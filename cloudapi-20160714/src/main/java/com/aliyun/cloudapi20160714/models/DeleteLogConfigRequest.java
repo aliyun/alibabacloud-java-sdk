@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteLogConfigRequest extends TeaModel {
     /**
-     * <p>The log type. Valid values: **log** and **survey**.</p>
+     * <p>The log type. Valid values: <strong>log</strong> and <strong>survey</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>log</p>
      */
     @NameInMap("LogType")
     public String logType;

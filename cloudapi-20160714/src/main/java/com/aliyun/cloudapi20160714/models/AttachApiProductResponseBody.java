@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AttachApiProductResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BA20890E-75C7-41BC-9C8B-73276B58F550</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -7,6 +7,10 @@ public class DescribePluginSchemasResponseBody extends TeaModel {
     @NameInMap("PluginSchemas")
     public DescribePluginSchemasResponseBodyPluginSchemas pluginSchemas;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2D39D1B3-8548-508A-9CE2-7F4A3F2A7989</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +36,38 @@ public class DescribePluginSchemasResponseBody extends TeaModel {
     }
 
     public static class DescribePluginSchemasResponseBodyPluginSchemasPluginSchema extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>plugin scheme description</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4107**</p>
+         */
         @NameInMap("DocumentId")
         public String documentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>VPC_C</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SupportClassic")
         public Boolean supportClassic;
 
+        /**
+         * <strong>example:</strong>
+         * <p>plugin schema title</p>
+         */
         @NameInMap("Title")
         public String title;
 

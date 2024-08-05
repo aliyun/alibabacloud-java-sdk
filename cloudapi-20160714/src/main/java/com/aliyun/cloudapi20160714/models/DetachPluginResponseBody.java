@@ -4,6 +4,10 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DetachPluginResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>AD00F8C0-311B-54A9-ADE2-2436771012DA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

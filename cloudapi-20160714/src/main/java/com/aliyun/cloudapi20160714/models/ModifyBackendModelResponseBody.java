@@ -4,9 +4,17 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class ModifyBackendModelResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>c16a1880f5164d779f6a54f64d997cd9</p>
+     */
     @NameInMap("OperationId")
     public String operationId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>19B89B04-418B-55EE-94A8-6B42CA06002A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

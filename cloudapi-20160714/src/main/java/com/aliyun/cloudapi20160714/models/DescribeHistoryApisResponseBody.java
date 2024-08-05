@@ -12,24 +12,36 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Maximum value: 50. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6C87A26A-6A18-4B8E-8099-705278381A2C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,69 +94,103 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
     public static class DescribeHistoryApisResponseBodyApiHisItemsApiHisItem extends TeaModel {
         /**
          * <p>The ID of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5af418828f0344a3b588c0cc1331a3bc</p>
          */
         @NameInMap("ApiId")
         public String apiId;
 
         /**
          * <p>The name of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2_role_assign</p>
          */
         @NameInMap("ApiName")
         public String apiName;
 
         /**
          * <p>The publising time (UTC) of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-07-20T08:28:48Z</p>
          */
         @NameInMap("DeployedTime")
         public String deployedTime;
 
         /**
          * <p>The description of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Creates an object</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the API group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1084f9034c744137901057206b39d2b6</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the group to which the API belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myGroup2</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The historical version of the API definition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20210915101416294</p>
          */
         @NameInMap("HistoryVersion")
         public String historyVersion;
 
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>Environmental alias</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Online</p>
          */
         @NameInMap("StageAlias")
         public String stageAlias;
 
         /**
          * <p>The name of the runtime environment. Valid values:</p>
-         * <br>
-         * <p>*   **RELEASE**</p>
-         * <p>*   **TEST.</p>
+         * <ul>
+         * <li><strong>RELEASE</strong></li>
+         * <li>**TEST.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RELEASE</p>
          */
         @NameInMap("StageName")
         public String stageName;
 
         /**
          * <p>Indicates whether an API version is effective. Valid values: ONLINE and OFFLINE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ONLINE</p>
          */
         @NameInMap("Status")
         public String status;

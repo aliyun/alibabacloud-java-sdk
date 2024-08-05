@@ -18,6 +18,9 @@ public class DescribeApiQpsDataResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ001</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,12 +57,18 @@ public class DescribeApiQpsDataResponseBody extends TeaModel {
     public static class DescribeApiQpsDataResponseBodyCallFailsMonitorItem extends TeaModel {
         /**
          * <p>The time of the monitoring metric. The time format follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-07-28T08:20:00Z</p>
          */
         @NameInMap("ItemTime")
         public String itemTime;
 
         /**
          * <p>The value corresponding to the monitoring metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ItemValue")
         public String itemValue;
@@ -109,12 +118,18 @@ public class DescribeApiQpsDataResponseBody extends TeaModel {
     public static class DescribeApiQpsDataResponseBodyCallSuccessesMonitorItem extends TeaModel {
         /**
          * <p>The time of the monitoring metric. The time format follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-07-28T08:24:00Z</p>
          */
         @NameInMap("ItemTime")
         public String itemTime;
 
         /**
          * <p>The value corresponding to the monitoring metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>650</p>
          */
         @NameInMap("ItemValue")
         public String itemValue;

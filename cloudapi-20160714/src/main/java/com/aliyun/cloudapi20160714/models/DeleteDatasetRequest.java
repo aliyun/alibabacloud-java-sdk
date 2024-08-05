@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteDatasetRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a25a6589b2584ff490e891cc********</p>
      */
     @NameInMap("DatasetId")
     public String datasetId;

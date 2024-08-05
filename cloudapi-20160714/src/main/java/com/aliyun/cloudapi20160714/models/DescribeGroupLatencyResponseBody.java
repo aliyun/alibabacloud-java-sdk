@@ -12,6 +12,9 @@ public class DescribeGroupLatencyResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>75DC3AB0-421C-5371-8170-86AEABF77AD0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,21 +43,31 @@ public class DescribeGroupLatencyResponseBody extends TeaModel {
     public static class DescribeGroupLatencyResponseBodyLatencyPacketMonitorItem extends TeaModel {
         /**
          * <p>The metric. Valid values:</p>
-         * <br>
-         * <p>*   latency: the backend processing latency</p>
-         * <p>*   gatewayLatency: the API Gateway processing latency</p>
+         * <ul>
+         * <li>latency: the backend processing latency</li>
+         * <li>gatewayLatency: the API Gateway processing latency</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>latency</p>
          */
         @NameInMap("Item")
         public String item;
 
         /**
          * <p>The point in time when the latency data was collected. The format is YYYY-MM-DDThh:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-30T16:10:00Z</p>
          */
         @NameInMap("ItemTime")
         public String itemTime;
 
         /**
          * <p>The latency. Unit: ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.0</p>
          */
         @NameInMap("ItemValue")
         public String itemValue;

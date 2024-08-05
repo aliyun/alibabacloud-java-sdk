@@ -6,36 +6,54 @@ import com.aliyun.tea.*;
 public class DescribeSummaryDataResponseBody extends TeaModel {
     /**
      * <p>The number of subscription dedicated instances that expire in 14 days or less.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ExpireInstanceNum")
     public Integer expireInstanceNum;
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ004</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of APIs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("UsageApiNum")
     public Integer usageApiNum;
 
     /**
      * <p>The number of API groups.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UsageGroupNum")
     public Integer usageGroupNum;
 
     /**
      * <p>The number of running dedicated instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UsageInstanceNum")
     public Integer usageInstanceNum;

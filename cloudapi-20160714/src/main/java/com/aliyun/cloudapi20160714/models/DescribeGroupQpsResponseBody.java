@@ -12,6 +12,9 @@ public class DescribeGroupQpsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D6E46F10-F26C-4AA0-BB69-FE2743D9AE62</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeGroupQpsResponseBody extends TeaModel {
     public static class DescribeGroupQpsResponseBodyGroupQpsMonitorItem extends TeaModel {
         /**
          * <p>The point in time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-08-02T09:15:00Z</p>
          */
         @NameInMap("ItemTime")
         public String itemTime;
 
         /**
          * <p>The number of requests at the specified point in time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17</p>
          */
         @NameInMap("ItemValue")
         public String itemValue;

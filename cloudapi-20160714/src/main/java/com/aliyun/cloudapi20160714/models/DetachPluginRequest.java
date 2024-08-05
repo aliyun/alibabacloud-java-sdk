@@ -4,14 +4,25 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DetachPluginRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>19a2846d8e8541c788c6be740035eb68</p>
+     */
     @NameInMap("ApiId")
     public String apiId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>93b87279e54c4c0baeb7113cdf9c67f5</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>05df2b52a3644a3a8b1935ab8ab59e9d</p>
      */
     @NameInMap("PluginId")
     public String pluginId;
@@ -21,6 +32,9 @@ public class DetachPluginRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RELEASE</p>
      */
     @NameInMap("StageName")
     public String stageName;

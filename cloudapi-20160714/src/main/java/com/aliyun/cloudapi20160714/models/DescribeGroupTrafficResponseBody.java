@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeGroupTrafficResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EF924FE4-2EDD-4CD3-89EC-34E4708574E7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,21 +43,31 @@ public class DescribeGroupTrafficResponseBody extends TeaModel {
     public static class DescribeGroupTrafficResponseBodyTrafficPerSecondMonitorItem extends TeaModel {
         /**
          * <p>The metric. Valid values:</p>
-         * <br>
-         * <p>*   inbound: traffic consumed by requests</p>
-         * <p>*   outbound: traffic consumed by responses</p>
+         * <ul>
+         * <li>inbound: traffic consumed by requests</li>
+         * <li>outbound: traffic consumed by responses</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>inbound</p>
          */
         @NameInMap("Item")
         public String item;
 
         /**
          * <p>The corresponding time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-29T01:30:00Z</p>
          */
         @NameInMap("ItemTime")
         public String itemTime;
 
         /**
          * <p>The traffic volume per second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.0</p>
          */
         @NameInMap("ItemValue")
         public String itemValue;

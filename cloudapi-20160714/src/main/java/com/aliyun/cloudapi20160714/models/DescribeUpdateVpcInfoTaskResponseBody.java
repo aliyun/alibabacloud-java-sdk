@@ -7,6 +7,10 @@ public class DescribeUpdateVpcInfoTaskResponseBody extends TeaModel {
     @NameInMap("ApiUpdateVpcInfoResults")
     public DescribeUpdateVpcInfoTaskResponseBodyApiUpdateVpcInfoResults apiUpdateVpcInfoResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ015</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +36,59 @@ public class DescribeUpdateVpcInfoTaskResponseBody extends TeaModel {
     }
 
     public static class DescribeUpdateVpcInfoTaskResponseBodyApiUpdateVpcInfoResultsApiUpdateVpcInfoResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>api_test2</p>
+         */
         @NameInMap("ApiName")
         public String apiName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>86364e7c166c47ba819b3f8f95ac0913</p>
+         */
         @NameInMap("ApiUid")
         public String apiUid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Success. Request Success.</p>
+         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e8da6f6346184da9a30d0dc1888b1f3b</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>fe952b95072747e2a8dfd336bcff8d7f</p>
+         */
         @NameInMap("StageId")
         public String stageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RELEASE</p>
+         */
         @NameInMap("StageName")
         public String stageName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
         @NameInMap("UpdateStatus")
         public String updateStatus;
 

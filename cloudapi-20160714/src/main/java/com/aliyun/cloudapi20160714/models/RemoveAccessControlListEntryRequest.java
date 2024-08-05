@@ -4,11 +4,18 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class RemoveAccessControlListEntryRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>[{\&quot;entry\&quot;:\&quot;192.168.1.0/24\&quot;,\&quot;comment\&quot;:\&quot;WhiteIp\&quot;}]</p>
+     */
     @NameInMap("AclEntrys")
     public String aclEntrys;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acl-bp12ag0xxcfhq1ll68wp9</p>
      */
     @NameInMap("AclId")
     public String aclId;

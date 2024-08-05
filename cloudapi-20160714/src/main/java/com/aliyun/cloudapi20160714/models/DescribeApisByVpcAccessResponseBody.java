@@ -7,15 +7,31 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
     @NameInMap("ApiVpcAccessInfos")
     public DescribeApisByVpcAccessResponseBodyApiVpcAccessInfos apiVpcAccessInfos;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4E707B25-5119-5ACF-9D26-7D2A2762F05C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,48 +81,103 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
     }
 
     public static class DescribeApisByVpcAccessResponseBodyApiVpcAccessInfosApiVpcAccessInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>09839002de484e76b5a213b040a6a3ca</p>
+         */
         @NameInMap("ApiId")
         public String apiId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>iwc</p>
+         */
         @NameInMap("ApiName")
         public String apiName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>41c33748cbfb41f6b00870156203b72a</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RT_PLU_IP_CTRL_group</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Ib-04e41XXXXXd95e9c1</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>POST</p>
+         */
         @NameInMap("Method")
         public String method;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/api/v1/friends/rc/status</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <strong>example:</strong>
+         * <p>443</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>57e17906a69b4424914fb1e05f67c78a</p>
+         */
         @NameInMap("StageId")
         public String stageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RELEASE</p>
+         */
         @NameInMap("StageName")
         public String stageName;
 
         /**
          * <p>vpc id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2ze7bj64wstznvftrskbk</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>aliYun_service_prod</p>
+         */
         @NameInMap("VpcName")
         public String vpcName;
 

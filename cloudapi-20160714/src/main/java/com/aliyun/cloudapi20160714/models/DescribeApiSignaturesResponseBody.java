@@ -12,24 +12,36 @@ public class DescribeApiSignaturesResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ004</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,30 +94,45 @@ public class DescribeApiSignaturesResponseBody extends TeaModel {
     public static class DescribeApiSignaturesResponseBodyApiSignaturesApiSignatureItem extends TeaModel {
         /**
          * <p>The ID of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46fbb52840d146f186e38e8e70fc8c90</p>
          */
         @NameInMap("ApiId")
         public String apiId;
 
         /**
          * <p>The name of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testapi</p>
          */
         @NameInMap("ApiName")
         public String apiName;
 
         /**
          * <p>The time when the backend signature key was bound.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-07-23T08:28:48Z</p>
          */
         @NameInMap("BoundTime")
         public String boundTime;
 
         /**
          * <p>The ID of the backend signature key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dd05f1c54d6749eda95f9fa6d491449a</p>
          */
         @NameInMap("SignatureId")
         public String signatureId;
 
         /**
          * <p>The name of the backend signature key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>backendsignature</p>
          */
         @NameInMap("SignatureName")
         public String signatureName;

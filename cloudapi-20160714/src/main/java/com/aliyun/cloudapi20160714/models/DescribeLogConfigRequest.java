@@ -4,6 +4,10 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogConfigRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>PROVIDER</p>
+     */
     @NameInMap("LogType")
     public String logType;
 

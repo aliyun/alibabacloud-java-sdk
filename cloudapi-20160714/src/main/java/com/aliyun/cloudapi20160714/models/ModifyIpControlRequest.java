@@ -6,20 +6,28 @@ import com.aliyun.tea.*;
 public class ModifyIpControlRequest extends TeaModel {
     /**
      * <p>The description. The description can be up to 200 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the ACL. The ID is unique.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7ea91319a34d48a09b5c9c871d9768b1</p>
      */
     @NameInMap("IpControlId")
     public String ipControlId;
 
     /**
-     * <p>The name of the ACL. The name must be 4 to 50 characters in length, and can contain letters, digits, and underscores (_). The name cannot start with an underscore (_).</p>
+     * <p>The name of the ACL. The name must be 4 to 50 characters in length, and can contain letters, digits, and underscores (<em>). The name cannot start with an underscore (</em>).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testControl11</p>
      */
     @NameInMap("IpControlName")
     public String ipControlName;

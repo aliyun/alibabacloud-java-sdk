@@ -91,12 +91,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Unpublishes a specified API from a specified runtime environment.
-     *
-     * @description *   This operation is intended for API providers and is the opposite of DeployApi.
-     * *   An API can be unpublished from a specified runtime environment in under 5 seconds.
-     * *   An unpublished API cannot be called in the specified runtime environment.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers and is the opposite of DeployApi.</p>
+     * <ul>
+     * <li>An API can be unpublished from a specified runtime environment in under 5 seconds.</li>
+     * <li>An unpublished API cannot be called in the specified runtime environment.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Unpublishes a specified API from a specified runtime environment.</p>
+     * 
      * @param request AbolishApiRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AbolishApiResponse
@@ -138,12 +142,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Unpublishes a specified API from a specified runtime environment.
-     *
-     * @description *   This operation is intended for API providers and is the opposite of DeployApi.
-     * *   An API can be unpublished from a specified runtime environment in under 5 seconds.
-     * *   An unpublished API cannot be called in the specified runtime environment.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers and is the opposite of DeployApi.</p>
+     * <ul>
+     * <li>An API can be unpublished from a specified runtime environment in under 5 seconds.</li>
+     * <li>An unpublished API cannot be called in the specified runtime environment.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Unpublishes a specified API from a specified runtime environment.</p>
+     * 
      * @param request AbolishApiRequest
      * @return AbolishApiResponse
      */
@@ -153,8 +161,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary This feature provides instance-level access control capabilities for dedicated instances. Adds an IP address entry to the access control polocy of an instance.
-     *
+     * <b>summary</b> : 
+     * <p>This feature provides instance-level access control capabilities for dedicated instances. Adds an IP address entry to the access control polocy of an instance.</p>
+     * 
      * @param request AddAccessControlListEntryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddAccessControlListEntryResponse
@@ -192,8 +201,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary This feature provides instance-level access control capabilities for dedicated instances. Adds an IP address entry to the access control polocy of an instance.
-     *
+     * <b>summary</b> : 
+     * <p>This feature provides instance-level access control capabilities for dedicated instances. Adds an IP address entry to the access control polocy of an instance.</p>
+     * 
      * @param request AddAccessControlListEntryRequest
      * @return AddAccessControlListEntryResponse
      */
@@ -203,13 +213,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a policy to an existing ACL.
-     *
-     * @description When you call this operation, note that:
-     * *   This operation is intended for API providers.
-     * *   An added policy immediately takes effect on all APIs that are bound to the access control list (ACL).
-     * *   A maximum of 100 policies can be added to an ACL.
-     *
+     * <b>description</b> :
+     * <p>When you call this operation, note that:</p>
+     * <ul>
+     * <li>This operation is intended for API providers.</li>
+     * <li>An added policy immediately takes effect on all APIs that are bound to the access control list (ACL).</li>
+     * <li>A maximum of 100 policies can be added to an ACL.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds a policy to an existing ACL.</p>
+     * 
      * @param request AddIpControlPolicyItemRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddIpControlPolicyItemResponse
@@ -251,13 +265,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a policy to an existing ACL.
-     *
-     * @description When you call this operation, note that:
-     * *   This operation is intended for API providers.
-     * *   An added policy immediately takes effect on all APIs that are bound to the access control list (ACL).
-     * *   A maximum of 100 policies can be added to an ACL.
-     *
+     * <b>description</b> :
+     * <p>When you call this operation, note that:</p>
+     * <ul>
+     * <li>This operation is intended for API providers.</li>
+     * <li>An added policy immediately takes effect on all APIs that are bound to the access control list (ACL).</li>
+     * <li>A maximum of 100 policies can be added to an ACL.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds a policy to an existing ACL.</p>
+     * 
      * @param request AddIpControlPolicyItemRequest
      * @return AddIpControlPolicyItemResponse
      */
@@ -267,12 +285,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a custom special policy to a specified throttling policy.
-     *
-     * @description *   This API is intended for API providers.
-     * *   If the input SpecialKey already exists, the previous configuration is overwritten. Use caution when calling this operation.
-     * *   Special throttling policies must be added to an existing throttling policy, and can take effect on all the APIs to which the throttling policy is bound.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>If the input SpecialKey already exists, the previous configuration is overwritten. Use caution when calling this operation.</li>
+     * <li>Special throttling policies must be added to an existing throttling policy, and can take effect on all the APIs to which the throttling policy is bound.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds a custom special policy to a specified throttling policy.</p>
+     * 
      * @param request AddTrafficSpecialControlRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddTrafficSpecialControlResponse
@@ -318,12 +340,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a custom special policy to a specified throttling policy.
-     *
-     * @description *   This API is intended for API providers.
-     * *   If the input SpecialKey already exists, the previous configuration is overwritten. Use caution when calling this operation.
-     * *   Special throttling policies must be added to an existing throttling policy, and can take effect on all the APIs to which the throttling policy is bound.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>If the input SpecialKey already exists, the previous configuration is overwritten. Use caution when calling this operation.</li>
+     * <li>Special throttling policies must be added to an existing throttling policy, and can take effect on all the APIs to which the throttling policy is bound.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds a custom special policy to a specified throttling policy.</p>
+     * 
      * @param request AddTrafficSpecialControlRequest
      * @return AddTrafficSpecialControlResponse
      */
@@ -333,8 +359,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Attaches APIs to an API product. If the API product does not exist, the system automatically creates the API product.
-     *
+     * <b>summary</b> : 
+     * <p>Attaches APIs to an API product. If the API product does not exist, the system automatically creates the API product.</p>
+     * 
      * @param request AttachApiProductRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AttachApiProductResponse
@@ -372,8 +399,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Attaches APIs to an API product. If the API product does not exist, the system automatically creates the API product.
-     *
+     * <b>summary</b> : 
+     * <p>Attaches APIs to an API product. If the API product does not exist, the system automatically creates the API product.</p>
+     * 
      * @param request AttachApiProductRequest
      * @return AttachApiProductResponse
      */
@@ -383,13 +411,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Binds a plug-in to an API.
-     *
-     * @description *   This operation is intended for API providers.
-     * *   You can only bind plug-ins to published APIs.
-     * *   The plug-in takes effect immediately after it is bound to an API.
-     * *   If you bind a different plug-in to an API, this plug-in takes effect immediately.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>You can only bind plug-ins to published APIs.</li>
+     * <li>The plug-in takes effect immediately after it is bound to an API.</li>
+     * <li>If you bind a different plug-in to an API, this plug-in takes effect immediately.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Binds a plug-in to an API.</p>
+     * 
      * @param request AttachPluginRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AttachPluginResponse
@@ -439,13 +471,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Binds a plug-in to an API.
-     *
-     * @description *   This operation is intended for API providers.
-     * *   You can only bind plug-ins to published APIs.
-     * *   The plug-in takes effect immediately after it is bound to an API.
-     * *   If you bind a different plug-in to an API, this plug-in takes effect immediately.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>You can only bind plug-ins to published APIs.</li>
+     * <li>The plug-in takes effect immediately after it is bound to an API.</li>
+     * <li>If you bind a different plug-in to an API, this plug-in takes effect immediately.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Binds a plug-in to an API.</p>
+     * 
      * @param request AttachPluginRequest
      * @return AttachPluginResponse
      */
@@ -455,8 +491,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Unpublishes multiple published APIs at a time.
-     *
+     * <b>summary</b> : 
+     * <p>Unpublishes multiple published APIs at a time.</p>
+     * 
      * @param request BatchAbolishApisRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchAbolishApisResponse
@@ -490,8 +527,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Unpublishes multiple published APIs at a time.
-     *
+     * <b>summary</b> : 
+     * <p>Unpublishes multiple published APIs at a time.</p>
+     * 
      * @param request BatchAbolishApisRequest
      * @return BatchAbolishApisResponse
      */
@@ -501,8 +539,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Publishes multiple APIs at a time.
-     *
+     * <b>summary</b> : 
+     * <p>Publishes multiple APIs at a time.</p>
+     * 
      * @param request BatchDeployApisRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchDeployApisResponse
@@ -544,8 +583,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Publishes multiple APIs at a time.
-     *
+     * <b>summary</b> : 
+     * <p>Publishes multiple APIs at a time.</p>
+     * 
      * @param request BatchDeployApisRequest
      * @return BatchDeployApisResponse
      */
@@ -555,8 +595,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary This feature provides instance-level access control capabilities for dedicated instances. Creates an Access Control List (ACL). Each user is allowed to create five ACLs in each region.
-     *
+     * <b>summary</b> : 
+     * <p>This feature provides instance-level access control capabilities for dedicated instances. Creates an Access Control List (ACL). Each user is allowed to create five ACLs in each region.</p>
+     * 
      * @param request CreateAccessControlListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAccessControlListResponse
@@ -594,8 +635,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary This feature provides instance-level access control capabilities for dedicated instances. Creates an Access Control List (ACL). Each user is allowed to create five ACLs in each region.
-     *
+     * <b>summary</b> : 
+     * <p>This feature provides instance-level access control capabilities for dedicated instances. Creates an Access Control List (ACL). Each user is allowed to create five ACLs in each region.</p>
+     * 
      * @param request CreateAccessControlListRequest
      * @return CreateAccessControlListResponse
      */
@@ -605,13 +647,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an API.
-     *
-     * @description *   This operation is intended for API providers.
-     * *   The name of an API must be unique within an API group.
-     * *   A request path must be unique within an API group.
-     * *   The QPS limit on this operation is 50 per user.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>The name of an API must be unique within an API group.</li>
+     * <li>A request path must be unique within an API group.</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an API.</p>
+     * 
      * @param request CreateApiRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateApiResponse
@@ -751,13 +797,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an API.
-     *
-     * @description *   This operation is intended for API providers.
-     * *   The name of an API must be unique within an API group.
-     * *   A request path must be unique within an API group.
-     * *   The QPS limit on this operation is 50 per user.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>The name of an API must be unique within an API group.</li>
+     * <li>A request path must be unique within an API group.</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an API.</p>
+     * 
      * @param request CreateApiRequest
      * @return CreateApiResponse
      */
@@ -825,10 +875,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a variable to an environment.
-     *
-     * @description *   This operation is intended for API providers.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds a variable to an environment.</p>
+     * 
      * @param request CreateApiStageVariableRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateApiStageVariableResponse
@@ -882,10 +934,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a variable to an environment.
-     *
-     * @description *   This operation is intended for API providers.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds a variable to an environment.</p>
+     * 
      * @param request CreateApiStageVariableRequest
      * @return CreateApiStageVariableResponse
      */
@@ -895,15 +949,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an application for calling APIs in API Gateway.
-     *
-     * @description *   This operation is intended for API callers.
-     * *   Each application has a key-value pair which is used for identity verification when you call an API.
-     * *   An application must be authorized to call an API.
-     * *   Each application has only one key-value pair, which can be reset if the pair is leaked.
-     * *   A maximum of 1,000 applications can be created for each Alibaba Cloud account.
-     * *   You can call this operation up to 50 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>Each application has a key-value pair which is used for identity verification when you call an API.</li>
+     * <li>An application must be authorized to call an API.</li>
+     * <li>Each application has only one key-value pair, which can be reset if the pair is leaked.</li>
+     * <li>A maximum of 1,000 applications can be created for each Alibaba Cloud account.</li>
+     * <li>You can call this operation up to 50 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an application for calling APIs in API Gateway.</p>
+     * 
      * @param request CreateAppRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAppResponse
@@ -961,15 +1019,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an application for calling APIs in API Gateway.
-     *
-     * @description *   This operation is intended for API callers.
-     * *   Each application has a key-value pair which is used for identity verification when you call an API.
-     * *   An application must be authorized to call an API.
-     * *   Each application has only one key-value pair, which can be reset if the pair is leaked.
-     * *   A maximum of 1,000 applications can be created for each Alibaba Cloud account.
-     * *   You can call this operation up to 50 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>Each application has a key-value pair which is used for identity verification when you call an API.</li>
+     * <li>An application must be authorized to call an API.</li>
+     * <li>Each application has only one key-value pair, which can be reset if the pair is leaked.</li>
+     * <li>A maximum of 1,000 applications can be created for each Alibaba Cloud account.</li>
+     * <li>You can call this operation up to 50 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an application for calling APIs in API Gateway.</p>
+     * 
      * @param request CreateAppRequest
      * @return CreateAppResponse
      */
@@ -979,8 +1041,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建新的AppCode
-     *
+     * <b>summary</b> : 
+     * <p>创建新的AppCode</p>
+     * 
      * @param request CreateAppCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAppCodeResponse
@@ -1014,8 +1077,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建新的AppCode
-     *
+     * <b>summary</b> : 
+     * <p>创建新的AppCode</p>
+     * 
      * @param request CreateAppCodeRequest
      * @return CreateAppCodeResponse
      */
@@ -1025,8 +1089,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建新的AK、SK
-     *
+     * <b>summary</b> : 
+     * <p>创建新的AK、SK</p>
+     * 
      * @param request CreateAppKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAppKeyResponse
@@ -1064,8 +1129,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建新的AK、SK
-     *
+     * <b>summary</b> : 
+     * <p>创建新的AK、SK</p>
+     * 
      * @param request CreateAppKeyRequest
      * @return CreateAppKeyResponse
      */
@@ -1075,8 +1141,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建后端服务
-     *
+     * <b>summary</b> : 
+     * <p>Creates a backend service in API Gateway.</p>
+     * 
      * @param request CreateBackendRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateBackendResponse
@@ -1130,8 +1197,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建后端服务
-     *
+     * <b>summary</b> : 
+     * <p>Creates a backend service in API Gateway.</p>
+     * 
      * @param request CreateBackendRequest
      * @return CreateBackendResponse
      */
@@ -1141,8 +1209,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建后端服务在环境上的配置
-     *
+     * <b>summary</b> : 
+     * <p>创建后端服务在环境上的配置</p>
+     * 
      * @param request CreateBackendModelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateBackendModelResponse
@@ -1192,8 +1261,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建后端服务在环境上的配置
-     *
+     * <b>summary</b> : 
+     * <p>创建后端服务在环境上的配置</p>
+     * 
      * @param request CreateBackendModelRequest
      * @return CreateBackendModelResponse
      */
@@ -1203,8 +1273,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a custom dataset.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a custom dataset.</p>
+     * 
      * @param request CreateDatasetRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDatasetResponse
@@ -1246,8 +1317,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a custom dataset.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a custom dataset.</p>
+     * 
      * @param request CreateDatasetRequest
      * @return CreateDatasetResponse
      */
@@ -1257,8 +1329,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建自定义数据集条目
-     *
+     * <b>summary</b> : 
+     * <p>创建自定义数据集条目</p>
+     * 
      * @param request CreateDatasetItemRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDatasetItemResponse
@@ -1304,8 +1377,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建自定义数据集条目
-     *
+     * <b>summary</b> : 
+     * <p>创建自定义数据集条目</p>
+     * 
      * @param request CreateDatasetItemRequest
      * @return CreateDatasetItemResponse
      */
@@ -1315,8 +1389,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an API Gateway instance.
-     *
+     * <b>summary</b> : 
+     * <p>Creates an API Gateway instance.</p>
+     * 
      * @param request CreateInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateInstanceResponse
@@ -1398,8 +1473,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an API Gateway instance.
-     *
+     * <b>summary</b> : 
+     * <p>Creates an API Gateway instance.</p>
+     * 
      * @param request CreateInstanceRequest
      * @return CreateInstanceResponse
      */
@@ -1451,13 +1527,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an access control list (ACL) in a region.
-     *
-     * @description *   This operation is intended for API providers.
-     * *   An ACL must be bound to an API to take effect. After an ACL is bound to an API, the ACL takes effect on the API immediately.
-     * *   You can add policies to an ACL when you create the ACL.
-     * *   If an ACL does not have any policy, the ACL is ineffective.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>An ACL must be bound to an API to take effect. After an ACL is bound to an API, the ACL takes effect on the API immediately.</li>
+     * <li>You can add policies to an ACL when you create the ACL.</li>
+     * <li>If an ACL does not have any policy, the ACL is ineffective.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an access control list (ACL) in a region.</p>
+     * 
      * @param request CreateIpControlRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateIpControlResponse
@@ -1503,13 +1583,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an access control list (ACL) in a region.
-     *
-     * @description *   This operation is intended for API providers.
-     * *   An ACL must be bound to an API to take effect. After an ACL is bound to an API, the ACL takes effect on the API immediately.
-     * *   You can add policies to an ACL when you create the ACL.
-     * *   If an ACL does not have any policy, the ACL is ineffective.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>An ACL must be bound to an API to take effect. After an ACL is bound to an API, the ACL takes effect on the API immediately.</li>
+     * <li>You can add policies to an ACL when you create the ACL.</li>
+     * <li>If an ACL does not have any policy, the ACL is ineffective.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an access control list (ACL) in a region.</p>
+     * 
      * @param request CreateIpControlRequest
      * @return CreateIpControlResponse
      */
@@ -1569,11 +1653,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a model for an API group.
-     *
-     * @description *   For more information about the model definition, see [JSON Schema Draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04?spm=a2c4g.11186623.2.10.2e977ff7p4BpQd).
-     * *   JSON Schema supports only element attributes of the Object type.
-     *
+     * <b>description</b> :
+     * <p>  For more information about the model definition, see <a href="https://tools.ietf.org/html/draft-zyp-json-schema-04?spm=a2c4g.11186623.2.10.2e977ff7p4BpQd">JSON Schema Draft 4</a>.</p>
+     * <ul>
+     * <li>JSON Schema supports only element attributes of the Object type.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a model for an API group.</p>
+     * 
      * @param request CreateModelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateModelResponse
@@ -1619,11 +1707,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a model for an API group.
-     *
-     * @description *   For more information about the model definition, see [JSON Schema Draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04?spm=a2c4g.11186623.2.10.2e977ff7p4BpQd).
-     * *   JSON Schema supports only element attributes of the Object type.
-     *
+     * <b>description</b> :
+     * <p>  For more information about the model definition, see <a href="https://tools.ietf.org/html/draft-zyp-json-schema-04?spm=a2c4g.11186623.2.10.2e977ff7p4BpQd">JSON Schema Draft 4</a>.</p>
+     * <ul>
+     * <li>JSON Schema supports only element attributes of the Object type.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a model for an API group.</p>
+     * 
      * @param request CreateModelRequest
      * @return CreateModelResponse
      */
@@ -1633,8 +1725,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables CloudMonitor alerting for a specified API group.
-     *
+     * <b>summary</b> : 
+     * <p>Enables CloudMonitor alerting for a specified API group.</p>
+     * 
      * @param request CreateMonitorGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateMonitorGroupResponse
@@ -1676,8 +1769,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables CloudMonitor alerting for a specified API group.
-     *
+     * <b>summary</b> : 
+     * <p>Enables CloudMonitor alerting for a specified API group.</p>
+     * 
      * @param request CreateMonitorGroupRequest
      * @return CreateMonitorGroupResponse
      */
@@ -1687,13 +1781,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a plug-in.
-     *
-     * @description *   This operation is intended for API providers.
-     * *   The number of plug-ins of the same type that each user can create is limited. Different limits apply to different plug-in types.
-     * *   The plug-in definitions for advanced features are restricted.
-     * *   Plug-ins must be bound to APIs to take effect. After a plug-in is bound, it takes effect on that API immediately.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>The number of plug-ins of the same type that each user can create is limited. Different limits apply to different plug-in types.</li>
+     * <li>The plug-in definitions for advanced features are restricted.</li>
+     * <li>Plug-ins must be bound to APIs to take effect. After a plug-in is bound, it takes effect on that API immediately.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a plug-in.</p>
+     * 
      * @param request CreatePluginRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreatePluginResponse
@@ -1743,13 +1841,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a plug-in.
-     *
-     * @description *   This operation is intended for API providers.
-     * *   The number of plug-ins of the same type that each user can create is limited. Different limits apply to different plug-in types.
-     * *   The plug-in definitions for advanced features are restricted.
-     * *   Plug-ins must be bound to APIs to take effect. After a plug-in is bound, it takes effect on that API immediately.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>The number of plug-ins of the same type that each user can create is limited. Different limits apply to different plug-in types.</li>
+     * <li>The plug-in definitions for advanced features are restricted.</li>
+     * <li>Plug-ins must be bound to APIs to take effect. After a plug-in is bound, it takes effect on that API immediately.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a plug-in.</p>
+     * 
      * @param request CreatePluginRequest
      * @return CreatePluginResponse
      */
@@ -1759,13 +1861,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a backend signature key.
-     *
-     * @description *   This API is intended for API providers.
-     * *   The API operation only creates a key policy. You must call the binding operation to bind the key to an API.
-     * *   After the key is bound to the API, requests sent from API Gateway to the backend service contain signature strings. You can specify whether your backend service verifies these signature strings.
-     * *   The QPS limit on this operation is 50 per user.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>The API operation only creates a key policy. You must call the binding operation to bind the key to an API.</li>
+     * <li>After the key is bound to the API, requests sent from API Gateway to the backend service contain signature strings. You can specify whether your backend service verifies these signature strings.</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a backend signature key.</p>
+     * 
      * @param request CreateSignatureRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateSignatureResponse
@@ -1807,13 +1913,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a backend signature key.
-     *
-     * @description *   This API is intended for API providers.
-     * *   The API operation only creates a key policy. You must call the binding operation to bind the key to an API.
-     * *   After the key is bound to the API, requests sent from API Gateway to the backend service contain signature strings. You can specify whether your backend service verifies these signature strings.
-     * *   The QPS limit on this operation is 50 per user.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>The API operation only creates a key policy. You must call the binding operation to bind the key to an API.</li>
+     * <li>After the key is bound to the API, requests sent from API Gateway to the backend service contain signature strings. You can specify whether your backend service verifies these signature strings.</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a backend signature key.</p>
+     * 
      * @param request CreateSignatureRequest
      * @return CreateSignatureResponse
      */
@@ -1823,12 +1933,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a custom throttling policy.
-     *
-     * @description *   This API is intended for API providers.
-     * *   Throttling policies must be bound to APIs to take effect. After a policy is bound to an API, it goes into effect on that API immediately.
-     * *   The QPS limit on this operation is 50 per user.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>Throttling policies must be bound to APIs to take effect. After a policy is bound to an API, it goes into effect on that API immediately.</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a custom throttling policy.</p>
+     * 
      * @param request CreateTrafficControlRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateTrafficControlResponse
@@ -1882,12 +1996,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a custom throttling policy.
-     *
-     * @description *   This API is intended for API providers.
-     * *   Throttling policies must be bound to APIs to take effect. After a policy is bound to an API, it goes into effect on that API immediately.
-     * *   The QPS limit on this operation is 50 per user.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>Throttling policies must be bound to APIs to take effect. After a policy is bound to an API, it goes into effect on that API immediately.</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a custom throttling policy.</p>
+     * 
      * @param request CreateTrafficControlRequest
      * @return CreateTrafficControlResponse
      */
@@ -1897,8 +2015,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary This feature provides instance-level access control capabilities for dedicated instances. Deletes an access control policy.
-     *
+     * <b>summary</b> : 
+     * <p>This feature provides instance-level access control capabilities for dedicated instances. Deletes an access control policy.</p>
+     * 
      * @param request DeleteAccessControlListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAccessControlListResponse
@@ -1932,8 +2051,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary This feature provides instance-level access control capabilities for dedicated instances. Deletes an access control policy.
-     *
+     * <b>summary</b> : 
+     * <p>This feature provides instance-level access control capabilities for dedicated instances. Deletes an access control policy.</p>
+     * 
      * @param request DeleteAccessControlListRequest
      * @return DeleteAccessControlListResponse
      */
@@ -1943,10 +2063,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes all custom special policies of a specified throttling policy.
-     *
-     * @description *   This API is intended for API providers.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes all custom special policies of a specified throttling policy.</p>
+     * 
      * @param request DeleteAllTrafficSpecialControlRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAllTrafficSpecialControlResponse
@@ -1980,10 +2102,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes all custom special policies of a specified throttling policy.
-     *
-     * @description *   This API is intended for API providers.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes all custom special policies of a specified throttling policy.</p>
+     * 
      * @param request DeleteAllTrafficSpecialControlRequest
      * @return DeleteAllTrafficSpecialControlResponse
      */
@@ -1993,12 +2117,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an API.
-     *
-     * @description *   This operation is intended for API providers and cannot be undone after it is complete.
-     * *   An API that is running in the runtime environment must be unpublished before you can delete the API.****
-     * *   The QPS limit on this operation is 50 per user.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers and cannot be undone after it is complete.</p>
+     * <ul>
+     * <li>An API that is running in the runtime environment must be unpublished before you can delete the API.****</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an API.</p>
+     * 
      * @param request DeleteApiRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteApiResponse
@@ -2036,12 +2164,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an API.
-     *
-     * @description *   This operation is intended for API providers and cannot be undone after it is complete.
-     * *   An API that is running in the runtime environment must be unpublished before you can delete the API.****
-     * *   The QPS limit on this operation is 50 per user.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers and cannot be undone after it is complete.</p>
+     * <ul>
+     * <li>An API that is running in the runtime environment must be unpublished before you can delete the API.****</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an API.</p>
+     * 
      * @param request DeleteApiRequest
      * @return DeleteApiResponse
      */
@@ -2051,14 +2183,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an API group.
-     *
-     * @description *   This operation is intended for API providers.
-     * *   An API group that contains APIs cannot be deleted. To delete the API group, you must first delete its APIs.
-     * *   After an API group is deleted, the second-level domain name bound to the API group is automatically invalidated.
-     * *   If the specified API group does not exist, a success response is returned.
-     * *   The QPS limit on this operation is 50 per user.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>An API group that contains APIs cannot be deleted. To delete the API group, you must first delete its APIs.</li>
+     * <li>After an API group is deleted, the second-level domain name bound to the API group is automatically invalidated.</li>
+     * <li>If the specified API group does not exist, a success response is returned.</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an API group.</p>
+     * 
      * @param request DeleteApiGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteApiGroupResponse
@@ -2096,14 +2232,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an API group.
-     *
-     * @description *   This operation is intended for API providers.
-     * *   An API group that contains APIs cannot be deleted. To delete the API group, you must first delete its APIs.
-     * *   After an API group is deleted, the second-level domain name bound to the API group is automatically invalidated.
-     * *   If the specified API group does not exist, a success response is returned.
-     * *   The QPS limit on this operation is 50 per user.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>An API group that contains APIs cannot be deleted. To delete the API group, you must first delete its APIs.</li>
+     * <li>After an API group is deleted, the second-level domain name bound to the API group is automatically invalidated.</li>
+     * <li>If the specified API group does not exist, a success response is returned.</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an API group.</p>
+     * 
      * @param request DeleteApiGroupRequest
      * @return DeleteApiGroupResponse
      */
@@ -2113,8 +2253,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an API product. Deleting an API product causes the association between APIs and the deleted API product to be deleted as well. Exercise caution when you delete an API product. If any API in the API product is associated with an application, the API product fails to be deleted.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes an API product. Deleting an API product causes the association between APIs and the deleted API product to be deleted as well. Exercise caution when you delete an API product. If any API in the API product is associated with an application, the API product fails to be deleted.</p>
+     * 
      * @param request DeleteApiProductRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteApiProductResponse
@@ -2148,8 +2289,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an API product. Deleting an API product causes the association between APIs and the deleted API product to be deleted as well. Exercise caution when you delete an API product. If any API in the API product is associated with an application, the API product fails to be deleted.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes an API product. Deleting an API product causes the association between APIs and the deleted API product to be deleted as well. Exercise caution when you delete an API product. If any API in the API product is associated with an application, the API product fails to be deleted.</p>
+     * 
      * @param request DeleteApiProductRequest
      * @return DeleteApiProductResponse
      */
@@ -2159,10 +2301,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a specified variable in a specified environment.
-     *
-     * @description *   This operation is intended for API providers.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified variable in a specified environment.</p>
+     * 
      * @param request DeleteApiStageVariableRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteApiStageVariableResponse
@@ -2204,10 +2348,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a specified variable in a specified environment.
-     *
-     * @description *   This operation is intended for API providers.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified variable in a specified environment.</p>
+     * 
      * @param request DeleteApiStageVariableRequest
      * @return DeleteApiStageVariableResponse
      */
@@ -2217,12 +2363,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an application.
-     *
-     * @description *   This operation is intended for API callers.
-     * *   After an application is deleted, the application and its API authorization cannot be restored.
-     * *   You can call this operation up to 50 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>After an application is deleted, the application and its API authorization cannot be restored.</li>
+     * <li>You can call this operation up to 50 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an application.</p>
+     * 
      * @param request DeleteAppRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAppResponse
@@ -2260,12 +2410,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an application.
-     *
-     * @description *   This operation is intended for API callers.
-     * *   After an application is deleted, the application and its API authorization cannot be restored.
-     * *   You can call this operation up to 50 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>After an application is deleted, the application and its API authorization cannot be restored.</li>
+     * <li>You can call this operation up to 50 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an application.</p>
+     * 
      * @param request DeleteAppRequest
      * @return DeleteAppResponse
      */
@@ -2275,8 +2429,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除新的AppCode
-     *
+     * <b>summary</b> : 
+     * <p>删除新的AppCode</p>
+     * 
      * @param request DeleteAppCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAppCodeResponse
@@ -2310,8 +2465,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除新的AppCode
-     *
+     * <b>summary</b> : 
+     * <p>删除新的AppCode</p>
+     * 
      * @param request DeleteAppCodeRequest
      * @return DeleteAppCodeResponse
      */
@@ -2321,8 +2477,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除新的AppKey
-     *
+     * <b>summary</b> : 
+     * <p>删除新的AppKey</p>
+     * 
      * @param request DeleteAppKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAppKeyResponse
@@ -2356,8 +2513,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除新的AppKey
-     *
+     * <b>summary</b> : 
+     * <p>删除新的AppKey</p>
+     * 
      * @param request DeleteAppKeyRequest
      * @return DeleteAppKeyResponse
      */
@@ -2367,8 +2525,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a backend service.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a backend service.</p>
+     * 
      * @param request DeleteBackendRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteBackendResponse
@@ -2402,8 +2561,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a backend service.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a backend service.</p>
+     * 
      * @param request DeleteBackendRequest
      * @return DeleteBackendResponse
      */
@@ -2413,8 +2573,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes the definition of a backend service in an environment. After the definition is deleted, the API that uses the backend service and is published to this environment will be unpublished.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes the definition of a backend service in an environment. After the definition is deleted, the API that uses the backend service and is published to this environment will be unpublished.</p>
+     * 
      * @param request DeleteBackendModelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteBackendModelResponse
@@ -2456,8 +2617,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes the definition of a backend service in an environment. After the definition is deleted, the API that uses the backend service and is published to this environment will be unpublished.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes the definition of a backend service in an environment. After the definition is deleted, the API that uses the backend service and is published to this environment will be unpublished.</p>
+     * 
      * @param request DeleteBackendModelRequest
      * @return DeleteBackendModelResponse
      */
@@ -2467,8 +2629,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除自定义数据集
-     *
+     * <b>summary</b> : 
+     * <p>删除自定义数据集</p>
+     * 
      * @param request DeleteDatasetRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDatasetResponse
@@ -2502,8 +2665,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除自定义数据集
-     *
+     * <b>summary</b> : 
+     * <p>删除自定义数据集</p>
+     * 
      * @param request DeleteDatasetRequest
      * @return DeleteDatasetResponse
      */
@@ -2513,8 +2677,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a data entry from a custom dataset.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a data entry from a custom dataset.</p>
+     * 
      * @param request DeleteDatasetItemRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDatasetItemResponse
@@ -2552,8 +2717,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a data entry from a custom dataset.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a data entry from a custom dataset.</p>
+     * 
      * @param request DeleteDatasetItemRequest
      * @return DeleteDatasetItemResponse
      */
@@ -2563,12 +2729,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Unbinds a custom domain name from a specified API group.
-     *
-     * @description *   This operation is intended for API providers.
-     * *   If the specified domain name does not exist, a successful response will still appear.
-     * *   Unbinding a domain name from an API group will affect access to the APIs in the group. Exercise caution when using this operation.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>If the specified domain name does not exist, a successful response will still appear.</li>
+     * <li>Unbinding a domain name from an API group will affect access to the APIs in the group. Exercise caution when using this operation.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Unbinds a custom domain name from a specified API group.</p>
+     * 
      * @param request DeleteDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDomainResponse
@@ -2606,12 +2776,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Unbinds a custom domain name from a specified API group.
-     *
-     * @description *   This operation is intended for API providers.
-     * *   If the specified domain name does not exist, a successful response will still appear.
-     * *   Unbinding a domain name from an API group will affect access to the APIs in the group. Exercise caution when using this operation.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>If the specified domain name does not exist, a successful response will still appear.</li>
+     * <li>Unbinding a domain name from an API group will affect access to the APIs in the group. Exercise caution when using this operation.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Unbinds a custom domain name from a specified API group.</p>
+     * 
      * @param request DeleteDomainRequest
      * @return DeleteDomainResponse
      */
@@ -2621,8 +2795,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes the SSL certificate of a specified domain name. This operation is intended for API providers. If the SSL certificate does not exist, a success response is still returned. If the specified API group does not exist, the InvalidGroupId.NotFound error is returned. Access over HTTPS is not supported after the SSL certificate is deleted. Exercise caution when using this API operation.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes the SSL certificate of a specified domain name. This operation is intended for API providers. If the SSL certificate does not exist, a success response is still returned. If the specified API group does not exist, the InvalidGroupId.NotFound error is returned. Access over HTTPS is not supported after the SSL certificate is deleted. Exercise caution when using this API operation.</p>
+     * 
      * @param request DeleteDomainCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDomainCertificateResponse
@@ -2664,8 +2839,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes the SSL certificate of a specified domain name. This operation is intended for API providers. If the SSL certificate does not exist, a success response is still returned. If the specified API group does not exist, the InvalidGroupId.NotFound error is returned. Access over HTTPS is not supported after the SSL certificate is deleted. Exercise caution when using this API operation.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes the SSL certificate of a specified domain name. This operation is intended for API providers. If the SSL certificate does not exist, a success response is still returned. If the specified API group does not exist, the InvalidGroupId.NotFound error is returned. Access over HTTPS is not supported after the SSL certificate is deleted. Exercise caution when using this API operation.</p>
+     * 
      * @param request DeleteDomainCertificateRequest
      * @return DeleteDomainCertificateResponse
      */
@@ -2675,8 +2851,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an API Gateway instance.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes an API Gateway instance.</p>
+     * 
      * @param request DeleteInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteInstanceResponse
@@ -2710,8 +2887,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an API Gateway instance.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes an API Gateway instance.</p>
+     * 
      * @param request DeleteInstanceRequest
      * @return DeleteInstanceResponse
      */
@@ -2721,12 +2899,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an access control list (ACL).
-     *
-     * @description *   This operation is intended for API providers.
-     * *   If the ACL is bound to an API, you must unbind the ACL from the API before you can delete the ACL. Otherwise, an error is returned.
-     * *   If you call this operation on an ACL that does not exist, a success message is returned.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>If the ACL is bound to an API, you must unbind the ACL from the API before you can delete the ACL. Otherwise, an error is returned.</li>
+     * <li>If you call this operation on an ACL that does not exist, a success message is returned.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an access control list (ACL).</p>
+     * 
      * @param request DeleteIpControlRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteIpControlResponse
@@ -2760,12 +2942,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an access control list (ACL).
-     *
-     * @description *   This operation is intended for API providers.
-     * *   If the ACL is bound to an API, you must unbind the ACL from the API before you can delete the ACL. Otherwise, an error is returned.
-     * *   If you call this operation on an ACL that does not exist, a success message is returned.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>If the ACL is bound to an API, you must unbind the ACL from the API before you can delete the ACL. Otherwise, an error is returned.</li>
+     * <li>If you call this operation on an ACL that does not exist, a success message is returned.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an access control list (ACL).</p>
+     * 
      * @param request DeleteIpControlRequest
      * @return DeleteIpControlResponse
      */
@@ -2775,8 +2961,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Delete the specified log configuration.
-     *
+     * <b>summary</b> : 
+     * <p>Delete the specified log configuration.</p>
+     * 
      * @param request DeleteLogConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteLogConfigResponse
@@ -2810,8 +2997,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Delete the specified log configuration.
-     *
+     * <b>summary</b> : 
+     * <p>Delete the specified log configuration.</p>
+     * 
      * @param request DeleteLogConfigRequest
      * @return DeleteLogConfigResponse
      */
@@ -2821,8 +3009,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a model from Model Management for an API group.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a model from Model Management for an API group.</p>
+     * 
      * @param request DeleteModelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteModelResponse
@@ -2856,8 +3045,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a model from Model Management for an API group.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a model from Model Management for an API group.</p>
+     * 
      * @param request DeleteModelRequest
      * @return DeleteModelResponse
      */
@@ -2867,8 +3057,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a CloudMonitor application group corresponding to an API group.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a CloudMonitor application group corresponding to an API group.</p>
+     * 
      * @param request DeleteMonitorGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteMonitorGroupResponse
@@ -2906,8 +3097,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a CloudMonitor application group corresponding to an API group.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a CloudMonitor application group corresponding to an API group.</p>
+     * 
      * @param request DeleteMonitorGroupRequest
      * @return DeleteMonitorGroupResponse
      */
@@ -2917,11 +3109,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a plug-in.
-     *
-     * @description *   This operation is intended for API providers.
-     * *   You must first unbind the plug-in from the API. Otherwise, an error is reported when you delete the plug-in.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>You must first unbind the plug-in from the API. Otherwise, an error is reported when you delete the plug-in.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a plug-in.</p>
+     * 
      * @param request DeletePluginRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeletePluginResponse
@@ -2959,11 +3155,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a plug-in.
-     *
-     * @description *   This operation is intended for API providers.
-     * *   You must first unbind the plug-in from the API. Otherwise, an error is reported when you delete the plug-in.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>You must first unbind the plug-in from the API. Otherwise, an error is reported when you delete the plug-in.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a plug-in.</p>
+     * 
      * @param request DeletePluginRequest
      * @return DeletePluginResponse
      */
@@ -2973,13 +3173,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a backend signature key.
-     *
-     * @description *   This API is intended for API providers.
-     * *   This API operation deletes an existing backend signature key.
-     * *   You cannot delete a key that is bound to an API. To delete the key, you must unbind it first.
-     * *   The QPS limit on this operation is 50 per user.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>This API operation deletes an existing backend signature key.</li>
+     * <li>You cannot delete a key that is bound to an API. To delete the key, you must unbind it first.</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a backend signature key.</p>
+     * 
      * @param request DeleteSignatureRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteSignatureResponse
@@ -3013,13 +3217,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a backend signature key.
-     *
-     * @description *   This API is intended for API providers.
-     * *   This API operation deletes an existing backend signature key.
-     * *   You cannot delete a key that is bound to an API. To delete the key, you must unbind it first.
-     * *   The QPS limit on this operation is 50 per user.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>This API operation deletes an existing backend signature key.</li>
+     * <li>You cannot delete a key that is bound to an API. To delete the key, you must unbind it first.</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a backend signature key.</p>
+     * 
      * @param request DeleteSignatureRequest
      * @return DeleteSignatureResponse
      */
@@ -3029,12 +3237,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a custom throttling policy and the special throttling rules in the policy.
-     *
-     * @description *   This API is intended for API providers.
-     * *   If the throttling policy you want to delete is bound to APIs, you need to unbind the policy first. Otherwise, an error is reported when you delete the policy.
-     * *   The QPS limit on this operation is 50 per user.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>If the throttling policy you want to delete is bound to APIs, you need to unbind the policy first. Otherwise, an error is reported when you delete the policy.</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a custom throttling policy and the special throttling rules in the policy.</p>
+     * 
      * @param request DeleteTrafficControlRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteTrafficControlResponse
@@ -3068,12 +3280,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a custom throttling policy and the special throttling rules in the policy.
-     *
-     * @description *   This API is intended for API providers.
-     * *   If the throttling policy you want to delete is bound to APIs, you need to unbind the policy first. Otherwise, an error is reported when you delete the policy.
-     * *   The QPS limit on this operation is 50 per user.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>If the throttling policy you want to delete is bound to APIs, you need to unbind the policy first. Otherwise, an error is reported when you delete the policy.</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a custom throttling policy and the special throttling rules in the policy.</p>
+     * 
      * @param request DeleteTrafficControlRequest
      * @return DeleteTrafficControlResponse
      */
@@ -3083,11 +3299,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a custom special throttling policy.
-     *
-     * @description *   This API is intended for API providers.
-     * *   You can obtain the input parameters required in this operation by calling other APIs.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>You can obtain the input parameters required in this operation by calling other APIs.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a custom special throttling policy.</p>
+     * 
      * @param request DeleteTrafficSpecialControlRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteTrafficSpecialControlResponse
@@ -3129,11 +3349,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a custom special throttling policy.
-     *
-     * @description *   This API is intended for API providers.
-     * *   You can obtain the input parameters required in this operation by calling other APIs.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>You can obtain the input parameters required in this operation by calling other APIs.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a custom special throttling policy.</p>
+     * 
      * @param request DeleteTrafficSpecialControlRequest
      * @return DeleteTrafficSpecialControlResponse
      */
@@ -3143,12 +3367,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Publishes an API to an environment.
-     *
-     * @description *   This operation is intended for API providers. Only the API that you have defined and published to a runtime environment can be called.
-     * *   An API is published to a cluster in under 5 seconds.
-     * *   The QPS limit on this operation is 50 per user.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers. Only the API that you have defined and published to a runtime environment can be called.</p>
+     * <ul>
+     * <li>An API is published to a cluster in under 5 seconds.</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Publishes an API to an environment.</p>
+     * 
      * @param request DeployApiRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeployApiResponse
@@ -3194,12 +3422,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Publishes an API to an environment.
-     *
-     * @description *   This operation is intended for API providers. Only the API that you have defined and published to a runtime environment can be called.
-     * *   An API is published to a cluster in under 5 seconds.
-     * *   The QPS limit on this operation is 50 per user.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers. Only the API that you have defined and published to a runtime environment can be called.</p>
+     * <ul>
+     * <li>An API is published to a cluster in under 5 seconds.</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Publishes an API to an environment.</p>
+     * 
      * @param request DeployApiRequest
      * @return DeployApiResponse
      */
@@ -3251,8 +3483,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary This feature provides instance-level access control for dedicated instances. Queries the details of an access control policy.
-     *
+     * <b>summary</b> : 
+     * <p>This feature provides instance-level access control for dedicated instances. Queries the details of an access control policy.</p>
+     * 
      * @param request DescribeAccessControlListAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAccessControlListAttributeResponse
@@ -3286,8 +3519,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary This feature provides instance-level access control for dedicated instances. Queries the details of an access control policy.
-     *
+     * <b>summary</b> : 
+     * <p>This feature provides instance-level access control for dedicated instances. Queries the details of an access control policy.</p>
+     * 
      * @param request DescribeAccessControlListAttributeRequest
      * @return DescribeAccessControlListAttributeResponse
      */
@@ -3297,8 +3531,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary This feature provides instance-level access control for dedicated instances. Queries access control policies.
-     *
+     * <b>summary</b> : 
+     * <p>This feature provides instance-level access control for dedicated instances. Queries access control policies.</p>
+     * 
      * @param request DescribeAccessControlListsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAccessControlListsResponse
@@ -3344,8 +3579,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary This feature provides instance-level access control for dedicated instances. Queries access control policies.
-     *
+     * <b>summary</b> : 
+     * <p>This feature provides instance-level access control for dedicated instances. Queries access control policies.</p>
+     * 
      * @param request DescribeAccessControlListsRequest
      * @return DescribeAccessControlListsResponse
      */
@@ -3355,10 +3591,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the definition of an API.
-     *
-     * @description *   This operation is intended for API providers.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the definition of an API.</p>
+     * 
      * @param request DescribeApiRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeApiResponse
@@ -3396,10 +3634,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the definition of an API.
-     *
-     * @description *   This operation is intended for API providers.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the definition of an API.</p>
+     * 
      * @param request DescribeApiRequest
      * @return DescribeApiResponse
      */
@@ -3409,13 +3649,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the documentation of an API.
-     *
-     * @description *   For API callers, the specified API must be a public or authorized private API that has been published to a runtime environment.
-     * *   When you call this operation as an API caller, the service information, parameter definitions, and other details of the API you specify are returned.
-     * *   When you call this operation as an API provider, the definition of the specified API running in the specified runtime environment is returned. The returned definition takes effect in the runtime environment, and may be different from the definition of the API you modify.
-     * *   Before you call this operation as an API provider, ensure that the API to be queried is a public one or that your application has been authorized to call the API, because authentication on API callers is required.
-     *
+     * <b>description</b> :
+     * <p>  For API callers, the specified API must be a public or authorized private API that has been published to a runtime environment.</p>
+     * <ul>
+     * <li>When you call this operation as an API caller, the service information, parameter definitions, and other details of the API you specify are returned.</li>
+     * <li>When you call this operation as an API provider, the definition of the specified API running in the specified runtime environment is returned. The returned definition takes effect in the runtime environment, and may be different from the definition of the API you modify.</li>
+     * <li>Before you call this operation as an API provider, ensure that the API to be queried is a public one or that your application has been authorized to call the API, because authentication on API callers is required.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the documentation of an API.</p>
+     * 
      * @param request DescribeApiDocRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeApiDocResponse
@@ -3457,13 +3701,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the documentation of an API.
-     *
-     * @description *   For API callers, the specified API must be a public or authorized private API that has been published to a runtime environment.
-     * *   When you call this operation as an API caller, the service information, parameter definitions, and other details of the API you specify are returned.
-     * *   When you call this operation as an API provider, the definition of the specified API running in the specified runtime environment is returned. The returned definition takes effect in the runtime environment, and may be different from the definition of the API you modify.
-     * *   Before you call this operation as an API provider, ensure that the API to be queried is a public one or that your application has been authorized to call the API, because authentication on API callers is required.
-     *
+     * <b>description</b> :
+     * <p>  For API callers, the specified API must be a public or authorized private API that has been published to a runtime environment.</p>
+     * <ul>
+     * <li>When you call this operation as an API caller, the service information, parameter definitions, and other details of the API you specify are returned.</li>
+     * <li>When you call this operation as an API provider, the definition of the specified API running in the specified runtime environment is returned. The returned definition takes effect in the runtime environment, and may be different from the definition of the API you modify.</li>
+     * <li>Before you call this operation as an API provider, ensure that the API to be queried is a public one or that your application has been authorized to call the API, because authentication on API callers is required.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the documentation of an API.</p>
+     * 
      * @param request DescribeApiDocRequest
      * @return DescribeApiDocResponse
      */
@@ -3473,10 +3721,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call this operation to query details about an API group, including the automatically assigned second-level domain name, custom domain name, and SSL certificate.
-     *
-     * @description *   This operation is intended for API providers.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>You can call this operation to query details about an API group, including the automatically assigned second-level domain name, custom domain name, and SSL certificate.</p>
+     * 
      * @param request DescribeApiGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeApiGroupResponse
@@ -3514,10 +3764,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call this operation to query details about an API group, including the automatically assigned second-level domain name, custom domain name, and SSL certificate.
-     *
-     * @description *   This operation is intended for API providers.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>You can call this operation to query details about an API group, including the automatically assigned second-level domain name, custom domain name, and SSL certificate.</p>
+     * 
      * @param request DescribeApiGroupRequest
      * @return DescribeApiGroupResponse
      */
@@ -3527,8 +3779,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the VPC whitelist that is allowed to access an API group.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the VPC whitelist that is allowed to access an API group.</p>
+     * 
      * @param request DescribeApiGroupVpcWhitelistRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeApiGroupVpcWhitelistResponse
@@ -3562,8 +3815,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the VPC whitelist that is allowed to access an API group.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the VPC whitelist that is allowed to access an API group.</p>
+     * 
      * @param request DescribeApiGroupVpcWhitelistRequest
      * @return DescribeApiGroupVpcWhitelistResponse
      */
@@ -3573,10 +3827,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries existing API groups and their basic information.
-     *
-     * @description *   This operation is intended for API providers.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries existing API groups and their basic information.</p>
+     * 
      * @param request DescribeApiGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeApiGroupsResponse
@@ -3638,10 +3894,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries existing API groups and their basic information.
-     *
-     * @description *   This operation is intended for API providers.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries existing API groups and their basic information.</p>
+     * 
      * @param request DescribeApiGroupsRequest
      * @return DescribeApiGroupsResponse
      */
@@ -3651,11 +3909,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the historical versions of a specified API.
-     *
-     * @description *   This operation is intended for API providers. Only APIs that have been published have historical version records.
-     * *   This operation allows you to obtain the historical versions of an API. This operation is always called by other operations.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers. Only APIs that have been published have historical version records.</p>
+     * <ul>
+     * <li>This operation allows you to obtain the historical versions of an API. This operation is always called by other operations.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the historical versions of a specified API.</p>
+     * 
      * @param request DescribeApiHistoriesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeApiHistoriesResponse
@@ -3709,11 +3971,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the historical versions of a specified API.
-     *
-     * @description *   This operation is intended for API providers. Only APIs that have been published have historical version records.
-     * *   This operation allows you to obtain the historical versions of an API. This operation is always called by other operations.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers. Only APIs that have been published have historical version records.</p>
+     * <ul>
+     * <li>This operation allows you to obtain the historical versions of an API. This operation is always called by other operations.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the historical versions of a specified API.</p>
+     * 
      * @param request DescribeApiHistoriesRequest
      * @return DescribeApiHistoriesResponse
      */
@@ -3723,12 +3989,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a specified historical version of a specified API definition.
-     *
-     * @description Queries the details of a specified historical version of a specified API definition.
-     * *   This API is intended for API providers.
-     * *   API Gateway records the time and definition of an API every time the API is published. You can use the version number obtained from other operations to query definition details at a certain publication.
-     *
+     * <b>description</b> :
+     * <p>Queries the details of a specified historical version of a specified API definition.</p>
+     * <ul>
+     * <li>This API is intended for API providers.</li>
+     * <li>API Gateway records the time and definition of an API every time the API is published. You can use the version number obtained from other operations to query definition details at a certain publication.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified historical version of a specified API definition.</p>
+     * 
      * @param request DescribeApiHistoryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeApiHistoryResponse
@@ -3774,12 +4044,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a specified historical version of a specified API definition.
-     *
-     * @description Queries the details of a specified historical version of a specified API definition.
-     * *   This API is intended for API providers.
-     * *   API Gateway records the time and definition of an API every time the API is published. You can use the version number obtained from other operations to query definition details at a certain publication.
-     *
+     * <b>description</b> :
+     * <p>Queries the details of a specified historical version of a specified API definition.</p>
+     * <ul>
+     * <li>This API is intended for API providers.</li>
+     * <li>API Gateway records the time and definition of an API every time the API is published. You can use the version number obtained from other operations to query definition details at a certain publication.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified historical version of a specified API definition.</p>
+     * 
      * @param request DescribeApiHistoryRequest
      * @return DescribeApiHistoryResponse
      */
@@ -3789,12 +4063,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the access control lists (ACLs) that are bound to all the APIs in an API group in a specified environment.
-     *
-     * @description *   This operation is intended for API callers.
-     * *   If an optional parameter is not specified, all results are returned on separate pages.
-     * ·
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>If an optional parameter is not specified, all results are returned on separate pages.
+     * ·</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the access control lists (ACLs) that are bound to all the APIs in an API group in a specified environment.</p>
+     * 
      * @param request DescribeApiIpControlsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeApiIpControlsResponse
@@ -3844,12 +4122,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the access control lists (ACLs) that are bound to all the APIs in an API group in a specified environment.
-     *
-     * @description *   This operation is intended for API callers.
-     * *   If an optional parameter is not specified, all results are returned on separate pages.
-     * ·
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>If an optional parameter is not specified, all results are returned on separate pages.
+     * ·</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the access control lists (ACLs) that are bound to all the APIs in an API group in a specified environment.</p>
+     * 
      * @param request DescribeApiIpControlsRequest
      * @return DescribeApiIpControlsResponse
      */
@@ -3859,12 +4141,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the response time statistics of an API.
-     *
-     * @description You can call this operation to query the latency metrics in milliseconds for a specified API.
-     * *   This API is intended for API providers.
-     * *   Only statistics for API calls made in the release environment are collected by default.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to query the latency metrics in milliseconds for a specified API.</p>
+     * <ul>
+     * <li>This API is intended for API providers.</li>
+     * <li>Only statistics for API calls made in the release environment are collected by default.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the response time statistics of an API.</p>
+     * 
      * @param request DescribeApiLatencyDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeApiLatencyDataResponse
@@ -3914,12 +4200,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the response time statistics of an API.
-     *
-     * @description You can call this operation to query the latency metrics in milliseconds for a specified API.
-     * *   This API is intended for API providers.
-     * *   Only statistics for API calls made in the release environment are collected by default.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to query the latency metrics in milliseconds for a specified API.</p>
+     * <ul>
+     * <li>This API is intended for API providers.</li>
+     * <li>Only statistics for API calls made in the release environment are collected by default.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the response time statistics of an API.</p>
+     * 
      * @param request DescribeApiLatencyDataRequest
      * @return DescribeApiLatencyDataResponse
      */
@@ -3929,8 +4219,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Alibaba Cloud Marketplace attributes of an API.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the Alibaba Cloud Marketplace attributes of an API.</p>
+     * 
      * @param request DescribeApiMarketAttributesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeApiMarketAttributesResponse
@@ -3968,8 +4259,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Alibaba Cloud Marketplace attributes of an API.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the Alibaba Cloud Marketplace attributes of an API.</p>
+     * 
      * @param request DescribeApiMarketAttributesRequest
      * @return DescribeApiMarketAttributesResponse
      */
@@ -3979,8 +4271,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the attached APIs of an API product.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the attached APIs of an API product.</p>
+     * 
      * @param request DescribeApiProductApisRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeApiProductApisResponse
@@ -4022,8 +4315,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the attached APIs of an API product.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the attached APIs of an API product.</p>
+     * 
      * @param request DescribeApiProductApisRequest
      * @return DescribeApiProductApisResponse
      */
@@ -4033,8 +4327,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries API products by application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries API products by application.</p>
+     * 
      * @param request DescribeApiProductsByAppRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeApiProductsByAppResponse
@@ -4076,8 +4371,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries API products by application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries API products by application.</p>
+     * 
      * @param request DescribeApiProductsByAppRequest
      * @return DescribeApiProductsByAppResponse
      */
@@ -4087,11 +4383,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the QPS statistics of an API.
-     *
-     * @description *   This API is intended for API providers.
-     * *   Only statistics for API calls made in the release environment are collected by default.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>Only statistics for API calls made in the release environment are collected by default.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the QPS statistics of an API.</p>
+     * 
      * @param request DescribeApiQpsDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeApiQpsDataResponse
@@ -4141,11 +4441,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the QPS statistics of an API.
-     *
-     * @description *   This API is intended for API providers.
-     * *   Only statistics for API calls made in the release environment are collected by default.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>Only statistics for API calls made in the release environment are collected by default.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the QPS statistics of an API.</p>
+     * 
      * @param request DescribeApiQpsDataRequest
      * @return DescribeApiQpsDataResponse
      */
@@ -4155,11 +4459,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the backend signature keys that are bound to the APIs of a specified API group in a specified environment.
-     *
-     * @description *   This API is intended for API providers.
-     * *   The ApiIds parameter is optional. If this parameter is not specified, all results in the specified environment of an API group are returned.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>The ApiIds parameter is optional. If this parameter is not specified, all results in the specified environment of an API group are returned.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the backend signature keys that are bound to the APIs of a specified API group in a specified environment.</p>
+     * 
      * @param request DescribeApiSignaturesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeApiSignaturesResponse
@@ -4209,11 +4517,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the backend signature keys that are bound to the APIs of a specified API group in a specified environment.
-     *
-     * @description *   This API is intended for API providers.
-     * *   The ApiIds parameter is optional. If this parameter is not specified, all results in the specified environment of an API group are returned.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>The ApiIds parameter is optional. If this parameter is not specified, all results in the specified environment of an API group are returned.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the backend signature keys that are bound to the APIs of a specified API group in a specified environment.</p>
+     * 
      * @param request DescribeApiSignaturesRequest
      * @return DescribeApiSignaturesResponse
      */
@@ -4223,11 +4535,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the throttling policies bound to all members of an API group in a specified environment.
-     *
-     * @description *   This API is intended for API providers.
-     * *   The ApiIds parameter is optional. If this parameter is not specified, all results in the specified environment of an API group are returned.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>The ApiIds parameter is optional. If this parameter is not specified, all results in the specified environment of an API group are returned.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the throttling policies bound to all members of an API group in a specified environment.</p>
+     * 
      * @param request DescribeApiTrafficControlsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeApiTrafficControlsResponse
@@ -4277,11 +4593,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the throttling policies bound to all members of an API group in a specified environment.
-     *
-     * @description *   This API is intended for API providers.
-     * *   The ApiIds parameter is optional. If this parameter is not specified, all results in the specified environment of an API group are returned.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>The ApiIds parameter is optional. If this parameter is not specified, all results in the specified environment of an API group are returned.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the throttling policies bound to all members of an API group in a specified environment.</p>
+     * 
      * @param request DescribeApiTrafficControlsRequest
      * @return DescribeApiTrafficControlsResponse
      */
@@ -4291,11 +4611,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the statistics on the traffic of an API.
-     *
-     * @description *   This API is intended for API providers.
-     * *   Only statistics for API calls made in the release environment are collected by default.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>Only statistics for API calls made in the release environment are collected by default.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the statistics on the traffic of an API.</p>
+     * 
      * @param request DescribeApiTrafficDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeApiTrafficDataResponse
@@ -4345,11 +4669,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the statistics on the traffic of an API.
-     *
-     * @description *   This API is intended for API providers.
-     * *   Only statistics for API calls made in the release environment are collected by default.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>Only statistics for API calls made in the release environment are collected by default.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the statistics on the traffic of an API.</p>
+     * 
      * @param request DescribeApiTrafficDataRequest
      * @return DescribeApiTrafficDataResponse
      */
@@ -4359,12 +4687,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of APIs that are being defined.
-     *
-     * @description *   This operation is intended for API callers.
-     * *   This operation returns a list of all APIs that are being defined. The basic information about these APIs is also returned in the list.
-     * *   This operation returns all APIs that are being edited, regardless of their environments. The returned definitions may be different from the definitions in the environments.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>This operation returns a list of all APIs that are being defined. The basic information about these APIs is also returned in the list.</li>
+     * <li>This operation returns all APIs that are being edited, regardless of their environments. The returned definitions may be different from the definitions in the environments.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of APIs that are being defined.</p>
+     * 
      * @param request DescribeApisRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeApisResponse
@@ -4446,12 +4778,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of APIs that are being defined.
-     *
-     * @description *   This operation is intended for API callers.
-     * *   This operation returns a list of all APIs that are being defined. The basic information about these APIs is also returned in the list.
-     * *   This operation returns all APIs that are being edited, regardless of their environments. The returned definitions may be different from the definitions in the environments.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>This operation returns a list of all APIs that are being defined. The basic information about these APIs is also returned in the list.</li>
+     * <li>This operation returns all APIs that are being edited, regardless of their environments. The returned definitions may be different from the definitions in the environments.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of APIs that are being defined.</p>
+     * 
      * @param request DescribeApisRequest
      * @return DescribeApisResponse
      */
@@ -4461,8 +4797,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the APIs with which an application is associated.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the APIs with which an application is associated.</p>
+     * 
      * @param request DescribeApisByAppRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeApisByAppResponse
@@ -4524,8 +4861,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the APIs with which an application is associated.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the APIs with which an application is associated.</p>
+     * 
      * @param request DescribeApisByAppRequest
      * @return DescribeApisByAppResponse
      */
@@ -4535,8 +4873,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries APIs in the draft or published state that are created by using a specified backend service.
-     *
+     * <b>summary</b> : 
+     * <p>Queries APIs in the draft or published state that are created by using a specified backend service.</p>
+     * 
      * @param request DescribeApisByBackendRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeApisByBackendResponse
@@ -4582,8 +4921,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries APIs in the draft or published state that are created by using a specified backend service.
-     *
+     * <b>summary</b> : 
+     * <p>Queries APIs in the draft or published state that are created by using a specified backend service.</p>
+     * 
      * @param request DescribeApisByBackendRequest
      * @return DescribeApisByBackendResponse
      */
@@ -4593,11 +4933,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the APIs that are bound to an access control list (ACL).
-     *
-     * @description *   This operation is intended for API callers.
-     * *   You can specify PageNumber to obtain the result on the specified page.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>You can specify PageNumber to obtain the result on the specified page.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the APIs that are bound to an access control list (ACL).</p>
+     * 
      * @param request DescribeApisByIpControlRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeApisByIpControlResponse
@@ -4639,11 +4983,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the APIs that are bound to an access control list (ACL).
-     *
-     * @description *   This operation is intended for API callers.
-     * *   You can specify PageNumber to obtain the result on the specified page.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>You can specify PageNumber to obtain the result on the specified page.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the APIs that are bound to an access control list (ACL).</p>
+     * 
      * @param request DescribeApisByIpControlRequest
      * @return DescribeApisByIpControlResponse
      */
@@ -4653,11 +5001,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the APIs to which a specified backend signature key is bound.
-     *
-     * @description *   This API is intended for API providers.
-     * *   The results are returned on separate pages. You can specify PageNumber to obtain the result on the specified page.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>The results are returned on separate pages. You can specify PageNumber to obtain the result on the specified page.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the APIs to which a specified backend signature key is bound.</p>
+     * 
      * @param request DescribeApisBySignatureRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeApisBySignatureResponse
@@ -4699,11 +5051,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the APIs to which a specified backend signature key is bound.
-     *
-     * @description *   This API is intended for API providers.
-     * *   The results are returned on separate pages. You can specify PageNumber to obtain the result on the specified page.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>The results are returned on separate pages. You can specify PageNumber to obtain the result on the specified page.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the APIs to which a specified backend signature key is bound.</p>
+     * 
      * @param request DescribeApisBySignatureRequest
      * @return DescribeApisBySignatureResponse
      */
@@ -4713,11 +5069,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the APIs to which a specified throttling policy is bound.
-     *
-     * @description *   This API is intended for API providers.
-     * *   You can specify PageNumber to obtain the result on the specified page.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>You can specify PageNumber to obtain the result on the specified page.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the APIs to which a specified throttling policy is bound.</p>
+     * 
      * @param request DescribeApisByTrafficControlRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeApisByTrafficControlResponse
@@ -4759,11 +5119,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the APIs to which a specified throttling policy is bound.
-     *
-     * @description *   This API is intended for API providers.
-     * *   You can specify PageNumber to obtain the result on the specified page.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>You can specify PageNumber to obtain the result on the specified page.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the APIs to which a specified throttling policy is bound.</p>
+     * 
      * @param request DescribeApisByTrafficControlRequest
      * @return DescribeApisByTrafficControlResponse
      */
@@ -4823,8 +5187,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries APIs by application. The environment information is also returned.
-     *
+     * <b>summary</b> : 
+     * <p>Queries APIs by application. The environment information is also returned.</p>
+     * 
      * @param request DescribeApisWithStageNameIntegratedByAppRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeApisWithStageNameIntegratedByAppResponse
@@ -4886,8 +5251,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries APIs by application. The environment information is also returned.
-     *
+     * <b>summary</b> : 
+     * <p>Queries APIs by application. The environment information is also returned.</p>
+     * 
      * @param request DescribeApisWithStageNameIntegratedByAppRequest
      * @return DescribeApisWithStageNameIntegratedByAppResponse
      */
@@ -4897,8 +5263,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the apps that can be authorized.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the apps that can be authorized.</p>
+     * 
      * @param request DescribeAppRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAppResponse
@@ -4932,8 +5299,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the apps that can be authorized.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the apps that can be authorized.</p>
+     * 
      * @param request DescribeAppRequest
      * @return DescribeAppResponse
      */
@@ -4943,11 +5311,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries apps and their basic information.
-     *
-     * @description *   This operation is intended for API callers.
-     * *   AppId is optional.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>AppId is optional.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries apps and their basic information.</p>
+     * 
      * @param request DescribeAppAttributesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAppAttributesResponse
@@ -5017,11 +5389,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries apps and their basic information.
-     *
-     * @description *   This operation is intended for API callers.
-     * *   AppId is optional.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>AppId is optional.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries apps and their basic information.</p>
+     * 
      * @param request DescribeAppAttributesRequest
      * @return DescribeAppAttributesResponse
      */
@@ -5031,8 +5407,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询APP的密钥信息
-     *
+     * <b>summary</b> : 
+     * <p>查询APP的密钥信息</p>
+     * 
      * @param request DescribeAppSecuritiesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAppSecuritiesResponse
@@ -5066,8 +5443,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询APP的密钥信息
-     *
+     * <b>summary</b> : 
+     * <p>查询APP的密钥信息</p>
+     * 
      * @param request DescribeAppSecuritiesRequest
      * @return DescribeAppSecuritiesResponse
      */
@@ -5077,10 +5455,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary This key is used for authentication when an API call is made.
-     *
-     * @description *   This operation is intended for API callers.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>This key is used for authentication when an API call is made.</p>
+     * 
      * @param request DescribeAppSecurityRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAppSecurityResponse
@@ -5118,10 +5498,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary This key is used for authentication when an API call is made.
-     *
-     * @description *   This operation is intended for API callers.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>This key is used for authentication when an API call is made.</p>
+     * 
      * @param request DescribeAppSecurityRequest
      * @return DescribeAppSecurityResponse
      */
@@ -5131,12 +5513,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the apps. App information is returned only to the app owner.
-     *
-     * @description *   This API is intended for API providers.
-     * *   API providers can use the app IDs or their Apsara Stack tenant accounts to query app information.
-     * *   Each provider can call this operation for a maximum of 200 times every day in a region.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>API providers can use the app IDs or their Apsara Stack tenant accounts to query app information.</li>
+     * <li>Each provider can call this operation for a maximum of 200 times every day in a region.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the apps. App information is returned only to the app owner.</p>
+     * 
      * @param request DescribeAppsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAppsResponse
@@ -5182,12 +5568,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the apps. App information is returned only to the app owner.
-     *
-     * @description *   This API is intended for API providers.
-     * *   API providers can use the app IDs or their Apsara Stack tenant accounts to query app information.
-     * *   Each provider can call this operation for a maximum of 200 times every day in a region.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>API providers can use the app IDs or their Apsara Stack tenant accounts to query app information.</li>
+     * <li>Each provider can call this operation for a maximum of 200 times every day in a region.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the apps. App information is returned only to the app owner.</p>
+     * 
      * @param request DescribeAppsRequest
      * @return DescribeAppsResponse
      */
@@ -5197,8 +5587,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries authorized applications by API product.
-     *
+     * <b>summary</b> : 
+     * <p>Queries authorized applications by API product.</p>
+     * 
      * @param request DescribeAppsByApiProductRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAppsByApiProductResponse
@@ -5244,8 +5635,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries authorized applications by API product.
-     *
+     * <b>summary</b> : 
+     * <p>Queries authorized applications by API product.</p>
+     * 
      * @param request DescribeAppsByApiProductRequest
      * @return DescribeAppsByApiProductResponse
      */
@@ -5255,11 +5647,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the authorized APIs of a specified APP.
-     *
-     * @description *   This operation is intended for API callers.
-     * *   The specified application can call all APIs included in the responses.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>The specified application can call all APIs included in the responses.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the authorized APIs of a specified APP.</p>
+     * 
      * @param request DescribeAuthorizedApisRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAuthorizedApisResponse
@@ -5301,11 +5697,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the authorized APIs of a specified APP.
-     *
-     * @description *   This operation is intended for API callers.
-     * *   The specified application can call all APIs included in the responses.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>The specified application can call all APIs included in the responses.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the authorized APIs of a specified APP.</p>
+     * 
      * @param request DescribeAuthorizedApisRequest
      * @return DescribeAuthorizedApisResponse
      */
@@ -5315,11 +5715,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the current apps.
-     *
-     * @description *   This operation is intended for API providers.
-     * *   All applications included in the responses have access to the specified API.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>All applications included in the responses have access to the specified API.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the current apps.</p>
+     * 
      * @param request DescribeAuthorizedAppsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAuthorizedAppsResponse
@@ -5381,11 +5785,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the current apps.
-     *
-     * @description *   This operation is intended for API providers.
-     * *   All applications included in the responses have access to the specified API.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>All applications included in the responses have access to the specified API.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the current apps.</p>
+     * 
      * @param request DescribeAuthorizedAppsRequest
      * @return DescribeAuthorizedAppsResponse
      */
@@ -5395,8 +5803,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a backend service and its URL configured for each environment.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a backend service and its URL configured for each environment.</p>
+     * 
      * @param request DescribeBackendInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeBackendInfoResponse
@@ -5430,8 +5839,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a backend service and its URL configured for each environment.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a backend service and its URL configured for each environment.</p>
+     * 
      * @param request DescribeBackendInfoRequest
      * @return DescribeBackendInfoResponse
      */
@@ -5441,8 +5851,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries backend services. You can filter backend services by backend service name and backend service type.
-     *
+     * <b>summary</b> : 
+     * <p>Queries backend services. You can filter backend services by backend service name and backend service type.</p>
+     * 
      * @param request DescribeBackendListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeBackendListResponse
@@ -5492,8 +5903,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries backend services. You can filter backend services by backend service name and backend service type.
-     *
+     * <b>summary</b> : 
+     * <p>Queries backend services. You can filter backend services by backend service name and backend service type.</p>
+     * 
      * @param request DescribeBackendListRequest
      * @return DescribeBackendListResponse
      */
@@ -5503,8 +5915,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a single dataset.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a single dataset.</p>
+     * 
      * @param request DescribeDatasetInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDatasetInfoResponse
@@ -5538,8 +5951,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a single dataset.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a single dataset.</p>
+     * 
      * @param request DescribeDatasetInfoRequest
      * @return DescribeDatasetInfoResponse
      */
@@ -5549,8 +5963,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a data entry in a custom dataset.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a data entry in a custom dataset.</p>
+     * 
      * @param request DescribeDatasetItemInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDatasetItemInfoResponse
@@ -5592,8 +6007,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a data entry in a custom dataset.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a data entry in a custom dataset.</p>
+     * 
      * @param request DescribeDatasetItemInfoRequest
      * @return DescribeDatasetItemInfoResponse
      */
@@ -5603,8 +6019,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the data entries of a custom dataset.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the data entries of a custom dataset.</p>
+     * 
      * @param request DescribeDatasetItemListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDatasetItemListResponse
@@ -5650,8 +6067,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the data entries of a custom dataset.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the data entries of a custom dataset.</p>
+     * 
      * @param request DescribeDatasetItemListRequest
      * @return DescribeDatasetItemListResponse
      */
@@ -5661,8 +6079,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries custom datasets.
-     *
+     * <b>summary</b> : 
+     * <p>Queries custom datasets.</p>
+     * 
      * @param request DescribeDatasetListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDatasetListResponse
@@ -5708,8 +6127,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries custom datasets.
-     *
+     * <b>summary</b> : 
+     * <p>Queries custom datasets.</p>
+     * 
      * @param request DescribeDatasetListRequest
      * @return DescribeDatasetListResponse
      */
@@ -5719,8 +6139,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the progress of an asynchronous API publishing task.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the progress of an asynchronous API publishing task.</p>
+     * 
      * @param request DescribeDeployApiTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDeployApiTaskResponse
@@ -5754,8 +6175,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the progress of an asynchronous API publishing task.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the progress of an asynchronous API publishing task.</p>
+     * 
      * @param request DescribeDeployApiTaskRequest
      * @return DescribeDeployApiTaskResponse
      */
@@ -5765,8 +6187,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the definition of an API that takes effect in an environment. The definition may differ from the definition being edited.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the definition of an API that takes effect in an environment. The definition may differ from the definition being edited.</p>
+     * 
      * @param request DescribeDeployedApiRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDeployedApiResponse
@@ -5808,8 +6231,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the definition of an API that takes effect in an environment. The definition may differ from the definition being edited.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the definition of an API that takes effect in an environment. The definition may differ from the definition being edited.</p>
+     * 
      * @param request DescribeDeployedApiRequest
      * @return DescribeDeployedApiResponse
      */
@@ -5819,10 +6243,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the APIs that are published to and running in an environment.
-     *
-     * @description *   This operation is intended for API callers.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the APIs that are published to and running in an environment.</p>
+     * 
      * @param request DescribeDeployedApisRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDeployedApisResponse
@@ -5892,10 +6318,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the APIs that are published to and running in an environment.
-     *
-     * @description *   This operation is intended for API callers.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the APIs that are published to and running in an environment.</p>
+     * 
      * @param request DescribeDeployedApisRequest
      * @return DescribeDeployedApisResponse
      */
@@ -5905,8 +6333,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about a bound custom domain name, including the system assigned second-level domain name, custom domain name, and SSL certificate.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details about a bound custom domain name, including the system assigned second-level domain name, custom domain name, and SSL certificate.</p>
+     * 
      * @param request DescribeDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainResponse
@@ -5944,8 +6373,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about a bound custom domain name, including the system assigned second-level domain name, custom domain name, and SSL certificate.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details about a bound custom domain name, including the system assigned second-level domain name, custom domain name, and SSL certificate.</p>
+     * 
      * @param request DescribeDomainRequest
      * @return DescribeDomainResponse
      */
@@ -5955,8 +6385,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the average latency of an API group in an environment.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the average latency of an API group in an environment.</p>
+     * 
      * @param request DescribeGroupLatencyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeGroupLatencyResponse
@@ -6002,8 +6433,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the average latency of an API group in an environment.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the average latency of an API group in an environment.</p>
+     * 
      * @param request DescribeGroupLatencyRequest
      * @return DescribeGroupLatencyResponse
      */
@@ -6013,8 +6445,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the statistics on the number of requests directed to an API group within a period of time.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the statistics on the number of requests directed to an API group within a period of time.</p>
+     * 
      * @param request DescribeGroupQpsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeGroupQpsResponse
@@ -6060,8 +6493,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the statistics on the number of requests directed to an API group within a period of time.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the statistics on the number of requests directed to an API group within a period of time.</p>
+     * 
      * @param request DescribeGroupQpsRequest
      * @return DescribeGroupQpsResponse
      */
@@ -6071,8 +6505,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the traffic of an API group.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the traffic of an API group.</p>
+     * 
      * @param request DescribeGroupTrafficRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeGroupTrafficResponse
@@ -6118,8 +6553,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the traffic of an API group.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the traffic of an API group.</p>
+     * 
      * @param request DescribeGroupTrafficRequest
      * @return DescribeGroupTrafficResponse
      */
@@ -6129,8 +6565,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the historical versions of an API.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the historical versions of an API.</p>
+     * 
      * @param request DescribeHistoryApisRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeHistoryApisResponse
@@ -6184,8 +6621,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the historical versions of an API.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the historical versions of an API.</p>
+     * 
      * @param request DescribeHistoryApisRequest
      * @return DescribeHistoryApisResponse
      */
@@ -6195,8 +6633,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the result of an OAS API import task.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the result of an OAS API import task.</p>
+     * 
      * @param request DescribeImportOASTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeImportOASTaskResponse
@@ -6230,8 +6669,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the result of an OAS API import task.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the result of an OAS API import task.</p>
+     * 
      * @param request DescribeImportOASTaskRequest
      * @return DescribeImportOASTaskResponse
      */
@@ -6241,8 +6681,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询专享实例集群的详情
-     *
+     * <b>summary</b> : 
+     * <p>查询专享实例集群的详情</p>
+     * 
      * @param request DescribeInstanceClusterInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstanceClusterInfoResponse
@@ -6276,8 +6717,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询专享实例集群的详情
-     *
+     * <b>summary</b> : 
+     * <p>查询专享实例集群的详情</p>
+     * 
      * @param request DescribeInstanceClusterInfoRequest
      * @return DescribeInstanceClusterInfoResponse
      */
@@ -6287,8 +6729,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询专享实例集群列表
-     *
+     * <b>summary</b> : 
+     * <p>查询专享实例集群列表</p>
+     * 
      * @param request DescribeInstanceClusterListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstanceClusterListResponse
@@ -6334,8 +6777,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询专享实例集群列表
-     *
+     * <b>summary</b> : 
+     * <p>查询专享实例集群列表</p>
+     * 
      * @param request DescribeInstanceClusterListRequest
      * @return DescribeInstanceClusterListResponse
      */
@@ -6345,8 +6789,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the number of lost connections to a dedicated instance within a period of time.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the number of lost connections to a dedicated instance within a period of time.</p>
+     * 
      * @param request DescribeInstanceDropConnectionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstanceDropConnectionsResponse
@@ -6392,8 +6837,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the number of lost connections to a dedicated instance within a period of time.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the number of lost connections to a dedicated instance within a period of time.</p>
+     * 
      * @param request DescribeInstanceDropConnectionsRequest
      * @return DescribeInstanceDropConnectionsResponse
      */
@@ -6403,8 +6849,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the number of dropped packets within a period of time.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the number of dropped packets within a period of time.</p>
+     * 
      * @param request DescribeInstanceDropPacketRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstanceDropPacketResponse
@@ -6450,8 +6897,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the number of dropped packets within a period of time.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the number of dropped packets within a period of time.</p>
+     * 
      * @param request DescribeInstanceDropPacketRequest
      * @return DescribeInstanceDropPacketResponse
      */
@@ -6461,8 +6909,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the distribution of HTTP status codes of requests to a dedicated instance within a period of time.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the distribution of HTTP status codes of requests to a dedicated instance within a period of time.</p>
+     * 
      * @param request DescribeInstanceHttpCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstanceHttpCodeResponse
@@ -6508,8 +6957,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the distribution of HTTP status codes of requests to a dedicated instance within a period of time.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the distribution of HTTP status codes of requests to a dedicated instance within a period of time.</p>
+     * 
      * @param request DescribeInstanceHttpCodeRequest
      * @return DescribeInstanceHttpCodeResponse
      */
@@ -6519,8 +6969,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the average latency of a dedicated instance over a period of time.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the average latency of a dedicated instance over a period of time.</p>
+     * 
      * @param request DescribeInstanceLatencyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstanceLatencyResponse
@@ -6566,8 +7017,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the average latency of a dedicated instance over a period of time.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the average latency of a dedicated instance over a period of time.</p>
+     * 
      * @param request DescribeInstanceLatencyRequest
      * @return DescribeInstanceLatencyResponse
      */
@@ -6577,8 +7029,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the number of new connections to a dedicated instance within a period of time.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the number of new connections to a dedicated instance within a period of time.</p>
+     * 
      * @param request DescribeInstanceNewConnectionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstanceNewConnectionsResponse
@@ -6624,8 +7077,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the number of new connections to a dedicated instance within a period of time.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the number of new connections to a dedicated instance within a period of time.</p>
+     * 
      * @param request DescribeInstanceNewConnectionsRequest
      * @return DescribeInstanceNewConnectionsResponse
      */
@@ -6635,8 +7089,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the numbers of inbound and outbound packets of a dedicated instance within a period of time.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the numbers of inbound and outbound packets of a dedicated instance within a period of time.</p>
+     * 
      * @param request DescribeInstancePacketsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstancePacketsResponse
@@ -6682,8 +7137,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the numbers of inbound and outbound packets of a dedicated instance within a period of time.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the numbers of inbound and outbound packets of a dedicated instance within a period of time.</p>
+     * 
      * @param request DescribeInstancePacketsRequest
      * @return DescribeInstancePacketsResponse
      */
@@ -6693,8 +7149,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the number of requests to a dedicated instance within a period of time.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the number of requests to a dedicated instance within a period of time.</p>
+     * 
      * @param request DescribeInstanceQpsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstanceQpsResponse
@@ -6740,8 +7197,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the number of requests to a dedicated instance within a period of time.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the number of requests to a dedicated instance within a period of time.</p>
+     * 
      * @param request DescribeInstanceQpsRequest
      * @return DescribeInstanceQpsResponse
      */
@@ -6751,8 +7209,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the number of concurrent connections to a dedicated instance within a period of time.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the number of concurrent connections to a dedicated instance within a period of time.</p>
+     * 
      * @param request DescribeInstanceSlbConnectRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstanceSlbConnectResponse
@@ -6798,8 +7257,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the number of concurrent connections to a dedicated instance within a period of time.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the number of concurrent connections to a dedicated instance within a period of time.</p>
+     * 
      * @param request DescribeInstanceSlbConnectRequest
      * @return DescribeInstanceSlbConnectResponse
      */
@@ -6809,8 +7269,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the request traffic and response traffic of a dedicated instance within a period of time.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the request traffic and response traffic of a dedicated instance within a period of time.</p>
+     * 
      * @param request DescribeInstanceTrafficRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstanceTrafficResponse
@@ -6856,8 +7317,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the request traffic and response traffic of a dedicated instance within a period of time.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the request traffic and response traffic of a dedicated instance within a period of time.</p>
+     * 
      * @param request DescribeInstanceTrafficRequest
      * @return DescribeInstanceTrafficResponse
      */
@@ -6867,8 +7329,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询实例信息
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of instances in a region. The instances include shared instances and dedicated instances.</p>
+     * 
      * @param request DescribeInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstancesResponse
@@ -6914,8 +7377,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询实例信息
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of instances in a region. The instances include shared instances and dedicated instances.</p>
+     * 
      * @param request DescribeInstancesRequest
      * @return DescribeInstancesResponse
      */
@@ -6925,11 +7389,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the rule entries of an IP address-based traffic control policy.
-     *
-     * @description *   This operation is intended for API providers.
-     * *   You can filter the query results by policy ID.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>You can filter the query results by policy ID.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the rule entries of an IP address-based traffic control policy.</p>
+     * 
      * @param request DescribeIpControlPolicyItemsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeIpControlPolicyItemsResponse
@@ -6975,11 +7443,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the rule entries of an IP address-based traffic control policy.
-     *
-     * @description *   This operation is intended for API providers.
-     * *   You can filter the query results by policy ID.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>You can filter the query results by policy ID.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the rule entries of an IP address-based traffic control policy.</p>
+     * 
      * @param request DescribeIpControlPolicyItemsRequest
      * @return DescribeIpControlPolicyItemsResponse
      */
@@ -6989,13 +7461,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries custom access control lists (ACLs) on separate pages.
-     *
-     * @description *   This operation is intended for API providers.
-     * *   This operation is used to query the ACLs in a region. Region is a system parameter.
-     * *   You can filter the query results by ACL ID, name, or type.
-     * *   This operation cannot be used to query specific policies. If you want to query specific policies, call the [DescribeIpControlPolicyItems](~~DescribeIpControlPolicyItems~~) operation.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>This operation is used to query the ACLs in a region. Region is a system parameter.</li>
+     * <li>You can filter the query results by ACL ID, name, or type.</li>
+     * <li>This operation cannot be used to query specific policies. If you want to query specific policies, call the <a href="~~DescribeIpControlPolicyItems~~">DescribeIpControlPolicyItems</a> operation.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries custom access control lists (ACLs) on separate pages.</p>
+     * 
      * @param request DescribeIpControlsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeIpControlsResponse
@@ -7045,13 +7521,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries custom access control lists (ACLs) on separate pages.
-     *
-     * @description *   This operation is intended for API providers.
-     * *   This operation is used to query the ACLs in a region. Region is a system parameter.
-     * *   You can filter the query results by ACL ID, name, or type.
-     * *   This operation cannot be used to query specific policies. If you want to query specific policies, call the [DescribeIpControlPolicyItems](~~DescribeIpControlPolicyItems~~) operation.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>This operation is used to query the ACLs in a region. Region is a system parameter.</li>
+     * <li>You can filter the query results by ACL ID, name, or type.</li>
+     * <li>This operation cannot be used to query specific policies. If you want to query specific policies, call the <a href="~~DescribeIpControlPolicyItems~~">DescribeIpControlPolicyItems</a> operation.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries custom access control lists (ACLs) on separate pages.</p>
+     * 
      * @param request DescribeIpControlsRequest
      * @return DescribeIpControlsResponse
      */
@@ -7103,8 +7583,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the number of remaining ordered relationships for a purchaser.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the number of remaining ordered relationships for a purchaser.</p>
+     * 
      * @param request DescribeMarketRemainsQuotaRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeMarketRemainsQuotaResponse
@@ -7138,8 +7619,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the number of remaining ordered relationships for a purchaser.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the number of remaining ordered relationships for a purchaser.</p>
+     * 
      * @param request DescribeMarketRemainsQuotaRequest
      * @return DescribeMarketRemainsQuotaResponse
      */
@@ -7149,10 +7631,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the created models of an API group.
-     *
-     * @description *   Fuzzy queries are supported.
-     *
+     * <b>description</b> :
+     * <p>  Fuzzy queries are supported.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the created models of an API group.</p>
+     * 
      * @param request DescribeModelsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeModelsResponse
@@ -7202,10 +7686,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the created models of an API group.
-     *
-     * @description *   Fuzzy queries are supported.
-     *
+     * <b>description</b> :
+     * <p>  Fuzzy queries are supported.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the created models of an API group.</p>
+     * 
      * @param request DescribeModelsRequest
      * @return DescribeModelsResponse
      */
@@ -7215,8 +7701,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the APIs to which a specified plug-in is bound.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the APIs to which a specified plug-in is bound.</p>
+     * 
      * @param request DescribePluginApisRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePluginApisResponse
@@ -7282,8 +7769,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the APIs to which a specified plug-in is bound.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the APIs to which a specified plug-in is bound.</p>
+     * 
      * @param request DescribePluginApisRequest
      * @return DescribePluginApisResponse
      */
@@ -7381,13 +7869,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries API Gateway plug-ins and the details of the plug-ins.
-     *
-     * @description *   This operation supports pagination.
-     * *   This operation allows you to query plug-ins by business type.
-     * *   This operation allows you to query plug-ins by ID.
-     * *   This operation allows you to query plug-ins by name.
-     *
+     * <b>description</b> :
+     * <p>  This operation supports pagination.</p>
+     * <ul>
+     * <li>This operation allows you to query plug-ins by business type.</li>
+     * <li>This operation allows you to query plug-ins by ID.</li>
+     * <li>This operation allows you to query plug-ins by name.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries API Gateway plug-ins and the details of the plug-ins.</p>
+     * 
      * @param request DescribePluginsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePluginsResponse
@@ -7441,13 +7933,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries API Gateway plug-ins and the details of the plug-ins.
-     *
-     * @description *   This operation supports pagination.
-     * *   This operation allows you to query plug-ins by business type.
-     * *   This operation allows you to query plug-ins by ID.
-     * *   This operation allows you to query plug-ins by name.
-     *
+     * <b>description</b> :
+     * <p>  This operation supports pagination.</p>
+     * <ul>
+     * <li>This operation allows you to query plug-ins by business type.</li>
+     * <li>This operation allows you to query plug-ins by ID.</li>
+     * <li>This operation allows you to query plug-ins by name.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries API Gateway plug-ins and the details of the plug-ins.</p>
+     * 
      * @param request DescribePluginsRequest
      * @return DescribePluginsResponse
      */
@@ -7457,11 +7953,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the plug-ins that are bound to a running API in an environment.
-     *
-     * @description *   This operation is intended for API callers.
-     * *   This operation supports pagination.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>This operation supports pagination.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the plug-ins that are bound to a running API in an environment.</p>
+     * 
      * @param request DescribePluginsByApiRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePluginsByApiResponse
@@ -7511,11 +8011,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the plug-ins that are bound to a running API in an environment.
-     *
-     * @description *   This operation is intended for API callers.
-     * *   This operation supports pagination.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>This operation supports pagination.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the plug-ins that are bound to a running API in an environment.</p>
+     * 
      * @param request DescribePluginsByApiRequest
      * @return DescribePluginsByApiResponse
      */
@@ -7525,8 +8029,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about an API group purchased from Alibaba Cloud Marketplace.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details about an API group purchased from Alibaba Cloud Marketplace.</p>
+     * 
      * @param request DescribePurchasedApiGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePurchasedApiGroupResponse
@@ -7560,8 +8065,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about an API group purchased from Alibaba Cloud Marketplace.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details about an API group purchased from Alibaba Cloud Marketplace.</p>
+     * 
      * @param request DescribePurchasedApiGroupRequest
      * @return DescribePurchasedApiGroupResponse
      */
@@ -7571,8 +8077,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries API groups that are purchased from Alibaba Cloud Marketplace.
-     *
+     * <b>summary</b> : 
+     * <p>Queries API groups that are purchased from Alibaba Cloud Marketplace.</p>
+     * 
      * @param request DescribePurchasedApiGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePurchasedApiGroupsResponse
@@ -7610,8 +8117,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries API groups that are purchased from Alibaba Cloud Marketplace.
-     *
+     * <b>summary</b> : 
+     * <p>Queries API groups that are purchased from Alibaba Cloud Marketplace.</p>
+     * 
      * @param request DescribePurchasedApiGroupsRequest
      * @return DescribePurchasedApiGroupsResponse
      */
@@ -7621,8 +8129,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries APIs that are purchased from Alibaba Cloud Marketplace.
-     *
+     * <b>summary</b> : 
+     * <p>Queries APIs that are purchased from Alibaba Cloud Marketplace.</p>
+     * 
      * @param request DescribePurchasedApisRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePurchasedApisResponse
@@ -7680,8 +8189,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries APIs that are purchased from Alibaba Cloud Marketplace.
-     *
+     * <b>summary</b> : 
+     * <p>Queries APIs that are purchased from Alibaba Cloud Marketplace.</p>
+     * 
      * @param request DescribePurchasedApisRequest
      * @return DescribePurchasedApisResponse
      */
@@ -7691,11 +8201,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Alibaba Cloud regions that are supported by API Gateway.
-     *
-     * @description This operation queries regions in which API Gateway is available.
-     * *   This operation is intended for API providers and callers.
-     *
+     * <b>description</b> :
+     * <p>This operation queries regions in which API Gateway is available.</p>
+     * <ul>
+     * <li>This operation is intended for API providers and callers.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the Alibaba Cloud regions that are supported by API Gateway.</p>
+     * 
      * @param request DescribeRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRegionsResponse
@@ -7729,11 +8243,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Alibaba Cloud regions that are supported by API Gateway.
-     *
-     * @description This operation queries regions in which API Gateway is available.
-     * *   This operation is intended for API providers and callers.
-     *
+     * <b>description</b> :
+     * <p>This operation queries regions in which API Gateway is available.</p>
+     * <ul>
+     * <li>This operation is intended for API providers and callers.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the Alibaba Cloud regions that are supported by API Gateway.</p>
+     * 
      * @param request DescribeRegionsRequest
      * @return DescribeRegionsResponse
      */
@@ -7743,11 +8261,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries backend signature keys.
-     *
-     * @description *   This API is intended for API providers.
-     * *   This operation is used to query the backend signature keys in a Region. Region is a system parameter.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>This operation is used to query the backend signature keys in a Region. Region is a system parameter.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries backend signature keys.</p>
+     * 
      * @param request DescribeSignaturesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSignaturesResponse
@@ -7793,11 +8315,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries backend signature keys.
-     *
-     * @description *   This API is intended for API providers.
-     * *   This operation is used to query the backend signature keys in a Region. Region is a system parameter.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>This operation is used to query the backend signature keys in a Region. Region is a system parameter.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries backend signature keys.</p>
+     * 
      * @param request DescribeSignaturesRequest
      * @return DescribeSignaturesResponse
      */
@@ -7807,10 +8333,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the backend signature keys that are bound to a specified API.
-     *
-     * @description *   This API is intended for API providers.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the backend signature keys that are bound to a specified API.</p>
+     * 
      * @param request DescribeSignaturesByApiRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSignaturesByApiResponse
@@ -7852,10 +8380,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the backend signature keys that are bound to a specified API.
-     *
-     * @description *   This API is intended for API providers.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the backend signature keys that are bound to a specified API.</p>
+     * 
      * @param request DescribeSignaturesByApiRequest
      * @return DescribeSignaturesByApiResponse
      */
@@ -7865,8 +8395,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the number of API Gateway resources in a region.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the number of API Gateway resources in a region.</p>
+     * 
      * @param request DescribeSummaryDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSummaryDataResponse
@@ -7896,8 +8427,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the number of API Gateway resources in a region.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the number of API Gateway resources in a region.</p>
+     * 
      * @param request DescribeSummaryDataRequest
      * @return DescribeSummaryDataResponse
      */
@@ -7907,11 +8439,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the common parameters supported by the system.
-     *
-     * @description *   This API is intended for API callers.
-     * *   The response of this API contains the system parameters that are optional in API definitions.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API callers.</p>
+     * <ul>
+     * <li>The response of this API contains the system parameters that are optional in API definitions.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the common parameters supported by the system.</p>
+     * 
      * @param request DescribeSystemParametersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSystemParametersResponse
@@ -7941,11 +8477,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the common parameters supported by the system.
-     *
-     * @description *   This API is intended for API callers.
-     * *   The response of this API contains the system parameters that are optional in API definitions.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API callers.</p>
+     * <ul>
+     * <li>The response of this API contains the system parameters that are optional in API definitions.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the common parameters supported by the system.</p>
+     * 
      * @param request DescribeSystemParametersRequest
      * @return DescribeSystemParametersResponse
      */
@@ -7955,12 +8495,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries custom throttling policies and their details. Conditional queries are supported.
-     *
-     * @description *   This API is intended for API providers.
-     * *   This API can be used to query all existing throttling policies (including special throttling policies) and their details.
-     * *   You can specify query conditions. For example, you can query the throttling policies bound to a specified API or in a specified environment.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>This API can be used to query all existing throttling policies (including special throttling policies) and their details.</li>
+     * <li>You can specify query conditions. For example, you can query the throttling policies bound to a specified API or in a specified environment.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries custom throttling policies and their details. Conditional queries are supported.</p>
+     * 
      * @param request DescribeTrafficControlsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeTrafficControlsResponse
@@ -8018,12 +8562,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries custom throttling policies and their details. Conditional queries are supported.
-     *
-     * @description *   This API is intended for API providers.
-     * *   This API can be used to query all existing throttling policies (including special throttling policies) and their details.
-     * *   You can specify query conditions. For example, you can query the throttling policies bound to a specified API or in a specified environment.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>This API can be used to query all existing throttling policies (including special throttling policies) and their details.</li>
+     * <li>You can specify query conditions. For example, you can query the throttling policies bound to a specified API or in a specified environment.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries custom throttling policies and their details. Conditional queries are supported.</p>
+     * 
      * @param request DescribeTrafficControlsRequest
      * @return DescribeTrafficControlsResponse
      */
@@ -8033,10 +8581,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the throttling policy that is bound to a specific API.
-     *
-     * @description *   This API is intended for API providers.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the throttling policy that is bound to a specific API.</p>
+     * 
      * @param request DescribeTrafficControlsByApiRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeTrafficControlsByApiResponse
@@ -8078,10 +8628,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the throttling policy that is bound to a specific API.
-     *
-     * @description *   This API is intended for API providers.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the throttling policy that is bound to a specific API.</p>
+     * 
      * @param request DescribeTrafficControlsByApiRequest
      * @return DescribeTrafficControlsByApiResponse
      */
@@ -8091,8 +8643,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询批量更新API后端元定结果
-     *
+     * <b>summary</b> : 
+     * <p>查询批量更新API后端元定结果</p>
+     * 
      * @param request DescribeUpdateBackendTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUpdateBackendTaskResponse
@@ -8126,8 +8679,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询批量更新API后端元定结果
-     *
+     * <b>summary</b> : 
+     * <p>查询批量更新API后端元定结果</p>
+     * 
      * @param request DescribeUpdateBackendTaskRequest
      * @return DescribeUpdateBackendTaskResponse
      */
@@ -8179,8 +8733,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries VPC access authorizations.
-     *
+     * <b>summary</b> : 
+     * <p>Queries VPC access authorizations.</p>
+     * 
      * @param request DescribeVpcAccessesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeVpcAccessesResponse
@@ -8246,8 +8801,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries VPC access authorizations.
-     *
+     * <b>summary</b> : 
+     * <p>Queries VPC access authorizations.</p>
+     * 
      * @param request DescribeVpcAccessesRequest
      * @return DescribeVpcAccessesResponse
      */
@@ -8257,8 +8813,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries zones in a region.
-     *
+     * <b>summary</b> : 
+     * <p>Queries zones in a region.</p>
+     * 
      * @param request DescribeZonesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeZonesResponse
@@ -8292,8 +8849,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries zones in a region.
-     *
+     * <b>summary</b> : 
+     * <p>Queries zones in a region.</p>
+     * 
      * @param request DescribeZonesRequest
      * @return DescribeZonesResponse
      */
@@ -8303,8 +8861,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Detaches APIs from an API product.
-     *
+     * <b>summary</b> : 
+     * <p>Detaches APIs from an API product.</p>
+     * 
      * @param request DetachApiProductRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DetachApiProductResponse
@@ -8342,8 +8901,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Detaches APIs from an API product.
-     *
+     * <b>summary</b> : 
+     * <p>Detaches APIs from an API product.</p>
+     * 
      * @param request DetachApiProductRequest
      * @return DetachApiProductResponse
      */
@@ -8353,8 +8913,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 解绑插件
-     *
+     * <b>summary</b> : 
+     * <p>解绑插件</p>
+     * 
      * @param request DetachPluginRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DetachPluginResponse
@@ -8400,8 +8961,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 解绑插件
-     *
+     * <b>summary</b> : 
+     * <p>解绑插件</p>
+     * 
      * @param request DetachPluginRequest
      * @return DetachPluginResponse
      */
@@ -8411,8 +8973,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary This feature provides instance-level access control capabilities for dedicated API Gateway instances. Disables access control on an instance.
-     *
+     * <b>summary</b> : 
+     * <p>This feature provides instance-level access control capabilities for dedicated API Gateway instances. Disables access control on an instance.</p>
+     * 
      * @param request DisableInstanceAccessControlRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DisableInstanceAccessControlResponse
@@ -8454,8 +9017,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary This feature provides instance-level access control capabilities for dedicated API Gateway instances. Disables access control on an instance.
-     *
+     * <b>summary</b> : 
+     * <p>This feature provides instance-level access control capabilities for dedicated API Gateway instances. Disables access control on an instance.</p>
+     * 
      * @param request DisableInstanceAccessControlRequest
      * @return DisableInstanceAccessControlResponse
      */
@@ -8465,8 +9029,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Checks the syntax before Swagger-compliant data is imported.
-     *
+     * <b>summary</b> : 
+     * <p>Checks the syntax before Swagger-compliant data is imported.</p>
+     * 
      * @param tmpReq DryRunSwaggerRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DryRunSwaggerResponse
@@ -8524,8 +9089,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Checks the syntax before Swagger-compliant data is imported.
-     *
+     * <b>summary</b> : 
+     * <p>Checks the syntax before Swagger-compliant data is imported.</p>
+     * 
      * @param request DryRunSwaggerRequest
      * @return DryRunSwaggerResponse
      */
@@ -8535,8 +9101,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 开启实例的访问控制
-     *
+     * <b>summary</b> : 
+     * <p>开启实例的访问控制</p>
+     * 
      * @param request EnableInstanceAccessControlRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableInstanceAccessControlResponse
@@ -8582,8 +9149,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 开启实例的访问控制
-     *
+     * <b>summary</b> : 
+     * <p>开启实例的访问控制</p>
+     * 
      * @param request EnableInstanceAccessControlRequest
      * @return EnableInstanceAccessControlResponse
      */
@@ -8593,8 +9161,87 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Imports APIs based on the OAS standard.
-     *
+     * <b>summary</b> : 
+     * <p>导出OAS</p>
+     * 
+     * @param tmpReq ExportOASRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExportOASResponse
+     */
+    public ExportOASResponse exportOASWithOptions(ExportOASRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ExportOASShrinkRequest request = new ExportOASShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.apiIdList)) {
+            request.apiIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.apiIdList, "ApiIdList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiIdListShrink)) {
+            query.put("ApiIdList", request.apiIdListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataFormat)) {
+            query.put("DataFormat", request.dataFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.oasVersion)) {
+            query.put("OasVersion", request.oasVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stageName)) {
+            query.put("StageName", request.stageName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.withXExtensions)) {
+            query.put("WithXExtensions", request.withXExtensions);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExportOAS"),
+            new TeaPair("version", "2016-07-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExportOASResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>导出OAS</p>
+     * 
+     * @param request ExportOASRequest
+     * @return ExportOASResponse
+     */
+    public ExportOASResponse exportOAS(ExportOASRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.exportOASWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Imports APIs based on the OAS standard.</p>
+     * 
      * @param request ImportOASRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ImportOASResponse
@@ -8662,8 +9309,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Imports APIs based on the OAS standard.
-     *
+     * <b>summary</b> : 
+     * <p>Imports APIs based on the OAS standard.</p>
+     * 
      * @param request ImportOASRequest
      * @return ImportOASResponse
      */
@@ -8673,11 +9321,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an API by importing Swagger-compliant data.
-     *
-     * @description *   Alibaba Cloud supports extensions based on Swagger 2.0.
-     * *   Alibaba Cloud supports Swagger configuration files in JSON and YAML formats.
-     *
+     * <b>description</b> :
+     * <p>  Alibaba Cloud supports extensions based on Swagger 2.0.</p>
+     * <ul>
+     * <li>Alibaba Cloud supports Swagger configuration files in JSON and YAML formats.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an API by importing Swagger-compliant data.</p>
+     * 
      * @param tmpReq ImportSwaggerRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ImportSwaggerResponse
@@ -8739,11 +9391,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an API by importing Swagger-compliant data.
-     *
-     * @description *   Alibaba Cloud supports extensions based on Swagger 2.0.
-     * *   Alibaba Cloud supports Swagger configuration files in JSON and YAML formats.
-     *
+     * <b>description</b> :
+     * <p>  Alibaba Cloud supports extensions based on Swagger 2.0.</p>
+     * <ul>
+     * <li>Alibaba Cloud supports Swagger configuration files in JSON and YAML formats.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an API by importing Swagger-compliant data.</p>
+     * 
      * @param request ImportSwaggerRequest
      * @return ImportSwaggerResponse
      */
@@ -8753,18 +9409,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the visible resource tags.
-     *
-     * @description *   The Tag.N.Key and Tag.N.Value parameters constitute a key-value pair.
-     * *   ResourceId.N must meet all the key-value pairs that are entered. If you enter multiple key-value pairs, resources that contain the specified key-value pairs are returned.
-     * *   This operation is used to query resource tags based on conditions. If no relationship matches the conditions, an empty list is returned.
-     * *   You can query both user tags and visible system tags.
-     * *   In addition to the required parameters, you can also specify ResourceId.N to query the visible resource tags of a specified resource in a region.
-     * *   You can also specify Tag.N.Key to query the visible keys of a specified key in a region.
-     * *   At least one of ResourceId.N, Tag.N.Key, and Tag.N.Value exists.
-     * *   You can query tags of the same type or different types in a single operation.
-     * *   You can query all your user types and visible system tags.
-     *
+     * <b>description</b> :
+     * <p>  The Tag.N.Key and Tag.N.Value parameters constitute a key-value pair.</p>
+     * <ul>
+     * <li>ResourceId.N must meet all the key-value pairs that are entered. If you enter multiple key-value pairs, resources that contain the specified key-value pairs are returned.</li>
+     * <li>This operation is used to query resource tags based on conditions. If no relationship matches the conditions, an empty list is returned.</li>
+     * <li>You can query both user tags and visible system tags.</li>
+     * <li>In addition to the required parameters, you can also specify ResourceId.N to query the visible resource tags of a specified resource in a region.</li>
+     * <li>You can also specify Tag.N.Key to query the visible keys of a specified key in a region.</li>
+     * <li>At least one of ResourceId.N, Tag.N.Key, and Tag.N.Value exists.</li>
+     * <li>You can query tags of the same type or different types in a single operation.</li>
+     * <li>You can query all your user types and visible system tags.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the visible resource tags.</p>
+     * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTagResourcesResponse
@@ -8806,18 +9466,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the visible resource tags.
-     *
-     * @description *   The Tag.N.Key and Tag.N.Value parameters constitute a key-value pair.
-     * *   ResourceId.N must meet all the key-value pairs that are entered. If you enter multiple key-value pairs, resources that contain the specified key-value pairs are returned.
-     * *   This operation is used to query resource tags based on conditions. If no relationship matches the conditions, an empty list is returned.
-     * *   You can query both user tags and visible system tags.
-     * *   In addition to the required parameters, you can also specify ResourceId.N to query the visible resource tags of a specified resource in a region.
-     * *   You can also specify Tag.N.Key to query the visible keys of a specified key in a region.
-     * *   At least one of ResourceId.N, Tag.N.Key, and Tag.N.Value exists.
-     * *   You can query tags of the same type or different types in a single operation.
-     * *   You can query all your user types and visible system tags.
-     *
+     * <b>description</b> :
+     * <p>  The Tag.N.Key and Tag.N.Value parameters constitute a key-value pair.</p>
+     * <ul>
+     * <li>ResourceId.N must meet all the key-value pairs that are entered. If you enter multiple key-value pairs, resources that contain the specified key-value pairs are returned.</li>
+     * <li>This operation is used to query resource tags based on conditions. If no relationship matches the conditions, an empty list is returned.</li>
+     * <li>You can query both user tags and visible system tags.</li>
+     * <li>In addition to the required parameters, you can also specify ResourceId.N to query the visible resource tags of a specified resource in a region.</li>
+     * <li>You can also specify Tag.N.Key to query the visible keys of a specified key in a region.</li>
+     * <li>At least one of ResourceId.N, Tag.N.Key, and Tag.N.Value exists.</li>
+     * <li>You can query tags of the same type or different types in a single operation.</li>
+     * <li>You can query all your user types and visible system tags.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the visible resource tags.</p>
+     * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
@@ -8827,14 +9491,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the definition of an API.
-     *
-     * @description **This operation is intended for API providers.**
-     * *   This API operation requires a full update. Updates of partial parameters are not supported.
-     * *   When you modify an API name, make sure that the name of each API within the same group is unique.
-     * *   When you modify the request path, make sure that each request path within the same group is unique.
-     * *   The QPS limit on this operation is 50 per user.
-     *
+     * <b>description</b> :
+     * <p><em>This operation is intended for API providers.</em>*</p>
+     * <ul>
+     * <li>This API operation requires a full update. Updates of partial parameters are not supported.</li>
+     * <li>When you modify an API name, make sure that the name of each API within the same group is unique.</li>
+     * <li>When you modify the request path, make sure that each request path within the same group is unique.</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the definition of an API.</p>
+     * 
      * @param request ModifyApiRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyApiResponse
@@ -8974,14 +9642,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the definition of an API.
-     *
-     * @description **This operation is intended for API providers.**
-     * *   This API operation requires a full update. Updates of partial parameters are not supported.
-     * *   When you modify an API name, make sure that the name of each API within the same group is unique.
-     * *   When you modify the request path, make sure that each request path within the same group is unique.
-     * *   The QPS limit on this operation is 50 per user.
-     *
+     * <b>description</b> :
+     * <p><em>This operation is intended for API providers.</em>*</p>
+     * <ul>
+     * <li>This API operation requires a full update. Updates of partial parameters are not supported.</li>
+     * <li>When you modify an API name, make sure that the name of each API within the same group is unique.</li>
+     * <li>When you modify the request path, make sure that each request path within the same group is unique.</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the definition of an API.</p>
+     * 
      * @param request ModifyApiRequest
      * @return ModifyApiResponse
      */
@@ -8991,8 +9663,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the draft definition of an API. This operation is different from the ModifyApi operation. This operation does not require all information about the API. You need to only specify the parameters that you want to modify. For example, if you want to change the authentication method of the API from Anonymous to APP, you specify APP as the value of AuthType and do not need to configure other parameters.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the draft definition of an API. This operation is different from the ModifyApi operation. This operation does not require all information about the API. You need to only specify the parameters that you want to modify. For example, if you want to change the authentication method of the API from Anonymous to APP, you specify APP as the value of AuthType and do not need to configure other parameters.</p>
+     * 
      * @param request ModifyApiConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyApiConfigurationResponse
@@ -9162,8 +9835,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the draft definition of an API. This operation is different from the ModifyApi operation. This operation does not require all information about the API. You need to only specify the parameters that you want to modify. For example, if you want to change the authentication method of the API from Anonymous to APP, you specify APP as the value of AuthType and do not need to configure other parameters.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the draft definition of an API. This operation is different from the ModifyApi operation. This operation does not require all information about the API. You need to only specify the parameters that you want to modify. For example, if you want to change the authentication method of the API from Anonymous to APP, you specify APP as the value of AuthType and do not need to configure other parameters.</p>
+     * 
      * @param request ModifyApiConfigurationRequest
      * @return ModifyApiConfigurationResponse
      */
@@ -9173,11 +9847,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the name, description, or basepath of an existing API group.
-     *
-     * @description *   This operation is intended for API providers.
-     * *   The QPS limit on this operation is 50 per user.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the name, description, or basepath of an existing API group.</p>
+     * 
      * @param request ModifyApiGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyApiGroupResponse
@@ -9259,11 +9937,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the name, description, or basepath of an existing API group.
-     *
-     * @description *   This operation is intended for API providers.
-     * *   The QPS limit on this operation is 50 per user.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the name, description, or basepath of an existing API group.</p>
+     * 
      * @param request ModifyApiGroupRequest
      * @return ModifyApiGroupResponse
      */
@@ -9327,8 +10009,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the network policy of an API group.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the network policy of an API group.</p>
+     * 
      * @param request ModifyApiGroupNetworkPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyApiGroupNetworkPolicyResponse
@@ -9386,8 +10069,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the network policy of an API group.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the network policy of an API group.</p>
+     * 
      * @param request ModifyApiGroupNetworkPolicyRequest
      * @return ModifyApiGroupNetworkPolicyResponse
      */
@@ -9397,8 +10081,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the VPC whitelist of an API group.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the VPC whitelist of an API group.</p>
+     * 
      * @param request ModifyApiGroupVpcWhitelistRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyApiGroupVpcWhitelistResponse
@@ -9436,8 +10121,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the VPC whitelist of an API group.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the VPC whitelist of an API group.</p>
+     * 
      * @param request ModifyApiGroupVpcWhitelistRequest
      * @return ModifyApiGroupVpcWhitelistResponse
      */
@@ -9447,12 +10133,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a specified application.
-     *
-     * @description *   This operation is intended for API callers.
-     * *   **AppName** or **Description** can be modified. If these parameters are not specified, no modifications are made and the operation will directly return a success response.
-     * *   You can call this operation up to 50 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li><strong>AppName</strong> or <strong>Description</strong> can be modified. If these parameters are not specified, no modifications are made and the operation will directly return a success response.</li>
+     * <li>You can call this operation up to 50 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a specified application.</p>
+     * 
      * @param request ModifyAppRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyAppResponse
@@ -9502,12 +10192,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a specified application.
-     *
-     * @description *   This operation is intended for API callers.
-     * *   **AppName** or **Description** can be modified. If these parameters are not specified, no modifications are made and the operation will directly return a success response.
-     * *   You can call this operation up to 50 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li><strong>AppName</strong> or <strong>Description</strong> can be modified. If these parameters are not specified, no modifications are made and the operation will directly return a success response.</li>
+     * <li>You can call this operation up to 50 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a specified application.</p>
+     * 
      * @param request ModifyAppRequest
      * @return ModifyAppResponse
      */
@@ -9517,8 +10211,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改后端服务
-     *
+     * <b>summary</b> : 
+     * <p>修改后端服务</p>
+     * 
      * @param request ModifyBackendRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyBackendResponse
@@ -9564,8 +10259,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改后端服务
-     *
+     * <b>summary</b> : 
+     * <p>修改后端服务</p>
+     * 
      * @param request ModifyBackendRequest
      * @return ModifyBackendResponse
      */
@@ -9575,8 +10271,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改后端服务在环境上的定义
-     *
+     * <b>summary</b> : 
+     * <p>修改后端服务在环境上的定义</p>
+     * 
      * @param request ModifyBackendModelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyBackendModelResponse
@@ -9630,8 +10327,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改后端服务在环境上的定义
-     *
+     * <b>summary</b> : 
+     * <p>修改后端服务在环境上的定义</p>
+     * 
      * @param request ModifyBackendModelRequest
      * @return ModifyBackendModelResponse
      */
@@ -9641,8 +10339,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the name of a custom dataset.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the name of a custom dataset.</p>
+     * 
      * @param request ModifyDatasetRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDatasetResponse
@@ -9680,8 +10379,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the name of a custom dataset.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the name of a custom dataset.</p>
+     * 
      * @param request ModifyDatasetRequest
      * @return ModifyDatasetResponse
      */
@@ -9691,8 +10391,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the expiration time and description of a data entry in a custom dataset.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the expiration time and description of a data entry in a custom dataset.</p>
+     * 
      * @param request ModifyDatasetItemRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDatasetItemResponse
@@ -9738,8 +10439,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the expiration time and description of a data entry in a custom dataset.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the expiration time and description of a data entry in a custom dataset.</p>
+     * 
      * @param request ModifyDatasetItemRequest
      * @return ModifyDatasetItemResponse
      */
@@ -9749,8 +10451,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改API网关实例属性
-     *
+     * <b>summary</b> : 
+     * <p>修改API网关实例属性</p>
+     * 
      * @param tmpReq ModifyInstanceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyInstanceAttributeResponse
@@ -9830,8 +10533,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改API网关实例属性
-     *
+     * <b>summary</b> : 
+     * <p>修改API网关实例属性</p>
+     * 
      * @param request ModifyInstanceAttributeRequest
      * @return ModifyInstanceAttributeResponse
      */
@@ -9841,8 +10545,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Upgrades or downgrades the configurations of an API Gateway instance.
-     *
+     * <b>summary</b> : 
+     * <p>Upgrades or downgrades the configurations of an API Gateway instance.</p>
+     * 
      * @param request ModifyInstanceSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyInstanceSpecResponse
@@ -9892,8 +10597,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Upgrades or downgrades the configurations of an API Gateway instance.
-     *
+     * <b>summary</b> : 
+     * <p>Upgrades or downgrades the configurations of an API Gateway instance.</p>
+     * 
      * @param request ModifyInstanceSpecRequest
      * @return ModifyInstanceSpecResponse
      */
@@ -9903,8 +10609,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the VPC domain name policy of an API group.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the VPC domain name policy of an API group.</p>
+     * 
      * @param request ModifyIntranetDomainPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyIntranetDomainPolicyResponse
@@ -9942,8 +10649,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the VPC domain name policy of an API group.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the VPC domain name policy of an API group.</p>
+     * 
      * @param request ModifyIntranetDomainPolicyRequest
      * @return ModifyIntranetDomainPolicyResponse
      */
@@ -9953,11 +10661,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies an access control list (ACL).
-     *
-     * @description *   This operation is intended for API providers.
-     * *   This operation allows you to modify only the name and description of an ACL. You cannot modify the type of the ACL.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>This operation allows you to modify only the name and description of an ACL. You cannot modify the type of the ACL.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies an access control list (ACL).</p>
+     * 
      * @param request ModifyIpControlRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyIpControlResponse
@@ -9999,11 +10711,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies an access control list (ACL).
-     *
-     * @description *   This operation is intended for API providers.
-     * *   This operation allows you to modify only the name and description of an ACL. You cannot modify the type of the ACL.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>This operation allows you to modify only the name and description of an ACL. You cannot modify the type of the ACL.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies an access control list (ACL).</p>
+     * 
      * @param request ModifyIpControlRequest
      * @return ModifyIpControlResponse
      */
@@ -10013,12 +10729,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a policy in an access control list (ACL).
-     *
-     * @description *   This operation is intended for API providers.
-     * *   The modification immediately takes effect on all the APIs that are bound to the policy.
-     * *   This operation causes a full modification of the content of a policy.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>The modification immediately takes effect on all the APIs that are bound to the policy.</li>
+     * <li>This operation causes a full modification of the content of a policy.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a policy in an access control list (ACL).</p>
+     * 
      * @param request ModifyIpControlPolicyItemRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyIpControlPolicyItemResponse
@@ -10064,12 +10784,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a policy in an access control list (ACL).
-     *
-     * @description *   This operation is intended for API providers.
-     * *   The modification immediately takes effect on all the APIs that are bound to the policy.
-     * *   This operation causes a full modification of the content of a policy.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>The modification immediately takes effect on all the APIs that are bound to the policy.</li>
+     * <li>This operation causes a full modification of the content of a policy.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a policy in an access control list (ACL).</p>
+     * 
      * @param request ModifyIpControlPolicyItemRequest
      * @return ModifyIpControlPolicyItemResponse
      */
@@ -10129,8 +10853,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the model of an API group.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the model of an API group.</p>
+     * 
      * @param request ModifyModelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyModelResponse
@@ -10176,8 +10901,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the model of an API group.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the model of an API group.</p>
+     * 
      * @param request ModifyModelRequest
      * @return ModifyModelResponse
      */
@@ -10187,11 +10913,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the information of a plug-in.
-     *
-     * @description *   This operation is intended for API providers.
-     * *   The name of the plug-in must be unique.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>The name of the plug-in must be unique.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the information of a plug-in.</p>
+     * 
      * @param request ModifyPluginRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyPluginResponse
@@ -10241,11 +10971,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the information of a plug-in.
-     *
-     * @description *   This operation is intended for API providers.
-     * *   The name of the plug-in must be unique.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>The name of the plug-in must be unique.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the information of a plug-in.</p>
+     * 
      * @param request ModifyPluginRequest
      * @return ModifyPluginResponse
      */
@@ -10255,13 +10989,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a backend signature key.
-     *
-     * @description *   This API is intended for API providers.
-     * *   This API operation modifies the name, Key value, and Secret value of an existing signature key.
-     * *   Note that the modification takes effect immediately. If the key has been bound to an API, you must adjust the backend signature verification based on the new key accordingly.
-     * *   The QPS limit on this operation is 50 per user.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>This API operation modifies the name, Key value, and Secret value of an existing signature key.</li>
+     * <li>Note that the modification takes effect immediately. If the key has been bound to an API, you must adjust the backend signature verification based on the new key accordingly.</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a backend signature key.</p>
+     * 
      * @param request ModifySignatureRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifySignatureResponse
@@ -10307,13 +11045,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a backend signature key.
-     *
-     * @description *   This API is intended for API providers.
-     * *   This API operation modifies the name, Key value, and Secret value of an existing signature key.
-     * *   Note that the modification takes effect immediately. If the key has been bound to an API, you must adjust the backend signature verification based on the new key accordingly.
-     * *   The QPS limit on this operation is 50 per user.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>This API operation modifies the name, Key value, and Secret value of an existing signature key.</li>
+     * <li>Note that the modification takes effect immediately. If the key has been bound to an API, you must adjust the backend signature verification based on the new key accordingly.</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a backend signature key.</p>
+     * 
      * @param request ModifySignatureRequest
      * @return ModifySignatureResponse
      */
@@ -10323,12 +11065,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the settings of a custom throttling policy.
-     *
-     * @description *   This API is intended for API providers.
-     * *   The modifications take effect on the bound APIs instantly.
-     * *   The QPS limit on this operation is 50 per user.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>The modifications take effect on the bound APIs instantly.</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the settings of a custom throttling policy.</p>
+     * 
      * @param request ModifyTrafficControlRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyTrafficControlResponse
@@ -10386,12 +11132,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the settings of a custom throttling policy.
-     *
-     * @description *   This API is intended for API providers.
-     * *   The modifications take effect on the bound APIs instantly.
-     * *   The QPS limit on this operation is 50 per user.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>The modifications take effect on the bound APIs instantly.</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the settings of a custom throttling policy.</p>
+     * 
      * @param request ModifyTrafficControlRequest
      * @return ModifyTrafficControlResponse
      */
@@ -10401,8 +11151,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a virtual private cloud (VPC) authorization and updates the metadata of the API associated with the VPC authorization.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies a virtual private cloud (VPC) authorization and updates the metadata of the API associated with the VPC authorization.</p>
+     * 
      * @param request ModifyVpcAccessAndUpdateApisRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyVpcAccessAndUpdateApisResponse
@@ -10464,8 +11215,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a virtual private cloud (VPC) authorization and updates the metadata of the API associated with the VPC authorization.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies a virtual private cloud (VPC) authorization and updates the metadata of the API associated with the VPC authorization.</p>
+     * 
      * @param request ModifyVpcAccessAndUpdateApisRequest
      * @return ModifyVpcAccessAndUpdateApisResponse
      */
@@ -10504,8 +11256,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the request logs of a user.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the request logs of a user.</p>
+     * 
      * @param request QueryRequestLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryRequestLogsResponse
@@ -10539,8 +11292,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the request logs of a user.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the request logs of a user.</p>
+     * 
      * @param request QueryRequestLogsRequest
      * @return QueryRequestLogsResponse
      */
@@ -10550,13 +11304,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Reactivates a custom domain name whose validity status is Abnormal.
-     *
-     * @description *   This operation is intended for API providers.
-     * *   You must solve the problem that is mentioned in the domain name exception prompt before you can reactivate the domain name.
-     * *   A typical reason why a custom domain name becomes abnormal is that the domain name does not have an ICP filing or the domain name is included in a blacklist by the administration. When a custom domain name is abnormal, users cannot use it to access APIs.
-     * *   You can call this operation to reactivate the domain name to resume normal access.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>You must solve the problem that is mentioned in the domain name exception prompt before you can reactivate the domain name.</li>
+     * <li>A typical reason why a custom domain name becomes abnormal is that the domain name does not have an ICP filing or the domain name is included in a blacklist by the administration. When a custom domain name is abnormal, users cannot use it to access APIs.</li>
+     * <li>You can call this operation to reactivate the domain name to resume normal access.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Reactivates a custom domain name whose validity status is Abnormal.</p>
+     * 
      * @param request ReactivateDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ReactivateDomainResponse
@@ -10594,13 +11352,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Reactivates a custom domain name whose validity status is Abnormal.
-     *
-     * @description *   This operation is intended for API providers.
-     * *   You must solve the problem that is mentioned in the domain name exception prompt before you can reactivate the domain name.
-     * *   A typical reason why a custom domain name becomes abnormal is that the domain name does not have an ICP filing or the domain name is included in a blacklist by the administration. When a custom domain name is abnormal, users cannot use it to access APIs.
-     * *   You can call this operation to reactivate the domain name to resume normal access.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>You must solve the problem that is mentioned in the domain name exception prompt before you can reactivate the domain name.</li>
+     * <li>A typical reason why a custom domain name becomes abnormal is that the domain name does not have an ICP filing or the domain name is included in a blacklist by the administration. When a custom domain name is abnormal, users cannot use it to access APIs.</li>
+     * <li>You can call this operation to reactivate the domain name to resume normal access.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Reactivates a custom domain name whose validity status is Abnormal.</p>
+     * 
      * @param request ReactivateDomainRequest
      * @return ReactivateDomainResponse
      */
@@ -10610,8 +11372,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除访问控制策略中IP条目
-     *
+     * <b>summary</b> : 
+     * <p>删除访问控制策略中IP条目</p>
+     * 
      * @param request RemoveAccessControlListEntryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RemoveAccessControlListEntryResponse
@@ -10649,8 +11412,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除访问控制策略中IP条目
-     *
+     * <b>summary</b> : 
+     * <p>删除访问控制策略中IP条目</p>
+     * 
      * @param request RemoveAccessControlListEntryRequest
      * @return RemoveAccessControlListEntryResponse
      */
@@ -10660,8 +11424,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Revokes permissions on API products from an application.
-     *
+     * <b>summary</b> : 
+     * <p>Revokes permissions on API products from an application.</p>
+     * 
      * @param tmpReq RemoveApiProductsAuthoritiesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RemoveApiProductsAuthoritiesResponse
@@ -10705,8 +11470,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Revokes permissions on API products from an application.
-     *
+     * <b>summary</b> : 
+     * <p>Revokes permissions on API products from an application.</p>
+     * 
      * @param request RemoveApiProductsAuthoritiesRequest
      * @return RemoveApiProductsAuthoritiesResponse
      */
@@ -10716,11 +11482,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Revokes the access permissions on multiple APIs from a specified application.
-     *
-     * @description *   This operation is intended for API providers and callers.
-     * *   Before you revoke access permissions, check by whom the permissions were granted. API providers can only revoke permissions granted by a Provider, and API callers can only revoke permissions granted by a Consumer.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers and callers.</p>
+     * <ul>
+     * <li>Before you revoke access permissions, check by whom the permissions were granted. API providers can only revoke permissions granted by a Provider, and API callers can only revoke permissions granted by a Consumer.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Revokes the access permissions on multiple APIs from a specified application.</p>
+     * 
      * @param request RemoveApisAuthoritiesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RemoveApisAuthoritiesResponse
@@ -10770,11 +11540,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Revokes the access permissions on multiple APIs from a specified application.
-     *
-     * @description *   This operation is intended for API providers and callers.
-     * *   Before you revoke access permissions, check by whom the permissions were granted. API providers can only revoke permissions granted by a Provider, and API callers can only revoke permissions granted by a Consumer.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers and callers.</p>
+     * <ul>
+     * <li>Before you revoke access permissions, check by whom the permissions were granted. API providers can only revoke permissions granted by a Provider, and API callers can only revoke permissions granted by a Consumer.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Revokes the access permissions on multiple APIs from a specified application.</p>
+     * 
      * @param request RemoveApisAuthoritiesRequest
      * @return RemoveApisAuthoritiesResponse
      */
@@ -10784,11 +11558,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Revokes the access permissions on a specified API from multiple applications. In this case, multiple applications map to a single API.
-     *
-     * @description *   This operation is intended for API providers and callers.
-     * *   Before you revoke access permissions, check by whom the permissions were granted. API providers can only revoke permissions granted by a Provider, and API callers can only revoke permissions granted by a Consumer.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers and callers.</p>
+     * <ul>
+     * <li>Before you revoke access permissions, check by whom the permissions were granted. API providers can only revoke permissions granted by a Provider, and API callers can only revoke permissions granted by a Consumer.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Revokes the access permissions on a specified API from multiple applications. In this case, multiple applications map to a single API.</p>
+     * 
      * @param request RemoveAppsAuthoritiesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RemoveAppsAuthoritiesResponse
@@ -10834,11 +11612,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Revokes the access permissions on a specified API from multiple applications. In this case, multiple applications map to a single API.
-     *
-     * @description *   This operation is intended for API providers and callers.
-     * *   Before you revoke access permissions, check by whom the permissions were granted. API providers can only revoke permissions granted by a Provider, and API callers can only revoke permissions granted by a Consumer.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers and callers.</p>
+     * <ul>
+     * <li>Before you revoke access permissions, check by whom the permissions were granted. API providers can only revoke permissions granted by a Provider, and API callers can only revoke permissions granted by a Consumer.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Revokes the access permissions on a specified API from multiple applications. In this case, multiple applications map to a single API.</p>
+     * 
      * @param request RemoveAppsAuthoritiesRequest
      * @return RemoveAppsAuthoritiesResponse
      */
@@ -10848,11 +11630,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Unbinds an API from an access control list (ACL).
-     *
-     * @description *   This operation is intended for API callers.
-     * *   The unbinding takes effect immediately. After the API is unbound from the ACL, the corresponding environment does not have any IP address access control in place for the API.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>The unbinding takes effect immediately. After the API is unbound from the ACL, the corresponding environment does not have any IP address access control in place for the API.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Unbinds an API from an access control list (ACL).</p>
+     * 
      * @param request RemoveIpControlApisRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RemoveIpControlApisResponse
@@ -10898,11 +11684,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Unbinds an API from an access control list (ACL).
-     *
-     * @description *   This operation is intended for API callers.
-     * *   The unbinding takes effect immediately. After the API is unbound from the ACL, the corresponding environment does not have any IP address access control in place for the API.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>The unbinding takes effect immediately. After the API is unbound from the ACL, the corresponding environment does not have any IP address access control in place for the API.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Unbinds an API from an access control list (ACL).</p>
+     * 
      * @param request RemoveIpControlApisRequest
      * @return RemoveIpControlApisResponse
      */
@@ -10912,10 +11702,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes one or more policies from an access control list (ACL).
-     *
-     * @description *   This operation is intended for API providers.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes one or more policies from an access control list (ACL).</p>
+     * 
      * @param request RemoveIpControlPolicyItemRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RemoveIpControlPolicyItemResponse
@@ -10953,10 +11745,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes one or more policies from an access control list (ACL).
-     *
-     * @description *   This operation is intended for API providers.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes one or more policies from an access control list (ACL).</p>
+     * 
      * @param request RemoveIpControlPolicyItemRequest
      * @return RemoveIpControlPolicyItemResponse
      */
@@ -10966,11 +11760,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Unbinds a backend signature key from APIs.
-     *
-     * @description *   This API is intended for API providers.
-     * *   The operation takes effect immediately. The request sent from API Gateway to the backend service does not contain the signature string. The corresponding verification step can be removed from the backend.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>The operation takes effect immediately. The request sent from API Gateway to the backend service does not contain the signature string. The corresponding verification step can be removed from the backend.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Unbinds a backend signature key from APIs.</p>
+     * 
      * @param request RemoveSignatureApisRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RemoveSignatureApisResponse
@@ -11016,11 +11814,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Unbinds a backend signature key from APIs.
-     *
-     * @description *   This API is intended for API providers.
-     * *   The operation takes effect immediately. The request sent from API Gateway to the backend service does not contain the signature string. The corresponding verification step can be removed from the backend.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>The operation takes effect immediately. The request sent from API Gateway to the backend service does not contain the signature string. The corresponding verification step can be removed from the backend.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Unbinds a backend signature key from APIs.</p>
+     * 
      * @param request RemoveSignatureApisRequest
      * @return RemoveSignatureApisResponse
      */
@@ -11030,11 +11832,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Unbinds a specified throttling policy from APIs.
-     *
-     * @description *   This API is intended for API providers.
-     * *   This API allows you to unbind a specified throttling policy from up to 100 APIs at a time.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>This API allows you to unbind a specified throttling policy from up to 100 APIs at a time.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Unbinds a specified throttling policy from APIs.</p>
+     * 
      * @param request RemoveTrafficControlApisRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RemoveTrafficControlApisResponse
@@ -11080,11 +11886,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Unbinds a specified throttling policy from APIs.
-     *
-     * @description *   This API is intended for API providers.
-     * *   This API allows you to unbind a specified throttling policy from up to 100 APIs at a time.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>This API allows you to unbind a specified throttling policy from up to 100 APIs at a time.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Unbinds a specified throttling policy from APIs.</p>
+     * 
      * @param request RemoveTrafficControlApisRequest
      * @return RemoveTrafficControlApisResponse
      */
@@ -11094,12 +11904,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a VPC authorization without unpublishing the associated APIs.
-     *
-     * @description *   This API is intended for API providers.
-     * *   Revokes the permissions of API Gateway to access your VPC instance.
-     * >  Deleting an authorization affects the associated API. Before you delete the authorization, make sure that it is not used by the API.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>Revokes the permissions of API Gateway to access your VPC instance.<blockquote>
+     * <p> Deleting an authorization affects the associated API. Before you delete the authorization, make sure that it is not used by the API.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a VPC authorization without unpublishing the associated APIs.</p>
+     * 
      * @param request RemoveVpcAccessRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RemoveVpcAccessResponse
@@ -11145,12 +11961,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a VPC authorization without unpublishing the associated APIs.
-     *
-     * @description *   This API is intended for API providers.
-     * *   Revokes the permissions of API Gateway to access your VPC instance.
-     * >  Deleting an authorization affects the associated API. Before you delete the authorization, make sure that it is not used by the API.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>Revokes the permissions of API Gateway to access your VPC instance.<blockquote>
+     * <p> Deleting an authorization affects the associated API. Before you delete the authorization, make sure that it is not used by the API.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a VPC authorization without unpublishing the associated APIs.</p>
+     * 
      * @param request RemoveVpcAccessRequest
      * @return RemoveVpcAccessResponse
      */
@@ -11214,8 +12036,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Resets the AppCode of an app.
-     *
+     * <b>summary</b> : 
+     * <p>Resets the AppCode of an app.</p>
+     * 
      * @param request ResetAppCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ResetAppCodeResponse
@@ -11253,8 +12076,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Resets the AppCode of an app.
-     *
+     * <b>summary</b> : 
+     * <p>Resets the AppCode of an app.</p>
+     * 
      * @param request ResetAppCodeRequest
      * @return ResetAppCodeResponse
      */
@@ -11264,12 +12088,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Resets the key of an application.
-     *
-     * @description *   This operation is intended for API callers.
-     * *   A new secret is automatically generated after you have called this operation. This secret cannot be customized.
-     * *   The results returned by this operation do not contain the application secret. You can obtain the secret by calling DescribeAppSecurity.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>A new secret is automatically generated after you have called this operation. This secret cannot be customized.</li>
+     * <li>The results returned by this operation do not contain the application secret. You can obtain the secret by calling DescribeAppSecurity.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Resets the key of an application.</p>
+     * 
      * @param request ResetAppSecretRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ResetAppSecretResponse
@@ -11311,12 +12139,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Resets the key of an application.
-     *
-     * @description *   This operation is intended for API callers.
-     * *   A new secret is automatically generated after you have called this operation. This secret cannot be customized.
-     * *   The results returned by this operation do not contain the application secret. You can obtain the secret by calling DescribeAppSecurity.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>A new secret is automatically generated after you have called this operation. This secret cannot be customized.</li>
+     * <li>The results returned by this operation do not contain the application secret. You can obtain the secret by calling DescribeAppSecurity.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Resets the key of an application.</p>
+     * 
      * @param request ResetAppSecretRequest
      * @return ResetAppSecretResponse
      */
@@ -11372,8 +12204,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 生成与App关联的API的SDK
-     *
+     * <b>summary</b> : 
+     * <p>生成与App关联的API的SDK</p>
+     * 
      * @param request SdkGenerateByAppForRegionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SdkGenerateByAppForRegionResponse
@@ -11411,8 +12244,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 生成与App关联的API的SDK
-     *
+     * <b>summary</b> : 
+     * <p>生成与App关联的API的SDK</p>
+     * 
      * @param request SdkGenerateByAppForRegionRequest
      * @return SdkGenerateByAppForRegionResponse
      */
@@ -11468,8 +12302,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改访问控制策略的名称
-     *
+     * <b>summary</b> : 
+     * <p>修改访问控制策略的名称</p>
+     * 
      * @param request SetAccessControlListAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetAccessControlListAttributeResponse
@@ -11507,8 +12342,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改访问控制策略的名称
-     *
+     * <b>summary</b> : 
+     * <p>修改访问控制策略的名称</p>
+     * 
      * @param request SetAccessControlListAttributeRequest
      * @return SetAccessControlListAttributeResponse
      */
@@ -11518,8 +12354,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 给多个API产品添加APP授权
-     *
+     * <b>summary</b> : 
+     * <p>给多个API产品添加APP授权</p>
+     * 
      * @param tmpReq SetApiProductsAuthoritiesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetApiProductsAuthoritiesResponse
@@ -11571,8 +12408,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 给多个API产品添加APP授权
-     *
+     * <b>summary</b> : 
+     * <p>给多个API产品添加APP授权</p>
+     * 
      * @param request SetApiProductsAuthoritiesRequest
      * @return SetApiProductsAuthoritiesResponse
      */
@@ -11582,12 +12420,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Authorizes a specified application to call multiple APIs.
-     *
-     * @description *   This operation is intended for API providers and callers.
-     * *   API providers can authorize any apps to call their APIs.
-     * *   API callers can authorize their own apps to call the APIs that they have purchased.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers and callers.</p>
+     * <ul>
+     * <li>API providers can authorize any apps to call their APIs.</li>
+     * <li>API callers can authorize their own apps to call the APIs that they have purchased.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Authorizes a specified application to call multiple APIs.</p>
+     * 
      * @param request SetApisAuthoritiesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetApisAuthoritiesResponse
@@ -11641,12 +12483,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Authorizes a specified application to call multiple APIs.
-     *
-     * @description *   This operation is intended for API providers and callers.
-     * *   API providers can authorize any apps to call their APIs.
-     * *   API callers can authorize their own apps to call the APIs that they have purchased.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers and callers.</p>
+     * <ul>
+     * <li>API providers can authorize any apps to call their APIs.</li>
+     * <li>API callers can authorize their own apps to call the APIs that they have purchased.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Authorizes a specified application to call multiple APIs.</p>
+     * 
      * @param request SetApisAuthoritiesRequest
      * @return SetApisAuthoritiesResponse
      */
@@ -11656,8 +12502,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 将多个APP授权给API产品
-     *
+     * <b>summary</b> : 
+     * <p>将多个APP授权给API产品</p>
+     * 
      * @param request SetAppsAuthToApiProductRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetAppsAuthToApiProductResponse
@@ -11703,8 +12550,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 将多个APP授权给API产品
-     *
+     * <b>summary</b> : 
+     * <p>将多个APP授权给API产品</p>
+     * 
      * @param request SetAppsAuthToApiProductRequest
      * @return SetAppsAuthToApiProductResponse
      */
@@ -11714,12 +12562,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Grants access permissions on a specified API to multiple applications.
-     *
-     * @description *   This operation is intended for API providers and callers.
-     * *   API providers can authorize any apps to call their APIs.
-     * *   API callers can authorize their own apps to call the APIs that they have purchased.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers and callers.</p>
+     * <ul>
+     * <li>API providers can authorize any apps to call their APIs.</li>
+     * <li>API callers can authorize their own apps to call the APIs that they have purchased.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Grants access permissions on a specified API to multiple applications.</p>
+     * 
      * @param request SetAppsAuthoritiesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetAppsAuthoritiesResponse
@@ -11773,12 +12625,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Grants access permissions on a specified API to multiple applications.
-     *
-     * @description *   This operation is intended for API providers and callers.
-     * *   API providers can authorize any apps to call their APIs.
-     * *   API callers can authorize their own apps to call the APIs that they have purchased.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers and callers.</p>
+     * <ul>
+     * <li>API providers can authorize any apps to call their APIs.</li>
+     * <li>API callers can authorize their own apps to call the APIs that they have purchased.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Grants access permissions on a specified API to multiple applications.</p>
+     * 
      * @param request SetAppsAuthoritiesRequest
      * @return SetAppsAuthoritiesResponse
      */
@@ -11788,8 +12644,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Binds a custom domain name to a specified API group.
-     *
+     * <b>summary</b> : 
+     * <p>Binds a custom domain name to a specified API group.</p>
+     * 
      * @param request SetDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetDomainResponse
@@ -11839,8 +12696,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Binds a custom domain name to a specified API group.
-     *
+     * <b>summary</b> : 
+     * <p>Binds a custom domain name to a specified API group.</p>
+     * 
      * @param request SetDomainRequest
      * @return SetDomainResponse
      */
@@ -11850,12 +12708,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Uploads an SSL certificate for a custom domain name.
-     *
-     * @description *   This operation is intended for API providers.
-     * *   The SSL certificate must match the custom domain name.
-     * *   After the SSL certificate is bound, HTTPS-based API services become available.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>The SSL certificate must match the custom domain name.</li>
+     * <li>After the SSL certificate is bound, HTTPS-based API services become available.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Uploads an SSL certificate for a custom domain name.</p>
+     * 
      * @param request SetDomainCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetDomainCertificateResponse
@@ -11913,12 +12775,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Uploads an SSL certificate for a custom domain name.
-     *
-     * @description *   This operation is intended for API providers.
-     * *   The SSL certificate must match the custom domain name.
-     * *   After the SSL certificate is bound, HTTPS-based API services become available.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>The SSL certificate must match the custom domain name.</li>
+     * <li>After the SSL certificate is bound, HTTPS-based API services become available.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Uploads an SSL certificate for a custom domain name.</p>
+     * 
      * @param request SetDomainCertificateRequest
      * @return SetDomainCertificateResponse
      */
@@ -11928,8 +12794,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables WebSocket for a custom domain name.
-     *
+     * <b>summary</b> : 
+     * <p>Enables or disables WebSocket for a custom domain name.</p>
+     * 
      * @param request SetDomainWebSocketStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetDomainWebSocketStatusResponse
@@ -11975,8 +12842,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables WebSocket for a custom domain name.
-     *
+     * <b>summary</b> : 
+     * <p>Enables or disables WebSocket for a custom domain name.</p>
+     * 
      * @param request SetDomainWebSocketStatusRequest
      * @return SetDomainWebSocketStatusResponse
      */
@@ -12032,11 +12900,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a binding relationship between specified access control lists (ACLs) and APIs.
-     *
-     * @description *   This operation is intended for API callers.
-     * *   A maximum of 100 APIs can be bound at a time.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>A maximum of 100 APIs can be bound at a time.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a binding relationship between specified access control lists (ACLs) and APIs.</p>
+     * 
      * @param request SetIpControlApisRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetIpControlApisResponse
@@ -12082,11 +12954,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a binding relationship between specified access control lists (ACLs) and APIs.
-     *
-     * @description *   This operation is intended for API callers.
-     * *   A maximum of 100 APIs can be bound at a time.
-     *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>A maximum of 100 APIs can be bound at a time.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a binding relationship between specified access control lists (ACLs) and APIs.</p>
+     * 
      * @param request SetIpControlApisRequest
      * @return SetIpControlApisResponse
      */
@@ -12096,8 +12972,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Binds a signature key to APIs.
-     *
+     * <b>summary</b> : 
+     * <p>Binds a signature key to APIs.</p>
+     * 
      * @param request SetSignatureApisRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetSignatureApisResponse
@@ -12143,8 +13020,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Binds a signature key to APIs.
-     *
+     * <b>summary</b> : 
+     * <p>Binds a signature key to APIs.</p>
+     * 
      * @param request SetSignatureApisRequest
      * @return SetSignatureApisResponse
      */
@@ -12154,11 +13032,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Binds a throttling policy to APIs.
-     *
-     * @description *   This API is intended for API providers.
-     * *   This API allows you to bind a specific throttling policy to up to 100 APIs at a time.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>This API allows you to bind a specific throttling policy to up to 100 APIs at a time.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Binds a throttling policy to APIs.</p>
+     * 
      * @param request SetTrafficControlApisRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetTrafficControlApisResponse
@@ -12204,11 +13086,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Binds a throttling policy to APIs.
-     *
-     * @description *   This API is intended for API providers.
-     * *   This API allows you to bind a specific throttling policy to up to 100 APIs at a time.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>This API allows you to bind a specific throttling policy to up to 100 APIs at a time.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Binds a throttling policy to APIs.</p>
+     * 
      * @param request SetTrafficControlApisRequest
      * @return SetTrafficControlApisResponse
      */
@@ -12218,11 +13104,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a virtual private cloud (VPC) access authorization and enables reverse access.
-     *
-     * @description * This operation is intended for API providers.
-     * * This operation is used to authorize API Gateway to access your VPC instance.
-     *
+     * <b>description</b> :
+     * <p>This operation is intended for API providers.</p>
+     * <ul>
+     * <li>This operation is used to authorize API Gateway to access your VPC instance.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a virtual private cloud (VPC) access authorization and enables reverse access.</p>
+     * 
      * @param request SetVpcAccessRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetVpcAccessResponse
@@ -12280,11 +13170,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a virtual private cloud (VPC) access authorization and enables reverse access.
-     *
-     * @description * This operation is intended for API providers.
-     * * This operation is used to authorize API Gateway to access your VPC instance.
-     *
+     * <b>description</b> :
+     * <p>This operation is intended for API providers.</p>
+     * <ul>
+     * <li>This operation is used to authorize API Gateway to access your VPC instance.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a virtual private cloud (VPC) access authorization and enables reverse access.</p>
+     * 
      * @param request SetVpcAccessRequest
      * @return SetVpcAccessResponse
      */
@@ -12294,8 +13188,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Specifies a wildcard domain name template for a bound custom domain name.
-     *
+     * <b>summary</b> : 
+     * <p>Specifies a wildcard domain name template for a bound custom domain name.</p>
+     * 
      * @param request SetWildcardDomainPatternsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetWildcardDomainPatternsResponse
@@ -12337,8 +13232,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Specifies a wildcard domain name template for a bound custom domain name.
-     *
+     * <b>summary</b> : 
+     * <p>Specifies a wildcard domain name template for a bound custom domain name.</p>
+     * 
      * @param request SetWildcardDomainPatternsRequest
      * @return SetWildcardDomainPatternsResponse
      */
@@ -12348,14 +13244,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Switches the definition of an API in a specified runtime environment to a historical version.
-     *
-     * @description *   This API is intended for API providers.
-     * *   The historical version can be obtained by calling the **DescribeHistoryApis** operation.
-     * *   Only APIs that have been published more than once have historical versions.
-     * *   This operation can only be performed on running APIs. Exercise caution when you perform this operation because the operation cannot be undone. The operation takes up to 5 seconds.
-     * *   The switch operation is essentially a publish operation. A reason for this operation must be provided.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>The historical version can be obtained by calling the <strong>DescribeHistoryApis</strong> operation.</li>
+     * <li>Only APIs that have been published more than once have historical versions.</li>
+     * <li>This operation can only be performed on running APIs. Exercise caution when you perform this operation because the operation cannot be undone. The operation takes up to 5 seconds.</li>
+     * <li>The switch operation is essentially a publish operation. A reason for this operation must be provided.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Switches the definition of an API in a specified runtime environment to a historical version.</p>
+     * 
      * @param request SwitchApiRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SwitchApiResponse
@@ -12405,14 +13305,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Switches the definition of an API in a specified runtime environment to a historical version.
-     *
-     * @description *   This API is intended for API providers.
-     * *   The historical version can be obtained by calling the **DescribeHistoryApis** operation.
-     * *   Only APIs that have been published more than once have historical versions.
-     * *   This operation can only be performed on running APIs. Exercise caution when you perform this operation because the operation cannot be undone. The operation takes up to 5 seconds.
-     * *   The switch operation is essentially a publish operation. A reason for this operation must be provided.
-     *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>The historical version can be obtained by calling the <strong>DescribeHistoryApis</strong> operation.</li>
+     * <li>Only APIs that have been published more than once have historical versions.</li>
+     * <li>This operation can only be performed on running APIs. Exercise caution when you perform this operation because the operation cannot be undone. The operation takes up to 5 seconds.</li>
+     * <li>The switch operation is essentially a publish operation. A reason for this operation must be provided.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Switches the definition of an API in a specified runtime environment to a historical version.</p>
+     * 
      * @param request SwitchApiRequest
      * @return SwitchApiResponse
      */
@@ -12422,14 +13326,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a tag-resource relationship.
-     *
-     * @description *   All tags (key-value pairs) are applied to all resources of a specified ResourceId, with each resource specified as ResourceId.N.
-     * *   Tag.N is a resource tag consisting of a key-value pair: Tag.N.Key and Tag.N.Value.
-     * *   If you call this operation to tag multiple resources simultaneously, either all or none of the resources will be tagged.
-     * *   If you specify Tag.1.Value in addition to required parameters, you must also specify Tag.1.Key. Otherwise, an InvalidParameter.TagKey error is reported. A tag that has a value must have the corresponding key, but the key can be an empty string.
-     * *   If a tag with the same key has been bound to a resource, the new tag will overwrite the existing one.
-     *
+     * <b>description</b> :
+     * <p>  All tags (key-value pairs) are applied to all resources of a specified ResourceId, with each resource specified as ResourceId.N.</p>
+     * <ul>
+     * <li>Tag.N is a resource tag consisting of a key-value pair: Tag.N.Key and Tag.N.Value.</li>
+     * <li>If you call this operation to tag multiple resources simultaneously, either all or none of the resources will be tagged.</li>
+     * <li>If you specify Tag.1.Value in addition to required parameters, you must also specify Tag.1.Key. Otherwise, an InvalidParameter.TagKey error is reported. A tag that has a value must have the corresponding key, but the key can be an empty string.</li>
+     * <li>If a tag with the same key has been bound to a resource, the new tag will overwrite the existing one.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a tag-resource relationship.</p>
+     * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TagResourcesResponse
@@ -12471,14 +13379,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a tag-resource relationship.
-     *
-     * @description *   All tags (key-value pairs) are applied to all resources of a specified ResourceId, with each resource specified as ResourceId.N.
-     * *   Tag.N is a resource tag consisting of a key-value pair: Tag.N.Key and Tag.N.Value.
-     * *   If you call this operation to tag multiple resources simultaneously, either all or none of the resources will be tagged.
-     * *   If you specify Tag.1.Value in addition to required parameters, you must also specify Tag.1.Key. Otherwise, an InvalidParameter.TagKey error is reported. A tag that has a value must have the corresponding key, but the key can be an empty string.
-     * *   If a tag with the same key has been bound to a resource, the new tag will overwrite the existing one.
-     *
+     * <b>description</b> :
+     * <p>  All tags (key-value pairs) are applied to all resources of a specified ResourceId, with each resource specified as ResourceId.N.</p>
+     * <ul>
+     * <li>Tag.N is a resource tag consisting of a key-value pair: Tag.N.Key and Tag.N.Value.</li>
+     * <li>If you call this operation to tag multiple resources simultaneously, either all or none of the resources will be tagged.</li>
+     * <li>If you specify Tag.1.Value in addition to required parameters, you must also specify Tag.1.Key. Otherwise, an InvalidParameter.TagKey error is reported. A tag that has a value must have the corresponding key, but the key can be an empty string.</li>
+     * <li>If a tag with the same key has been bound to a resource, the new tag will overwrite the existing one.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a tag-resource relationship.</p>
+     * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
      */
@@ -12488,14 +13400,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes tags from resources.
-     *
-     * @description *   If you call this operation to untag multiple resources simultaneously, either all or none of the resources will be untagged.
-     * *   If you specify resource IDs without specifying tag keys and set the All parameter to true, all tags bound to the specified resources will be deleted. If a resource does not have any tags, the request is not processed but a success is returned.
-     * *   If you specify resource IDs without specifying tag keys and set the All parameter to false, the request is not processed but a success is returned.
-     * *   When tag keys are specified, the All parameter is invalid.
-     * *   When multiple resources and key-value pairs are specified, the specified tags bound to the resources are deleted.
-     *
+     * <b>description</b> :
+     * <p>  If you call this operation to untag multiple resources simultaneously, either all or none of the resources will be untagged.</p>
+     * <ul>
+     * <li>If you specify resource IDs without specifying tag keys and set the All parameter to true, all tags bound to the specified resources will be deleted. If a resource does not have any tags, the request is not processed but a success is returned.</li>
+     * <li>If you specify resource IDs without specifying tag keys and set the All parameter to false, the request is not processed but a success is returned.</li>
+     * <li>When tag keys are specified, the All parameter is invalid.</li>
+     * <li>When multiple resources and key-value pairs are specified, the specified tags bound to the resources are deleted.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes tags from resources.</p>
+     * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UntagResourcesResponse
@@ -12541,14 +13457,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes tags from resources.
-     *
-     * @description *   If you call this operation to untag multiple resources simultaneously, either all or none of the resources will be untagged.
-     * *   If you specify resource IDs without specifying tag keys and set the All parameter to true, all tags bound to the specified resources will be deleted. If a resource does not have any tags, the request is not processed but a success is returned.
-     * *   If you specify resource IDs without specifying tag keys and set the All parameter to false, the request is not processed but a success is returned.
-     * *   When tag keys are specified, the All parameter is invalid.
-     * *   When multiple resources and key-value pairs are specified, the specified tags bound to the resources are deleted.
-     *
+     * <b>description</b> :
+     * <p>  If you call this operation to untag multiple resources simultaneously, either all or none of the resources will be untagged.</p>
+     * <ul>
+     * <li>If you specify resource IDs without specifying tag keys and set the All parameter to true, all tags bound to the specified resources will be deleted. If a resource does not have any tags, the request is not processed but a success is returned.</li>
+     * <li>If you specify resource IDs without specifying tag keys and set the All parameter to false, the request is not processed but a success is returned.</li>
+     * <li>When tag keys are specified, the All parameter is invalid.</li>
+     * <li>When multiple resources and key-value pairs are specified, the specified tags bound to the resources are deleted.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes tags from resources.</p>
+     * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
      */
@@ -12558,8 +13478,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Tests the network connectivity between an API Gateway instance and a port on an Elastic Compute Service (ECS) or Server Load Balance (SLB) instance in a virtual private cloud (VPC) access authorization.
-     *
+     * <b>summary</b> : 
+     * <p>Tests the network connectivity between an API Gateway instance and a port on an Elastic Compute Service (ECS) or Server Load Balance (SLB) instance in a virtual private cloud (VPC) access authorization.</p>
+     * 
      * @param request ValidateVpcConnectivityRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ValidateVpcConnectivityResponse
@@ -12597,8 +13518,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Tests the network connectivity between an API Gateway instance and a port on an Elastic Compute Service (ECS) or Server Load Balance (SLB) instance in a virtual private cloud (VPC) access authorization.
-     *
+     * <b>summary</b> : 
+     * <p>Tests the network connectivity between an API Gateway instance and a port on an Elastic Compute Service (ECS) or Server Load Balance (SLB) instance in a virtual private cloud (VPC) access authorization.</p>
+     * 
      * @param request ValidateVpcConnectivityRequest
      * @return ValidateVpcConnectivityResponse
      */

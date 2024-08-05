@@ -4,9 +4,17 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class SdkGenerateByGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://oss-bucket/object">http://oss-bucket/object</a></p>
+     */
     @NameInMap("DownloadLink")
     public String downloadLink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D0075BDA-8AED-5073-A70A-FE44E86AB20F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

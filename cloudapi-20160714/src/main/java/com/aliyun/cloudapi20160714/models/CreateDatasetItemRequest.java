@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateDatasetItemRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a25a6589b2584ff490e891cc********</p>
      */
     @NameInMap("DatasetId")
     public String datasetId;
@@ -13,6 +16,10 @@ public class CreateDatasetItemRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-09-22T12:00:00Z</p>
+     */
     @NameInMap("ExpiredTime")
     public String expiredTime;
 
@@ -21,6 +28,9 @@ public class CreateDatasetItemRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>106.43.XXX.XXX</p>
      */
     @NameInMap("Value")
     public String value;

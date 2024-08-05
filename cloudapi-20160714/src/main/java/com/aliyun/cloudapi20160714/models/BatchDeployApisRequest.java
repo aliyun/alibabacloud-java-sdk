@@ -12,8 +12,10 @@ public class BatchDeployApisRequest extends TeaModel {
 
     /**
      * <p>The description.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Description")
     public String description;
@@ -23,12 +25,15 @@ public class BatchDeployApisRequest extends TeaModel {
 
     /**
      * <p>The name of the runtime environment. Valid values:</p>
-     * <br>
-     * <p>*   **RELEASE**</p>
-     * <p>*   **TEST**</p>
-     * <p>*   PRE: the pre-release environment</p>
-     * <br>
+     * <ul>
+     * <li><strong>RELEASE</strong></li>
+     * <li><strong>TEST</strong></li>
+     * <li>PRE: the pre-release environment</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RELEASE</p>
      */
     @NameInMap("StageName")
     public String stageName;
@@ -73,16 +78,20 @@ public class BatchDeployApisRequest extends TeaModel {
     public static class BatchDeployApisRequestApi extends TeaModel {
         /**
          * <p>The API ID.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2b35dd68345b472f8051647306a16415</p>
          */
         @NameInMap("ApiUid")
         public String apiUid;
 
         /**
          * <p>The API group ID.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b4f5c342b8bc4ef88ccda0332402e0fa</p>
          */
         @NameInMap("GroupId")
         public String groupId;

@@ -6,15 +6,16 @@ import com.aliyun.tea.*;
 public class DetachApiProductRequest extends TeaModel {
     /**
      * <p>The ID of the API product.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>117b7a64a8b3f064eaa4a47ac62aac5e</p>
      */
     @NameInMap("ApiProductId")
     public String apiProductId;
 
     /**
      * <p>The APIs that you want to detach from the API product.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Apis")
@@ -55,20 +56,25 @@ public class DetachApiProductRequest extends TeaModel {
     public static class DetachApiProductRequestApis extends TeaModel {
         /**
          * <p>The API ID.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ba84c55eca46488598da17c0609f3ead</p>
          */
         @NameInMap("ApiId")
         public String apiId;
 
         /**
          * <p>The environment to which the API is published. Valid values:</p>
-         * <br>
-         * <p>*   **RELEASE**: the production environment</p>
-         * <p>*   **PRE**: the pre-release environment</p>
-         * <p>*   **TEST**: the test environment</p>
-         * <br>
+         * <ul>
+         * <li><strong>RELEASE</strong>: the production environment</li>
+         * <li><strong>PRE</strong>: the pre-release environment</li>
+         * <li><strong>TEST</strong>: the test environment</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RELEASE</p>
          */
         @NameInMap("StageName")
         public String stageName;

@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteApiStageVariableRequest extends TeaModel {
     /**
      * <p>The ID of the API group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>523e8dc7bbe04613b5b1d726c2a7889d</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -17,16 +19,20 @@ public class DeleteApiStageVariableRequest extends TeaModel {
 
     /**
      * <p>The ID of the runtime environment.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6EF60BEC-0242-43AF-BB20-270359FB54A7</p>
      */
     @NameInMap("StageId")
     public String stageId;
 
     /**
      * <p>The name of the variable to be deleted. This parameter is case-sensitive.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>serverName</p>
      */
     @NameInMap("VariableName")
     public String variableName;

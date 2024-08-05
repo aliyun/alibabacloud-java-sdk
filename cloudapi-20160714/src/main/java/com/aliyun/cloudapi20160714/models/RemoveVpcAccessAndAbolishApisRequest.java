@@ -6,15 +6,25 @@ import com.aliyun.tea.*;
 public class RemoveVpcAccessAndAbolishApisRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-uf6iaale3gfef9t9cb41</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("NeedBatchWork")
     public Boolean needBatchWork;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8080</p>
      */
     @NameInMap("Port")
     public Integer port;
@@ -24,6 +34,9 @@ public class RemoveVpcAccessAndAbolishApisRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1iw82phcgkvupgfv0o8</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

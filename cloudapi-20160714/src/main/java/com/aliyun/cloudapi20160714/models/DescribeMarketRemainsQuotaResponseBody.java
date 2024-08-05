@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeMarketRemainsQuotaResponseBody extends TeaModel {
     /**
      * <p>The remaining quota.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("RemainsQuota")
     public Long remainsQuota;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E7FE7172-AA75-5880-B6F7-C00893E9BC06</p>
      */
     @NameInMap("RequestId")
     public String requestId;

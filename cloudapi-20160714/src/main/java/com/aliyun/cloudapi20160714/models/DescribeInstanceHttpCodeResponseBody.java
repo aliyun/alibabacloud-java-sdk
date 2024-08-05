@@ -12,6 +12,9 @@ public class DescribeInstanceHttpCodeResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AD00F8C0-311B-54A9-ADE2-2436771012DA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeInstanceHttpCodeResponseBody extends TeaModel {
     public static class DescribeInstanceHttpCodeResponseBodyInstanceHttpCodeMonitorItem extends TeaModel {
         /**
          * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>404</p>
          */
         @NameInMap("ItemTime")
         public String itemTime;
 
         /**
          * <p>The corresponding value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ItemValue")
         public String itemValue;

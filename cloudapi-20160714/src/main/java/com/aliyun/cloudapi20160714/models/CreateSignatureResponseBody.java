@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CreateSignatureResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ004</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the back-end signature key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dd05f1c54d6749eda95f9fa6d491449a</p>
      */
     @NameInMap("SignatureId")
     public String signatureId;
 
     /**
      * <p>The name of the back-end signature key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>backendsignature</p>
      */
     @NameInMap("SignatureName")
     public String signatureName;

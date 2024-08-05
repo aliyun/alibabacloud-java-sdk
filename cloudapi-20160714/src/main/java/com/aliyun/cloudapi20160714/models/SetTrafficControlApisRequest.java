@@ -6,41 +6,53 @@ import com.aliyun.tea.*;
 public class SetTrafficControlApisRequest extends TeaModel {
     /**
      * <p>The API ID for the specified operation. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3b81fd160f5645e097cc8855d75a1cf6,46fbb52840d146f186e38e8e70fc8c12</p>
      */
     @NameInMap("ApiIds")
     public String apiIds;
 
     /**
      * <p>The ID of the API group containing the APIs to which you want to bind a specified throttling policy.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0009db9c828549768a200320714b8930</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The security token included in the WebSocket request header. The system uses this token to authenticate the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>556d15cb-0808-432d-ab07-33e6b961b703</p>
      */
     @NameInMap("SecurityToken")
     public String securityToken;
 
     /**
      * <p>The name of the runtime environment. Valid values:</p>
-     * <br>
-     * <p>*   **RELEASE**</p>
-     * <p>*   **TEST**</p>
-     * <br>
+     * <ul>
+     * <li><strong>RELEASE</strong></li>
+     * <li><strong>TEST</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RELEASE</p>
      */
     @NameInMap("StageName")
     public String stageName;
 
     /**
      * <p>The ID of the throttling policy.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dd05f1c54d6749eda95f9fa6d491449a</p>
      */
     @NameInMap("TrafficControlId")
     public String trafficControlId;

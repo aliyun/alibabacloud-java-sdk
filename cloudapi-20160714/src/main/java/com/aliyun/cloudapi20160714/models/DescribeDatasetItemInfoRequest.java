@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class DescribeDatasetItemInfoRequest extends TeaModel {
     /**
      * <p>The ID of the dataset.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>62b91a790a693238********</p>
      */
     @NameInMap("DatasetId")
     public String datasetId;
 
     /**
      * <p>The ID of the data entry.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5045****</p>
      */
     @NameInMap("DatasetItemId")
     public String datasetItemId;
@@ -23,6 +28,9 @@ public class DescribeDatasetItemInfoRequest extends TeaModel {
 
     /**
      * <p>The value of the data entry.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>106.43.XXX.XXX</p>
      */
     @NameInMap("Value")
     public String value;

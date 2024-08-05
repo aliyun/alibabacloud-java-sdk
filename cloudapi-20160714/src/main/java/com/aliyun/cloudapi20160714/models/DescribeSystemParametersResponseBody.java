@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeSystemParametersResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0CCDF65E-6050-412D-AD68-FA3D9196836C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
     public static class DescribeSystemParametersResponseBodySystemParamsSystemParamItem extends TeaModel {
         /**
          * <p>Examples</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.1</p>
          */
         @NameInMap("DemoValue")
         public String demoValue;
 
         /**
          * <p>The description of a parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Client IP Address</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CaClientIp</p>
          */
         @NameInMap("ParamName")
         public String paramName;
 
         /**
          * <p>The type of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>string</p>
          */
         @NameInMap("ParamType")
         public String paramType;

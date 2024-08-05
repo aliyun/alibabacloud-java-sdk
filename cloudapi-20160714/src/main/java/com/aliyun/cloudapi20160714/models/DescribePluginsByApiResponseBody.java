@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribePluginsByApiResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -24,12 +30,18 @@ public class DescribePluginsByApiResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>46373DC4-19F1-4DC8-8C31-1107289BB5E0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,48 +94,72 @@ public class DescribePluginsByApiResponseBody extends TeaModel {
     public static class DescribePluginsByApiResponseBodyPluginsPluginAttribute extends TeaModel {
         /**
          * <p>The time when the plug-in was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-11T09:29:58Z</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         /**
          * <p>The plug-in description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Traffic throttling</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The time when the plug-in was last modified. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-11T09:29:58Z</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
         /**
          * <p>The definition statement of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;unit\&quot;:\&quot;MINUTE\&quot;,\&quot;apiDefault\&quot;:20}</p>
          */
         @NameInMap("PluginData")
         public String pluginData;
 
         /**
          * <p>The plug-in ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9a3f1a5279434f2ba74ccd91c295af9f</p>
          */
         @NameInMap("PluginId")
         public String pluginId;
 
         /**
          * <p>The plug-in name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>firstPlugin</p>
          */
         @NameInMap("PluginName")
         public String pluginName;
 
         /**
          * <p>The plug-in type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trafficControl</p>
          */
         @NameInMap("PluginType")
         public String pluginType;
 
         /**
          * <p>The region where the plug-in resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         @NameInMap("RegionId")
         public String regionId;

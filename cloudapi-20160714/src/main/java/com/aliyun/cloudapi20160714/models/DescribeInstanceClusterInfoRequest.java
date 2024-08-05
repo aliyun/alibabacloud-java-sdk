@@ -4,6 +4,10 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceClusterInfoRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>testvpc</p>
+     */
     @NameInMap("InstanceClusterName")
     public String instanceClusterName;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteMonitorGroupResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C7E2CBAA-47FF-569F-AF12-B14B80E25422</p>
      */
     @NameInMap("RequestId")
     public String requestId;

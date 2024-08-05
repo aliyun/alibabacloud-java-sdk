@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class DeleteInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>apigateway-sh-ae502ee79ef8</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The tag of objects that match the lifecycle rule. You can specify multiple tags.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Key， Value</p>
      */
     @NameInMap("Tag")
     public java.util.List<DeleteInstanceRequestTag> tag;
@@ -42,16 +47,20 @@ public class DeleteInstanceRequest extends TeaModel {
     public static class DeleteInstanceRequestTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         @NameInMap("Value")
         public String value;

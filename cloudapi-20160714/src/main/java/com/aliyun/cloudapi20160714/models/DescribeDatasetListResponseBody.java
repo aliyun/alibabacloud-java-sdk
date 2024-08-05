@@ -12,24 +12,36 @@ public class DescribeDatasetListResponseBody extends TeaModel {
 
     /**
      * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D403C6E6-21B3-5B78-82DA-E3B6********</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,12 +94,18 @@ public class DescribeDatasetListResponseBody extends TeaModel {
     public static class DescribeDatasetListResponseBodyDatasetInfoListTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENV</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Value")
         public String value;
@@ -118,34 +136,50 @@ public class DescribeDatasetListResponseBody extends TeaModel {
     public static class DescribeDatasetListResponseBodyDatasetInfoList extends TeaModel {
         /**
          * <p>The time when the dataset was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-09-21T12:58:43Z</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         /**
          * <p>The dataset ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6304ce6b4ae6453f********</p>
          */
         @NameInMap("DatasetId")
         public String datasetId;
 
         /**
          * <p>The dataset name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DatasetName</p>
          */
         @NameInMap("DatasetName")
         public String datasetName;
 
         /**
          * <p>The dataset type. Valid values:</p>
-         * <br>
-         * <p>*   JWT_BLOCKING : a JSON Web Token (JWT) blacklist</p>
-         * <p>*   IP_WHITELIST_CIDR : an IP address whitelist</p>
-         * <p>*   PARAMETER_ACCESS: a list of parameters for parameter-based access control</p>
+         * <ul>
+         * <li>JWT_BLOCKING : a JSON Web Token (JWT) blacklist</li>
+         * <li>IP_WHITELIST_CIDR : an IP address whitelist</li>
+         * <li>PARAMETER_ACCESS: a list of parameters for parameter-based access control</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IP_WHITELIST_CIDR</p>
          */
         @NameInMap("DatasetType")
         public String datasetType;
 
         /**
          * <p>The time when the dataset was last modified. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-09-21T12:58:43Z</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;

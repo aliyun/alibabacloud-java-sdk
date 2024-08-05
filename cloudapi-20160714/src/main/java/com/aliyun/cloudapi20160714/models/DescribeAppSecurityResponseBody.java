@@ -6,36 +6,54 @@ import com.aliyun.tea.*;
 public class DescribeAppSecurityResponseBody extends TeaModel {
     /**
      * <p>The AppCode of the app.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3aaf905a0a1f4f0eabc6d891dfa08afc</p>
      */
     @NameInMap("AppCode")
     public String appCode;
 
     /**
      * <p>The key of the app.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60030986</p>
      */
     @NameInMap("AppKey")
     public String appKey;
 
     /**
      * <p>The password of the app.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c1ae97aaa7e45f21d10824bc44678fee</p>
      */
     @NameInMap("AppSecret")
     public String appSecret;
 
     /**
      * <p>The creation time (UTC) of the key, which is the same as the app creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2016-07-31T04:10:19Z</p>
      */
     @NameInMap("CreatedTime")
     public String createdTime;
 
     /**
      * <p>The modification time (UTC) of the key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2016-07-31T04:10:19Z</p>
      */
     @NameInMap("ModifiedTime")
     public String modifiedTime;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ015</p>
      */
     @NameInMap("RequestId")
     public String requestId;

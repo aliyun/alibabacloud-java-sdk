@@ -4,6 +4,10 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreateAppKeyResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>5D524309-6BED-5BB4-A735-F7D9F98B7B88</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

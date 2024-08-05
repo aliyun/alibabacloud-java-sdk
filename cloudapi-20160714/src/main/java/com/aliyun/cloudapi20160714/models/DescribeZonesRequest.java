@@ -6,10 +6,14 @@ import com.aliyun.tea.*;
 public class DescribeZonesRequest extends TeaModel {
     /**
      * <p>The language in which you want to use to return the description of the system policy. Valid values:</p>
-     * <br>
-     * <p>*   en: English</p>
-     * <p>*   zh-CN: Chinese</p>
-     * <p>*   ja: Japanese</p>
+     * <ul>
+     * <li>en: English</li>
+     * <li>zh-CN: Chinese</li>
+     * <li>ja: Japanese</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Language")
     public String language;

@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class DescribeApiRequest extends TeaModel {
     /**
      * <p>The ID of the API.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8afff6c8c4c6447abb035812e4d66b65</p>
      */
     @NameInMap("ApiId")
     public String apiId;
 
     /**
      * <p>The ID of the API group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("GroupId")
     public String groupId;

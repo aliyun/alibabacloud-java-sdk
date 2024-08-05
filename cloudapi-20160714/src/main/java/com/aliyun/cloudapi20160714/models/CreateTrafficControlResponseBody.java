@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateTrafficControlResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ004</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the throttling policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tf123456</p>
      */
     @NameInMap("TrafficControlId")
     public String trafficControlId;

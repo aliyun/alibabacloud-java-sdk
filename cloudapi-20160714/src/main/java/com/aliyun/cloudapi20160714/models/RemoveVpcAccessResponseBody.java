@@ -12,6 +12,9 @@ public class RemoveVpcAccessResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ015</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class RemoveVpcAccessResponseBody extends TeaModel {
     public static class RemoveVpcAccessResponseBodyApisApi extends TeaModel {
         /**
          * <p>API Id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>551877242a4b4f3a84a56b7c3570e4a7</p>
          */
         @NameInMap("ApiId")
         public String apiId;
 
         /**
          * <p>The ID of the API group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78d54ac4424d4b1792e33ca35637e8e4</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The ID of the runtime environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d1e1ee28f9fb4b729db0ee8ca76ff0a5</p>
          */
         @NameInMap("StageId")
         public String stageId;

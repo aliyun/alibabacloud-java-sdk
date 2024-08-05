@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribePluginTemplatesResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EF924FE4-2EDD-4CD3-89EC-34E4708574E7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,30 +43,45 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
     public static class DescribePluginTemplatesResponseBodyTemplatesTemplate extends TeaModel {
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>balabala</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The document anchor point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>anchor</p>
          */
         @NameInMap("DocumentAnchor")
         public String documentAnchor;
 
         /**
          * <p>The ID of the document.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>41079</p>
          */
         @NameInMap("DocumentId")
         public String documentId;
 
         /**
          * <p>The sample.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Sample")
         public String sample;
 
         /**
          * <p>The title of the plug-in template title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>template title</p>
          */
         @NameInMap("Title")
         public String title;

@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class ModifyApiGroupInstanceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>01c97ed08a614118849b00079753d1e2</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>migrate</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
@@ -21,6 +28,9 @@ public class ModifyApiGroupInstanceRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>apigateway-bj-c325375b1ebe</p>
      */
     @NameInMap("TargetInstanceId")
     public String targetInstanceId;
@@ -73,12 +83,18 @@ public class ModifyApiGroupInstanceRequest extends TeaModel {
     public static class ModifyApiGroupInstanceRequestTag extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Value")
         public String value;

@@ -4,24 +4,43 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreateApiGroupRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>/qqq</p>
+     */
     @NameInMap("BasePath")
     public String basePath;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The weather informations.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Weather</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>apigateway-cn-v6419k43xxxxx</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Key， Value</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateApiGroupRequestTag> tag;
 
@@ -79,9 +98,17 @@ public class CreateApiGroupRequest extends TeaModel {
     }
 
     public static class CreateApiGroupRequestTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>key</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>value</p>
+         */
         @NameInMap("Value")
         public String value;
 

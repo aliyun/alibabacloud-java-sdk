@@ -6,48 +6,72 @@ import com.aliyun.tea.*;
 public class DescribeAppAttributesRequest extends TeaModel {
     /**
      * <p>The AppCode of the app.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23552160</p>
      */
     @NameInMap("AppCode")
     public String appCode;
 
     /**
      * <p>The ID of the app.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20112314518278</p>
      */
     @NameInMap("AppId")
     public Long appId;
 
     /**
      * <p>The app key that is used to make an API call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>203708622</p>
      */
     @NameInMap("AppKey")
     public String appKey;
 
     /**
      * <p>The name of the app.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testApp</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
      * <p>Specifies whether to enable tag verification.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EnableTagAuth")
     public Boolean enableTagAuth;
 
     /**
      * <p>The extended information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>110243810311</p>
      */
     @NameInMap("Extend")
     public String extend;
 
     /**
      * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -57,15 +81,22 @@ public class DescribeAppAttributesRequest extends TeaModel {
 
     /**
      * <p>The order. Valid values: asc and desc. Default value: desc.</p>
-     * <br>
-     * <p>*   asc: The apps are displayed in ascending order of modification time.</p>
-     * <p>*   desc: The apps are displayed in descending order of modification time.</p>
+     * <ul>
+     * <li>asc: The apps are displayed in ascending order of modification time.</li>
+     * <li>desc: The apps are displayed in descending order of modification time.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>desc</p>
      */
     @NameInMap("Sort")
     public String sort;
 
     /**
      * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Key， Value</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeAppAttributesRequestTag> tag;
@@ -166,18 +197,21 @@ public class DescribeAppAttributesRequest extends TeaModel {
     public static class DescribeAppAttributesRequestTag extends TeaModel {
         /**
          * <p>The value of tag N.</p>
-         * <br>
-         * <p>Valid values of n: `[1, 20]`.</p>
-         * <br>
+         * <p>Valid values of n: <code>[1, 20]</code>.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The key of tag N.</p>
-         * <br>
-         * <p>Valid values of n: `[1, 20]`.</p>
+         * <p>Valid values of n: <code>[1, 20]</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>\&quot; \&quot;</p>
          */
         @NameInMap("Value")
         public String value;

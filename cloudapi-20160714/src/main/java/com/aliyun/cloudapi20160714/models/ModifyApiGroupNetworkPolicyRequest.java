@@ -6,32 +6,46 @@ import com.aliyun.tea.*;
 public class ModifyApiGroupNetworkPolicyRequest extends TeaModel {
     /**
      * <p>The ID of the API group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b0162c75d7d34ff48506f1aff878b05e</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The HTTPS security policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HTTPS1_1_TLS1_0</p>
      */
     @NameInMap("HttpsPolicy")
     public String httpsPolicy;
 
     /**
      * <p>Specifies whether to disable the public second-level domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("InnerDomainEnable")
     public Boolean innerDomainEnable;
 
     /**
      * <p>Specifies whether to enable the virtual private cloud (VPC) second-level domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("InternetEnable")
     public Boolean internetEnable;
 
     /**
-     * <p>Specifies whether to enable IPv6. Valid values: **true** and **false**.</p>
+     * <p>Specifies whether to enable IPv6. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("InternetIPV6Enable")
     public Boolean internetIPV6Enable;
@@ -41,15 +55,22 @@ public class ModifyApiGroupNetworkPolicyRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable the VPC domain name. Valid values:</p>
-     * <br>
-     * <p>*   TRUE</p>
-     * <p>*   FALSE</p>
+     * <ul>
+     * <li>TRUE</li>
+     * <li>FALSE</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("VpcIntranetEnable")
     public Boolean vpcIntranetEnable;
 
     /**
      * <p>Specifies whether to enable the self-calling domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("VpcSlbIntranetEnable")
     public Boolean vpcSlbIntranetEnable;

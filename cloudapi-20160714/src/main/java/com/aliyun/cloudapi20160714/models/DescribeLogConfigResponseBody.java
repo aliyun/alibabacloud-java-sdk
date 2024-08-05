@@ -7,6 +7,10 @@ public class DescribeLogConfigResponseBody extends TeaModel {
     @NameInMap("LogInfos")
     public DescribeLogConfigResponseBodyLogInfos logInfos;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E3BC2706-ABDB-5B64-A12F-08DFD9E3F339</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,31 @@ public class DescribeLogConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeLogConfigResponseBodyLogInfosLogInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>PROVIDER</p>
+         */
         @NameInMap("LogType")
         public String logType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>slsstore</p>
+         */
         @NameInMap("SlsLogStore")
         public String slsLogStore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>slsproject</p>
+         */
         @NameInMap("SlsProject")
         public String slsProject;
 

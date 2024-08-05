@@ -6,25 +6,33 @@ import com.aliyun.tea.*;
 public class RemoveIpControlApisRequest extends TeaModel {
     /**
      * <p>The IDs of the APIs from which you want to unbind the ACL.</p>
-     * <br>
-     * <p>*   If this parameter is not specified, the ACL is unbound from all the APIs in the specified environment of the API group.</p>
-     * <p>*   The IDs of APIs that you want to query. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.</p>
+     * <ul>
+     * <li>If this parameter is not specified, the ACL is unbound from all the APIs in the specified environment of the API group.</li>
+     * <li>The IDs of APIs that you want to query. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("ApiIds")
     public String apiIds;
 
     /**
      * <p>The ID of the API group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0009db9c828549768a200320714b8930</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The ID of the ACL.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dd05f1c54d6749eda95f9fa6d491449a</p>
      */
     @NameInMap("IpControlId")
     public String ipControlId;
@@ -34,11 +42,14 @@ public class RemoveIpControlApisRequest extends TeaModel {
 
     /**
      * <p>The name of the runtime environment. Valid values:</p>
-     * <br>
-     * <p>*   **RELEASE**</p>
-     * <p>*   **TEST**</p>
-     * <br>
+     * <ul>
+     * <li><strong>RELEASE</strong></li>
+     * <li><strong>TEST</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TEST</p>
      */
     @NameInMap("StageName")
     public String stageName;

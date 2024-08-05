@@ -6,17 +6,23 @@ import com.aliyun.tea.*;
 public class CreateAccessControlListRequest extends TeaModel {
     /**
      * <p>The name of the ACL. The name must be 1 to 30 characters in length, and can contain letters, digits, periods (.), hyphens (-), forward slashes (/), and underscores (_). The name must be unique within the region.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testAcl</p>
      */
     @NameInMap("AclName")
     public String aclName;
 
     /**
      * <p>The IP version of the Classic Load Balancer (CLB) instance with which the ACL is associated. Valid values:</p>
-     * <br>
-     * <p>*   **ipv4**</p>
-     * <p>*   **ipv6**</p>
+     * <ul>
+     * <li><strong>ipv4</strong></li>
+     * <li><strong>ipv6</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv4</p>
      */
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;

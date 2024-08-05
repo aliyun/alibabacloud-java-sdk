@@ -12,6 +12,9 @@ public class SetApiProductsAuthoritiesShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>111385984</p>
      */
     @NameInMap("AppId")
     public Long appId;

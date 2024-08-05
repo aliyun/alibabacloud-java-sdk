@@ -12,24 +12,36 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ015</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,20 +94,31 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
     public static class DescribeAccessControlListsResponseBodyAclsAcl extends TeaModel {
         /**
          * <p>The ID of the access control policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acl-3nsohdozz0ru8fi5onwz1</p>
          */
         @NameInMap("AclId")
         public String aclId;
 
         /**
          * <p>The name of the access control policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testAcl</p>
          */
         @NameInMap("AclName")
         public String aclName;
 
         /**
          * <p>访问控制策略组的IP版本。</p>
-         * <p>- **IPv4**。</p>
-         * <p>- **IPv6**。</p>
+         * <ul>
+         * <li><strong>IPv4</strong>。</li>
+         * <li><strong>IPv6</strong>。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv4</p>
          */
         @NameInMap("AddressIPVersion")
         public String addressIPVersion;

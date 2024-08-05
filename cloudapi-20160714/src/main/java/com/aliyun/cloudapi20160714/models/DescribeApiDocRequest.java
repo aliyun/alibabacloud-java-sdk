@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class DescribeApiDocRequest extends TeaModel {
     /**
      * <p>The ID of the API.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3b81fd160f5645e097cc8855d75a1cf6</p>
      */
     @NameInMap("ApiId")
     public String apiId;
 
     /**
      * <p>The ID of the API group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -23,11 +28,14 @@ public class DescribeApiDocRequest extends TeaModel {
 
     /**
      * <p>The environment to which the API is published. Valid values:</p>
-     * <br>
-     * <p>*   **RELEASE**</p>
-     * <p>*   **TEST**</p>
-     * <br>
+     * <ul>
+     * <li><strong>RELEASE</strong></li>
+     * <li><strong>TEST</strong></li>
+     * </ul>
      * <p>If this parameter is not specified, the default value is used, which is RELEASE.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RELEASE</p>
      */
     @NameInMap("StageName")
     public String stageName;

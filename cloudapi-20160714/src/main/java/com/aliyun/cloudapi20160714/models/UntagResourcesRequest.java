@@ -5,42 +5,57 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to delete all tags. This parameter is valid only when the **TagKey.N**parameter is not specified. Default value: false. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <p>Specifies whether to delete all tags. This parameter is valid only when the <strong>TagKey.N</strong>parameter is not specified. Default value: false. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("All")
     public Boolean all;
 
     /**
      * <p>The resource IDs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>285bb759342649a1b70c2093a772e087</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
      * <p>The type of the resource. Tags are bound to API groups, plug-ins, and applications. You can use tags to manage cloud resources by group. Valid values:</p>
-     * <br>
-     * <p>*   **apiGroup**</p>
-     * <p>*   **plugin**</p>
-     * <p>*   **app**</p>
-     * <br>
+     * <ul>
+     * <li><strong>apiGroup</strong></li>
+     * <li><strong>plugin</strong></li>
+     * <li><strong>app</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>apiGroup</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The security token included in the WebSocket request header. The system uses this token to authenticate the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0f96f124-1276-4f81-b52b-c554240beb4c</p>
      */
     @NameInMap("SecurityToken")
     public String securityToken;
 
     /**
      * <p>The tag keys of the resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>env</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

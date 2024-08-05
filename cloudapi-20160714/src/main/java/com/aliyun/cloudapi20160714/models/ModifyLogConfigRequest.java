@@ -4,6 +4,10 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class ModifyLogConfigRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>PROVIDER</p>
+     */
     @NameInMap("LogType")
     public String logType;
 
@@ -12,12 +16,18 @@ public class ModifyLogConfigRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>logs-gateway</p>
      */
     @NameInMap("SlsLogStore")
     public String slsLogStore;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ford-api-gateway-log</p>
      */
     @NameInMap("SlsProject")
     public String slsProject;

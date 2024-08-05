@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteApiProductRequest extends TeaModel {
     /**
      * <p>The ID of the API product.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>117b7a64a8b3f064eaa4a47ac62aac5e</p>
      */
     @NameInMap("ApiProductId")
     public String apiProductId;

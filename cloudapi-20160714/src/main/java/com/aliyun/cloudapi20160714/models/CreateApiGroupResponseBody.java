@@ -4,30 +4,66 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreateApiGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>/qqq</p>
+     */
     @NameInMap("BasePath")
     public String basePath;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The weather informations</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>523e8dc7bbe04613b5b1d726c2a7xx</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Weather</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>apigateway-cn-v6419k43xxxxx</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>VPC_SHARED</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FF3B7D81-66AE-47E0-BF69-157DCF187514</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>523e8dc7bbe04613b5b1d726xxxxxxxx-cn-hangzhou.alicloudapi.com</p>
+     */
     @NameInMap("SubDomain")
     public String subDomain;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("TagStatus")
     public Boolean tagStatus;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeAccessControlListAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the access control policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acl-3nsohdozz0ru8fi5onwz1</p>
      */
     @NameInMap("AclId")
     public String aclId;

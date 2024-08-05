@@ -12,24 +12,36 @@ public class DescribeDatasetItemListResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C6E9C6E4-608B-5C0F-9783-E288********</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,42 +94,63 @@ public class DescribeDatasetItemListResponseBody extends TeaModel {
     public static class DescribeDatasetItemListResponseBodyDatasetItemInfoList extends TeaModel {
         /**
          * <p>The time when the data entry was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-09-21T12:58:43Z</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         /**
          * <p>The ID of the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4add6a61804e47858266883e********</p>
          */
         @NameInMap("DatasetId")
         public String datasetId;
 
         /**
          * <p>The ID of the data entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5045****</p>
          */
         @NameInMap("DatasetItemId")
         public String datasetItemId;
 
         /**
          * <p>The description of the data entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The time in UTC when the data entry expires. The time is in the **yyyy-MM-ddTHH:mm:ssZ** format. If this parameter is empty, the data entry does not expire.</p>
+         * <p>The time in UTC when the data entry expires. The time is in the <strong>yyyy-MM-ddTHH:mm:ssZ</strong> format. If this parameter is empty, the data entry does not expire.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-09-22T12:00:00Z</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         /**
          * <p>The last modification time (UTC) of the data entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-09-21T12:58:43Z</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
         /**
          * <p>The value of the data entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>106.43.XXX.XXX</p>
          */
         @NameInMap("Value")
         public String value;

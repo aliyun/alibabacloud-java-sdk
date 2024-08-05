@@ -4,6 +4,10 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreateLogConfigResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -6,29 +6,36 @@ import com.aliyun.tea.*;
 public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The token used to start the next query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1d2db86sca4384811e0b5e8707e68181f</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the resource.</p>
-     * <br>
-     * <p>Valid values of N: `[1,50]`.</p>
+     * <p>Valid values of N: <code>[1,50]</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>285bb759342649a1b70c2093a772e087</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
      * <p>The type of the resource.</p>
-     * <br>
      * <p>Currently, tags are supported for API groups, plug-ins, and apps. Operations performed on APIs are based on the tags of API groups.</p>
-     * <br>
-     * <p>*   **apiGroup**</p>
-     * <p>*   **plugin**</p>
-     * <p>*   **app**</p>
-     * <p>*   **api**</p>
-     * <br>
+     * <ul>
+     * <li><strong>apiGroup</strong></li>
+     * <li><strong>plugin</strong></li>
+     * <li><strong>app</strong></li>
+     * <li><strong>api</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>apiGroup</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -79,16 +86,20 @@ public class ListTagResourcesRequest extends TeaModel {
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
-         * <br>
-         * <p>Valid values of N: `[1,20]`.</p>
+         * <p>Valid values of N: <code>[1,20]</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag. If the parameter has a value, a value is also required for the tag key of the same N in the corresponding **tag.N.Key**. Otherwise, an error is reported.</p>
-         * <br>
-         * <p>Valid values of N: `[1,20]`.</p>
+         * <p>The value of the tag. If the parameter has a value, a value is also required for the tag key of the same N in the corresponding <strong>tag.N.Key</strong>. Otherwise, an error is reported.</p>
+         * <p>Valid values of N: <code>[1,20]</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>product</p>
          */
         @NameInMap("Value")
         public String value;

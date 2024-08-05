@@ -12,24 +12,36 @@ public class DescribeApiProductApisResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>03442A3D-3B7D-434C-8A95-A5FEB989B519</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,58 +94,86 @@ public class DescribeApiProductApisResponseBody extends TeaModel {
     public static class DescribeApiProductApisResponseBodyApiInfoListApiInfo extends TeaModel {
         /**
          * <p>The API ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dd46297680014a7e8e318308f3345951</p>
          */
         @NameInMap("ApiId")
         public String apiId;
 
         /**
          * <p>The API name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testApi</p>
          */
         @NameInMap("ApiName")
         public String apiName;
 
         /**
          * <p>The API description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the API group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1e377f18142345dfb700cd8911c2463a</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the API group to which the API belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testApiGroup</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The request method of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POST</p>
          */
         @NameInMap("Method")
         public String method;
 
         /**
          * <p>The request path of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/test</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
          * <p>The ID of the region where the API is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The environment to which the API is published. Valid values:</p>
-         * <br>
-         * <p>*   **RELEASE**: the production environment</p>
-         * <p>*   **PRE**: the staging environment</p>
-         * <p>*   **TEST**: the test environment</p>
+         * <ul>
+         * <li><strong>RELEASE</strong>: the production environment</li>
+         * <li><strong>PRE</strong>: the staging environment</li>
+         * <li><strong>TEST</strong>: the test environment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RELEASE</p>
          */
         @NameInMap("StageName")
         public String stageName;

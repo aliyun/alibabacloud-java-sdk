@@ -4,9 +4,17 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreateDatasetItemResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>5045****</p>
+     */
     @NameInMap("DatasetItemId")
     public String datasetItemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8A5E2053-4D9F-5280-B7A9-D357********</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

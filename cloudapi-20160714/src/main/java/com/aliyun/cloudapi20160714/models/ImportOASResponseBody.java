@@ -24,12 +24,18 @@ public class ImportOASResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the asynchronous API import task that was generated during the import operation. This ID is used to query the execution status of the API import task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c16a1880f5164d779f6a54f64d997cd9</p>
      */
     @NameInMap("OperationId")
     public String operationId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E7FE7172-AA75-5880-B6F7-C00893E9BC06</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -143,18 +149,27 @@ public class ImportOASResponseBody extends TeaModel {
     public static class ImportOASResponseBodyFailedApisFailedApi extends TeaModel {
         /**
          * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid Api Definition.</p>
          */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
         /**
          * <p>The HTTP method configured when you created the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POST</p>
          */
         @NameInMap("HttpMethod")
         public String httpMethod;
 
         /**
          * <p>The request path configured when you created the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/st1</p>
          */
         @NameInMap("Path")
         public String path;
@@ -212,18 +227,27 @@ public class ImportOASResponseBody extends TeaModel {
     public static class ImportOASResponseBodyFailedModelsFailedModel extends TeaModel {
         /**
          * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid Model Definition.</p>
          */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
         /**
          * <p>The ID of the API group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2c1bc62e19614cc68c6b0b484bc9c5db</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ModelName")
         public String modelName;
@@ -281,24 +305,36 @@ public class ImportOASResponseBody extends TeaModel {
     public static class ImportOASResponseBodySuccessApisSuccessApi extends TeaModel {
         /**
          * <p>The ID of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>92af1abffc2443eaa2b815fdbd9c13f1</p>
          */
         @NameInMap("ApiId")
         public String apiId;
 
         /**
          * <p>Indicates that the operation is CREATE or MODIFY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE</p>
          */
         @NameInMap("ApiOperation")
         public String apiOperation;
 
         /**
          * <p>The HTTP method configured when you created the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POST</p>
          */
         @NameInMap("HttpMethod")
         public String httpMethod;
 
         /**
          * <p>The request path configured when you created the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/st1</p>
          */
         @NameInMap("Path")
         public String path;
@@ -364,24 +400,36 @@ public class ImportOASResponseBody extends TeaModel {
     public static class ImportOASResponseBodySuccessModelsSuccessModel extends TeaModel {
         /**
          * <p>The ID of the API group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>feaccf67040643bcbdedb253e59eb527</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ModelName")
         public String modelName;
 
         /**
          * <p>The operation of the model. Valid values: CREATE and MODIFY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE</p>
          */
         @NameInMap("ModelOperation")
         public String modelOperation;
 
         /**
          * <p>The UID of the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1r4efwee19614cc68c6b0b484bc9c5dbs</p>
          */
         @NameInMap("ModelUid")
         public String modelUid;

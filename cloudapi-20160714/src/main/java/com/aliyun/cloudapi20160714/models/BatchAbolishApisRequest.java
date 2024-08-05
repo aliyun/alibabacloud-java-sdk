@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class BatchAbolishApisRequest extends TeaModel {
     /**
      * <p>The APIs that you want to operate.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Api")
@@ -39,28 +38,38 @@ public class BatchAbolishApisRequest extends TeaModel {
     public static class BatchAbolishApisRequestApi extends TeaModel {
         /**
          * <p>The ID of the API.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>994f72dcdaf04af0b38022c65fdbd1ac</p>
          */
         @NameInMap("ApiUid")
         public String apiUid;
 
         /**
          * <p>The ID of the API group.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ced5ab777f7b440398ea70e4470124de</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The ID of the environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>979fd16250644d5b82173534f465ac77</p>
          */
         @NameInMap("StageId")
         public String stageId;
 
         /**
          * <p>The name of the environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RELEASE</p>
          */
         @NameInMap("StageName")
         public String stageName;

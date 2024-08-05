@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribePurchasedApiGroupResponseBody extends TeaModel {
     /**
      * <p>The description of the API group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>api group description</p>
      */
     @NameInMap("Description")
     public String description;
@@ -18,39 +21,58 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the API group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>48977d7b96074966a7c9c2a8872d7e06</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The name of the API group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Weather</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
      * <p>The time when the API group was purchased.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-12-19T00:00:00</p>
      */
     @NameInMap("PurchasedTime")
     public String purchasedTime;
 
     /**
      * <p>The region where the API group is located.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-qingdao</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>61A16D46-EC04-5288-8A18-811B0F536CC2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The status of the API group.</p>
-     * <br>
-     * <p>*   **NORMAL**: The API group is normal.</p>
-     * <p>*   **DELETE**: The API group is deleted.</p>
+     * <ul>
+     * <li><strong>NORMAL</strong>: The API group is normal.</li>
+     * <li><strong>DELETE</strong>: The API group is deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
      */
     @NameInMap("Status")
     public String status;
@@ -127,6 +149,9 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
     public static class DescribePurchasedApiGroupResponseBodyDomainsDomainItem extends TeaModel {
         /**
          * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_domain.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;

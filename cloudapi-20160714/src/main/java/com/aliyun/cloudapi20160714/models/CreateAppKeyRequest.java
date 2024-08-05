@@ -6,13 +6,24 @@ import com.aliyun.tea.*;
 public class CreateAppKeyRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>111053351</p>
      */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>204203237</p>
+     */
     @NameInMap("AppKey")
     public String appKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6f0a4ad7918a4b41a57fc087d5b066d0</p>
+     */
     @NameInMap("AppSecret")
     public String appSecret;
 

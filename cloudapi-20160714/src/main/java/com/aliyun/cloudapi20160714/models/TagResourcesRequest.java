@@ -6,20 +6,25 @@ import com.aliyun.tea.*;
 public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The ID of the resource.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>285bb759342649a1b70c2093a772e087</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
      * <p>The type of the resource. Tags are bound to API groups, plug-ins, and applications. You can use tags to manage cloud resources by group. Valid values:</p>
-     * <br>
-     * <p>*   **apiGroup**</p>
-     * <p>*   **plugin**</p>
-     * <p>*   **app**</p>
-     * <br>
+     * <ul>
+     * <li><strong>apiGroup</strong></li>
+     * <li><strong>plugin</strong></li>
+     * <li><strong>app</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>apiGroup</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -29,8 +34,10 @@ public class TagResourcesRequest extends TeaModel {
 
     /**
      * <p>The tag of objects that match the lifecycle rule. You can specify multiple tags.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021022811</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
@@ -75,16 +82,20 @@ public class TagResourcesRequest extends TeaModel {
     public static class TagResourcesRequestTag extends TeaModel {
         /**
          * <p>The key of tag N.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>\&quot; \&quot;</p>
          */
         @NameInMap("Value")
         public String value;

@@ -6,16 +6,23 @@ import com.aliyun.tea.*;
 public class DescribePluginTemplatesRequest extends TeaModel {
     /**
      * <p>The language that is used to return the description of the system policy. Valid values:</p>
-     * <br>
-     * <p>*   en: English</p>
-     * <p>*   zh-CN: Chinese.</p>
-     * <p>*   ja: Japanese</p>
+     * <ul>
+     * <li>en: English</li>
+     * <li>zh-CN: Chinese.</li>
+     * <li>ja: Japanese</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Language")
     public String language;
 
     /**
      * <p>The name of the plug-in.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>jwtAuth</p>
      */
     @NameInMap("PluginName")
     public String pluginName;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class SetAccessControlListAttributeRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acl-bp1ohqkonqybecf4llbrc</p>
      */
     @NameInMap("AclId")
     public String aclId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testAcl</p>
      */
     @NameInMap("AclName")
     public String aclName;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -24,12 +30,18 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>36BBBAD4-1CFB-489F-841A-8CA52EEA787E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,63 +94,94 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
     public static class DescribePurchasedApiGroupsResponseBodyPurchasedApiGroupAttributesPurchasedApiGroupAttribute extends TeaModel {
         /**
          * <p>The billing method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POSTPAID</p>
          */
         @NameInMap("BillingType")
         public String billingType;
 
         /**
          * <p>The description of the API group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The time when the API group expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-19T00:00:00</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
 
         /**
          * <p>The ID of the API group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8e91f23f88f94348855b82c9a73209f3</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the API group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group1</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The maximum number of calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("InvokeTimesMax")
         public Long invokeTimesMax;
 
         /**
          * <p>The current number of calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("InvokeTimesNow")
         public Long invokeTimesNow;
 
         /**
          * <p>The time when the API group was purchased.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-19T00:00:00</p>
          */
         @NameInMap("PurchasedTime")
         public String purchasedTime;
 
         /**
          * <p>The ID of the region where the API group is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The status of the API group.</p>
-         * <br>
-         * <p>*   **NORMAL**: The API group is normal.</p>
-         * <p>*   **DELETE**: The API group is deleted.</p>
+         * <ul>
+         * <li><strong>NORMAL</strong>: The API group is normal.</li>
+         * <li><strong>DELETE</strong>: The API group is deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         @NameInMap("Status")
         public String status;

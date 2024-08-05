@@ -12,6 +12,9 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0AA90E87-3506-5AA6-AFFB-A4D53B4F6231</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,60 +43,90 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
     public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigNacosConfig extends TeaModel {
         /**
          * <p>The AccessKey of the RAM user that has the resource management permissions on Microservices Engine (MSE).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5FIDxxxxxx</p>
          */
         @NameInMap("AccessKey")
         public String accessKey;
 
         /**
          * <p>The authentication method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PASSWORD</p>
          */
         @NameInMap("AuthType")
         public String authType;
 
         /**
          * <p>The name of the cluster to which the microservice belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster1</p>
          */
         @NameInMap("Clusters")
         public String clusters;
 
         /**
          * <p>The name of the group to which the microservice that is registered with Nacos belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT_GROUP</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The ID of the namespace where the microservice that is registered with Nacos resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>password</p>
          */
         @NameInMap("Password")
         public String password;
 
         /**
          * <p>The SecretKey of the RAM user that has the resource management permissions on MSE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dl5loxxxxxx</p>
          */
         @NameInMap("SecretKey")
         public String secretKey;
 
         /**
          * <p>The Nacos service address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://1xx.2xx.3xx.4xx:8848">http://1xx.2xx.3xx.4xx:8848</a></p>
          */
         @NameInMap("ServerAddress")
         public String serverAddress;
 
         /**
          * <p>The microservice name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service-provider</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
          * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>username</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -235,6 +268,9 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
         /**
          * <p>The registry type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NACOS</p>
          */
         @NameInMap("RcType")
         public String rcType;
@@ -361,24 +397,36 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
     public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEventBridgeConfig extends TeaModel {
         /**
          * <p>The region ID of the event bus in EventBridge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("EventBridgeRegionId")
         public String eventBridgeRegionId;
 
         /**
          * <p>The event bus.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testBus</p>
          */
         @NameInMap("EventBus")
         public String eventBus;
 
         /**
          * <p>The event source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds_driver</p>
          */
         @NameInMap("EventSource")
         public String eventSource;
 
         /**
          * <p>The ARN of the RAM role to be assumed by API Gateway to access EventBridge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::1975133748561***:role/aliyunserviceroleforiotlogexport</p>
          */
         @NameInMap("RoleArn")
         public String roleArn;
@@ -425,48 +473,72 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
     public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigFunctionComputeConfig extends TeaModel {
         /**
          * <p>The root path of the Function Compute service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://t*******.ap-*****.fcapp.run/">https://t*******.ap-*****.fcapp.run/</a></p>
          */
         @NameInMap("FcBaseUrl")
         public String fcBaseUrl;
 
         /**
          * <p>The region ID of the Function Compute service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("FcRegionId")
         public String fcRegionId;
 
         /**
          * <p>The type of the service in Function Compute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HttpTrigger</p>
          */
         @NameInMap("FcType")
         public String fcType;
 
         /**
          * <p>The function name that is defined in Function Compute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edge_function</p>
          */
         @NameInMap("FunctionName")
         public String functionName;
 
         /**
          * <p>Indicates whether the backend service receives only the service path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("OnlyBusinessPath")
         public Boolean onlyBusinessPath;
 
         /**
          * <p>The alias of the function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testQualifier</p>
          */
         @NameInMap("Qualifier")
         public String qualifier;
 
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role that is assumed by API Gateway to access Function Compute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::31985*:role/aliyunserviceroleforbastionhostpam</p>
          */
         @NameInMap("RoleArn")
         public String roleArn;
 
         /**
          * <p>The service name that is defined in Function Compute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myservice</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
@@ -631,12 +703,18 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
     public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigOssConfig extends TeaModel {
         /**
          * <p>The name of the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_bucket</p>
          */
         @NameInMap("BucketName")
         public String bucketName;
 
         /**
          * <p>The region ID of the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("OssRegionId")
         public String ossRegionId;
@@ -667,36 +745,54 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
     public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigVpcConfig extends TeaModel {
         /**
          * <p>The ID of the Elastic Compute Service (ECS) or Server Load Balancer (SLB) instance in the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-uf6iaale3gfef9t9cb41</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the VPC configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dypls-cn-beijing-slb-pre</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The port number that corresponds to the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         @NameInMap("Port")
         public Long port;
 
         /**
          * <p>The ID of the VPC access authorization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2zej3ehuzg9m77kvwnfpn</p>
          */
         @NameInMap("VpcAccessId")
         public String vpcAccessId;
 
         /**
          * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-wz9v96hqi6d14744sxqmx</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>Indicates whether HTTP or HTTPS is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http</p>
          */
         @NameInMap("VpcScheme")
         public String vpcScheme;
@@ -794,6 +890,9 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
         /**
          * <p>The host of the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.host.com">www.host.com</a></p>
          */
         @NameInMap("HttpTargetHostName")
         public String httpTargetHostName;
@@ -812,6 +911,9 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
         /**
          * <p>The URL of the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.1</p>
          */
         @NameInMap("ServiceAddress")
         public String serviceAddress;
@@ -821,6 +923,9 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
         /**
          * <p>The type of the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("Type")
         public String type;
@@ -935,36 +1040,54 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the backend service in the environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5c4995d08e8b4954b0f326e8e4f2b97d</p>
          */
         @NameInMap("BackendModelId")
         public String backendModelId;
 
         /**
          * <p>The description of the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDvs 1</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The time when the backend service was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-20T03:22:03.000+0000</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The time when the backend service was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-20T03:22:03.000+0000</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The ID of the environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6fc978bb63574146b766863dd7bdf661</p>
          */
         @NameInMap("StageModeId")
         public String stageModeId;
 
         /**
          * <p>The environment name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RELEASE</p>
          */
         @NameInMap("StageName")
         public String stageName;
@@ -1035,6 +1158,9 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
     public static class DescribeBackendInfoResponseBodyBackendInfo extends TeaModel {
         /**
          * <p>The ID of the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6fc978bb63574146b766863dd7bdf661</p>
          */
         @NameInMap("BackendId")
         public String backendId;
@@ -1047,30 +1173,45 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
         /**
          * <p>The name of the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testoss2</p>
          */
         @NameInMap("BackendName")
         public String backendName;
 
         /**
          * <p>The type of the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         @NameInMap("BackendType")
         public String backendType;
 
         /**
          * <p>The time when the backend service was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-22T11:10:46+08:00</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         /**
          * <p>The description of the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>add</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The time when the backend service was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-11T15:18:09+08:00</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;

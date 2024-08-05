@@ -6,36 +6,54 @@ import com.aliyun.tea.*;
 public class DescribeVpcAccessesRequest extends TeaModel {
     /**
      * <p>Whether to conduct precise queries</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AccurateQuery")
     public Boolean accurateQuery;
 
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.199.26.***</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the authorization. The name must be unique.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wuying-edm-svc</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The service port.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8080</p>
      */
     @NameInMap("Port")
     public String port;
@@ -51,12 +69,18 @@ public class DescribeVpcAccessesRequest extends TeaModel {
 
     /**
      * <p>The ID of the VPC authorization.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-*****ssds24</p>
      */
     @NameInMap("VpcAccessId")
     public String vpcAccessId;
 
     /**
      * <p>The ID of the VPC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-uf657qec7lx42paw3qxxx</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -149,12 +173,18 @@ public class DescribeVpcAccessesRequest extends TeaModel {
     public static class DescribeVpcAccessesRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>appname</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>product</p>
          */
         @NameInMap("Value")
         public String value;

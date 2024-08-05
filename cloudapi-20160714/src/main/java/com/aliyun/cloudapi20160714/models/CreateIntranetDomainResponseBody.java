@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateIntranetDomainResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>api.demo.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>auditing</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20D942A5-EDC6-5DA3-93F9-257888399E22</p>
      */
     @NameInMap("RequestId")
     public String requestId;

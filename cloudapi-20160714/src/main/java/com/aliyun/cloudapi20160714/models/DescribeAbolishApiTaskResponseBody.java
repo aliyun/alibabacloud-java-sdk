@@ -12,6 +12,9 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E8515BA6-81CD-4191-A7CF-C4FCDD3C0D99</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,51 +43,76 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
     public static class DescribeAbolishApiTaskResponseBodyApiAbolishResultsApiAbolishResult extends TeaModel {
         /**
          * <p>The unpublishing status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OVER</p>
          */
         @NameInMap("AbolishStatus")
         public String abolishStatus;
 
         /**
          * <p>The name of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2_page_consent</p>
          */
         @NameInMap("ApiName")
         public String apiName;
 
         /**
          * <p>The ID of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4e26cdbbb113416dba1f0285bed29979</p>
          */
         @NameInMap("ApiUid")
         public String apiUid;
 
         /**
          * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success. Request Success.</p>
          */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
         /**
          * <p>The ID of the API group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>160cb6505e1c43a6b84346856d74eb47</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the API group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wb2022021401619286</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The ID of the runtime environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0919f2854a88484c91dc9253347c78f9</p>
          */
         @NameInMap("StageId")
         public String stageId;
 
         /**
          * <p>The name of the runtime environment. Valid values:</p>
-         * <br>
-         * <p>*   **RELEASE**</p>
-         * <p>*   **TEST**</p>
+         * <ul>
+         * <li><strong>RELEASE</strong></li>
+         * <li><strong>TEST</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RELEASE</p>
          */
         @NameInMap("StageName")
         public String stageName;

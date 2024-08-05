@@ -6,20 +6,28 @@ import com.aliyun.tea.*;
 public class ResetAppSecretRequest extends TeaModel {
     /**
      * <p>The key of the application that is used to make an API call.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60030986</p>
      */
     @NameInMap("AppKey")
     public String appKey;
 
     /**
      * <p>The new AppKey that you set must be globally unique.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testAppKey</p>
      */
     @NameInMap("NewAppKey")
     public String newAppKey;
 
     /**
      * <p>The new key of the application. To improve compatibility, we recommend that you use other parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test***</p>
      */
     @NameInMap("NewAppSecret")
     public String newAppSecret;

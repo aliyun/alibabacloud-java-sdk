@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class DeployApiRequest extends TeaModel {
     /**
      * <p>The ID of the API.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d6f679aeb3be4b91b3688e887ca1fe16</p>
      */
     @NameInMap("ApiId")
     public String apiId;
 
     /**
      * <p>The publishing remarks.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>for_test1</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the API group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>63be9002440b4778a61122f14c2b2bbb</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -31,12 +38,15 @@ public class DeployApiRequest extends TeaModel {
 
     /**
      * <p>The name of the runtime environment. Valid values:</p>
-     * <br>
-     * <p>*   **RELEASE**</p>
-     * <p>*   **PRE**: the pre-release environment</p>
-     * <p>*   **TEST**</p>
-     * <br>
+     * <ul>
+     * <li><strong>RELEASE</strong></li>
+     * <li><strong>PRE</strong>: the pre-release environment</li>
+     * <li><strong>TEST</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RELEASE</p>
      */
     @NameInMap("StageName")
     public String stageName;

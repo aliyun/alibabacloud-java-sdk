@@ -12,24 +12,36 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8883AC74-259D-4C0B-99FC-0B7F9A588B2F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,12 +94,18 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
     public static class DescribeAppAttributesResponseBodyAppsAppAttributeTagsTagInfo extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>appid</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Value")
         public String value;
@@ -137,36 +155,54 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
     public static class DescribeAppAttributesResponseBodyAppsAppAttribute extends TeaModel {
         /**
          * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20112314518278</p>
          */
         @NameInMap("AppId")
         public Long appId;
 
         /**
          * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateApptest</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>The creation time (UTC) of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-07-31T04:10:19Z</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         /**
          * <p>The application description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>App test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The extended information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110461946884</p>
          */
         @NameInMap("Extend")
         public String extend;
 
         /**
          * <p>The modification time (UTC) of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-07-31T04:10:19Z</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;

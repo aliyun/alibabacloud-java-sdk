@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class SetAppsAuthoritiesResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D6E46F10-F26C-4AA0-BB69-FE2743D9AE62</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,32 +6,46 @@ import com.aliyun.tea.*;
 public class DescribeModelsRequest extends TeaModel {
     /**
      * <p>The ID of the API group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30e792398d6c4569b04c0e53a3494381</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The ID of the model.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("ModelId")
     public String modelId;
 
     /**
      * <p>The name of the model.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test</p>
      */
     @NameInMap("ModelName")
     public String modelName;
 
     /**
      * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

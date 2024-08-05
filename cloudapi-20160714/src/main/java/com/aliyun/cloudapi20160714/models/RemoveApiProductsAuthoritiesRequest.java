@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class RemoveApiProductsAuthoritiesRequest extends TeaModel {
     /**
      * <p>The API products.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ApiProductIds")
@@ -14,8 +13,10 @@ public class RemoveApiProductsAuthoritiesRequest extends TeaModel {
 
     /**
      * <p>The application ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>110982490</p>
      */
     @NameInMap("AppId")
     public Long appId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeUpdateVpcInfoTaskRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7d341787517a47afaaef9cc1bdb7acce</p>
      */
     @NameInMap("OperationUid")
     public String operationUid;

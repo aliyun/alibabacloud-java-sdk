@@ -12,6 +12,9 @@ public class DescribeInstanceNewConnectionsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ004</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeInstanceNewConnectionsResponseBody extends TeaModel {
     public static class DescribeInstanceNewConnectionsResponseBodyInstanceNewConnectionsMonitorItem extends TeaModel {
         /**
          * <p>The monitoring time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-08T02:08:00Z</p>
          */
         @NameInMap("ItemTime")
         public String itemTime;
 
         /**
          * <p>The number of new connections in the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         @NameInMap("ItemValue")
         public String itemValue;

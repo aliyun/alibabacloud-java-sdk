@@ -12,24 +12,36 @@ public class DescribeAppsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ015</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,18 +94,27 @@ public class DescribeAppsResponseBody extends TeaModel {
     public static class DescribeAppsResponseBodyAppsAppItem extends TeaModel {
         /**
          * <p>The ID of the app.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20112314518278</p>
          */
         @NameInMap("AppId")
         public Long appId;
 
         /**
          * <p>The name of the app.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateApptest</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>The description of the app.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>App test</p>
          */
         @NameInMap("Description")
         public String description;
