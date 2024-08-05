@@ -238,6 +238,25 @@ public class ListInstancesResponseBody extends TeaModel {
 
     }
 
+    public static class ListInstancesResponseBodyInstancesOperatingTool extends TeaModel {
+        @NameInMap("IsEnable")
+        public Boolean isEnable;
+
+        public static ListInstancesResponseBodyInstancesOperatingTool build(java.util.Map<String, ?> map) throws Exception {
+            ListInstancesResponseBodyInstancesOperatingTool self = new ListInstancesResponseBodyInstancesOperatingTool();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstancesResponseBodyInstancesOperatingTool setIsEnable(Boolean isEnable) {
+            this.isEnable = isEnable;
+            return this;
+        }
+        public Boolean getIsEnable() {
+            return this.isEnable;
+        }
+
+    }
+
     public static class ListInstancesResponseBodyInstances extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -283,6 +302,9 @@ public class ListInstancesResponseBody extends TeaModel {
          */
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("OperatingTool")
+        public ListInstancesResponseBodyInstancesOperatingTool operatingTool;
 
         /**
          * <strong>example:</strong>
@@ -364,6 +386,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public ListInstancesResponseBodyInstances setOperatingTool(ListInstancesResponseBodyInstancesOperatingTool operatingTool) {
+            this.operatingTool = operatingTool;
+            return this;
+        }
+        public ListInstancesResponseBodyInstancesOperatingTool getOperatingTool() {
+            return this.operatingTool;
         }
 
         public ListInstancesResponseBodyInstances setRegionId(String regionId) {

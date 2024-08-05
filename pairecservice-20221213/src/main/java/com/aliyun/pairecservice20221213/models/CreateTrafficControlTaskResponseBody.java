@@ -4,9 +4,17 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class CreateTrafficControlTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>42391E6D-822C-58F8-9F7E-D991BB86D6AD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TrafficControlTaskId")
     public String trafficControlTaskId;
 

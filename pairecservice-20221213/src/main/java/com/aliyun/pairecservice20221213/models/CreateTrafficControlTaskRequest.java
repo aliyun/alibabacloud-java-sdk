@@ -4,72 +4,160 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class CreateTrafficControlTaskRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("BehaviorTableMetaId")
     public String behaviorTableMetaId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Global</p>
+     */
     @NameInMap("ControlGranularity")
     public String controlGranularity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Guaranteed</p>
+     */
     @NameInMap("ControlLogic")
     public String controlLogic;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Percent</p>
+     */
     @NameInMap("ControlType")
     public String controlType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>this is a test task</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-03-26</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TimeRange</p>
+     */
     @NameInMap("ExecutionTime")
     public String executionTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pairec-cn-***test</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[{\&quot;field\&quot;:\&quot;status\&quot;,\&quot;option\&quot;:\&quot;=\&quot;,\&quot;value\&quot;:\&quot;1\&quot;}]</p>
+     */
     @NameInMap("ItemConditionArray")
     public String itemConditionArray;
 
+    /**
+     * <strong>example:</strong>
+     * <p>status=1</p>
+     */
     @NameInMap("ItemConditionExpress")
     public String itemConditionExpress;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Array</p>
+     */
     @NameInMap("ItemConditionType")
     public String itemConditionType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ItemTableMetaId")
     public String itemTableMetaId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>task-1</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-03-25</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[{\&quot;field\&quot;:\&quot;click\&quot;,\&quot;option\&quot;:\&quot;&lt;=\&quot;,\&quot;value\&quot;:\&quot;30\&quot;}]</p>
+     */
     @NameInMap("StatisBehaviorConditionArray")
     public String statisBehaviorConditionArray;
 
+    /**
+     * <strong>example:</strong>
+     * <p>click=30</p>
+     */
     @NameInMap("StatisBehaviorConditionExpress")
     public String statisBehaviorConditionExpress;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Array</p>
+     */
     @NameInMap("StatisBehaviorConditionType")
     public String statisBehaviorConditionType;
 
     @NameInMap("TrafficControlTargets")
     public java.util.List<CreateTrafficControlTaskRequestTrafficControlTargets> trafficControlTargets;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[{\&quot;field\&quot;:\&quot;gender\&quot;,\&quot;option\&quot;:\&quot;=\&quot;,\&quot;value\&quot;:\&quot;male\&quot;}]</p>
+     */
     @NameInMap("UserConditionArray")
     public String userConditionArray;
 
+    /**
+     * <strong>example:</strong>
+     * <p>age&lt;=30&amp;&amp;(3&lt;=level&lt;=6)&amp;&amp;gender=male</p>
+     */
     @NameInMap("UserConditionExpress")
     public String userConditionExpress;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Array</p>
+     */
     @NameInMap("UserConditionType")
     public String userConditionType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("UserTableMetaId")
     public String userTableMetaId;
 
@@ -263,42 +351,94 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
     }
 
     public static class CreateTrafficControlTaskRequestTrafficControlTargets extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2024-04-25</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>click</p>
+         */
         @NameInMap("Event")
         public String event;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[{\&quot;field\&quot;:\&quot;status\&quot;,\&quot;option\&quot;:\&quot;=\&quot;,\&quot;value\&quot;:\&quot;1\&quot;}]</p>
+         */
         @NameInMap("ItemConditionArray")
         public String itemConditionArray;
 
+        /**
+         * <strong>example:</strong>
+         * <p>status=1</p>
+         */
         @NameInMap("ItemConditionExpress")
         public String itemConditionExpress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Array</p>
+         */
         @NameInMap("ItemConditionType")
         public String itemConditionType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>target_1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("NewProductRegulation")
         public Boolean newProductRegulation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>recall_1</p>
+         */
         @NameInMap("RecallName")
         public String recallName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-03-25</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Daily</p>
+         */
         @NameInMap("StatisPeriod")
         public String statisPeriod;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Opened</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("ToleranceValue")
         public Long toleranceValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Value")
         public Float value;
 
