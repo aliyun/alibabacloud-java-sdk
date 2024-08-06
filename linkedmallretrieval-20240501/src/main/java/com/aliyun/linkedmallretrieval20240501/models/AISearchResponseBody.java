@@ -10,6 +10,10 @@ public class AISearchResponseBody extends TeaModel {
     @NameInMap("payload")
     public String payload;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D016A23D-738A-5209-A91A-6145845C5A23</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -43,15 +47,31 @@ public class AISearchResponseBody extends TeaModel {
     }
 
     public static class AISearchResponseBodyHeader extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>on_common_search_stream</p>
+         */
         @NameInMap("event")
         public String event;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ff3de49-cedc-47ea-ba3c-8456acd345d8</p>
+         */
         @NameInMap("eventId")
         public String eventId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>D4F6D088-EDE9-5823-9E66-22603937A40B</p>
+         */
         @NameInMap("requestId")
         public String requestId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1403</p>
+         */
         @NameInMap("responseTime")
         public String responseTime;
 
