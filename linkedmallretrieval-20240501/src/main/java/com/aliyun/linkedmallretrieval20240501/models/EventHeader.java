@@ -4,15 +4,31 @@ package com.aliyun.linkedmallretrieval20240501.models;
 import com.aliyun.tea.*;
 
 public class EventHeader extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>on_common_search_stream</p>
+     */
     @NameInMap("event")
     public String event;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ff3de49-cedc-47ea-ba3c-8456acd345d8</p>
+     */
     @NameInMap("eventId")
     public String eventId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>55c2349-cedc-47ea-ba3c-8456acd6c7d8</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1403</p>
+     */
     @NameInMap("responseTime")
     public Long responseTime;
 

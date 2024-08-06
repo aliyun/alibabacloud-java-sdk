@@ -10,6 +10,10 @@ public class AISearchResult extends TeaModel {
     @NameInMap("payload")
     public String payload;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3239281273464326823</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

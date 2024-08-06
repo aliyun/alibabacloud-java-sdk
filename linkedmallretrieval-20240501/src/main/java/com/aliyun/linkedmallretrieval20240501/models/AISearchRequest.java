@@ -4,11 +4,18 @@ package com.aliyun.linkedmallretrieval20240501.models;
 import com.aliyun.tea.*;
 
 public class AISearchRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>active</p>
+     */
     @NameInMap("card")
     public String card;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>今年五一假期放假时间表</p>
      */
     @NameInMap("query")
     public String query;

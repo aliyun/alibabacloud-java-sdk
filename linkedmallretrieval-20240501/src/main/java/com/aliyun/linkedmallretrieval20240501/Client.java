@@ -27,8 +27,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary AI搜索
-     *
+     * <b>summary</b> : 
+     * <p>AI搜索</p>
+     * 
      * @param request AISearchRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -64,8 +65,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary AI搜索
-     *
+     * <b>summary</b> : 
+     * <p>AI搜索</p>
+     * 
      * @param request AISearchRequest
      * @return AISearchResponse
      */
