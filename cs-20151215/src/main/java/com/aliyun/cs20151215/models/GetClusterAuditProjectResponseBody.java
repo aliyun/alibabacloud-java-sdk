@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class GetClusterAuditProjectResponseBody extends TeaModel {
+    @NameInMap("audit_enabled")
+    public Boolean auditEnabled;
+
     /**
      * <strong>example:</strong>
      * <p>k8s-log-cad1230511cbb4db4a488e58518******</p>
@@ -14,6 +17,14 @@ public class GetClusterAuditProjectResponseBody extends TeaModel {
     public static GetClusterAuditProjectResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetClusterAuditProjectResponseBody self = new GetClusterAuditProjectResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetClusterAuditProjectResponseBody setAuditEnabled(Boolean auditEnabled) {
+        this.auditEnabled = auditEnabled;
+        return this;
+    }
+    public Boolean getAuditEnabled() {
+        return this.auditEnabled;
     }
 
     public GetClusterAuditProjectResponseBody setSlsProjectName(String slsProjectName) {
