@@ -76,4 +76,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.aISearchWithOptions(request, headers, runtime);
     }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提供通用检索与检索后处理的多阶段优化结果，为开放域QA提供信源</p>
+     * 
+     * @param request AISearchV2Request
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AISearchV2Response
+     */
+    public AISearchV2Response aISearchV2WithOptions(AISearchV2Request request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            query.put("query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("sessionId", request.sessionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AISearchV2"),
+            new TeaPair("version", "2024-05-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/linked-retrieval/linked-retrieval-entry/v2/linkedRetrieval/commands/aiSearch"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AISearchV2Response());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提供通用检索与检索后处理的多阶段优化结果，为开放域QA提供信源</p>
+     * 
+     * @param request AISearchV2Request
+     * @return AISearchV2Response
+     */
+    public AISearchV2Response aISearchV2(AISearchV2Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.aISearchV2WithOptions(request, headers, runtime);
+    }
 }
