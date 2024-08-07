@@ -24,6 +24,9 @@ public class SubmitProjectTaskRequest extends TeaModel {
     @NameInMap("subtitleTag")
     public Integer subtitleTag;
 
+    @NameInMap("transparentBackground")
+    public Integer transparentBackground;
+
     public static SubmitProjectTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitProjectTaskRequest self = new SubmitProjectTaskRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class SubmitProjectTaskRequest extends TeaModel {
     }
     public Integer getSubtitleTag() {
         return this.subtitleTag;
+    }
+
+    public SubmitProjectTaskRequest setTransparentBackground(Integer transparentBackground) {
+        this.transparentBackground = transparentBackground;
+        return this;
+    }
+    public Integer getTransparentBackground() {
+        return this.transparentBackground;
     }
 
     public static class SubmitProjectTaskRequestFramesLayersMaterial extends TeaModel {

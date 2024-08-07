@@ -18,6 +18,9 @@ public class ListTextsRequest extends TeaModel {
     @NameInMap("industry")
     public String industry;
 
+    @NameInMap("keyword")
+    public String keyword;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -72,6 +75,14 @@ public class ListTextsRequest extends TeaModel {
     }
     public String getIndustry() {
         return this.industry;
+    }
+
+    public ListTextsRequest setKeyword(String keyword) {
+        this.keyword = keyword;
+        return this;
+    }
+    public String getKeyword() {
+        return this.keyword;
     }
 
     public ListTextsRequest setPageNumber(Integer pageNumber) {
