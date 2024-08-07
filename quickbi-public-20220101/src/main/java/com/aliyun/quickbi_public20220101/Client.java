@@ -2540,6 +2540,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>修改智能问数嵌入配置</p>
+     * 
+     * @param request ModifyCopilotEmbedConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyCopilotEmbedConfigResponse
+     */
+    public ModifyCopilotEmbedConfigResponse modifyCopilotEmbedConfigWithOptions(ModifyCopilotEmbedConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentName)) {
+            query.put("AgentName", request.agentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.copilotId)) {
+            query.put("CopilotId", request.copilotId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataRange)) {
+            query.put("DataRange", request.dataRange);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.moduleName)) {
+            query.put("ModuleName", request.moduleName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyCopilotEmbedConfig"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyCopilotEmbedConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改智能问数嵌入配置</p>
+     * 
+     * @param request ModifyCopilotEmbedConfigRequest
+     * @return ModifyCopilotEmbedConfigResponse
+     */
+    public ModifyCopilotEmbedConfigResponse modifyCopilotEmbedConfig(ModifyCopilotEmbedConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyCopilotEmbedConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>根据审批人获取相应的审批流信息</p>
      * 
      * @param request QueryApprovalInfoRequest
@@ -2732,6 +2788,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取开通小Q嵌入的配置列表</p>
+     * 
+     * @param request QueryCopilotEmbedConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryCopilotEmbedConfigResponse
+     */
+    public QueryCopilotEmbedConfigResponse queryCopilotEmbedConfigWithOptions(QueryCopilotEmbedConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryCopilotEmbedConfig"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryCopilotEmbedConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取开通小Q嵌入的配置列表</p>
+     * 
+     * @param request QueryCopilotEmbedConfigRequest
+     * @return QueryCopilotEmbedConfigResponse
+     */
+    public QueryCopilotEmbedConfigResponse queryCopilotEmbedConfig(QueryCopilotEmbedConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryCopilotEmbedConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询数据集优化建议</p>
      * 
      * @param request QueryCubeOptimizationRequest
@@ -2836,6 +2936,110 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryCubePerformanceResponse queryCubePerformance(QueryCubePerformanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryCubePerformanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>调用开放数据服务API</p>
+     * 
+     * @param request QueryDataRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryDataResponse
+     */
+    public QueryDataResponse queryDataWithOptions(QueryDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiId)) {
+            query.put("ApiId", request.apiId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.conditions)) {
+            query.put("Conditions", request.conditions);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.returnFields)) {
+            query.put("ReturnFields", request.returnFields);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryData"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDataResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>调用开放数据服务API</p>
+     * 
+     * @param request QueryDataRequest
+     * @return QueryDataResponse
+     */
+    public QueryDataResponse queryData(QueryDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryDataWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取数据范围目录列表</p>
+     * 
+     * @param request QueryDataRangeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryDataRangeResponse
+     */
+    public QueryDataRangeResponse queryDataRangeWithOptions(QueryDataRangeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryDataRange"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDataRangeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取数据范围目录列表</p>
+     * 
+     * @param request QueryDataRangeRequest
+     * @return QueryDataRangeResponse
+     */
+    public QueryDataRangeResponse queryDataRange(QueryDataRangeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryDataRangeWithOptions(request, runtime);
     }
 
     /**
