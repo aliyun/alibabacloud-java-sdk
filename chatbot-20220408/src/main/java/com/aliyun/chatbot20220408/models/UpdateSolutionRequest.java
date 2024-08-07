@@ -4,6 +4,10 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class UpdateSolutionRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
+     */
     @NameInMap("AgentKey")
     public String agentKey;
 
@@ -13,6 +17,10 @@ public class UpdateSolutionRequest extends TeaModel {
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ContentType")
     public Integer contentType;
 
@@ -24,6 +32,9 @@ public class UpdateSolutionRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100001333260</p>
      */
     @NameInMap("SolutionId")
     public Long solutionId;

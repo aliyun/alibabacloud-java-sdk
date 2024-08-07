@@ -7,6 +7,10 @@ public class DescribeCategoryResponseBody extends TeaModel {
     @NameInMap("Category")
     public DescribeCategoryResponseBodyCategory category;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2B0304FD-3804-5C06-9A83-77F5523664AF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,15 +39,27 @@ public class DescribeCategoryResponseBody extends TeaModel {
         @NameInMap("BizCode")
         public String bizCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30000049006</p>
+         */
         @NameInMap("CategoryId")
         public Long categoryId;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("ParentCategoryId")
         public Long parentCategoryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Status")
         public Integer status;
 

@@ -7,15 +7,31 @@ public class ListIntentResponseBody extends TeaModel {
     @NameInMap("Intents")
     public java.util.List<ListIntentResponseBodyIntents> intents;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>23dsfa34r2s2s2sd12</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,18 +81,34 @@ public class ListIntentResponseBody extends TeaModel {
     }
 
     public static class ListIntentResponseBodyIntentsSlotInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Array")
         public Boolean array;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Encrypt")
         public Boolean encrypt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Interactive")
         public Boolean interactive;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12134223</p>
+         */
         @NameInMap("SlotId")
         public String slotId;
 
@@ -142,27 +174,55 @@ public class ListIntentResponseBody extends TeaModel {
         @NameInMap("AliasName")
         public String aliasName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-08-12T16:00:01Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123231</p>
+         */
         @NameInMap("CreateUserId")
         public String createUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("CreateUserName")
         public String createUserName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>234234234234</p>
+         */
         @NameInMap("IntentId")
         public Long intentId;
 
         @NameInMap("IntentName")
         public String intentName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-08-12T16:00:01Z</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123231</p>
+         */
         @NameInMap("ModifyUserId")
         public String modifyUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("ModifyUserName")
         public String modifyUserName;
 

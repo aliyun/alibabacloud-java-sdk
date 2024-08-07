@@ -9,10 +9,17 @@ public class ListSaasInfoResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A629A28F-F25E-5572-A679-FA46FB0151D6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>06614fdb-c72f-436e-8003-dfe8a2854a15</p>
+     */
     @NameInMap("SaasToken")
     public String saasToken;
 
@@ -46,18 +53,34 @@ public class ListSaasInfoResponseBody extends TeaModel {
     }
 
     public static class ListSaasInfoResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>GLOBAL_SERVICE</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>GLOBAL SERVICE</p>
+         */
         @NameInMap("EnName")
         public String enName;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://pre-alime4service.console.aliyun.com/?productCode=p_beebot_public&switchAgent=1204001&saasCode=Robot&saasToken=06614fdb-c72f-436e-8003-dfe8a2854a15&saasName=123#/robot">https://pre-alime4service.console.aliyun.com/?productCode=p_beebot_public&amp;switchAgent=1204001&amp;saasCode=Robot&amp;saasToken=06614fdb-c72f-436e-8003-dfe8a2854a15&amp;saasName=123#/robot</a></p>
+         */
         @NameInMap("ServiceUrl")
         public String serviceUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://alime.console.aliyun.com/?productCode=p_beebot_public&switchAgent=1204001&saasCode=Robot&saasToken=06614fdb-c72f-436e-8003-dfe8a2854a15&saasName=123#/robot">https://alime.console.aliyun.com/?productCode=p_beebot_public&amp;switchAgent=1204001&amp;saasCode=Robot&amp;saasToken=06614fdb-c72f-436e-8003-dfe8a2854a15&amp;saasName=123#/robot</a></p>
+         */
         @NameInMap("Url")
         public String url;
 

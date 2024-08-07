@@ -4,24 +4,49 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class GenerateUserAccessTokenRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
+     */
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>a***<a href="mailto:bcx@gmail.com">bcx@gmail.com</a></p>
+     */
     @NameInMap("Email")
     public String email;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("ExpireTime")
     public Integer expireTime;
 
     @NameInMap("ExtraInfo")
     public String extraInfo;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8882022040000000171</p>
+     */
     @NameInMap("ForeignId")
     public String foreignId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Nick")
     public String nick;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1381111****</p>
+     */
     @NameInMap("Telephone")
     public String telephone;
 

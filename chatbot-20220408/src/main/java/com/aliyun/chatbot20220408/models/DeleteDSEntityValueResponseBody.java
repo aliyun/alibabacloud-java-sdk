@@ -4,9 +4,17 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class DeleteDSEntityValueResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3453453452</p>
+     */
     @NameInMap("EntityValueId")
     public Long entityValueId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dfdf2t3rfvb45y</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

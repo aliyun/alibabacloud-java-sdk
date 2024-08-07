@@ -4,15 +4,31 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class UpdateInstanceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
+     */
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>chatbot-cn-mp90s2lrk00050</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>用于C端问答的机器人</p>
+     */
     @NameInMap("Introduction")
     public String introduction;
 
+    /**
+     * <strong>example:</strong>
+     * <p>智能客服-小C</p>
+     */
     @NameInMap("Name")
     public String name;
 

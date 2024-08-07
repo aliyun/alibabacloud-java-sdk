@@ -4,11 +4,18 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class UpdateLgfRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
+     */
     @NameInMap("AgentKey")
     public String agentKey;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>chatbot-cn-yjzbyrEvqd</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -21,8 +28,10 @@ public class UpdateLgfRequest extends TeaModel {
 
     /**
      * <p>LGF ID</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12121</p>
      */
     @NameInMap("LgfId")
     public Long lgfId;
@@ -67,6 +76,9 @@ public class UpdateLgfRequest extends TeaModel {
     public static class UpdateLgfRequestLgfDefinition extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23234523522</p>
          */
         @NameInMap("IntentId")
         public Long intentId;

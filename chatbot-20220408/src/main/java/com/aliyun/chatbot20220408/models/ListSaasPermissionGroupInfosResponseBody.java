@@ -9,6 +9,9 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8AD9FA10-7780-5E12-B701-13C928524F32</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -35,9 +38,17 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
     }
 
     public static class ListSaasPermissionGroupInfosResponseBodyDataPgInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>FAQ</p>
+         */
         @NameInMap("PgCode")
         public String pgCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FAQ</p>
+         */
         @NameInMap("PgEnName")
         public String pgEnName;
 
@@ -76,6 +87,10 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
     }
 
     public static class ListSaasPermissionGroupInfosResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Release Center</p>
+         */
         @NameInMap("EnName")
         public String enName;
 
@@ -85,6 +100,10 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
         @NameInMap("PgInfos")
         public java.util.List<ListSaasPermissionGroupInfosResponseBodyDataPgInfos> pgInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FAQ</p>
+         */
         @NameInMap("SaasCode")
         public String saasCode;
 

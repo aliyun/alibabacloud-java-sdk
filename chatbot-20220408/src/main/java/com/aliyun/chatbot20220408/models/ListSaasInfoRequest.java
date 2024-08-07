@@ -4,14 +4,25 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class ListSaasInfoRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
+     */
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DS,FAQ</p>
+     */
     @NameInMap("SaasGroupCodes")
     public String saasGroupCodes;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>userTest</p>
      */
     @NameInMap("SaasName")
     public String saasName;

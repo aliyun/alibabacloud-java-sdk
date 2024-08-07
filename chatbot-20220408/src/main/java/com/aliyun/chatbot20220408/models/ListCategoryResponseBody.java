@@ -7,6 +7,10 @@ public class ListCategoryResponseBody extends TeaModel {
     @NameInMap("Categories")
     public java.util.List<ListCategoryResponseBodyCategories> categories;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9C5F8186-2D22-433E-9545-606D344F30B5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,15 +39,27 @@ public class ListCategoryResponseBody extends TeaModel {
         @NameInMap("BizCode")
         public String bizCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>231001028593</p>
+         */
         @NameInMap("CategoryId")
         public Long categoryId;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("ParentCategoryId")
         public Long parentCategoryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Status")
         public Integer status;
 

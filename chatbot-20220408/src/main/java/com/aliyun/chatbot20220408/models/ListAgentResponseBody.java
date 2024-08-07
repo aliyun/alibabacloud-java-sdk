@@ -7,18 +7,33 @@ public class ListAgentResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<ListAgentResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F55D90C1-31BE-4B2A-AA3F-25EFC36F9419</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -68,9 +83,17 @@ public class ListAgentResponseBody extends TeaModel {
     }
 
     public static class ListAgentResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>881</p>
+         */
         @NameInMap("AgentId")
         public Long agentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4e7400028e6f4a7393ed3acf6a7b8927_p_beebot_public</p>
+         */
         @NameInMap("AgentKey")
         public String agentKey;
 

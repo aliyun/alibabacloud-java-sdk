@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class DeleteLgfResponseBody extends TeaModel {
     /**
      * <p>LGF ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2342424</p>
      */
     @NameInMap("LgfId")
     public Long lgfId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dgw2342424qw42</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

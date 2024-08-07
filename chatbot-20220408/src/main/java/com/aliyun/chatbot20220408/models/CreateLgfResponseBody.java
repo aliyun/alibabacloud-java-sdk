@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class CreateLgfResponseBody extends TeaModel {
     /**
      * <p>LGF ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123453433453</p>
      */
     @NameInMap("LgfId")
     public Long lgfId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>af5fg3sdf457j5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

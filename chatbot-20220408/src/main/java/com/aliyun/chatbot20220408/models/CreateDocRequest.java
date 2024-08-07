@@ -4,27 +4,50 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class CreateDocRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
+     */
     @NameInMap("AgentKey")
     public String agentKey;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30000049006</p>
      */
     @NameInMap("CategoryId")
     public Long categoryId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;Splitter&quot;:&quot;treeSplitter&quot;,&quot;ChunkSize&quot;:500,&quot;TreePatterns&quot;:[&quot;^# .<em>&quot;,&quot;^## .</em>&quot;,&quot;^### .<em>&quot;,&quot;^#### .</em>&quot;],&quot;TitleSource&quot;:&quot;&quot;}</p>
+     */
     @NameInMap("Config")
     public String config;
 
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2032-05-25T16:28:36Z</p>
+     */
     @NameInMap("EndDate")
     public String endDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;code&quot;:&quot;xxx&quot;}</p>
+     */
     @NameInMap("Meta")
     public String meta;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-05-25T16:28:36Z</p>
+     */
     @NameInMap("StartDate")
     public String startDate;
 
@@ -37,6 +60,10 @@ public class CreateDocRequest extends TeaModel {
     @NameInMap("Title")
     public String title;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://example.com/example.pdf">https://example.com/example.pdf</a></p>
+     */
     @NameInMap("Url")
     public String url;
 

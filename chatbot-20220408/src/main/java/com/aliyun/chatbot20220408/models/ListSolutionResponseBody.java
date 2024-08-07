@@ -4,6 +4,10 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class ListSolutionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>5B29DB5E-251D-5A73-84B5-A12DF795F231</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,12 +39,24 @@ public class ListSolutionResponseBody extends TeaModel {
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ContentType")
         public Integer contentType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-29T03:55:04Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-29T06:23:53Z</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
@@ -50,6 +66,10 @@ public class ListSolutionResponseBody extends TeaModel {
         @NameInMap("PlainText")
         public String plainText;
 
+        /**
+         * <strong>example:</strong>
+         * <p>496</p>
+         */
         @NameInMap("SolutionId")
         public Long solutionId;
 

@@ -4,9 +4,17 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class CreateDSEntityResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>23436345</p>
+     */
     @NameInMap("EntityId")
     public Long entityId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>adfad2343f1f2r</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

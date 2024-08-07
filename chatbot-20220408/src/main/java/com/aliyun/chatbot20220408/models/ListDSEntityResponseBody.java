@@ -7,15 +7,31 @@ public class ListDSEntityResponseBody extends TeaModel {
     @NameInMap("Entities")
     public java.util.List<ListDSEntityResponseBodyEntities> entities;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ga4h345defgwet2sdf223</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,30 +81,62 @@ public class ListDSEntityResponseBody extends TeaModel {
     }
 
     public static class ListDSEntityResponseBodyEntities extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-08-12T16:00:01Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123231</p>
+         */
         @NameInMap("CreateUserId")
         public String createUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("CreateUserName")
         public String createUserName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>234564567445</p>
+         */
         @NameInMap("EntityId")
         public Long entityId;
 
         @NameInMap("EntityName")
         public String entityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>synonyms</p>
+         */
         @NameInMap("EntityType")
         public String entityType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-08-12T16:00:01Z</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123231</p>
+         */
         @NameInMap("ModifyUserId")
         public String modifyUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("ModifyUserName")
         public String modifyUserName;
 

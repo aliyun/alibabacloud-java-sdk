@@ -4,33 +4,69 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class DescribeDSEntityResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2021-08-12T16:00:01Z</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123231</p>
+     */
     @NameInMap("CreateUserId")
     public String createUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("CreateUserName")
     public String createUserName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("EntityId")
     public Long entityId;
 
     @NameInMap("EntityName")
     public String entityName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>synonyms</p>
+     */
     @NameInMap("EntityType")
     public String entityType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-08-12T16:00:01Z</p>
+     */
     @NameInMap("ModifyTime")
     public String modifyTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123231</p>
+     */
     @NameInMap("ModifyUserId")
     public String modifyUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("ModifyUserName")
     public String modifyUserName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ad23234dsf234fga</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

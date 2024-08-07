@@ -4,12 +4,24 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class FeedbackResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>good</p>
+     */
     @NameInMap("Feedback")
     public String feedback;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5ca40988-4f99-47ad-ac96-9060d0f81db9</p>
+     */
     @NameInMap("MessageId")
     public String messageId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4e5eea71-f326-450c-8849-49515473ef64</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

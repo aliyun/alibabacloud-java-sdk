@@ -4,54 +4,114 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class SearchFaqRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
+     */
     @NameInMap("AgentKey")
     public String agentKey;
 
     @NameInMap("CategoryIds")
     public java.util.List<Long> categoryIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-04-02T03:09:30Z</p>
+     */
     @NameInMap("CreateTimeBegin")
     public String createTimeBegin;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-05-02T03:09:30Z</p>
+     */
     @NameInMap("CreateTimeEnd")
     public String createTimeEnd;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test01</p>
+     */
     @NameInMap("CreateUserName")
     public String createUserName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-04-02T03:09:30Z</p>
+     */
     @NameInMap("EndTimeBegin")
     public String endTimeBegin;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-05-02T03:09:30Z</p>
+     */
     @NameInMap("EndTimeEnd")
     public String endTimeEnd;
 
     @NameInMap("Keyword")
     public String keyword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-04-02T03:09:30Z</p>
+     */
     @NameInMap("ModifyTimeBegin")
     public String modifyTimeBegin;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-05-02T03:09:30Z</p>
+     */
     @NameInMap("ModifyTimeEnd")
     public String modifyTimeEnd;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test01</p>
+     */
     @NameInMap("ModifyUserName")
     public String modifyUserName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SearchScope")
     public Integer searchScope;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-04-02T03:09:30Z</p>
+     */
     @NameInMap("StartTimeBegin")
     public String startTimeBegin;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-04-03T03:09:30Z</p>
+     */
     @NameInMap("StartTimeEnd")
     public String startTimeEnd;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Status")
     public Integer status;
 

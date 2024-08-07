@@ -4,9 +4,17 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class DeleteIntentResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>12345</p>
+     */
     @NameInMap("IntentId")
     public Long intentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3464dfg3qwr34tf34</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

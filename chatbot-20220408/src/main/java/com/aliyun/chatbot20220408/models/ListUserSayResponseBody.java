@@ -4,15 +4,31 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class ListUserSayResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>fs1fg4512v43572v23</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,12 +81,24 @@ public class ListUserSayResponseBody extends TeaModel {
     }
 
     public static class ListUserSayResponseBodyUserSaysSlotInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("EndIndex")
         public Integer endIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3456sdfg3tu</p>
+         */
         @NameInMap("SlotId")
         public String slotId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("StartIndex")
         public Integer startIndex;
 
@@ -109,18 +137,34 @@ public class ListUserSayResponseBody extends TeaModel {
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-08-12T16:00:01Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>235564564</p>
+         */
         @NameInMap("IntentId")
         public Long intentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-08-12T16:00:01Z</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
         @NameInMap("SlotInfos")
         public java.util.List<ListUserSayResponseBodyUserSaysSlotInfos> slotInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3453452138</p>
+         */
         @NameInMap("UserSayId")
         public Long userSayId;
 

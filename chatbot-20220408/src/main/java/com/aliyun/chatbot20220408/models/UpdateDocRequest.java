@@ -4,12 +4,24 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class UpdateDocRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
+     */
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>231001028593</p>
+     */
     @NameInMap("CategoryId")
     public Long categoryId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;Splitter&quot;:&quot;treeSplitter&quot;,&quot;ChunkSize&quot;:500,&quot;TreePatterns&quot;:[&quot;^# .<em>&quot;,&quot;^## .</em>&quot;,&quot;^### .<em>&quot;,&quot;^#### .</em>&quot;],&quot;TitleSource&quot;:&quot;&quot;}</p>
+     */
     @NameInMap("Config")
     public String config;
 
@@ -19,18 +31,33 @@ public class UpdateDocRequest extends TeaModel {
     @NameInMap("DocName")
     public String docName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-03-11T23:59:59Z</p>
+     */
     @NameInMap("EndDate")
     public String endDate;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001905617</p>
      */
     @NameInMap("KnowledgeId")
     public Long knowledgeId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;code&quot;:&quot;xxx&quot;}</p>
+     */
     @NameInMap("Meta")
     public String meta;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-05-25T16:28:36Z</p>
+     */
     @NameInMap("StartDate")
     public String startDate;
 

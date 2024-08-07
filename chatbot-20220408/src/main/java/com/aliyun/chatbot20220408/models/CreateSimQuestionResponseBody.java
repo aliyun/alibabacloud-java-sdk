@@ -4,9 +4,17 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class CreateSimQuestionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>16AC1B3C-66E0-438B-BB7C-71B692407B67</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000002788</p>
+     */
     @NameInMap("SimQuestionId")
     public Long simQuestionId;
 

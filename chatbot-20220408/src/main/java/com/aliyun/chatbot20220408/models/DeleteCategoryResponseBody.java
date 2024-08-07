@@ -4,6 +4,10 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class DeleteCategoryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>4B3E0DE3-DC57-5BFE-88D4-ADD8ED024F55</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

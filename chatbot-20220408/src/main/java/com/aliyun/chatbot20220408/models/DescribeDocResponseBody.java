@@ -4,18 +4,38 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class DescribeDocResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>bizcode123</p>
+     */
     @NameInMap("BizCode")
     public String bizCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30000049006</p>
+     */
     @NameInMap("CategoryId")
     public Long categoryId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;Splitter&quot;:&quot;treeSplitter&quot;,&quot;ChunkSize&quot;:500,&quot;TreePatterns&quot;:[&quot;^# .<em>&quot;,&quot;^## .</em>&quot;,&quot;^### .<em>&quot;,&quot;^#### .</em>&quot;],&quot;TitleSource&quot;:&quot;docName&quot;}</p>
+     */
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-04-12T06:30:17Z</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1111111111</p>
+     */
     @NameInMap("CreateUserId")
     public Long createUserId;
 
@@ -31,45 +51,88 @@ public class DescribeDocResponseBody extends TeaModel {
     @NameInMap("DocTags")
     public java.util.List<DescribeDocResponseBodyDocTags> docTags;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("EffectStatus")
     public Integer effectStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-04-27T06:08:54Z</p>
+     */
     @NameInMap("EndDate")
     public String endDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30001979424</p>
+     */
     @NameInMap("KnowledgeId")
     public Long knowledgeId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;code&quot;:&quot;xxx&quot;}</p>
+     */
     @NameInMap("Meta")
     public String meta;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-11-25T08:56:55Z</p>
+     */
     @NameInMap("ModifyTime")
     public String modifyTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2222222222</p>
+     */
     @NameInMap("ModifyUserId")
     public Long modifyUserId;
 
     @NameInMap("ModifyUserName")
     public String modifyUserName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ProcessCanRetry")
     public Boolean processCanRetry;
 
     @NameInMap("ProcessMessage")
     public String processMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("ProcessStatus")
     public Integer processStatus;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7F132693-212A-40A9-8A81-11E7694E478B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1979-12-31T16:00:00Z</p>
+     */
     @NameInMap("StartDate")
     public String startDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Status")
     public Integer status;
 
@@ -277,15 +340,27 @@ public class DescribeDocResponseBody extends TeaModel {
     }
 
     public static class DescribeDocResponseBodyDocInfoDocParas extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ParaLevel")
         public Integer paraLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ParaNo")
         public Integer paraNo;
 
         @NameInMap("ParaText")
         public String paraText;
 
+        /**
+         * <strong>example:</strong>
+         * <p>text</p>
+         */
         @NameInMap("ParaType")
         public String paraType;
 

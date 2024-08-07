@@ -4,12 +4,20 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class GetBotSessionDataResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>116</p>
+     */
     @NameInMap("CostTime")
     public String costTime;
 
     @NameInMap("Datas")
     public java.util.List<java.util.Map<String, ?>> datas;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15CD94CC-CBEB-4189-806C-A132D1F45D51</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

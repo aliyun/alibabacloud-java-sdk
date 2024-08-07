@@ -4,9 +4,17 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class DeletePerspectiveResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>FC384CE1-8D42-1900-84E1-F33F990F2B5E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 

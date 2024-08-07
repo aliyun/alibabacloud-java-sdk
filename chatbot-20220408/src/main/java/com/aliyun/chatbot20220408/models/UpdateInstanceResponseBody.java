@@ -4,6 +4,10 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class UpdateInstanceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>C45BFEE4-F657-1332-8B47-2C757B94C972</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
