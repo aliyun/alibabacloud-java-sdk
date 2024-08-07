@@ -26,17 +26,17 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
     public DescribeGreyTagRouteResponseBodyData data;
 
     /**
-     * <p>The returned error code. Valid values:</p>
+     * <p>The error code. Valid values:</p>
      * <ul>
      * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned information.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -45,7 +45,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9D29CBD0-45D3-410B-9826-52F86F90****</p>
@@ -138,6 +138,8 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
 
     public static class DescribeGreyTagRouteResponseBodyDataAlbRulesItems extends TeaModel {
         /**
+         * <p>Valid value: ==.</p>
+         * 
          * <strong>example:</strong>
          * <p>==</p>
          */
@@ -145,6 +147,8 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
         public String cond;
 
         /**
+         * <p>This parameter is not returned for applications that are associated with ALB instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>N/A</p>
          */
@@ -152,6 +156,8 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
         public String expr;
 
         /**
+         * <p>This parameter is not returned for applications that are associated with Application Load Balancer (ALB) instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>N/A</p>
          */
@@ -159,6 +165,8 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
         public Integer index;
 
         /**
+         * <p>The name of the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>example</p>
          */
@@ -166,6 +174,8 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The operator. Valid value: <strong>rawvalue</strong>. This value indicates direct comparison.</p>
+         * 
          * <strong>example:</strong>
          * <p>rawvalue</p>
          */
@@ -173,6 +183,13 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
         public String operator;
 
         /**
+         * <p>The type of the comparison. Valid values:</p>
+         * <ul>
+         * <li><strong>sourceIp</strong>: SourceIp</li>
+         * <li><strong>cookie</strong>: cookie</li>
+         * <li><strong>header</strong>: header</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>cookie</p>
          */
@@ -180,6 +197,8 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The value of the parameter. This value is compared with the value that is obtained based on the type and name parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -251,6 +270,8 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
 
     public static class DescribeGreyTagRouteResponseBodyDataAlbRules extends TeaModel {
         /**
+         * <p>The condition mode of the canary release rule. Valid value: AND. This value indicates that that all conditions must be met.</p>
+         * 
          * <strong>example:</strong>
          * <p>AND</p>
          */
@@ -258,6 +279,8 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
         public String condition;
 
         /**
+         * <p>The ID of the gateway routing rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>23</p>
          */
@@ -268,6 +291,8 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
         public java.util.List<DescribeGreyTagRouteResponseBodyDataAlbRulesItems> items;
 
         /**
+         * <p>The service ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>22</p>
          */

@@ -8,7 +8,7 @@ public class CreateNamespaceRequest extends TeaModel {
     public Boolean enableMicroRegistration;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The trace ID that is used to query the details of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -17,7 +17,7 @@ public class CreateNamespaceRequest extends TeaModel {
     public String nameSpaceShortId;
 
     /**
-     * <p>The name of the namespace.</p>
+     * <p>The message returned for the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>desc</p>
@@ -26,13 +26,7 @@ public class CreateNamespaceRequest extends TeaModel {
     public String namespaceDescription;
 
     /**
-     * <p>The HTTP status code. Valid values:</p>
-     * <ul>
-     * <li><strong>2xx</strong>: indicates that the request was successful.</li>
-     * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
-     * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
-     * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
-     * </ul>
+     * <p>The data returned.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing:test</p>
@@ -41,7 +35,7 @@ public class CreateNamespaceRequest extends TeaModel {
     public String namespaceId;
 
     /**
-     * <p>cn-beijing:test</p>
+     * <p>The ID of the request.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

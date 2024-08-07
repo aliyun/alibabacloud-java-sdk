@@ -23,6 +23,9 @@ public class BindSlbRequest extends TeaModel {
     @NameInMap("Internet")
     public String internet;
 
+    @NameInMap("InternetSlbChargeType")
+    public String internetSlbChargeType;
+
     /**
      * <p>lb-bp1tg0k6d9nqaw7l1\<em>\</em>\<em>\</em></p>
      * 
@@ -40,6 +43,9 @@ public class BindSlbRequest extends TeaModel {
      */
     @NameInMap("Intranet")
     public String intranet;
+
+    @NameInMap("IntranetSlbChargeType")
+    public String intranetSlbChargeType;
 
     /**
      * <p>lb-bp1tg0k6d9nqaw7l1\<em>\</em>\<em>\</em></p>
@@ -71,6 +77,14 @@ public class BindSlbRequest extends TeaModel {
         return this.internet;
     }
 
+    public BindSlbRequest setInternetSlbChargeType(String internetSlbChargeType) {
+        this.internetSlbChargeType = internetSlbChargeType;
+        return this;
+    }
+    public String getInternetSlbChargeType() {
+        return this.internetSlbChargeType;
+    }
+
     public BindSlbRequest setInternetSlbId(String internetSlbId) {
         this.internetSlbId = internetSlbId;
         return this;
@@ -85,6 +99,14 @@ public class BindSlbRequest extends TeaModel {
     }
     public String getIntranet() {
         return this.intranet;
+    }
+
+    public BindSlbRequest setIntranetSlbChargeType(String intranetSlbChargeType) {
+        this.intranetSlbChargeType = intranetSlbChargeType;
+        return this;
+    }
+    public String getIntranetSlbChargeType() {
+        return this.intranetSlbChargeType;
     }
 
     public BindSlbRequest setIntranetSlbId(String intranetSlbId) {

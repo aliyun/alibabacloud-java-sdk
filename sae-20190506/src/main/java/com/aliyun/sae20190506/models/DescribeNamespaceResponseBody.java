@@ -20,7 +20,7 @@ public class DescribeNamespaceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The information of the namespace.</p>
+     * <p>The information about the namespace.</p>
      */
     @NameInMap("Data")
     public DescribeNamespaceResponseBodyData data;
@@ -145,11 +145,10 @@ public class DescribeNamespaceResponseBody extends TeaModel {
 
     public static class DescribeNamespaceResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the SAE built-in registry is enabled. 
-         * Valid values:</p>
+         * <p>Indicates whether the SAE built-in registry is enabled. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>

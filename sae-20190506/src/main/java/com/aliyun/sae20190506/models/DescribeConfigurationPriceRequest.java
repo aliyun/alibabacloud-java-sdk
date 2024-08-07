@@ -6,16 +6,26 @@ import com.aliyun.tea.*;
 public class DescribeConfigurationPriceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2000</p>
      */
     @NameInMap("Cpu")
     public Integer cpu;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4096</p>
      */
     @NameInMap("Memory")
     public Integer memory;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Web</p>
+     */
     @NameInMap("Workload")
     public String workload;
 

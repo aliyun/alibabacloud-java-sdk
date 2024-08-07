@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApplicationImageRequest extends TeaModel {
     /**
-     * <p>d700e680-aa4d-4ec1-afc2-6566b5ff\<em>\</em>\<em>\</em></p>
+     * <p>The ID of the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeApplicationImageRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>registry-vpc.cn-hangzhou.aliyuncs.com/demo/demo:latest</p>
+     * <p>The URL of the image.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

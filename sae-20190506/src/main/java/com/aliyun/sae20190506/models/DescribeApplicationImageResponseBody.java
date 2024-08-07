@@ -7,10 +7,10 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: indicates that the request was successful.</li>
-     * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
-     * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
-     * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+     * <li><strong>2xx</strong>: The call was successful.</li>
+     * <li><strong>3xx</strong>: The call was redirected.</li>
+     * <li><strong>4xx</strong>: The call failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,26 +20,26 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The information about the image of an application.</p>
+     * <p>The information about the image of the application.</p>
      */
     @NameInMap("Data")
     public DescribeApplicationImageResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error code. Valid values:</p>
      * <ul>
-     * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
-     * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+     * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The returned message. Valid values:</p>
      * <ul>
-     * <li><strong>success</strong> is returned when the request succeeds.</li>
-     * <li>An error code is returned when the request fails.</li>
+     * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
+     * <li>An error code: If the call fails, an error code is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -58,10 +58,10 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the image information was obtained. Valid values:</p>
+     * <p>Indicates whether the information about the image was obtained. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: indicates that the information was obtained.</li>
-     * <li><strong>false</strong>: indicates that the information could not be obtained.</li>
+     * <li><strong>true</strong>: The information was obtained.</li>
+     * <li><strong>false</strong>: The information failed to be obtained.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +71,7 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The ID of the trace. It is used to query the details of a request.</p>
+     * <p>The trace ID that is used to query the details of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -154,7 +154,7 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
         public String logo;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -172,7 +172,7 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
         public String repoName;
 
         /**
-         * <p>The name of the namespace to which the repository belongs.</p>
+         * <p>The name of the namespace to which the image repository belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>demo</p>

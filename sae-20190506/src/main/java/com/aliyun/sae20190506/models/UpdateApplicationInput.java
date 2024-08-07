@@ -25,6 +25,9 @@ public class UpdateApplicationInput extends TeaModel {
     @NameInMap("customHealthCheckConfig")
     public CustomHealthCheckConfig customHealthCheckConfig;
 
+    @NameInMap("customHostAlias")
+    public CustomHostAlias customHostAlias;
+
     @NameInMap("customRuntimeConfig")
     public CustomRuntimeConfig customRuntimeConfig;
 
@@ -174,6 +177,14 @@ public class UpdateApplicationInput extends TeaModel {
     }
     public CustomHealthCheckConfig getCustomHealthCheckConfig() {
         return this.customHealthCheckConfig;
+    }
+
+    public UpdateApplicationInput setCustomHostAlias(CustomHostAlias customHostAlias) {
+        this.customHostAlias = customHostAlias;
+        return this;
+    }
+    public CustomHostAlias getCustomHostAlias() {
+        return this.customHostAlias;
     }
 
     public UpdateApplicationInput setCustomRuntimeConfig(CustomRuntimeConfig customRuntimeConfig) {

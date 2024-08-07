@@ -39,7 +39,7 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3B763F98-0BA2-5C23-B6B8-558568D2C1C2</p>
@@ -107,7 +107,7 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
 
     public static class GetChangeOrderMetricResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
@@ -134,7 +134,7 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
         public Float errorPercent;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -143,7 +143,7 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the namespace.</p>
+         * <p>The namespace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
