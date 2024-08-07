@@ -9242,6 +9242,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("endpoints", request.endpoints);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.esInstanceId)) {
+            body.put("esInstanceId", request.esInstanceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.password)) {
             body.put("password", request.password);
         }

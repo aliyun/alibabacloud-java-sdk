@@ -7,6 +7,9 @@ public class UpdatePipelineManagementConfigRequest extends TeaModel {
     @NameInMap("endpoints")
     public java.util.List<String> endpoints;
 
+    @NameInMap("esInstanceId")
+    public String esInstanceId;
+
     /**
      * <strong>example:</strong>
      * <hr>
@@ -49,6 +52,14 @@ public class UpdatePipelineManagementConfigRequest extends TeaModel {
     }
     public java.util.List<String> getEndpoints() {
         return this.endpoints;
+    }
+
+    public UpdatePipelineManagementConfigRequest setEsInstanceId(String esInstanceId) {
+        this.esInstanceId = esInstanceId;
+        return this;
+    }
+    public String getEsInstanceId() {
+        return this.esInstanceId;
     }
 
     public UpdatePipelineManagementConfigRequest setPassword(String password) {
