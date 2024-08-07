@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The data returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("Data")
     public ListCustomizeRuleTestResultResponseBodyData data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,18 +101,27 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
     public static class ListCustomizeRuleTestResultResponseBodyDataPageInfo extends TeaModel {
         /**
          * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;
@@ -135,97 +160,144 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
     public static class ListCustomizeRuleTestResultResponseBodyDataResponseData extends TeaModel {
         /**
          * <p>The description of the alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The account you logged in this time is not in the legal account category defined by you. Please confirm the legality of the login behavior.</p>
          */
         @NameInMap("AlertDesc")
         public String alertDesc;
 
         /**
          * <p>The alert details in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;main_user_id&quot;: &quot;165295629792****&quot;;&quot;log_uuid_count&quot;: &quot;99&quot;;&quot;attack_ip&quot;: &quot;218.92.XX.XX&quot;}</p>
          */
         @NameInMap("AlertDetail")
         public String alertDetail;
 
         /**
          * <p>The source of the alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         @NameInMap("AlertSrcProd")
         public String alertSrcProd;
 
         /**
          * <p>The sub-module of the source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf</p>
          */
         @NameInMap("AlertSrcProdModule")
         public String alertSrcProdModule;
 
         /**
-         * <p>The tag of the ATT\&CK attack.</p>
+         * <p>The tag of the ATT\&amp;CK attack.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>T1595.002 Vulnerability Scanning</p>
          */
         @NameInMap("AttCk")
         public String attCk;
 
         /**
          * <p>The name of the alert, which corresponds to the name of the custom rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_scan</p>
          */
         @NameInMap("EventName")
         public String eventName;
 
         /**
          * <p>The threat type, which indicates the alert type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WEBSHELL</p>
          */
         @NameInMap("EventType")
         public String eventType;
 
         /**
          * <p>The threat level. Valid values:</p>
-         * <br>
-         * <p>*   serious: high.</p>
-         * <p>*   suspicious: medium.</p>
-         * <p>*   remind: low.</p>
+         * <ul>
+         * <li>serious: high.</li>
+         * <li>suspicious: medium.</li>
+         * <li>remind: low.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>remind</p>
          */
         @NameInMap("Level")
         public String level;
 
         /**
          * <p>The log source of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_siem_aegis_sas_alert</p>
          */
         @NameInMap("LogSource")
         public String logSource;
 
         /**
          * <p>The time when the alert was recorded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-06 16:37:29</p>
          */
         @NameInMap("LogTime")
         public String logTime;
 
         /**
          * <p>The log type of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALERT_ACTIVITY</p>
          */
         @NameInMap("LogType")
         public String logType;
 
         /**
          * <p>The ID of the Alibaba Cloud account that is associated with the alert in SIEM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         @NameInMap("MainUserId")
         public String mainUserId;
 
         /**
          * <p>The status of the alert data. Valid values:</p>
-         * <br>
-         * <p>*   test: business test data.</p>
-         * <p>*   online: online data.</p>
+         * <ul>
+         * <li>test: business test data.</li>
+         * <li>online: online data.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("OnlineStatus")
         public String onlineStatus;
 
         /**
          * <p>The ID of the Alibaba Cloud account within which the alert is generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>176555323***</p>
          */
         @NameInMap("SubUserId")
         public String subUserId;
 
         /**
          * <p>The UUID of the alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas_71e24437d2797ce8fc59692905a4****</p>
          */
         @NameInMap("Uuid")
         public String uuid;

@@ -12,6 +12,9 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
     public static class DescribeDataSourceParametersResponseBodyDataParamValue extends TeaModel {
         /**
          * <p>The display value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>guangzhou</p>
          */
         @NameInMap("Label")
         public String label;
 
         /**
          * <p>The actual value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-guangzhou</p>
          */
         @NameInMap("Value")
         public String value;
@@ -76,83 +85,121 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
     public static class DescribeDataSourceParametersResponseBodyData extends TeaModel {
         /**
          * <p>Indicates whether the edit operation is supported. Valid values:</p>
-         * <br>
-         * <p>*   **0**</p>
-         * <p>*   **1**</p>
+         * <ul>
+         * <li><strong>0</strong></li>
+         * <li><strong>1</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>wafApi</p>
          */
         @NameInMap("CanEditted")
         public Integer canEditted;
 
         /**
          * <p>The code of the cloud service provider. Valid values:</p>
-         * <br>
-         * <p>*   **qcloud**: Tencent Cloud</p>
-         * <p>*   **aliyun**: Alibaba Cloud</p>
-         * <p>*   **hcloud**: Huawei Cloud</p>
+         * <ul>
+         * <li><strong>qcloud</strong>: Tencent Cloud</li>
+         * <li><strong>aliyun</strong>: Alibaba Cloud</li>
+         * <li><strong>hcloud</strong>: Huawei Cloud</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>hcloud</p>
          */
         @NameInMap("CloudCode")
         public String cloudCode;
 
         /**
          * <p>The type of the data source. Valid values:</p>
-         * <br>
-         * <p>*   **obs**: Huawei Cloud Object Storage Service (OBS)</p>
-         * <p>*   **wafApi**: download API of Tencent Cloud Web Application Firewall (WAF)</p>
-         * <p>*   **ckafka**: Tencent Cloud TDMQ for CKafka</p>
+         * <ul>
+         * <li><strong>obs</strong>: Huawei Cloud Object Storage Service (OBS)</li>
+         * <li><strong>wafApi</strong>: download API of Tencent Cloud Web Application Firewall (WAF)</li>
+         * <li><strong>ckafka</strong>: Tencent Cloud TDMQ for CKafka</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>obs</p>
          */
         @NameInMap("DataSourceType")
         public String dataSourceType;
 
         /**
          * <p>The default value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wafApi</p>
          */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
         /**
          * <p>Indicates whether the modification operation is forbidden. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>wafApi</p>
          */
         @NameInMap("Disabled")
         public Boolean disabled;
 
         /**
          * <p>The method that is used to check the parameter format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>email</p>
          */
         @NameInMap("FormatCheck")
         public String formatCheck;
 
         /**
          * <p>The additional information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>obs docment</p>
          */
         @NameInMap("Hit")
         public String hit;
 
         /**
          * <p>The code of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>region_code</p>
          */
         @NameInMap("ParaCode")
         public String paraCode;
 
         /**
          * <p>The parameter level. Valid values:</p>
-         * <br>
-         * <p>*   **1**: the parameters of the data source</p>
-         * <p>*   **2**: the parameters of the log</p>
+         * <ul>
+         * <li><strong>1</strong>: the parameters of the data source</li>
+         * <li><strong>2</strong>: the parameters of the log</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ParaLevel")
         public Integer paraLevel;
 
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>region local</p>
          */
         @NameInMap("ParaName")
         public String paraName;
 
         /**
          * <p>The data type of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>string</p>
          */
         @NameInMap("ParaType")
         public String paraType;
@@ -165,15 +212,22 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the parameter is required. Valid values:</p>
-         * <br>
-         * <p>*   **1**: required</p>
-         * <p>*   **0**: optional</p>
+         * <ul>
+         * <li><strong>1</strong>: required</li>
+         * <li><strong>0</strong>: optional</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>string</p>
          */
         @NameInMap("Required")
         public Integer required;
 
         /**
          * <p>The note for the parameter value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>obs bucket name</p>
          */
         @NameInMap("Title")
         public String title;

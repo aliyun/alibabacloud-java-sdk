@@ -12,6 +12,9 @@ public class ShowQuickAnalysisResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2A4FBD89-C29D-5973-B882-CB2D23F6****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

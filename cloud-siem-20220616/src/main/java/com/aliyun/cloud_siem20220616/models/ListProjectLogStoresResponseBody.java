@@ -12,6 +12,9 @@ public class ListProjectLogStoresResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,48 +43,72 @@ public class ListProjectLogStoresResponseBody extends TeaModel {
     public static class ListProjectLogStoresResponseBodyData extends TeaModel {
         /**
          * <p>The endpoint of the Simple Log Service project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou.log.aliyuncs.com</p>
          */
         @NameInMap("EndPoint")
         public String endPoint;
 
         /**
          * <p>The name of the region in which the Simple Log Service project resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hangzhou</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
          * <p>The name of the Simple Log Service Logstore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud-siem-logstore</p>
          */
         @NameInMap("LogStore")
         public String logStore;
 
         /**
          * <p>The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123XXXXXXXXX</p>
          */
         @NameInMap("MainUserId")
         public Long mainUserId;
 
         /**
          * <p>The name of the Simple Log Service project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud-siem-project</p>
          */
         @NameInMap("Project")
         public String project;
 
         /**
          * <p>The ID of the region in which the Simple Log Service project resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123XXXXXXXX</p>
          */
         @NameInMap("SubUserId")
         public Long subUserId;
 
         /**
          * <p>The username of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas_account_xxxx</p>
          */
         @NameInMap("SubUserName")
         public String subUserName;

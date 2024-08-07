@@ -12,6 +12,9 @@ public class DescribeImportedLogCountResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class DescribeImportedLogCountResponseBody extends TeaModel {
     public static class DescribeImportedLogCountResponseBodyData extends TeaModel {
         /**
          * <p>The number of logs that are added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("ImportedLogCount")
         public Integer importedLogCount;
 
         /**
          * <p>The total number of logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>59</p>
          */
         @NameInMap("TotalLogCount")
         public Integer totalLogCount;
 
         /**
          * <p>The number of logs that are not added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49</p>
          */
         @NameInMap("UnImportedLogCount")
         public Integer unImportedLogCount;

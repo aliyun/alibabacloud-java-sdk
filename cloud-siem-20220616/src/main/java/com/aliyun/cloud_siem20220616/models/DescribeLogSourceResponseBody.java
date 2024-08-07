@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class DescribeLogSourceResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The data returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeLogSourceResponseBodyData> data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,12 +101,18 @@ public class DescribeLogSourceResponseBody extends TeaModel {
     public static class DescribeLogSourceResponseBodyData extends TeaModel {
         /**
          * <p>The log source of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_siem_aegis_sas_alert</p>
          */
         @NameInMap("LogSource")
         public String logSource;
 
         /**
          * <p>The internal code of the log source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas.cloudsiem.prod.cloud_siem_aegis_sas_alert</p>
          */
         @NameInMap("LogSourceName")
         public String logSourceName;

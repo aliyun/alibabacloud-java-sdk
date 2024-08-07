@@ -12,6 +12,9 @@ public class ListBindAccountResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,52 +43,77 @@ public class ListBindAccountResponseBody extends TeaModel {
     public static class ListBindAccountResponseBodyData extends TeaModel {
         /**
          * <p>The AccessKey ID of the cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABCXXXXXXXX</p>
          */
         @NameInMap("AccessId")
         public String accessId;
 
         /**
          * <p>The ID of the cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123xxxxxxx</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
          * <p>The username of the cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas_account_xxx</p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
          * <p>The ID that is generated when the cloud account is added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123xxxxxxx</p>
          */
         @NameInMap("BindId")
         public Long bindId;
 
         /**
          * <p>The code of the cloud service provider. Valid values:</p>
-         * <br>
-         * <p>*   qcloud: Tencent Cloud</p>
-         * <p>*   aliyun: Alibaba Cloud</p>
-         * <p>*   hcloud: Huawei Cloud</p>
+         * <ul>
+         * <li>qcloud: Tencent Cloud</li>
+         * <li>aliyun: Alibaba Cloud</li>
+         * <li>hcloud: Huawei Cloud</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>hcloud</p>
          */
         @NameInMap("CloudCode")
         public String cloudCode;
 
         /**
          * <p>The ID of the account that is used to add the cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123xxxxxxx</p>
          */
         @NameInMap("CreateUser")
         public String createUser;
 
         /**
          * <p>The number of data sources that are added to the threat analysis feature within the cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("DataSourceCount")
         public Long dataSourceCount;
 
         /**
          * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-11-10 12:20:35</p>
          */
         @NameInMap("ModifyTime")
         public String modifyTime;

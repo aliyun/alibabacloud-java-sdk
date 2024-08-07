@@ -6,24 +6,37 @@ import com.aliyun.tea.*;
 public class DoSelfDelegateRequest extends TeaModel {
     /**
      * <p>The Alibaba Cloud account of an ordinary member of the threat analysis feature.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>104423523217****</p>
      */
     @NameInMap("AliUid")
     public Long aliUid;
 
     /**
      * <p>Specifies whether to use a delegated administrator account. Valid values:</p>
-     * <br>
-     * <p>*   1: use a delegated administrator account.</p>
-     * <p>*   0: do not use a delegated administrator account.</p>
+     * <ul>
+     * <li>1: use a delegated administrator account.</li>
+     * <li>0: do not use a delegated administrator account.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("DelegateOrNot")
     public Integer delegateOrNot;
 
     /**
      * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the region where your assets reside. Valid values:</p>
-     * <br>
-     * <p>*   cn-hangzhou: Your assets reside in regions inside the Chinese mainland or in the China (Hong Kong) region.</p>
-     * <p>*   ap-southeast-1: Your assets reside in regions outside the Chinese mainland, excluding the China (Hong Kong) region.</p>
+     * <ul>
+     * <li>cn-hangzhou: Your assets reside in regions inside the Chinese mainland or in the China (Hong Kong) region.</li>
+     * <li>ap-southeast-1: Your assets reside in regions outside the Chinese mainland, excluding the China (Hong Kong) region.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

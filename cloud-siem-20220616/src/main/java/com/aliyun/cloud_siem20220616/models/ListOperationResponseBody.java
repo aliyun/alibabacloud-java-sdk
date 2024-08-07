@@ -12,6 +12,9 @@ public class ListOperationResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CCEEE128-6607-503E-AAA6-C5E57D94****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,9 +43,13 @@ public class ListOperationResponseBody extends TeaModel {
     public static class ListOperationResponseBodyData extends TeaModel {
         /**
          * <p>Indicates whether the user is an administrator. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AdminOrNot")
         public Boolean adminOrNot;

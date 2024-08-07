@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class DescribeEventDisposeResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The data returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("Data")
     public DescribeEventDisposeResponseBodyData data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,54 +101,80 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
     public static class DescribeEventDisposeResponseBodyDataReceiverInfo extends TeaModel {
         /**
          * <p>The channel of the contact information. Valid values:</p>
-         * <br>
-         * <p>*   message</p>
-         * <p>*   mail</p>
+         * <ul>
+         * <li>message</li>
+         * <li>mail</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>message</p>
          */
         @NameInMap("Channel")
         public String channel;
 
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-06 16:37:29</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-06 16:37:29</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The ID of the recipient who receives the event handling result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The UUID of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
          */
         @NameInMap("IncidentUuid")
         public String incidentUuid;
 
         /**
          * <p>The message title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>siem event dealed message</p>
          */
         @NameInMap("MessageTitle")
         public String messageTitle;
 
         /**
          * <p>The contact information of the recipient.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>138xxxxxx</p>
          */
         @NameInMap("Receiver")
         public String receiver;
 
         /**
          * <p>Indicates whether the message is sent. Valid values:</p>
-         * <br>
-         * <p>*   0: not sent</p>
-         * <p>*   1: sent</p>
+         * <ul>
+         * <li>0: not sent</li>
+         * <li>1: sent</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
@@ -211,6 +253,9 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
     public static class DescribeEventDisposeResponseBodyData extends TeaModel {
         /**
          * <p>An array consisting of JSON objects that are configured for event handling.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ playbookName: &quot;使用安全组封禁入方向IP&quot;, sophonTaskId: &quot;400442a5-4f98-45ed-97db-5ab117eb0b8f&quot;, … }</p>
          */
         @NameInMap("EventDispose")
         public java.util.List<?> eventDispose;
@@ -223,17 +268,24 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
 
         /**
          * <p>The description of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dealed</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
          * <p>The status of the event. Valid values:</p>
-         * <br>
-         * <p>*   0: not handled</p>
-         * <p>*   1: handing</p>
-         * <p>*   5: handling failed</p>
-         * <p>*   10: handled</p>
+         * <ul>
+         * <li>0: not handled</li>
+         * <li>1: handing</li>
+         * <li>5: handling failed</li>
+         * <li>10: handled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Status")
         public Integer status;

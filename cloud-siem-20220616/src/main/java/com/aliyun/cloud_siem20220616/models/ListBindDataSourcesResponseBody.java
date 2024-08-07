@@ -12,6 +12,9 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,62 +43,91 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
     public static class ListBindDataSourcesResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123xxxxxxx</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
          * <p>The username of the cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas_tq_account_xxxx</p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
          * <p>The code of the cloud service provider. Valid values:</p>
-         * <br>
-         * <p>*   qcloud: Tencent Cloud</p>
-         * <p>*   aliyun: Alibaba Cloud</p>
-         * <p>*   hcloud: Huawei Cloud</p>
+         * <ul>
+         * <li>qcloud: Tencent Cloud</li>
+         * <li>aliyun: Alibaba Cloud</li>
+         * <li>hcloud: Huawei Cloud</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>hcloud</p>
          */
         @NameInMap("CloudCode")
         public String cloudCode;
 
         /**
          * <p>The ID of the data source. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>220ba97c9d1fdb0b9c7e8c7ca328d7ea</p>
          */
         @NameInMap("DataSourceInstanceId")
         public String dataSourceInstanceId;
 
         /**
          * <p>The name of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_kafka</p>
          */
         @NameInMap("DataSourceName")
         public String dataSourceName;
 
         /**
          * <p>The remarks on the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_kafka</p>
          */
         @NameInMap("DataSourceRemark")
         public String dataSourceRemark;
 
         /**
          * <p>The type of the data source. Valid values:</p>
-         * <br>
-         * <p>*   obs: Huawei Cloud Object Storage Service (OBS)</p>
-         * <p>*   wafApi: download API of Tencent Cloud Web Application Firewall (WAF)</p>
-         * <p>*   ckafka: Tencent Cloud Kafka (CKafka)</p>
+         * <ul>
+         * <li>obs: Huawei Cloud Object Storage Service (OBS)</li>
+         * <li>wafApi: download API of Tencent Cloud Web Application Firewall (WAF)</li>
+         * <li>ckafka: Tencent Cloud Kafka (CKafka)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>obs</p>
          */
         @NameInMap("DataSourceType")
         public String dataSourceType;
 
         /**
          * <p>The number of logs that are added within the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("LogCount")
         public Integer logCount;
 
         /**
          * <p>The number of existing tasks that are created to add logs within the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("TaskCount")
         public Integer taskCount;

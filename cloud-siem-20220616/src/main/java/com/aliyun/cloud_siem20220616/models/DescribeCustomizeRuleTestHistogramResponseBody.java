@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class DescribeCustomizeRuleTestHistogramResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The return value for the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeCustomizeRuleTestHistogramResponseBodyData> data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,18 +101,27 @@ public class DescribeCustomizeRuleTestHistogramResponseBody extends TeaModel {
     public static class DescribeCustomizeRuleTestHistogramResponseBodyData extends TeaModel {
         /**
          * <p>The number of alerts that are generated in the query time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>125</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
          * <p>The start of the time range for querying alerts. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1599897188</p>
          */
         @NameInMap("From")
         public Long from;
 
         /**
          * <p>The end of the time range for querying alerts. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1599997188</p>
          */
         @NameInMap("To")
         public Long to;

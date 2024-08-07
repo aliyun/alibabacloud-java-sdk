@@ -12,6 +12,9 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>81D8EC0C-0804-51AD-8C38-17ED0BC74892</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,72 +43,110 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
     public static class DescribeUserBuyStatusResponseBodyData extends TeaModel {
         /**
          * <p>Indicates whether the logon Alibaba Cloud account can be used to place orders for the threat analysis feature, such as purchase, upgrade, and specifications change orders. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("CanBuy")
         public Boolean canBuy;
 
         /**
          * <p>The log storage capacity that is purchased for the threat analysis feature. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         @NameInMap("Capacity")
         public Integer capacity;
 
         /**
          * <p>The number of days before the expiration time of the threat analysis feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("DurationDays")
         public Long durationDays;
 
         /**
          * <p>The timestamp when the threat analysis feature expires. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1669823999000</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
          * <p>The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123XXXXXX</p>
          */
         @NameInMap("MainUserId")
         public Long mainUserId;
 
         /**
          * <p>The username of the Alibaba Cloud account that is used to purchase the threat analysis feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas_account_xxx</p>
          */
         @NameInMap("MainUserName")
         public String mainUserName;
 
         /**
          * <p>The ID of the management account of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123XXXXXX</p>
          */
         @NameInMap("MasterUserId")
         public Long masterUserId;
 
         /**
          * <p>The display name of the management account of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rd_master_xxx</p>
          */
         @NameInMap("MasterUserName")
         public String masterUserName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RdOrder")
         public Integer rdOrder;
 
         /**
          * <p>The instance ID of Security Center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas-instance-xxxxx</p>
          */
         @NameInMap("SasInstanceId")
         public String sasInstanceId;
 
         /**
          * <p>The ID of the logon Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123XXXXXX</p>
          */
         @NameInMap("SubUserId")
         public Long subUserId;
 
         /**
          * <p>The username of the logon Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas_account_xxx</p>
          */
         @NameInMap("SubUserName")
         public String subUserName;

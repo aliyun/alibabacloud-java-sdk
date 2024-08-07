@@ -6,96 +6,155 @@ import com.aliyun.tea.*;
 public class DescribeCloudSiemEventsRequest extends TeaModel {
     /**
      * <p>The ID of the asset that is associated with the event.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6c740667-80b2-476d-8924-2e706feb****</p>
      */
     @NameInMap("AssetId")
     public String assetId;
 
     /**
      * <p>The page number. Pages start from page 1.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The end of the time range to query. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1577808000000</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>The name of the event.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS unusual log in</p>
      */
     @NameInMap("EventName")
     public String eventName;
 
     /**
      * <p>The ID of the event.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
      */
     @NameInMap("IncidentUuid")
     public String incidentUuid;
 
     /**
      * <p>The sort order. Valid values:</p>
-     * <br>
-     * <p>*   desc: descending order</p>
-     * <p>*   asc: ascending order</p>
+     * <ul>
+     * <li>desc: descending order</li>
+     * <li>asc: ascending order</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>desc</p>
      */
     @NameInMap("Order")
     public String order;
 
     /**
      * <p>The sort field. Valid values:</p>
-     * <br>
-     * <p>*   GmtModified: sorts the events by creation time. This is the default value.</p>
-     * <p>*   ThreatScore: sorts the events by risk score.</p>
+     * <ul>
+     * <li>GmtModified: sorts the events by creation time. This is the default value.</li>
+     * <li>ThreatScore: sorts the events by risk score.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ThreatScore</p>
      */
     @NameInMap("OrderField")
     public String orderField;
 
     /**
      * <p>The number of entries per page. Maximum value: 100.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
-     * <br>
-     * <p>*   cn-hangzhou: Your assets reside in regions in China.</p>
-     * <p>*   ap-southeast-1: Your assets reside in regions outside China.</p>
+     * <ul>
+     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
+     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the account that you switch from the management account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>113091674488****</p>
+     */
     @NameInMap("RoleFor")
     public Long roleFor;
 
+    /**
+     * <p>The type of the view. Valid values:</p>
+     * <ul>
+     * <li>0: the current Alibaba Cloud account</li>
+     * <li>1: the global account</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RoleType")
     public Integer roleType;
 
     /**
      * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1577808000000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
 
     /**
      * <p>The status of the event. Valid values:</p>
-     * <br>
-     * <p>*   0: unhandled</p>
-     * <p>*   1: handling</p>
-     * <p>*   5: handling failed</p>
-     * <p>*   10: handled</p>
+     * <ul>
+     * <li>0: unhandled</li>
+     * <li>1: handling</li>
+     * <li>5: handling failed</li>
+     * <li>10: handled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Status")
     public Integer status;
 
     /**
      * <p>The risk levels of the events. The value is a JSON array. Valid values:</p>
-     * <br>
-     * <p>*   serious: high</p>
-     * <p>*   suspicious: medium</p>
-     * <p>*   remind: low</p>
+     * <ul>
+     * <li>serious: high</li>
+     * <li>suspicious: medium</li>
+     * <li>remind: low</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;serious&quot;,&quot;suspicious&quot;,&quot;remind&quot;]</p>
      */
     @NameInMap("ThreadLevel")
     public java.util.List<String> threadLevel;

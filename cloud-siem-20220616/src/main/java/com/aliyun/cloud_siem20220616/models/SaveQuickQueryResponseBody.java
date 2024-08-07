@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class SaveQuickQueryResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the query statement is saved as a saved search. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Data")
     public Boolean data;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>06735F17-1EDE-5212-81A3-8585368F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

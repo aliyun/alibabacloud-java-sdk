@@ -6,113 +6,181 @@ import com.aliyun.tea.*;
 public class ListDisposeStrategyRequest extends TeaModel {
     /**
      * <p>The page number. Pages start from page 1.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The status of the policy. Valid values:</p>
-     * <br>
-     * <p>*   0: invalid</p>
-     * <p>*   1: valid</p>
+     * <ul>
+     * <li>0: invalid</li>
+     * <li>1: valid</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("EffectiveStatus")
     public Integer effectiveStatus;
 
     /**
      * <p>The end of the time range to query. Unit: milliseconds.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1577808000000</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>The feature value of the entity. Fuzzy match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test22.php</p>
      */
     @NameInMap("EntityIdentity")
     public String entityIdentity;
 
     /**
      * <p>The entity type of the playbook. Valid values:</p>
-     * <br>
-     * <p>*   ip</p>
-     * <p>*   process</p>
-     * <p>*   file</p>
+     * <ul>
+     * <li>ip</li>
+     * <li>process</li>
+     * <li>file</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ip</p>
      */
     @NameInMap("EntityType")
     public String entityType;
 
     /**
      * <p>The sort order. Valid values:</p>
-     * <br>
-     * <p>*   desc: descending order.</p>
-     * <p>*   asc: ascending order.</p>
+     * <ul>
+     * <li>desc: descending order.</li>
+     * <li>asc: ascending order.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>desc</p>
      */
     @NameInMap("Order")
     public String order;
 
     /**
      * <p>The sort field. Valid values:</p>
-     * <br>
-     * <p>*   GmtModified: sorts the policies by update time.</p>
-     * <p>*   GmtCreate: sorts the policies by creation time.</p>
-     * <p>*   FinishTime: sorts the policies by end time.</p>
+     * <ul>
+     * <li>GmtModified: sorts the policies by update time.</li>
+     * <li>GmtCreate: sorts the policies by creation time.</li>
+     * <li>FinishTime: sorts the policies by end time.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>GmtModified</p>
      */
     @NameInMap("OrderField")
     public String orderField;
 
     /**
      * <p>The number of entries per page. Maximum value: 100.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The name of the playbook, which is the unique identifier of the playbook.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WafBlockIP</p>
      */
     @NameInMap("PlaybookName")
     public String playbookName;
 
     /**
      * <p>The type of the playbook. Valid values:</p>
-     * <br>
-     * <p>*   system: user-triggered playbook</p>
-     * <p>*   custom: event-triggered playbook</p>
-     * <p>*   custom_alert: alert-triggered playbook</p>
-     * <p>*   soar-manual: user-run playbook</p>
-     * <p>*   soar-mdr: MDR-run playbook</p>
+     * <ul>
+     * <li>system: user-triggered playbook</li>
+     * <li>custom: event-triggered playbook</li>
+     * <li>custom_alert: alert-triggered playbook</li>
+     * <li>soar-manual: user-run playbook</li>
+     * <li>soar-mdr: MDR-run playbook</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>system</p>
      */
     @NameInMap("PlaybookTypes")
     public String playbookTypes;
 
     /**
      * <p>The UUID of the playbook.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>system_aliyun_clb_process_book</p>
      */
     @NameInMap("PlaybookUuid")
     public String playbookUuid;
 
     /**
      * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
-     * <br>
-     * <p>*   cn-hangzhou: Your assets reside in regions in China.</p>
-     * <p>*   ap-southeast-1: Your assets reside in regions outside China.</p>
+     * <ul>
+     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
+     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the account that you switch from the management account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>113091674488****</p>
+     */
     @NameInMap("RoleFor")
     public Long roleFor;
 
+    /**
+     * <p>The type of the view. Valid values:</p>
+     * <ul>
+     * <li>0: the current Alibaba Cloud account</li>
+     * <li>1: the global account</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RoleType")
     public Integer roleType;
 
     /**
      * <p>The ID of the SOAR handling policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a50a49b7-6044-4593-ab15-2b46567caadd</p>
      */
     @NameInMap("SophonTaskId")
     public String sophonTaskId;
 
     /**
      * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1577808000000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

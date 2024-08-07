@@ -12,6 +12,9 @@ public class ListRdUsersResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,39 +43,58 @@ public class ListRdUsersResponseBody extends TeaModel {
     public static class ListRdUsersResponseBodyData extends TeaModel {
         /**
          * <p>Indicates whether the account can be used to view the logs and alerts within the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DelegatedOrNot")
         public Boolean delegatedOrNot;
 
         /**
          * <p>Indicates whether the account is added to the threat analysis feature for centralized management. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Joined")
         public Boolean joined;
 
         /**
          * <p>The time when the account was added to the threat analysis feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2013-10-01 00:00:00</p>
          */
         @NameInMap("JoinedTime")
         public String joinedTime;
 
         /**
          * <p>The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123XXXXXXXXX</p>
          */
         @NameInMap("MainUserId")
         public Long mainUserId;
 
         /**
          * <p>The ID of the Alibaba Cloud account that is used to perform operations supported by the threat analysis feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123XXXXXXXX</p>
          */
         @NameInMap("SubUserId")
         public Long subUserId;
 
         /**
          * <p>The username of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas_account_xxx</p>
          */
         @NameInMap("SubUserName")
         public String subUserName;

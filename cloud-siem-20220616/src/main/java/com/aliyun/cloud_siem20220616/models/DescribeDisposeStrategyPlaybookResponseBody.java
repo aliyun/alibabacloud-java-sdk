@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class DescribeDisposeStrategyPlaybookResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The data returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeDisposeStrategyPlaybookResponseBodyData> data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,12 +101,18 @@ public class DescribeDisposeStrategyPlaybookResponseBody extends TeaModel {
     public static class DescribeDisposeStrategyPlaybookResponseBodyData extends TeaModel {
         /**
          * <p>The playbook name, which is the unique identifier of the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WafBlockIP</p>
          */
         @NameInMap("PlaybookName")
         public String playbookName;
 
         /**
          * <p>The UUID of the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system_aliyun_clb_process_book</p>
          */
         @NameInMap("PlaybookUuid")
         public String playbookUuid;

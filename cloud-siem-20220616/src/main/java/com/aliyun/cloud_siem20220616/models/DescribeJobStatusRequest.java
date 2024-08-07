@@ -5,16 +5,20 @@ import com.aliyun.tea.*;
 
 public class DescribeJobStatusRequest extends TeaModel {
     /**
-     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
-     * <br>
-     * <p>*   cn-hangzhou: Your assets reside in regions in China.</p>
-     * <p>*   ap-southeast-1: Your assets reside in regions outside China.</p>
+     * <p>The region where the service resides. Default value: cn-shanghai.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The id of collection task.</p>
+     * <p>The ID of the collection task. The ID is the value of the submitId parameter in the response of the <a href="https://next.api.aliyun.com/api/cloud-siem/2022-06-16/BatchSubmitJob?lang=JAVA%5C&useCommon=true">BatchJobSubmit</a> operation.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxx_folder_xxxxxx</p>
      */
     @NameInMap("SubmitId")
     public String submitId;

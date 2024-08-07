@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class DescribeAlertsCountResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The data returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("Data")
     public DescribeAlertsCountResponseBodyData data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,30 +101,45 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
     public static class DescribeAlertsCountResponseBodyData extends TeaModel {
         /**
          * <p>The total number of alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75</p>
          */
         @NameInMap("All")
         public Long all;
 
         /**
          * <p>The number of high-risk alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         @NameInMap("High")
         public Long high;
 
         /**
          * <p>The number of low-risk alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         @NameInMap("Low")
         public Long low;
 
         /**
          * <p>The number of medium-risk alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         @NameInMap("Medium")
         public Long medium;
 
         /**
          * <p>The number of connected services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("ProductNum")
         public Integer productNum;

@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class DescribeEntityInfoResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The data returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("Data")
     public DescribeEntityInfoResponseBodyData data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,31 +101,53 @@ public class DescribeEntityInfoResponseBody extends TeaModel {
     public static class DescribeEntityInfoResponseBodyData extends TeaModel {
         /**
          * <p>The logical ID of the entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("EntityId")
         public Long entityId;
 
         /**
          * <p>The information about the entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ location: &quot;xian&quot;, net_connect_dir: &quot;in&quot;, malware_type: &quot;${aliyun.siem.sas.alert_tag.login_unusual_account}&quot; }</p>
          */
         @NameInMap("EntityInfo")
         public java.util.Map<String, ?> entityInfo;
 
         /**
          * <p>The type of the entity. Valid values:</p>
-         * <br>
-         * <p>*   ip</p>
-         * <p>*   domain</p>
-         * <p>*   url</p>
-         * <p>*   process</p>
-         * <p>*   file</p>
-         * <p>*   host</p>
+         * <ul>
+         * <li>ip</li>
+         * <li>domain</li>
+         * <li>url</li>
+         * <li>process</li>
+         * <li>file</li>
+         * <li>host</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ip</p>
          */
         @NameInMap("EntityType")
         public String entityType;
 
         /**
          * <p>The information about the risk Intelligence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;Ip&quot;: {
+         *             &quot;queryHot&quot;: &quot;0&quot;,
+         *             &quot;country&quot;: &quot;China&quot;,
+         *             &quot;province&quot;: &quot;shanxi&quot;,
+         *             &quot;ip&quot;: &quot;221.11.XX.XXX&quot;,
+         *             &quot;asn&quot;: &quot;4837&quot;,
+         *             &quot;asn_label&quot;: &quot;CHINAXXX-Backbone - CHINA UNICOM ChinaXXX Backbone, CN&quot;
+         *       }
+         * }</p>
          */
         @NameInMap("TipInfo")
         public java.util.Map<String, ?> tipInfo;

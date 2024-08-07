@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class DescribeAuthResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the SIEM system is granted the required permissions. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Data")
     public Boolean data;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4F539347-7D9A-51EA-8ABF-5D5507045C5C</p>
      */
     @NameInMap("RequestId")
     public String requestId;

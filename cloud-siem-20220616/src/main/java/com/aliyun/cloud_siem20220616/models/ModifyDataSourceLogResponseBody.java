@@ -12,6 +12,9 @@ public class ModifyDataSourceLogResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class ModifyDataSourceLogResponseBody extends TeaModel {
     public static class ModifyDataSourceLogResponseBodyData extends TeaModel {
         /**
          * <p>The number of logs that are modified. The value 1 indicates that the modification is successful, and a value less than or equal to 0 indicates that the modification failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The ID of the log. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>220ba97c9d1fdb0b9c7e8c7ca328d7ea</p>
          */
         @NameInMap("LogInstanceId")
         public String logInstanceId;

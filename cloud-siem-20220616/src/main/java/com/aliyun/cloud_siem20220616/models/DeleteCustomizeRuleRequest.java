@@ -6,18 +6,40 @@ import com.aliyun.tea.*;
 public class DeleteCustomizeRuleRequest extends TeaModel {
     /**
      * <p>The region in which the service is deployed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the account that you switch from the management account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>113091674488****</p>
+     */
     @NameInMap("RoleFor")
     public Long roleFor;
 
+    /**
+     * <p>The type of the view. Valid values:</p>
+     * <ul>
+     * <li>0: the current Alibaba Cloud account</li>
+     * <li>1: the global account</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RoleType")
     public Integer roleType;
 
     /**
      * <p>The ID of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456789</p>
      */
     @NameInMap("RuleId")
     public Long ruleId;

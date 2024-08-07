@@ -6,34 +6,65 @@ import com.aliyun.tea.*;
 public class ListCustomizeRuleTestResultRequest extends TeaModel {
     /**
      * <p>The page number. Pages start from page 1.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The ID of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456789</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The number of entries per page. Valid values: 1 to 100.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
-     * <br>
-     * <p>*   cn-hangzhou: Your assets reside in regions in China.</p>
-     * <p>*   ap-southeast-1: Your assets reside in regions outside China.</p>
+     * <ul>
+     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
+     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the account that you switch from the management account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>113091674488****</p>
+     */
     @NameInMap("RoleFor")
     public Long roleFor;
 
+    /**
+     * <p>The type of the view. Valid values:</p>
+     * <ul>
+     * <li>0: the current Alibaba Cloud account</li>
+     * <li>1: the global account</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RoleType")
     public Integer roleType;
 

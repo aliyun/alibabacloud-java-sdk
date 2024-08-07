@@ -6,79 +6,131 @@ import com.aliyun.tea.*;
 public class ListAutomateResponseConfigsRequest extends TeaModel {
     /**
      * <p>The type of the handling action. Valid values:</p>
-     * <br>
-     * <p>*   doPlaybook: runs a playbook.</p>
-     * <p>*   changeEventStatus: changes the status of an event.</p>
-     * <p>*   changeThreatLevel: changes the risk level of an event.</p>
+     * <ul>
+     * <li>doPlaybook: runs a playbook.</li>
+     * <li>changeEventStatus: changes the status of an event.</li>
+     * <li>changeThreatLevel: changes the risk level of an event.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>doPlaybook</p>
      */
     @NameInMap("ActionType")
     public String actionType;
 
     /**
      * <p>The type of the automated response rule. Valid values:</p>
-     * <br>
-     * <p>*   event</p>
-     * <p>*   alert</p>
+     * <ul>
+     * <li>event</li>
+     * <li>alert</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>event</p>
      */
     @NameInMap("AutoResponseType")
     public String autoResponseType;
 
     /**
      * <p>The page number. Pages start from page 1.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The ID of the automated response rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The number of entries per page. Maximum value: 100.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The UUID of the playbook.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>system_aliyun_aegis_kill_quara_book</p>
      */
     @NameInMap("PlaybookUuid")
     public String playbookUuid;
 
     /**
      * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
-     * <br>
-     * <p>*   cn-hangzhou: Your assets reside in regions in China.</p>
-     * <p>*   ap-southeast-1: Your assets reside in regions outside China.</p>
+     * <ul>
+     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
+     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the account that you switch from the management account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>113091674488****</p>
+     */
     @NameInMap("RoleFor")
     public Long roleFor;
 
+    /**
+     * <p>The type of the view. Valid values:</p>
+     * <ul>
+     * <li>0: the current Alibaba Cloud account</li>
+     * <li>1: the global account</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RoleType")
     public Integer roleType;
 
     /**
      * <p>The name of the automated response rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cfw kill quara book</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
 
     /**
      * <p>The status of the rule. Valid values:</p>
-     * <br>
-     * <p>*   0: disabled</p>
-     * <p>*   100: enabled</p>
+     * <ul>
+     * <li>0: disabled</li>
+     * <li>100: enabled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Status")
     public Integer status;
 
     /**
      * <p>The ID of the user who created the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>17108579417****</p>
      */
     @NameInMap("SubUserId")
     public Long subUserId;

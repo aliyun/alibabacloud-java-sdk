@@ -12,6 +12,9 @@ public class ListUserProdLogsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,69 +43,102 @@ public class ListUserProdLogsResponseBody extends TeaModel {
     public static class ListUserProdLogsResponseBodyData extends TeaModel {
         /**
          * <p>The display details of the Logstore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai.siem-project.siem-logstore</p>
          */
         @NameInMap("DisplayLine")
         public String displayLine;
 
         /**
          * <p>Indicates whether the details of the added log are returned. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Displayed")
         public Boolean displayed;
 
         /**
          * <p>Indicates whether the log is added to the threat analysis feature. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Imported")
         public Boolean imported;
 
         /**
          * <p>Indicates whether the log is added to the threat analysis feature. Valid values:</p>
-         * <br>
-         * <p>*   0: yes</p>
-         * <p>*   1: no</p>
+         * <ul>
+         * <li>0: yes</li>
+         * <li>1: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("IsDeleted")
         public Integer isDeleted;
 
         /**
          * <p>The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123XXXXXXXXX</p>
          */
         @NameInMap("MainUserId")
         public Long mainUserId;
 
         /**
          * <p>The log code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_siem_aegis_proc</p>
          */
         @NameInMap("SourceLogCode")
         public String sourceLogCode;
 
         /**
          * <p>The details of the Logstore. The value is a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;project&quot;:&quot;wafnew-project-1335759343513432-cn-hangzhou&quot;,&quot;logStore&quot;:&quot;wafnew-logstore&quot;,&quot;regionCode&quot;:&quot;cn-hangzhou&quot;,&quot;prodCode&quot;:&quot;waf&quot;}</p>
          */
         @NameInMap("SourceLogInfo")
         public String sourceLogInfo;
 
         /**
          * <p>The code of the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         @NameInMap("SourceProdCode")
         public String sourceProdCode;
 
         /**
          * <p>The ID of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123XXXXXXXX</p>
          */
         @NameInMap("SubUserId")
         public Long subUserId;
 
         /**
          * <p>The username of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas_account_xxx</p>
          */
         @NameInMap("SubUserName")
         public String subUserName;

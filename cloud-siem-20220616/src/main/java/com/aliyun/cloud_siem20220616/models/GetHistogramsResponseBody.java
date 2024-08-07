@@ -12,6 +12,9 @@ public class GetHistogramsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>97A31C3A-3F9F-5866-8979-5159E3DC****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,27 +43,40 @@ public class GetHistogramsResponseBody extends TeaModel {
     public static class GetHistogramsResponseBodyDataHistograms extends TeaModel {
         /**
          * <p>Indicates whether the query results within the subinterval is complete. Valid values:</p>
-         * <br>
-         * <p>*   true: The query is complete and the returned result is complete.</p>
-         * <p>*   false: The query is complete but the returned result is incomplete. You must repeat the request to obtain the complete result.</p>
+         * <ul>
+         * <li>true: The query is complete and the returned result is complete.</li>
+         * <li>false: The query is complete but the returned result is incomplete. You must repeat the request to obtain the complete result.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("CompletedOrNot")
         public Boolean completedOrNot;
 
         /**
          * <p>The number of logs within the subinterval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
          * <p>The start time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1409529600</p>
          */
         @NameInMap("From")
         public Integer from;
 
         /**
          * <p>The end time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1409569200</p>
          */
         @NameInMap("To")
         public Integer to;
@@ -113,12 +129,18 @@ public class GetHistogramsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nginx</p>
          */
         @NameInMap("Server")
         public String server;
 
         /**
          * <p>The number of logs that are generated within the subinterval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

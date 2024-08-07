@@ -6,27 +6,55 @@ import com.aliyun.tea.*;
 public class ListUserProdLogsRequest extends TeaModel {
     /**
      * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
-     * <br>
-     * <p>*   cn-hangzhou: Your assets reside in regions in China.</p>
-     * <p>*   ap-southeast-1: Your assets reside in regions outside China.</p>
+     * <ul>
+     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
+     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>管理员切换成其他成员视角的用户ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>113091674488****</p>
+     */
     @NameInMap("RoleFor")
     public Long roleFor;
 
+    /**
+     * <p>视图类型。</p>
+     * <ul>
+     * <li>0：当前阿里云账号视图。</li>
+     * <li>1：企业下所有账号的视图。</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RoleType")
     public Integer roleType;
 
     /**
      * <p>The log code.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cloud_siem_aegis_proc</p>
      */
     @NameInMap("SourceLogCode")
     public String sourceLogCode;
 
     /**
      * <p>The code of the cloud service.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sas</p>
      */
     @NameInMap("SourceProdCode")
     public String sourceProdCode;
