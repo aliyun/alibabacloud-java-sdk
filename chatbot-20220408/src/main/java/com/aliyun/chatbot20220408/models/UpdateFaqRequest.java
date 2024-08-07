@@ -4,24 +4,42 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class UpdateFaqRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
+     */
     @NameInMap("AgentKey")
     public String agentKey;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30000049006</p>
      */
     @NameInMap("CategoryId")
     public Long categoryId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2030-12-31T16:00:00Z</p>
+     */
     @NameInMap("EndDate")
     public String endDate;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001905617</p>
      */
     @NameInMap("KnowledgeId")
     public Long knowledgeId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-05-27T05:18:20Z</p>
+     */
     @NameInMap("StartDate")
     public String startDate;
 

@@ -4,11 +4,18 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class UpdateDocResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>30002406051</p>
+     */
     @NameInMap("KnowledgeId")
     public Long knowledgeId;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0F9F136A-1BF6-5CC1-9D57-9717761F03B8</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -4,11 +4,18 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class CreateIntentRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
+     */
     @NameInMap("AgentKey")
     public String agentKey;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>chatbot-cn-yjzbyrEvqd</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -46,12 +53,24 @@ public class CreateIntentRequest extends TeaModel {
     }
 
     public static class CreateIntentRequestIntentDefinitionSlotInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Array")
         public Boolean array;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Encrypt")
         public Boolean encrypt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Interactive")
         public Boolean interactive;
 
@@ -63,6 +82,9 @@ public class CreateIntentRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fg452dfg3df23</p>
          */
         @NameInMap("SlotId")
         public String slotId;

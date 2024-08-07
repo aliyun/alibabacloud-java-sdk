@@ -7,30 +7,62 @@ public class DescribeIntentResponseBody extends TeaModel {
     @NameInMap("AliasName")
     public String aliasName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-08-12T16:00:01Z</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123231</p>
+     */
     @NameInMap("CreateUserId")
     public String createUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("CreateUserName")
     public String createUserName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>84243341</p>
+     */
     @NameInMap("IntentId")
     public Long intentId;
 
     @NameInMap("IntentName")
     public String intentName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-08-12T16:00:01Z</p>
+     */
     @NameInMap("ModifyTime")
     public String modifyTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123231</p>
+     */
     @NameInMap("ModifyUserId")
     public String modifyUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("ModifyUserName")
     public String modifyUserName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>a22afaf2adfasf2gr345fga45ada</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -131,18 +163,34 @@ public class DescribeIntentResponseBody extends TeaModel {
     }
 
     public static class DescribeIntentResponseBodySlotInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Array")
         public Boolean array;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Encrypt")
         public Boolean encrypt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Interactive")
         public Boolean interactive;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>aa4d2a343a3ad4afad</p>
+         */
         @NameInMap("SlotId")
         public String slotId;
 

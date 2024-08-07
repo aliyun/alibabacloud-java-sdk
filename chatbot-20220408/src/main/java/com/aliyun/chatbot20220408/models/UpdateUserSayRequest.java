@@ -4,11 +4,18 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class UpdateUserSayRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
+     */
     @NameInMap("AgentKey")
     public String agentKey;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>chatbot-cn-yjzbyrEvqd</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -18,6 +25,9 @@ public class UpdateUserSayRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>34512323</p>
      */
     @NameInMap("UserSayId")
     public Long userSayId;
@@ -60,12 +70,24 @@ public class UpdateUserSayRequest extends TeaModel {
     }
 
     public static class UpdateUserSayRequestUserSayDefinitionSlotInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("EndIndex")
         public Integer endIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>346ffg3q23dv</p>
+         */
         @NameInMap("SlotId")
         public String slotId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("StartIndex")
         public Integer startIndex;
 
@@ -109,6 +131,9 @@ public class UpdateUserSayRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("IntentId")
         public Long intentId;

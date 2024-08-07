@@ -4,12 +4,20 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class NluResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2828708A-2C7A-1BAE-B810-87DB9DA9C661</p>
+     */
     @NameInMap("MessageId")
     public String messageId;
 
     @NameInMap("Messages")
     public java.util.List<NluResponseBodyMessages> messages;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A6357C1B-1D79-1382-B259-BD9E80751B42</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,9 +51,17 @@ public class NluResponseBody extends TeaModel {
     }
 
     public static class NluResponseBodyMessagesDialogHubNluInfoGlobalDictList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>天气</p>
+         */
         @NameInMap("StandardWord")
         public String standardWord;
 
+        /**
+         * <strong>example:</strong>
+         * <p>天气</p>
+         */
         @NameInMap("Word")
         public String word;
 
@@ -73,9 +89,17 @@ public class NluResponseBody extends TeaModel {
     }
 
     public static class NluResponseBodyMessagesDialogHubNluInfoGlobalSensitiveWordList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>天气</p>
+         */
         @NameInMap("StandardWord")
         public String standardWord;
 
+        /**
+         * <strong>example:</strong>
+         * <p>天气</p>
+         */
         @NameInMap("Word")
         public String word;
 
@@ -133,15 +157,31 @@ public class NluResponseBody extends TeaModel {
     }
 
     public static class NluResponseBodyMessagesDsNluInfoEntityList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>@城市</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>北京</p>
+         */
         @NameInMap("Origin")
         public String origin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>text</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>首都</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -185,15 +225,31 @@ public class NluResponseBody extends TeaModel {
     }
 
     public static class NluResponseBodyMessagesDsNluInfoIntentListSlotList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>@城市</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>北京</p>
+         */
         @NameInMap("Origin")
         public String origin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>text</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>首都</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -237,18 +293,38 @@ public class NluResponseBody extends TeaModel {
     }
 
     public static class NluResponseBodyMessagesDsNluInfoIntentList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>724387</p>
+         */
         @NameInMap("IntentId")
         public Long intentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>classifierType=Fewshot,from=Fewshot,content=[我要查北京的天气, 帮我查北京的天气, 北京天气怎么样, 北京今天下雨吗, 北京今天多少度]</p>
+         */
         @NameInMap("MatchDetail")
         public String matchDetail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FewShotLearning</p>
+         */
         @NameInMap("MatchType")
         public String matchType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>查天气意图</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.995</p>
+         */
         @NameInMap("Score")
         public Double score;
 

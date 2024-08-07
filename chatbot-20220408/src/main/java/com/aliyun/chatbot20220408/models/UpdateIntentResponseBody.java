@@ -4,9 +4,17 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class UpdateIntentResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>234234234534</p>
+     */
     @NameInMap("IntentId")
     public Long intentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dfaf23dfas234234234534</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,6 +4,10 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class ChatResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>A2315C4B-A872-5DEE-9DAD-D73B194A4AEC</p>
+     */
     @NameInMap("MessageId")
     public String messageId;
 
@@ -13,9 +17,17 @@ public class ChatResponseBody extends TeaModel {
     @NameInMap("QuerySegList")
     public java.util.List<String> querySegList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A2315C4B-A872-5DEE-9DAD-D73B194A4AEC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>a6f216a0685c4c8baa0e8beb6d5ec6db</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 
@@ -65,6 +77,10 @@ public class ChatResponseBody extends TeaModel {
     }
 
     public static class ChatResponseBodyMessagesKnowledgeRelatedKnowledges extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>735899</p>
+         */
         @NameInMap("KnowledgeId")
         public String knowledgeId;
 
@@ -95,6 +111,10 @@ public class ChatResponseBody extends TeaModel {
     }
 
     public static class ChatResponseBodyMessagesKnowledge extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>KnowledgeBase</p>
+         */
         @NameInMap("AnswerSource")
         public String answerSource;
 
@@ -104,18 +124,30 @@ public class ChatResponseBody extends TeaModel {
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PLAIN_TEXT</p>
+         */
         @NameInMap("ContentType")
         public String contentType;
 
         @NameInMap("HitStatement")
         public String hitStatement;
 
+        /**
+         * <strong>example:</strong>
+         * <p>735898</p>
+         */
         @NameInMap("Id")
         public String id;
 
         @NameInMap("RelatedKnowledges")
         public java.util.List<ChatResponseBodyMessagesKnowledgeRelatedKnowledges> relatedKnowledges;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.998</p>
+         */
         @NameInMap("Score")
         public Double score;
 
@@ -213,12 +245,24 @@ public class ChatResponseBody extends TeaModel {
     }
 
     public static class ChatResponseBodyMessagesRecommends extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>KNOWLEDGE</p>
+         */
         @NameInMap("AnswerSource")
         public String answerSource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4548</p>
+         */
         @NameInMap("KnowledgeId")
         public String knowledgeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.46</p>
+         */
         @NameInMap("Score")
         public Double score;
 
@@ -265,6 +309,10 @@ public class ChatResponseBody extends TeaModel {
     }
 
     public static class ChatResponseBodyMessagesTextSlots extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Hit")
         public Boolean hit;
 
@@ -317,18 +365,32 @@ public class ChatResponseBody extends TeaModel {
     }
 
     public static class ChatResponseBodyMessagesText extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>BotFramework</p>
+         */
         @NameInMap("AnswerSource")
         public String answerSource;
 
         @NameInMap("ArticleTitle")
         public String articleTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;sysToAgent&quot;: &quot;{\&quot;skillGroup\&quot;:\&quot;12\&quot;}&quot;
+         * }</p>
+         */
         @NameInMap("Commands")
         public java.util.Map<String, ?> commands;
 
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PLAIN_TEXT</p>
+         */
         @NameInMap("ContentType")
         public String contentType;
 
@@ -350,15 +412,27 @@ public class ChatResponseBody extends TeaModel {
         @NameInMap("MetaData")
         public String metaData;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1410-c7a72a78.__city</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SSML</p>
+         */
         @NameInMap("ResponseType")
         public String responseType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100.0</p>
+         */
         @NameInMap("Score")
         public Double score;
 
@@ -512,9 +586,17 @@ public class ChatResponseBody extends TeaModel {
     }
 
     public static class ChatResponseBodyMessages extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>KNOWLEDGE</p>
+         */
         @NameInMap("AnswerSource")
         public String answerSource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Text</p>
+         */
         @NameInMap("AnswerType")
         public String answerType;
 

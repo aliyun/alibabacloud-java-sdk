@@ -4,11 +4,18 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class RetryDocRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>e2a20f74cd9042558002c0f7dc873739_p_outbound_public</p>
+     */
     @NameInMap("AgentKey")
     public String agentKey;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001905617</p>
      */
     @NameInMap("KnowledgeId")
     public Long knowledgeId;

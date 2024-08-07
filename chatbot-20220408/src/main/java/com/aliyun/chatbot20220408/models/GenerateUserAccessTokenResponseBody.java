@@ -4,21 +4,40 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class GenerateUserAccessTokenResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DDEXEDAFWAGASDFWAEFFAWEFAWFWEAFWAFWAEF</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Parameter.Invalid</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E6988CE6-41CF-1103-9BEC-2B20D26C0B51</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

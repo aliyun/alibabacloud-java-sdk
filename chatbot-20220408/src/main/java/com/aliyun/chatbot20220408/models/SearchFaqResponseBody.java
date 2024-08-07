@@ -7,15 +7,31 @@ public class SearchFaqResponseBody extends TeaModel {
     @NameInMap("FaqHits")
     public java.util.List<SearchFaqResponseBodyFaqHits> faqHits;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E45491D5-7E0A-42C6-9B21-91D1066B1475</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1075</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,18 +81,38 @@ public class SearchFaqResponseBody extends TeaModel {
     }
 
     public static class SearchFaqResponseBodyFaqHits extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>30000055639</p>
+         */
         @NameInMap("CategoryId")
         public Long categoryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-04-02T03:09:30Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>18453</p>
+         */
         @NameInMap("CreateUserId")
         public Long createUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test01</p>
+         */
         @NameInMap("CreateUserName")
         public String createUserName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("EffectStatus")
         public Integer effectStatus;
 
@@ -86,18 +122,38 @@ public class SearchFaqResponseBody extends TeaModel {
         @NameInMap("HitSolutions")
         public java.util.List<String> hitSolutions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30002145804</p>
+         */
         @NameInMap("KnowledgeId")
         public Long knowledgeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-04-02T03:09:30Z</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>18453</p>
+         */
         @NameInMap("ModifyUserId")
         public Long modifyUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test01</p>
+         */
         @NameInMap("ModifyUserName")
         public String modifyUserName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Status")
         public Integer status;
 

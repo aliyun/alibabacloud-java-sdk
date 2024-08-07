@@ -4,9 +4,17 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class CreateFaqResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>30001979424</p>
+     */
     @NameInMap("KnowledgeId")
     public Long knowledgeId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>28805A7C-D695-548C-A31B-67E52C2C274F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

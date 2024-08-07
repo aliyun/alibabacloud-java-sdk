@@ -7,9 +7,17 @@ public class GetAsyncResultResponseBody extends TeaModel {
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F79E7305-5314-5069-A701-9591AD051902</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Status")
     public String status;
 

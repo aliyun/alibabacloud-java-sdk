@@ -4,36 +4,64 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class ChatRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
+     */
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>chatbot-cn-mp90s2lrk00050</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("IntentName")
     public String intentName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30002406051</p>
+     */
     @NameInMap("KnowledgeId")
     public String knowledgeId;
 
     @NameInMap("Perspective")
     public java.util.List<String> perspective;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("SandBox")
     public Boolean sandBox;
 
+    /**
+     * <strong>example:</strong>
+     * <p>custumer_123456</p>
+     */
     @NameInMap("SenderId")
     public String senderId;
 
     @NameInMap("SenderNick")
     public String senderNick;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9c6ebdc6e66f46ecadab3434314f6959</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 
     @NameInMap("Utterance")
     public String utterance;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;phone&quot;:123456789}</p>
+     */
     @NameInMap("VendorParam")
     public String vendorParam;
 

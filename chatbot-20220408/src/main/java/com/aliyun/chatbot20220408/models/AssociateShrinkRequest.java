@@ -4,21 +4,45 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class AssociateShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
+     */
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>chatbot-cn-mp90s2lrk00050</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;qyzzVfyFfa&quot;]</p>
+     */
     @NameInMap("Perspective")
     public String perspectiveShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("RecommendNum")
     public Long recommendNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7c3cec23cc8940bc9db4a318c8f4f0aa</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>公积金提取</p>
+     */
     @NameInMap("Utterance")
     public String utterance;
 

@@ -7,15 +7,31 @@ public class ListDSEntityValueResponseBody extends TeaModel {
     @NameInMap("EntityValues")
     public java.util.List<ListDSEntityValueResponseBodyEntityValues> entityValues;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>n3fg34gbfj8adf2gj923</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -68,15 +84,31 @@ public class ListDSEntityValueResponseBody extends TeaModel {
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-08-12T16:00:01Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>34313785463</p>
+         */
         @NameInMap("EntityId")
         public Long entityId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3467858234534534532</p>
+         */
         @NameInMap("EntityValueId")
         public Long entityValueId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-08-12T16:00:01Z</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 

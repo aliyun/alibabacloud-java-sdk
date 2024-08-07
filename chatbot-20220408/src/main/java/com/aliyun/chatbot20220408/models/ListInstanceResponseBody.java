@@ -7,15 +7,31 @@ public class ListInstanceResponseBody extends TeaModel {
     @NameInMap("Instances")
     public java.util.List<ListInstanceResponseBodyInstances> instances;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>92B81548-42B9-4B34-924B-4E778AEB412B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>23</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,24 +81,52 @@ public class ListInstanceResponseBody extends TeaModel {
     }
 
     public static class ListInstanceResponseBodyInstances extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>/alimefe/meebot/robot/0.0.5/img/xxx-90-97.png</p>
+         */
         @NameInMap("Avatar")
         public String avatar;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-08-12T16:00:01Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>chatbot-cn-mp90s2lrk00050</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>用于C端问答的机器人</p>
+         */
         @NameInMap("Introduction")
         public String introduction;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zh-cn</p>
+         */
         @NameInMap("LanguageCode")
         public String languageCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>智能客服-小C</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>scenario_im</p>
+         */
         @NameInMap("RobotType")
         public String robotType;
 

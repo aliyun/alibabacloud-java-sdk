@@ -7,15 +7,31 @@ public class ListLgfResponseBody extends TeaModel {
     @NameInMap("Lgfs")
     public java.util.List<ListLgfResponseBodyLgfs> lgfs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>34fg57h2gh5783</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,18 +81,33 @@ public class ListLgfResponseBody extends TeaModel {
     }
 
     public static class ListLgfResponseBodyLgfs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-08-12T16:00:01Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>256756734345</p>
+         */
         @NameInMap("IntentId")
         public Long intentId;
 
         /**
          * <p>LGF ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("LgfId")
         public Long lgfId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-08-12T16:00:01Z</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 

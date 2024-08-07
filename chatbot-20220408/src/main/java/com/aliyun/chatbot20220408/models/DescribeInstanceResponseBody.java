@@ -4,36 +4,76 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>/alimefe/meebot/robot/0.0.5/img/xxx-90-97.png</p>
+     */
     @NameInMap("Avatar")
     public String avatar;
 
     @NameInMap("Categories")
     public java.util.List<DescribeInstanceResponseBodyCategories> categories;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-08-12T16:00:01Z</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PUBLISHED</p>
+     */
     @NameInMap("EditStatus")
     public String editStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>chatbot-cn-mp90s2lrk00050</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>用于C端问答的机器人</p>
+     */
     @NameInMap("Introduction")
     public String introduction;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh-cn</p>
+     */
     @NameInMap("LanguageCode")
     public String languageCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>智能客服-小C</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>907AA5F2-0521-49AB-80AB-1ADEFAB2B901</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>scenario_im</p>
+     */
     @NameInMap("RobotType")
     public String robotType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Asia/Chongqing</p>
+     */
     @NameInMap("TimeZone")
     public String timeZone;
 
@@ -131,12 +171,24 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyCategories extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>30000066832</p>
+         */
         @NameInMap("CategoryId")
         public Long categoryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>杭州市防疫政策</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("ParentCategoryId")
         public Long parentCategoryId;
 

@@ -7,6 +7,10 @@ public class GetInstancePublishTaskStateResponseBody extends TeaModel {
     @NameInMap("BizTypeList")
     public java.util.List<String> bizTypeList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-04-12T06:30:17Z</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
@@ -16,18 +20,38 @@ public class GetInstancePublishTaskStateResponseBody extends TeaModel {
     @NameInMap("Errors")
     public java.util.Map<String, ?> errors;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8522</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-04-12T06:30:33Z</p>
+     */
     @NameInMap("ModifyTime")
     public String modifyTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5CBF0581-EAE7-1DC4-95C6-A089656A1E2D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8522</p>
+     */
     @NameInMap("Response")
     public String response;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FE_RUNNING</p>
+     */
     @NameInMap("Status")
     public String status;
 

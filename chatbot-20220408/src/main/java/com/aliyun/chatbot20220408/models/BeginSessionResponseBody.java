@@ -10,15 +10,26 @@ public class BeginSessionResponseBody extends TeaModel {
     @NameInMap("Interruptible")
     public Boolean interruptible;
 
+    /**
+     * <strong>example:</strong>
+     * <p>149C7528-C104-1B50-A4F9-0C5907A8AD9D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>静默超时时间</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("SilenceReplyTimeout")
     public Integer silenceReplyTimeout;
 
+    /**
+     * <strong>example:</strong>
+     * <p>智能对话机器人为您服务，请问有什么可以帮您？</p>
+     */
     @NameInMap("WelcomeMessage")
     public String welcomeMessage;
 

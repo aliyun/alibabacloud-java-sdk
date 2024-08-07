@@ -7,18 +7,33 @@ public class SearchDocResponseBody extends TeaModel {
     @NameInMap("DocHits")
     public java.util.List<SearchDocResponseBodyDocHits> docHits;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E3E5C779-A630-45AC-B0F2-A4506A4212F1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>141</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -131,18 +146,38 @@ public class SearchDocResponseBody extends TeaModel {
     }
 
     public static class SearchDocResponseBodyDocHits extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cn_dytns</p>
+         */
         @NameInMap("BizCode")
         public String bizCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30000135654</p>
+         */
         @NameInMap("CategoryId")
         public Long categoryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;Splitter&quot;:&quot;treeSplitter&quot;,&quot;ChunkSize&quot;:500,&quot;TreePatterns&quot;:[&quot;^# .<em>&quot;,&quot;^## .</em>&quot;,&quot;^### .<em>&quot;,&quot;^#### .</em>&quot;],&quot;TitleSource&quot;:&quot;docName&quot;}</p>
+         */
         @NameInMap("Config")
         public String config;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-06-22T03:53:41Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>111111111</p>
+         */
         @NameInMap("CreateUserId")
         public Long createUserId;
 
@@ -155,39 +190,79 @@ public class SearchDocResponseBody extends TeaModel {
         @NameInMap("DocTags")
         public java.util.List<SearchDocResponseBodyDocHitsDocTags> docTags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("EffectStatus")
         public Integer effectStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2099-12-31T16:00:00Z</p>
+         */
         @NameInMap("EndDate")
         public String endDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30002692007</p>
+         */
         @NameInMap("KnowledgeId")
         public Long knowledgeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;code&quot;:&quot;xxx&quot;}</p>
+         */
         @NameInMap("Meta")
         public String meta;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-06-25T02:27:42Z</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>222222222</p>
+         */
         @NameInMap("ModifyUserId")
         public Long modifyUserId;
 
         @NameInMap("ModifyUserName")
         public String modifyUserName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("ProcessCanRetry")
         public Boolean processCanRetry;
 
         @NameInMap("ProcessMessage")
         public String processMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ProcessStatus")
         public Integer processStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-02-28T11:40:18Z</p>
+         */
         @NameInMap("StartDate")
         public String startDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
 

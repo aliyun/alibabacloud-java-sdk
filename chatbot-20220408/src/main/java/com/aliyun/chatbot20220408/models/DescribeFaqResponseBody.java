@@ -4,33 +4,69 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class DescribeFaqResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>30000055617</p>
+     */
     @NameInMap("CategoryId")
     public Long categoryId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-11-30T03:03:37Z</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test01</p>
+     */
     @NameInMap("CreateUserName")
     public String createUserName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("EffectStatus")
     public Integer effectStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-04-27T06:08:54Z</p>
+     */
     @NameInMap("EndDate")
     public String endDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30001979424</p>
+     */
     @NameInMap("KnowledgeId")
     public Long knowledgeId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-12-02T06:35:50Z</p>
+     */
     @NameInMap("ModifyTime")
     public String modifyTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test01</p>
+     */
     @NameInMap("ModifyUserName")
     public String modifyUserName;
 
     @NameInMap("Outlines")
     public java.util.List<DescribeFaqResponseBodyOutlines> outlines;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8AD9FA10-7780-5E12-B701-13C928524F32</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -40,9 +76,17 @@ public class DescribeFaqResponseBody extends TeaModel {
     @NameInMap("Solutions")
     public java.util.List<DescribeFaqResponseBodySolutions> solutions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-04-27T07:04:39Z</p>
+     */
     @NameInMap("StartDate")
     public String startDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("Status")
     public Integer status;
 
@@ -175,15 +219,31 @@ public class DescribeFaqResponseBody extends TeaModel {
     }
 
     public static class DescribeFaqResponseBodyOutlines extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1000098002</p>
+         */
         @NameInMap("ConnQuestionId")
         public Long connQuestionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-05-26T10:24:00Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-05-26T18:12:02Z</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>797</p>
+         */
         @NameInMap("OutlineId")
         public Long outlineId;
 
@@ -238,12 +298,24 @@ public class DescribeFaqResponseBody extends TeaModel {
     }
 
     public static class DescribeFaqResponseBodySimQuestions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-05-26T10:24:00Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-05-29T03:55:07Z</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000000581</p>
+         */
         @NameInMap("SimQuestionId")
         public Long simQuestionId;
 
@@ -293,12 +365,24 @@ public class DescribeFaqResponseBody extends TeaModel {
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ContentType")
         public Integer contentType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-05-26T10:24:00Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-05-29T07:07:13Z</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
@@ -308,6 +392,10 @@ public class DescribeFaqResponseBody extends TeaModel {
         @NameInMap("PlainText")
         public String plainText;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000003071</p>
+         */
         @NameInMap("SolutionId")
         public Long solutionId;
 

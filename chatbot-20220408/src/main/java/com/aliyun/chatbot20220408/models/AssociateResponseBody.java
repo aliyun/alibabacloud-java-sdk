@@ -7,12 +7,24 @@ public class AssociateResponseBody extends TeaModel {
     @NameInMap("Associate")
     public java.util.List<AssociateResponseBodyAssociate> associate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5ADF0EBD-7C50-1922-A28B-43215B47CC1A</p>
+     */
     @NameInMap("MessageId")
     public String messageId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5C20F0D4-9721-178A-8236-3BF990634962</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1531ded6b3df4afca4be63943f708bb7</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 
@@ -54,9 +66,17 @@ public class AssociateResponseBody extends TeaModel {
     }
 
     public static class AssociateResponseBodyAssociate extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("Meta")
         public String meta;
 
+        /**
+         * <strong>example:</strong>
+         * <p>公积金提取的政策</p>
+         */
         @NameInMap("Title")
         public String title;
 

@@ -10,9 +10,17 @@ public class ListAgentRequest extends TeaModel {
     @NameInMap("GoodsCodes")
     public String goodsCodes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
