@@ -23,7 +23,7 @@ public class ListApplicationsResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The queried applications.</p>
      */
     @NameInMap("Data")
     public ListApplicationsResponseBodyData data;
@@ -375,7 +375,7 @@ public class ListApplicationsResponseBody extends TeaModel {
 
     public static class ListApplicationsResponseBodyDataApplicationsTags extends TeaModel {
         /**
-         * <p>appName</p>
+         * <p>The key of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>key</p>
@@ -384,7 +384,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The key of the tag.</p>
+         * <p>The value of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>value</p>
@@ -417,7 +417,11 @@ public class ListApplicationsResponseBody extends TeaModel {
 
     public static class ListApplicationsResponseBodyDataApplications extends TeaModel {
         /**
-         * <p>demo-app</p>
+         * <p>Indicates whether the application is being deleted. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The application is being deleted.</li>
+         * <li><strong>false</strong>: The application is not being deleted.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -426,7 +430,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public Boolean appDeletingStatus;
 
         /**
-         * <p>[{&quot;key&quot;:&quot;key&quot;,&quot;value&quot;:&quot;value&quot;}]</p>
+         * <p>The description of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>description</p>
@@ -435,7 +439,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String appDescription;
 
         /**
-         * <p>The total number of applications.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>f7730764-d88f-4b9a-8d8e-cd8efbfe****</p>
@@ -444,7 +448,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>demo-app</p>
@@ -458,11 +462,26 @@ public class ListApplicationsResponseBody extends TeaModel {
         @NameInMap("Children")
         public java.util.List<ListApplicationsResponseBodyDataApplicationsChildren> children;
 
+        /**
+         * <p>The CPU specifications that are required for each instance. Unit: millicores. This parameter cannot be set to 0. Valid values:</p>
+         * <ul>
+         * <li><strong>500</strong></li>
+         * <li><strong>1000</strong></li>
+         * <li><strong>2000</strong></li>
+         * <li><strong>4000</strong></li>
+         * <li><strong>8000</strong></li>
+         * <li><strong>16000</strong></li>
+         * <li><strong>32000</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
         /**
-         * <p>The total number of applications.</p>
+         * <p>The number of application instances.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -470,6 +489,24 @@ public class ListApplicationsResponseBody extends TeaModel {
         @NameInMap("Instances")
         public Integer instances;
 
+        /**
+         * <p>The memory size that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:</p>
+         * <ul>
+         * <li>This parameter is set to <strong>1024</strong> if the Cpu parameter is set to 500 or 1000.</li>
+         * <li>This parameter is set to <strong>2048</strong> if the Cpu parameter is set to 500, 1000, or 2000.</li>
+         * <li>This parameter is set to <strong>4096</strong> if the Cpu parameter is set to 1000, 2000, or 4000.</li>
+         * <li>This parameter is set to <strong>8192</strong> if the Cpu parameter is set to 2000, 4000, or 8000.</li>
+         * <li>This parameter is set to <strong>12288</strong> if the Cpu parameter is set to 12000.</li>
+         * <li>This parameter is set to <strong>16384</strong> if the Cpu parameter is set to 4000, 8000, or 16000.</li>
+         * <li>This parameter is set to <strong>24576</strong> if the Cpu parameter is set to 12000.</li>
+         * <li>This parameter is set to <strong>32768</strong> if the Cpu parameter is set to 16000.</li>
+         * <li>This parameter is set to <strong>65536</strong> if the Cpu parameter is set to 8000, 16000, or 32000.</li>
+         * <li>This parameter is set to <strong>131072</strong> if the Cpu parameter is set to 32000.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
+         */
         @NameInMap("Mem")
         public Integer mem;
 
@@ -480,7 +517,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String mseNamespaceId;
 
         /**
-         * <p>demo-app</p>
+         * <p>The namespace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing:demo</p>
@@ -492,7 +529,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String programmingLanguage;
 
         /**
-         * <p>The number of running instances.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -501,7 +538,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The number of running instances.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -510,7 +547,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public Integer runningInstances;
 
         /**
-         * <p>cn-beijing:demo</p>
+         * <p>The tags of the application.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListApplicationsResponseBodyDataApplicationsTags> tags;
@@ -652,7 +689,7 @@ public class ListApplicationsResponseBody extends TeaModel {
 
     public static class ListApplicationsResponseBodyData extends TeaModel {
         /**
-         * <p>The description of the application.</p>
+         * <p>The applications.</p>
          */
         @NameInMap("Applications")
         public java.util.List<ListApplicationsResponseBodyDataApplications> applications;

@@ -19,6 +19,17 @@ public class ListApplicationsRequest extends TeaModel {
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>The SAE application type. Valid values:</p>
+     * <ul>
+     * <li><strong>micro_service</strong></li>
+     * <li><strong>web</strong></li>
+     * <li><strong>job</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>micro_service</p>
+     */
     @NameInMap("AppSource")
     public String appSource;
 

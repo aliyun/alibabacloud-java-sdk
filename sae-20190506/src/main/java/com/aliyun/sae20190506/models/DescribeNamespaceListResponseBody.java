@@ -20,23 +20,26 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The list of namespaces.</p>
+     * <p>The namespaces.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeNamespaceListResponseBodyData> data;
 
     /**
-     * <p>The returned error code. Valid values:</p>
+     * <p>The error code. Valid values:</p>
      * <ul>
      * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>NULL</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned information. Valid values:</p>
+     * <p>The returned message. Valid values:</p>
      * <ul>
      * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
      * <li>An error code: If the call fails, an error code is returned.</li>
@@ -49,7 +52,7 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>30375C38-F4ED-4135-A0AE-5C75DC7F****</p>
@@ -58,10 +61,10 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the namespaces were obtained. Valid values:</p>
+     * <p>Indicates whether the list of namespaces was queried. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The namespaces were obtained.</li>
-     * <li><strong>false</strong>: The namespaces failed to be obtained.</li>
+     * <li><strong>true</strong>: The list was queried.</li>
+     * <li><strong>false</strong>: The list failed to be queried.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -173,7 +176,7 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
         public Boolean custom;
 
         /**
-         * <p>Specifies whether hybrid cloud namespaces are excluded. Valid values:</p>
+         * <p>Indicates whether hybrid cloud namespaces are excluded. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Hybrid cloud namespaces are excluded.</li>
          * <li><strong>false</strong>: Hybrid cloud namespaces are included.</li>
@@ -186,6 +189,8 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
         public Boolean hybridCloudEnable;
 
         /**
+         * <p>The short ID of the namespace.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

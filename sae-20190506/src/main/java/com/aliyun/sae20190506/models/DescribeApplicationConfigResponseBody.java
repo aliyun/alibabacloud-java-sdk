@@ -20,7 +20,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The details of the application.</p>
+     * <p>The information about the application.</p>
      */
     @NameInMap("Data")
     public DescribeApplicationConfigResponseBodyData data;
@@ -256,7 +256,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
 
     public static class DescribeApplicationConfigResponseBodyDataOssMountDescs extends TeaModel {
         /**
-         * <p>The name of the bucket.</p>
+         * <p>The name of the OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>oss-bucket</p>
@@ -265,7 +265,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>The directory or object that you created in the OSS bucket. If the specified object or directory is invalid, an exception occurs.</p>
+         * <p>The directory or object in OSS. If the specified directory or object does not exist, an error is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>data/user.data</p>
@@ -274,7 +274,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         public String bucketPath;
 
         /**
-         * <p>The directory of your container in SAE. The parameter value that you specified overwrites the original value. If the specified directory does not exist, SAE automatically creates the directory.</p>
+         * <p>The path of the container in SAE. The parameter value that you specified overwrites the original value. If the specified path does not exist, SAE automatically creates the path.</p>
          * 
          * <strong>example:</strong>
          * <p>/usr/data/user.data</p>
@@ -283,10 +283,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         public String mountPath;
 
         /**
-         * <p>Indicates whether the application can use the container directory to read data from or write data to resources in the directory of the OSS bucket. Valid values:</p>
+         * <p>Indicates whether the application can use the container path to read data from or write data to resources in the directory of the OSS bucket. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The application has read-only permissions.</li>
-         * <li><strong>false</strong>: The application has read and write permissions.</li>
+         * <li><strong>true</strong>: The application has the read-only permissions.</li>
+         * <li><strong>false</strong>: The application has the read and write permissions.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -419,6 +419,12 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The SAE application type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>micro_service</p>
+         */
         @NameInMap("AppSource")
         public String appSource;
 
@@ -750,6 +756,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("MseApplicationId")
         public String mseApplicationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shenzhen-alb-demo-5c****</p>
+         */
         @NameInMap("MseApplicationName")
         public String mseApplicationName;
 
@@ -849,6 +859,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("PackageVersion")
         public String packageVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PHP-FPM 7.0</p>
+         */
         @NameInMap("Php")
         public String php;
 

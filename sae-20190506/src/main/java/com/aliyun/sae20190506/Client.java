@@ -170,6 +170,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Stops multiple applications at a time.</p>
+     * 
      * @param request BatchStopApplicationsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -209,6 +212,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Stops multiple applications at a time.</p>
+     * 
      * @param request BatchStopApplicationsRequest
      * @return BatchStopApplicationsResponse
      */
@@ -235,12 +241,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Internet", request.internet);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.internetSlbChargeType)) {
+            query.put("InternetSlbChargeType", request.internetSlbChargeType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.internetSlbId)) {
             query.put("InternetSlbId", request.internetSlbId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.intranet)) {
             query.put("Intranet", request.intranet);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.intranetSlbChargeType)) {
+            query.put("IntranetSlbChargeType", request.intranetSlbChargeType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.intranetSlbId)) {
@@ -1182,7 +1196,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>desc</p>
+     * <p>Creates a namespace.</p>
      * 
      * @param request CreateNamespaceRequest
      * @param headers map
@@ -1232,7 +1246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>desc</p>
+     * <p>Creates a namespace.</p>
      * 
      * @param request CreateNamespaceRequest
      * @return CreateNamespaceResponse
@@ -2317,6 +2331,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the configurations of an application.</p>
+     * 
      * @param request DescribeApplicationConfigRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2352,6 +2369,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the configurations of an application.</p>
+     * 
      * @param request DescribeApplicationConfigRequest
      * @return DescribeApplicationConfigResponse
      */
@@ -2411,6 +2431,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information about the image of an application.</p>
+     * 
      * @param request DescribeApplicationImageRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2446,6 +2469,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information about the image of an application.</p>
+     * 
      * @param request DescribeApplicationImageRequest
      * @return DescribeApplicationImageResponse
      */
@@ -3286,6 +3312,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of namespaces.</p>
+     * 
      * @param request DescribeNamespaceListRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3321,6 +3350,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of namespaces.</p>
+     * 
      * @param request DescribeNamespaceListRequest
      * @return DescribeNamespaceListResponse
      */

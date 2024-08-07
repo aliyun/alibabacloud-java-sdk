@@ -4,6 +4,10 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeConfigurationPriceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -13,15 +17,31 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ADCEC067-86AD-19E2-BD43-E83F3841****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1a0dcc771722848598056771******</p>
+     */
     @NameInMap("TraceId")
     public String traceId;
 
@@ -87,9 +107,17 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeConfigurationPriceResponseBodyDataBagUsage extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>497570.450009</p>
+         */
         @NameInMap("Cpu")
         public Float cpu;
 
+        /**
+         * <strong>example:</strong>
+         * <p>989802.563546</p>
+         */
         @NameInMap("Mem")
         public Float mem;
 
@@ -117,15 +145,27 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeConfigurationPriceResponseBodyDataCpuMemPriceOrder extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.0009259</p>
+         */
         @NameInMap("DiscountAmount")
         public Float discountAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0046296</p>
+         */
         @NameInMap("OriginalAmount")
         public Float originalAmount;
 
         @NameInMap("RuleIds")
         public java.util.List<String> ruleIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0037037</p>
+         */
         @NameInMap("TradeAmount")
         public Float tradeAmount;
 
@@ -172,6 +212,10 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000010******</p>
+         */
         @NameInMap("RuleDescId")
         public Float ruleDescId;
 
@@ -229,15 +273,27 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeConfigurationPriceResponseBodyDataOrder extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.0018518</p>
+         */
         @NameInMap("DiscountAmount")
         public Float discountAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0092592</p>
+         */
         @NameInMap("OriginalAmount")
         public Float originalAmount;
 
         @NameInMap("RuleIds")
         public java.util.List<String> ruleIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0074074</p>
+         */
         @NameInMap("TradeAmount")
         public Float tradeAmount;
 
@@ -281,15 +337,27 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeConfigurationPriceResponseBodyDataRequestPriceOrder extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.0009259</p>
+         */
         @NameInMap("DiscountAmount")
         public Float discountAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0046296</p>
+         */
         @NameInMap("OriginalAmount")
         public Float originalAmount;
 
         @NameInMap("RuleIds")
         public java.util.List<String> ruleIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0037037</p>
+         */
         @NameInMap("TradeAmount")
         public Float tradeAmount;
 
@@ -336,6 +404,10 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000010******</p>
+         */
         @NameInMap("RuleDescId")
         public Long ruleDescId;
 
@@ -396,6 +468,10 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000010******</p>
+         */
         @NameInMap("RuleDescId")
         public Long ruleDescId;
 
@@ -423,15 +499,27 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeConfigurationPriceResponseBodyDataTrafficPriceOrder extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.0009259</p>
+         */
         @NameInMap("DiscountAmount")
         public Float discountAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0046296</p>
+         */
         @NameInMap("OriginalAmount")
         public Float originalAmount;
 
         @NameInMap("RuleIds")
         public java.util.List<String> ruleIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0037037</p>
+         */
         @NameInMap("TradeAmount")
         public Float tradeAmount;
 
@@ -478,6 +566,10 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000010******</p>
+         */
         @NameInMap("RuleDescId")
         public Float ruleDescId;
 

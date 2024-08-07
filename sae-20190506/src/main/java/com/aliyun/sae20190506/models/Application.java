@@ -7,9 +7,6 @@ public class Application extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("applicationID")
-    public String applicationID;
-
     @NameInMap("applicationId")
     public String applicationId;
 
@@ -45,6 +42,9 @@ public class Application extends TeaModel {
 
     @NameInMap("customHealthCheckConfig")
     public CustomHealthCheckConfig customHealthCheckConfig;
+
+    @NameInMap("customHostAlias")
+    public CustomHostAlias customHostAlias;
 
     @NameInMap("customRuntimeConfig")
     public CustomRuntimeConfig customRuntimeConfig;
@@ -173,14 +173,6 @@ public class Application extends TeaModel {
         return this.requestId;
     }
 
-    public Application setApplicationID(String applicationID) {
-        this.applicationID = applicationID;
-        return this;
-    }
-    public String getApplicationID() {
-        return this.applicationID;
-    }
-
     public Application setApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -275,6 +267,14 @@ public class Application extends TeaModel {
     }
     public CustomHealthCheckConfig getCustomHealthCheckConfig() {
         return this.customHealthCheckConfig;
+    }
+
+    public Application setCustomHostAlias(CustomHostAlias customHostAlias) {
+        this.customHostAlias = customHostAlias;
+        return this;
+    }
+    public CustomHostAlias getCustomHostAlias() {
+        return this.customHostAlias;
     }
 
     public Application setCustomRuntimeConfig(CustomRuntimeConfig customRuntimeConfig) {

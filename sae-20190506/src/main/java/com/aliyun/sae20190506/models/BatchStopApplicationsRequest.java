@@ -23,6 +23,12 @@ public class BatchStopApplicationsRequest extends TeaModel {
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    /**
+     * <p>The application version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0</p>
+     */
     @NameInMap("Version")
     public String version;
 

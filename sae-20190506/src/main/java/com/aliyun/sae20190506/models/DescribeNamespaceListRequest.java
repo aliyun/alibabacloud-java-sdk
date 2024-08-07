@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeNamespaceListRequest extends TeaModel {
     /**
-     * <p>true</p>
+     * <p>Specifies whether to return custom namespaces. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The system returns custom namespaces.</li>
+     * <li><strong>false</strong>: The system does not return custom namespaces.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +18,11 @@ public class DescribeNamespaceListRequest extends TeaModel {
     public Boolean containCustom;
 
     /**
-     * <p>true</p>
+     * <p>Specifies whether to exclude hybrid cloud namespaces from the result. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The system excludes hybrid cloud namespaces from the result.</li>
+     * <li><strong>false</strong>: The system does not exclude hybrid cloud namespaces from the result.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

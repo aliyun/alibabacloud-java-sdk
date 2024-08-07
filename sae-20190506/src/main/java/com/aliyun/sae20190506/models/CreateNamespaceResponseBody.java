@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNamespaceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the trace. It can be used to query the details of a request.</p>
+     * <p>bucketPath</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,16 +20,16 @@ public class CreateNamespaceResponseBody extends TeaModel {
     public CreateNamespaceResponseBodyData data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p><a href="http://sae_pop_pre/#vpc">http://sae_pop_pre/#vpc</a></p>
      * 
      * <strong>example:</strong>
-     * <p>The returned message.</p>
+     * <p>bucketName</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>name</p>
+     * <p>The ID of the namespace.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -38,7 +38,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The description of the namespace.</p>
+     * <p>The description of the custom namespace.</p>
      * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -47,7 +47,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information of the namespace.</p>
+     * <p>mountDir</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -56,7 +56,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The ID of the trace. It can be used to query the details of a request.</p>
+     * <p>The name of the namespace.</p>
      * 
      * <strong>example:</strong>
      * <p>0a981dd515966966104121683d****</p>
@@ -130,7 +130,11 @@ public class CreateNamespaceResponseBody extends TeaModel {
         public Boolean enableMicroRegistration;
 
         /**
-         * <p>desc</p>
+         * <p>Indicates whether the namespace was created. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The instance was created.</li>
+         * <li><strong>false</strong>: The call failed to be created.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -139,7 +143,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         public String nameSpaceShortId;
 
         /**
-         * <p>The information of the namespace.</p>
+         * <p>The short ID of the namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>desc</p>
@@ -148,7 +152,11 @@ public class CreateNamespaceResponseBody extends TeaModel {
         public String namespaceDescription;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The error code returned. Take note of the following rules:</p>
+         * <ul>
+         * <li>The <strong>ErrorCode</strong> parameter is not returned if the request succeeds.</li>
+         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing:test</p>
@@ -157,7 +165,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         public String namespaceId;
 
         /**
-         * <p>cn-beijing:test</p>
+         * <p>Null</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -166,7 +174,13 @@ public class CreateNamespaceResponseBody extends TeaModel {
         public String namespaceName;
 
         /**
-         * <p>name</p>
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The call was successful.</li>
+         * <li><strong>3xx</strong>: The call was redirected.</li>
+         * <li><strong>4xx</strong>: The call failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>

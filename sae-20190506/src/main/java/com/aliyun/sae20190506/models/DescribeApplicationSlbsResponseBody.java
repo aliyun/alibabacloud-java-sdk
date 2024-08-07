@@ -412,6 +412,9 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         @NameInMap("InternetIp")
         public String internetIp;
 
+        @NameInMap("InternetSlbChargeType")
+        public String internetSlbChargeType;
+
         @NameInMap("InternetSlbExpired")
         public Boolean internetSlbExpired;
 
@@ -442,6 +445,9 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
+
+        @NameInMap("IntranetSlbChargeType")
+        public String intranetSlbChargeType;
 
         @NameInMap("IntranetSlbExpired")
         public Boolean intranetSlbExpired;
@@ -476,6 +482,14 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             return this.internetIp;
         }
 
+        public DescribeApplicationSlbsResponseBodyData setInternetSlbChargeType(String internetSlbChargeType) {
+            this.internetSlbChargeType = internetSlbChargeType;
+            return this;
+        }
+        public String getInternetSlbChargeType() {
+            return this.internetSlbChargeType;
+        }
+
         public DescribeApplicationSlbsResponseBodyData setInternetSlbExpired(Boolean internetSlbExpired) {
             this.internetSlbExpired = internetSlbExpired;
             return this;
@@ -506,6 +520,14 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         }
         public String getIntranetIp() {
             return this.intranetIp;
+        }
+
+        public DescribeApplicationSlbsResponseBodyData setIntranetSlbChargeType(String intranetSlbChargeType) {
+            this.intranetSlbChargeType = intranetSlbChargeType;
+            return this;
+        }
+        public String getIntranetSlbChargeType() {
+            return this.intranetSlbChargeType;
         }
 
         public DescribeApplicationSlbsResponseBodyData setIntranetSlbExpired(Boolean intranetSlbExpired) {

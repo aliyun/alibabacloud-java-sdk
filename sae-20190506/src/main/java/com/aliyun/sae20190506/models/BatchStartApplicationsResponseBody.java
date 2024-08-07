@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class BatchStartApplicationsResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code. Take note of the following rules:</p>
+     * <ul>
+     * <li><strong>2xx</strong>: The call was successful.</li>
+     * <li><strong>3xx</strong>: The call was redirected.</li>
+     * <li><strong>4xx</strong>: The call failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,11 +30,14 @@ public class BatchStartApplicationsResponseBody extends TeaModel {
     public BatchStartApplicationsResponseBodyData data;
 
     /**
-     * <p>Indicates whether the specified applications are successfully started. Valid values:</p>
+     * <p>The error code returned if the request failed. Take note of the following rules:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li>The ErrorCode parameter is not returned if the request succeeds.</li>
+     * <li>If the call fails, the ErrorCode parameter is returned. For more information, see the &quot;Error codes&quot; section of this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>NULL</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -50,6 +61,12 @@ public class BatchStartApplicationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the application deployment is successful. Take note of the following rules:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

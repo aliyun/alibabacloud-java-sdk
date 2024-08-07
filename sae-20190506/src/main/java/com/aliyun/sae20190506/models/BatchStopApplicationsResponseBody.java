@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class BatchStopApplicationsResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the specified applications are stopped. Valid values:</p>
+     * <p>The HTTP status code. Take note of the following rules:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>2xx</strong>: The call was successful.</li>
+     * <li><strong>3xx</strong>: The call was redirected.</li>
+     * <li><strong>4xx</strong>: The call failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,13 +26,14 @@ public class BatchStopApplicationsResponseBody extends TeaModel {
     public BatchStopApplicationsResponseBodyData data;
 
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The error code returned if the request failed. Take note of the following rules:</p>
      * <ul>
-     * <li><strong>2xx</strong>: indicates that the request was successful.</li>
-     * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
-     * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
-     * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+     * <li>The ErrorCode parameter is not returned if the request succeeds.</li>
+     * <li>If the call fails, the ErrorCode parameter is returned. For more information, see the &quot;Error codes&quot; section of this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Null</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -58,6 +61,12 @@ public class BatchStopApplicationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the application is created. Valid values</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
