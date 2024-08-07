@@ -134,6 +134,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>文本数量统计</p>
+     * 
+     * @param request CountTextRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CountTextResponse
+     */
+    public CountTextResponse countTextWithOptions(CountTextRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.generationSource)) {
+            query.put("generationSource", request.generationSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.industry)) {
+            query.put("industry", request.industry);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.publishStatus)) {
+            query.put("publishStatus", request.publishStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.style)) {
+            query.put("style", request.style);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CountText"),
+            new TeaPair("version", "2024-03-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/yic/yic-console/openService/v1/countText"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CountTextResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>文本数量统计</p>
+     * 
+     * @param request CountTextRequest
+     * @return CountTextResponse
+     */
+    public CountTextResponse countText(CountTextRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.countTextWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建配图生成任务</p>
      * 
      * @param request CreateIllustrationTaskRequest
@@ -647,6 +706,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("industry", request.industry);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("keyword", request.keyword);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("pageNumber", request.pageNumber);
         }
@@ -1132,6 +1195,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.subtitleTag)) {
             body.put("subtitleTag", request.subtitleTag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transparentBackground)) {
+            body.put("transparentBackground", request.transparentBackground);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
