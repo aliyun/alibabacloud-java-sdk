@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The data returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("Data")
     public DescribeCloudSiemEventDetailResponseBodyData data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,114 +101,170 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
     public static class DescribeCloudSiemEventDetailResponseBodyData extends TeaModel {
         /**
          * <p>The number of alerts that are associated with the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("AlertNum")
         public Integer alertNum;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the event belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         @NameInMap("Aliuid")
         public Long aliuid;
 
         /**
          * <p>The number of assets that are associated with the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("AssetNum")
         public Integer assetNum;
 
         /**
-         * <p>The tags of the ATT\&CK attacks.</p>
+         * <p>The tags of the ATT\&amp;CK attacks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;T1595.002 Vulnerability Scanning&quot;]</p>
          */
         @NameInMap("AttCkLabels")
         public java.util.List<String> attCkLabels;
 
         /**
          * <p>The source of the alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[sas,waf]</p>
          */
         @NameInMap("DataSources")
         public java.util.List<String> dataSources;
 
         /**
          * <p>The description of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The threat event contains 13 Miner Network,1 Execute suspicious encoded commands on Linux, etc</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The description of the event in English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The threat event contains 13 Miner Network,1 Execute suspicious encoded commands on Linux, etc</p>
          */
         @NameInMap("DescriptionEn")
         public String descriptionEn;
 
         /**
          * <p>The extended information of the event in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;event_transfer_type&quot;:&quot;customize_rule&quot;}</p>
          */
         @NameInMap("ExtContent")
         public String extContent;
 
         /**
          * <p>The time when the event occurred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-06 16:37:29</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The time when the event was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-06 16:37:29</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The name of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Multiple type of alerts, including Miner Network, Command line download and run malicious files, Backdoor Process, etc</p>
          */
         @NameInMap("IncidentName")
         public String incidentName;
 
         /**
          * <p>The name of the event in English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Multiple type of alerts, including Miner Network, Command line download and run malicious files, Backdoor Process, etc</p>
          */
         @NameInMap("IncidentNameEn")
         public String incidentNameEn;
 
         /**
          * <p>The UUID of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
          */
         @NameInMap("IncidentUuid")
         public String incidentUuid;
 
+        /**
+         * <p>Users associated with the event.</p>
+         */
         @NameInMap("ReferAccount")
         public String referAccount;
 
         /**
          * <p>The remarks of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dealed</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
          * <p>The status of the event. Valid values:</p>
-         * <br>
-         * <p>*   0: not handled</p>
-         * <p>*   1: handing</p>
-         * <p>*   5: handling failed</p>
-         * <p>*   10: handled</p>
+         * <ul>
+         * <li>0: not handled</li>
+         * <li>1: handing</li>
+         * <li>5: handling failed</li>
+         * <li>10: handled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The risk level. Valid values:</p>
-         * <br>
-         * <p>*   serious: high</p>
-         * <p>*   suspicious: medium</p>
-         * <p>*   remind: low</p>
+         * <ul>
+         * <li>serious: high</li>
+         * <li>suspicious: medium</li>
+         * <li>remind: low</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>remind</p>
          */
         @NameInMap("ThreatLevel")
         public String threatLevel;
 
         /**
          * <p>The risk score of the event. The score ranges from 0 to 100. A higher score indicates a higher risk level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90.2</p>
          */
         @NameInMap("ThreatScore")
         public Float threatScore;

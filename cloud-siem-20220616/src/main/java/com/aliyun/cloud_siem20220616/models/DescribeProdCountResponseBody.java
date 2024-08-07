@@ -12,6 +12,9 @@ public class DescribeProdCountResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class DescribeProdCountResponseBody extends TeaModel {
     public static class DescribeProdCountResponseBodyData extends TeaModel {
         /**
          * <p>The number of Alibaba Cloud services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19</p>
          */
         @NameInMap("AliyunProdCount")
         public Integer aliyunProdCount;
 
         /**
          * <p>The number of Huawei Cloud services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("HcloudProdCount")
         public Integer hcloudProdCount;
 
         /**
          * <p>The number of Tencent Cloud services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("QcloudProdCount")
         public Integer qcloudProdCount;

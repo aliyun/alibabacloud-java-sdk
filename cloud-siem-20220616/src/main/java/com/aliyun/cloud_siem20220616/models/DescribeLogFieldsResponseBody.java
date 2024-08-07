@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class DescribeLogFieldsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The data returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeLogFieldsResponseBodyData> data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,33 +101,49 @@ public class DescribeLogFieldsResponseBody extends TeaModel {
     public static class DescribeLogFieldsResponseBodyData extends TeaModel {
         /**
          * <p>The type of the log to which the field belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP_ACTIVITY</p>
          */
         @NameInMap("ActivityName")
         public String activityName;
 
         /**
          * <p>The internal code of the field description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas.cloudsiem.prod.activity_name</p>
          */
         @NameInMap("FieldDesc")
         public String fieldDesc;
 
         /**
          * <p>The name of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>activity_name</p>
          */
         @NameInMap("FieldName")
         public String fieldName;
 
         /**
          * <p>The data type of the field. Valid values:</p>
-         * <br>
-         * <p>*   varchar</p>
-         * <p>*   bigint</p>
+         * <ul>
+         * <li>varchar</li>
+         * <li>bigint</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>varchar</p>
          */
         @NameInMap("FieldType")
         public String fieldType;
 
         /**
          * <p>The log source to which the field belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_siem_aegis_sas_alert</p>
          */
         @NameInMap("LogCode")
         public String logCode;

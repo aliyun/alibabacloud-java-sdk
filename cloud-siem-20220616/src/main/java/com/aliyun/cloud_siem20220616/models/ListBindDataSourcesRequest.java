@@ -6,27 +6,39 @@ import com.aliyun.tea.*;
 public class ListBindDataSourcesRequest extends TeaModel {
     /**
      * <p>The ID of the cloud account.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123xxxxxxx</p>
      */
     @NameInMap("AccountId")
     public String accountId;
 
     /**
      * <p>The code of the cloud service provider.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   qcloud</p>
-     * <p>*   hcloud</p>
-     * <p>*   aliyun</p>
+     * <ul>
+     * <li>qcloud</li>
+     * <li>hcloud</li>
+     * <li>aliyun</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hcloud</p>
      */
     @NameInMap("CloudCode")
     public String cloudCode;
 
     /**
      * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
-     * <br>
-     * <p>*   cn-hangzhou: Your assets reside in regions in China.</p>
-     * <p>*   ap-southeast-1: Your assets reside in regions outside China.</p>
+     * <ul>
+     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
+     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

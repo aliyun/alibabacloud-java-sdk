@@ -6,55 +6,79 @@ import com.aliyun.tea.*;
 public class AddDataSourceRequest extends TeaModel {
     /**
      * <p>The ID of the cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123xxxxxxxx</p>
      */
     @NameInMap("AccountId")
     public String accountId;
 
     /**
      * <p>The code of the cloud service provider.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   qcloud</p>
-     * <p>*   hcloud</p>
-     * <p>*   aliyun</p>
+     * <ul>
+     * <li>qcloud</li>
+     * <li>hcloud</li>
+     * <li>aliyun</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hcloud</p>
      */
     @NameInMap("CloudCode")
     public String cloudCode;
 
     /**
      * <p>The name of the data source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>beijing_waf_kafka</p>
      */
     @NameInMap("DataSourceInstanceName")
     public String dataSourceInstanceName;
 
     /**
      * <p>The parameters of the data source. Set this parameter to a JSON array.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;paraCode&quot;:&quot;region_code&quot;,&quot;paraValue&quot;:&quot;ap-guangzhou&quot;}]</p>
      */
     @NameInMap("DataSourceInstanceParams")
     public String dataSourceInstanceParams;
 
     /**
      * <p>The remarks on the data source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>waf_alert_log</p>
      */
     @NameInMap("DataSourceInstanceRemark")
     public String dataSourceInstanceRemark;
 
     /**
      * <p>The type of the data source. Valid values:</p>
-     * <br>
-     * <p>*   obs: Huawei Cloud Object Storage Service (OBS)</p>
-     * <p>*   wafApi: download API of Tencent Cloud Web Application Firewall (WAF)</p>
-     * <p>*   ckafka: Tencent Cloud Kafka (CKafka)</p>
+     * <ul>
+     * <li>obs: Huawei Cloud Object Storage Service (OBS)</li>
+     * <li>wafApi: download API of Tencent Cloud Web Application Firewall (WAF)</li>
+     * <li>ckafka: Tencent Cloud Kafka (CKafka)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>obs</p>
      */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
     /**
      * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
-     * <br>
-     * <p>*   cn-hangzhou: Your assets reside in regions in China.</p>
-     * <p>*   ap-southeast-1: Your assets reside in regions outside China.</p>
+     * <ul>
+     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
+     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

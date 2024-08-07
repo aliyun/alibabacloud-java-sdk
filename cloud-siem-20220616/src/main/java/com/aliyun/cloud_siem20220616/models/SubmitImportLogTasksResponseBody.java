@@ -12,6 +12,9 @@ public class SubmitImportLogTasksResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class SubmitImportLogTasksResponseBody extends TeaModel {
     public static class SubmitImportLogTasksResponseBodyData extends TeaModel {
         /**
          * <p>The number of log collection tasks that are submitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Count")
         public Integer count;

@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The data returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeAutomateResponseConfigFeatureResponseBodyData> data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,12 +101,18 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
     public static class DescribeAutomateResponseConfigFeatureResponseBodyDataRightValueEnums extends TeaModel {
         /**
          * <p>The enumerated value of the right operand.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>serious</p>
          */
         @NameInMap("Value")
         public String value;
 
         /**
          * <p>The internal code of the enumerated value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun.siem.automate.feature.alert_level.serious</p>
          */
         @NameInMap("ValueMds")
         public String valueMds;
@@ -121,51 +143,76 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
     public static class DescribeAutomateResponseConfigFeatureResponseBodyDataSupportOperators extends TeaModel {
         /**
          * <p>Indicates whether the right operand is required. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("HasRightValue")
         public Boolean hasRightValue;
 
         /**
          * <p>The position of the operator in the operator list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Index")
         public Integer index;
 
         /**
          * <p>The operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&lt;=</p>
          */
         @NameInMap("Operator")
         public String operator;
 
         /**
          * <p>The description of the operator in Chinese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>larger than or equal to</p>
          */
         @NameInMap("OperatorDescCn")
         public String operatorDescCn;
 
         /**
          * <p>The description of the operator in English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>larger than or equal to</p>
          */
         @NameInMap("OperatorDescEn")
         public String operatorDescEn;
 
         /**
          * <p>The name of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&lt;=</p>
          */
         @NameInMap("OperatorName")
         public String operatorName;
 
         /**
          * <p>The data types that are supported by the operator. The data types are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>varchar</p>
          */
         @NameInMap("SupportDataType")
         public String supportDataType;
 
         /**
          * <p>The scenarios that are supported by the operator. Multiple scenarios are separated by commas (,), such as aggregation scenarios. By default, this parameter is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[AGGREGATE]</p>
          */
         @NameInMap("SupportTag")
         public java.util.List<String> supportTag;
@@ -244,12 +291,18 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
     public static class DescribeAutomateResponseConfigFeatureResponseBodyData extends TeaModel {
         /**
          * <p>The data type of the condition field in the automated response rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>varchar</p>
          */
         @NameInMap("DataType")
         public String dataType;
 
         /**
          * <p>The name of the condition field in the automated response rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alert_desc</p>
          */
         @NameInMap("Feature")
         public String feature;

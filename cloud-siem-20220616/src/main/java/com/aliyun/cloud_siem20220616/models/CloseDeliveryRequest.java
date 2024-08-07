@@ -6,52 +6,80 @@ import com.aliyun.tea.*;
 public class CloseDeliveryRequest extends TeaModel {
     /**
      * <p>The log code of the cloud service, such as the code of the process log for Security Center. You can obtain the log code from the response of the ListDelivery operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cloud_siem_aegis_proc</p>
      */
     @NameInMap("LogCode")
     public String logCode;
 
     /**
      * <p>The code of the cloud service. Valid values:</p>
-     * <br>
-     * <p>*   qcloud_waf</p>
-     * <p>*   qlcoud_cfw</p>
-     * <p>*   hcloud_waf</p>
-     * <p>*   hcloud_cfw</p>
-     * <p>*   ddos</p>
-     * <p>*   sas</p>
-     * <p>*   cfw</p>
-     * <p>*   config</p>
-     * <p>*   csk</p>
-     * <p>*   fc</p>
-     * <p>*   rds</p>
-     * <p>*   nas</p>
-     * <p>*   apigateway</p>
-     * <p>*   cdn</p>
-     * <p>*   mongodb</p>
-     * <p>*   eip</p>
-     * <p>*   slb</p>
-     * <p>*   vpc</p>
-     * <p>*   actiontrail</p>
-     * <p>*   waf</p>
-     * <p>*   bastionhost</p>
-     * <p>*   oss</p>
-     * <p>*   polardb</p>
+     * <ul>
+     * <li>qcloud_waf</li>
+     * <li>qlcoud_cfw</li>
+     * <li>hcloud_waf</li>
+     * <li>hcloud_cfw</li>
+     * <li>ddos</li>
+     * <li>sas</li>
+     * <li>cfw</li>
+     * <li>config</li>
+     * <li>csk</li>
+     * <li>fc</li>
+     * <li>rds</li>
+     * <li>nas</li>
+     * <li>apigateway</li>
+     * <li>cdn</li>
+     * <li>mongodb</li>
+     * <li>eip</li>
+     * <li>slb</li>
+     * <li>vpc</li>
+     * <li>actiontrail</li>
+     * <li>waf</li>
+     * <li>bastionhost</li>
+     * <li>oss</li>
+     * <li>polardb</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sas</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
      * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the region where your assets reside. Valid values:</p>
-     * <br>
-     * <p>*   cn-hangzhou: Your assets reside in regions inside the Chinese mainland or in the China (Hong Kong) region.</p>
-     * <p>*   ap-southeast-1: Your assets reside in regions outside the Chinese mainland, excluding the China (Hong Kong) region.</p>
+     * <ul>
+     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
+     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the account that you switch from the management account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>113091674488****</p>
+     */
     @NameInMap("RoleFor")
     public Long roleFor;
 
+    /**
+     * <p>The type of the view. Valid values:</p>
+     * <ul>
+     * <li>0: the current Alibaba Cloud account</li>
+     * <li>1: the global account</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RoleType")
     public Integer roleType;
 

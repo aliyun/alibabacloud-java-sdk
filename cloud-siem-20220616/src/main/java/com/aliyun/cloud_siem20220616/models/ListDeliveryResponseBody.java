@@ -12,6 +12,9 @@ public class ListDeliveryResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6276D891-58D4-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class ListDeliveryResponseBody extends TeaModel {
     public static class ListDeliveryResponseBodyDataProductListLogListExtraParameters extends TeaModel {
         /**
          * <p>The ID of the extended parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flag</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the extended parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         @NameInMap("Value")
         public String value;
@@ -76,9 +85,13 @@ public class ListDeliveryResponseBody extends TeaModel {
     public static class ListDeliveryResponseBodyDataProductListLogList extends TeaModel {
         /**
          * <p>Indicates whether the log delivery feature can be enabled or disabled. The feature can be enabled or disabled only by the administrator of the threat analysis feature. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("CanOperateOrNot")
         public Boolean canOperateOrNot;
@@ -91,39 +104,58 @@ public class ListDeliveryResponseBody extends TeaModel {
 
         /**
          * <p>The code of the log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_siem_config_log</p>
          */
         @NameInMap("LogCode")
         public String logCode;
 
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>audit log</p>
          */
         @NameInMap("LogName")
         public String logName;
 
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>audit log</p>
          */
         @NameInMap("LogNameEn")
         public String logNameEn;
 
         /**
          * <p>The language code of the log that is used to indicate the language in which the log is displayed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>${sas.cloudsiem.prod.cloud_siem_aegis_crack_from_beaver}</p>
          */
         @NameInMap("LogNameKey")
         public String logNameKey;
 
         /**
          * <p>The status of the log delivery. Valid values:</p>
-         * <br>
-         * <p>*   true: The logs are being delivered.</p>
-         * <p>*   false: The log delivery feature is disabled.</p>
+         * <ul>
+         * <li>true: The logs are being delivered.</li>
+         * <li>false: The log delivery feature is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Status")
         public Boolean status;
 
         /**
          * <p>The topic of the log in the Logstore. The value is an index field in the Logstore that can be used to distinguish different logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas_login_event</p>
          */
         @NameInMap("Topic")
         public String topic;
@@ -214,36 +246,43 @@ public class ListDeliveryResponseBody extends TeaModel {
 
         /**
          * <p>The code of the cloud service. Valid values:</p>
-         * <br>
-         * <p>*   qcloud_waf</p>
-         * <p>*   qlcoud_cfw</p>
-         * <p>*   hcloud_waf</p>
-         * <p>*   hcloud_cfw</p>
-         * <p>*   ddos</p>
-         * <p>*   sas</p>
-         * <p>*   cfw</p>
-         * <p>*   config</p>
-         * <p>*   csk</p>
-         * <p>*   fc</p>
-         * <p>*   rds</p>
-         * <p>*   nas</p>
-         * <p>*   apigateway</p>
-         * <p>*   cdn</p>
-         * <p>*   mongodb</p>
-         * <p>*   eip</p>
-         * <p>*   slb</p>
-         * <p>*   vpc</p>
-         * <p>*   actiontrail</p>
-         * <p>*   waf</p>
-         * <p>*   bastionhost</p>
-         * <p>*   oss</p>
-         * <p>*   polardb</p>
+         * <ul>
+         * <li>qcloud_waf</li>
+         * <li>qlcoud_cfw</li>
+         * <li>hcloud_waf</li>
+         * <li>hcloud_cfw</li>
+         * <li>ddos</li>
+         * <li>sas</li>
+         * <li>cfw</li>
+         * <li>config</li>
+         * <li>csk</li>
+         * <li>fc</li>
+         * <li>rds</li>
+         * <li>nas</li>
+         * <li>apigateway</li>
+         * <li>cdn</li>
+         * <li>mongodb</li>
+         * <li>eip</li>
+         * <li>slb</li>
+         * <li>vpc</li>
+         * <li>actiontrail</li>
+         * <li>waf</li>
+         * <li>bastionhost</li>
+         * <li>oss</li>
+         * <li>polardb</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
 
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Security Center</p>
          */
         @NameInMap("ProductName")
         public String productName;
@@ -290,21 +329,32 @@ public class ListDeliveryResponseBody extends TeaModel {
     public static class ListDeliveryResponseBodyData extends TeaModel {
         /**
          * <p>The URL that is displayed in charts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://sls4service.console.aliyun.com/lognext/project/aliyun-cloudsiem-data-127608589417****-cn-shanghai">https://sls4service.console.aliyun.com/lognext/project/aliyun-cloudsiem-data-127608589417****-cn-shanghai</a>
+         * /dashboard/cloud-siem?isShare=true&amp;hideTopbar=true&amp;hideSidebar=true&amp;ignoreTabLocalStorage=true</p>
          */
         @NameInMap("DashboardUrl")
         public String dashboardUrl;
 
         /**
          * <p>Indicates whether the log delivery switch is displayed. Default value: true. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DisplaySwitchOrNot")
         public Boolean displaySwitchOrNot;
 
         /**
          * <p>The name of the Logstore for the threat analysis feature on the user side. The value is in the cloud_siem format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud-siem</p>
          */
         @NameInMap("LogStoreName")
         public String logStoreName;
@@ -317,12 +367,19 @@ public class ListDeliveryResponseBody extends TeaModel {
 
         /**
          * <p>The name of the project for the threat analysis feature in Simple Log service on the user side. The value is in the aliyun-cloudsiem-data-${aliUid}-${region} format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun-cloudsiem-data-127608589417****-cn-shanghai</p>
          */
         @NameInMap("ProjectName")
         public String projectName;
 
         /**
          * <p>The URL that is used for log analysis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://sls4service.console.aliyun.com/lognext/project/aliyun-cloudsiem-data-127608589417****-cn-shanghai">https://sls4service.console.aliyun.com/lognext/project/aliyun-cloudsiem-data-127608589417****-cn-shanghai</a>
+         * /logsearch/cloud-siem?isShare=true&amp;hideTopbar=true&amp;hideSidebar=true&amp;ignoreTabLocalStorage=true</p>
          */
         @NameInMap("SearchUrl")
         public String searchUrl;

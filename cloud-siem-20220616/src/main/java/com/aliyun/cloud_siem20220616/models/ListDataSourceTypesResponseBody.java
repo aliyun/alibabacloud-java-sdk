@@ -12,6 +12,9 @@ public class ListDataSourceTypesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,16 +43,23 @@ public class ListDataSourceTypesResponseBody extends TeaModel {
     public static class ListDataSourceTypesResponseBodyData extends TeaModel {
         /**
          * <p>The code of the third-party cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hcloud</p>
          */
         @NameInMap("CloudCode")
         public String cloudCode;
 
         /**
          * <p>The type of the data source. Valid values:</p>
-         * <br>
-         * <p>*   obs: Huawei Cloud Object Storage Service (OBS)</p>
-         * <p>*   wafApi: download API of Tencent Cloud Web Application Firewall (WAF)</p>
-         * <p>*   ckafka: Tencent Cloud Kafka (CKafka)</p>
+         * <ul>
+         * <li>obs: Huawei Cloud Object Storage Service (OBS)</li>
+         * <li>wafApi: download API of Tencent Cloud Web Application Firewall (WAF)</li>
+         * <li>ckafka: Tencent Cloud Kafka (CKafka)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>obs</p>
          */
         @NameInMap("DataSourceType")
         public String dataSourceType;

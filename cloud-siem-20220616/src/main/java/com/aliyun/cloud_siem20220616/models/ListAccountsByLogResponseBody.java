@@ -12,6 +12,9 @@ public class ListAccountsByLogResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,42 +43,63 @@ public class ListAccountsByLogResponseBody extends TeaModel {
     public static class ListAccountsByLogResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123xxxxxxx</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
          * <p>The name of the cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas_account_xxx</p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
          * <p>Indicates whether the account is added. Valid values: -1: yes -0: no</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123xxxxxxx</p>
          */
         @NameInMap("Imported")
         public Integer imported;
 
         /**
          * <p>The code of the log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_siem_waf_xxxxx</p>
          */
         @NameInMap("LogCode")
         public String logCode;
 
         /**
          * <p>The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123XXXXXXXXX</p>
          */
         @NameInMap("MainUserId")
         public Long mainUserId;
 
         /**
          * <p>The code of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qcloud_waf</p>
          */
         @NameInMap("ProdCode")
         public String prodCode;
 
         /**
          * <p>The ID of the Alibaba Cloud account for which the threat analysis feature is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123XXXXXXXX</p>
          */
         @NameInMap("SubUserId")
         public Long subUserId;

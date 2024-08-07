@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The data returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("Data")
     public DescribeCustomizeRuleCountResponseBodyData data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -83,51 +99,111 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
     }
 
     public static class DescribeCustomizeRuleCountResponseBodyData extends TeaModel {
+        /**
+         * <p>同类聚合规则数。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("AggregationRuleNum")
         public Integer aggregationRuleNum;
 
+        /**
+         * <p>自定义规则数。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("CustomizeRuleNum")
         public Integer customizeRuleNum;
 
+        /**
+         * <p>专家规则数。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
         @NameInMap("ExpertRuleNum")
         public Integer expertRuleNum;
 
+        /**
+         * <p>图计算规则数。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("GraphComputingRuleNum")
         public Integer graphComputingRuleNum;
 
         /**
          * <p>The number of rules that are used to identify high-risk threats.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("HighRuleNum")
         public Integer highRuleNum;
 
         /**
          * <p>The total number of rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("InUseRuleNum")
         public Integer inUseRuleNum;
 
         /**
          * <p>The number of rules that are used to identify low-risk threats.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("LowRuleNum")
         public Integer lowRuleNum;
 
         /**
          * <p>The number of rules that are used to identify medium-risk threats.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("MediumRuleNum")
         public Integer mediumRuleNum;
 
+        /**
+         * <p>预定义规则数。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PredefinedRuleNum")
         public Integer predefinedRuleNum;
 
+        /**
+         * <p>告警透传规则数。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("SingleAlertRuleNum")
         public Integer singleAlertRuleNum;
 
+        /**
+         * <p>总规则数。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("TotalRuleNum")
         public Integer totalRuleNum;
 
+        /**
+         * <p>不产生事件规则数。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("UnEventRuleNum")
         public Integer unEventRuleNum;
 

@@ -5,40 +5,56 @@ import com.aliyun.tea.*;
 
 public class DescribeJobStatusResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The HTTP status code. If the request is successful, 200 is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public DescribeJobStatusResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error code. If the request is successful, the parameter is empty. If the request fails, an error code is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ServerError</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The error message. If the request is successful, the parameter is empty. If the request fails, the reason for the failure is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5B0DFF6D-XXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -98,37 +114,55 @@ public class DescribeJobStatusResponseBody extends TeaModel {
 
     public static class DescribeJobStatusResponseBodyDataErrTaskListProductListLogList extends TeaModel {
         /**
-         * <p>The error code.</p>
+         * <p>The reason for the failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ProjectLogStoreNotFound</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
-         * <p>The log code.</p>
+         * <p>The code of the logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_siem_aegis_proc</p>
          */
         @NameInMap("LogCode")
         public String logCode;
 
         /**
-         * <p>The pattern of SLS logstore name.</p>
+         * <p>The pattern for the name of the Simple Log Service Logstore from which logs are collected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc_project_test</p>
          */
         @NameInMap("LogStoreNamePattern")
         public String logStoreNamePattern;
 
         /**
-         * <p>The code of product.</p>
+         * <p>The code of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
 
         /**
-         * <p>The pattern of SLS project name.</p>
+         * <p>The pattern for the name of the Simple Log Service project from which logs are collected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-project-test</p>
          */
         @NameInMap("ProjectNamePattern")
         public String projectNamePattern;
 
         /**
-         * <p>The ID of the region in which the instance resides.</p>
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         @NameInMap("RegionCode")
         public String regionCode;
@@ -190,13 +224,16 @@ public class DescribeJobStatusResponseBody extends TeaModel {
 
     public static class DescribeJobStatusResponseBodyDataErrTaskListProductList extends TeaModel {
         /**
-         * <p>The list of log.</p>
+         * <p>The list of logs that fail to be collected.</p>
          */
         @NameInMap("LogList")
         public java.util.List<DescribeJobStatusResponseBodyDataErrTaskListProductListLogList> logList;
 
         /**
-         * <p>The code of product.</p>
+         * <p>The code of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
@@ -226,13 +263,16 @@ public class DescribeJobStatusResponseBody extends TeaModel {
 
     public static class DescribeJobStatusResponseBodyDataErrTaskList extends TeaModel {
         /**
-         * <p>The list of product.</p>
+         * <p>The list of services in failed tasks.</p>
          */
         @NameInMap("ProductList")
         public java.util.List<DescribeJobStatusResponseBodyDataErrTaskListProductList> productList;
 
         /**
-         * <p>The account id of aliyun.</p>
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123XXXXX</p>
          */
         @NameInMap("UserId")
         public Long userId;
@@ -263,42 +303,76 @@ public class DescribeJobStatusResponseBody extends TeaModel {
     public static class DescribeJobStatusResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the task configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx_folder_xxxx</p>
          */
         @NameInMap("ConfigId")
         public String configId;
 
         /**
-         * <p>The list of failed task.</p>
+         * <p>The list of failed tasks. The value contains the Alibaba Cloud account and service code of each failed task.</p>
          */
         @NameInMap("ErrTaskList")
         public java.util.List<DescribeJobStatusResponseBodyDataErrTaskList> errTaskList;
 
         /**
-         * <p>The number of failed tasks.</p>
+         * <p>The total number of tasks that fail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("FailedCount")
         public Integer failedCount;
 
         /**
-         * <p>The number of scan tasks that are complete.</p>
+         * <p>The total number of tasks that are complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52</p>
          */
         @NameInMap("FinishCount")
         public Integer finishCount;
 
         /**
-         * <p>The ID of the folder.</p>
+         * <p>The ID of the resource directory folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fd-xxxxx</p>
          */
         @NameInMap("FolderId")
         public String folderId;
 
         /**
-         * <p>The number of existing tasks that are created to add logs within the data source.</p>
+         * <p>The total number of collection tasks that are created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("TaskCount")
         public Integer taskCount;
 
         /**
-         * <p>The status of submitted task.</p>
+         * <p>The status of the submitted task.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>submit</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>finish</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>finish</p>
          */
         @NameInMap("TaskStatus")
         public String taskStatus;

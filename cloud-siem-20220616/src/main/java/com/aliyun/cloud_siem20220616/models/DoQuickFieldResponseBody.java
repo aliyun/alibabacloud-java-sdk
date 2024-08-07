@@ -12,6 +12,9 @@ public class DoQuickFieldResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>06735F17-1EDE-5212-81A3-8585368F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,27 +43,40 @@ public class DoQuickFieldResponseBody extends TeaModel {
     public static class DoQuickFieldResponseBodyData extends TeaModel {
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("AggQueryd")
         public String aggQueryd;
 
         /**
          * <p>Indicates whether the quick analysis was successful. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("CompleteOrNot")
         public Boolean completeOrNot;
 
         /**
          * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("HasSQL")
         public Boolean hasSQL;
@@ -73,6 +89,9 @@ public class DoQuickFieldResponseBody extends TeaModel {
 
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Limited")
         public Long limited;
@@ -85,24 +104,38 @@ public class DoQuickFieldResponseBody extends TeaModel {
 
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("PQuery")
         public String PQuery;
 
         /**
          * <p>The number of entries queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("ProcessedRows")
         public Long processedRows;
 
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("QueryMode")
         public Integer queryMode;
 
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li>and alert_level : remind | with_pack_meta</li>
+         * </ul>
          */
         @NameInMap("WhereQuery")
         public String whereQuery;

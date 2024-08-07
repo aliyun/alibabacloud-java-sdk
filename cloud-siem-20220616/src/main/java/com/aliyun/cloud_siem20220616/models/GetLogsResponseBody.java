@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class GetLogsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The results of the log query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("Data")
     public GetLogsResponseBodyData data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>93A8B186-A5F1-5B20-9BCF-5605C5E9****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,18 +101,27 @@ public class GetLogsResponseBody extends TeaModel {
     public static class GetLogsResponseBodyDataPageInfo extends TeaModel {
         /**
          * <p>The page number. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;
@@ -135,30 +160,44 @@ public class GetLogsResponseBody extends TeaModel {
     public static class GetLogsResponseBodyDataResponseData extends TeaModel {
         /**
          * <p>The status of the log query. Valid values:</p>
-         * <br>
-         * <p>*   true: The query is complete and the returned result is complete.</p>
-         * <p>*   false: The query is complete but the returned result is incomplete. You must resend the request to obtain the complete result.</p>
+         * <ul>
+         * <li>true: The query is complete and the returned result is complete.</li>
+         * <li>false: The query is complete but the returned result is incomplete. You must resend the request to obtain the complete result.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("CompleteOrNot")
         public Boolean completeOrNot;
 
         /**
          * <p>The time period of the log query. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28</p>
          */
         @NameInMap("Cost")
         public Long cost;
 
         /**
          * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>Indicated whether an analytic statement is contained. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("HasSql")
         public Boolean hasSql;

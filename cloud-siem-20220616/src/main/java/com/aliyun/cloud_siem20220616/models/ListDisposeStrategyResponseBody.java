@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class ListDisposeStrategyResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The data returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("Data")
     public ListDisposeStrategyResponseBodyData data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,18 +101,27 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
     public static class ListDisposeStrategyResponseBodyDataPageInfo extends TeaModel {
         /**
          * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;
@@ -135,144 +160,242 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
     public static class ListDisposeStrategyResponseBodyDataResponseData extends TeaModel {
         /**
          * <p>The UUID of the alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas_71e24437d2797ce8fc59692905a4****</p>
          */
         @NameInMap("AlertUuid")
         public String alertUuid;
 
         /**
          * <p>The ID of the Alibaba Cloud account that is associated with the policy in SIEM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         @NameInMap("Aliuid")
         public Long aliuid;
 
         /**
          * <p>The status of the policy. Valid values:</p>
-         * <br>
-         * <p>*   0: invalid</p>
-         * <p>*   1: valid</p>
+         * <ul>
+         * <li>0: invalid</li>
+         * <li>1: valid</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("EffectiveStatus")
         public Integer effectiveStatus;
 
         /**
          * <p>The details of the entity. The value is a JSON array.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;ip&quot;:&quot;1.1.1.1&quot;}]</p>
          */
         @NameInMap("Entity")
         public java.util.List<?> entity;
 
         /**
          * <p>The ID of the entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         @NameInMap("EntityId")
         public Long entityId;
 
         /**
          * <p>The type of the entity. Valid values:</p>
-         * <br>
-         * <p>*   ip</p>
-         * <p>*   process</p>
-         * <p>*   file</p>
+         * <ul>
+         * <li>ip</li>
+         * <li>process</li>
+         * <li>file</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ip</p>
          */
         @NameInMap("EntityType")
         public String entityType;
 
         /**
          * <p>The summary information about the failed task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DisposalEntity failed which description is Aegis Quarantine File , return_info failed which description is Check Aegis Process Result , [ERROR DETAIL] *******.php:file not found</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The end time of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-08-10 21:34:07</p>
          */
         @NameInMap("FinishTime")
         public String finishTime;
 
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-06 16:37:29</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-06 16:37:29</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The ID of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Multiple type of alerts, including Miner Network, Command line download and run malicious files, Backdoor Process, etc</p>
          */
         @NameInMap("IncidentName")
         public String incidentName;
 
         /**
          * <p>The UUID of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
          */
         @NameInMap("IncidentUuid")
         public String incidentUuid;
 
         /**
          * <p>The name of the playbook, which is the unique identifier of the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WafBlockIP</p>
          */
         @NameInMap("PlaybookName")
         public String playbookName;
 
         /**
          * <p>The type of the playbook. Valid values:</p>
-         * <br>
-         * <p>*   system: user-triggered playbook</p>
-         * <p>*   custom: event-triggered playbook</p>
-         * <p>*   custom_alert: alert-triggered playbook</p>
-         * <p>*   soar-manual: user-run playbook</p>
-         * <p>*   soar-mdr: MDR-run playbook</p>
+         * <ul>
+         * <li>system: user-triggered playbook</li>
+         * <li>custom: event-triggered playbook</li>
+         * <li>custom_alert: alert-triggered playbook</li>
+         * <li>soar-manual: user-run playbook</li>
+         * <li>soar-mdr: MDR-run playbook</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>system</p>
          */
         @NameInMap("PlaybookType")
         public String playbookType;
 
         /**
          * <p>The UUID of the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system_aliyun_clb_process_book</p>
          */
         @NameInMap("PlaybookUuid")
         public String playbookUuid;
 
         /**
          * <p>The scope of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{ aliUid: 1766185894104675 }]</p>
          */
         @NameInMap("Scope")
         public java.util.List<?> scope;
 
         /**
          * <p>The ID of the SOAR handling policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>577bbf90-a770-44a7-8154-586aa2d318fa</p>
          */
         @NameInMap("SophonTaskId")
         public String sophonTaskId;
 
         /**
          * <p>The running status of the playbook. Valid values:</p>
-         * <br>
-         * <p>*   200: successful</p>
-         * <p>*   10: deleted</p>
-         * <p>*   5: failed</p>
-         * <p>*   0: initial</p>
+         * <ul>
+         * <li>200: successful</li>
+         * <li>10: deleted</li>
+         * <li>5: failed</li>
+         * <li>0: initial</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The ID of the Alibaba account that is used to configure the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>176555323***</p>
          */
         @NameInMap("SubAliuid")
         public Long subAliuid;
 
         /**
          * <p>The parameters that are used to trigger the playbook. The value is in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;file&quot;: {
+         *             &quot;op_code&quot;: &quot;2&quot;,
+         *             &quot;file_path&quot;: &quot;/root/alert0913/a886.jsp&quot;,
+         *             &quot;entity_type&quot;: &quot;file&quot;,
+         *             &quot;entity_name&quot;: &quot;a886.jsp&quot;,
+         *             &quot;file_name&quot;: &quot;a886.jsp&quot;,
+         *             &quot;file_owner&quot;: &quot;USER:,GROUP:&quot;,
+         *             &quot;hash_value&quot;: &quot;5def10c9a4287d0920d86b42420b20b0&quot;,
+         *             &quot;op_level&quot;: &quot;2&quot;,
+         *             &quot;entity_id&quot;: &quot;/root/alert0913/a886.jsp&quot;,
+         *             &quot;host_uuid&quot;: {
+         *                   &quot;entity_type&quot;: &quot;host&quot;,
+         *                   &quot;entity_name&quot;: &quot;N/A&quot;,
+         *                   &quot;is_comprised&quot;: &quot;1&quot;,
+         *                   &quot;os_type&quot;: &quot;linux&quot;,
+         *                   &quot;entity_id&quot;: &quot;5f58ef67-8803-4314-8d67-c87dc92b****&quot;,
+         *                   &quot;host_uuid&quot;: &quot;5f58ef67-8803-4314-8d67-c87dc92b****&quot;,
+         *                   &quot;host_name&quot;: &quot;N/A&quot;
+         *             },
+         *             &quot;malware_type&quot;: &quot;${aliyun.siem.sas.alert_tag.webshell}&quot;
+         *       },
+         *       &quot;_sys_siem&quot;: {
+         *             &quot;cloudCode&quot;: &quot;aliyun&quot;,
+         *             &quot;alertId&quot;: &quot;89416745494****&quot;
+         *       },
+         *       &quot;scope&quot;: [
+         *             {
+         *                   &quot;aliUid&quot;: 1766185894104****
+         *             }
+         *       ]
+         * }</p>
          */
         @NameInMap("TaskParam")
         public String taskParam;

@@ -12,6 +12,9 @@ public class GetCapacityResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>27D27DCB-D76B-5064-8B3B-0900DEF7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,21 +43,31 @@ public class GetCapacityResponseBody extends TeaModel {
     public static class GetCapacityResponseBodyData extends TeaModel {
         /**
          * <p>Indicates whether the Logstores for the threat analysis feature exist on the user side. Valid values:</p>
-         * <br>
-         * <p>*   true: The logs are in the normal state. The log analysis feature is available.</p>
-         * <p>*   false: The logs are being cleared. The log analysis feature is unavailable.</p>
+         * <ul>
+         * <li>true: The logs are in the normal state. The log analysis feature is available.</li>
+         * <li>false: The logs are being cleared. The log analysis feature is unavailable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ExistLogStore")
         public Boolean existLogStore;
 
         /**
          * <p>The purchased storage capacity of the threat analysis feature. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9000</p>
          */
         @NameInMap("PreservedCapacity")
         public Long preservedCapacity;
 
         /**
          * <p>The billable storage capacity of the threat analysis feature. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("UsedCapacity")
         public Double usedCapacity;

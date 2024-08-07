@@ -6,12 +6,22 @@ import com.aliyun.tea.*;
 public class DescribeImportedLogCountRequest extends TeaModel {
     /**
      * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
-     * <br>
-     * <p>*   cn-hangzhou: Your assets reside in regions in China.</p>
-     * <p>*   ap-southeast-1: Your assets reside in regions outside China.</p>
+     * <ul>
+     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
+     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("RoleFor")
+    public String roleFor;
+
+    @NameInMap("RoleType")
+    public String roleType;
 
     public static DescribeImportedLogCountRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeImportedLogCountRequest self = new DescribeImportedLogCountRequest();
@@ -24,6 +34,22 @@ public class DescribeImportedLogCountRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeImportedLogCountRequest setRoleFor(String roleFor) {
+        this.roleFor = roleFor;
+        return this;
+    }
+    public String getRoleFor() {
+        return this.roleFor;
+    }
+
+    public DescribeImportedLogCountRequest setRoleType(String roleType) {
+        this.roleType = roleType;
+        return this;
+    }
+    public String getRoleType() {
+        return this.roleType;
     }
 
 }

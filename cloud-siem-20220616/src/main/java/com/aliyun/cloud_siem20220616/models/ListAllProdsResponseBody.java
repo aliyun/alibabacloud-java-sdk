@@ -12,6 +12,9 @@ public class ListAllProdsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,34 +43,50 @@ public class ListAllProdsResponseBody extends TeaModel {
     public static class ListAllProdsResponseBodyDataProdList extends TeaModel {
         /**
          * <p>The code of the cloud service provider. Valid values:</p>
-         * <br>
-         * <p>*   qcloud: Tencent Cloud</p>
-         * <p>*   aliyun: Alibaba Cloud</p>
-         * <p>*   hcloud: Huawei Cloud</p>
+         * <ul>
+         * <li>qcloud: Tencent Cloud.</li>
+         * <li>aliyun: Alibaba Cloud.</li>
+         * <li>hcloud: Huawei Cloud.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>hcloud</p>
          */
         @NameInMap("CloudCode")
         public String cloudCode;
 
         /**
          * <p>The number of logs within the cloud service that are added to the threat analysis feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("ImportedLogCount")
         public Integer importedLogCount;
 
         /**
          * <p>The time when the logs within the cloud service were last added to the threat analysis feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-11-23 12:12:12</p>
          */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
         /**
          * <p>The code of the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         @NameInMap("ProdCode")
         public String prodCode;
 
         /**
          * <p>The total number of logs within the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19</p>
          */
         @NameInMap("TotalLogCount")
         public Integer totalLogCount;
@@ -122,24 +141,36 @@ public class ListAllProdsResponseBody extends TeaModel {
     public static class ListAllProdsResponseBodyData extends TeaModel {
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The cloud services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ProdList")
         public java.util.List<ListAllProdsResponseBodyDataProdList> prodList;
 
         /**
          * <p>The total number of logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

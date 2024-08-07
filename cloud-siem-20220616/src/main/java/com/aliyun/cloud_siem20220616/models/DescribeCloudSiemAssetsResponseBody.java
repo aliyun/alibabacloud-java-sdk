@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The data returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("Data")
     public DescribeCloudSiemAssetsResponseBodyData data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,18 +101,27 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
     public static class DescribeCloudSiemAssetsResponseBodyDataPageInfo extends TeaModel {
         /**
          * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;
@@ -135,18 +160,27 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
     public static class DescribeCloudSiemAssetsResponseBodyDataResponseDataAssetInfo extends TeaModel {
         /**
          * <p>The attribute key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>suspicious.wbd.wb.trojanpath</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The name of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Trojan Path</p>
          */
         @NameInMap("KeyName")
         public String keyName;
 
         /**
          * <p>The value of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/root/test33.php</p>
          */
         @NameInMap("Values")
         public String values;
@@ -185,83 +219,121 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
     public static class DescribeCloudSiemAssetsResponseBodyDataResponseData extends TeaModel {
         /**
          * <p>The UUID of the alert associated with the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas_71e24437d2797ce8fc59692905a4****</p>
          */
         @NameInMap("AlertUuid")
         public String alertUuid;
 
         /**
          * <p>The ID of the Alibaba Cloud account in SIEM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1276085894174392</p>
          */
         @NameInMap("Aliuid")
         public Long aliuid;
 
         /**
          * <p>The logical ID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0616caeb-acb8-45e0-8520-4ee5fbe251f0</p>
          */
         @NameInMap("AssetId")
         public String assetId;
 
         /**
          * <p>The display information of the asset is in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;KeyName&quot;: &quot;${aliyun.siem.asset.asset_name}&quot;,&quot;Values&quot;: &quot;zsw-agentless-ubuntu20&quot;,&quot;Key&quot;: &quot;asset_name&quot;}]</p>
          */
         @NameInMap("AssetInfo")
         public java.util.List<DescribeCloudSiemAssetsResponseBodyDataResponseDataAssetInfo> assetInfo;
 
         /**
          * <p>The name of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zsw-agentless-centos****</p>
          */
         @NameInMap("AssetName")
         public String assetName;
 
         /**
          * <p>The type of the asset. Valid values:</p>
-         * <br>
-         * <p>*   ip</p>
-         * <p>*   domain</p>
-         * <p>*   url</p>
-         * <p>*   process</p>
-         * <p>*   file</p>
-         * <p>*   host</p>
+         * <ul>
+         * <li>ip</li>
+         * <li>domain</li>
+         * <li>url</li>
+         * <li>process</li>
+         * <li>file</li>
+         * <li>host</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>domain</p>
          */
         @NameInMap("AssetType")
         public String assetType;
 
         /**
          * <p>The cloud code of the entity. Valid values:</p>
-         * <br>
-         * <p>*   aliyun: Alibaba Cloud</p>
-         * <p>*   qcloud: Tencent Cloud</p>
-         * <p>*   hcloud: Huawei Cloud</p>
+         * <ul>
+         * <li>aliyun: Alibaba Cloud</li>
+         * <li>qcloud: Tencent Cloud</li>
+         * <li>hcloud: Huawei Cloud</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun</p>
          */
         @NameInMap("CloudCode")
         public String cloudCode;
 
         /**
          * <p>The time when the asset was synchronized.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-06 16:37:29</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The time when the asset was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-06 16:37:29</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The ID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The UUID of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
          */
         @NameInMap("IncidentUuid")
         public String incidentUuid;
 
         /**
          * <p>The ID of the associated account to which the asset belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>176555323***</p>
          */
         @NameInMap("SubUserId")
         public Long subUserId;

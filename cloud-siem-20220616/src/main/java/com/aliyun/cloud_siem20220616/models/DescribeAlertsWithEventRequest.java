@@ -6,70 +6,118 @@ import com.aliyun.tea.*;
 public class DescribeAlertsWithEventRequest extends TeaModel {
     /**
      * <p>The title of the alert.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Scan-Try SNMP weak password</p>
      */
     @NameInMap("AlertTitle")
     public String alertTitle;
 
     /**
      * <p>The page number. Pages start from page 1.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The ID of the event.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
      */
     @NameInMap("IncidentUuid")
     public String incidentUuid;
 
     /**
      * <p>Specifies whether an attack is defended. Valid values:</p>
-     * <br>
-     * <p>*   0: detected</p>
-     * <p>*   1: blocked</p>
+     * <ul>
+     * <li>0: detected</li>
+     * <li>1: blocked</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("IsDefend")
     public String isDefend;
 
     /**
      * <p>The risk levels. The value is a JSON array. Valid values:</p>
-     * <br>
-     * <p>*   serious: high</p>
-     * <p>*   suspicious: medium</p>
-     * <p>*   remind: low</p>
+     * <ul>
+     * <li>serious: high</li>
+     * <li>suspicious: medium</li>
+     * <li>remind: low</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;serious&quot;,&quot;suspicious&quot;,&quot;remind&quot;]</p>
      */
     @NameInMap("Level")
     public java.util.List<String> level;
 
     /**
      * <p>The number of entries per page. Maximum value: 100.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
-     * <br>
-     * <p>*   cn-hangzhou: Your assets reside in regions in China.</p>
-     * <p>*   ap-southeast-1: Your assets reside in regions outside China.</p>
+     * <ul>
+     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
+     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the member in the resource directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>113091674488****</p>
+     */
     @NameInMap("RoleFor")
     public Long roleFor;
 
+    /**
+     * <p>The type of the view.</p>
+     * <ul>
+     * <li>0: view of the current Alibaba Cloud account.</li>
+     * <li>1: view of all accounts for the enterprise.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RoleType")
     public Integer roleType;
 
     /**
      * <p>The data source of the alert.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sas</p>
      */
     @NameInMap("Source")
     public String source;
 
     /**
      * <p>The ID of the account within which the alert is generated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>176555323***</p>
      */
     @NameInMap("SubUserId")
     public Long subUserId;

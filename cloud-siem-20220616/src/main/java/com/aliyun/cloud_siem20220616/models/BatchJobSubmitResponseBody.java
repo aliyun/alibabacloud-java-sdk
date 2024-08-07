@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class BatchJobSubmitResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,27 +21,40 @@ public class BatchJobSubmitResponseBody extends TeaModel {
 
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ServerError</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5B0DFF6D-XXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -99,36 +115,54 @@ public class BatchJobSubmitResponseBody extends TeaModel {
     public static class BatchJobSubmitResponseBodyDataConfigListProductListLogList extends TeaModel {
         /**
          * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ProjectLogstoreNotFound</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
          * <p>The log code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_siem_cfw_flow</p>
          */
         @NameInMap("LogCode")
         public String logCode;
 
         /**
          * <p>The pattern of SLS log store name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-test-logstore</p>
          */
         @NameInMap("LogStoreNamePattern")
         public String logStoreNamePattern;
 
         /**
          * <p>The code of product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
 
         /**
          * <p>The pattern of SLS project name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-test-project</p>
          */
         @NameInMap("ProjectNamePattern")
         public String projectNamePattern;
 
         /**
          * <p>The ID of the region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         @NameInMap("RegionCode")
         public String regionCode;
@@ -197,6 +231,9 @@ public class BatchJobSubmitResponseBody extends TeaModel {
 
         /**
          * <p>The code of the product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
@@ -233,6 +270,9 @@ public class BatchJobSubmitResponseBody extends TeaModel {
 
         /**
          * <p>The account id of aliyun.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123xxxxxx</p>
          */
         @NameInMap("UserId")
         public Long userId;
@@ -263,6 +303,9 @@ public class BatchJobSubmitResponseBody extends TeaModel {
     public static class BatchJobSubmitResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the task configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx_folder_xxxx</p>
          */
         @NameInMap("ConfigId")
         public String configId;
@@ -275,12 +318,18 @@ public class BatchJobSubmitResponseBody extends TeaModel {
 
         /**
          * <p>The id of task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BATCH_JOB_XXXXXX</p>
          */
         @NameInMap("SubmitId")
         public String submitId;
 
         /**
          * <p>The number of existing tasks that are created to add logs within the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("TaskCount")
         public Integer taskCount;

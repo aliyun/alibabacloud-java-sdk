@@ -12,6 +12,9 @@ public class GetStorageResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>97A31C3A-3F9F-5866-8979-5159E3DC****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,32 +43,45 @@ public class GetStorageResponseBody extends TeaModel {
     public static class GetStorageResponseBodyData extends TeaModel {
         /**
          * <p>Indicates whether the storage region can be changed for once. Default value: false Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("CanOperate")
         public Boolean canOperate;
 
         /**
          * <p>Indicates whether the storage region can be changed. Default value: false Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("DisplayRegion")
         public Boolean displayRegion;
 
         /**
          * <p>The region where the data is stored.</p>
-         * <br>
-         * <p>If the data management center is **cn-hangzhou**, the default value of **Region** is cn-shanghai, which specifies the China (Shanghai) region. If the data management center is **ap-southeast-1**, the default value of **Region** is ap-southeast-1, which specifies the Singapore region.</p>
+         * <p>If the data management center is <strong>cn-hangzhou</strong>, the default value of <strong>Region</strong> is cn-shanghai, which specifies the China (Shanghai) region. If the data management center is <strong>ap-southeast-1</strong>, the default value of <strong>Region</strong> is ap-southeast-1, which specifies the Singapore region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The storage period of logs. Unit: day. Default value: 180. Valid values: 30 to 3000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>180</p>
          */
         @NameInMap("Ttl")
         public Integer ttl;

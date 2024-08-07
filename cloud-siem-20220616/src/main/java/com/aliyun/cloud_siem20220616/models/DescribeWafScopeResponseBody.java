@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class DescribeWafScopeResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The data returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeWafScopeResponseBodyData> data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,18 +101,27 @@ public class DescribeWafScopeResponseBody extends TeaModel {
     public static class DescribeWafScopeResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account in SIEM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         @NameInMap("Aliuid")
         public Long aliuid;
 
         /**
          * <p>The domain names that are protected by the WAF instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[123.com, 456.com]</p>
          */
         @NameInMap("Domains")
         public java.util.List<String> domains;
 
         /**
          * <p>The ID of the WAF instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf-cn-tl123ast****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;

@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class DescribeStorageResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the projects and Logstores that are created for the threat analysis feature exist in Simple Log Service. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Data")
     public Boolean data;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CCEEE128-6607-503E-AAA6-C5E57D94****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class ListAutomateResponseConfigsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The data returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("Data")
     public ListAutomateResponseConfigsResponseBodyData data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,18 +101,27 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
     public static class ListAutomateResponseConfigsResponseBodyDataPageInfo extends TeaModel {
         /**
          * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;
@@ -134,80 +159,130 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
 
     public static class ListAutomateResponseConfigsResponseBodyDataResponseData extends TeaModel {
         /**
-         * <p>The configuration of the action that is performed after the rule is hit. The value is in JSON format.</p>
+         * <p>The configuration of the action that is performed after the automated response rule is hit. The value is in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *       {
+         *             &quot;actionType&quot;: &quot;doPlaybook&quot;,
+         *             &quot;playbookName&quot;: &quot;WafBlockIP&quot;,
+         *             &quot;playbookUuid&quot;: &quot;bdad6220-6584-41b2-9704-fc6584568758&quot;
+         *       }
+         * ]</p>
          */
         @NameInMap("ActionConfig")
         public String actionConfig;
 
         /**
          * <p>The type of the handling action. Multiple types are separated by commas (,). Valid values:</p>
-         * <br>
-         * <p>*   doPlaybook: runs a playbook.</p>
-         * <p>*   changeEventStatus: changes the status of an event.</p>
-         * <p>*   changeThreatLevel: changes the risk level of an event.</p>
+         * <ul>
+         * <li><strong>doPlaybook</strong>: runs the playbook.</li>
+         * <li><strong>changeEventStatus</strong>: changes the event status.</li>
+         * <li><strong>changeThreatLevel</strong>: changes the risk level of the event.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>doPlaybook,changeEventStatus</p>
          */
         @NameInMap("ActionType")
         public String actionType;
 
         /**
          * <p>The ID of the Alibaba Cloud account that is associated with the rule in SIEM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         @NameInMap("Aliuid")
         public Long aliuid;
 
         /**
          * <p>The type of the automated response rule. Valid values:</p>
-         * <br>
-         * <p>*   event</p>
-         * <p>*   alert</p>
+         * <ul>
+         * <li><strong>event</strong></li>
+         * <li><strong>alert</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>event</p>
          */
         @NameInMap("AutoResponseType")
         public String autoResponseType;
 
+        /**
+         * <p>The type of the view. Valid values:</p>
+         * <p>0: the current Alibaba Cloud account
+         * 1: the global account</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("DataType")
         public Integer dataType;
 
         /**
-         * <p>The trigger condition of the rule. The value is in the JSON format.</p>
+         * <p>The trigger condition of the automated response rule. The value is in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;left&quot;:{&quot;value&quot;:&quot;alert_name&quot;},&quot;operator&quot;:&quot;containsString&quot;,&quot;right&quot;:{&quot;value&quot;:&quot;webshell_online&quot;}}]</p>
          */
         @NameInMap("ExecutionCondition")
         public String executionCondition;
 
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-06 16:37:29</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-06 16:37:29</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The ID of the automated response rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name of the automated response rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cfw kill quara book</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
          * <p>The status of the rule. Valid values:</p>
-         * <br>
-         * <p>*   0: disabled</p>
-         * <p>*   100: enabled</p>
+         * <ul>
+         * <li><strong>0</strong>: disabled.</li>
+         * <li><strong>100</strong>: enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The ID of the user who created the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17108579417****</p>
          */
         @NameInMap("SubUserId")
         public Long subUserId;

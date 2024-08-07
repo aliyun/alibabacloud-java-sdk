@@ -6,48 +6,71 @@ import com.aliyun.tea.*;
 public class DataProductListLogMapValue extends TeaModel {
     /**
      * <p>The code of the log.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cloud_siem_config_log</p>
      */
     @NameInMap("LogCode")
     public String logCode;
 
     /**
      * <p>This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>audit log</p>
      */
     @NameInMap("LogName")
     public String logName;
 
     /**
      * <p>This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>audit log</p>
      */
     @NameInMap("LogNameEn")
     public String logNameEn;
 
     /**
      * <p>The language code of the log that is used to indicate the language in which the log is displayed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>${sas.cloudsiem.prod.cloud_siem_aegis_crack_from_beaver}</p>
      */
     @NameInMap("LogNameKey")
     public String logNameKey;
 
     /**
      * <p>The status of the log delivery. Valid values:</p>
-     * <br>
-     * <p>*   true: The logs are being delivered.</p>
-     * <p>*   false: The log delivery feature is disabled.</p>
+     * <ul>
+     * <li>true: The logs are being delivered.</li>
+     * <li>false: The log delivery feature is disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Status")
     public Boolean status;
 
     /**
      * <p>Indicates whether the log delivery feature can be enabled or disabled. The feature can be enabled or disabled only by the administrator of the threat analysis feature. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("CanOperateOrNot")
     public Boolean canOperateOrNot;
 
     /**
      * <p>The topic of the log in the Logstore. The value is an index field in the Logstore that can be used to distinguish different logs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sas_login_event</p>
      */
     @NameInMap("Topic")
     public String topic;
@@ -130,12 +153,18 @@ public class DataProductListLogMapValue extends TeaModel {
     public static class DataProductListLogMapValueExtraParameters extends TeaModel {
         /**
          * <p>The ID of the extended parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flag</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the extended parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         @NameInMap("Value")
         public String value;

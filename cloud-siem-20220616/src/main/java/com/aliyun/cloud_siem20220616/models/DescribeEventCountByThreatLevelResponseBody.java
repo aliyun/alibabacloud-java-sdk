@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The data returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("Data")
     public DescribeEventCountByThreatLevelResponseBodyData data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,30 +101,45 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
     public static class DescribeEventCountByThreatLevelResponseBodyData extends TeaModel {
         /**
          * <p>The total number of events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("EventNum")
         public Long eventNum;
 
         /**
          * <p>The number of high-risk events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("HighLevelEventNum")
         public Long highLevelEventNum;
 
         /**
          * <p>The number of low-risk events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52</p>
          */
         @NameInMap("LowLevelEventNum")
         public Long lowLevelEventNum;
 
         /**
          * <p>The number of medium-risk events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("MediumLevelEventNum")
         public Long mediumLevelEventNum;
 
         /**
          * <p>The number of unhandled events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75</p>
          */
         @NameInMap("UndealEventNum")
         public Long undealEventNum;

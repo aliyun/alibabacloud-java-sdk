@@ -12,6 +12,9 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,73 +43,117 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
     public static class ListImportedLogsByProdResponseBodyData extends TeaModel {
         /**
          * <p>Indicates whether the log is automatically added to the threat analysis feature within newly added accounts. Valid values:</p>
-         * <br>
-         * <p>*   1: yes</p>
-         * <p>*   0: no</p>
+         * <ul>
+         * <li>1: yes.</li>
+         * <li>0: no.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-11-23 12:30:00</p>
          */
         @NameInMap("AutoImported")
         public Integer autoImported;
 
         /**
          * <p>The code of the cloud service provider. Valid values:</p>
-         * <br>
-         * <p>*   qcloud: Tencent Cloud</p>
-         * <p>*   aliyun: Alibaba Cloud</p>
-         * <p>*   hcloud: Huawei Cloud</p>
+         * <ul>
+         * <li>qcloud: Tencent Cloud.</li>
+         * <li>aliyun: Alibaba Cloud.</li>
+         * <li>hcloud: Huawei Cloud.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>hcloud</p>
          */
         @NameInMap("CloudCode")
         public String cloudCode;
 
         /**
          * <p>Indicates whether the log is added to the threat analysis feature. Valid values:</p>
-         * <br>
-         * <p>*   1: yes</p>
-         * <p>*   0: no</p>
+         * <ul>
+         * <li>1: yes.</li>
+         * <li>0: no.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-11-23 12:30:00</p>
          */
         @NameInMap("Imported")
         public Integer imported;
 
         /**
          * <p>The number of users who have added the log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ImportedUserCount")
         public Integer importedUserCount;
 
         /**
-         * <p>The log code.</p>
+         * <p>The code of the log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_siem_waf_xxxxx</p>
          */
         @NameInMap("LogCode")
         public String logCode;
 
         /**
-         * <p>The display log code.</p>
+         * <p>The display code of the log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>${siem.prod. cloud_siem_waf_xxxxx}</p>
          */
         @NameInMap("LogMdsCode")
         public String logMdsCode;
 
+        /**
+         * <p>The type of log. Valid values:</p>
+         * <ul>
+         * <li>1: the log produced by other product</li>
+         * <li>2: the predefined log</li>
+         * <li>3: the custom log</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("LogType")
         public Integer logType;
 
         /**
          * <p>The time when the log was last added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-11-23 12:30:00</p>
          */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
         /**
          * <p>The code of the cloud service to which the log belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qcloud_waf</p>
          */
         @NameInMap("ProdCode")
         public String prodCode;
 
         /**
          * <p>The total number of users who have the log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("TotalUserCount")
         public Integer totalUserCount;
 
         /**
          * <p>The number of users who have not added the log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("UnImportedUserCount")
         public Integer unImportedUserCount;

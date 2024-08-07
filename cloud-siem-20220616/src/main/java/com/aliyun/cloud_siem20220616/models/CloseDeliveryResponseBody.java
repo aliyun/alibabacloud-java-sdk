@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class CloseDeliveryResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the threat analysis feature was disabled. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Data")
     public Boolean data;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F375A043-4F5B-55F2-A564-CC47FFC6****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

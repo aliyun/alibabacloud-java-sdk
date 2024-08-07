@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListAccountAccessIdResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,21 +21,31 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,45 +98,67 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
     public static class ListAccountAccessIdResponseBodyData extends TeaModel {
         /**
          * <p>The AccessKey ID of the cloud account that is added to the threat analysis feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABCXXXXXXXX</p>
          */
         @NameInMap("AccessId")
         public String accessId;
 
         /**
          * <p>The MD5 hash value of the AccessKey ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcXXXXXXXX</p>
          */
         @NameInMap("AccessIdMd5")
         public String accessIdMd5;
 
         /**
          * <p>The ID of the cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123xxxxxxx</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
          * <p>The information about the cloud account to which the AccessKey ID belongs. The value is in the following format: Alibaba Cloud account ID|Alibaba Cloud account username|AccessKey ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123xxxxxx|xxxx|ABCXXXXX</p>
          */
         @NameInMap("AccountStr")
         public String accountStr;
 
         /**
          * <p>Indicates whether the cloud account to which the AccessKey ID belongs is added to the threat analysis feature. Valid values:</p>
-         * <br>
-         * <p>*   0: no</p>
-         * <p>*   1: yes</p>
+         * <ul>
+         * <li>0: no</li>
+         * <li>1: yes</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Bound")
         public Integer bound;
 
         /**
          * <p>The code of the cloud service provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hcloud</p>
          */
         @NameInMap("CloudCode")
         public String cloudCode;
 
         /**
          * <p>The ID of the Alibaba Cloud account that is used to add the third-party cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABCXXXXXXXX</p>
          */
         @NameInMap("SubUserId")
         public Long subUserId;

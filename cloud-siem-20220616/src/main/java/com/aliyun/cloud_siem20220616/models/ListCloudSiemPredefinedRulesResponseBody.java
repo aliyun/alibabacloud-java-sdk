@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The data returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("Data")
     public ListCloudSiemPredefinedRulesResponseBodyData data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,18 +101,27 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
     public static class ListCloudSiemPredefinedRulesResponseBodyDataPageInfo extends TeaModel {
         /**
          * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;
@@ -135,79 +160,140 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
     public static class ListCloudSiemPredefinedRulesResponseBodyDataResponseData extends TeaModel {
         /**
          * <p>The type of the risk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WEBSHELL</p>
          */
         @NameInMap("AlertType")
         public String alertType;
 
+        /**
+         * <p>The alert additional field for ATT\&amp;CK.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>T1595.002 Vulnerability Scanning</p>
+         */
         @NameInMap("AttCk")
         public String attCk;
 
+        /**
+         * <p>The method that is used to generate an event. Valid values:</p>
+         * <ul>
+         * <li>default: built-in method.</li>
+         * <li>singleToSingle: The system generates an event for each alert.</li>
+         * <li>allToSingle: The system generates an event for alerts within a period of time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>allToSingle</p>
+         */
         @NameInMap("EventTransferType")
         public String eventTransferType;
 
         /**
          * <p>The time when the rule was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-06 16:37:29</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The time when the rule was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-06 16:37:29</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The ID of the predefined rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The internal code of the rule description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>${siem_rule_description_siem_cfw-attack-count-level-up_cfw-attack}</p>
          */
         @NameInMap("RuleDescMds")
         public String ruleDescMds;
 
         /**
          * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>siem_base64-command-exec_aegis-proc</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The rule name in Chinese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>siem_base64-command-exec_aegis-proc</p>
+         */
         @NameInMap("RuleNameCn")
         public String ruleNameCn;
 
+        /**
+         * <p>The rule name in English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>siem_base64-command-exec_aegis-proc</p>
+         */
         @NameInMap("RuleNameEn")
         public String ruleNameEn;
 
         /**
          * <p>The internal code of the rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>${siem_rule_name_siem_cfw-attack-count-level-up_cfw-attack}</p>
          */
         @NameInMap("RuleNameMds")
         public String ruleNameMds;
 
         /**
          * <p>The log source of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_siem_aegis_proc</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
          * <p>The status of the predefined rule. Valid values:</p>
-         * <br>
-         * <p>*   0: The rule is in the initial state.</p>
-         * <p>*   100: The rule takes effect.</p>
+         * <ul>
+         * <li>0: The rule is in the initial state.</li>
+         * <li>100: The rule takes effect.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
-         * <p>The threat level. Valid values:</p>
-         * <br>
-         * <p>*   serious: high</p>
-         * <p>*   suspicious: medium</p>
-         * <p>*   remind: low</p>
+         * <p>The risk level. Valid values:</p>
+         * <ul>
+         * <li>serious: high.</li>
+         * <li>suspicious: medium.</li>
+         * <li>remind: low.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>remind</p>
          */
         @NameInMap("ThreatLevel")
         public String threatLevel;

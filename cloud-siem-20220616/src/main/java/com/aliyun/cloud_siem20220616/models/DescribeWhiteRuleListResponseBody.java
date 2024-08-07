@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class DescribeWhiteRuleListResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The data returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("Data")
     public DescribeWhiteRuleListResponseBodyData data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,18 +101,27 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
     public static class DescribeWhiteRuleListResponseBodyDataPageInfo extends TeaModel {
         /**
          * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;
@@ -135,15 +160,22 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
     public static class DescribeWhiteRuleListResponseBodyDataResponseDataExpressionConditionsLeft extends TeaModel {
         /**
          * <p>Indicates whether the left operand is a variable. Valid values:</p>
-         * <br>
-         * <p>*   true: variable</p>
-         * <p>*   false: constant</p>
+         * <ul>
+         * <li>true: variable.</li>
+         * <li>false: constant.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsVar")
         public Boolean isVar;
 
         /**
-         * <p>The remarks on the left operand.</p>
+         * <p>The remarks on the right operand.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>length</p>
          */
         @NameInMap("Modifier")
         public String modifier;
@@ -156,15 +188,22 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the left operand is a constant. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The variable of the left operand.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip</p>
          */
         @NameInMap("Value")
         public String value;
@@ -219,15 +258,22 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
     public static class DescribeWhiteRuleListResponseBodyDataResponseDataExpressionConditionsRight extends TeaModel {
         /**
          * <p>Indicates whether the right operand is a constant or a runtime variable that is obtained from the runtime context. Valid values:</p>
-         * <br>
-         * <p>*   true: runtime variable</p>
-         * <p>*   false: constant</p>
+         * <ul>
+         * <li>true: runtime variable.</li>
+         * <li>false: constant.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsVar")
         public Boolean isVar;
 
         /**
          * <p>The remarks on the right operand.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>length</p>
          */
         @NameInMap("Modifier")
         public String modifier;
@@ -240,12 +286,18 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
 
         /**
          * <p>The data type of the right operand.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>String</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The right operand.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("Value")
         public String value;
@@ -300,15 +352,22 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
     public static class DescribeWhiteRuleListResponseBodyDataResponseDataExpressionConditions extends TeaModel {
         /**
          * <p>Indicates whether the result is inverted. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsNot")
         public Boolean isNot;
 
         /**
          * <p>The ID of the rule condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ItemId")
         public Integer itemId;
@@ -321,13 +380,17 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
 
         /**
          * <p>The logical operator of the rule condition. Valid values:</p>
-         * <br>
-         * <p>*   `=`: equals to</p>
-         * <p>*   `<>`: does not equal to</p>
-         * <p>*   `in`: contains</p>
-         * <p>*   `not in`: does not contain</p>
-         * <p>*   `REGEXP`: matches a regular expression</p>
-         * <p>*   `NOT REGEXP`: does not match a regular expression</p>
+         * <ul>
+         * <li><code>=</code>: equals to.</li>
+         * <li><code>&lt;&gt;</code>: does not equal to.</li>
+         * <li><code>in</code>: contains.</li>
+         * <li><code>not in</code>: does not contain.</li>
+         * <li><code>REGEXP</code>: matches a regular expression.</li>
+         * <li><code>NOT REGEXP</code>: does not match a regular expression.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>REGEXP</p>
          */
         @NameInMap("Operator")
         public String operator;
@@ -394,6 +457,9 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
 
         /**
          * <p>The logical relationships among the rule conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(1&amp;2)|(3&amp;4)</p>
          */
         @NameInMap("Logic")
         public String logic;
@@ -424,81 +490,121 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
     public static class DescribeWhiteRuleListResponseBodyDataResponseData extends TeaModel {
         /**
          * <p>The alert name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Try SNMP weak password</p>
          */
         @NameInMap("AlertName")
         public String alertName;
 
         /**
          * <p>The ID of the alert name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Try SNMP weak password</p>
          */
         @NameInMap("AlertNameId")
         public String alertNameId;
 
         /**
          * <p>The alert type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scan</p>
          */
         @NameInMap("AlertType")
         public String alertType;
 
         /**
          * <p>The ID of the alert type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scan</p>
          */
         @NameInMap("AlertTypeId")
         public String alertTypeId;
 
         /**
          * <p>The UUID of the alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas_71e24437d2797ce8fc59692905a4****</p>
          */
         @NameInMap("AlertUuid")
         public String alertUuid;
 
         /**
          * <p>The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         @NameInMap("Aliuid")
         public Long aliuid;
 
         /**
          * <p>The conditions in the rule. The value is a JSON array.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;conditions&quot;:[{&quot;isNot&quot;:false,&quot;itemId&quot;:0,&quot;left&quot;:{&quot;value&quot;:&quot;host_uuid.host_name&quot;},&quot;operator&quot;:&quot;containsString&quot;,&quot;right&quot;:{&quot;value&quot;:&quot;Cloud-MCH&quot;}}]}]</p>
          */
         @NameInMap("Expression")
         public DescribeWhiteRuleListResponseBodyDataResponseDataExpression expression;
 
         /**
          * <p>The time when the whitelist rule was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-06 16:37:29</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The time when the whitelist rule was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-06 16:37:29</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The ID of the whitelist rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The UUID of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
          */
         @NameInMap("IncidentUuid")
         public String incidentUuid;
 
         /**
          * <p>The status of the whitelist rule. Valid values:</p>
-         * <br>
-         * <p>*   1: enabled</p>
-         * <p>*   0: disabled</p>
+         * <ul>
+         * <li>1: enabled.</li>
+         * <li>0: disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The ID of the Alibaba Cloud account that is used to create the whitelist rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>176555323***</p>
          */
         @NameInMap("SubAliuid")
         public Long subAliuid;

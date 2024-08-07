@@ -6,31 +6,48 @@ import com.aliyun.tea.*;
 public class ListDataSourceLogsRequest extends TeaModel {
     /**
      * <p>The ID of the cloud account.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123xxxxxx</p>
      */
     @NameInMap("AccountId")
     public String accountId;
 
     /**
      * <p>The code that is used for multi-cloud environments. Valid values:</p>
-     * <br>
-     * <p>*   qcloud: Tencent Cloud</p>
-     * <p>*   aliyun: Alibaba Cloud</p>
-     * <p>*   hcloud: Huawei Cloud</p>
+     * <ul>
+     * <li>qcloud: Tencent Cloud</li>
+     * <li>aliyun: Alibaba Cloud</li>
+     * <li>hcloud: Huawei Cloud</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hcloud</p>
      */
     @NameInMap("CloudCode")
     public String cloudCode;
 
     /**
      * <p>The ID of the data source. The value is obtained after the threat analysis feature calculates the MD5 hash value of a parameter.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>220ba97c9d1fdb0b9c7e8c7ca328d7ea</p>
      */
     @NameInMap("DataSourceInstanceId")
     public String dataSourceInstanceId;
 
     /**
      * <p>The data management center of the threat analysis feature. Specify this parameter based on the region where your assets reside. Valid values:</p>
-     * <br>
-     * <p>*   cn-hangzhou: Your assets reside in regions inside China.</p>
-     * <p>*   ap-southeast-1: Your assets reside in regions outside China.</p>
+     * <ul>
+     * <li>cn-hangzhou: Your assets reside in regions inside China.</li>
+     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

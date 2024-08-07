@@ -12,6 +12,9 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
     public static class DescribeDataSourceInstanceResponseBodyDataDataSourceInstanceParams extends TeaModel {
         /**
          * <p>The code of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>region_code</p>
          */
         @NameInMap("ParaCode")
         public String paraCode;
 
         /**
          * <p>The value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-guangzhou</p>
          */
         @NameInMap("ParaValue")
         public String paraValue;
@@ -76,22 +85,32 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
     public static class DescribeDataSourceInstanceResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123xxxxxxx</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
          * <p>The code of the cloud service provider. Valid values:</p>
-         * <br>
-         * <p>*   qcloud: Tencent Cloud</p>
-         * <p>*   aliyun: Alibaba Cloud</p>
-         * <p>*   hcloud: Huawei Cloud</p>
+         * <ul>
+         * <li>qcloud: Tencent Cloud</li>
+         * <li>aliyun: Alibaba Cloud</li>
+         * <li>hcloud: Huawei Cloud</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>hcloud</p>
          */
         @NameInMap("CloudCode")
         public String cloudCode;
 
         /**
          * <p>The ID of the data source. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>220ba97c9d1fdb0b9c7e8c7ca328d7ea</p>
          */
         @NameInMap("DataSourceInstanceId")
         public String dataSourceInstanceId;

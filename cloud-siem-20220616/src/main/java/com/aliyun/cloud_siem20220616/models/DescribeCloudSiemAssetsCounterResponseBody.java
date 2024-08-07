@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class DescribeCloudSiemAssetsCounterResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The data returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeCloudSiemAssetsCounterResponseBodyData> data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,19 +101,26 @@ public class DescribeCloudSiemAssetsCounterResponseBody extends TeaModel {
     public static class DescribeCloudSiemAssetsCounterResponseBodyData extends TeaModel {
         /**
          * <p>The number of assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AssetNum")
         public Integer assetNum;
 
         /**
          * <p>The type of the asset. Valid values:</p>
-         * <br>
-         * <p>*   ip</p>
-         * <p>*   domain</p>
-         * <p>*   url</p>
-         * <p>*   process</p>
-         * <p>*   file</p>
-         * <p>*   host</p>
+         * <ul>
+         * <li>ip</li>
+         * <li>domain</li>
+         * <li>url</li>
+         * <li>process</li>
+         * <li>file</li>
+         * <li>host</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>domain</p>
          */
         @NameInMap("AssetType")
         public String assetType;

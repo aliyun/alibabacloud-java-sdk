@@ -6,131 +6,211 @@ import com.aliyun.tea.*;
 public class PostCustomizeRuleRequest extends TeaModel {
     /**
      * <p>The risk type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WEBSHELL</p>
      */
     @NameInMap("AlertType")
     public String alertType;
 
     /**
      * <p>The internal code of the risk type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>${siem_rule_type_process_abnormal_command}</p>
      */
     @NameInMap("AlertTypeMds")
     public String alertTypeMds;
 
+    /**
+     * <p>att&amp;ck.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>T1595.002 Vulnerability Scanning</p>
+     */
     @NameInMap("AttCk")
     public String attCk;
 
     /**
      * <p>The extended information about event generation. If eventTransferType is set to allToSingle, the value of this parameter indicates the length and unit of the alert aggregation window.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;time&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;MINUTE&quot;}</p>
      */
     @NameInMap("EventTransferExt")
     public String eventTransferExt;
 
     /**
      * <p>Specifies whether to convert an alert to an event. Valid values:</p>
-     * <br>
-     * <p>*   0: no</p>
-     * <p>*   1: yes</p>
+     * <ul>
+     * <li>0: no</li>
+     * <li>1: yes</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("EventTransferSwitch")
     public Integer eventTransferSwitch;
 
     /**
      * <p>The event generation method. Valid values:</p>
-     * <br>
-     * <p>*   default: The default method is used.</p>
-     * <p>*   singleToSingle: The system generates an event for each alert.</p>
-     * <p>*   allToSingle: The system generates an event for alerts within a period of time.</p>
+     * <ul>
+     * <li>default: The default method is used.</li>
+     * <li>singleToSingle: The system generates an event for each alert.</li>
+     * <li>allToSingle: The system generates an event for alerts within a period of time.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>allToSingle</p>
      */
     @NameInMap("EventTransferType")
     public String eventTransferType;
 
     /**
      * <p>The ID of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456789</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The log source of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cloud_siem_aegis_sas_alert</p>
      */
     @NameInMap("LogSource")
     public String logSource;
 
     /**
      * <p>The internal code of the log source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>${sas.cloudsiem.prod.cloud_siem_aegis_sas_alert}</p>
      */
     @NameInMap("LogSourceMds")
     public String logSourceMds;
 
     /**
      * <p>The log type of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALERT_ACTIVITY</p>
      */
     @NameInMap("LogType")
     public String logType;
 
     /**
      * <p>The internal code of the log type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>${security_event_config.event_name.webshellName_clientav}</p>
      */
     @NameInMap("LogTypeMds")
     public String logTypeMds;
 
     /**
      * <p>The window length of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;time&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;HOUR&quot;}</p>
      */
     @NameInMap("QueryCycle")
     public String queryCycle;
 
     /**
      * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
-     * <br>
-     * <p>*   cn-hangzhou: Your assets reside in regions in China.</p>
-     * <p>*   ap-southeast-1: Your assets reside in regions outside China.</p>
+     * <ul>
+     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
+     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the account that you switch from the management account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>113091674488****</p>
+     */
     @NameInMap("RoleFor")
     public Long roleFor;
 
+    /**
+     * <p>The type of the view. Valid values:</p>
+     * <ul>
+     * <li>0: the current Alibaba Cloud account</li>
+     * <li>1: the global account</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RoleType")
     public Integer roleType;
 
     /**
      * <p>The query condition of the rule. The value is in the JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[[{&quot;not&quot;:false,&quot;left&quot;:&quot;alert_name&quot;,&quot;operator&quot;:&quot;=&quot;,&quot;right&quot;:&quot;WEBSHELL&quot;}]]</p>
      */
     @NameInMap("RuleCondition")
     public String ruleCondition;
 
     /**
      * <p>The description of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>this rule is for waf scan</p>
      */
     @NameInMap("RuleDesc")
     public String ruleDesc;
 
     /**
      * <p>The log aggregation field of the rule. The value is a JSON string.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;asset_id&quot;]</p>
      */
     @NameInMap("RuleGroup")
     public String ruleGroup;
 
     /**
      * <p>The name of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>waf_scan</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
 
     /**
      * <p>The threshold configuration of the rule. The value is in the JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;aggregateFunction&quot;:&quot;count&quot;,&quot;aggregateFunctionName&quot;:&quot;count&quot;,&quot;field&quot;:&quot;activity_name&quot;,&quot;operator&quot;:&quot;&lt;=&quot;,&quot;value&quot;:1}</p>
      */
     @NameInMap("RuleThreshold")
     public String ruleThreshold;
 
     /**
      * <p>The risk level. Valid values:</p>
-     * <br>
-     * <p>*   serious: high</p>
-     * <p>*   suspicious: medium</p>
-     * <p>*   remind: low</p>
+     * <ul>
+     * <li>serious: high</li>
+     * <li>suspicious: medium</li>
+     * <li>remind: low</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>remind</p>
      */
     @NameInMap("ThreatLevel")
     public String threatLevel;
