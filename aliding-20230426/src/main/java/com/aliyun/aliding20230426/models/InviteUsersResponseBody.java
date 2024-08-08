@@ -20,6 +20,12 @@ public class InviteUsersResponseBody extends TeaModel {
     @NameInMap("success")
     public Boolean success;
 
+    @NameInMap("vendorRequestId")
+    public String vendorRequestId;
+
+    @NameInMap("vendorType")
+    public String vendorType;
+
     public static InviteUsersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         InviteUsersResponseBody self = new InviteUsersResponseBody();
         return TeaModel.build(map, self);
@@ -39,6 +45,22 @@ public class InviteUsersResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public InviteUsersResponseBody setVendorRequestId(String vendorRequestId) {
+        this.vendorRequestId = vendorRequestId;
+        return this;
+    }
+    public String getVendorRequestId() {
+        return this.vendorRequestId;
+    }
+
+    public InviteUsersResponseBody setVendorType(String vendorType) {
+        this.vendorType = vendorType;
+        return this;
+    }
+    public String getVendorType() {
+        return this.vendorType;
     }
 
 }
