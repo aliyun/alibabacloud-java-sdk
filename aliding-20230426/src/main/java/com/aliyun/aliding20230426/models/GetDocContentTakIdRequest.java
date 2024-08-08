@@ -13,6 +13,9 @@ public class GetDocContentTakIdRequest extends TeaModel {
     @NameInMap("DentryUuid")
     public String dentryUuid;
 
+    @NameInMap("GenerateCp")
+    public Boolean generateCp;
+
     /**
      * <strong>example:</strong>
      * <p>markdown</p>
@@ -34,6 +37,14 @@ public class GetDocContentTakIdRequest extends TeaModel {
     }
     public String getDentryUuid() {
         return this.dentryUuid;
+    }
+
+    public GetDocContentTakIdRequest setGenerateCp(Boolean generateCp) {
+        this.generateCp = generateCp;
+        return this;
+    }
+    public Boolean getGenerateCp() {
+        return this.generateCp;
     }
 
     public GetDocContentTakIdRequest setTargetFormat(String targetFormat) {

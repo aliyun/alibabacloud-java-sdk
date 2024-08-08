@@ -1548,6 +1548,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>提交文件</p>
+     * 
+     * @param tmpReq CommitFileRequest
+     * @param tmpHeader CommitFileHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CommitFileResponse
+     */
+    public CommitFileResponse commitFileWithOptions(CommitFileRequest tmpReq, CommitFileHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CommitFileShrinkRequest request = new CommitFileShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        CommitFileShrinkHeaders headers = new CommitFileShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.option)) {
+            request.optionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.option, "Option", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantContext)) {
+            request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.optionShrink)) {
+            body.put("Option", request.optionShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentDentryUuid)) {
+            body.put("ParentDentryUuid", request.parentDentryUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
+            body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uploadKey)) {
+            body.put("UploadKey", request.uploadKey);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CommitFile"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dingtalk/v1/documents/commitFile"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CommitFileResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交文件</p>
+     * 
+     * @param request CommitFileRequest
+     * @return CommitFileResponse
+     */
+    public CommitFileResponse commitFile(CommitFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        CommitFileHeaders headers = new CommitFileHeaders();
+        return this.commitFileWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>发布钉钉投放活动</p>
      * 
      * @param tmpReq CreateDeliveryPlanRequest
@@ -5504,6 +5592,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("DentryUuid", request.dentryUuid);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.generateCp)) {
+            body.put("GenerateCp", request.generateCp);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.targetFormat)) {
             body.put("TargetFormat", request.targetFormat);
         }
@@ -5776,6 +5868,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         GetFileDownloadInfoHeaders headers = new GetFileDownloadInfoHeaders();
         return this.getFileDownloadInfoWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文件上传信息</p>
+     * 
+     * @param tmpReq GetFileUploadInfoRequest
+     * @param tmpHeader GetFileUploadInfoHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetFileUploadInfoResponse
+     */
+    public GetFileUploadInfoResponse getFileUploadInfoWithOptions(GetFileUploadInfoRequest tmpReq, GetFileUploadInfoHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetFileUploadInfoShrinkRequest request = new GetFileUploadInfoShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        GetFileUploadInfoShrinkHeaders headers = new GetFileUploadInfoShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.option)) {
+            request.optionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.option, "Option", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantContext)) {
+            request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.optionShrink)) {
+            body.put("Option", request.optionShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentDentryUuid)) {
+            body.put("ParentDentryUuid", request.parentDentryUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.protocol)) {
+            body.put("Protocol", request.protocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
+            body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFileUploadInfo"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dingtalk/v1/documents/getFileUploadInfo"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFileUploadInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文件上传信息</p>
+     * 
+     * @param request GetFileUploadInfoRequest
+     * @return GetFileUploadInfoResponse
+     */
+    public GetFileUploadInfoResponse getFileUploadInfo(GetFileUploadInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetFileUploadInfoHeaders headers = new GetFileUploadInfoHeaders();
+        return this.getFileUploadInfoWithOptions(request, headers, runtime);
     }
 
     /**
@@ -6782,6 +6958,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         GetMineWorkspaceHeaders headers = new GetMineWorkspaceHeaders();
         return this.getMineWorkspaceWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文件分片上传信息</p>
+     * 
+     * @param tmpReq GetMultipartFileUploadInfosRequest
+     * @param tmpHeader GetMultipartFileUploadInfosHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMultipartFileUploadInfosResponse
+     */
+    public GetMultipartFileUploadInfosResponse getMultipartFileUploadInfosWithOptions(GetMultipartFileUploadInfosRequest tmpReq, GetMultipartFileUploadInfosHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetMultipartFileUploadInfosShrinkRequest request = new GetMultipartFileUploadInfosShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        GetMultipartFileUploadInfosShrinkHeaders headers = new GetMultipartFileUploadInfosShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.option)) {
+            request.optionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.option, "Option", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.partNumbers)) {
+            request.partNumbersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.partNumbers, "PartNumbers", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantContext)) {
+            request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.optionShrink)) {
+            body.put("Option", request.optionShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.partNumbersShrink)) {
+            body.put("PartNumbers", request.partNumbersShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
+            body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uploadKey)) {
+            body.put("UploadKey", request.uploadKey);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMultipartFileUploadInfos"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/GetMultipartFileUploadInfos"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMultipartFileUploadInfosResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文件分片上传信息</p>
+     * 
+     * @param request GetMultipartFileUploadInfosRequest
+     * @return GetMultipartFileUploadInfosResponse
+     */
+    public GetMultipartFileUploadInfosResponse getMultipartFileUploadInfos(GetMultipartFileUploadInfosRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetMultipartFileUploadInfosHeaders headers = new GetMultipartFileUploadInfosHeaders();
+        return this.getMultipartFileUploadInfosWithOptions(request, headers, runtime);
     }
 
     /**
@@ -7832,6 +8096,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取用户忙闲信息</p>
+     * 
+     * @param tmpReq GetScheduleRequest
+     * @param tmpHeader GetScheduleHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetScheduleResponse
+     */
+    public GetScheduleResponse getScheduleWithOptions(GetScheduleRequest tmpReq, GetScheduleHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetScheduleShrinkRequest request = new GetScheduleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        GetScheduleShrinkHeaders headers = new GetScheduleShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantContext)) {
+            request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userIds)) {
+            request.userIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userIds, "UserIds", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            body.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            body.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
+            body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userIdsShrink)) {
+            body.put("UserIds", request.userIdsShrink);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSchedule"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dingtalk/v1/calendar/getSchedule"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetScheduleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取用户忙闲信息</p>
+     * 
+     * @param request GetScheduleRequest
+     * @return GetScheduleResponse
+     */
+    public GetScheduleResponse getSchedule(GetScheduleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetScheduleHeaders headers = new GetScheduleHeaders();
+        return this.getScheduleWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取工作表</p>
      * 
      * @param tmpReq GetSheetRequest
@@ -8636,6 +8984,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         GrantHonorHeaders headers = new GrantHonorHeaders();
         return this.grantHonorWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>初始化文件分片上传</p>
+     * 
+     * @param tmpReq InitMultipartFileUploadRequest
+     * @param tmpHeader InitMultipartFileUploadHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return InitMultipartFileUploadResponse
+     */
+    public InitMultipartFileUploadResponse initMultipartFileUploadWithOptions(InitMultipartFileUploadRequest tmpReq, InitMultipartFileUploadHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        InitMultipartFileUploadShrinkRequest request = new InitMultipartFileUploadShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        InitMultipartFileUploadShrinkHeaders headers = new InitMultipartFileUploadShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.option)) {
+            request.optionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.option, "Option", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantContext)) {
+            request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.optionShrink)) {
+            body.put("Option", request.optionShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentDentryUuid)) {
+            body.put("ParentDentryUuid", request.parentDentryUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
+            body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InitMultipartFileUpload"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dingtalk/v1/documents/initMultipartFileUpload"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InitMultipartFileUploadResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>初始化文件分片上传</p>
+     * 
+     * @param request InitMultipartFileUploadRequest
+     * @return InitMultipartFileUploadResponse
+     */
+    public InitMultipartFileUploadResponse initMultipartFileUpload(InitMultipartFileUploadRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        InitMultipartFileUploadHeaders headers = new InitMultipartFileUploadHeaders();
+        return this.initMultipartFileUploadWithOptions(request, headers, runtime);
     }
 
     /**
