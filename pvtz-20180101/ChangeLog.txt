@@ -1,3 +1,7 @@
+2024-08-08 Version: 1.5.0
+- Support API DescribeUserServiceStatus.
+
+
 2024-08-01 Version: 1.4.0
 - Support API AddCustomLine.
 - Support API ChangeZoneDnsGroup.
