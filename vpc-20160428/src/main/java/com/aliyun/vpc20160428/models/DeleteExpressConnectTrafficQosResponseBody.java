@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteExpressConnectTrafficQosResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>606998F0-B94D-48FE-8316-ACA81BB230DA</p>
      */

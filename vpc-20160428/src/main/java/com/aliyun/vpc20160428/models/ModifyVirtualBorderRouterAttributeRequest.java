@@ -200,6 +200,10 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("SitelinkEnable")
     public Boolean sitelinkEnable;
 

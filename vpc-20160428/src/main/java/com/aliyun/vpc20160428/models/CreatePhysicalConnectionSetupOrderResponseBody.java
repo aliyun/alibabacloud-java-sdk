@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePhysicalConnectionSetupOrderResponseBody extends TeaModel {
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>202844382740728</p>
@@ -23,7 +23,7 @@ public class CreatePhysicalConnectionSetupOrderResponseBody extends TeaModel {
     public String physicalConnectionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F7A6301A-64BA-41EC-8284-8F4838C15D1F</p>

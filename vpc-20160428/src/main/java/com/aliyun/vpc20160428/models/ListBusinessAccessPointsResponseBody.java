@@ -54,7 +54,7 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
          * <p>The name of the access point.</p>
          * 
          * <strong>example:</strong>
-         * <p>美国-弗吉尼亚-C</p>
+         * <p>hangzhou-xs-B</p>
          */
         @NameInMap("AccessPointName")
         public String accessPointName;

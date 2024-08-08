@@ -93,8 +93,8 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
 
     public static class DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeTagsTags extends TeaModel {
         /**
-         * <p>The key of tag N added to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>It can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The key of tag N added to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -103,8 +103,8 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N added to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-         * <p>It can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The value of tag N added to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>
@@ -156,7 +156,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
 
     public static class DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType extends TeaModel {
         /**
-         * <p>The ID of the access point.</p>
+         * <p>The ID of the Express Connect circuit.</p>
          * 
          * <strong>example:</strong>
          * <p>ap-cn-hangzhou-finance-yh-E</p>
@@ -177,7 +177,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
          * <p>The information about the data center and rack.</p>
          * 
          * <strong>example:</strong>
-         * <p>浙江省杭州市XX区XX镇XX路10号, XX机房, ET135ET135-XX-2包间, JXX机柜,  position30</p>
+         * <p>Position 30, Server Rack JXX, Booth ET135ET135-XX-2, Room XX, Building 10, XX Road, XX Town, XX District, Hangzhou, Zhejiang Province</p>
          */
         @NameInMap("AdDetailLocation")
         public String adDetailLocation;
@@ -193,7 +193,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
 
         /**
          * <p>The maximum bandwidth of the Express Connect circuit.</p>
-         * <p>Unit: Gbit/s.</p>
+         * <p>Unit: Mbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -204,9 +204,9 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         /**
          * <p>The status of the Express Connect circuit. Valid values:</p>
          * <ul>
-         * <li><strong>Normal</strong></li>
-         * <li><strong>FinancialLocked</strong></li>
-         * <li><strong>SecurityLocked</strong></li>
+         * <li><strong>Normal</strong>: enabled</li>
+         * <li><strong>FinancialLocked</strong>: locked due to overdue payments</li>
+         * <li><strong>SecurityLocked</strong>: locked for security reasons</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -253,7 +253,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The time when the Express Connect circuit is enabled.</p>
+         * <p>The time when the Express Connect circuit was enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-08-24T07:33:18Z</p>
@@ -272,7 +272,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
 
         /**
          * <p>The estimated maximum bandwidth of the shared Express Connect circuit. The estimated bandwidth takes effect after you complete the payment.</p>
-         * <p><strong>M</strong> indicates Mbit/s and <strong>G</strong> indicates Gbit/s.</p>
+         * <p>Unit: <strong>M</strong> (Mbit/s) and <strong>G</strong> (Gbit/s).</p>
          * 
          * <strong>example:</strong>
          * <p>50M</p>
@@ -313,13 +313,13 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         /**
          * <p>The status of the letter of authorization (LOA). Valid values:</p>
          * <ul>
-         * <li><strong>Applying</strong></li>
-         * <li><strong>Accept</strong></li>
-         * <li><strong>Available</strong></li>
-         * <li><strong>Rejected</strong></li>
-         * <li><strong>Completing</strong></li>
-         * <li><strong>Complete</strong></li>
-         * <li><strong>Deleted</strong></li>
+         * <li><strong>Applying</strong>: The LOA is pending for approval.</li>
+         * <li><strong>Accept</strong>: The LOA is approved.</li>
+         * <li><strong>Available</strong>: The LOA is available.</li>
+         * <li><strong>Rejected</strong>: The LOA is rejected.</li>
+         * <li><strong>Completing</strong>: The Express Connect circuit is under construction.</li>
+         * <li><strong>Complete</strong>: The Express Connect circuit is installed.</li>
+         * <li><strong>Deleted</strong>: The LOA is deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -338,7 +338,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The payer for the shared Express Connect circuit. Valid values:</p>
+         * <p>The payer for the hosted connection. Valid values:</p>
          * <ul>
          * <li><strong>PayByPhysicalConnectionOwner</strong>: The partner pays for the shared Express Connect circuit.</li>
          * <li><strong>PayByVirtualPhysicalConnectionOwner</strong>: The tenant pays for the shared Express Connect circuit.</li>
@@ -351,7 +351,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         public String orderMode;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the shared Express Connect circuit belongs.</p>
+         * <p>The ID of the Alibaba Cloud account to which the parent Express Connect circuit belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>283117732402483989</p>
@@ -360,7 +360,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         public Long parentPhysicalConnectionAliUid;
 
         /**
-         * <p>The ID of the Express Connect circuit that is used to create the hosted connection.</p>
+         * <p>The ID of the parent Express Connect circuit.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-bp1ciz7ekd2grn1as****</p>
@@ -396,7 +396,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         public String portNumber;
 
         /**
-         * <p>The port type. Valid values:</p>
+         * <p>The port type of the Express Connect circuit. Valid values:</p>
          * <ul>
          * <li><strong>100Base-T</strong>: 100 Mbit/s copper Ethernet port</li>
          * <li><strong>1000Base-T</strong>: 1,000 Mbit/s copper Ethernet port</li>
@@ -407,7 +407,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
          * <li><strong>100GBase-LR</strong>: 100,000 Mbit/s single-mode optical port</li>
          * </ul>
          * <blockquote>
-         * <p> To create ports of 40GBase-LR and 100GBase-LR, you must first contact your account manager.</p>
+         * <p>Whether 40GBase-LR and 100GBase-LR ports can be created depends on resource supplies. For more information, contact your account manager.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -429,11 +429,17 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         @NameInMap("ProductType")
         public String productType;
 
+        /**
+         * <p>The ID of the QoS policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qos-bp10s3szn8rgnxuw7****</p>
+         */
         @NameInMap("QosId")
         public String qosId;
 
         /**
-         * <p>The ID of the redundant Express Connect circuit.</p>
+         * <p>The ID of the standby Express Connect circuit.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-119mfjzm****</p>
@@ -462,7 +468,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
 
         /**
          * <p>The type of the pending order.</p>
-         * <p>If the value is set to <strong>RENEW</strong>, it indicates that the order is placed for service renewal.</p>
+         * <p>If the value is <strong>RENEW</strong>, it indicates that the order is placed for service renewal.</p>
          * 
          * <strong>example:</strong>
          * <p>RENEW</p>
@@ -471,7 +477,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         public String reservationOrderType;
 
         /**
-         * <p>The ID of the resource group to which the ACL belongs.</p>
+         * <p>The resource group ID to which the instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmwu3k52prgdi</p>
@@ -492,17 +498,17 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         /**
          * <p>The status of the Express Connect circuit. Valid values:</p>
          * <ul>
-         * <li><strong>Initial</strong>: The application is under review.</li>
-         * <li><strong>Approved</strong>: The application is approved.</li>
-         * <li><strong>Allocating</strong>: The system is allocating resources.</li>
-         * <li><strong>Allocated</strong>: The Express Connect circuit is under construction.</li>
-         * <li><strong>Confirmed</strong>: The Express Connect circuit is pending for user confirmation.</li>
-         * <li><strong>Enabled</strong>: The Express Connect circuit is enabled.</li>
-         * <li><strong>Rejected</strong>: The application is rejected.</li>
-         * <li><strong>Canceled</strong>: The application is canceled.</li>
-         * <li><strong>Allocation Failed</strong>: The system failed to allocate resources.</li>
-         * <li><strong>Terminating</strong>: The Express Connect circuit is being disabled.</li>
-         * <li><strong>Terminated</strong>: The Express Connect circuit is disabled.</li>
+         * <li><strong>Initial</strong></li>
+         * <li><strong>Approved</strong></li>
+         * <li><strong>Allocating</strong></li>
+         * <li><strong>Allocated</strong></li>
+         * <li><strong>Confirmed</strong></li>
+         * <li><strong>Enabled</strong></li>
+         * <li><strong>Rejected</strong></li>
+         * <li><strong>Canceled</strong></li>
+         * <li><strong>Allocation Failed</strong></li>
+         * <li><strong>Terminating</strong></li>
+         * <li><strong>Terminated</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -512,7 +518,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tag list.</p>
+         * <p>The tags that are added to the cluster.</p>
          */
         @NameInMap("Tags")
         public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeTags tags;
@@ -527,7 +533,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The number of hosted connections that are established over the Express Connect circuit.</p>
+         * <p>The number of Express Connect circuits that are established.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -545,7 +551,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         public String vlanId;
 
         /**
-         * <p>The status of the hosted connection. Valid values:</p>
+         * <p>The status of the shared Express Connect circuit. Valid values:</p>
          * <ul>
          * <li><strong>Confirmed</strong></li>
          * <li><strong>UnConfirmed</strong></li>

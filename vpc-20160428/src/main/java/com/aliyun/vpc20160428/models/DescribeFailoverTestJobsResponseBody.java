@@ -11,10 +11,15 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <p>The list of failover tests.</p>
+     */
     @NameInMap("FailoverTestJobList")
     public java.util.List<DescribeFailoverTestJobsResponseBodyFailoverTestJobList> failoverTestJobList;
 
     /**
+     * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -97,6 +102,9 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
 
     public static class DescribeFailoverTestJobsResponseBodyFailoverTestJobList extends TeaModel {
         /**
+         * <p>The description of the failover test.</p>
+         * <p>The description must be 0 to 256 characters in length and cannot start with \<em>\<em>http:// <strong>or</strong> https://\</em>\</em>.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -104,6 +112,8 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The duration of the failover test. Unit: minutes. Valid values: <strong>1 to 4320</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -111,6 +121,8 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
         public String jobDuration;
 
         /**
+         * <p>The ID of the failover test.</p>
+         * 
          * <strong>example:</strong>
          * <p>ftj-xxxxxxxxx</p>
          */
@@ -118,6 +130,12 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>Indicates whether the failover test is performed immediately. Valid values:</p>
+         * <ul>
+         * <li><strong>StartNow</strong></li>
+         * <li><strong>StartLater</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>StartNow</p>
          */
@@ -125,16 +143,24 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
         public String jobType;
 
         /**
+         * <p>The name of the failover test.</p>
+         * <p>The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The IDs of the failover test resources.</p>
+         */
         @NameInMap("ResourceId")
         public java.util.List<String> resourceId;
 
         /**
+         * <p>The type of the failover test resource. Only <strong>PHYSICALCONNECTION</strong> is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>PHYSICALCONNECTION</p>
          */
@@ -149,6 +175,15 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The status of the failover test. Valid values:</p>
+         * <ul>
+         * <li><strong>Init</strong></li>
+         * <li><strong>Starting</strong></li>
+         * <li><strong>Testing</strong></li>
+         * <li><strong>Stopping</strong></li>
+         * <li><strong>Stopped</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Init</p>
          */

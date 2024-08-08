@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateExpressConnectTrafficQosRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> in each API request may be different.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
@@ -18,6 +24,9 @@ public class CreateExpressConnectTrafficQosRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The description of the QoS policy.</p>
+     * <p>The description must be 0 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>qos-test</p>
      */
@@ -25,6 +34,9 @@ public class CreateExpressConnectTrafficQosRequest extends TeaModel {
     public String qosDescription;
 
     /**
+     * <p>The name of the QoS policy.</p>
+     * <p>The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>qos-test</p>
      */
@@ -32,6 +44,8 @@ public class CreateExpressConnectTrafficQosRequest extends TeaModel {
     public String qosName;
 
     /**
+     * <p>The region ID of the QoS policy.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
