@@ -27,12 +27,176 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to create a new account or manage an existing account and apply the account baseline to the account.
-      * Accounts are created in asynchronous mode. After you create an account, you can apply the account baseline to the account. You can call the [GetEnrolledAccount API](~~GetEnrolledAccount~~) operation to view the details about the account to obtain the result of applying the account baseline to the account.
-      *
-      * @param request EnrollAccountRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return EnrollAccountResponse
+     * <b>summary</b> : 
+     * <p>账号工厂批量注册账号</p>
+     * 
+     * @param request BatchEnrollAccountsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchEnrollAccountsResponse
+     */
+    public BatchEnrollAccountsResponse batchEnrollAccountsWithOptions(BatchEnrollAccountsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accounts)) {
+            query.put("Accounts", request.accounts);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.baselineId)) {
+            query.put("BaselineId", request.baselineId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.baselineItems)) {
+            query.put("BaselineItems", request.baselineItems);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchEnrollAccounts"),
+            new TeaPair("version", "2021-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchEnrollAccountsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>账号工厂批量注册账号</p>
+     * 
+     * @param request BatchEnrollAccountsRequest
+     * @return BatchEnrollAccountsResponse
+     */
+    public BatchEnrollAccountsResponse batchEnrollAccounts(BatchEnrollAccountsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.batchEnrollAccountsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建账号工厂基线</p>
+     * 
+     * @param request CreateAccountFactoryBaselineRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAccountFactoryBaselineResponse
+     */
+    public CreateAccountFactoryBaselineResponse createAccountFactoryBaselineWithOptions(CreateAccountFactoryBaselineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baselineItems)) {
+            query.put("BaselineItems", request.baselineItems);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.baselineName)) {
+            query.put("BaselineName", request.baselineName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAccountFactoryBaseline"),
+            new TeaPair("version", "2021-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAccountFactoryBaselineResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建账号工厂基线</p>
+     * 
+     * @param request CreateAccountFactoryBaselineRequest
+     * @return CreateAccountFactoryBaselineResponse
+     */
+    public CreateAccountFactoryBaselineResponse createAccountFactoryBaseline(CreateAccountFactoryBaselineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAccountFactoryBaselineWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除账号工厂基线</p>
+     * 
+     * @param request DeleteAccountFactoryBaselineRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAccountFactoryBaselineResponse
+     */
+    public DeleteAccountFactoryBaselineResponse deleteAccountFactoryBaselineWithOptions(DeleteAccountFactoryBaselineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baselineId)) {
+            query.put("BaselineId", request.baselineId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAccountFactoryBaseline"),
+            new TeaPair("version", "2021-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAccountFactoryBaselineResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除账号工厂基线</p>
+     * 
+     * @param request DeleteAccountFactoryBaselineRequest
+     * @return DeleteAccountFactoryBaselineResponse
+     */
+    public DeleteAccountFactoryBaselineResponse deleteAccountFactoryBaseline(DeleteAccountFactoryBaselineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAccountFactoryBaselineWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can call this API operation to create a new account or manage an existing account and apply the account baseline to the account.
+     * Accounts are created in asynchronous mode. After you create an account, you can apply the account baseline to the account. You can call the <a href="~~GetEnrolledAccount~~">GetEnrolledAccount API</a> operation to view the details about the account to obtain the result of applying the account baseline to the account.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enrolls an account. You can create a new account or manage an existing account in the account factory.</p>
+     * 
+     * @param request EnrollAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnrollAccountResponse
      */
     public EnrollAccountResponse enrollAccountWithOptions(EnrollAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -91,17 +255,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to create a new account or manage an existing account and apply the account baseline to the account.
-      * Accounts are created in asynchronous mode. After you create an account, you can apply the account baseline to the account. You can call the [GetEnrolledAccount API](~~GetEnrolledAccount~~) operation to view the details about the account to obtain the result of applying the account baseline to the account.
-      *
-      * @param request EnrollAccountRequest
-      * @return EnrollAccountResponse
+     * <b>description</b> :
+     * <p>You can call this API operation to create a new account or manage an existing account and apply the account baseline to the account.
+     * Accounts are created in asynchronous mode. After you create an account, you can apply the account baseline to the account. You can call the <a href="~~GetEnrolledAccount~~">GetEnrolledAccount API</a> operation to view the details about the account to obtain the result of applying the account baseline to the account.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enrolls an account. You can create a new account or manage an existing account in the account factory.</p>
+     * 
+     * @param request EnrollAccountRequest
+     * @return EnrollAccountResponse
      */
     public EnrollAccountResponse enrollAccount(EnrollAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.enrollAccountWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the details of an account factory baseline.</p>
+     * 
+     * @param request GetAccountFactoryBaselineRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAccountFactoryBaselineResponse
+     */
     public GetAccountFactoryBaselineResponse getAccountFactoryBaselineWithOptions(GetAccountFactoryBaselineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -130,11 +306,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAccountFactoryBaselineResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the details of an account factory baseline.</p>
+     * 
+     * @param request GetAccountFactoryBaselineRequest
+     * @return GetAccountFactoryBaselineResponse
+     */
     public GetAccountFactoryBaselineResponse getAccountFactoryBaseline(GetAccountFactoryBaselineRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAccountFactoryBaselineWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details about an account that is enrolled in the account factory.</p>
+     * 
+     * @param request GetEnrolledAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetEnrolledAccountResponse
+     */
     public GetEnrolledAccountResponse getEnrolledAccountWithOptions(GetEnrolledAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -163,11 +354,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetEnrolledAccountResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details about an account that is enrolled in the account factory.</p>
+     * 
+     * @param request GetEnrolledAccountRequest
+     * @return GetEnrolledAccountResponse
+     */
     public GetEnrolledAccountResponse getEnrolledAccount(GetEnrolledAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getEnrolledAccountWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>获取账号工厂基线元素列表</p>
+     * 
+     * @param request ListAccountFactoryBaselineItemsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAccountFactoryBaselineItemsResponse
+     */
+    public ListAccountFactoryBaselineItemsResponse listAccountFactoryBaselineItemsWithOptions(ListAccountFactoryBaselineItemsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.names)) {
+            query.put("Names", request.names);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versions)) {
+            query.put("Versions", request.versions);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAccountFactoryBaselineItems"),
+            new TeaPair("version", "2021-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAccountFactoryBaselineItemsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取账号工厂基线元素列表</p>
+     * 
+     * @param request ListAccountFactoryBaselineItemsRequest
+     * @return ListAccountFactoryBaselineItemsResponse
+     */
+    public ListAccountFactoryBaselineItemsResponse listAccountFactoryBaselineItems(ListAccountFactoryBaselineItemsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAccountFactoryBaselineItemsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains a list of baselines in the account factory.</p>
+     * 
+     * @param request ListAccountFactoryBaselinesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAccountFactoryBaselinesResponse
+     */
     public ListAccountFactoryBaselinesResponse listAccountFactoryBaselinesWithOptions(ListAccountFactoryBaselinesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -200,11 +470,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListAccountFactoryBaselinesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains a list of baselines in the account factory.</p>
+     * 
+     * @param request ListAccountFactoryBaselinesRequest
+     * @return ListAccountFactoryBaselinesResponse
+     */
     public ListAccountFactoryBaselinesResponse listAccountFactoryBaselines(ListAccountFactoryBaselinesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listAccountFactoryBaselinesWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of accounts that are enrolled in the account factory.</p>
+     * 
+     * @param request ListEnrolledAccountsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListEnrolledAccountsResponse
+     */
     public ListEnrolledAccountsResponse listEnrolledAccountsWithOptions(ListEnrolledAccountsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -237,8 +522,335 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListEnrolledAccountsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of accounts that are enrolled in the account factory.</p>
+     * 
+     * @param request ListEnrolledAccountsRequest
+     * @return ListEnrolledAccountsResponse
+     */
     public ListEnrolledAccountsResponse listEnrolledAccounts(ListEnrolledAccountsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listEnrolledAccountsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看治理检测定义</p>
+     * 
+     * @param request ListEvaluationMetadataRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListEvaluationMetadataResponse
+     */
+    public ListEvaluationMetadataResponse listEvaluationMetadataWithOptions(ListEvaluationMetadataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListEvaluationMetadata"),
+            new TeaPair("version", "2021-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListEvaluationMetadataResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看治理检测定义</p>
+     * 
+     * @param request ListEvaluationMetadataRequest
+     * @return ListEvaluationMetadataResponse
+     */
+    public ListEvaluationMetadataResponse listEvaluationMetadata(ListEvaluationMetadataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listEvaluationMetadataWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取云治理中心治理检测项结果详情</p>
+     * 
+     * @param request ListEvaluationMetricDetailsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListEvaluationMetricDetailsResponse
+     */
+    public ListEvaluationMetricDetailsResponse listEvaluationMetricDetailsWithOptions(ListEvaluationMetricDetailsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountId)) {
+            query.put("AccountId", request.accountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListEvaluationMetricDetails"),
+            new TeaPair("version", "2021-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListEvaluationMetricDetailsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取云治理中心治理检测项结果详情</p>
+     * 
+     * @param request ListEvaluationMetricDetailsRequest
+     * @return ListEvaluationMetricDetailsResponse
+     */
+    public ListEvaluationMetricDetailsResponse listEvaluationMetricDetails(ListEvaluationMetricDetailsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listEvaluationMetricDetailsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看检测结果</p>
+     * 
+     * @param request ListEvaluationResultsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListEvaluationResultsResponse
+     */
+    public ListEvaluationResultsResponse listEvaluationResultsWithOptions(ListEvaluationResultsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountId)) {
+            query.put("AccountId", request.accountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListEvaluationResults"),
+            new TeaPair("version", "2021-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListEvaluationResultsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看检测结果</p>
+     * 
+     * @param request ListEvaluationResultsRequest
+     * @return ListEvaluationResultsResponse
+     */
+    public ListEvaluationResultsResponse listEvaluationResults(ListEvaluationResultsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listEvaluationResultsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看治理检测定义</p>
+     * 
+     * @param request ListEvaluationScoreHistoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListEvaluationScoreHistoryResponse
+     */
+    public ListEvaluationScoreHistoryResponse listEvaluationScoreHistoryWithOptions(ListEvaluationScoreHistoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            query.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            query.put("StartDate", request.startDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListEvaluationScoreHistory"),
+            new TeaPair("version", "2021-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListEvaluationScoreHistoryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看治理检测定义</p>
+     * 
+     * @param request ListEvaluationScoreHistoryRequest
+     * @return ListEvaluationScoreHistoryResponse
+     */
+    public ListEvaluationScoreHistoryResponse listEvaluationScoreHistory(ListEvaluationScoreHistoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listEvaluationScoreHistoryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>运行云治理中心治理检测</p>
+     * 
+     * @param request RunEvaluationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RunEvaluationResponse
+     */
+    public RunEvaluationResponse runEvaluationWithOptions(RunEvaluationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountId)) {
+            query.put("AccountId", request.accountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scope)) {
+            query.put("Scope", request.scope);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RunEvaluation"),
+            new TeaPair("version", "2021-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RunEvaluationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>运行云治理中心治理检测</p>
+     * 
+     * @param request RunEvaluationRequest
+     * @return RunEvaluationResponse
+     */
+    public RunEvaluationResponse runEvaluation(RunEvaluationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.runEvaluationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新账号工厂基线</p>
+     * 
+     * @param request UpdateAccountFactoryBaselineRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAccountFactoryBaselineResponse
+     */
+    public UpdateAccountFactoryBaselineResponse updateAccountFactoryBaselineWithOptions(UpdateAccountFactoryBaselineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baselineId)) {
+            query.put("BaselineId", request.baselineId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.baselineItems)) {
+            query.put("BaselineItems", request.baselineItems);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.baselineName)) {
+            query.put("BaselineName", request.baselineName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAccountFactoryBaseline"),
+            new TeaPair("version", "2021-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAccountFactoryBaselineResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新账号工厂基线</p>
+     * 
+     * @param request UpdateAccountFactoryBaselineRequest
+     * @return UpdateAccountFactoryBaselineResponse
+     */
+    public UpdateAccountFactoryBaselineResponse updateAccountFactoryBaseline(UpdateAccountFactoryBaselineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateAccountFactoryBaselineWithOptions(request, runtime);
     }
 }

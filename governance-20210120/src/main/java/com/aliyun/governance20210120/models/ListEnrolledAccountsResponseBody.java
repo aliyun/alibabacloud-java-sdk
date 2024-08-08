@@ -12,12 +12,18 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
 
     /**
      * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAALHWGpGoYCcYMxiFfmlhvh62Xr2DzYbz/SAfc*****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>768F908D-A66A-5A5D-816C-20C93CBBFEE3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,55 +60,80 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
     public static class ListEnrolledAccountsResponseBodyEnrolledAccounts extends TeaModel {
         /**
          * <p>The account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19534534552*****</p>
          */
         @NameInMap("AccountUid")
         public Long accountUid;
 
         /**
          * <p>The baseline ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>afb-bp1durvn3lgqe28v****</p>
          */
         @NameInMap("BaselineId")
         public String baselineId;
 
         /**
          * <p>The time at which the account was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-01T02:38:27Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The display name of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestAccount</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The ID of the parent folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fd-5ESoku****</p>
          */
         @NameInMap("FolderId")
         public String folderId;
 
         /**
          * <p>The ID of the billing account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13161210500*****</p>
          */
         @NameInMap("PayerAccountUid")
         public Long payerAccountUid;
 
         /**
          * <p>The creation status of the account. Valid values:</p>
-         * <br>
-         * <p>*   Pending: The account is waiting to be created.</p>
-         * <p>*   Running: The account is being created.</p>
-         * <p>*   Finished: The account is created.</p>
-         * <p>*   Failed: The account failed to be created.</p>
-         * <p>*   Scheduling: The account is being scheduled.</p>
-         * <p>*   ScheduleFailed: The account failed to be scheduled.</p>
+         * <ul>
+         * <li>Pending: The account is waiting to be created.</li>
+         * <li>Running: The account is being created.</li>
+         * <li>Finished: The account is created.</li>
+         * <li>Failed: The account failed to be created.</li>
+         * <li>Scheduling: The account is being scheduled.</li>
+         * <li>ScheduleFailed: The account failed to be scheduled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The time when the information about the account was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-01T02:38:27Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

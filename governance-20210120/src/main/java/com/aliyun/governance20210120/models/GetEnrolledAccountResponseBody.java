@@ -6,94 +6,138 @@ import com.aliyun.tea.*;
 public class GetEnrolledAccountResponseBody extends TeaModel {
     /**
      * <p>The account ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12868156179*****</p>
      */
     @NameInMap("AccountUid")
     public Long accountUid;
 
     /**
-     * <p>The ID of the baseline that was applied to the account.</p>
+     * <p>The ID of the baseline that is implemented.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>afb-bp1adadfadsf***</p>
      */
     @NameInMap("BaselineId")
     public String baselineId;
 
+    /**
+     * <p>An array that contains baseline items.</p>
+     */
     @NameInMap("BaselineItems")
     public java.util.List<GetEnrolledAccountResponseBodyBaselineItems> baselineItems;
 
     /**
-     * <p>The time at which the account was created.</p>
+     * <p>The time when the account was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-11-01T02:38:27Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
      * <p>The display name of the account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-account</p>
      */
     @NameInMap("DisplayName")
     public String displayName;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
+     * <blockquote>
+     * <p> This parameter is returned if the value of <code>Status</code> is <code>Failed</code> or <code>ScheduleFailed</code>.</p>
+     * </blockquote>
      */
     @NameInMap("ErrorInfo")
     public GetEnrolledAccountResponseBodyErrorInfo errorInfo;
 
     /**
      * <p>The ID of the parent folder.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fd-5ESoku****</p>
      */
     @NameInMap("FolderId")
     public String folderId;
 
     /**
-     * <p>Indicates whether the account was initialized.</p>
+     * <p>Indicates whether the initialization is complete. Valid values:</p>
+     * <ul>
+     * <li>false</li>
+     * <li>true</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Initialized")
     public Boolean initialized;
 
     /**
-     * <p>The input parameters that are used when you enrolled the account.</p>
+     * <p>The input parameters that are used when the account was registered.</p>
      */
     @NameInMap("Inputs")
     public GetEnrolledAccountResponseBodyInputs inputs;
 
     /**
-     * <p>The ID of the master account to which the account belongs.</p>
+     * <p>The ID of the management account of the resource directory to which the account belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>19534534552*****</p>
      */
     @NameInMap("MasterAccountUid")
     public Long masterAccountUid;
 
     /**
-     * <p>The ID of the billing account.</p>
+     * <p>The ID of the settlement account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>19534534552*****</p>
      */
     @NameInMap("PayerAccountUid")
     public Long payerAccountUid;
 
     /**
-     * <p>The progress of applying the account baseline to the account.</p>
+     * <p>The progress of the applying the baseline to the account.</p>
      */
     @NameInMap("Progress")
     public java.util.List<GetEnrolledAccountResponseBodyProgress> progress;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>768F908D-A66A-5A5D-816C-20C93CBBFEE3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The creation status of the account. Valid values:</p>
-     * <br>
-     * <p>*   Pending: The account is waiting to be created.</p>
-     * <p>*   Running: The account is being created.</p>
-     * <p>*   Finished: The account is created.</p>
-     * <p>*   Failed: The account failed to be created.</p>
-     * <p>*   Scheduling: The account is being scheduled.</p>
-     * <p>*   ScheduleFailed: The account failed to be scheduled.</p>
+     * <p>The status of the account. Valid values:</p>
+     * <ul>
+     * <li>Pending: The account is pending to be created.</li>
+     * <li>Running: The account is being created.</li>
+     * <li>Finished: The account is created.</li>
+     * <li>Failed: The account fails to be created.</li>
+     * <li>Scheduling: The account is being scheduled.</li>
+     * <li>ScheduleFailed: The account fails to be scheduled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Finished</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The time when the information about the account was updated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-11-01T02:38:27Z</p>
      */
     @NameInMap("UpdateTime")
     public String updateTime;
@@ -224,15 +268,43 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
     }
 
     public static class GetEnrolledAccountResponseBodyBaselineItems extends TeaModel {
+        /**
+         * <p>The configurations of the baseline item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;Notifications\&quot;:[{\&quot;GroupKey\&quot;:\&quot;account_msg\&quot;,\&quot;Contacts\&quot;:[{\&quot;Name\&quot;:\&quot;aa\&quot;}],\&quot;PmsgStatus\&quot;:1,\&quot;EmailStatus\&quot;:1,\&quot;SmsStatus\&quot;:1}]}</p>
+         */
         @NameInMap("Config")
         public String config;
 
+        /**
+         * <p>The name of the baseline item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS-BP_ACCOUNT_FACTORY_VPC</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Indicates whether baseline item is skipped. Valid values:</p>
+         * <ul>
+         * <li>false</li>
+         * <li>true</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Skip")
         public Boolean skip;
 
+        /**
+         * <p>The version of the baseline item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -277,25 +349,37 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
 
     public static class GetEnrolledAccountResponseBodyErrorInfo extends TeaModel {
         /**
-         * <p>The error code returned.</p>
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CompliancePackExists</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The compliance pack already exists.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The suggestions that are used to resolve the issue.</p>
+         * <p>The recommended solution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://next.api.aliyun.com/troubleshoot?q=CompliancePackExists%5C%5C%5C%5Cu0026product=Config">https://next.api.aliyun.com/troubleshoot?q=CompliancePackExists\\\\u0026product=Config</a></p>
          */
         @NameInMap("Recommend")
         public String recommend;
 
         /**
          * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6D5EAA86-2D41-5CB7-8DA7-B60093ACAA4E</p>
          */
         @NameInMap("RequestId")
         public String requestId;
@@ -342,24 +426,40 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
     public static class GetEnrolledAccountResponseBodyInputsBaselineItems extends TeaModel {
         /**
          * <p>The configurations of the baseline item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;Contacts\&quot;:[{\&quot;Name\&quot;:\&quot;governance\&quot;,\&quot;Email\&quot;:\&quot;wibud****@gmail.com\&quot;,\&quot;Mobile\&quot;:\&quot;1234\&quot;,\&quot;Position\&quot;:\&quot;Other\&quot;}]}</p>
          */
         @NameInMap("Config")
         public String config;
 
         /**
          * <p>The name of the baseline item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS-BP_ACCOUNT_FACTORY_VPC</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>Indicates whether to skip the baseline item.</p>
+         * <p>Indicates whether baseline item is skipped. Valid values:</p>
+         * <ul>
+         * <li>false</li>
+         * <li>true</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Skip")
         public Boolean skip;
 
         /**
          * <p>The version of the baseline item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         @NameInMap("Version")
         public String version;
@@ -405,37 +505,52 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
 
     public static class GetEnrolledAccountResponseBodyInputs extends TeaModel {
         /**
-         * <p>The prefix for the account name of the member.</p>
+         * <p>The prefix of the account name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-account</p>
          */
         @NameInMap("AccountNamePrefix")
         public String accountNamePrefix;
 
         /**
          * <p>The account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12868156179*****</p>
          */
         @NameInMap("AccountUid")
         public Long accountUid;
 
         /**
-         * <p>An array that contains baseline items.</p>
+         * <p>The baseline items.</p>
          */
         @NameInMap("BaselineItems")
         public java.util.List<GetEnrolledAccountResponseBodyInputsBaselineItems> baselineItems;
 
         /**
          * <p>The display name of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-account</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The ID of the parent folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fd-5ESoku****</p>
          */
         @NameInMap("FolderId")
         public String folderId;
 
         /**
-         * <p>The ID of the billing account.</p>
+         * <p>The ID of the settlement account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19534534552*****</p>
          */
         @NameInMap("PayerAccountUid")
         public Long payerAccountUid;
@@ -498,17 +613,24 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
     public static class GetEnrolledAccountResponseBodyProgress extends TeaModel {
         /**
          * <p>The name of the baseline item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS-BP_ACCOUNT_FACTORY_VPC</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The status of applying the account baseline to the account. Valid values:</p>
-         * <br>
-         * <p>*   Pending: The account is waiting to be created.</p>
-         * <p>*   Running: The account baseline is being applied to the account.</p>
-         * <p>*   Finished: The account baseline is applied to the account.</p>
-         * <p>*   Failed: The account baseline failed to be applied to the account.</p>
+         * <p>The status of applying the baseline to the account. Valid values:</p>
+         * <ul>
+         * <li>Pending: The baseline is pending to be applied to the account.</li>
+         * <li>Running: The baseline is being applied to the account.</li>
+         * <li>Finished: : The baseline is applied to the account.</li>
+         * <li>Failed: : The baseline fails to be applied to the account.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("Status")
         public String status;
