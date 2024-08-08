@@ -11,6 +11,9 @@ public class ListHttpApisRequest extends TeaModel {
     @NameInMap("keyword")
     public String keyword;
 
+    @NameInMap("name")
+    public String name;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -39,6 +42,14 @@ public class ListHttpApisRequest extends TeaModel {
     }
     public String getKeyword() {
         return this.keyword;
+    }
+
+    public ListHttpApisRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public ListHttpApisRequest setPageNumber(Integer pageNumber) {

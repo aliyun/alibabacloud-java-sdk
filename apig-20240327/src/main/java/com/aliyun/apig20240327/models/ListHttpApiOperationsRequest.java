@@ -11,6 +11,9 @@ public class ListHttpApiOperationsRequest extends TeaModel {
     @NameInMap("method")
     public String method;
 
+    @NameInMap("name")
+    public String name;
+
     /**
      * <strong>example:</strong>
      * <p>GetUser</p>
@@ -50,6 +53,14 @@ public class ListHttpApiOperationsRequest extends TeaModel {
     }
     public String getMethod() {
         return this.method;
+    }
+
+    public ListHttpApiOperationsRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public ListHttpApiOperationsRequest setNameLike(String nameLike) {

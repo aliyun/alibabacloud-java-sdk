@@ -481,6 +481,44 @@ public class HttpApiApiInfo extends TeaModel {
 
     }
 
+    public static class HttpApiApiInfoEnvironmentsGatewayInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>gw-xxx</p>
+         */
+        @NameInMap("gatewayId")
+        public String gatewayId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        public static HttpApiApiInfoEnvironmentsGatewayInfo build(java.util.Map<String, ?> map) throws Exception {
+            HttpApiApiInfoEnvironmentsGatewayInfo self = new HttpApiApiInfoEnvironmentsGatewayInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public HttpApiApiInfoEnvironmentsGatewayInfo setGatewayId(String gatewayId) {
+            this.gatewayId = gatewayId;
+            return this;
+        }
+        public String getGatewayId() {
+            return this.gatewayId;
+        }
+
+        public HttpApiApiInfoEnvironmentsGatewayInfo setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class HttpApiApiInfoEnvironmentsServiceConfigs extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -638,6 +676,13 @@ public class HttpApiApiInfo extends TeaModel {
     public static class HttpApiApiInfoEnvironments extends TeaModel {
         /**
          * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("alias")
+        public String alias;
+
+        /**
+         * <strong>example:</strong>
          * <p>SingleService</p>
          */
         @NameInMap("backendScene")
@@ -653,6 +698,9 @@ public class HttpApiApiInfo extends TeaModel {
         @NameInMap("cloudProductConfig")
         public HttpApiApiInfoEnvironmentsCloudProductConfig cloudProductConfig;
 
+        @NameInMap("customDomains")
+        public java.util.List<HttpApiDomainInfo> customDomains;
+
         @NameInMap("dnsConfigs")
         public java.util.List<HttpApiApiInfoEnvironmentsDnsConfigs> dnsConfigs;
 
@@ -663,6 +711,23 @@ public class HttpApiApiInfo extends TeaModel {
         @NameInMap("environmentId")
         public String environmentId;
 
+        @NameInMap("gatewayInfo")
+        public HttpApiApiInfoEnvironmentsGatewayInfo gatewayInfo;
+
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Published</p>
+         */
+        @NameInMap("publishStatus")
+        public String publishStatus;
+
         @NameInMap("serviceConfigs")
         public java.util.List<HttpApiApiInfoEnvironmentsServiceConfigs> serviceConfigs;
 
@@ -672,6 +737,14 @@ public class HttpApiApiInfo extends TeaModel {
         public static HttpApiApiInfoEnvironments build(java.util.Map<String, ?> map) throws Exception {
             HttpApiApiInfoEnvironments self = new HttpApiApiInfoEnvironments();
             return TeaModel.build(map, self);
+        }
+
+        public HttpApiApiInfoEnvironments setAlias(String alias) {
+            this.alias = alias;
+            return this;
+        }
+        public String getAlias() {
+            return this.alias;
         }
 
         public HttpApiApiInfoEnvironments setBackendScene(String backendScene) {
@@ -698,6 +771,14 @@ public class HttpApiApiInfo extends TeaModel {
             return this.cloudProductConfig;
         }
 
+        public HttpApiApiInfoEnvironments setCustomDomains(java.util.List<HttpApiDomainInfo> customDomains) {
+            this.customDomains = customDomains;
+            return this;
+        }
+        public java.util.List<HttpApiDomainInfo> getCustomDomains() {
+            return this.customDomains;
+        }
+
         public HttpApiApiInfoEnvironments setDnsConfigs(java.util.List<HttpApiApiInfoEnvironmentsDnsConfigs> dnsConfigs) {
             this.dnsConfigs = dnsConfigs;
             return this;
@@ -712,6 +793,30 @@ public class HttpApiApiInfo extends TeaModel {
         }
         public String getEnvironmentId() {
             return this.environmentId;
+        }
+
+        public HttpApiApiInfoEnvironments setGatewayInfo(HttpApiApiInfoEnvironmentsGatewayInfo gatewayInfo) {
+            this.gatewayInfo = gatewayInfo;
+            return this;
+        }
+        public HttpApiApiInfoEnvironmentsGatewayInfo getGatewayInfo() {
+            return this.gatewayInfo;
+        }
+
+        public HttpApiApiInfoEnvironments setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public HttpApiApiInfoEnvironments setPublishStatus(String publishStatus) {
+            this.publishStatus = publishStatus;
+            return this;
+        }
+        public String getPublishStatus() {
+            return this.publishStatus;
         }
 
         public HttpApiApiInfoEnvironments setServiceConfigs(java.util.List<HttpApiApiInfoEnvironmentsServiceConfigs> serviceConfigs) {
