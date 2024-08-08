@@ -242,6 +242,112 @@ public class ListGatewaysResponseBody extends TeaModel {
 
     }
 
+    public static class ListGatewaysResponseBodyDataItemsSecurityGroup extends TeaModel {
+        @NameInMap("securityGroupId")
+        public String securityGroupId;
+
+        public static ListGatewaysResponseBodyDataItemsSecurityGroup build(java.util.Map<String, ?> map) throws Exception {
+            ListGatewaysResponseBodyDataItemsSecurityGroup self = new ListGatewaysResponseBodyDataItemsSecurityGroup();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGatewaysResponseBodyDataItemsSecurityGroup setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+    }
+
+    public static class ListGatewaysResponseBodyDataItemsVSwitch extends TeaModel {
+        @NameInMap("vSwitchId")
+        public String vSwitchId;
+
+        public static ListGatewaysResponseBodyDataItemsVSwitch build(java.util.Map<String, ?> map) throws Exception {
+            ListGatewaysResponseBodyDataItemsVSwitch self = new ListGatewaysResponseBodyDataItemsVSwitch();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGatewaysResponseBodyDataItemsVSwitch setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+    }
+
+    public static class ListGatewaysResponseBodyDataItemsVpc extends TeaModel {
+        @NameInMap("vpcId")
+        public String vpcId;
+
+        public static ListGatewaysResponseBodyDataItemsVpc build(java.util.Map<String, ?> map) throws Exception {
+            ListGatewaysResponseBodyDataItemsVpc self = new ListGatewaysResponseBodyDataItemsVpc();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGatewaysResponseBodyDataItemsVpc setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+    }
+
+    public static class ListGatewaysResponseBodyDataItemsZonesVSwitch extends TeaModel {
+        @NameInMap("vSwitchId")
+        public String vSwitchId;
+
+        public static ListGatewaysResponseBodyDataItemsZonesVSwitch build(java.util.Map<String, ?> map) throws Exception {
+            ListGatewaysResponseBodyDataItemsZonesVSwitch self = new ListGatewaysResponseBodyDataItemsZonesVSwitch();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGatewaysResponseBodyDataItemsZonesVSwitch setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+    }
+
+    public static class ListGatewaysResponseBodyDataItemsZones extends TeaModel {
+        @NameInMap("vSwitch")
+        public ListGatewaysResponseBodyDataItemsZonesVSwitch vSwitch;
+
+        @NameInMap("zoneId")
+        public String zoneId;
+
+        public static ListGatewaysResponseBodyDataItemsZones build(java.util.Map<String, ?> map) throws Exception {
+            ListGatewaysResponseBodyDataItemsZones self = new ListGatewaysResponseBodyDataItemsZones();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGatewaysResponseBodyDataItemsZones setVSwitch(ListGatewaysResponseBodyDataItemsZonesVSwitch vSwitch) {
+            this.vSwitch = vSwitch;
+            return this;
+        }
+        public ListGatewaysResponseBodyDataItemsZonesVSwitch getVSwitch() {
+            return this.vSwitch;
+        }
+
+        public ListGatewaysResponseBodyDataItemsZones setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+    }
+
     public static class ListGatewaysResponseBodyDataItems extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -295,6 +401,9 @@ public class ListGatewaysResponseBody extends TeaModel {
         @NameInMap("replicas")
         public String replicas;
 
+        @NameInMap("securityGroup")
+        public ListGatewaysResponseBodyDataItemsSecurityGroup securityGroup;
+
         /**
          * <strong>example:</strong>
          * <p>apigw.small.x1</p>
@@ -323,12 +432,21 @@ public class ListGatewaysResponseBody extends TeaModel {
         @NameInMap("updateTimestamp")
         public Long updateTimestamp;
 
+        @NameInMap("vSwitch")
+        public ListGatewaysResponseBodyDataItemsVSwitch vSwitch;
+
         /**
          * <strong>example:</strong>
          * <p>2.0.2</p>
          */
         @NameInMap("version")
         public String version;
+
+        @NameInMap("vpc")
+        public ListGatewaysResponseBodyDataItemsVpc vpc;
+
+        @NameInMap("zones")
+        public java.util.List<ListGatewaysResponseBodyDataItemsZones> zones;
 
         public static ListGatewaysResponseBodyDataItems build(java.util.Map<String, ?> map) throws Exception {
             ListGatewaysResponseBodyDataItems self = new ListGatewaysResponseBodyDataItems();
@@ -399,6 +517,14 @@ public class ListGatewaysResponseBody extends TeaModel {
             return this.replicas;
         }
 
+        public ListGatewaysResponseBodyDataItems setSecurityGroup(ListGatewaysResponseBodyDataItemsSecurityGroup securityGroup) {
+            this.securityGroup = securityGroup;
+            return this;
+        }
+        public ListGatewaysResponseBodyDataItemsSecurityGroup getSecurityGroup() {
+            return this.securityGroup;
+        }
+
         public ListGatewaysResponseBodyDataItems setSpec(String spec) {
             this.spec = spec;
             return this;
@@ -431,12 +557,36 @@ public class ListGatewaysResponseBody extends TeaModel {
             return this.updateTimestamp;
         }
 
+        public ListGatewaysResponseBodyDataItems setVSwitch(ListGatewaysResponseBodyDataItemsVSwitch vSwitch) {
+            this.vSwitch = vSwitch;
+            return this;
+        }
+        public ListGatewaysResponseBodyDataItemsVSwitch getVSwitch() {
+            return this.vSwitch;
+        }
+
         public ListGatewaysResponseBodyDataItems setVersion(String version) {
             this.version = version;
             return this;
         }
         public String getVersion() {
             return this.version;
+        }
+
+        public ListGatewaysResponseBodyDataItems setVpc(ListGatewaysResponseBodyDataItemsVpc vpc) {
+            this.vpc = vpc;
+            return this;
+        }
+        public ListGatewaysResponseBodyDataItemsVpc getVpc() {
+            return this.vpc;
+        }
+
+        public ListGatewaysResponseBodyDataItems setZones(java.util.List<ListGatewaysResponseBodyDataItemsZones> zones) {
+            this.zones = zones;
+            return this;
+        }
+        public java.util.List<ListGatewaysResponseBodyDataItemsZones> getZones() {
+            return this.zones;
         }
 
     }
