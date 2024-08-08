@@ -4,18 +4,48 @@ package com.aliyun.paiautoml20220828.models;
 import com.aliyun.tea.*;
 
 public class RestartHpoTrialsResponseBody extends TeaModel {
+    /**
+     * <p>Response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INVALID_USER_OR_EXP</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Extra error information.</p>
+     */
     @NameInMap("Detail")
     public java.util.Map<String, String> detail;
 
+    /**
+     * <p>Error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Missing \&quot;user_id\&quot; in request.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3F190916-B3E5-5D1E-AD0C-35C0DF105F51</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Restart status of all the trial IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     * \&quot;xrYq99\&quot;: TrialJobInfo text,
+     * \&quot;xrYq9N\&quot;:TrialJobInfo text
+     * }</p>
+     */
     @NameInMap("Results")
     public java.util.Map<String, ?> results;
 

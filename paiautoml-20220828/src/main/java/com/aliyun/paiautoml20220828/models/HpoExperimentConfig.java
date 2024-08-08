@@ -10,6 +10,9 @@ public class HpoExperimentConfig extends TeaModel {
     @NameInMap("k8s_config")
     public HpoExperimentConfigK8sConfig k8sConfig;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("metric_config")
     public HpoExperimentConfigMetricConfig metricConfig;
 
@@ -31,6 +34,9 @@ public class HpoExperimentConfig extends TeaModel {
     @NameInMap("params_config")
     public HpoExperimentConfigParamsConfig paramsConfig;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("platform_config")
     public HpoExperimentConfigPlatformConfig platformConfig;
 
@@ -279,15 +285,27 @@ public class HpoExperimentConfig extends TeaModel {
     }
 
     public static class HpoExperimentConfigMetricConfig extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("final_mode")
         public String finalMode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("metric_dict")
         public java.util.Map<String, ?> metricDict;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("metric_source")
         public java.util.List<String> metricSource;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("metric_type")
         public String metricType;
 
@@ -624,6 +642,10 @@ public class HpoExperimentConfig extends TeaModel {
     }
 
     public static class HpoExperimentConfigParamsConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>src_path,dst_file_path</p>
+         */
         @NameInMap("params_src_dst_filepath")
         public java.util.List<String> paramsSrcDstFilepath;
 
@@ -643,9 +665,18 @@ public class HpoExperimentConfig extends TeaModel {
     }
 
     public static class HpoExperimentConfigPlatformConfig extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("cmd")
         public java.util.List<String> cmd;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DLC, MC,paiflow, etc</p>
+         */
         @NameInMap("name")
         public String name;
 

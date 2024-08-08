@@ -4,18 +4,42 @@ package com.aliyun.paiautoml20220828.models;
 import com.aliyun.tea.*;
 
 public class ListHpoTrialCommandsResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INVALID_USER_OR_EXP</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The list of commands.</p>
+     */
     @NameInMap("Commands")
     public java.util.List<ListHpoTrialCommandsResponseBodyCommands> commands;
 
+    /**
+     * <p>Extra error information.</p>
+     */
     @NameInMap("Detail")
     public java.util.Map<String, String> detail;
 
+    /**
+     * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Missing \&quot;user_id\&quot; in request.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>071A904D-5A49-597F-9F69-81C7701D04AC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,12 +89,30 @@ public class ListHpoTrialCommandsResponseBody extends TeaModel {
     }
 
     public static class ListHpoTrialCommandsResponseBodyCommands extends TeaModel {
+        /**
+         * <p>The command that you want to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc submit pytorch --name=test_nni_foo_bar</p>
+         */
         @NameInMap("Command")
         public String command;
 
+        /**
+         * <p>The id of the command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
+        /**
+         * <p>The output of the above command</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc job submitted.</p>
+         */
         @NameInMap("Output")
         public String output;
 
