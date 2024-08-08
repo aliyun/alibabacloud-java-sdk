@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyExpressConnectTrafficQosQueueResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>079874CD-AEC1-43E6-AC03-ADD96B6E4907</p>
      */

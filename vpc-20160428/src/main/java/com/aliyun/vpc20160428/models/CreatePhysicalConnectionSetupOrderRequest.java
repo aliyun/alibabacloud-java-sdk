@@ -15,10 +15,10 @@ public class CreatePhysicalConnectionSetupOrderRequest extends TeaModel {
     public String accessPointId;
 
     /**
-     * <p>Specifies whether to enable automatic payment. Valid values:</p>
+     * <p>Specifies whether to enable automatic payments. Valid values:</p>
      * <ul>
      * <li><strong>false</strong> (default): disables automatic payment.</li>
-     * <li><strong>true</strong>: enables automatic payment.</li>
+     * <li><strong>true</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,9 +29,9 @@ public class CreatePhysicalConnectionSetupOrderRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, the system automatically uses <strong>RequestId</strong> as <strong>ClientToken</strong>. <strong>RequestId</strong> of each API request may be different.</p>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -65,7 +65,7 @@ public class CreatePhysicalConnectionSetupOrderRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The port type. Valid values:</p>
+     * <p>The port type of the Express Connect circuit. Valid values:</p>
      * <ul>
      * <li><strong>100Base-T</strong>: 100 Mbit/s copper Ethernet port</li>
      * <li><strong>1000Base-T</strong> (default): 1,000 Mbit/s copper Ethernet port</li>
@@ -76,7 +76,7 @@ public class CreatePhysicalConnectionSetupOrderRequest extends TeaModel {
      * <li><strong>100GBase-LR</strong>: 100,000 Mbit/s single-mode optical port</li>
      * </ul>
      * <blockquote>
-     * <p> Whether 40GBase-LR and 100GBase-LR ports can be created is based on resource supplies. For more information, contact your business manager.</p>
+     * <p> Whether 40GBase-LR and 100GBase-LR ports can be created depends on resource supplies. For more information, contact your account manager.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -86,7 +86,7 @@ public class CreatePhysicalConnectionSetupOrderRequest extends TeaModel {
     public String portType;
 
     /**
-     * <p>The ID of the redundant Express Connect circuit. The redundant Express Connect circuit must be in the <strong>Allocated</strong>, <strong>Confirmed</strong>, or <strong>Enabled</strong> state.</p>
+     * <p>The ID of the redundant physical connection. The redundant physical connection must be in the <strong>Allocated</strong>, <strong>Confirmed</strong>, or <strong>Enabled</strong> state.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-bp10zsv5ntp****</p>

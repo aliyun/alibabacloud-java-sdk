@@ -319,7 +319,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
          * <p>admin</p>
          */
         @NameInMap("UserType")
-        public Boolean userType;
+        public String userType;
 
         /**
          * <p>The zone of the IP address pool. This parameter is returned only when the service type of the IP address pool is CloudBox.</p>
@@ -468,11 +468,11 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             return this.usedIpNum;
         }
 
-        public ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList setUserType(Boolean userType) {
+        public ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList setUserType(String userType) {
             this.userType = userType;
             return this;
         }
-        public Boolean getUserType() {
+        public String getUserType() {
             return this.userType;
         }
 

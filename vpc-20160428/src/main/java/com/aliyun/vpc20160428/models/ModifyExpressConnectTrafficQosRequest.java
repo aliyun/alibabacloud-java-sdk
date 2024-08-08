@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyExpressConnectTrafficQosRequest extends TeaModel {
     /**
+     * <p>The instances to be added. Ignore this parameter if no instances are to be added.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>false</p>
      */
@@ -12,6 +14,12 @@ public class ModifyExpressConnectTrafficQosRequest extends TeaModel {
     public java.util.List<ModifyExpressConnectTrafficQosRequestAddInstanceList> addInstanceList;
 
     /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
      */
@@ -25,6 +33,8 @@ public class ModifyExpressConnectTrafficQosRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The description of the QoS policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>qos-test</p>
      */
@@ -32,6 +42,7 @@ public class ModifyExpressConnectTrafficQosRequest extends TeaModel {
     public String qosDescription;
 
     /**
+     * <p>The ID of the QoS policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +52,8 @@ public class ModifyExpressConnectTrafficQosRequest extends TeaModel {
     public String qosId;
 
     /**
+     * <p>The name of the QoS policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>qos-test</p>
      */
@@ -48,6 +61,8 @@ public class ModifyExpressConnectTrafficQosRequest extends TeaModel {
     public String qosName;
 
     /**
+     * <p>The region ID of the resource.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,6 +71,9 @@ public class ModifyExpressConnectTrafficQosRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The instances to be removed. Ignore this parameter if no instances are to be removed.</p>
+     */
     @NameInMap("RemoveInstanceList")
     public java.util.List<ModifyExpressConnectTrafficQosRequestRemoveInstanceList> removeInstanceList;
 
@@ -148,9 +166,21 @@ public class ModifyExpressConnectTrafficQosRequest extends TeaModel {
     }
 
     public static class ModifyExpressConnectTrafficQosRequestAddInstanceList extends TeaModel {
+        /**
+         * <p>The ID of the instance to be associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-bp159zj8zujwy3p07****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The type of instance to be associated. Set the value to <strong>PHYSICALCONNECTION</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PHYSICALCONNECTION</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
@@ -178,9 +208,21 @@ public class ModifyExpressConnectTrafficQosRequest extends TeaModel {
     }
 
     public static class ModifyExpressConnectTrafficQosRequestRemoveInstanceList extends TeaModel {
+        /**
+         * <p>The ID of the associated instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-bp1j37am632492qzw****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The type of the associated instance. Set the value to <strong>PHYSICALCONNECTION</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PHYSICALCONNECTION</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 

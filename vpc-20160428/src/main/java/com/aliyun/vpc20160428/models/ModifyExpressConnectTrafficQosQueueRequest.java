@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyExpressConnectTrafficQosQueueRequest extends TeaModel {
     /**
+     * <p>The percentage of bandwidth allocated to the QoS queue.</p>
+     * <ul>
+     * <li>If QueueType is set to <strong>Medium</strong>, this parameter is required. Valid values: 1 to 100.</li>
+     * <li>If QueueType is set to <strong>Default</strong>, a value of - is returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -12,6 +18,12 @@ public class ModifyExpressConnectTrafficQosQueueRequest extends TeaModel {
     public String bandwidthPercent;
 
     /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the value, but you must ensure that the value is unique among all requests. The client token can contain only ASCII characters.</p>
+     * <blockquote>
+     * <p> If you do not set this parameter, the system uses <strong>RequestId</strong> as <strong>ClientToken</strong>. <strong>RequestId</strong> might be different for each API request.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
@@ -25,6 +37,7 @@ public class ModifyExpressConnectTrafficQosQueueRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the QoS policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,6 +47,9 @@ public class ModifyExpressConnectTrafficQosQueueRequest extends TeaModel {
     public String qosId;
 
     /**
+     * <p>The description of the QoS queue.</p>
+     * <p>The description must be 0 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>qos-queue-test</p>
      */
@@ -41,6 +57,7 @@ public class ModifyExpressConnectTrafficQosQueueRequest extends TeaModel {
     public String queueDescription;
 
     /**
+     * <p>The ID of the QoS queue.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +67,9 @@ public class ModifyExpressConnectTrafficQosQueueRequest extends TeaModel {
     public String queueId;
 
     /**
+     * <p>The name of the QoS queue.</p>
+     * <p>The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>qos-queue-test</p>
      */
@@ -57,6 +77,8 @@ public class ModifyExpressConnectTrafficQosQueueRequest extends TeaModel {
     public String queueName;
 
     /**
+     * <p>The region ID of the QoS policy.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class DescribeFailoverTestJobsRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The filter information.</p>
+     */
     @NameInMap("Filter")
     public java.util.List<DescribeFailoverTestJobsRequestFilter> filter;
 
     /**
+     * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -35,6 +46,9 @@ public class DescribeFailoverTestJobsRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region where you want to perform the failover test.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -115,12 +129,31 @@ public class DescribeFailoverTestJobsRequest extends TeaModel {
 
     public static class DescribeFailoverTestJobsRequestFilter extends TeaModel {
         /**
+         * <p>The filter key. Valid values:</p>
+         * <ul>
+         * <li><strong>JobId</strong></li>
+         * <li><strong>JobName</strong></li>
+         * <li><strong>JobStatus</strong></li>
+         * <li><strong>ResourceId</strong></li>
+         * <li><strong>ResourceName</strong></li>
+         * <li><strong>ResourceType</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>You can specify at most five different filter keys. If you specify ResourceId or ResourceName, you must also specify ResourceType. The logical operator among the filter keys is AND. Results that meet all specified filter keys are returned.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>JobId</p>
          */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the filter key.</p>
+         * <blockquote>
+         * <p>You can specify at most five filter values for each filter key. The logical operator among filter values is OR. If a filter value is matched, the filter key is considered matched.</p>
+         * </blockquote>
+         */
         @NameInMap("Value")
         public java.util.List<String> value;
 

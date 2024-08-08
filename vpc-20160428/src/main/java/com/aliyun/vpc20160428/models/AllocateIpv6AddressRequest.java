@@ -4,6 +4,16 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class AllocateIpv6AddressRequest extends TeaModel {
+    /**
+     * <p>The type of the IPv6 address. Valid values:</p>
+     * <ul>
+     * <li>IPv6Address (default): an IPv6 address.</li>
+     * <li>IPv6Prefix: an IPv6 CIDR block.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>IPv6Address</p>
+     */
     @NameInMap("AddressType")
     public String addressType;
 
