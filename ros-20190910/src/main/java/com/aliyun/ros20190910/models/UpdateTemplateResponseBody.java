@@ -22,6 +22,9 @@ public class UpdateTemplateResponseBody extends TeaModel {
     @NameInMap("TemplateId")
     public String templateId;
 
+    @NameInMap("TemplateVersion")
+    public String templateVersion;
+
     public static UpdateTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateTemplateResponseBody self = new UpdateTemplateResponseBody();
         return TeaModel.build(map, self);
@@ -41,6 +44,14 @@ public class UpdateTemplateResponseBody extends TeaModel {
     }
     public String getTemplateId() {
         return this.templateId;
+    }
+
+    public UpdateTemplateResponseBody setTemplateVersion(String templateVersion) {
+        this.templateVersion = templateVersion;
+        return this;
+    }
+    public String getTemplateVersion() {
+        return this.templateVersion;
     }
 
 }
