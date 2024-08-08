@@ -4822,12 +4822,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Updates the information of an application group. You can call this operation only for the application groups that reside in the China (Hangzhou) region. Use an endpoint of the China (Hangzhou) region.</p>
      * 
-     * @param request UpdateApplicationGroupRequest
+     * @param tmpReq UpdateApplicationGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateApplicationGroupResponse
      */
-    public UpdateApplicationGroupResponse updateApplicationGroupWithOptions(UpdateApplicationGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public UpdateApplicationGroupResponse updateApplicationGroupWithOptions(UpdateApplicationGroupRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateApplicationGroupShrinkRequest request = new UpdateApplicationGroupShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.parameters)) {
+            request.parametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.parameters, "Parameters", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.applicationName)) {
             query.put("ApplicationName", request.applicationName);
@@ -4839,6 +4845,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.newName)) {
             query.put("NewName", request.newName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operationName)) {
+            query.put("OperationName", request.operationName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parametersShrink)) {
+            query.put("Parameters", request.parametersShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {

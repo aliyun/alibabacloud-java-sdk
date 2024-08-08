@@ -3,7 +3,7 @@ package com.aliyun.oos20190601.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateApplicationGroupRequest extends TeaModel {
+public class UpdateApplicationGroupShrinkRequest extends TeaModel {
     /**
      * <p>The application name.</p>
      * <p>This parameter is required.</p>
@@ -37,7 +37,7 @@ public class UpdateApplicationGroupRequest extends TeaModel {
     public String operationName;
 
     @NameInMap("Parameters")
-    public java.util.Map<String, ?> parameters;
+    public String parametersShrink;
 
     /**
      * <p>The region ID. Set the value to cn-hangzhou.</p>
@@ -48,12 +48,12 @@ public class UpdateApplicationGroupRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    public static UpdateApplicationGroupRequest build(java.util.Map<String, ?> map) throws Exception {
-        UpdateApplicationGroupRequest self = new UpdateApplicationGroupRequest();
+    public static UpdateApplicationGroupShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateApplicationGroupShrinkRequest self = new UpdateApplicationGroupShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateApplicationGroupRequest setApplicationName(String applicationName) {
+    public UpdateApplicationGroupShrinkRequest setApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
     }
@@ -61,7 +61,7 @@ public class UpdateApplicationGroupRequest extends TeaModel {
         return this.applicationName;
     }
 
-    public UpdateApplicationGroupRequest setName(String name) {
+    public UpdateApplicationGroupShrinkRequest setName(String name) {
         this.name = name;
         return this;
     }
@@ -69,7 +69,7 @@ public class UpdateApplicationGroupRequest extends TeaModel {
         return this.name;
     }
 
-    public UpdateApplicationGroupRequest setNewName(String newName) {
+    public UpdateApplicationGroupShrinkRequest setNewName(String newName) {
         this.newName = newName;
         return this;
     }
@@ -77,7 +77,7 @@ public class UpdateApplicationGroupRequest extends TeaModel {
         return this.newName;
     }
 
-    public UpdateApplicationGroupRequest setOperationName(String operationName) {
+    public UpdateApplicationGroupShrinkRequest setOperationName(String operationName) {
         this.operationName = operationName;
         return this;
     }
@@ -85,15 +85,15 @@ public class UpdateApplicationGroupRequest extends TeaModel {
         return this.operationName;
     }
 
-    public UpdateApplicationGroupRequest setParameters(java.util.Map<String, ?> parameters) {
-        this.parameters = parameters;
+    public UpdateApplicationGroupShrinkRequest setParametersShrink(String parametersShrink) {
+        this.parametersShrink = parametersShrink;
         return this;
     }
-    public java.util.Map<String, ?> getParameters() {
-        return this.parameters;
+    public String getParametersShrink() {
+        return this.parametersShrink;
     }
 
-    public UpdateApplicationGroupRequest setRegionId(String regionId) {
+    public UpdateApplicationGroupShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
