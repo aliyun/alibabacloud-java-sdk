@@ -4,12 +4,30 @@ package com.aliyun.paiautoml20220828.models;
 import com.aliyun.tea.*;
 
 public class ListHpoExperimentLogsRequest extends TeaModel {
+    /**
+     * <p>Log name to be listed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nnimanager.log</p>
+     */
     @NameInMap("LogName")
     public String logName;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

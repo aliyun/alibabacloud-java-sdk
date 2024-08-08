@@ -4,21 +4,51 @@ package com.aliyun.paiautoml20220828.models;
 import com.aliyun.tea.*;
 
 public class ListHpoTrialsResponseBody extends TeaModel {
+    /**
+     * <p>Error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INVALID_USER_OR_EXP</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Extra error information.</p>
+     */
     @NameInMap("Detail")
     public java.util.Map<String, String> detail;
 
+    /**
+     * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Missing \&quot;user_id\&quot; in request.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3F190916-B3E5-5D1E-AD0C-35C0DF105F51</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries qualified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>Trial array.</p>
+     */
     @NameInMap("Trials")
     public java.util.List<ListHpoTrialsResponseBodyTrials> trials;
 

@@ -4,9 +4,18 @@ package com.aliyun.paiautoml20220828.models;
 import com.aliyun.tea.*;
 
 public class RestartHpoTrialsRequest extends TeaModel {
+    /**
+     * <p>A hyperparameter combination instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>‘{&quot;${batch_size}&quot;: &quot;32&quot;, &quot;${lr}&quot;: &quot;0.01&quot;}\&quot;</p>
+     */
     @NameInMap("TrialHyperParameters")
     public String trialHyperParameters;
 
+    /**
+     * <p>Trial ID array.</p>
+     */
     @NameInMap("TrialIds")
     public java.util.List<String> trialIds;
 

@@ -4,12 +4,21 @@ package com.aliyun.paiautoml20220828.models;
 import com.aliyun.tea.*;
 
 public class AutofeExperimentConfiguration extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("odps_config")
     public AutofeExperimentConfigurationOdpsConfig odpsConfig;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("oss_config")
     public AutofeExperimentConfigurationOssConfig ossConfig;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("yml_config")
     public AutofeExperimentConfigurationYmlConfig ymlConfig;
 
@@ -49,12 +58,27 @@ public class AutofeExperimentConfiguration extends TeaModel {
         @NameInMap("odps_access_key")
         public String odpsAccessKey;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://service.cn-beijing.maxcompute.aliyun.com/api">http://service.cn-beijing.maxcompute.aliyun.com/api</a></p>
+         */
         @NameInMap("odps_endpoint")
         public String odpsEndpoint;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("odps_project_name")
         public String odpsProjectName;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("odps_region_id")
         public String odpsRegionId;
 
@@ -123,9 +147,21 @@ public class AutofeExperimentConfiguration extends TeaModel {
         @NameInMap("oss_access_key")
         public String ossAccessKey;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>autofe-service</p>
+         */
         @NameInMap("oss_bucket")
         public String ossBucket;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-beijing.aliyuncs.com</p>
+         */
         @NameInMap("oss_endpoint")
         public String ossEndpoint;
 
@@ -180,27 +216,53 @@ public class AutofeExperimentConfiguration extends TeaModel {
     }
 
     public static class AutofeExperimentConfigurationYmlConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>train</p>
+         */
         @NameInMap("action")
         public String action;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("aggregate_only")
         public String aggregateOnly;
 
         @NameInMap("analyze_exp_id")
         public String analyzeExpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("cpu")
         public String cpu;
 
         @NameInMap("data_partition")
         public String dataPartition;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps_table_name</p>
+         */
         @NameInMap("data_source")
         public String dataSource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>odps</p>
+         */
         @NameInMap("data_type")
         public String dataType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("debug_mode")
         public String debugMode;
 
@@ -210,42 +272,89 @@ public class AutofeExperimentConfiguration extends TeaModel {
         @NameInMap("feature_selection")
         public String featureSelection;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("filter_thresh")
         public String filterThresh;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.02</p>
+         */
         @NameInMap("iv_thresh")
         public String ivThresh;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>label</p>
+         */
         @NameInMap("label")
         public String label;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4000</p>
+         */
         @NameInMap("memory")
         public String memory;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://bucket_name/</p>
+         */
         @NameInMap("output_config_oss_dir")
         public String outputConfigOssDir;
 
         @NameInMap("pipeline_exp_id")
         public String pipelineExpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("reuse_results")
         public String reuseResults;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("sample_ratio")
         public String sampleRatio;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5000000</p>
+         */
         @NameInMap("sample_size")
         public String sampleSize;
 
         @NameInMap("selection_exp_id")
         public String selectionExpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("skip_select")
         public String skipSelect;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("workers")
         public String workers;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("workspace_name")
         public String workspaceName;
 

@@ -3,19 +3,15 @@ package com.aliyun.paiautoml20220828.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteHpoExperimentResponseBody extends TeaModel {
+public class CreateAutofeExperimentResponseBody extends TeaModel {
     /**
-     * <p>The error code when the API call is not successful.</p>
-     * 
      * <strong>example:</strong>
-     * <p>INVALID_USER_OR_EXP</p>
+     * <p>INVALID_INPUT_PARAMS</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>Extra info on the execution failure.</p>
-     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -23,8 +19,13 @@ public class DeleteHpoExperimentResponseBody extends TeaModel {
     public java.util.Map<String, ?> detail;
 
     /**
-     * <p>The error message returned.</p>
-     * 
+     * <strong>example:</strong>
+     * <p>t8cNdMO</p>
+     */
+    @NameInMap("ExperimentId")
+    public String experimentId;
+
+    /**
      * <strong>example:</strong>
      * <p>Missing \&quot;user_id\&quot; in request.</p>
      */
@@ -32,20 +33,18 @@ public class DeleteHpoExperimentResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
-     * <p>3F190916-B3E5-5D1E-AD0C-35C0DF105F51</p>
+     * <p>22A1EC4E-15A2-51FF-BFA3-10D6735BAA69</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeleteHpoExperimentResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteHpoExperimentResponseBody self = new DeleteHpoExperimentResponseBody();
+    public static CreateAutofeExperimentResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CreateAutofeExperimentResponseBody self = new CreateAutofeExperimentResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteHpoExperimentResponseBody setCode(String code) {
+    public CreateAutofeExperimentResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -53,7 +52,7 @@ public class DeleteHpoExperimentResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DeleteHpoExperimentResponseBody setDetail(java.util.Map<String, ?> detail) {
+    public CreateAutofeExperimentResponseBody setDetail(java.util.Map<String, ?> detail) {
         this.detail = detail;
         return this;
     }
@@ -61,7 +60,15 @@ public class DeleteHpoExperimentResponseBody extends TeaModel {
         return this.detail;
     }
 
-    public DeleteHpoExperimentResponseBody setMessage(String message) {
+    public CreateAutofeExperimentResponseBody setExperimentId(String experimentId) {
+        this.experimentId = experimentId;
+        return this;
+    }
+    public String getExperimentId() {
+        return this.experimentId;
+    }
+
+    public CreateAutofeExperimentResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -69,7 +76,7 @@ public class DeleteHpoExperimentResponseBody extends TeaModel {
         return this.message;
     }
 
-    public DeleteHpoExperimentResponseBody setRequestId(String requestId) {
+    public CreateAutofeExperimentResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

@@ -4,18 +4,45 @@ package com.aliyun.paiautoml20220828.models;
 import com.aliyun.tea.*;
 
 public class CreateHpoExperimentResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INVALID_INPUT_PARAMS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Detailed information of the failure.</p>
+     */
     @NameInMap("Detail")
     public java.util.Map<String, String> detail;
 
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sORVEck</p>
+     */
     @NameInMap("ExperimentId")
     public String experimentId;
 
+    /**
+     * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Missing \&quot;user_id\&quot; in request.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3F190916-B3E5-5D1E-AD0C-35C0DF105F51</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

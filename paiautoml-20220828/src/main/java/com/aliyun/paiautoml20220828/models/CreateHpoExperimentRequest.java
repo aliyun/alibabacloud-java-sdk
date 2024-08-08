@@ -4,18 +4,45 @@ package com.aliyun.paiautoml20220828.models;
 import com.aliyun.tea.*;
 
 public class CreateHpoExperimentRequest extends TeaModel {
+    /**
+     * <p>Experiment accesibility, public or private.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PRIVATE</p>
+     */
     @NameInMap("Accessibility")
     public String accessibility;
 
+    /**
+     * <p>Experiment description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is an AutoML HPO experiment.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The config object of the expriment.</p>
+     */
     @NameInMap("HpoExperimentConfiguration")
     public HpoExperimentConfig hpoExperimentConfiguration;
 
+    /**
+     * <p>Experiment Name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my experiment x</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>AI Workspace ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

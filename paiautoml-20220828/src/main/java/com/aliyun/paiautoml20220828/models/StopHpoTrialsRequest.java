@@ -4,6 +4,9 @@ package com.aliyun.paiautoml20220828.models;
 import com.aliyun.tea.*;
 
 public class StopHpoTrialsRequest extends TeaModel {
+    /**
+     * <p>Trial Ids to be stopped.</p>
+     */
     @NameInMap("TrialIds")
     public java.util.List<String> trialIds;
 

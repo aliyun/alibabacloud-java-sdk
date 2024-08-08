@@ -4,15 +4,39 @@ package com.aliyun.paiautoml20220828.models;
 import com.aliyun.tea.*;
 
 public class UpdateHpoExperimentResponseBody extends TeaModel {
+    /**
+     * <p>Error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Extra error information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Detail")
     public java.util.Map<String, ?> detail;
 
+    /**
+     * <p>Error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Missing \&quot;user_id\&quot; in request.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3F190916-B3E5-5D1E-AD0C-35C0DF105F51</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
