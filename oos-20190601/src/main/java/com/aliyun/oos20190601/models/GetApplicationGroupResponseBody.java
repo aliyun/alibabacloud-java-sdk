@@ -131,6 +131,9 @@ public class GetApplicationGroupResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("OperationMetadata")
+        public String operationMetadata;
+
         /**
          * <p>The creation progress of the application instance.</p>
          * 
@@ -250,6 +253,14 @@ public class GetApplicationGroupResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetApplicationGroupResponseBodyApplicationGroup setOperationMetadata(String operationMetadata) {
+            this.operationMetadata = operationMetadata;
+            return this;
+        }
+        public String getOperationMetadata() {
+            return this.operationMetadata;
         }
 
         public GetApplicationGroupResponseBodyApplicationGroup setProgress(String progress) {
