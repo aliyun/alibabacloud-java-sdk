@@ -14,6 +14,8 @@ public class DescribeDasConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the automatic storage expansion feature is enabled for the standard cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>Enable</p>
      */
@@ -21,6 +23,11 @@ public class DescribeDasConfigResponseBody extends TeaModel {
     public String storageAutoScale;
 
     /**
+     * <p>The maximum storage capacity of the standard cluster that is scaled up. Unit: GB.</p>
+     * <blockquote>
+     * <p> This parameter is returned when the StorageAutoScale parameter is set to Enable.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>800</p>
      */
