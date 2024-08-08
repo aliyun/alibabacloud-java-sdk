@@ -4994,7 +4994,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看实例的 DAS 配置</p>
+     * <p>Queries the configurations of a cluster in Database Autonomy Service (DAS).</p>
      * 
      * @param request DescribeDasConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5042,7 +5042,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看实例的 DAS 配置</p>
+     * <p>Queries the configurations of a cluster in Database Autonomy Service (DAS).</p>
      * 
      * @param request DescribeDasConfigRequest
      * @return DescribeDasConfigResponse
@@ -7109,6 +7109,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.targetDBNodeId)) {
             query.put("TargetDBNodeId", request.targetDBNodeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetZoneType)) {
+            query.put("TargetZoneType", request.targetZoneType);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

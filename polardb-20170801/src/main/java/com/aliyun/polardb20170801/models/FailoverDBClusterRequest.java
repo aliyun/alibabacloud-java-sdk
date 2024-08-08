@@ -63,6 +63,9 @@ public class FailoverDBClusterRequest extends TeaModel {
     @NameInMap("TargetDBNodeId")
     public String targetDBNodeId;
 
+    @NameInMap("TargetZoneType")
+    public String targetZoneType;
+
     public static FailoverDBClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         FailoverDBClusterRequest self = new FailoverDBClusterRequest();
         return TeaModel.build(map, self);
@@ -130,6 +133,14 @@ public class FailoverDBClusterRequest extends TeaModel {
     }
     public String getTargetDBNodeId() {
         return this.targetDBNodeId;
+    }
+
+    public FailoverDBClusterRequest setTargetZoneType(String targetZoneType) {
+        this.targetZoneType = targetZoneType;
+        return this;
+    }
+    public String getTargetZoneType() {
+        return this.targetZoneType;
     }
 
 }

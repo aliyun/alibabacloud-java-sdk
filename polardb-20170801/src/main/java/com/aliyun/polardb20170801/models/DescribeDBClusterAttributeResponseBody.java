@@ -4,6 +4,10 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterAttributeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2024-03-13T01:20:28Z</p>
+     */
     @NameInMap("AiCreatingTime")
     public String aiCreatingTime;
 
@@ -20,6 +24,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("AiType")
     public String aiType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>X86</p>
+     */
     @NameInMap("Architecture")
     public String architecture;
 
@@ -64,9 +72,17 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("Category")
     public String category;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ON</p>
+     */
     @NameInMap("CompressStorageMode")
     public String compressStorageMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15529410560</p>
+     */
     @NameInMap("CompressStorageUsed")
     public Long compressStorageUsed;
 
@@ -116,7 +132,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public String DBClusterStatus;
 
     /**
-     * <p>The details of the nodes.</p>
+     * <p>The information about the nodes.</p>
      */
     @NameInMap("DBNodes")
     public java.util.List<DescribeDBClusterAttributeResponseBodyDBNodes> DBNodes;
@@ -229,6 +245,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("HasCompleteStandbyRes")
     public Boolean hasCompleteStandbyRes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>StandbyClusterON</p>
+     */
     @NameInMap("HotStandbyCluster")
     public String hotStandbyCluster;
 
@@ -299,6 +319,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("MaintainTime")
     public String maintainTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ON</p>
+     */
     @NameInMap("Orca")
     public String orca;
 
@@ -315,6 +339,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("PayType")
     public String payType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2500</p>
+     */
     @NameInMap("ProvisionedIops")
     public String provisionedIops;
 
@@ -407,9 +435,17 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2179639137</p>
+     */
     @NameInMap("RestoreDataPoint")
     public String restoreDataPoint;
 
+    /**
+     * <strong>example:</strong>
+     * <p>RestoreByTime</p>
+     */
     @NameInMap("RestoreType")
     public String restoreType;
 
@@ -431,6 +467,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("ServerlessType")
     public String serverlessType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pc-pz51ziv48317b2880</p>
+     */
     @NameInMap("SourceDBCluster")
     public String sourceDBCluster;
 
@@ -1052,6 +1092,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("AddedCpuCores")
         public String addedCpuCores;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("CpuCores")
         public String cpuCores;
 
@@ -1181,15 +1225,27 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("MaxIOPS")
         public Integer maxIOPS;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8192</p>
+         */
         @NameInMap("MemorySize")
         public String memorySize;
 
         @NameInMap("MirrorInsName")
         public String mirrorInsName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("Orca")
         public String orca;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3072</p>
+         */
         @NameInMap("RemoteMemorySize")
         public String remoteMemorySize;
 
@@ -1228,6 +1284,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("ServerlessType")
         public String serverlessType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Primary</p>
+         */
         @NameInMap("SubCluster")
         public String subCluster;
 
