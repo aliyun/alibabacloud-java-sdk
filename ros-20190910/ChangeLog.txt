@@ -1,3 +1,7 @@
+2024-08-08 Version: 2.4.2
+- Update API UpdateTemplate: update response param.
+
+
 2024-08-01 Version: 2.4.1
 - Update API CreateTemplate: add param ValidationOptions.
 - Update API UpdateTemplate: add param IsDraft.
