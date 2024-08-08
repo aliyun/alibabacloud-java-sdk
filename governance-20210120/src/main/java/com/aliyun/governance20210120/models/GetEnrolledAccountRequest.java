@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class GetEnrolledAccountRequest extends TeaModel {
     /**
      * <p>The account ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>19534534552****</p>
      */
     @NameInMap("AccountUid")
     public Long accountUid;
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

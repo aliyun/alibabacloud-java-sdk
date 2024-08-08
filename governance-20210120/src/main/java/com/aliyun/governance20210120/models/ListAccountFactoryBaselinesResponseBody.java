@@ -12,12 +12,18 @@ public class ListAccountFactoryBaselinesResponseBody extends TeaModel {
 
     /**
      * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAALHWGpGoYCcYMxiFfmlhvh62Xr2DzYbz/SAfc*****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3245E413-7CDD-5287-8988-6A94DE8A8369</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,39 +60,58 @@ public class ListAccountFactoryBaselinesResponseBody extends TeaModel {
     public static class ListAccountFactoryBaselinesResponseBodyBaselines extends TeaModel {
         /**
          * <p>The baseline ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>afb-bp1durvn3lgqe28v****</p>
          */
         @NameInMap("BaselineId")
         public String baselineId;
 
         /**
          * <p>The name of the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         @NameInMap("BaselineName")
         public String baselineName;
 
         /**
          * <p>The time at which the baseline was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-30T09:09:28Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default baseline</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The type of the baseline. Valid values:</p>
-         * <br>
-         * <p>*   System: default baseline</p>
-         * <p>*   Custom: custom baseline</p>
+         * <ul>
+         * <li>System: default baseline</li>
+         * <li>Custom: custom baseline</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The time when the baseline was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-29T07:08:40Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

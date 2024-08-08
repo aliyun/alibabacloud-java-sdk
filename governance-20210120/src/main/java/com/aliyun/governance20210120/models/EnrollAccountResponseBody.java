@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class EnrollAccountResponseBody extends TeaModel {
     /**
      * <p>The account ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>143165363236****</p>
      */
     @NameInMap("AccountUid")
     public Long accountUid;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7071E5FA-515E-5F53-B335-B87D619C6A66</p>
      */
     @NameInMap("RequestId")
     public String requestId;

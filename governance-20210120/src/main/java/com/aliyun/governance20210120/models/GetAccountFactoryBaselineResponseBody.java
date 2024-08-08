@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetAccountFactoryBaselineResponseBody extends TeaModel {
     /**
      * <p>The baseline ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>afb-bp16ae2k8a3yo3d*****</p>
      */
     @NameInMap("BaselineId")
     public String baselineId;
@@ -18,39 +21,58 @@ public class GetAccountFactoryBaselineResponseBody extends TeaModel {
 
     /**
      * <p>The name of the baseline.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Default</p>
      */
     @NameInMap("BaselineName")
     public String baselineName;
 
     /**
      * <p>The time when the baseline was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-11-28T00:46:34Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
      * <p>The description of the baseline.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Default baseline</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60D54503-F1F6-51B6-B6FA-A70CBDA2A68C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The type of the baseline. Valid values:</p>
-     * <br>
-     * <p>*   System: default baseline.</p>
-     * <p>*   Custom: custom baseline.</p>
+     * <ul>
+     * <li>System: default baseline.</li>
+     * <li>Custom: custom baseline.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Custom</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>The time when the baseline was updated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-11-02T01:00:07Z</p>
      */
     @NameInMap("UpdateTime")
     public String updateTime;
@@ -127,20 +149,28 @@ public class GetAccountFactoryBaselineResponseBody extends TeaModel {
     public static class GetAccountFactoryBaselineResponseBodyBaselineItems extends TeaModel {
         /**
          * <p>The configuration of the baseline item.</p>
-         * <br>
          * <p>The value is a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;Notifications\&quot;:[{\&quot;GroupKey\&quot;:\&quot;account_msg\&quot;,\&quot;Contacts\&quot;:[{\&quot;Name\&quot;:\&quot;aa\&quot;}],\&quot;PmsgStatus\&quot;:1,\&quot;EmailStatus\&quot;:1,\&quot;SmsStatus\&quot;:1}]}</p>
          */
         @NameInMap("Config")
         public String config;
 
         /**
          * <p>The name of the baseline item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1097526274671790</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The version of the baseline item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         @NameInMap("Version")
         public String version;
