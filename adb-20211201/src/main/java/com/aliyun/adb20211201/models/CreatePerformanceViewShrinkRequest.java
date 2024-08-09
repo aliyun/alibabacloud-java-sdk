@@ -12,6 +12,10 @@ public class CreatePerformanceViewShrinkRequest extends TeaModel {
     public String createFromViewType;
 
     /**
+     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition clusters within a region.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +25,12 @@ public class CreatePerformanceViewShrinkRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>Specifies whether to populate the names of the metrics in the original monitoring view when you view the monitoring view. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -34,6 +44,10 @@ public class CreatePerformanceViewShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +63,7 @@ public class CreatePerformanceViewShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The information about the monitoring view.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ViewDetail")

@@ -24,7 +24,7 @@ public class DescribeAccountPrivilegeObjectsRequest extends TeaModel {
     public String columnPrivilegeObject;
 
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

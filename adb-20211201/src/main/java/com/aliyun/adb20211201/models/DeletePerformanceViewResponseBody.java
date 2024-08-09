@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeletePerformanceViewResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial.</p>
+     * <blockquote>
+     * <p> This parameter is returned only if Resource Access Management (RAM) permission verification failed.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,

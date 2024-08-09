@@ -42,7 +42,7 @@ public class GetSparkAppLogResponseBody extends TeaModel {
 
     public static class GetSparkAppLogResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the Data Lakehouse Edition (V3.0) cluster.</p>
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>amv-clusterxxx</p>

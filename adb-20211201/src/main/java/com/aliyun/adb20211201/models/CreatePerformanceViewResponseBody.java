@@ -20,6 +20,12 @@ public class CreatePerformanceViewResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The creation result. Valid values:</p>
+     * <ul>
+     * <li><strong>SUCCESS</strong></li>
+     * <li><strong>FAILED</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */

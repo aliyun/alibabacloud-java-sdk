@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeElasticPlansResponseBody extends TeaModel {
     /**
-     * <p>The scaling plans.</p>
+     * <p>The queried scaling plans.</p>
      */
     @NameInMap("ElasticPlans")
     public java.util.List<DescribeElasticPlansResponseBodyElasticPlans> elasticPlans;

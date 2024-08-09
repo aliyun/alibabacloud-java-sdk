@@ -23,9 +23,6 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
 
     /**
      * <p>The cluster ID.</p>
-     * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>am-bp1ub9grke1****</p>

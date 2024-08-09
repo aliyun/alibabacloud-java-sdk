@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyPerformanceViewRequest extends TeaModel {
     /**
+     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +24,10 @@ public class ModifyPerformanceViewRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,12 +43,14 @@ public class ModifyPerformanceViewRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The new information about the monitoring view.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ViewDetail")
     public ModifyPerformanceViewRequestViewDetail viewDetail;
 
     /**
+     * <p>The name of the monitoring view.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ViewName")
@@ -117,6 +127,8 @@ public class ModifyPerformanceViewRequest extends TeaModel {
 
     public static class ModifyPerformanceViewRequestViewDetailCategoriesKeys extends TeaModel {
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>AnalyticDB_CPU</p>
          */
@@ -124,6 +136,12 @@ public class ModifyPerformanceViewRequest extends TeaModel {
         public String keyName;
 
         /**
+         * <p>Specifies whether to select the metric. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -155,12 +173,23 @@ public class ModifyPerformanceViewRequest extends TeaModel {
 
     public static class ModifyPerformanceViewRequestViewDetailCategories extends TeaModel {
         /**
+         * <p>The name of the metric category. Valid values:</p>
+         * <ul>
+         * <li><strong>Node</strong></li>
+         * <li><strong>DiskData</strong></li>
+         * <li><strong>WorkLoad</strong></li>
+         * <li><strong>ResourceGroup</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Node</p>
          */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The metrics.</p>
+         */
         @NameInMap("Keys")
         public java.util.List<ModifyPerformanceViewRequestViewDetailCategoriesKeys> keys;
 
@@ -188,10 +217,19 @@ public class ModifyPerformanceViewRequest extends TeaModel {
     }
 
     public static class ModifyPerformanceViewRequestViewDetail extends TeaModel {
+        /**
+         * <p>The metric categories.</p>
+         */
         @NameInMap("Categories")
         public java.util.List<ModifyPerformanceViewRequestViewDetailCategories> categories;
 
         /**
+         * <p>Specifies whether to enable the filter interaction feature. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -199,6 +237,8 @@ public class ModifyPerformanceViewRequest extends TeaModel {
         public Boolean chartLinked;
 
         /**
+         * <p>The number of charts to display in each row.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
