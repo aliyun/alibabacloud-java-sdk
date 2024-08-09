@@ -1383,7 +1383,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>start job</p>
+     * <p>Creates and starts a job.</p>
      * 
      * @deprecated OpenAPI StartJob is deprecated
      * 
@@ -1425,7 +1425,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>start job</p>
+     * <p>Creates and starts a job.</p>
      * 
      * @deprecated OpenAPI StartJob is deprecated
      * 

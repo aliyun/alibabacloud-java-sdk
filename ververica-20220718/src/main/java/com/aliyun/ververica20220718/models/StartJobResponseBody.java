@@ -4,10 +4,21 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class StartJobResponseBody extends TeaModel {
+    /**
+     * <ul>
+     * <li>If the value of success was true, the job that you created was returned.</li>
+     * <li>If the value of success was false, a null value was returned.</li>
+     * </ul>
+     */
     @NameInMap("data")
     public Job data;
 
     /**
+     * <ul>
+     * <li>If the value of success was false, an error code was returned.</li>
+     * <li>If the value of success was true, a null value was returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -15,6 +26,11 @@ public class StartJobResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <ul>
+     * <li>If the value of success was false, an error message was returned.</li>
+     * <li>If the value of success was true, a null value was returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -22,6 +38,8 @@ public class StartJobResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The value was fixed to 200.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +47,8 @@ public class StartJobResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</p>
      */
@@ -36,6 +56,8 @@ public class StartJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

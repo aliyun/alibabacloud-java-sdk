@@ -75,6 +75,9 @@ public class Deployment extends TeaModel {
     @NameInMap("jobSummary")
     public JobSummary jobSummary;
 
+    @NameInMap("labels")
+    public java.util.Map<String, ?> labels;
+
     @NameInMap("localVariables")
     public java.util.List<LocalVariable> localVariables;
 
@@ -111,6 +114,13 @@ public class Deployment extends TeaModel {
      */
     @NameInMap("namespace")
     public String namespace;
+
+    /**
+     * <strong>example:</strong>
+     * <p>00000000-0000-0000-0000-000000000003</p>
+     */
+    @NameInMap("referencedDeploymentDraftId")
+    public String referencedDeploymentDraftId;
 
     @NameInMap("streamingResourceSetting")
     public StreamingResourceSetting streamingResourceSetting;
@@ -231,6 +241,14 @@ public class Deployment extends TeaModel {
         return this.jobSummary;
     }
 
+    public Deployment setLabels(java.util.Map<String, ?> labels) {
+        this.labels = labels;
+        return this;
+    }
+    public java.util.Map<String, ?> getLabels() {
+        return this.labels;
+    }
+
     public Deployment setLocalVariables(java.util.List<LocalVariable> localVariables) {
         this.localVariables = localVariables;
         return this;
@@ -285,6 +303,14 @@ public class Deployment extends TeaModel {
     }
     public String getNamespace() {
         return this.namespace;
+    }
+
+    public Deployment setReferencedDeploymentDraftId(String referencedDeploymentDraftId) {
+        this.referencedDeploymentDraftId = referencedDeploymentDraftId;
+        return this;
+    }
+    public String getReferencedDeploymentDraftId() {
+        return this.referencedDeploymentDraftId;
     }
 
     public Deployment setStreamingResourceSetting(StreamingResourceSetting streamingResourceSetting) {
