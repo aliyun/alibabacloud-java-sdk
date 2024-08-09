@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartJobRequest extends TeaModel {
     /**
+     * <p>The parameter that is used to start the job.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")
