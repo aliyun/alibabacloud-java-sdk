@@ -48,6 +48,23 @@ public class MassPushRequest extends TeaModel {
         @NameInMap("AndroidActivity")
         public String androidActivity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>99</p>
+         */
+        @NameInMap("AndroidBadgeAddNum")
+        public Integer androidBadgeAddNum;
+
+        @NameInMap("AndroidBadgeClass")
+        public String androidBadgeClass;
+
+        /**
+         * <strong>example:</strong>
+         * <p>99</p>
+         */
+        @NameInMap("AndroidBadgeSetNum")
+        public Integer androidBadgeSetNum;
+
         @NameInMap("AndroidBigBody")
         public String androidBigBody;
 
@@ -536,6 +553,30 @@ public class MassPushRequest extends TeaModel {
         }
         public String getAndroidActivity() {
             return this.androidActivity;
+        }
+
+        public MassPushRequestPushTask setAndroidBadgeAddNum(Integer androidBadgeAddNum) {
+            this.androidBadgeAddNum = androidBadgeAddNum;
+            return this;
+        }
+        public Integer getAndroidBadgeAddNum() {
+            return this.androidBadgeAddNum;
+        }
+
+        public MassPushRequestPushTask setAndroidBadgeClass(String androidBadgeClass) {
+            this.androidBadgeClass = androidBadgeClass;
+            return this;
+        }
+        public String getAndroidBadgeClass() {
+            return this.androidBadgeClass;
+        }
+
+        public MassPushRequestPushTask setAndroidBadgeSetNum(Integer androidBadgeSetNum) {
+            this.androidBadgeSetNum = androidBadgeSetNum;
+            return this;
+        }
+        public Integer getAndroidBadgeSetNum() {
+            return this.androidBadgeSetNum;
         }
 
         public MassPushRequestPushTask setAndroidBigBody(String androidBigBody) {

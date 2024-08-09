@@ -618,6 +618,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AndroidActivity", request.androidActivity);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.androidBadgeAddNum)) {
+            query.put("AndroidBadgeAddNum", request.androidBadgeAddNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.androidBadgeClass)) {
+            query.put("AndroidBadgeClass", request.androidBadgeClass);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.androidBadgeSetNum)) {
+            query.put("AndroidBadgeSetNum", request.androidBadgeSetNum);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.androidBigBody)) {
             query.put("AndroidBigBody", request.androidBigBody);
         }
