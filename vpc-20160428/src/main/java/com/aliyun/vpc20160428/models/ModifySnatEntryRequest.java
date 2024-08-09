@@ -20,6 +20,9 @@ public class ModifySnatEntryRequest extends TeaModel {
     @NameInMap("EipAffinity")
     public Integer eipAffinity;
 
+    @NameInMap("NetworkInterfaceId")
+    public String networkInterfaceId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -107,6 +110,14 @@ public class ModifySnatEntryRequest extends TeaModel {
     }
     public Integer getEipAffinity() {
         return this.eipAffinity;
+    }
+
+    public ModifySnatEntryRequest setNetworkInterfaceId(String networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+        return this;
+    }
+    public String getNetworkInterfaceId() {
+        return this.networkInterfaceId;
     }
 
     public ModifySnatEntryRequest setOwnerAccount(String ownerAccount) {

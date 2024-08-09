@@ -7596,6 +7596,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EipAffinity", request.eipAffinity);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.networkInterfaceId)) {
+            query.put("NetworkInterfaceId", request.networkInterfaceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
@@ -18680,6 +18684,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NatGatewayId", request.natGatewayId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.networkInterfaceIds)) {
+            query.put("NetworkInterfaceIds", request.networkInterfaceIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
@@ -28244,6 +28252,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.eipAffinity)) {
             query.put("EipAffinity", request.eipAffinity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkInterfaceId)) {
+            query.put("NetworkInterfaceId", request.networkInterfaceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {

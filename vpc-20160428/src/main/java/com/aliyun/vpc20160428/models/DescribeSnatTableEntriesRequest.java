@@ -16,6 +16,9 @@ public class DescribeSnatTableEntriesRequest extends TeaModel {
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
+    @NameInMap("NetworkInterfaceIds")
+    public java.util.List<String> networkInterfaceIds;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -133,6 +136,14 @@ public class DescribeSnatTableEntriesRequest extends TeaModel {
     }
     public String getNatGatewayId() {
         return this.natGatewayId;
+    }
+
+    public DescribeSnatTableEntriesRequest setNetworkInterfaceIds(java.util.List<String> networkInterfaceIds) {
+        this.networkInterfaceIds = networkInterfaceIds;
+        return this;
+    }
+    public java.util.List<String> getNetworkInterfaceIds() {
+        return this.networkInterfaceIds;
     }
 
     public DescribeSnatTableEntriesRequest setOwnerAccount(String ownerAccount) {

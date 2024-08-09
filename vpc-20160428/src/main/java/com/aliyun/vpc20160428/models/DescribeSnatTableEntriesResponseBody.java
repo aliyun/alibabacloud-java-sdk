@@ -104,6 +104,9 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         @NameInMap("NatGatewayId")
         public String natGatewayId;
 
+        @NameInMap("NetworkInterfaceId")
+        public String networkInterfaceId;
+
         /**
          * <p>The ID of the SNAT entry.</p>
          * 
@@ -197,6 +200,14 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
         public String getNatGatewayId() {
             return this.natGatewayId;
+        }
+
+        public DescribeSnatTableEntriesResponseBodySnatTableEntriesSnatTableEntry setNetworkInterfaceId(String networkInterfaceId) {
+            this.networkInterfaceId = networkInterfaceId;
+            return this;
+        }
+        public String getNetworkInterfaceId() {
+            return this.networkInterfaceId;
         }
 
         public DescribeSnatTableEntriesResponseBodySnatTableEntriesSnatTableEntry setSnatEntryId(String snatEntryId) {

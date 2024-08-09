@@ -31,6 +31,9 @@ public class CreateSnatEntryRequest extends TeaModel {
     @NameInMap("EipAffinity")
     public Integer eipAffinity;
 
+    @NameInMap("NetworkInterfaceId")
+    public String networkInterfaceId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -88,7 +91,6 @@ public class CreateSnatEntryRequest extends TeaModel {
      * <ul>
      * <li>When you add SNAT entries for a VPC NAT gateway, this parameter specifies the NAT IP addresses in the SNAT entry. Separate multiple NAT IP addresses with commas (,).</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>47.98.XX.XX</p>
@@ -157,6 +159,14 @@ public class CreateSnatEntryRequest extends TeaModel {
     }
     public Integer getEipAffinity() {
         return this.eipAffinity;
+    }
+
+    public CreateSnatEntryRequest setNetworkInterfaceId(String networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+        return this;
+    }
+    public String getNetworkInterfaceId() {
+        return this.networkInterfaceId;
     }
 
     public CreateSnatEntryRequest setOwnerAccount(String ownerAccount) {
