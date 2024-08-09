@@ -7,6 +7,9 @@ public class ExtraPodSpec extends TeaModel {
     @NameInMap("InitContainers")
     public java.util.List<ContainerSpec> initContainers;
 
+    @NameInMap("Lifecycle")
+    public Lifecycle lifecycle;
+
     @NameInMap("PodAnnotations")
     public java.util.Map<String, String> podAnnotations;
 
@@ -30,6 +33,14 @@ public class ExtraPodSpec extends TeaModel {
     }
     public java.util.List<ContainerSpec> getInitContainers() {
         return this.initContainers;
+    }
+
+    public ExtraPodSpec setLifecycle(Lifecycle lifecycle) {
+        this.lifecycle = lifecycle;
+        return this;
+    }
+    public Lifecycle getLifecycle() {
+        return this.lifecycle;
     }
 
     public ExtraPodSpec setPodAnnotations(java.util.Map<String, String> podAnnotations) {

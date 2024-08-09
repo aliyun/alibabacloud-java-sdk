@@ -365,6 +365,9 @@ public class CreateJobRequest extends TeaModel {
         @NameInMap("MountPath")
         public String mountPath;
 
+        @NameInMap("Options")
+        public String options;
+
         /**
          * <strong>example:</strong>
          * <p>oss://bucket.oss-cn-hangzhou-internal.aliyuncs.com/path/</p>
@@ -391,6 +394,14 @@ public class CreateJobRequest extends TeaModel {
         }
         public String getMountPath() {
             return this.mountPath;
+        }
+
+        public CreateJobRequestDataSources setOptions(String options) {
+            this.options = options;
+            return this;
+        }
+        public String getOptions() {
+            return this.options;
         }
 
         public CreateJobRequestDataSources setUri(String uri) {
