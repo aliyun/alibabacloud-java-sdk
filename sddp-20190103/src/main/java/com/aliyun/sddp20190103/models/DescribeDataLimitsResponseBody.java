@@ -267,6 +267,9 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         @NameInMap("LastFinishedTime")
         public Long lastFinishedTime;
 
+        @NameInMap("LastStartTime")
+        public Long lastStartTime;
+
         /**
          * <p>The region in which the data asset resides.</p>
          * 
@@ -647,6 +650,14 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         }
         public Long getLastFinishedTime() {
             return this.lastFinishedTime;
+        }
+
+        public DescribeDataLimitsResponseBodyItems setLastStartTime(Long lastStartTime) {
+            this.lastStartTime = lastStartTime;
+            return this;
+        }
+        public Long getLastStartTime() {
+            return this.lastStartTime;
         }
 
         public DescribeDataLimitsResponseBodyItems setLocalName(String localName) {
