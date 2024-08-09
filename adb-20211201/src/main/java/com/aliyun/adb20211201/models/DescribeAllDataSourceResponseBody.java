@@ -92,7 +92,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         public String columnName;
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>amv-bp1pke2pcfavw****</p>
@@ -224,7 +224,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
 
     public static class DescribeAllDataSourceResponseBodySchemasSchema extends TeaModel {
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>amv-bp1pke2pcfavw****</p>
@@ -285,7 +285,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
 
     public static class DescribeAllDataSourceResponseBodyTablesTable extends TeaModel {
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>amv-bp1pke2pcfavw****</p>

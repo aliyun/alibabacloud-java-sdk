@@ -12,6 +12,10 @@ public class CreatePerformanceViewRequest extends TeaModel {
     public String createFromViewType;
 
     /**
+     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition clusters within a region.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +25,12 @@ public class CreatePerformanceViewRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>Specifies whether to populate the names of the metrics in the original monitoring view when you view the monitoring view. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -34,6 +44,10 @@ public class CreatePerformanceViewRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +63,7 @@ public class CreatePerformanceViewRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The information about the monitoring view.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ViewDetail")
@@ -147,6 +162,8 @@ public class CreatePerformanceViewRequest extends TeaModel {
 
     public static class CreatePerformanceViewRequestViewDetailCategoriesKeys extends TeaModel {
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>AnalyticDB_CPU</p>
          */
@@ -154,6 +171,12 @@ public class CreatePerformanceViewRequest extends TeaModel {
         public String keyName;
 
         /**
+         * <p>Specifies whether to select the metric. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -185,12 +208,23 @@ public class CreatePerformanceViewRequest extends TeaModel {
 
     public static class CreatePerformanceViewRequestViewDetailCategories extends TeaModel {
         /**
+         * <p>The name of the metric category. Valid values:</p>
+         * <ul>
+         * <li><strong>Node</strong></li>
+         * <li><strong>DiskData</strong></li>
+         * <li><strong>WorkLoad</strong></li>
+         * <li><strong>ResourceGroup</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Node</p>
          */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The metrics.</p>
+         */
         @NameInMap("Keys")
         public java.util.List<CreatePerformanceViewRequestViewDetailCategoriesKeys> keys;
 
@@ -218,10 +252,19 @@ public class CreatePerformanceViewRequest extends TeaModel {
     }
 
     public static class CreatePerformanceViewRequestViewDetail extends TeaModel {
+        /**
+         * <p>The metric categories.</p>
+         */
         @NameInMap("Categories")
         public java.util.List<CreatePerformanceViewRequestViewDetailCategories> categories;
 
         /**
+         * <p>Specifies whether to enable the filter interaction feature. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -229,6 +272,8 @@ public class CreatePerformanceViewRequest extends TeaModel {
         public Boolean chartLinked;
 
         /**
+         * <p>The number of charts to display in each row.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

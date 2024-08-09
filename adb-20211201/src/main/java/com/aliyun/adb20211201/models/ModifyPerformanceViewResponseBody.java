@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyPerformanceViewResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial. This parameter is returned only if Resource Access Management (RAM) permission verification failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,
@@ -20,6 +22,12 @@ public class ModifyPerformanceViewResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The modification result. Valid values:</p>
+     * <ul>
+     * <li><strong>SUCCESS</strong></li>
+     * <li><strong>FAILED</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
@@ -27,6 +35,8 @@ public class ModifyPerformanceViewResponseBody extends TeaModel {
     public String modifyStatus;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C7EDB8E4-9769-4233-88C7-DCA4C9******</p>
      */

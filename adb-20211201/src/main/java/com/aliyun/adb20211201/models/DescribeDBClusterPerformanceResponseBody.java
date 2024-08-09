@@ -176,7 +176,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
          * <ul>
          * <li>AnalyticDB_Avg_QueryRT: the average amount of time consumed by queries.</li>
          * <li>AnalyticDB_Max_QueryRT: the maximum amount of time consumed by a single query.</li>
-         * <li>etl_avg_rt: the average amount of time consumed by extract-transform-load (ETL) operations.</li>
+         * <li>etl_avg_rt: the average amount of time consumed by extract, transform, load (ETL) operations.</li>
          * <li>etl_max_rt: the maximum amount of time consumed by a single ETL operation.</li>
          * </ul>
          * </li>
@@ -301,31 +301,31 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
          * </li>
          * </ul>
          * </li>
-         * <li><p>APS</p>
+         * <li><p>AnalyticDB Pipeline Service (APS)</p>
          * <ul>
-         * <li><p>AnalyticDB_APS_BPS: the bytes per second (BPS) of APS provided by the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <li><p>AnalyticDB_APS_BPS: the bytes per second (BPS) of APS provided by the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
          * <ul>
          * <li>APS_Read_BPS: the read BPS of APS.</li>
          * </ul>
          * </li>
-         * <li><p>AnalyticDB_APS_CPU: the CPU utilization of APS provided by the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <li><p>AnalyticDB_APS_CPU: the CPU utilization of APS provided by the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
          * <ul>
          * <li>APS_CPU_Avg_Usage_Percentage: the average CPU utilization of APS.</li>
          * <li>APS_CPU_Max_Usage_Percentage: the maximum CPU utilization of APS.</li>
          * </ul>
          * </li>
-         * <li><p>AnalyticDB_APS_Memory: the memory usage of APS provided by the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <li><p>AnalyticDB_APS_Memory: the memory usage of APS provided by the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
          * <ul>
          * <li>APS_Memory_Avg_Usage_Percentage: the average memory usage of APS.</li>
          * <li>APS_Memory_Max_Usage_Percentage: the maximum memory usage of APS.</li>
          * </ul>
          * </li>
-         * <li><p>AnalyticDB_APS_RPS: the number of records per second of APS provided by the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <li><p>AnalyticDB_APS_RPS: the number of records per second of APS provided by the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
          * <ul>
          * <li>APS_Read_RPS: the number of read records per second of APS.</li>
          * </ul>
          * </li>
-         * <li><p>AnalyticDB_APS_RT: the response time of APS provided by the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <li><p>AnalyticDB_APS_RT: the response time of APS provided by the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
          * <ul>
          * <li>APS_Read_Avg_RT: the average response time of APS.</li>
          * <li>APS_Read_Max_RT: the maximum response time of APS.</li>
@@ -334,12 +334,6 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
          * </ul>
          * </li>
          * </ul>
-         * <hr>
-         * <pre><code>*   *
-         * *   *
-         * *   *
-         * *   *
-         * </code></pre>
          * 
          * <strong>example:</strong>
          * <p>AnalyticDB_Storage_CPU_Avg_Usage_Percentage</p>

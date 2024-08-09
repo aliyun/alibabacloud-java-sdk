@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterRequest extends TeaModel {
     /**
-     * <p>The reserved computing resources. Unit: ACUs. Valid values: 0 to 4096. The value must be in increments of 16 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.</p>
+     * <p>The reserved computing resources. Unit: ACUs. Valid values: 0 to 4096. The value must be in increments of 16 ACUs. Each ACU is approximately equal to 1 core and 4 GB memory.</p>
      * <blockquote>
      * <p> This parameter must be specified with a unit.</p>
      * </blockquote>
@@ -70,7 +70,7 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     /**
-     * <p>The reserved storage resources. Unit: ACUs. Valid values: 0 to 2064. The value must be in increments of 24 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.</p>
+     * <p>The reserved storage resources. Unit: ACUs. Valid values: 0 to 2064. The value must be in increments of 24 ACUs. Each ACU is approximately equal to 1 core and 4 GB memory.</p>
      * <blockquote>
      * <p> This parameter must be specified with a unit.</p>
      * </blockquote>

@@ -46,9 +46,9 @@ public class SubmitSparkAppRequest extends TeaModel {
     public String appType;
 
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query cluster IDs.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -74,7 +74,7 @@ public class SubmitSparkAppRequest extends TeaModel {
     /**
      * <p>The name of the job resource group.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/612410.html">DescribeDBResourceGroup</a> operation to query the resource group ID of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/612410.html">DescribeDBResourceGroup</a> operation to query the name of a resource group within a cluster.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

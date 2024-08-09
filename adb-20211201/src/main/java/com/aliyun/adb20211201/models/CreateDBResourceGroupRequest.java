@@ -248,18 +248,27 @@ public class CreateDBResourceGroupRequest extends TeaModel {
          * <li>The name must start with a letter or digit.</li>
          * <li>The name can contain letters, digits, hyphens (-), and underscores (_).</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>test_group</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The execution duration of the query. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>180000</p>
          */
         @NameInMap("QueryTime")
         public String queryTime;
 
         /**
-         * <p>The name of the destination resource group.</p>
+         * <p>The name of the resource group to which you want to resubmit the query job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job</p>
          */
         @NameInMap("TargetGroupName")
         public String targetGroupName;
