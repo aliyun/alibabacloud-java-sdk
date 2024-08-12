@@ -626,6 +626,9 @@ public class RunInstancesRequest extends TeaModel {
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    @NameInMap("PrivateDnsNameOptions")
+    public RunInstancesRequestPrivateDnsNameOptions privateDnsNameOptions;
+
     /**
      * <p>The private IP address to assign to the instance. To assign a private IP address to an instance that resides in a VPC, make sure that the IP address is an idle IP address within the CIDR block of the vSwitch specified by <code>VSwitchId</code>.</p>
      * <p>Take note of the following items:</p>
@@ -1319,6 +1322,14 @@ public class RunInstancesRequest extends TeaModel {
     }
     public String getPeriodUnit() {
         return this.periodUnit;
+    }
+
+    public RunInstancesRequest setPrivateDnsNameOptions(RunInstancesRequestPrivateDnsNameOptions privateDnsNameOptions) {
+        this.privateDnsNameOptions = privateDnsNameOptions;
+        return this;
+    }
+    public RunInstancesRequestPrivateDnsNameOptions getPrivateDnsNameOptions() {
+        return this.privateDnsNameOptions;
     }
 
     public RunInstancesRequest setPrivateIpAddress(String privateIpAddress) {
@@ -2895,6 +2906,69 @@ public class RunInstancesRequest extends TeaModel {
         }
         public Boolean getEnableJumboFrame() {
             return this.enableJumboFrame;
+        }
+
+    }
+
+    public static class RunInstancesRequestPrivateDnsNameOptions extends TeaModel {
+        @NameInMap("EnableInstanceIdDnsAAAARecord")
+        public Boolean enableInstanceIdDnsAAAARecord;
+
+        @NameInMap("EnableInstanceIdDnsARecord")
+        public Boolean enableInstanceIdDnsARecord;
+
+        @NameInMap("EnableIpDnsARecord")
+        public Boolean enableIpDnsARecord;
+
+        @NameInMap("EnableIpDnsPtrRecord")
+        public Boolean enableIpDnsPtrRecord;
+
+        @NameInMap("HostnameType")
+        public String hostnameType;
+
+        public static RunInstancesRequestPrivateDnsNameOptions build(java.util.Map<String, ?> map) throws Exception {
+            RunInstancesRequestPrivateDnsNameOptions self = new RunInstancesRequestPrivateDnsNameOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public RunInstancesRequestPrivateDnsNameOptions setEnableInstanceIdDnsAAAARecord(Boolean enableInstanceIdDnsAAAARecord) {
+            this.enableInstanceIdDnsAAAARecord = enableInstanceIdDnsAAAARecord;
+            return this;
+        }
+        public Boolean getEnableInstanceIdDnsAAAARecord() {
+            return this.enableInstanceIdDnsAAAARecord;
+        }
+
+        public RunInstancesRequestPrivateDnsNameOptions setEnableInstanceIdDnsARecord(Boolean enableInstanceIdDnsARecord) {
+            this.enableInstanceIdDnsARecord = enableInstanceIdDnsARecord;
+            return this;
+        }
+        public Boolean getEnableInstanceIdDnsARecord() {
+            return this.enableInstanceIdDnsARecord;
+        }
+
+        public RunInstancesRequestPrivateDnsNameOptions setEnableIpDnsARecord(Boolean enableIpDnsARecord) {
+            this.enableIpDnsARecord = enableIpDnsARecord;
+            return this;
+        }
+        public Boolean getEnableIpDnsARecord() {
+            return this.enableIpDnsARecord;
+        }
+
+        public RunInstancesRequestPrivateDnsNameOptions setEnableIpDnsPtrRecord(Boolean enableIpDnsPtrRecord) {
+            this.enableIpDnsPtrRecord = enableIpDnsPtrRecord;
+            return this;
+        }
+        public Boolean getEnableIpDnsPtrRecord() {
+            return this.enableIpDnsPtrRecord;
+        }
+
+        public RunInstancesRequestPrivateDnsNameOptions setHostnameType(String hostnameType) {
+            this.hostnameType = hostnameType;
+            return this;
+        }
+        public String getHostnameType() {
+            return this.hostnameType;
         }
 
     }

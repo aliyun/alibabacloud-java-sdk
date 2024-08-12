@@ -26582,6 +26582,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Password", request.password);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.privateDnsNameOptions)) {
+            query.put("PrivateDnsNameOptions", request.privateDnsNameOptions);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.recyclable)) {
             query.put("Recyclable", request.recyclable);
         }
@@ -33274,6 +33278,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.periodUnit)) {
             query.put("PeriodUnit", request.periodUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.privateDnsNameOptions)) {
+            query.put("PrivateDnsNameOptions", request.privateDnsNameOptions);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.privateIpAddress)) {

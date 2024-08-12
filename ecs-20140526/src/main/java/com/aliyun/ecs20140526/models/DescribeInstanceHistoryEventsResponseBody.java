@@ -650,6 +650,9 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         @NameInMap("Reason")
         public String reason;
 
+        @NameInMap("ReasonCode")
+        public String reasonCode;
+
         /**
          * <p>The type of the resource. Valid values:</p>
          * <ul>
@@ -747,6 +750,14 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
         public String getReason() {
             return this.reason;
+        }
+
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventType setReasonCode(String reasonCode) {
+            this.reasonCode = reasonCode;
+            return this;
+        }
+        public String getReasonCode() {
+            return this.reasonCode;
         }
 
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventType setResourceType(String resourceType) {

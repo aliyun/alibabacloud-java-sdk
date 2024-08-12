@@ -443,6 +443,9 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         @NameInMap("Primary")
         public Boolean primary;
 
+        @NameInMap("PrivateDnsName")
+        public String privateDnsName;
+
         /**
          * <p>The private IP address of the ENI.</p>
          * 
@@ -471,6 +474,14 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         }
         public Boolean getPrimary() {
             return this.primary;
+        }
+
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet setPrivateDnsName(String privateDnsName) {
+            this.privateDnsName = privateDnsName;
+            return this;
+        }
+        public String getPrivateDnsName() {
+            return this.privateDnsName;
         }
 
         public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet setPrivateIpAddress(String privateIpAddress) {
