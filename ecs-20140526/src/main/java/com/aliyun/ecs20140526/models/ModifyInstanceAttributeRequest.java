@@ -121,6 +121,9 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     @NameInMap("Password")
     public String password;
 
+    @NameInMap("PrivateDnsNameOptions")
+    public ModifyInstanceAttributeRequestPrivateDnsNameOptions privateDnsNameOptions;
+
     /**
      * <blockquote>
      * <p> This parameter is in invitational preview and is not publicly available.</p>
@@ -274,6 +277,14 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
         return this.password;
     }
 
+    public ModifyInstanceAttributeRequest setPrivateDnsNameOptions(ModifyInstanceAttributeRequestPrivateDnsNameOptions privateDnsNameOptions) {
+        this.privateDnsNameOptions = privateDnsNameOptions;
+        return this;
+    }
+    public ModifyInstanceAttributeRequestPrivateDnsNameOptions getPrivateDnsNameOptions() {
+        return this.privateDnsNameOptions;
+    }
+
     public ModifyInstanceAttributeRequest setRecyclable(Boolean recyclable) {
         this.recyclable = recyclable;
         return this;
@@ -356,6 +367,69 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
         }
         public String getTopologyType() {
             return this.topologyType;
+        }
+
+    }
+
+    public static class ModifyInstanceAttributeRequestPrivateDnsNameOptions extends TeaModel {
+        @NameInMap("EnableInstanceIdDnsAAAARecord")
+        public Boolean enableInstanceIdDnsAAAARecord;
+
+        @NameInMap("EnableInstanceIdDnsARecord")
+        public Boolean enableInstanceIdDnsARecord;
+
+        @NameInMap("EnableIpDnsARecord")
+        public Boolean enableIpDnsARecord;
+
+        @NameInMap("EnableIpDnsPtrRecord")
+        public Boolean enableIpDnsPtrRecord;
+
+        @NameInMap("HostnameType")
+        public String hostnameType;
+
+        public static ModifyInstanceAttributeRequestPrivateDnsNameOptions build(java.util.Map<String, ?> map) throws Exception {
+            ModifyInstanceAttributeRequestPrivateDnsNameOptions self = new ModifyInstanceAttributeRequestPrivateDnsNameOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyInstanceAttributeRequestPrivateDnsNameOptions setEnableInstanceIdDnsAAAARecord(Boolean enableInstanceIdDnsAAAARecord) {
+            this.enableInstanceIdDnsAAAARecord = enableInstanceIdDnsAAAARecord;
+            return this;
+        }
+        public Boolean getEnableInstanceIdDnsAAAARecord() {
+            return this.enableInstanceIdDnsAAAARecord;
+        }
+
+        public ModifyInstanceAttributeRequestPrivateDnsNameOptions setEnableInstanceIdDnsARecord(Boolean enableInstanceIdDnsARecord) {
+            this.enableInstanceIdDnsARecord = enableInstanceIdDnsARecord;
+            return this;
+        }
+        public Boolean getEnableInstanceIdDnsARecord() {
+            return this.enableInstanceIdDnsARecord;
+        }
+
+        public ModifyInstanceAttributeRequestPrivateDnsNameOptions setEnableIpDnsARecord(Boolean enableIpDnsARecord) {
+            this.enableIpDnsARecord = enableIpDnsARecord;
+            return this;
+        }
+        public Boolean getEnableIpDnsARecord() {
+            return this.enableIpDnsARecord;
+        }
+
+        public ModifyInstanceAttributeRequestPrivateDnsNameOptions setEnableIpDnsPtrRecord(Boolean enableIpDnsPtrRecord) {
+            this.enableIpDnsPtrRecord = enableIpDnsPtrRecord;
+            return this;
+        }
+        public Boolean getEnableIpDnsPtrRecord() {
+            return this.enableIpDnsPtrRecord;
+        }
+
+        public ModifyInstanceAttributeRequestPrivateDnsNameOptions setHostnameType(String hostnameType) {
+            this.hostnameType = hostnameType;
+            return this;
+        }
+        public String getHostnameType() {
+            return this.hostnameType;
         }
 
     }

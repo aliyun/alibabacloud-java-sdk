@@ -78,10 +78,10 @@ public class ModifyDiskSpecRequest extends TeaModel {
     public String performanceLevel;
 
     /**
-     * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}</p>
-     * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}</p>
+     * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
+     * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
      * <blockquote>
-     * <p> This parameter is available only if the DiskCategory parameter is set to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a> and <a href="https://help.aliyun.com/document_detail/413275.html">Modify the performance configurations of an ESSD AutoPL disk</a>.</p>
+     * <p> This parameter is available only if you set DiskCategory to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a> and <a href="https://help.aliyun.com/document_detail/413275.html">Modify the performance configurations of an ESSD AutoPL disk</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

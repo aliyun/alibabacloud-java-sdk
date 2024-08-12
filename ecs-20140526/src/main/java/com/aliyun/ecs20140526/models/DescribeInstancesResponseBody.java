@@ -728,6 +728,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("Primary")
         public Boolean primary;
 
+        @NameInMap("PrivateDnsName")
+        public String privateDnsName;
+
         /**
          * <p>The private IP address of the ENI.</p>
          * 
@@ -748,6 +751,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public Boolean getPrimary() {
             return this.primary;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSetsPrivateIpSet setPrivateDnsName(String privateDnsName) {
+            this.privateDnsName = privateDnsName;
+            return this;
+        }
+        public String getPrivateDnsName() {
+            return this.privateDnsName;
         }
 
         public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSetsPrivateIpSet setPrivateIpAddress(String privateIpAddress) {
@@ -998,6 +1009,69 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public java.util.List<DescribeInstancesResponseBodyInstancesInstanceOperationLocksLockReason> getLockReason() {
             return this.lockReason;
+        }
+
+    }
+
+    public static class DescribeInstancesResponseBodyInstancesInstancePrivateDnsNameOptions extends TeaModel {
+        @NameInMap("EnableInstanceIdDnsAAAARecord")
+        public Boolean enableInstanceIdDnsAAAARecord;
+
+        @NameInMap("EnableInstanceIdDnsARecord")
+        public Boolean enableInstanceIdDnsARecord;
+
+        @NameInMap("EnableIpDnsARecord")
+        public Boolean enableIpDnsARecord;
+
+        @NameInMap("EnableIpDnsPtrRecord")
+        public Boolean enableIpDnsPtrRecord;
+
+        @NameInMap("HostnameType")
+        public String hostnameType;
+
+        public static DescribeInstancesResponseBodyInstancesInstancePrivateDnsNameOptions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstancePrivateDnsNameOptions self = new DescribeInstancesResponseBodyInstancesInstancePrivateDnsNameOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstancePrivateDnsNameOptions setEnableInstanceIdDnsAAAARecord(Boolean enableInstanceIdDnsAAAARecord) {
+            this.enableInstanceIdDnsAAAARecord = enableInstanceIdDnsAAAARecord;
+            return this;
+        }
+        public Boolean getEnableInstanceIdDnsAAAARecord() {
+            return this.enableInstanceIdDnsAAAARecord;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstancePrivateDnsNameOptions setEnableInstanceIdDnsARecord(Boolean enableInstanceIdDnsARecord) {
+            this.enableInstanceIdDnsARecord = enableInstanceIdDnsARecord;
+            return this;
+        }
+        public Boolean getEnableInstanceIdDnsARecord() {
+            return this.enableInstanceIdDnsARecord;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstancePrivateDnsNameOptions setEnableIpDnsARecord(Boolean enableIpDnsARecord) {
+            this.enableIpDnsARecord = enableIpDnsARecord;
+            return this;
+        }
+        public Boolean getEnableIpDnsARecord() {
+            return this.enableIpDnsARecord;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstancePrivateDnsNameOptions setEnableIpDnsPtrRecord(Boolean enableIpDnsPtrRecord) {
+            this.enableIpDnsPtrRecord = enableIpDnsPtrRecord;
+            return this;
+        }
+        public Boolean getEnableIpDnsPtrRecord() {
+            return this.enableIpDnsPtrRecord;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstancePrivateDnsNameOptions setHostnameType(String hostnameType) {
+            this.hostnameType = hostnameType;
+            return this;
+        }
+        public String getHostnameType() {
+            return this.hostnameType;
         }
 
     }
@@ -1627,6 +1701,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("OperationLocks")
         public DescribeInstancesResponseBodyInstancesInstanceOperationLocks operationLocks;
 
+        @NameInMap("PrivateDnsNameOptions")
+        public DescribeInstancesResponseBodyInstancesInstancePrivateDnsNameOptions privateDnsNameOptions;
+
         /**
          * <p>The public IP addresses of the instance.</p>
          */
@@ -2173,6 +2250,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public DescribeInstancesResponseBodyInstancesInstanceOperationLocks getOperationLocks() {
             return this.operationLocks;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setPrivateDnsNameOptions(DescribeInstancesResponseBodyInstancesInstancePrivateDnsNameOptions privateDnsNameOptions) {
+            this.privateDnsNameOptions = privateDnsNameOptions;
+            return this;
+        }
+        public DescribeInstancesResponseBodyInstancesInstancePrivateDnsNameOptions getPrivateDnsNameOptions() {
+            return this.privateDnsNameOptions;
         }
 
         public DescribeInstancesResponseBodyInstancesInstance setPublicIpAddress(DescribeInstancesResponseBodyInstancesInstancePublicIpAddress publicIpAddress) {
