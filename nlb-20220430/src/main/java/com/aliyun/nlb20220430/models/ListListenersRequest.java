@@ -57,6 +57,9 @@ public class ListListenersRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("SecSensorEnabled")
+    public String secSensorEnabled;
+
     /**
      * <p>The tags.</p>
      */
@@ -114,6 +117,14 @@ public class ListListenersRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListListenersRequest setSecSensorEnabled(String secSensorEnabled) {
+        this.secSensorEnabled = secSensorEnabled;
+        return this;
+    }
+    public String getSecSensorEnabled() {
+        return this.secSensorEnabled;
     }
 
     public ListListenersRequest setTag(java.util.List<ListListenersRequestTag> tag) {
