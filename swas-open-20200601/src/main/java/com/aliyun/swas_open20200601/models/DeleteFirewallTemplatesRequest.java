@@ -21,15 +21,6 @@ public class DeleteFirewallTemplatesRequest extends TeaModel {
     public java.util.List<String> firewallTemplateId;
 
     /**
-     * <p>The ID of the simple application server to which the firewall templates belong.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ace0706b2ac4454d984295a94213****</p>
-     */
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    /**
      * <p>The region ID of the simple application server. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
@@ -58,14 +49,6 @@ public class DeleteFirewallTemplatesRequest extends TeaModel {
     }
     public java.util.List<String> getFirewallTemplateId() {
         return this.firewallTemplateId;
-    }
-
-    public DeleteFirewallTemplatesRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public DeleteFirewallTemplatesRequest setRegionId(String regionId) {

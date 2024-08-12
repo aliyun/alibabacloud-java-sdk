@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListCustomImageShareAccountsRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure the idempotence of a request?</a></p>
+     * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
@@ -12,6 +14,7 @@ public class ListCustomImageShareAccountsRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The ID of the shared custom image.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class ListCustomImageShareAccountsRequest extends TeaModel {
     public String imageId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,6 +33,10 @@ public class ListCustomImageShareAccountsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * <p>Maximum value: 50.</p>
+     * <p>Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -35,6 +44,7 @@ public class ListCustomImageShareAccountsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

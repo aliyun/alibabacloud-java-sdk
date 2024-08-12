@@ -23,15 +23,6 @@ public class DescribeFirewallTemplateApplyResultsRequest extends TeaModel {
     public String firewallTemplateId;
 
     /**
-     * <p>The ID of the simple application server to which the template belongs.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ace0706b2ac4454d984295a94213****</p>
-     */
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    /**
      * <p>The page number.</p>
      * 
      * <strong>example:</strong>
@@ -84,14 +75,6 @@ public class DescribeFirewallTemplateApplyResultsRequest extends TeaModel {
     }
     public String getFirewallTemplateId() {
         return this.firewallTemplateId;
-    }
-
-    public DescribeFirewallTemplateApplyResultsRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public DescribeFirewallTemplateApplyResultsRequest setPageNumber(Integer pageNumber) {
