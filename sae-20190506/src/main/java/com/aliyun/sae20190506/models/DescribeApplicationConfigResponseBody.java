@@ -550,6 +550,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("EnableGreyTagRoute")
         public Boolean enableGreyTagRoute;
 
+        @NameInMap("EnableIdle")
+        public Boolean enableIdle;
+
         /**
          * <p>The environment variables. Variable description:</p>
          * <ul>
@@ -699,6 +702,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          */
         @NameInMap("MicroRegistration")
         public String microRegistration;
+
+        @NameInMap("MicroRegistrationConfig")
+        public String microRegistrationConfig;
 
         /**
          * <p>The percentage of the minimum number of available instances. Valid values:</p>
@@ -1253,6 +1259,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.enableGreyTagRoute;
         }
 
+        public DescribeApplicationConfigResponseBodyData setEnableIdle(Boolean enableIdle) {
+            this.enableIdle = enableIdle;
+            return this;
+        }
+        public Boolean getEnableIdle() {
+            return this.enableIdle;
+        }
+
         public DescribeApplicationConfigResponseBodyData setEnvs(String envs) {
             this.envs = envs;
             return this;
@@ -1331,6 +1345,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public String getMicroRegistration() {
             return this.microRegistration;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setMicroRegistrationConfig(String microRegistrationConfig) {
+            this.microRegistrationConfig = microRegistrationConfig;
+            return this;
+        }
+        public String getMicroRegistrationConfig() {
+            return this.microRegistrationConfig;
         }
 
         public DescribeApplicationConfigResponseBodyData setMinReadyInstanceRatio(Integer minReadyInstanceRatio) {
