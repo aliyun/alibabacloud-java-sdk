@@ -1,3 +1,10 @@
+2024-08-12 Version: 2.27.0
+- Support API ListCallSummaries.
+- Support API ListFlashSmsApplications.
+- Support API ListFlashSmsTemplates.
+- Support API ListWaitingChats.
+
+
 2024-08-07 Version: 2.26.0
 - Support API GetChatMediaUrl.
 - Update API ListCallDetailRecordsV2: update param EndTime.
