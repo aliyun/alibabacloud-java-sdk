@@ -5939,6 +5939,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param tmpReq ListCallSummariesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCallSummariesResponse
+     */
+    public ListCallSummariesResponse listCallSummariesWithOptions(ListCallSummariesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListCallSummariesShrinkRequest request = new ListCallSummariesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.contactIdList)) {
+            request.contactIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.contactIdList, "ContactIdList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.contactIdListShrink)) {
+            query.put("ContactIdList", request.contactIdListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCallSummaries"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCallSummariesResponse());
+    }
+
+    /**
+     * @param request ListCallSummariesRequest
+     * @return ListCallSummariesResponse
+     */
+    public ListCallSummariesResponse listCallSummaries(ListCallSummariesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCallSummariesWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>列出号码标签</p>
      * 
@@ -6598,6 +6646,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListDocumentsResponse listDocuments(ListDocumentsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDocumentsWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request ListFlashSmsApplicationsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListFlashSmsApplicationsResponse
+     */
+    public ListFlashSmsApplicationsResponse listFlashSmsApplicationsWithOptions(ListFlashSmsApplicationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.providerId)) {
+            query.put("ProviderId", request.providerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListFlashSmsApplications"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListFlashSmsApplicationsResponse());
+    }
+
+    /**
+     * @param request ListFlashSmsApplicationsRequest
+     * @return ListFlashSmsApplicationsResponse
+     */
+    public ListFlashSmsApplicationsResponse listFlashSmsApplications(ListFlashSmsApplicationsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listFlashSmsApplicationsWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request ListFlashSmsTemplatesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListFlashSmsTemplatesResponse
+     */
+    public ListFlashSmsTemplatesResponse listFlashSmsTemplatesWithOptions(ListFlashSmsTemplatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.providerId)) {
+            query.put("ProviderId", request.providerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListFlashSmsTemplates"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListFlashSmsTemplatesResponse());
+    }
+
+    /**
+     * @param request ListFlashSmsTemplatesRequest
+     * @return ListFlashSmsTemplatesResponse
+     */
+    public ListFlashSmsTemplatesResponse listFlashSmsTemplates(ListFlashSmsTemplatesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listFlashSmsTemplatesWithOptions(request, runtime);
     }
 
     /**
@@ -8752,6 +8900,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListVoicemailsResponse listVoicemails(ListVoicemailsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listVoicemailsWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request ListWaitingChatsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListWaitingChatsResponse
+     */
+    public ListWaitingChatsResponse listWaitingChatsWithOptions(ListWaitingChatsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillGroupIdList)) {
+            query.put("SkillGroupIdList", request.skillGroupIdList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListWaitingChats"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListWaitingChatsResponse());
+    }
+
+    /**
+     * @param request ListWaitingChatsRequest
+     * @return ListWaitingChatsResponse
+     */
+    public ListWaitingChatsResponse listWaitingChats(ListWaitingChatsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listWaitingChatsWithOptions(request, runtime);
     }
 
     /**
