@@ -61,14 +61,8 @@ public class CreateCustomImageRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The ID of the resource group.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rg-aek2bti7cf7****</p>
-     */
-    @NameInMap("ResoureGroupId")
-    public String resoureGroupId;
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     /**
      * <p>The ID of the system disk snapshot.</p>
@@ -138,12 +132,12 @@ public class CreateCustomImageRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CreateCustomImageRequest setResoureGroupId(String resoureGroupId) {
-        this.resoureGroupId = resoureGroupId;
+    public CreateCustomImageRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
         return this;
     }
-    public String getResoureGroupId() {
-        return this.resoureGroupId;
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateCustomImageRequest setSystemSnapshotId(String systemSnapshotId) {

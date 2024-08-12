@@ -27,8 +27,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you share a custom image, make sure that all sensitive data and files are removed from the image.</p>
+     * <ul>
+     * <li>The IDs of the Alibaba Cloud accounts with which you want to share the image is obtained. Move the pointer over the profile in the upper-right corner of the Simple Application Server console. In the card that appears, if Main Account is displayed, the showed account ID is the Alibaba Cloud account ID.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>共享镜像给用户</p>
+     * <p>Shares a custom image with other Alibaba Cloud accounts in the same region to quickly deploy the same environment configurations for multiple simple application servers at a time. This improves deployment efficiency.</p>
      * 
      * @param request AddCustomImageShareAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -71,8 +77,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you share a custom image, make sure that all sensitive data and files are removed from the image.</p>
+     * <ul>
+     * <li>The IDs of the Alibaba Cloud accounts with which you want to share the image is obtained. Move the pointer over the profile in the upper-right corner of the Simple Application Server console. In the card that appears, if Main Account is displayed, the showed account ID is the Alibaba Cloud account ID.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>共享镜像给用户</p>
+     * <p>Shares a custom image with other Alibaba Cloud accounts in the same region to quickly deploy the same environment configurations for multiple simple application servers at a time. This improves deployment efficiency.</p>
      * 
      * @param request AddCustomImageShareAccountRequest
      * @return AddCustomImageShareAccountResponse
@@ -164,10 +176,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.firewallTemplateId)) {
             query.put("FirewallTemplateId", request.firewallTemplateId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
-            query.put("InstanceId", request.instanceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
@@ -404,8 +412,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.resoureGroupId)) {
-            query.put("ResoureGroupId", request.resoureGroupId);
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.systemSnapshotId)) {
@@ -1384,10 +1392,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FirewallTemplateRuleId", request.firewallTemplateRuleId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
-            query.put("InstanceId", request.instanceId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -1444,10 +1448,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.firewallTemplateId)) {
             query.put("FirewallTemplateId", request.firewallTemplateId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
-            query.put("InstanceId", request.instanceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -2409,10 +2409,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.firewallTemplateId)) {
             query.put("FirewallTemplateId", request.firewallTemplateId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
-            query.put("InstanceId", request.instanceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
@@ -3454,7 +3450,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询镜像共享给的用户</p>
+     * <p>Queries information about custom images that are shared across Alibaba Cloud accounts in a region.</p>
      * 
      * @param request ListCustomImageShareAccountsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3502,7 +3498,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询镜像共享给的用户</p>
+     * <p>Queries information about custom images that are shared across Alibaba Cloud accounts in a region.</p>
      * 
      * @param request ListCustomImageShareAccountsRequest
      * @return ListCustomImageShareAccountsResponse
@@ -4704,10 +4700,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FirewallTemplateRule", request.firewallTemplateRule);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
-            query.put("InstanceId", request.instanceId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
         }
@@ -5074,7 +5066,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消共享镜像到用户</p>
+     * <p>Unshares a custom image that is shared across Alibaba Cloud accounts.</p>
      * 
      * @param request RemoveCustomImageShareAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5118,7 +5110,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消共享镜像到用户</p>
+     * <p>Unshares a custom image that is shared across Alibaba Cloud accounts.</p>
      * 
      * @param request RemoveCustomImageShareAccountRequest
      * @return RemoveCustomImageShareAccountResponse

@@ -24,15 +24,6 @@ public class ApplyFirewallTemplateRequest extends TeaModel {
     public String firewallTemplateId;
 
     /**
-     * <p>The ID of the simple application server.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ace0706b2ac4454d984295a94213****</p>
-     */
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    /**
      * <p>The IDs of the simple application servers.</p>
      * <p>This parameter is required.</p>
      */
@@ -68,14 +59,6 @@ public class ApplyFirewallTemplateRequest extends TeaModel {
     }
     public String getFirewallTemplateId() {
         return this.firewallTemplateId;
-    }
-
-    public ApplyFirewallTemplateRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public ApplyFirewallTemplateRequest setInstanceIds(java.util.List<String> instanceIds) {

@@ -4,10 +4,15 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class ListCustomImageShareAccountsResponseBody extends TeaModel {
+    /**
+     * <p>The information about the shared custom images.</p>
+     */
     @NameInMap("ImageShareUsers")
     public java.util.List<ListCustomImageShareAccountsResponseBodyImageShareUsers> imageShareUsers;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListCustomImageShareAccountsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListCustomImageShareAccountsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30637AD6-D977-4833-A54C-CC89483E****</p>
      */
@@ -29,6 +38,8 @@ public class ListCustomImageShareAccountsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -81,10 +92,18 @@ public class ListCustomImageShareAccountsResponseBody extends TeaModel {
     }
 
     public static class ListCustomImageShareAccountsResponseBodyImageShareUsers extends TeaModel {
+        /**
+         * <p>The time when the custom image is shared.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-07-15 13:59:21.0</p>
+         */
         @NameInMap("SharedTime")
         public String sharedTime;
 
         /**
+         * <p>The ID of the Alibaba Cloud account whose custom image is shared.</p>
+         * 
          * <strong>example:</strong>
          * <p>125111425233****</p>
          */

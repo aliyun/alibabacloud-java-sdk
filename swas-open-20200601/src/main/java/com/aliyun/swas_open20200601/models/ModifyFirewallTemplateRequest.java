@@ -39,15 +39,6 @@ public class ModifyFirewallTemplateRequest extends TeaModel {
     public java.util.List<ModifyFirewallTemplateRequestFirewallTemplateRule> firewallTemplateRule;
 
     /**
-     * <p>The ID of the simple application server to which the firewall template is applied.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2ad1ae67295445f598017499dc****</p>
-     */
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    /**
      * <p>The name of the firewall template.</p>
      * 
      * <strong>example:</strong>
@@ -101,14 +92,6 @@ public class ModifyFirewallTemplateRequest extends TeaModel {
     }
     public java.util.List<ModifyFirewallTemplateRequestFirewallTemplateRule> getFirewallTemplateRule() {
         return this.firewallTemplateRule;
-    }
-
-    public ModifyFirewallTemplateRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public ModifyFirewallTemplateRequest setName(String name) {
