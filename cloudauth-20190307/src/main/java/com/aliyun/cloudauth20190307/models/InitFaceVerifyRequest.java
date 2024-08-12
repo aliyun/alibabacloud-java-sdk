@@ -4,6 +4,9 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class InitFaceVerifyRequest extends TeaModel {
+    @NameInMap("AppQualityCheck")
+    public String appQualityCheck;
+
     @NameInMap("AuthId")
     public String authId;
 
@@ -172,6 +175,14 @@ public class InitFaceVerifyRequest extends TeaModel {
     public static InitFaceVerifyRequest build(java.util.Map<String, ?> map) throws Exception {
         InitFaceVerifyRequest self = new InitFaceVerifyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public InitFaceVerifyRequest setAppQualityCheck(String appQualityCheck) {
+        this.appQualityCheck = appQualityCheck;
+        return this;
+    }
+    public String getAppQualityCheck() {
+        return this.appQualityCheck;
     }
 
     public InitFaceVerifyRequest setAuthId(String authId) {

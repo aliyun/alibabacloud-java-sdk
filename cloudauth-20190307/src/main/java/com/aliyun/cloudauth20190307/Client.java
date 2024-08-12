@@ -1274,6 +1274,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public InitFaceVerifyResponse initFaceVerifyWithOptions(InitFaceVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appQualityCheck)) {
+            query.put("AppQualityCheck", request.appQualityCheck);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.birthday)) {
             query.put("Birthday", request.birthday);
         }
