@@ -5,38 +5,53 @@ import com.aliyun.tea.*;
 
 public class DescribeProcessListRequest extends TeaModel {
     /**
-     * <p>The cluster ID. You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/170879.html) operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.</p>
-     * <br>
+     * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-bp1190tj036am****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The ID of the query statement.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6c69d508-f05f-4c74-857c-d982b7e7e79f</p>
      */
     @NameInMap("InitialQueryId")
     public String initialQueryId;
 
     /**
      * <p>The account that is used to log on to the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user</p>
      */
     @NameInMap("InitialUser")
     public String initialUser;
 
     /**
      * <p>The keyword that is used to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>join</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
      * <p>Sorting by the specified column name. Valid values:</p>
-     * <br>
-     * <p>*   elapsed: the cumulative execution time</p>
-     * <p>*   written_rows: the number of written rows</p>
-     * <p>*   read_rows: the number of read rows</p>
-     * <p>*   memory_usage: the memory usage</p>
+     * <ul>
+     * <li>elapsed: the cumulative execution time</li>
+     * <li>written_rows: the number of written rows</li>
+     * <li>read_rows: the number of read rows</li>
+     * <li>memory_usage: the memory usage</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>elapsed</p>
      */
     @NameInMap("Order")
     public String order;
@@ -49,28 +64,41 @@ public class DescribeProcessListRequest extends TeaModel {
 
     /**
      * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page. Valid values:</p>
-     * <br>
-     * <p>*   **30** (default)</p>
-     * <p>*   **50**</p>
-     * <p>*   **100**</p>
+     * <ul>
+     * <li><strong>30</strong> (default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The minimum query duration. The minimum value is **1000**, and the default value is **1000**. Unit: milliseconds. Queries that last longer than this duration are returned in response parameters.</p>
+     * <p>The minimum query duration. The minimum value is <strong>1000</strong>, and the default value is <strong>1000</strong>. Unit: milliseconds. Queries that last longer than this duration are returned in response parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>500</p>
      */
     @NameInMap("QueryDurationMs")
     public Integer queryDurationMs;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/170875.html) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,31 +6,45 @@ import com.aliyun.tea.*;
 public class CheckScaleOutBalancedResponseBody extends TeaModel {
     /**
      * <p>The check result. Valid values:</p>
-     * <br>
-     * <p>*   **400**: The cluster failed the check.</p>
-     * <p>*   **200**: The cluster passed the check.</p>
+     * <ul>
+     * <li><strong>400</strong>: The cluster failed the check.</li>
+     * <li><strong>200</strong>: The cluster passed the check.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>400</p>
      */
     @NameInMap("CheckCode")
     public String checkCode;
 
     /**
      * <p>The total number of returned pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page. Valid values:</p>
-     * <br>
-     * <p>*   **30** (default)</p>
-     * <p>*   **50**</p>
-     * <p>*   **100**</p>
+     * <ul>
+     * <li><strong>30</strong> (default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F5178C10-1407-4987-9133-DE4DC9119F75</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -43,12 +57,18 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
 
     /**
      * <p>The amount of time that is required for the migration and scale-out. Unit: minutes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21</p>
      */
     @NameInMap("TimeDuration")
     public String timeDuration;
 
     /**
      * <p>The total number of entries that are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -116,28 +136,41 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
 
     public static class CheckScaleOutBalancedResponseBodyTableDetailsTableDetail extends TeaModel {
         /**
-         * <p>The cluster. The value is fixed as **default**.</p>
+         * <p>The cluster. The value is fixed as <strong>default</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Cluster")
         public String cluster;
 
         /**
          * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db_name</p>
          */
         @NameInMap("Database")
         public String database;
 
         /**
          * <p>The error details. Valid values:</p>
-         * <br>
-         * <p>*   **1**: The unique distributed table is missing.</p>
-         * <p>*   **2**: More than one distributed table exists for the local table.</p>
+         * <ul>
+         * <li><strong>1</strong>: The unique distributed table is missing.</li>
+         * <li><strong>2</strong>: More than one distributed table exists for the local table.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Detail")
         public Integer detail;
 
         /**
          * <p>The name of the local table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("TableName")
         public String tableName;

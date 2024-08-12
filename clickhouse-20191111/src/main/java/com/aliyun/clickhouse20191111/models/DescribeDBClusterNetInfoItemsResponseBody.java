@@ -6,17 +6,23 @@ import com.aliyun.tea.*;
 public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
     /**
      * <p>The network type of the cluster. Only VPC is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
      */
     @NameInMap("ClusterNetworkType")
     public String clusterNetworkType;
 
     /**
      * <p>Indicates whether Server Load Balancer (SLB) is activated in the VPC. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EnableSLB")
     public Boolean enableSLB;
@@ -29,6 +35,9 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9A23C87D-87DF-4DA0-A50E-CB13F4F7923D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -73,61 +82,91 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
     public static class DescribeDBClusterNetInfoItemsResponseBodyNetInfoItemsNetInfoItem extends TeaModel {
         /**
          * <p>The endpoint that is used to connect to the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp1554t789i8e****.clickhouse.ads.aliyuncs.com</p>
          */
         @NameInMap("ConnectionString")
         public String connectionString;
 
         /**
          * <p>The HTTP port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8123</p>
          */
         @NameInMap("HttpPort")
         public String httpPort;
 
         /**
          * <p>The HTTPS port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8443</p>
          */
         @NameInMap("HttpsPort")
         public String httpsPort;
 
         /**
          * <p>The IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.255.234.251</p>
          */
         @NameInMap("IPAddress")
         public String IPAddress;
 
         /**
          * <p>The port number that is used in Java Database Connectivity (JDBC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("JdbcPort")
         public String jdbcPort;
 
         /**
          * <p>The port of the MySQL instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9004</p>
          */
         @NameInMap("MySQLPort")
         public String mySQLPort;
 
         /**
          * <p>The network type of the endpoint. Valid values:</p>
-         * <br>
-         * <p>*   Public: public endpoint</p>
-         * <p>*   VPC: VPC</p>
+         * <ul>
+         * <li>Public: public endpoint</li>
+         * <li>VPC: VPC</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("NetType")
         public String netType;
 
         /**
          * <p>The vSwitch ID.</p>
-         * <br>
-         * <p>>  If the value of the NetType parameter is set to Public, an empty string is returned.</p>
+         * <blockquote>
+         * <p> If the value of the NetType parameter is set to Public, an empty string is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1gzt31twhlo0sa5****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
          * <p>The virtual private cloud (VPC) ID.</p>
-         * <br>
-         * <p>>  If the value of the NetType parameter is set to Public, an empty string is returned.</p>
+         * <blockquote>
+         * <p> If the value of the NetType parameter is set to Public, an empty string is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp175iuvg8nxqraf2****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

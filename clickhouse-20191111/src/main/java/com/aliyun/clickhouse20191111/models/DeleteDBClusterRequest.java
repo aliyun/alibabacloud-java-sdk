@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteDBClusterRequest extends TeaModel {
     /**
      * <p>The ID of the pay-as-you-go ApsaraDB for ClickHouse cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-bp108z124a8o7****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;

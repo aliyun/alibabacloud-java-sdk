@@ -6,36 +6,48 @@ import com.aliyun.tea.*;
 public class CreateRDSToClickhouseDbRequest extends TeaModel {
     /**
      * <p>The password of the account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456Aa</p>
      */
     @NameInMap("CkPassword")
     public String ckPassword;
 
     /**
      * <p>The account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user1</p>
      */
     @NameInMap("CkUserName")
     public String ckUserName;
 
     /**
      * <p>The port number of the ApsaraDB for ClickHouse cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8123</p>
      */
     @NameInMap("ClickhousePort")
     public Long clickhousePort;
 
     /**
      * <p>The ID of the ApsaraDB for ClickHouse cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-2ze5zeyl72188****</p>
      */
     @NameInMap("DbClusterId")
     public String dbClusterId;
 
     /**
      * <p>The maximum number of rows that can be synchronized per second.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50000</p>
      */
     @NameInMap("LimitUpper")
     public Long limitUpper;
@@ -48,42 +60,57 @@ public class CreateRDSToClickhouseDbRequest extends TeaModel {
 
     /**
      * <p>The ID of the ApsaraDB RDS for MySQL instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-8vb989qj9roh0****</p>
      */
     @NameInMap("RdsId")
     public String rdsId;
 
     /**
      * <p>The password of the account that is used to log on to the ApsaraDB RDS for MySQL instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456Rr</p>
      */
     @NameInMap("RdsPassword")
     public String rdsPassword;
 
     /**
      * <p>The port number of the ApsaraDB RDS for MySQL instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3306</p>
      */
     @NameInMap("RdsPort")
     public Long rdsPort;
 
     /**
      * <p>The account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user2</p>
      */
     @NameInMap("RdsUserName")
     public String rdsUserName;
 
     /**
      * <p>The ID of the virtual private cloud (VPC) to which the ApsaraDB RDS for MySQL instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-2zen93xryil99jsfy****</p>
      */
     @NameInMap("RdsVpcId")
     public String rdsVpcId;
 
     /**
      * <p>The private endpoint of the ApsaraDB RDS for MySQL instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-bp16t9h3999xb0a7****.mysql.rds.aliyuncs.com</p>
      */
     @NameInMap("RdsVpcUrl")
     public String rdsVpcUrl;
@@ -96,19 +123,24 @@ public class CreateRDSToClickhouseDbRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to ignore the table schemas that do not support synchronization. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
-     * <br>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("SkipUnsupported")
     public Boolean skipUnsupported;
 
     /**
      * <p>The tables whose data you want to synchronize.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;Schema&quot;:&quot;recommend&quot;,&quot;Tables&quot;:[&quot;mr_platform_cpm&quot;,&quot;mr_platform_ecpm&quot;,&quot;p_monitor_record&quot;]}]</p>
      */
     @NameInMap("SynDbTables")
     public String synDbTables;

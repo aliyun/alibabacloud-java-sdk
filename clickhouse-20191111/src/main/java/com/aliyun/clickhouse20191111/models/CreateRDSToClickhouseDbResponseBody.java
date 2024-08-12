@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateRDSToClickhouseDbResponseBody extends TeaModel {
     /**
-     * <p>If -1 is returned for the **Status** parameter, the cause of the creation failure is returned.</p>
+     * <p>If -1 is returned for the <strong>Status</strong> parameter, the cause of the creation failure is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ClickHouse exception, code: 49, host: 100.100.79.102, port: 14540; Code: 49, e.displayText() = DB::Exception: Logical error: there is no global context (version 20.8.17.25)n</p>
      */
     @NameInMap("ErrorMsg")
     public String errorMsg;
@@ -18,16 +21,23 @@ public class CreateRDSToClickhouseDbResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>66676F54-1994-5DCF-993F-74536649628A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the synchronization task was created. Valid values:</p>
-     * <br>
-     * <p>*   **1**: Created.</p>
-     * <p>*   **0**: Creation failed. The tables in the synchronization task are duplicate. The duplicate tables are returned for the **RepeatedDbs** parameter.</p>
-     * <p>*   **-1**: Creation failed. The cause why the creation failed is returned for the **ErrorMsg** parameter.</p>
+     * <ul>
+     * <li><strong>1</strong>: Created.</li>
+     * <li><strong>0</strong>: Creation failed. The tables in the synchronization task are duplicate. The duplicate tables are returned for the <strong>RepeatedDbs</strong> parameter.</li>
+     * <li><strong>-1</strong>: Creation failed. The cause why the creation failed is returned for the <strong>ErrorMsg</strong> parameter.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Status")
     public Long status;

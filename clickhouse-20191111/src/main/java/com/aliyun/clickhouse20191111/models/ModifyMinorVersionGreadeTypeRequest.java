@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ModifyMinorVersionGreadeTypeRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-bp1qx68m06981****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("MaintainAutoType")
     public Boolean maintainAutoType;

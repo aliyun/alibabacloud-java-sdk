@@ -4,18 +4,33 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBClusterAccessWhiteListRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>NULL</p>
+     */
     @NameInMap("DBClusterIPArrayAttribute")
     public String DBClusterIPArrayAttribute;
 
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("DBClusterIPArrayName")
     public String DBClusterIPArrayName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-bp1qx68m06981****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Cover</p>
+     */
     @NameInMap("ModifyMode")
     public String modifyMode;
 
@@ -33,6 +48,9 @@ public class ModifyDBClusterAccessWhiteListRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.xx.xx</p>
      */
     @NameInMap("SecurityIps")
     public String securityIps;

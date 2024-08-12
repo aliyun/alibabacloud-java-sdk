@@ -12,6 +12,9 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>905F13A4-5097-4897-A84D-527EC75FFF4F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
     public static class DescribeDBClusterAccessWhiteListResponseBodyDBClusterAccessWhiteListIPArray extends TeaModel {
         /**
          * <p>The attribute of the IP address whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("DBClusterIPArrayAttribute")
         public String DBClusterIPArrayAttribute;
 
         /**
          * <p>The name of the IP address whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("DBClusterIPArrayName")
         public String DBClusterIPArrayName;
 
         /**
          * <p>The IP addresses in the IP address whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.xx.xx,192.168.xx.xx</p>
          */
         @NameInMap("SecurityIPList")
         public String securityIPList;

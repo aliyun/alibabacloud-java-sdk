@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeAccountAuthorityResponseBody extends TeaModel {
     /**
      * <p>The name of the database account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("AccountName")
     public String accountName;
@@ -24,24 +27,35 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the database account has DDL permissions. Valid values:</p>
-     * <br>
-     * <p>*   **true**: has DDL permissions.</p>
-     * <p>*   **false**: does not have DDL permissions.</p>
+     * <ul>
+     * <li><strong>true</strong>: has DDL permissions.</li>
+     * <li><strong>false</strong>: does not have DDL permissions.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("DdlAuthority")
     public Boolean ddlAuthority;
 
     /**
      * <p>Indicates whether the database account has DML permissions. Valid values:</p>
-     * <br>
-     * <p>*   **all**</p>
-     * <p>*   **readOnly,modify**</p>
+     * <ul>
+     * <li><strong>all</strong></li>
+     * <li><strong>readOnly,modify</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>all</p>
      */
     @NameInMap("DmlAuthority")
     public String dmlAuthority;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F5178C10-1407-4987-9133-DE4DC9119F75</p>
      */
     @NameInMap("RequestId")
     public String requestId;

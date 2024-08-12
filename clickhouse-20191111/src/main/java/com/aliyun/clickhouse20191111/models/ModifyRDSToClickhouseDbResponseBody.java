@@ -6,28 +6,43 @@ import com.aliyun.tea.*;
 public class ModifyRDSToClickhouseDbResponseBody extends TeaModel {
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("ErrorCode")
     public Long errorCode;
 
     /**
-     * <p>*   If the value **1** is returned for the **Status** parameter, the system does not return the ErrorMsg parameter.</p>
-     * <p>*   If the value **0** is returned for the **Status** parameter, the ErrorMsg parameter returns the cause for the modification failure.</p>
+     * <ul>
+     * <li>If the value <strong>1</strong> is returned for the <strong>Status</strong> parameter, the system does not return the ErrorMsg parameter.</li>
+     * <li>If the value <strong>0</strong> is returned for the <strong>Status</strong> parameter, the ErrorMsg parameter returns the cause for the modification failure.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ClickHouse exception, code: 49, host: 100.100.118.132, port: 49670; Code: 49, e.displayText() = DB::Exception: Logical error: there is no global context (version 20.8.17.25)n</p>
      */
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>746CD303-0B82-5E8D-886D-93A9FAF3A876</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the modification was successful. Valid values:</p>
-     * <br>
-     * <p>*   **1**: The modification was successful.</p>
-     * <p>*   **0**: The modification failed.</p>
+     * <ul>
+     * <li><strong>1</strong>: The modification was successful.</li>
+     * <li><strong>0</strong>: The modification failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Status")
     public Long status;

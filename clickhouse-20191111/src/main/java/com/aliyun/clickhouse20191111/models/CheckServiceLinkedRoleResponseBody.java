@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CheckServiceLinkedRoleResponseBody extends TeaModel {
     /**
      * <p>The role.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxx</p>
      */
     @NameInMap("HasServiceLinkedRole")
     public Boolean hasServiceLinkedRole;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
      */
     @NameInMap("RequestId")
     public String requestId;

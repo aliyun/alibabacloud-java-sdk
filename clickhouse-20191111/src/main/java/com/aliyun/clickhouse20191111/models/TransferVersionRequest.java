@@ -6,11 +6,16 @@ import com.aliyun.tea.*;
 public class TransferVersionRequest extends TeaModel {
     /**
      * <p>The ID of the source ApsaraDB for ClickHouse cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-bp1tm8zf130ew****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
+
+    @NameInMap("DisableWriteWindows")
+    public String disableWriteWindows;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -20,24 +25,33 @@ public class TransferVersionRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page. Valid values:</p>
-     * <br>
-     * <p>*   **30** (default)</p>
-     * <p>*   **50**</p>
-     * <p>*   **100**</p>
+     * <ul>
+     * <li><strong>30</strong> (default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/170875.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -50,40 +64,50 @@ public class TransferVersionRequest extends TeaModel {
 
     /**
      * <p>The database account that is used to log on to the database in the source ApsaraDB for ClickHouse cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("SourceAccount")
     public String sourceAccount;
 
     /**
      * <p>The password that corresponds to the database account for logging on to the database in the source ApsaraDB for ClickHouse cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456Aa</p>
      */
     @NameInMap("SourcePassword")
     public String sourcePassword;
 
     /**
      * <p>The database account that is used to log on to the database in the destination ApsaraDB for ClickHouse cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test01</p>
      */
     @NameInMap("TargetAccount")
     public String targetAccount;
 
     /**
      * <p>The ID of the destination ApsaraDB for ClickHouse cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-bp14b39djx7zg****</p>
      */
     @NameInMap("TargetDbClusterId")
     public String targetDbClusterId;
 
     /**
      * <p>The password that corresponds to the database account for logging on to the database in the destination ApsaraDB for ClickHouse cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456Ff</p>
      */
     @NameInMap("TargetPassword")
     public String targetPassword;
@@ -99,6 +123,14 @@ public class TransferVersionRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public TransferVersionRequest setDisableWriteWindows(String disableWriteWindows) {
+        this.disableWriteWindows = disableWriteWindows;
+        return this;
+    }
+    public String getDisableWriteWindows() {
+        return this.disableWriteWindows;
     }
 
     public TransferVersionRequest setOwnerAccount(String ownerAccount) {

@@ -4,17 +4,27 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>117403****</p>
+     */
     @NameInMap("BackupId")
     public String backupId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-bp1qx68m06981****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-11-25T16:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -25,9 +35,17 @@ public class DescribeBackupsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -39,6 +57,9 @@ public class DescribeBackupsRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-11-21T16:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

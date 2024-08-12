@@ -12,6 +12,9 @@ public class DescribeProcessListResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FD61BB0D-788A-5185-A8E3-1B90BA8F6F04</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,36 +43,54 @@ public class DescribeProcessListResponseBody extends TeaModel {
     public static class DescribeProcessListResponseBodyProcessListDataResultSet extends TeaModel {
         /**
          * <p>The IP address of the client that initiates the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>::ffff:10.1.XX.XX</p>
          */
         @NameInMap("InitialAddress")
         public String initialAddress;
 
         /**
          * <p>The query ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2dd144fd-4230-4249-b15c-e63f964fbb5a</p>
          */
         @NameInMap("InitialQueryId")
         public String initialQueryId;
 
         /**
          * <p>The database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("InitialUser")
         public String initialUser;
 
         /**
          * <p>The SQL statement that is executed in the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select * from test order by score limit 1;</p>
          */
         @NameInMap("Query")
         public String query;
 
         /**
          * <p>The execution duration of the query. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         @NameInMap("QueryDurationMs")
         public String queryDurationMs;
 
         /**
          * <p>The beginning of the time range to query. The value is in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in Coordinated Universal Time (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-02-02T09:14:48Z</p>
          */
         @NameInMap("QueryStartTime")
         public String queryStartTime;
@@ -151,18 +172,27 @@ public class DescribeProcessListResponseBody extends TeaModel {
     public static class DescribeProcessListResponseBodyProcessListStatistics extends TeaModel {
         /**
          * <p>The size of the data that was scanned. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9141300000</p>
          */
         @NameInMap("BytesRead")
         public Integer bytesRead;
 
         /**
          * <p>The average response time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4156</p>
          */
         @NameInMap("ElapsedTime")
         public Float elapsedTime;
 
         /**
          * <p>The number of scanned rows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000</p>
          */
         @NameInMap("RowsRead")
         public Integer rowsRead;
@@ -201,12 +231,18 @@ public class DescribeProcessListResponseBody extends TeaModel {
     public static class DescribeProcessListResponseBodyProcessListTableSchemaResultSet extends TeaModel {
         /**
          * <p>The column name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InitialUser</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The column type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>String</p>
          */
         @NameInMap("Type")
         public String type;
@@ -262,12 +298,18 @@ public class DescribeProcessListResponseBody extends TeaModel {
 
         /**
          * <p>The number of rows returned for the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1145700</p>
          */
         @NameInMap("Rows")
         public String rows;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RowsBeforeLimitAtLeast")
         public String rowsBeforeLimitAtLeast;

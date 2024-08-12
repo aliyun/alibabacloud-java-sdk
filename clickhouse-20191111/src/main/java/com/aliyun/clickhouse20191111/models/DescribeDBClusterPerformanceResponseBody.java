@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-bp125e3uu94wo****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
-     * <p>The end of the time range to query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in Coordinated Universal Time (UTC).</p>
+     * <p>The end of the time range to query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in Coordinated Universal Time (UTC).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-11-27T16:38Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -24,12 +30,18 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FE242962-6DA3-5FC8-9691-37B62A3210F7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The beginning of the time range to query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>The beginning of the time range to query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-11-27T16:37Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -104,6 +116,9 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     public static class DescribeDBClusterPerformanceResponseBodyPerformancesSeries extends TeaModel {
         /**
          * <p>The name of the list of performance metric values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp125e3uu94wo1s0k16****</p>
          */
         @NameInMap("Name")
         public String name;
@@ -140,12 +155,18 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     public static class DescribeDBClusterPerformanceResponseBodyPerformances extends TeaModel {
         /**
          * <p>The name of the performance metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MEM_USAGE</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The name of the performance metric value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mem_usage</p>
          */
         @NameInMap("Name")
         public String name;
@@ -158,6 +179,9 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
 
         /**
          * <p>The unit of the performance metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>%</p>
          */
         @NameInMap("Unit")
         public String unit;

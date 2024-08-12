@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class ModifyDBConfigRequest extends TeaModel {
     /**
      * <p>The dictionary configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;name&quot;:&quot;test&quot;}</p>
      */
     @NameInMap("Config")
     public String config;
 
     /**
      * <p>The cluster ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-bp1r59y779o04****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -25,7 +30,10 @@ public class ModifyDBConfigRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/170875.html) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

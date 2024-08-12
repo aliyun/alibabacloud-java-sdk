@@ -12,6 +12,9 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>05321590-BB65-4720-8CB6-8218E041CDD0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,28 +42,54 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
 
     public static class DescribeTransferHistoryResponseBodyHistoryDetailsHistoryDetail extends TeaModel {
         /**
+         * <strong>if can be null:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("DisableWriteWindows")
+        public String disableWriteWindows;
+
+        /**
          * <p>The progress of the data migration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100%</p>
          */
         @NameInMap("Progress")
         public String progress;
 
+        @NameInMap("SourceControlVersion")
+        public String sourceControlVersion;
+
         /**
          * <p>The ID of the source cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp108z124a8o7****</p>
          */
         @NameInMap("SourceDBCluster")
         public String sourceDBCluster;
 
         /**
          * <p>The status of the data migration task. Valid values:</p>
-         * <br>
-         * <p>*   **Finished**: The data migration task is complete.</p>
-         * <p>*   **Processing**: The data migration task is in progress.</p>
+         * <ul>
+         * <li><strong>Finished</strong>: The data migration task is complete.</li>
+         * <li><strong>Processing</strong>: The data migration task is in progress.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("TargetControlVersion")
+        public String targetControlVersion;
+
         /**
          * <p>The ID of the destination cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp13zkh9uw523****</p>
          */
         @NameInMap("TargetDBCluster")
         public String targetDBCluster;
@@ -70,12 +99,28 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeTransferHistoryResponseBodyHistoryDetailsHistoryDetail setDisableWriteWindows(String disableWriteWindows) {
+            this.disableWriteWindows = disableWriteWindows;
+            return this;
+        }
+        public String getDisableWriteWindows() {
+            return this.disableWriteWindows;
+        }
+
         public DescribeTransferHistoryResponseBodyHistoryDetailsHistoryDetail setProgress(String progress) {
             this.progress = progress;
             return this;
         }
         public String getProgress() {
             return this.progress;
+        }
+
+        public DescribeTransferHistoryResponseBodyHistoryDetailsHistoryDetail setSourceControlVersion(String sourceControlVersion) {
+            this.sourceControlVersion = sourceControlVersion;
+            return this;
+        }
+        public String getSourceControlVersion() {
+            return this.sourceControlVersion;
         }
 
         public DescribeTransferHistoryResponseBodyHistoryDetailsHistoryDetail setSourceDBCluster(String sourceDBCluster) {
@@ -92,6 +137,14 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeTransferHistoryResponseBodyHistoryDetailsHistoryDetail setTargetControlVersion(String targetControlVersion) {
+            this.targetControlVersion = targetControlVersion;
+            return this;
+        }
+        public String getTargetControlVersion() {
+            return this.targetControlVersion;
         }
 
         public DescribeTransferHistoryResponseBodyHistoryDetailsHistoryDetail setTargetDBCluster(String targetDBCluster) {

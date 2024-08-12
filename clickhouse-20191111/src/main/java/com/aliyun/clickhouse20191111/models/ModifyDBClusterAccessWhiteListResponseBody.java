@@ -4,6 +4,10 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBClusterAccessWhiteListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>D0CEC6AC-7760-409A-A0D5-E6CD8660E9CC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

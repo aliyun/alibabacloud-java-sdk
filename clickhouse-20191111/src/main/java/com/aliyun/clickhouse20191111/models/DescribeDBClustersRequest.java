@@ -6,26 +6,37 @@ import com.aliyun.tea.*;
 public class DescribeDBClustersRequest extends TeaModel {
     /**
      * <p>The description of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-bp108z124a8o7****</p>
      */
     @NameInMap("DBClusterDescription")
     public String DBClusterDescription;
 
     /**
      * <p>The cluster ID.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the information about all clusters is queried.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the information about all clusters is queried.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-bp108z124a8o7****</p>
      */
     @NameInMap("DBClusterIds")
     public String DBClusterIds;
 
     /**
      * <p>The state of the cluster. Valid values:</p>
-     * <br>
-     * <p>*   **Preparing**: The cluster is being prepared.</p>
-     * <p>*   **Creating**: The cluster is being created.</p>
-     * <p>*   **Running**: The cluster is running.</p>
-     * <p>*   **Deleting**: The cluster is being deleted.</p>
-     * <p>*   **SCALING_OUT**: The storage capacity of the cluster is being expanded.</p>
+     * <ul>
+     * <li><strong>Preparing</strong>: The cluster is being prepared.</li>
+     * <li><strong>Creating</strong>: The cluster is being created.</li>
+     * <li><strong>Running</strong>: The cluster is running.</li>
+     * <li><strong>Deleting</strong>: The cluster is being deleted.</li>
+     * <li><strong>SCALING_OUT</strong>: The storage capacity of the cluster is being expanded.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
      */
     @NameInMap("DBClusterStatus")
     public String DBClusterStatus;
@@ -38,30 +49,42 @@ public class DescribeDBClustersRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page. Valid values:</p>
-     * <br>
-     * <p>*   **30** (default)</p>
-     * <p>*   **50**</p>
-     * <p>*   **100**</p>
+     * <ul>
+     * <li><strong>30</strong> (default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/170875.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the cluster belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-4690g37929****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -182,12 +205,18 @@ public class DescribeDBClustersRequest extends TeaModel {
     public static class DescribeDBClustersRequestTag extends TeaModel {
         /**
          * <p>The tag name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>department</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>it</p>
          */
         @NameInMap("Value")
         public String value;
