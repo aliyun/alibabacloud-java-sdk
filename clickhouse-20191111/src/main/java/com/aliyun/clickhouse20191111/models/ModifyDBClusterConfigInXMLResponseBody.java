@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyDBClusterConfigInXMLResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BDD29EB1-BE76-5CFA-9068-D34B696310BF</p>
      */
     @NameInMap("RequestId")
     public String requestId;

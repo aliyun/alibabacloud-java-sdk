@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class DescribeAccountAuthorityRequest extends TeaModel {
     /**
      * <p>The name of the database account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>The cluster ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-bp1p816075e21****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -25,7 +30,10 @@ public class DescribeAccountAuthorityRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/170875.html) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeSynDbTablesRequest extends TeaModel {
     /**
      * <p>The ID of the ApsaraDB for ClickHouse cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-bp158i5wvj436****</p>
      */
     @NameInMap("DbClusterId")
     public String dbClusterId;
@@ -26,8 +28,10 @@ public class DescribeSynDbTablesRequest extends TeaModel {
 
     /**
      * <p>The name of the ApsaraDB RDS for MySQL instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>database</p>
      */
     @NameInMap("SynDb")
     public String synDb;

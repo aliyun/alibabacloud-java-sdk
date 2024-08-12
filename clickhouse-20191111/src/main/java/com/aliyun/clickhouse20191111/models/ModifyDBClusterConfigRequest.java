@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterConfigRequest extends TeaModel {
     /**
-     * <p>The cluster ID. You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/170879.html) operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.</p>
-     * <br>
+     * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-bp1t9lbb7a4z7****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -20,12 +22,18 @@ public class ModifyDBClusterConfigRequest extends TeaModel {
 
     /**
      * <p>The reason for the change.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Reason")
     public String reason;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/170875.html) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -38,10 +46,13 @@ public class ModifyDBClusterConfigRequest extends TeaModel {
 
     /**
      * <p>The names of the parameters and the new values that you want to specify for the parameters.</p>
-     * <br>
-     * <p>>  You can change the value of a single parameter. The values of parameters that are not specified will not be changed.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can change the value of a single parameter. The values of parameters that are not specified will not be changed.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;keep_alive_timeout&quot;:&quot;301&quot;}</p>
      */
     @NameInMap("UserConfig")
     public String userConfig;

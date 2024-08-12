@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class CheckModifyConfigNeedRestartResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the cluster was restarted after you modified the configuration parameters. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The cluster was restarted.</p>
-     * <p>*   **false**: The cluster was not restarted.</p>
+     * <ul>
+     * <li><strong>true</strong>: The cluster was restarted.</li>
+     * <li><strong>false</strong>: The cluster was not restarted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("NeedRestart")
     public Boolean needRestart;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>06798FEE-BEF2-5FAF-A30D-728973BBE97C</p>
      */
     @NameInMap("RequestId")
     public String requestId;

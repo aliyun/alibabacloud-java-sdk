@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpgradeMinorVersionResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FE242962-6DA3-5FC8-9691-37B62A3210F7</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -12,6 +12,9 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>05321590-BB65-4720-8CB6-8218E041CDD0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,48 +71,71 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
     public static class DescribeAllDataSourceResponseBodyColumnsColumn extends TeaModel {
         /**
          * <p>Indicates whether the column is an auto-increment column. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AutoIncrementColumn")
         public Boolean autoIncrementColumn;
 
         /**
          * <p>The column name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
 
         /**
          * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp108z124a8o7****</p>
          */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
         /**
          * <p>Indicates whether the column is the primary key of the table. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("PrimaryKey")
         public Boolean primaryKey;
 
         /**
          * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>database</p>
          */
         @NameInMap("SchemaName")
         public String schemaName;
 
         /**
          * <p>The table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table</p>
          */
         @NameInMap("TableName")
         public String tableName;
 
         /**
          * <p>The type of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>String</p>
          */
         @NameInMap("Type")
         public String type;
@@ -199,12 +225,18 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
     public static class DescribeAllDataSourceResponseBodySchemasSchema extends TeaModel {
         /**
          * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp108z124a8o7****</p>
          */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
         /**
          * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>database</p>
          */
         @NameInMap("SchemaName")
         public String schemaName;
@@ -254,18 +286,27 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
     public static class DescribeAllDataSourceResponseBodyTablesTable extends TeaModel {
         /**
          * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp108z124a8o7****</p>
          */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
         /**
          * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>database</p>
          */
         @NameInMap("SchemaName")
         public String schemaName;
 
         /**
          * <p>The table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table</p>
          */
         @NameInMap("TableName")
         public String tableName;

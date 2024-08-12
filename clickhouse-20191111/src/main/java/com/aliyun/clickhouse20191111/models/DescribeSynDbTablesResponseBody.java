@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeSynDbTablesResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>851D11EA-681C-5B38-A065-C3F90BBD49DE</p>
      */
     @NameInMap("RequestId")
     public String requestId;

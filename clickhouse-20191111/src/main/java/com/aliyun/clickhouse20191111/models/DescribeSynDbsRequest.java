@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeSynDbsRequest extends TeaModel {
     /**
      * <p>The ID of the ApsaraDB for ClickHouse cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-bp1ab22b80814****</p>
      */
     @NameInMap("DbClusterId")
     public String dbClusterId;
@@ -20,12 +22,18 @@ public class DescribeSynDbsRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

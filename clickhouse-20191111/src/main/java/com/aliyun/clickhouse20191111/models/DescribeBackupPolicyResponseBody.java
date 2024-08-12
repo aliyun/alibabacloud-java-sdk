@@ -6,47 +6,67 @@ import com.aliyun.tea.*;
 public class DescribeBackupPolicyResponseBody extends TeaModel {
     /**
      * <p>The retention period for the backup data. By default, the backup data is retained for seven days. Valid values: 7 to 730. Unit: day.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
      */
     @NameInMap("BackupRetentionPeriod")
     public Integer backupRetentionPeriod;
 
     /**
      * <p>The size of the backup data. Unit: MB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123124</p>
      */
     @NameInMap("BackupSize")
     public String backupSize;
 
     /**
      * <p>The day of a week when the system regularly backs up data. Valid values:</p>
-     * <br>
-     * <p>*   **Monday**</p>
-     * <p>*   **Tuesday**</p>
-     * <p>*   **Wednesday**</p>
-     * <p>*   **Thursday**</p>
-     * <p>*   **Friday**</p>
-     * <p>*   **Saturday**</p>
-     * <p>*   **Sunday**</p>
+     * <ul>
+     * <li><strong>Monday</strong></li>
+     * <li><strong>Tuesday</strong></li>
+     * <li><strong>Wednesday</strong></li>
+     * <li><strong>Thursday</strong></li>
+     * <li><strong>Friday</strong></li>
+     * <li><strong>Saturday</strong></li>
+     * <li><strong>Sunday</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Monday</p>
      */
     @NameInMap("PreferredBackupPeriod")
     public String preferredBackupPeriod;
 
     /**
      * <p>The backup window. The time is displayed in Coordinated Universal Time (UTC).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15:00Z-16:00Z</p>
      */
     @NameInMap("PreferredBackupTime")
     public String preferredBackupTime;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F5178C10-1407-4987-9133-DE4DC9119F75</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the backup feature is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Switch")
     public String _switch;

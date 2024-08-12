@@ -6,55 +6,69 @@ import com.aliyun.tea.*;
 public class ModifyDBClusterRequest extends TeaModel {
     /**
      * <p>The specifications of the cluster.</p>
-     * <br>
-     * <p>*   Valid values when the cluster is of Single-replica Edition:</p>
-     * <br>
-     * <p>    *   **S4-NEW**</p>
-     * <p>    *   **S8**</p>
-     * <p>    *   **S16**</p>
-     * <p>    *   **S32**</p>
-     * <p>    *   **S64**</p>
-     * <p>    *   **S104**</p>
-     * <br>
-     * <p>*   Valid values when the cluster is of Double-replica Edition:</p>
-     * <br>
-     * <p>    *   **C4-NEW**</p>
-     * <p>    *   **C8**</p>
-     * <p>    *   **C16**</p>
-     * <p>    *   **C32**</p>
-     * <p>    *   **C64**</p>
-     * <p>    *   **C104**</p>
-     * <br>
+     * <ul>
+     * <li><p>Valid values when the cluster is of Single-replica Edition:</p>
+     * <ul>
+     * <li><strong>S4-NEW</strong></li>
+     * <li><strong>S8</strong></li>
+     * <li><strong>S16</strong></li>
+     * <li><strong>S32</strong></li>
+     * <li><strong>S64</strong></li>
+     * <li><strong>S104</strong></li>
+     * </ul>
+     * </li>
+     * <li><p>Valid values when the cluster is of Double-replica Edition:</p>
+     * <ul>
+     * <li><strong>C4-NEW</strong></li>
+     * <li><strong>C8</strong></li>
+     * <li><strong>C16</strong></li>
+     * <li><strong>C32</strong></li>
+     * <li><strong>C64</strong></li>
+     * <li><strong>C104</strong></li>
+     * </ul>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>S4-NEW</p>
      */
     @NameInMap("DBClusterClass")
     public String DBClusterClass;
 
     /**
      * <p>The cluster ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-bp19lo45sy98x****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The number of nodes in the cluster.</p>
-     * <br>
-     * <p>*   If the cluster is of Single-replica Edition, the value must be an integer that ranges from 1 to 48.</p>
-     * <p>*   If the cluster is of Double-replica Edition, the value must be an integer that ranges from 1 to 24.</p>
-     * <br>
+     * <ul>
+     * <li>If the cluster is of Single-replica Edition, the value must be an integer that ranges from 1 to 48.</li>
+     * <li>If the cluster is of Double-replica Edition, the value must be an integer that ranges from 1 to 24.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("DBNodeGroupCount")
     public String DBNodeGroupCount;
 
     /**
      * <p>The storage capacity of a single node of the cluster. Unit: GB.</p>
-     * <br>
      * <p>Valid values: 100 to 32000.</p>
-     * <br>
-     * <p>>  This value is a multiple of 100.</p>
-     * <br>
+     * <blockquote>
+     * <p> This value is a multiple of 100.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("DBNodeStorage")
     public String DBNodeStorage;
@@ -69,9 +83,11 @@ public class ModifyDBClusterRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/170875.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,19 +6,24 @@ import com.aliyun.tea.*;
 public class ModifyDBClusterDescriptionRequest extends TeaModel {
     /**
      * <p>The cluster name. When you set the cluster name, take note of the following rules:</p>
-     * <br>
-     * <p>*   The cluster name cannot start with http:// or https://.</p>
-     * <p>*   The cluster name must be 2 to 256 characters in length.</p>
-     * <br>
+     * <ul>
+     * <li>The cluster name cannot start with http:// or https://.</li>
+     * <li>The cluster name must be 2 to 256 characters in length.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ClusterDescriptionTest</p>
      */
     @NameInMap("DBClusterDescription")
     public String DBClusterDescription;
 
     /**
      * <p>The cluster ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-bp108z124a8o7****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;

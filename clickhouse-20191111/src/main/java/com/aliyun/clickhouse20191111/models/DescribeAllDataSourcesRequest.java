@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeAllDataSourcesRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-bp108z124a8o7****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -26,12 +28,18 @@ public class DescribeAllDataSourcesRequest extends TeaModel {
 
     /**
      * <p>The database name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>database</p>
      */
     @NameInMap("SchemaName")
     public String schemaName;
 
     /**
      * <p>The table name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>table</p>
      */
     @NameInMap("TableName")
     public String tableName;

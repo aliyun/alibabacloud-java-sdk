@@ -12,6 +12,9 @@ public class ModifyDBClusterResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BA30A000-3A4D-5B97-9420-E5D0D49F7016</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class ModifyDBClusterResponseBody extends TeaModel {
     public static class ModifyDBClusterResponseBodyDBCluster extends TeaModel {
         /**
          * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp19lo45sy98x****</p>
          */
         @NameInMap("dbClusterId")
         public String dbClusterId;
 
         /**
          * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21417210003****</p>
          */
         @NameInMap("orderId")
         public String orderId;

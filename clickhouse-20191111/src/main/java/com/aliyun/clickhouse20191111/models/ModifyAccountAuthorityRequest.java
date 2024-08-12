@@ -6,54 +6,68 @@ import com.aliyun.tea.*;
 public class ModifyAccountAuthorityRequest extends TeaModel {
     /**
      * <p>The name of the database account.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>The databases to which you want to grant permissions. Separate databases with commas (,).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>db1</p>
      */
     @NameInMap("AllowDatabases")
     public String allowDatabases;
 
     /**
      * <p>The dictionaries to which you want to grant permissions. Separate dictionaries with commas (,).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dt1</p>
      */
     @NameInMap("AllowDictionaries")
     public String allowDictionaries;
 
     /**
      * <p>The cluster ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-bp108z124a8o7****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>Specifies whether to grant DDL permissions to the database account. Valid values:</p>
-     * <br>
-     * <p>*   **true**: grants DDL permissions to the database account.</p>
-     * <p>*   **false**: does not grant DDL permissions to the database account.</p>
-     * <br>
+     * <ul>
+     * <li><strong>true</strong>: grants DDL permissions to the database account.</li>
+     * <li><strong>false</strong>: does not grant DDL permissions to the database account.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("DdlAuthority")
     public Boolean ddlAuthority;
 
     /**
      * <p>Specifies whether to grant DML permissions to the database account. Valid values:</p>
-     * <br>
-     * <p>*   **all**</p>
-     * <p>*   **readonly,modify**</p>
-     * <br>
+     * <ul>
+     * <li><strong>all</strong></li>
+     * <li><strong>readonly,modify</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>all</p>
      */
     @NameInMap("DmlAuthority")
     public String dmlAuthority;
@@ -65,7 +79,10 @@ public class ModifyAccountAuthorityRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/170875.html) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -78,12 +95,18 @@ public class ModifyAccountAuthorityRequest extends TeaModel {
 
     /**
      * <p>All databases. Separate databases with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>db1,db2</p>
      */
     @NameInMap("TotalDatabases")
     public String totalDatabases;
 
     /**
      * <p>All dictionaries. Separate dictionaries with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dt1,dt2</p>
      */
     @NameInMap("TotalDictionaries")
     public String totalDictionaries;

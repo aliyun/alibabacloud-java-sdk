@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateMonitorDataReportResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>94F92113-FF63-5E57-8401-6FE123AD11DD</p>
      */
     @NameInMap("RequestId")
     public String requestId;

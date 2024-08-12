@@ -7,15 +7,31 @@ public class DescribeAccountsResponseBody extends TeaModel {
     @NameInMap("Accounts")
     public DescribeAccountsResponseBodyAccounts accounts;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F5178C10-1407-4987-9133-DE4DC9119F75</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,15 +81,31 @@ public class DescribeAccountsResponseBody extends TeaModel {
     }
 
     public static class DescribeAccountsResponseBodyAccountsAccount extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("AccountDescription")
         public String accountDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Creating</p>
+         */
         @NameInMap("AccountStatus")
         public String accountStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Super</p>
+         */
         @NameInMap("AccountType")
         public String accountType;
 

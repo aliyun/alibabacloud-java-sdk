@@ -12,28 +12,41 @@ public class DescribeDBClustersResponseBody extends TeaModel {
 
     /**
      * <p>The total number of returned pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page. Valid values:</p>
-     * <br>
-     * <p>*   **30** (default)</p>
-     * <p>*   **50**</p>
-     * <p>*   **100**</p>
+     * <ul>
+     * <li><strong>30</strong> (default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F5178C10-1407-4987-9133-DE4DC9119F75</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries that are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -86,16 +99,24 @@ public class DescribeDBClustersResponseBody extends TeaModel {
     public static class DescribeDBClustersResponseBodyDBClustersDBClusterScaleOutStatus extends TeaModel {
         /**
          * <p>The progress of the data migration task in percentage.</p>
-         * <br>
-         * <p>>  This parameter is returned only when the cluster is in the SCALING_OUT state.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when the cluster is in the SCALING_OUT state.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The progress of the data migration task. This value is displayed in the following format: Data volume that has been migrated/Total data volume.</p>
-         * <br>
-         * <p>>  This parameter is returned only when the cluster is in the SCALING_OUT state.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when the cluster is in the SCALING_OUT state.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0MB/60469MB</p>
          */
         @NameInMap("Ratio")
         public String ratio;
@@ -126,12 +147,18 @@ public class DescribeDBClustersResponseBody extends TeaModel {
     public static class DescribeDBClustersResponseBodyDBClustersDBClusterTagsTag extends TeaModel {
         /**
          * <p>The tag name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>department</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>it</p>
          */
         @NameInMap("Value")
         public String value;
@@ -181,195 +208,285 @@ public class DescribeDBClustersResponseBody extends TeaModel {
     public static class DescribeDBClustersResponseBodyDBClustersDBCluster extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>140692647406****</p>
          */
         @NameInMap("AliUid")
         public String aliUid;
 
         /**
          * <p>The site ID. Valid values:</p>
-         * <br>
-         * <p>*   **26842**: the China site (aliyun.com)</p>
-         * <p>*   **26888**: the international site (alibabacloud.com)</p>
+         * <ul>
+         * <li><strong>26842</strong>: the China site (aliyun.com)</li>
+         * <li><strong>26888</strong>: the international site (alibabacloud.com)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>26842</p>
          */
         @NameInMap("Bid")
         public String bid;
 
         /**
          * <p>The edition of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   **Basic**: Single-replica Edition</p>
-         * <p>*   **HighAvailability**: Double-replica Edition</p>
+         * <ul>
+         * <li><strong>Basic</strong>: Single-replica Edition</li>
+         * <li><strong>HighAvailability</strong>: Double-replica Edition</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Basic</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>The commodity code of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>clickhouse_go_public_cn</p>
          */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
         /**
          * <p>The VPC endpoint of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp1fs5o051c61****.clickhouse.ads.aliyuncs.com</p>
          */
         @NameInMap("ConnectionString")
         public String connectionString;
 
         /**
          * <p>The version number of the backend management system of ApsaraDB for ClickHouse. Valid values:</p>
-         * <br>
-         * <p>*   **v1**</p>
-         * <p>*   **v2**</p>
+         * <ul>
+         * <li><strong>v1</strong></li>
+         * <li><strong>v2</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("ControlVersion")
         public String controlVersion;
 
         /**
          * <p>The time when the cluster was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-28T07:24:45Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("DBClusterDescription")
         public String DBClusterDescription;
 
         /**
          * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp108z124a8o7****</p>
          */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
         /**
          * <p>The network type of the cluster. Only VPC is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("DBClusterNetworkType")
         public String DBClusterNetworkType;
 
         /**
          * <p>The state of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   **Preparing**: The cluster is being prepared.</p>
-         * <p>*   **Creating**: The cluster is being created.</p>
-         * <p>*   **Running**: The cluster is running.</p>
-         * <p>*   **Deleting**: The cluster is being deleted.</p>
-         * <p>*   **SCALING_OUT**: The storage capacity of the cluster is being expanded.</p>
+         * <ul>
+         * <li><strong>Preparing</strong>: The cluster is being prepared.</li>
+         * <li><strong>Creating</strong>: The cluster is being created.</li>
+         * <li><strong>Running</strong>: The cluster is running.</li>
+         * <li><strong>Deleting</strong>: The cluster is being deleted.</li>
+         * <li><strong>SCALING_OUT</strong>: The storage capacity of the cluster is being expanded.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("DBClusterStatus")
         public String DBClusterStatus;
 
         /**
          * <p>The specifications of the cluster.</p>
-         * <br>
-         * <p>*   Valid values when the cluster is of Single-replica Edition: -**S4**: 4 CPU cores and 16 GB of memory -**S8**: 8 CPU cores and 32 GB of memory</p>
-         * <br>
-         * <p>    *   **S16**: 16 CPU cores and 64 GB of memory</p>
-         * <p>    *   **S32**: 32 CPU cores and 128 GB of memory</p>
-         * <p>    *   **S64**: 64 CPU cores and 256 GB of memory</p>
-         * <p>    *   **S104**: 104 CPU cores and 384 GB of memory</p>
-         * <br>
-         * <p>*   Valid values when the cluster is of Double-replica Edition: -**C4**: 4 CPU cores and 16 GB of memory -**C8**: 8 CPU cores and 32 GB of memory -**C16**: 16 CPU cores and 64 GB of memory -**C32**: 32 CPU cores and 128 GB of memory -**C64**: 64 CPU cores and 256 GB of memory -**C104**: 104 CPU cores and 384 GB of memory</p>
+         * <ul>
+         * <li><p>Valid values when the cluster is of Single-replica Edition: -<strong>S4</strong>: 4 CPU cores and 16 GB of memory -<strong>S8</strong>: 8 CPU cores and 32 GB of memory</p>
+         * <ul>
+         * <li><strong>S16</strong>: 16 CPU cores and 64 GB of memory</li>
+         * <li><strong>S32</strong>: 32 CPU cores and 128 GB of memory</li>
+         * <li><strong>S64</strong>: 64 CPU cores and 256 GB of memory</li>
+         * <li><strong>S104</strong>: 104 CPU cores and 384 GB of memory</li>
+         * </ul>
+         * </li>
+         * <li><p>Valid values when the cluster is of Double-replica Edition: -<strong>C4</strong>: 4 CPU cores and 16 GB of memory -<strong>C8</strong>: 8 CPU cores and 32 GB of memory -<strong>C16</strong>: 16 CPU cores and 64 GB of memory -<strong>C32</strong>: 32 CPU cores and 128 GB of memory -<strong>C64</strong>: 64 CPU cores and 256 GB of memory -<strong>C104</strong>: 104 CPU cores and 384 GB of memory</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>C8</p>
          */
         @NameInMap("DBNodeClass")
         public String DBNodeClass;
 
         /**
          * <p>The number of nodes.</p>
-         * <br>
-         * <p>*   Valid values when the cluster is of Single-replica Edition: 1 to 48.</p>
-         * <p>*   Valid values when the cluster is of Double-replica Edition: 1 to 24.</p>
+         * <ul>
+         * <li>Valid values when the cluster is of Single-replica Edition: 1 to 48.</li>
+         * <li>Valid values when the cluster is of Double-replica Edition: 1 to 24.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("DBNodeCount")
         public Long DBNodeCount;
 
         /**
          * <p>The storage capacity of each node. Valid values: 100 to 32000. Unit: GB.</p>
-         * <br>
-         * <p>>  This value is a multiple of 100.</p>
+         * <blockquote>
+         * <p> This value is a multiple of 100.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("DBNodeStorage")
         public Long DBNodeStorage;
 
+        @NameInMap("DbVersion")
+        public String dbVersion;
+
         /**
          * <p>The time when the cluster expired. The time is in the yyyy-MM-ddTHH:mm:ssZ format.</p>
-         * <br>
-         * <p>>  Pay-as-you-go clusters never expire. If the cluster is a pay-as-you-go cluster, an empty string is returned for this parameter.</p>
+         * <blockquote>
+         * <p> Pay-as-you-go clusters never expire. If the cluster is a pay-as-you-go cluster, an empty string is returned for this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2011-05-30T12:11:4Z</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
 
         /**
          * <p>The extended storage space.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100GB</p>
          */
         @NameInMap("ExtStorageSize")
         public Integer extStorageSize;
 
         /**
          * <p>The extended storage type. Valid values:</p>
-         * <br>
-         * <p>*   **CloudSSD**: standard SSD.</p>
-         * <p>*   **CloudESSD**: The cluster uses an enhanced SSD (ESSD) of performance level (PL) 1.</p>
-         * <p>*   **CloudESSD_PL2**: The cluster uses an ESSD of PL 2.</p>
-         * <p>*   **CloudESSD_PL3**: The cluster uses an ESSD of PL 3.</p>
-         * <p>*   **CloudEfficiency**: The cluster uses an ultra disk.</p>
+         * <ul>
+         * <li><strong>CloudSSD</strong>: standard SSD.</li>
+         * <li><strong>CloudESSD</strong>: The cluster uses an enhanced SSD (ESSD) of performance level (PL) 1.</li>
+         * <li><strong>CloudESSD_PL2</strong>: The cluster uses an ESSD of PL 2.</li>
+         * <li><strong>CloudESSD_PL3</strong>: The cluster uses an ESSD of PL 3.</li>
+         * <li><strong>CloudEfficiency</strong>: The cluster uses an ultra disk.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudESSD</p>
          */
         @NameInMap("ExtStorageType")
         public String extStorageType;
 
         /**
          * <p>Indicates whether the cluster has expired. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The cluster has expired.</p>
-         * <p>*   **false**: The cluster has not expired.</p>
+         * <ul>
+         * <li><strong>true</strong>: The cluster has expired.</li>
+         * <li><strong>false</strong>: The cluster has not expired.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsExpired")
         public String isExpired;
 
         /**
          * <p>The lock mode of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   **Unlock**: The cluster is not locked.</p>
-         * <p>*   **ManualLock**: The cluster is manually locked.</p>
-         * <p>*   **LockByExpiration**: The cluster is automatically locked due to cluster expiration.</p>
-         * <p>*   **LockByRestoration**: The cluster is automatically locked because the cluster is about to be rolled back.</p>
-         * <p>*   **LockByDiskQuota**: The cluster is automatically locked because the disk space is exhausted.</p>
+         * <ul>
+         * <li><strong>Unlock</strong>: The cluster is not locked.</li>
+         * <li><strong>ManualLock</strong>: The cluster is manually locked.</li>
+         * <li><strong>LockByExpiration</strong>: The cluster is automatically locked due to cluster expiration.</li>
+         * <li><strong>LockByRestoration</strong>: The cluster is automatically locked because the cluster is about to be rolled back.</li>
+         * <li><strong>LockByDiskQuota</strong>: The cluster is automatically locked because the disk space is exhausted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Unlock</p>
          */
         @NameInMap("LockMode")
         public String lockMode;
 
         /**
          * <p>The cause why the cluster was locked.</p>
-         * <br>
-         * <p>>  If the value of the LockMode parameter is Unlock, an empty string is returned for this parameter.</p>
+         * <blockquote>
+         * <p> If the value of the LockMode parameter is Unlock, an empty string is returned for this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>DISK_FULL</p>
          */
         @NameInMap("LockReason")
         public String lockReason;
 
         /**
          * <p>The billing method of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   **Postpaid**: The cluster uses the pay-as-you-go billing method.</p>
-         * <p>*   **Prepaid**: The cluster uses the subscription billing method.</p>
+         * <ul>
+         * <li><strong>Postpaid</strong>: The cluster uses the pay-as-you-go billing method.</li>
+         * <li><strong>Prepaid</strong>: The cluster uses the subscription billing method.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Postpaid</p>
          */
         @NameInMap("PayType")
         public String payType;
 
         /**
          * <p>The HTTP port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8123</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the resource group to which the cluster belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-4690g37929****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -382,11 +499,15 @@ public class DescribeDBClustersResponseBody extends TeaModel {
 
         /**
          * <p>The storage type of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   **CloudESSD**: The cluster uses an enhanced SSD (ESSD) of performance level (PL) 1.</p>
-         * <p>*   **CloudESSD_PL2**: The cluster uses an ESSD of PL 2.</p>
-         * <p>*   **CloudESSD_PL3**: The cluster uses an ESSD of PL 3.</p>
-         * <p>*   **CloudEfficiency**: The cluster uses an ultra disk.</p>
+         * <ul>
+         * <li><strong>CloudESSD</strong>: The cluster uses an enhanced SSD (ESSD) of performance level (PL) 1.</li>
+         * <li><strong>CloudESSD_PL2</strong>: The cluster uses an ESSD of PL 2.</li>
+         * <li><strong>CloudESSD_PL3</strong>: The cluster uses an ESSD of PL 3.</li>
+         * <li><strong>CloudEfficiency</strong>: The cluster uses an ultra disk.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudESSD</p>
          */
         @NameInMap("StorageType")
         public String storageType;
@@ -399,24 +520,36 @@ public class DescribeDBClustersResponseBody extends TeaModel {
 
         /**
          * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1gzt31twhlo0sa5****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
          * <p>The ID of the VPC in which the cluster is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp175iuvg8nxqraf2****</p>
          */
         @NameInMap("VpcCloudInstanceId")
         public String vpcCloudInstanceId;
 
         /**
          * <p>The ID of the virtual private cloud (VPC) in which the cluster is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp175iuvg8nxqraf2****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
@@ -536,6 +669,14 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
         public Long getDBNodeStorage() {
             return this.DBNodeStorage;
+        }
+
+        public DescribeDBClustersResponseBodyDBClustersDBCluster setDbVersion(String dbVersion) {
+            this.dbVersion = dbVersion;
+            return this;
+        }
+        public String getDbVersion() {
+            return this.dbVersion;
         }
 
         public DescribeDBClustersResponseBodyDBClustersDBCluster setExpireTime(String expireTime) {

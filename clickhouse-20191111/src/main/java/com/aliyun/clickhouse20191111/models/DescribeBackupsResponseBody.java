@@ -7,15 +7,31 @@ public class DescribeBackupsResponseBody extends TeaModel {
     @NameInMap("Items")
     public java.util.List<DescribeBackupsResponseBodyItems> items;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F5178C10-1407-4987-9133-DE4DC9119F75</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -65,33 +81,73 @@ public class DescribeBackupsResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupsResponseBodyItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-11-22T18:28:41Z</p>
+         */
         @NameInMap("BackupEndTime")
         public String backupEndTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>117403****</p>
+         */
         @NameInMap("BackupId")
         public String backupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Physical</p>
+         */
         @NameInMap("BackupMethod")
         public String backupMethod;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;shard_count&quot;：4}</p>
+         */
         @NameInMap("BackupSetInfo")
         public String backupSetInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>131072</p>
+         */
         @NameInMap("BackupSize")
         public Long backupSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-11-22T18:28:22Z</p>
+         */
         @NameInMap("BackupStartTime")
         public String backupStartTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("BackupStatus")
         public String backupStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>IncrementalBackup</p>
+         */
         @NameInMap("BackupType")
         public String backupType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cc-bp1qx68m06981****</p>
+         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-22T18:28:41Z</p>
+         */
         @NameInMap("ExpireDate")
         public String expireDate;
 

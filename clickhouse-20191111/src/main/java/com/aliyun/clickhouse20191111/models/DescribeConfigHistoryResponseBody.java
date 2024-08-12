@@ -12,6 +12,9 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D0CEC6AC-7760-409A-A0D5-E6CD8660E9CC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,33 +43,49 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
     public static class DescribeConfigHistoryResponseBodyConfigHistoryItems extends TeaModel {
         /**
          * <p>The ID of the change record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ChangeId")
         public String changeId;
 
         /**
          * <p>The user ID (UID) of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>253460731706911258</p>
          */
         @NameInMap("OwnerId")
         public String ownerId;
 
         /**
          * <p>The reason for the setting modification of the configuration parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
          * <p>Indicates whether the setting modification of the configuration parameters took effect. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Success")
         public Boolean success;
 
         /**
          * <p>The time when the values of the configuration parameters were changed. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-22T10:00:00Z</p>
          */
         @NameInMap("Time")
         public String time;
