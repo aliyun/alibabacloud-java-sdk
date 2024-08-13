@@ -2298,6 +2298,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("LastScanTimeStart", request.lastScanTimeStart);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.marker)) {
+            query.put("Marker", request.marker);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
         }

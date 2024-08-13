@@ -19,6 +19,12 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
     @NameInMap("Items")
     public java.util.List<DescribeOssObjectsResponseBodyItems> items;
 
+    @NameInMap("Marker")
+    public String marker;
+
+    @NameInMap("NextMarker")
+    public String nextMarker;
+
     /**
      * <p>The number of entries returned per page.</p>
      * 
@@ -46,6 +52,9 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    @NameInMap("Truncated")
+    public Boolean truncated;
+
     public static DescribeOssObjectsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeOssObjectsResponseBody self = new DescribeOssObjectsResponseBody();
         return TeaModel.build(map, self);
@@ -65,6 +74,22 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
     }
     public java.util.List<DescribeOssObjectsResponseBodyItems> getItems() {
         return this.items;
+    }
+
+    public DescribeOssObjectsResponseBody setMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    public String getMarker() {
+        return this.marker;
+    }
+
+    public DescribeOssObjectsResponseBody setNextMarker(String nextMarker) {
+        this.nextMarker = nextMarker;
+        return this;
+    }
+    public String getNextMarker() {
+        return this.nextMarker;
     }
 
     public DescribeOssObjectsResponseBody setPageSize(Integer pageSize) {
@@ -89,6 +114,14 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
     }
     public Integer getTotalCount() {
         return this.totalCount;
+    }
+
+    public DescribeOssObjectsResponseBody setTruncated(Boolean truncated) {
+        this.truncated = truncated;
+        return this;
+    }
+    public Boolean getTruncated() {
+        return this.truncated;
     }
 
     public static class DescribeOssObjectsResponseBodyItemsRuleList extends TeaModel {

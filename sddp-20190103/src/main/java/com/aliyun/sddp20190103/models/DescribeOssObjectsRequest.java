@@ -65,6 +65,9 @@ public class DescribeOssObjectsRequest extends TeaModel {
     @NameInMap("LastScanTimeStart")
     public Long lastScanTimeStart;
 
+    @NameInMap("Marker")
+    public Long marker;
+
     /**
      * <p>The search keyword. Fuzzy match is supported.</p>
      * 
@@ -180,6 +183,14 @@ public class DescribeOssObjectsRequest extends TeaModel {
     }
     public Long getLastScanTimeStart() {
         return this.lastScanTimeStart;
+    }
+
+    public DescribeOssObjectsRequest setMarker(Long marker) {
+        this.marker = marker;
+        return this;
+    }
+    public Long getMarker() {
+        return this.marker;
     }
 
     public DescribeOssObjectsRequest setName(String name) {
