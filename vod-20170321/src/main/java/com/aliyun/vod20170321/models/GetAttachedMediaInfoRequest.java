@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class GetAttachedMediaInfoRequest extends TeaModel {
     /**
-     * <p>The validity period of the URL of the auxiliary media asset. Unit: seconds.</p>
-     * <blockquote>
+     * <p>The validity period of the URL. Unit: seconds.</p>
      * <ul>
-     * <li>If the OutputType parameter is set to <strong>cdn</strong>:<ul>
+     * <li><p>If you set the OutputType parameter to <strong>cdn</strong>:</p>
+     * <ul>
      * <li>The URL of the auxiliary media asset has a validity period only if URL signing is enabled. Otherwise, the URL of the auxiliary media asset is permanently valid.</li>
      * <li>Minimum value: <strong>1</strong>.</li>
      * <li>Maximum value: unlimited.</li>
      * <li>Default value: If you do not set this parameter, the default validity period that is specified in URL signing is used.</li>
      * </ul>
      * </li>
-     * <li>If the OutputType parameter is set to <strong>oss</strong>:<ul>
+     * <li><p>If you set the OutputType parameter to <strong>oss</strong>:</p>
+     * <ul>
      * <li>The URL of the auxiliary media asset has a validity period only if the permissions on the Object Storage Service (OSS) bucket are private. Otherwise, the URL of the auxiliary media asset is permanently valid.</li>
      * <li>Minimum value: <strong>1</strong>.</li>
-     * <li>Maximum value: <strong>2592000</strong> (30 days). The maximum value is limited to reduce security risks of the origin.</li>
-     * <li>Default value: If you do not set this parameter, the default value is <strong>3600</strong>.</li>
+     * <li>The maximum value for a media asset stored in the VOD bucket is <strong>2592000</strong> (30 days) and the maximum value for a media asset stored in an OSS bucket is <strong>129600</strong> (36 hours). The maximum value is limited to reduce security risks of the origin.</li>
+     * <li>Default value: If you do not set this parameter, the default value <strong>3600</strong> is used.</li>
      * </ul>
      * </li>
      * </ul>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>3600</p>
@@ -32,7 +32,11 @@ public class GetAttachedMediaInfoRequest extends TeaModel {
     public Long authTimeout;
 
     /**
-     * <p>The ID of the auxiliary media asset. Separate multiple IDs with commas (,). A maximum of 20 IDs can be specified.</p>
+     * <p>The ID of the auxiliary media asset.</p>
+     * <ul>
+     * <li>Separate multiple IDs with commas (,). You can specify up to 20 IDs.</li>
+     * <li>You can obtain the ID from the response to the <a href="~~CreateUploadAttachedMedia~~">CreateUploadAttachedMedia</a> operation that you call to obtain the upload URL and credential.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,10 +46,10 @@ public class GetAttachedMediaInfoRequest extends TeaModel {
     public String mediaIds;
 
     /**
-     * <p>The type of the URL of the auxiliary media asset. Valid values:</p>
+     * <p>The type of the media asset URL. Valid values:</p>
      * <ul>
-     * <li><strong>oss</strong>: OSS URL</li>
-     * <li><strong>cdn</strong> (default): Content Delivery Network (CDN) URL</li>
+     * <li><strong>oss</strong></li>
+     * <li><strong>cdn</strong> (default)</li>
      * </ul>
      * 
      * <strong>example:</strong>

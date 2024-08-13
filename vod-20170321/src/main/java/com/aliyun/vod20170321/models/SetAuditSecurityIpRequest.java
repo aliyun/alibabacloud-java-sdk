@@ -25,6 +25,9 @@ public class SetAuditSecurityIpRequest extends TeaModel {
      * <li><strong>Cover</strong>: overwrites the original whitelist.</li>
      * <li><strong>Delete</strong>: removes the IP addresses from the original whitelist.</li>
      * </ul>
+     * <blockquote>
+     * <p> If the value that you specify is invalid, the default value is used.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Cover</p>

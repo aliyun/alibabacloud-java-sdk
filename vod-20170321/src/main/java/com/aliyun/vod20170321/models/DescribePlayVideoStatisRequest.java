@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribePlayVideoStatisRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <blockquote>
+     * <p> The end time must be later than the start time. The interval between the start time and the end time cannot exceed 180 days.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +31,12 @@ public class DescribePlayVideoStatisRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The video ID.</p>
+     * <p>The ID of the video. You can specify only one ID. You can use one of the following methods to obtain the ID:</p>
+     * <ul>
+     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong>. On the page that appears, view the video ID.</li>
+     * <li>Obtain the video ID from the response to the <a href="~~CreateUploadVideo~~">CreateUploadVideo</a> operation that you call to obtain the upload URL and credential.</li>
+     * <li>Obtain the video ID from the response to the <a href="~~SearchMedia~~">SearchMedia</a> operation that you call to query the audio or video file.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

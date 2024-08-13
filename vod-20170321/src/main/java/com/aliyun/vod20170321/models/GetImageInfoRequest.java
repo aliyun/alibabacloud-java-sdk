@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class GetImageInfoRequest extends TeaModel {
     /**
-     * <p>The validity period of the image URL. Unit: seconds.</p>
-     * <blockquote>
+     * <p>The time when the image URL expires. Unit: seconds.</p>
      * <ul>
-     * <li>If the OutputType parameter is set to <strong>cdn</strong>:<ul>
-     * <li>The image URL has a validity period only if URL signing is enabled. Otherwise, the image URL is permanently valid.</li>
-     * <li>Minimum value: <strong>1</strong>.</li>
+     * <li><p>If you set OutputType to cdn:</p>
+     * <ul>
+     * <li>This parameter takes effect only if URL authentication is enabled. Otherwise, the image URL does not expire.</li>
+     * <li>Minimum value: 1.</li>
      * <li>Maximum value: unlimited.</li>
-     * <li>Default value: If you do not set this parameter, the default validity period that is specified in URL signing is used.</li>
+     * <li>Default value: If you leave this parameter empty, the default validity period that is specified in URL signing is used.</li>
      * </ul>
      * </li>
-     * <li>If the OutputType parameter is set to <strong>oss</strong>:<ul>
-     * <li>The image URL has a validity period only if the permissions on the Object Storage Service (OSS) bucket are private. Otherwise, the image URL is permanently valid.</li>
-     * <li>Minimum value: <strong>1</strong>.</li>
-     * <li>Maximum value: <strong>2592000</strong> (30 days). The maximum value is limited to reduce security risks of the origin.</li>
-     * <li>Default value: If you do not set this parameter, the default value is <strong>3600</strong>.</li>
+     * <li><p>If you set OutputType to oss:</p>
+     * <ul>
+     * <li>This parameter takes effect only when the ACL of the Object Storage Service (OSS) bucket is private. Otherwise, the image URL does not expire.</li>
+     * <li>Minimum value: 1.</li>
+     * <li>If you store the image in the VOD bucket, the maximum value of this parameter is <strong>2592000</strong> (30 days). If you store the image in an OSS bucket, the maximum value of this parameter is <strong>129600</strong> (36 hours). The maximum value is limited to reduce security risks of the origin.</li>
+     * <li>Default value: 3600.</li>
      * </ul>
      * </li>
      * </ul>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>3600</p>
@@ -32,7 +32,12 @@ public class GetImageInfoRequest extends TeaModel {
     public Long authTimeout;
 
     /**
-     * <p>The ID of the image.</p>
+     * <p>The ID of the image. You can use one of the following methods to obtain the ID:</p>
+     * <ul>
+     * <li>Log on to the <a href="https://vod.console.aliyun.com/">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose Media Files &gt; Image. On the Image page, view the image ID.</li>
+     * <li>Obtain the image ID from the response to the <a href="~~CreateUploadImage~~">CreateUploadImage</a> operation that you call to obtain the upload URL and credential.</li>
+     * <li>Obtain the image ID from the response to the <a href="~~SearchMedia~~">SearchMedia</a> operation that you call to query the image.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,10 +47,10 @@ public class GetImageInfoRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The type of the image URL. Valid values:</p>
+     * <p>The type of the output image URL. Valid values:</p>
      * <ul>
-     * <li><strong>oss</strong>: OSS URL</li>
-     * <li><strong>cdn</strong> (default): Content Delivery Network (CDN) URL</li>
+     * <li>oss: OSS URL</li>
+     * <li>cdn: CDN URL</li>
      * </ul>
      * 
      * <strong>example:</strong>

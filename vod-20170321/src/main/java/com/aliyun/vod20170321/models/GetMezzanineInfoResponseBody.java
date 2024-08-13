@@ -826,6 +826,9 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         @NameInMap("OutputType")
         public String outputType;
 
+        @NameInMap("PreprocessStatus")
+        public String preprocessStatus;
+
         /**
          * <p>The period of time in which the object remains in the restored state.</p>
          * 
@@ -992,6 +995,14 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         }
         public String getOutputType() {
             return this.outputType;
+        }
+
+        public GetMezzanineInfoResponseBodyMezzanine setPreprocessStatus(String preprocessStatus) {
+            this.preprocessStatus = preprocessStatus;
+            return this;
+        }
+        public String getPreprocessStatus() {
+            return this.preprocessStatus;
         }
 
         public GetMezzanineInfoResponseBodyMezzanine setRestoreExpiration(String restoreExpiration) {

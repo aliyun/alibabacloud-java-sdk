@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVodVerifyContentRequest extends TeaModel {
     /**
-     * <p>The domain name for which you want to query the ownership verification content. You can specify only one domain name in each call.</p>
+     * <p>The domain name for which you want to verify the ownership. You can specify only one domain name in each call.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

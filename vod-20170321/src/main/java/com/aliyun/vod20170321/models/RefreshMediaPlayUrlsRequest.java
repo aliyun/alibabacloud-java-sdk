@@ -111,13 +111,13 @@ public class RefreshMediaPlayUrlsRequest extends TeaModel {
     public String taskType;
 
     /**
-     * <p>The custom configurations such as callback configurations and upload acceleration configurations. The value is a JSON string. For more information, see <a href="https://help.aliyun.com/document_detail/86952.html">Request parameter</a>.</p>
+     * <p>The custom configurations such as callback configurations and upload acceleration configurations. The value must be a JSON string. For more information, see the &quot;UserData: specifies the custom configurations for media upload&quot; section in the <a href="https://help.aliyun.com/document_detail/86952.html">Request parameter</a> topic.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
      * <li>The callback configurations take effect only after you specify the HTTP callback URL and select specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see <a href="https://help.aliyun.com/document_detail/86071.html">Configure callback settings</a>.</li>
-     * <li>You must submit a ticket to enable the upload acceleration feature. For more information, see <a href="https://help.aliyun.com/document_detail/55396.html">Overview</a>.</li>
+     * <li>To enable the upload acceleration feature, submit a ticket. For more information, see <a href="https://help.aliyun.com/document_detail/55396.html">Overview</a>. For more information about how to submit a ticket, see <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>{&quot;MessageCallback&quot;:{&quot;CallbackURL&quot;:&quot;<a href="http://example.aliyundoc.com%22%7D">http://example.aliyundoc.com&quot;}</a>, &quot;Extend&quot;:{&quot;localId&quot;:&quot;xxx&quot;,&quot;test&quot;:&quot;www&quot;}}</p>

@@ -194,7 +194,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
 
     public static class DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotal extends TeaModel {
         /**
-         * <p>The date. The date is displayed in the <em>yyyy-MM-dd</em> format.</p>
+         * <p>The date. The date is displayed in the yyyy-MM-dd format.</p>
          * 
          * <strong>example:</strong>
          * <p>20170120</p>

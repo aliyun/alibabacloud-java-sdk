@@ -17,7 +17,7 @@ public class SetMessageCallbackRequest extends TeaModel {
      * <p>The authentication key. The key can be up to 32 characters in length and must contain uppercase letters, lowercase letters, and digits. This parameter takes effect only when you set CallbackType to <strong>HTTP</strong>.</p>
      * 
      * <strong>example:</strong>
-     * <p>dsf346dvet</p>
+     * <p>Dsf346dvet</p>
      */
     @NameInMap("AuthKey")
     public String authKey;

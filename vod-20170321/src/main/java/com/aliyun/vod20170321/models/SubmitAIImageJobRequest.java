@@ -7,7 +7,7 @@ public class SubmitAIImageJobRequest extends TeaModel {
     /**
      * <p>The ID of the pipeline that is used for the AI processing job.</p>
      * <blockquote>
-     * <p> This parameter is optional if you have specified a default pipeline ID. If you need to submit image AI processing jobs in a batch to a specific pipeline, <a href="https://yida.alibaba-inc.com/o/ticketapply">submit a ticket</a> to contact Alibaba Cloud technical support.</p>
+     * <p> This parameter is optional if you specify a default pipeline ID. If you want to use a separate pipeline to submit multiple AI processing jobs., submit a ticket or contact Alibaba Cloud after-sales engineers. For more information about how to submit a ticket, see <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -117,6 +117,9 @@ public class GetAppInfosResponseBody extends TeaModel {
         @NameInMap("ModificationTime")
         public String modificationTime;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         /**
          * <p>The status of the application. Valid values:</p>
          * <ul>
@@ -186,6 +189,14 @@ public class GetAppInfosResponseBody extends TeaModel {
         }
         public String getModificationTime() {
             return this.modificationTime;
+        }
+
+        public GetAppInfosResponseBodyAppInfoList setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public GetAppInfosResponseBodyAppInfoList setStatus(String status) {

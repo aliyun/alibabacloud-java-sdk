@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVodCertificateListResponseBody extends TeaModel {
     /**
-     * <p>The information about the returned certificates.</p>
+     * <p>The information about each certificate.</p>
      */
     @NameInMap("CertificateListModel")
     public DescribeVodCertificateListResponseBodyCertificateListModel certificateListModel;
@@ -41,6 +41,9 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
     }
 
     public static class DescribeVodCertificateListResponseBodyCertificateListModelCertListCert extends TeaModel {
+        @NameInMap("Algorithm")
+        public String algorithm;
+
         /**
          * <p>The ID of the certificate.</p>
          * 
@@ -49,6 +52,9 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
          */
         @NameInMap("CertId")
         public Long certId;
+
+        @NameInMap("CertIdentifier")
+        public String certIdentifier;
 
         /**
          * <p>The name of the certificate.</p>
@@ -68,6 +74,15 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
         @NameInMap("Common")
         public String common;
 
+        @NameInMap("CreateTime")
+        public Long createTime;
+
+        @NameInMap("DomainMatchCert")
+        public Boolean domainMatchCert;
+
+        @NameInMap("EndTime")
+        public Long endTime;
+
         /**
          * <p>The fingerprint of the certificate.</p>
          * 
@@ -76,6 +91,9 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
          */
         @NameInMap("Fingerprint")
         public String fingerprint;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
 
         /**
          * <p>The certificate authority (CA) that issued the certificate.</p>
@@ -95,9 +113,20 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
         @NameInMap("LastTime")
         public Long lastTime;
 
+        @NameInMap("SignAlgorithm")
+        public String signAlgorithm;
+
         public static DescribeVodCertificateListResponseBodyCertificateListModelCertListCert build(java.util.Map<String, ?> map) throws Exception {
             DescribeVodCertificateListResponseBodyCertificateListModelCertListCert self = new DescribeVodCertificateListResponseBodyCertificateListModelCertListCert();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeVodCertificateListResponseBodyCertificateListModelCertListCert setAlgorithm(String algorithm) {
+            this.algorithm = algorithm;
+            return this;
+        }
+        public String getAlgorithm() {
+            return this.algorithm;
         }
 
         public DescribeVodCertificateListResponseBodyCertificateListModelCertListCert setCertId(Long certId) {
@@ -106,6 +135,14 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
         }
         public Long getCertId() {
             return this.certId;
+        }
+
+        public DescribeVodCertificateListResponseBodyCertificateListModelCertListCert setCertIdentifier(String certIdentifier) {
+            this.certIdentifier = certIdentifier;
+            return this;
+        }
+        public String getCertIdentifier() {
+            return this.certIdentifier;
         }
 
         public DescribeVodCertificateListResponseBodyCertificateListModelCertListCert setCertName(String certName) {
@@ -124,12 +161,44 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
             return this.common;
         }
 
+        public DescribeVodCertificateListResponseBodyCertificateListModelCertListCert setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        public DescribeVodCertificateListResponseBodyCertificateListModelCertListCert setDomainMatchCert(Boolean domainMatchCert) {
+            this.domainMatchCert = domainMatchCert;
+            return this;
+        }
+        public Boolean getDomainMatchCert() {
+            return this.domainMatchCert;
+        }
+
+        public DescribeVodCertificateListResponseBodyCertificateListModelCertListCert setEndTime(Long endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
         public DescribeVodCertificateListResponseBodyCertificateListModelCertListCert setFingerprint(String fingerprint) {
             this.fingerprint = fingerprint;
             return this;
         }
         public String getFingerprint() {
             return this.fingerprint;
+        }
+
+        public DescribeVodCertificateListResponseBodyCertificateListModelCertListCert setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public DescribeVodCertificateListResponseBodyCertificateListModelCertListCert setIssuer(String issuer) {
@@ -146,6 +215,14 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
         }
         public Long getLastTime() {
             return this.lastTime;
+        }
+
+        public DescribeVodCertificateListResponseBodyCertificateListModelCertListCert setSignAlgorithm(String signAlgorithm) {
+            this.signAlgorithm = signAlgorithm;
+            return this;
+        }
+        public String getSignAlgorithm() {
+            return this.signAlgorithm;
         }
 
     }
@@ -171,13 +248,13 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
 
     public static class DescribeVodCertificateListResponseBodyCertificateListModel extends TeaModel {
         /**
-         * <p>The details of each certificate.</p>
+         * <p>The list of certificates.</p>
          */
         @NameInMap("CertList")
         public DescribeVodCertificateListResponseBodyCertificateListModelCertList certList;
 
         /**
-         * <p>The number of certificates.</p>
+         * <p>The number of certificates that are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

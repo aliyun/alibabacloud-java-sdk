@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateUploadAttachedMediaRequest extends TeaModel {
     /**
-     * <p>The ID of the application. Default value: <strong>app-1000000</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</p>
+     * <p>The ID of the application. Default value: <strong>app-1000000</strong>. If you have activated the multi-application service, specify the ID of the application to add the watermark template in the specified application. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>app-****</p>
@@ -14,7 +14,7 @@ public class CreateUploadAttachedMediaRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The type of the media asset. Valid values:</p>
+     * <p>The type of the auxiliary media asset. Valid values:</p>
      * <ul>
      * <li><strong>watermark</strong></li>
      * <li><strong>subtitle</strong></li>
@@ -29,11 +29,11 @@ public class CreateUploadAttachedMediaRequest extends TeaModel {
     public String businessType;
 
     /**
-     * <p>The one or more category IDs of the auxiliary media asset. Separate multiple category IDs with commas (,). A maximum of five category IDs can be specified. You can use one of the following methods to obtain the category ID:</p>
+     * <p>The ID of the category. Separate multiple IDs with commas (,). You can specify up to five IDs. You can use one of the following methods to obtain the ID:</p>
      * <ul>
-     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Configuration Management</strong> &gt; <strong>Media Management</strong> &gt; <strong>Categories</strong>. On the Categories page, you can view the category ID.</li>
-     * <li>View the value of the CateId parameter returned by the <a href="https://help.aliyun.com/document_detail/56401.html">AddCategory</a> operation that you called to create a category.</li>
-     * <li>View the value of the CateId parameter returned by the <a href="https://help.aliyun.com/document_detail/56406.html">GetCategories</a> operation that you called to query a category.</li>
+     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Configuration Management</strong> &gt; <strong>Media Management</strong> &gt; <strong>Categories</strong> to view the category ID of the media file.</li>
+     * <li>Obtain the category ID from the response to the <a href="~~AddCategory~~">AddCategory</a> operation that you call to create a category.</li>
+     * <li>Obtain the category ID from the response to the <a href="~~GetCategories~~">GetCategories</a> operation that you call to query categories.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,7 +56,10 @@ public class CreateUploadAttachedMediaRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The name of the source file.</p>
+     * <p>The source file URL of the auxiliary media asset.</p>
+     * <blockquote>
+     * <p> The file name extension is optional. If the file name extension that you specified for this parameter is different from the value of MediaExt, the value of MediaExt takes effect.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>D:\test.png</p>
@@ -74,7 +77,7 @@ public class CreateUploadAttachedMediaRequest extends TeaModel {
     public String fileSize;
 
     /**
-     * <p>The file name extension. Valid values:</p>
+     * <p>The file name extension of the auxiliary media asset.</p>
      * <ul>
      * <li>Valid values for watermarks: <strong>png, gif, apng, and mov</strong></li>
      * <li>Valid values for subtitles: <strong>srt, ass, stl, ttml, and vtt</strong></li>
@@ -88,10 +91,10 @@ public class CreateUploadAttachedMediaRequest extends TeaModel {
     public String mediaExt;
 
     /**
-     * <p>The storage location. You can use one of the following methods to obtain the storage location:</p>
-     * <p>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Configuration Management</strong> &gt; <strong>Media Management</strong> &gt; <strong>Storage</strong>. On the Storage page, you can view the storage location.</p>
+     * <p>The storage address. Perform the following operations to obtain the storage address:</p>
+     * <p>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Configuration Management</strong> &gt; <strong>Media Management</strong> &gt; <strong>Storage</strong>. On the Storage page, view the storage address.</p>
      * <blockquote>
-     * <p> If this parameter is set to a specific value, the auxiliary media asset is uploaded to the specified storage location.</p>
+     * <p> If you leave this parameter empty, the auxiliary media asset is uploaded to the default storage address. If you specify this parameter, the auxiliary media asset is uploaded to the specified storage address.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -116,10 +119,10 @@ public class CreateUploadAttachedMediaRequest extends TeaModel {
     public String tags;
 
     /**
-     * <p>The title of the media asset. Take note of the following items:</p>
+     * <p>The title of the auxiliary media asset. The following rules apply:</p>
      * <ul>
-     * <li>The title can be up to 128 bytes in length.</li>
-     * <li>The value must be encoded in UTF-8.</li>
+     * <li>The title cannot exceed 128 bytes.</li>
+     * <li>The title must be encoded in UTF-8.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -129,11 +132,11 @@ public class CreateUploadAttachedMediaRequest extends TeaModel {
     public String title;
 
     /**
-     * <p>The custom configurations, including callback configurations and upload acceleration configurations. The value is a JSON string. For more information, see the &quot;UserData: specifies the custom configurations for media upload&quot; section of the <a href="https://help.aliyun.com/document_detail/86952.html">Request parameters</a> topic.</p>
+     * <p>The custom configurations. For example, you can specify callback configurations and upload acceleration configurations. The value must be a JSON string. For more information, see <a href="~~86952#section-6fg-qll-v3w~~">Request parameters</a>.</p>
      * <blockquote>
      * <ul>
-     * <li>The callback configurations take effect only after you specify the HTTP callback URL and select the specific callback events in the ApsaraVideo VOD console. For more information about how to configure an HTTP callback in the ApsaraVideo VOD console, see <a href="https://help.aliyun.com/document_detail/86071.html">Configure callback settings</a>.</li>
-     * <li>To use the upload acceleration feature, submit a <a href="https://ticket-intl.console.aliyun.com/#/ticket/createIndex">ticket</a> to enable this feature. For more information, see <a href="https://help.aliyun.com/document_detail/55396.html">Overview</a>.</li>
+     * <li>The callback configurations take effect only after you specify the HTTP callback URL and select the specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see <a href="https://help.aliyun.com/document_detail/86071.html">Configure callback settings</a>.</li>
+     * <li>If you want to enable the upload acceleration feature, submit a ticket. For more information, see <a href="https://help.aliyun.com/document_detail/55396.html">Overview</a>. For more information about how to submit a ticket, see <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</li>
      * </ul>
      * </blockquote>
      * 

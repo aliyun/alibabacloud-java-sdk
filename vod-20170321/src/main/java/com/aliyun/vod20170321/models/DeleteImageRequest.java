@@ -20,14 +20,14 @@ public class DeleteImageRequest extends TeaModel {
     public String deleteImageType;
 
     /**
-     * <p>The ID of the image file. You can specify multiple image IDs. Separate multiple IDs with commas (,). You can use one of the following methods to obtain the image ID:</p>
+     * <p>The ID of the image. You can specify up to 20 image IDs and separate them with commas (,). You can use one of the following methods to obtain the image ID:</p>
      * <ul>
-     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Media Files</strong> &gt; <strong>Image</strong> to view the image ID. This method is applicable to images that are uploaded by using the ApsaraVideo VOD console.</li>
-     * <li>Obtain the value of the ImageId parameter from the response to the <a href="https://help.aliyun.com/document_detail/55619.html">CreateUploadImage</a> operation.</li>
-     * <li>Obtain the value of the ImageId parameter from the response to the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation after you upload images.</li>
+     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Media Files</strong> &gt; <strong>Image</strong> to view the image ID.</li>
+     * <li>Obtain the image ID from the response to the <a href="~~CreateUploadImage~~">CreateUploadImage</a> operation that you call to obtain the upload credential and URL.</li>
+     * <li>Obtain the image ID from the response to the <a href="~~SearchMedia~~">SearchMedia</a> operation that you call to query images.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required only if you set <strong>DeleteImageType</strong> to <strong>ImageId</strong>.</p>
+     * <p> This parameter takes effect and is required only if you set <strong>DeleteImageType</strong> to <strong>ImageId</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -37,14 +37,17 @@ public class DeleteImageRequest extends TeaModel {
     public String imageIds;
 
     /**
-     * <p>The type of images that you want to delete. The images are associated with the video. This parameter is required only if you set <strong>DeleteImageType</strong> to <strong>VideoId</strong>. Valid values:</p>
+     * <p>The type of images that you want to delete. The images are associated with the video. Valid values:</p>
      * <ul>
      * <li><strong>CoverSnapshot</strong>: thumbnail snapshot.</li>
-     * <li><strong>NormalSnapshot</strong>: normal snapshot.</li>
+     * <li><strong>NormalSnapshot</strong>: regular snapshot.</li>
      * <li><strong>SpriteSnapshot</strong>: sprite snapshot.</li>
      * <li><strong>SpriteOriginSnapshot</strong>: sprite source snapshot.</li>
-     * <li><strong>All</strong>: images of all the preceding types. If this parameter is not set to All, you can specify multiple types and separate the types with commas (,).</li>
+     * <li><strong>All</strong>: images of all the preceding types. You can specify multiple types other than <code>All</code> for this parameter. Separate multiple types with commas (,).</li>
      * </ul>
+     * <blockquote>
+     * <p> This parameter takes effect and is required only if you set <strong>DeleteImageType</strong> to <strong>VideoId</strong>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>All</p>
@@ -53,9 +56,9 @@ public class DeleteImageRequest extends TeaModel {
     public String imageType;
 
     /**
-     * <p>The URL of the image. You can obtain the value of ImageURL from the response to the <a href="https://help.aliyun.com/document_detail/55619.html">CreateUploadImage</a> operation. You can specify multiple URLs. Separate multiple URLs with commas (,).</p>
+     * <p>The URL of the image. You can obtain the value of <code>ImageURL</code> from the response to the <a href="~~CreateUploadImage~~">CreateUploadImage</a> operation. You can specify up to 20 URLs and separate them with commas (,).</p>
      * <blockquote>
-     * <p>This parameter is required only if you set <strong>DeleteImageType</strong> to <strong>ImageURL</strong>.</p>
+     * <p> This parameter takes effect and is required only if you set <strong>DeleteImageType</strong> to <strong>ImageURL</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -65,14 +68,14 @@ public class DeleteImageRequest extends TeaModel {
     public String imageURLs;
 
     /**
-     * <p>The ID of the video file. You can use one of the following methods to obtain the video ID:</p>
+     * <p>The ID of the video. You can specify only one ID. You can use one of the following methods to obtain the ID:</p>
      * <ul>
-     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD</a> console. In the left-side navigation pane, choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong>. On the Video and Audio page, view the ID of the media file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.</li>
-     * <li>Obtain the value of the VideoId parameter from the response to the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation.</li>
-     * <li>Obtain the value of the VideoId parameter from the response to the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation after you upload media files.</li>
+     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong>. On the Video and Audio page, view the ID of the media file.</li>
+     * <li>Obtain the video ID from the response to the <a href="~~CreateUploadVideo~~">CreateUploadVideo</a> operation that you call to obtain the upload credential and URL.</li>
+     * <li>Obtain the video ID from the response to the <a href="~~SearchMedia~~">SearchMedia</a> operation that you call to query videos.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required only if you set <strong>DeleteImageType</strong> to <strong>VideoId</strong>.</p>
+     * <p> This parameter takes effect and is required only if you set <strong>DeleteImageType</strong> to <strong>VideoId</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

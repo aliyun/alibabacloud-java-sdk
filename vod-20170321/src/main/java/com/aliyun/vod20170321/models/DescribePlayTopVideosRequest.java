@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePlayTopVideosRequest extends TeaModel {
     /**
-     * <p>The time to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The time to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribePlayTopVideosRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,7 +27,7 @@ public class DescribePlayTopVideosRequest extends TeaModel {
     public Long pageNo;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>100</strong>. Maximum value: <strong>1000</strong>.</p>
+     * <p>The number of entries to return on each page. The default value is <strong>100</strong>. The maximum value is <strong>1000</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

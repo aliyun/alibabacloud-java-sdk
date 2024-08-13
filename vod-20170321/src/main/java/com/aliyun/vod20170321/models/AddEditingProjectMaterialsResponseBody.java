@@ -4,10 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class AddEditingProjectMaterialsResponseBody extends TeaModel {
+    /**
+     * <p>The materials.</p>
+     */
     @NameInMap("MaterialList")
     public java.util.List<AddEditingProjectMaterialsResponseBodyMaterialList> materialList;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>85237CDA-0B54-5CED-BA10-A8A71AA13C1A</p>
      */
@@ -37,19 +42,29 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
 
     public static class AddEditingProjectMaterialsResponseBodyMaterialList extends TeaModel {
         /**
+         * <p>The ID of the category.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000487543</p>
          */
         @NameInMap("CateId")
         public Integer cateId;
 
+        /**
+         * <p>The category name of the material.</p>
+         */
         @NameInMap("CateName")
         public String cateName;
 
+        /**
+         * <p>The thumbnail URL.</p>
+         */
         @NameInMap("CoverURL")
         public String coverURL;
 
         /**
+         * <p>The time when the material was created. The time follows the ISO 8601 standard in the <em>YYYY-MM-DD**Thh:mm:ss</em> format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2019-10-02T08:26Z</p>
          */
@@ -57,16 +72,23 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234751840694470</p>
          */
         @NameInMap("CustomerId")
         public Long customerId;
 
+        /**
+         * <p>The description of the material.</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The duration of the material. Unit: seconds. The value is accurate to four decimal places.</p>
+         * 
          * <strong>example:</strong>
          * <p>3690.2332</p>
          */
@@ -74,6 +96,8 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public Float duration;
 
         /**
+         * <p>The ID of the material.</p>
+         * 
          * <strong>example:</strong>
          * <p>85befc4118b84c6723e53b80b1****</p>
          */
@@ -81,6 +105,13 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public String materialId;
 
         /**
+         * <p>The type of the material. Valid values:</p>
+         * <ul>
+         * <li><strong>video</strong></li>
+         * <li><strong>audio</strong></li>
+         * <li><strong>image</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>video</p>
          */
@@ -88,6 +119,8 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public String materialType;
 
         /**
+         * <p>The time when the material was last updated. The time follows the ISO 8601 standard in the <em>YYYY-MM-DD**Thh:mm:ss</em> format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-11-25T07:28:34Z</p>
          */
@@ -95,26 +128,43 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
+         * <p>The size of the material.</p>
+         * 
          * <strong>example:</strong>
          * <p>1682694</p>
          */
         @NameInMap("Size")
         public Long size;
 
+        /**
+         * <p>The URLs of snapshots.</p>
+         */
         @NameInMap("Snapshots")
         public java.util.List<String> snapshots;
 
         /**
+         * <p>The configuration of the sprite snapshot.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
         @NameInMap("SpriteConfig")
         public String spriteConfig;
 
+        /**
+         * <p>The URLs of sprite snapshots.</p>
+         */
         @NameInMap("Sprites")
         public java.util.List<String> sprites;
 
         /**
+         * <p>The status of the material. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong></li>
+         * <li><strong>Uploading</strong></li>
+         * <li><strong>UploadFail</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -122,6 +172,8 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The tag of the material. Multiple tags are separated by commas (,).</p>
+         * 
          * <strong>example:</strong>
          * <p>tag1,tag2</p>
          */
@@ -129,6 +181,8 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public String tags;
 
         /**
+         * <p>The title of the material.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

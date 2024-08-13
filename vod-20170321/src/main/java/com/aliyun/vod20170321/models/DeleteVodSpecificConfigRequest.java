@@ -15,7 +15,7 @@ public class DeleteVodSpecificConfigRequest extends TeaModel {
     public String configId;
 
     /**
-     * <p>The domain name for CDN.</p>
+     * <p>The accelerated domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,10 +25,11 @@ public class DeleteVodSpecificConfigRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The environment of configuration. </p>
-     * <p>Value:</p>
-     * <p>online: production environment</p>
-     * <p>gray: simulation environment</p>
+     * <p>The environment from which the domain name configurations are deleted. Valid values:</p>
+     * <ul>
+     * <li>online: production environment</li>
+     * <li>gray: simulation environment</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>online</p>

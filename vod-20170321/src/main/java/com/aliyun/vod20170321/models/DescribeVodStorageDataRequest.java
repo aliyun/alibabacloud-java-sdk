@@ -4,6 +4,10 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodStorageDataRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>app-1000000</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
@@ -46,7 +50,7 @@ public class DescribeVodStorageDataRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The name of the Object Storage Service (OSS) bucket. If you leave this parameter empty, data of all buckets is returned. Separate multiple bucket names with commas (,).</p>
+     * <p>The name of the Object Storage Service (OSS) bucket. If you leave this parameter empty, data of all buckets is returned. Separate multiple transcoding specifications with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>bucket</p>
@@ -55,7 +59,7 @@ public class DescribeVodStorageDataRequest extends TeaModel {
     public String storage;
 
     /**
-     * <p>The storage type. Set the value to <strong>OSS</strong>.</p>
+     * <p>The storage class. Set the value to <strong>OSS</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>OSS</p>
