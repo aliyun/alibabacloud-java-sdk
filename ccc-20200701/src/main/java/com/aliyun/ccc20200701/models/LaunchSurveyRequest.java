@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class LaunchSurveyRequest extends TeaModel {
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>4685b65a-eb8f-11ec-8ea0-0242ac120002</p>
      */
