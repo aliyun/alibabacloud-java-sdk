@@ -6,31 +6,51 @@ import com.aliyun.tea.*;
 public class ApproveFotaUpdateRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.0.1-D-20220513.14****</p>
      */
     @NameInMap("AppVersion")
     public String appVersion;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d4452bd7-88df-4b90-a409-806da674****</p>
      */
     @NameInMap("ClientId")
     public String clientId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ecd-138dsptkrt00u****</p>
+     */
     @NameInMap("DesktopId")
     public String desktopId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v18390c954ce59e2915ef16663205371721e0db9a46179ac89249a203320459523cb54ad08efe324784dd0eba25950****</p>
      */
     @NameInMap("LoginToken")
     public String loginToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4771b873-c757-4893-973c-7f5beejh****</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 

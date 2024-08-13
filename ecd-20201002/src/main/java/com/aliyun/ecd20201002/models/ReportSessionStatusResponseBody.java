@@ -4,6 +4,10 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class ReportSessionStatusResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0EE5DE20-25F4-5870-9D56-C259A45B****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

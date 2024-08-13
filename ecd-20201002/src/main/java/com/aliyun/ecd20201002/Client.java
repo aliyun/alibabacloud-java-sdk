@@ -28,8 +28,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 允许桌面FOTA升级
-     *
+     * <b>summary</b> : 
+     * <p>允许桌面FOTA升级</p>
+     * 
      * @param request ApproveFotaUpdateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ApproveFotaUpdateResponse
@@ -83,8 +84,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 允许桌面FOTA升级
-     *
+     * <b>summary</b> : 
+     * <p>允许桌面FOTA升级</p>
+     * 
      * @param request ApproveFotaUpdateRequest
      * @return ApproveFotaUpdateResponse
      */
@@ -512,8 +514,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列举快照
-     *
+     * <b>summary</b> : 
+     * <p>列举快照</p>
+     * 
      * @param request DescribeSnapshotsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSnapshotsResponse
@@ -571,8 +574,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列举快照
-     *
+     * <b>summary</b> : 
+     * <p>列举快照</p>
+     * 
      * @param request DescribeSnapshotsRequest
      * @return DescribeSnapshotsResponse
      */
@@ -644,8 +648,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取无影云盘的免密token
-     *
+     * <b>summary</b> : 
+     * <p>获取无影云盘的免密token</p>
+     * 
      * @param request GetCloudDriveServiceMountTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetCloudDriveServiceMountTokenResponse
@@ -691,8 +696,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取无影云盘的免密token
-     *
+     * <b>summary</b> : 
+     * <p>获取无影云盘的免密token</p>
+     * 
      * @param request GetCloudDriveServiceMountTokenRequest
      * @return GetCloudDriveServiceMountTokenResponse
      */
@@ -792,8 +798,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains logon credentials.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains logon credentials.</p>
+     * 
      * @param request GetLoginTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetLoginTokenResponse
@@ -891,8 +898,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains logon credentials.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains logon credentials.</p>
+     * 
      * @param request GetLoginTokenRequest
      * @return GetLoginTokenResponse
      */
@@ -902,8 +910,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 是否保持登录判断接口
-     *
+     * <b>summary</b> : 
+     * <p>是否保持登录判断接口</p>
+     * 
      * @param request IsKeepAliveRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return IsKeepAliveResponse
@@ -941,8 +950,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 是否保持登录判断接口
-     *
+     * <b>summary</b> : 
+     * <p>是否保持登录判断接口</p>
+     * 
      * @param request IsKeepAliveRequest
      * @return IsKeepAliveResponse
      */
@@ -952,8 +962,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询Agent需要上报的配置信息
-     *
+     * <b>summary</b> : 
+     * <p>查询Agent需要上报的配置信息</p>
+     * 
      * @param request QueryEdsAgentReportConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryEdsAgentReportConfigResponse
@@ -991,8 +1002,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询Agent需要上报的配置信息
-     *
+     * <b>summary</b> : 
+     * <p>查询Agent需要上报的配置信息</p>
+     * 
      * @param request QueryEdsAgentReportConfigRequest
      * @return QueryEdsAgentReportConfigResponse
      */
@@ -1002,8 +1014,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restart cloud computers.
-     *
+     * <b>summary</b> : 
+     * <p>Restart cloud computers.</p>
+     * 
      * @param request RebootDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RebootDesktopsResponse
@@ -1069,8 +1082,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restart cloud computers.
-     *
+     * <b>summary</b> : 
+     * <p>Restart cloud computers.</p>
+     * 
      * @param request RebootDesktopsRequest
      * @return RebootDesktopsResponse
      */
@@ -1142,8 +1156,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 上报edsAgent的信息
-     *
+     * <b>summary</b> : 
+     * <p>上报edsAgent的信息</p>
+     * 
      * @param request ReportEdsAgentInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ReportEdsAgentInfoResponse
@@ -1185,8 +1200,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 上报edsAgent的信息
-     *
+     * <b>summary</b> : 
+     * <p>上报edsAgent的信息</p>
+     * 
      * @param request ReportEdsAgentInfoRequest
      * @return ReportEdsAgentInfoResponse
      */
@@ -1316,8 +1332,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 还原快照
-     *
+     * <b>summary</b> : 
+     * <p>还原快照</p>
+     * 
      * @param request ResetSnapshotRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ResetSnapshotResponse
@@ -1363,8 +1380,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 还原快照
-     *
+     * <b>summary</b> : 
+     * <p>还原快照</p>
+     * 
      * @param request ResetSnapshotRequest
      * @return ResetSnapshotResponse
      */
@@ -1576,10 +1594,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Start cloud computers.
-     *
-     * @description The cloud computers that you want to start must be in the Stopped state. After you call this operation, the cloud computers enter the Running state.
-     *
+     * <b>description</b> :
+     * <p>The cloud computers that you want to start must be in the Stopped state. After you call this operation, the cloud computers enter the Running state.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Start cloud computers.</p>
+     * 
      * @param request StartDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartDesktopsResponse
@@ -1641,10 +1661,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Start cloud computers.
-     *
-     * @description The cloud computers that you want to start must be in the Stopped state. After you call this operation, the cloud computers enter the Running state.
-     *
+     * <b>description</b> :
+     * <p>The cloud computers that you want to start must be in the Stopped state. After you call this operation, the cloud computers enter the Running state.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Start cloud computers.</p>
+     * 
      * @param request StartDesktopsRequest
      * @return StartDesktopsResponse
      */
@@ -1720,10 +1742,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Stops cloud computers.
-     *
-     * @description The cloud computers that you want to stop must be in the Running state. After you call this operation, the cloud computers enter the Stopped state.
-     *
+     * <b>description</b> :
+     * <p>The cloud computers that you want to stop must be in the Running state. After you call this operation, the cloud computers enter the Stopped state.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops cloud computers.</p>
+     * 
      * @param request StopDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StopDesktopsResponse
@@ -1785,10 +1809,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Stops cloud computers.
-     *
-     * @description The cloud computers that you want to stop must be in the Running state. After you call this operation, the cloud computers enter the Stopped state.
-     *
+     * <b>description</b> :
+     * <p>The cloud computers that you want to stop must be in the Running state. After you call this operation, the cloud computers enter the Stopped state.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops cloud computers.</p>
+     * 
      * @param request StopDesktopsRequest
      * @return StopDesktopsResponse
      */
@@ -1860,8 +1886,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 解绑用户桌面
-     *
+     * <b>summary</b> : 
+     * <p>解绑用户桌面</p>
+     * 
      * @param request UnbindUserDesktopRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UnbindUserDesktopResponse
@@ -1915,8 +1942,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 解绑用户桌面
-     *
+     * <b>summary</b> : 
+     * <p>解绑用户桌面</p>
+     * 
      * @param request UnbindUserDesktopRequest
      * @return UnbindUserDesktopResponse
      */

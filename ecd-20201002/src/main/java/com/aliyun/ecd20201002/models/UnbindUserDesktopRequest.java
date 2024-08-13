@@ -6,36 +6,59 @@ import com.aliyun.tea.*;
 public class UnbindUserDesktopRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>58f96f67-7944-4f97-9342-****</p>
      */
     @NameInMap("ClientId")
     public String clientId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>windows</p>
+     */
     @NameInMap("ClientType")
     public String clientType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Force")
     public Boolean force;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v12307f5e0****</p>
      */
     @NameInMap("LoginToken")
     public String loginToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3b053331-dc98-43d8-b247-****</p>
      */
     @NameInMap("SessionId")
     public String sessionId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ud-sdfs****</p>
      */
     @NameInMap("UserDesktopId")
     public String userDesktopId;

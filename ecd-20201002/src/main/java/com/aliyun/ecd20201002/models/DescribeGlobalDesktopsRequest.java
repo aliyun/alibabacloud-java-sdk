@@ -6,67 +6,136 @@ import com.aliyun.tea.*;
 public class DescribeGlobalDesktopsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c213150d-7ac3-432c-b749-6e1e090b****</p>
      */
     @NameInMap("ClientId")
     public String clientId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>INTERNET</p>
+     */
     @NameInMap("DesktopAccessType")
     public String desktopAccessType;
 
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DesktopTest</p>
+     */
     @NameInMap("DesktopName")
     public String desktopName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("DesktopStatus")
     public String desktopStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+dir-880841****</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
      * <p>关键字。支持模糊搜索桌面ID、云桌面名称和终端用户自定义的桌面名称。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecd</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("LoginRegionId")
     public String loginRegionId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v147c9114a180489f89691663893169****</p>
      */
     @NameInMap("LoginToken")
     public String loginToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>500</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eyJkZWZhdWx0IjpbIjk2MjEy****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+dir-880841****</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AssignTime</p>
+     */
     @NameInMap("OrderBy")
     public String orderBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("QueryFotaUpdate")
     public Boolean queryFotaUpdate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("SearchRegionId")
     public String searchRegionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5c456a41-1e65-4e72-ab4d-5dcfff52****</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASC</p>
+     */
     @NameInMap("SortType")
     public String sortType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("WithoutLatency")
     public Boolean withoutLatency;
 

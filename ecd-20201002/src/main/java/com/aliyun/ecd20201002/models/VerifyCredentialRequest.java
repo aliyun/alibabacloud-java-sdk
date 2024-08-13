@@ -6,40 +6,67 @@ import com.aliyun.tea.*;
 public class VerifyCredentialRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d0b95762-0541-4b53-a0e4-7ed09f39****</p>
      */
     @NameInMap("ClientId")
     public String clientId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456789cyG</p>
      */
     @NameInMap("Credential")
     public String credential;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Password</p>
+     */
     @NameInMap("CredentialType")
     public String credentialType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>drjfs****</p>
+     */
     @NameInMap("EncryptedKey")
     public String encryptedKey;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1f5772a1c60dbea9fd8e1648567079018086448d234b5bc8e30bec0ba6e80c41c767c4dd0db51e9e5c4e0f111431a****</p>
      */
     @NameInMap("LoginToken")
     public String loginToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai+dir-227468****</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eb17af2e-1dd6-4cc4-a3ee-3a14d0d7****</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 

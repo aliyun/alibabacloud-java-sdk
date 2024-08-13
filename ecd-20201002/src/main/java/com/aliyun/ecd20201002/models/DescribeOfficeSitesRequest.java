@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeOfficeSitesRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>42f6645a-9c3c-4772-be2a-cc5f5732****</p>
      */
     @NameInMap("ClientId")
     public String clientId;
@@ -15,6 +18,9 @@ public class DescribeOfficeSitesRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

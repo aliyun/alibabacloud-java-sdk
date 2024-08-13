@@ -4,6 +4,10 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class SendTokenCodeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>134BD0B2-B848-5743-9CE2-C1FD3D5F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -7,6 +7,10 @@ public class DescribeFingerPrintTemplatesResponseBody extends TeaModel {
     @NameInMap("FingerPrintTemplates")
     public java.util.List<DescribeFingerPrintTemplatesResponseBodyFingerPrintTemplates> fingerPrintTemplates;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9C1D3FBE-84E1-5ABB-AD98-2003AC71****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +36,52 @@ public class DescribeFingerPrintTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeFingerPrintTemplatesResponseBodyFingerPrintTemplates extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2258a3d5-b8f8-4d79-a221-eaecf211****</p>
+         */
         @NameInMap("ClientId")
         public String clientId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-13T13:26:29Z</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Finger 1</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>liming</p>
+         */
         @NameInMap("EndUserId")
         public String endUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Index")
         public Long index;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-13T13:26:29Z</p>
+         */
         @NameInMap("LoginTime")
         public String loginTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-074949****</p>
+         */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 

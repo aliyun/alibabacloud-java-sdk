@@ -4,9 +4,17 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnapshotsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>51592A88-0F2C-55E6-AD2C-2AD9C10D****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,36 +51,80 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     }
 
     public static class DescribeSnapshotsResponseBodySnapshots extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-20T14:52:28Z</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testDescription</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ecd-g03l3tlm8djoj****</p>
+         */
         @NameInMap("DesktopId")
         public String desktopId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100%</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("RemainTime")
         public Integer remainTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>s-2zeipxmnhej803x7****</p>
+         */
         @NameInMap("SnapshotId")
         public String snapshotId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testSnapshotName</p>
+         */
         @NameInMap("SnapshotName")
         public String snapshotName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>USER</p>
+         */
         @NameInMap("SnapshotType")
         public String snapshotType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>150</p>
+         */
         @NameInMap("SourceDiskSize")
         public String sourceDiskSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
+         */
         @NameInMap("SourceDiskType")
         public String sourceDiskType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ACCOMPLISHED</p>
+         */
         @NameInMap("Status")
         public String status;
 

@@ -4,35 +4,54 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class ReportSessionStatusRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>liming</p>
+     */
     @NameInMap("EndUserId")
     public String endUserId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp167fcodoa90ixn****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1642909143781</p>
      */
     @NameInMap("SessionChangeTime")
     public Long sessionChangeTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("SessionId")
     public String sessionId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SessionLogOn</p>
      */
     @NameInMap("SessionStatus")
     public String sessionStatus;
