@@ -41,6 +41,9 @@ public class DescribeProdCountResponseBody extends TeaModel {
     }
 
     public static class DescribeProdCountResponseBodyData extends TeaModel {
+        @NameInMap("AliyunImportedCount")
+        public Integer aliyunImportedCount;
+
         /**
          * <p>The number of Alibaba Cloud services.</p>
          * 
@@ -50,6 +53,9 @@ public class DescribeProdCountResponseBody extends TeaModel {
         @NameInMap("AliyunProdCount")
         public Integer aliyunProdCount;
 
+        @NameInMap("HcloudImportedCount")
+        public Integer hcloudImportedCount;
+
         /**
          * <p>The number of Huawei Cloud services.</p>
          * 
@@ -58,6 +64,19 @@ public class DescribeProdCountResponseBody extends TeaModel {
          */
         @NameInMap("HcloudProdCount")
         public Integer hcloudProdCount;
+
+        @NameInMap("IdcImportedCount")
+        public Integer idcImportedCount;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("IdcProdCount")
+        public Integer idcProdCount;
+
+        @NameInMap("QcloudImportedCount")
+        public Integer qcloudImportedCount;
 
         /**
          * <p>The number of Tencent Cloud services.</p>
@@ -73,6 +92,14 @@ public class DescribeProdCountResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeProdCountResponseBodyData setAliyunImportedCount(Integer aliyunImportedCount) {
+            this.aliyunImportedCount = aliyunImportedCount;
+            return this;
+        }
+        public Integer getAliyunImportedCount() {
+            return this.aliyunImportedCount;
+        }
+
         public DescribeProdCountResponseBodyData setAliyunProdCount(Integer aliyunProdCount) {
             this.aliyunProdCount = aliyunProdCount;
             return this;
@@ -81,12 +108,44 @@ public class DescribeProdCountResponseBody extends TeaModel {
             return this.aliyunProdCount;
         }
 
+        public DescribeProdCountResponseBodyData setHcloudImportedCount(Integer hcloudImportedCount) {
+            this.hcloudImportedCount = hcloudImportedCount;
+            return this;
+        }
+        public Integer getHcloudImportedCount() {
+            return this.hcloudImportedCount;
+        }
+
         public DescribeProdCountResponseBodyData setHcloudProdCount(Integer hcloudProdCount) {
             this.hcloudProdCount = hcloudProdCount;
             return this;
         }
         public Integer getHcloudProdCount() {
             return this.hcloudProdCount;
+        }
+
+        public DescribeProdCountResponseBodyData setIdcImportedCount(Integer idcImportedCount) {
+            this.idcImportedCount = idcImportedCount;
+            return this;
+        }
+        public Integer getIdcImportedCount() {
+            return this.idcImportedCount;
+        }
+
+        public DescribeProdCountResponseBodyData setIdcProdCount(Integer idcProdCount) {
+            this.idcProdCount = idcProdCount;
+            return this;
+        }
+        public Integer getIdcProdCount() {
+            return this.idcProdCount;
+        }
+
+        public DescribeProdCountResponseBodyData setQcloudImportedCount(Integer qcloudImportedCount) {
+            this.qcloudImportedCount = qcloudImportedCount;
+            return this;
+        }
+        public Integer getQcloudImportedCount() {
+            return this.qcloudImportedCount;
         }
 
         public DescribeProdCountResponseBodyData setQcloudProdCount(Integer qcloudProdCount) {
