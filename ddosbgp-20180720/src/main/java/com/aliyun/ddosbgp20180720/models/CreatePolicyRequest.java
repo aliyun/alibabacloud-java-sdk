@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePolicyRequest extends TeaModel {
     /**
+     * <p>The name of the policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,11 @@ public class CreatePolicyRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The type of the policy. Valid values:</p>
+     * <ul>
+     * <li><strong>l3</strong>: IP-specific mitigation policies.</li>
+     * <li><strong>l4</strong>: port-specific mitigation policies.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

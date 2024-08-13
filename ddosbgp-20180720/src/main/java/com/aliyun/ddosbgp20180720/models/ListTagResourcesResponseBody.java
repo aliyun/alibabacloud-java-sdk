@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The query token that is returned in this call.</p>
+     * <p>A pagination token.</p>
      * 
      * <strong>example:</strong>
      * <p>RGuYpqDdKhzXb8C3.D1BwQgc1tMBsoxdGiEKHHUUCf****</p>
@@ -14,7 +14,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C3F7E6AE-43B2-4730-B6A3-FD17552B8F65</p>
@@ -23,7 +23,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of tags that are added to the Anti-DDoS Origin instance.</p>
+     * <p>The tags that are added to the Anti-DDoS Origin instance.</p>
      */
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
@@ -68,7 +68,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The type of the resource. The value is fixed as <strong>INSTANCE</strong>, which indicates instances.</p>
+         * <p>The type of the resource. The value is set to <strong>INSTANCE</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>INSTANCE</p>

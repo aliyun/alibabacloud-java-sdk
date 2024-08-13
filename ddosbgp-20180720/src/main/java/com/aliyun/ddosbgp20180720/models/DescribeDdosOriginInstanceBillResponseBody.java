@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
     /**
+     * <p>The payment status. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: The payment is not overdue.</li>
+     * <li><strong>1</strong>: The payment is overdue.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("DebtStatus")
     public Long debtStatus;
 
+    /**
+     * <p>The details about the traffic of EIPs with Anti-DDoS (Enhanced) enabled.</p>
+     */
     @NameInMap("FlowList")
     public java.util.List<DescribeDdosOriginInstanceBillResponseBodyFlowList> flowList;
 
     /**
+     * <p>The traffic distribution of EIPs with Anti-DDoS (Enhanced) enabled by region.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;cn-hongkong\&quot;: 166491566}</p>
      */
@@ -22,6 +33,8 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
     public java.util.Map<String, ?> flowRegion;
 
     /**
+     * <p>The ID of the Anti-DDoS Origin (Pay-as-you-go) instance to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>ddosorigin_cn-u7c3lcr9r02</p>
      */
@@ -29,16 +42,29 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The number of protected IP addresses.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */
     @NameInMap("IpCount")
     public Long ipCount;
 
+    /**
+     * <p>The protected IP addresses and enabled features.</p>
+     */
     @NameInMap("IpCountOrFunctionList")
     public java.util.List<DescribeDdosOriginInstanceBillResponseBodyIpCountOrFunctionList> ipCountOrFunctionList;
 
     /**
+     * <p>The IP address distribution. The JSON struct contains the following fields:</p>
+     * <ul>
+     * <li><strong>eipCnIpCount</strong>: the number of EIPs with Anti-DDoS (Enhanced) enabled in the Chinese mainland</li>
+     * <li><strong>eipOvIpCount</strong>: the number of EIPs with Anti-DDoS (Enhanced) enabled outside the Chinese mainland</li>
+     * <li><strong>standardAssetsCnIpCount</strong>: the number of IP addresses of regular Alibaba Cloud services in the Chinese mainland</li>
+     * <li><strong>standardAssetsOvIpCount</strong>: the number of IP addresses of regular Alibaba Cloud services outside the Chinese mainland</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;eipCnIpCount\&quot;:6,\&quot;eipOvIpCount\&quot;:17,\&quot;standardAssetsCnIpCount\&quot;:2,\&quot;standardAssetsOvIpCount\&quot;:0}</p>
      */
@@ -46,16 +72,23 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
     public String ipInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>72155560-F343-55C8-82FE-ED4D7E4AA97E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details about the traffic of regular Alibaba Cloud services.</p>
+     */
     @NameInMap("StandardAssetsFlowList")
     public java.util.List<DescribeDdosOriginInstanceBillResponseBodyStandardAssetsFlowList> standardAssetsFlowList;
 
     /**
+     * <p>The traffic distribution of regular Alibaba Cloud services by region.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;cn-hongkong\&quot;: 166491566}</p>
      */
@@ -63,6 +96,8 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
     public java.util.Map<String, ?> standardAssetsFlowRegion;
 
     /**
+     * <p>The total traffic of regular Alibaba Cloud services in the Chinese mainland in the current month.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -70,6 +105,8 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
     public Long standardAssetsTotalFlowCn;
 
     /**
+     * <p>The total traffic of regular Alibaba Cloud services outside the Chinese mainland in the current month.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -77,6 +114,13 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
     public Long standardAssetsTotalFlowOv;
 
     /**
+     * <p>The instance status. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: normal</li>
+     * <li><strong>2</strong>: expired</li>
+     * <li><strong>3</strong>: released</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -84,6 +128,8 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
     public Long status;
 
     /**
+     * <p>The total traffic of EIPs with Anti-DDoS (Enhanced) enabled in the Chinese mainland in the current month. Unit: bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>6302081067</p>
      */
@@ -91,6 +137,8 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
     public Long totalFlowCn;
 
     /**
+     * <p>The total traffic of EIPs with Anti-DDoS (Enhanced) enabled outside the Chinese mainland in the current month. Unit: bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>6204918019</p>
      */
@@ -224,6 +272,18 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
 
     public static class DescribeDdosOriginInstanceBillResponseBodyFlowList extends TeaModel {
         /**
+         * <p>The traffic distribution by region. The JSON struct contains the following fields:</p>
+         * <ul>
+         * <li><strong>bytes</strong>: the traffic volume of EIPs with Anti-DDoS (Enhanced) enabled in a region. Unit: bytes.</li>
+         * <li><strong>memberUid</strong>: the owner account.</li>
+         * <li><strong>instanceId</strong>: the ID of the pay-as-you-go instance that protects the EIPs with Anti-DDoS (Enhanced) enabled.</li>
+         * <li><strong>ip</strong>: the EIPs with Anti-DDoS (Enhanced) enabled.</li>
+         * <li><strong>region</strong>: the region.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If the memberUid field in the JSON struct is empty, the information about the current account is returned. The value of the bytes parameter in the outermost level of the JSON struct indicates the total traffic, and the values of the bytes parameters in inner levels indicate the traffic of the account.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>[{\&quot;bytes\&quot;:79282719,\&quot;memberUid\&quot;:\&quot;\&quot;,\&quot;regionFlows\&quot;:{\&quot;cn-hangzhou\&quot;:[{\&quot;bytes\&quot;:79282719,\&quot;instanceId\&quot;:\&quot;ddosorigin_cn-u7c3lcr9r02\&quot;,\&quot;ip\&quot;:\&quot;47.118.168.57\&quot;,\&quot;region\&quot;:\&quot;cn-hangzhou\&quot;}]}}]</p>
          */
@@ -231,6 +291,14 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
         public String memberFlow;
 
         /**
+         * <p>The traffic distribution by region. The JSON struct contains the following fields:</p>
+         * <ul>
+         * <li><strong>bytes</strong>: the traffic volume of EIPs with Anti-DDoS (Enhanced) enabled in a region. Unit: bytes.</li>
+         * <li><strong>instanceId</strong>: the ID of the pay-as-you-go instance that protects the EIPs with Anti-DDoS (Enhanced) enabled.</li>
+         * <li><strong>ip</strong>: the EIPs with Anti-DDoS (Enhanced) enabled.</li>
+         * <li><strong>region</strong>: the region.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;cn-hangzhou\&quot;:[{\&quot;bytes\&quot;:0,\&quot;instanceId\&quot;:\&quot;ddosorigin_cn-u7c3lcr9r02\&quot;,\&quot;ip\&quot;:\&quot;47.118.168.124\&quot;,\&quot;region\&quot;:\&quot;cn-hangzhou\&quot;}]}</p>
          */
@@ -238,6 +306,8 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
         public String regionFlow;
 
         /**
+         * <p>The timestamp. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1620951900</p>
          */
@@ -245,6 +315,8 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
         public Long time;
 
         /**
+         * <p>The traffic of EIPs with Anti-DDoS (Enhanced) enabled. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>6302081067</p>
          */
@@ -292,6 +364,13 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
 
     public static class DescribeDdosOriginInstanceBillResponseBodyIpCountOrFunctionList extends TeaModel {
         /**
+         * <p>The application scope of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>only_mainland_china</strong>: regions in the Chinese mainland</li>
+         * <li><strong>global</strong>: all regions</li>
+         * <li><strong>international_and_hmt</strong>: regions outside the Chinese mainland</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>global</p>
          */
@@ -299,6 +378,8 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
         public String coverage;
 
         /**
+         * <p>The number of IP addresses protected by the pay-as-you-go instance in the Chinese mainland.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -306,6 +387,8 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
         public Long ipCntCn;
 
         /**
+         * <p>The number of IP addresses protected by the pay-as-you-go instance outside the Chinese mainland.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -313,6 +396,18 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
         public Long ipCntOv;
 
         /**
+         * <p>The bill distribution by account. The JSON struct contains the following fields:</p>
+         * <ul>
+         * <li><strong>eipCnIpCount</strong>: the number of EIPs with Anti-DDoS (Enhanced) enabled in the Chinese mainland</li>
+         * <li><strong>eipOvIpCount</strong>: the number of EIPs with Anti-DDoS (Enhanced) enabled outside the Chinese mainland</li>
+         * <li><strong>memberUid</strong>: the owner account</li>
+         * <li><strong>standardAssetsCnIpCount</strong>: the number of IP addresses of regular Alibaba Cloud services in the Chinese mainland</li>
+         * <li><strong>standardAssetsOvIpCount</strong>: the number of IP addresses of regular Alibaba Cloud services outside the Chinese mainland</li>
+         * </ul>
+         * <blockquote>
+         * <p> If the memberUid field in the JSON struct is empty, the information about the current account is returned.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>[{\&quot;eipCnIpCount\&quot;:3,\&quot;eipOvIpCount\&quot;:18,\&quot;memberUid\&quot;:\&quot;\&quot;,\&quot;standardAssetsCnIpCount\&quot;:2,\&quot;standardAssetsOvIpCount\&quot;:0},{\&quot;eipCnIpCount\&quot;:3,\&quot;eipOvIpCount\&quot;:0,\&quot;memberUid\&quot;:\&quot;1776997906319249\&quot;,\&quot;standardAssetsCnIpCount\&quot;:0,\&quot;standardAssetsOvIpCount\&quot;:0}]</p>
          */
@@ -320,6 +415,8 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
         public String memberIpCnt;
 
         /**
+         * <p>The billing time. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1680278400000</p>
          */
@@ -375,6 +472,18 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
 
     public static class DescribeDdosOriginInstanceBillResponseBodyStandardAssetsFlowList extends TeaModel {
         /**
+         * <p>The traffic distribution by region. The JSON struct contains the following fields:</p>
+         * <ul>
+         * <li><strong>bytes</strong>: the traffic volume of regular Alibaba Cloud services in a region. Unit: bytes.</li>
+         * <li><strong>memberUid</strong>: the owner account.</li>
+         * <li><strong>instanceId</strong>: the ID of the pay-as-you-go instance that protects the regular Alibaba Cloud services.</li>
+         * <li><strong>ip</strong>: the IP address of the regular Alibaba Cloud service protected by the Anti-DDoS Origin instance.</li>
+         * <li><strong>region</strong>: the region.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If the memberUid field in the JSON struct is empty, the information about the current account is returned. The value of the bytes parameter in the outermost level of the JSON struct indicates the total traffic, and the values of the bytes parameters in inner levels indicate the traffic of the account.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>[{\&quot;bytes\&quot;:79282719,\&quot;memberUid\&quot;:\&quot;\&quot;,\&quot;regionFlows\&quot;:{\&quot;cn-hangzhou\&quot;:[{\&quot;bytes\&quot;:79282719,\&quot;instanceId\&quot;:\&quot;ddosorigin_cn-u7c3lcr9r02\&quot;,\&quot;ip\&quot;:\&quot;47.118.168.57\&quot;,\&quot;region\&quot;:\&quot;cn-hangzhou\&quot;}]}}]</p>
          */
@@ -382,6 +491,14 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
         public String memberFlow;
 
         /**
+         * <p>The traffic distribution by region. The JSON struct contains the following fields:</p>
+         * <ul>
+         * <li><strong>bytes</strong>: the traffic volume of regular Alibaba Cloud services in a region. Unit: bytes.</li>
+         * <li><strong>instanceId</strong>: the ID of the pay-as-you-go instance that protects the regular Alibaba Cloud services.</li>
+         * <li><strong>ip</strong>: the IP address protected by the Anti-DDoS Origin instance.</li>
+         * <li><strong>region</strong>: the region.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;cn-hangzhou\&quot;:[{\&quot;bytes\&quot;:0,\&quot;instanceId\&quot;:\&quot;ddosorigin_cn-u7c3lcr9r02\&quot;,\&quot;ip\&quot;:\&quot;47.118.168.124\&quot;,\&quot;region\&quot;:\&quot;cn-hangzhou\&quot;}]}</p>
          */
@@ -389,6 +506,8 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
         public String regionFlow;
 
         /**
+         * <p>The timestamp. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1679846400000</p>
          */
@@ -396,6 +515,8 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
         public Long time;
 
         /**
+         * <p>The traffic of regular Alibaba Cloud services. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>6302081067</p>
          */

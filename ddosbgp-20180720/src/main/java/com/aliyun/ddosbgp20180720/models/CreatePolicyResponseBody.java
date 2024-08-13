@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreatePolicyResponseBody extends TeaModel {
     /**
+     * <p>The ID of the policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>83967609-7ea5-4f6d-a6ea-380b09e****</p>
      */
@@ -12,6 +14,8 @@ public class CreatePolicyResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>864FE2F4-CB2E-4024-B9EF-D59FD08A****</p>
      */

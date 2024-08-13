@@ -4,10 +4,14 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class ModifyPolicyContentShrinkRequest extends TeaModel {
+    /**
+     * <p>The content of the policy.</p>
+     */
     @NameInMap("Content")
     public String contentShrink;
 
     /**
+     * <p>The ID of the policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,8 @@ public class ModifyPolicyContentShrinkRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The name of the policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>demo**</p>
      */

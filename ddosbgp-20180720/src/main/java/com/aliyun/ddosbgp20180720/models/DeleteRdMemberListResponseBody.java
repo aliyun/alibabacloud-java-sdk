@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteRdMemberListResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A2D6D5FB-FA07-41A8-B093-A2B7B26E72F2</p>
      */

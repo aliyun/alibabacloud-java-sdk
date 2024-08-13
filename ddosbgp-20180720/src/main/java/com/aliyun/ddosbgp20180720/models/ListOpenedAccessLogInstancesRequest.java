@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOpenedAccessLogInstancesRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Pages start from page 1. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListOpenedAccessLogInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class ListOpenedAccessLogInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management. This parameter is empty by default, which indicates that the Anti-DDoS Origin instance belongs to the default resource group.</p>
+     * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
      * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94485.html">Create a resource group</a>.</p>
      * 
      * <strong>example:</strong>

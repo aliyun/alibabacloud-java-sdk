@@ -20,7 +20,7 @@ public class QuerySchedruleOnDemandRequest extends TeaModel {
     /**
      * <p>The region ID of the on-demand instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query all regions supported by Anti-DDoS Origin.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

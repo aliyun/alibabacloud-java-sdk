@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
-     * <p>The ID of the region where the Anti-DDoS Origin instance resides.</p>
+     * <p>The ID of the region in which the instance resides.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.</p>
+     * <p>The ID of the resource group to which the instance belongs in Resource Management.</p>
      * <p>If you do not specify this parameter, the instance belongs to the default resource group.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +28,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>The IDs of the instances to which you want to add tags. You can specify up to 51 IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +47,9 @@ public class TagResourcesRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tags to add. You can specify up to 21 tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
 
@@ -98,7 +102,7 @@ public class TagResourcesRequest extends TeaModel {
         /**
          * <p>The key of the tag to add.</p>
          * <blockquote>
-         * <p> If the specified key does not exist, a key is created.</p>
+         * <p>If the specified key does not exist, a key is created.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -110,7 +114,7 @@ public class TagResourcesRequest extends TeaModel {
         /**
          * <p>The value of the tag to add.</p>
          * <blockquote>
-         * <p> If the specified value does not exist, a value is created.</p>
+         * <p>If the specified tag value does not exist, the tag value is created.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

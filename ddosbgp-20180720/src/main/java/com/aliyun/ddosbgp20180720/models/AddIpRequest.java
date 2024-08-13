@@ -21,9 +21,8 @@ public class AddIpRequest extends TeaModel {
      * <p>The list of IP addresses that you want to add to the Anti-DDoS Origin Enterprise instance. This parameter is a string consisting of JSON arrays. Each element in a JSON array is a JSON struct that includes the following field:</p>
      * <ul>
      * <li><p><strong>ip</strong>: required. The IP address that you want to add. Data type: string.</p>
-     * <blockquote>
-     * <p>The IP address must be the IP address of an asset that belongs to the current Alibaba Cloud account.</p>
-     * </blockquote>
+     * <p>**</p>
+     * <p><strong>Note</strong> The IP address must be the IP address of an asset that belongs to the current Alibaba Cloud account.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -37,7 +36,7 @@ public class AddIpRequest extends TeaModel {
     /**
      * <p>The region ID of the Anti-DDoS Origin Enterprise instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query all regions supported by Anti-DDoS Origin.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

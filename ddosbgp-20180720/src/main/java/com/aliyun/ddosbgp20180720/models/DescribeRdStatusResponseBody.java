@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeRdStatusResponseBody extends TeaModel {
     /**
+     * <p>The Alibaba Cloud account ID of the current account.</p>
+     * 
      * <strong>example:</strong>
      * <p>125085778340****</p>
      */
@@ -12,6 +14,13 @@ public class DescribeRdStatusResponseBody extends TeaModel {
     public String currentUid;
 
     /**
+     * <p>The type of the Alibaba Cloud account. Valid values:</p>
+     * <ul>
+     * <li><strong>MasterAccount</strong>: management account</li>
+     * <li><strong>DelegatedAdminAccount</strong>: delegated administrator account</li>
+     * <li><strong>MasterAccount</strong>: member</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>MemberAccount</p>
      */
@@ -19,6 +28,8 @@ public class DescribeRdStatusResponseBody extends TeaModel {
     public String currentUidType;
 
     /**
+     * <p>Indicates whether the multi-account management feature is enabled for Anti-DDoS Origin.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -26,6 +37,8 @@ public class DescribeRdStatusResponseBody extends TeaModel {
     public Boolean enabled;
 
     /**
+     * <p>Indicates whether the multi-account management feature is enabled for the current account in Anti-DDoS Origin.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -33,6 +46,8 @@ public class DescribeRdStatusResponseBody extends TeaModel {
     public Boolean localEnable;
 
     /**
+     * <p>The Alibaba Cloud account ID of the management account in the resource directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>125085778340****</p>
      */
@@ -40,6 +55,8 @@ public class DescribeRdStatusResponseBody extends TeaModel {
     public String masterUid;
 
     /**
+     * <p>Indicates whether Resource Directory is enabled in the <a href="https://resourcemanager.console.aliyun.com">Resource Management console</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -47,6 +64,8 @@ public class DescribeRdStatusResponseBody extends TeaModel {
     public Boolean remoteEnable;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1B0F7EC6-51D7-4D70-B0EC-CD8A9E998D86</p>
      */
@@ -54,6 +73,8 @@ public class DescribeRdStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The Alibaba Cloud account ID of the management account for which the multi-account management feature is enabled in Anti-DDoS Origin.</p>
+     * 
      * <strong>example:</strong>
      * <p>125085778340****</p>
      */
@@ -61,6 +82,8 @@ public class DescribeRdStatusResponseBody extends TeaModel {
     public String rootUid;
 
     /**
+     * <p>Indicates whether the trusted service is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

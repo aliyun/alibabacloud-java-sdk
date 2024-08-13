@@ -4,10 +4,15 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class ListPolicyAttachmentResponseBody extends TeaModel {
+    /**
+     * <p>The records of attachments to the mitigation policy.</p>
+     */
     @NameInMap("AttachmentList")
     public java.util.List<ListPolicyAttachmentResponseBodyAttachmentList> attachmentList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B4B379C2-9319-4C6B-B579-FE36831B09F4</p>
      */
@@ -15,6 +20,8 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of attachments to the mitigation policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>28</p>
      */
@@ -52,6 +59,8 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
 
     public static class ListPolicyAttachmentResponseBodyAttachmentList extends TeaModel {
         /**
+         * <p>The IP address of the protected object.</p>
+         * 
          * <strong>example:</strong>
          * <p>147.139.183.***</p>
          */
@@ -59,6 +68,8 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
         public String ip;
 
         /**
+         * <p>The UID of the member to which the IP address of the protected object belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>177699790631****</p>
          */
@@ -66,6 +77,8 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
         public String memberUid;
 
         /**
+         * <p>The ID of the policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>1b43f44e-65e1-411a-b0c0-d6c1********</p>
          */
@@ -73,13 +86,24 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
         public String policyId;
 
         /**
+         * <p>The name of the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>test**</p>
          */
         @NameInMap("PolicyName")
         public String policyName;
 
+        @NameInMap("PolicyRemark")
+        public String policyRemark;
+
         /**
+         * <p>The type of the policy. Valid values:</p>
+         * <ul>
+         * <li><strong>l3</strong>: IP-specific mitigation policies.</li>
+         * <li><strong>l4</strong>: port-specific mitigation policies.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>l3</p>
          */
@@ -87,6 +111,8 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
         public String policyType;
 
         /**
+         * <p>The port number of the protected object.</p>
+         * 
          * <strong>example:</strong>
          * <p>8*</p>
          */
@@ -94,6 +120,12 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
         public Integer port;
 
         /**
+         * <p>The protocol type of the protected object. Valid values:</p>
+         * <ul>
+         * <li><strong>tcp</strong></li>
+         * <li><strong>udp</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>udp</p>
          */
@@ -101,6 +133,8 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
         public String protocol;
 
         /**
+         * <p>The region to which the IP address of the protected object belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -142,6 +176,14 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
         }
         public String getPolicyName() {
             return this.policyName;
+        }
+
+        public ListPolicyAttachmentResponseBodyAttachmentList setPolicyRemark(String policyRemark) {
+            this.policyRemark = policyRemark;
+            return this;
+        }
+        public String getPolicyRemark() {
+            return this.policyRemark;
         }
 
         public ListPolicyAttachmentResponseBodyAttachmentList setPolicyType(String policyType) {

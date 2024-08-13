@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceSpecsResponseBody extends TeaModel {
     /**
-     * <p>The specifications of the Anti-DDoS Origin Enterprise instance, including whether the unlimited protection feature is enabled, and the numbers of times that the unlimited protection feature can be enabled and has been enabled.</p>
+     * <p>The specifications of the Anti-DDoS Origin Enterprise instance, including whether best-effort protection is enabled, the number of available best-effort protection sessions, and the number of used best-effort protection sessions.</p>
      */
     @NameInMap("InstanceSpecs")
     public java.util.List<DescribeInstanceSpecsResponseBodyInstanceSpecs> instanceSpecs;
@@ -42,7 +42,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
 
     public static class DescribeInstanceSpecsResponseBodyInstanceSpecsPackConfig extends TeaModel {
         /**
-         * <p>The bandwidth of the package configuration.</p>
+         * <p>The bandwidth. Unit: Gbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -60,7 +60,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         public Integer bindIpCount;
 
         /**
-         * <p>The burstable bandwidth of each protected IP address. Unit: Gbit/s.</p>
+         * <p>The burstable protection bandwidth of each protected IP address. Unit: Gbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -69,7 +69,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         public Integer ipAdvanceThre;
 
         /**
-         * <p>The basic bandwidth of each protected IP address. Unit: Gbit/s.</p>
+         * <p>The basic protection bandwidth of each protected IP address. Unit: Gbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -87,7 +87,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         public Integer ipSpec;
 
         /**
-         * <p>The normal clean bandwidth. Unit: Mbit/s.</p>
+         * <p>The clean bandwidth. Unit: Mbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -186,7 +186,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
 
     public static class DescribeInstanceSpecsResponseBodyInstanceSpecs extends TeaModel {
         /**
-         * <p>The number of times that the unlimited protection feature can be enabled.</p>
+         * <p>The available best-effort protection sessions.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -203,11 +203,17 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         @NameInMap("AvailableDeleteBlackholeCount")
         public String availableDeleteBlackholeCount;
 
+        /**
+         * <p>The percentage of the used best-effort protection sessions. Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("DefenseTimesPercent")
         public Integer defenseTimesPercent;
 
         /**
-         * <p>The ID of the Anti-DDoS Origin Enterprise instance.</p>
+         * <p>The region ID of the Anti-DDoS Origin Enterprise instance.</p>
          * 
          * <strong>example:</strong>
          * <p>ddosbgp-cn-n6w1r7nz****</p>
@@ -216,10 +222,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Indicates whether the unlimited protection feature is enabled. Valid values:</p>
+         * <p>Indicates whether best-effort protection is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: The unlimited protection feature is disabled.</li>
-         * <li><strong>1</strong>: The unlimited protection feature is enabled.</li>
+         * <li><strong>0</strong>: Best-effort protection is disabled.</li>
+         * <li><strong>1</strong>: Best-effort protection is enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -237,7 +243,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         /**
          * <p>The region ID of the Anti-DDoS Origin Enterprise instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the name of the region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the name of the region.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -247,7 +253,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The number of times that the unlimited protection feature can be enabled.</p>
+         * <p>The total best-effort protection sessions.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

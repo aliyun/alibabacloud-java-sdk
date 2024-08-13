@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeletePolicyRequest extends TeaModel {
     /**
+     * <p>The ID of the policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

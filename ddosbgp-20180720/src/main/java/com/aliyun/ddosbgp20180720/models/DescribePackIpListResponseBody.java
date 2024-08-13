@@ -115,12 +115,34 @@ public class DescribePackIpListResponseBody extends TeaModel {
         @NameInMap("MemberUid")
         public String memberUid;
 
+        /**
+         * <p>The time when the near-origin traffic diversion feature was disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1715658000</p>
+         */
         @NameInMap("NsmExpireAt")
         public Long nsmExpireAt;
 
+        /**
+         * <p>The time when the near-origin traffic diversion feature was enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1715655000</p>
+         */
         @NameInMap("NsmStartAt")
         public Long nsmStartAt;
 
+        /**
+         * <p>The status of the near-origin traffic diversion feature. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: The near-origin traffic diversion feature is enabled.</li>
+         * <li><strong>0</strong>: The near-origin traffic diversion feature is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("NsmStatus")
         public Integer nsmStatus;
 
@@ -128,7 +150,7 @@ public class DescribePackIpListResponseBody extends TeaModel {
          * <p>The type of the cloud asset to which the IP address belongs. Valid values:</p>
          * <ul>
          * <li><strong>ECS</strong>: an ECS instance.</li>
-         * <li><strong>SLB</strong>: a CLB instance, originally called an SLB instance.</li>
+         * <li><strong>SLB</strong>: a CLB (formerly SLB) instance.</li>
          * <li><strong>EIP</strong>: an EIP. If the IP address belongs to an ALB instance, the value EIP is returned.</li>
          * <li><strong>WAF</strong>: a WAF instance.</li>
          * </ul>
@@ -166,7 +188,7 @@ public class DescribePackIpListResponseBody extends TeaModel {
         /**
          * <p>The status of the IP address. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong>: The IP address is in the normal state, which indicates that the IP address is not under attack.</li>
+         * <li><strong>normal</strong>: The IP address is not under attack.</li>
          * <li><strong>hole_begin</strong>: Blackhole filtering is triggered for the IP address.</li>
          * </ul>
          * 

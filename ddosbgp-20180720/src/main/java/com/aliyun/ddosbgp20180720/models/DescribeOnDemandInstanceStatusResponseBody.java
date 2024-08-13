@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOnDemandInstanceStatusResponseBody extends TeaModel {
     /**
-     * <p>The details of the on-demand instance.</p>
+     * <p>The details of the anti-DDoS diversion instance.</p>
      */
     @NameInMap("Instances")
     public java.util.List<DescribeOnDemandInstanceStatusResponseBodyInstances> instances;
@@ -44,8 +44,8 @@ public class DescribeOnDemandInstanceStatusResponseBody extends TeaModel {
         /**
          * <p>The details of route advertisement for data centers outside the Chinese mainland. This parameter is a JSON string. The following fields are included in the value:</p>
          * <ul>
-         * <li><strong>region</strong>: The code of the data center outside the Chinese mainland. The value is of the STRING type. For more information, see <strong>Codes of data centers outside the Chinese mainland</strong>.</li>
-         * <li><strong>declared</strong>: indicates whether the data center advertised the route. The value is of the STRING type. Valid values: <strong>0</strong> and <strong>1</strong>. The value of 0 indicates that the data center did not advertise the route. The value of 1 indicates that the data center advertised the route.</li>
+         * <li><strong>region</strong>: The code of the data center outside the Chinese mainland. The value is of the string type. For more information, see <strong>Codes of data centers outside the Chinese mainland</strong>.</li>
+         * <li><strong>declared</strong>: indicates whether the data center advertised the route. The value is of the string type. Valid values: <strong>0</strong> and <strong>1</strong>. The value of 0 indicates that the data center did not advertise the route. The value of 1 indicates that the data center advertised the route.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -55,9 +55,9 @@ public class DescribeOnDemandInstanceStatusResponseBody extends TeaModel {
         public String declared;
 
         /**
-         * <p>The description of the on-demand instance.</p>
+         * <p>The description of the anti-DDoS diversion instance.</p>
          * <blockquote>
-         * <p> The value of this parameter is returned only when the information about multiple on-demand instances is returned. The value of this parameter is not returned because the information about only one on-demand instance is returned.</p>
+         * <p>This parameter is returned only when the information about multiple anti-DDoS diversion instances are returned. The value of this parameter is not returned because the information about only one anti-DDoS diversion instance is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -67,9 +67,9 @@ public class DescribeOnDemandInstanceStatusResponseBody extends TeaModel {
         public String desc;
 
         /**
-         * <p>The ID of the on-demand instance.</p>
+         * <p>The ID of the anti-DDoS diversion instance.</p>
          * <blockquote>
-         * <p> The value of this parameter is returned only when the information about multiple on-demand instances is returned. The value of this parameter is not returned because the information about only one on-demand instance is returned.</p>
+         * <p>This parameter is returned only when the information about multiple anti-DDoS diversion instances are returned. The value of this parameter is not returned because the information about only one anti-DDoS diversion instance is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class DescribeOnDemandInstanceStatusResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The mode used to start the on-demand instance. Valid values:</p>
+         * <p>The mode that is used to enable traffic rerouting to the anti-DDoS diversion instance. Valid values:</p>
          * <ul>
          * <li><strong>manual</strong>: The instance is manually started.</li>
          * <li><strong>netflow-auto</strong>: The instance is automatically started by using NetFlow that monitors network traffic.</li>
@@ -92,7 +92,7 @@ public class DescribeOnDemandInstanceStatusResponseBody extends TeaModel {
         public String mode;
 
         /**
-         * <p>The CIDR block of the on-demand instance.</p>
+         * <p>The CIDR block of the anti-DDoS diversion instance.</p>
          * 
          * <strong>example:</strong>
          * <p>47.<em><strong>.</strong></em>.0/24</p>

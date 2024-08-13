@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteRdMemberListRequest extends TeaModel {
     /**
+     * <p>The list of the members.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("MemberList")
@@ -25,6 +26,8 @@ public class DeleteRdMemberListRequest extends TeaModel {
 
     public static class DeleteRdMemberListRequestMemberList extends TeaModel {
         /**
+         * <p>The Alibaba Cloud account ID of the member.</p>
+         * 
          * <strong>example:</strong>
          * <p>136548010379****</p>
          */

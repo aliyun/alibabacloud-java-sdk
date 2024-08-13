@@ -20,7 +20,7 @@ public class ConfigSchedruleOnDemandRequest extends TeaModel {
     /**
      * <p>The region ID of the on-demand instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query all regions supported by Anti-DDoS Origin.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class ConfigSchedruleOnDemandRequest extends TeaModel {
     public String ruleConditionCnt;
 
     /**
-     * <p>The threshold of inbound packets. Unit: Kpps. Minimum value: <strong>10</strong>.</p>
+     * <p>The threshold of inbound packets. Unit: kilo packets per second (Kpps). Minimum value: <strong>10</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -86,8 +86,8 @@ public class ConfigSchedruleOnDemandRequest extends TeaModel {
     /**
      * <p>Specifies whether the scheduling rule is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong>: enabled</li>
-     * <li><strong>off</strong>: disabled</li>
+     * <li><strong>on</strong></li>
+     * <li><strong>off</strong></li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -101,7 +101,7 @@ public class ConfigSchedruleOnDemandRequest extends TeaModel {
      * <p>The start time of the period during which the scheduling rule is automatically stopped. The time must be in the 24-hour clock and in the <code>hh:mm</code> format.</p>
      * <p>If the system detects that DDoS attacks stop, the system no longer reroutes traffic to the on-demand instance from the time you specified. We recommend that you set this parameter to a value that is defined as off-peak hours.</p>
      * <blockquote>
-     * <p> This parameter takes effect only when the <strong>RuleUndoMode</strong> parameter is set to <strong>auto</strong>.</p>
+     * <p> This parameter takes effect only when the value of <strong>RuleUndoMode</strong> is <strong>auto</strong>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -123,8 +123,8 @@ public class ConfigSchedruleOnDemandRequest extends TeaModel {
     /**
      * <p>The stop method of the scheduling rule. Valid values:</p>
      * <ul>
-     * <li><strong>auto</strong>: The scheduling rule automatically stops.</li>
-     * <li><strong>manual</strong>: The scheduling rule is manually stopped.</li>
+     * <li><strong>auto</strong></li>
+     * <li><strong>manual</strong></li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -138,7 +138,7 @@ public class ConfigSchedruleOnDemandRequest extends TeaModel {
      * <p>The time zone of the time when the scheduling rule automatically stops. The time zone must be in the <code>GMT-hh:mm</code> format.</p>
      * <p>For example, the value <code>GMT-08:00</code> indicates that the time zone is UTC+8.</p>
      * <blockquote>
-     * <p> This parameter takes effect only when the <strong>RuleUndoMode</strong> parameter is set to <strong>auto</strong>.</p>
+     * <p> This parameter takes effect only when the value of <strong>RuleUndoMode</strong> is <strong>auto</strong>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

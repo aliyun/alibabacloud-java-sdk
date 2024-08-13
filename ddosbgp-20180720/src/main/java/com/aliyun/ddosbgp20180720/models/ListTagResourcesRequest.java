@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The query token. Set the value to the <strong>NextToken</strong> value that is returned in the last call to the ListTagResources operation. Leave this parameter empty the first time you call this operation.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>RGuYpqDdKhzXb8C3.D1BwQgc1tMBsoxdGiEKHHUUCf****</p>
@@ -37,9 +37,9 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The IDs of Anti-DDoS Origin Instances to query.</p>
+     * <p>The IDs of the Anti-DDoS Origin instances to query.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all Anti-DDoS Origin instances.</p>
+     * <p> The <strong>ResourceId</strong> parameter and the <strong>key-value pair for the Tag parameter</strong> cannot be left empty at the same time.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource to query. Set the value to <strong>INSTANCE</strong>, which indicates instances.</p>
+     * <p>The type of the resource to query. Set the value to <strong>INSTANCE</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags to query.</p>
+     * <p>The key-value pair of the tag to query.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -121,7 +121,7 @@ public class ListTagResourcesRequest extends TeaModel {
         /**
          * <p>The key of the tag to query.</p>
          * <blockquote>
-         * <p> The <strong>ResourceIds.N</strong> parameter and the key-value pair (Tag.N.Key and Tag.N.Value) cannot be left empty at the same time.</p>
+         * <p> The <strong>ResourceId</strong> parameter and the <strong>key-value pair for the Tag parameter</strong> cannot be left empty at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -133,7 +133,7 @@ public class ListTagResourcesRequest extends TeaModel {
         /**
          * <p>The value of the tag to query.</p>
          * <blockquote>
-         * <p> The <strong>ResourceIds.N</strong> parameter and the key-value pair (Tag.N.Key and Tag.N.Value) cannot be left empty at the same time.</p>
+         * <p> The <strong>ResourceId</strong> parameter and the <strong>key-value pair for the Tag parameter</strong> cannot be left empty at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

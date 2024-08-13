@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeRdMemberListRequest extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeRdMemberListRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class DescribeRdMemberListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the resource directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>rd-x9bLhd</p>
      */

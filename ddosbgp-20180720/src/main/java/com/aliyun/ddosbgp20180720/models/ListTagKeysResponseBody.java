@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagKeysResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListTagKeysResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,7 +23,7 @@ public class ListTagKeysResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>97935DF1-0289-4AA2-9DD1-72377838B16B</p>
@@ -32,13 +32,13 @@ public class ListTagKeysResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of tags and the details of each tag.</p>
+     * <p>The information about the tags.</p>
      */
     @NameInMap("TagKeys")
     public java.util.List<ListTagKeysResponseBodyTagKeys> tagKeys;
 
     /**
-     * <p>The total number of tags.</p>
+     * <p>The total number of tags returned.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -102,7 +102,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         public Integer tagCount;
 
         /**
-         * <p>The key of each tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>a</p>

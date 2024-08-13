@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOpenedAccessLogInstancesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4DB64811-70A1-41C9-A0CE-CD8B260ED551</p>
@@ -61,8 +61,8 @@ public class ListOpenedAccessLogInstancesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether log analysis was enabled for the Anti-DDoS Origin instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Log analysis was enabled.</li>
-         * <li><strong>false</strong>: Log analysis was disabled.</li>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
