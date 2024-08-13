@@ -4,21 +4,37 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class GetConnectionTicketResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("TaskCode")
     public String taskCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2afbad19-778a-4fc5-9674-1f19c63862da</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
     @NameInMap("TaskMessage")
     public String taskMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FINISHED</p>
+     */
     @NameInMap("TaskStatus")
     public String taskStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********</p>
+     */
     @NameInMap("Ticket")
     public String ticket;
 

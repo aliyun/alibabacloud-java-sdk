@@ -7,6 +7,10 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
     @NameInMap("Directories")
     public java.util.List<DescribeDirectoriesResponseBodyDirectories> directories;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F369A091-002F-49C8-AD55-02A77629****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +36,38 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
     }
 
     public static class DescribeDirectoriesResponseBodyDirectories extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>INTERNET</p>
+         */
         @NameInMap("DesktopAccessType")
         public String desktopAccessType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-gx2x1dhsmu52rd****</p>
+         */
         @NameInMap("DirectoryId")
         public String directoryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AD_CONNECTOR</p>
+         */
         @NameInMap("DirectoryType")
         public String directoryType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>26842</p>
+         */
         @NameInMap("ProviderId")
         public String providerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://eds-cn-shanghai-67726">https://eds-cn-shanghai-67726</a>****</p>
+         */
         @NameInMap("SsoServiceUrl")
         public String ssoServiceUrl;
 

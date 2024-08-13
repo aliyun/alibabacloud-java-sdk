@@ -6,45 +6,80 @@ import com.aliyun.tea.*;
 public class SetFingerPrintTemplateRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>347431a9-90f6-448e-82c4-42bc84a9****</p>
      */
     @NameInMap("ClientId")
     public String clientId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-42665544****</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testDescription</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAAAAAAAAAA</p>
+     */
     @NameInMap("EncryptedFingerPrintTemplate")
     public String encryptedFingerPrintTemplate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>drjfspchj</p>
+     */
     @NameInMap("EncryptedKey")
     public String encryptedKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>goG3gG8AAABhujtscn</p>
+     */
     @NameInMap("FingerPrintTemplate")
     public String fingerPrintTemplate;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v11c73e7af0cb43ff39301651142485099ffb447085d76c4147519dbaa21c3bd90d53045e327c1f525ee6331c52556****</p>
      */
     @NameInMap("LoginToken")
     public String loginToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>As53328794</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8b42538a-246e-45a1-95ea-e5c65b09****</p>
      */
     @NameInMap("SessionId")
     public String sessionId;

@@ -7,6 +7,10 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
     @NameInMap("OfficeSites")
     public java.util.List<DescribeOfficeSitesResponseBodyOfficeSites> officeSites;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +36,45 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
     }
 
     public static class DescribeOfficeSitesResponseBodyOfficeSites extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>VPC</p>
+         */
         @NameInMap("DesktopAccessType")
         public String desktopAccessType;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://ep-bp1s2vmbj55r5rzc****.epsrv-bp1pcfhpwvlpny01****.cn-hangzhou.privatelink.aliyuncs.com">http://ep-bp1s2vmbj55r5rzc****.epsrv-bp1pcfhpwvlpny01****.cn-hangzhou.privatelink.aliyuncs.com</a></p>
+         */
         @NameInMap("DesktopVpcEndpoint")
         public String desktopVpcEndpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-363353****</p>
+         */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SIMPLE</p>
+         */
         @NameInMap("OfficeSiteType")
         public String officeSiteType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>268****</p>
+         */
         @NameInMap("ProviderId")
         public String providerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://eds-cn-shanghai-67">https://eds-cn-shanghai-67</a>****</p>
+         */
         @NameInMap("SsoServiceUrl")
         public String ssoServiceUrl;
 

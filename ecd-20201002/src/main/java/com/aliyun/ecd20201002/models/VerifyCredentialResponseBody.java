@@ -4,6 +4,10 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class VerifyCredentialResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>D5F0BDFB-A229-5F1D-B790-33709D43****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

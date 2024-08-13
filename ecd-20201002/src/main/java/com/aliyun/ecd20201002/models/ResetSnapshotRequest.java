@@ -6,27 +6,43 @@ import com.aliyun.tea.*;
 public class ResetSnapshotRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b9d8ddfd-65d4-4857-9e97-56477d1f****</p>
      */
     @NameInMap("ClientId")
     public String clientId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1fdef51b727aa91d6c881658978508114d3f5680fa99a66b2a631d17d5bb4860cccf1173be24d77d5ef1423c83aea****</p>
      */
     @NameInMap("LoginToken")
     public String loginToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>05182b8c-bb0d-49d3-963c-ee63a507****</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>s-2zeipxmnhej803x7****</p>
      */
     @NameInMap("SnapshotId")
     public String snapshotId;

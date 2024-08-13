@@ -6,34 +6,58 @@ import com.aliyun.tea.*;
 public class ResetPasswordRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>95e41934-383e-4c9f-824f-3b93b19b****</p>
      */
     @NameInMap("ClientId")
     public String clientId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2f00ab32-a473-4c90-9aae-dd8842ae****</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>a***@example.edu</p>
+     */
     @NameInMap("Email")
     public String email;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>liming</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+dir-899235****</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1827912****</p>
+     */
     @NameInMap("phone")
     public String phone;
 

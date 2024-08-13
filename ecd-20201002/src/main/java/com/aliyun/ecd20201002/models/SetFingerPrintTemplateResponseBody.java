@@ -4,12 +4,24 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class SetFingerPrintTemplateResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0711abb9-4cf8-41b2-9d0e-b51209468631;da4VFPNxwY3CZegFjOrCNw==;iHp2l9/qGcfD4tWx7jZIZQ==</p>
+     */
     @NameInMap("EncryptedPassword")
     public String encryptedPassword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Index")
     public Integer index;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CDE666EA-4FCD-5024-895C-8698E3D3****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

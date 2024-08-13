@@ -6,36 +6,59 @@ import com.aliyun.tea.*;
 public class EncryptPasswordRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1d40776f-e9cb-4e2b-a8da-308d10e8****</p>
      */
     @NameInMap("ClientId")
     public String clientId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing+dir-131196****</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1b16dcff3ab21a6c5ec01652238375511cff5a1db59fd4dc49afb37e2ea7a626af6f38109fd0498b6abd9de1af7743****</p>
      */
     @NameInMap("LoginToken")
     public String loginToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing+dir-131196****</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ab123456</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c78e2e52-23d9-4401-a648-e67ac6ff****</p>
      */
     @NameInMap("SessionId")
     public String sessionId;

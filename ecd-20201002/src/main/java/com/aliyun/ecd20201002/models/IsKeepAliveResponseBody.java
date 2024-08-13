@@ -4,15 +4,31 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class IsKeepAliveResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("IsKeepAlive")
     public Boolean isKeepAlive;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+dir-885351****</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>141631846826****</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 

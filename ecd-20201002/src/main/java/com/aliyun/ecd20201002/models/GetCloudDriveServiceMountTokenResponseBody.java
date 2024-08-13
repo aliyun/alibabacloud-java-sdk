@@ -4,6 +4,10 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class GetCloudDriveServiceMountTokenResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>DC27288A-F9E1-5092-9B5B-71C27D15****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +36,45 @@ public class GetCloudDriveServiceMountTokenResponseBody extends TeaModel {
     }
 
     public static class GetCloudDriveServiceMountTokenResponseBodyToken extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>h****</p>
+         */
         @NameInMap("DomainId")
         public String domainId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-10-10T04:41:35Z</p>
+         */
         @NameInMap("ExpiredAfter")
         public String expiredAfter;
 
+        /**
+         * <strong>example:</strong>
+         * <p>enabled</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7836fa6eced7dc8d54c775k34iu3h4i2kh534f****</p>
+         */
         @NameInMap("Token")
         public String token;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6050416754750</p>
+         */
         @NameInMap("TotalSize")
         public Long totalSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>605089</p>
+         */
         @NameInMap("UsedSize")
         public Long usedSize;
 

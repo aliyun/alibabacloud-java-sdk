@@ -6,27 +6,49 @@ import com.aliyun.tea.*;
 public class GetConnectionTicketRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>f4a0dc8e-1702-4728-9a60-95b27a35****</p>
      */
     @NameInMap("ClientId")
     public String clientId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Windows_NT 10.0.18363 x64</p>
+     */
     @NameInMap("ClientOS")
     public String clientOS;
 
+    /**
+     * <strong>example:</strong>
+     * <p>windows</p>
+     */
     @NameInMap("ClientType")
     public String clientType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2.1.0-R-20210731.151756</p>
+     */
     @NameInMap("ClientVersion")
     public String clientVersion;
 
     @NameInMap("CommandContent")
     public String commandContent;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ecd-gx2x1dhsmucyy****</p>
+     */
     @NameInMap("DesktopId")
     public String desktopId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v18101ac6a9e69c66b04a163031680463660b4b216cd758f34b60b9ad6a7c7f7334b83dd8f75eef4209c68f9f1080b****</p>
      */
     @NameInMap("LoginToken")
     public String loginToken;
@@ -36,6 +58,9 @@ public class GetConnectionTicketRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -46,9 +71,17 @@ public class GetConnectionTicketRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cd45e873-650d-4d70-acb9-f996187a****</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2afbad19-778a-4fc5-9674-1f19c638****</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

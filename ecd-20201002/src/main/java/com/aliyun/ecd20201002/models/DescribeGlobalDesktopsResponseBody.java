@@ -7,9 +7,17 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
     @NameInMap("Desktops")
     public java.util.List<DescribeGlobalDesktopsResponseBodyDesktops> desktops;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eyJkZWZhdWx0IjpbIjIwMjItMDgtMTdUM****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4686A731-D601-548C-83E2-4CB6371E****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -45,22 +53,30 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
     public static class DescribeGlobalDesktopsResponseBodyDesktopsClients extends TeaModel {
         /**
          * <p>客户端类型，取值：</p>
-         * <br>
-         * <p>- macos：Mac客户端</p>
-         * <p>- ios：IOS客户端</p>
-         * <p>- android：Android客户端</p>
-         * <p>- html5：Web客户端</p>
-         * <p>- windows：Windows客户端</p>
-         * <p>- linux：Linux客户端</p>
+         * <ul>
+         * <li>macos：Mac客户端</li>
+         * <li>ios：IOS客户端</li>
+         * <li>android：Android客户端</li>
+         * <li>html5：Web客户端</li>
+         * <li>windows：Windows客户端</li>
+         * <li>linux：Linux客户端</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>windows</p>
          */
         @NameInMap("ClientType")
         public String clientType;
 
         /**
          * <p>客户端状态，取值：</p>
-         * <br>
-         * <p>- ON：允许登录</p>
-         * <p>- OFF：不允许登录</p>
+         * <ul>
+         * <li>ON：允许登录</li>
+         * <li>OFF：不允许登录</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ON</p>
          */
         @NameInMap("Status")
         public String status;
@@ -92,24 +108,44 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         @NameInMap("AllowClientSetting")
         public Boolean allowClientSetting;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0 0 0 ? * 1</p>
+         */
         @NameInMap("CronExpression")
         public String cronExpression;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Enforce")
         public Boolean enforce;
 
         @NameInMap("ExecutionTime")
         public String executionTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("Interval")
         public Integer interval;
 
         @NameInMap("OperationType")
         public String operationType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RESET_TYPE_BOTH</p>
+         */
         @NameInMap("ResetType")
         public String resetType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NoConnectShutdown</p>
+         */
         @NameInMap("TimerType")
         public String timerType;
 
@@ -185,12 +221,24 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
     }
 
     public static class DescribeGlobalDesktopsResponseBodyDesktopsDisks extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>d-jedbpr4sl9l37****</p>
+         */
         @NameInMap("DiskId")
         public String diskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("DiskSize")
         public Integer diskSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
+         */
         @NameInMap("DiskType")
         public String diskType;
 
@@ -226,18 +274,38 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
     }
 
     public static class DescribeGlobalDesktopsResponseBodyDesktopsFotaUpdate extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Enterprise</p>
+         */
         @NameInMap("Channel")
         public String channel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0.0-D-20220102.xxxx</p>
+         */
         @NameInMap("CurrentAppVersion")
         public String currentAppVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Force")
         public Boolean force;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0.0-R-20220307.xxxx</p>
+         */
         @NameInMap("NewAppVersion")
         public String newAppVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testProject</p>
+         */
         @NameInMap("Project")
         public String project;
 
@@ -250,6 +318,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         @NameInMap("ReleaseNoteJp")
         public String releaseNoteJp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Size")
         public String size;
 
@@ -333,9 +405,17 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
     }
 
     public static class DescribeGlobalDesktopsResponseBodyDesktopsSessions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>User1</p>
+         */
         @NameInMap("EndUserId")
         public String endUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-03-07T08:23Z</p>
+         */
         @NameInMap("EstablishmentTime")
         public String establishmentTime;
 
@@ -363,6 +443,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
     }
 
     public static class DescribeGlobalDesktopsResponseBodyDesktops extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
@@ -372,63 +456,123 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         @NameInMap("Clients")
         public java.util.List<DescribeGlobalDesktopsResponseBodyDesktopsClients> clients;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Disconnected</p>
+         */
         @NameInMap("ConnectionStatus")
         public String connectionStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-11-06T08:28Z</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dg-3uiojcc0j4kh7****</p>
+         */
         @NameInMap("DesktopGroupId")
         public String desktopGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ecd-gx2x1dhsmucyy****</p>
+         */
         @NameInMap("DesktopId")
         public String desktopId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testDesktopName</p>
+         */
         @NameInMap("DesktopName")
         public String desktopName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("DesktopStatus")
         public String desktopStatus;
 
         @NameInMap("DesktopTimers")
         public java.util.List<DescribeGlobalDesktopsResponseBodyDesktopsDesktopTimers> desktopTimers;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ecd.basic.large</p>
+         */
         @NameInMap("DesktopType")
         public String desktopType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-jedbpr4sl9l37****</p>
+         */
         @NameInMap("DirectoryId")
         public String directoryId;
 
         @NameInMap("Disks")
         public java.util.List<DescribeGlobalDesktopsResponseBodyDesktopsDisks> disks;
 
+        /**
+         * <strong>example:</strong>
+         * <p>User1</p>
+         */
         @NameInMap("EndUserId")
         public String endUserId;
 
         @NameInMap("EndUserIds")
         public java.util.List<String> endUserIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-12-31T15:59Z</p>
+         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         @NameInMap("FotaUpdate")
         public DescribeGlobalDesktopsResponseBodyDesktopsFotaUpdate fotaUpdate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2048</p>
+         */
         @NameInMap("GpuMemory")
         public Integer gpuMemory;
 
         @NameInMap("HibernationBeta")
         public Boolean hibernationBeta;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testName</p>
+         */
         @NameInMap("HostName")
         public String hostName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>m-4zfb6zj728hhr****</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-07-13T15:59Z</p>
+         */
         @NameInMap("LastStartTime")
         public String lastStartTime;
 
@@ -438,35 +582,70 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         @NameInMap("ManagementFlags")
         public java.util.List<String> managementFlags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4096</p>
+         */
         @NameInMap("Memory")
         public Long memory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>192.168.xx.xx</p>
+         */
         @NameInMap("NetworkInterfaceIp")
         public String networkInterfaceIp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-363353****</p>
+         */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
         @NameInMap("Os")
         public String os;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Windows</p>
+         */
         @NameInMap("OsType")
         public String osType;
 
         @NameInMap("Platform")
         public String platform;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pg-9cktlowtxfl6****</p>
+         */
         @NameInMap("PolicyGroupId")
         public String policyGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ASP</p>
+         */
         @NameInMap("ProtocolType")
         public String protocolType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ecd-gx2x1dhsm****</p>
+         */
         @NameInMap("RealDesktopId")
         public String realDesktopId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("RegionLocation")
+        public String regionLocation;
 
         @NameInMap("SessionType")
         public String sessionType;
@@ -474,9 +653,17 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         @NameInMap("Sessions")
         public java.util.List<DescribeGlobalDesktopsResponseBodyDesktopsSessions> sessions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SupportHibernation")
         public Boolean supportHibernation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testDesktop</p>
+         */
         @NameInMap("UserCustomName")
         public String userCustomName;
 
@@ -755,6 +942,14 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeGlobalDesktopsResponseBodyDesktops setRegionLocation(String regionLocation) {
+            this.regionLocation = regionLocation;
+            return this;
+        }
+        public String getRegionLocation() {
+            return this.regionLocation;
         }
 
         public DescribeGlobalDesktopsResponseBodyDesktops setSessionType(String sessionType) {

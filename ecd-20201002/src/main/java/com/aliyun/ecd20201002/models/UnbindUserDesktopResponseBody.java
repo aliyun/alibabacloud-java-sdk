@@ -4,6 +4,10 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class UnbindUserDesktopResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>D5B7CF35-E078-5EBF-A010-****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

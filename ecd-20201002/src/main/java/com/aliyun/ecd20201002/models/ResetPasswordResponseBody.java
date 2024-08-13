@@ -4,6 +4,10 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class ResetPasswordResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>A00477A5-167F-56D2-A315-EA77E4BD****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

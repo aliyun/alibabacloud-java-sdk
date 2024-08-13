@@ -4,6 +4,10 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class SetFingerPrintTemplateDescriptionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>BBD7DFD1-A5DE-51D9-8FD6-3BF54EF4****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
