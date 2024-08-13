@@ -11,7 +11,7 @@ public class DescribeDdosEventResponseBody extends TeaModel {
     public java.util.List<DescribeDdosEventResponseBodyEvents> events;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F3B6C3F9-6B21-519D-B976-A1E14166F909</p>
@@ -20,7 +20,7 @@ public class DescribeDdosEventResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of DDoS attack events.</p>
+     * <p>The total number of DDoS attack events that are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

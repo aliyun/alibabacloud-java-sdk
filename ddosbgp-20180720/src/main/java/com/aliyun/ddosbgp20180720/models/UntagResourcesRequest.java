@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to remove all tags from the specified Anti-DDoS Origin Enterprise instances.</p>
+     * <p>Specifies whether to remove all tags from the instances. Default value: No.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,7 +14,7 @@ public class UntagResourcesRequest extends TeaModel {
     public Boolean all;
 
     /**
-     * <p>The ID of the region where the Anti-DDoS Origin Enterprise instances reside.</p>
+     * <p>The ID of the region in which the instances reside.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +33,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>The IDs of the instances. Valid values of N: 0 to 49. You can specify up to 50 instances at a time. Example: ResourceId.0, ResourceId.1, ... , ResourceId.49.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +43,7 @@ public class UntagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the specified resource. Set the value to <strong>INSTANCE</strong>.</p>
+     * <p>The resource type. Set the value to <strong>INSTANCE</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,6 +53,8 @@ public class UntagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The keys of the tag that you want to remove. Valid values of N: 0 to 19. You can specify up to 20 tag keys at a time. Example: Tag.0.Key, Tag.1.Key, ... , Tag.19.Key.</p>
+     * 
      * <strong>example:</strong>
      * <p>testKey1</p>
      */

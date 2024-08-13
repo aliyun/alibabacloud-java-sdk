@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOpEntitiesRequest extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to <strong>DescribeOpEntities</strong>.</p>
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeOpEntitiesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The details of the operation log.</p>
+     * <p>The end time. Operation logs that were generated before this time are queried.**** The value is a UNIX timestamp. Unit: milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,10 @@ public class DescribeOpEntitiesRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The ID of the instance to query.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all instances.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>ddosbgp-cn-n6w1r7nz****</p>
@@ -34,11 +37,7 @@ public class DescribeOpEntitiesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The sort order of operation logs. Valid values:</p>
-     * <ul>
-     * <li><strong>ASC</strong>: the ascending order.</li>
-     * <li><strong>DESC</strong>: the descending order.</li>
-     * </ul>
+     * <p>The sorting method of operation logs. Set the value to <strong>opdate</strong>, which indicates sorting based on the operation time.</p>
      * 
      * <strong>example:</strong>
      * <p>opdate</p>
@@ -47,10 +46,12 @@ public class DescribeOpEntitiesRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The ID of the region where the Anti-DDoS Origin instance resides.</p>
-     * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
-     * </blockquote>
+     * <p>The sort order of operation logs. Valid values:</p>
+     * <ul>
+     * <li><strong>ASC</strong>: the ascending order.</li>
+     * <li><strong>DESC</strong>: the descending order.</li>
+     * </ul>
+     * <p>Default value: <strong>DESC</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>ASC</p>
@@ -59,7 +60,7 @@ public class DescribeOpEntitiesRequest extends TeaModel {
     public String orderDir;
 
     /**
-     * <p>The type of the operation object. The value is fixed as <strong>1</strong>, which indicates Anti-DDoS Origin instances.</p>
+     * <p>The number of entries per page. Maximum value: 50.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,9 +70,9 @@ public class DescribeOpEntitiesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the Alibaba Cloud account that performs the operation.</p>
+     * <p>The ID of the region where the instance resides.</p>
      * <blockquote>
-     * <p> If the value is <strong>system</strong>, the operation is performed by Anti-DDoS Origin.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -81,43 +82,8 @@ public class DescribeOpEntitiesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The details about the operation. The value is a string that consists of a JSON struct. The JSON struct contains the following fields:</p>
-     * <ul>
-     * <li><p><strong>entity</strong>: the operation object. Data type: object. The fields that are included in the value of the <strong>entity</strong> parameter vary based on the value of the <strong>OpAction</strong> parameter. Take note of the following items:</p>
-     * <ul>
-     * <li><p>If the value of the <strong>OpAction</strong> parameter is <strong>3</strong>, the value of the <strong>entity</strong> parameter consists of the following field:</p>
-     * <ul>
-     * <li><strong>ips</strong>: the public IP addresses that are protected by the Anti-DDoS Origin instance. Data type: array</li>
-     * </ul>
-     * </li>
-     * <li><p>If the value of the <strong>OpAction</strong> parameter is <strong>4</strong>, the value of the <strong>entity</strong> parameter consists of the following field:</p>
-     * <ul>
-     * <li><strong>ips</strong>: the public IP addresses that are no longer protected by the Anti-DDoS Origin instance. Data type: array.</li>
-     * </ul>
-     * </li>
-     * <li><p>If the value of the <strong>OpAction</strong> parameter is <strong>5</strong>, the value of the <strong>entity</strong> parameter consists of the following fields:</p>
-     * <ul>
-     * <li><strong>baseBandwidth</strong>: the basic protection bandwidth. Unit: Gbit/s. Data type: integer.</li>
-     * <li><strong>elasticBandwidth</strong>: the burstable protection bandwidth. Unit: Gbit/s. Data type: integer.</li>
-     * <li><strong>opSource</strong>: the source of the operation. The value is fixed as <strong>1</strong>, indicating that the operation is performed by Anti-DDoS Origin. Data type: integer.</li>
-     * </ul>
-     * </li>
-     * <li><p>If the value of the <strong>OpAction</strong> parameter is <strong>6</strong>, the value of the <strong>entity</strong> parameter consists of the following field:</p>
-     * <ul>
-     * <li><strong>ips</strong>: the public IP addresses for which to deactivate blackhole filtering. Data type: array.</li>
-     * </ul>
-     * </li>
-     * <li><p>If the value of the <strong>OpAction</strong> parameter is <strong>7</strong>, the <strong>entity</strong> parameter is not returned.</p>
-     * </li>
-     * <li><p>If the value of the <strong>OpAction</strong> parameter is <strong>8</strong>, the value of the <strong>entity</strong> parameter consists of the following fields:</p>
-     * <ul>
-     * <li><strong>baseBandwidth</strong>: the basic protection bandwidth. Unit: Gbit/s. Data type: integer.</li>
-     * <li><strong>elasticBandwidth</strong>: the burstable protection bandwidth. Unit: Gbit/s. Data type: integer.</li>
-     * </ul>
-     * </li>
-     * </ul>
-     * </li>
-     * </ul>
+     * <p>The ID of the resource group to which the instance belongs in Resource Management.</p>
+     * <p>If you do not specify this parameter, the instance belongs to the default resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm2pz25js****</p>
@@ -126,7 +92,7 @@ public class DescribeOpEntitiesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The sorting method of operation logs. Set the value to <strong>opdate</strong>, which indicates sorting based on the operation time.</p>
+     * <p>The start time. Operation logs that were generated after this time are queried.**** The value is a UNIX timestamp. Unit: milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

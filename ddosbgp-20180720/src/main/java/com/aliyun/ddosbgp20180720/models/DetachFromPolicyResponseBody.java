@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DetachFromPolicyResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1B0F7EC6-51D7-4D70-B0EC-CD8A9E99****</p>
      */

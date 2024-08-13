@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class AttachToPolicyShrinkRequest extends TeaModel {
     /**
+     * <p>The protected objects.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("IpPortProtocolList")
     public String ipPortProtocolListShrink;
 
     /**
+     * <p>The policy ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

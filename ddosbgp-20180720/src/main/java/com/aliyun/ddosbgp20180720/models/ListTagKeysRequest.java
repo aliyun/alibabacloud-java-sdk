@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagKeysRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListTagKeysRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page. Valid values: 1 to <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,7 +23,7 @@ public class ListTagKeysRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The ID of the region that you want to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class ListTagKeysRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -42,7 +42,7 @@ public class ListTagKeysRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The type of the resource. Valid value: <strong>INSTANCE</strong>.</p>
+     * <p>The resource type. Set the value to <strong>INSTANCE</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

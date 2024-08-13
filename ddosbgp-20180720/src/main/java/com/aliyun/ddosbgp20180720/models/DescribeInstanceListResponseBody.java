@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceListResponseBody extends TeaModel {
     /**
-     * <p>The details about the Anti-DDoS Origin instance.</p>
+     * <p>The details about the Anti-DDoS Origin instances.</p>
      */
     @NameInMap("InstanceList")
     public java.util.List<DescribeInstanceListResponseBodyInstanceList> instanceList;
@@ -77,14 +77,17 @@ public class DescribeInstanceListResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceListResponseBodyInstanceList extends TeaModel {
+        /**
+         * <p>The condition that triggers automatic association of the instance with an object.</p>
+         */
         @NameInMap("AutoProtectCondition")
         public DescribeInstanceListResponseBodyInstanceListAutoProtectCondition autoProtectCondition;
 
         /**
          * <p>Indicates whether auto-renewal is enabled for the instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enabled</li>
-         * <li><strong>false</strong>: disabled</li>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -105,14 +108,30 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         @NameInMap("BlackholdingCount")
         public String blackholdingCount;
 
+        /**
+         * <p>The type of the instance.</p>
+         * <ul>
+         * <li><strong>ddos_ddosorigin_public_cn</strong>: Anti-DDoS Origin 2.0 (Pay-as-you-go) on the China site (aliyun.com)</li>
+         * <li><strong>ddos_ddosorigin_public_intl</strong>: Anti-DDoS Origin 2.0 (Pay-as-you-go) on the International site (alibabacloud.com)</li>
+         * </ul>
+         */
         @NameInMap("CommodityType")
         public String commodityType;
 
+        /**
+         * <p>The application scope of the instance.</p>
+         * <ul>
+         * <li><strong>1</strong>: The instance supports public IP addresses in all regions.</li>
+         * <li><strong>2</strong>: The instance supports public IP addresses in regions in the Chinese mainland.</li>
+         * <li><strong>3</strong>: The instance supports public IP addresses in regions outside the Chinese mainland.</li>
+         * <li><strong>4</strong>: The instance supports public IP addresses in a region in or outside the Chinese mainland.</li>
+         * </ul>
+         */
         @NameInMap("CoverageType")
         public Integer coverageType;
 
         /**
-         * <p>The time when the instance expires. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the instance expires. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1640275200000</p>
@@ -121,7 +140,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         public Long expireTime;
 
         /**
-         * <p>The time when the instance was purchased. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the instance was purchased. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1592886047000</p>
@@ -154,8 +173,8 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         /**
          * <p>The protocol type of the IP address asset that is protected by the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Ipv4</strong>: IPv4</li>
-         * <li><strong>Ipv6</strong>: IPv6</li>
+         * <li><strong>Ipv4</strong></li>
+         * <li><strong>Ipv6</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -165,7 +184,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         public String ipType;
 
         /**
-         * <p>The type of the cloud service that is associated with the Anti-DDoS Origin instance. By default, this parameter is not returned. If the Anti-DDoS Origin instance is created by using a different cloud service, the code of the cloud service is returned.</p>
+         * <p>The type of the cloud service that is associated with the Anti-DDoS Origin instance By default, this parameter is not returned. If the Anti-DDoS Origin instance is created by using a different cloud service, the code of the cloud service is returned.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li><strong>gamebox</strong>: The Anti-DDoS Origin instance is created by using Game Security Box.</li>
@@ -179,7 +198,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         public String product;
 
         /**
-         * <p>The remarks of the instance.</p>
+         * <p>The description of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

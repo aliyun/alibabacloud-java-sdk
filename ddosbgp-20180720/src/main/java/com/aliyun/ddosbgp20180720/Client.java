@@ -105,8 +105,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only a delegated administrator account or the management account of a resource directory can be used to add members to the resource directory.</p>
+     * 
      * <b>summary</b> : 
-     * <p>添加资源目录成员账号列表</p>
+     * <p>Adds members to a resource directory.</p>
      * 
      * @param tmpReq AddRdMemberListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -143,8 +146,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only a delegated administrator account or the management account of a resource directory can be used to add members to the resource directory.</p>
+     * 
      * <b>summary</b> : 
-     * <p>添加资源目录成员账号列表</p>
+     * <p>Adds members to a resource directory.</p>
      * 
      * @param request AddRdMemberListRequest
      * @return AddRdMemberListResponse
@@ -214,7 +220,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>策略绑定</p>
+     * <p>Associates a mitigation policy to a protected object.</p>
      * 
      * @param tmpReq AttachToPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -256,7 +262,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>策略绑定</p>
+     * <p>Associates a mitigation policy to a protected object.</p>
      * 
      * @param request AttachToPolicyRequest
      * @return AttachToPolicyResponse
@@ -268,7 +274,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether Anti-DDoS Origin is authorized to access Log Service.</p>
+     * <p>Queries whether Anti-DDoS Origin is authorized to access Simple Log Service.</p>
      * 
      * @param request CheckAccessLogAuthRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -304,7 +310,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether Anti-DDoS Origin is authorized to access Log Service.</p>
+     * <p>Queries whether Anti-DDoS Origin is authorized to access Simple Log Service.</p>
      * 
      * @param request CheckAccessLogAuthRequest
      * @return CheckAccessLogAuthResponse
@@ -365,6 +371,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies a scheduling rule of an on-demand instance.</p>
+     * 
      * @param request ConfigSchedruleOnDemandRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ConfigSchedruleOnDemandResponse
@@ -438,6 +447,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies a scheduling rule of an on-demand instance.</p>
+     * 
      * @param request ConfigSchedruleOnDemandRequest
      * @return ConfigSchedruleOnDemandResponse
      */
@@ -448,7 +460,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建策略</p>
+     * <p>Creates a mitigation policy.</p>
      * 
      * @param request CreatePolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -484,7 +496,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建策略</p>
+     * <p>Creates a mitigation policy.</p>
      * 
      * @param request CreatePolicyRequest
      * @return CreatePolicyResponse
@@ -586,8 +598,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>You can call the DeleteBlackhole operation to deactivate blackhole filtering for a protected IP address.
      * Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/118701.html">DescribePackIpList</a> operation to query the protection status of the IP addresses that are protected by your Anti-DDoS Origin instance. For example, you can query whether blackhole filtering is triggered for an IP address.</p>
-     * <h3>Limits</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <h3><a href="#qps-"></a>Limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Deactivates blackhole filtering for a protected IP address.</p>
@@ -636,8 +648,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>You can call the DeleteBlackhole operation to deactivate blackhole filtering for a protected IP address.
      * Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/118701.html">DescribePackIpList</a> operation to query the protection status of the IP addresses that are protected by your Anti-DDoS Origin instance. For example, you can query whether blackhole filtering is triggered for an IP address.</p>
-     * <h3>Limits</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <h3><a href="#qps-"></a>Limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Deactivates blackhole filtering for a protected IP address.</p>
@@ -713,8 +725,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You cannot delete a mitigation policy to which a protected object is added.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除策略</p>
+     * <p>Deletes a mitigation policy.</p>
      * 
      * @param request DeletePolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -745,8 +760,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You cannot delete a mitigation policy to which a protected object is added.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除策略</p>
+     * <p>Deletes a mitigation policy.</p>
      * 
      * @param request DeletePolicyRequest
      * @return DeletePolicyResponse
@@ -757,8 +775,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only a delegated administrator account or the management account of a resource directory can be used to delete members.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除资源目录成员账号列表</p>
+     * <p>Deletes members.</p>
      * 
      * @param tmpReq DeleteRdMemberListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -795,8 +816,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only a delegated administrator account or the management account of a resource directory can be used to delete members.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除资源目录成员账号列表</p>
+     * <p>Deletes members.</p>
      * 
      * @param request DeleteRdMemberListRequest
      * @return DeleteRdMemberListResponse
@@ -807,6 +831,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a scheduling rule of an anti-DDoS diversion instance.</p>
+     * 
      * @param request DeleteSchedruleOnDemandRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteSchedruleOnDemandResponse
@@ -844,6 +871,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a scheduling rule of an anti-DDoS diversion instance.</p>
+     * 
      * @param request DeleteSchedruleOnDemandRequest
      * @return DeleteSchedruleOnDemandResponse
      */
@@ -974,12 +1004,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the DescribeDdosEvent operation to query the details about the DDoS attack events that occurred on a specific Anti-DDoS Origin instance by page. The details include the start time, end time, attacked IP address, and status of each event.  </p>
-     * <h2>Limits</h2>
+     * <p>You can call the DescribeDdosEvent operation to query the details about the DDoS attack events that occurred on an Anti-DDoS Origin instance by page. The details include the start time, end time, attacked IP address, and status of each event.</p>
+     * <h3><a href="#qps-"></a>Limits</h3>
      * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details about the DDoS attack events that occurred on a specific Anti-DDoS Origin instance.</p>
+     * <p>Queries the details about the DDoS attack events that occurred on an Anti-DDoS Origin instance.</p>
      * 
      * @param request DescribeDdosEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1039,12 +1069,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the DescribeDdosEvent operation to query the details about the DDoS attack events that occurred on a specific Anti-DDoS Origin instance by page. The details include the start time, end time, attacked IP address, and status of each event.  </p>
-     * <h2>Limits</h2>
+     * <p>You can call the DescribeDdosEvent operation to query the details about the DDoS attack events that occurred on an Anti-DDoS Origin instance by page. The details include the start time, end time, attacked IP address, and status of each event.</p>
+     * <h3><a href="#qps-"></a>Limits</h3>
      * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details about the DDoS attack events that occurred on a specific Anti-DDoS Origin instance.</p>
+     * <p>Queries the details about the DDoS attack events that occurred on an Anti-DDoS Origin instance.</p>
      * 
      * @param request DescribeDdosEventRequest
      * @return DescribeDdosEventResponse
@@ -1056,7 +1086,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询账单</p>
+     * <p>Queries the bill of an Anti-DDoS Origin (Pay-as-you-go) instance.</p>
      * 
      * @param request DescribeDdosOriginInstanceBillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1100,7 +1130,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询账单</p>
+     * <p>Queries the bill of an Anti-DDoS Origin (Pay-as-you-go) instance.</p>
      * 
      * @param request DescribeDdosOriginInstanceBillRequest
      * @return DescribeDdosOriginInstanceBillResponse
@@ -1116,10 +1146,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call the DescribeExcpetionCount operation to query the number of assets that are in an abnormal state and the number of Anti-DDoS Origin instances that are about to expire in a specific region. For example, if blackhole filtering is triggered for an IP address, the IP address is in an abnormal state. An instance whose remaining validity period is less than seven days is considered as an instance that is about to expire.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the number of assets that are in an abnormal state and the number of Anti-DDoS
-     *                   Origin instances that are about to expire in a specific region. The assets can be
-     *                   elastic IP addresses (EIPs). The assets can also be Elastic Compute Service (ECS)
-     *                   instances or Server Load Balancer (SLB) instances that are assigned public IP addresses.</p>
+     * <p>Queries the number of assets that are in an abnormal state and the number of Anti-DDoS Origin instances that are about to expire. The assets can be elastic IP addresses (EIPs). The assets can also be Elastic Compute Service (ECS) instances or Server Load Balancer (SLB) instances that are assigned public IP addresses.</p>
      * 
      * @param request DescribeExcpetionCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1159,10 +1186,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call the DescribeExcpetionCount operation to query the number of assets that are in an abnormal state and the number of Anti-DDoS Origin instances that are about to expire in a specific region. For example, if blackhole filtering is triggered for an IP address, the IP address is in an abnormal state. An instance whose remaining validity period is less than seven days is considered as an instance that is about to expire.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the number of assets that are in an abnormal state and the number of Anti-DDoS
-     *                   Origin instances that are about to expire in a specific region. The assets can be
-     *                   elastic IP addresses (EIPs). The assets can also be Elastic Compute Service (ECS)
-     *                   instances or Server Load Balancer (SLB) instances that are assigned public IP addresses.</p>
+     * <p>Queries the number of assets that are in an abnormal state and the number of Anti-DDoS Origin instances that are about to expire. The assets can be elastic IP addresses (EIPs). The assets can also be Elastic Compute Service (ECS) instances or Server Load Balancer (SLB) instances that are assigned public IP addresses.</p>
      * 
      * @param request DescribeExcpetionCountRequest
      * @return DescribeExcpetionCountResponse
@@ -1322,12 +1346,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p> Anti-DDoS Origin API operations are available for only Anti-DDoS Origin Enterprise users.</p>
-     * </blockquote>
+     * <p>You can use this operation to query the details about the DDoS attack events that occurred on the IP address of an anti-DDoS diversion instance of Anti-DDoS Origin by page. The details include the start time, end time, volume of attack traffic, and status of each event.</p>
+     * <h3><a href="#qps-"></a>Limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Call the DescribeOnDemandDdosEvent operation to query the DDoS events recorded for the IP address of the Anti-DDoS on-demand instance.</p>
+     * <p>Queries the DDoS attack events recorded for the IP address of an anti-DDoS diversion instance of Anti-DDoS Origin.</p>
      * 
      * @param request DescribeOnDemandDdosEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1387,12 +1411,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p> Anti-DDoS Origin API operations are available for only Anti-DDoS Origin Enterprise users.</p>
-     * </blockquote>
+     * <p>You can use this operation to query the details about the DDoS attack events that occurred on the IP address of an anti-DDoS diversion instance of Anti-DDoS Origin by page. The details include the start time, end time, volume of attack traffic, and status of each event.</p>
+     * <h3><a href="#qps-"></a>Limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Call the DescribeOnDemandDdosEvent operation to query the DDoS events recorded for the IP address of the Anti-DDoS on-demand instance.</p>
+     * <p>Queries the DDoS attack events recorded for the IP address of an anti-DDoS diversion instance of Anti-DDoS Origin.</p>
      * 
      * @param request DescribeOnDemandDdosEventRequest
      * @return DescribeOnDemandDdosEventResponse
@@ -1403,6 +1427,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the details of anti-DDoS diversion instances.</p>
+     * 
      * @param request DescribeOnDemandInstanceStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeOnDemandInstanceStatusResponse
@@ -1436,6 +1463,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the details of anti-DDoS diversion instances.</p>
+     * 
      * @param request DescribeOnDemandInstanceStatusRequest
      * @return DescribeOnDemandInstanceStatusResponse
      */
@@ -1446,10 +1476,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The start time. Operation logs that were generated after this time are queried.**** This value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>You can call the DescribeOpEntities operation to query the operation logs of an instance by page.</p>
+     * <h3>Limit</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>The number of entries to return on each page.</p>
+     * <p>Queries the operation logs of an Anti-DDoS Origin instance.</p>
      * 
      * @param request DescribeOpEntitiesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1513,10 +1545,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The start time. Operation logs that were generated after this time are queried.**** This value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>You can call the DescribeOpEntities operation to query the operation logs of an instance by page.</p>
+     * <h3>Limit</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>The number of entries to return on each page.</p>
+     * <p>Queries the operation logs of an Anti-DDoS Origin instance.</p>
      * 
      * @param request DescribeOpEntitiesRequest
      * @return DescribeOpEntitiesResponse
@@ -1610,7 +1644,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资源目录成员账号列表</p>
+     * <p>Queries members that are managed by using the multi-account management feature.</p>
      * 
      * @param request DescribeRdMemberListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1650,7 +1684,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资源目录成员账号列表</p>
+     * <p>Queries members that are managed by using the multi-account management feature.</p>
      * 
      * @param request DescribeRdMemberListRequest
      * @return DescribeRdMemberListResponse
@@ -1662,7 +1696,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询RD状态</p>
+     * <p>Queries the status of the multi-account management feature.</p>
      * 
      * @param request DescribeRdStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1686,7 +1720,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询RD状态</p>
+     * <p>Queries the status of the multi-account management feature.</p>
      * @return DescribeRdStatusResponse
      */
     public DescribeRdStatusResponse describeRdStatus() throws Exception {
@@ -1836,7 +1870,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>策略解绑</p>
+     * <p>Removes protected objects from a mitigation policy.</p>
      * 
      * @param tmpReq DetachFromPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1878,7 +1912,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>策略解绑</p>
+     * <p>Removes protected objects from a mitigation policy.</p>
      * 
      * @param request DetachFromPolicyRequest
      * @return DetachFromPolicyResponse
@@ -1948,7 +1982,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether Log Service is activated.</p>
+     * <p>Queries whether Simple Log Service is activated.</p>
      * 
      * @param request GetSlsOpenStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1984,7 +2018,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether Log Service is activated.</p>
+     * <p>Queries whether Simple Log Service is activated.</p>
      * 
      * @param request GetSlsOpenStatusRequest
      * @return GetSlsOpenStatusResponse
@@ -2048,7 +2082,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询策略</p>
+     * <p>Queries mitigation policies.</p>
      * 
      * @param request ListPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2067,6 +2101,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            query.put("ProductType", request.productType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
@@ -2092,7 +2130,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询策略</p>
+     * <p>Queries mitigation policies.</p>
      * 
      * @param request ListPolicyRequest
      * @return ListPolicyResponse
@@ -2104,7 +2142,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询策略绑定</p>
+     * <p>Queries attachments to mitigation policies.</p>
      * 
      * @param tmpReq ListPolicyAttachmentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2158,7 +2196,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询策略绑定</p>
+     * <p>Queries attachments to mitigation policies.</p>
      * 
      * @param request ListPolicyAttachmentRequest
      * @return ListPolicyAttachmentResponse
@@ -2231,6 +2269,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>You can call the ListTagResources operation to query the tags that are added to Anti-DDoS Origin instances at a time.</p>
+     * <h3><a href="#qps-"></a>Limits</h3>
+     * <p>You can call this API operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the relationship between Anti-DDoS Origin instances and tags.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2283,6 +2326,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>You can call the ListTagResources operation to query the tags that are added to Anti-DDoS Origin instances at a time.</p>
+     * <h3><a href="#qps-"></a>Limits</h3>
+     * <p>You can call this API operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the relationship between Anti-DDoS Origin instances and tags.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -2294,7 +2342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改策略</p>
+     * <p>Modifies a mitigation policy.</p>
      * 
      * @param tmpReq ModifyPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2344,7 +2392,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改策略</p>
+     * <p>Modifies a mitigation policy.</p>
      * 
      * @param request ModifyPolicyRequest
      * @return ModifyPolicyResponse
@@ -2355,8 +2403,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Make sure that all request parameters are configured when you call this operation. If any parameter is left empty, the configuration is deleted.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改策略</p>
+     * <p>Modifies the content of the mitigation policy.</p>
      * 
      * @param tmpReq ModifyPolicyContentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2401,8 +2452,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Make sure that all request parameters are configured when you call this operation. If any parameter is left empty, the configuration is deleted.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改策略</p>
+     * <p>Modifies the content of the mitigation policy.</p>
      * 
      * @param request ModifyPolicyContentRequest
      * @return ModifyPolicyContentResponse
@@ -2414,12 +2468,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the ModifyRemark operation to add remarks for a single Anti-DDoS Origin instance.  </p>
-     * <h2>Limits</h2>
+     * <p>You can call the ModifyRemark operation to add remarks for a single Anti-DDoS Origin instance.</p>
+     * <h3><a href="#qps-"></a>Limits</h3>
      * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds remarks for a specific Anti-DDoS Origin instance.</p>
+     * <p>Adds remarks for a single Anti-DDoS Origin instance.</p>
      * 
      * @param request ModifyRemarkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2463,12 +2517,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the ModifyRemark operation to add remarks for a single Anti-DDoS Origin instance.  </p>
-     * <h2>Limits</h2>
+     * <p>You can call the ModifyRemark operation to add remarks for a single Anti-DDoS Origin instance.</p>
+     * <h3><a href="#qps-"></a>Limits</h3>
      * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds remarks for a specific Anti-DDoS Origin instance.</p>
+     * <p>Adds remarks for a single Anti-DDoS Origin instance.</p>
      * 
      * @param request ModifyRemarkRequest
      * @return ModifyRemarkResponse
@@ -2528,7 +2582,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>释放原生防护全局实例</p>
+     * <p>Releases a pay-as-you-go Anti-DDoS Origin instance.</p>
      * 
      * @param request ReleaseDdosOriginInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2560,7 +2614,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>释放原生防护全局实例</p>
+     * <p>Releases a pay-as-you-go Anti-DDoS Origin instance.</p>
      * 
      * @param request ReleaseDdosOriginInstanceRequest
      * @return ReleaseDdosOriginInstanceResponse
@@ -2571,6 +2625,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Specifies the scheduling mode for on-demand instances.</p>
+     * 
      * @param request SetInstanceModeOnDemandRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetInstanceModeOnDemandResponse
@@ -2608,6 +2665,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Specifies the scheduling mode for on-demand instances.</p>
+     * 
      * @param request SetInstanceModeOnDemandRequest
      * @return SetInstanceModeOnDemandResponse
      */
@@ -2618,12 +2678,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the TagResources operation to add tags to Anti-DDoS Origin instances. </p>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>You can call the TagResources operation to add tags to instances.</p>
+     * <h3>Limit</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds tags to Anti-DDoS Origin instances.</p>
+     * <p>Add tags to Anti-DDoS Origin instances.</p>
      * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2671,12 +2731,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the TagResources operation to add tags to Anti-DDoS Origin instances. </p>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>You can call the TagResources operation to add tags to instances.</p>
+     * <h3>Limit</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds tags to Anti-DDoS Origin instances.</p>
+     * <p>Add tags to Anti-DDoS Origin instances.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -2688,7 +2748,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes tags from Anti-DDoS Origin Enterprise instances.</p>
+     * <p>Removes tags from Anti-DDoS Origin instances.</p>
      * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2740,7 +2800,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes tags from Anti-DDoS Origin Enterprise instances.</p>
+     * <p>Removes tags from Anti-DDoS Origin instances.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse

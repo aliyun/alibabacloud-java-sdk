@@ -18,12 +18,11 @@ public class DeleteIpRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The list of IP addresses that you want to remove from the Anti-DDoS Origin Enterprise instance. This parameter is a string consisting of JSON arrays. Each element in a JSON array is a JSON struct that includes the following field:</p>
+     * <p>The list of IP addresses that you want to remove from the Anti-DDoS Origin Enterprise instance. This parameter is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:</p>
      * <ul>
      * <li><p><strong>ip</strong>: required. The IP address that you want to remove. Data type: string.</p>
-     * <blockquote>
-     * <p>The IP addresses that you want to remove must be protected by the Anti-DDoS Origin Enterprise instance.</p>
-     * </blockquote>
+     * <p>**</p>
+     * <p><strong>Note</strong> The IP addresses that you want to remove must be protected by the Anti-DDoS Origin Enterprise instance.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -37,7 +36,7 @@ public class DeleteIpRequest extends TeaModel {
     /**
      * <p>The region ID of the Anti-DDoS Origin Enterprise instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query all regions supported by Anti-DDoS Origin.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

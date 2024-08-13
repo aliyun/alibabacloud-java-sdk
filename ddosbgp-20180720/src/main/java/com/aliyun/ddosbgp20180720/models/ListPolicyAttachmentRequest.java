@@ -4,10 +4,15 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class ListPolicyAttachmentRequest extends TeaModel {
+    /**
+     * <p>The protected objects.</p>
+     */
     @NameInMap("IpPortProtocolList")
     public java.util.List<ListPolicyAttachmentRequestIpPortProtocolList> ipPortProtocolList;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListPolicyAttachmentRequest extends TeaModel {
     public Long pageNo;
 
     /**
+     * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListPolicyAttachmentRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The ID of the policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>f38f6520-92b7-451e-b520-9ab3********</p>
      */
@@ -29,6 +38,13 @@ public class ListPolicyAttachmentRequest extends TeaModel {
     public String policyId;
 
     /**
+     * <p>The type of the policy. Valid values:</p>
+     * <ul>
+     * <li><strong>default</strong>: the default mitigation policies.</li>
+     * <li><strong>l3</strong>: IP-specific mitigation policies.</li>
+     * <li><strong>l4</strong>: port-specific mitigation policies.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>l3</p>
      */
@@ -82,6 +98,7 @@ public class ListPolicyAttachmentRequest extends TeaModel {
 
     public static class ListPolicyAttachmentRequestIpPortProtocolList extends TeaModel {
         /**
+         * <p>The IP address of the protected object.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -91,6 +108,8 @@ public class ListPolicyAttachmentRequest extends TeaModel {
         public String ip;
 
         /**
+         * <p>The port number of the protected object.</p>
+         * 
          * <strong>example:</strong>
          * <p>8*</p>
          */
@@ -98,6 +117,12 @@ public class ListPolicyAttachmentRequest extends TeaModel {
         public Integer port;
 
         /**
+         * <p>The protocol type of the protected object. Valid values:</p>
+         * <ul>
+         * <li><strong>tcp</strong></li>
+         * <li><strong>udp</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>tcp</p>
          */

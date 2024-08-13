@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeOpEntitiesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The details of the operation log.</p>
      */
     @NameInMap("OpEntities")
     public java.util.List<DescribeOpEntitiesResponseBodyOpEntities> opEntities;
 
     /**
-     * <p>The end time. Operation logs that were generated before this time are queried.**** This value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>52C8ECB0-0B1A-4E66-A31C-B6A855120E82</p>
@@ -20,7 +20,7 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The time when the log was generated. This value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The total number of operation logs.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,7 +59,7 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
 
     public static class DescribeOpEntitiesResponseBodyOpEntities extends TeaModel {
         /**
-         * <p>Queries the operation logs of an Anti-DDoS Origin instance.</p>
+         * <p>The operation object, which is the ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>ddosbgp-cn-n6w1r7nz****</p>
@@ -68,8 +68,7 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
         public String entityObject;
 
         /**
-         * <p>All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see <a href="https://help.aliyun.com/document_detail/118841.html">Common parameters</a>.</p>
-         * <p>For more information about sample requests, see the <strong>&quot;Examples&quot;</strong> section of this topic.</p>
+         * <p>The type of the operation object. The value is fixed as <strong>1</strong>, which indicates Anti-DDoS Origin instances.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -78,7 +77,7 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
         public Integer entityType;
 
         /**
-         * <p>WB01342967</p>
+         * <p>The time when the log was generated. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1635818114000</p>
@@ -87,6 +86,11 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
+         * <p>The ID of the Alibaba Cloud account that performs the operation.</p>
+         * <blockquote>
+         * <p>If the value is <strong>system</strong>, the operation is performed by Anti-DDoS Origin.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>171986973287****</p>
          */
@@ -94,7 +98,15 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
         public String opAccount;
 
         /**
-         * <p>DescribeOpEntities</p>
+         * <p>The type of operation. Valid values:</p>
+         * <ul>
+         * <li><strong>3</strong>: indicates an operation to add an IP address to the Anti-DDoS Origin instance for protection.</li>
+         * <li><strong>4</strong>: indicates an operation to remove a protected IP address from the Anti-DDoS Origin instance.</li>
+         * <li><strong>5</strong>: indicates an operation to downgrade the Anti-DDoS Origin instance.</li>
+         * <li><strong>6</strong>: indicates an operation to deactivate blackhole filtering for an IP address.</li>
+         * <li><strong>7</strong>: indicates an operation to reset the number of times that you can deactivate blackhole filtering.</li>
+         * <li><strong>8</strong>: indicates an operation to enable burstable protection.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -103,6 +115,44 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
         public Integer opAction;
 
         /**
+         * <p>The details of the operation. The value is a string that consists of a JSON struct. The JSON struct contains the following fields:</p>
+         * <ul>
+         * <li><p><strong>entity</strong>: the operation object. Data type: object. The fields that are included in the value of the <strong>entity</strong> parameter vary based on the value of the <strong>OpAction</strong> parameter. Valid values:</p>
+         * <ul>
+         * <li><p>If the value of the <strong>OpAction</strong> parameter is <strong>3</strong>, the value of the <strong>entity</strong> parameter consists of the following field:</p>
+         * <ul>
+         * <li><strong>ips</strong>: the public IP addresses that are protected by the Anti-DDoS Origin instance. Data type: array</li>
+         * </ul>
+         * </li>
+         * <li><p>If the value of the <strong>OpAction</strong> parameter is <strong>4</strong>, the value of the <strong>entity</strong> parameter consists of the following field:</p>
+         * <ul>
+         * <li><strong>ips</strong>: the public IP addresses that are no longer protected by the Anti-DDoS Origin instance. Data type: array.</li>
+         * </ul>
+         * </li>
+         * <li><p>If the value of the <strong>OpAction</strong> parameter is <strong>5</strong>, the value of the <strong>entity</strong> parameter consists of the following fields:</p>
+         * <ul>
+         * <li><strong>baseBandwidth</strong>: the basic protection bandwidth. Unit: Gbit/s. Data type: integer.</li>
+         * <li><strong>elasticBandwidth</strong>: the burstable protection bandwidth. Unit: Gbit/s. Data type: integer.</li>
+         * <li><strong>opSource</strong>: the source of the operation. The value is fixed as <strong>1</strong>, indicating that the operation is performed by Anti-DDoS Origin. Data type: integer.</li>
+         * </ul>
+         * </li>
+         * <li><p>If the value of the <strong>OpAction</strong> parameter is <strong>6</strong>, the value of the <strong>entity</strong> parameter consists of the following field:</p>
+         * <ul>
+         * <li><strong>ips</strong>: the public IP addresses for which to deactivate blackhole filtering. Data type: array.</li>
+         * </ul>
+         * </li>
+         * <li><p>If the value of the <strong>OpAction</strong> parameter is <strong>7</strong>, the <strong>entity</strong> parameter is not returned.</p>
+         * </li>
+         * <li><p>If the value of the <strong>OpAction</strong> parameter is <strong>8</strong>, the value of the <strong>entity</strong> parameter consists of the following fields:</p>
+         * <ul>
+         * <li><strong>baseBandwidth</strong>: the basic protection bandwidth. Unit: Gbit/s. Data type: integer.</li>
+         * <li><strong>elasticBandwidth</strong>: the burstable protection bandwidth. Unit: Gbit/s. Data type: integer.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;entity&quot;:{&quot;baseBandwidth&quot;:20,&quot;elasticBandwidth&quot;:20}}</p>
          */

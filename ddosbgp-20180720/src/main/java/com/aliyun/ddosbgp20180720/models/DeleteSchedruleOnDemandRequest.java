@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteSchedruleOnDemandRequest extends TeaModel {
     /**
-     * <p>The ID of the on-demand instance.</p>
+     * <p>The ID of the anti-DDoS diversion instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/152120.html">DescribeOnDemandInstance</a> operation to query the IDs of all on-demand instances.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/152120.html">DescribeOnDemandInstance</a> operation to query the IDs of all anti-DDoS diversion instances.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,9 +18,9 @@ public class DeleteSchedruleOnDemandRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region ID of the on-demand instance.</p>
+     * <p>The region ID of the anti-DDoS diversion instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query all regions supported by Anti-DDoS Origin.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

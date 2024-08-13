@@ -5,12 +5,19 @@ import com.aliyun.tea.*;
 
 public class DetachFromPolicyShrinkRequest extends TeaModel {
     /**
+     * <p>The protected objects.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("IpPortProtocolList")
     public String ipPortProtocolListShrink;
 
     /**
+     * <p>The type of the policy. Valid values:</p>
+     * <ul>
+     * <li><strong>default</strong>: the default mitigation policies.</li>
+     * <li><strong>l3</strong>: IP-specific mitigation policies.</li>
+     * <li><strong>l4</strong>: port-specific mitigation policies.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

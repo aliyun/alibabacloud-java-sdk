@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDdosEventRequest extends TeaModel {
     /**
-     * <p>The end time of the DDoS attack event to query. This value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The end time of the DDoS attack events to query. This value is a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class DescribeDdosEventRequest extends TeaModel {
     public String ip;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class DescribeDdosEventRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class DescribeDdosEventRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The start time of the DDoS attack event to query. This value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The start time of the DDoS attack events to query. This value is a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

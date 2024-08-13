@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteRdMemberListShrinkRequest extends TeaModel {
     /**
+     * <p>The list of the members.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("MemberList")

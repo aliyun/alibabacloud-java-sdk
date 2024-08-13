@@ -4,10 +4,15 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DescribeRdMemberListResponseBody extends TeaModel {
+    /**
+     * <p>The list of the members.</p>
+     */
     @NameInMap("MemberList")
     public java.util.List<DescribeRdMemberListResponseBodyMemberList> memberList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DC245DEE-9800-5579-BF99-189D6A5BA9FE</p>
      */
@@ -15,6 +20,8 @@ public class DescribeRdMemberListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -52,6 +59,8 @@ public class DescribeRdMemberListResponseBody extends TeaModel {
 
     public static class DescribeRdMemberListResponseBodyMemberList extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1624954942000</p>
          */
@@ -59,6 +68,8 @@ public class DescribeRdMemberListResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
+         * <p>The name of the member.</p>
+         * 
          * <strong>example:</strong>
          * <p>test1</p>
          */
@@ -66,6 +77,8 @@ public class DescribeRdMemberListResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The Alibaba Cloud account ID of the member.</p>
+         * 
          * <strong>example:</strong>
          * <p>1960279802016267</p>
          */

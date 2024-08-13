@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeOnDemandDdosEventResponseBody extends TeaModel {
     /**
-     * <p>The list of DDoS events and the details of each event.</p>
+     * <p>The details about the DDoS attack event.</p>
      */
     @NameInMap("Events")
     public java.util.List<DescribeOnDemandDdosEventResponseBodyEvents> events;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6A507DC8-F657-4C13-84E2-D1D1B9400753</p>
@@ -20,7 +20,7 @@ public class DescribeOnDemandDdosEventResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of DDoS events.</p>
+     * <p>The total number of DDoS attack events that are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,7 +59,7 @@ public class DescribeOnDemandDdosEventResponseBody extends TeaModel {
 
     public static class DescribeOnDemandDdosEventResponseBodyEvents extends TeaModel {
         /**
-         * <p>The timestamp that indicates the end time of the attack. Unit: seconds. The timestamp follows the UNIX time format. It is the number of seconds that have elapsed since 00:00:00 Thursday, 1 January 1970.</p>
+         * <p>The time when the DDoS attack stopped. This value is a UNIX timestamp. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1557891306</p>
@@ -68,7 +68,7 @@ public class DescribeOnDemandDdosEventResponseBody extends TeaModel {
         public Integer endTime;
 
         /**
-         * <p>The IP address of the protection target that encounters the DDoS attack.</p>
+         * <p>The attacked IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>192.XX.XX.1</p>
@@ -77,7 +77,7 @@ public class DescribeOnDemandDdosEventResponseBody extends TeaModel {
         public String ip;
 
         /**
-         * <p>The throughput of the DDoS attack. Unit: Mbit/s.</p>
+         * <p>The attack traffic. Unit: Mbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>110000</p>
@@ -95,7 +95,7 @@ public class DescribeOnDemandDdosEventResponseBody extends TeaModel {
         public Integer pps;
 
         /**
-         * <p>The timestamp that indicates the start time of the attack. Unit: seconds. The timestamp follows the UNIX time format. It is the number of seconds that have elapsed since 00:00:00 Thursday, 1 January 1970.</p>
+         * <p>The time when the DDoS attack started. This value is a UNIX timestamp. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1557889506</p>
@@ -104,12 +104,12 @@ public class DescribeOnDemandDdosEventResponseBody extends TeaModel {
         public Integer startTime;
 
         /**
-         * <p>The status of the event. Valid values:</p>
+         * <p>The status of the DDoS attack event. Valid values:</p>
          * <ul>
-         * <li>**hole_begin **: indicates that the event is in the blackhole state.</li>
-         * <li>**hole_end **: indicates that blackhole ends.</li>
-         * <li>**defense_begin **: indicates that the event is in the cleaning state.</li>
-         * <li>**defense_end **: indicates that cleaning ends.</li>
+         * <li><strong>hole_begin</strong>: indicates that blackhole filtering is triggered.</li>
+         * <li><strong>hole_end</strong>: indicates that tblackhole filtering is deactivated.</li>
+         * <li><strong>defense_begin</strong>: indicates that traffic scrubbing is in progress.</li>
+         * <li><strong>defense_end</strong>: indicates that traffic scrubbing is complete.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOnDemandDdosEventRequest extends TeaModel {
     /**
-     * <p>The timestamp that specifies the end of the time range to query. Unit: seconds. The timestamp follows the UNIX time format. It is the number of seconds that have elapsed since 00:00:00 Thursday, 1 January 1970.</p>
+     * <p>The end time of the DDoS attack events to query. This value is a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,10 @@ public class DescribeOnDemandDdosEventRequest extends TeaModel {
     public Integer endTime;
 
     /**
-     * <p>The ID of the on-demand instance to query.</p>
+     * <p>The ID of the anti-DDoS diversion instance to query.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/152120.html">DescribeOnDemandInstance</a> operation to query the IDs of all anti-DDoS diversion instances.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +28,7 @@ public class DescribeOnDemandDdosEventRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The IP address of the protection target.</p>
+     * <p>The IP address of the anti-DDoS diversion instance to query.</p>
      * 
      * <strong>example:</strong>
      * <p>192.XX.XX.1</p>
@@ -34,7 +37,7 @@ public class DescribeOnDemandDdosEventRequest extends TeaModel {
     public String ip;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +47,7 @@ public class DescribeOnDemandDdosEventRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries to return on each page. The maximum value is <strong>50</strong>. The default value is <strong>10</strong>.</p>
+     * <p>The number of entries per page. Maximum value: <strong>50</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,6 +57,11 @@ public class DescribeOnDemandDdosEventRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID of the anti-DDoS diversion instance to query.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -61,7 +69,8 @@ public class DescribeOnDemandDdosEventRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.</p>
+     * <p>If you do not specify this parameter, the instance belongs to the default resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm2pz25js****</p>
@@ -70,7 +79,7 @@ public class DescribeOnDemandDdosEventRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The timestamp that specifies the beginning of the time range to query. Unit: seconds. The timestamp follows the UNIX time format. It is the number of seconds that have elapsed since 00:00:00 Thursday, 1 January 1970.</p>
+     * <p>The start time of the DDoS attack events to query. This value is a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
