@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAttachedMediaInfoResponseBody extends TeaModel {
     /**
-     * <p>The information about the media asset.</p>
+     * <p>The information about the media assets.</p>
      */
     @NameInMap("AttachedMediaList")
     public java.util.List<GetAttachedMediaInfoResponseBodyAttachedMediaList> attachedMediaList;
@@ -56,7 +56,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
 
     public static class GetAttachedMediaInfoResponseBodyAttachedMediaListCategories extends TeaModel {
         /**
-         * <p>The ID of the video category.</p>
+         * <p>The ID of the category.</p>
          * 
          * <strong>example:</strong>
          * <p>1000224338</p>
@@ -66,10 +66,6 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
 
         /**
          * <p>The name of the category.</p>
-         * <ul>
-         * <li>The value can be up to 64 bytes in length.</li>
-         * <li>The string must be encoded in the UTF-8 format.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>category test</p>
@@ -78,7 +74,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         public String cateName;
 
         /**
-         * <p>The level of the category. A value of 0 indicates a level 1 category.</p>
+         * <p>The level of the category.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -87,7 +83,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         public Long level;
 
         /**
-         * <p>The ID of the parent category. The parent category ID of a level 1 category is -1.</p>
+         * <p>The ID of the parent category.</p>
          * 
          * <strong>example:</strong>
          * <p>1000224336</p>
@@ -145,7 +141,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The list of categories.</p>
+         * <p>The categories.</p>
          */
         @NameInMap("Categories")
         public java.util.List<GetAttachedMediaInfoResponseBodyAttachedMediaListCategories> categories;
@@ -161,6 +157,9 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
 
         /**
          * <p>The description of the auxiliary media asset.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when a description is specified for the auxiliary media asset.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>description test</p>
@@ -178,7 +177,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         public String mediaId;
 
         /**
-         * <p>The time when the auxiliary media asset was updated. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the auxiliary media asset was last updated. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-05-31T11:42:20Z</p>
@@ -189,9 +188,9 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         /**
          * <p>The status of the auxiliary media asset. Valid values:</p>
          * <ul>
-         * <li><strong>Uploading</strong>: The auxiliary media asset is being uploaded. This is the initial status.</li>
-         * <li><strong>Normal</strong>: The auxiliary media asset is uploaded.</li>
-         * <li><strong>UploadFail</strong>: The auxiliary media asset fails to be uploaded.</li>
+         * <li><strong>Uploading</strong></li>
+         * <li><strong>Normal</strong></li>
+         * <li><strong>UploadFail</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -201,7 +200,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The OSS bucket where the auxiliary media asset is stored.</p>
+         * <p>The storage address of the auxiliary media asset.</p>
          * 
          * <strong>example:</strong>
          * <p>outin-bfefbb9*****c7426.oss-cn-shanghai.aliyuncs.com</p>
@@ -211,6 +210,9 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
 
         /**
          * <p>The tags of the auxiliary media asset.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when tags are specified for the auxiliary media asset.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>tag1,tag2</p>
@@ -228,7 +230,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>The type of the auxiliary media asset. Valid values:</p>
+         * <p>The type of the auxiliary media asset.</p>
          * <ul>
          * <li><strong>watermark</strong></li>
          * <li><strong>subtitle</strong></li>
@@ -244,7 +246,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         /**
          * <p>The URL of the auxiliary media asset.</p>
          * <blockquote>
-         * <p>If a CDN domain name is specified, a CDN URL is returned. Otherwise, an OSS URL is returned.</p>
+         * <p> If a CDN domain name is specified, a CDN URL is returned. Otherwise, an OSS URL is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

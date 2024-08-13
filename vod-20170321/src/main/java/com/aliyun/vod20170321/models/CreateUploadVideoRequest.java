@@ -14,11 +14,11 @@ public class CreateUploadVideoRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The category ID of the media file. You can use one of the following methods to obtain the category ID:</p>
+     * <p>The ID of the category. You can use one of the following methods to obtain the ID:</p>
      * <ul>
      * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Configuration Management</strong> &gt; <strong>Media Management</strong> &gt; <strong>Categories</strong> to view the category ID of the media file.</li>
-     * <li>Obtain the value of CateId from the response to the <a href="https://help.aliyun.com/document_detail/56401.html">AddCategory</a> operation.</li>
-     * <li>Obtain the value of CateId from the response to the <a href="https://help.aliyun.com/document_detail/56406.html">GetCategories</a> operation.</li>
+     * <li>Obtain the value of CateId from the response to the <a href="~~AddCategory~~">AddCategory</a> operation.</li>
+     * <li>Obtain the value of CateId from the response to the <a href="~~GetCategories~~">GetCategories</a> operation.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,7 +50,7 @@ public class CreateUploadVideoRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The name of the audio or video file.</p>
+     * <p>The name of the source file.</p>
      * <ul>
      * <li>The name must contain a file name extension, which is not case-sensitive.</li>
      * <li>For more information about file name extensions supported by ApsaraVideo VOD, see <a href="https://help.aliyun.com/document_detail/55396.html">Overview</a>.</li>
@@ -73,9 +73,9 @@ public class CreateUploadVideoRequest extends TeaModel {
     public Long fileSize;
 
     /**
-     * <p>The storage address. To obtain the storage address, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Configuration Management</strong> &gt; <strong>Media Management</strong> &gt; <strong>Storage</strong>.</p>
+     * <p>The storage address. Perform the following operations to obtain the storage address: Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Configuration Management</strong> &gt; <strong>Media Management</strong> &gt; <strong>Storage</strong>. On the Storage page, view the storage address.</p>
      * <blockquote>
-     * <p>If you specify a storage address, media files are uploaded to the specified address.</p>
+     * <p> If you leave this parameter empty, audio and video files are uploaded to the default storage address. If you specify a storage address, audio and video files are uploaded to the specified address.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -100,14 +100,19 @@ public class CreateUploadVideoRequest extends TeaModel {
     public String tags;
 
     /**
-     * <p>The ID of the transcoding template group. You can use one of the following methods to obtain the ID of the transcoding template group:</p>
+     * <p>The ID of the transcoding template group. You can use one of the following methods to obtain the ID:</p>
      * <ul>
-     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Configuration Management</strong> &gt; <strong>Media Processing</strong> &gt; <strong>Transcoding Template Groups</strong> to view the ID of the transcoding template group.</li>
-     * <li>Obtain the value of TranscodeTemplateGroupId in the response to the <a href="https://help.aliyun.com/document_detail/102665.html">AddTranscodeTemplateGroup</a> operation.</li>
-     * <li>Obtain the value of TranscodeTemplateGroupId in the response to the <a href="https://help.aliyun.com/document_detail/102669.html">ListTranscodeTemplateGroup</a> operation.</li>
+     * <li>Log on to the ApsaraVideo VOD console. In the left-side navigation pane, choose Configuration Management &gt; Media Processing &gt; Transcoding Template Groups. On the Transcoding Template Groups page, you can view the ID of the transcoding template group.<a href="https://vod.console.aliyun.com"></a>************</li>
+     * <li>Obtain the value of the TranscodeTemplateGroupId parameter from the response to the <a href="https://help.aliyun.com/document_detail/102665.html">AddTranscodeTemplateGroup</a> operation that you called to create a transcoding template group.</li>
+     * <li>Obtain the value of the TranscodeTemplateGroupId parameter from the response to the <a href="https://help.aliyun.com/document_detail/102669.html">ListTranscodeTemplateGroup</a> operation that you called to query transcoding template groups.</li>
      * </ul>
      * <blockquote>
-     * <p>If you leave this parameter empty, the default transcoding template group is used. If you specify this parameter, the specified transcoding template group is used for transcoding.</p>
+     * <ul>
+     * <li>If you specify both WorkflowId and TemplateGroupId, the value of the WorkflowId parameter takes effect.</li>
+     * <li>If this parameter is not specified, transcoding is performed based on the default transcoding template group. If the transcoding template group ID is specified, transcoding is performed based on the specified template group.</li>
+     * <li>If the <strong>No Transcoding</strong> template group is used, only the <a href="https://help.aliyun.com/document_detail/55630.html">FileUploadComplete</a> event notification is returned after a video is uploaded. The <a href="https://help.aliyun.com/document_detail/55636.html">StreamTranscodeComplete</a> event notification is not returned.</li>
+     * <li>If you use the <strong>No Transcoding</strong> template group to upload videos, only videos in the format of MP4, FLV, MP3, M3U8, or WebM can be played. Videos in other formats can only be stored in ApsaraVideo VOD. You can view the file name extension to obtain the video format. If you want to use ApsaraVideo Player, make sure that the version of the player is V3.1.0 or later.</li>
+     * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>

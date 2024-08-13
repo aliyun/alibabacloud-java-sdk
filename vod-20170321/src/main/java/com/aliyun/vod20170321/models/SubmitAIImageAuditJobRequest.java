@@ -47,15 +47,11 @@ public class SubmitAIImageAuditJobRequest extends TeaModel {
     public String resourceOwnerId;
 
     /**
-     * <p>The ID of the review template.</p>
-     * <p>If you want to use an AI template, you can call the following operations:</p>
+     * <p>The ID of the AI template. You can use one of the following methods to obtain the ID:</p>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/102936.html">ListAITemplate</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/102930.html">AddAITemplate</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/102933.html">GetAITemplate</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/102937.html">SetDefaultAITemplate</a></li>
+     * <li>Obtain the value of TemplateId from the response to the <a href="https://help.aliyun.com/document_detail/102930.html">AddAITemplate</a> operation that you call to create an AI template.</li>
+     * <li>Obtain the value of TemplateId from the response to the <a href="https://help.aliyun.com/document_detail/102936.html">ListAITemplate</a> operation that you call to create an AI template.</li>
      * </ul>
-     * <p>If you do not specify this parameter, the ID of the default AI template for automated review is used.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

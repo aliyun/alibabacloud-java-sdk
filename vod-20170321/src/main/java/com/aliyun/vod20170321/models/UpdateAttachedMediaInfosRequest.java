@@ -5,7 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateAttachedMediaInfosRequest extends TeaModel {
     /**
-     * <p>The new information about auxiliary media assets. You can modify the information about up to 20 auxiliary media assets at a time. For more information, see the <strong>UpdateContent</strong> section of this topic.</p>
+     * <p>The new information about the one or more images. You can modify the information about up to 20 auxiliary media assets at a time. For more information, see the <strong>UpdateContent</strong> section of this topic.</p>
+     * <blockquote>
+     * <ul>
+     * <li>You cannot specify emojis for <code>Title</code>, <code>Description</code>, or <code>Tags</code>.</li>
+     * <li>The specific parameter of a video is updated only when a new value is passed in the parameter.</li>
+     * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

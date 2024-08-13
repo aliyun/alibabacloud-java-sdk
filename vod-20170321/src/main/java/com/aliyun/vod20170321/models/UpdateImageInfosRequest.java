@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpdateImageInfosRequest extends TeaModel {
     /**
-     * <p>The new information about the one or more images. You can modify the information about up to 20 images at a time. For more information, see the <strong>UpdateContent</strong> section of this topic.</p>
+     * <p>The new information about the one or more images. You can modify the information about up to 20 images at a time. For more information about the parameter structure, see the <strong>UpdateContent</strong> section.</p>
      * <blockquote>
-     * <p>The values of the nested parameters Title, Description, and Tags under the UpdateContent parameter cannot contain emoticons.</p>
+     * <p> The values of the nested parameters Title, Description, and Tags under the UpdateContent parameter cannot contain emoticons.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

@@ -83,7 +83,13 @@ public class DescribeVodMediaPlayDataRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The playback time. You can specify this parameter to query all playback data generated only on the specified date. You can query data only by day. Specify the value in the yyyyMMdd format.</p>
+     * <p>The playback time. Specify the value in the yyyyMMdd format.</p>
+     * <blockquote>
+     * <ul>
+     * <li>You can query data only by day.</li>
+     * <li>You can query only data within the last 30 days.</li>
+     * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>20240322</p>
@@ -101,7 +107,7 @@ public class DescribeVodMediaPlayDataRequest extends TeaModel {
      * <li><strong>ap-southeast-1</strong>: Singapore</li>
      * <li><strong>ap-southeast-5</strong>: Indonesia (Jakarta)</li>
      * <li><strong>eu-central-1</strong>: Germany (Frankfurt)</li>
-     * <li><strong>ap-south-1</strong>: India (Mumbai)</li>
+     * <li><strong>ap-south-1</strong>: India (Mumbai) (disabled)</li>
      * </ul>
      * 
      * <strong>example:</strong>

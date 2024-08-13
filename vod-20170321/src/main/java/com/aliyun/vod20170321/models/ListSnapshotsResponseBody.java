@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSnapshotsResponseBody extends TeaModel {
     /**
-     * <p>The snapshot data of the media.</p>
+     * <p>The information about the snapshot.</p>
      */
     @NameInMap("MediaSnapshot")
     public ListSnapshotsResponseBodyMediaSnapshot mediaSnapshot;
@@ -121,7 +121,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The rule for generating snapshot URLs.</p>
+         * <p>The rule used to generate snapshot URLs.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://example.aliyundoc.com/snapshot/sample%7BSnapshotCount%7D.jpg">http://example.aliyundoc.com/snapshot/sample{SnapshotCount}.jpg</a></p>
@@ -130,7 +130,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         public String regular;
 
         /**
-         * <p>The snapshot data.</p>
+         * <p>The details of the snapshot.</p>
          */
         @NameInMap("Snapshots")
         public ListSnapshotsResponseBodyMediaSnapshotSnapshots snapshots;

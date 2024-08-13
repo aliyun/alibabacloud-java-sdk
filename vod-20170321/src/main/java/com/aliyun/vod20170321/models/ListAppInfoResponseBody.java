@@ -103,6 +103,12 @@ public class ListAppInfoResponseBody extends TeaModel {
         @NameInMap("ModificationTime")
         public String modificationTime;
 
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         /**
          * <p>The status of the application. Valid values:</p>
          * <ul>
@@ -172,6 +178,22 @@ public class ListAppInfoResponseBody extends TeaModel {
         }
         public String getModificationTime() {
             return this.modificationTime;
+        }
+
+        public ListAppInfoResponseBodyAppInfoList setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public ListAppInfoResponseBodyAppInfoList setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListAppInfoResponseBodyAppInfoList setStatus(String status) {

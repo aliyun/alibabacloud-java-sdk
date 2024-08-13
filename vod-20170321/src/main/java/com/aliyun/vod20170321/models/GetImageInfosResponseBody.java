@@ -56,7 +56,7 @@ public class GetImageInfosResponseBody extends TeaModel {
 
     public static class GetImageInfosResponseBodyImageInfoMezzanine extends TeaModel {
         /**
-         * <p>The size of the image file. Unit: bytes.</p>
+         * <p>The size of the file to be uploaded. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>8932</p>
@@ -83,7 +83,7 @@ public class GetImageInfosResponseBody extends TeaModel {
         public Integer height;
 
         /**
-         * <p>The name of the source file.</p>
+         * <p>The URL of the source file.</p>
          * 
          * <strong>example:</strong>
          * <p>****.gif</p>
@@ -158,7 +158,7 @@ public class GetImageInfosResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The ID of the category to which the image belongs.</p>
+         * <p>The ID of the category.</p>
          * 
          * <strong>example:</strong>
          * <p>254766071</p>
@@ -194,7 +194,7 @@ public class GetImageInfosResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the image file.</p>
+         * <p>The ID of the image.</p>
          * 
          * <strong>example:</strong>
          * <p>bbc65bba53f9*****ed90de118a7849</p>
@@ -205,11 +205,8 @@ public class GetImageInfosResponseBody extends TeaModel {
         /**
          * <p>The type of the image. Valid values:</p>
          * <ul>
-         * <li><strong>CoverSnapshot</strong>: thumbnail snapshot</li>
-         * <li><strong>NormalSnapshot</strong>: normal snapshot</li>
-         * <li><strong>SpriteSnapshot</strong>: sprite snapshot</li>
-         * <li><strong>SpriteOriginSnapshot</strong>: sprite source snapshot</li>
-         * <li><strong>All</strong>: images of all the preceding types. If this parameter is not set to All, you can specify multiple types and separate the types with commas (,).</li>
+         * <li><strong>default</strong>: regular images</li>
+         * <li><strong>cover</strong>: video thumbnail</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -248,7 +245,7 @@ public class GetImageInfosResponseBody extends TeaModel {
         public String storageLocation;
 
         /**
-         * <p>The tags of the image. Separate multiple tags with commas (,).</p>
+         * <p>The tags of the image. Multiple tags are separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>tag1,tag2,tag3</p>

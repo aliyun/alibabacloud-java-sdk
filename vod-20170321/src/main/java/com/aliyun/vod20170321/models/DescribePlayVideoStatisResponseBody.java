@@ -42,7 +42,7 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
 
     public static class DescribePlayVideoStatisResponseBodyVideoPlayStatisDetailsVideoPlayStatisDetail extends TeaModel {
         /**
-         * <p>The date. The date is displayed in the <em>yyyy-MM-dd</em> format.</p>
+         * <p>The date. The time follows the ISO 8601 standard in the <em>YYYY-MM-DD</em>T<em>hh:mm:ss</em> format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>20170120</p>
@@ -51,7 +51,7 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
         public String date;
 
         /**
-         * <p>The playback duration. Unit: millisecond.</p>
+         * <p>The total playback duration. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>967277</p>

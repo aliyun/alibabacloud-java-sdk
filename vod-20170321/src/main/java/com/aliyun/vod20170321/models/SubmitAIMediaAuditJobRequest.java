@@ -8,7 +8,7 @@ public class SubmitAIMediaAuditJobRequest extends TeaModel {
      * <p>The configuration information about the review job.</p>
      * <ul>
      * <li>Other configuration items of the review job. Only the ResourceType field is supported. This field is used to specify the type of media files. You can adjust review standards and rules based on the type of media files.</li>
-     * <li>If you want to modify the review standard and rules based on ResourceType, <a href="https://yida.alibaba-inc.com/o/ticketapply">submit a request on Yida</a> to reach technical support.</li>
+     * <li>If you want to modify the review standard and rules based on ResourceType, submit a ticket. For more information, see <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</li>
      * <li>The value of ResourceType can contain only letters, digits, and underscores (_).</li>
      * </ul>
      * 
@@ -40,8 +40,8 @@ public class SubmitAIMediaAuditJobRequest extends TeaModel {
     /**
      * <p>The ID of the AI template. You can use one of the following methods to obtain the ID of the AI template:</p>
      * <ul>
-     * <li>Obtain the ID of the AI template from the response to the <a href="https://help.aliyun.com/document_detail/102930.html">AddAITemplate</a> operation. The value of TemplateId is the ID of the AI template.</li>
-     * <li>Obtain the ID of the AI template from the response to the <a href="https://help.aliyun.com/document_detail/102936.html">ListAITemplate</a> operation. The value of TemplateId is the ID of the AI template.</li>
+     * <li>Obtain the value of TemplateId from the response to the <a href="https://help.aliyun.com/document_detail/102930.html">AddAITemplate</a> operation that you call to create an AI template.</li>
+     * <li>Obtain the value of TemplateId from the response to the <a href="https://help.aliyun.com/document_detail/102936.html">ListAITemplate</a> operation that you call to create an AI template.</li>
      * </ul>
      * <blockquote>
      * <p> If you do not specify an ID, the ID of the default AI template is used.</p>

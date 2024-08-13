@@ -31,6 +31,9 @@ public class CreateAppInfoRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static CreateAppInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAppInfoRequest self = new CreateAppInfoRequest();
         return TeaModel.build(map, self);
@@ -50,6 +53,14 @@ public class CreateAppInfoRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateAppInfoRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

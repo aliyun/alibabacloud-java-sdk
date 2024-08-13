@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListSnapshotsRequest extends TeaModel {
     /**
-     * <p>The validity period of the snapshot URL. Unit: seconds. Default value: <strong>3600</strong>. Minimum value: <strong>3600</strong>.</p>
+     * <p>The validity period of the snapshot URL. Default value: <strong>3600</strong>. Minimum value: <strong>3600</strong>. Unit: seconds.</p>
      * <ul>
-     * <li>This parameter only takes effect when <a href="https://help.aliyun.com/document_detail/57007.html">URL authentication</a> is enabled.</li>
-     * <li>If the specified validity period is less than <strong>3600</strong> seconds, the default value is <strong>3600</strong>.</li>
-     * <li>If an Object Storage Service (OSS) URL is returned, the maximum validity period is limited to <strong>2592000</strong> seconds (30 days) to reduce security risks of the origin.</li>
+     * <li>This parameter takes effect only when you enable URL signing. For more information, see <a href="https://help.aliyun.com/document_detail/57007.html">Configure URL signing</a>.</li>
+     * <li>If you specify a value smaller than <strong>3,600 seconds</strong>, <strong>3600</strong> is used by default.</li>
+     * <li>If the snapshot URL is an Object Storage Service (OSS) URL, the maximum value for this parameter is <strong>2592000</strong> (30 days). This reduces risks on the origin.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class ListSnapshotsRequest extends TeaModel {
     public String authTimeout;
 
     /**
-     * <p>The number of the page to turn. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -28,7 +28,7 @@ public class ListSnapshotsRequest extends TeaModel {
     public String pageNo;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>20</strong>. Maximum value: <strong>100</strong>.</p>
+     * <p>The number of entries per page. Default value: <strong>20</strong>. Maximum value: <strong>100</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -37,10 +37,10 @@ public class ListSnapshotsRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The type of snapshots that are returned. Valid values:</p>
+     * <p>The type of snapshots to return. Valid values:</p>
      * <ul>
      * <li><strong>CoverSnapshot</strong>: thumbnail snapshot</li>
-     * <li><strong>NormalSnapshot</strong>: normal snapshot</li>
+     * <li><strong>NormalSnapshot</strong>: regular snapshot</li>
      * <li><strong>SpriteSnapshot</strong>: sprite snapshot</li>
      * <li><strong>SpriteOriginSnapshot</strong>: sprite source snapshot</li>
      * <li><strong>WebVttSnapshot</strong>: WebVTT snapshot</li>
@@ -53,7 +53,12 @@ public class ListSnapshotsRequest extends TeaModel {
     public String snapshotType;
 
     /**
-     * <p>The ID of the video.</p>
+     * <p>The ID of the video. You can use one of the following methods to obtain the ID:</p>
+     * <ul>
+     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong> to view the video ID.</li>
+     * <li>Obtain the video ID from the response to the <a href="~~CreateUploadVideo~~">CreateUploadVideo</a> operation that you call to obtain the upload URL and credential.</li>
+     * <li>Obtain the video ID from the response to the <a href="~~SearchMedia~~">SearchMedia</a> operation that you call to query videos.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -22,6 +22,9 @@ public class ListAppInfoRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The status of the application. After an application is created, it enters the <strong>Normal</strong> state. Valid values:</p>
      * <ul>
@@ -54,6 +57,14 @@ public class ListAppInfoRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListAppInfoRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ListAppInfoRequest setStatus(String status) {

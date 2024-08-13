@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateUploadAttachedMediaResponseBody extends TeaModel {
     /**
-     * <p>The OSS URL of the file. The URL does not contain the information used for URL signing. You can set the FileUrl parameter to this URL when you call the <a href="https://help.aliyun.com/document_detail/98617.html">AddWatermark</a> operation.</p>
+     * <p>The URL of the auxiliary media asset file. The URL is an Object Storage Service (OSS) URL and does not contain the information used for URL signing.</p>
+     * <p>You can use specify this value for the <code>FileUrl</code> parameter when you call the <a href="~~AddWatermark~~">AddWatermark</a> operation to create a watermark template.</p>
      * 
      * <strong>example:</strong>
      * <p>https://<strong><strong>.oss-cn-shanghai.aliyuncs.com/watermark/</strong></strong>.mov</p>
@@ -23,9 +24,10 @@ public class CreateUploadAttachedMediaResponseBody extends TeaModel {
     public String mediaId;
 
     /**
-     * <p>The URL of the auxiliary media asset. If a domain name for Alibaba Cloud CDN (CDN) is specified, a CDN URL is returned. Otherwise, an OSS URL is returned.</p>
+     * <p>The URL of the auxiliary media asset.</p>
+     * <p>If a domain name for Alibaba Cloud CDN is specified, a CDN URL is returned. Otherwise, an OSS URL is returned.</p>
      * <blockquote>
-     * <p> If you enable the URL signing feature of ApsaraVideo VOD, you may be unable to access the returned URL of the auxiliary media asset by using a browser and the HTTP status code 403 may be returned. You can disable the <a href="https://help.aliyun.com/document_detail/86090.html">URL signing</a> feature or <a href="https://help.aliyun.com/document_detail/57007.html">generate an authentication signature</a>.</p>
+     * <p> If you enable the URL signing feature of ApsaraVideo VOD, you may be unable to access the returned URL of the auxiliary media asset by using a browser and the HTTP status code 403 may be returned. To resolve this issue, you can disable the <a href="https://help.aliyun.com/document_detail/86090.html">URL signing</a> feature or <a href="https://help.aliyun.com/document_detail/57007.html">generate a signed URL</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

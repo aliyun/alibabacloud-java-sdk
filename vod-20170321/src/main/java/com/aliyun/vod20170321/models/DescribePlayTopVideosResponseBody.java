@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePlayTopVideosResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
     public Long pageNo;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -93,7 +93,7 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
 
     public static class DescribePlayTopVideosResponseBodyTopPlayVideosTopPlayVideoStatis extends TeaModel {
         /**
-         * <p>The playback duration. Unit: milliseconds.</p>
+         * <p>The total playback duration. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>4640369</p>

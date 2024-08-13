@@ -60,7 +60,7 @@ public class AddEditingProjectResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The last time when the online editing project was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the online editing project was last modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-01-11T13:00:00Z</p>
@@ -80,10 +80,10 @@ public class AddEditingProjectResponseBody extends TeaModel {
         /**
          * <p>The status of the online editing project. Valid values:</p>
          * <ul>
-         * <li><strong>Normal</strong>: indicates that the online editing project is in draft.</li>
-         * <li><strong>Producing</strong>: indicates that the video is being produced.</li>
-         * <li><strong>Produced</strong>: indicates that the video was produced.</li>
-         * <li><strong>ProduceFailed</strong>: indicates that the video failed to be produced.</li>
+         * <li><strong>Normal</strong>: the online editing project is in draft.</li>
+         * <li><strong>Producing</strong>: the video is being produced.</li>
+         * <li><strong>Produced</strong>: the video is produced.</li>
+         * <li><strong>ProduceFailed</strong>: the video failed to be produced.</li>
          * </ul>
          * 
          * <strong>example:</strong>

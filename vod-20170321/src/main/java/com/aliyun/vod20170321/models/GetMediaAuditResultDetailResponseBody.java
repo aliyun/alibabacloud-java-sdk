@@ -42,10 +42,19 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
 
     public static class GetMediaAuditResultDetailResponseBodyMediaAuditResultDetailList extends TeaModel {
         /**
-         * <p>The category of the ad review result. Valid values:</p>
+         * <p>The category of the review result. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong>: normal content</li>
-         * <li><strong>ad</strong>: ad or text violation</li>
+         * <li><strong>normal</strong>: normal content.</li>
+         * <li><strong>ad</strong>: other ads.</li>
+         * <li><strong>politics</strong>: political content in text.</li>
+         * <li><strong>porn</strong>: pornographic content in text.</li>
+         * <li><strong>abuse</strong>: verbal abuse in text.</li>
+         * <li><strong>terrorism</strong>: terrorist content in text.</li>
+         * <li><strong>contraband</strong>: prohibited content in text.</li>
+         * <li><strong>spam</strong>: spam content in text.</li>
+         * <li><strong>npx</strong>: illegal ad</li>
+         * <li><strong>qrcode</strong>: QR code.</li>
+         * <li><strong>programCode</strong>: mini program code.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -55,7 +64,7 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
         public String adLabel;
 
         /**
-         * <p>The score of the review result category. It is representative of the confidence. Valid values: <code>[0.00-100.00].</code> The value is rounded down to 10 decimal places.</p>
+         * <p>The score of the video snapshot in the ad review result. Valid values: <code>[0,100]</code>. The value is rounded down to 10 decimal places. The score is representative of the confidence.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -64,10 +73,13 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
         public String adScore;
 
         /**
-         * <p>The category of the undesirable scene review result. Valid values:</p>
+         * <p>The category of the review result. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong>: The video does not contain undesirable scenes.</li>
-         * <li><strong>live</strong>: The video contains undesirable scenes.</li>
+         * <li><strong>normal</strong>: normal content.</li>
+         * <li><strong>meaningless</strong>: meaningless content, such as a black or white screen.</li>
+         * <li><strong>PIP</strong>: picture-in-picture.</li>
+         * <li><strong>smoking</strong>: smoking.</li>
+         * <li><strong>drivelive</strong>: live broadcasting in a running vehicle.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -77,7 +89,7 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
         public String liveLabel;
 
         /**
-         * <p>The score of the review result category. It is representative of the confidence. Valid values: <code>[0.00-100.00].</code> The value is rounded down to 10 decimal places.</p>
+         * <p>The score of the video snapshot in the undesirable content review result. Valid values: <code>[0,100]</code>. The value is rounded down to 10 decimal places. The score is representative of the confidence.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -86,10 +98,11 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
         public String liveScore;
 
         /**
-         * <p>The category of the logo review result. Valid values:</p>
+         * <p>The category of the review result. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong></li>
-         * <li><strong>tlogo</strong></li>
+         * <li><strong>normal</strong>: normal content.</li>
+         * <li><strong>TV</strong>: controlled TV station logo.</li>
+         * <li><strong>trademark</strong>: trademark.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -99,7 +112,7 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
         public String logoLabel;
 
         /**
-         * <p>The score of the review result category. It is representative of the confidence. Valid values: <code>[0.00-100.00].</code> The value is rounded down to 10 decimal places.</p>
+         * <p>The score of the video snapshot in the logo review result. Valid values: <code>[0,100]</code>. The value is rounded down to 10 decimal places. The score is representative of the confidence.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -108,7 +121,7 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
         public String logoScore;
 
         /**
-         * <p>The category of the pornographic content review result. Valid values:</p>
+         * <p>The category of the review result. Valid values:</p>
          * <ul>
          * <li><strong>normal</strong></li>
          * <li><strong>porn</strong></li>
@@ -122,7 +135,7 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
         public String pornLabel;
 
         /**
-         * <p>The score of the review result category. It is representative of the confidence. Valid values: <code>[0.00-100.00].</code> The value is rounded down to 10 decimal places.</p>
+         * <p>The score of the video snapshot in the pornographic content review result. Valid values: <code>[0,100]</code>. The value is rounded down to 10 decimal places. The score is representative of the confidence.</p>
          * 
          * <strong>example:</strong>
          * <p>100.00</p>
@@ -131,15 +144,22 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
         public String pornScore;
 
         /**
-         * <p>The category of the terrorist content review result.</p>
+         * <p>The category of the review result. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong>: normal</li>
-         * <li><strong>terrorism</strong>: terrorist content</li>
-         * <li><strong>outfit</strong>: special costume</li>
-         * <li><strong>logo</strong>: special logo</li>
-         * <li><strong>weapon</strong>: weapon</li>
-         * <li><strong>politics</strong>: politically sensitive content</li>
-         * <li><strong>others</strong>: other terrorist content and politically sensitive content</li>
+         * <li><strong>normal</strong></li>
+         * <li><strong>bloody</strong></li>
+         * <li><strong>explosion</strong></li>
+         * <li><strong>outfit</strong></li>
+         * <li><strong>logo</strong></li>
+         * <li><strong>weapon</strong></li>
+         * <li><strong>politics</strong></li>
+         * <li><strong>violence</strong></li>
+         * <li><strong>crowd</strong></li>
+         * <li><strong>parade</strong></li>
+         * <li><strong>carcrash</strong></li>
+         * <li><strong>flag</strong></li>
+         * <li><strong>location</strong></li>
+         * <li><strong>others</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +169,7 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
         public String terrorismLabel;
 
         /**
-         * <p>The score of the review result category. It is representative of the confidence. Valid values: <code>[0.00-100.00].</code> The value is rounded down to 10 decimal places.</p>
+         * <p>The score of the video snapshot in the terrorist content review result. Valid values: <code>[0,100]</code>. The value is rounded down to 10 decimal places. The score is representative of the confidence.</p>
          * 
          * <strong>example:</strong>
          * <p>100.00</p>
@@ -158,7 +178,7 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
         public String terrorismScore;
 
         /**
-         * <p>The position in the video. Unit: milliseconds.</p>
+         * <p>The timestamp of the snapshot in the video. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3005</p>
@@ -167,7 +187,7 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
         public String timestamp;
 
         /**
-         * <p>The URL of the image.</p>
+         * <p>The URL of the video snapshot.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://temp-testbucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg">http://temp-testbucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg</a></p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVodDomainLogRequest extends TeaModel {
     /**
-     * <p>The domain name.</p>
+     * <p>The domain name for CDN.</p>
      * <blockquote>
      * <p> You can specify only one domain name in each query.</p>
      * </blockquote>

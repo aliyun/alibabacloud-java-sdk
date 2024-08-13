@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitPreprocessJobsResponseBody extends TeaModel {
     /**
-     * <p>The job information.</p>
+     * <p>The information about the job.</p>
      */
     @NameInMap("PreprocessJobs")
     public SubmitPreprocessJobsResponseBodyPreprocessJobs preprocessJobs;
