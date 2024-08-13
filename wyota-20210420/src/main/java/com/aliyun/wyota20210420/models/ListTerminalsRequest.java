@@ -25,12 +25,18 @@ public class ListTerminalsRequest extends TeaModel {
     @NameInMap("SearchKeyword")
     public String searchKeyword;
 
+    @NameInMap("SerialNumbers")
+    public java.util.List<String> serialNumbers;
+
     /**
      * <strong>example:</strong>
      * <p>tg-default</p>
      */
     @NameInMap("TerminalGroupId")
     public String terminalGroupId;
+
+    @NameInMap("Uuids")
+    public java.util.List<String> uuids;
 
     public static ListTerminalsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTerminalsRequest self = new ListTerminalsRequest();
@@ -61,12 +67,28 @@ public class ListTerminalsRequest extends TeaModel {
         return this.searchKeyword;
     }
 
+    public ListTerminalsRequest setSerialNumbers(java.util.List<String> serialNumbers) {
+        this.serialNumbers = serialNumbers;
+        return this;
+    }
+    public java.util.List<String> getSerialNumbers() {
+        return this.serialNumbers;
+    }
+
     public ListTerminalsRequest setTerminalGroupId(String terminalGroupId) {
         this.terminalGroupId = terminalGroupId;
         return this;
     }
     public String getTerminalGroupId() {
         return this.terminalGroupId;
+    }
+
+    public ListTerminalsRequest setUuids(java.util.List<String> uuids) {
+        this.uuids = uuids;
+        return this;
+    }
+    public java.util.List<String> getUuids() {
+        return this.uuids;
     }
 
 }

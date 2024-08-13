@@ -4,6 +4,9 @@ package com.aliyun.wyota20210420.models;
 import com.aliyun.tea.*;
 
 public class SendOpsMessageToTerminalsRequest extends TeaModel {
+    @NameInMap("Delay")
+    public Boolean delay;
+
     @NameInMap("Msg")
     public String msg;
 
@@ -19,6 +22,14 @@ public class SendOpsMessageToTerminalsRequest extends TeaModel {
     public static SendOpsMessageToTerminalsRequest build(java.util.Map<String, ?> map) throws Exception {
         SendOpsMessageToTerminalsRequest self = new SendOpsMessageToTerminalsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SendOpsMessageToTerminalsRequest setDelay(Boolean delay) {
+        this.delay = delay;
+        return this;
+    }
+    public Boolean getDelay() {
+        return this.delay;
     }
 
     public SendOpsMessageToTerminalsRequest setMsg(String msg) {
