@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GrantUserPermissionsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4412F213-DBCD-5D1B-A9A1-F6C26C6C19D9</p>
      */
     @NameInMap("RequestId")
     public String requestId;

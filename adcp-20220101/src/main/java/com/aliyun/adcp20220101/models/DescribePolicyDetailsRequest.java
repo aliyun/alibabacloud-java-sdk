@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribePolicyDetailsRequest extends TeaModel {
     /**
      * <p>The policy name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACKAllowedRepos</p>
      */
     @NameInMap("PolicyName")
     public String policyName;

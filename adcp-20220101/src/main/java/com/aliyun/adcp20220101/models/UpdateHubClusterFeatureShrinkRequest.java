@@ -12,126 +12,181 @@ public class UpdateHubClusterFeatureShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the EIP.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eip-xxx</p>
      */
     @NameInMap("ApiServerEipId")
     public String apiServerEipId;
 
     /**
      * <p>Specifies whether to enable Argo CD. This parameter takes effect only if Profile is set to XFlow. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ArgoCDEnabled")
     public Boolean argoCDEnabled;
 
     /**
      * <p>Specifies whether to enable high availability for Argo CD. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ArgoCDHAEnabled")
     public Boolean argoCDHAEnabled;
 
     /**
      * <p>Specifies whether to enable ArgoEvents. Valid values:</p>
-     * <br>
-     * <p>- true</p>
-     * <p>- false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ArgoEventsEnabled")
     public Boolean argoEventsEnabled;
 
     /**
      * <p>Specifies whether to enable the workflow instance UI. This parameter takes effect only if Profile is set to XFlow. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ArgoServerEnabled")
     public Boolean argoServerEnabled;
 
     /**
      * <p>Specifies whether to enable the audit logging feature. Valid values:</p>
-     * <br>
-     * <p>*   true: enables the audit logging feature.</p>
-     * <p>*   false: disables the audit logging feature.</p>
+     * <ul>
+     * <li>true: enables the audit logging feature.</li>
+     * <li>false: disables the audit logging feature.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AuditLogEnabled")
     public Boolean auditLogEnabled;
 
     /**
      * <p>The cluster ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c46979b1075f04d99b5f2b710393e5****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>Specifies whether to enable the deletion protection feature for the cluster. After you enable the deletion protection feature for the cluster, you cannot delete the cluster in the console or by calling the DeleteHubCluster operation. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("DeletionProtection")
     public Boolean deletionProtection;
 
     /**
      * <p>Specifies whether to enable Service Mesh (ASM). Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EnableMesh")
     public Boolean enableMesh;
 
     /**
      * <p>Specifies whether to enable Gateway. Valid values:</p>
-     * <p>- true</p>
-     * <p>- false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("GatewayEnabled")
     public Boolean gatewayEnabled;
 
     /**
      * <p>Specifies whether to enable the monitoring dashboard feature for the workflow instance. This parameter takes effect only if Profile is set to XFlow. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("MonitorEnabled")
     public Boolean monitorEnabled;
 
     /**
      * <p>The name of the master instance. The name must be 1 to 63 characters in length. It must start with a letter, and can contain letters, digits, underscores (_), and hyphens (-).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ack-demo</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The limit on the prices of containers in the workflow. This parameter takes effect only if the WorkflowScheduleMode parameter is set to cost-optimized.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.08</p>
      */
     @NameInMap("PriceLimit")
     public String priceLimit;
 
     /**
      * <p>Specifies whether to enable public domain name resolution in the Argo CD or Argo Workflow console. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("PublicAccessEnabled")
     public Boolean publicAccessEnabled;
 
     /**
      * <p>Specifies whether to associate an elastic IP address (EIP) with the API server. Valid values:</p>
-     * <br>
-     * <p>*   true: associates an EIP with the API server. You can specify ApiServerEipId. If you do not specify ApiServerEipId, the system automatically creates an EIP.</p>
-     * <p>*   false: disassociates an EIP from the API server.</p>
+     * <ul>
+     * <li>true: associates an EIP with the API server. You can specify ApiServerEipId. If you do not specify ApiServerEipId, the system automatically creates an EIP.</li>
+     * <li>false: disassociates an EIP from the API server.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("PublicApiServerEnabled")
     public Boolean publicApiServerEnabled;
@@ -144,9 +199,13 @@ public class UpdateHubClusterFeatureShrinkRequest extends TeaModel {
 
     /**
      * <p>The scheduling mode of the workflow. This parameter takes effect only if Profile is set to XFlow. Valid values:</p>
-     * <br>
-     * <p>*   cost-optimized: cost-prioritized scheduling mode.</p>
-     * <p>*   stock-optimized: inventory-prioritized scheduling mode.</p>
+     * <ul>
+     * <li>cost-optimized: cost-prioritized scheduling mode.</li>
+     * <li>stock-optimized: inventory-prioritized scheduling mode.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cost-optimized</p>
      */
     @NameInMap("WorkflowScheduleMode")
     public String workflowScheduleMode;

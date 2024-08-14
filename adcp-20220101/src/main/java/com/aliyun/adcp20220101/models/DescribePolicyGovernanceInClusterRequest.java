@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribePolicyGovernanceInClusterRequest extends TeaModel {
     /**
      * <p>The ID of the master instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c09946603cd764dac96135f51d1ba****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;

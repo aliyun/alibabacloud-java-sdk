@@ -12,6 +12,9 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2D676EFC-8C04-5CCE-A08E-BB97D24B47E8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,53 +43,79 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
     public static class DescribePolicyDetailsResponseBodyPolicy extends TeaModel {
         /**
          * <p>The action of the policy. Valid values:</p>
-         * <br>
-         * <p>*   enforce: blocks deployments that match the policy.</p>
-         * <p>*   inform: generates alerts for deployments that match the policy.</p>
+         * <ul>
+         * <li>enforce: blocks deployments that match the policy.</li>
+         * <li>inform: generates alerts for deployments that match the policy.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enforce</p>
          */
         @NameInMap("Action")
         public String action;
 
         /**
          * <p>The type of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k8s-general</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>The time when the policy was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-18T10:52:17+08:00</p>
          */
         @NameInMap("Created")
         public String created;
 
         /**
          * <p>The description of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Requires container images to begin with a repo string from a specified list</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACKAllowedRepos</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>Indicates whether parameters are required. Valid values:</p>
-         * <br>
-         * <p>*   0: Parameters are required.</p>
-         * <p>*   1: Parameters are not required.</p>
+         * <ul>
+         * <li>0: Parameters are required.</li>
+         * <li>1: Parameters are not required.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("NoConfig")
         public Integer noConfig;
 
         /**
          * <p>The severity level of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
          */
         @NameInMap("Severity")
         public String severity;
 
         /**
+         * <p>The content of the policy.</p>
+         * 
+         * <strong>example:</strong>
          * <p>The content of the policy.</p>
          */
         @NameInMap("Template")
@@ -94,6 +123,9 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
 
         /**
          * <p>The time when the policy was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-18T10:52:17+08:00</p>
          */
         @NameInMap("Updated")
         public String updated;

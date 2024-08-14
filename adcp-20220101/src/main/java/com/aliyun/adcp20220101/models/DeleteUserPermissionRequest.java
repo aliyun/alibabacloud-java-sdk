@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class DeleteUserPermissionRequest extends TeaModel {
     /**
      * <p>The ID of the master instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c09946603cd764dac96135f51d1ba****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The ID of the RAM user.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2176****</p>
      */
     @NameInMap("UserId")
     public String userId;

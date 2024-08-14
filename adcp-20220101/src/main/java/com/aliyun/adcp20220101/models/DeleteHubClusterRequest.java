@@ -6,19 +6,24 @@ import com.aliyun.tea.*;
 public class DeleteHubClusterRequest extends TeaModel {
     /**
      * <p>The ID of the master instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cd90dd24a86fd42f895a1b77df620****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>Specifies whether to forcefully delete the master instance in ACK One. Valid values:</p>
-     * <br>
-     * <p>*   true: forcefully deletes the master instance in ACK One.</p>
-     * <p>*   false: does not forcibly delete the master instance in ACK One.</p>
-     * <br>
+     * <ul>
+     * <li>true: forcefully deletes the master instance in ACK One.</li>
+     * <li>false: does not forcibly delete the master instance in ACK One.</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Force")
     public Boolean force;

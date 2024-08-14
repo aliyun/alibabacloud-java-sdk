@@ -12,6 +12,9 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>52C1B7DF-96C1-5214-97B6-1B0859FEAFE5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,21 +43,31 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
     public static class DescribeHubClusterDetailsResponseBodyClusterApiServer extends TeaModel {
         /**
          * <p>The ID of the elastic IP address (EIP).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-abc****</p>
          */
         @NameInMap("ApiServerEipId")
         public String apiServerEipId;
 
         /**
          * <p>Indicates whether the API server is accessible over the Internet. Valid values:</p>
-         * <br>
-         * <p>*   true: The API server is accessible over the Internet.</p>
-         * <p>*   false: The API server is inaccessible over the Internet.</p>
+         * <ul>
+         * <li>true: The API server is accessible over the Internet.</li>
+         * <li>false: The API server is inaccessible over the Internet.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EnabledPublic")
         public Boolean enabledPublic;
 
         /**
          * <p>The ID of the Server Load Balancer (SLB) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-hp3ioqbfeq37h13rwe***</p>
          */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
@@ -99,27 +112,39 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether GitOps is enabled. Valid values:</p>
-         * <br>
-         * <p>*   true: GitOps is enabled.</p>
-         * <p>*   false: GitOps is disabled.</p>
+         * <ul>
+         * <li>true: GitOps is enabled.</li>
+         * <li>false: GitOps is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
          * <p>Indicates whether GitOps High Availability is enabled. Valid values:</p>
-         * <br>
-         * <p>*   true:  GitOps High Availability is enabled.</p>
-         * <p>*   false:  GitOps High Availability is disabled.</p>
+         * <ul>
+         * <li>true:  GitOps High Availability is enabled.</li>
+         * <li>false:  GitOps High Availability is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("HAEnabled")
         public Boolean HAEnabled;
 
         /**
          * <p>Specifies whether to enable public domain name resolution in the Argo CD or Argo Workflow console. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("PublicAccessEnabled")
         public Boolean publicAccessEnabled;
@@ -172,27 +197,39 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
 
         /**
          * <p>Specifies whether to enable the argo workflow. Valid values:</p>
-         * <br>
-         * <p>*   **false** (default)</p>
-         * <p>*   **true**</p>
+         * <ul>
+         * <li><strong>false</strong> (default)</li>
+         * <li><strong>true</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
          * <p>Specifies whether to enable public domain name resolution in the Argo CD or Argo Workflow console. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("PublicAccessEnabled")
         public Boolean publicAccessEnabled;
 
         /**
          * <p>Specifies whether to enable the argo workflow. UI Valid values:</p>
-         * <br>
-         * <p>*   **false** (default)</p>
-         * <p>*   **true**</p>
+         * <ul>
+         * <li><strong>false</strong> (default)</li>
+         * <li><strong>true</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ServerEnabled")
         public String serverEnabled;
@@ -349,26 +386,39 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
     public static class DescribeHubClusterDetailsResponseBodyClusterClusterInfo extends TeaModel {
         /**
          * <p>The ID of the master instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cb09fda0dc2f94a8397c76638c7ecf***</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The specification of the master instance. Valid value:</p>
-         * <br>
-         * <p>*   ack.pro.small: ACK Pro cluster</p>
+         * <ul>
+         * <li>ack.pro.small: ACK Pro cluster</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ack.pro.small</p>
          */
         @NameInMap("ClusterSpec")
         public String clusterSpec;
 
         /**
          * <p>The time when the master instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-03-23T06:22:28Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The error message returned when the master instance failed to be created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified product does not exist.</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
@@ -381,38 +431,54 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the master instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ackone-heyuan</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The configurations of the master instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         @NameInMap("Profile")
         public String profile;
 
         /**
          * <p>The ID of the region in which the master instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of Resource Group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-1w4vdvo6p51***</p>
          */
         @NameInMap("ResourceGroupID")
         public String resourceGroupID;
 
         /**
          * <p>The status of the master instance. Valid values:</p>
-         * <br>
-         * <p>*   initial: The master instance is being initialized.</p>
-         * <p>*   failed: The master instance failed to be created.</p>
-         * <p>*   running: The master instance is running</p>
-         * <p>*   inactive: The master instance is pending.</p>
-         * <p>*   deleting: The master instance is being deleted.</p>
-         * <p>*   delete_failed: The master instance failed to be deleted.</p>
-         * <p>*   deleted: The master instance is deleted.</p>
+         * <ul>
+         * <li>initial: The master instance is being initialized.</li>
+         * <li>failed: The master instance failed to be created.</li>
+         * <li>running: The master instance is running</li>
+         * <li>inactive: The master instance is pending.</li>
+         * <li>deleting: The master instance is being deleted.</li>
+         * <li>delete_failed: The master instance failed to be deleted.</li>
+         * <li>deleted: The master instance is deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         @NameInMap("State")
         public String state;
@@ -422,12 +488,18 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
 
         /**
          * <p>The time when the master instance was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-03-21T02:51:35.542Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
 
         /**
          * <p>The version of the master instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.22.3-aliyun.1</p>
          */
         @NameInMap("Version")
         public String version;
@@ -546,28 +618,41 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
     public static class DescribeHubClusterDetailsResponseBodyClusterConditions extends TeaModel {
         /**
          * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The reason for the deletion condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
          * <p>The status of the master instance that the deletion condition indicates. Valid values:</p>
-         * <br>
-         * <p>*   True: The master instance cannot be deleted.</p>
-         * <p>*   False: The master instance can be deleted.</p>
-         * <p>*   Unknow: Whether the master instance can be deleted is unknown.</p>
+         * <ul>
+         * <li>True: The master instance cannot be deleted.</li>
+         * <li>False: The master instance can be deleted.</li>
+         * <li>Unknow: Whether the master instance can be deleted is unknown.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The type of deletion condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DeletionProtection</p>
          */
         @NameInMap("Type")
         public String type;
@@ -614,12 +699,18 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
     public static class DescribeHubClusterDetailsResponseBodyClusterEndpoints extends TeaModel {
         /**
          * <p>The endpoint that is used to access the API server over the internal network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://172.16.6.**:6443">https://172.16.6.**:6443</a></p>
          */
         @NameInMap("IntranetApiServerEndpoint")
         public String intranetApiServerEndpoint;
 
         /**
          * <p>The endpoint that is used to access the API server over the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://123.57.21.***:6443">https://123.57.21.***:6443</a></p>
          */
         @NameInMap("PublicApiServerEndpoint")
         public String publicApiServerEndpoint;
@@ -650,21 +741,31 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
     public static class DescribeHubClusterDetailsResponseBodyClusterLogConfig extends TeaModel {
         /**
          * <p>Indicates whether the audit logging feature is enabled. Valid values:</p>
-         * <br>
-         * <p>*   true: Audit logging is enabled.</p>
-         * <p>*   false: Audit logging is disabled.</p>
+         * <ul>
+         * <li>true: Audit logging is enabled.</li>
+         * <li>false: Audit logging is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("EnableLog")
         public Boolean enableLog;
 
         /**
          * <p>The name of the project of Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k8s-log-abc</p>
          */
         @NameInMap("LogProject")
         public String logProject;
 
         /**
          * <p>The number of days that logs are retained by Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         @NameInMap("LogStoreTTL")
         public String logStoreTTL;
@@ -703,15 +804,22 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
     public static class DescribeHubClusterDetailsResponseBodyClusterMeshConfig extends TeaModel {
         /**
          * <p>Indicates whether ASM is enabled. Valid values:</p>
-         * <br>
-         * <p>*   true: ASM is enabled.</p>
-         * <p>*   false: ASM is disabled.</p>
+         * <ul>
+         * <li>true: ASM is enabled.</li>
+         * <li>false: ASM is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("EnableMesh")
         public Boolean enableMesh;
 
         /**
          * <p>service mesh (ASM) instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cb09fda0dc2f94a8397c76638c7ecf***</p>
          */
         @NameInMap("MeshId")
         public String meshId;
@@ -742,16 +850,23 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
     public static class DescribeHubClusterDetailsResponseBodyClusterNetwork extends TeaModel {
         /**
          * <p>The domain name of the master instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster.local</p>
          */
         @NameInMap("ClusterDomain")
         public String clusterDomain;
 
         /**
          * <p>The IP version that is supported by the master instance. Valid values:</p>
-         * <br>
-         * <p>*   ipv4: IPv4.</p>
-         * <p>*   ipv6: IPv6.</p>
-         * <p>*   dual: IPv4 and IPv6.</p>
+         * <ul>
+         * <li>ipv4: IPv4.</li>
+         * <li>ipv6: IPv6.</li>
+         * <li>dual: IPv4 and IPv6.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv4</p>
          */
         @NameInMap("IPStack")
         public String IPStack;
@@ -770,6 +885,9 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the virtual private cloud (VPC) in which the master instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-f8ziib1019r9o0hdv2***</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
@@ -824,14 +942,21 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
     public static class DescribeHubClusterDetailsResponseBodyClusterWorkflowConfigWorkflowUnitsVSwitches extends TeaModel {
         /**
          * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-wz9sf0hsuizl7bxnj****</p>
          */
         @NameInMap("VswitchId")
         public String vswitchId;
 
         /**
          * <p>The zone ID of the cluster.</p>
-         * <br>
-         * <p>> You can call the [DescribeRegions](https://help.aliyun.com/document_detail/143074.html) operation to query the most recent zone list.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent zone list.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-e</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
@@ -862,8 +987,12 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
     public static class DescribeHubClusterDetailsResponseBodyClusterWorkflowConfigWorkflowUnits extends TeaModel {
         /**
          * <p>The region ID of the cluster.</p>
-         * <br>
-         * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/143074.html) operation to query the most recent region list.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -876,6 +1005,9 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-f8zukabbkv5aw7zkm****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
@@ -914,24 +1046,35 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
     public static class DescribeHubClusterDetailsResponseBodyClusterWorkflowConfig extends TeaModel {
         /**
          * <p>Specifies whether to enable the workflow instance UI. This parameter takes effect only if Profile is set to XFlow. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ArgoServerEnabled")
         public Boolean argoServerEnabled;
 
         /**
          * <p>The limit on the prices of containers in the workflow. This parameter takes effect only if the WorkflowScheduleMode parameter is set to cost-optimized.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.08</p>
          */
         @NameInMap("PriceLimit")
         public String priceLimit;
 
         /**
          * <p>The scheduling mode of the workflow. This parameter takes effect only if Profile is set to XFlow. Valid values:</p>
-         * <br>
-         * <p>*   cost-optimized: cost-prioritized scheduling mode.</p>
-         * <p>*   stock-optimized: inventory-prioritized scheduling mode.</p>
+         * <ul>
+         * <li>cost-optimized: cost-prioritized scheduling mode.</li>
+         * <li>stock-optimized: inventory-prioritized scheduling mode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cost-optimized</p>
          */
         @NameInMap("WorkflowScheduleMode")
         public String workflowScheduleMode;

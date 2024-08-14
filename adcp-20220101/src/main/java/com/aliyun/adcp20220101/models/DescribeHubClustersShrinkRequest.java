@@ -6,16 +6,25 @@ import com.aliyun.tea.*;
 public class DescribeHubClustersShrinkRequest extends TeaModel {
     /**
      * <p>The configurations of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Default</p>
      */
     @NameInMap("Profile")
     public String profile;
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekz77rhypeu***</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public String tagShrink;
 

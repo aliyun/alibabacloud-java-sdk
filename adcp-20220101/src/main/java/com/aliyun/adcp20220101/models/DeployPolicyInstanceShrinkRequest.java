@@ -6,15 +6,16 @@ import com.aliyun.tea.*;
 public class DeployPolicyInstanceShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the master instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c102fe5f1ee5d4c87a68121a77d8b****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>An array of JSON strings. The JSON strings in the array indicate the IDs of the associated clusters in which the policy instance is deployed.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterIds")
@@ -28,19 +29,24 @@ public class DeployPolicyInstanceShrinkRequest extends TeaModel {
 
     /**
      * <p>The action of the policy. Valid values:</p>
-     * <br>
-     * <p>*   deny: blocks deployments that match the policy.</p>
-     * <p>*   warn: generates alerts for deployments that match the policy.</p>
-     * <br>
+     * <ul>
+     * <li>deny: blocks deployments that match the policy.</li>
+     * <li>warn: generates alerts for deployments that match the policy.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>warn</p>
      */
     @NameInMap("PolicyAction")
     public String policyAction;
 
     /**
      * <p>The name of the policy.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACKNoEnvVarSecrets</p>
      */
     @NameInMap("PolicyName")
     public String policyName;

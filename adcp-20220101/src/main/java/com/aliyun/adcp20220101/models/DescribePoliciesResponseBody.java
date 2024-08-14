@@ -12,6 +12,9 @@ public class DescribePoliciesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9439169C-64C1-5849-9F7C-E3E60BDDEF7A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class DescribePoliciesResponseBody extends TeaModel {
     public static class DescribePoliciesResponseBodyPolicies extends TeaModel {
         /**
          * <p>The policy type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>psp</p>
          */
         @NameInMap("Category")
         public String category;

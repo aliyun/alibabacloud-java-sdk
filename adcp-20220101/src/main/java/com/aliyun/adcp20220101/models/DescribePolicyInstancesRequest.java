@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class DescribePolicyInstancesRequest extends TeaModel {
     /**
      * <p>The ID of the master instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c102fe5f1ee5d4c87a68121a77d8b****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The name of the policy.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACKNoEnvVarSecrets</p>
      */
     @NameInMap("PolicyName")
     public String policyName;

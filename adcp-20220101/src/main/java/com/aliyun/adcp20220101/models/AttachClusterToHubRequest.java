@@ -5,23 +5,30 @@ import com.aliyun.tea.*;
 
 public class AttachClusterToHubRequest extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **AttachClusterToHub**.</p>
+     * <p>The operation that you want to perform. Set the value to <strong>AttachClusterToHub</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AttachToMesh")
     public Boolean attachToMesh;
 
     /**
      * <p>The ID of the task.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cd08d62e6506a4fa5a8c44c19d0fc****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The ID of the request.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;cdea10134be464ba4acb36cc831a6****&quot;]</p>
      */
     @NameInMap("ClusterIds")
     public String clusterIds;
