@@ -6222,6 +6222,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NextToken", request.nextToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
             query.put("SortBy", request.sortBy);
         }

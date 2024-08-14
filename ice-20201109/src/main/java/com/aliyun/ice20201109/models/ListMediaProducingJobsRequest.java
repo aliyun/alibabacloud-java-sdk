@@ -46,6 +46,9 @@ public class ListMediaProducingJobsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("ProjectId")
+    public String projectId;
+
     /**
      * <strong>example:</strong>
      * <p>CreationTime:Desc</p>
@@ -118,6 +121,14 @@ public class ListMediaProducingJobsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListMediaProducingJobsRequest setProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public String getProjectId() {
+        return this.projectId;
     }
 
     public ListMediaProducingJobsRequest setSortBy(String sortBy) {
