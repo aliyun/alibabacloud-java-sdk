@@ -6,44 +6,57 @@ import com.aliyun.tea.*;
 public class UpdateUserPermissionRequest extends TeaModel {
     /**
      * <p>The ID of the master instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c8e28143817db4b039b8548d7c899****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The namespace to which the permissions are scoped. By default, this parameter is empty when you set RoleType to cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>Specifies the predefined role that you want to assign. Valid values:</p>
-     * <br>
-     * <p>*   admin: the administrator role.</p>
-     * <p>*   dev: the developer role.</p>
-     * <br>
+     * <ul>
+     * <li>admin: the administrator role.</li>
+     * <li>dev: the developer role.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>admin</p>
      */
     @NameInMap("RoleName")
     public String roleName;
 
     /**
      * <p>The authorization type. Valid values:</p>
-     * <br>
-     * <p>*   cluster: specifies that the permissions are scoped to a master instance.</p>
-     * <p>*   namespace: specifies that the permissions are scoped to a namespace of a cluster.</p>
-     * <br>
+     * <ul>
+     * <li>cluster: specifies that the permissions are scoped to a master instance.</li>
+     * <li>namespace: specifies that the permissions are scoped to a namespace of a cluster.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cluster</p>
      */
     @NameInMap("RoleType")
     public String roleType;
 
     /**
      * <p>The ID of the RAM user.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2176****</p>
      */
     @NameInMap("UserId")
     public String userId;

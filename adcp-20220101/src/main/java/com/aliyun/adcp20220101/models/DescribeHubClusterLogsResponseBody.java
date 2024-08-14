@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeHubClusterLogsResponseBody extends TeaModel {
     /**
-     * <p>Brief information about operation logs.</p>
+     * <p>The details of operations logs.</p>
      */
     @NameInMap("Logs")
     public java.util.List<DescribeHubClusterLogsResponseBodyLogs> logs;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>661192D7-25A6-54C2-B643-1129CB7D2768</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,25 +42,42 @@ public class DescribeHubClusterLogsResponseBody extends TeaModel {
 
     public static class DescribeHubClusterLogsResponseBodyLogs extends TeaModel {
         /**
-         * <p>The ID of the master instance.</p>
+         * <p>The ID of the Fleet instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c102fe5f1ee5d4c87a68121a77d8b0f38</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
-         * <p>A log of the master instance.</p>
+         * <p>The log of the Fleet instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cluster Created</p>
          */
         @NameInMap("ClusterLog")
         public String clusterLog;
 
         /**
-         * <p>The time when the log was created. Format: <i>yyyy-mm-dd</i>t<i>hh:mm:ss</i>z (UTC time).</p>
+         * <p>The time when the log was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-02T11:48:15+08:00</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The severity level of the log. Valid values: - error: errors. - warn: warnings. - info: information.</p>
+         * <p>The log level. Valid values:</p>
+         * <ul>
+         * <li>error</li>
+         * <li>warn</li>
+         * <li>info</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>INFO</p>
          */
         @NameInMap("LogLevel")
         public String logLevel;

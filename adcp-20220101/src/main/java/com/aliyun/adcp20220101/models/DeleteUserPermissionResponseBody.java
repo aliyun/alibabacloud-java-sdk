@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteUserPermissionResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2D676EFC-8C04-5CCE-A08E-BB97D24B47E8</p>
      */
     @NameInMap("RequestId")
     public String requestId;

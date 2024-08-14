@@ -5,20 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeHubClusterKubeconfigRequest extends TeaModel {
     /**
-     * <p>The ID of the master instance.</p>
-     * <br>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c102fe5f1ee5d4c87a68121a77d8b****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>Specifies whether to obtain the kubeconfig file that is used to connect to the cluster over the internal network. Valid values:</p>
-     * <br>
-     * <p>*   `true`: obtains the kubeconfig file that is used to connect to the master instance over the internal network.</p>
-     * <p>*   `false`: obtains the kubeconfig file that is used to connect to the master instance over the Internet.</p>
-     * <br>
-     * <p>Default value: `false`</p>
+     * <ul>
+     * <li><code>true</code>: obtains the kubeconfig file that is used to connect to the master instance over the internal network.</li>
+     * <li><code>false</code>: obtains the kubeconfig file that is used to connect to the master instance over the Internet.</li>
+     * </ul>
+     * <p>Default value: <code>false</code></p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("PrivateIpAddress")
     public Boolean privateIpAddress;

@@ -5,23 +5,30 @@ import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the new resource group.</p>
-     * <br>
+     * <p>The ID of the new resource group. You can view the available resource groups in the Resource Management console.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekzlvgbhaca***</p>
      */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
 
     /**
-     * <p>The resource ID. If ResourceType=cluster, the resource ID is ClusterId.</p>
-     * <br>
+     * <p>The ID of the resource. The value of this parameter varies with the resource type. For example, if you set ResourceType to cluster, this parameter specifies a cluster ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c9603ee23a84a41d6a1424619cb80****</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
-     * <p>The type of the resource. Only cluster are supported. Set the value to cluster.</p>
+     * <p>The resource type. Set the value to cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cluster</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

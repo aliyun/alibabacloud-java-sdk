@@ -12,6 +12,9 @@ public class DescribePolicyInstancesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5BE4C329-DCC2-5B61-8F66-112B7D7FC712</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,39 +43,58 @@ public class DescribePolicyInstancesResponseBody extends TeaModel {
     public static class DescribePolicyInstancesResponseBodyPolicies extends TeaModel {
         /**
          * <p>The ID of the associated cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cd0e6882394f7496589837cac3585****</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The name of the policy instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>no-env-var-secrets-****</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The action of the policy. Valid values:</p>
-         * <br>
-         * <p>*   deny: blocks deployments that match the policy.</p>
-         * <p>*   warn: generates alerts for deployments that match the policy.</p>
+         * <ul>
+         * <li>deny: blocks deployments that match the policy.</li>
+         * <li>warn: generates alerts for deployments that match the policy.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>warn</p>
          */
         @NameInMap("PolicyAction")
         public String policyAction;
 
         /**
          * <p>The type of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k8s-general</p>
          */
         @NameInMap("PolicyCategory")
         public String policyCategory;
 
         /**
          * <p>The description of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Restricts secrets used in pod envs</p>
          */
         @NameInMap("PolicyDescription")
         public String policyDescription;
 
         /**
          * <p>The name of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACKPSPCapabilities</p>
          */
         @NameInMap("PolicyName")
         public String policyName;
@@ -85,22 +107,31 @@ public class DescribePolicyInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The applicable scope of the policy instance.</p>
-         * <br>
-         * <p>A value of \\* indicates all namespaces. This is the default value.</p>
-         * <br>
+         * <p>A value of \* indicates all namespaces. This is the default value.</p>
          * <p>Multiple namespaces are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("PolicyScope")
         public String policyScope;
 
         /**
          * <p>The severity level of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>low</p>
          */
         @NameInMap("PolicySeverity")
         public String policySeverity;
 
         /**
          * <p>The total number of deployments that match the policy in the associated cluster, including the deployments that are blocked and the deployments that have triggered alerting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TotalViolations")
         public Long totalViolations;

@@ -6,98 +6,139 @@ import com.aliyun.tea.*;
 public class CreateHubClusterShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to expose the API server to the Internet. Valid values:</p>
-     * <br>
-     * <p>*   true: exposes the API server to the Internet.</p>
-     * <p>*   false: exposes the API server to the internal network.</p>
+     * <ul>
+     * <li>true: exposes the API server to the Internet.</li>
+     * <li>false: exposes the API server to the internal network.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ApiServerPublicEip")
     public Boolean apiServerPublicEip;
 
     /**
      * <p>Specifies whether to enable the workflow instance UI. This parameter takes effect only if Profile is set to XFlow. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ArgoServerEnabled")
     public Boolean argoServerEnabled;
 
     /**
      * <p>Specifies whether to enable the audit log feature. Valid values:</p>
-     * <br>
-     * <p>*   true: enables the audit log feature.</p>
-     * <p>*   false: disables the audit log feature.</p>
+     * <ul>
+     * <li>true: enables the audit log feature.</li>
+     * <li>false: disables the audit log feature.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AuditLogEnabled")
     public Boolean auditLogEnabled;
 
     /**
      * <p>Specifies whether to use an advanced security group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsEnterpriseSecurityGroup")
     public Boolean isEnterpriseSecurityGroup;
 
     /**
      * <p>The name of the master instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ack-demo</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The limit on the prices of containers in the workflow. This parameter takes effect only if the WorkflowScheduleMode parameter is set to cost-optimized.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.08</p>
      */
     @NameInMap("PriceLimit")
     public String priceLimit;
 
     /**
      * <p>The type of scenario for which the master instance is suitable. Valid values:</p>
-     * <br>
-     * <p>*   `Default`: The master instance is suitable for standard scenarios.</p>
-     * <p>*   `XFlow`: The master instance is suitable for workflow scenarios.</p>
-     * <br>
-     * <p>Default value: `Default`.</p>
+     * <ul>
+     * <li><code>Default</code>: The master instance is suitable for standard scenarios.</li>
+     * <li><code>XFlow</code>: The master instance is suitable for workflow scenarios.</li>
+     * </ul>
+     * <p>Default value: <code>Default</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Default</p>
      */
     @NameInMap("Profile")
     public String profile;
 
     /**
      * <p>The ID of the region. You can call the DescribeRegions operation to query available regions.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The Resource Group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-1exm6tg2h48***</p>
      */
     @NameInMap("ResourceGroupID")
     public String resourceGroupID;
 
+    /**
+     * <p>The tags.</p>
+     * <p>You can specify at most 20 tags in each call.</p>
+     */
     @NameInMap("Tag")
     public String tagShrink;
 
     /**
      * <p>The ID of the vSwitch.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;vsw-2zeaijsas4zkzz81xm***&quot;]</p>
      */
     @NameInMap("VSwitches")
     public String vSwitches;
 
     /**
      * <p>The ID of the virtual private cloud (VPC) to which the master instance belongs. You can call the DescribeVpcs operation to query available VPCs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-f8zin0jscsr84s96tg***</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
      * <p>The scheduling mode of the workflow. This parameter takes effect only if Profile is set to XFlow. Valid values:</p>
-     * <br>
-     * <p>*   cost-optimized: cost-prioritized scheduling mode.</p>
-     * <p>*   stock-optimized: inventory-prioritized scheduling mode.</p>
+     * <ul>
+     * <li>cost-optimized: cost-prioritized scheduling mode.</li>
+     * <li>stock-optimized: inventory-prioritized scheduling mode.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cost-optimized</p>
      */
     @NameInMap("WorkflowScheduleMode")
     public String workflowScheduleMode;

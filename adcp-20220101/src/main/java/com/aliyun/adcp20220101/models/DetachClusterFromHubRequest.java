@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class DetachClusterFromHubRequest extends TeaModel {
     /**
      * <p>The ID of the request.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cb09fda0dc2f94a8397c76638c7ec****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DetachClusterFromHub**.</p>
-     * <br>
+     * <p>The operation that you want to perform. Set the value to <strong>DetachClusterFromHub</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;c1c731554c1ec4a1ca9bb690ff9ed****&quot;]</p>
      */
     @NameInMap("ClusterIds")
     public String clusterIds;
 
     /**
      * <p>Example 1</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DetachFromMesh")
     public Boolean detachFromMesh;

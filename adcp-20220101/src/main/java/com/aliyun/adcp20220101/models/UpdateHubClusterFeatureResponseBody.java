@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateHubClusterFeatureResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>52C1B7DF-96C1-5214-97B6-1B0859FEAFE5</p>
      */
     @NameInMap("RequestId")
     public String requestId;

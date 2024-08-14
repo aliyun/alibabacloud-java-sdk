@@ -52,8 +52,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can search for API operations, call and debug API operations online, and dynamically generate executable sample code for SDKs.
-     *
+     * <b>summary</b> : 
+     * <p>You can search for API operations, call and debug API operations online, and dynamically generate executable sample code for SDKs.</p>
+     * 
      * @param request AttachClusterToHubRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AttachClusterToHubResponse
@@ -93,8 +94,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can search for API operations, call and debug API operations online, and dynamically generate executable sample code for SDKs.
-     *
+     * <b>summary</b> : 
+     * <p>You can search for API operations, call and debug API operations online, and dynamically generate executable sample code for SDKs.</p>
+     * 
      * @param request AttachClusterToHubRequest
      * @return AttachClusterToHubResponse
      */
@@ -104,8 +106,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新资源组
-     *
+     * <b>summary</b> : 
+     * <p>更新资源组</p>
+     * 
      * @param request ChangeResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ChangeResourceGroupResponse
@@ -143,8 +146,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新资源组
-     *
+     * <b>summary</b> : 
+     * <p>更新资源组</p>
+     * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
      */
@@ -154,8 +158,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a master instance in Alibaba Cloud Distributed Cloud Container Platform (ACK One).
-     *
+     * <b>summary</b> : 
+     * <p>Creates a master instance in Alibaba Cloud Distributed Cloud Container Platform (ACK One).</p>
+     * 
      * @param tmpReq CreateHubClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateHubClusterResponse
@@ -241,8 +246,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a master instance in Alibaba Cloud Distributed Cloud Container Platform (ACK One).
-     *
+     * <b>summary</b> : 
+     * <p>Creates a master instance in Alibaba Cloud Distributed Cloud Container Platform (ACK One).</p>
+     * 
      * @param request CreateHubClusterRequest
      * @return CreateHubClusterResponse
      */
@@ -252,8 +258,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a master cluster in Alibaba Cloud Distributed Cloud Container Platform (ACK One).
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a master cluster in Alibaba Cloud Distributed Cloud Container Platform (ACK One).</p>
+     * 
      * @param tmpReq DeleteHubClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteHubClusterResponse
@@ -297,8 +304,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a master cluster in Alibaba Cloud Distributed Cloud Container Platform (ACK One).
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a master cluster in Alibaba Cloud Distributed Cloud Container Platform (ACK One).</p>
+     * 
      * @param request DeleteHubClusterRequest
      * @return DeleteHubClusterResponse
      */
@@ -308,8 +316,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a policy for associated clusters.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a policy for associated clusters.</p>
+     * 
      * @param tmpReq DeletePolicyInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeletePolicyInstanceResponse
@@ -353,8 +362,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a policy for associated clusters.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a policy for associated clusters.</p>
+     * 
      * @param request DeletePolicyInstanceRequest
      * @return DeletePolicyInstanceResponse
      */
@@ -364,8 +374,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes the role-based access control (RBAC) permissions of a RAM user.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes the role-based access control (RBAC) permissions of a RAM user.</p>
+     * 
      * @param request DeleteUserPermissionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteUserPermissionResponse
@@ -399,8 +410,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes the role-based access control (RBAC) permissions of a RAM user.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes the role-based access control (RBAC) permissions of a RAM user.</p>
+     * 
      * @param request DeleteUserPermissionRequest
      * @return DeleteUserPermissionResponse
      */
@@ -410,8 +422,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deploys a policy instance in the clusters that are associated with a master instance.
-     *
+     * <b>summary</b> : 
+     * <p>Deploys a policy instance in the clusters that are associated with a master instance.</p>
+     * 
      * @param tmpReq DeployPolicyInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeployPolicyInstanceResponse
@@ -467,8 +480,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deploys a policy instance in the clusters that are associated with a master instance.
-     *
+     * <b>summary</b> : 
+     * <p>Deploys a policy instance in the clusters that are associated with a master instance.</p>
+     * 
      * @param request DeployPolicyInstanceRequest
      * @return DeployPolicyInstanceResponse
      */
@@ -478,8 +492,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a master instance in Alibaba Cloud Distributed Cloud Container Platform (ACK One).
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a master instance in Alibaba Cloud Distributed Cloud Container Platform (ACK One).</p>
+     * 
      * @param request DescribeHubClusterDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeHubClusterDetailsResponse
@@ -509,8 +524,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a master instance in Alibaba Cloud Distributed Cloud Container Platform (ACK One).
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a master instance in Alibaba Cloud Distributed Cloud Container Platform (ACK One).</p>
+     * 
      * @param request DescribeHubClusterDetailsRequest
      * @return DescribeHubClusterDetailsResponse
      */
@@ -520,8 +536,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the kubeconfig file of a master instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the kubeconfig file of a Distributed Cloud Container Platform for Kubernetes (ACK One) cluster. In addition to the Container Service for Kubernetes (ACK) console, you can also use the Kubernetes CLI kubectl to manage clusters and applications. If you use kubectl to manage an ACK cluster, you must obtain the kubeconfig file of the cluster and use kubectl to connect to the cluster.</p>
+     * 
      * @param request DescribeHubClusterKubeconfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeHubClusterKubeconfigResponse
@@ -555,8 +572,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the kubeconfig file of a master instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the kubeconfig file of a Distributed Cloud Container Platform for Kubernetes (ACK One) cluster. In addition to the Container Service for Kubernetes (ACK) console, you can also use the Kubernetes CLI kubectl to manage clusters and applications. If you use kubectl to manage an ACK cluster, you must obtain the kubeconfig file of the cluster and use kubectl to connect to the cluster.</p>
+     * 
      * @param request DescribeHubClusterKubeconfigRequest
      * @return DescribeHubClusterKubeconfigResponse
      */
@@ -566,8 +584,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查查HUB集群日志
-     *
+     * <b>summary</b> : 
+     * <p>Queries the logs of the Fleet instance of a multi-cluster fleet of Distributed Cloud Container Platform for Kubernetes (ACK One).</p>
+     * 
      * @param request DescribeHubClusterLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeHubClusterLogsResponse
@@ -597,8 +616,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查查HUB集群日志
-     *
+     * <b>summary</b> : 
+     * <p>Queries the logs of the Fleet instance of a multi-cluster fleet of Distributed Cloud Container Platform for Kubernetes (ACK One).</p>
+     * 
      * @param request DescribeHubClusterLogsRequest
      * @return DescribeHubClusterLogsResponse
      */
@@ -608,8 +628,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Distributed Cloud Container Platform for Kubernetes (ACK One) clusters that are created by the current user.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the Distributed Cloud Container Platform for Kubernetes (ACK One) clusters that are created by the current user.</p>
+     * 
      * @param tmpReq DescribeHubClustersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeHubClustersResponse
@@ -653,8 +674,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Distributed Cloud Container Platform for Kubernetes (ACK One) clusters that are created by the current user.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the Distributed Cloud Container Platform for Kubernetes (ACK One) clusters that are created by the current user.</p>
+     * 
      * @param request DescribeHubClustersRequest
      * @return DescribeHubClustersResponse
      */
@@ -664,8 +686,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Alibaba Cloud CLI allows you to search for API operations, call and debug API operations online, and dynamically generate executable sample code for SDKs.
-     *
+     * <b>summary</b> : 
+     * <p>Alibaba Cloud CLI allows you to search for API operations, call and debug API operations online, and dynamically generate executable sample code for SDKs.</p>
+     * 
      * @param request DescribeManagedClustersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeManagedClustersResponse
@@ -695,8 +718,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Alibaba Cloud CLI allows you to search for API operations, call and debug API operations online, and dynamically generate executable sample code for SDKs.
-     *
+     * <b>summary</b> : 
+     * <p>Alibaba Cloud CLI allows you to search for API operations, call and debug API operations online, and dynamically generate executable sample code for SDKs.</p>
+     * 
      * @param request DescribeManagedClustersRequest
      * @return DescribeManagedClustersResponse
      */
@@ -706,8 +730,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of policies.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of policies.</p>
+     * 
      * @param request DescribePoliciesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePoliciesResponse
@@ -729,8 +754,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of policies.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of policies.</p>
      * @return DescribePoliciesResponse
      */
     public DescribePoliciesResponse describePolicies() throws Exception {
@@ -739,8 +764,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries detailed information about a policy.
-     *
+     * <b>summary</b> : 
+     * <p>Queries detailed information about a policy.</p>
+     * 
      * @param request DescribePolicyDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePolicyDetailsResponse
@@ -770,8 +796,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries detailed information about a policy.
-     *
+     * <b>summary</b> : 
+     * <p>Queries detailed information about a policy.</p>
+     * 
      * @param request DescribePolicyDetailsRequest
      * @return DescribePolicyDetailsResponse
      */
@@ -781,8 +808,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries detailed information about the policies used by the clusters that are associated with a master instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries detailed information about the policies used by the clusters that are associated with a master instance.</p>
+     * 
      * @param request DescribePolicyGovernanceInClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePolicyGovernanceInClusterResponse
@@ -812,8 +840,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries detailed information about the policies used by the clusters that are associated with a master instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries detailed information about the policies used by the clusters that are associated with a master instance.</p>
+     * 
      * @param request DescribePolicyGovernanceInClusterRequest
      * @return DescribePolicyGovernanceInClusterResponse
      */
@@ -823,8 +852,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries policy instances that are deployed in the clusters associated with a master instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries policy instances that are deployed in the clusters associated with a master instance.</p>
+     * 
      * @param request DescribePolicyInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePolicyInstancesResponse
@@ -858,8 +888,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries policy instances that are deployed in the clusters associated with a master instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries policy instances that are deployed in the clusters associated with a master instance.</p>
+     * 
      * @param request DescribePolicyInstancesRequest
      * @return DescribePolicyInstancesResponse
      */
@@ -869,8 +900,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries detailed information about policy instances that are deployed in the clusters associated with a master instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries detailed information about policy instances that are deployed in the clusters associated with a master instance.</p>
+     * 
      * @param request DescribePolicyInstancesStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePolicyInstancesStatusResponse
@@ -900,8 +932,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries detailed information about policy instances that are deployed in the clusters associated with a master instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries detailed information about policy instances that are deployed in the clusters associated with a master instance.</p>
+     * 
      * @param request DescribePolicyInstancesStatusRequest
      * @return DescribePolicyInstancesStatusResponse
      */
@@ -911,8 +944,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询地域列表
-     *
+     * <b>summary</b> : 
+     * <p>查询地域列表</p>
+     * 
      * @param request DescribeRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRegionsResponse
@@ -938,8 +972,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询地域列表
-     *
+     * <b>summary</b> : 
+     * <p>查询地域列表</p>
+     * 
      * @param request DescribeRegionsRequest
      * @return DescribeRegionsResponse
      */
@@ -949,8 +984,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Query the permissions of a Resource Access Management (RAM) user.
-     *
+     * <b>summary</b> : 
+     * <p>Query the permissions of a Resource Access Management (RAM) user.</p>
+     * 
      * @param request DescribeUserPermissionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUserPermissionsResponse
@@ -980,8 +1016,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Query the permissions of a Resource Access Management (RAM) user.
-     *
+     * <b>summary</b> : 
+     * <p>Query the permissions of a Resource Access Management (RAM) user.</p>
+     * 
      * @param request DescribeUserPermissionsRequest
      * @return DescribeUserPermissionsResponse
      */
@@ -991,8 +1028,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Alibaba Cloud CLI allows you to search for API operations, call and debug API operations online, and dynamically generate executable sample code for SDKs.
-     *
+     * <b>summary</b> : 
+     * <p>Alibaba Cloud CLI allows you to search for API operations, call and debug API operations online, and dynamically generate executable sample code for SDKs.</p>
+     * 
      * @param request DetachClusterFromHubRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DetachClusterFromHubResponse
@@ -1032,8 +1070,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Alibaba Cloud CLI allows you to search for API operations, call and debug API operations online, and dynamically generate executable sample code for SDKs.
-     *
+     * <b>summary</b> : 
+     * <p>Alibaba Cloud CLI allows you to search for API operations, call and debug API operations online, and dynamically generate executable sample code for SDKs.</p>
+     * 
      * @param request DetachClusterFromHubRequest
      * @return DetachClusterFromHubResponse
      */
@@ -1043,8 +1082,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Schema of Response
-     *
+     * <b>description</b> :
+     * <p>  To call this API operation to grant permissions to a RAM user or RAM role on a specific cluster, you must use an Alibaba Cloud account, the account that is used to create the cluster, or a RAM user that has the cluster administrator permissions. A regular RAM user does not have the permissions to call this operation.</p>
+     * <ul>
+     * <li>Before you grant RBAC permissions to a RAM user or RAM role on a cluster, you must grant the operation permissions to the RAM user or RAM role on the specified cluster. For more information, see <a href="https://help.aliyun.com/document_detail/613486.html">Attach a system permission policy to a RAM user or RAM role</a>.
+     * For more information, see <a href="https://help.aliyun.com/document_detail/613468.html">Authorization overview</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Grants role-based access control (RBAC) permissions to Resource Access Management (RAM) users or RAM roles. System policies can be attached to RAM users to grant only the operation permissions on Distributed Cloud Container Platform for Kubernetes (ACK One) cluster resources. The operation permissions include creating and viewing instances. If you want to perform operations on Kubernetes resources in a specific cluster by using a RAM user or assuming a RAM role, such as creating GitOps applications and Argo workflows, you must grant RBAC permissions to the RAM user or RAM role to perform operations on the specified ACK One cluster and namespace. This topic describes how to grant RBAC permissions to a RAM user or RAM role.</p>
+     * 
      * @param request GrantUserPermissionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GrantUserPermissionResponse
@@ -1094,8 +1141,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Schema of Response
-     *
+     * <b>description</b> :
+     * <p>  To call this API operation to grant permissions to a RAM user or RAM role on a specific cluster, you must use an Alibaba Cloud account, the account that is used to create the cluster, or a RAM user that has the cluster administrator permissions. A regular RAM user does not have the permissions to call this operation.</p>
+     * <ul>
+     * <li>Before you grant RBAC permissions to a RAM user or RAM role on a cluster, you must grant the operation permissions to the RAM user or RAM role on the specified cluster. For more information, see <a href="https://help.aliyun.com/document_detail/613486.html">Attach a system permission policy to a RAM user or RAM role</a>.
+     * For more information, see <a href="https://help.aliyun.com/document_detail/613468.html">Authorization overview</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Grants role-based access control (RBAC) permissions to Resource Access Management (RAM) users or RAM roles. System policies can be attached to RAM users to grant only the operation permissions on Distributed Cloud Container Platform for Kubernetes (ACK One) cluster resources. The operation permissions include creating and viewing instances. If you want to perform operations on Kubernetes resources in a specific cluster by using a RAM user or assuming a RAM role, such as creating GitOps applications and Argo workflows, you must grant RBAC permissions to the RAM user or RAM role to perform operations on the specified ACK One cluster and namespace. This topic describes how to grant RBAC permissions to a RAM user or RAM role.</p>
+     * 
      * @param request GrantUserPermissionRequest
      * @return GrantUserPermissionResponse
      */
@@ -1105,14 +1160,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Grant permissions to a Resource Access Management (RAM) user.</p>
+     * 
      * @deprecated OpenAPI GrantUserPermissions is deprecated, please use adcp::2022-01-01::GrantUserPermission instead.
-     *
-     * @summary Grant permissions to a Resource Access Management (RAM) user.
-     *
+     * 
      * @param tmpReq GrantUserPermissionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GrantUserPermissionsResponse
      */
+    @Deprecated
     // Deprecated
     public GrantUserPermissionsResponse grantUserPermissionsWithOptions(GrantUserPermissionsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -1149,13 +1206,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Grant permissions to a Resource Access Management (RAM) user.</p>
+     * 
      * @deprecated OpenAPI GrantUserPermissions is deprecated, please use adcp::2022-01-01::GrantUserPermission instead.
-     *
-     * @summary Grant permissions to a Resource Access Management (RAM) user.
-     *
+     * 
      * @param request GrantUserPermissionsRequest
      * @return GrantUserPermissionsResponse
      */
+    @Deprecated
     // Deprecated
     public GrantUserPermissionsResponse grantUserPermissions(GrantUserPermissionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1163,8 +1222,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the configurations of a Container Service for Kubernetes (ACK) cluster that serves as a master instance.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the configurations of a Container Service for Kubernetes (ACK) cluster that serves as a master instance.</p>
+     * 
      * @param tmpReq UpdateHubClusterFeatureRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateHubClusterFeatureResponse
@@ -1272,8 +1332,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the configurations of a Container Service for Kubernetes (ACK) cluster that serves as a master instance.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the configurations of a Container Service for Kubernetes (ACK) cluster that serves as a master instance.</p>
+     * 
      * @param request UpdateHubClusterFeatureRequest
      * @return UpdateHubClusterFeatureResponse
      */
@@ -1283,8 +1344,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the role-based access control (RBAC) permissions of a RAM user.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the role-based access control (RBAC) permissions of a RAM user.</p>
+     * 
      * @param request UpdateUserPermissionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateUserPermissionResponse
@@ -1330,8 +1392,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the role-based access control (RBAC) permissions of a RAM user.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the role-based access control (RBAC) permissions of a RAM user.</p>
+     * 
      * @param request UpdateUserPermissionRequest
      * @return UpdateUserPermissionResponse
      */

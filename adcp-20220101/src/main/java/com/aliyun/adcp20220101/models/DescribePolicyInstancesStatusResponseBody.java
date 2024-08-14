@@ -12,6 +12,9 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5D89C59A-A7EB-5BF8-B094-6479175346CA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,13 +42,19 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
 
     public static class DescribePolicyInstancesStatusResponseBodyPoliciesPolicyInstancesPolicyClusters extends TeaModel {
         /**
-         * <p>The ID of the associated cluster.</p>
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c639e5310e73e4a29ab18d6330a633****</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
-         * <p>The status of the deployment.</p>
+         * <p>The status of the policy deployment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("Status")
         public String status;
@@ -76,6 +85,9 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
     public static class DescribePolicyInstancesStatusResponseBodyPoliciesPolicyInstances extends TeaModel {
         /**
          * <p>The type of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>compliance</p>
          */
         @NameInMap("PolicyCategory")
         public String policyCategory;
@@ -88,24 +100,36 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
 
         /**
          * <p>The description of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Restricts use of the cluster-admin role.</p>
          */
         @NameInMap("PolicyDescription")
         public String policyDescription;
 
         /**
-         * <p>The number of policy instances that are deployed. If this parameter is empty, no policy instance is deployed.</p>
+         * <p>The number of policy instances that are deployed. If this parameter is left empty, no policy instance is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("PolicyInstancesCount")
         public Long policyInstancesCount;
 
         /**
-         * <p>The name of the policy.</p>
+         * <p>The policy name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACKRestrictRoleBindings</p>
          */
         @NameInMap("PolicyName")
         public String policyName;
 
         /**
          * <p>The severity level of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>low</p>
          */
         @NameInMap("PolicySeverity")
         public String policySeverity;
@@ -168,12 +192,18 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
     public static class DescribePolicyInstancesStatusResponseBodyPoliciesSeverityInfo extends TeaModel {
         /**
          * <p>The number of policy instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("SeverityCount")
         public String severityCount;
 
         /**
-         * <p>The severity level.</p>
+         * <p>The severity level of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>low</p>
          */
         @NameInMap("SeverityType")
         public String severityType;

@@ -12,6 +12,9 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
 
     /**
      * <p>VPC ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BDA85C7A-FC81-56C4-9BC2-9112EE970059</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,84 +43,126 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
     public static class DescribeManagedClustersResponseBodyClustersCluster extends TeaModel {
         /**
          * <p>Information about the master instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c2f41fd4599454a9c9ad8b3daafe873ad</p>
          */
         @NameInMap("ClusterID")
         public String clusterID;
 
         /**
          * <p>The ID of the master instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ack.pro.small</p>
          */
         @NameInMap("ClusterSpec")
         public String clusterSpec;
 
         /**
          * <p>The time when the master instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>One</p>
          */
         @NameInMap("ClusterType")
         public String clusterType;
 
         /**
          * <p>The ID of the master instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-03-23T06:22:28Z</p>
          */
         @NameInMap("Created")
         public String created;
 
         /**
          * <p>The name of the master instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.22.3-aliyun.1</p>
          */
         @NameInMap("CurrentVersion")
         public String currentVersion;
 
         /**
          * <p>The specification of the master instance. Valid values: - ack.pro.small: ACK Pro.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.20.4-aliyun.1</p>
          */
         @NameInMap("InitVersion")
         public String initVersion;
 
         /**
          * <p>The status information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ackone-heyuan</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         @NameInMap("Profile")
         public String profile;
 
         /**
          * <p>The ID of the master instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The name of the master instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmx7o7ewyqcby</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The current Kubernetes version of the master instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
          * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-03-23T06:22:28Z</p>
          */
         @NameInMap("Updated")
         public String updated;
 
         /**
          * <p>The original Kubernetes version of the master instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-m5e0pbkgmhvzecf7enfym</p>
          */
         @NameInMap("VSwitchID")
         public String vSwitchID;
 
         /**
          * <p>The status of the association between the clusters and the master instance. Valid values: - Installing: The clusters are being associated with the master instance. - Successed: The clusters are associated with the master instance. - Failed: The clusters failed to be associated with the master instance. - Deleting: The clusters are being disassociated from the master instance. - Deleted: The clusters are disassociated from the master instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1fhizs9fxuvit06zeb9</p>
          */
         @NameInMap("VpcID")
         public String vpcID;
@@ -242,6 +287,10 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeManagedClustersResponseBodyClustersMeshStatus extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("InMesh")
         public Boolean inMesh;
 
@@ -263,12 +312,18 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
     public static class DescribeManagedClustersResponseBodyClustersStatus extends TeaModel {
         /**
          * <p>Query the clusters that are associated with a master instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>You can call the DescribeManagedClusters operation to query the clusters that are associated with a master instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successed</p>
          */
         @NameInMap("State")
         public String state;

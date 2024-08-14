@@ -12,6 +12,9 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>96C6A284-0EC3-5486-9A97-E8E9EE27E9EF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,42 +43,63 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     public static class DescribePolicyGovernanceInClusterResponseBodyPolicyGovernancesCluster extends TeaModel {
         /**
          * <p>The ID of the associated cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca5cf1b5edb5c4736a6ea0dfb4061****</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The specifications of the associated cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ack.pro.small</p>
          */
         @NameInMap("ClusterSpec")
         public String clusterSpec;
 
         /**
          * <p>The type of the associated cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ManagedKubernetes</p>
          */
         @NameInMap("ClusterType")
         public String clusterType;
 
         /**
          * <p>The name of the associated cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ack-001</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The identifier of the associated cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         @NameInMap("Profile")
         public String profile;
 
         /**
          * <p>The region ID of the associated cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-heyuan</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The status of the associated cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         @NameInMap("State")
         public String state;
@@ -146,18 +170,27 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     public static class DescribePolicyGovernanceInClusterResponseBodyPolicyGovernancesPolicyGovernanceAdmitLog extends TeaModel {
         /**
          * <p>The number of log entries in the query result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Count")
         public String count;
 
         /**
          * <p>The name of the Log Service project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         @NameInMap("LogProject")
         public String logProject;
 
         /**
          * <p>The name of the Logstore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         @NameInMap("LogStore")
         public String logStore;
@@ -170,9 +203,13 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
         /**
          * <p>The status of the query. Valid values:</p>
-         * <br>
-         * <p>*   Complete: The query is successful, and the complete result is returned.</p>
-         * <p>*   Incomplete: The query is successful, but the query result is incomplete. To obtain the complete result, you must call the operation again.</p>
+         * <ul>
+         * <li>Complete: The query is successful, and the complete result is returned.</li>
+         * <li>Incomplete: The query is successful, but the query result is incomplete. To obtain the complete result, you must call the operation again.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Complete</p>
          */
         @NameInMap("Progress")
         public String progress;
@@ -227,18 +264,27 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     public static class DescribePolicyGovernanceInClusterResponseBodyPolicyGovernancesPolicyGovernanceOnState extends TeaModel {
         /**
          * <p>The types of policies that are enabled in the associated cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("EnabledCount")
         public Long enabledCount;
 
         /**
          * <p>The severity level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>low</p>
          */
         @NameInMap("Severity")
         public String severity;
 
         /**
          * <p>The types of policies of each severity level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;
@@ -277,12 +323,18 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     public static class DescribePolicyGovernanceInClusterResponseBodyPolicyGovernancesPolicyGovernanceViolationTotalViolationsDeny extends TeaModel {
         /**
          * <p>The severity level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>low</p>
          */
         @NameInMap("Severity")
         public String severity;
 
         /**
          * <p>The number of deployments that are blocked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Violations")
         public Long violations;
@@ -313,12 +365,18 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     public static class DescribePolicyGovernanceInClusterResponseBodyPolicyGovernancesPolicyGovernanceViolationTotalViolationsWarn extends TeaModel {
         /**
          * <p>The severity level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>low</p>
          */
         @NameInMap("Severity")
         public String severity;
 
         /**
          * <p>The number of deployments that have triggered alerting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Violations")
         public String violations;
@@ -385,24 +443,36 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     public static class DescribePolicyGovernanceInClusterResponseBodyPolicyGovernancesPolicyGovernanceViolationViolationsDeny extends TeaModel {
         /**
          * <p>The description of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Restricts secrets used in pod envs</p>
          */
         @NameInMap("PolicyDescription")
         public String policyDescription;
 
         /**
          * <p>The name of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACKPSPCapabilities</p>
          */
         @NameInMap("PolicyName")
         public String policyName;
 
         /**
          * <p>The severity level of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>low</p>
          */
         @NameInMap("Severity")
         public String severity;
 
         /**
          * <p>The number of times that the policy blocks deployments.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Violations")
         public Long violations;
@@ -449,24 +519,36 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     public static class DescribePolicyGovernanceInClusterResponseBodyPolicyGovernancesPolicyGovernanceViolationViolationsWarn extends TeaModel {
         /**
          * <p>The description of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Restricts secrets used in pod envs</p>
          */
         @NameInMap("PolicyDescription")
         public String policyDescription;
 
         /**
          * <p>The name of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACKPSPCapabilities</p>
          */
         @NameInMap("PolicyName")
         public String policyName;
 
         /**
          * <p>The severity level of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>low</p>
          */
         @NameInMap("Severity")
         public String severity;
 
         /**
          * <p>The number of times that the policy generates alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Violations")
         public Long violations;
