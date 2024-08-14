@@ -4,30 +4,62 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class ListMaterialDocumentsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>DataNotExists</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Current")
     public Integer current;
 
     @NameInMap("Data")
     public java.util.List<ListMaterialDocumentsResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>数据不存在</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Size")
     public Integer size;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -112,9 +144,17 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
         @NameInMap("Author")
         public String author;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-03-18 02:00:00</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CreateUser")
         public String createUser;
 
@@ -124,27 +164,55 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
         @NameInMap("DocKeywords")
         public java.util.List<String> docKeywords;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pdf</p>
+         */
         @NameInMap("DocType")
         public String docType;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://www.example.com">https://www.example.com</a></p>
+         */
         @NameInMap("ExternalUrl")
         public String externalUrl;
 
         @NameInMap("HtmlContent")
         public String htmlContent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>35</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-03-18 02:00:00</p>
+         */
         @NameInMap("PubTime")
         public String pubTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://www.example.com">https://www.example.com</a></p>
+         */
         @NameInMap("PublicUrl")
         public String publicUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ShareAttr")
         public Integer shareAttr;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user_upload</p>
+         */
         @NameInMap("SrcFrom")
         public String srcFrom;
 
@@ -160,15 +228,27 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-03-18 02:00:00</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("UpdateUser")
         public String updateUser;
 
         @NameInMap("UpdateUserName")
         public String updateUserName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://www.example.com">https://www.example.com</a></p>
+         */
         @NameInMap("Url")
         public String url;
 

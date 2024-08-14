@@ -4,21 +4,41 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class GetInterveneRuleDetailResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetInterveneRuleDetailResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>428DCC0D-3C63-5306-BD1B-124396AB97BE</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,12 +96,20 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
     }
 
     public static class GetInterveneRuleDetailResponseBodyDataInterveneRuleDetailAnswerConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AnswerType")
         public Integer answerType;
 
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>namespace_qa_query</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
@@ -117,12 +145,24 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
     }
 
     public static class GetInterveneRuleDetailResponseBodyDataInterveneRuleDetailEffectConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("EffectType")
         public Integer effectType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-11-25 14:21:15</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-11-25 14:21:15</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
@@ -164,12 +204,20 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
         @NameInMap("EffectConfig")
         public GetInterveneRuleDetailResponseBodyDataInterveneRuleDetailEffectConfig effectConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("InterveneType")
         public Integer interveneType;
 
         @NameInMap("NamespaceList")
         public java.util.List<String> namespaceList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100418</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 

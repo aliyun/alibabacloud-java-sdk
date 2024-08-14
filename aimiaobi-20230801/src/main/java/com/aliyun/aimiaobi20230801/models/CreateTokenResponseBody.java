@@ -4,21 +4,41 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class CreateTokenResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>NoData</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public CreateTokenResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,9 +96,17 @@ public class CreateTokenResponseBody extends TeaModel {
     }
 
     public static class CreateTokenResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1705388704855</p>
+         */
         @NameInMap("ExpiredTime")
         public Long expiredTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
+         */
         @NameInMap("Token")
         public String token;
 

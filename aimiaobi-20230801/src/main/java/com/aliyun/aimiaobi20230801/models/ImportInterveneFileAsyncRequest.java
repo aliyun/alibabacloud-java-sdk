@@ -6,16 +6,31 @@ import com.aliyun.tea.*;
 public class ImportInterveneFileAsyncRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c160c841c8e54295bf2f441432785944_p_efm</p>
      */
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>import.xls</p>
+     */
     @NameInMap("DocName")
     public String docName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>import.xls</p>
+     */
     @NameInMap("FileKey")
     public String fileKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://xxx/import.xls">https://xxx/import.xls</a></p>
+     */
     @NameInMap("FileUrl")
     public String fileUrl;
 

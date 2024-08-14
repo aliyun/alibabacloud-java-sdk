@@ -4,21 +4,41 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class ListHotNewsWithTypeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>DataNotExists</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public java.util.List<ListHotNewsWithTypeResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>数据不存在</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -82,12 +102,20 @@ public class ListHotNewsWithTypeResponseBody extends TeaModel {
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
+         */
         @NameInMap("DocUuid")
         public String docUuid;
 
         @NameInMap("ImageUrls")
         public java.util.List<String> imageUrls;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-04-11 06:14:07</p>
+         */
         @NameInMap("PubTime")
         public String pubTime;
 
@@ -109,9 +137,17 @@ public class ListHotNewsWithTypeResponseBody extends TeaModel {
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-10-14 14:30:00</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://xxxxx/xxx">http://xxxxx/xxx</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -230,12 +266,20 @@ public class ListHotNewsWithTypeResponseBody extends TeaModel {
         @NameInMap("News")
         public java.util.List<ListHotNewsWithTypeResponseBodyDataNews> news;
 
+        /**
+         * <strong>example:</strong>
+         * <p>society</p>
+         */
         @NameInMap("NewsType")
         public String newsType;
 
         @NameInMap("NewsTypeName")
         public String newsTypeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>77</p>
+         */
         @NameInMap("TotalPages")
         public Integer totalPages;
 

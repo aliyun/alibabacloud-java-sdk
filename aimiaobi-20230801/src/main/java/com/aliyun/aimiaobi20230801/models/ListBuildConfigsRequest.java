@@ -6,10 +6,20 @@ import com.aliyun.tea.*;
 public class ListBuildConfigsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cd327c3d5d5e44159cc716e23bfa530e_p_beebot_public</p>
      */
     @NameInMap("AgentKey")
     public String agentKey;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>media</p>
+     */
     @NameInMap("Type")
     public String type;
 
@@ -24,6 +34,14 @@ public class ListBuildConfigsRequest extends TeaModel {
     }
     public String getAgentKey() {
         return this.agentKey;
+    }
+
+    public ListBuildConfigsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListBuildConfigsRequest setType(String type) {

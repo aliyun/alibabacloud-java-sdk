@@ -4,21 +4,41 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class InsertInterveneRuleResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public InsertInterveneRuleResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DD656AF9-0839-521A-A3D2-F320009F9C87</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,6 +96,10 @@ public class InsertInterveneRuleResponseBody extends TeaModel {
     }
 
     public static class InsertInterveneRuleResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 

@@ -6,13 +6,24 @@ import com.aliyun.tea.*;
 public class ListInterveneCntRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fcb14f25c9ee41ccad33a049de8f941b_p_outbound_public</p>
      */
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageIndex")
     public Integer pageIndex;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

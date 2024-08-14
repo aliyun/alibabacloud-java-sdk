@@ -4,21 +4,41 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class DocumentExtractionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>NoData</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public java.util.List<DocumentExtractionResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,33 +96,73 @@ public class DocumentExtractionResponseBody extends TeaModel {
     }
 
     public static class DocumentExtractionResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>作者</p>
+         */
         @NameInMap("Author")
         public String author;
 
+        /**
+         * <strong>example:</strong>
+         * <p>文章内容</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>文档-自定义的唯一ID</p>
+         */
         @NameInMap("DocId")
         public String docId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8df2d69d63a247b6b52ff455b2d426b6</p>
+         */
         @NameInMap("DocUuid")
         public String docUuid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-05-14 08:54:33</p>
+         */
         @NameInMap("PubTime")
         public String pubTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>央视网</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>文章摘要</p>
+         */
         @NameInMap("Summary")
         public String summary;
 
+        /**
+         * <strong>example:</strong>
+         * <p>文章标签</p>
+         */
         @NameInMap("Tag")
         public String tag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>文章标题</p>
+         */
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://www.example.com/aaa.docx">https://www.example.com/aaa.docx</a></p>
+         */
         @NameInMap("Url")
         public String url;
 

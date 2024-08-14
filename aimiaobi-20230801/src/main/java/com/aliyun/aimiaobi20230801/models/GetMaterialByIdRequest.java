@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetMaterialByIdRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>67c520d1fa43455ea44fb69fa402d54d_p_beebot_public</p>
      */
     @NameInMap("AgentKey")
     public String agentKey;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("Id")
     public Long id;

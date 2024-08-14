@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListVersionsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>33a2658aaabf4c24b45d50e575125311_p_beebot_public</p>
      */
     @NameInMap("AgentKey")
     public String agentKey;

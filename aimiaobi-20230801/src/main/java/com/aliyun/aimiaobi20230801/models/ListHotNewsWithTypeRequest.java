@@ -6,19 +6,34 @@ import com.aliyun.tea.*;
 public class ListHotNewsWithTypeRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c160c841c8e54295bf2f441432785944_p_efm</p>
      */
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Current")
     public Integer current;
 
+    /**
+     * <strong>example:</strong>
+     * <p>society</p>
+     */
     @NameInMap("NewsType")
     public String newsType;
 
     @NameInMap("NewsTypes")
     public java.util.List<String> newsTypes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Size")
     public Integer size;
 

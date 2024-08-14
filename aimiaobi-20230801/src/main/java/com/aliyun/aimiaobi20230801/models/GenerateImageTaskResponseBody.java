@@ -4,21 +4,41 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class GenerateImageTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GenerateImageTaskResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F2F366D6-E9FE-1006-BB70-2C650896AAB5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,15 +96,31 @@ public class GenerateImageTaskResponseBody extends TeaModel {
     }
 
     public static class GenerateImageTaskResponseBodyDataTaskList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>一直忧伤的猫</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e1be065b-adc3-435e-bd01-1c18c5ed75d3</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SUCCESSED</p>
+         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 

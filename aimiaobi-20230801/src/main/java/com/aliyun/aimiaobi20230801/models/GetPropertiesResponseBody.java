@@ -4,21 +4,41 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class GetPropertiesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>DataNotExists</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetPropertiesResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,6 +96,10 @@ public class GetPropertiesResponseBody extends TeaModel {
     }
 
     public static class GetPropertiesResponseBodyDataConsoleConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("TipContent")
         public String tipContent;
 
@@ -106,15 +130,31 @@ public class GetPropertiesResponseBody extends TeaModel {
     }
 
     public static class GetPropertiesResponseBodyDataIntelligentSearchConfigSearchSamplesArticles extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Select")
         public Boolean select;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Stared")
         public Boolean stared;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://xxx.com">http://xxx.com</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -161,9 +201,17 @@ public class GetPropertiesResponseBody extends TeaModel {
         @NameInMap("Articles")
         public java.util.List<GetPropertiesResponseBodyDataIntelligentSearchConfigSearchSamplesArticles> articles;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Prompt")
         public String prompt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("Text")
         public String text;
 
@@ -199,12 +247,24 @@ public class GetPropertiesResponseBody extends TeaModel {
     }
 
     public static class GetPropertiesResponseBodyDataIntelligentSearchConfigSearchSources extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("DatasetName")
         public String datasetName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -240,6 +300,10 @@ public class GetPropertiesResponseBody extends TeaModel {
     }
 
     public static class GetPropertiesResponseBodyDataIntelligentSearchConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("ProductDescription")
         public String productDescription;
 
@@ -284,6 +348,10 @@ public class GetPropertiesResponseBody extends TeaModel {
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SystemSearch</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -311,15 +379,31 @@ public class GetPropertiesResponseBody extends TeaModel {
     }
 
     public static class GetPropertiesResponseBodyDataUserInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AgentId")
         public String agentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>admin</p>
+         */
         @NameInMap("Username")
         public String username;
 
@@ -363,9 +447,17 @@ public class GetPropertiesResponseBody extends TeaModel {
     }
 
     public static class GetPropertiesResponseBodyDataWanxiangImageSizeConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1:1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1024*1024</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -396,9 +488,17 @@ public class GetPropertiesResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://img.alicdn.com/imgextra/i4/O1CN01RzKicz1W0YWzYkWcK_!!6000000002726-2-tps-132-104.png">https://img.alicdn.com/imgextra/i4/O1CN01RzKicz1W0YWzYkWcK_!!6000000002726-2-tps-132-104.png</a></p>
+         */
         @NameInMap("Pic")
         public String pic;
 
+        /**
+         * <strong>example:</strong>
+         * <auto>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -449,6 +549,10 @@ public class GetPropertiesResponseBody extends TeaModel {
         @NameInMap("SearchSources")
         public java.util.List<GetPropertiesResponseBodyDataSearchSources> searchSources;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SlrAuthorized")
         public Boolean slrAuthorized;
 

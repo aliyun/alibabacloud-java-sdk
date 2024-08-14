@@ -4,21 +4,41 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class FetchImageTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public FetchImageTaskResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DD656AF9-0839-521A-A3D2-F320009F9C87</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,12 +96,20 @@ public class FetchImageTaskResponseBody extends TeaModel {
     }
 
     public static class FetchImageTaskResponseBodyDataTaskInfoListImageList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>NoData</p>
+         */
         @NameInMap("Code")
         public String code;
 
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://a-hbr-temp-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/r-000aham3nsx9gc7a8r5l.csv?Expires=1678260131&OSSAccessKeyId=LTAIjGotF8wXIEjy&Signature=WpMfqBnjeR0w5UL1xFAd1J556Pw%3D">https://a-hbr-temp-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/r-000aham3nsx9gc7a8r5l.csv?Expires=1678260131&amp;OSSAccessKeyId=LTAIjGotF8wXIEjy&amp;Signature=WpMfqBnjeR0w5UL1xFAd1J556Pw%3D</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -117,15 +145,27 @@ public class FetchImageTaskResponseBody extends TeaModel {
     }
 
     public static class FetchImageTaskResponseBodyDataTaskInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Id")
         public Long id;
 
         @NameInMap("ImageList")
         public java.util.List<FetchImageTaskResponseBodyDataTaskInfoListImageList> imageList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>net-7eb32699000d4193a3c59fc64ae1e55f</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SUCCESSED</p>
+         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 

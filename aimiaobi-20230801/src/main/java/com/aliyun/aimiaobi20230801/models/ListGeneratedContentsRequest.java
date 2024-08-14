@@ -6,24 +6,53 @@ import com.aliyun.tea.*;
 public class ListGeneratedContentsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxx_p_efm</p>
      */
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>media</p>
+     */
     @NameInMap("ContentDomain")
     public String contentDomain;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Current")
     public Integer current;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-01-04 11:46:07</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("Query")
+    public String query;
+
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Size")
     public Integer size;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-01-04 11:46:07</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
+
+    @NameInMap("TaskId")
+    public String taskId;
 
     @NameInMap("Title")
     public String title;
@@ -65,6 +94,14 @@ public class ListGeneratedContentsRequest extends TeaModel {
         return this.endTime;
     }
 
+    public ListGeneratedContentsRequest setQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    public String getQuery() {
+        return this.query;
+    }
+
     public ListGeneratedContentsRequest setSize(Integer size) {
         this.size = size;
         return this;
@@ -79,6 +116,14 @@ public class ListGeneratedContentsRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
+    }
+
+    public ListGeneratedContentsRequest setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
     public ListGeneratedContentsRequest setTitle(String title) {

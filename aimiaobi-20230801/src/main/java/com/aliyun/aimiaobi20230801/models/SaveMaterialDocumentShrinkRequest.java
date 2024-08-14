@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class SaveMaterialDocumentShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c160c841c8e54295bf2f441432785944_p_efm</p>
      */
     @NameInMap("AgentKey")
     public String agentKey;
@@ -13,6 +16,10 @@ public class SaveMaterialDocumentShrinkRequest extends TeaModel {
     @NameInMap("Author")
     public String author;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("BothSavePrivateAndShare")
     public Boolean bothSavePrivateAndShare;
 
@@ -21,22 +28,41 @@ public class SaveMaterialDocumentShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>excel</p>
      */
     @NameInMap("DocType")
     public String docType;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://xxxxx/xxx">http://xxxxx/xxx</a></p>
+     */
     @NameInMap("ExternalUrl")
     public String externalUrl;
 
     @NameInMap("HtmlContent")
     public String htmlContent;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-04-11 06:14:07</p>
+     */
     @NameInMap("PubTime")
     public String pubTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ShareAttr")
     public Integer shareAttr;
 
+    /**
+     * <strong>example:</strong>
+     * <p>IntellijSearch</p>
+     */
     @NameInMap("SrcFrom")
     public String srcFrom;
 
@@ -49,6 +75,10 @@ public class SaveMaterialDocumentShrinkRequest extends TeaModel {
     @NameInMap("Title")
     public String title;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://xxxxx/xxx">http://xxxxx/xxx</a></p>
+     */
     @NameInMap("Url")
     public String url;
 

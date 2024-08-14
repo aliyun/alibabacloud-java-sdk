@@ -4,21 +4,41 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class ListInterveneImportTasksResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>DataNotExists</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public ListInterveneImportTasksResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,18 +96,38 @@ public class ListInterveneImportTasksResponseBody extends TeaModel {
     }
 
     public static class ListInterveneImportTasksResponseBodyDataStatusList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("Msg")
         public String msg;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Percentage")
         public Integer percentage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4854</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12344454</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
@@ -139,15 +179,27 @@ public class ListInterveneImportTasksResponseBody extends TeaModel {
     }
 
     public static class ListInterveneImportTasksResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageIndex")
         public Integer pageIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         @NameInMap("StatusList")
         public java.util.List<ListInterveneImportTasksResponseBodyDataStatusList> statusList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalSize")
         public Integer totalSize;
 

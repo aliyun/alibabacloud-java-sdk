@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateMaterialDocumentRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>67c520d1fa43455ea44fb69fa402d54d_p_beebot_public</p>
      */
     @NameInMap("AgentKey")
     public String agentKey;
@@ -18,10 +21,17 @@ public class UpdateMaterialDocumentRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>image</p>
      */
     @NameInMap("DocType")
     public String docType;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://xxxxx/xxx">http://xxxxx/xxx</a></p>
+     */
     @NameInMap("ExternalUrl")
     public String externalUrl;
 
@@ -30,16 +40,34 @@ public class UpdateMaterialDocumentRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>44</p>
      */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-04-11 06:14:07</p>
+     */
     @NameInMap("PubTime")
     public String pubTime;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ShareAttr")
     public Integer shareAttr;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UserUpload</p>
+     */
     @NameInMap("SrcFrom")
     public String srcFrom;
 
@@ -52,6 +80,10 @@ public class UpdateMaterialDocumentRequest extends TeaModel {
     @NameInMap("Title")
     public String title;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://xxxxx/xxx">http://xxxxx/xxx</a></p>
+     */
     @NameInMap("Url")
     public String url;
 
@@ -122,6 +154,14 @@ public class UpdateMaterialDocumentRequest extends TeaModel {
     }
     public String getPubTime() {
         return this.pubTime;
+    }
+
+    public UpdateMaterialDocumentRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public UpdateMaterialDocumentRequest setShareAttr(Integer shareAttr) {

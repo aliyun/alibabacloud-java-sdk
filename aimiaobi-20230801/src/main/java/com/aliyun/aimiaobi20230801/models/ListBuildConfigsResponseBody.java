@@ -4,21 +4,41 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class ListBuildConfigsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public java.util.List<ListBuildConfigsResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DA021073-17CE-5CCF-9FEB-93226C766887</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -106,12 +126,24 @@ public class ListBuildConfigsResponseBody extends TeaModel {
     }
 
     public static class ListBuildConfigsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("BuildIn")
         public Boolean buildIn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-04-11 06:14:07</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CreateUser")
         public String createUser;
 
@@ -121,18 +153,34 @@ public class ListBuildConfigsResponseBody extends TeaModel {
         @NameInMap("Keywords")
         public java.util.List<ListBuildConfigsResponseBodyDataKeywords> keywords;
 
+        /**
+         * <strong>example:</strong>
+         * <p>writingStyle</p>
+         */
         @NameInMap("Tag")
         public String tag;
 
         @NameInMap("TagDescription")
         public String tagDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>media</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-04-11 06:14:07</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("UpdateUser")
         public String updateUser;
 

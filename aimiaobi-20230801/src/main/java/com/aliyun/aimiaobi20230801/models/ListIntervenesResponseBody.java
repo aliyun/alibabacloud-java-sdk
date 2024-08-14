@@ -4,21 +4,41 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class ListIntervenesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public ListIntervenesResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>428DCC0D-3C63-5306-BD1B-124396AB97BE</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -78,6 +98,9 @@ public class ListIntervenesResponseBody extends TeaModel {
     public static class ListIntervenesResponseBodyDataInterveneList extends TeaModel {
         /**
          * <p>id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36559</p>
          */
         @NameInMap("Id")
         public String id;
@@ -112,12 +135,24 @@ public class ListIntervenesResponseBody extends TeaModel {
         @NameInMap("InterveneList")
         public java.util.List<ListIntervenesResponseBodyDataInterveneList> interveneList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageIndex")
         public Integer pageIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalSize")
         public Long totalSize;
 

@@ -4,21 +4,41 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class GenerateUploadConfigResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>NoData</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GenerateUploadConfigResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,12 +96,20 @@ public class GenerateUploadConfigResponseBody extends TeaModel {
     }
 
     public static class GenerateUploadConfigResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>oss://default/oss-bucket-name/aimiaobi/2021/07/01/1625126400000/1.docx</p>
+         */
         @NameInMap("FileKey")
         public String fileKey;
 
         @NameInMap("FormDatas")
         public java.util.Map<String, ?> formDatas;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://bucket-name.oss-cn-hangzhou.aliyuncs.com">https://bucket-name.oss-cn-hangzhou.aliyuncs.com</a></p>
+         */
         @NameInMap("PostUrl")
         public String postUrl;
 

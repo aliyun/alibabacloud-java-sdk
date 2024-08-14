@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class GetInterveneImportTaskInfoRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>67c520d1fa43455ea44fb69fa402d54d_p_beebot_public</p>
      */
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>19162157</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

@@ -6,22 +6,45 @@ import com.aliyun.tea.*;
 public class SearchNewsShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxx_p_efm</p>
      */
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("FilterNotNull")
     public Boolean filterNotNull;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IncludeContent")
     public Boolean includeContent;
 
+    /**
+     * <strong>example:</strong>
+     * <p>81</p>
+     */
     @NameInMap("Page")
     public Integer page;
 
+    /**
+     * <strong>example:</strong>
+     * <p>35</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>检索Query</p>
+     */
     @NameInMap("Query")
     public String query;
 

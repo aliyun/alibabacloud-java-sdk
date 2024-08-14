@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GenerateImageTaskRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e1be065b-adc3-435e-bd01-1c18c5ed75d3</p>
      */
     @NameInMap("AgentKey")
     public String agentKey;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e1be065b-adc3-435e-bd01-1c18c5ed75d3</p>
      */
     @NameInMap("ArticleTaskId")
     public String articleTaskId;
@@ -24,12 +30,18 @@ public class GenerateImageTaskRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1024*1024</p>
      */
     @NameInMap("Size")
     public String size;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <auto>
      */
     @NameInMap("Style")
     public String style;
@@ -82,19 +94,33 @@ public class GenerateImageTaskRequest extends TeaModel {
     public static class GenerateImageTaskRequestParagraphList extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>一直忧伤的猫</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e1be065b-adc3-435e-bd01-1c18c5ed75d3</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SUCCESSED</p>
+         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
