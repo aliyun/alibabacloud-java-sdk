@@ -7681,6 +7681,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("next_version", request.nextVersion);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.rollingPolicy)) {
+            body.put("rolling_policy", request.rollingPolicy);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.version)) {
             body.put("version", request.version);
         }

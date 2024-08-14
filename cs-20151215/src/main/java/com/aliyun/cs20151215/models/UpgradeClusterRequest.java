@@ -36,6 +36,9 @@ public class UpgradeClusterRequest extends TeaModel {
     @NameInMap("next_version")
     public String nextVersion;
 
+    @NameInMap("rolling_policy")
+    public UpgradeClusterRequestRollingPolicy rollingPolicy;
+
     /**
      * <p>This parameter is discontinued. Specify the Kubernetes version by using the next_version parameter.</p>
      * 
@@ -75,12 +78,39 @@ public class UpgradeClusterRequest extends TeaModel {
         return this.nextVersion;
     }
 
+    public UpgradeClusterRequest setRollingPolicy(UpgradeClusterRequestRollingPolicy rollingPolicy) {
+        this.rollingPolicy = rollingPolicy;
+        return this;
+    }
+    public UpgradeClusterRequestRollingPolicy getRollingPolicy() {
+        return this.rollingPolicy;
+    }
+
     public UpgradeClusterRequest setVersion(String version) {
         this.version = version;
         return this;
     }
     public String getVersion() {
         return this.version;
+    }
+
+    public static class UpgradeClusterRequestRollingPolicy extends TeaModel {
+        @NameInMap("max_parallelism")
+        public Integer maxParallelism;
+
+        public static UpgradeClusterRequestRollingPolicy build(java.util.Map<String, ?> map) throws Exception {
+            UpgradeClusterRequestRollingPolicy self = new UpgradeClusterRequestRollingPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public UpgradeClusterRequestRollingPolicy setMaxParallelism(Integer maxParallelism) {
+            this.maxParallelism = maxParallelism;
+            return this;
+        }
+        public Integer getMaxParallelism() {
+            return this.maxParallelism;
+        }
+
     }
 
 }
