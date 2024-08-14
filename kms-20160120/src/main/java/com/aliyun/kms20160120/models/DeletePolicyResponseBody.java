@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeletePolicyResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>00a26a33-d992-42f3-9012-5fd12764430f</p>
      */
     @NameInMap("RequestId")
     public String requestId;

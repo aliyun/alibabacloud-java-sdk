@@ -6,34 +6,46 @@ import com.aliyun.tea.*;
 public class UpdateSecretVersionStageRequest extends TeaModel {
     /**
      * <p>The version from which you want to remove the specified stage label.</p>
-     * <br>
-     * <p>>  You must specify at least one of the RemoveFromVersion and MoveToVersion parameters.</p>
+     * <blockquote>
+     * <p> You must specify at least one of the RemoveFromVersion and MoveToVersion parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>002</p>
      */
     @NameInMap("MoveToVersion")
     public String moveToVersion;
 
     /**
      * <p>The specified stage label. Valid values:</p>
-     * <br>
-     * <p>*   ACSCurrent</p>
-     * <p>*   ACSPrevious</p>
-     * <p>*   Custom stage label</p>
+     * <ul>
+     * <li>ACSCurrent</li>
+     * <li>ACSPrevious</li>
+     * <li>Custom stage label</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>001</p>
      */
     @NameInMap("RemoveFromVersion")
     public String removeFromVersion;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **UpdateSecretVersionStage**.</p>
-     * <br>
+     * <p>The operation that you want to perform. Set the value to <strong>UpdateSecretVersionStage</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>secret001</p>
      */
     @NameInMap("SecretName")
     public String secretName;
 
     /**
      * <p>The name of the secret.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACSCurrent</p>
      */
     @NameInMap("VersionStage")
     public String versionStage;

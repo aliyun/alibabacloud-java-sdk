@@ -12,24 +12,36 @@ public class ListApplicationAccessPointsResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bcfefe15-46f0-44a3-bd96-3d422474b71a</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,12 +94,18 @@ public class ListApplicationAccessPointsResponseBody extends TeaModel {
     public static class ListApplicationAccessPointsResponseBodyApplicationAccessPointsApplicationAccessPoint extends TeaModel {
         /**
          * <p>The authentication method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ClientKey</p>
          */
         @NameInMap("AuthenticationMethod")
         public String authenticationMethod;
 
         /**
          * <p>The name of the AAP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aap_test</p>
          */
         @NameInMap("Name")
         public String name;

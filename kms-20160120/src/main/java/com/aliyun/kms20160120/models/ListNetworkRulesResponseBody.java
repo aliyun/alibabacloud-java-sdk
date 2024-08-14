@@ -12,24 +12,36 @@ public class ListNetworkRulesResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3bf02f7a-015b-4f34-be0f-cc043fda2d33</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,12 +94,18 @@ public class ListNetworkRulesResponseBody extends TeaModel {
     public static class ListNetworkRulesResponseBodyNetworkRulesNetworkRule extends TeaModel {
         /**
          * <p>The name of the access control rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>networkrule_test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The network type. The value is fixed as Private. Self-managed applications can access KMS instances only over a private virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Private</p>
          */
         @NameInMap("Type")
         public String type;

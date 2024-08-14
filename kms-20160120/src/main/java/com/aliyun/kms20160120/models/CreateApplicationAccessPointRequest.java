@@ -6,30 +6,41 @@ import com.aliyun.tea.*;
 public class CreateApplicationAccessPointRequest extends TeaModel {
     /**
      * <p>The authentication method. Currently, only ClientKey is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ClientKey</p>
      */
     @NameInMap("AuthenticationMethod")
     public String authenticationMethod;
 
     /**
      * <p>The description of the AAP.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aap description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The name of the AAP.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aap_test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The permission policy.</p>
-     * <br>
-     * <p>> You can bind up to three permission policies to each AAP.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can bind up to three permission policies to each AAP.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;kst-hzz62ee817bvyyr5x****.efkd&quot;,&quot;kst-hzz62ee817bvyyr5x****.eyyp&quot;]</p>
      */
     @NameInMap("Policies")
     public String policies;

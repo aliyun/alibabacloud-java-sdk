@@ -6,40 +6,50 @@ import com.aliyun.tea.*;
 public class ConnectKmsInstanceRequest extends TeaModel {
     /**
      * <p>The provider of the KMS instance. Set the value to Aliyun.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Aliyun</p>
      */
     @NameInMap("KMProvider")
     public String KMProvider;
 
     /**
      * <p>The ID of the KMS instance that you want to enable.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>kst-phzz64f722a1buamw0****</p>
      */
     @NameInMap("KmsInstanceId")
     public String kmsInstanceId;
 
     /**
      * <p>The vSwitch in the two zones. The vSwitch must have at least one available IP address.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp1i512amda6d10a0****</p>
      */
     @NameInMap("VSwitchIds")
     public String vSwitchIds;
 
     /**
      * <p>The ID of the virtual private cloud (VPC) that is associated with the KMS instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp19z7cwmltad5dff****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
      * <p>The two zones for the KMS instance. Dual-zone deployment improves service availability and disaster recovery capabilities.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-k,cn-hangzhou-j</p>
      */
     @NameInMap("ZoneIds")
     public String zoneIds;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteNetworkRuleResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3bf02f7a-015b-4f93-be0f-cc043fda2d4</p>
      */
     @NameInMap("RequestId")
     public String requestId;

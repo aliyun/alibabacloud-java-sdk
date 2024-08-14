@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class GetKeyPolicyRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>key-hzz630494463ejqjx****</p>
      */
     @NameInMap("KeyId")
     public String keyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("PolicyName")
     public String policyName;
 

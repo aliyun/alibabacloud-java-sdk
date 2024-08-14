@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class EnableKeyRequest extends TeaModel {
     /**
      * <p>The globally unique ID of the CMK.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234abcd-12ab-34cd-56ef-12345678****</p>
      */
     @NameInMap("KeyId")
     public String keyId;

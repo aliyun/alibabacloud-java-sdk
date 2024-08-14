@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListResourceTagsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4162a6af-bc99-40b3-a552-89dcc8aaf7c8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class ListResourceTagsResponseBody extends TeaModel {
     public static class ListResourceTagsResponseBodyTagsTag extends TeaModel {
         /**
          * <p>The globally unique ID of the CMK.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33caea95-c3e5-4b3e-a9c6-cec76e4e****</p>
          */
         @NameInMap("KeyId")
         public String keyId;
 
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Project</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

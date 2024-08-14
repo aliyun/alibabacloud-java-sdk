@@ -12,24 +12,36 @@ public class ListKeyVersionsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>f71204c4-53cd-4eea-b405-653ba2db7e86</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned key versions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,20 +94,30 @@ public class ListKeyVersionsResponseBody extends TeaModel {
     public static class ListKeyVersionsResponseBodyKeyVersionsKeyVersion extends TeaModel {
         /**
          * <p>The date and time when the CMK version was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-03-25T10:42:40Z</p>
          */
         @NameInMap("CreationDate")
         public String creationDate;
 
         /**
          * <p>The globally unique ID of the CMK.</p>
-         * <br>
-         * <p>>  If you set the KeyId parameter to the alias of the CMK, the ID of the CMK to which the alias is bound is returned.</p>
+         * <blockquote>
+         * <p> If you set the KeyId parameter to the alias of the CMK, the ID of the CMK to which the alias is bound is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0b30658a-ed1a-4922-b8f7-a673ca9c****</p>
          */
         @NameInMap("KeyId")
         public String keyId;
 
         /**
          * <p>The globally unique ID of the CMK version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1e3304fd-68ac-4d5b-8886-ae5f01a1****</p>
          */
         @NameInMap("KeyVersionId")
         public String keyVersionId;

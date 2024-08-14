@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class UpdateSecretResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5b75d8b1-5b6a-4ec0-8e0c-c08befdfad47</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The name of the secret.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>secret001</p>
      */
     @NameInMap("SecretName")
     public String secretName;

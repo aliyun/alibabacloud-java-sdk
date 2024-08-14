@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class PutSecretValueResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>f94ec9d3-2d10-4922-9a5c-5dcd5ebcb5e8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The name of the secret.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>secret001</p>
      */
     @NameInMap("SecretName")
     public String secretName;
 
     /**
      * <p>The new version of the secret value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>00000000000000000000000000000000203</p>
      */
     @NameInMap("VersionId")
     public String versionId;

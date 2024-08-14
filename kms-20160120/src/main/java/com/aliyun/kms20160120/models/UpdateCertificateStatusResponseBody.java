@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateCertificateStatusResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e3f57fe0-9ded-40b0-9caf-a3815f2148c1</p>
      */
     @NameInMap("RequestId")
     public String requestId;

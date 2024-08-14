@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class EnableKeyResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>efb1cbbd-a093-4278-bc03-639dd4fcc207</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListSecretsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of returned secrets.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The list of secrets.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6a6287a0-ff34-4780-a790-fdfca900557f</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +39,9 @@ public class ListSecretsResponseBody extends TeaModel {
 
     /**
      * <p>The secret name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>55</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -80,9 +92,17 @@ public class ListSecretsResponseBody extends TeaModel {
     }
 
     public static class ListSecretsResponseBodySecretListSecretTagsTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>key1</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>val1</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -131,29 +151,41 @@ public class ListSecretsResponseBody extends TeaModel {
     public static class ListSecretsResponseBodySecretListSecret extends TeaModel {
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-17T07:59:05Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The resource tags of the secret.</p>
-         * <br>
          * <p>This parameter is not returned if you set the FetchTags parameter to false or do not specify the FetchTags parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-17T07:59:05Z</p>
          */
         @NameInMap("PlannedDeleteTime")
         public String plannedDeleteTime;
 
         /**
          * <p>The type of the secret. Valid values:</p>
-         * <br>
-         * <p>*   Generic: indicates a generic secret.</p>
-         * <p>*   Rds: indicates a managed ApsaraDB RDS secret.</p>
+         * <ul>
+         * <li>Generic: indicates a generic secret.</li>
+         * <li>Rds: indicates a managed ApsaraDB RDS secret.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>secret001</p>
          */
         @NameInMap("SecretName")
         public String secretName;
 
         /**
          * <p>The time when the secret was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Generic</p>
          */
         @NameInMap("SecretType")
         public String secretType;
@@ -166,6 +198,9 @@ public class ListSecretsResponseBody extends TeaModel {
 
         /**
          * <p>The time when the secret is scheduled to be deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-17T07:59:05Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

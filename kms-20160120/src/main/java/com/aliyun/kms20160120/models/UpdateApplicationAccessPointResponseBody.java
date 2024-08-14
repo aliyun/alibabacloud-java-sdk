@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateApplicationAccessPointResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bcfefe15-46f0-44a3-bd96-3d422474b71a</p>
      */
     @NameInMap("RequestId")
     public String requestId;

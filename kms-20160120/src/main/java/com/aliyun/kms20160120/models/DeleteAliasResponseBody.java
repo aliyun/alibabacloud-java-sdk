@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteAliasResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4c8ae23f-3a42-6791-a4ba-1faa77831c28</p>
      */
     @NameInMap("RequestId")
     public String requestId;

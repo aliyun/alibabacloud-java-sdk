@@ -6,20 +6,22 @@ import com.aliyun.tea.*;
 public class DescribeKeyVersionRequest extends TeaModel {
     /**
      * <p>The globally unique ID of the CMK.</p>
-     * <br>
-     * <p>You can also set this parameter to an alias that is bound to the CMK. For more information, see [Alias overview](https://help.aliyun.com/document_detail/68522.html).</p>
-     * <br>
+     * <p>You can also set this parameter to an alias that is bound to the CMK. For more information, see <a href="https://help.aliyun.com/document_detail/68522.html">Alias overview</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234abcd-12ab-34cd-56ef-12345678****</p>
      */
     @NameInMap("KeyId")
     public String keyId;
 
     /**
      * <p>The globally unique ID of the CMK version.</p>
-     * <br>
-     * <p>You can call the [ListKeyVersions](https://help.aliyun.com/document_detail/133966.html) operation to query the versions of the CMK.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/133966.html">ListKeyVersions</a> operation to query the versions of the CMK.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2ab1a983-7072-4bbc-a582-584b5bd8****</p>
      */
     @NameInMap("KeyVersionId")
     public String keyVersionId;

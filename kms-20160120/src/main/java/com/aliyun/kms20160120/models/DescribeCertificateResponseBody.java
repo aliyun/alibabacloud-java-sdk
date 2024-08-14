@@ -6,97 +6,138 @@ import com.aliyun.tea.*;
 public class DescribeCertificateResponseBody extends TeaModel {
     /**
      * <p>The Alibaba Cloud Resource Name (ARN) of the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:kms:cn-hangzhou:159498693826****:certificate/9a28de48-8d8b-484d-a766-dec4****&quot;</p>
      */
     @NameInMap("Arn")
     public String arn;
 
     /**
      * <p>The ID of the certificate. The ID must be globally unique in Certificates Manager.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9a28de48-8d8b-484d-a766-dec4****</p>
      */
     @NameInMap("CertificateId")
     public String certificateId;
 
     /**
      * <p>The time when the certificate was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-10-13T03:05:03Z</p>
      */
     @NameInMap("CreatedAt")
     public String createdAt;
 
     /**
      * <p>Indicates whether the private key of the certificate can be exported for use. Valid values:</p>
-     * <br>
-     * <p>*   true: The private key of the certificate can be exported for use. This is the default value.</p>
-     * <p>*   false: The private key of the certificate cannot be exported for use.</p>
+     * <ul>
+     * <li>true: The private key of the certificate can be exported for use. This is the default value.</li>
+     * <li>false: The private key of the certificate cannot be exported for use.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ExportablePrivateKey")
     public Boolean exportablePrivateKey;
 
     /**
      * <p>The certificate issuer in the distinguished name (DN) format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CN=testCA,OU=kms,O=aliyun,C=CN</p>
      */
     @NameInMap("Issuer")
     public String issuer;
 
     /**
      * <p>The type of the key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RSA_2048</p>
      */
     @NameInMap("KeySpec")
     public String keySpec;
 
     /**
      * <p>The end of the validity period of the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-10-13T03:09:00Z</p>
      */
     @NameInMap("NotAfter")
     public String notAfter;
 
     /**
      * <p>The beginning of the validity period of the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-10-13T03:09:00Z</p>
      */
     @NameInMap("NotBefore")
     public String notBefore;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>edb671a3-c5a1-4ebe-a1de-d748b640bdf2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The serial number of the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345678</p>
      */
     @NameInMap("Serial")
     public String serial;
 
     /**
      * <p>The signature algorithm of the certificate. Valid values:</p>
-     * <br>
-     * <p>*   RSA2048-SHA256</p>
-     * <p>*   ECDSA-SHA256</p>
-     * <p>*   SM2-SM3</p>
+     * <ul>
+     * <li>RSA2048-SHA256</li>
+     * <li>ECDSA-SHA256</li>
+     * <li>SM2-SM3</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ECDSA-SHA256</p>
      */
     @NameInMap("SignatureAlgorithm")
     public String signatureAlgorithm;
 
     /**
      * <p>The status of the certificate. Valid values:</p>
-     * <br>
-     * <p>*   PENDING: The certificate is to be imported.</p>
-     * <p>*   ACTIVE: The certificate is enabled.</p>
-     * <p>*   INACTIVE: The certificate is disabled.</p>
-     * <p>*   REVOKED: The certificate is revoked.</p>
+     * <ul>
+     * <li>PENDING: The certificate is to be imported.</li>
+     * <li>ACTIVE: The certificate is enabled.</li>
+     * <li>INACTIVE: The certificate is disabled.</li>
+     * <li>REVOKED: The certificate is revoked.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ACTIVE</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The subject of the certificate, which is in the DN format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CN=userName,OU=aliyun,O=aliyun,C=CN</p>
      */
     @NameInMap("Subject")
     public String subject;
 
     /**
      * <p>The alias of the certificate subject.</p>
-     * <br>
      * <p>A domain name list is supported. A maximum of 10 domain names are supported.</p>
      */
     @NameInMap("SubjectAlternativeNames")
@@ -104,24 +145,36 @@ public class DescribeCertificateResponseBody extends TeaModel {
 
     /**
      * <p>The public key identifier of the certificate subject.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>79 36 26 DE 9F F5 15 E3 56 DC ****</p>
      */
     @NameInMap("SubjectKeyIdentifier")
     public String subjectKeyIdentifier;
 
     /**
      * <p>The public key of the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-----BEGIN PUBLIC KEY----- MIIBIjA -----END PUBLIC KEY-----</p>
      */
     @NameInMap("SubjectPublicKey")
     public String subjectPublicKey;
 
     /**
      * <p>The tag of the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{\&quot;TagKey\&quot;:\&quot;S1key1\&quot;,\&quot;TagValue\&quot;:\&quot;S1val1\&quot;},{\&quot;TagKey\&quot;:\&quot;S1key2\&quot;,\&quot;TagValue\&quot;:\&quot;S2val2\&quot;}]</p>
      */
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
 
     /**
      * <p>The time when the certificate was updated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-12-23T06:10:13Z</p>
      */
     @NameInMap("UpdatedAt")
     public String updatedAt;

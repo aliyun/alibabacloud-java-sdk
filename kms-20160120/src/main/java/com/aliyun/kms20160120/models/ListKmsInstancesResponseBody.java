@@ -12,24 +12,36 @@ public class ListKmsInstancesResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d3eca5c8-a856-4347-8eb6-e1898c3fda2e</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of KMS instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -82,12 +94,18 @@ public class ListKmsInstancesResponseBody extends TeaModel {
     public static class ListKmsInstancesResponseBodyKmsInstancesKmsInstance extends TeaModel {
         /**
          * <p>The ARN of the KMS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:kms:pre-hangzhou:120708975881****:keystore/kst-phzz64c9f84eo32dbs****</p>
          */
         @NameInMap("KmsInstanceArn")
         public String kmsInstanceArn;
 
         /**
          * <p>The ID of the KMS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kst-phzz64c9f84eo32dbs****</p>
          */
         @NameInMap("KmsInstanceId")
         public String kmsInstanceId;

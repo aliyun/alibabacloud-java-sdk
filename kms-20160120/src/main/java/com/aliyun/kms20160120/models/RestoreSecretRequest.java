@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class RestoreSecretRequest extends TeaModel {
     /**
      * <p>The name of the secret you want to restore.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>secret001</p>
      */
     @NameInMap("SecretName")
     public String secretName;

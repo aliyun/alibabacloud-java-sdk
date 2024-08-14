@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
-     * <br>
-     * <p>*   If NextToken is empty ("NextToken": ""), no next page exists.</p>
-     * <p>*   If NextToken is not empty, the next query is required, and the value is the token used to start the next query.</p>
+     * <ul>
+     * <li>If NextToken is empty (&quot;NextToken&quot;: &quot;&quot;), no next page exists.</li>
+     * <li>If NextToken is not empty, the next query is required, and the value is the token used to start the next query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>e71d8a535bd9cc11</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>00827261-20B7-4562-83F2-4DF39876A45A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,24 +64,36 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
         /**
          * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-hzz62f1cb66fa42qo****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The type of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>disk-encryption</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

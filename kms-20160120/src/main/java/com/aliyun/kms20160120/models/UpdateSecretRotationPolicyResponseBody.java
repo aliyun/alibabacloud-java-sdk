@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class UpdateSecretRotationPolicyResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2c124f6f-4210-499f-b88a-69f54004d2d8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The name of the secret.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RdsSecret/Mysql5.4/MyCred</p>
      */
     @NameInMap("SecretName")
     public String secretName;

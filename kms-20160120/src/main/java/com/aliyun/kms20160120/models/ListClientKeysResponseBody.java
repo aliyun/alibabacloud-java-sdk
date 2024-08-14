@@ -12,6 +12,9 @@ public class ListClientKeysResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2312e45f-b2fa-4c34-ad94-3eca50932916</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,50 +43,73 @@ public class ListClientKeysResponseBody extends TeaModel {
     public static class ListClientKeysResponseBodyClientKeys extends TeaModel {
         /**
          * <p>The name of the AAP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aap_test</p>
          */
         @NameInMap("AapName")
         public String aapName;
 
         /**
          * <p>The ID of the client key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KAAP.66abf237-63f6-4625-b8cf-47e1086e****</p>
          */
         @NameInMap("ClientKeyId")
         public String clientKeyId;
 
         /**
          * <p>The time when the client key was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-08-31T09:14:38Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The private key algorithm of the client key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RSA_2048</p>
          */
         @NameInMap("KeyAlgorithm")
         public String keyAlgorithm;
 
         /**
          * <p>The provider of the client key.</p>
-         * <br>
          * <p>Currently, only KMS is supported. The value is fixed as KMS_PROVIDED.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KMS_PROVIDED</p>
          */
         @NameInMap("KeyOrigin")
         public String keyOrigin;
 
         /**
          * <p>The end of the validity period of the client key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2028-08-31T17:14:33Z</p>
          */
         @NameInMap("NotAfter")
         public String notAfter;
 
         /**
          * <p>The beginning of the validity period of the client key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-08-31T17:14:33Z</p>
          */
         @NameInMap("NotBefore")
         public String notBefore;
 
         /**
          * <p>The public key of the client key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----\nMIIDcjCCAlqgAwIBAgIQT/sAVRxwYp54mrw****-----END CERTIFICATE-----</p>
          */
         @NameInMap("PublicKeyData")
         public String publicKeyData;

@@ -6,26 +6,37 @@ import com.aliyun.tea.*;
 public class ReEncryptResponseBody extends TeaModel {
     /**
      * <p>The ciphertext re-encrypted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DZhOWVmZDktM2QxNi00ODk0LWJkNGYtMWZjNDNmM2YyYWJmaaSl+TztSIMe43nbTH/Z1Wr4XfLftKhAciUmDQXuMRl4WTvKhxjMThjK****</p>
      */
     @NameInMap("CiphertextBlob")
     public String ciphertextBlob;
 
     /**
      * <p>The ID of the CMK that is used to decrypt the original ciphertext.</p>
-     * <br>
      * <p>This parameter is the globally unique ID of the CMK.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2ab1a983-7072-4bbc-a582-584b5bd8****</p>
      */
     @NameInMap("KeyId")
     public String keyId;
 
     /**
      * <p>The ID of the CMK version that is used to decrypt the original ciphertext.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>202b9877-5a25-46e3-a763-e20791b5****</p>
      */
     @NameInMap("KeyVersionId")
     public String keyVersionId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>207596a2-36d3-4840-b1bd-f87044699bd7</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,29 +6,37 @@ import com.aliyun.tea.*;
 public class SetDeletionProtectionRequest extends TeaModel {
     /**
      * <p>The description of deletion protection.</p>
-     * <br>
-     * <p>>  This parameter takes effect only when you set the EnableDeletionProtection parameter to true.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only when you set the EnableDeletionProtection parameter to true.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>This key is being used by XXX service. You are protected from deletion.</p>
      */
     @NameInMap("DeletionProtectionDescription")
     public String deletionProtectionDescription;
 
     /**
      * <p>Specifies whether to enable deletion protection. Valid values:</p>
-     * <br>
-     * <p>*   true: enables deletion protection.</p>
-     * <p>*   false: disables deletion protection.</p>
-     * <br>
+     * <ul>
+     * <li>true: enables deletion protection.</li>
+     * <li>false: disables deletion protection.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EnableDeletionProtection")
     public Boolean enableDeletionProtection;
 
     /**
      * <p>The ARN of the CMK for which you want to set deletion protection.</p>
-     * <br>
-     * <p>You can call the [DescribeKey](https://help.aliyun.com/document_detail/28952.html) operation to query the CMK ARN.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the CMK ARN.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:kms:cn-hangzhou:123213123****:key/0225f411-b21d-46d1-be5b-93931c82****</p>
      */
     @NameInMap("ProtectedResourceArn")
     public String protectedResourceArn;

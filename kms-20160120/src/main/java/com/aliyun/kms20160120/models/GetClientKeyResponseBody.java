@@ -6,56 +6,82 @@ import com.aliyun.tea.*;
 public class GetClientKeyResponseBody extends TeaModel {
     /**
      * <p>The name of the application access point (AAP).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aap_test</p>
      */
     @NameInMap("AapName")
     public String aapName;
 
     /**
      * <p>The ID of the client key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>KAAP.66abf237-63f6-4625-b8cf-47e1086e****</p>
      */
     @NameInMap("ClientKeyId")
     public String clientKeyId;
 
     /**
      * <p>The time when the client key was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-08-31T09:14:38Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
      * <p>The private key algorithm of the client key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RSA_2048</p>
      */
     @NameInMap("KeyAlgorithm")
     public String keyAlgorithm;
 
     /**
      * <p>The provider of the client key.</p>
-     * <br>
      * <p>Currently, only Key Management Service (KMS) is supported. The value is fixed as KMS_PROVIDED.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>KMS_PROVIDED</p>
      */
     @NameInMap("KeyOrigin")
     public String keyOrigin;
 
     /**
      * <p>The end of the validity period of the client key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2028-08-31T17:14:33Z</p>
      */
     @NameInMap("NotAfter")
     public String notAfter;
 
     /**
      * <p>The beginning of the validity period of the client key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-08-31T17:14:33Z</p>
      */
     @NameInMap("NotBefore")
     public String notBefore;
 
     /**
      * <p>The content of the public key of the client key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-----BEGIN CERTIFICATE-----\nMIIDcjCCAlqgAwIBAgIQT/sAVRxwYp54mrw****-----END CERTIFICATE-----</p>
      */
     @NameInMap("PublicKeyData")
     public String publicKeyData;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>63d849a6-045b-4a57-ad9f-c5f756cea9e9</p>
      */
     @NameInMap("RequestId")
     public String requestId;

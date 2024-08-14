@@ -5,38 +5,47 @@ import com.aliyun.tea.*;
 
 public class CreateClientKeyRequest extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **CreateClientKey**.</p>
-     * <br>
+     * <p>The operation that you want to perform. Set the value to <strong>CreateClientKey</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aap_test</p>
      */
     @NameInMap("AapName")
     public String aapName;
 
     /**
      * <p>The encryption password of the client key.</p>
-     * <br>
-     * <p>The password must be 8 to 64 characters in length and must contain at least two of the following types: digits, letters, and special characters. Special characters include `~ ! @ # $ % ^ & * ? _ -`.</p>
+     * <p>The password must be 8 to 64 characters in length and must contain at least two of the following types: digits, letters, and special characters. Special characters include <code>~ ! @ # $ % ^ &amp; * ? _ -</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2028-08-31T17:14:33Z</p>
      */
     @NameInMap("NotAfter")
     public String notAfter;
 
     /**
      * <p>The end of the validity period of the client key.</p>
-     * <br>
      * <p>Specify the time in the ISO 8601 standard. The time must be in UTC. The time must be in the yyyy-MM-ddTHH:mm:ssZ format.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If you do not configure NotAfter, the default value is the time when the client key was created plus five years.</p>
-     * <p>*   If you configure NotAfter, you must configure NotBefore.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>If you do not configure NotAfter, the default value is the time when the client key was created plus five years.</li>
+     * <li>If you configure NotAfter, you must configure NotBefore.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-08-31T17:14:33Z</p>
      */
     @NameInMap("NotBefore")
     public String notBefore;
 
     /**
      * <p>The name of the AAP.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bcfefe15-46f0****</p>
      */
     @NameInMap("Password")
     public String password;

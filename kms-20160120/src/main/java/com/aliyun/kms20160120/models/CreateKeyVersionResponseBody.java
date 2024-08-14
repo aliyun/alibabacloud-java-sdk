@@ -12,6 +12,9 @@ public class CreateKeyVersionResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b96f250a-4b75-498c-91be-22c6928f85be</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class CreateKeyVersionResponseBody extends TeaModel {
     public static class CreateKeyVersionResponseBodyKeyVersion extends TeaModel {
         /**
          * <p>The date and time when the version was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-08-02T10:38:27Z</p>
          */
         @NameInMap("CreationDate")
         public String creationDate;
 
         /**
          * <p>The ID of the CMK. The ID must be globally unique.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0b30658a-ed1a-4922-b8f7-a673ca9c****</p>
          */
         @NameInMap("KeyId")
         public String keyId;
 
         /**
          * <p>The ID of the version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c0a3d5dc-0b47-4199-a050-b289349a****</p>
          */
         @NameInMap("KeyVersionId")
         public String keyVersionId;

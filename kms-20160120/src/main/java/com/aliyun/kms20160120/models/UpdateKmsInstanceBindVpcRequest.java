@@ -6,23 +6,27 @@ import com.aliyun.tea.*;
 public class UpdateKmsInstanceBindVpcRequest extends TeaModel {
     /**
      * <p>The VPC configuration. The configuration of each VPC contains the following content:</p>
-     * <br>
-     * <p>*   VpcId: the ID of the VPC.</p>
-     * <p>*   VSwitchId: the vSwitch in the VPC.</p>
-     * <p>*   RegionID: the ID of the region to which the VPC belongs.</p>
-     * <p>*   VpcOwnerId: the Alibaba Cloud account to which the VPC belongs.</p>
-     * <br>
-     * <p>Format: `[{"VpcId":"${VpcId}","VSwitchId":"${VSwitchId}","RegionId":"${RegionId}","VpcOwnerId":${VpcOwnerId}},..]`.</p>
-     * <br>
+     * <ul>
+     * <li>VpcId: the ID of the VPC.</li>
+     * <li>VSwitchId: the vSwitch in the VPC.</li>
+     * <li>RegionID: the ID of the region to which the VPC belongs.</li>
+     * <li>VpcOwnerId: the Alibaba Cloud account to which the VPC belongs.</li>
+     * </ul>
+     * <p>Format: <code>[{&quot;VpcId&quot;:&quot;${VpcId}&quot;,&quot;VSwitchId&quot;:&quot;${VSwitchId}&quot;,&quot;RegionId&quot;:&quot;${RegionId}&quot;,&quot;VpcOwnerId&quot;:${VpcOwnerId}},..]</code>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;VpcId&quot;:&quot;vpc-bp1go9qvmj78j4f4c****&quot;,&quot;VSwitchId&quot;:&quot;vsw-bp16c5pvvcf0fp5b9****&quot;,&quot;RegionId&quot;:&quot;cn-hangzhou&quot;,&quot;VpcOwnerId&quot;:120708975881****},{&quot;VpcId&quot;:&quot;vpc-bp14c07ucxg6h1xjm****&quot;,&quot;VSwitchId&quot;:&quot;vsw-bp1wujtnspi1l3gvu****&quot;,&quot;RegionId&quot;:&quot;cn-hangzhou&quot;,&quot;VpcOwnerId&quot;:119285303511****}]</p>
      */
     @NameInMap("BindVpcs")
     public String bindVpcs;
 
     /**
      * <p>The ID of the KMS instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>kst-phzz64f722a1buamw0****</p>
      */
     @NameInMap("KmsInstanceId")
     public String kmsInstanceId;

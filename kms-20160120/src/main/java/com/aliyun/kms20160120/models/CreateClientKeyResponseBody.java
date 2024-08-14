@@ -6,43 +6,61 @@ import com.aliyun.tea.*;
 public class CreateClientKeyResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>KAAP.66abf237-63f6-4625-b8cf-47e1086e****</p>
      */
     @NameInMap("ClientKeyId")
     public String clientKeyId;
 
     /**
      * <p>The ID of the client key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RSA_2048</p>
      */
     @NameInMap("KeyAlgorithm")
     public String keyAlgorithm;
 
     /**
      * <p>The beginning of the validity period of the client key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2028-08-31T17:14:33Z</p>
      */
     @NameInMap("NotAfter")
     public String notAfter;
 
     /**
      * <p>The private key of the client key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-08-31T17:14:33Z</p>
      */
     @NameInMap("NotBefore")
     public String notBefore;
 
     /**
      * <p>The algorithm that is used to encrypt the private key of the client key. Currently, only RSA_2048 is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MIIJqwIBAzCCCXcGCSqGSIb3DQEHAaCCCWgEgglkMIIJYDCCBBcGCSqGSIb3DQEHBqCCBAgwgg******</p>
      */
     @NameInMap("PrivateKeyData")
     public String privateKeyData;
 
     /**
      * <p>The beginning of the validity period of the client key.</p>
-     * <br>
      * <p>Specify the time in the ISO 8601 standard. The time must be in UTC. The time must be in the yyyy-MM-ddTHH:mm:ssZ format.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If you do not configure NotBefore, the default value is the time when the client key was created.</p>
-     * <p>*   If you configure NotBefore, you must configure NotAfter.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>If you do not configure NotBefore, the default value is the time when the client key was created.</li>
+     * <li>If you configure NotBefore, you must configure NotAfter.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2312e45f-b2fa-4c34-ad94-3eca50932916</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListPoliciesResponseBody extends TeaModel {
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -24,12 +30,18 @@ public class ListPoliciesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b66ad557-9c00-4064-9c8d-b621c3263308</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,6 +94,9 @@ public class ListPoliciesResponseBody extends TeaModel {
     public static class ListPoliciesResponseBodyPoliciesPolicy extends TeaModel {
         /**
          * <p>The name of the permission policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policy_test</p>
          */
         @NameInMap("Name")
         public String name;

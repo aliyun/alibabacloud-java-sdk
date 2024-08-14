@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class GetKmsInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the KMS instance that you want to query.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>kst-bjj62f5ba3dnpb6v8****</p>
      */
     @NameInMap("KmsInstanceId")
     public String kmsInstanceId;

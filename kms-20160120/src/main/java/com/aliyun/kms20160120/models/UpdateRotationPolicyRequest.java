@@ -6,27 +6,36 @@ import com.aliyun.tea.*;
 public class UpdateRotationPolicyRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic key rotation. Valid values:</p>
-     * <br>
-     * <p>*   true: enables automatic key rotation.</p>
-     * <p>*   false: disables automatic key rotation.</p>
-     * <br>
+     * <ul>
+     * <li>true: enables automatic key rotation.</li>
+     * <li>false: disables automatic key rotation.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EnableAutomaticRotation")
     public Boolean enableAutomaticRotation;
 
     /**
      * <p>The ID of the customer master key (CMK). The ID must be globally unique.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234abcd-12ab-34cd-56ef-12345678****</p>
      */
     @NameInMap("KeyId")
     public String keyId;
 
     /**
      * <p>The period of automatic key rotation. Specify the value in the integer[unit] format. The following units are supported: d (day), h (hour), m (minute), and s (second). For example, you can use either 7d or 604800s to specify a seven-day period. The period can range from 7 days to 730 days.</p>
-     * <br>
-     * <p>>  If you set the EnableAutomaticRotation parameter to true, you must also specify this parameter. If you set the EnableAutomaticRotation parameter to false, you can leave this parameter unspecified.</p>
+     * <blockquote>
+     * <p> If you set the EnableAutomaticRotation parameter to true, you must also specify this parameter. If you set the EnableAutomaticRotation parameter to false, you can leave this parameter unspecified.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>30d</p>
      */
     @NameInMap("RotationInterval")
     public String rotationInterval;
