@@ -28,6 +28,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>身份证三要素</p>
+     * 
+     * @param request CertNoThreeElementVerificationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CertNoThreeElementVerificationResponse
+     */
+    public CertNoThreeElementVerificationResponse certNoThreeElementVerificationWithOptions(CertNoThreeElementVerificationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authCode)) {
+            query.put("AuthCode", request.authCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certName)) {
+            query.put("CertName", request.certName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certNo)) {
+            query.put("CertNo", request.certNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certPicture)) {
+            query.put("CertPicture", request.certPicture);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mask)) {
+            query.put("Mask", request.mask);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CertNoThreeElementVerification"),
+            new TeaPair("version", "2020-02-17"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CertNoThreeElementVerificationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>身份证三要素</p>
+     * 
+     * @param request CertNoThreeElementVerificationRequest
+     * @return CertNoThreeElementVerificationResponse
+     */
+    public CertNoThreeElementVerificationResponse certNoThreeElementVerification(CertNoThreeElementVerificationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.certNoThreeElementVerificationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>身份证二要素认证</p>
      * 
      * @param request CertNoTwoElementVerificationRequest
@@ -422,6 +494,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeEmptyNumberResponse describeEmptyNumber(DescribeEmptyNumberRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeEmptyNumberWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>号码归属地查询v2</p>
+     * 
+     * @param request DescribeMobileOperatorAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeMobileOperatorAttributeResponse
+     */
+    public DescribeMobileOperatorAttributeResponse describeMobileOperatorAttributeWithOptions(DescribeMobileOperatorAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authCode)) {
+            query.put("AuthCode", request.authCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inputNumber)) {
+            query.put("InputNumber", request.inputNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mask)) {
+            query.put("Mask", request.mask);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMobileOperatorAttribute"),
+            new TeaPair("version", "2020-02-17"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMobileOperatorAttributeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>号码归属地查询v2</p>
+     * 
+     * @param request DescribeMobileOperatorAttributeRequest
+     * @return DescribeMobileOperatorAttributeResponse
+     */
+    public DescribeMobileOperatorAttributeResponse describeMobileOperatorAttribute(DescribeMobileOperatorAttributeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeMobileOperatorAttributeWithOptions(request, runtime);
     }
 
     /**
