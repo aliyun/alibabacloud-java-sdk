@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class GenerateFileUrlByKeyRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxx_p_efm</p>
      */
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://default/oss-bucket-name/aimiaobi/2021/07/01/1625126400000/1.docx</p>
+     */
     @NameInMap("FileKey")
     public String fileKey;
 

@@ -4,30 +4,62 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class ListDialoguesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>NoData</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Current")
     public Integer current;
 
     @NameInMap("Data")
     public java.util.List<ListDialoguesResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Size")
     public Integer size;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -109,21 +141,45 @@ public class ListDialoguesResponseBody extends TeaModel {
     }
 
     public static class ListDialoguesResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Bot")
         public String bot;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-01-04 11:46:07</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("CreateUser")
         public String createUser;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("DialogueType")
         public Integer dialogueType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>x</p>
+         */
         @NameInMap("User")
         public String user;
 

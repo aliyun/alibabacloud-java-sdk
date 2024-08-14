@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ExportIntervenesRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fed6555ec9e24b92aeecc34be484b887_p_efm</p>
      */
     @NameInMap("AgentKey")
     public String agentKey;

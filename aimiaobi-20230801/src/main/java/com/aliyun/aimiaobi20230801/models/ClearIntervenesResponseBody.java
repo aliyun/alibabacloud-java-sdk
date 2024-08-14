@@ -4,21 +4,41 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class ClearIntervenesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public ClearIntervenesResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -79,6 +99,10 @@ public class ClearIntervenesResponseBody extends TeaModel {
         @NameInMap("FailIdList")
         public java.util.List<String> failIdList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 

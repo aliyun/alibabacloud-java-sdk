@@ -4,21 +4,41 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class ListInterveneRulesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public ListInterveneRulesResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DA021073-17CE-5CCF-9FEB-93226C766887</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,12 +96,20 @@ public class ListInterveneRulesResponseBody extends TeaModel {
     }
 
     public static class ListInterveneRulesResponseBodyDataInterveneRuleListAnswerConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AnswerType")
         public Integer answerType;
 
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>namespace_qa_query</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
@@ -120,21 +148,41 @@ public class ListInterveneRulesResponseBody extends TeaModel {
         @NameInMap("AnswerConfig")
         public java.util.List<ListInterveneRulesResponseBodyDataInterveneRuleListAnswerConfig> answerConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-06-05 15:17:01</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-04-03 02:42:01</p>
+         */
         @NameInMap("EffectTime")
         public String effectTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("InterveneType")
         public Integer interveneType;
 
         @NameInMap("NamespaceList")
         public java.util.List<String> namespaceList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mr-iuo9pi9w555phfbb</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ruletest</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
@@ -202,15 +250,27 @@ public class ListInterveneRulesResponseBody extends TeaModel {
     }
 
     public static class ListInterveneRulesResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Count")
         public Long count;
 
         @NameInMap("InterveneRuleList")
         public java.util.List<ListInterveneRulesResponseBodyDataInterveneRuleList> interveneRuleList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageIndex")
         public Integer pageIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 

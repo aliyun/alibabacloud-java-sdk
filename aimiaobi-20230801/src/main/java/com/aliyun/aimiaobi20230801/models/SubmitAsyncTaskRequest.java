@@ -6,22 +6,40 @@ import com.aliyun.tea.*;
 public class SubmitAsyncTaskRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2daaa2e0c209xb26acb97009ea77bd4b_p_efm</p>
      */
     @NameInMap("AgentKey")
     public String agentKey;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MaterialDocumentUpload</p>
      */
     @NameInMap("TaskCode")
     public String taskCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-10-14 14:30:00</p>
+     */
     @NameInMap("TaskExecuteTime")
     public String taskExecuteTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>任务名称</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>任务提交参数</p>
+     */
     @NameInMap("TaskParam")
     public String taskParam;
 

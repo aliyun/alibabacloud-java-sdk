@@ -6,18 +6,32 @@ import com.aliyun.tea.*;
 public class UpdateGeneratedContentShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxx_p_efm</p>
      */
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>正文</p>
+     */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <strong>example:</strong>
+     * <p>正文</p>
+     */
     @NameInMap("ContentText")
     public String contentText;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>36</p>
      */
     @NameInMap("Id")
     public Long id;
@@ -25,9 +39,17 @@ public class UpdateGeneratedContentShrinkRequest extends TeaModel {
     @NameInMap("Keywords")
     public String keywordsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>创作xx文章</p>
+     */
     @NameInMap("Prompt")
     public String prompt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>评论类文章</p>
+     */
     @NameInMap("Title")
     public String title;
 

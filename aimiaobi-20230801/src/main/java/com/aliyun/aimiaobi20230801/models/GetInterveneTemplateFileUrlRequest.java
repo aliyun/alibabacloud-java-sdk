@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetInterveneTemplateFileUrlRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c160c841c8e54295bf2f441432785944_p_efm</p>
      */
     @NameInMap("AgentKey")
     public String agentKey;

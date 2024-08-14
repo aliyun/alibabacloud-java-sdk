@@ -4,21 +4,41 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class GetGeneratedContentResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>NoData</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetGeneratedContentResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -79,21 +99,41 @@ public class GetGeneratedContentResponseBody extends TeaModel {
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>media</p>
+         */
         @NameInMap("ContentDomain")
         public String contentDomain;
 
         @NameInMap("ContentText")
         public String contentText;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-01-04 11:46:07</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CreateUser")
         public String createUser;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("DeviceId")
         public String deviceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>86</p>
+         */
         @NameInMap("Id")
         public Long id;
 
@@ -106,18 +146,34 @@ public class GetGeneratedContentResponseBody extends TeaModel {
         @NameInMap("Prompt")
         public String prompt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-01-04 11:46:07</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("UpdateUser")
         public String updateUser;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0961a514-2e26-4aa6-b22b-f592d145fe47</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 

@@ -4,30 +4,58 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class ListAsyncTasksResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Current")
     public Integer current;
 
     @NameInMap("Data")
     public java.util.List<ListAsyncTasksResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>428DCC0D-3C63-5306-BD1B-124396AB97BE</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Size")
     public Integer size;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -109,66 +137,138 @@ public class ListAsyncTasksResponseBody extends TeaModel {
     }
 
     public static class ListAsyncTasksResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-23 15:41:58</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1111</p>
+         */
         @NameInMap("CreateUser")
         public String createUser;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MaterialDocumentUpload</p>
+         */
         @NameInMap("TaskCode")
         public String taskCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("TaskDefinition")
         public String taskDefinition;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-03-09 00:00:00</p>
+         */
         @NameInMap("TaskEndTime")
         public String taskEndTime;
 
         @NameInMap("TaskErrorMessage")
         public String taskErrorMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-10-14 14:30:00</p>
+         */
         @NameInMap("TaskExecuteTime")
         public String taskExecuteTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
         @NameInMap("TaskInnerErrorMessage")
         public String taskInnerErrorMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("TaskIntermediateResult")
         public String taskIntermediateResult;
 
         @NameInMap("TaskName")
         public String taskName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("TaskParam")
         public String taskParam;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("TaskProgressMessage")
         public String taskProgressMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("TaskResult")
         public String taskResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TaskRetryCount")
         public String taskRetryCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-03-20 10:53:00</p>
+         */
         @NameInMap("TaskStartTime")
         public String taskStartTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TaskStatus")
         public Integer taskStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-02-16 10:29:16</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>111</p>
+         */
         @NameInMap("UpdateUser")
         public String updateUser;
 

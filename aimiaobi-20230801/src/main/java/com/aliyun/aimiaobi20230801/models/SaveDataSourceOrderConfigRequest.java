@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class SaveDataSourceOrderConfigRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c160c841c8e54295bf2f441432785944_p_efm</p>
      */
     @NameInMap("AgentKey")
     public String agentKey;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>miaobi</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
@@ -54,6 +60,9 @@ public class SaveDataSourceOrderConfigRequest extends TeaModel {
     public static class SaveDataSourceOrderConfigRequestUserConfigDataSourceList extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>QuarkCommonNews</p>
          */
         @NameInMap("Code")
         public String code;
@@ -63,12 +72,18 @@ public class SaveDataSourceOrderConfigRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Number")
         public Integer number;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SystemSearch</p>
          */
         @NameInMap("Type")
         public String type;

@@ -4,21 +4,41 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class GetDataSourceOrderConfigResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetDataSourceOrderConfigResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>428DCC0D-3C63-5306-BD1B-124396AB97BE</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,15 +96,27 @@ public class GetDataSourceOrderConfigResponseBody extends TeaModel {
     }
 
     public static class GetDataSourceOrderConfigResponseBodyDataUserConfigDataSourceList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>QuarkCommonNews</p>
+         */
         @NameInMap("Code")
         public String code;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("Number")
         public Integer number;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SystemSearch</p>
+         */
         @NameInMap("Type")
         public String type;
 

@@ -4,21 +4,41 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class SubmitAsyncTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>DataNotExists</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public SubmitAsyncTaskResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,12 +96,24 @@ public class SubmitAsyncTaskResponseBody extends TeaModel {
     }
 
     public static class SubmitAsyncTaskResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("TaskIntermediateResult")
         public Object taskIntermediateResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p>任务名称</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 

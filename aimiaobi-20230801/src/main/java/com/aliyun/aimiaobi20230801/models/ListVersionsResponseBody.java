@@ -4,21 +4,41 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class ListVersionsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>DataNotExists</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public java.util.List<ListVersionsResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>数据不存在</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,39 +96,83 @@ public class ListVersionsResponseBody extends TeaModel {
     }
 
     public static class ListVersionsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>43</p>
+         */
         @NameInMap("ConcurrentCount")
         public Integer concurrentCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-04-23 02:00:34</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>55</p>
+         */
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ga-bp12pismsw4v3tzhf62p1</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
         @NameInMap("OrderId")
         public Long orderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CUSTOMIZE</p>
+         */
         @NameInMap("ProductType")
         public String productType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>13</p>
+         */
         @NameInMap("Quota")
         public Integer quota;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-05-27 04:11:00</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>65</p>
+         */
         @NameInMap("UseQuota")
         public Integer useQuota;
 
         @NameInMap("VersionDetail")
         public String versionDetail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>试用版</p>
+         */
         @NameInMap("VersionName")
         public String versionName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>87</p>
+         */
         @NameInMap("VersionStatus")
         public Integer versionStatus;
 

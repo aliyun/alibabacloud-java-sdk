@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class SaveDataSourceOrderConfigShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c160c841c8e54295bf2f441432785944_p_efm</p>
      */
     @NameInMap("AgentKey")
     public String agentKey;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>miaobi</p>
      */
     @NameInMap("ProductCode")
     public String productCode;

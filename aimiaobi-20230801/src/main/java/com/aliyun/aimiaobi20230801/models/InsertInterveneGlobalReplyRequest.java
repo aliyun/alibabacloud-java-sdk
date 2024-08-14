@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class InsertInterveneGlobalReplyRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx_efm</p>
      */
     @NameInMap("AgentKey")
     public String agentKey;

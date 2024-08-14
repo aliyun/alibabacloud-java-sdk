@@ -6,28 +6,55 @@ import com.aliyun.tea.*;
 public class ListAsyncTasksRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cd327c3d5d5e44159cc716e23bfa530e_p_beebot_public</p>
      */
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-03-18 02:00:00</p>
+     */
     @NameInMap("CreateTimeEnd")
     public String createTimeEnd;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-02-19 07:28:11</p>
+     */
     @NameInMap("CreateTimeStart")
     public String createTimeStart;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Current")
     public Integer current;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Size")
     public Integer size;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MaterialDocumentUpload</p>
+     */
     @NameInMap("TaskCode")
     public String taskCode;
 
     @NameInMap("TaskName")
     public String taskName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TaskStatus")
     public Integer taskStatus;
 

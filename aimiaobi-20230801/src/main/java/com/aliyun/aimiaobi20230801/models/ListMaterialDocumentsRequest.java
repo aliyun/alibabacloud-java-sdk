@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListMaterialDocumentsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>33a2658aaabf4c24b45d50e575125311_p_beebot_public</p>
      */
     @NameInMap("AgentKey")
     public String agentKey;
@@ -13,24 +16,52 @@ public class ListMaterialDocumentsRequest extends TeaModel {
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-03-18 02:00:00</p>
+     */
     @NameInMap("CreateTimeEnd")
     public String createTimeEnd;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-02-19 07:28:11</p>
+     */
     @NameInMap("CreateTimeStart")
     public String createTimeStart;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Current")
     public Integer current;
 
+    /**
+     * <strong>example:</strong>
+     * <p>jsonLine</p>
+     */
     @NameInMap("DocType")
     public String docType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>excel</p>
+     */
     @NameInMap("DocTypeList")
     public java.util.List<String> docTypeList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("GeneratePublicUrl")
     public Boolean generatePublicUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>69</p>
+     */
     @NameInMap("Id")
     public Long id;
 
@@ -40,18 +71,34 @@ public class ListMaterialDocumentsRequest extends TeaModel {
     @NameInMap("Query")
     public String query;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ShareAttr")
     public Integer shareAttr;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Size")
     public Integer size;
 
     @NameInMap("Title")
     public String title;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-03-18 03:00:00</p>
+     */
     @NameInMap("UpdateTimeEnd")
     public String updateTimeEnd;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-03-18 02:00:00</p>
+     */
     @NameInMap("UpdateTimeStart")
     public String updateTimeStart;
 

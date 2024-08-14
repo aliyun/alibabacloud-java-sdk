@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateTokenRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2daaa2e0c209xb26acb97009ea77bd4b_p_efm</p>
      */
     @NameInMap("AgentKey")
     public String agentKey;

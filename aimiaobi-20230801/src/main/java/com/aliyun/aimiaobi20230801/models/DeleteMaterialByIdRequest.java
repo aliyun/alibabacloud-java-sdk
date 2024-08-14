@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeleteMaterialByIdRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cd327c3d5d5e44159cc716e23bfa530e_p_beebot_public</p>
      */
     @NameInMap("AgentKey")
     public String agentKey;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Id")
     public Long id;

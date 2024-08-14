@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetDataSourceOrderConfigRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d9a1f6146a37446495d9985c2e7b267e_p_outbound_public</p>
      */
     @NameInMap("AgentKey")
     public String agentKey;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>miaobi</p>
      */
     @NameInMap("ProductCode")
     public String productCode;

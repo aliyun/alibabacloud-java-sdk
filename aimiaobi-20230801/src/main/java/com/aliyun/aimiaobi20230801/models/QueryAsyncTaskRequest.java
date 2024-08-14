@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class QueryAsyncTaskRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>33a2658aaabf4c24b45d50e575125311_p_beebot_public</p>
      */
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

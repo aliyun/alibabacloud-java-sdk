@@ -4,30 +4,62 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class SearchNewsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>NoData</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Current")
     public Integer current;
 
     @NameInMap("Data")
     public java.util.List<SearchNewsResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Size")
     public Integer size;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -109,42 +141,90 @@ public class SearchNewsResponseBody extends TeaModel {
     }
 
     public static class SearchNewsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>作者</p>
+         */
         @NameInMap("Author")
         public String author;
 
+        /**
+         * <strong>example:</strong>
+         * <p>文章内容</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9a598b44c6444da5907b8ea68a5f82c4</p>
+         */
         @NameInMap("DocUuid")
         public String docUuid;
 
         @NameInMap("ImageUrls")
         public java.util.List<String> imageUrls;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-01-18 06:46:22</p>
+         */
         @NameInMap("PubTime")
         public String pubTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>QuarkCommonNews</p>
+         */
         @NameInMap("SearchSource")
         public String searchSource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>夸克检索</p>
+         */
         @NameInMap("SearchSourceName")
         public String searchSourceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>央视网</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>文章摘要</p>
+         */
         @NameInMap("Summary")
         public String summary;
 
+        /**
+         * <strong>example:</strong>
+         * <p>文章标签</p>
+         */
         @NameInMap("Tag")
         public String tag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>文章标题</p>
+         */
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-01-18 06:46:22</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>文章URL</p>
+         */
         @NameInMap("Url")
         public String url;
 

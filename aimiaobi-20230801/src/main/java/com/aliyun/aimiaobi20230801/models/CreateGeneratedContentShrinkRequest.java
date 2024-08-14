@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateGeneratedContentShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx_efm</p>
      */
     @NameInMap("AgentKey")
     public String agentKey;
@@ -16,6 +19,10 @@ public class CreateGeneratedContentShrinkRequest extends TeaModel {
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <strong>example:</strong>
+     * <p>government</p>
+     */
     @NameInMap("ContentDomain")
     public String contentDomain;
 
@@ -30,6 +37,9 @@ public class CreateGeneratedContentShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
      */
     @NameInMap("TaskId")
     public String taskId;
@@ -40,6 +50,10 @@ public class CreateGeneratedContentShrinkRequest extends TeaModel {
     @NameInMap("Title")
     public String title;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxxx</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 

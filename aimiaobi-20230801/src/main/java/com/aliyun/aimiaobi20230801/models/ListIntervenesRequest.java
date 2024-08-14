@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListIntervenesRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>33a2658aaabf4c24b45d50e575125311_p_beebot_public</p>
      */
     @NameInMap("AgentKey")
     public String agentKey;
@@ -13,15 +16,27 @@ public class ListIntervenesRequest extends TeaModel {
     @NameInMap("InterveneType")
     public Integer interveneType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageIndex")
     public Integer pageIndex;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("Query")
     public String query;
 
+    /**
+     * <strong>example:</strong>
+     * <p>mqtt_outRule_1679019634514</p>
+     */
     @NameInMap("RuleId")
     public Long ruleId;
 
