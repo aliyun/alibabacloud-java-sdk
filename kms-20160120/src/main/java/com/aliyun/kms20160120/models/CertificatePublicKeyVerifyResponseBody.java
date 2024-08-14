@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class CertificatePublicKeyVerifyResponseBody extends TeaModel {
     /**
      * <p>The ID of the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345678-1234-1234-1234-12345678****</p>
      */
     @NameInMap("CertificateId")
     public String certificateId;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5979d897-d69f-4fc9-87dd-f3bb73c40b80</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The verification result. Valid values:</p>
-     * <br>
-     * <p>*   true: The signature is valid.</p>
-     * <p>*   false: The signature is invalid.</p>
+     * <ul>
+     * <li>true: The signature is valid.</li>
+     * <li>false: The signature is invalid.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("SignatureValid")
     public Boolean signatureValid;

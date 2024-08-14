@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateAliasResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1d2baaf3-d357-46c2-832e-13560c2bd9cd</p>
      */
     @NameInMap("RequestId")
     public String requestId;

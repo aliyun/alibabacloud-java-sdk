@@ -12,24 +12,36 @@ public class ListKeysResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8252db58-2036-408c-a3d5-56e656dc2551</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of CMKs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,12 +94,18 @@ public class ListKeysResponseBody extends TeaModel {
     public static class ListKeysResponseBodyKeysKey extends TeaModel {
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the CMK.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:kms:cn-hangzhou:123456:key/80e9409f-78fa-42ab-84bd-83f40c81****</p>
          */
         @NameInMap("KeyArn")
         public String keyArn;
 
         /**
          * <p>The ID of the CMK. The ID must be globally unique.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</p>
          */
         @NameInMap("KeyId")
         public String keyId;

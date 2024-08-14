@@ -6,22 +6,32 @@ import com.aliyun.tea.*;
 public class DescribeAccountKmsStatusResponseBody extends TeaModel {
     /**
      * <p>The status of KMS within your Alibaba cloud account. Valid values:</p>
-     * <br>
-     * <p>*   Enabled: KMS is enabled.</p>
-     * <br>
-     * <p>*   NotEnabled: KMS is disabled.</p>
-     * <br>
-     * <p>*   InDebt: Your account is overdue, and KMS stops providing services.</p>
-     * <br>
-     * <p>> If your Alibaba Cloud account is overdue, top up your account at the earliest opportunity to avoid impacts on your services.</p>
-     * <br>
-     * <p>*   Suspended: KMS is suspended.</p>
+     * <ul>
+     * <li><p>Enabled: KMS is enabled.</p>
+     * </li>
+     * <li><p>NotEnabled: KMS is disabled.</p>
+     * </li>
+     * <li><p>InDebt: Your account is overdue, and KMS stops providing services.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>If your Alibaba Cloud account is overdue, top up your account at the earliest opportunity to avoid impacts on your services.</p>
+     * </blockquote>
+     * <ul>
+     * <li>Suspended: KMS is suspended.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Enabled</p>
      */
     @NameInMap("AccountStatus")
     public String accountStatus;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3ac84333-d64d-4784-a8bc-997834a7ac6c</p>
      */
     @NameInMap("RequestId")
     public String requestId;

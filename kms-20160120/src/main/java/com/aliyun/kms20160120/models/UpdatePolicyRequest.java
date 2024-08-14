@@ -6,42 +6,58 @@ import com.aliyun.tea.*;
 public class UpdatePolicyRequest extends TeaModel {
     /**
      * <p>The access control rule.</p>
-     * <br>
-     * <p>> For more information about how to query created access control rules, see [ListNetworkRules](https://help.aliyun.com/document_detail/2539433.html).</p>
+     * <blockquote>
+     * <p>For more information about how to query created access control rules, see <a href="https://help.aliyun.com/document_detail/2539433.html">ListNetworkRules</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;NetworkRules&quot;:[&quot;kst-hzz62ee817bvyyr5x****.efkd&quot;,&quot;kst-hzz62ee817bvyyr5x****.eyyp&quot;]}</p>
      */
     @NameInMap("AccessControlRules")
     public String accessControlRules;
 
     /**
      * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>policy  description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The name of the permission policy that you want to update.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>policy_test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The operations that are supported by the updated policy. Valid values:</p>
-     * <br>
-     * <p>*   RbacPermission/Template/CryptoServiceKeyUser: allows you to perform cryptographic operations.</p>
-     * <p>*   RbacPermission/Template/CryptoServiceSecretUser: allows you to perform secret-related operations.</p>
-     * <br>
+     * <ul>
+     * <li>RbacPermission/Template/CryptoServiceKeyUser: allows you to perform cryptographic operations.</li>
+     * <li>RbacPermission/Template/CryptoServiceSecretUser: allows you to perform secret-related operations.</li>
+     * </ul>
      * <p>You can select both.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;RbacPermission/Template/CryptoServiceKeyUser&quot;, &quot;RbacPermission/Template/CryptoServiceSecretUser&quot;]</p>
      */
     @NameInMap("Permissions")
     public String permissions;
 
     /**
      * <p>The key and secret that are allowed to access after the update.</p>
-     * <br>
-     * <p>*   Key: Enter a key in the `key/${KeyId}` format. To allow access to all keys of a KMS instance, enter key/\\*.</p>
-     * <p>*   Secret: Enter a secret in the `secret/${SecretName}` format. To allow access to all secrets of a KMS instance, enter secret/\\*.</p>
+     * <ul>
+     * <li>Key: Enter a key in the <code>key/${KeyId}</code> format. To allow access to all keys of a KMS instance, enter key/\*.</li>
+     * <li>Secret: Enter a secret in the <code>secret/${SecretName}</code> format. To allow access to all secrets of a KMS instance, enter secret/\*.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;secret/acs/ram/user/ram-secret&quot;, &quot;secret/acs/ram/user/acr-master&quot;, &quot;key/key-hzz63d9c8d3dfv8cv****&quot;]</p>
      */
     @NameInMap("Resources")
     public String resources;

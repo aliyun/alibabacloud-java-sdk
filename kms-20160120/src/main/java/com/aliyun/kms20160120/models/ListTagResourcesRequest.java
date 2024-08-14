@@ -6,37 +6,46 @@ import com.aliyun.tea.*;
 public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
-     * <br>
-     * <p>>  If the call does not return all result entries, the value of the NextToken parameter is returned. By default, 200 rows are returned. You can call this operation again and set the value of the parameter to the value of the parameter that is returned in the last call to implement paged query.</p>
+     * <blockquote>
+     * <p> If the call does not return all result entries, the value of the NextToken parameter is returned. By default, 200 rows are returned. You can call this operation again and set the value of the parameter to the value of the parameter that is returned in the last call to implement paged query.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The region ID of the resource.</p>
-     * <br>
-     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/601478.html) to query the most recent region list.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/601478.html">DescribeRegions</a> to query the most recent region list.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>A list of resource IDs for which you want to query tags. You can enter a maximum of 50 resource IDs.</p>
-     * <br>
-     * <p>Enter multiple resource IDs in the `["ResourceId. 1","ResourceId. 2",...]` format.</p>
+     * <p>Enter multiple resource IDs in the <code>[&quot;ResourceId. 1&quot;,&quot;ResourceId. 2&quot;,...]</code> format.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
      * <p>The type of resource whose tags you want to query. Valid value:</p>
-     * <br>
-     * <p>*   key</p>
-     * <p>*   secret</p>
-     * <br>
+     * <ul>
+     * <li>key</li>
+     * <li>secret</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>key</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -95,18 +104,23 @@ public class ListTagResourcesRequest extends TeaModel {
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
          * <p>The key of the tag. A tag consists of a key-value pair.</p>
-         * <br>
-         * <p>You can enter up to 20 tags. Enter multiple tags in the `[{"Key":"key1","Value":"value1"},{"Key":"key2","Value":"value2"},..]` format.</p>
-         * <br>
-         * <p>>  The key cannot start with aliyun or acs:.</p>
+         * <p>You can enter up to 20 tags. Enter multiple tags in the <code>[{&quot;Key&quot;:&quot;key1&quot;,&quot;Value&quot;:&quot;value1&quot;},{&quot;Key&quot;:&quot;key2&quot;,&quot;Value&quot;:&quot;value2&quot;},..]</code> format.</p>
+         * <blockquote>
+         * <p> The key cannot start with aliyun or acs:.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>disk-encryption</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag. A tag consists of a key-value pair.</p>
-         * <br>
-         * <p>You can enter up to 20 tags. Enter multiple tags in the `[{"Key":"key1","Value":"value1"},{"Key":"key2","Value":"value2"},..]` format.</p>
+         * <p>You can enter up to 20 tags. Enter multiple tags in the <code>[{&quot;Key&quot;:&quot;key1&quot;,&quot;Value&quot;:&quot;value1&quot;},{&quot;Key&quot;:&quot;key2&quot;,&quot;Value&quot;:&quot;value2&quot;},..]</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Value")
         public String value;

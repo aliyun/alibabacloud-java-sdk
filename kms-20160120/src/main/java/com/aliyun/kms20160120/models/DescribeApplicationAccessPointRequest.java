@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeApplicationAccessPointRequest extends TeaModel {
     /**
      * <p>The name of the AAP that you want to query.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aap_test</p>
      */
     @NameInMap("Name")
     public String name;

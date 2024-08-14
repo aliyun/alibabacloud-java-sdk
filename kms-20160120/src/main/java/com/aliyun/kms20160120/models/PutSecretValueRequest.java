@@ -6,39 +6,52 @@ import com.aliyun.tea.*;
 public class PutSecretValueRequest extends TeaModel {
     /**
      * <p>The secret value. The value is encrypted and then stored in the new version.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>importantdata</p>
      */
     @NameInMap("SecretData")
     public String secretData;
 
     /**
      * <p>The type of the secret value. Valid values:</p>
-     * <br>
-     * <p>*   text: This is the default value.</p>
-     * <p>*   binary</p>
+     * <ul>
+     * <li>text: This is the default value.</li>
+     * <li>binary</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>text</p>
      */
     @NameInMap("SecretDataType")
     public String secretDataType;
 
     /**
      * <p>The name of the secret.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>secret001</p>
      */
     @NameInMap("SecretName")
     public String secretName;
 
     /**
      * <p>The new version of the secret value. Version numbers must be unique in each secret.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>00000000000000000000000000000000203</p>
      */
     @NameInMap("VersionId")
     public String versionId;
 
     /**
      * <p>The stage labels that are used to mark the new version. If you do not specify this parameter, Secrets Manager marks the new version with ACSCurrent.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;ACSCurrent&quot;,&quot;ACSNext&quot;]</p>
      */
     @NameInMap("VersionStages")
     public String versionStages;

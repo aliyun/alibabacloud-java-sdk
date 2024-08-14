@@ -6,30 +6,39 @@ import com.aliyun.tea.*;
 public class CreateNetworkRuleRequest extends TeaModel {
     /**
      * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>networkrule description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The name of the access control rule.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>networkrule_test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The private IP address or private CIDR block. Separate multiple items with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;192.10.XX.XX&quot;,&quot;192.168.XX.XX/24&quot;]</p>
      */
     @NameInMap("SourcePrivateIp")
     public String sourcePrivateIp;
 
     /**
      * <p>The network type.</p>
-     * <br>
      * <p>Only private IP addresses are supported. Set the value to Private.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Private</p>
      */
     @NameInMap("Type")
     public String type;

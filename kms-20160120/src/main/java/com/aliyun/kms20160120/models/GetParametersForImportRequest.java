@@ -6,26 +6,33 @@ import com.aliyun.tea.*;
 public class GetParametersForImportRequest extends TeaModel {
     /**
      * <p>The globally unique ID of the CMK.</p>
-     * <br>
-     * <p>>  You can import key material only for CMKs whose Origin parameter is set to EXTERNAL.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can import key material only for CMKs whose Origin parameter is set to EXTERNAL.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>202b9877-5a25-46e3-a763-e20791b5****</p>
      */
     @NameInMap("KeyId")
     public String keyId;
 
     /**
      * <p>The algorithm that is used to encrypt key material.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RSAES_PKCS1_V1_5</p>
      */
     @NameInMap("WrappingAlgorithm")
     public String wrappingAlgorithm;
 
     /**
      * <p>The type of the public key that is used to encrypt key material.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RSA_2048</p>
      */
     @NameInMap("WrappingKeySpec")
     public String wrappingKeySpec;

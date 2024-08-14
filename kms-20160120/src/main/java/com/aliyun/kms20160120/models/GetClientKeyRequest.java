@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class GetClientKeyRequest extends TeaModel {
     /**
      * <p>The ID of the client key.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>KAAP.66abf237-63f6-4625-b8cf-47e1086e****</p>
      */
     @NameInMap("ClientKeyId")
     public String clientKeyId;

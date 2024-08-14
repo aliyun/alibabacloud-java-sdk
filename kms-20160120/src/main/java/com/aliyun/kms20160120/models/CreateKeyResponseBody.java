@@ -12,6 +12,9 @@ public class CreateKeyResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>381D5D33-BB8F-395F-8EE4-AE3BB4B523C4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,124 +43,173 @@ public class CreateKeyResponseBody extends TeaModel {
     public static class CreateKeyResponseBodyKeyMetadata extends TeaModel {
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:kms:cn-qingdao:154035569884****:key/key-hzz62f1cb66fa42qo****</p>
          */
         @NameInMap("Arn")
         public String arn;
 
         /**
          * <p>The status of automatic key rotation. Valid values:</p>
-         * <br>
-         * <p>- Enabled</p>
-         * <p>- Disabled</p>
-         * <p>- Suspended</p>
+         * <ul>
+         * <li>Enabled</li>
+         * <li>Disabled</li>
+         * <li>Suspended</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         @NameInMap("AutomaticRotation")
         public String automaticRotation;
 
         /**
          * <p>The date and time (UTC) when the key was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-25T10:00:00Z</p>
          */
         @NameInMap("CreationDate")
         public String creationDate;
 
         /**
          * <p>The user who created the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>154035569884****</p>
          */
         @NameInMap("Creator")
         public String creator;
 
         /**
          * <p>The ID of the KMS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kst-bjj62d8f5e0sgtx8h****</p>
          */
         @NameInMap("DKMSInstanceId")
         public String DKMSInstanceId;
 
         /**
          * <p>The time when the key is scheduled for deletion. For more information, see ScheduleKeyDeletion.</p>
-         * <br>
          * <p>This parameter is returned only when the value of KeyState is PendingDeletion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-25T10:00:00Z</p>
          */
         @NameInMap("DeleteDate")
         public String deleteDate;
 
         /**
          * <p>The description of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key description example</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The globally unique ID of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-hzz62f1cb66fa42qo****</p>
          */
         @NameInMap("KeyId")
         public String keyId;
 
         /**
          * <p>The specification of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun_AES_256</p>
          */
         @NameInMap("KeySpec")
         public String keySpec;
 
         /**
          * <p>The status of the key.</p>
-         * <br>
-         * <p>For more information, see [Impacts of key status on API operations](https://help.aliyun.com/document_detail/44211.html).</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/44211.html">Impacts of key status on API operations</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         @NameInMap("KeyState")
         public String keyState;
 
         /**
          * <p>The usage of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENCRYPT/DECRYPT</p>
          */
         @NameInMap("KeyUsage")
         public String keyUsage;
 
         /**
          * <p>The time when the last rotation was performed. The time is displayed in UTC.</p>
-         * <br>
          * <p>For a new key, this parameter value is the time when the initial version of the key was generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-25T10:00:00Z</p>
          */
         @NameInMap("LastRotationDate")
         public String lastRotationDate;
 
         /**
          * <p>The time when the key material expires. The time is displayed in UTC.</p>
-         * <br>
          * <p>If this parameter value is empty, the key material does not expire.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-25T10:00:00Z</p>
          */
         @NameInMap("MaterialExpireTime")
         public String materialExpireTime;
 
         /**
          * <p>The time when the key is next rotated.</p>
-         * <br>
          * <p>This value is returned only when the value of AutomaticRotation is Enabled or Suspended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-03-25T10:00:00Z</p>
          */
         @NameInMap("NextRotationDate")
         public String nextRotationDate;
 
         /**
          * <p>The key material origin.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun_KMS</p>
          */
         @NameInMap("Origin")
         public String origin;
 
         /**
          * <p>The current primary version identifier of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7ce1d081-06cb-42e6-aab6-5c5de030****</p>
          */
         @NameInMap("PrimaryKeyVersion")
         public String primaryKeyVersion;
 
         /**
          * <p>The protection level of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SOFTWARE</p>
          */
         @NameInMap("ProtectionLevel")
         public String protectionLevel;
 
         /**
          * <p>The interval for automatic key rotation. Unit: seconds. The format is an integer value followed by the character s. For example, if the rotation period is seven days, this parameter is set to 604800s.</p>
-         * <br>
          * <p>This value is returned only when the value of AutomaticRotation is Enabled or Suspended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31536000s</p>
          */
         @NameInMap("RotationInterval")
         public String rotationInterval;

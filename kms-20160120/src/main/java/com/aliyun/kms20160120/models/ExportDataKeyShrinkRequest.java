@@ -6,49 +6,63 @@ import com.aliyun.tea.*;
 public class ExportDataKeyShrinkRequest extends TeaModel {
     /**
      * <p>The ciphertext of the data key encrypted by using a CMK.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ODZhOWVmZDktM2QxNi00ODk0LWJkNGYtMWZjNDNmM2YyYWJmS7FmDBBQ0BkKsQrtRnidtPwirmDcS0ZuJCU41xxAAWk4Z8qsADfbV0b+i6kQmlvj79dJdGOvtX69Uycs901q********</p>
      */
     @NameInMap("CiphertextBlob")
     public String ciphertextBlob;
 
+    @NameInMap("DryRun")
+    public String dryRun;
+
     /**
-     * <p>A JSON string that consists of key-value pairs. If you specify this parameter when you use a CMK to encrypt the data key, an equivalent value is required here. For more information, see [EncryptionContext](https://help.aliyun.com/document_detail/42975.html).</p>
+     * <p>A JSON string that consists of key-value pairs. If you specify this parameter when you use a CMK to encrypt the data key, an equivalent value is required here. For more information, see <a href="https://help.aliyun.com/document_detail/42975.html">EncryptionContext</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Example&quot;:&quot;Example&quot;}</p>
      */
     @NameInMap("EncryptionContext")
     public String encryptionContextShrink;
 
     /**
      * <p>A Base64-encoded public key.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAndKfC2ReLL2+y8a0+ZBBeAft/uBYo86GZiYJuflqgUzKxpyuvlo3uQkBv6b+nx+0tz8g8v7GhpPWMSW5L9mNHYsvYFsa7jTxsYdt17yj6GlUHPuMIs8hr5qbwl38IHU1iIa7nYWwE2fb3ePOvLDACRJVgGpU0yxioW80d2QD+9aU4jF5dlAahcfgsNzo2CXzCUc1+xbmNuq7Rp+H9VJB9dyYOwqnW3RhOLBo21FzpORapf0UiRlrHRpk1V6ez+aE1dofaYh/9bh0m6ioxj7j5hpZbWccuEZTMBKd+cbuBkRhJzc6Tti6qwZbDiu4fUwbZS0Tqpuo1UadiyxMW********</p>
      */
     @NameInMap("PublicKeyBlob")
     public String publicKeyBlob;
 
     /**
-     * <p>The encryption algorithm based on which you want to use the public key specified by PublicKeyBlob to encrypt the data key. For more information about encryption algorithms, see [AsymmetricDecrypt](https://help.aliyun.com/document_detail/148130.html).</p>
-     * <br>
+     * <p>The encryption algorithm based on which you want to use the public key specified by PublicKeyBlob to encrypt the data key. For more information about encryption algorithms, see <a href="https://help.aliyun.com/document_detail/148130.html">AsymmetricDecrypt</a>.</p>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   RSAES_OAEP_SHA_256</p>
-     * <p>*   RSAES_OAEP_SHA_1</p>
-     * <p>*   SM2PKE</p>
-     * <br>
+     * <ul>
+     * <li>RSAES_OAEP_SHA_256</li>
+     * <li>RSAES_OAEP_SHA_1</li>
+     * <li>SM2PKE</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RSAES_OAEP_SHA_256</p>
      */
     @NameInMap("WrappingAlgorithm")
     public String wrappingAlgorithm;
 
     /**
-     * <p>The key type of the public key specified by PublicKeyBlob. For more information about key types, see [Introduction to asymmetric keys](https://help.aliyun.com/document_detail/148147.html).</p>
-     * <br>
+     * <p>The key type of the public key specified by PublicKeyBlob. For more information about key types, see <a href="https://help.aliyun.com/document_detail/148147.html">Introduction to asymmetric keys</a>.</p>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   RSA_2048</p>
-     * <p>*   EC_SM2</p>
-     * <br>
+     * <ul>
+     * <li>RSA_2048</li>
+     * <li>EC_SM2</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RSA_2048</p>
      */
     @NameInMap("WrappingKeySpec")
     public String wrappingKeySpec;
@@ -64,6 +78,14 @@ public class ExportDataKeyShrinkRequest extends TeaModel {
     }
     public String getCiphertextBlob() {
         return this.ciphertextBlob;
+    }
+
+    public ExportDataKeyShrinkRequest setDryRun(String dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public String getDryRun() {
+        return this.dryRun;
     }
 
     public ExportDataKeyShrinkRequest setEncryptionContextShrink(String encryptionContextShrink) {

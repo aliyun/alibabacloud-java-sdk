@@ -6,20 +6,22 @@ import com.aliyun.tea.*;
 public class ScheduleKeyDeletionRequest extends TeaModel {
     /**
      * <p>The ID of the customer master key (CMK). The ID must be globally unique.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7906979c-8e06-46a2-be2d-68e3ccbc****</p>
      */
     @NameInMap("KeyId")
     public String keyId;
 
     /**
      * <p>The scheduled period after which the CMK is deleted. During this period, the CMK is in the PendingDeletion state. After this period ends, you cannot cancel the key deletion task.</p>
-     * <br>
      * <p>Valid values: 7 to 366.</p>
-     * <br>
      * <p>Unit: days.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
      */
     @NameInMap("PendingWindowInDays")
     public Integer pendingWindowInDays;

@@ -4,6 +4,10 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class UntagResourceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>4162a6af-bc99-40b3-a552-89dcc8aaf7c8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

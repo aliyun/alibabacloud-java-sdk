@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class CancelKeyDeletionRequest extends TeaModel {
     /**
      * <p>The ID of the CMK. The ID must be globally unique.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234abcd-12ab-34cd-56ef-12345678****</p>
      */
     @NameInMap("KeyId")
     public String keyId;

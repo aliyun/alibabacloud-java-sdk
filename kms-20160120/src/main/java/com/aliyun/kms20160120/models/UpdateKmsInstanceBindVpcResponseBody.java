@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateKmsInstanceBindVpcResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d3eca5c8-a856-4347-8eb6-e1898c3fda2e</p>
      */
     @NameInMap("RequestId")
     public String requestId;

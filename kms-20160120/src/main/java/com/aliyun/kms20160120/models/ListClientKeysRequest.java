@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListClientKeysRequest extends TeaModel {
     /**
      * <p>The name of the application access point (AAP).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aap_test</p>
      */
     @NameInMap("AapName")
     public String aapName;

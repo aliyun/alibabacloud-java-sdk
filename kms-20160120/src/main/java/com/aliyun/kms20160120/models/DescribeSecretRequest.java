@@ -6,17 +6,23 @@ import com.aliyun.tea.*;
 public class DescribeSecretRequest extends TeaModel {
     /**
      * <p>Specifies whether to return the resource tags of the secret. Valid values:</p>
-     * <br>
-     * <p>*   true: The resource tags are returned.</p>
-     * <p>*   false: The resource tags are not returned. This is the default value.</p>
+     * <ul>
+     * <li>true: The resource tags are returned.</li>
+     * <li>false: The resource tags are not returned. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("FetchTags")
     public String fetchTags;
 
     /**
      * <p>The name of the secret.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>secret001</p>
      */
     @NameInMap("SecretName")
     public String secretName;

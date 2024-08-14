@@ -6,10 +6,13 @@ import com.aliyun.tea.*;
 public class CreateKeyVersionRequest extends TeaModel {
     /**
      * <p>The ID of the CMK. The ID must be globally unique.</p>
-     * <br>
-     * <p>>  You can also set the value to an alias that is bound to the CMK. For more information, see [Overview of aliases](https://help.aliyun.com/document_detail/68522.html).</p>
-     * <br>
+     * <blockquote>
+     * <p> You can also set the value to an alias that is bound to the CMK. For more information, see <a href="https://help.aliyun.com/document_detail/68522.html">Overview of aliases</a>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0b30658a-ed1a-4922-b8f7-a673ca9c****</p>
      */
     @NameInMap("KeyId")
     public String keyId;

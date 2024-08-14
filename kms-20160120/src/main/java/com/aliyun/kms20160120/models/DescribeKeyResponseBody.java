@@ -12,6 +12,9 @@ public class DescribeKeyResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>f1fdfa9d-bd49-418b-942f-8f3e3ec00a4f</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,145 +43,206 @@ public class DescribeKeyResponseBody extends TeaModel {
     public static class DescribeKeyResponseBodyKeyMetadata extends TeaModel {
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the CMK.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:kms:cn-hangzhou:154035569884****:key/05754286-3ba2-4fa6-8d41-4323aca6****</p>
          */
         @NameInMap("Arn")
         public String arn;
 
         /**
          * <p>Indicates whether automatic key rotation is enabled. Valid values:</p>
-         * <br>
-         * <p>*   Enabled</p>
-         * <p>*   Disabled</p>
-         * <p>*   Suspended</p>
-         * <br>
-         * <p>For more information, see [Automatic key rotation](https://help.aliyun.com/document_detail/134270.html).</p>
-         * <br>
-         * <p>>  Only symmetric CMKs support automatic key rotation.</p>
+         * <ul>
+         * <li>Enabled</li>
+         * <li>Disabled</li>
+         * <li>Suspended</li>
+         * </ul>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/134270.html">Automatic key rotation</a>.</p>
+         * <blockquote>
+         * <p> Only symmetric CMKs support automatic key rotation.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Disabled</p>
          */
         @NameInMap("AutomaticRotation")
         public String automaticRotation;
 
         /**
          * <p>The time when the CMK was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-20T06:34:21Z</p>
          */
         @NameInMap("CreationDate")
         public String creationDate;
 
         /**
          * <p>The Alibaba Cloud account that is used to create the CMK.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>154035569884****</p>
          */
         @NameInMap("Creator")
         public String creator;
 
         /**
          * <p>The ID of the dedicated KMS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kst-bjj62d8f5e0sgtx8h****</p>
          */
         @NameInMap("DKMSInstanceId")
         public String DKMSInstanceId;
 
         /**
          * <p>The time at which the CMK is scheduled for deletion. The time is displayed in UTC.</p>
-         * <br>
-         * <p>For more information, see [ScheduleKeyDeletion](https://help.aliyun.com/document_detail/44196.html).</p>
-         * <br>
-         * <p>>  This parameter is returned only when the value of the KeyState parameter is PendingDeletion.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/44196.html">ScheduleKeyDeletion</a>.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when the value of the KeyState parameter is PendingDeletion.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-26T18:22:03Z</p>
          */
         @NameInMap("DeleteDate")
         public String deleteDate;
 
         /**
          * <p>Indicates whether deletion protection is enabled. Valid values:</p>
-         * <br>
-         * <p>*   Enabled</p>
-         * <p>*   Disabled</p>
+         * <ul>
+         * <li>Enabled</li>
+         * <li>Disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         @NameInMap("DeletionProtection")
         public String deletionProtection;
 
         /**
          * <p>The description of deletion protection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The CMK is being used by XXX. Deletion protection is set.</p>
          */
         @NameInMap("DeletionProtectionDescription")
         public String deletionProtectionDescription;
 
         /**
          * <p>The description of the CMK.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key description example</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the CMK. The ID must be globally unique.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05754286-3ba2-4fa6-8d41-4323aca6****</p>
          */
         @NameInMap("KeyId")
         public String keyId;
 
         /**
          * <p>The type of the CMK.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun_AES_256</p>
          */
         @NameInMap("KeySpec")
         public String keySpec;
 
         /**
          * <p>The status of the CMK.</p>
-         * <br>
-         * <p>For more information, see [Impact of CMK status on API operations](https://help.aliyun.com/document_detail/44211.html).</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/44211.html">Impact of CMK status on API operations</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         @NameInMap("KeyState")
         public String keyState;
 
         /**
          * <p>The usage of the CMK.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENCRYPT/DECRYPT</p>
          */
         @NameInMap("KeyUsage")
         public String keyUsage;
 
         /**
          * <p>The time when the last rotation was performed. The time is displayed in UTC. For a new CMK, the value of this parameter is the time when the initial version of the CMK was generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-20T06:34:21Z</p>
          */
         @NameInMap("LastRotationDate")
         public String lastRotationDate;
 
         /**
          * <p>The time when the key material expires. The time is displayed in UTC. If this parameter value is empty, the key material does not expire.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-06T18:22:03Z</p>
          */
         @NameInMap("MaterialExpireTime")
         public String materialExpireTime;
 
         /**
          * <p>The time when the next rotation will be performed.</p>
-         * <br>
-         * <p>>  This parameter is returned only when the value of the AutomaticRotation parameter is Enabled or Suspended.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when the value of the AutomaticRotation parameter is Enabled or Suspended.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-06T18:22:03Z</p>
          */
         @NameInMap("NextRotationDate")
         public String nextRotationDate;
 
         /**
          * <p>The source of the key material for the CMK.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun_KMS</p>
          */
         @NameInMap("Origin")
         public String origin;
 
         /**
          * <p>The ID of the current primary key version for the symmetric CMK.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>515e0b0a-624f-45ab-92b5-54f9b551****</p>
          */
         @NameInMap("PrimaryKeyVersion")
         public String primaryKeyVersion;
 
         /**
          * <p>The protection level of the CMK.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HSM</p>
          */
         @NameInMap("ProtectionLevel")
         public String protectionLevel;
 
         /**
          * <p>The interval for automatic key rotation.</p>
-         * <br>
          * <p>Unit: seconds.</p>
-         * <br>
          * <p>For example, if the value is 604800s, automatic key rotation is performed at a 7-day interval.</p>
-         * <br>
-         * <p>>  This parameter is returned only when the value of the AutomaticRotation parameter is Enabled or Suspended.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when the value of the AutomaticRotation parameter is Enabled or Suspended.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>31536000s</p>
          */
         @NameInMap("RotationInterval")
         public String rotationInterval;

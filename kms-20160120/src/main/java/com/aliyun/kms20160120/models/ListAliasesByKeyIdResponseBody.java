@@ -12,24 +12,36 @@ public class ListAliasesByKeyIdResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1b57992c-834b-4811-a889-f8bac1ba0353</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned CMKs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,18 +94,27 @@ public class ListAliasesByKeyIdResponseBody extends TeaModel {
     public static class ListAliasesByKeyIdResponseBodyAliasesAlias extends TeaModel {
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the alias.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:kms:cn-hangzhou:123456:alias/ExampleAlias1</p>
          */
         @NameInMap("AliasArn")
         public String aliasArn;
 
         /**
          * <p>The ID of the alias.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alias/ExampleAlias1</p>
          */
         @NameInMap("AliasName")
         public String aliasName;
 
         /**
          * <p>The CMK to which an alias is bound.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</p>
          */
         @NameInMap("KeyId")
         public String keyId;

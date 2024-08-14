@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class RotateSecretResponseBody extends TeaModel {
     /**
      * <p>The Alibaba Cloud Resource Name (ARN) of the secret.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:kms:cn-hangzhou:154035569884****:secret/RdsSecret/Mysql5.4/MyCred</p>
      */
     @NameInMap("Arn")
     public String arn;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10257c86-269d-43aa-aaf3-90ed4144bb7c</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The name of the secret.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RdsSecret/Mysql5.4/MyCred</p>
      */
     @NameInMap("SecretName")
     public String secretName;
 
     /**
      * <p>The version number of the secret after the secret is rotated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>000000123</p>
      */
     @NameInMap("VersionId")
     public String versionId;

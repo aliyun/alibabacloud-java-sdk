@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeNetworkRuleRequest extends TeaModel {
     /**
      * <p>The name of the access control rule that you want to query.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>networkrule_test</p>
      */
     @NameInMap("Name")
     public String name;

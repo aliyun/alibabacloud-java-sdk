@@ -6,77 +6,93 @@ import com.aliyun.tea.*;
 public class GetRandomPasswordRequest extends TeaModel {
     /**
      * <p>The characters that are not included in the password to be generated.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>` Valid characters: 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ! \\"#$%&\\"()*+,-. /:;<=>? @[\\] your_project_id} ~  `.</p>
-     * <br>
+     * <p><code>Valid characters: 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ! \\&quot;#$%&amp;\\&quot;()*+,-. /:;&lt;=&gt;? @[\\] your_project_id} ~ </code>.</p>
      * <p>This parameter is empty by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ABCabc</p>
      */
     @NameInMap("ExcludeCharacters")
     public String excludeCharacters;
 
     /**
      * <p>Specifies whether to exclude lowercase letters.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ExcludeLowercase")
     public String excludeLowercase;
 
     /**
      * <p>Specifies whether to exclude digits.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ExcludeNumbers")
     public String excludeNumbers;
 
     /**
      * <p>Specifies whether to exclude special characters.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ExcludePunctuation")
     public String excludePunctuation;
 
     /**
      * <p>Specifies whether to exclude uppercase letters.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ExcludeUppercase")
     public String excludeUppercase;
 
     /**
      * <p>The number of bytes that the password to be generated contains.</p>
-     * <br>
      * <p>Valid values: 8 to 128.</p>
-     * <br>
      * <p>Default value: 32</p>
+     * 
+     * <strong>example:</strong>
+     * <p>32</p>
      */
     @NameInMap("PasswordLength")
     public String passwordLength;
 
     /**
      * <p>Specifies whether to include all the preceding character types.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("RequireEachIncludedType")
     public String requireEachIncludedType;

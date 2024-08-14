@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdatePolicyResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>f455324b-e229-4066-9f58-9c1cf3fe83a8</p>
      */
     @NameInMap("RequestId")
     public String requestId;

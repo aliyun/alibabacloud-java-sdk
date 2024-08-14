@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class ListSecretVersionIdsResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5b75d8b1-5b6a-4ec0-8e0c-c08befdfad47</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The name of the secret.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>secret001</p>
      */
     @NameInMap("SecretName")
     public String secretName;
 
     /**
      * <p>The number of entries returned on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -115,12 +130,18 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
     public static class ListSecretVersionIdsResponseBodyVersionIdsVersionId extends TeaModel {
         /**
          * <p>The time when the secret version was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-02-21T15:39:26Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00000000000000000000000000000000203</p>
          */
         @NameInMap("VersionId")
         public String versionId;

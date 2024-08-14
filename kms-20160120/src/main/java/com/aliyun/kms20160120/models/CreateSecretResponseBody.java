@@ -4,63 +4,100 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class CreateSecretResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>acs:kms:cn-hangzhou:154035569884****:secret/mydbconninfo</p>
+     */
     @NameInMap("Arn")
     public String arn;
 
     /**
      * <p>The type of the secret. Valid values:</p>
-     * <br>
-     * <p>*   Generic: indicates a generic secret.</p>
-     * <p>*   Rds: indicates a managed ApsaraDB RDS secret.</p>
-     * <p>*   RAMCredentials: indicates a managed RAM secret.</p>
-     * <p>*   ECS: indicates a managed ECS secret.</p>
+     * <ul>
+     * <li>Generic: indicates a generic secret.</li>
+     * <li>Rds: indicates a managed ApsaraDB RDS secret.</li>
+     * <li>RAMCredentials: indicates a managed RAM secret.</li>
+     * <li>ECS: indicates a managed ECS secret.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Enabled</p>
      */
     @NameInMap("AutomaticRotation")
     public String automaticRotation;
 
+    /**
+     * <strong>example:</strong>
+     * <p>kst-bjj62d8f5e0sgtx8h****</p>
+     */
     @NameInMap("DKMSInstanceId")
     public String DKMSInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;SecretSubType\&quot;:\&quot;SingleUser\&quot;, \&quot;DBInstanceId\&quot;:\&quot;rm-uf667446pc955****\&quot;,  \&quot;CustomData\&quot;:{} }</p>
+     */
     @NameInMap("ExtendedConfig")
     public String extendedConfig;
 
     /**
      * <p>The extended configuration of the secret.</p>
-     * <br>
-     * <p>>  This parameter is returned if you set the SecretType parameter to Rds, RAMCredentials, or ECS.</p>
+     * <blockquote>
+     * <p> This parameter is returned if you set the SecretType parameter to Rds, RAMCredentials, or ECS.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-07-06T18:22:03Z</p>
      */
     @NameInMap("NextRotationDate")
     public String nextRotationDate;
 
     /**
      * <p>The time when the next rotation will be performed.</p>
-     * <br>
-     * <p>>  This parameter is returned if automatic rotation is enabled.</p>
+     * <blockquote>
+     * <p> This parameter is returned if automatic rotation is enabled.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>3bf02f7a-015b-4f93-be0f-cc043fda2dd3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>604800s</p>
+     */
     @NameInMap("RotationInterval")
     public String rotationInterval;
 
     /**
      * <p>The interval for automatic rotation.</p>
-     * <br>
-     * <p>The value is in the `integer[unit]` format. The value of the `unit` field is fixed as s. For example, if the value is 604800s, automatic rotation is performed at a 7-day interval.</p>
-     * <br>
-     * <p>>  This parameter is returned if automatic rotation is enabled.</p>
+     * <p>The value is in the <code>integer[unit]</code> format. The value of the <code>unit</code> field is fixed as s. For example, if the value is 604800s, automatic rotation is performed at a 7-day interval.</p>
+     * <blockquote>
+     * <p> This parameter is returned if automatic rotation is enabled.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>mydbconninfo</p>
      */
     @NameInMap("SecretName")
     public String secretName;
 
     /**
      * <p>The ID of the dedicated KMS instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Rds</p>
      */
     @NameInMap("SecretType")
     public String secretType;
 
     /**
      * <p>The Alibaba Cloud Resource Name (ARN) of the secret.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1</p>
      */
     @NameInMap("VersionId")
     public String versionId;

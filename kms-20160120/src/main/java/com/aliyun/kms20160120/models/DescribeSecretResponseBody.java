@@ -6,112 +6,159 @@ import com.aliyun.tea.*;
 public class DescribeSecretResponseBody extends TeaModel {
     /**
      * <p>The Alibaba Cloud Resource Name (ARN) of the secret.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:kms:cn-hangzhou:154035569884****:secret/secret001</p>
      */
     @NameInMap("Arn")
     public String arn;
 
     /**
      * <p>Indicates whether automatic rotation is enabled. Valid values:</p>
-     * <br>
-     * <p>*   Enabled: indicates that automatic rotation is enabled.</p>
-     * <p>*   Disabled: indicates that automatic rotation is disabled.</p>
-     * <p>*   Invalid: indicates that the status of automatic rotation is abnormal. In this case, Secrets Manager cannot automatically rotate the secret.</p>
-     * <br>
-     * <p>>  This parameter is returned only for a managed ApsaraDB RDS secret, a managed RAM secret, or a managed ECS secret.</p>
+     * <ul>
+     * <li>Enabled: indicates that automatic rotation is enabled.</li>
+     * <li>Disabled: indicates that automatic rotation is disabled.</li>
+     * <li>Invalid: indicates that the status of automatic rotation is abnormal. In this case, Secrets Manager cannot automatically rotate the secret.</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is returned only for a managed ApsaraDB RDS secret, a managed RAM secret, or a managed ECS secret.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Enabled</p>
      */
     @NameInMap("AutomaticRotation")
     public String automaticRotation;
 
     /**
      * <p>The time when the secret was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-02-21T15:39:26Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
      * <p>The ID of the dedicated KMS instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>kst-bjj62d8f5e0sgtx8h****</p>
      */
     @NameInMap("DKMSInstanceId")
     public String DKMSInstanceId;
 
     /**
      * <p>The description of the secret.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>userinfo</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the customer master key (CMK) that is used to encrypt the secret value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>00aa68af-2c02-4f68-95fe-3435d330****</p>
      */
     @NameInMap("EncryptionKeyId")
     public String encryptionKeyId;
 
     /**
      * <p>The extended configuration of the secret.</p>
-     * <br>
-     * <p>>  This parameter is returned only for a managed ApsaraDB RDS secret, a managed Resource Access Management (RAM) secret, or a managed Elastic Compute Service (ECS) secret.</p>
+     * <blockquote>
+     * <p> This parameter is returned only for a managed ApsaraDB RDS secret, a managed Resource Access Management (RAM) secret, or a managed Elastic Compute Service (ECS) secret.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;SecretSubType\&quot;:\&quot;SingleUser\&quot;, \&quot;DBInstanceId\&quot;:\&quot;rm-uf667446pc955****\&quot;,  \&quot;CustomData\&quot;:{} }</p>
      */
     @NameInMap("ExtendedConfig")
     public String extendedConfig;
 
     /**
      * <p>The time when the last rotation was performed.</p>
-     * <br>
-     * <p>>  This parameter is returned if the secret was rotated.</p>
+     * <blockquote>
+     * <p> This parameter is returned if the secret was rotated.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-07-05T08:22:03Z</p>
      */
     @NameInMap("LastRotationDate")
     public String lastRotationDate;
 
     /**
      * <p>The time when the next rotation will be performed.</p>
-     * <br>
-     * <p>>  This parameter is returned when automatic rotation is enabled.</p>
+     * <blockquote>
+     * <p> This parameter is returned when automatic rotation is enabled.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-07-06T18:22:03Z</p>
      */
     @NameInMap("NextRotationDate")
     public String nextRotationDate;
 
     /**
      * <p>The time when the secret is scheduled to be deleted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-03-21T15:45:12Z</p>
      */
     @NameInMap("PlannedDeleteTime")
     public String plannedDeleteTime;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>93348dfb-3627-4417-8d90-487a76a909c9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The interval for automatic rotation.</p>
-     * <br>
-     * <p>The value is in the `integer[unit]` format. `integer` indicates the length of time. `unit`: indicates the time unit. The value of `unit` is fixed as s. For example, if the value is 604800s, automatic rotation is performed at a 7-day interval.</p>
-     * <br>
-     * <p>>  This parameter is returned when automatic rotation is enabled.</p>
+     * <p>The value is in the <code>integer[unit]</code> format. <code>integer</code> indicates the length of time. <code>unit</code>: indicates the time unit. The value of <code>unit</code> is fixed as s. For example, if the value is 604800s, automatic rotation is performed at a 7-day interval.</p>
+     * <blockquote>
+     * <p> This parameter is returned when automatic rotation is enabled.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>3153600s</p>
      */
     @NameInMap("RotationInterval")
     public String rotationInterval;
 
     /**
      * <p>The name of the secret.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>secret001</p>
      */
     @NameInMap("SecretName")
     public String secretName;
 
     /**
      * <p>The type of the secret. Valid values:</p>
-     * <br>
-     * <p>*   Generic: indicates a generic secret.</p>
-     * <p>*   Rds: indicates a managed ApsaraDB RDS secret.</p>
-     * <p>*   RAMCredentials: indicates a managed RAM secret.</p>
-     * <p>*   ECS: indicates a managed ECS secret.</p>
+     * <ul>
+     * <li>Generic: indicates a generic secret.</li>
+     * <li>Rds: indicates a managed ApsaraDB RDS secret.</li>
+     * <li>RAMCredentials: indicates a managed RAM secret.</li>
+     * <li>ECS: indicates a managed ECS secret.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Rds</p>
      */
     @NameInMap("SecretType")
     public String secretType;
 
     /**
      * <p>The resource tags of the secret.</p>
-     * <br>
      * <p>This parameter is not returned if you set the FetchTags parameter to false or you do not specify the FetchTags parameter.</p>
      */
     @NameInMap("Tags")
@@ -119,6 +166,9 @@ public class DescribeSecretResponseBody extends TeaModel {
 
     /**
      * <p>The time when the secret was updated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-02-21T15:39:26Z</p>
      */
     @NameInMap("UpdateTime")
     public String updateTime;
@@ -259,12 +309,18 @@ public class DescribeSecretResponseBody extends TeaModel {
     public static class DescribeSecretResponseBodyTagsTag extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>val1</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

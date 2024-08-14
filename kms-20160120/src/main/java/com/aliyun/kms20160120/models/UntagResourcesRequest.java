@@ -6,30 +6,36 @@ import com.aliyun.tea.*;
 public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove all tags from resources. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false (default)</p>
-     * <br>
-     * <p>>  This parameter takes effect only when you specify an empty tag key.</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false (default)</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter takes effect only when you specify an empty tag key.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("All")
     public Boolean all;
 
     /**
      * <p>The region ID of the resource.</p>
-     * <br>
-     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/601478.html) operation to query the most recent region list.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/601478.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The IDs of the resources from which you want to remove tags. You can enter up to 50 resource IDs.</p>
-     * <br>
-     * <p>Enter multiple resource IDs in the `["ResourceId.1","ResourceId.2",...]` format.</p>
-     * <br>
+     * <p>Enter multiple resource IDs in the <code>[&quot;ResourceId.1&quot;,&quot;ResourceId.2&quot;,...]</code> format.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
@@ -37,21 +43,24 @@ public class UntagResourcesRequest extends TeaModel {
 
     /**
      * <p>The type of the resource from which you want to remove tags. Valid values:</p>
-     * <br>
-     * <p>*   key</p>
-     * <p>*   secret</p>
-     * <br>
+     * <ul>
+     * <li>key</li>
+     * <li>secret</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>key</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The keys of the tags that you want to remove. You can enter up to 20 tag keys.</p>
-     * <br>
-     * <p>Enter multiple tag keys in the `["key.1","key.2",...]` format.</p>
-     * <br>
-     * <p>>  The tag key cannot start with aliyun or acs:.</p>
+     * <p>Enter multiple tag keys in the <code>[&quot;key.1&quot;,&quot;key.2&quot;,...]</code> format.</p>
+     * <blockquote>
+     * <p> The tag key cannot start with aliyun or acs:.</p>
+     * </blockquote>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

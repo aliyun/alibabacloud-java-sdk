@@ -6,33 +6,43 @@ import com.aliyun.tea.*;
 public class ListSecretVersionIdsRequest extends TeaModel {
     /**
      * <p>Specifies whether to return deprecated secret versions.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   false: no</p>
-     * <p>*   true: yes</p>
-     * <br>
+     * <ul>
+     * <li>false: no</li>
+     * <li>true: yes</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IncludeDeprecated")
     public String includeDeprecated;
 
     /**
      * <p>The number of the page to return. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The name of the secret.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>secret001</p>
      */
     @NameInMap("SecretName")
     public String secretName;

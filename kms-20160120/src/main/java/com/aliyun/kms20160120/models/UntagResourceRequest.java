@@ -4,20 +4,34 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class UntagResourceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>770dbe42-e146-43d1-a55a-1355db86****</p>
+     */
     @NameInMap("CertificateId")
     public String certificateId;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>08c33a6f-4e0a-4a1b-a3fa-7ddf****</p>
      */
     @NameInMap("KeyId")
     public String keyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MyDbC****</p>
+     */
     @NameInMap("SecretName")
     public String secretName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;tagkey1&quot;,&quot;tagkey2&quot;]</p>
      */
     @NameInMap("TagKeys")
     public String tagKeys;

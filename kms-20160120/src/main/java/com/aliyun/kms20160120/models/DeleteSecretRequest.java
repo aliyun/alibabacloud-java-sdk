@@ -6,25 +6,33 @@ import com.aliyun.tea.*;
 public class DeleteSecretRequest extends TeaModel {
     /**
      * <p>Specifies whether to forcibly delete the secret. If this parameter is set to true, the secret cannot be recovered.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false** (default value)</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default value)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ForceDeleteWithoutRecovery")
     public String forceDeleteWithoutRecovery;
 
     /**
      * <p>Specifies the recovery period of the secret if you do not forcibly delete it. Default value: 30. Unit: Days.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("RecoveryWindowInDays")
     public String recoveryWindowInDays;
 
     /**
      * <p>The name of the secret.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>secret001</p>
      */
     @NameInMap("SecretName")
     public String secretName;
