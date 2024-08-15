@@ -12,6 +12,9 @@ public class GetFolderResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C2CBCA30-C8DD-423E-B4AD-4FB694C9180C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class GetFolderResponseBody extends TeaModel {
     public static class GetFolderResponseBodyFolder extends TeaModel {
         /**
          * <p>The time when the folder was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-15T06:39:08.521Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The ID of the folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fd-Jyl5U7****</p>
          */
         @NameInMap("FolderId")
         public String folderId;
 
         /**
          * <p>The name of the folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Applications</p>
          */
         @NameInMap("FolderName")
         public String folderName;
 
         /**
          * <p>The ID of the parent folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-Wm****</p>
          */
         @NameInMap("ParentFolderId")
         public String parentFolderId;

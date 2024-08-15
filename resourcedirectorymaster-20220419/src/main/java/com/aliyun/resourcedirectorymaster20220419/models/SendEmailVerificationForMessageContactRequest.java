@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class SendEmailVerificationForMessageContactRequest extends TeaModel {
     /**
      * <p>The ID of the contact.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-5gsZAGt***PGduDF</p>
      */
     @NameInMap("ContactId")
     public String contactId;
 
     /**
      * <p>The email address of the contact.</p>
-     * <br>
-     * <p>The specified email address must be the one you specify when you call [AddMessageContact](~~AddMessageContact~~).</p>
+     * <p>The specified email address must be the one you specify when you call <a href="~~AddMessageContact~~">AddMessageContact</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>someone***@example.com</p>
      */
     @NameInMap("EmailAddress")
     public String emailAddress;

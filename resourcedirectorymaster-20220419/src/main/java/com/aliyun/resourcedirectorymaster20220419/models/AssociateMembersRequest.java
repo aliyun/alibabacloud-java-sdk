@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AssociateMembersRequest extends TeaModel {
     /**
      * <p>The ID of the contact.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-qL4HqKONzOM7****</p>
      */
     @NameInMap("ContactId")
     public String contactId;

@@ -4,6 +4,10 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class GetResourceDirectoryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>CD76D376-2517-4924-92C5-DBC52262F93A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +36,55 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
     }
 
     public static class GetResourceDirectoryResponseBodyResourceDirectory extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Enabled</p>
+         */
         @NameInMap("ControlPolicyStatus")
         public String controlPolicyStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-02-18T15:32:10.473Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("IdentityInformation")
         public String identityInformation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>172845045600****</p>
+         */
         @NameInMap("MasterAccountId")
         public String masterAccountId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>aliyun-admin</p>
+         */
         @NameInMap("MasterAccountName")
         public String masterAccountName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Enabled</p>
+         */
         @NameInMap("MemberDeletionStatus")
         public String memberDeletionStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rd-St****</p>
+         */
         @NameInMap("ResourceDirectoryId")
         public String resourceDirectoryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>r-Zo****</p>
+         */
         @NameInMap("RootFolderId")
         public String rootFolderId;
 

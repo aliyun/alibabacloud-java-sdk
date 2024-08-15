@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetAccountResponseBody extends TeaModel {
     /**
-     * <p>The information of the member.</p>
+     * <p>The information about the member.</p>
      */
     @NameInMap("Account")
     public GetAccountResponseBodyAccount account;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9B34724D-54B0-4A51-B34D-4512372FE1BE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,13 +42,19 @@ public class GetAccountResponseBody extends TeaModel {
 
     public static class GetAccountResponseBodyAccountTags extends TeaModel {
         /**
-         * <p>A tag key.</p>
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag_key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>A tag value.</p>
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag_value</p>
          */
         @NameInMap("Value")
         public String value;
@@ -76,59 +85,95 @@ public class GetAccountResponseBody extends TeaModel {
     public static class GetAccountResponseBodyAccount extends TeaModel {
         /**
          * <p>The Alibaba Cloud account ID of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>181761095690****</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
          * <p>The Alibaba Cloud account name of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
          * <p>The display name of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The status of the modification for the email address bound to the member. Valid values:</p>
-         * <br>
-         * <p>*   If the value of this parameter is empty, no modification is performed for the email address.</p>
-         * <p>*   WAIT_MODIFY: The modification is being performed.</p>
-         * <p>*   CANCELLED: The modification is canceled.</p>
-         * <p>*   EXPIRED: The modification expires.</p>
+         * <ul>
+         * <li>If the value of this parameter is empty, no modification is performed for the email address.</li>
+         * <li>WAIT_MODIFY: The modification is being performed.</li>
+         * <li>CANCELLED: The modification is canceled.</li>
+         * <li>EXPIRED: The modification expires.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>WAIT_MODIFY</p>
          */
         @NameInMap("EmailStatus")
         public String emailStatus;
 
         /**
          * <p>The ID of the folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fd-bVaRIG****</p>
          */
         @NameInMap("FolderId")
         public String folderId;
 
+        /**
+         * <p>Indicates whether a mobile phone number is bound to the member for security purposes. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("HasSecureMobilePhone")
         public Boolean hasSecureMobilePhone;
 
         /**
          * <p>The real-name verification information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun-admin</p>
          */
         @NameInMap("IdentityInformation")
         public String identityInformation;
 
         /**
          * <p>The way in which the member joins the resource directory. Valid values:</p>
-         * <br>
-         * <p>*   invited: The member is invited to join the resource directory.</p>
-         * <p>*   created: The member is directly created in the resource directory.</p>
+         * <ul>
+         * <li>invited: The member is invited to join the resource directory.</li>
+         * <li>created: The member is directly created in the resource directory.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>created</p>
          */
         @NameInMap("JoinMethod")
         public String joinMethod;
 
         /**
          * <p>The time when the member joined the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-01-23T12:33:18Z</p>
          */
         @NameInMap("JoinTime")
         public String joinTime;
@@ -141,12 +186,18 @@ public class GetAccountResponseBody extends TeaModel {
 
         /**
          * <p>The time when the member was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-01-23T12:33:18Z</p>
          */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
         /**
          * <p>The ID of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rd-k3****</p>
          */
         @NameInMap("ResourceDirectoryId")
         public String resourceDirectoryId;
@@ -159,14 +210,18 @@ public class GetAccountResponseBody extends TeaModel {
 
         /**
          * <p>The status of the member. Valid values:</p>
-         * <br>
-         * <p>*   CreateSuccess: The member is created.</p>
-         * <p>*   PromoteVerifying: The upgrade of the member is being confirmed.</p>
-         * <p>*   PromoteFailed: The upgrade of the member fails.</p>
-         * <p>*   PromoteExpired: The upgrade of the member expires.</p>
-         * <p>*   PromoteCancelled: The upgrade of the member is canceled.</p>
-         * <p>*   PromoteSuccess: The member is upgraded.</p>
-         * <p>*   InviteSuccess: The member accepts the invitation.</p>
+         * <ul>
+         * <li>CreateSuccess: The member is created.</li>
+         * <li>PromoteVerifying: The upgrade of the member is being confirmed.</li>
+         * <li>PromoteFailed: The upgrade of the member fails.</li>
+         * <li>PromoteExpired: The upgrade of the member expires.</li>
+         * <li>PromoteCancelled: The upgrade of the member is canceled.</li>
+         * <li>PromoteSuccess: The member is upgraded.</li>
+         * <li>InviteSuccess: The member accepts the invitation.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateSuccess</p>
          */
         @NameInMap("Status")
         public String status;
@@ -179,9 +234,13 @@ public class GetAccountResponseBody extends TeaModel {
 
         /**
          * <p>The type of the member. Valid values:</p>
-         * <br>
-         * <p>*   CloudAccount: cloud account</p>
-         * <p>*   ResourceAccount: resource account</p>
+         * <ul>
+         * <li>CloudAccount: cloud account</li>
+         * <li>ResourceAccount: resource account</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ResourceAccount</p>
          */
         @NameInMap("Type")
         public String type;

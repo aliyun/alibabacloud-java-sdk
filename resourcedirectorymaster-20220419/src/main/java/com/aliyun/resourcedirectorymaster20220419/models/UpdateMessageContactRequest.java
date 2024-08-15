@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class UpdateMessageContactRequest extends TeaModel {
     /**
      * <p>The ID of the contact.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-qL4HqKONzOM7****</p>
      */
     @NameInMap("ContactId")
     public String contactId;
 
     /**
      * <p>The email address of the contact.</p>
-     * <br>
-     * <p>After you specify an email address, you need to call [SendEmailVerificationForMessageContact](~~SendEmailVerificationForMessageContact~~) to send verification information to the email address. After the verification is passed, the email address takes effect.</p>
+     * <p>After you specify an email address, you need to call <a href="~~SendEmailVerificationForMessageContact~~">SendEmailVerificationForMessageContact</a> to send verification information to the email address. After the verification is passed, the email address takes effect.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>someone***@example.com</p>
      */
     @NameInMap("EmailAddress")
     public String emailAddress;
@@ -26,72 +31,73 @@ public class UpdateMessageContactRequest extends TeaModel {
 
     /**
      * <p>The name of the contact.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tom</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The mobile phone number of the contact.</p>
-     * <br>
-     * <p>Specify the mobile phone number in the `<Country code>-<Mobile phone number>` format.</p>
-     * <br>
-     * <p>After you specify a mobile phone number, you need to call [SendPhoneVerificationForMessageContact](~~SendPhoneVerificationForMessageContact~~) to send verification information to the mobile phone number. After the verification is passed, the mobile phone number takes effect.</p>
+     * <p>Specify the mobile phone number in the <code>&lt;Country code&gt;-&lt;Mobile phone number&gt;</code> format.</p>
+     * <p>After you specify a mobile phone number, you need to call <a href="~~SendPhoneVerificationForMessageContact~~">SendPhoneVerificationForMessageContact</a> to send verification information to the mobile phone number. After the verification is passed, the mobile phone number takes effect.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>86-139****1234</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
     /**
      * <p>The job title of the contact.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   FinanceDirector</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   TechnicalDirector</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   MaintenanceDirector</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   CEO</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   ProjectDirector</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   Other</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><p>FinanceDirector</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>TechnicalDirector</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>MaintenanceDirector</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>CEO</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>ProjectDirector</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>Other</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>TechnicalDirector</p>
      */
     @NameInMap("Title")
     public String title;

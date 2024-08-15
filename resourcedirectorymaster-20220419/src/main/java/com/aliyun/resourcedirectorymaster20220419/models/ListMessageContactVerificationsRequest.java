@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListMessageContactVerificationsRequest extends TeaModel {
     /**
      * <p>The ID of the contact.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-qL4HqKONzOM7****</p>
      */
     @NameInMap("ContactId")
     public String contactId;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

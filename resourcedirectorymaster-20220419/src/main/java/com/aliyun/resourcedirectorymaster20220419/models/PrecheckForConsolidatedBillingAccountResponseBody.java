@@ -12,15 +12,22 @@ public class PrecheckForConsolidatedBillingAccountResponseBody extends TeaModel 
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9E6B6CA8-9E7A-521F-A743-AA582714727E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the check was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Result")
     public Boolean result;
@@ -57,12 +64,18 @@ public class PrecheckForConsolidatedBillingAccountResponseBody extends TeaModel 
     public static class PrecheckForConsolidatedBillingAccountResponseBodyReasons extends TeaModel {
         /**
          * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PaymentAccountEnterpriseInvoiceError</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>No enterprise invoice header information is set for the payment account.</p>
          */
         @NameInMap("Message")
         public String message;

@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class PrecheckForConsolidatedBillingAccountRequest extends TeaModel {
     /**
      * <p>The ID of the management account or member to be used as a main financial account.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>111***089</p>
      */
     @NameInMap("BillingAccountId")
     public String billingAccountId;

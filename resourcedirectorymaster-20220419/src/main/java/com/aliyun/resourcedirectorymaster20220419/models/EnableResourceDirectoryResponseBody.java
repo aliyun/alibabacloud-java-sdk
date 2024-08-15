@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class EnableResourceDirectoryResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EC2FE94D-A4A2-51A1-A493-5C273A36C46A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,30 +43,45 @@ public class EnableResourceDirectoryResponseBody extends TeaModel {
     public static class EnableResourceDirectoryResponseBodyResourceDirectory extends TeaModel {
         /**
          * <p>The time when the resource directory was enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-08T02:15:31.744Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The ID of the management account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>507408460615****</p>
          */
         @NameInMap("MasterAccountId")
         public String masterAccountId;
 
         /**
          * <p>The name of the management account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:alice@example.com">alice@example.com</a></p>
          */
         @NameInMap("MasterAccountName")
         public String masterAccountName;
 
         /**
          * <p>The ID of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rd-54****</p>
          */
         @NameInMap("ResourceDirectoryId")
         public String resourceDirectoryId;
 
         /**
          * <p>The ID of the Root folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-G9****</p>
          */
         @NameInMap("RootFolderId")
         public String rootFolderId;

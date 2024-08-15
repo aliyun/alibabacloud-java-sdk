@@ -12,6 +12,9 @@ public class AddMessageContactResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2DFCE4C9-04A9-4C83-BB14-FE791275EC53</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class AddMessageContactResponseBody extends TeaModel {
     public static class AddMessageContactResponseBodyContact extends TeaModel {
         /**
          * <p>The ID of the contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-qL4HqKONzOM7****</p>
          */
         @NameInMap("ContactId")
         public String contactId;
 
         /**
          * <p>The time when the contact was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-27 17:19:21</p>
          */
         @NameInMap("CreateDate")
         public String createDate;

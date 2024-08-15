@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RegisterDelegatedAdministratorResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0A45FC8F-54D2-4A65-8338-25E5DEBDA304</p>
      */
     @NameInMap("RequestId")
     public String requestId;

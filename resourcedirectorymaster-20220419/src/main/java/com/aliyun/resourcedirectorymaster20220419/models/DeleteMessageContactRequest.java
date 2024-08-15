@@ -6,15 +6,23 @@ import com.aliyun.tea.*;
 public class DeleteMessageContactRequest extends TeaModel {
     /**
      * <p>The ID of the contact.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-qL4HqKONzOM7****</p>
      */
     @NameInMap("ContactId")
     public String contactId;
 
     /**
      * <p>Specifies whether to retain the contact for members. Valid values:</p>
-     * <br>
-     * <p>*   true (default): retains the contact for members. In this case, the contact can still receive messages for the members.</p>
-     * <p>*   false: does not retain the contact for members. In this case, the contact can no longer receive messages for the members. If you set this parameter to false, the response is asynchronously returned. You can call [GetMessageContactDeletionStatus](~~GetMessageContactDeletionStatus~~) to obtain the deletion result.</p>
+     * <ul>
+     * <li>true (default): retains the contact for members. In this case, the contact can still receive messages for the members.</li>
+     * <li>false: does not retain the contact for members. In this case, the contact can no longer receive messages for the members. If you set this parameter to false, the response is asynchronously returned. You can call <a href="~~GetMessageContactDeletionStatus~~">GetMessageContactDeletionStatus</a> to obtain the deletion result.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("RetainContactInMembers")
     public Boolean retainContactInMembers;

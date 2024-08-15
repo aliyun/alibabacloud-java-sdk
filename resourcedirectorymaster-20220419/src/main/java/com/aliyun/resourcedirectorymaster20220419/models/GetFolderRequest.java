@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class GetFolderRequest extends TeaModel {
     /**
      * <p>The ID of the folder.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fd-Jyl5U7****</p>
      */
     @NameInMap("FolderId")
     public String folderId;

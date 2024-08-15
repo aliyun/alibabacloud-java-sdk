@@ -12,6 +12,9 @@ public class DisassociateMembersResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>95060F1D-6990-4645-8920-A81D1BBFE992</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,22 +43,32 @@ public class DisassociateMembersResponseBody extends TeaModel {
     public static class DisassociateMembersResponseBodyMembers extends TeaModel {
         /**
          * <p>The ID of the contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-qL4HqKONzOM7****</p>
          */
         @NameInMap("ContactId")
         public String contactId;
 
         /**
          * <p>The ID of the object. Valid values:</p>
-         * <br>
-         * <p>- ID of the resource directory</p>
-         * <p>- ID of the folder</p>
-         * <p>- ID of the member</p>
+         * <ul>
+         * <li>ID of the resource directory</li>
+         * <li>ID of the folder</li>
+         * <li>ID of the member</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>fd-ZDNPiT****</p>
          */
         @NameInMap("MemberId")
         public String memberId;
 
         /**
          * <p>The time when the contact was unbound from the object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-27 17:19:21</p>
          */
         @NameInMap("ModifyDate")
         public String modifyDate;
