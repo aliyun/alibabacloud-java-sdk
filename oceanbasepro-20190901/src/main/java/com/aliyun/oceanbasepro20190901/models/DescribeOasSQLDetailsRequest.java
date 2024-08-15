@@ -37,6 +37,9 @@ public class DescribeOasSQLDetailsRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("ParseTable")
+    public Boolean parseTable;
+
     /**
      * <p>SQL ID.</p>
      * <p>This parameter is required.</p>
@@ -102,6 +105,14 @@ public class DescribeOasSQLDetailsRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeOasSQLDetailsRequest setParseTable(Boolean parseTable) {
+        this.parseTable = parseTable;
+        return this;
+    }
+    public Boolean getParseTable() {
+        return this.parseTable;
     }
 
     public DescribeOasSQLDetailsRequest setSqlId(String sqlId) {

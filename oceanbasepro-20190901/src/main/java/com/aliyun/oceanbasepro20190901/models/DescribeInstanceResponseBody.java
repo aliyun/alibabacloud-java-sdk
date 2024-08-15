@@ -1143,6 +1143,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyInstance extends TeaModel {
+        @NameInMap("AllowCreateProxySqlFirewallRule")
+        public Boolean allowCreateProxySqlFirewallRule;
+
         @NameInMap("AllowModifyInternetAddressConnectionLimit")
         public Boolean allowModifyInternetAddressConnectionLimit;
 
@@ -1421,6 +1424,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public static DescribeInstanceResponseBodyInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceResponseBodyInstance self = new DescribeInstanceResponseBodyInstance();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceResponseBodyInstance setAllowCreateProxySqlFirewallRule(Boolean allowCreateProxySqlFirewallRule) {
+            this.allowCreateProxySqlFirewallRule = allowCreateProxySqlFirewallRule;
+            return this;
+        }
+        public Boolean getAllowCreateProxySqlFirewallRule() {
+            return this.allowCreateProxySqlFirewallRule;
         }
 
         public DescribeInstanceResponseBodyInstance setAllowModifyInternetAddressConnectionLimit(Boolean allowModifyInternetAddressConnectionLimit) {

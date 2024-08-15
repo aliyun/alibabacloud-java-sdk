@@ -427,6 +427,9 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("IntranetRpcPort")
         public Integer intranetRpcPort;
 
+        @NameInMap("IntranetSqlPort")
+        public Integer intranetSqlPort;
+
         @NameInMap("MaxConnectionLimit")
         public Long maxConnectionLimit;
 
@@ -436,6 +439,9 @@ public class DescribeTenantResponseBody extends TeaModel {
          */
         @NameInMap("MaxConnectionNum")
         public Long maxConnectionNum;
+
+        @NameInMap("OdpVersion")
+        public String odpVersion;
 
         @NameInMap("ParallelQueryDegree")
         public Long parallelQueryDegree;
@@ -618,6 +624,14 @@ public class DescribeTenantResponseBody extends TeaModel {
             return this.intranetRpcPort;
         }
 
+        public DescribeTenantResponseBodyTenantTenantConnections setIntranetSqlPort(Integer intranetSqlPort) {
+            this.intranetSqlPort = intranetSqlPort;
+            return this;
+        }
+        public Integer getIntranetSqlPort() {
+            return this.intranetSqlPort;
+        }
+
         public DescribeTenantResponseBodyTenantTenantConnections setMaxConnectionLimit(Long maxConnectionLimit) {
             this.maxConnectionLimit = maxConnectionLimit;
             return this;
@@ -632,6 +646,14 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
         public Long getMaxConnectionNum() {
             return this.maxConnectionNum;
+        }
+
+        public DescribeTenantResponseBodyTenantTenantConnections setOdpVersion(String odpVersion) {
+            this.odpVersion = odpVersion;
+            return this;
+        }
+        public String getOdpVersion() {
+            return this.odpVersion;
         }
 
         public DescribeTenantResponseBodyTenantTenantConnections setParallelQueryDegree(Long parallelQueryDegree) {
@@ -1354,6 +1376,9 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("MaxParallelQueryDegree")
         public Long maxParallelQueryDegree;
 
+        @NameInMap("OdpVersion")
+        public String odpVersion;
+
         /**
          * <strong>example:</strong>
          * <p>POSTPAY</p>
@@ -1691,6 +1716,14 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
         public Long getMaxParallelQueryDegree() {
             return this.maxParallelQueryDegree;
+        }
+
+        public DescribeTenantResponseBodyTenant setOdpVersion(String odpVersion) {
+            this.odpVersion = odpVersion;
+            return this;
+        }
+        public String getOdpVersion() {
+            return this.odpVersion;
         }
 
         public DescribeTenantResponseBodyTenant setPayType(String payType) {
