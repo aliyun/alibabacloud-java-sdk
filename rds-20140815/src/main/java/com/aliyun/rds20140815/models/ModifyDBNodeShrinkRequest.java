@@ -65,7 +65,7 @@ public class ModifyDBNodeShrinkRequest extends TeaModel {
     /**
      * <p>The information about the node.</p>
      * <blockquote>
-     * <p> This parameter is supported for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.</p>
+     * <p> This parameter is used for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.</p>
      * </blockquote>
      */
     @NameInMap("DBNode")
@@ -85,10 +85,10 @@ public class ModifyDBNodeShrinkRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Effective time, value:</p>
+     * <p>The time when you want the change to take effect. Valid values:</p>
      * <ul>
-     * <li>Immediate (default value): takes effect immediately.</li>
-     * <li>MaintainTime: Effective within the operational time period, please refer to ModifyDBInstanceMaintainTime.</li>
+     * <li><strong>Immediate</strong> (default): The change immediately takes effect.</li>
+     * <li><strong>MaintainTime</strong>: The effective time is within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</li>
      * </ul>
      * 
      * <strong>example:</strong>

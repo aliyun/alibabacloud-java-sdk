@@ -434,15 +434,6 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String metaStatus;
 
         /**
-         * <p>The resource group ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-acfmy*****</p>
-         */
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
-
-        /**
          * <p>The storage class of the backup set. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: regular storage</li>
@@ -647,14 +638,6 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
         public String getMetaStatus() {
             return this.metaStatus;
-        }
-
-        public DescribeBackupsResponseBodyItemsBackup setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
         }
 
         public DescribeBackupsResponseBodyItemsBackup setStorageClass(String storageClass) {

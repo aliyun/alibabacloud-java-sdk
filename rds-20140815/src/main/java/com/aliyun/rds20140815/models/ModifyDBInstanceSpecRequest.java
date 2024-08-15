@@ -149,15 +149,11 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The time when you want the change to take effect. Valid values:</p>
+     * <p>The effective time. Valid values:</p>
      * <ul>
      * <li><strong>Immediate</strong> (default)</li>
      * <li><strong>MaintainTime</strong>: The effective time is within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</li>
-     * </ul>
-     * <!---->
-     * 
-     * <ul>
-     * <li>ScheduleTime: The schedule time must be a specific point in time that is 12 hours later than the current time. In this case, EffectiveTime is calculated by using the following formula: EffectiveTime = ScheduleTime + SwitchTime.</li>
+     * <li><strong>ScheduleTime</strong>: The change takes effect at the point in time that you specify. The schedule time must be a specific point in time that is 12 hours later than the current time. In this case, EffectiveTime is calculated by using the following formula: EffectiveTime = ScheduleTime + SwitchTime.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -241,9 +237,6 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
 
     /**
      * <p>The specifications that you want to change for a serverless instance.</p>
-     * <blockquote>
-     * <p> This parameter is available only on the China site (aliyun.com).</p>
-     * </blockquote>
      */
     @NameInMap("ServerlessConfiguration")
     public ModifyDBInstanceSpecRequestServerlessConfiguration serverlessConfiguration;
@@ -520,11 +513,10 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
          * <li><strong>false</strong> (default)</li>
          * </ul>
          * <blockquote>
+         * </blockquote>
          * <ul>
          * <li>This parameter is required only for serverless instances that run MySQL and PostgreSQL. After the automatic start and stop feature is enabled, if no connections to the instance are established within 10 minutes, the instance is suspended. After a connection to the instance is established, the instance is automatically resumed.</li>
-         * <li>This parameter is available only on the China site (aliyun.com).</li>
          * </ul>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -543,11 +535,10 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
          * <li>Serverless ApsaraDB RDS for PostgreSQL instances: <strong>1 to 14</strong></li>
          * </ul>
          * <blockquote>
+         * </blockquote>
          * <ul>
          * <li>The value of this parameter must be greater than or equal to the value of <strong>MinCapacity</strong> and can be specified only to an <strong>integer</strong>.</li>
-         * <li>This parameter is available only on the China site (aliyun.com).</li>
          * </ul>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -563,11 +554,10 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
          * <li>Serverless ApsaraDB RDS for PostgreSQL instances: <strong>0.5 to 14</strong>.</li>
          * </ul>
          * <blockquote>
+         * </blockquote>
          * <ul>
          * <li>The value of this parameter must be less than or equal to the value of MaxCapacity.</li>
-         * <li>This parameter is available only on the China site (aliyun.com).</li>
          * </ul>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
@@ -582,12 +572,13 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
          * <li><strong>false</strong> (default)</li>
          * </ul>
          * <blockquote>
-         * <ul>
-         * <li>This parameter is required only for serverless instances that run MySQL and PostgreSQL. If you set this parameter to true, a service interruption that lasts 30 to 120 seconds occurs during forced scaling. Process with caution.</li>
-         * <li>The RCU scaling for a serverless instance immediately takes effect. In some cases, such as the execution of large transactions, the scaling does not immediately take effect. In this case, you can enable this feature to forcefully scale the RCUs of the instance.</li>
-         * <li>This parameter is available only on the China site (aliyun.com).</li>
-         * </ul>
          * </blockquote>
+         * <ul>
+         * <li><p>This parameter is required only for serverless instances that run MySQL and PostgreSQL. If you set this parameter to true, a service interruption that lasts 30 to 120 seconds occurs during forced scaling. Process with caution.</p>
+         * </li>
+         * <li><p>The RCU scaling for a serverless instance immediately takes effect. In some cases, such as the execution of large transactions, the scaling does not immediately take effect. In this case, you can enable this feature to forcefully scale the RCUs of the instance.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>

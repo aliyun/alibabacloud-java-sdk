@@ -21,14 +21,26 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     @NameInMap("Amount")
     public Integer amount;
 
+    /**
+     * <p>是否自动创建代理。取值范围：</p>
+     * <ul>
+     * <li><p><strong>true</strong>：开启自动创建，默认为通用代理。</p>
+     * </li>
+     * <li><p><strong>false</strong>：不开启自动创建。</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoCreateProxy")
     public Boolean autoCreateProxy;
 
     /**
      * <p>Specifies whether to enable the automatic payment feature. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: automatically completes the payment. You must make sure that your account balance is sufficient.</li>
-     * <li><strong>false</strong>: does not automatically complete the payment. An unpaid order is generated.</li>
+     * <li><strong>true</strong>: enables the feature. Make sure that your account balance is sufficient.</li>
+     * <li><strong>false</strong>: disables the feature. An unpaid order is generated.</li>
      * </ul>
      * <blockquote>
      * <p> The default value is true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</p>

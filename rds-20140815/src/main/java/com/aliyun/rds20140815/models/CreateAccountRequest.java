@@ -69,7 +69,7 @@ public class CreateAccountRequest extends TeaModel {
     /**
      * <p>The account type. Valid values:</p>
      * <ul>
-     * <li><strong>Normal</strong>: standard account (default).</li>
+     * <li><strong>Normal</strong> (default): standard account.</li>
      * <li><strong>Super</strong>: privileged account.</li>
      * <li><strong>Sysadmin</strong>: system admin account. The account type is available only for ApsaraDB RDS for SQL Server instances.</li>
      * </ul>

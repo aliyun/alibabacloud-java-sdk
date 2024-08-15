@@ -149,15 +149,11 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The time when you want the change to take effect. Valid values:</p>
+     * <p>The effective time. Valid values:</p>
      * <ul>
      * <li><strong>Immediate</strong> (default)</li>
      * <li><strong>MaintainTime</strong>: The effective time is within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</li>
-     * </ul>
-     * <!---->
-     * 
-     * <ul>
-     * <li>ScheduleTime: The schedule time must be a specific point in time that is 12 hours later than the current time. In this case, EffectiveTime is calculated by using the following formula: EffectiveTime = ScheduleTime + SwitchTime.</li>
+     * <li><strong>ScheduleTime</strong>: The change takes effect at the point in time that you specify. The schedule time must be a specific point in time that is 12 hours later than the current time. In this case, EffectiveTime is calculated by using the following formula: EffectiveTime = ScheduleTime + SwitchTime.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -241,9 +237,6 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
 
     /**
      * <p>The specifications that you want to change for a serverless instance.</p>
-     * <blockquote>
-     * <p> This parameter is available only on the China site (aliyun.com).</p>
-     * </blockquote>
      */
     @NameInMap("ServerlessConfiguration")
     public String serverlessConfigurationShrink;

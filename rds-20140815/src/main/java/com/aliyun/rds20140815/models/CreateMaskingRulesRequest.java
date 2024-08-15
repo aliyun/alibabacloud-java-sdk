@@ -19,6 +19,9 @@ public class CreateMaskingRulesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public String ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -69,6 +72,14 @@ public class CreateMaskingRulesRequest extends TeaModel {
     }
     public String getOwnerId() {
         return this.ownerId;
+    }
+
+    public CreateMaskingRulesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateMaskingRulesRequest setResourceOwnerAccount(String resourceOwnerAccount) {

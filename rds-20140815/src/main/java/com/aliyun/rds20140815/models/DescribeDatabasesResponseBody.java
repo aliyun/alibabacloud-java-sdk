@@ -321,15 +321,6 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The resource group ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-acfmy****</p>
-         */
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
-
-        /**
          * <p>The runtime information about the database.</p>
          * <blockquote>
          * <p> This parameter is returned only for instances that run SQL Server.</p>
@@ -477,14 +468,6 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
         public Integer getPageSize() {
             return this.pageSize;
-        }
-
-        public DescribeDatabasesResponseBodyDatabasesDatabase setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
         }
 
         public DescribeDatabasesResponseBodyDatabasesDatabase setRuntimeInfo(DescribeDatabasesResponseBodyDatabasesDatabaseRuntimeInfo runtimeInfo) {

@@ -99,15 +99,6 @@ public class DescribeBackupsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The resource group ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rg-acfmy*****</p>
-     */
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
@@ -187,14 +178,6 @@ public class DescribeBackupsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public DescribeBackupsRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
     public DescribeBackupsRequest setResourceOwnerId(Long resourceOwnerId) {
