@@ -20,7 +20,7 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     public String ACL;
 
     /**
-     * <p>The type of the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks. If you set SSLEnabled to <strong>1</strong>, the default value of this parameter is <strong>aliyun</strong>. Valid values:</p>
+     * <p>The type of the server certificate. This parameter is supported only when the instance runs MySQL or PostgreSQL with cloud disks. If you set SSLEnabled to <strong>1</strong>, the default value of this parameter is <strong>aliyun</strong>. Valid values:</p>
      * <ul>
      * <li><strong>aliyun</strong>: a cloud certificate</li>
      * <li><strong>custom</strong>: a custom certificate</li>

@@ -4,6 +4,18 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CreateReadOnlyDBInstanceRequest extends TeaModel {
+    /**
+     * <p>是否自动创建代理。取值范围：</p>
+     * <ul>
+     * <li><p><strong>true</strong>：开启自动创建，默认为通用代理。</p>
+     * </li>
+     * <li><p><strong>false</strong>：不开启自动创建。</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoCreateProxy")
     public Boolean autoCreateProxy;
 
@@ -14,7 +26,7 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
      * <li><strong>false</strong>: disables the feature. An unpaid order is generated.</li>
      * </ol>
      * <blockquote>
-     * <p> Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</p>
+     * <p> The default value is true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -162,11 +174,11 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the release protection feature for the read-only instance. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables the feature.</li>
-     * <li><strong>false</strong> (default): disables the feature.</li>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
      * </ul>
      * <blockquote>
-     * <p> You can enable the release protection feature for the read-only instance only when you set the <strong>Billing Method</strong> parameter to <strong>Pay-As-You-Go</strong>.</p>
+     * <p> You can enable the release protection feature for the read-only instance only when you set the <strong>PayType</strong> parameter to <strong>Postpaid</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

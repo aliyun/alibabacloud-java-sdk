@@ -68,15 +68,6 @@ public class DescribeDatabasesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The ID of the resource group.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rg-acfmy****</p>
-     */
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -142,14 +133,6 @@ public class DescribeDatabasesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public DescribeDatabasesRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
     public DescribeDatabasesRequest setResourceOwnerAccount(String resourceOwnerAccount) {

@@ -691,96 +691,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is phased out.</p>
-     * <h3><a href="#"></a>Supported database engines</h3>
-     * <ul>
-     * <li>RDS SQL Server</li>
-     * </ul>
-     * <h3><a href="#"></a>Description</h3>
-     * <p>This operation is supported for instances that run SQL Server and belong to the dedicated or dedicated host instance family. For more information about how to start a migration task, see <a href="https://help.aliyun.com/document_detail/610592.html">ImportDatabaseBetweenInstances</a>.</p>
-     * <h3><a href="#"></a>Usage notes</h3>
-     * <p>This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.</p>
-     * 
-     * <b>summary</b> : 
-     * <p>Cancels the migration task of an ApsaraDB RDS for SQL Server instance.</p>
-     * 
-     * @param request CancelImportRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return CancelImportResponse
-     */
-    public CancelImportResponse cancelImportWithOptions(CancelImportRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
-            query.put("DBInstanceId", request.DBInstanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.importId)) {
-            query.put("ImportId", request.importId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
-            query.put("OwnerAccount", request.ownerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
-            query.put("ResourceGroupId", request.resourceGroupId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
-            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
-            query.put("ResourceOwnerId", request.resourceOwnerId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CancelImport"),
-            new TeaPair("version", "2014-08-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelImportResponse());
-    }
-
-    /**
-     * <b>description</b> :
-     * <p>This operation is phased out.</p>
-     * <h3><a href="#"></a>Supported database engines</h3>
-     * <ul>
-     * <li>RDS SQL Server</li>
-     * </ul>
-     * <h3><a href="#"></a>Description</h3>
-     * <p>This operation is supported for instances that run SQL Server and belong to the dedicated or dedicated host instance family. For more information about how to start a migration task, see <a href="https://help.aliyun.com/document_detail/610592.html">ImportDatabaseBetweenInstances</a>.</p>
-     * <h3><a href="#"></a>Usage notes</h3>
-     * <p>This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.</p>
-     * 
-     * <b>summary</b> : 
-     * <p>Cancels the migration task of an ApsaraDB RDS for SQL Server instance.</p>
-     * 
-     * @param request CancelImportRequest
-     * @return CancelImportResponse
-     */
-    public CancelImportResponse cancelImport(CancelImportRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.cancelImportWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
      * <li>MySQL</li>
@@ -1367,6 +1277,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.category)) {
             query.put("Category", request.category);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceClass)) {
@@ -2011,10 +1925,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.DBName)) {
             query.put("DBName", request.DBName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
-            query.put("ResourceGroupId", request.resourceGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
@@ -3299,10 +3209,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
-            query.put("ResourceGroupId", request.resourceGroupId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
@@ -3842,6 +3748,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
@@ -5721,14 +5631,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engines</h3>
-     * <ul>
-     * <li>MySQL</li>
-     * <li>PostgreSQL</li>
-     * </ul>
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>MySQL</p>
      * <h3><a href="#"></a>References</h3>
      * <blockquote>
-     * <p>Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
      * <a href="https://help.aliyun.com/document_detail/464130.html">Delete a node from an ApsaraDB RDS for MySQL cluster</a></p>
      * </blockquote>
      * 
@@ -5799,14 +5706,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engines</h3>
-     * <ul>
-     * <li>MySQL</li>
-     * <li>PostgreSQL</li>
-     * </ul>
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>MySQL</p>
      * <h3><a href="#"></a>References</h3>
      * <blockquote>
-     * <p>Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
      * <a href="https://help.aliyun.com/document_detail/464130.html">Delete a node from an ApsaraDB RDS for MySQL cluster</a></p>
      * </blockquote>
      * 
@@ -6096,6 +6000,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
@@ -6784,6 +6692,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
@@ -6996,7 +6908,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details about scheduled O\\\\\\&amp;M tasks for an instance.</p>
+     * <p>Queries the details about scheduled O\\\\\\\\\\&amp;M tasks for an instance.</p>
      * 
      * @param request DescribeActiveOperationTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7097,7 +7009,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details about scheduled O\\\\\\&amp;M tasks for an instance.</p>
+     * <p>Queries the details about scheduled O\\\\\\\\\\&amp;M tasks for an instance.</p>
      * 
      * @param request DescribeActiveOperationTasksRequest
      * @return DescribeActiveOperationTasksResponse
@@ -8033,10 +7945,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
-            query.put("ResourceGroupId", request.resourceGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
@@ -9770,21 +9678,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
-     * <p>RDS SQL Server</p>
+     * <p>SQL Server</p>
      * <h3><a href="#"></a>Prerequisites</h3>
      * <ul>
      * <li>The RDS instance runs RDS Basic Edition, RDS High-availability Edition, or RDS Cluster Edition. If your RDS instance runs RDS High-availability Edition, make sure that the instance runs SQL Server 2012 or later.</li>
      * <li>The RDS instance belongs to a general-purpose or dedicated instance family. The shared instance family is not supported.</li>
-     * <li>If the RDS instance runs RDS Basic Edition, the instance is created on or after September 02, 2022. You can view the Creation Time</li>
+     * <li>If the RDS instance runs RDS Basic Edition, the instance is created on or after September 02, 2022. You can view the Creation Time parameter of an instance in the Status section of the Basic Information page in the ApsaraDB RDS console.</li>
      * </ul>
      * <h3><a href="#"></a>References</h3>
      * <blockquote>
-     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * <a href="https://help.aliyun.com/document_detail/124321.html">Configure a distributed transaction whitelist</a></p>
+     * <p> Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
      * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/124321.html">Configure a distributed transaction whitelist</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/124188.html">Connect Kingdee K/3 WISE to an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the hostname of the Elastic Compute Service (ECS) instance on which the ApsaraDB RDS for SQL Server instance runs.</p>
+     * <p>Queries the internal IP address and hostname of the Elastic Compute Service (ECS) instance on which the ApsaraDB RDS for SQL Server instance runs.</p>
      * 
      * @param request DescribeDBInstanceIpHostnameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9841,21 +9752,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
-     * <p>RDS SQL Server</p>
+     * <p>SQL Server</p>
      * <h3><a href="#"></a>Prerequisites</h3>
      * <ul>
      * <li>The RDS instance runs RDS Basic Edition, RDS High-availability Edition, or RDS Cluster Edition. If your RDS instance runs RDS High-availability Edition, make sure that the instance runs SQL Server 2012 or later.</li>
      * <li>The RDS instance belongs to a general-purpose or dedicated instance family. The shared instance family is not supported.</li>
-     * <li>If the RDS instance runs RDS Basic Edition, the instance is created on or after September 02, 2022. You can view the Creation Time</li>
+     * <li>If the RDS instance runs RDS Basic Edition, the instance is created on or after September 02, 2022. You can view the Creation Time parameter of an instance in the Status section of the Basic Information page in the ApsaraDB RDS console.</li>
      * </ul>
      * <h3><a href="#"></a>References</h3>
      * <blockquote>
-     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * <a href="https://help.aliyun.com/document_detail/124321.html">Configure a distributed transaction whitelist</a></p>
+     * <p> Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
      * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/124321.html">Configure a distributed transaction whitelist</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/124188.html">Connect Kingdee K/3 WISE to an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the hostname of the Elastic Compute Service (ECS) instance on which the ApsaraDB RDS for SQL Server instance runs.</p>
+     * <p>Queries the internal IP address and hostname of the Elastic Compute Service (ECS) instance on which the ApsaraDB RDS for SQL Server instance runs.</p>
      * 
      * @param request DescribeDBInstanceIpHostnameRequest
      * @return DescribeDBInstanceIpHostnameResponse
@@ -11835,10 +11749,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
-            query.put("ResourceGroupId", request.resourceGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
@@ -13930,6 +13840,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
@@ -15999,7 +15913,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>The DescribeSQLLogFiles operation does not return the log files that are generated by SQL Explorer Trial Edition for an ApsaraDB RDS for MySQL instance.</li>
      * <li>The DescribeSQLLogFiles operation does not return the log files that are generated by the SQL Explorer feature and manually exported from the ApsaraDB RDS console. The DescribeSQLLogFiles operation returns the SQL Explorer log files that are generated by calling the <a href="https://help.aliyun.com/document_detail/610533.html">DescribeSQLLogRecords</a> operation with the request parameter <strong>Form</strong> set to <strong>File</strong>.</li>
-     * <li>The exported files are retained for only two days.</li>
+     * <li>The exported files are retained for only two days.
+     * **
+     * <strong>Note</strong> If you have enabled Database Autonomy Service (DAS) Enterprise Edition V2 or V3 and have enabled the SQL Explorer and Audit feature, the exported files are retained for seven days. You can call the <a href="https://help.aliyun.com/document_detail/2778837.html">DescribeSqlLogConfig</a> operation to query the information about the enabled DAS Enterprise Edition.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -16075,7 +15991,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>The DescribeSQLLogFiles operation does not return the log files that are generated by SQL Explorer Trial Edition for an ApsaraDB RDS for MySQL instance.</li>
      * <li>The DescribeSQLLogFiles operation does not return the log files that are generated by the SQL Explorer feature and manually exported from the ApsaraDB RDS console. The DescribeSQLLogFiles operation returns the SQL Explorer log files that are generated by calling the <a href="https://help.aliyun.com/document_detail/610533.html">DescribeSQLLogRecords</a> operation with the request parameter <strong>Form</strong> set to <strong>File</strong>.</li>
-     * <li>The exported files are retained for only two days.</li>
+     * <li>The exported files are retained for only two days.
+     * **
+     * <strong>Note</strong> If you have enabled Database Autonomy Service (DAS) Enterprise Edition V2 or V3 and have enabled the SQL Explorer and Audit feature, the exported files are retained for seven days. You can call the <a href="https://help.aliyun.com/document_detail/2778837.html">DescribeSqlLogConfig</a> operation to query the information about the enabled DAS Enterprise Edition.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -20093,80 +20011,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>The API has been taken offline</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>修改实例访问模式</p>
-     * 
-     * @param request ModifyDBInstanceConnectionModeRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return ModifyDBInstanceConnectionModeResponse
-     */
-    public ModifyDBInstanceConnectionModeResponse modifyDBInstanceConnectionModeWithOptions(ModifyDBInstanceConnectionModeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.connectionMode)) {
-            query.put("ConnectionMode", request.connectionMode);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
-            query.put("DBInstanceId", request.DBInstanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
-            query.put("OwnerAccount", request.ownerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
-            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
-            query.put("ResourceOwnerId", request.resourceOwnerId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ModifyDBInstanceConnectionMode"),
-            new TeaPair("version", "2014-08-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDBInstanceConnectionModeResponse());
-    }
-
-    /**
-     * <b>description</b> :
-     * <blockquote>
-     * <p>The API has been taken offline</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>修改实例访问模式</p>
-     * 
-     * @param request ModifyDBInstanceConnectionModeRequest
-     * @return ModifyDBInstanceConnectionModeResponse
-     */
-    public ModifyDBInstanceConnectionModeResponse modifyDBInstanceConnectionMode(ModifyDBInstanceConnectionModeRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.modifyDBInstanceConnectionModeWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>description</b> :
      * <h3>Supported database engines</h3>
      * <ul>
      * <li>MySQL</li>
@@ -21391,80 +21235,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>This operation is phased out.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>You can call the ModifyDBInstanceProxyConfiguration operation to configure the database proxy for an instance.</p>
-     * 
-     * @param request ModifyDBInstanceProxyConfigurationRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return ModifyDBInstanceProxyConfigurationResponse
-     */
-    public ModifyDBInstanceProxyConfigurationResponse modifyDBInstanceProxyConfigurationWithOptions(ModifyDBInstanceProxyConfigurationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
-            query.put("DBInstanceId", request.DBInstanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.proxyConfigurationKey)) {
-            query.put("ProxyConfigurationKey", request.proxyConfigurationKey);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.proxyConfigurationValue)) {
-            query.put("ProxyConfigurationValue", request.proxyConfigurationValue);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
-            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
-            query.put("ResourceOwnerId", request.resourceOwnerId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ModifyDBInstanceProxyConfiguration"),
-            new TeaPair("version", "2014-08-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDBInstanceProxyConfigurationResponse());
-    }
-
-    /**
-     * <b>description</b> :
-     * <blockquote>
-     * <p>This operation is phased out.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>You can call the ModifyDBInstanceProxyConfiguration operation to configure the database proxy for an instance.</p>
-     * 
-     * @param request ModifyDBInstanceProxyConfigurationRequest
-     * @return ModifyDBInstanceProxyConfigurationResponse
-     */
-    public ModifyDBInstanceProxyConfigurationResponse modifyDBInstanceProxyConfiguration(ModifyDBInstanceProxyConfigurationRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.modifyDBInstanceProxyConfigurationWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
      * <li>MySQL</li>
@@ -22021,20 +21791,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engines</h3>
+     * <h3><a href="#"></a>Supported database engine</h3>
      * <ul>
      * <li>MySQL</li>
      * </ul>
      * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2627998.html">Change instance specifications</a></p>
      * <blockquote>
-     * <p>Fees are generated if the call is successful. Before you call this operation, carefully read the following topics:</p>
+     * <p> Fees of an instance are changed if the call is successful. Before you call this operation, carefully read the related topics.</p>
      * </blockquote>
-     * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96061.html">Change the specifications of an ApsaraDB RDS for MySQL instance</a></li>
-     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Changes the specifications and storage capacity of an instance.</p>
+     * <p>Changes the specifications, storage type, and storage capacity of an ApsaraDB RDS for MySQL instance that runs RDS Cluster Edition.</p>
      * 
      * @param tmpReq ModifyDBNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22120,20 +21888,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engines</h3>
+     * <h3><a href="#"></a>Supported database engine</h3>
      * <ul>
      * <li>MySQL</li>
      * </ul>
      * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2627998.html">Change instance specifications</a></p>
      * <blockquote>
-     * <p>Fees are generated if the call is successful. Before you call this operation, carefully read the following topics:</p>
+     * <p> Fees of an instance are changed if the call is successful. Before you call this operation, carefully read the related topics.</p>
      * </blockquote>
-     * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96061.html">Change the specifications of an ApsaraDB RDS for MySQL instance</a></li>
-     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Changes the specifications and storage capacity of an instance.</p>
+     * <p>Changes the specifications, storage type, and storage capacity of an ApsaraDB RDS for MySQL instance that runs RDS Cluster Edition.</p>
      * 
      * @param request ModifyDBNodeRequest
      * @return ModifyDBNodeResponse
@@ -27173,76 +26939,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SwitchDBInstanceVpcResponse switchDBInstanceVpc(SwitchDBInstanceVpcRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.switchDBInstanceVpcWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>description</b> :
-     * <p>This operation is phased out.</p>
-     * 
-     * <b>summary</b> : 
-     * <p>Switches a disaster recovery instance to a primary instance.</p>
-     * 
-     * @param request SwitchGuardToMasterInstanceRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return SwitchGuardToMasterInstanceResponse
-     */
-    public SwitchGuardToMasterInstanceResponse switchGuardToMasterInstanceWithOptions(SwitchGuardToMasterInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
-            query.put("DBInstanceId", request.DBInstanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
-            query.put("OwnerAccount", request.ownerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
-            query.put("ResourceGroupId", request.resourceGroupId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
-            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
-            query.put("ResourceOwnerId", request.resourceOwnerId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "SwitchGuardToMasterInstance"),
-            new TeaPair("version", "2014-08-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new SwitchGuardToMasterInstanceResponse());
-    }
-
-    /**
-     * <b>description</b> :
-     * <p>This operation is phased out.</p>
-     * 
-     * <b>summary</b> : 
-     * <p>Switches a disaster recovery instance to a primary instance.</p>
-     * 
-     * @param request SwitchGuardToMasterInstanceRequest
-     * @return SwitchGuardToMasterInstanceResponse
-     */
-    public SwitchGuardToMasterInstanceResponse switchGuardToMasterInstance(SwitchGuardToMasterInstanceRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.switchGuardToMasterInstanceWithOptions(request, runtime);
     }
 
     /**

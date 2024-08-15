@@ -85,15 +85,6 @@ public class CreateBackupRequest extends TeaModel {
     @NameInMap("DBName")
     public String DBName;
 
-    /**
-     * <p>The resource group ID. You can call the DescribeDBInstanceAttribute to query the resource group ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rg-acfmy*****</p>
-     */
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
@@ -140,14 +131,6 @@ public class CreateBackupRequest extends TeaModel {
     }
     public String getDBName() {
         return this.DBName;
-    }
-
-    public CreateBackupRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
     public CreateBackupRequest setResourceOwnerId(Long resourceOwnerId) {

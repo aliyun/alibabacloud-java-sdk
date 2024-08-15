@@ -90,6 +90,15 @@ public class CloneDBInstanceRequest extends TeaModel {
     public String category;
 
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0c593ea1-3bea-11e9-b96b-88**********</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
      * <p>The instance type of the new instance. For information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</p>
      * <blockquote>
      * <p>By default, the new instance uses the same instance type as the original primary instance.</p>
@@ -214,7 +223,7 @@ public class CloneDBInstanceRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The unit that is used to calculate the billing cycle of the new instance. Valid values:</p>
+     * <p>The unit that is used to calculate the billing cycle of the new instance. This parameter takes effect only when you select the subscription billing method for the new instance. Valid values:</p>
      * <ul>
      * <li><strong>Year</strong></li>
      * <li><strong>Month</strong></li>
@@ -411,6 +420,14 @@ public class CloneDBInstanceRequest extends TeaModel {
     }
     public String getCategory() {
         return this.category;
+    }
+
+    public CloneDBInstanceRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CloneDBInstanceRequest setDBInstanceClass(String DBInstanceClass) {

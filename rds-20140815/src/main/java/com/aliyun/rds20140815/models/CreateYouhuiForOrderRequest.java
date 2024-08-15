@@ -41,7 +41,7 @@ public class CreateYouhuiForOrderRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
-    public String resourceOwnerId;
+    public Long resourceOwnerId;
 
     public static CreateYouhuiForOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateYouhuiForOrderRequest self = new CreateYouhuiForOrderRequest();
@@ -88,11 +88,11 @@ public class CreateYouhuiForOrderRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public CreateYouhuiForOrderRequest setResourceOwnerId(String resourceOwnerId) {
+    public CreateYouhuiForOrderRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
-    public String getResourceOwnerId() {
+    public Long getResourceOwnerId() {
         return this.resourceOwnerId;
     }
 

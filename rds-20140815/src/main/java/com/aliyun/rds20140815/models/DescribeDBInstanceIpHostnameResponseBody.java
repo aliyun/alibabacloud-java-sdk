@@ -14,7 +14,7 @@ public class DescribeDBInstanceIpHostnameResponseBody extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The internal IP addresses and hostnames of the ECS instances on which the primary and secondary instances reside. Format: <code>IP address 1,Hostname 1;IP address 2,Hostname 2</code>.</p>
+     * <p>The internal IP addresses and hostnames of the ECS instance on which a primary ApsaraDB RDS for SQL Server instance and its secondary RDS instance reside. Format: <code>IP address 1, Hostname 1; IP address 2, Hostname 2</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>172.16.xx.xx,sdxxxxxxxxB;172.16.xx.xx,sdxxxxxxxxA</p>

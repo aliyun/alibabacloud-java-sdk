@@ -43,13 +43,13 @@ public class DescribeSQLLogRecordsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>Specifies whether to generate an SQL audit log file or return SQL audit log entries. Valid values:</p>
+     * <p>Specifies whether to generate an SQL audit log file or return SQL audit logs. Valid values:</p>
      * <ul>
      * <li><strong>File</strong>: If you set this parameter to File, this operation generates an SQL audit log file and returns only common response parameters. After you call this operation, you must call the DescribeSQLLogFiles operation to obtain the download URL of the SQL audit log file.</li>
-     * <li><strong>Stream</strong> (default): If you set this parameter to Stream, this operation returns SQL audit log entries.</li>
+     * <li><strong>Stream</strong> (default): If you set this parameter to Stream, this operation returns SQL audit logs.</li>
      * </ul>
      * <blockquote>
-     * <p> If you set this parameter to <strong>File</strong>, only ApsaraDB RDS for MySQL instances that use local disks and ApsaraDB RDS for SQL Server instances are supported, and a maximum of one million log entries are returned.</p>
+     * <p> If you set this parameter to <strong>File</strong>, only ApsaraDB RDS for MySQL instances that use local disks and ApsaraDB RDS for SQL Server instances are supported, and a maximum of 1 million logs are returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
