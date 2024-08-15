@@ -69,11 +69,17 @@ public class GetTaskInfoResponseBody extends TeaModel {
         @NameInMap("AutoChapters")
         public String autoChapters;
 
+        @NameInMap("CustomPrompt")
+        public String customPrompt;
+
         @NameInMap("MeetingAssistance")
         public String meetingAssistance;
 
         @NameInMap("PptExtraction")
         public String pptExtraction;
+
+        @NameInMap("ServiceInspection")
+        public String serviceInspection;
 
         @NameInMap("Summarization")
         public String summarization;
@@ -100,6 +106,14 @@ public class GetTaskInfoResponseBody extends TeaModel {
             return this.autoChapters;
         }
 
+        public GetTaskInfoResponseBodyDataResult setCustomPrompt(String customPrompt) {
+            this.customPrompt = customPrompt;
+            return this;
+        }
+        public String getCustomPrompt() {
+            return this.customPrompt;
+        }
+
         public GetTaskInfoResponseBodyDataResult setMeetingAssistance(String meetingAssistance) {
             this.meetingAssistance = meetingAssistance;
             return this;
@@ -114,6 +128,14 @@ public class GetTaskInfoResponseBody extends TeaModel {
         }
         public String getPptExtraction() {
             return this.pptExtraction;
+        }
+
+        public GetTaskInfoResponseBodyDataResult setServiceInspection(String serviceInspection) {
+            this.serviceInspection = serviceInspection;
+            return this;
+        }
+        public String getServiceInspection() {
+            return this.serviceInspection;
         }
 
         public GetTaskInfoResponseBodyDataResult setSummarization(String summarization) {
