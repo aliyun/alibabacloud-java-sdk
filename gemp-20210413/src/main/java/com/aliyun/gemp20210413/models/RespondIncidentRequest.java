@@ -4,6 +4,10 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class RespondIncidentRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>FD200FAE-E98F-496E-BFE6-4CE61E59A221</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 

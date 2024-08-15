@@ -4,21 +4,41 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class UpdateProblemTimelineRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>c26f36de-1ec8-496a-a828-880676c5ef81</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
     @NameInMap("content")
     public String content;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NodeTest</p>
+     */
     @NameInMap("keyNode")
     public String keyNode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>234</p>
+     */
     @NameInMap("problemId")
     public Long problemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3940</p>
+     */
     @NameInMap("problemTimelineId")
     public Long problemTimelineId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-08 10:10:10</p>
+     */
     @NameInMap("time")
     public String time;
 

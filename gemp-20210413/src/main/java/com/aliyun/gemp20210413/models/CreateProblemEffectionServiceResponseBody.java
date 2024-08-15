@@ -12,6 +12,9 @@ public class CreateProblemEffectionServiceResponseBody extends TeaModel {
 
     /**
      * <p>id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c26f36de-1ec8-496a-a828-880676c5ef81</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -38,6 +41,10 @@ public class CreateProblemEffectionServiceResponseBody extends TeaModel {
     }
 
     public static class CreateProblemEffectionServiceResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>6442430</p>
+         */
         @NameInMap("effectionServiceId")
         public Long effectionServiceId;
 

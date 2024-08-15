@@ -4,9 +4,17 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetIncidentRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2b63cdef-7ac3-4892-a76d-0f3389ef729f</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>32113</p>
+     */
     @NameInMap("incidentId")
     public Long incidentId;
 

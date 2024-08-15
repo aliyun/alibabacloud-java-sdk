@@ -12,6 +12,9 @@ public class ListIntegrationConfigsResponseBody extends TeaModel {
 
     /**
      * <p>id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>601FA6A2-AC5C-4B59-BE11-378F887A6A11</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -38,21 +41,48 @@ public class ListIntegrationConfigsResponseBody extends TeaModel {
     }
 
     public static class ListIntegrationConfigsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1023</p>
+         */
         @NameInMap("integrationConfigId")
         public Long integrationConfigId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("isReceivedEvent")
         public Boolean isReceivedEvent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>87</p>
+         */
         @NameInMap("monitorSourceId")
         public Long monitorSourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Zabbix</p>
+         */
         @NameInMap("monitorSourceName")
         public String monitorSourceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Zabbix</p>
+         */
         @NameInMap("monitorSourceShortName")
         public String monitorSourceShortName;
 
+        @NameInMap("monitorSourceType")
+        public Integer monitorSourceType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>NOT_INTEGRATED</p>
+         */
         @NameInMap("status")
         public String status;
 
@@ -99,6 +129,14 @@ public class ListIntegrationConfigsResponseBody extends TeaModel {
         }
         public String getMonitorSourceShortName() {
             return this.monitorSourceShortName;
+        }
+
+        public ListIntegrationConfigsResponseBodyData setMonitorSourceType(Integer monitorSourceType) {
+            this.monitorSourceType = monitorSourceType;
+            return this;
+        }
+        public Integer getMonitorSourceType() {
+            return this.monitorSourceType;
         }
 
         public ListIntegrationConfigsResponseBodyData setStatus(String status) {

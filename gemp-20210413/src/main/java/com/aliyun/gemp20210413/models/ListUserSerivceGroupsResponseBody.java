@@ -12,6 +12,9 @@ public class ListUserSerivceGroupsResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2b63cdef-7ac3-4892-a76d-0f3389ef7291</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -38,12 +41,24 @@ public class ListUserSerivceGroupsResponseBody extends TeaModel {
     }
 
     public static class ListUserSerivceGroupsResponseBodyDataServiceGroups extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>描述</p>
+         */
         @NameInMap("serviceGroupDescription")
         public String serviceGroupDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("serviceGroupId")
         public Long serviceGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>服务组A</p>
+         */
         @NameInMap("serviceGroupName")
         public String serviceGroupName;
 
@@ -79,21 +94,41 @@ public class ListUserSerivceGroupsResponseBody extends TeaModel {
     }
 
     public static class ListUserSerivceGroupsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12121****@163.com</p>
+         */
         @NameInMap("email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1390000****</p>
+         */
         @NameInMap("phone")
         public String phone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>321</p>
+         */
         @NameInMap("ramId")
         public Long ramId;
 
         @NameInMap("serviceGroups")
         public java.util.List<ListUserSerivceGroupsResponseBodyDataServiceGroups> serviceGroups;
 
+        /**
+         * <strong>example:</strong>
+         * <p>321</p>
+         */
         @NameInMap("userId")
         public Long userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>小明</p>
+         */
         @NameInMap("username")
         public String username;
 

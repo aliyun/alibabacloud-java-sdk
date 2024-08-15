@@ -26,12 +26,18 @@ public class GetIncidentSubtotalCountResponseBody extends TeaModel {
     public static class GetIncidentSubtotalCountResponseBodyData extends TeaModel {
         /**
          * <p>id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24343424234</p>
          */
         @NameInMap("requestId")
         public String requestId;
 
         /**
          * <p>map</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{12:12}</p>
          */
         @NameInMap("subtotalCount")
         public java.util.Map<String, ?> subtotalCount;

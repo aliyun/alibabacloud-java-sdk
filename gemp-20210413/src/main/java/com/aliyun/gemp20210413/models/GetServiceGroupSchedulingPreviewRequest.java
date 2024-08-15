@@ -4,9 +4,17 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetServiceGroupSchedulingPreviewRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>C4BE3837-1A13-413B-A225-2C88188E8A43</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-09-01 00:00:00</p>
+     */
     @NameInMap("endTime")
     public String endTime;
 
@@ -16,12 +24,28 @@ public class GetServiceGroupSchedulingPreviewRequest extends TeaModel {
     @NameInMap("fineScheduling")
     public GetServiceGroupSchedulingPreviewRequestFineScheduling fineScheduling;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FAST</p>
+     */
     @NameInMap("schedulingWay")
     public String schedulingWay;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>55555</p>
+     */
     @NameInMap("serviceGroupId")
     public Long serviceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-11-01 00:00:00</p>
+     */
     @NameInMap("startTime")
     public String startTime;
 
@@ -87,9 +111,17 @@ public class GetServiceGroupSchedulingPreviewRequest extends TeaModel {
     }
 
     public static class GetServiceGroupSchedulingPreviewRequestFastSchedulingSchedulingUsers extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("schedulingOrder")
         public Integer schedulingOrder;
 
+        /**
+         * <strong>example:</strong>
+         * <p>122222</p>
+         */
         @NameInMap("schedulingUserId")
         public Long schedulingUserId;
 
@@ -119,6 +151,9 @@ public class GetServiceGroupSchedulingPreviewRequest extends TeaModel {
     public static class GetServiceGroupSchedulingPreviewRequestFastScheduling extends TeaModel {
         /**
          * <p>FAST_CHOICE</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FAST_CHOICE</p>
          */
         @NameInMap("dutyPlan")
         public String dutyPlan;
@@ -126,10 +161,17 @@ public class GetServiceGroupSchedulingPreviewRequest extends TeaModel {
         @NameInMap("schedulingUsers")
         public java.util.List<GetServiceGroupSchedulingPreviewRequestFastSchedulingSchedulingUsers> schedulingUsers;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("singleDuration")
         public Integer singleDuration;
 
         /**
+         * <p>DAY</p>
+         * 
+         * <strong>example:</strong>
          * <p>DAY</p>
          */
         @NameInMap("singleDurationUnit")
@@ -175,15 +217,31 @@ public class GetServiceGroupSchedulingPreviewRequest extends TeaModel {
     }
 
     public static class GetServiceGroupSchedulingPreviewRequestFineSchedulingSchedulingFineShifts extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2020-10-13</p>
+         */
         @NameInMap("schedulingEndTime")
         public String schedulingEndTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("schedulingOrder")
         public Long schedulingOrder;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-08-13</p>
+         */
         @NameInMap("schedulingStartTime")
         public String schedulingStartTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>早班</p>
+         */
         @NameInMap("shiftName")
         public String shiftName;
 
@@ -227,15 +285,27 @@ public class GetServiceGroupSchedulingPreviewRequest extends TeaModel {
     }
 
     public static class GetServiceGroupSchedulingPreviewRequestFineScheduling extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("period")
         public Integer period;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DAY</p>
+         */
         @NameInMap("periodUnit")
         public String periodUnit;
 
         @NameInMap("schedulingFineShifts")
         public java.util.List<GetServiceGroupSchedulingPreviewRequestFineSchedulingSchedulingFineShifts> schedulingFineShifts;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MORNING_NIGHT</p>
+         */
         @NameInMap("shiftType")
         public String shiftType;
 

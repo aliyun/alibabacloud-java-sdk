@@ -4,21 +4,44 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class FinishIncidentRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>FD200FAE-E98F-496E-BFE6-4CE61E59A2DC</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("incidentFinishReason")
     public Integer incidentFinishReason;
 
+    /**
+     * <strong>example:</strong>
+     * <p>原因描述</p>
+     */
     @NameInMap("incidentFinishReasonDescription")
     public String incidentFinishReasonDescription;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("incidentFinishSolution")
     public Integer incidentFinishSolution;
 
+    /**
+     * <strong>example:</strong>
+     * <p>解决方案描述</p>
+     */
     @NameInMap("incidentFinishSolutionDescription")
     public String incidentFinishSolutionDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("incidentIds")
     public java.util.List<Long> incidentIds;
 

@@ -12,6 +12,9 @@ public class GetProblemEffectionServiceResponseBody extends TeaModel {
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e2d4306a-bf4d-4345-9ae6-158223c85dbd</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -38,24 +41,48 @@ public class GetProblemEffectionServiceResponseBody extends TeaModel {
     }
 
     public static class GetProblemEffectionServiceResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ew</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6442430</p>
+         */
         @NameInMap("effectionServiceId")
         public Long effectionServiceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>P2</p>
+         */
         @NameInMap("level")
         public Long level;
 
         @NameInMap("picUrl")
         public java.util.List<String> picUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>170000000</p>
+         */
         @NameInMap("serviceId")
         public Long serviceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>哈哈</p>
+         */
         @NameInMap("serviceName")
         public String serviceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>UN_RECOVERED</p>
+         */
         @NameInMap("status")
         public Long status;
 

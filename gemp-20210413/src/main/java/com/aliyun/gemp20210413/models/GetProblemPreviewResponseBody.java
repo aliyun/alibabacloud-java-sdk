@@ -12,6 +12,9 @@ public class GetProblemPreviewResponseBody extends TeaModel {
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4361a0e1-6747-4834-96ce-0c2840fd3812</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -57,6 +60,10 @@ public class GetProblemPreviewResponseBody extends TeaModel {
     }
 
     public static class GetProblemPreviewResponseBodyDataMail extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("count")
         public Long count;
 
@@ -90,6 +97,10 @@ public class GetProblemPreviewResponseBody extends TeaModel {
         @NameInMap("serviceGroupDescription")
         public String serviceGroupDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1231</p>
+         */
         @NameInMap("serviceGroupId")
         public Long serviceGroupId;
 
@@ -128,6 +139,10 @@ public class GetProblemPreviewResponseBody extends TeaModel {
     }
 
     public static class GetProblemPreviewResponseBodyDataProblemEffectionServices extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1231</p>
+         */
         @NameInMap("serviceId")
         public Long serviceId;
 
@@ -161,21 +176,41 @@ public class GetProblemPreviewResponseBody extends TeaModel {
         @NameInMap("coordinationGroups")
         public java.util.List<GetProblemPreviewResponseBodyDataProblemCoordinationGroups> coordinationGroups;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-02-21 00:00:00</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-02-21 00:00:00</p>
+         */
         @NameInMap("discoverTime")
         public String discoverTime;
 
         @NameInMap("effectionServices")
         public java.util.List<GetProblemPreviewResponseBodyDataProblemEffectionServices> effectionServices;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isManual")
         public Boolean isManual;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isUpgrade")
         public Boolean isUpgrade;
 
+        /**
+         * <strong>example:</strong>
+         * <p>231</p>
+         */
         @NameInMap("mainHandlerId")
         public String mainHandlerId;
 
@@ -185,27 +220,51 @@ public class GetProblemPreviewResponseBody extends TeaModel {
         @NameInMap("preliminaryReason")
         public String preliminaryReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123123</p>
+         */
         @NameInMap("problemId")
         public Long problemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>P2</p>
+         */
         @NameInMap("problemLevel")
         public String problemLevel;
 
         @NameInMap("problemName")
         public String problemName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HANDLING</p>
+         */
         @NameInMap("problemStatus")
         public String problemStatus;
 
         @NameInMap("progressSummary")
         public String progressSummary;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12312</p>
+         */
         @NameInMap("progressSummaryRichTextId")
         public Long progressSummaryRichTextId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-02-21 00:00:00</p>
+         */
         @NameInMap("recoveryTime")
         public String recoveryTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>213123</p>
+         */
         @NameInMap("relatedServiceId")
         public Long relatedServiceId;
 
@@ -383,6 +442,10 @@ public class GetProblemPreviewResponseBody extends TeaModel {
     }
 
     public static class GetProblemPreviewResponseBodyDataSms extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("count")
         public Long count;
 
@@ -432,6 +495,10 @@ public class GetProblemPreviewResponseBody extends TeaModel {
     }
 
     public static class GetProblemPreviewResponseBodyDataVoice extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("count")
         public Long count;
 
@@ -481,6 +548,10 @@ public class GetProblemPreviewResponseBody extends TeaModel {
     }
 
     public static class GetProblemPreviewResponseBodyDataWebhook extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("count")
         public Long count;
 

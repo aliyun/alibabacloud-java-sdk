@@ -12,6 +12,9 @@ public class ListConfigsResponseBody extends TeaModel {
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>uuid</p>
      */
     @NameInMap("requestId")
     public String requestId;

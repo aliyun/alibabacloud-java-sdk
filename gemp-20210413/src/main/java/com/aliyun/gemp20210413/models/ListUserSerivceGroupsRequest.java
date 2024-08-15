@@ -6,10 +6,19 @@ import com.aliyun.tea.*;
 public class ListUserSerivceGroupsRequest extends TeaModel {
     /**
      * <p>clientToken</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2b63cdef-7ac3-4892-a76d-0f3389ef729f</p>
      */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("userId")
     public Long userId;
 

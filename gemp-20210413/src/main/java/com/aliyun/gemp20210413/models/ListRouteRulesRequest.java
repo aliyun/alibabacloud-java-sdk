@@ -4,24 +4,48 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListRouteRulesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>C4BE3837-1A13-413B-A225-2C88188E8A43</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
     @NameInMap("notFilterRouteRuleDeleted")
     public Boolean notFilterRouteRuleDeleted;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("routeType")
     public Long routeType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>规则名字</p>
+     */
     @NameInMap("ruleName")
     public byte[] ruleName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>冲上云霄</p>
+     */
     @NameInMap("serviceName")
     public byte[] serviceName;
 

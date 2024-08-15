@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class EnableServiceGroupWebhookResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C4BE3837-1A13-413B-A225-2C88188E8A43</p>
      */
     @NameInMap("requestId")
     public String requestId;

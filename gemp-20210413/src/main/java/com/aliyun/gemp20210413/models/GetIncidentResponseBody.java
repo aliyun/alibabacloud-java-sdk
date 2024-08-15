@@ -12,6 +12,9 @@ public class GetIncidentResponseBody extends TeaModel {
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2b63cdef-7ac3-4892-a76d-0f3389ef7291</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -41,15 +44,31 @@ public class GetIncidentResponseBody extends TeaModel {
         @NameInMap("assignToWhoIsValid")
         public Integer assignToWhoIsValid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12312</p>
+         */
         @NameInMap("assignUserId")
         public Long assignUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>小明</p>
+         */
         @NameInMap("assignUserName")
         public String assignUserName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1390000****</p>
+         */
         @NameInMap("assignUserPhone")
         public String assignUserPhone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-01-10 00:00:00</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
@@ -62,42 +81,94 @@ public class GetIncidentResponseBody extends TeaModel {
         @NameInMap("defaultAssignToWhoName")
         public String defaultAssignToWhoName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3000000</p>
+         */
         @NameInMap("durationTime")
         public Long durationTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>LOW</p>
+         */
         @NameInMap("effect")
         public String effect;
 
+        /**
+         * <strong>example:</strong>
+         * <p>事件描述</p>
+         */
         @NameInMap("incidentDescription")
         public String incidentDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3213</p>
+         */
         @NameInMap("incidentId")
         public Long incidentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>P4</p>
+         */
         @NameInMap("incidentLevel")
         public String incidentLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>I3443831000000016247759753663894</p>
+         */
         @NameInMap("incidentNumber")
         public String incidentNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FINISHE</p>
+         */
         @NameInMap("incidentStatus")
         public String incidentStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>事件标题</p>
+         */
         @NameInMap("incidentTitle")
         public String incidentTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isManual")
         public Boolean isManual;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isUpgrade")
         public Boolean isUpgrade;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1 短信  2  邮件  3  电话  4 企微群 5 钉钉群 6飞书 7 群通知 8 slack</p>
+         */
         @NameInMap("notifyChannels")
         public java.util.List<String> notifyChannels;
 
+        /**
+         * <strong>example:</strong>
+         * <p>232113</p>
+         */
         @NameInMap("problemId")
         public Long problemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3332113231453321</p>
+         */
         @NameInMap("problemNumber")
         public String problemNumber;
 
@@ -110,24 +181,52 @@ public class GetIncidentResponseBody extends TeaModel {
         @NameInMap("relServiceGroupIsValid")
         public Integer relServiceGroupIsValid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>关联服务描述</p>
+         */
         @NameInMap("relatedServiceDescription")
         public String relatedServiceDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>13000</p>
+         */
         @NameInMap("relatedServiceGroupId")
         public Long relatedServiceGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>服务组A</p>
+         */
         @NameInMap("relatedServiceGroupName")
         public String relatedServiceGroupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>312312</p>
+         */
         @NameInMap("relatedServiceId")
         public Long relatedServiceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>服务A</p>
+         */
         @NameInMap("relatedServiceName")
         public String relatedServiceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3123</p>
+         */
         @NameInMap("routeRuleId")
         public Long routeRuleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>流转规则A</p>
+         */
         @NameInMap("routeRuleName")
         public String routeRuleName;
 

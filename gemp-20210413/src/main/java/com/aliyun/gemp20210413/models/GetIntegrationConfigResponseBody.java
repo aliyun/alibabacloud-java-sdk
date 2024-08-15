@@ -12,6 +12,9 @@ public class GetIntegrationConfigResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>601FA6A2-AC5C-4B59-BE11-378F887A6A11</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -38,24 +41,52 @@ public class GetIntegrationConfigResponseBody extends TeaModel {
     }
 
     public static class GetIntegrationConfigResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>601FA6A2-AC5C-4B59-BE11-378F887A6A11</p>
+         */
         @NameInMap("accessKey")
         public String accessKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>101</p>
+         */
         @NameInMap("integrationConfigId")
         public Long integrationConfigId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
         @NameInMap("isReceivedEvent")
         public Boolean isReceivedEvent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>65</p>
+         */
         @NameInMap("monitorSourceId")
         public Long monitorSourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Zabbix</p>
+         */
         @NameInMap("monitorSourceName")
         public String monitorSourceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Zabbix</p>
+         */
         @NameInMap("monitorSourceShortName")
         public String monitorSourceShortName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INTEGRATED</p>
+         */
         @NameInMap("status")
         public String status;
 

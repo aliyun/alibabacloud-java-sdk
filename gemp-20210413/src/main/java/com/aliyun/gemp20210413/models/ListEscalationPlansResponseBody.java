@@ -10,18 +10,33 @@ public class ListEscalationPlansResponseBody extends TeaModel {
     @NameInMap("data")
     public java.util.List<ListEscalationPlansResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Long pageSize;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A5A1FEAE-9C47-011C-9C73-A376BC2REQUEST</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>878</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -71,15 +86,27 @@ public class ListEscalationPlansResponseBody extends TeaModel {
     }
 
     public static class ListEscalationPlansResponseBodyDataEscalationPlanScopeObjects extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>SERVICE</p>
+         */
         @NameInMap("scope")
         public String scope;
 
         @NameInMap("scopeObjectDeletedType")
         public Integer scopeObjectDeletedType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>23</p>
+         */
         @NameInMap("scopeObjectId")
         public Long scopeObjectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>某服务1</p>
+         */
         @NameInMap("scopeObjectName")
         public String scopeObjectName;
 
@@ -123,18 +150,37 @@ public class ListEscalationPlansResponseBody extends TeaModel {
     }
 
     public static class ListEscalationPlansResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>43</p>
+         */
         @NameInMap("escalationPlanId")
         public Long escalationPlanId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>升级计划2345</p>
+         */
         @NameInMap("escalationPlanName")
         public String escalationPlanName;
 
         @NameInMap("escalationPlanScopeObjects")
         public java.util.List<ListEscalationPlansResponseBodyDataEscalationPlanScopeObjects> escalationPlanScopeObjects;
 
+        @NameInMap("isGlobal")
+        public Boolean isGlobal;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2021-09-09 09:09:09</p>
+         */
         @NameInMap("modifyTime")
         public String modifyTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ENABLE</p>
+         */
         @NameInMap("status")
         public String status;
 
@@ -165,6 +211,14 @@ public class ListEscalationPlansResponseBody extends TeaModel {
         }
         public java.util.List<ListEscalationPlansResponseBodyDataEscalationPlanScopeObjects> getEscalationPlanScopeObjects() {
             return this.escalationPlanScopeObjects;
+        }
+
+        public ListEscalationPlansResponseBodyData setIsGlobal(Boolean isGlobal) {
+            this.isGlobal = isGlobal;
+            return this;
+        }
+        public Boolean getIsGlobal() {
+            return this.isGlobal;
         }
 
         public ListEscalationPlansResponseBodyData setModifyTime(String modifyTime) {

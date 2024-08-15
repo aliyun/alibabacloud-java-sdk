@@ -9,6 +9,9 @@ public class ListSourceEventsForMonitorSourceResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxx</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -35,15 +38,31 @@ public class ListSourceEventsForMonitorSourceResponseBody extends TeaModel {
     }
 
     public static class ListSourceEventsForMonitorSourceResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("eventJson")
         public String eventJson;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-01-01 18:30:00</p>
+         */
         @NameInMap("eventTime")
         public String eventTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("monitorSourceId")
         public Boolean monitorSourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zabbix</p>
+         */
         @NameInMap("monitorSourceName")
         public String monitorSourceName;
 

@@ -12,6 +12,9 @@ public class CreateSubscriptionResponseBody extends TeaModel {
 
     /**
      * <p>request id</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10REQUES-AC5C-4B59-BE11-378F117A6A88</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -38,6 +41,10 @@ public class CreateSubscriptionResponseBody extends TeaModel {
     }
 
     public static class CreateSubscriptionResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>101</p>
+         */
         @NameInMap("subscriptionId")
         public Long subscriptionId;
 

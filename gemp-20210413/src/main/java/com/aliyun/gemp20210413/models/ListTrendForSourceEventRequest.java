@@ -4,21 +4,45 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListTrendForSourceEventRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2020-10-10 23:59:59</p>
+     */
     @NameInMap("endTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("instanceId")
     public Long instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>INCIDENT</p>
+     */
     @NameInMap("instanceType")
     public String instanceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxxx</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-10-10 00:00:00</p>
+     */
     @NameInMap("startTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("timeUnit")
     public Long timeUnit;
 

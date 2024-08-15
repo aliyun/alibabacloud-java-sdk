@@ -12,24 +12,36 @@ public class ListIntegrationConfigTimelinesResponseBody extends TeaModel {
 
     /**
      * <p>pageNumber</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("pageNumber")
     public Long pageNumber;
 
     /**
      * <p>pageSize</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("pageSize")
     public Long pageSize;
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>601FA6A2-AC5C-4B59-BE11-378F887A6A11</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>totalCount</p>
+     * 
+     * <strong>example:</strong>
+     * <p>103</p>
      */
     @NameInMap("totalCount")
     public Long totalCount;
@@ -80,6 +92,10 @@ public class ListIntegrationConfigTimelinesResponseBody extends TeaModel {
     }
 
     public static class ListIntegrationConfigTimelinesResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-04-05 10:10:10</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 

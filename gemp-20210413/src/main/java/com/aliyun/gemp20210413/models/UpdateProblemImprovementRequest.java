@@ -4,39 +4,75 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class UpdateProblemImprovementRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>4361a0e1-6747-4834-96ce-0c4840fd3813</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
     @NameInMap("customProblemReason")
     public String customProblemReason;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("discoverSource")
     public Long discoverSource;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123123</p>
+     */
     @NameInMap("dutyDepartmentId")
     public Long dutyDepartmentId;
 
     @NameInMap("dutyDepartmentName")
     public String dutyDepartmentName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1231</p>
+     */
     @NameInMap("dutyUserId")
     public Long dutyUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("injectionMode")
     public String injectionMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Zabbix</p>
+     */
     @NameInMap("monitorSourceName")
     public String monitorSourceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12312</p>
+     */
     @NameInMap("problemId")
     public Long problemId;
 
     @NameInMap("problemReason")
     public String problemReason;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("recentActivity")
     public String recentActivity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("recoveryMode")
     public String recoveryMode;
 
@@ -46,9 +82,17 @@ public class UpdateProblemImprovementRequest extends TeaModel {
     @NameInMap("remark")
     public String remark;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1213</p>
+     */
     @NameInMap("replayDutyUserId")
     public Long replayDutyUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("userReport")
     public Long userReport;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteEscalationPlanResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A5A1FEAE-9C47-011C-9C73-A376BC21925D</p>
      */
     @NameInMap("requestId")
     public String requestId;

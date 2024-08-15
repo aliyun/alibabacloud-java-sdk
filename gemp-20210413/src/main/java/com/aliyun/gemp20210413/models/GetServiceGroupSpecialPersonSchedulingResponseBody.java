@@ -9,6 +9,9 @@ public class GetServiceGroupSpecialPersonSchedulingResponseBody extends TeaModel
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxx</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -35,21 +38,45 @@ public class GetServiceGroupSpecialPersonSchedulingResponseBody extends TeaModel
     }
 
     public static class GetServiceGroupSpecialPersonSchedulingResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-08-17</p>
+         */
         @NameInMap("schedulingDate")
         public String schedulingDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-08-17  12:00:00</p>
+         */
         @NameInMap("schedulingEndTime")
         public String schedulingEndTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-08-17  00:00:00</p>
+         */
         @NameInMap("schedulingStartTime")
         public String schedulingStartTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>111111</p>
+         */
         @NameInMap("schedulingUserId")
         public Long schedulingUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8888</p>
+         */
         @NameInMap("serviceGroupId")
         public Long serviceGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>刘德华</p>
+         */
         @NameInMap("serviceGroupName")
         public String serviceGroupName;
 

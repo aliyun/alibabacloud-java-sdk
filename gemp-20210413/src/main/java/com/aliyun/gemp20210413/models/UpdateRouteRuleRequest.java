@@ -4,15 +4,35 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class UpdateRouteRuleRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("assignObjectId")
     public Long assignObjectId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SERVICEGROUP</p>
+     */
     @NameInMap("assignObjectType")
     public String assignObjectType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AND</p>
+     */
     @NameInMap("childRuleRelation")
     public String childRuleRelation;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C4BE3837-1A13-413B-A225-2C88188E8A43</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
@@ -25,15 +45,36 @@ public class UpdateRouteRuleRequest extends TeaModel {
     @NameInMap("coverageProblemLevels")
     public java.util.List<String> coverageProblemLevels;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LOW</p>
+     */
     @NameInMap("effection")
     public String effection;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>P1</p>
+     */
     @NameInMap("incidentLevel")
     public String incidentLevel;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("matchCount")
     public Long matchCount;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("notifyChannels")
     public java.util.List<String> notifyChannels;
 
@@ -43,24 +84,63 @@ public class UpdateRouteRuleRequest extends TeaModel {
     @NameInMap("problemLevelGroup")
     public java.util.Map<String, ProblemLevelGroupValue> problemLevelGroup;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("relatedServiceId")
     public Long relatedServiceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("routeChildRules")
     public java.util.List<UpdateRouteRuleRequestRouteChildRules> routeChildRules;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("routeRuleId")
     public Long routeRuleId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALERT</p>
+     */
     @NameInMap("routeType")
     public String routeType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>规则1</p>
+     */
     @NameInMap("ruleName")
     public String ruleName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("timeWindow")
     public Integer timeWindow;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MINUTE</p>
+     */
     @NameInMap("timeWindowUnit")
     public String timeWindowUnit;
 
@@ -230,12 +310,30 @@ public class UpdateRouteRuleRequest extends TeaModel {
     }
 
     public static class UpdateRouteRuleRequestRouteChildRulesConditions extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>payload.summary</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>equals</p>
+         */
         @NameInMap("operationSymbol")
         public String operationSymbol;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -271,18 +369,43 @@ public class UpdateRouteRuleRequest extends TeaModel {
     }
 
     public static class UpdateRouteRuleRequestRouteChildRules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("childConditionRelation")
         public Long childConditionRelation;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("childRouteRuleId")
         public Long childRouteRuleId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("conditions")
         public java.util.List<UpdateRouteRuleRequestRouteChildRulesConditions> conditions;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("isValidChildRule")
         public Boolean isValidChildRule;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("monitorSourceId")
         public Long monitorSourceId;
 

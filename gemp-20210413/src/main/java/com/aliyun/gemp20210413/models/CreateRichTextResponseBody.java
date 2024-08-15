@@ -12,6 +12,9 @@ public class CreateRichTextResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10REQUES-AC5C-4B59-BE11-378F117A6A88</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -38,12 +41,24 @@ public class CreateRichTextResponseBody extends TeaModel {
     }
 
     public static class CreateRichTextResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1231</p>
+         */
         @NameInMap("instanceId")
         public Long instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0 事件 1告警 2 故障</p>
+         */
         @NameInMap("instanceType")
         public Long instanceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>这是一个富文本</p>
+         */
         @NameInMap("richText")
         public String richText;
 

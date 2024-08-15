@@ -1,3 +1,27 @@
+2024-08-15 Version: 1.0.12
+- Update API CreateEscalationPlan: update param body.
+- Update API CreateService: update param body.
+- Update API CreateUser: update param body.
+- Update API GeneratePictureLink: update response param.
+- Update API GeneratePictureUploadSign: update response param.
+- Update API GenerateProblemPictureUploadSign: update response param.
+- Update API GetEscalationPlan: update response param.
+- Update API GetService: update response param.
+- Update API GetServiceGroup: update response param.
+- Update API GetUser: update response param.
+- Update API ListConfigs: update response param.
+- Update API ListEscalationPlans: update param body.
+- Update API ListEscalationPlans: update response param.
+- Update API ListIncidentDetailEscalationPlans: update response param.
+- Update API ListIntegrationConfigs: update response param.
+- Update API ListServiceGroups: update param body.
+- Update API ListServices: update response param.
+- Update API ListUsers: update response param.
+- Update API UpdateEscalationPlan: update param body.
+- Update API UpdateService: update param body.
+- Update API UpdateUser: update param body.
+
+
 2023-03-03 Version: 1.0.11
 - SDK for Operation Incident Center.
 

@@ -12,6 +12,9 @@ public class GeneratePictureLinkResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxx</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class GeneratePictureLinkResponseBody extends TeaModel {
     public static class GeneratePictureLinkResponseBodyDataLinks extends TeaModel {
         /**
          * <p>oss key</p>
+         * 
+         * <strong>example:</strong>
+         * <p>problem/38b2a36d-484d-4242-b9cf-d243e53a82c6</p>
          */
         @NameInMap("key")
         public String key;
 
         /**
          * <p>url</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://gam-objects-bucket.oss-cn-shanghai.aliyuncs.com/problem/38b2a36d-484d-4242-b9cf-d243e53a82c6?Expires=1625662477&OSSAccessKeyId=LTAI5tEoRVPw8GMy1iLRCno7&Signature=1NFnt%2BnudD%2F%2BHVc31b6v5%2FFxoqg%3D">http://gam-objects-bucket.oss-cn-shanghai.aliyuncs.com/problem/38b2a36d-484d-4242-b9cf-d243e53a82c6?Expires=1625662477&amp;OSSAccessKeyId=LTAI5tEoRVPw8GMy1iLRCno7&amp;Signature=1NFnt%2BnudD%2F%2BHVc31b6v5%2FFxoqg%3D</a></p>
          */
         @NameInMap("link")
         public String link;

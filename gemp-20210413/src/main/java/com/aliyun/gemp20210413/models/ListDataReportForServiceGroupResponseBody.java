@@ -7,18 +7,33 @@ public class ListDataReportForServiceGroupResponseBody extends TeaModel {
     @NameInMap("data")
     public java.util.List<ListDataReportForServiceGroupResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSIze")
     public Long pageSIze;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxxx</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -68,39 +83,77 @@ public class ListDataReportForServiceGroupResponseBody extends TeaModel {
     }
 
     public static class ListDataReportForServiceGroupResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("escalationIncidentCount")
         public Long escalationIncidentCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>111</p>
+         */
         @NameInMap("finishIncidentCount")
         public Long finishIncidentCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19%</p>
+         */
         @NameInMap("finishProportion")
         public String finishProportion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("incidentCount")
         public Long incidentCount;
 
         /**
          * <p>MRRA</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3分19秒</p>
          */
         @NameInMap("meanTimeToAcknowledge")
         public Long meanTimeToAcknowledge;
 
         /**
          * <p>MTTR</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3分19秒</p>
          */
         @NameInMap("meanTimeToRepair")
         public Long meanTimeToRepair;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("serviceGroupId")
         public Long serviceGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>服务组</p>
+         */
         @NameInMap("serviceGroupName")
         public String serviceGroupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("unAcknowledgedEscalationIncidentCount")
         public Long unAcknowledgedEscalationIncidentCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("unFinishEscalationIncidentCount")
         public Long unFinishEscalationIncidentCount;
 

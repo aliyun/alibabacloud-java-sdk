@@ -9,6 +9,9 @@ public class ListServiceGroupMonitorSourceTemplatesResponseBody extends TeaModel
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxx</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -38,15 +41,31 @@ public class ListServiceGroupMonitorSourceTemplatesResponseBody extends TeaModel
         @NameInMap("fields")
         public java.util.List<String> fields;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("monitorSourceId")
         public Long monitorSourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zabbix</p>
+         */
         @NameInMap("monitorSourceName")
         public String monitorSourceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("templateContent")
         public String templateContent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("templateId")
         public Long templateId;
 

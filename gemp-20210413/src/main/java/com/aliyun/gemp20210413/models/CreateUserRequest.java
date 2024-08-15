@@ -4,17 +4,36 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class CreateUserRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>c26f36de-1ec8-496a-a828-880676c5ef81</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:5678@qq.com">5678@qq.com</a></p>
+     */
     @NameInMap("email")
     public String email;
 
+    /**
+     * <strong>example:</strong>
+     * <p>188898989892</p>
+     */
     @NameInMap("phone")
     public String phone;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4787654378343</p>
+     */
     @NameInMap("ramId")
     public Long ramId;
+
+    @NameInMap("roleIdList")
+    public java.util.List<Long> roleIdList;
 
     @NameInMap("username")
     public String username;
@@ -54,6 +73,14 @@ public class CreateUserRequest extends TeaModel {
     }
     public Long getRamId() {
         return this.ramId;
+    }
+
+    public CreateUserRequest setRoleIdList(java.util.List<Long> roleIdList) {
+        this.roleIdList = roleIdList;
+        return this;
+    }
+    public java.util.List<Long> getRoleIdList() {
+        return this.roleIdList;
     }
 
     public CreateUserRequest setUsername(String username) {

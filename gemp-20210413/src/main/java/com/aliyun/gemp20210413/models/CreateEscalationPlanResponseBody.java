@@ -12,6 +12,9 @@ public class CreateEscalationPlanResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A5A1FEAE-9C47-011C-9C73-A376BC21925D</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -38,6 +41,10 @@ public class CreateEscalationPlanResponseBody extends TeaModel {
     }
 
     public static class CreateEscalationPlanResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>234532</p>
+         */
         @NameInMap("escalationPlanId")
         public Long escalationPlanId;
 

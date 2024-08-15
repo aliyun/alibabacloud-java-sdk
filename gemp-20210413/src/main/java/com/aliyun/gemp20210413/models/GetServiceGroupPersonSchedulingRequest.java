@@ -4,18 +4,38 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetServiceGroupPersonSchedulingRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>C4BE3837-1A13-413B-A225-2C88188E8A43</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-09-31 00:00:00</p>
+     */
     @NameInMap("endTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>77777</p>
+     */
     @NameInMap("serviceGroupId")
     public Long serviceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-09-01 00:00:00</p>
+     */
     @NameInMap("startTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>66666</p>
+     */
     @NameInMap("userId")
     public Long userId;
 

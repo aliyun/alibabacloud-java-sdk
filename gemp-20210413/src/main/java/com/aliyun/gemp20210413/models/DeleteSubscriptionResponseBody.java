@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteSubscriptionResponseBody extends TeaModel {
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c26f36de-1ec8-496a-a828-880676c5ef81</p>
      */
     @NameInMap("requestId")
     public String requestId;

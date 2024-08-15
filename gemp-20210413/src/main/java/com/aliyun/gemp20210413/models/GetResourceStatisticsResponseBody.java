@@ -12,6 +12,9 @@ public class GetResourceStatisticsResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FD200FAE-E98F-496E-BFE6-4CE61E59A2E9</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -38,15 +41,31 @@ public class GetResourceStatisticsResponseBody extends TeaModel {
     }
 
     public static class GetResourceStatisticsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("alertCount")
         public Integer alertCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1331</p>
+         */
         @NameInMap("incidentCount")
         public Integer incidentCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2211</p>
+         */
         @NameInMap("integrationCount")
         public Integer integrationCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>221</p>
+         */
         @NameInMap("problemCount")
         public Integer problemCount;
 

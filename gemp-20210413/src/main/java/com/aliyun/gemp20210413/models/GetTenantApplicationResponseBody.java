@@ -12,6 +12,9 @@ public class GetTenantApplicationResponseBody extends TeaModel {
 
     /**
      * <p>id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10REQUES-AC5C-4B59-BE11-378F117A6A88</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -38,18 +41,34 @@ public class GetTenantApplicationResponseBody extends TeaModel {
     }
 
     public static class GetTenantApplicationResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>7356</p>
+         */
         @NameInMap("bizId")
         public String bizId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DINGDING</p>
+         */
         @NameInMap("channel")
         public String channel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ding81913c*</p>
+         */
         @NameInMap("corporationId")
         public String corporationId;
 
         @NameInMap("originalCorpId")
         public String originalCorpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NOT_OPEN</p>
+         */
         @NameInMap("progress")
         public String progress;
 

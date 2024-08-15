@@ -4,18 +4,38 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class DeleteServiceGroupUserRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>xxxxxx</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>88888</p>
+     */
     @NameInMap("newUserId")
     public Long newUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>777777</p>
+     */
     @NameInMap("oldUserId")
     public Long oldUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("removeUser")
     public Boolean removeUser;
 
+    /**
+     * <strong>example:</strong>
+     * <p>66666</p>
+     */
     @NameInMap("serviceGroupId")
     public Long serviceGroupId;
 

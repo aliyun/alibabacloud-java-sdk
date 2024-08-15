@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateServiceGroupSchedulingResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxxxxxx</p>
      */
     @NameInMap("requestId")
     public String requestId;

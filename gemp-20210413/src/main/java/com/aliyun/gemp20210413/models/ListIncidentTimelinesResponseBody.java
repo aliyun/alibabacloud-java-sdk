@@ -10,18 +10,33 @@ public class ListIncidentTimelinesResponseBody extends TeaModel {
     @NameInMap("data")
     public java.util.List<ListIncidentTimelinesResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FD200FAE-E98F-496E-BFE6-4CE61E59A2E9</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>132</p>
+     */
     @NameInMap("totalCount")
     public Integer totalCount;
 
@@ -71,18 +86,34 @@ public class ListIncidentTimelinesResponseBody extends TeaModel {
     }
 
     public static class ListIncidentTimelinesResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>INCIDENT_ADD</p>
+         */
         @NameInMap("action")
         public String action;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-06-23 00:00:00</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
         @NameInMap("description")
         public Long description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3321</p>
+         */
         @NameInMap("incidentId")
         public Long incidentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>I13002001</p>
+         */
         @NameInMap("incidentNumber")
         public String incidentNumber;
 

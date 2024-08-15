@@ -4,9 +4,17 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class PushMonitorResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("data")
     public Object data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5A30D240-1821-0246-B580-AB1468657AD2</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

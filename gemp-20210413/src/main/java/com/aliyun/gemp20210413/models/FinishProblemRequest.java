@@ -4,9 +4,17 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class FinishProblemRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>6338F42D-ED0B-442C-932C-657300AFB4BB</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3123</p>
+     */
     @NameInMap("problemId")
     public Long problemId;
 

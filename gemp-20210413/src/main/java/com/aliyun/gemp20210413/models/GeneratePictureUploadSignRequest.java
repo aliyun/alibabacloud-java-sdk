@@ -7,9 +7,17 @@ public class GeneratePictureUploadSignRequest extends TeaModel {
     @NameInMap("files")
     public java.util.List<GeneratePictureUploadSignRequestFiles> files;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123123</p>
+     */
     @NameInMap("instanceId")
     public Long instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>INCIDENT 事件 ALERT告警 PROBLEM故障</p>
+     */
     @NameInMap("instanceType")
     public String instanceType;
 
@@ -43,12 +51,24 @@ public class GeneratePictureUploadSignRequest extends TeaModel {
     }
 
     public static class GeneratePictureUploadSignRequestFiles extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>文件A</p>
+         */
         @NameInMap("fileName")
         public String fileName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("fileSize")
         public Long fileSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>JPG</p>
+         */
         @NameInMap("fileType")
         public String fileType;
 

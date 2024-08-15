@@ -12,6 +12,9 @@ public class RefreshIntegrationConfigKeyResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>601FA6A2-AC5C-4B59-BE11-378F887A6A11</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -38,6 +41,10 @@ public class RefreshIntegrationConfigKeyResponseBody extends TeaModel {
     }
 
     public static class RefreshIntegrationConfigKeyResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>859FA6A2-AC5C-4B09-BE23-986F887H6A232</p>
+         */
         @NameInMap("key")
         public String key;
 

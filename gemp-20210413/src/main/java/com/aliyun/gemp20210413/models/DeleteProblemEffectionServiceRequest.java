@@ -6,13 +6,24 @@ import com.aliyun.tea.*;
 public class DeleteProblemEffectionServiceRequest extends TeaModel {
     /**
      * <p>clientToken</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e0b6735e-1a04-4d6b-a625-d2350612492c</p>
      */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>567</p>
+     */
     @NameInMap("effectionServiceId")
     public Long effectionServiceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>876</p>
+     */
     @NameInMap("problemId")
     public Long problemId;
 

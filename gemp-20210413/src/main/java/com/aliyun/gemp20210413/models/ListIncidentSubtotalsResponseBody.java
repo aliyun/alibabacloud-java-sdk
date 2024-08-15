@@ -12,6 +12,9 @@ public class ListIncidentSubtotalsResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FD200FAE-E98F-496E-BFE6-4CE61E59A2E9</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -38,15 +41,27 @@ public class ListIncidentSubtotalsResponseBody extends TeaModel {
     }
 
     public static class ListIncidentSubtotalsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-06-23 00:00:00</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12312</p>
+         */
         @NameInMap("createUserId")
         public Long createUserId;
 
         @NameInMap("createUserName")
         public String createUserName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>130****1111</p>
+         */
         @NameInMap("createUserPhone")
         public String createUserPhone;
 

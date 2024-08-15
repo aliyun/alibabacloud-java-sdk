@@ -4,6 +4,10 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class RemoveProblemServiceGroupRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>13123</p>
+     */
     @NameInMap("problemId")
     public Long problemId;
 

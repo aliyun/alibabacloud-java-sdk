@@ -4,6 +4,10 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class DataValue extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SMS</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -13,18 +17,34 @@ public class DataValue extends TeaModel {
     @NameInMap("configDescription")
     public String configDescription;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PROBLEM_REASON_DISASTER</p>
+     */
     @NameInMap("configCode")
     public String configCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PROBLEM_REASON</p>
+     */
     @NameInMap("parentCode")
     public String parentCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("configKey")
     public String configKey;
 
     @NameInMap("configValue")
     public String configValue;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("requirement")
     public Boolean requirement;
 

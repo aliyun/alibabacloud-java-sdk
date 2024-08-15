@@ -9,6 +9,9 @@ public class VerifyRouteRuleResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxx</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -35,9 +38,17 @@ public class VerifyRouteRuleResponseBody extends TeaModel {
     }
 
     public static class VerifyRouteRuleResponseBodyDataEscalationPlans extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>111111</p>
+         */
         @NameInMap("escalationPlanId")
         public Long escalationPlanId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>升级计划1</p>
+         */
         @NameInMap("escalationPlanName")
         public String escalationPlanName;
 
@@ -65,9 +76,17 @@ public class VerifyRouteRuleResponseBody extends TeaModel {
     }
 
     public static class VerifyRouteRuleResponseBodyDataNotifySubscriptionNames extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>111111</p>
+         */
         @NameInMap("subscriptionId")
         public Long subscriptionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>订阅名称</p>
+         */
         @NameInMap("title")
         public String title;
 
@@ -98,6 +117,10 @@ public class VerifyRouteRuleResponseBody extends TeaModel {
         @NameInMap("escalationPlans")
         public java.util.List<VerifyRouteRuleResponseBodyDataEscalationPlans> escalationPlans;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isValidRule")
         public Boolean isValidRule;
 
@@ -110,6 +133,10 @@ public class VerifyRouteRuleResponseBody extends TeaModel {
         @NameInMap("routeRuleFailReason")
         public java.util.List<String> routeRuleFailReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INCIDENT、ALERT</p>
+         */
         @NameInMap("routeType")
         public String routeType;
 

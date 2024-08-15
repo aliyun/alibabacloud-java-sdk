@@ -9,6 +9,9 @@ public class GetServiceGroupPersonSchedulingResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxx</p>
      */
     @NameInMap("requestId")
     public String requestId;

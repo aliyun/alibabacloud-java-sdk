@@ -12,6 +12,9 @@ public class ListMonitorSourcesResponseBody extends TeaModel {
 
     /**
      * <p>id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10REQUES-AC5C-4B59-BE11-378F117A6A88</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -41,9 +44,17 @@ public class ListMonitorSourcesResponseBody extends TeaModel {
         @NameInMap("fieldKeys")
         public java.util.List<String> fieldKeys;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("monitorSourceId")
         public Long monitorSourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Zabbix</p>
+         */
         @NameInMap("monitorSourceName")
         public String monitorSourceName;
 

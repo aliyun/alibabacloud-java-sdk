@@ -4,12 +4,24 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class RecoverProblemRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("problemId")
     public Long problemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PROBLEM_UPDATE</p>
+     */
     @NameInMap("problemNotifyType")
     public String problemNotifyType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-02-01 00:00:00</p>
+     */
     @NameInMap("recoveryTime")
     public String recoveryTime;
 

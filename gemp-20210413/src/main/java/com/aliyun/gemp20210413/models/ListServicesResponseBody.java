@@ -7,18 +7,33 @@ public class ListServicesResponseBody extends TeaModel {
     @NameInMap("data")
     public java.util.List<ListServicesResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Long pageSize;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C4BE3837-1A13-413B-A225-2C88188E8A43</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -68,24 +83,65 @@ public class ListServicesResponseBody extends TeaModel {
     }
 
     public static class ListServicesResponseBodyData extends TeaModel {
+        @NameInMap("escalationPlanId")
+        public Long escalationPlanId;
+
+        @NameInMap("escalationPlanName")
+        public String escalationPlanName;
+
         @NameInMap("isValid")
         public Integer isValid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>服务描述</p>
+         */
         @NameInMap("serviceDescription")
         public String serviceDescription;
 
+        @NameInMap("serviceGroupIdList")
+        public java.util.List<Long> serviceGroupIdList;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("serviceId")
         public Long serviceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>冲上云霄</p>
+         */
         @NameInMap("serviceName")
         public String serviceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-09-08 14:30:30</p>
+         */
         @NameInMap("updateTime")
         public String updateTime;
 
         public static ListServicesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListServicesResponseBodyData self = new ListServicesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListServicesResponseBodyData setEscalationPlanId(Long escalationPlanId) {
+            this.escalationPlanId = escalationPlanId;
+            return this;
+        }
+        public Long getEscalationPlanId() {
+            return this.escalationPlanId;
+        }
+
+        public ListServicesResponseBodyData setEscalationPlanName(String escalationPlanName) {
+            this.escalationPlanName = escalationPlanName;
+            return this;
+        }
+        public String getEscalationPlanName() {
+            return this.escalationPlanName;
         }
 
         public ListServicesResponseBodyData setIsValid(Integer isValid) {
@@ -102,6 +158,14 @@ public class ListServicesResponseBody extends TeaModel {
         }
         public String getServiceDescription() {
             return this.serviceDescription;
+        }
+
+        public ListServicesResponseBodyData setServiceGroupIdList(java.util.List<Long> serviceGroupIdList) {
+            this.serviceGroupIdList = serviceGroupIdList;
+            return this;
+        }
+        public java.util.List<Long> getServiceGroupIdList() {
+            return this.serviceGroupIdList;
         }
 
         public ListServicesResponseBodyData setServiceId(Long serviceId) {

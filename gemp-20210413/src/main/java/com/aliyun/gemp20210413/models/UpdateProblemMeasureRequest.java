@@ -4,36 +4,76 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class UpdateProblemMeasureRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("checkStandard")
     public String checkStandard;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("checkUserId")
     public Long checkUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4361a0e1-6747-4834-96ce-0c4840fd3812</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
     @NameInMap("content")
     public String content;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("directorId")
     public Long directorId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1231</p>
+     */
     @NameInMap("measureId")
     public Long measureId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-21 00:00:00</p>
+     */
     @NameInMap("planFinishTime")
     public String planFinishTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1233</p>
+     */
     @NameInMap("problemId")
     public Long problemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("stalkerId")
     public Long stalkerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UNIMPROVED</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("type")
     public Integer type;
 

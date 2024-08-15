@@ -12,6 +12,9 @@ public class CreateProblemSubtotalResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4361a0e1-6747-4834-96ce-0c4840fd381A</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -38,6 +41,10 @@ public class CreateProblemSubtotalResponseBody extends TeaModel {
     }
 
     public static class CreateProblemSubtotalResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("subtotalId")
         public Long subtotalId;
 

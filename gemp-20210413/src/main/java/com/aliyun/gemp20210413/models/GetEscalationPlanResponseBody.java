@@ -12,6 +12,9 @@ public class GetEscalationPlanResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A5A1FEAE-9C47-011C-9C73-A376BC2REQUEST</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -38,9 +41,17 @@ public class GetEscalationPlanResponseBody extends TeaModel {
     }
 
     public static class GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanConditions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>LOW</p>
+         */
         @NameInMap("effection")
         public String effection;
 
+        /**
+         * <strong>example:</strong>
+         * <p>P1</p>
+         */
         @NameInMap("level")
         public String level;
 
@@ -68,9 +79,17 @@ public class GetEscalationPlanResponseBody extends TeaModel {
     }
 
     public static class GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategiesNoticeObjectList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>234</p>
+         */
         @NameInMap("noticeObjectId")
         public Long noticeObjectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>张老三</p>
+         */
         @NameInMap("noticeObjectName")
         public String noticeObjectName;
 
@@ -97,10 +116,48 @@ public class GetEscalationPlanResponseBody extends TeaModel {
 
     }
 
-    public static class GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategiesServiceGroups extends TeaModel {
+    public static class GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategiesNoticeRoleObjectList extends TeaModel {
         @NameInMap("id")
         public Long id;
 
+        @NameInMap("name")
+        public String name;
+
+        public static GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategiesNoticeRoleObjectList build(java.util.Map<String, ?> map) throws Exception {
+            GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategiesNoticeRoleObjectList self = new GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategiesNoticeRoleObjectList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategiesNoticeRoleObjectList setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategiesNoticeRoleObjectList setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategiesServiceGroups extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>343</p>
+         */
+        @NameInMap("id")
+        public Long id;
+
+        /**
+         * <strong>example:</strong>
+         * <p>VCD是</p>
+         */
         @NameInMap("serviceGroupName")
         public String serviceGroupName;
 
@@ -128,18 +185,43 @@ public class GetEscalationPlanResponseBody extends TeaModel {
     }
 
     public static class GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategies extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("enableWebhook")
         public Boolean enableWebhook;
 
+        /**
+         * <strong>example:</strong>
+         * <p>UN_ACKNOWLEDGE</p>
+         */
         @NameInMap("escalationPlanType")
         public String escalationPlanType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SMS</p>
+         */
         @NameInMap("noticeChannels")
         public String noticeChannels;
 
         @NameInMap("noticeObjectList")
         public java.util.List<GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategiesNoticeObjectList> noticeObjectList;
 
+        @NameInMap("noticeObjects")
+        public java.util.List<Long> noticeObjects;
+
+        @NameInMap("noticeRoleList")
+        public java.util.List<Long> noticeRoleList;
+
+        @NameInMap("noticeRoleObjectList")
+        public java.util.List<GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategiesNoticeRoleObjectList> noticeRoleObjectList;
+
+        /**
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
         @NameInMap("noticeTime")
         public Long noticeTime;
 
@@ -183,6 +265,30 @@ public class GetEscalationPlanResponseBody extends TeaModel {
             return this.noticeObjectList;
         }
 
+        public GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategies setNoticeObjects(java.util.List<Long> noticeObjects) {
+            this.noticeObjects = noticeObjects;
+            return this;
+        }
+        public java.util.List<Long> getNoticeObjects() {
+            return this.noticeObjects;
+        }
+
+        public GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategies setNoticeRoleList(java.util.List<Long> noticeRoleList) {
+            this.noticeRoleList = noticeRoleList;
+            return this;
+        }
+        public java.util.List<Long> getNoticeRoleList() {
+            return this.noticeRoleList;
+        }
+
+        public GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategies setNoticeRoleObjectList(java.util.List<GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategiesNoticeRoleObjectList> noticeRoleObjectList) {
+            this.noticeRoleObjectList = noticeRoleObjectList;
+            return this;
+        }
+        public java.util.List<GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategiesNoticeRoleObjectList> getNoticeRoleObjectList() {
+            return this.noticeRoleObjectList;
+        }
+
         public GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategies setNoticeTime(Long noticeTime) {
             this.noticeTime = noticeTime;
             return this;
@@ -205,6 +311,10 @@ public class GetEscalationPlanResponseBody extends TeaModel {
         @NameInMap("escalationPlanConditions")
         public java.util.List<GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanConditions> escalationPlanConditions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>345</p>
+         */
         @NameInMap("escalationPlanRuleId")
         public Long escalationPlanRuleId;
 
@@ -246,15 +356,27 @@ public class GetEscalationPlanResponseBody extends TeaModel {
         @NameInMap("escalationPlanScopeObjects")
         public Integer escalationPlanScopeObjects;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SERVICE</p>
+         */
         @NameInMap("scope")
         public String scope;
 
         @NameInMap("scopeObjectDeletedType")
         public Integer scopeObjectDeletedType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>234</p>
+         */
         @NameInMap("scopeObjectId")
         public Long scopeObjectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xx服务</p>
+         */
         @NameInMap("scopeObjectName")
         public String scopeObjectName;
 
@@ -306,15 +428,31 @@ public class GetEscalationPlanResponseBody extends TeaModel {
     }
 
     public static class GetEscalationPlanResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-09-09 09:09:09</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>描述1234</p>
+         */
         @NameInMap("escalationPlanDescription")
         public String escalationPlanDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2345</p>
+         */
         @NameInMap("escalationPlanId")
         public Long escalationPlanId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>升级计划234</p>
+         */
         @NameInMap("escalationPlanName")
         public String escalationPlanName;
 
@@ -323,6 +461,9 @@ public class GetEscalationPlanResponseBody extends TeaModel {
 
         @NameInMap("escalationPlanScopeObjects")
         public java.util.List<GetEscalationPlanResponseBodyDataEscalationPlanScopeObjects> escalationPlanScopeObjects;
+
+        @NameInMap("isGlobal")
+        public Boolean isGlobal;
 
         public static GetEscalationPlanResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetEscalationPlanResponseBodyData self = new GetEscalationPlanResponseBodyData();
@@ -375,6 +516,14 @@ public class GetEscalationPlanResponseBody extends TeaModel {
         }
         public java.util.List<GetEscalationPlanResponseBodyDataEscalationPlanScopeObjects> getEscalationPlanScopeObjects() {
             return this.escalationPlanScopeObjects;
+        }
+
+        public GetEscalationPlanResponseBodyData setIsGlobal(Boolean isGlobal) {
+            this.isGlobal = isGlobal;
+            return this;
+        }
+        public Boolean getIsGlobal() {
+            return this.isGlobal;
         }
 
     }

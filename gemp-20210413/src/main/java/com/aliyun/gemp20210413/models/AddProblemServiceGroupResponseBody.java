@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AddProblemServiceGroupResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5AD6E6BC-2582-4E0E-832D-52CB1B922253</p>
      */
     @NameInMap("requestId")
     public String requestId;

@@ -12,6 +12,9 @@ public class ListEscalationPlanServicesResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A5A1FEAE-9C47-011C-9C73-A376BC2REQUEST</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -38,9 +41,17 @@ public class ListEscalationPlanServicesResponseBody extends TeaModel {
     }
 
     public static class ListEscalationPlanServicesResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>SERVICE</p>
+         */
         @NameInMap("scope")
         public String scope;
 
+        /**
+         * <strong>example:</strong>
+         * <p>23</p>
+         */
         @NameInMap("scopeObjectId")
         public Long scopeObjectId;
 

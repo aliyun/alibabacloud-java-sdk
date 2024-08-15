@@ -10,18 +10,33 @@ public class ListProblemDetailOperationsResponseBody extends TeaModel {
     @NameInMap("data")
     public java.util.List<ListProblemDetailOperationsResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FD200FAE-E98F-496E-BFE6-4CE61E59A2E9</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>210</p>
+     */
     @NameInMap("totalCount")
     public Integer totalCount;
 
@@ -71,24 +86,52 @@ public class ListProblemDetailOperationsResponseBody extends TeaModel {
     }
 
     public static class ListProblemDetailOperationsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>PROBLEM_CANCEL</p>
+         */
         @NameInMap("action")
         public String action;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-23 00:00:00</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>描述</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>服务A</p>
+         */
         @NameInMap("relatedServiceName")
         public String relatedServiceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>备注</p>
+         */
         @NameInMap("remark")
         public String remark;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{“userName”:&quot;小明&quot;}</p>
+         */
         @NameInMap("snapshotData")
         public String snapshotData;
 
+        /**
+         * <strong>example:</strong>
+         * <p>动态标题</p>
+         */
         @NameInMap("title")
         public String title;
 

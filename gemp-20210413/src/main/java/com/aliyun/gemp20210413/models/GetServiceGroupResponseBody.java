@@ -7,6 +7,10 @@ public class GetServiceGroupResponseBody extends TeaModel {
     @NameInMap("data")
     public GetServiceGroupResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C4BE3837-1A13-413B-A225-2C88188E8A43</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,15 +36,34 @@ public class GetServiceGroupResponseBody extends TeaModel {
     }
 
     public static class GetServiceGroupResponseBodyDataUsers extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1390000****</p>
+         */
         @NameInMap("phone")
         public String phone;
 
+        @NameInMap("roleNameList")
+        public java.util.List<String> roleNameList;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("serviceGroupId")
         public Long serviceGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("userId")
         public Long userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>jack</p>
+         */
         @NameInMap("userName")
         public String userName;
 
@@ -55,6 +78,14 @@ public class GetServiceGroupResponseBody extends TeaModel {
         }
         public String getPhone() {
             return this.phone;
+        }
+
+        public GetServiceGroupResponseBodyDataUsers setRoleNameList(java.util.List<String> roleNameList) {
+            this.roleNameList = roleNameList;
+            return this;
+        }
+        public java.util.List<String> getRoleNameList() {
+            return this.roleNameList;
         }
 
         public GetServiceGroupResponseBodyDataUsers setServiceGroupId(Long serviceGroupId) {
@@ -84,30 +115,62 @@ public class GetServiceGroupResponseBody extends TeaModel {
     }
 
     public static class GetServiceGroupResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2020-08-08 10:00:00</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ENABLE</p>
+         */
         @NameInMap("enableWebhook")
         public String enableWebhook;
 
+        /**
+         * <strong>example:</strong>
+         * <p>服务描述</p>
+         */
         @NameInMap("serviceGroupDescription")
         public String serviceGroupDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("serviceGroupId")
         public Long serviceGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>冲上云霄</p>
+         */
         @NameInMap("serviceGroupName")
         public String serviceGroupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-05-03 15:39:39</p>
+         */
         @NameInMap("updateTime")
         public String updateTime;
 
         @NameInMap("users")
         public java.util.List<GetServiceGroupResponseBodyDataUsers> users;
 
+        /**
+         * <strong>example:</strong>
+         * <p>wwwwwww</p>
+         */
         @NameInMap("webhookLink")
         public String webhookLink;
 
+        /**
+         * <strong>example:</strong>
+         * <p>WEIXIN_GROUP</p>
+         */
         @NameInMap("webhookType")
         public String webhookType;
 

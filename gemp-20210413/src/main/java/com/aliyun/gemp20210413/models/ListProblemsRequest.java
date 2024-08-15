@@ -4,45 +4,101 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListProblemsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("affectServiceId")
     public Long affectServiceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C4BE3837-1A13-413B-A225-2C88188E8A43</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-03-05 15:50:59</p>
+     */
     @NameInMap("discoveryEndTime")
     public String discoveryEndTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-03-05 15:50:59</p>
+     */
     @NameInMap("discoveryStartTime")
     public String discoveryStartTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("mainHandlerId")
     public Long mainHandlerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>P2</p>
+     */
     @NameInMap("problemLevel")
     public String problemLevel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>HANDLING</p>
+     */
     @NameInMap("problemStatus")
     public String problemStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>RESPONSIBLE</p>
+     */
     @NameInMap("queryType")
     public String queryType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("repeaterId")
     public Long repeaterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-03-05 15:50:59</p>
+     */
     @NameInMap("restoreEndTime")
     public String restoreEndTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-03-05 15:50:59</p>
+     */
     @NameInMap("restoreStartTime")
     public String restoreStartTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("serviceGroupId")
     public Long serviceGroupId;
 

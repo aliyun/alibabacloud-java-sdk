@@ -12,6 +12,9 @@ public class GetIncidentListByIdListResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C4BE3837-1A13-413B-A225-2C88188E8A43</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -38,93 +41,181 @@ public class GetIncidentListByIdListResponseBody extends TeaModel {
     }
 
     public static class GetIncidentListByIdListResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("assignToWhoIsValid")
         public Integer assignToWhoIsValid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12312</p>
+         */
         @NameInMap("assignUserId")
         public Long assignUserId;
 
         @NameInMap("assignUserName")
         public String assignUserName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>139****1111</p>
+         */
         @NameInMap("assignUserPhone")
         public String assignUserPhone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2010-03-09 15:53:45</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1212</p>
+         */
         @NameInMap("defaultAssignToWho")
         public Integer defaultAssignToWho;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("defaultAssignToWhoIsValid")
         public Integer defaultAssignToWhoIsValid;
 
         @NameInMap("defaultAssignToWhoName")
         public String defaultAssignToWhoName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3000000</p>
+         */
         @NameInMap("durationTime")
         public String durationTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>LOW</p>
+         */
         @NameInMap("effect")
         public String effect;
 
         @NameInMap("incidentDescription")
         public String incidentDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3213</p>
+         */
         @NameInMap("incidentId")
         public Long incidentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>P4</p>
+         */
         @NameInMap("incidentLevel")
         public String incidentLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>I13002001</p>
+         */
         @NameInMap("incidentNumber")
         public String incidentNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FINISHE</p>
+         */
         @NameInMap("incidentStatus")
         public String incidentStatus;
 
         @NameInMap("incidentTitle")
         public String incidentTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isManual")
         public Boolean isManual;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isUpgrade")
         public Boolean isUpgrade;
 
         @NameInMap("notifyChannels")
         public java.util.List<String> notifyChannels;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12312</p>
+         */
         @NameInMap("problemId")
         public Long problemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>P1231231</p>
+         */
         @NameInMap("problemNumber")
         public String problemNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("relRouteRuleDeleteType")
         public Integer relRouteRuleDeleteType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("relServiceDeleteType")
         public Integer relServiceDeleteType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("relServiceGroupIsValid")
         public Integer relServiceGroupIsValid;
 
         @NameInMap("relatedServiceDescription")
         public String relatedServiceDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>13000</p>
+         */
         @NameInMap("relatedServiceGroupId")
         public Long relatedServiceGroupId;
 
         @NameInMap("relatedServiceGroupName")
         public String relatedServiceGroupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>213123</p>
+         */
         @NameInMap("relatedServiceId")
         public Long relatedServiceId;
 
         @NameInMap("relatedServiceName")
         public String relatedServiceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("routeRuleId")
         public Long routeRuleId;
 
