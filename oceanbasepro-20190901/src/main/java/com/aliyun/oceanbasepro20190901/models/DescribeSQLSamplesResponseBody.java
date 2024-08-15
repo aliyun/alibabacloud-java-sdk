@@ -278,6 +278,9 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         @NameInMap("ObUserId")
         public Double obUserId;
 
+        @NameInMap("ParamsValue")
+        public String paramsValue;
+
         /**
          * <p>Average number of partition accessed during the execution period.</p>
          * 
@@ -725,6 +728,14 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         }
         public Double getObUserId() {
             return this.obUserId;
+        }
+
+        public DescribeSQLSamplesResponseBodyData setParamsValue(String paramsValue) {
+            this.paramsValue = paramsValue;
+            return this;
+        }
+        public String getParamsValue() {
+            return this.paramsValue;
         }
 
         public DescribeSQLSamplesResponseBodyData setPartitionCount(Double partitionCount) {

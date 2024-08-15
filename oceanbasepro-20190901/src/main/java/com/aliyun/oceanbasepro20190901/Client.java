@@ -3207,6 +3207,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.parseTable)) {
+            body.put("ParseTable", request.parseTable);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sqlId)) {
             body.put("SqlId", request.sqlId);
         }

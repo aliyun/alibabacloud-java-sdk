@@ -726,6 +726,12 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
         @NameInMap("MergedVersion")
         public Long mergedVersion;
 
+        @NameInMap("OutlineId")
+        public String outlineId;
+
+        @NameInMap("OutlineStatus")
+        public String outlineStatus;
+
         /**
          * <p>Execution plan.</p>
          */
@@ -773,6 +779,9 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
          */
         @NameInMap("QuerySql")
         public String querySql;
+
+        @NameInMap("TableScan")
+        public Boolean tableScan;
 
         public static DescribeOasSQLPlansResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeOasSQLPlansResponseBodyData self = new DescribeOasSQLPlansResponseBodyData();
@@ -835,6 +844,22 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             return this.mergedVersion;
         }
 
+        public DescribeOasSQLPlansResponseBodyData setOutlineId(String outlineId) {
+            this.outlineId = outlineId;
+            return this;
+        }
+        public String getOutlineId() {
+            return this.outlineId;
+        }
+
+        public DescribeOasSQLPlansResponseBodyData setOutlineStatus(String outlineStatus) {
+            this.outlineStatus = outlineStatus;
+            return this;
+        }
+        public String getOutlineStatus() {
+            return this.outlineStatus;
+        }
+
         public DescribeOasSQLPlansResponseBodyData setPlanExplain(DescribeOasSQLPlansResponseBodyDataPlanExplain planExplain) {
             this.planExplain = planExplain;
             return this;
@@ -881,6 +906,14 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
         }
         public String getQuerySql() {
             return this.querySql;
+        }
+
+        public DescribeOasSQLPlansResponseBodyData setTableScan(Boolean tableScan) {
+            this.tableScan = tableScan;
+            return this;
+        }
+        public Boolean getTableScan() {
+            return this.tableScan;
         }
 
     }
