@@ -14840,6 +14840,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>更新nacos灰度配置</p>
+     * 
+     * @param request UpdateNacosGrayConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateNacosGrayConfigResponse
+     */
+    public UpdateNacosGrayConfigResponse updateNacosGrayConfigWithOptions(UpdateNacosGrayConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            query.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
+            query.put("Content", request.content);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataId)) {
+            query.put("DataId", request.dataId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.grayRule)) {
+            query.put("GrayRule", request.grayRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.grayType)) {
+            query.put("GrayType", request.grayType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.group)) {
+            query.put("Group", request.group);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestPars)) {
+            query.put("RequestPars", request.requestPars);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stopGray)) {
+            query.put("StopGray", request.stopGray);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateNacosGrayConfig"),
+            new TeaPair("version", "2019-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateNacosGrayConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新nacos灰度配置</p>
+     * 
+     * @param request UpdateNacosGrayConfigRequest
+     * @return UpdateNacosGrayConfigResponse
+     */
+    public UpdateNacosGrayConfigResponse updateNacosGrayConfig(UpdateNacosGrayConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateNacosGrayConfigWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
