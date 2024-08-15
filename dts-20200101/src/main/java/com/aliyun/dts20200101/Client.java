@@ -2585,6 +2585,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeCheckJobsResponse describeCheckJobsWithOptions(DescribeCheckJobsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.checkJobId)) {
+            query.put("CheckJobId", request.checkJobId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.checkType)) {
             query.put("CheckType", request.checkType);
         }

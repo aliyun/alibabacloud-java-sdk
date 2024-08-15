@@ -4,6 +4,9 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCheckJobsRequest extends TeaModel {
+    @NameInMap("CheckJobId")
+    public String checkJobId;
+
     @NameInMap("CheckType")
     public Integer checkType;
 
@@ -25,6 +28,14 @@ public class DescribeCheckJobsRequest extends TeaModel {
     public static DescribeCheckJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCheckJobsRequest self = new DescribeCheckJobsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCheckJobsRequest setCheckJobId(String checkJobId) {
+        this.checkJobId = checkJobId;
+        return this;
+    }
+    public String getCheckJobId() {
+        return this.checkJobId;
     }
 
     public DescribeCheckJobsRequest setCheckType(Integer checkType) {

@@ -3757,6 +3757,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("DtsJobName")
         public String dtsJobName;
 
+        @NameInMap("DuRealUsage")
+        public String duRealUsage;
+
         /**
          * <p>The number of DUs that have been used.</p>
          * 
@@ -4191,6 +4194,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
         public String getDtsJobName() {
             return this.dtsJobName;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobList setDuRealUsage(String duRealUsage) {
+            this.duRealUsage = duRealUsage;
+            return this;
+        }
+        public String getDuRealUsage() {
+            return this.duRealUsage;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobList setDuUsage(Long duUsage) {
