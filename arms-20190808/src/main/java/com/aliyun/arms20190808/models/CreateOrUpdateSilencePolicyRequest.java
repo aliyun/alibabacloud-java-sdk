@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateOrUpdateSilencePolicyRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>PERMANENT</p>
+     */
+    @NameInMap("EffectiveTimeType")
+    public String effectiveTimeType;
+
+    /**
      * <p>The ID of the silence policy.</p>
      * <ul>
      * <li>If you do not configure this parameter, a new silence policy is created.</li>
@@ -66,9 +73,31 @@ public class CreateOrUpdateSilencePolicyRequest extends TeaModel {
     @NameInMap("State")
     public String state;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DAY</p>
+     */
+    @NameInMap("TimePeriod")
+    public String timePeriod;
+
+    /**
+     * <strong>example:</strong>
+     * <p>[{&quot;startTime&quot;:&quot;2024-08-04 22:13&quot;,&quot;endTime&quot;:&quot;2024-08-04 22:21&quot;}]</p>
+     */
+    @NameInMap("TimeSlots")
+    public String timeSlots;
+
     public static CreateOrUpdateSilencePolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateOrUpdateSilencePolicyRequest self = new CreateOrUpdateSilencePolicyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateOrUpdateSilencePolicyRequest setEffectiveTimeType(String effectiveTimeType) {
+        this.effectiveTimeType = effectiveTimeType;
+        return this;
+    }
+    public String getEffectiveTimeType() {
+        return this.effectiveTimeType;
     }
 
     public CreateOrUpdateSilencePolicyRequest setId(Long id) {
@@ -109,6 +138,22 @@ public class CreateOrUpdateSilencePolicyRequest extends TeaModel {
     }
     public String getState() {
         return this.state;
+    }
+
+    public CreateOrUpdateSilencePolicyRequest setTimePeriod(String timePeriod) {
+        this.timePeriod = timePeriod;
+        return this;
+    }
+    public String getTimePeriod() {
+        return this.timePeriod;
+    }
+
+    public CreateOrUpdateSilencePolicyRequest setTimeSlots(String timeSlots) {
+        this.timeSlots = timeSlots;
+        return this;
+    }
+    public String getTimeSlots() {
+        return this.timeSlots;
     }
 
 }

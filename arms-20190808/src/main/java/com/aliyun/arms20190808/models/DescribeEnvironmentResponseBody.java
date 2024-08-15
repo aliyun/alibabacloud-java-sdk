@@ -381,7 +381,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The security group ID bound to the environment.</p>
+         * <p>The ID of the security group associated with the environment.</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;

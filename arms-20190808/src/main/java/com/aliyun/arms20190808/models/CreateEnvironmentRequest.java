@@ -42,7 +42,7 @@ public class CreateEnvironmentRequest extends TeaModel {
      * <p>The subtype of the environment. Valid values:</p>
      * <ul>
      * <li>CS: Container Service for Kubernetes (ACK) or Distributed Cloud Container Platform for Kubernetes (ACK One)</li>
-     * <li>ECS: Elastic Compute Service (ECS)</li>
+     * <li>ECS: ECS</li>
      * <li>Cloud: cloud service</li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -56,8 +56,8 @@ public class CreateEnvironmentRequest extends TeaModel {
     /**
      * <p>The type of the environment. Valid values:</p>
      * <ul>
-     * <li>CS: ACK</li>
-     * <li>ECS: ECS</li>
+     * <li>CS: Container Service</li>
+     * <li>ECS: Elastic Compute Service</li>
      * <li>Cloud: cloud service</li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -69,7 +69,7 @@ public class CreateEnvironmentRequest extends TeaModel {
     public String environmentType;
 
     /**
-     * <p>The payable resource plan. Valid values:</p>
+     * <p>The payable resource plan.</p>
      * <ul>
      * <li>If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.</li>
      * <li>Otherwise, leave the parameter empty.</li>
@@ -91,7 +91,7 @@ public class CreateEnvironmentRequest extends TeaModel {
     public String grafanaWorkspaceId;
 
     /**
-     * <p>Whether to initialize the environment.</p>
+     * <p>Specifies whether to initialize the environment.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

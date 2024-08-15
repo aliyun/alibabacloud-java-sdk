@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteEventBridgeIntegrationRequest extends TeaModel {
     /**
-     * <p>The ID of the EventBridge integration. You can call the <strong>ListEventBridgeIntegrations</strong> operation to query the ID.</p>
+     * <p>Required. The ID of the EventBridge notification integration. You can call the <strong>ListEventBridgeIntegrations</strong> operation to query the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

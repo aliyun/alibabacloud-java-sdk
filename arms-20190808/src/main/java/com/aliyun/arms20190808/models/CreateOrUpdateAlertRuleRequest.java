@@ -104,13 +104,14 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     public String alertStatus;
 
     /**
+     * <p>The type of the alert rule. Valid values:</p>
      * <ul>
-     * <li>APPLICATION_MONITORING_ALERT_RULE</li>
-     * <li>BROWSER_MONITORING_ALERT_RULE</li>
-     * <li>XTRACE_MONITORING_ALERT_RULE</li>
-     * <li>RUM_MONITORING_ALERT_RULE</li>
-     * <li>EBPF_MONITORING_ALERT_RULE</li>
-     * <li>PROMETHEUS_MONITORING_ALERT_RULE</li>
+     * <li>APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring</li>
+     * <li>BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring</li>
+     * <li>PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Managed Service for Prometheus</li>
+     * <li>XTRACE_MONITORING_ALERT_RULE: alert rule for Managed Service for OpenTelemetry</li>
+     * <li>EBPF_MONITORING_ALERT_RULE: alert rule for Application Monitoring eBPF Edition</li>
+     * <li>RUM_MONITORING_ALERT_RULE: alert rule for Real User Monitoring</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -143,7 +144,7 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     public Boolean autoAddNewApplication;
 
     /**
-     * <p>Application monitoring alarm rules - Alarm application automatically adds configuration. auto Add Match Type: Matching method: regular match (REGULAR)/regular non-match (NOT_REGULAR) auto Add Match Exp: regular expression</p>
+     * <p>The configurations that are automatically appended to monitor the application based on the specified alert rule. autoAddMatchType: the matching mode. Valid values: REGULAR and NOT_REGULAR. autoAddMatchExp: the regular expression</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;autoAddMatchType\&quot;:\&quot;REGULAR\&quot;,\&quot;autoAddMatchExp\&quot;:\&quot;.<em>cbw.</em>\&quot;}</p>
@@ -281,7 +282,12 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     public String notice;
 
     /**
-     * <p>Notification Mode. Normal mode or Simplified mode.</p>
+     * <p>The notification mode. You can specify the normal mode or simple mode.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>DIRECTED_MODE</li>
+     * <li>NORMAL_MODE</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>NORMAL_MODE</p>

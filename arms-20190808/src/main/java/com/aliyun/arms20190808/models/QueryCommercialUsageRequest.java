@@ -35,6 +35,11 @@ public class QueryCommercialUsageRequest extends TeaModel {
 
     /**
      * <p>The time interval between data slices. Unit: seconds. Minimum value: 3600.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>3600: hours</li>
+     * <li>86400: days</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>3600</p>

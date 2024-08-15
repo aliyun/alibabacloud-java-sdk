@@ -508,7 +508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates a Prometheus instance with the ID and name of a Flink workspace.</p>
+     * <p>Attaches the workspace ID and workspace name tags to the Prometheus instance corresponding to a Flink workspace.</p>
      * 
      * @param request AddTagToFlinkClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -560,7 +560,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates a Prometheus instance with the ID and name of a Flink workspace.</p>
+     * <p>Attaches the workspace ID and workspace name tags to the Prometheus instance corresponding to a Flink workspace.</p>
      * 
      * @param request AddTagToFlinkClusterRequest
      * @return AddTagToFlinkClusterResponse
@@ -2360,6 +2360,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public CreateOrUpdateSilencePolicyResponse createOrUpdateSilencePolicyWithOptions(CreateOrUpdateSilencePolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.effectiveTimeType)) {
+            query.put("EffectiveTimeType", request.effectiveTimeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timePeriod)) {
+            query.put("TimePeriod", request.timePeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeSlots)) {
+            query.put("TimeSlots", request.timeSlots);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.id)) {
             body.put("Id", request.id);
@@ -2382,6 +2395,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -7477,8 +7491,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the usage data for the current day at any time. You can query the usage data for the previous day only after 8:00 today.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取RUM OCU统计数据</p>
+     * <p>Queries the observability capacity unit (OCU) usage data of Real User Monitoring (RUM).</p>
      * 
      * @param tmpReq GetRumOcuStatisticDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7515,8 +7532,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the usage data for the current day at any time. You can query the usage data for the previous day only after 8:00 today.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取RUM OCU统计数据</p>
+     * <p>Queries the observability capacity unit (OCU) usage data of Real User Monitoring (RUM).</p>
      * 
      * @param request GetRumOcuStatisticDataRequest
      * @return GetRumOcuStatisticDataResponse

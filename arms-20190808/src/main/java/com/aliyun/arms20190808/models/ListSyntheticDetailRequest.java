@@ -4,6 +4,13 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListSyntheticDetailRequest extends TeaModel {
+    /**
+     * <p>An array of filter conditions. This parameter is required.</p>
+     * <ul>
+     * <li>To query the list of synthetic test results, set this parameter in the following format: [{&quot;Key&quot;:&quot;taskType&quot;,&quot;OpType&quot;:&quot;in&quot;,&quot;Value&quot;:[Task type]}].</li>
+     * <li>To query the result details of a synthetic monitoring task, set this parameter in the following format: [{&quot;Key&quot;:&quot;dataId&quot;,&quot;OpType&quot;:&quot;eq&quot;,&quot;Value&quot;:&quot;dataId&quot;}]. dataId is returned when you query the list of synthetic test results.</li>
+     * </ul>
+     */
     @NameInMap("AdvancedFilters")
     public java.util.List<ListSyntheticDetailRequestAdvancedFilters> advancedFilters;
 
@@ -15,6 +22,17 @@ public class ListSyntheticDetailRequest extends TeaModel {
     public String category;
 
     /**
+     * <p>The type of the list that contains the results. This parameter is required. Valid values:</p>
+     * <ul>
+     * <li>ICMP_LIST</li>
+     * <li>TCP_LIST</li>
+     * <li>DNS_LIST</li>
+     * <li>HTTP_LIST</li>
+     * <li>WEBSITE_LIST</li>
+     * <li>DOWNLOAD_LIST</li>
+     * <li>ALL</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ICMP_LIST</p>
      */
@@ -31,6 +49,13 @@ public class ListSyntheticDetailRequest extends TeaModel {
     @NameInMap("ExactFilters")
     public java.util.List<ListSyntheticDetailRequestExactFilters> exactFilters;
 
+    /**
+     * <p>The filter condition. This parameter is required.</p>
+     * <ul>
+     * <li>To query the result of a synthetic monitoring task, set this parameter in the following format: {&quot;taskId&quot;:&quot;${taskId}&quot;}.</li>
+     * <li>To query the result details of a synthetic monitoring task, set this parameter in the following format: {&quot;taskId&quot;:&quot;${taskId}&quot;,&quot;dataId&quot;:&quot;${dataId}&quot;}.</li>
+     * </ul>
+     */
     @NameInMap("Filters")
     public java.util.Map<String, String> filters;
 
@@ -194,6 +219,12 @@ public class ListSyntheticDetailRequest extends TeaModel {
 
     public static class ListSyntheticDetailRequestAdvancedFilters extends TeaModel {
         /**
+         * <p>The filter condition. The taskType and dataId fields are supported.</p>
+         * <ul>
+         * <li>To query the list of synthetic test results, set the key to taskType.</li>
+         * <li>To query the result details of a synthetic monitoring task, set the key to dataId.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>taskType</p>
          */
@@ -201,6 +232,8 @@ public class ListSyntheticDetailRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The type of the filter condition. Valid values: eq and in. eq: equal to. in: include.</p>
+         * 
          * <strong>example:</strong>
          * <p>eq</p>
          */
@@ -208,6 +241,8 @@ public class ListSyntheticDetailRequest extends TeaModel {
         public String opType;
 
         /**
+         * <p>The value of the filter condition. The type of the task. Valid values: 1: ICMP 2: TCP 3: DNS 4: HTTP 5: website speed measurement 6: file download</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

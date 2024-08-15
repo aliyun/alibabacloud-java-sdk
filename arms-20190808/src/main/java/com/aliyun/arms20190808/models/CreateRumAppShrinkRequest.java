@@ -36,7 +36,7 @@ public class CreateRumAppShrinkRequest extends TeaModel {
      * <p>The nick name.</p>
      * 
      * <strong>example:</strong>
-     * <p>test-user</p>
+     * <p>test-app</p>
      */
     @NameInMap("NickName")
     public String nickName;

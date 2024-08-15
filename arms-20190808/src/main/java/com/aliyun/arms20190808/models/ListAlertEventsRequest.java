@@ -42,7 +42,7 @@ public class ListAlertEventsRequest extends TeaModel {
     public Long page;
 
     /**
-     * <p>Whether to display the associated notification policies.</p>
+     * <p>Specifies whether to show the associated notification policy.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

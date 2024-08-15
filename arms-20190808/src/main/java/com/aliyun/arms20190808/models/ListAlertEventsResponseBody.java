@@ -252,7 +252,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
         public String labels;
 
         /**
-         * <p>The information about the notification policy.</p>
+         * <p>The associated notification policies.</p>
          */
         @NameInMap("NotificationPolicies")
         public java.util.List<ListAlertEventsResponseBodyPageBeanEventsNotificationPolicies> notificationPolicies;
@@ -306,7 +306,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The number of times the alert is triggered.</p>
+         * <p>The number of times the event is triggered.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

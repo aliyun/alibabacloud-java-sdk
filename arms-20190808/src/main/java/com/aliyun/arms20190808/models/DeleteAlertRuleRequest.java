@@ -5,11 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteAlertRuleRequest extends TeaModel {
     /**
-     * <p>Indicates whether the alert rule was successfully deleted.</p>
-     * <ul>
-     * <li><code>true</code>: The specified data is deleted.</li>
-     * <li><code>false</code>: The specified data fails to be deleted.</li>
-     * </ul>
+     * <p>The alert rule ID.</p>
+     * <p>For more information about how to obtain the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/2612348.html">GetAlertRules</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

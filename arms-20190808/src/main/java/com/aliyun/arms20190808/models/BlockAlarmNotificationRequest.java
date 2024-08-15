@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BlockAlarmNotificationRequest extends TeaModel {
     /**
+     * <p>The ID of the alert.</p>
+     * <p>For more information about how to obtain the ID of an alert, see <a href="https://help.aliyun.com/document_detail/2612346.html">ListAlertEvents</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +16,8 @@ public class BlockAlarmNotificationRequest extends TeaModel {
     public Long alarmId;
 
     /**
+     * <p>The ID of the alert handler.</p>
+     * 
      * <strong>example:</strong>
      * <p>2044049</p>
      */
@@ -30,6 +34,7 @@ public class BlockAlarmNotificationRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The number of seconds that elapse before alert notifications are blocked. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

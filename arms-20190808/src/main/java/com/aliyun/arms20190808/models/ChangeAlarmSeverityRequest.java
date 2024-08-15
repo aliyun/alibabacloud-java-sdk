@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ChangeAlarmSeverityRequest extends TeaModel {
     /**
+     * <p>The ID of the alert.</p>
+     * <p>For more information about how to obtain the ID of an alert, see <a href="https://help.aliyun.com/document_detail/2612346.html">ListAlertEvents</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

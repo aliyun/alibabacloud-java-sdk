@@ -4,6 +4,12 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DescribeEnvironmentFeatureRequest extends TeaModel {
+    /**
+     * <p>Language, en | zh.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("AliyunLang")
     public String aliyunLang;
 
@@ -21,19 +27,9 @@ public class DescribeEnvironmentFeatureRequest extends TeaModel {
      * <p>The name of the feature.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p>app-agent-pilot</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>metric-agent</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
+     * <li>app-agent-pilot: App Pilot agent</li>
+     * <li>arms-cmonitor: ARMS CMonitor agent</li>
+     * <li>metric-agent: Prometheus agent</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

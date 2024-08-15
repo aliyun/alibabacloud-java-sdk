@@ -41,7 +41,7 @@ public class GetAlertRulesRequest extends TeaModel {
      * <li>PAUSED</li>
      * </ul>
      * <blockquote>
-     * <p>The <strong>PAUSED</strong> status indicates that the alert rule is abnormal and is actively paused by the system. The alert rule may be paused because that it is not unique or the associated cluster has been deleted.</p>
+     * <p> The PAUSED state indicates that the alert rule is abnormal and has been suspended. This may be because the specified threshold value is excessively large, or the associated cluster has been deleted.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -51,11 +51,11 @@ public class GetAlertRulesRequest extends TeaModel {
     public String alertStatus;
 
     /**
-     * <p>The type of the alert rule.</p>
+     * <p>The type of the alert rule. Valid values:</p>
      * <ul>
      * <li>APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring</li>
-     * <li>BROWSER_MONITORING_ALERT_RULE: an alert rule for Browser Monitoring.</li>
-     * <li>PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Managed Service for Prometheus.</li>
+     * <li>BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring</li>
+     * <li>PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Managed Service for Prometheus</li>
      * </ul>
      * 
      * <strong>example:</strong>

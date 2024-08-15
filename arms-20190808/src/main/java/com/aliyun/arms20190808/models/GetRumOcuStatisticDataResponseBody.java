@@ -5,20 +5,28 @@ import com.aliyun.tea.*;
 
 public class GetRumOcuStatisticDataResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The returned struct.</p>
+     */
     @NameInMap("Data")
     public GetRumOcuStatisticDataResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>626037F5-FDEB-45B0-804C-B3C92797****</p>
@@ -65,16 +73,23 @@ public class GetRumOcuStatisticDataResponseBody extends TeaModel {
 
     public static class GetRumOcuStatisticDataResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether the next page exists.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("Complete")
         public Boolean complete;
 
+        /**
+         * <p>The queried data.</p>
+         */
         @NameInMap("Items")
         public java.util.List<java.util.Map<String, ?>> items;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -82,6 +97,8 @@ public class GetRumOcuStatisticDataResponseBody extends TeaModel {
         public Integer page;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -89,6 +106,8 @@ public class GetRumOcuStatisticDataResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

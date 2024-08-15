@@ -99,7 +99,7 @@ public class CreateOrUpdateIMRobotRequest extends TeaModel {
      * <ul>
      * <li><code>dingding</code>: DingTalk chatbot</li>
      * <li><code>wechat</code>: WeCom chatbot</li>
-     * <li><code>feishu</code>: Lark chatbot.</li>
+     * <li><code>feishu</code>: Lark chatbot</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

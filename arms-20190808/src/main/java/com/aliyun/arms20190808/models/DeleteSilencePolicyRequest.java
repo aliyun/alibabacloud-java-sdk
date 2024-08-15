@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteSilencePolicyRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the silence policy.</p>
+     * <p>For more information about how to obtain the ID of a silence policy, see <a href="https://help.aliyun.com/document_detail/2612383.html">ListSilencePolicies</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

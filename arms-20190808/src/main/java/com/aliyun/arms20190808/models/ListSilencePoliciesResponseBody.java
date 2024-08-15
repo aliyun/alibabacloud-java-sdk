@@ -130,6 +130,9 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
     }
 
     public static class ListSilencePoliciesResponseBodyPageBeanSilencePolicies extends TeaModel {
+        @NameInMap("EffectiveTimeType")
+        public String effectiveTimeType;
+
         /**
          * <p>The ID of the silence policy.</p>
          * 
@@ -163,9 +166,23 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
         @NameInMap("State")
         public String state;
 
+        @NameInMap("TimePeriod")
+        public String timePeriod;
+
+        @NameInMap("TimeSlots")
+        public String timeSlots;
+
         public static ListSilencePoliciesResponseBodyPageBeanSilencePolicies build(java.util.Map<String, ?> map) throws Exception {
             ListSilencePoliciesResponseBodyPageBeanSilencePolicies self = new ListSilencePoliciesResponseBodyPageBeanSilencePolicies();
             return TeaModel.build(map, self);
+        }
+
+        public ListSilencePoliciesResponseBodyPageBeanSilencePolicies setEffectiveTimeType(String effectiveTimeType) {
+            this.effectiveTimeType = effectiveTimeType;
+            return this;
+        }
+        public String getEffectiveTimeType() {
+            return this.effectiveTimeType;
         }
 
         public ListSilencePoliciesResponseBodyPageBeanSilencePolicies setId(Long id) {
@@ -198,6 +215,22 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
+        }
+
+        public ListSilencePoliciesResponseBodyPageBeanSilencePolicies setTimePeriod(String timePeriod) {
+            this.timePeriod = timePeriod;
+            return this;
+        }
+        public String getTimePeriod() {
+            return this.timePeriod;
+        }
+
+        public ListSilencePoliciesResponseBodyPageBeanSilencePolicies setTimeSlots(String timeSlots) {
+            this.timeSlots = timeSlots;
+            return this;
+        }
+        public String getTimeSlots() {
+            return this.timeSlots;
         }
 
     }

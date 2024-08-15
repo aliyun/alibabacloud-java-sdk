@@ -78,6 +78,9 @@ public class ListEnvironmentsRequest extends TeaModel {
     @NameInMap("FeePackage")
     public String feePackage;
 
+    /**
+     * <p>The region IDs.</p>
+     */
     @NameInMap("FilterRegionIds")
     public String filterRegionIds;
 
