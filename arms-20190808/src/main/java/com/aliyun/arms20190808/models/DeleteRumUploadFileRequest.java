@@ -4,6 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteRumUploadFileRequest extends TeaModel {
+    @NameInMap("BatchItems")
+    public String batchItems;
+
     /**
      * <p>The file name, with the extension.</p>
      * 
@@ -15,6 +18,7 @@ public class DeleteRumUploadFileRequest extends TeaModel {
 
     /**
      * <p>The application ID.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>atc889zkcf@d8deedfa9bf****</p>
@@ -53,6 +57,14 @@ public class DeleteRumUploadFileRequest extends TeaModel {
     public static DeleteRumUploadFileRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteRumUploadFileRequest self = new DeleteRumUploadFileRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteRumUploadFileRequest setBatchItems(String batchItems) {
+        this.batchItems = batchItems;
+        return this;
+    }
+    public String getBatchItems() {
+        return this.batchItems;
     }
 
     public DeleteRumUploadFileRequest setFileName(String fileName) {

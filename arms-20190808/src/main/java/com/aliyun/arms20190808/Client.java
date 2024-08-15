@@ -4754,6 +4754,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteRumUploadFileResponse deleteRumUploadFileWithOptions(DeleteRumUploadFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.batchItems)) {
+            query.put("BatchItems", request.batchItems);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
             query.put("FileName", request.fileName);
         }
