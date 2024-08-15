@@ -6,24 +6,29 @@ import com.aliyun.tea.*;
 public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The Alibaba Cloud account IDs of the members.</p>
-     * <br>
      * <p>You can specify a maximum of 50 IDs.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
      * <p>The type of the objects to which you want to add tags. Valid values:</p>
-     * <br>
-     * <p>*   Account: member</p>
+     * <ul>
+     * <li>Account: member</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Account</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The tags.</p>
-     * <br>
      * <p>You can specify a maximum of 20 tags.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
@@ -60,16 +65,20 @@ public class TagResourcesRequest extends TeaModel {
     public static class TagResourcesRequestTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
-         * <br>
-         * <p>A tag key can be a maximum of 128 characters in length. It cannot contain `http://` or `https://` and cannot start with `acs:` or `aliyun`.</p>
+         * <p>A tag key can be a maximum of 128 characters in length. It cannot contain <code>http://</code> or <code>https://</code> and cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
-         * <br>
-         * <p>A tag value can be a maximum of 128 characters in length. It cannot contain `http://` or `https://` and cannot start with `acs:`.</p>
+         * <p>A tag value can be a maximum of 128 characters in length. It cannot contain <code>http://</code> or <code>https://</code> and cannot start with <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("Value")
         public String value;

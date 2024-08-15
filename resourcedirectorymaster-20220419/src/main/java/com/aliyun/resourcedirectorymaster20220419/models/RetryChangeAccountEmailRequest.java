@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class RetryChangeAccountEmailRequest extends TeaModel {
     /**
      * <p>The Alibaba Cloud account ID of the member.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>181761095690****</p>
      */
     @NameInMap("AccountId")
     public String accountId;

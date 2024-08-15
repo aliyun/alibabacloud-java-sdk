@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class GetAccountDeletionStatusRequest extends TeaModel {
     /**
      * <p>The Alibaba Cloud account ID of the member.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>169946124551****</p>
      */
     @NameInMap("AccountId")
     public String accountId;

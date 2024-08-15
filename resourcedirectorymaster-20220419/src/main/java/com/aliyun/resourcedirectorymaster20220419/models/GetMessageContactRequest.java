@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class GetMessageContactRequest extends TeaModel {
     /**
      * <p>The ID of the contact.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-qL4HqKONzOM7****</p>
      */
     @NameInMap("ContactId")
     public String contactId;

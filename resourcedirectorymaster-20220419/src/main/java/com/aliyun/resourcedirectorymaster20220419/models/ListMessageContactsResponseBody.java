@@ -12,24 +12,36 @@ public class ListMessageContactsResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>95060F1D-6990-4645-8920-A81D1BBFE992</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,24 +94,36 @@ public class ListMessageContactsResponseBody extends TeaModel {
     public static class ListMessageContactsResponseBodyContacts extends TeaModel {
         /**
          * <p>The time when the contact was bound to the objects.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-27 17:19:21</p>
          */
         @NameInMap("AssociatedDate")
         public String associatedDate;
 
         /**
          * <p>The ID of the contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-qL4HqKONzOM7****</p>
          */
         @NameInMap("ContactId")
         public String contactId;
 
         /**
          * <p>The time when the contact was added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-27 17:19:21</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
          * <p>The email address of the contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>someone***@example.com</p>
          */
         @NameInMap("EmailAddress")
         public String emailAddress;
@@ -118,28 +142,41 @@ public class ListMessageContactsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tom</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The mobile phone number of the contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86-139****1234</p>
          */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
         /**
          * <p>The status of the contact. Valid values:</p>
-         * <br>
-         * <p>- Verifying</p>
-         * <p>- Active</p>
-         * <p>- Deleting</p>
+         * <ul>
+         * <li>Verifying</li>
+         * <li>Active</li>
+         * <li>Deleting</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The job title of the contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TechnicalDirector</p>
          */
         @NameInMap("Title")
         public String title;

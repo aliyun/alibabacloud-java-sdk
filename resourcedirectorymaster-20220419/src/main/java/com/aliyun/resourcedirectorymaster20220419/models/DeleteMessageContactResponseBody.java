@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class DeleteMessageContactResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9B34724D-54B0-4A51-B34D-4512372FE1BE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The deletion status of the contact. Valid values:</p>
-     * <br>
-     * <p>*   Deleting</p>
-     * <p>*   Deleted</p>
+     * <ul>
+     * <li>Deleting</li>
+     * <li>Deleted</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Deleting</p>
      */
     @NameInMap("Status")
     public String status;

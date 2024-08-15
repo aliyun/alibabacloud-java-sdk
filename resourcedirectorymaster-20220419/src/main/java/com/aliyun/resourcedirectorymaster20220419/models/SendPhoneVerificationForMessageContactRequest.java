@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class SendPhoneVerificationForMessageContactRequest extends TeaModel {
     /**
      * <p>The ID of the contact.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-qL4HqKONzOM7****</p>
      */
     @NameInMap("ContactId")
     public String contactId;
 
     /**
      * <p>The mobile phone number of the contact.</p>
-     * <br>
-     * <p>The value must be in the `<Country code>-<Mobile phone number>` format.</p>
-     * <br>
-     * <p>The specified mobile phone number must be the one you specify when you call the [AddMessageContact](~~AddMessageContact~~) operation.</p>
+     * <p>The value must be in the <code>&lt;Country code&gt;-&lt;Mobile phone number&gt;</code> format.</p>
+     * <p>The specified mobile phone number must be the one you specify when you call the <a href="~~AddMessageContact~~">AddMessageContact</a> operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>86-139****1234</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;

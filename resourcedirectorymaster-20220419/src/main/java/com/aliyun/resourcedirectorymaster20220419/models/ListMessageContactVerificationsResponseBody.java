@@ -12,24 +12,36 @@ public class ListMessageContactVerificationsResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CD76D376-2517-4924-92C5-DBC52262F93A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>48</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,15 +94,22 @@ public class ListMessageContactVerificationsResponseBody extends TeaModel {
     public static class ListMessageContactVerificationsResponseBodyContactVerifications extends TeaModel {
         /**
          * <p>The ID of the contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-qL4HqKONzOM7****</p>
          */
         @NameInMap("ContactId")
         public String contactId;
 
         /**
          * <p>The object that is used for verification. Valid values:</p>
-         * <br>
-         * <p>- Mobile phone number</p>
-         * <p>- Email address</p>
+         * <ul>
+         * <li>Mobile phone number</li>
+         * <li>Email address</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>someone***@example.com</p>
          */
         @NameInMap("Target")
         public String target;

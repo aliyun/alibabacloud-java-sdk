@@ -6,39 +6,51 @@ import com.aliyun.tea.*;
 public class CreateControlPolicyRequest extends TeaModel {
     /**
      * <p>The description of the access control policy.</p>
-     * <br>
-     * <p>The description must be 1 to 1,024 characters in length. The description can contain letters, digits, underscores (\_), and hyphens (-) and must start with a letter.</p>
+     * <p>The description must be 1 to 1,024 characters in length. The description can contain letters, digits, underscores (_), and hyphens (-) and must start with a letter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ExampleControlPolicy</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The effective scope of the access control policy.</p>
-     * <br>
      * <p>The value RAM indicates that the access control policy takes effect only for RAM users and RAM roles.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RAM</p>
      */
     @NameInMap("EffectScope")
     public String effectScope;
 
     /**
      * <p>The document of the access control policy.</p>
-     * <br>
      * <p>The document can be a maximum of 4,096 characters in length.</p>
-     * <br>
-     * <p>For more information about the languages of access control policies, see [Languages of access control policies](~~179096~~).</p>
-     * <br>
-     * <p>For more information about the examples of access control policies, see [Examples of custom access control policies](~~181474~~).</p>
+     * <p>For more information about the languages of access control policies, see <a href="https://help.aliyun.com/document_detail/179096.html">Languages of access control policies</a>.</p>
+     * <p>For more information about the examples of access control policies, see <a href="https://help.aliyun.com/document_detail/181474.html">Examples of custom access control policies</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Version&quot;:&quot;1&quot;,&quot;Statement&quot;:[{&quot;Effect&quot;:&quot;Deny&quot;,&quot;Action&quot;:[&quot;ram:UpdateRole&quot;,&quot;ram:DeleteRole&quot;,&quot;ram:AttachPolicyToRole&quot;,&quot;ram:DetachPolicyFromRole&quot;],&quot;Resource&quot;:&quot;acs:ram:<em>:</em>:role/ResourceDirectoryAccountAccessRole&quot;}]}</p>
      */
     @NameInMap("PolicyDocument")
     public String policyDocument;
 
     /**
      * <p>The name of the access control policy.</p>
-     * <br>
      * <p>The name must be 1 to 128 characters in length. The name can contain letters, digits, and hyphens (-) and must start with a letter.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ExampleControlPolicy</p>
      */
     @NameInMap("PolicyName")
     public String policyName;
+
+    @NameInMap("Tag")
+    public java.util.List<CreateControlPolicyRequestTag> tag;
 
     public static CreateControlPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateControlPolicyRequest self = new CreateControlPolicyRequest();
@@ -75,6 +87,44 @@ public class CreateControlPolicyRequest extends TeaModel {
     }
     public String getPolicyName() {
         return this.policyName;
+    }
+
+    public CreateControlPolicyRequest setTag(java.util.List<CreateControlPolicyRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateControlPolicyRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class CreateControlPolicyRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateControlPolicyRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateControlPolicyRequestTag self = new CreateControlPolicyRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateControlPolicyRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateControlPolicyRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

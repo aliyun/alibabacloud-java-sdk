@@ -6,37 +6,47 @@ import com.aliyun.tea.*;
 public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Valid values: 1 to 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that is used to start the next query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The Alibaba Cloud account IDs of the members. This parameter specifies a filter condition for the query.</p>
-     * <br>
-     * <p>> If you want to query the tags that are added to the members in a resource directory, you must configure both the `ResourceId` and `ResourceType` parameters and set the `ResourceType` parameter to `Account` in your request.</p>
+     * <blockquote>
+     * <p>If you want to query the tags that are added to the members in a resource directory, you must configure both the <code>ResourceId</code> and <code>ResourceType</code> parameters and set the <code>ResourceType</code> parameter to <code>Account</code> in your request.</p>
+     * </blockquote>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
      * <p>The type of the objects whose tags you want to query. This parameter specifies a filter condition for the query. Valid values:</p>
-     * <br>
-     * <p>*   Account: member</p>
+     * <ul>
+     * <li>Account: member</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Account</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The tags. This parameter specifies a filter condition for the query.</p>
-     * <br>
      * <p>You can specify a maximum of 20 tags.</p>
      */
     @NameInMap("Tag")
@@ -90,12 +100,18 @@ public class ListTagResourcesRequest extends TeaModel {
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("Value")
         public String value;

@@ -6,28 +6,41 @@ import com.aliyun.tea.*;
 public class ListMessageContactsRequest extends TeaModel {
     /**
      * <p>The ID of the contact.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-qL4HqKONzOM7****</p>
      */
     @NameInMap("ContactId")
     public String contactId;
 
     /**
      * <p>The ID of the object to which the contact is bound. Valid values:</p>
-     * <br>
-     * <p>*   ID of the resource directory</p>
-     * <p>*   ID of the folder</p>
-     * <p>*   ID of the member</p>
+     * <ul>
+     * <li>ID of the resource directory</li>
+     * <li>ID of the folder</li>
+     * <li>ID of the member</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>fd-ZDNPiT****</p>
      */
     @NameInMap("Member")
     public String member;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

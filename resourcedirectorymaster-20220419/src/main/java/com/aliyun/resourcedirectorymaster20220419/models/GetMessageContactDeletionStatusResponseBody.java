@@ -12,6 +12,9 @@ public class GetMessageContactDeletionStatusResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>95060F1D-6990-4645-8920-A81D1BBFE992</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class GetMessageContactDeletionStatusResponseBody extends TeaModel {
     public static class GetMessageContactDeletionStatusResponseBodyContactDeletionStatusFailReasonList extends TeaModel {
         /**
          * <p>The Alibaba Cloud account ID of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>199796839435****</p>
          */
         @NameInMap("AccountId")
         public String accountId;
@@ -76,6 +82,9 @@ public class GetMessageContactDeletionStatusResponseBody extends TeaModel {
     public static class GetMessageContactDeletionStatusResponseBodyContactDeletionStatus extends TeaModel {
         /**
          * <p>The ID of the contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-qL4HqKONzOM7****</p>
          */
         @NameInMap("ContactId")
         public String contactId;
@@ -88,9 +97,13 @@ public class GetMessageContactDeletionStatusResponseBody extends TeaModel {
 
         /**
          * <p>The deletion status of the contact. Valid values:</p>
-         * <br>
-         * <p>*   Deleting</p>
-         * <p>*   Failed</p>
+         * <ul>
+         * <li>Deleting</li>
+         * <li>Failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Deleting</p>
          */
         @NameInMap("Status")
         public String status;

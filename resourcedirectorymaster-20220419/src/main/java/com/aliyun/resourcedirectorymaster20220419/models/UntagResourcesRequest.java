@@ -6,35 +6,44 @@ import com.aliyun.tea.*;
 public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove all tags from the specified members. Valid values:</p>
-     * <br>
-     * <p>*   false (default value)</p>
-     * <p>*   true</p>
+     * <ul>
+     * <li>false (default value)</li>
+     * <li>true</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("All")
     public Boolean all;
 
     /**
      * <p>The Alibaba Cloud account IDs of the members.</p>
-     * <br>
      * <p>You can specify a maximum of 50 IDs.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
      * <p>The type of the objects from which you want to remove tags. Valid values:</p>
-     * <br>
-     * <p>*   Account: member</p>
+     * <ul>
+     * <li>Account: member</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Account</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The tag keys.</p>
-     * <br>
      * <p>You can specify a maximum of 20 tag keys.</p>
-     * <br>
-     * <p>> If you set the `All` parameter to `true`, you do not need to specify tag keys.</p>
+     * <blockquote>
+     * <p>If you set the <code>All</code> parameter to <code>true</code>, you do not need to specify tag keys.</p>
+     * </blockquote>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

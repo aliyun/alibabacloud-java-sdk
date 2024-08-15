@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class InviteAccountToResourceDirectoryRequest extends TeaModel {
     /**
      * <p>The description of the invitation.</p>
-     * <br>
      * <p>The description can be up to 1,024 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Welcome</p>
      */
     @NameInMap("Note")
     public String note;
 
     /**
      * <p>The ID of the parent folder.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-b1****</p>
      */
     @NameInMap("ParentFolderId")
     public String parentFolderId;
@@ -26,15 +31,24 @@ public class InviteAccountToResourceDirectoryRequest extends TeaModel {
 
     /**
      * <p>The ID or logon email address of the account that you want to invite.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
      */
     @NameInMap("TargetEntity")
     public String targetEntity;
 
     /**
      * <p>The type of the invited account. Valid values:</p>
-     * <br>
-     * <p>*   Account: indicates the ID of the account.</p>
-     * <p>*   Email: indicates the logon email address of the account.</p>
+     * <ul>
+     * <li>Account: indicates the ID of the account.</li>
+     * <li>Email: indicates the logon email address of the account.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Email</p>
      */
     @NameInMap("TargetType")
     public String targetType;
@@ -87,12 +101,18 @@ public class InviteAccountToResourceDirectoryRequest extends TeaModel {
     public static class InviteAccountToResourceDirectoryRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("Value")
         public String value;

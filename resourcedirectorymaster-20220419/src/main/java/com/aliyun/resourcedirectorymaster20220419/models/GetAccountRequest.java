@@ -6,15 +6,23 @@ import com.aliyun.tea.*;
 public class GetAccountRequest extends TeaModel {
     /**
      * <p>The Alibaba Cloud account ID of the member.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>181761095690****</p>
      */
     @NameInMap("AccountId")
     public String accountId;
 
     /**
      * <p>Specifies whether to return the information of tags. Valid values:</p>
-     * <br>
-     * <p>*   false (default value)</p>
-     * <p>*   true</p>
+     * <ul>
+     * <li>false (default value)</li>
+     * <li>true</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IncludeTags")
     public Boolean includeTags;

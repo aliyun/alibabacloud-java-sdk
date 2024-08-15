@@ -6,33 +6,43 @@ import com.aliyun.tea.*;
 public class ListAccountsRequest extends TeaModel {
     /**
      * <p>Specifies whether to return information about tags. Valid values:</p>
-     * <br>
-     * <p>*   false (default value)</p>
-     * <p>*   true</p>
+     * <ul>
+     * <li>false (default value)</li>
+     * <li>true</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IncludeTags")
     public Boolean includeTags;
 
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Valid values: 1 to 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The keyword used for the query, such as the display name of a member.</p>
-     * <br>
      * <p>Fuzzy match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Advance</p>
      */
     @NameInMap("QueryKeyword")
     public String queryKeyword;
@@ -91,12 +101,18 @@ public class ListAccountsRequest extends TeaModel {
     public static class ListAccountsRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag_key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag_value</p>
          */
         @NameInMap("Value")
         public String value;

@@ -6,14 +6,21 @@ import com.aliyun.tea.*;
 public class UpdateFolderRequest extends TeaModel {
     /**
      * <p>The ID of the folder.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fd-u8B321****</p>
      */
     @NameInMap("FolderId")
     public String folderId;
 
     /**
      * <p>The new name of the folder.</p>
-     * <br>
-     * <p>The name must be 1 to 24 characters in length and can contain letters, digits, underscores (\_), periods (.), and hyphens (-).</p>
+     * <p>The name must be 1 to 24 characters in length and can contain letters, digits, underscores (_), periods (.), and hyphens (-).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rdFolder</p>
      */
     @NameInMap("NewFolderName")
     public String newFolderName;
