@@ -10,18 +10,33 @@ public class ListIncidentsResponseBody extends TeaModel {
     @NameInMap("data")
     public java.util.List<ListIncidentsResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FD200FAE-E98F-496E-BFE6-4CE61E59A2E9</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("totalCount")
     public Integer totalCount;
 
@@ -76,6 +91,9 @@ public class ListIncidentsResponseBody extends TeaModel {
 
         /**
          * <p>代表创建时间的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21312</p>
          */
         @NameInMap("assignUserId")
         public Long assignUserId;
@@ -86,38 +104,61 @@ public class ListIncidentsResponseBody extends TeaModel {
         @NameInMap("assignUserName")
         public String assignUserName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1390000****</p>
+         */
         @NameInMap("assignUserPhone")
         public String assignUserPhone;
 
         /**
          * <p>事件级别</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-1 00:00:00</p>
          */
         @NameInMap("createTime")
         public String createTime;
 
         /**
          * <p>时间指派人ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HIGH</p>
          */
         @NameInMap("effect")
         public String effect;
 
         /**
          * <p>修改时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12321</p>
          */
         @NameInMap("incidentId")
         public Long incidentId;
 
         /**
          * <p>影响程度</p>
+         * 
+         * <strong>example:</strong>
+         * <p>P4</p>
          */
         @NameInMap("incidentLevel")
         public String incidentLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>I3000021</p>
+         */
         @NameInMap("incidentNumber")
         public String incidentNumber;
 
         /**
          * <p>关联流转规则ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RESPONDED</p>
          */
         @NameInMap("incidentStatus")
         public String incidentStatus;
@@ -128,6 +169,10 @@ public class ListIncidentsResponseBody extends TeaModel {
         @NameInMap("incidentTitle")
         public String incidentTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isManual")
         public Boolean isManual;
 
@@ -139,6 +184,9 @@ public class ListIncidentsResponseBody extends TeaModel {
 
         /**
          * <p>事件状态</p>
+         * 
+         * <strong>example:</strong>
+         * <p>213123</p>
          */
         @NameInMap("relatedServiceId")
         public Long relatedServiceId;
@@ -148,6 +196,9 @@ public class ListIncidentsResponseBody extends TeaModel {
 
         /**
          * <p>关联的服务ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("routeRuleId")
         public Long routeRuleId;

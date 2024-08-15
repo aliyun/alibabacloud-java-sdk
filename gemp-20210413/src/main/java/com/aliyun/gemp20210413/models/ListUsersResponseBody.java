@@ -10,18 +10,33 @@ public class ListUsersResponseBody extends TeaModel {
     @NameInMap("data")
     public java.util.List<ListUsersResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Long pageSize;
 
     /**
      * <p>id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c26f36de-1ec8-496a-a828-880676c5ef81</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -71,15 +86,40 @@ public class ListUsersResponseBody extends TeaModel {
     }
 
     public static class ListUsersResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>SUB</p>
+         */
         @NameInMap("accountType")
         public Long accountType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>23456tre</p>
+         */
         @NameInMap("appAccount")
         public String appAccount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2345****@qq.com</p>
+         */
         @NameInMap("email")
         public String email;
 
+        @NameInMap("gmtActive")
+        public String gmtActive;
+
+        @NameInMap("gmtCreate")
+        public String gmtCreate;
+
+        @NameInMap("isActive")
+        public Long isActive;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isEditableUser")
         public Long isEditableUser;
 
@@ -89,18 +129,44 @@ public class ListUsersResponseBody extends TeaModel {
         @NameInMap("isRam")
         public Integer isRam;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RELATED关联  NOT_RELATED 未关联</p>
+         */
         @NameInMap("isRelated")
         public String isRelated;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1390000****</p>
+         */
         @NameInMap("phone")
         public String phone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>53624523</p>
+         */
         @NameInMap("ramId")
         public Long ramId;
 
+        @NameInMap("roleIdList")
+        public java.util.List<Long> roleIdList;
+
+        @NameInMap("roleNameList")
+        public java.util.List<String> roleNameList;
+
+        /**
+         * <strong>example:</strong>
+         * <p>DINGDING</p>
+         */
         @NameInMap("synergyChannel")
         public String synergyChannel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("userId")
         public Long userId;
 
@@ -134,6 +200,30 @@ public class ListUsersResponseBody extends TeaModel {
         }
         public String getEmail() {
             return this.email;
+        }
+
+        public ListUsersResponseBodyData setGmtActive(String gmtActive) {
+            this.gmtActive = gmtActive;
+            return this;
+        }
+        public String getGmtActive() {
+            return this.gmtActive;
+        }
+
+        public ListUsersResponseBodyData setGmtCreate(String gmtCreate) {
+            this.gmtCreate = gmtCreate;
+            return this;
+        }
+        public String getGmtCreate() {
+            return this.gmtCreate;
+        }
+
+        public ListUsersResponseBodyData setIsActive(Long isActive) {
+            this.isActive = isActive;
+            return this;
+        }
+        public Long getIsActive() {
+            return this.isActive;
         }
 
         public ListUsersResponseBodyData setIsEditableUser(Long isEditableUser) {
@@ -182,6 +272,22 @@ public class ListUsersResponseBody extends TeaModel {
         }
         public Long getRamId() {
             return this.ramId;
+        }
+
+        public ListUsersResponseBodyData setRoleIdList(java.util.List<Long> roleIdList) {
+            this.roleIdList = roleIdList;
+            return this;
+        }
+        public java.util.List<Long> getRoleIdList() {
+            return this.roleIdList;
+        }
+
+        public ListUsersResponseBodyData setRoleNameList(java.util.List<String> roleNameList) {
+            this.roleNameList = roleNameList;
+            return this;
+        }
+        public java.util.List<String> getRoleNameList() {
+            return this.roleNameList;
         }
 
         public ListUsersResponseBodyData setSynergyChannel(String synergyChannel) {

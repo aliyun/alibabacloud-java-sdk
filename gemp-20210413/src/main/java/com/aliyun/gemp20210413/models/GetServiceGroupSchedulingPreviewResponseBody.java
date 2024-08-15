@@ -9,6 +9,9 @@ public class GetServiceGroupSchedulingPreviewResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxxxxx</p>
      */
     @NameInMap("requestId")
     public String requestId;

@@ -12,6 +12,9 @@ public class ListProblemSubtotalsResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4361a0e1-6747-4834-96ce-0S4840fd3812</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -41,12 +44,24 @@ public class ListProblemSubtotalsResponseBody extends TeaModel {
         @NameInMap("createRamName")
         public String createRamName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-10-02 00:00:00</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123123</p>
+         */
         @NameInMap("createUserId")
         public Long createUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>130****11111</p>
+         */
         @NameInMap("createUserPhone")
         public String createUserPhone;
 

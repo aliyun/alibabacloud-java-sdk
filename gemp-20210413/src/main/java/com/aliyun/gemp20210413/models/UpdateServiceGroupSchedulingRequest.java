@@ -4,18 +4,38 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class UpdateServiceGroupSchedulingRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>C4BE3837-1A13-413B-A225-2C88188E8A43</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>HOUR</p>
+     */
     @NameInMap("fastScheduling")
     public UpdateServiceGroupSchedulingRequestFastScheduling fastScheduling;
 
     @NameInMap("fineScheduling")
     public UpdateServiceGroupSchedulingRequestFineScheduling fineScheduling;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FAST</p>
+     */
     @NameInMap("schedulingWay")
     public String schedulingWay;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("serviceGroupId")
     public Long serviceGroupId;
 
@@ -68,9 +88,17 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
         @NameInMap("schedulingObjectType")
         public String schedulingObjectType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("schedulingOrder")
         public Integer schedulingOrder;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6666</p>
+         */
         @NameInMap("schedulingUserId")
         public Long schedulingUserId;
 
@@ -117,18 +145,34 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
     }
 
     public static class UpdateServiceGroupSchedulingRequestFastScheduling extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>FAST_CHOICE</p>
+         */
         @NameInMap("dutyPlan")
         public String dutyPlan;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("id")
         public Long id;
 
         @NameInMap("schedulingUsers")
         public java.util.List<UpdateServiceGroupSchedulingRequestFastSchedulingSchedulingUsers> schedulingUsers;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("singleDuration")
         public Integer singleDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DAY</p>
+         */
         @NameInMap("singleDurationUnit")
         public String singleDurationUnit;
 
@@ -180,30 +224,58 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
     }
 
     public static class UpdateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("cycleOrder")
         public Integer cycleOrder;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-10-13</p>
+         */
         @NameInMap("schedulingEndTime")
         public String schedulingEndTime;
 
         @NameInMap("schedulingObjectType")
         public String schedulingObjectType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("schedulingOrder")
         public Long schedulingOrder;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-08-13</p>
+         */
         @NameInMap("schedulingStartTime")
         public String schedulingStartTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("schedulingUserId")
         public Long schedulingUserId;
 
         @NameInMap("schedulingUserIdList")
         public java.util.List<Long> schedulingUserIdList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>早班</p>
+         */
         @NameInMap("shiftName")
         public String shiftName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("skipOneDay")
         public Boolean skipOneDay;
 
@@ -287,18 +359,34 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
     }
 
     public static class UpdateServiceGroupSchedulingRequestFineSchedulingSchedulingTemplateFineShifts extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-11-01 00:00：00</p>
+         */
         @NameInMap("schedulingEndTime")
         public String schedulingEndTime;
 
         @NameInMap("schedulingObjectType")
         public String schedulingObjectType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("schedulingOrder")
         public Integer schedulingOrder;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-10-01 00:00：00</p>
+         */
         @NameInMap("schedulingStartTime")
         public String schedulingStartTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("schedulingUserId")
         public Long schedulingUserId;
 
@@ -308,6 +396,10 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
         @NameInMap("shiftName")
         public String shiftName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("skipOneDay")
         public Boolean skipOneDay;
 
@@ -383,12 +475,24 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
     }
 
     public static class UpdateServiceGroupSchedulingRequestFineScheduling extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("period")
         public Integer period;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DAY</p>
+         */
         @NameInMap("periodUnit")
         public String periodUnit;
 
@@ -398,6 +502,10 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
         @NameInMap("schedulingTemplateFineShifts")
         public java.util.List<UpdateServiceGroupSchedulingRequestFineSchedulingSchedulingTemplateFineShifts> schedulingTemplateFineShifts;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MORNING_NIGHT</p>
+         */
         @NameInMap("shiftType")
         public String shiftType;
 

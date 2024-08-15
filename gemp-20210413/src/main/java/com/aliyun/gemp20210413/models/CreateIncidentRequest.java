@@ -4,32 +4,55 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class CreateIncidentRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>12312</p>
+     */
     @NameInMap("assignUserId")
     public Long assignUserId;
 
     @NameInMap("channels")
     public java.util.List<String> channels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2b63cdef-7ac3-4892-a76d-0f3389ef729f</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>LOW</p>
+     */
     @NameInMap("effect")
     public String effect;
 
     @NameInMap("incidentDescription")
     public String incidentDescription;
 
+    /**
+     * <strong>example:</strong>
+     * <p>P1</p>
+     */
     @NameInMap("incidentLevel")
     public String incidentLevel;
 
     @NameInMap("incidentTitle")
     public String incidentTitle;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12312</p>
+     */
     @NameInMap("relatedServiceId")
     public Long relatedServiceId;
 
     /**
      * <p>12000</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12312</p>
      */
     @NameInMap("serviceGroupId")
     public Long serviceGroupId;

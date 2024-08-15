@@ -7,15 +7,31 @@ public class ListAlertsResponseBody extends TeaModel {
     @NameInMap("data")
     public java.util.List<ListAlertsResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C4BE3837-1A13-413B-A225-2C88188E8A43</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -65,21 +81,45 @@ public class ListAlertsResponseBody extends TeaModel {
     }
 
     public static class ListAlertsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>20000</p>
+         */
         @NameInMap("alertId")
         public Long alertId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>P1</p>
+         */
         @NameInMap("alertLevel")
         public String alertLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>A123123123</p>
+         */
         @NameInMap("alertNumber")
         public String alertNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zabbix</p>
+         */
         @NameInMap("alertSourceName")
         public String alertSourceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-03-05 15:53:55</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-09-08 18:30:00</p>
+         */
         @NameInMap("firstEventTime")
         public String firstEventTime;
 
@@ -89,21 +129,41 @@ public class ListAlertsResponseBody extends TeaModel {
         @NameInMap("relServiceDeleteType")
         public Integer relServiceDeleteType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>服务A</p>
+         */
         @NameInMap("relatedServiceName")
         public String relatedServiceName;
 
         @NameInMap("routeRuleDeleteType")
         public Integer routeRuleDeleteType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("routeRuleId")
         public Long routeRuleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>流转规则</p>
+         */
         @NameInMap("routeRuleName")
         public String routeRuleName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("sourceEventCount")
         public Long sourceEventCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>报警</p>
+         */
         @NameInMap("title")
         public String title;
 

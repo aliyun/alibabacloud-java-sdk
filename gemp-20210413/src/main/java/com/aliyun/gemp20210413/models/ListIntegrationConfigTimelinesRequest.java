@@ -4,15 +4,31 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListIntegrationConfigTimelinesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>601FA6A2-AC5C-4B59-BE11-378F887A6A11</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>101</p>
+     */
     @NameInMap("integrationConfigId")
     public Long integrationConfigId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Long pageSize;
 

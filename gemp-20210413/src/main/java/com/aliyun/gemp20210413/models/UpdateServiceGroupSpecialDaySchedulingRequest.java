@@ -4,15 +4,34 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class UpdateServiceGroupSpecialDaySchedulingRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>C4BE3837-1A13-413B-A225-2C88188E8A43</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-08-19</p>
+     */
     @NameInMap("schedulingDate")
     public String schedulingDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("schedulingSpecialDays")
     public java.util.List<UpdateServiceGroupSpecialDaySchedulingRequestSchedulingSpecialDays> schedulingSpecialDays;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6666</p>
+     */
     @NameInMap("serviceGroupId")
     public Long serviceGroupId;
 
@@ -54,18 +73,40 @@ public class UpdateServiceGroupSpecialDaySchedulingRequest extends TeaModel {
     }
 
     public static class UpdateServiceGroupSpecialDaySchedulingRequestSchedulingSpecialDays extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-08-19 12:00:00</p>
+         */
         @NameInMap("schedulingEndTime")
         public String schedulingEndTime;
 
         @NameInMap("schedulingObjectType")
         public String schedulingObjectType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("schedulingOrder")
         public Integer schedulingOrder;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-08-19 08:00:00</p>
+         */
         @NameInMap("schedulingStartTime")
         public String schedulingStartTime;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64</p>
+         */
         @NameInMap("schedulingUserId")
         public Long schedulingUserId;
 

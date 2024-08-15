@@ -6,13 +6,24 @@ import com.aliyun.tea.*;
 public class UpdateIntegrationConfigRequest extends TeaModel {
     /**
      * <p>accessKey</p>
+     * 
+     * <strong>example:</strong>
+     * <p>601FA6A2-AC5C-4B59-BE11-378F887A6A11</p>
      */
     @NameInMap("accessKey")
     public String accessKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>601FA6A2-AC5C-4B59-BE11-378F987A6A98</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>103</p>
+     */
     @NameInMap("integrationConfigId")
     public Long integrationConfigId;
 

@@ -4,17 +4,32 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListAlertsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>P1</p>
+     */
     @NameInMap("alertLevel")
     public String alertLevel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>报警</p>
+     */
     @NameInMap("alertName")
     public String alertName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>流转规则A</p>
+     */
     @NameInMap("alertSourceName")
     public String alertSourceName;
 
     /**
      * <p>2020-09-10 21:00:00</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-10-01 23:59:59</p>
      */
     @NameInMap("endTime")
     public String endTime;
@@ -22,20 +37,39 @@ public class ListAlertsRequest extends TeaModel {
     @NameInMap("monitorSourceId")
     public String monitorSourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("relatedServiceId")
     public Long relatedServiceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zabbix</p>
+     */
     @NameInMap("ruleName")
     public String ruleName;
 
     /**
      * <p>2020-09-10 13:00:00</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-10-01 00:00:00</p>
      */
     @NameInMap("startTime")
     public String startTime;

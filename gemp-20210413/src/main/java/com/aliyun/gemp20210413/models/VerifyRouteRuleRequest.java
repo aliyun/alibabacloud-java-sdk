@@ -4,6 +4,10 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class VerifyRouteRuleRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1111</p>
+     */
     @NameInMap("routeRuleId")
     public Long routeRuleId;
 
@@ -32,15 +36,31 @@ public class VerifyRouteRuleRequest extends TeaModel {
     }
 
     public static class VerifyRouteRuleRequestTestSourceEvents extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("eventJson")
         public String eventJson;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-09-08 13:00:00</p>
+         */
         @NameInMap("eventTime")
         public String eventTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("monitorSourceId")
         public Long monitorSourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zabbix</p>
+         */
         @NameInMap("monitorSourceName")
         public String monitorSourceName;
 

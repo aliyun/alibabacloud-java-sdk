@@ -4,24 +4,48 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetProblemPreviewRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>4361a0e1-6747-4834-96ce-0c4840f13812</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
     @NameInMap("effectServiceIds")
     public java.util.List<Long> effectServiceIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>213123</p>
+     */
     @NameInMap("incidentId")
     public Long incidentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12312</p>
+     */
     @NameInMap("problemId")
     public Long problemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>P2</p>
+     */
     @NameInMap("problemLevel")
     public String problemLevel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PROBLEM_NOTIFY</p>
+     */
     @NameInMap("problemNotifyType")
     public String problemNotifyType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21312</p>
+     */
     @NameInMap("relatedServiceId")
     public Long relatedServiceId;
 

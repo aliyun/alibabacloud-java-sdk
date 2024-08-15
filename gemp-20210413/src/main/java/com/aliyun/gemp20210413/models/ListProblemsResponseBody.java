@@ -7,18 +7,33 @@ public class ListProblemsResponseBody extends TeaModel {
     @NameInMap("data")
     public java.util.List<ListProblemsResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Long pageSize;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C4BE3837-1A13-413B-A225-2C88188E8A43</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -68,15 +83,31 @@ public class ListProblemsResponseBody extends TeaModel {
     }
 
     public static class ListProblemsResponseBodyDataAffectServices extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>服务描述</p>
+         */
         @NameInMap("serviceDescription")
         public String serviceDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("serviceId")
         public Long serviceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>冲上云霄</p>
+         */
         @NameInMap("serviceName")
         public String serviceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-09-08 15:59:59</p>
+         */
         @NameInMap("updateTime")
         public String updateTime;
 
@@ -123,66 +154,142 @@ public class ListProblemsResponseBody extends TeaModel {
         @NameInMap("affectServices")
         public java.util.List<ListProblemsResponseBodyDataAffectServices> affectServices;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-09-08 15:59:59</p>
+         */
         @NameInMap("cancelTime")
         public String cancelTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-09-08 15:59:59</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-09-08 15:59:59</p>
+         */
         @NameInMap("discoverTime")
         public String discoverTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-09-08 15:59:59</p>
+         */
         @NameInMap("finishTime")
         public String finishTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("incidentId")
         public Long incidentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isManual")
         public Boolean isManual;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isUpgrade")
         public Boolean isUpgrade;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("mainHandlerId")
         public Long mainHandlerId;
 
         @NameInMap("mainHandlerIsValid")
         public Long mainHandlerIsValid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>王宇</p>
+         */
         @NameInMap("mainHandlerName")
         public String mainHandlerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("problemId")
         public Long problemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>P1</p>
+         */
         @NameInMap("problemLevel")
         public String problemLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>故障</p>
+         */
         @NameInMap("problemName")
         public String problemName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>P34438300000001116258132229577472</p>
+         */
         @NameInMap("problemNumber")
         public String problemNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HANDLING</p>
+         */
         @NameInMap("problemStatus")
         public String problemStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-09-08 15:59:59</p>
+         */
         @NameInMap("recoveryTime")
         public String recoveryTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("relatedServiceId")
         public String relatedServiceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-09-08 15:59:59</p>
+         */
         @NameInMap("replayTime")
         public String replayTime;
 
         @NameInMap("serviceDeletedType")
         public Integer serviceDeletedType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>服务1</p>
+         */
         @NameInMap("serviceName")
         public String serviceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-09-08 15:59:59</p>
+         */
         @NameInMap("updateTime")
         public String updateTime;
 

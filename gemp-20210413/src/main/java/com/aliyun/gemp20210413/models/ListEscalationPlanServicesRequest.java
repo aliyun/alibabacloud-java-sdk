@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListEscalationPlanServicesRequest extends TeaModel {
     /**
      * <p>clientToken</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A5A1FEAE-9C47-011C-9C73-A376BC2REQUEST</p>
      */
     @NameInMap("clientToken")
     public String clientToken;

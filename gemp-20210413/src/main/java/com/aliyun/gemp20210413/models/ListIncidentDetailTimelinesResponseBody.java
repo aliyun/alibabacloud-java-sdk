@@ -10,14 +10,25 @@ public class ListIncidentDetailTimelinesResponseBody extends TeaModel {
     @NameInMap("data")
     public java.util.List<ListIncidentDetailTimelinesResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FD200FAE-E98F-496E-BFE6-4CE61E59A2E9</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -71,6 +82,10 @@ public class ListIncidentDetailTimelinesResponseBody extends TeaModel {
     }
 
     public static class ListIncidentDetailTimelinesResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>INCIDENT_ADD</p>
+         */
         @NameInMap("action")
         public String action;
 

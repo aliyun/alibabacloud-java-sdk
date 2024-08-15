@@ -12,6 +12,9 @@ public class CreateUserResponseBody extends TeaModel {
 
     /**
      * <p>id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c26f36de-1ec8-496a-a828-880676c5ef81</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -38,6 +41,10 @@ public class CreateUserResponseBody extends TeaModel {
     }
 
     public static class CreateUserResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("userId")
         public Long userId;
 

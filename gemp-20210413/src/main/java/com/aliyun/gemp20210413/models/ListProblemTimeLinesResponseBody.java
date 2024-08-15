@@ -9,6 +9,9 @@ public class ListProblemTimeLinesResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C4BE3837-1A13-413B-A225-2C88188E8A43</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -38,9 +41,17 @@ public class ListProblemTimeLinesResponseBody extends TeaModel {
         @NameInMap("isValid")
         public Long isValid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>232</p>
+         */
         @NameInMap("userId")
         public Long userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>张老萨</p>
+         */
         @NameInMap("username")
         public String username;
 
@@ -76,24 +87,52 @@ public class ListProblemTimeLinesResponseBody extends TeaModel {
     }
 
     public static class ListProblemTimeLinesResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>内容</p>
+         */
         @NameInMap("content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-08-08 15:38:38</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isKey")
         public Boolean isKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PROBLEM_INJECTION,PROBLEM_HAPPEN</p>
+         */
         @NameInMap("keyNode")
         public String keyNode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("problemTimelineId")
         public Long problemTimelineId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-08-08 15:38:38</p>
+         */
         @NameInMap("time")
         public String time;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-08-08 15:38:38</p>
+         */
         @NameInMap("updateTime")
         public String updateTime;
 

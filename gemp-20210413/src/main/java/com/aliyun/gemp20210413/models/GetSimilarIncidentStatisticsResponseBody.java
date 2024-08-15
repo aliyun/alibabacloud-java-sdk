@@ -12,6 +12,9 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
 
     /**
      * <p>id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7C56D225-7C34-40BB-9624-C8BA449260E6</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -38,45 +41,101 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
     }
 
     public static class GetSimilarIncidentStatisticsResponseBodyDataDailySimilarIncidentsSimilarIncidents extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>433</p>
+         */
         @NameInMap("assignUserId")
         public Long assignUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>张老三</p>
+         */
         @NameInMap("assignUserName")
         public String assignUserName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-09-09 09:09:09</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6789765678</p>
+         */
         @NameInMap("durationTime")
         public Long durationTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("finishReason")
         public Long finishReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xx原因</p>
+         */
         @NameInMap("finishReasonDescription")
         public String finishReasonDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx方案</p>
+         */
         @NameInMap("finishSolutionDescription")
         public String finishSolutionDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("incidentFinishSolution")
         public Long incidentFinishSolution;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5435</p>
+         */
         @NameInMap("incidentId")
         public Long incidentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>I234432</p>
+         */
         @NameInMap("incidentNumber")
         public String incidentNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>线性代数发多少</p>
+         */
         @NameInMap("incidentTitle")
         public String incidentTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>334</p>
+         */
         @NameInMap("relatedRouteRuleId")
         public Long relatedRouteRuleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx规则</p>
+         */
         @NameInMap("relatedRouteRuleName")
         public String relatedRouteRuleName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1003.567</p>
+         */
         @NameInMap("similarScore")
         public String similarScore;
 
@@ -200,21 +259,41 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
     }
 
     public static class GetSimilarIncidentStatisticsResponseBodyDataDailySimilarIncidents extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("commitment")
         public Long commitment;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-03-07</p>
+         */
         @NameInMap("date")
         public String date;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("day")
         public Long day;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("month")
         public Long month;
 
         @NameInMap("similarIncidents")
         public java.util.List<GetSimilarIncidentStatisticsResponseBodyDataDailySimilarIncidentsSimilarIncidents> similarIncidents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("week")
         public String week;
 
@@ -274,45 +353,101 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
     }
 
     public static class GetSimilarIncidentStatisticsResponseBodyDataTopFiveIncidents extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>43</p>
+         */
         @NameInMap("assignUserId")
         public String assignUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>张老三</p>
+         */
         @NameInMap("assignUserName")
         public String assignUserName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-09-09 09:09:09</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6787678767</p>
+         */
         @NameInMap("durationTime")
         public Long durationTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("finishReason")
         public Long finishReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxx原因</p>
+         */
         @NameInMap("finishReasonDescription")
         public String finishReasonDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx方案</p>
+         */
         @NameInMap("finishSolutionDescription")
         public String finishSolutionDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("incidentFinishSolution")
         public Long incidentFinishSolution;
 
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("incidentId")
         public Long incidentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>I34324</p>
+         */
         @NameInMap("incidentNumber")
         public String incidentNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx事件</p>
+         */
         @NameInMap("incidentTitle")
         public String incidentTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4343</p>
+         */
         @NameInMap("relatedRouteRuleId")
         public Long relatedRouteRuleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("relatedRouteRuleName")
         public String relatedRouteRuleName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1992.21</p>
+         */
         @NameInMap("similarScore")
         public String similarScore;
 
@@ -436,17 +571,32 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
     }
 
     public static class GetSimilarIncidentStatisticsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("countInSevenDays")
         public Long countInSevenDays;
 
+        /**
+         * <strong>example:</strong>
+         * <p>43</p>
+         */
         @NameInMap("countInSixMonths")
         public Long countInSixMonths;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("dailySimilarIncidents")
         public java.util.List<GetSimilarIncidentStatisticsResponseBodyDataDailySimilarIncidents> dailySimilarIncidents;
 
         /**
          * <p>id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>uyihg6789</p>
          */
         @NameInMap("requestId")
         public String requestId;

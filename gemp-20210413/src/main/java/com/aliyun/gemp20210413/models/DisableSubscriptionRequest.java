@@ -4,6 +4,10 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class DisableSubscriptionRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>89</p>
+     */
     @NameInMap("subscriptionId")
     public Long subscriptionId;
 

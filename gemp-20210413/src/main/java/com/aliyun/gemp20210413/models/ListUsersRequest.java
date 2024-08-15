@@ -6,28 +6,59 @@ import com.aliyun.tea.*;
 public class ListUsersRequest extends TeaModel {
     /**
      * <p>clientToken</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c26f36de-1ec8-496a-a828-880676c5ef81</p>
      */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1887879****</p>
+     */
     @NameInMap("phone")
     public String phone;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1344383</p>
+     */
     @NameInMap("ramId")
     public String ramId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>USER_LIST</p>
+     */
     @NameInMap("scene")
     public Long scene;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DINGDING</p>
+     */
     @NameInMap("synergyChannel")
     public String synergyChannel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>张三</p>
+     */
     @NameInMap("username")
     public String username;
 

@@ -4,11 +4,18 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("data")
     public CreateServiceResponseBodyData data;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C4BE3837-1A13-413B-A225-2C88188E8A43</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -35,6 +42,10 @@ public class CreateServiceResponseBody extends TeaModel {
     }
 
     public static class CreateServiceResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("serviceId")
         public Long serviceId;
 

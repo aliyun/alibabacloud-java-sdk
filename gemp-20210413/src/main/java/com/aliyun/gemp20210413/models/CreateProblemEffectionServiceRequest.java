@@ -6,25 +6,50 @@ import com.aliyun.tea.*;
 public class CreateProblemEffectionServiceRequest extends TeaModel {
     /**
      * <p>clientToken</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e0b6735e-1a04-4d6b-a625-d2350612492c</p>
      */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>erdwcdc</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>P2</p>
+     */
     @NameInMap("level")
     public String level;
 
     @NameInMap("pictureUrl")
     public java.util.List<String> pictureUrl;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>150000000</p>
+     */
     @NameInMap("problemId")
     public Long problemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>170000000</p>
+     */
     @NameInMap("serviceId")
     public Long serviceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UN_RECOVERED</p>
+     */
     @NameInMap("status")
     public String status;
 

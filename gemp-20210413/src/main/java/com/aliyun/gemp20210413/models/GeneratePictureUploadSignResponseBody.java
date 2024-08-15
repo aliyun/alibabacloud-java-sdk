@@ -12,6 +12,9 @@ public class GeneratePictureUploadSignResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e2d4306a-bf4d-4345-9ae6-158223c85dbd</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -38,17 +41,32 @@ public class GeneratePictureUploadSignResponseBody extends TeaModel {
     }
 
     public static class GeneratePictureUploadSignResponseBodyDataFiles extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>文件A</p>
+         */
         @NameInMap("fileName")
         public String fileName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("fileSize")
         public Long fileSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>JPG</p>
+         */
         @NameInMap("fileType")
         public String fileType;
 
         /**
          * <p>oss key</p>
+         * 
+         * <strong>example:</strong>
+         * <p>problem/25a2316c-b08d-41a5-9f41-b3185d529277</p>
          */
         @NameInMap("key")
         public String key;
@@ -95,12 +113,18 @@ public class GeneratePictureUploadSignResponseBody extends TeaModel {
     public static class GeneratePictureUploadSignResponseBodyData extends TeaModel {
         /**
          * <p>accessKeyId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LTAI1tEoRVPw8GMy1iLRCno7</p>
          */
         @NameInMap("accessKeyId")
         public String accessKeyId;
 
         /**
          * <p>oss bucket name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gam-objects-bucket</p>
          */
         @NameInMap("bucketName")
         public String bucketName;
@@ -113,18 +137,27 @@ public class GeneratePictureUploadSignResponseBody extends TeaModel {
 
         /**
          * <p>policy</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJleHBpcmF0aW9uIjoiMjAyMS0wNy0xM1QwNDowOTo0NS4yODJaIiwiY29uZGl0aW9ucyI6W1siY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsMTA0ODU3NjAwXSxbInN0YXJ0cy13aXRoIiwiJGtleSIsInByb2JsZW0iXV19</p>
          */
         @NameInMap("policy")
         public String policy;
 
         /**
          * <p>signature</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SHqvIkwUNQd8Hervklir2K8U+ts=</p>
          */
         @NameInMap("signature")
         public String signature;
 
         /**
          * <p>url</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://gam-objects-bucket.oss-cn-shanghai.aliyuncs.com">https://gam-objects-bucket.oss-cn-shanghai.aliyuncs.com</a></p>
          */
         @NameInMap("url")
         public String url;

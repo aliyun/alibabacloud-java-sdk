@@ -9,6 +9,9 @@ public class GetServiceResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C4BE3837-1A13-413B-A225-2C88188E8A43</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -35,15 +38,35 @@ public class GetServiceResponseBody extends TeaModel {
     }
 
     public static class GetServiceResponseBodyData extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("escalationPlanId")
+        public Long escalationPlanId;
+
         @NameInMap("serviceDescription")
         public String serviceDescription;
 
+        @NameInMap("serviceGroupIdList")
+        public java.util.List<Long> serviceGroupIdList;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("serviceId")
         public Long serviceId;
 
         @NameInMap("serviceName")
         public String serviceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-03-08 12:53:53</p>
+         */
         @NameInMap("updateTime")
         public String updateTime;
 
@@ -52,12 +75,28 @@ public class GetServiceResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetServiceResponseBodyData setEscalationPlanId(Long escalationPlanId) {
+            this.escalationPlanId = escalationPlanId;
+            return this;
+        }
+        public Long getEscalationPlanId() {
+            return this.escalationPlanId;
+        }
+
         public GetServiceResponseBodyData setServiceDescription(String serviceDescription) {
             this.serviceDescription = serviceDescription;
             return this;
         }
         public String getServiceDescription() {
             return this.serviceDescription;
+        }
+
+        public GetServiceResponseBodyData setServiceGroupIdList(java.util.List<Long> serviceGroupIdList) {
+            this.serviceGroupIdList = serviceGroupIdList;
+            return this;
+        }
+        public java.util.List<Long> getServiceGroupIdList() {
+            return this.serviceGroupIdList;
         }
 
         public GetServiceResponseBodyData setServiceId(Long serviceId) {

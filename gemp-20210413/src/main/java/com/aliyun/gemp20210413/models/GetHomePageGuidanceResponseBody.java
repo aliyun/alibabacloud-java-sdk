@@ -9,6 +9,9 @@ public class GetHomePageGuidanceResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxx</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -35,15 +38,31 @@ public class GetHomePageGuidanceResponseBody extends TeaModel {
     }
 
     public static class GetHomePageGuidanceResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("notifySubscriptionStatus")
         public Boolean notifySubscriptionStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("serviceGroupStatus")
         public Boolean serviceGroupStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("serviceStatus")
         public Boolean serviceStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("usersStatus")
         public Boolean usersStatus;
 

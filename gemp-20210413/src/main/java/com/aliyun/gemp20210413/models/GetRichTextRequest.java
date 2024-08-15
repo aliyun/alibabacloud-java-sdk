@@ -4,12 +4,24 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetRichTextRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>INCIDENT 事件 ALERT告警 PROBLEM故障</p>
+     */
     @NameInMap("instanceId")
     public Long instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>INCIDENT</p>
+     */
     @NameInMap("instanceType")
     public String instanceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12221才</p>
+     */
     @NameInMap("richTextId")
     public Long richTextId;
 

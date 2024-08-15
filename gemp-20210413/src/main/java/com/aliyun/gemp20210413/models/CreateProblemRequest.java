@@ -7,42 +7,94 @@ public class CreateProblemRequest extends TeaModel {
     @NameInMap("affectServiceIds")
     public java.util.List<Long> affectServiceIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E789D869-DB13-4913-BAA8-A1F56F94B94D</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-10-02 00:00:00</p>
+     */
     @NameInMap("discoverTime")
     public String discoverTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123221</p>
+     */
     @NameInMap("incidentId")
     public Long incidentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>32121</p>
+     */
     @NameInMap("mainHandlerId")
     public Long mainHandlerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>初步原因</p>
+     */
     @NameInMap("preliminaryReason")
     public String preliminaryReason;
 
+    /**
+     * <strong>example:</strong>
+     * <p>P2</p>
+     */
     @NameInMap("problemLevel")
     public String problemLevel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>故障A</p>
+     */
     @NameInMap("problemName")
     public String problemName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PROBLEM_NOTIFY</p>
+     */
     @NameInMap("problemNotifyType")
     public String problemNotifyType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>HANDLING</p>
+     */
     @NameInMap("problemStatus")
     public String problemStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>进展摘要</p>
+     */
     @NameInMap("progressSummary")
     public String progressSummary;
 
+    /**
+     * <strong>example:</strong>
+     * <p>343</p>
+     */
     @NameInMap("progressSummaryRichTextId")
     public Long progressSummaryRichTextId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-10-02 00:00:00</p>
+     */
     @NameInMap("recoveryTime")
     public String recoveryTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123122</p>
+     */
     @NameInMap("relatedServiceId")
     public Long relatedServiceId;
 

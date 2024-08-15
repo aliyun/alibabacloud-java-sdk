@@ -6,16 +6,33 @@ import com.aliyun.tea.*;
 public class UpdateEscalationPlanRequest extends TeaModel {
     /**
      * <p>clientToken</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6b404f14-77d1-4b53-a1a1-30a58bbcfc57</p>
      */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxxx</p>
+     */
     @NameInMap("escalationPlanDescription")
     public String escalationPlanDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>433</p>
+     */
     @NameInMap("escalationPlanId")
     public Long escalationPlanId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("escalationPlanName")
     public String escalationPlanName;
 
@@ -24,6 +41,9 @@ public class UpdateEscalationPlanRequest extends TeaModel {
 
     @NameInMap("escalationPlanScopeObjects")
     public java.util.List<UpdateEscalationPlanRequestEscalationPlanScopeObjects> escalationPlanScopeObjects;
+
+    @NameInMap("isGlobal")
+    public Boolean isGlobal;
 
     public static UpdateEscalationPlanRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateEscalationPlanRequest self = new UpdateEscalationPlanRequest();
@@ -78,15 +98,29 @@ public class UpdateEscalationPlanRequest extends TeaModel {
         return this.escalationPlanScopeObjects;
     }
 
+    public UpdateEscalationPlanRequest setIsGlobal(Boolean isGlobal) {
+        this.isGlobal = isGlobal;
+        return this;
+    }
+    public Boolean getIsGlobal() {
+        return this.isGlobal;
+    }
+
     public static class UpdateEscalationPlanRequestEscalationPlanRulesEscalationPlanConditions extends TeaModel {
         /**
          * <p>LOW HIGH</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LOW</p>
          */
         @NameInMap("effection")
         public String effection;
 
         /**
          * <p>P1 P2 P3 P4</p>
+         * 
+         * <strong>example:</strong>
+         * <p>P1</p>
          */
         @NameInMap("level")
         public String level;
@@ -115,9 +149,17 @@ public class UpdateEscalationPlanRequest extends TeaModel {
     }
 
     public static class UpdateEscalationPlanRequestEscalationPlanRulesEscalationPlanStrategies extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("enableWebhook")
         public Boolean enableWebhook;
 
+        /**
+         * <strong>example:</strong>
+         * <p>UN_ACKNOWLEDGE</p>
+         */
         @NameInMap("escalationPlanType")
         public String escalationPlanType;
 
@@ -127,6 +169,13 @@ public class UpdateEscalationPlanRequest extends TeaModel {
         @NameInMap("noticeObjects")
         public java.util.List<Long> noticeObjects;
 
+        @NameInMap("noticeRoleList")
+        public java.util.List<Long> noticeRoleList;
+
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("noticeTime")
         public Long noticeTime;
 
@@ -170,6 +219,14 @@ public class UpdateEscalationPlanRequest extends TeaModel {
             return this.noticeObjects;
         }
 
+        public UpdateEscalationPlanRequestEscalationPlanRulesEscalationPlanStrategies setNoticeRoleList(java.util.List<Long> noticeRoleList) {
+            this.noticeRoleList = noticeRoleList;
+            return this;
+        }
+        public java.util.List<Long> getNoticeRoleList() {
+            return this.noticeRoleList;
+        }
+
         public UpdateEscalationPlanRequestEscalationPlanRulesEscalationPlanStrategies setNoticeTime(Long noticeTime) {
             this.noticeTime = noticeTime;
             return this;
@@ -195,9 +252,17 @@ public class UpdateEscalationPlanRequest extends TeaModel {
         @NameInMap("escalationPlanStrategies")
         public java.util.List<UpdateEscalationPlanRequestEscalationPlanRulesEscalationPlanStrategies> escalationPlanStrategies;
 
+        /**
+         * <strong>example:</strong>
+         * <p>UN_ACKNOWLEDGE</p>
+         */
         @NameInMap("escalationPlanType")
         public String escalationPlanType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>872</p>
+         */
         @NameInMap("id")
         public Long id;
 
@@ -241,12 +306,28 @@ public class UpdateEscalationPlanRequest extends TeaModel {
     }
 
     public static class UpdateEscalationPlanRequestEscalationPlanScopeObjects extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>87</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SERVICE</p>
+         */
         @NameInMap("scope")
         public String scope;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>234</p>
+         */
         @NameInMap("scopeObjectId")
         public Long scopeObjectId;
 

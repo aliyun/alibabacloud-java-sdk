@@ -4,30 +4,71 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class UpdateServiceGroupRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>C4BE3837-1A13-413B-A225-2C88188E8A43</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ENABLE</p>
+     */
     @NameInMap("enableWebhook")
     public String enableWebhook;
 
     @NameInMap("monitorSourceTemplates")
     public java.util.List<UpdateServiceGroupRequestMonitorSourceTemplates> monitorSourceTemplates;
 
+    /**
+     * <strong>example:</strong>
+     * <p>飞车</p>
+     */
     @NameInMap("serviceGroupDescription")
     public String serviceGroupDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("serviceGroupId")
     public Long serviceGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>冲上云霄</p>
+     */
     @NameInMap("serviceGroupName")
     public String serviceGroupName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("userIds")
     public java.util.List<Long> userIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wwwwwww</p>
+     */
     @NameInMap("webhookLink")
     public String webhookLink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WEIXINGROUP</p>
+     */
     @NameInMap("webhookType")
     public String webhookType;
 
@@ -109,15 +150,31 @@ public class UpdateServiceGroupRequest extends TeaModel {
     }
 
     public static class UpdateServiceGroupRequestMonitorSourceTemplates extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>11111</p>
+         */
         @NameInMap("monitorSourceId")
         public Long monitorSourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zabbix</p>
+         */
         @NameInMap("monitorSourceName")
         public String monitorSourceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxx</p>
+         */
         @NameInMap("templateContent")
         public String templateContent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1111</p>
+         */
         @NameInMap("templateId")
         public Long templateId;
 

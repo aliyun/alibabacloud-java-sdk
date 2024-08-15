@@ -4,6 +4,10 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListSourceEventsForMonitorSourceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("monitorSourceId")
     public Long monitorSourceId;
 

@@ -4,6 +4,10 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListSubscriptionServiceGroupsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>89f51d2e-5527-4f6c-a6c6-4411b5496e9f</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 

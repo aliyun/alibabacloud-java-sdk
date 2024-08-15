@@ -9,6 +9,9 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxxxxxxxx</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -38,15 +41,27 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
         @NameInMap("schedulingObjectType")
         public String schedulingObjectType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("schedulingOrder")
         public Integer schedulingOrder;
 
+        /**
+         * <strong>example:</strong>
+         * <p>66666</p>
+         */
         @NameInMap("schedulingUserId")
         public Long schedulingUserId;
 
         @NameInMap("schedulingUserIdList")
         public java.util.List<Long> schedulingUserIdList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>张杰</p>
+         */
         @NameInMap("schedulingUserName")
         public String schedulingUserName;
 
@@ -98,18 +113,34 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
     }
 
     public static class GetServiceGroupSchedulingResponseBodyDataFastScheduling extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>FAST_CHOICE</p>
+         */
         @NameInMap("dutyPlan")
         public String dutyPlan;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2222</p>
+         */
         @NameInMap("id")
         public Long id;
 
         @NameInMap("schedulingUsers")
         public java.util.List<GetServiceGroupSchedulingResponseBodyDataFastSchedulingSchedulingUsers> schedulingUsers;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("singleDuration")
         public Integer singleDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DAY</p>
+         */
         @NameInMap("singleDurationUnit")
         public String singleDurationUnit;
 
@@ -161,33 +192,65 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
     }
 
     public static class GetServiceGroupSchedulingResponseBodyDataFineSchedulingSchedulingFineShifts extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("cycleOrder")
         public Long cycleOrder;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-10-13</p>
+         */
         @NameInMap("schedulingEndTime")
         public String schedulingEndTime;
 
         @NameInMap("schedulingObjectType")
         public String schedulingObjectType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("schedulingOrder")
         public Integer schedulingOrder;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-08-13</p>
+         */
         @NameInMap("schedulingStartTime")
         public String schedulingStartTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1111</p>
+         */
         @NameInMap("schedulingUserId")
         public Long schedulingUserId;
 
         @NameInMap("schedulingUserIdList")
         public java.util.List<Long> schedulingUserIdList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>刘德华</p>
+         */
         @NameInMap("schedulingUserName")
         public String schedulingUserName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>早班</p>
+         */
         @NameInMap("shiftName")
         public String shiftName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("skipOneDay")
         public Boolean skipOneDay;
 
@@ -279,18 +342,34 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
     }
 
     public static class GetServiceGroupSchedulingResponseBodyDataFineSchedulingSchedulingTemplateFineShifts extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-10-01 00:00:00</p>
+         */
         @NameInMap("schedulingEndTime")
         public String schedulingEndTime;
 
         @NameInMap("schedulingObjectType")
         public String schedulingObjectType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("schedulingOrder")
         public Long schedulingOrder;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-09-01 00:00:00</p>
+         */
         @NameInMap("schedulingStartTime")
         public String schedulingStartTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("schedulingUserId")
         public String schedulingUserId;
 
@@ -303,6 +382,10 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
         @NameInMap("shiftName")
         public String shiftName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("skipOneDay")
         public Boolean skipOneDay;
 
@@ -388,16 +471,26 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
     public static class GetServiceGroupSchedulingResponseBodyDataFineScheduling extends TeaModel {
         /**
          * <p>1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>精细排班ID</p>
          */
         @NameInMap("id")
         public Long id;
 
         /**
          * <p>1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>循环周期</p>
          */
         @NameInMap("period")
         public Integer period;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DAY</p>
+         */
         @NameInMap("periodUnit")
         public String periodUnit;
 
@@ -407,6 +500,10 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
         @NameInMap("schedulingTemplateFineShifts")
         public java.util.List<GetServiceGroupSchedulingResponseBodyDataFineSchedulingSchedulingTemplateFineShifts> schedulingTemplateFineShifts;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MORNING_NIGHT</p>
+         */
         @NameInMap("shiftType")
         public String shiftType;
 
@@ -502,9 +599,17 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
         @NameInMap("fineScheduling")
         public GetServiceGroupSchedulingResponseBodyDataFineScheduling fineScheduling;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FINE</p>
+         */
         @NameInMap("schedulingWay")
         public String schedulingWay;
 
+        /**
+         * <strong>example:</strong>
+         * <p>99999</p>
+         */
         @NameInMap("serviceGroupId")
         public Long serviceGroupId;
 

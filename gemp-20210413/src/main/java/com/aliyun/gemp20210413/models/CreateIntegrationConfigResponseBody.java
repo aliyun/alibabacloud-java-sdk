@@ -12,6 +12,9 @@ public class CreateIntegrationConfigResponseBody extends TeaModel {
 
     /**
      * <p>id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>601FA6A2-AC5C-4B59-BE11-378F887A6A11</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -38,6 +41,10 @@ public class CreateIntegrationConfigResponseBody extends TeaModel {
     }
 
     public static class CreateIntegrationConfigResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>101</p>
+         */
         @NameInMap("integrationConfigId")
         public Long integrationConfigId;
 

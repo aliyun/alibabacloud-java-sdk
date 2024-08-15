@@ -4,36 +4,80 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListIncidentsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>FD200FAE-E98F-496E-BFE6-4CE61E59A2E1</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-11-10 00:00:00</p>
+     */
     @NameInMap("createEndTime")
     public String createEndTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-11-01 00:00:00</p>
+     */
     @NameInMap("createStartTime")
     public String createStartTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>LOW</p>
+     */
     @NameInMap("effect")
     public String effect;
 
+    /**
+     * <strong>example:</strong>
+     * <p>P1</p>
+     */
     @NameInMap("incidentLevel")
     public String incidentLevel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASSIGNED</p>
+     */
     @NameInMap("incidentStatus")
     public String incidentStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("me")
     public Integer me;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12312</p>
+     */
     @NameInMap("relationServiceId")
     public Long relationServiceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sa</p>
+     */
     @NameInMap("ruleName")
     public String ruleName;
 

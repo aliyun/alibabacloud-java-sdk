@@ -12,6 +12,9 @@ public class GetProblemImprovementResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4361a0e1-6747-4834-96ce-0c4840fd3811</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -41,6 +44,10 @@ public class GetProblemImprovementResponseBody extends TeaModel {
         @NameInMap("checkStandard")
         public String checkStandard;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("checkUserId")
         public Long checkUserId;
 
@@ -53,6 +60,10 @@ public class GetProblemImprovementResponseBody extends TeaModel {
         @NameInMap("content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>212</p>
+         */
         @NameInMap("directorId")
         public Long directorId;
 
@@ -62,12 +73,24 @@ public class GetProblemImprovementResponseBody extends TeaModel {
         @NameInMap("directorName")
         public String directorName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12312</p>
+         */
         @NameInMap("measureId")
         public Long measureId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-05-01 00:00:00</p>
+         */
         @NameInMap("planFinishTime")
         public String planFinishTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3121</p>
+         */
         @NameInMap("stalkerId")
         public Long stalkerId;
 
@@ -77,9 +100,17 @@ public class GetProblemImprovementResponseBody extends TeaModel {
         @NameInMap("stalkerName")
         public String stalkerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>UNIMPROVED</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("type")
         public Long type;
 
@@ -214,15 +245,27 @@ public class GetProblemImprovementResponseBody extends TeaModel {
         @NameInMap("customProblemReason")
         public String customProblemReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("discoverSource")
         public String discoverSource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12312</p>
+         */
         @NameInMap("dutyDepartmentId")
         public String dutyDepartmentId;
 
         @NameInMap("dutyDepartmentName")
         public String dutyDepartmentName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>231</p>
+         */
         @NameInMap("dutyUserId")
         public Long dutyUserId;
 
@@ -232,30 +275,58 @@ public class GetProblemImprovementResponseBody extends TeaModel {
         @NameInMap("dutyUserName")
         public String dutyUserName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>13098898****</p>
+         */
         @NameInMap("dutyUserPhone")
         public String dutyUserPhone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("injectionMode")
         public String injectionMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isManual")
         public Boolean isManual;
 
         @NameInMap("measureList")
         public java.util.List<GetProblemImprovementResponseBodyDataMeasureList> measureList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Zabbix</p>
+         */
         @NameInMap("monitorSourceName")
         public String monitorSourceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>231231</p>
+         */
         @NameInMap("problemId")
         public String problemId;
 
         @NameInMap("problemReason")
         public String problemReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("recentActivity")
         public String recentActivity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("recoveryMode")
         public String recoveryMode;
 
@@ -265,6 +336,10 @@ public class GetProblemImprovementResponseBody extends TeaModel {
         @NameInMap("remark")
         public String remark;
 
+        /**
+         * <strong>example:</strong>
+         * <p>23123</p>
+         */
         @NameInMap("replayDutyUserId")
         public Long replayDutyUserId;
 
@@ -274,9 +349,17 @@ public class GetProblemImprovementResponseBody extends TeaModel {
         @NameInMap("replayDutyUserName")
         public String replayDutyUserName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1308787****</p>
+         */
         @NameInMap("replayDutyUserPhone")
         public String replayDutyUserPhone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("userReport")
         public Long userReport;
 

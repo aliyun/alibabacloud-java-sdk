@@ -4,30 +4,62 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListSubscriptionsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>601FA6A2-AC5C-4B59-BE11-378FTOKENA11</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
     @NameInMap("notFilterScopeObjectDeleted")
     public Boolean notFilterScopeObjectDeleted;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("notifyObject")
     public String notifyObject;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SERVICE</p>
+     */
     @NameInMap("notifyObjectType")
     public String notifyObjectType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SERVICE</p>
+     */
     @NameInMap("scope")
     public String scope;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TestName</p>
+     */
     @NameInMap("scopeObject")
     public String scopeObject;
 
+    /**
+     * <strong>example:</strong>
+     * <p>newTitle</p>
+     */
     @NameInMap("subscriptionTitle")
     public String subscriptionTitle;
 

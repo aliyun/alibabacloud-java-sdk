@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RevokeProblemRecoveryResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FD200FAE-E98F-496E-BFE6-4CE61E59A2E9</p>
      */
     @NameInMap("requestId")
     public String requestId;

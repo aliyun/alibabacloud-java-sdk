@@ -4,18 +4,38 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class CancelProblemRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>取消原因</p>
+     */
     @NameInMap("cancelReason")
     public Long cancelReason;
 
+    /**
+     * <strong>example:</strong>
+     * <p>原因描述</p>
+     */
     @NameInMap("cancelReasonDescription")
     public String cancelReasonDescription;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4361a0e1-6747-4834-96ce-0c4840fd3812</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>312</p>
+     */
     @NameInMap("problemId")
     public Long problemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PROBLEM_NOTIFY</p>
+     */
     @NameInMap("problemNotifyType")
     public Long problemNotifyType;
 

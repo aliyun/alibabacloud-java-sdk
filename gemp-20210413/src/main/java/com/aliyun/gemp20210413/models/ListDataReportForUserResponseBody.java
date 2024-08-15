@@ -9,10 +9,17 @@ public class ListDataReportForUserResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxx</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -46,42 +53,84 @@ public class ListDataReportForUserResponseBody extends TeaModel {
     }
 
     public static class ListDataReportForUserResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("distributionIncidentCount")
         public Long distributionIncidentCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("escalationIncidentCount")
         public Long escalationIncidentCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("finishIncidentNumber")
         public Long finishIncidentNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20%</p>
+         */
         @NameInMap("finishProportion")
         public String finishProportion;
 
         /**
          * <p>MRRA</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3分50秒</p>
          */
         @NameInMap("meanTimeToAcknowledge")
         public String meanTimeToAcknowledge;
 
         /**
          * <p>MTTA</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3分50秒</p>
          */
         @NameInMap("meanTimeToRepair")
         public String meanTimeToRepair;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("unAcknowledgedEscalationIncidentCount")
         public Long unAcknowledgedEscalationIncidentCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("unDistributionIncidentCount")
         public Long unDistributionIncidentCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("unFinishEscalationIncidentCount")
         public Long unFinishEscalationIncidentCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1111</p>
+         */
         @NameInMap("userId")
         public Long userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>wy</p>
+         */
         @NameInMap("userName")
         public String userName;
 

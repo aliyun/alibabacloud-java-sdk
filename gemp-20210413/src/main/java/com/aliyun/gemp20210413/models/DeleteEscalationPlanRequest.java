@@ -4,9 +4,19 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class DeleteEscalationPlanRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>A5A1FEAE-9C47-011C-9C73-A376BC2REQUEST</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>234534</p>
+     */
     @NameInMap("escalationPlanId")
     public Long escalationPlanId;
 

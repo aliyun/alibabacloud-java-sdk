@@ -7,6 +7,10 @@ public class GetSubscriptionRequest extends TeaModel {
     @NameInMap("notFilterScopeObjectDeleted")
     public Boolean notFilterScopeObjectDeleted;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("subscriptionId")
     public Long subscriptionId;
 

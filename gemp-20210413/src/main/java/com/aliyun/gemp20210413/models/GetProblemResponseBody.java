@@ -7,6 +7,10 @@ public class GetProblemResponseBody extends TeaModel {
     @NameInMap("data")
     public GetProblemResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C4BE3837-1A13-41VB-A225-2C88188E8A43</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,15 +36,31 @@ public class GetProblemResponseBody extends TeaModel {
     }
 
     public static class GetProblemResponseBodyDataCancelProblemOperateLogs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>取消故障</p>
+         */
         @NameInMap("actionName")
         public String actionName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-09-08 15:38:38</p>
+         */
         @NameInMap("actionTime")
         public String actionTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>王宇</p>
+         */
         @NameInMap("operator")
         public String operator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>66666</p>
+         */
         @NameInMap("userId")
         public Long userId;
 
@@ -87,9 +107,17 @@ public class GetProblemResponseBody extends TeaModel {
         @NameInMap("isValid")
         public Long isValid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("serviceGroupId")
         public Long serviceGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>清扫大队</p>
+         */
         @NameInMap("serviceGroupName")
         public String serviceGroupName;
 
@@ -125,21 +153,41 @@ public class GetProblemResponseBody extends TeaModel {
     }
 
     public static class GetProblemResponseBodyDataEffectionServices extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>描述</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>P1</p>
+         */
         @NameInMap("effectionLevel")
         public Long effectionLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("effectionServiceId")
         public Long effectionServiceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RESTORED</p>
+         */
         @NameInMap("effectionStatus")
         public Integer effectionStatus;
 
         @NameInMap("serviceDeleteType")
         public Integer serviceDeleteType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>购物车</p>
+         */
         @NameInMap("serviceName")
         public String serviceName;
 
@@ -199,15 +247,31 @@ public class GetProblemResponseBody extends TeaModel {
     }
 
     public static class GetProblemResponseBodyDataHandingProblemOperateLogs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>取消故障</p>
+         */
         @NameInMap("actionName")
         public String actionName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2010-03-09 15:53:45</p>
+         */
         @NameInMap("actionTime")
         public String actionTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>王宇</p>
+         */
         @NameInMap("operator")
         public String operator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>233</p>
+         */
         @NameInMap("userId")
         public Long userId;
 
@@ -262,15 +326,31 @@ public class GetProblemResponseBody extends TeaModel {
     }
 
     public static class GetProblemResponseBodyDataReplayProblemOperateLogs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>复盘故障</p>
+         */
         @NameInMap("actionName")
         public String actionName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-08-08 15:39:39</p>
+         */
         @NameInMap("actionTime")
         public String actionTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>周宇凡</p>
+         */
         @NameInMap("operator")
         public String operator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2323</p>
+         */
         @NameInMap("userId")
         public Long userId;
 
@@ -325,15 +405,31 @@ public class GetProblemResponseBody extends TeaModel {
     }
 
     public static class GetProblemResponseBodyDataReplayingProblemOperateLogs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>复盘故障</p>
+         */
         @NameInMap("actionName")
         public String actionName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-08-08 15:39:39</p>
+         */
         @NameInMap("actionTime")
         public String actionTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>刘杰</p>
+         */
         @NameInMap("operator")
         public String operator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>用户id</p>
+         */
         @NameInMap("userId")
         public Long userId;
 
@@ -388,15 +484,31 @@ public class GetProblemResponseBody extends TeaModel {
     }
 
     public static class GetProblemResponseBodyDataRestoredProblemOperateLogs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>恢复故障</p>
+         */
         @NameInMap("actionName")
         public String actionName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-08-08 15:39:39</p>
+         */
         @NameInMap("actionTime")
         public String actionTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>王宇</p>
+         */
         @NameInMap("operator")
         public String operator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3232</p>
+         */
         @NameInMap("userId")
         public Long userId;
 
@@ -451,6 +563,10 @@ public class GetProblemResponseBody extends TeaModel {
     }
 
     public static class GetProblemResponseBodyDataTimelines extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1,2,3,4,5,7,6,8,9,10</p>
+         */
         @NameInMap("keyNode")
         public String keyNode;
 
@@ -473,84 +589,168 @@ public class GetProblemResponseBody extends TeaModel {
         @NameInMap("cancelProblemOperateLogs")
         public java.util.List<GetProblemResponseBodyDataCancelProblemOperateLogs> cancelProblemOperateLogs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>取消理由</p>
+         */
         @NameInMap("cancelReason")
         public Long cancelReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>理由</p>
+         */
         @NameInMap("cancelReasonDescription")
         public String cancelReasonDescription;
 
         @NameInMap("coordinationGroups")
         public java.util.List<GetProblemResponseBodyDataCoordinationGroups> coordinationGroups;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2010-03-09 15:53:45</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2010-03-09 15:53:45</p>
+         */
         @NameInMap("discoverTime")
         public String discoverTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>300000</p>
+         */
         @NameInMap("durationTime")
         public Long durationTime;
 
         @NameInMap("effectionServices")
         public java.util.List<GetProblemResponseBodyDataEffectionServices> effectionServices;
 
+        /**
+         * <strong>example:</strong>
+         * <p>feedback</p>
+         */
         @NameInMap("feedback")
         public String feedback;
 
         @NameInMap("handingProblemOperateLogs")
         public java.util.List<GetProblemResponseBodyDataHandingProblemOperateLogs> handingProblemOperateLogs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>130000032</p>
+         */
         @NameInMap("incidentId")
         public Long incidentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>I3443835000012016260833157948165</p>
+         */
         @NameInMap("incidentNumber")
         public String incidentNumber;
 
         @NameInMap("isRuleTrigger")
         public Boolean isRuleTrigger;
 
+        /**
+         * <strong>example:</strong>
+         * <p>王宇</p>
+         */
         @NameInMap("mainHandler")
         public Long mainHandler;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("mainHandlerId")
         public Long mainHandlerId;
 
         @NameInMap("mainHandlerIsValid")
         public Long mainHandlerIsValid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1308987****</p>
+         */
         @NameInMap("mainHandlerPhone")
         public String mainHandlerPhone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>原因</p>
+         */
         @NameInMap("preliminaryReason")
         public String preliminaryReason;
 
         /**
          * <p>ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("problemId")
         public Long problemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>P1</p>
+         */
         @NameInMap("problemLevel")
         public Integer problemLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>故障</p>
+         */
         @NameInMap("problemName")
         public String problemName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>P34438300010030116260833538987481</p>
+         */
         @NameInMap("problemNumber")
         public String problemNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HANDLING</p>
+         */
         @NameInMap("problemStatus")
         public Integer problemStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>摘要</p>
+         */
         @NameInMap("progressSummary")
         public String progressSummary;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1231231</p>
+         */
         @NameInMap("progressSummaryRichTextId")
         public Long progressSummaryRichTextId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2010-03-09 15:53:45</p>
+         */
         @NameInMap("recoveryTime")
         public String recoveryTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("relatedServiceId")
         public Long relatedServiceId;
 
@@ -569,6 +769,10 @@ public class GetProblemResponseBody extends TeaModel {
         @NameInMap("serviceDeleteType")
         public Integer serviceDeleteType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>服务</p>
+         */
         @NameInMap("serviceName")
         public String serviceName;
 

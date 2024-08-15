@@ -4,36 +4,87 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class UpdateSubscriptionRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2022-05-09 10:10:23</p>
+     */
     @NameInMap("endTime")
     public String endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LONG_TERM</p>
+     */
     @NameInMap("expiredType")
     public String expiredType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("notifyObjectList")
     public java.util.List<UpdateSubscriptionRequestNotifyObjectList> notifyObjectList;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>USER</p>
+     */
     @NameInMap("notifyObjectType")
     public String notifyObjectType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("notifyStrategyList")
     public java.util.List<UpdateSubscriptionRequestNotifyStrategyList> notifyStrategyList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1个月</p>
+     */
     @NameInMap("period")
     public String period;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SERVICE</p>
+     */
     @NameInMap("scope")
     public String scope;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("scopeObjectList")
     public java.util.List<UpdateSubscriptionRequestScopeObjectList> scopeObjectList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-04-04 10:10:11</p>
+     */
     @NameInMap("startTime")
     public String startTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80002020</p>
+     */
     @NameInMap("subscriptionId")
     public Long subscriptionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>newSubs244</p>
+     */
     @NameInMap("subscriptionTitle")
     public String subscriptionTitle;
 
@@ -131,9 +182,19 @@ public class UpdateSubscriptionRequest extends TeaModel {
     }
 
     public static class UpdateSubscriptionRequestNotifyObjectList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19</p>
+         */
         @NameInMap("notifyObjectId")
         public Long notifyObjectId;
 
@@ -161,15 +222,31 @@ public class UpdateSubscriptionRequest extends TeaModel {
     }
 
     public static class UpdateSubscriptionRequestNotifyStrategyListStrategiesConditions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>INCIDENT_TRIGGER</p>
+         */
         @NameInMap("action")
         public String action;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HIGH</p>
+         */
         @NameInMap("effection")
         public String effection;
 
+        /**
+         * <strong>example:</strong>
+         * <p>P1</p>
+         */
         @NameInMap("level")
         public String level;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PROBLEM_NOTIFY</p>
+         */
         @NameInMap("problemNotifyType")
         public String problemNotifyType;
 
@@ -213,9 +290,17 @@ public class UpdateSubscriptionRequest extends TeaModel {
     }
 
     public static class UpdateSubscriptionRequestNotifyStrategyListStrategiesPeriodChannel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>SMS,WEIXIN_GROUP</p>
+         */
         @NameInMap("nonWorkday")
         public String nonWorkday;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SMS,WEIXIN_GROUP</p>
+         */
         @NameInMap("workday")
         public String workday;
 
@@ -243,12 +328,20 @@ public class UpdateSubscriptionRequest extends TeaModel {
     }
 
     public static class UpdateSubscriptionRequestNotifyStrategyListStrategies extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>SMS,WEIXIN_GROUP</p>
+         */
         @NameInMap("channels")
         public String channels;
 
         @NameInMap("conditions")
         public java.util.List<UpdateSubscriptionRequestNotifyStrategyListStrategiesConditions> conditions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("id")
         public String id;
 
@@ -295,9 +388,18 @@ public class UpdateSubscriptionRequest extends TeaModel {
     }
 
     public static class UpdateSubscriptionRequestNotifyStrategyList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INCIDENT</p>
+         */
         @NameInMap("instanceType")
         public Long instanceType;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("strategies")
         public java.util.List<UpdateSubscriptionRequestNotifyStrategyListStrategies> strategies;
 
@@ -325,9 +427,19 @@ public class UpdateSubscriptionRequest extends TeaModel {
     }
 
     public static class UpdateSubscriptionRequestScopeObjectList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("scopeObjectId")
         public Long scopeObjectId;
 

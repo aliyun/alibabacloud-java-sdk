@@ -4,27 +4,62 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListServiceGroupsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>C4BE3837-1A13-413B-A225-2C88188E8A43</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("isScheduled")
     public Boolean isScheduled;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("orderByScheduleStatus")
     public Boolean orderByScheduleStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>王宇</p>
+     */
     @NameInMap("queryName")
     public String queryName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>USER</p>
+     */
     @NameInMap("queryType")
     public String queryType;
 
+    @NameInMap("serviceId")
+    public Long serviceId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>100000</p>
+     */
     @NameInMap("userId")
     public Long userId;
 
@@ -87,6 +122,14 @@ public class ListServiceGroupsRequest extends TeaModel {
     }
     public String getQueryType() {
         return this.queryType;
+    }
+
+    public ListServiceGroupsRequest setServiceId(Long serviceId) {
+        this.serviceId = serviceId;
+        return this;
+    }
+    public Long getServiceId() {
+        return this.serviceId;
     }
 
     public ListServiceGroupsRequest setUserId(Long userId) {

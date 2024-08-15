@@ -12,6 +12,9 @@ public class GenerateProblemPictureUploadSignResponseBody extends TeaModel {
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e2d4306a-bf4d-4345-9ae6-158223c85dbd</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,36 +43,54 @@ public class GenerateProblemPictureUploadSignResponseBody extends TeaModel {
     public static class GenerateProblemPictureUploadSignResponseBodyData extends TeaModel {
         /**
          * <p>ossaccessKeyId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XXXXXXXH8GMy1iLRCno7</p>
          */
         @NameInMap("accessKeyId")
         public String accessKeyId;
 
         /**
          * <p>oss bucket name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx</p>
          */
         @NameInMap("bucketName")
         public String bucketName;
 
         /**
          * <p>oss key</p>
+         * 
+         * <strong>example:</strong>
+         * <p>problem/xxxxxxxxxxxxxxxx1-b3185d529277</p>
          */
         @NameInMap("key")
         public String key;
 
         /**
          * <p>policy</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJleHBpcmF0a0p0IjoiMjAyMS0wNy0xM1QwNDowOTo0NS4yODJaIiwiY29uZGl0aW9ucyI6W1siY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsMTA0ODU3NjAwXSxbInN0YXJ0cy13aXRoIiwiJGtleSIsInByb2JsZW0iXV19</p>
          */
         @NameInMap("policy")
         public String policy;
 
         /**
          * <p>signature</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SHqvIkwUNQd0o0rvklir2K8U+ts=</p>
          */
         @NameInMap("signature")
         public String signature;
 
         /**
          * <p>url</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxx-xxx-bucket.oss-cn-shanghai.aliyuncs.com">https://xxx-xxx-bucket.oss-cn-shanghai.aliyuncs.com</a></p>
          */
         @NameInMap("url")
         public String url;

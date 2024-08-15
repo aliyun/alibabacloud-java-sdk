@@ -7,15 +7,27 @@ public class UpdateProblemRequest extends TeaModel {
     @NameInMap("feedback")
     public String feedback;
 
+    /**
+     * <strong>example:</strong>
+     * <p>P1</p>
+     */
     @NameInMap("level")
     public String level;
 
+    /**
+     * <strong>example:</strong>
+     * <p>678</p>
+     */
     @NameInMap("mainHandlerId")
     public Long mainHandlerId;
 
     @NameInMap("preliminaryReason")
     public String preliminaryReason;
 
+    /**
+     * <strong>example:</strong>
+     * <p>213432</p>
+     */
     @NameInMap("problemId")
     public Long problemId;
 
@@ -25,9 +37,17 @@ public class UpdateProblemRequest extends TeaModel {
     @NameInMap("progressSummary")
     public String progressSummary;
 
+    /**
+     * <strong>example:</strong>
+     * <p>23232</p>
+     */
     @NameInMap("progressSummaryRichTextId")
     public Long progressSummaryRichTextId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("relatedServiceId")
     public Long relatedServiceId;
 

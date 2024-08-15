@@ -6,13 +6,24 @@ import com.aliyun.tea.*;
 public class ListChartDataForUserRequest extends TeaModel {
     /**
      * <p>clientToken</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3232dsd32sd32gr</p>
      */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-10-09</p>
+     */
     @NameInMap("endTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-09-09</p>
+     */
     @NameInMap("startTime")
     public String startTime;
 

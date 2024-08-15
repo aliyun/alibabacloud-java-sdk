@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetSimilarIncidentStatisticsResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public GetSimilarIncidentStatisticsResponseBody body;
 
     public static GetSimilarIncidentStatisticsResponse build(java.util.Map<String, ?> map) throws Exception {

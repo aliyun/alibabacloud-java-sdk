@@ -4,36 +4,74 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListSourceEventsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>C4BE3837-1A13-413B-A225-2C88188E8A43</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
     /**
      * <p>2020-09-18 13:00:00</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-10-01 23:59:59</p>
      */
     @NameInMap("endTime")
     public String endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("instanceId")
     public Long instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INCIDENT</p>
+     */
     @NameInMap("instanceType")
     public String instanceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("pageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9223370410626682599-1344383-78954515-1-0a6e01a1701447fd9ef18b079edd2c6d</p>
+     */
     @NameInMap("startRowKey")
     public String startRowKey;
 
     /**
      * <p>2020-09-10 13:00:00</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-10-01 00:00:00</p>
      */
     @NameInMap("startTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9223370410626682599-1344383-78954515-1-0a6e01a1701447fd9ef18b079edd2c6d</p>
+     */
     @NameInMap("stopRowKey")
     public String stopRowKey;
 

@@ -7,15 +7,31 @@ public class ListRouteRulesResponseBody extends TeaModel {
     @NameInMap("data")
     public java.util.List<ListRouteRulesResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C4BE3837-1A13B-A225-2C88188E8A43</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -65,60 +81,128 @@ public class ListRouteRulesResponseBody extends TeaModel {
     }
 
     public static class ListRouteRulesResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("assignObjectId")
         public Long assignObjectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SERVICEGROUP</p>
+         */
         @NameInMap("assignObjectType")
         public String assignObjectType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-03-05 15:53:55</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>LOW</p>
+         */
         @NameInMap("effection")
         public String effection;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DISABLE</p>
+         */
         @NameInMap("enableStatus")
         public String enableStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>P1</p>
+         */
         @NameInMap("incidentLevel")
         public String incidentLevel;
 
         @NameInMap("isValid")
         public Integer isValid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("matchCount")
         public Long matchCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zabbix</p>
+         */
         @NameInMap("monitorSourceNames")
         public String monitorSourceNames;
 
         @NameInMap("relServiceDeleteType")
         public Integer relServiceDeleteType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("relatedServiceId")
         public Long relatedServiceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>关联服务名字</p>
+         */
         @NameInMap("relatedServiceName")
         public String relatedServiceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("routeRuleId")
         public Long routeRuleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INCIDENT</p>
+         */
         @NameInMap("routeType")
         public String routeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>规则名字</p>
+         */
         @NameInMap("ruleName")
         public String ruleName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1344383</p>
+         */
         @NameInMap("tenantRamId")
         public Long tenantRamId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>时间窗口</p>
+         */
         @NameInMap("timeWindow")
         public Long timeWindow;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MINUTE</p>
+         */
         @NameInMap("timeWindowUnit")
         public Long timeWindowUnit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-03-05 15:53:55</p>
+         */
         @NameInMap("updateTime")
         public String updateTime;
 

@@ -7,18 +7,33 @@ public class ListServiceGroupsResponseBody extends TeaModel {
     @NameInMap("data")
     public java.util.List<ListServiceGroupsResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Long pageSize;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sssss</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -68,21 +83,41 @@ public class ListServiceGroupsResponseBody extends TeaModel {
     }
 
     public static class ListServiceGroupsResponseBodyDataUsers extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>wy930***@163.com</p>
+         */
         @NameInMap("email")
         public String email;
 
         @NameInMap("isRelated")
         public Integer isRelated;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1390000****</p>
+         */
         @NameInMap("phone")
         public String phone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("serviceGroupId")
         public Long serviceGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("userId")
         public Long userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>jack</p>
+         */
         @NameInMap("userName")
         public String userName;
 
@@ -142,30 +177,62 @@ public class ListServiceGroupsResponseBody extends TeaModel {
     }
 
     public static class ListServiceGroupsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ENABLE</p>
+         */
         @NameInMap("enableWebhook")
         public String enableWebhook;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isScheduled")
         public Boolean isScheduled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>服务描述</p>
+         */
         @NameInMap("serviceGroupDescription")
         public String serviceGroupDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("serviceGroupId")
         public Long serviceGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>服务组</p>
+         */
         @NameInMap("serviceGroupName")
         public String serviceGroupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-08-09 15:50:30</p>
+         */
         @NameInMap("updateTime")
         public String updateTime;
 
         @NameInMap("users")
         public java.util.List<ListServiceGroupsResponseBodyDataUsers> users;
 
+        /**
+         * <strong>example:</strong>
+         * <p>wwwwwwwwww</p>
+         */
         @NameInMap("webhookLink")
         public String webhookLink;
 
+        /**
+         * <strong>example:</strong>
+         * <p>WEIXIN_GROUP</p>
+         */
         @NameInMap("webhookType")
         public String webhookType;
 

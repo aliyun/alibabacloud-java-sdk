@@ -10,6 +10,10 @@ public class GeneratePictureLinkRequest extends TeaModel {
     @NameInMap("keys")
     public java.util.List<String> keys;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50002020</p>
+     */
     @NameInMap("problemId")
     public Long problemId;
 

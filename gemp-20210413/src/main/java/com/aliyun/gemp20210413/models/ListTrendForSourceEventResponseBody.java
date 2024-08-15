@@ -9,6 +9,9 @@ public class ListTrendForSourceEventResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxx</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -35,18 +38,38 @@ public class ListTrendForSourceEventResponseBody extends TeaModel {
     }
 
     public static class ListTrendForSourceEventResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>90.90%</p>
+         */
         @NameInMap("convergenceRate")
         public String convergenceRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10920312312312</p>
+         */
         @NameInMap("maxSustainTime")
         public Long maxSustainTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("skipDay")
         public Boolean skipDay;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{             &quot;Grafana&quot;: [                 {                     &quot;evenTime&quot;: &quot;2021-11-15 14:29:59&quot;,                     &quot;eventCount&quot;: 4,                     &quot;monitorSourceName&quot;: &quot;Grafana&quot;,                     &quot;monitorSourceCounts&quot;: null,                     &quot;sustainTime&quot;: 15646                 },                 {                     &quot;evenTime&quot;: &quot;2021-11-15 14:30:36&quot;,                     &quot;eventCount&quot;: 7,                     &quot;monitorSourceName&quot;: &quot;Grafana&quot;,                     &quot;monitorSourceCounts&quot;: null,                     &quot;sustainTime&quot;: 52638                 }             ]         }</p>
+         */
         @NameInMap("sourceEventsStatMap")
         public java.util.Map<String, ?> sourceEventsStatMap;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("unit")
         public String unit;
 

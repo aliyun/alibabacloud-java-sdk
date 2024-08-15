@@ -12,6 +12,9 @@ public class ListSubscriptionServiceGroupsResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>89f51d2e-5527-4f6c-a6c6-4411b5496e9f</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -41,6 +44,10 @@ public class ListSubscriptionServiceGroupsResponseBody extends TeaModel {
         @NameInMap("serviceGroupDescription")
         public String serviceGroupDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123113</p>
+         */
         @NameInMap("serviceId")
         public Long serviceId;
 

@@ -4,18 +4,40 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class UpdateIncidentRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>FD200FAE-E98F-496E-BFE6-4CE61E59A123</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>LOW</p>
+     */
     @NameInMap("effect")
     public String effect;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12312</p>
+     */
     @NameInMap("incidentId")
     public Long incidentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>P1</p>
+     */
     @NameInMap("incidentLevel")
     public String incidentLevel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>事件标题</p>
+     */
     @NameInMap("incidentTitle")
     public String incidentTitle;
 

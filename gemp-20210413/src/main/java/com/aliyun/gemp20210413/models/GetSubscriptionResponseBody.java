@@ -12,6 +12,9 @@ public class GetSubscriptionResponseBody extends TeaModel {
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10REQUES-AC5C-4B59-BE11-378F117A6A88</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -38,15 +41,31 @@ public class GetSubscriptionResponseBody extends TeaModel {
     }
 
     public static class GetSubscriptionResponseBodyDataNotifyObjectList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>23</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestName</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19</p>
+         */
         @NameInMap("notifyObjectId")
         public Long notifyObjectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>USER</p>
+         */
         @NameInMap("notifyObjectType")
         public Long notifyObjectType;
 
@@ -90,15 +109,31 @@ public class GetSubscriptionResponseBody extends TeaModel {
     }
 
     public static class GetSubscriptionResponseBodyDataNotifyStrategyListStrategiesConditions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>INCIDENT_TRIGGER</p>
+         */
         @NameInMap("action")
         public String action;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HIGH</p>
+         */
         @NameInMap("effection")
         public String effection;
 
+        /**
+         * <strong>example:</strong>
+         * <p>P1</p>
+         */
         @NameInMap("level")
         public String level;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PROBLEM_NOTIFY</p>
+         */
         @NameInMap("problemNotifyType")
         public String problemNotifyType;
 
@@ -142,9 +177,17 @@ public class GetSubscriptionResponseBody extends TeaModel {
     }
 
     public static class GetSubscriptionResponseBodyDataNotifyStrategyListStrategiesPeriodChannel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>DINGDING</p>
+         */
         @NameInMap("nonWorkday")
         public String nonWorkday;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DINGDING</p>
+         */
         @NameInMap("workday")
         public String workday;
 
@@ -172,12 +215,20 @@ public class GetSubscriptionResponseBody extends TeaModel {
     }
 
     public static class GetSubscriptionResponseBodyDataNotifyStrategyListStrategies extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>SMS</p>
+         */
         @NameInMap("channels")
         public String channels;
 
         @NameInMap("conditions")
         public java.util.List<GetSubscriptionResponseBodyDataNotifyStrategyListStrategiesConditions> conditions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("id")
         public Long id;
 
@@ -224,6 +275,10 @@ public class GetSubscriptionResponseBody extends TeaModel {
     }
 
     public static class GetSubscriptionResponseBodyDataNotifyStrategyList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>INCIDENT</p>
+         */
         @NameInMap("instanceType")
         public Long instanceType;
 
@@ -254,18 +309,30 @@ public class GetSubscriptionResponseBody extends TeaModel {
     }
 
     public static class GetSubscriptionResponseBodyDataScopeObjectList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("id")
         public Long id;
 
         @NameInMap("isValid")
         public Long isValid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SERVICE</p>
+         */
         @NameInMap("scope")
         public String scope;
 
         @NameInMap("scopeObject")
         public String scopeObject;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("scopeObjectId")
         public Long scopeObjectId;
 
@@ -317,24 +384,44 @@ public class GetSubscriptionResponseBody extends TeaModel {
     }
 
     public static class GetSubscriptionResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-08-9 10:10:10</p>
+         */
         @NameInMap("endTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>LONG_TERM</p>
+         */
         @NameInMap("expiredType")
         public String expiredType;
 
         @NameInMap("notifyObjectList")
         public java.util.List<GetSubscriptionResponseBodyDataNotifyObjectList> notifyObjectList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>USER</p>
+         */
         @NameInMap("notifyObjectType")
         public String notifyObjectType;
 
         @NameInMap("notifyStrategyList")
         public java.util.List<GetSubscriptionResponseBodyDataNotifyStrategyList> notifyStrategyList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1个月</p>
+         */
         @NameInMap("period")
         public String period;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SERVICE</p>
+         */
         @NameInMap("scope")
         public String scope;
 
@@ -344,15 +431,31 @@ public class GetSubscriptionResponseBody extends TeaModel {
         @NameInMap("scopeObjectList")
         public java.util.List<GetSubscriptionResponseBodyDataScopeObjectList> scopeObjectList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-05-9 10:10:10</p>
+         */
         @NameInMap("startTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ENABLE</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>68</p>
+         */
         @NameInMap("subscriptionId")
         public Long subscriptionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>newTitle</p>
+         */
         @NameInMap("subscriptionTitle")
         public String subscriptionTitle;
 

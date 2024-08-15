@@ -4,21 +4,52 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetSimilarIncidentStatisticsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>7C56D225-7C34-40BB-9624-C8BA449260E6</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-09-09 09:09:09</p>
+     */
     @NameInMap("createTime")
     public String createTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("events")
     public java.util.List<String> events;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>32</p>
+     */
     @NameInMap("incidentId")
     public Long incidentId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx事件</p>
+     */
     @NameInMap("incidentTitle")
     public String incidentTitle;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23</p>
+     */
     @NameInMap("relatedServiceId")
     public Long relatedServiceId;
 

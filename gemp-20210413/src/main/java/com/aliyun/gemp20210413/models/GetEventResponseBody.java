@@ -9,6 +9,9 @@ public class GetEventResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>XXXXXXXXXXXX</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -35,15 +38,31 @@ public class GetEventResponseBody extends TeaModel {
     }
 
     public static class GetEventResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>“”</p>
+         */
         @NameInMap("eventJson")
         public String eventJson;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2002-09-08 15:30:35</p>
+         */
         @NameInMap("eventTime")
         public String eventTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("monitorSourceId")
         public Long monitorSourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zabbix</p>
+         */
         @NameInMap("monitorSourceName")
         public String monitorSourceName;
 

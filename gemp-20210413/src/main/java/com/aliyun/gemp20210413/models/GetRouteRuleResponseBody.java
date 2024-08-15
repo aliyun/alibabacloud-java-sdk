@@ -7,6 +7,10 @@ public class GetRouteRuleResponseBody extends TeaModel {
     @NameInMap("data")
     public GetRouteRuleResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6B9347ED-FD93-42B4-B9A4-7282962F5D6A</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class GetRouteRuleResponseBody extends TeaModel {
     }
 
     public static class GetRouteRuleResponseBodyDataEventRouteChildRulesConditions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>alarmName</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>contain</p>
+         */
         @NameInMap("operationSymbol")
         public String operationSymbol;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Zabbix server</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -73,27 +89,55 @@ public class GetRouteRuleResponseBody extends TeaModel {
     }
 
     public static class GetRouteRuleResponseBodyDataEventRouteChildRules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("childConditionRelation")
         public Long childConditionRelation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("childRouteRuleId")
         public Long childRouteRuleId;
 
         @NameInMap("conditions")
         public java.util.List<GetRouteRuleResponseBodyDataEventRouteChildRulesConditions> conditions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("isValidChildRule")
         public Boolean isValidChildRule;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("monitorIntegrationConfigId")
         public Long monitorIntegrationConfigId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("monitorSourceId")
         public Long monitorSourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zabbix</p>
+         */
         @NameInMap("monitorSourceName")
         public String monitorSourceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1800</p>
+         */
         @NameInMap("parentRuleId")
         public Long parentRuleId;
 
@@ -180,15 +224,31 @@ public class GetRouteRuleResponseBody extends TeaModel {
     }
 
     public static class GetRouteRuleResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("assignObjectId")
         public Long assignObjectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>刘德华</p>
+         */
         @NameInMap("assignObjectName")
         public String assignObjectName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SERVICEGROUP</p>
+         */
         @NameInMap("assignObjectType")
         public String assignObjectType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AND、OR</p>
+         */
         @NameInMap("childRuleRelation")
         public String childRuleRelation;
 
@@ -201,21 +261,41 @@ public class GetRouteRuleResponseBody extends TeaModel {
         @NameInMap("coverageProblemLevels")
         public java.util.List<String> coverageProblemLevels;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-09-08 15:30:30</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>LOW</p>
+         */
         @NameInMap("effection")
         public String effection;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DISABLE</p>
+         */
         @NameInMap("enableStatus")
         public String enableStatus;
 
         @NameInMap("eventRouteChildRules")
         public java.util.List<GetRouteRuleResponseBodyDataEventRouteChildRules> eventRouteChildRules;
 
+        /**
+         * <strong>example:</strong>
+         * <p>P1</p>
+         */
         @NameInMap("incidentLevel")
         public String incidentLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("matchCount")
         public Long matchCount;
 
@@ -234,24 +314,52 @@ public class GetRouteRuleResponseBody extends TeaModel {
         @NameInMap("relServiceDeleteType")
         public Integer relServiceDeleteType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("relatedServiceId")
         public Long relatedServiceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>冲上云霄</p>
+         */
         @NameInMap("relatedServiceName")
         public String relatedServiceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>180000000</p>
+         */
         @NameInMap("routeRuleId")
         public Long routeRuleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INCIDENT</p>
+         */
         @NameInMap("routeType")
         public String routeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>规则1</p>
+         */
         @NameInMap("ruleName")
         public String ruleName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("timeWindow")
         public Integer timeWindow;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-09-08 15:30:30</p>
+         */
         @NameInMap("updateTime")
         public String updateTime;
 
