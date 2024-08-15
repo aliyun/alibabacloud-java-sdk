@@ -48,6 +48,13 @@ public class GetRumExceptionStackRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The file type. Valid values:</p>
+     * <ul>
+     * <li>source-map: SourceMap files</li>
+     * <li>mapping: symbol table files for Android</li>
+     * <li>dsym: dSYM files for iOS</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>source-map</p>
      */

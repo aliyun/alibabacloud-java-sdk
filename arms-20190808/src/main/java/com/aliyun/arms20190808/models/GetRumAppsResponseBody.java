@@ -111,16 +111,16 @@ public class GetRumAppsResponseBody extends TeaModel {
 
     public static class GetRumAppsResponseBodyAppListServiceDomainConfigs extends TeaModel {
         /**
-         * <p>Description.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试</p>
+         * <p>Test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>Domain name or IP.</p>
+         * <p>The domain name or IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -129,16 +129,16 @@ public class GetRumAppsResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>Trace transparent transmission protocol list, which must be transmitted when link tracing is enabled.</p>
+         * <p>The trace propagation protocols. This parameter is required if the tracing analysis feature is enabled.</p>
          */
         @NameInMap("PropagatorTypes")
         public java.util.List<String> propagatorTypes;
 
         /**
-         * <p>Whether to enable link tracking (need to enable the observable link Open Telemetry version), value:</p>
+         * <p>Indicates whether the tracing analysis feature is enabled. To enable the tracing analysis feature, you must activate Managed Service for OpenTelemetry. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Enable link tracking (after enabling, the relevant header will be inserted into the domain name request).</li>
-         * <li><code>false</code>: Do not enable link tracking.</li>
+         * <li><code>true</code>: enables the tracing analysis feature. If you enable the tracing analysis feature, related headers are inserted into requests for the domain name.</li>
+         * <li><code>false</code>: disables the tracing analysis feature.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -323,7 +323,7 @@ public class GetRumAppsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>Service domain name configuration list. Currently only supports mobile applications.</p>
+         * <p>The list of service domain configurations. Only mobile applications are supported.</p>
          */
         @NameInMap("ServiceDomainConfigs")
         public java.util.List<GetRumAppsResponseBodyAppListServiceDomainConfigs> serviceDomainConfigs;

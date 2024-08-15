@@ -32,7 +32,7 @@ public class CreateRumAppResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

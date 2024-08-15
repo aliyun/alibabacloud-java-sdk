@@ -45,7 +45,9 @@ public class ClaimAlarmResponseBody extends TeaModel {
     public Boolean result;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p><code>true</code></p>
+     * <p><code>false</code></p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -118,7 +118,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
 
     public static class GetPrometheusInstanceResponseBodyData extends TeaModel {
         /**
-         * <p>Permission type: read Write, read Only, http Read Only</p>
+         * <p>The permission type. Valid values: readWrite, readOnly, and httpReadOnly</p>
          * 
          * <strong>example:</strong>
          * <p>readWrite</p>
@@ -178,9 +178,21 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @NameInMap("ClusterType")
         public String clusterType;
 
+        /**
+         * <p>Backend data storage status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("DbInstanceStatus")
         public String dbInstanceStatus;
 
+        /**
+         * <p>Whether to enable access token authentication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableAuthToken")
         public String enableAuthToken;
 
@@ -224,6 +236,16 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @NameInMap("PaymentType")
         public String paymentType;
 
+        /**
+         * <p>The product to which the prometheus instance belongs.</p>
+         * <ul>
+         * <li>arms</li>
+         * <li>cms</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>arms</p>
+         */
         @NameInMap("Product")
         public String product;
 
@@ -335,8 +357,8 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @NameInMap("SubClustersJson")
         public String subClustersJson;
 
-        @NameInMap("SurpportAuthTypes")
-        public java.util.List<String> surpportAuthTypes;
+        @NameInMap("SupportAuthTypes")
+        public java.util.List<String> supportAuthTypes;
 
         /**
          * <p>The tags of the instance.</p>
@@ -576,12 +598,12 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             return this.subClustersJson;
         }
 
-        public GetPrometheusInstanceResponseBodyData setSurpportAuthTypes(java.util.List<String> surpportAuthTypes) {
-            this.surpportAuthTypes = surpportAuthTypes;
+        public GetPrometheusInstanceResponseBodyData setSupportAuthTypes(java.util.List<String> supportAuthTypes) {
+            this.supportAuthTypes = supportAuthTypes;
             return this;
         }
-        public java.util.List<String> getSurpportAuthTypes() {
-            return this.surpportAuthTypes;
+        public java.util.List<String> getSupportAuthTypes() {
+            return this.supportAuthTypes;
         }
 
         public GetPrometheusInstanceResponseBodyData setTags(java.util.List<GetPrometheusInstanceResponseBodyDataTags> tags) {

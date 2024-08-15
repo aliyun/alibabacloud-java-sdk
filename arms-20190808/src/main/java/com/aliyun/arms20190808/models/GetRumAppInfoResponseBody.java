@@ -29,7 +29,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>StartTime is mandatory for this action.</p>
@@ -112,19 +112,30 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class GetRumAppInfoResponseBodyDataBonreeSDKConfig extends TeaModel {
+    public static class GetRumAppInfoResponseBodyDataBonreeSDKConfigModuleConfig extends TeaModel {
+        @NameInMap("defaultConfig")
+        public java.util.Map<String, DataBonreeSDKConfigModuleConfigDefaultConfigValue> defaultConfig;
+
         @NameInMap("enable")
         public Boolean enable;
 
-        @NameInMap("moduleConfig")
-        public java.util.Map<String, DataBonreeSDKConfigModuleConfigValue> moduleConfig;
+        @NameInMap("versionConfigs")
+        public java.util.Map<String, DataBonreeSDKConfigModuleConfigVersionConfigsValue> versionConfigs;
 
-        public static GetRumAppInfoResponseBodyDataBonreeSDKConfig build(java.util.Map<String, ?> map) throws Exception {
-            GetRumAppInfoResponseBodyDataBonreeSDKConfig self = new GetRumAppInfoResponseBodyDataBonreeSDKConfig();
+        public static GetRumAppInfoResponseBodyDataBonreeSDKConfigModuleConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetRumAppInfoResponseBodyDataBonreeSDKConfigModuleConfig self = new GetRumAppInfoResponseBodyDataBonreeSDKConfigModuleConfig();
             return TeaModel.build(map, self);
         }
 
-        public GetRumAppInfoResponseBodyDataBonreeSDKConfig setEnable(Boolean enable) {
+        public GetRumAppInfoResponseBodyDataBonreeSDKConfigModuleConfig setDefaultConfig(java.util.Map<String, DataBonreeSDKConfigModuleConfigDefaultConfigValue> defaultConfig) {
+            this.defaultConfig = defaultConfig;
+            return this;
+        }
+        public java.util.Map<String, DataBonreeSDKConfigModuleConfigDefaultConfigValue> getDefaultConfig() {
+            return this.defaultConfig;
+        }
+
+        public GetRumAppInfoResponseBodyDataBonreeSDKConfigModuleConfig setEnable(Boolean enable) {
             this.enable = enable;
             return this;
         }
@@ -132,11 +143,30 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             return this.enable;
         }
 
-        public GetRumAppInfoResponseBodyDataBonreeSDKConfig setModuleConfig(java.util.Map<String, DataBonreeSDKConfigModuleConfigValue> moduleConfig) {
+        public GetRumAppInfoResponseBodyDataBonreeSDKConfigModuleConfig setVersionConfigs(java.util.Map<String, DataBonreeSDKConfigModuleConfigVersionConfigsValue> versionConfigs) {
+            this.versionConfigs = versionConfigs;
+            return this;
+        }
+        public java.util.Map<String, DataBonreeSDKConfigModuleConfigVersionConfigsValue> getVersionConfigs() {
+            return this.versionConfigs;
+        }
+
+    }
+
+    public static class GetRumAppInfoResponseBodyDataBonreeSDKConfig extends TeaModel {
+        @NameInMap("moduleConfig")
+        public GetRumAppInfoResponseBodyDataBonreeSDKConfigModuleConfig moduleConfig;
+
+        public static GetRumAppInfoResponseBodyDataBonreeSDKConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetRumAppInfoResponseBodyDataBonreeSDKConfig self = new GetRumAppInfoResponseBodyDataBonreeSDKConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetRumAppInfoResponseBodyDataBonreeSDKConfig setModuleConfig(GetRumAppInfoResponseBodyDataBonreeSDKConfigModuleConfig moduleConfig) {
             this.moduleConfig = moduleConfig;
             return this;
         }
-        public java.util.Map<String, DataBonreeSDKConfigModuleConfigValue> getModuleConfig() {
+        public GetRumAppInfoResponseBodyDataBonreeSDKConfigModuleConfig getModuleConfig() {
             return this.moduleConfig;
         }
 
@@ -144,16 +174,16 @@ public class GetRumAppInfoResponseBody extends TeaModel {
 
     public static class GetRumAppInfoResponseBodyDataServiceDomainConfigs extends TeaModel {
         /**
-         * <p>Describe.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试</p>
+         * <p>Test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>Domain name or IP.</p>
+         * <p>The domain name or IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -162,16 +192,19 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>Trace transparent transmission protocol list, must be transmitted when link tracking is enabled.</p>
+         * <p>The trace propagation protocols. This parameter is required if the tracing analysis feature is enabled.</p>
          */
         @NameInMap("PropagatorTypes")
         public java.util.List<String> propagatorTypes;
 
+        @NameInMap("SamplingRate")
+        public Integer samplingRate;
+
         /**
-         * <p>Whether to enable link tracking (need to enable the observable link Open Telemetry version), value:</p>
+         * <p>Indicates whether the tracing analysis feature is enabled. To enable the tracing analysis feature, you must activate Managed Service for OpenTelemetry. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Enable link tracking (after enabling, the relevant header will be inserted into the domain name request).</li>
-         * <li><code>false</code>: Do not enable link tracking.</li>
+         * <li><code>true</code>: enables the tracing analysis feature. If you enable the tracing analysis feature, related headers are inserted into requests for the domain name.</li>
+         * <li><code>false</code>: disables the tracing analysis feature.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -207,6 +240,14 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         }
         public java.util.List<String> getPropagatorTypes() {
             return this.propagatorTypes;
+        }
+
+        public GetRumAppInfoResponseBodyDataServiceDomainConfigs setSamplingRate(Integer samplingRate) {
+            this.samplingRate = samplingRate;
+            return this;
+        }
+        public Integer getSamplingRate() {
+            return this.samplingRate;
         }
 
         public GetRumAppInfoResponseBodyDataServiceDomainConfigs setTracing(Boolean tracing) {
@@ -372,7 +413,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>Service domain name configuration list (currently only supports mobile applications).</p>
+         * <p>The list of service domain configurations. Only mobile applications are supported.</p>
          */
         @NameInMap("ServiceDomainConfigs")
         public java.util.List<GetRumAppInfoResponseBodyDataServiceDomainConfigs> serviceDomainConfigs;

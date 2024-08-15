@@ -5,19 +5,41 @@ import com.aliyun.tea.*;
 
 public class GetRumOcuStatisticDataShrinkRequest extends TeaModel {
     /**
+     * <p>The end of the time range to query. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1687849260000</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The filter condition. Three types of filter conditions are provided:</p>
+     * <ul>
+     * <li>Application name: pid (Note that the application name is displayed, but the application ID is actually specified)</li>
+     * <li>Application type: siteType</li>
+     * <li>Data type: dataType</li>
+     * </ul>
+     */
     @NameInMap("Filter")
     public String filterShrink;
 
+    /**
+     * <p>The grouping fields. Valid values:</p>
+     * <ul>
+     * <li>siteType: The total number of OCUs is grouped by application type.</li>
+     * <li>dataType: The total number of OCUs is grouped by data type.</li>
+     * <li>pid: The total number of OCUs is grouped by application ID.</li>
+     * <li>appName: The total number of OCUs is grouped by application name.</li>
+     * <li>startTime: The total number of OCUs is grouped by start time.</li>
+     * </ul>
+     */
     @NameInMap("Group")
     public String groupShrink;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -25,6 +47,8 @@ public class GetRumOcuStatisticDataShrinkRequest extends TeaModel {
     public Integer page;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -32,6 +56,8 @@ public class GetRumOcuStatisticDataShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The type of the query. To query non-time series data, set the value to INSTANT. To query time series data, set the value to TIME_SERIES.</p>
+     * 
      * <strong>example:</strong>
      * <p>TIME_SERIES</p>
      */
@@ -39,6 +65,8 @@ public class GetRumOcuStatisticDataShrinkRequest extends TeaModel {
     public String queryType;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -46,6 +74,8 @@ public class GetRumOcuStatisticDataShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1600063200000</p>
      */

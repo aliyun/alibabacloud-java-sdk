@@ -130,6 +130,9 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateSilencePolicyResponseBodySilencePolicy extends TeaModel {
+        @NameInMap("EffectiveTimeType")
+        public String effectiveTimeType;
+
         /**
          * <p>The ID of the silence policy.</p>
          * 
@@ -163,9 +166,23 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
         @NameInMap("State")
         public String state;
 
+        @NameInMap("TimePeriod")
+        public String timePeriod;
+
+        @NameInMap("TimeSlots")
+        public String timeSlots;
+
         public static CreateOrUpdateSilencePolicyResponseBodySilencePolicy build(java.util.Map<String, ?> map) throws Exception {
             CreateOrUpdateSilencePolicyResponseBodySilencePolicy self = new CreateOrUpdateSilencePolicyResponseBodySilencePolicy();
             return TeaModel.build(map, self);
+        }
+
+        public CreateOrUpdateSilencePolicyResponseBodySilencePolicy setEffectiveTimeType(String effectiveTimeType) {
+            this.effectiveTimeType = effectiveTimeType;
+            return this;
+        }
+        public String getEffectiveTimeType() {
+            return this.effectiveTimeType;
         }
 
         public CreateOrUpdateSilencePolicyResponseBodySilencePolicy setId(Long id) {
@@ -198,6 +215,22 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
+        }
+
+        public CreateOrUpdateSilencePolicyResponseBodySilencePolicy setTimePeriod(String timePeriod) {
+            this.timePeriod = timePeriod;
+            return this;
+        }
+        public String getTimePeriod() {
+            return this.timePeriod;
+        }
+
+        public CreateOrUpdateSilencePolicyResponseBodySilencePolicy setTimeSlots(String timeSlots) {
+            this.timeSlots = timeSlots;
+            return this;
+        }
+        public String getTimeSlots() {
+            return this.timeSlots;
         }
 
     }

@@ -4,6 +4,13 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListSyntheticDetailShrinkRequest extends TeaModel {
+    /**
+     * <p>An array of filter conditions. This parameter is required.</p>
+     * <ul>
+     * <li>To query the list of synthetic test results, set this parameter in the following format: [{&quot;Key&quot;:&quot;taskType&quot;,&quot;OpType&quot;:&quot;in&quot;,&quot;Value&quot;:[Task type]}].</li>
+     * <li>To query the result details of a synthetic monitoring task, set this parameter in the following format: [{&quot;Key&quot;:&quot;dataId&quot;,&quot;OpType&quot;:&quot;eq&quot;,&quot;Value&quot;:&quot;dataId&quot;}]. dataId is returned when you query the list of synthetic test results.</li>
+     * </ul>
+     */
     @NameInMap("AdvancedFilters")
     public String advancedFiltersShrink;
 
@@ -15,6 +22,17 @@ public class ListSyntheticDetailShrinkRequest extends TeaModel {
     public String category;
 
     /**
+     * <p>The type of the list that contains the results. This parameter is required. Valid values:</p>
+     * <ul>
+     * <li>ICMP_LIST</li>
+     * <li>TCP_LIST</li>
+     * <li>DNS_LIST</li>
+     * <li>HTTP_LIST</li>
+     * <li>WEBSITE_LIST</li>
+     * <li>DOWNLOAD_LIST</li>
+     * <li>ALL</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ICMP_LIST</p>
      */
@@ -31,6 +49,13 @@ public class ListSyntheticDetailShrinkRequest extends TeaModel {
     @NameInMap("ExactFilters")
     public String exactFiltersShrink;
 
+    /**
+     * <p>The filter condition. This parameter is required.</p>
+     * <ul>
+     * <li>To query the result of a synthetic monitoring task, set this parameter in the following format: {&quot;taskId&quot;:&quot;${taskId}&quot;}.</li>
+     * <li>To query the result details of a synthetic monitoring task, set this parameter in the following format: {&quot;taskId&quot;:&quot;${taskId}&quot;,&quot;dataId&quot;:&quot;${dataId}&quot;}.</li>
+     * </ul>
+     */
     @NameInMap("Filters")
     public String filtersShrink;
 

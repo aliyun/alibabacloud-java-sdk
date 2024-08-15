@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryAppMetadataRequest extends TeaModel {
     /**
-     * <p>The list of metadata IDs. Separate multiple IDs with commas (,).</p>
+     * <p>The metadata IDs. Separate multiple IDs with commas (,).</p>
+     * <p>You can obtain the exception ID on the <strong>Exception Analysis</strong> page of your application in the ARMS console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +16,11 @@ public class QueryAppMetadataRequest extends TeaModel {
     public String metaIds;
 
     /**
-     * <p>The metadata type. Valid values: sql: obtains an SQL statement based on sqlId exception: obtains the exception stack based on exceptionId</p>
+     * <p>The metadata type. Valid values:</p>
+     * <ul>
+     * <li>sql: obtains an SQL statement based on sqlId.</li>
+     * <li>exception: obtains the exception stack based on exceptionId.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +30,7 @@ public class QueryAppMetadataRequest extends TeaModel {
     public String metaType;
 
     /**
-     * <p>The process identifier (PID) of the application. For more information about how to obtain the PID, see &quot;Obtain the PID of an application.&quot;</p>
+     * <p>The process identifier (PID) of the application. You can obtain the PID of an application by calling the <strong>ListTraceApps</strong> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +40,7 @@ public class QueryAppMetadataRequest extends TeaModel {
     public String pid;
 
     /**
-     * <p>The region ID. Default value: cn-hangzhou.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class UpdateRumAppRequest extends TeaModel {
     public Boolean restart;
 
     /**
-     * <p>Set the application service domain name, support creation, modification, and deletion of service domain name configuration.</p>
+     * <p>The service domain name of the application. You can create, modify, and delete service domain name configurations.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;Op\&quot;:\&quot;Update\&quot;,\&quot;Domain\&quot;:\&quot;example.com\&quot;,\&quot;Config\&quot;:{\&quot;Description\&quot;:\&quot;message\&quot;,\&quot;Tracing\&quot;:\&quot;true\&quot;,\&quot;PropagatorTypes\&quot;:[\&quot;sw8\&quot;]}}</p>

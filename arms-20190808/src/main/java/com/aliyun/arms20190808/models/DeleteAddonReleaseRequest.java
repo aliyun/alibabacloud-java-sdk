@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteAddonReleaseRequest extends TeaModel {
     /**
-     * <p>The name of the add-on.</p>
+     * <p>The name of the add-on. If you assign a value to AddonName, the ReleaseName parameter is ignored and all AddonReleases that belong to the same add-on are deleted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql</p>
      */
     @NameInMap("AddonName")
     public String addonName;

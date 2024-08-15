@@ -168,7 +168,15 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The status.</p>
+         * <p>The installation status of the agent.</p>
+         * <ul>
+         * <li>Installing: The agent is being installed.</li>
+         * <li>Success: The agent is installed.</li>
+         * <li>Failed: The agent failed to be installed.</li>
+         * <li>UnInstall: The agent is uninstalled or has not been installed.</li>
+         * <li>Uninstalling: The agent is being uninstalled.</li>
+         * <li>UnInstallFailed: The agent failed to be uninstalled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -288,7 +296,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         public java.util.List<String> args;
 
         /**
-         * <p>The image of the container.</p>
+         * <p>The container image.</p>
          * 
          * <strong>example:</strong>
          * <p>registry-cn-hangzhou-vpc.ack.aliyuncs.com/acs/arms-prometheus-agent:v4.0.0</p>
@@ -297,7 +305,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         public String image;
 
         /**
-         * <p>The name of the container.</p>
+         * <p>The container name.</p>
          * 
          * <strong>example:</strong>
          * <p>arms-prometheus-operator</p>
@@ -337,6 +345,12 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
     }
 
     public static class DescribeEnvironmentFeatureResponseBodyDataFeatureStatus extends TeaModel {
+        /**
+         * <p>Binded resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c013823b55e4b4d6bb6b6f28682bd38a7</p>
+         */
         @NameInMap("BindResourceId")
         public String bindResourceId;
 
@@ -346,6 +360,9 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         @NameInMap("FeatureContainers")
         public java.util.List<DescribeEnvironmentFeatureResponseBodyDataFeatureStatusFeatureContainers> featureContainers;
 
+        /**
+         * <p>IPs for Pod.</p>
+         */
         @NameInMap("Ips")
         public java.util.List<String> ips;
 
@@ -367,6 +384,12 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The security group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp1c9fcexoalq9po6cp8</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
@@ -384,6 +407,12 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1qt6ict0dbxgv4wer8l</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
@@ -460,7 +489,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
 
     public static class DescribeEnvironmentFeatureResponseBodyData extends TeaModel {
         /**
-         * <p>The installation information of the feature.</p>
+         * <p>The installation information about the feature.</p>
          */
         @NameInMap("Feature")
         public DescribeEnvironmentFeatureResponseBodyDataFeature feature;
