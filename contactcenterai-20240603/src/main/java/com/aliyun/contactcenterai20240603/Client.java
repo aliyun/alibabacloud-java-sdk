@@ -28,6 +28,81 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>根据类型调用大模型</p>
+     * 
+     * @param request AnalyzeConversationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AnalyzeConversationResponse
+     */
+    public AnalyzeConversationResponse analyzeConversationWithOptions(String workspaceId, String appId, AnalyzeConversationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dialogue)) {
+            body.put("dialogue", request.dialogue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.exampleList)) {
+            body.put("exampleList", request.exampleList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fields)) {
+            body.put("fields", request.fields);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelCode)) {
+            body.put("modelCode", request.modelCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resultTypes)) {
+            body.put("resultTypes", request.resultTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneName)) {
+            body.put("sceneName", request.sceneName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceInspection)) {
+            body.put("serviceInspection", request.serviceInspection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stream)) {
+            body.put("stream", request.stream);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AnalyzeConversation"),
+            new TeaPair("version", "2024-06-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/ccai/app/" + com.aliyun.openapiutil.Client.getEncodeParam(appId) + "/analyze_conversation"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AnalyzeConversationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>根据类型调用大模型</p>
+     * 
+     * @param request AnalyzeConversationRequest
+     * @return AnalyzeConversationResponse
+     */
+    public AnalyzeConversationResponse analyzeConversation(String workspaceId, String appId, AnalyzeConversationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.analyzeConversationWithOptions(workspaceId, appId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>CCAI服务面API</p>
      * 
      * @param request RunCompletionRequest
