@@ -18,6 +18,9 @@ public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B4F480E0-4E76-5E43-9966-8322C28A158A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +33,9 @@ public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the zone supports the multicast feature.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("SupportMulticast")
     public Boolean supportMulticast;

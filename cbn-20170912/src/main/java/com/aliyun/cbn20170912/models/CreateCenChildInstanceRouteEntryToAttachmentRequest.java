@@ -6,37 +6,49 @@ import com.aliyun.tea.*;
 public class CreateCenChildInstanceRouteEntryToAttachmentRequest extends TeaModel {
     /**
      * <p>The CEN instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1n6cbxcszp55vxo****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     * <blockquote>
+     * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>02fb3da4-130e-11e9-8e44-001****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The destination CIDR block of the route.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.0.0/24</p>
      */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
 
     /**
      * <p>Specifies whether to perform a dry run to check information such as the permissions and the instance status. Valid values:</p>
-     * <br>
-     * <p>*   **false**: performs a dry run and sends the request.</p>
-     * <p>*   **true**: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <br>
-     * <p>>  This parameter is not in use.</p>
+     * <ul>
+     * <li><strong>false</strong>: performs a dry run and sends the request.</li>
+     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is not in use.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -55,16 +67,20 @@ public class CreateCenChildInstanceRouteEntryToAttachmentRequest extends TeaMode
 
     /**
      * <p>The ID of the route table configured on the network instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vrt-bp1msipdczo9lejup****</p>
      */
     @NameInMap("RouteTableId")
     public String routeTableId;
 
     /**
      * <p>The ID of the network instance connection.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-attach-r1qhupkc19iadz****</p>
      */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;

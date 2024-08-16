@@ -12,10 +12,11 @@ public class ListTransitRouterAvailableResourceRequest extends TeaModel {
 
     /**
      * <p>The region ID of the Enterprise Edition transit router.</p>
-     * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -28,12 +29,16 @@ public class ListTransitRouterAvailableResourceRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to query only the zones in which the multicast feature is supported. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <br>
-     * <p>    After you call **ListTransitRouterAvailableResource**, if no zone is returned, it indicates that the Enterprise Edition transit router does not support the multicast feature.</p>
-     * <br>
-     * <p>*   **false** (default)</p>
+     * <ul>
+     * <li><p><strong>true</strong></p>
+     * <p>After you call <strong>ListTransitRouterAvailableResource</strong>, if no zone is returned, it indicates that the Enterprise Edition transit router does not support the multicast feature.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default)</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("SupportMulticast")
     public Boolean supportMulticast;

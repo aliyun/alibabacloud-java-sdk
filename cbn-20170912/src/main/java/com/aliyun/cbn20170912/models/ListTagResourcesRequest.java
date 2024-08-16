@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The token that determines the start point of the query. Valid values:</p>
-     * <br>
-     * <p>*   If this is your first query and no next queries are to be sent, ignore this parameter.</p>
-     * <p>*   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     * <ul>
+     * <li>If this is your first query and no next queries are to be sent, ignore this parameter.</li>
+     * <li>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -20,23 +24,30 @@ public class ListTagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the region where the resource is deployed.</p>
-     * <br>
      * <p>You can ignore this parameter if ResourceType is set to Cen or BandwidthPackage.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The IDs of the CEN instances.</p>
-     * <br>
      * <p>You can specify at most 20 IDs in each call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-8z69wtwqel33lq****</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -49,35 +60,26 @@ public class ListTagResourcesRequest extends TeaModel {
 
     /**
      * <p>The type of the resource to which you want to add the tag. Valid values:</p>
-     * <br>
-     * <p>**Cen**: CEN instance</p>
-     * <br>
-     * <p>**BandwidthPackage**: bandwidth plan</p>
-     * <br>
-     * <p>**TransitRouter**: transit router</p>
-     * <br>
-     * <p>**TransitRouterVpcAttachment**: virtual private cloud (VPC) connection</p>
-     * <br>
-     * <p>**TransitRouterVbrAttachment**: virtual border router (VBR) connection</p>
-     * <br>
-     * <p>**TransitRouterPeerAttachment**: inter-region connection</p>
-     * <br>
-     * <p>**TransitRouterVpnAttachment**: VPN connection</p>
-     * <br>
-     * <p>**TransitRouterRouteTable**: route table</p>
-     * <br>
-     * <p>**Flowlog**: flow log</p>
-     * <br>
-     * <p>**TransitRouterMulticastDomain**: multicast domain</p>
-     * <br>
+     * <p><strong>Cen</strong>: CEN instance</p>
+     * <p><strong>BandwidthPackage</strong>: bandwidth plan</p>
+     * <p><strong>TransitRouter</strong>: transit router</p>
+     * <p><strong>TransitRouterVpcAttachment</strong>: virtual private cloud (VPC) connection</p>
+     * <p><strong>TransitRouterVbrAttachment</strong>: virtual border router (VBR) connection</p>
+     * <p><strong>TransitRouterPeerAttachment</strong>: inter-region connection</p>
+     * <p><strong>TransitRouterVpnAttachment</strong>: VPN connection</p>
+     * <p><strong>TransitRouterRouteTable</strong>: route table</p>
+     * <p><strong>Flowlog</strong>: flow log</p>
+     * <p><strong>TransitRouterMulticastDomain</strong>: multicast domain</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The information about the tags that are added to the CEN instance.</p>
-     * <br>
      * <p>You can query at most 20 tags in each call.</p>
      */
     @NameInMap("Tag")
@@ -171,20 +173,22 @@ public class ListTagResourcesRequest extends TeaModel {
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
-         * <br>
-         * <p>The tag key cannot exceed 64 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
-         * <br>
+         * <p>The tag key cannot exceed 64 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>You can specify at most 20 tag keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
-         * <br>
-         * <p>The tag value cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
-         * <br>
+         * <p>The tag value cannot exceed 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>You can specify at most 20 tag values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bp</p>
          */
         @NameInMap("Value")
         public String value;

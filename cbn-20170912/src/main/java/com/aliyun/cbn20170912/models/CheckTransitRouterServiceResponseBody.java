@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class CheckTransitRouterServiceResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the transit router feature is activated.</p>
-     * <br>
-     * <p>*   **true**: activated</p>
-     * <p>*   If this value is not returned, the system prompts that the current account does not have the transit router feature activated.</p>
+     * <ul>
+     * <li><strong>true</strong>: activated</li>
+     * <li>If this value is not returned, the system prompts that the current account does not have the transit router feature activated.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Enabled")
     public String enabled;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5D93C8B9-C354-5C3E-BEFB-BA8A2C314D68</p>
      */
     @NameInMap("RequestId")
     public String requestId;

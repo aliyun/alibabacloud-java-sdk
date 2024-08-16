@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeTransitRouteTableAggregationDetailResponseBody extends TeaModel {
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("Count")
     public Integer count;
@@ -18,12 +21,18 @@ public class DescribeTransitRouteTableAggregationDetailResponseBody extends TeaM
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0C2EE7A8-74D4-4081-8236-CEBDE3BBCF50</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -68,24 +77,34 @@ public class DescribeTransitRouteTableAggregationDetailResponseBody extends TeaM
     public static class DescribeTransitRouteTableAggregationDetailResponseBodyData extends TeaModel {
         /**
          * <p>The error message returned if the configuration of the aggregate route fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desctest</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the virtual private cloud (VPC) for which the aggregate route is configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-6eh7fp9hdqa2wv85t****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The status of the aggregate route. Valid values:</p>
-         * <br>
-         * <p>*   **Configured**: The aggregate route is advertised to the VPC.</p>
-         * <p>*   **Configuring**: The aggregate route is being advertised.</p>
-         * <p>*   **ConfigFailed**: The aggregate route failed to be advertised.</p>
-         * <p>*   **PartialConfigured**: Failed to advertise the aggregate route to some VPCs.</p>
-         * <p>*   **Deleting**: The aggregate route is being deleted.</p>
+         * <ul>
+         * <li><strong>Configured</strong>: The aggregate route is advertised to the VPC.</li>
+         * <li><strong>Configuring</strong>: The aggregate route is being advertised.</li>
+         * <li><strong>ConfigFailed</strong>: The aggregate route failed to be advertised.</li>
+         * <li><strong>PartialConfigured</strong>: Failed to advertise the aggregate route to some VPCs.</li>
+         * <li><strong>Deleting</strong>: The aggregate route is being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Configured</p>
          */
         @NameInMap("Status")
         public String status;

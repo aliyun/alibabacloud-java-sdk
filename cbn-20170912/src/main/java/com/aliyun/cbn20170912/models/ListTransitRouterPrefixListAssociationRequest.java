@@ -6,25 +6,36 @@ import com.aliyun.tea.*;
 public class ListTransitRouterPrefixListAssociationRequest extends TeaModel {
     /**
      * <p>The ID of the next hop.</p>
-     * <br>
-     * <p>> Set the value to **BlackHole** if you want to query the prefix list that generates blackhole routes.</p>
+     * <blockquote>
+     * <p>Set the value to <strong>BlackHole</strong> if you want to query the prefix list that generates blackhole routes.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-attach-flbq507rg2ckrj****</p>
      */
     @NameInMap("NextHop")
     public String nextHop;
 
     /**
      * <p>The ID of the network instance associated with the next hop connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-6eh7fp9hdqa2wv85t****</p>
      */
     @NameInMap("NextHopInstanceId")
     public String nextHopInstanceId;
 
     /**
      * <p>The type of the next hop. Valid values:</p>
-     * <br>
-     * <p>*   **BlackHole**: The prefix list that generates blackhole routes.</p>
-     * <p>*   **VPC**: The prefix list whose next hop is a virtual private cloud (VPC) connection.</p>
-     * <p>*   **VBR**: The prefix list whose next hop is a virtual border router (VBR) connection.</p>
-     * <p>*   **TR**: The prefix list whose next hop is an inter-region connection on the transit router.</p>
+     * <ul>
+     * <li><strong>BlackHole</strong>: The prefix list that generates blackhole routes.</li>
+     * <li><strong>VPC</strong>: The prefix list whose next hop is a virtual private cloud (VPC) connection.</li>
+     * <li><strong>VBR</strong>: The prefix list whose next hop is a virtual border router (VBR) connection.</li>
+     * <li><strong>TR</strong>: The prefix list whose next hop is an inter-region connection on the transit router.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
      */
     @NameInMap("NextHopType")
     public String nextHopType;
@@ -37,34 +48,47 @@ public class ListTransitRouterPrefixListAssociationRequest extends TeaModel {
 
     /**
      * <p>The ID of the Alibaba Cloud account to which the prefix list belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1210123456123456</p>
      */
     @NameInMap("OwnerUid")
     public Long ownerUid;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **100**. Default value: **10**.</p>
+     * <p>The number of entries to return on each page. Maximum value: <strong>100</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the prefix list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pl-6ehtn5kqxgeyy08fi****</p>
      */
     @NameInMap("PrefixListId")
     public String prefixListId;
 
     /**
      * <p>The ID of the region where the transit router is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -77,23 +101,32 @@ public class ListTransitRouterPrefixListAssociationRequest extends TeaModel {
 
     /**
      * <p>The status of the prefix list. Valid values:</p>
-     * <br>
-     * <p>*   **Active**</p>
-     * <p>*   **Updating**</p>
+     * <ul>
+     * <li><strong>Active</strong></li>
+     * <li><strong>Updating</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Active</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The ID of the transit router.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-6ehx7q2jze8ch5ji0****</p>
      */
     @NameInMap("TransitRouterId")
     public String transitRouterId;
 
     /**
      * <p>The ID of the route table of the transit router.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vtb-6ehgc262hr170qgyc****</p>
      */
     @NameInMap("TransitRouterTableId")
     public String transitRouterTableId;

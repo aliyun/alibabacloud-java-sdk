@@ -4,6 +4,10 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("All")
     public Boolean all;
 
@@ -13,11 +17,18 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-7qthudw0ll6jmc****</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -30,10 +41,17 @@ public class UntagResourcesRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FinanceDept</p>
+     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

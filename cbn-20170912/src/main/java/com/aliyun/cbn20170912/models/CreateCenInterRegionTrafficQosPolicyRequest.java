@@ -6,17 +6,23 @@ import com.aliyun.tea.*;
 public class CreateCenInterRegionTrafficQosPolicyRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether only to precheck the API request. Valid values:</p>
-     * <br>
-     * <p>*   **true**: prechecks the request but does not create the QoS policy. The system checks the required parameters, the request format, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false**: sends the API request. If the request passes the precheck, the QoS policy is created. This is the default value.</p>
+     * <ul>
+     * <li><strong>true</strong>: prechecks the request but does not create the QoS policy. The system checks the required parameters, the request format, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong>: sends the API request. If the request passes the precheck, the QoS policy is created. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -35,23 +41,26 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends TeaModel {
 
     /**
      * <p>The description of the QoS policy.</p>
-     * <br>
      * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>desctest</p>
      */
     @NameInMap("TrafficQosPolicyDescription")
     public String trafficQosPolicyDescription;
 
     /**
      * <p>The name of the QoS policy.</p>
-     * <br>
      * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nametest</p>
      */
     @NameInMap("TrafficQosPolicyName")
     public String trafficQosPolicyName;
 
     /**
      * <p>The information about the QoS queue.</p>
-     * <br>
      * <p>You can add at most three QoS queues in a QoS policy by calling this operation. To add more QoS queues, call the CreateCenInterRegionTrafficQosQueue operation.</p>
      */
     @NameInMap("TrafficQosQueues")
@@ -59,16 +68,20 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends TeaModel {
 
     /**
      * <p>The ID of the inter-region connection.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-attach-r6g0m3epjehw57****</p>
      */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 
     /**
      * <p>The ID of the transit router.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-8vbuqeo5h5pu3m01d****</p>
      */
     @NameInMap("TransitRouterId")
     public String transitRouterId;
@@ -169,7 +182,6 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends TeaModel {
     public static class CreateCenInterRegionTrafficQosPolicyRequestTrafficQosQueues extends TeaModel {
         /**
          * <p>The Differentiated Services Code Point (DSCP) value that matches the current queue.</p>
-         * <br>
          * <p>Each QoS policy supports at most three queues. You can specify at most 60 DSCP values for each queue. Separate multiple DCSP values with commas (,).</p>
          */
         @NameInMap("Dscps")
@@ -177,32 +189,36 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends TeaModel {
 
         /**
          * <p>The description of the current queue.</p>
-         * <br>
          * <p>Each QoS policy supports at most three queues. You can specify a description for each queue.</p>
-         * <br>
          * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desctest</p>
          */
         @NameInMap("QosQueueDescription")
         public String qosQueueDescription;
 
         /**
          * <p>The name of the current queue.</p>
-         * <br>
          * <p>Each QoS policy supports at most three queues. You can specify a name for each queue.</p>
-         * <br>
          * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nametest</p>
          */
         @NameInMap("QosQueueName")
         public String qosQueueName;
 
         /**
          * <p>The percentage of the inter-region bandwidth that can be used by the queue.</p>
-         * <br>
          * <p>Each QoS policy supports at most three queues. You can specify a valid percentage for each queue.</p>
-         * <br>
-         * <p>For example, a value of **1** specifies that the queue can consume 1% of the inter-region bandwidth.</p>
-         * <br>
-         * <p>>  The sum of the percentage values of all the queues in a QoS policy cannot exceed 100%.</p>
+         * <p>For example, a value of <strong>1</strong> specifies that the queue can consume 1% of the inter-region bandwidth.</p>
+         * <blockquote>
+         * <p> The sum of the percentage values of all the queues in a QoS policy cannot exceed 100%.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RemainBandwidthPercent")
         public String remainBandwidthPercent;

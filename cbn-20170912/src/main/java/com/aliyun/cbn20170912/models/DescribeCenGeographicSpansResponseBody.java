@@ -12,24 +12,36 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>09780287-BC24-4164-8334-773432E32696</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,18 +94,27 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
     public static class DescribeCenGeographicSpansResponseBodyGeographicSpanModelsGeographicSpanModel extends TeaModel {
         /**
          * <p>The ID of the pair of connected areas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>china_asia-pacific</p>
          */
         @NameInMap("GeographicSpanId")
         public String geographicSpanId;
 
         /**
          * <p>The ID of the local area.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asia-pacific</p>
          */
         @NameInMap("LocalGeoRegionId")
         public String localGeoRegionId;
 
         /**
          * <p>The ID of the peer area.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>china</p>
          */
         @NameInMap("OppositeGeoRegionId")
         public String oppositeGeoRegionId;

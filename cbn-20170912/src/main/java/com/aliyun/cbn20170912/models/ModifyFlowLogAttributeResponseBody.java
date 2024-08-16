@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class ModifyFlowLogAttributeResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9A411874-2EC8-4633-9D30-9012DCE89DD1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;

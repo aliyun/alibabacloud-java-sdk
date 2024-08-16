@@ -6,34 +6,47 @@ import com.aliyun.tea.*;
 public class DescribeCenPrivateZoneRoutesRequest extends TeaModel {
     /**
      * <p>The ID of the region where PrivateZone is accessed.</p>
-     * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("AccessRegionId")
     public String accessRegionId;
 
     /**
      * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-7qthudw0ll6jmc****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
      * <p>The ID of the region where PrivateZone is deployed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("HostRegionId")
     public String hostRegionId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

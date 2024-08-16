@@ -6,29 +6,41 @@ import com.aliyun.tea.*;
 public class ListTransitRouterMulticastDomainsRequest extends TeaModel {
     /**
      * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-a7syd349kne38g****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **20**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   You do not need to specify this parameter for the first request.</p>
-     * <p>*   If a value is returned for NextToken, specify the value in the next request to retrieve a new page of results.</p>
+     * <ul>
+     * <li>You do not need to specify this parameter for the first request.</li>
+     * <li>If a value is returned for NextToken, specify the value in the next request to retrieve a new page of results.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -41,8 +53,10 @@ public class ListTransitRouterMulticastDomainsRequest extends TeaModel {
 
     /**
      * <p>The region ID of the transit router.</p>
-     * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -55,7 +69,6 @@ public class ListTransitRouterMulticastDomainsRequest extends TeaModel {
 
     /**
      * <p>The tags.</p>
-     * <br>
      * <p>You can specify up to 20 tags in each call.</p>
      */
     @NameInMap("Tag")
@@ -63,12 +76,18 @@ public class ListTransitRouterMulticastDomainsRequest extends TeaModel {
 
     /**
      * <p>The transit router ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-p0wr9p28r92d598y6****</p>
      */
     @NameInMap("TransitRouterId")
     public String transitRouterId;
 
     /**
      * <p>The multicast domain ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-mcast-domain-3r3bvbypxqheej****</p>
      */
     @NameInMap("TransitRouterMulticastDomainId")
     public String transitRouterMulticastDomainId;
@@ -177,20 +196,22 @@ public class ListTransitRouterMulticastDomainsRequest extends TeaModel {
     public static class ListTransitRouterMulticastDomainsRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
-         * <br>
-         * <p>The tag key cannot be an empty string. The key can be up to 64 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.</p>
-         * <br>
+         * <p>The tag key cannot be an empty string. The key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>You can specify at most 20 tag keys in each call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
-         * <br>
-         * <p>The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
-         * <br>
+         * <p>The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>Each key-value pair must be unique. You can specify up to 20 tag values in each call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagValue</p>
          */
         @NameInMap("Value")
         public String value;

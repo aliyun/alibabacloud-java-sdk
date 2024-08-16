@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeCenGeographicSpanRemainingBandwidthResponseBody extends TeaModel {
     /**
      * <p>The remaining bandwidth of the bandwidth plan. Unit: Mbit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("RemainingBandwidth")
     public Long remainingBandwidth;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E4B345CD-2CBA-4881-AF6D-E5D9BAE1CA7B</p>
      */
     @NameInMap("RequestId")
     public String requestId;

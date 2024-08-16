@@ -6,60 +6,76 @@ import com.aliyun.tea.*;
 public class ResolveAndRouteServiceInCenRequest extends TeaModel {
     /**
      * <p>The IDs of the regions where the cloud service is accessed.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("AccessRegionIds")
     public java.util.List<String> accessRegionIds;
 
     /**
      * <p>The ID of the CEN instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-ckwa2hhmuislse****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     * <blockquote>
+     * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>02fb3da4****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The description of the cloud service.</p>
-     * <br>
      * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>descname</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The IP addresses or CIDR blocks of the cloud service.</p>
-     * <br>
-     * <p>> In most cases, multiple IP addresses or CIDR blocks are assigned to a cloud service. We recommend that you call this operation multiple times to add all IP addresses and CIDR blocks of the cloud service.</p>
-     * <br>
+     * <blockquote>
+     * <p>In most cases, multiple IP addresses or CIDR blocks are assigned to a cloud service. We recommend that you call this operation multiple times to add all IP addresses and CIDR blocks of the cloud service.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100.118.28.0/24</p>
      */
     @NameInMap("Host")
     public String host;
 
     /**
      * <p>The ID of the region in which the cloud service is deployed.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("HostRegionId")
     public String hostRegionId;
 
     /**
      * <p>The ID of the VPC that is associated with the cloud service.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-o6woh5s494zueq40v****</p>
      */
     @NameInMap("HostVpcId")
     public String hostVpcId;

@@ -6,24 +6,30 @@ import com.aliyun.tea.*;
 public class ModifyCenAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the CEN instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-7qthudw0ll6jmc****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
      * <p>The description of the CEN instance.</p>
-     * <br>
-     * <p>The description must be 2 to 256 characters in length. It must start with a letter or Chinese character and cannot start with `http://` or `https://`.</p>
+     * <p>The description must be 2 to 256 characters in length. It must start with a letter or Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The name of the CEN instance.</p>
-     * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter and cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
@@ -36,8 +42,10 @@ public class ModifyCenAttributeRequest extends TeaModel {
 
     /**
      * <p>The level of CIDR block overlapping.</p>
-     * <br>
-     * <p>Set the value to **REDUCED** (default). This value specifies that CIDR blocks can overlap but cannot be the same.</p>
+     * <p>Set the value to <strong>REDUCED</strong> (default). This value specifies that CIDR blocks can overlap but cannot be the same.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>REDUCED</p>
      */
     @NameInMap("ProtectionLevel")
     public String protectionLevel;

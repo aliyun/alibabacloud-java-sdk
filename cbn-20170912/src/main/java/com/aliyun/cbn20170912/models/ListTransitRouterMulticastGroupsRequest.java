@@ -6,48 +6,71 @@ import com.aliyun.tea.*;
 public class ListTransitRouterMulticastGroupsRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The IP address of the multicast group.</p>
-     * <br>
      * <p>Each multicast group is identified by its IP address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>239.XX.XX.2</p>
      */
     @NameInMap("GroupIpAddress")
     public String groupIpAddress;
 
     /**
      * <p>Specified whether to query the multicast members. Valid values:</p>
-     * <br>
-     * <p>*   **false**</p>
-     * <p>*   **true**</p>
-     * <br>
-     * <p>>- This parameter must be specified together with the IsGroupMember parameter.</p>
-     * <p>>- If you do not set IsGroupMember or IsGroupSource, both the multicast sources and members are queried.</p>
-     * <p>>- If you set only one of them or both of them, the specified values prevail.</p>
+     * <ul>
+     * <li><strong>false</strong></li>
+     * <li><strong>true</strong></li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>This parameter must be specified together with the IsGroupMember parameter.</li>
+     * <li>If you do not set IsGroupMember or IsGroupSource, both the multicast sources and members are queried.</li>
+     * <li>If you set only one of them or both of them, the specified values prevail.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsGroupMember")
     public Boolean isGroupMember;
 
     /**
      * <p>Specifies whether to query the multicast sources. Valid values:</p>
-     * <br>
-     * <p>*   **false**</p>
-     * <p>*   **true**</p>
-     * <br>
-     * <p>> - This parameter must be specified together with the IsGroupMember parameter.</p>
-     * <p>> *   If you do not specify IsGroupMember or IsGroupSource, both the multicast sources and members are queried.</p>
-     * <p>> *   If you specify only one of them or both of them, the specified values prevail.</p>
+     * <ul>
+     * <li><strong>false</strong></li>
+     * <li><strong>true</strong></li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>This parameter must be specified together with the IsGroupMember parameter.</li>
+     * </ul>
+     * <ul>
+     * <li>If you do not specify IsGroupMember or IsGroupSource, both the multicast sources and members are queried.</li>
+     * <li>If you specify only one of them or both of them, the specified values prevail.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsGroupSource")
     public Boolean isGroupSource;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **20**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
@@ -60,9 +83,13 @@ public class ListTransitRouterMulticastGroupsRequest extends TeaModel {
 
     /**
      * <p>The token that determines the start point of the query. Valid values:</p>
-     * <br>
-     * <p>*   If this is your first query and no next queries are to be sent, ignore this parameter.</p>
-     * <p>*   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     * <ul>
+     * <li>If this is your first query and no next queries are to be sent, ignore this parameter.</li>
+     * <li>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -81,6 +108,9 @@ public class ListTransitRouterMulticastGroupsRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource associated with the multicast resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-p0w9alkte4w2htrqe****</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -93,25 +123,33 @@ public class ListTransitRouterMulticastGroupsRequest extends TeaModel {
 
     /**
      * <p>The type of the multicast resource. Valid values:</p>
-     * <br>
-     * <p>*   **VPC**: queries multicast resources by VPC.</p>
-     * <p>*   **TR**: queries multicast resources that are also deployed in a different region.</p>
+     * <ul>
+     * <li><strong>VPC</strong>: queries multicast resources by VPC.</li>
+     * <li><strong>TR</strong>: queries multicast resources that are also deployed in a different region.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The ID of the network instance connection</p>
-     * <br>
      * <p>You must configure one of the TransitRouterMulticastDomainId and TransitRouterAttachmentId parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-attach-g3kz2k3u76amsk****</p>
      */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 
     /**
      * <p>The ID of the multicast domain.</p>
-     * <br>
      * <p>You must configure one of the TransitRouterMulticastDomainId and TransitRouterAttachmentId parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-mcast-domain-5mjb5gjb6dgu98****</p>
      */
     @NameInMap("TransitRouterMulticastDomainId")
     public String transitRouterMulticastDomainId;

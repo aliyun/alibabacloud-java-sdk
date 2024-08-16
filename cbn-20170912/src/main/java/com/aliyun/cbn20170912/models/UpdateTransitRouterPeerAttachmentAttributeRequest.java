@@ -6,64 +6,88 @@ import com.aliyun.tea.*;
 public class UpdateTransitRouterPeerAttachmentAttributeRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the local Enterprise Edition transit router to automatically advertise the routes of the inter-region connection to the peer transit router. Valid values:</p>
-     * <br>
-     * <p>*   **false** (default): no</p>
-     * <p>*   **true**: yes</p>
+     * <ul>
+     * <li><strong>false</strong> (default): no</li>
+     * <li><strong>true</strong>: yes</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AutoPublishRouteEnabled")
     public Boolean autoPublishRouteEnabled;
 
     /**
      * <p>The bandwidth value of the inter-region connection. Unit: Mbit/s.</p>
-     * <br>
-     * <p>*   This parameter specifies the maximum bandwidth value for the inter-region connection if you set **BandwidthType** to **BandwidthPackage**.</p>
-     * <p>*   This parameter specifies the bandwidth throttling threshold for the inter-region connection if you set **BandwidthType** to **DataTransfer**.</p>
+     * <ul>
+     * <li>This parameter specifies the maximum bandwidth value for the inter-region connection if you set <strong>BandwidthType</strong> to <strong>BandwidthPackage</strong>.</li>
+     * <li>This parameter specifies the bandwidth throttling threshold for the inter-region connection if you set <strong>BandwidthType</strong> to <strong>DataTransfer</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
     /**
      * <p>The bandwidth allocation method. Valid values:</p>
-     * <br>
-     * <p>*   **BandwidthPackage**: allocates bandwidth from a bandwidth plan.</p>
-     * <p>*   **DataTransfer**: bandwidth is billed based on the pay-by-data-transfer metering method.</p>
+     * <ul>
+     * <li><strong>BandwidthPackage</strong>: allocates bandwidth from a bandwidth plan.</li>
+     * <li><strong>DataTransfer</strong>: bandwidth is billed based on the pay-by-data-transfer metering method.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>BandwidthPackage</p>
      */
     @NameInMap("BandwidthType")
     public String bandwidthType;
 
     /**
      * <p>The ID of the bandwidth plan that is used to allocate bandwidth to the inter-region connection.</p>
-     * <br>
-     * <p>>  If you set **BandwidthType** to **DataTransfer**, you do not need to set this parameter.</p>
+     * <blockquote>
+     * <p> If you set <strong>BandwidthType</strong> to <strong>DataTransfer</strong>, you do not need to set this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cenbwp-3xrxupouolw5ou****</p>
      */
     @NameInMap("CenBandwidthPackageId")
     public String cenBandwidthPackageId;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     * <blockquote>
+     * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>02fb3da4-130e-11e9-8e44-001****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The default line type.</p>
-     * <br>
      * <p>Valid values: Platinum and Gold.</p>
-     * <br>
      * <p>Platinum is supported only when BandwidthType is set to DataTransfer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Gold</p>
      */
     @NameInMap("DefaultLinkType")
     public String defaultLinkType;
 
     /**
      * <p>Specifies whether to perform a dry run to check information such as the permissions and the instance status. Default values:</p>
-     * <br>
-     * <p>*   **false** (default): performs a dry run and sends the request.</p>
-     * <p>*   **true**: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.</p>
+     * <ul>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
+     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -82,24 +106,30 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends TeaModel 
 
     /**
      * <p>The new description of the inter-region connection.</p>
-     * <br>
      * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testdesc</p>
      */
     @NameInMap("TransitRouterAttachmentDescription")
     public String transitRouterAttachmentDescription;
 
     /**
      * <p>The ID of the inter-region connection.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-attach-ft94dcrbc3e5taun3x</p>
      */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 
     /**
      * <p>The new name of the inter-region connection.</p>
-     * <br>
      * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testname</p>
      */
     @NameInMap("TransitRouterAttachmentName")
     public String transitRouterAttachmentName;

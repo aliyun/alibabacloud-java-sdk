@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("Count")
     public Integer count;
@@ -18,21 +21,31 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is empty, no next page exists.</p>
-     * <p>*   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0C2EE7A8-74D4-4081-8236-CEBDE3BBCF50</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -85,52 +98,72 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
     public static class DescribeTransitRouteTableAggregationResponseBodyData extends TeaModel {
         /**
          * <p>The description of the aggregate route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desctest</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the aggregate route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nametest</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The type of the aggregate route.</p>
-         * <br>
-         * <p>The valid value is **Static**, which indicates a static route. By default, aggregate routes advertised to a VPC are considered custom routes.</p>
+         * <p>The valid value is <strong>Static</strong>, which indicates a static route. By default, aggregate routes advertised to a VPC are considered custom routes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Static</p>
          */
         @NameInMap("RouteType")
         public String routeType;
 
         /**
          * <p>The scope of networks that you want to advertise the aggregate route.</p>
-         * <br>
-         * <p>The valid value is **VPC**, which indicates that the aggregate route is advertised to all virtual private clouds (VPCs) that are in associated forwarding correlation with the Enterprise Edition transit router and have route synchronization enabled.</p>
+         * <p>The valid value is <strong>VPC</strong>, which indicates that the aggregate route is advertised to all virtual private clouds (VPCs) that are in associated forwarding correlation with the Enterprise Edition transit router and have route synchronization enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("Scope")
         public String scope;
 
         /**
          * <p>The status of the advertisement of the aggregate route. Valid values:</p>
-         * <br>
-         * <p>*   **AllConfigured**: The aggregate route is advertised to all VPCs.</p>
-         * <p>*   **Configuring**: The aggregate route is being advertised.</p>
-         * <p>*   **ConfigFailed**: The aggregate route failed to be advertised.</p>
-         * <p>*   **PartialConfigured**: Failed to advertise the aggregate route to some VPCs.</p>
-         * <p>*   **Deleting**: The aggregate route is being deleted.</p>
+         * <ul>
+         * <li><strong>AllConfigured</strong>: The aggregate route is advertised to all VPCs.</li>
+         * <li><strong>Configuring</strong>: The aggregate route is being advertised.</li>
+         * <li><strong>ConfigFailed</strong>: The aggregate route failed to be advertised.</li>
+         * <li><strong>PartialConfigured</strong>: Failed to advertise the aggregate route to some VPCs.</li>
+         * <li><strong>Deleting</strong>: The aggregate route is being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AllConfigured</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-6ehgc262hr170qgyc****</p>
          */
         @NameInMap("TrRouteTableId")
         public String trRouteTableId;
 
         /**
          * <p>The destination CIDR block of the aggregate route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.10.0/24</p>
          */
         @NameInMap("TransitRouteTableAggregationCidr")
         public String transitRouteTableAggregationCidr;

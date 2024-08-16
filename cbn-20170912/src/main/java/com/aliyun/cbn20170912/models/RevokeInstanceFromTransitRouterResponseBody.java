@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RevokeInstanceFromTransitRouterResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AA4BFFD1-5090-5896-935F-4B353557F1A8</p>
      */
     @NameInMap("RequestId")
     public String requestId;

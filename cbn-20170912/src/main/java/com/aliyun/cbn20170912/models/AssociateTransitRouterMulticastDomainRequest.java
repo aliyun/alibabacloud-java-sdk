@@ -6,17 +6,23 @@ import com.aliyun.tea.*;
 public class AssociateTransitRouterMulticastDomainRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether only to precheck the API request. Valid values:</p>
-     * <br>
-     * <p>*   **true**: prechecks the request but does not associate the vSwitch with the multicast domain. The system checks the required parameters, the request format, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): sends the request. The vSwitch is associated with the multicast domain after the request passes the precheck.</p>
+     * <ul>
+     * <li><strong>true</strong>: prechecks the request but does not associate the vSwitch with the multicast domain. The system checks the required parameters, the request format, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): sends the request. The vSwitch is associated with the multicast domain after the request passes the precheck.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -35,23 +41,26 @@ public class AssociateTransitRouterMulticastDomainRequest extends TeaModel {
 
     /**
      * <p>The ID of the VPC connection.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-attach-g3kz2k3u76amsk****</p>
      */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 
     /**
      * <p>The ID of the multicast domain.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-mcast-domain-91wpg6wbhchjeq****</p>
      */
     @NameInMap("TransitRouterMulticastDomainId")
     public String transitRouterMulticastDomainId;
 
     /**
      * <p>The vSwitch IDs.</p>
-     * <br>
      * <p>You can specify at most five vSwitch IDs in each call.</p>
      */
     @NameInMap("VSwitchIds")

@@ -6,72 +6,101 @@ import com.aliyun.tea.*;
 public class ListTransitRouterCidrAllocationRequest extends TeaModel {
     /**
      * <p>The ID of the network instance connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-attach-2nalp6yksc805w****</p>
      */
     @NameInMap("AttachmentId")
     public String attachmentId;
 
     /**
      * <p>The name of the network instance connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nametest</p>
      */
     @NameInMap("AttachmentName")
     public String attachmentName;
 
     /**
      * <p>The CIDR block of the transit router.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.10.0/24</p>
      */
     @NameInMap("Cidr")
     public String cidr;
 
     /**
      * <p>The CIDR blocks that have IP addresses allocated to network instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.10.0/28</p>
      */
     @NameInMap("CidrBlock")
     public String cidrBlock;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The CIDR block that is for exclusive use.</p>
-     * <br>
-     * <p>Set the value to **VPN**, which specifies the CIDR block that is reserved for VPN connections.</p>
+     * <p>Set the value to <strong>VPN</strong>, which specifies the CIDR block that is reserved for VPN connections.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VPN</p>
      */
     @NameInMap("DedicatedOwnerId")
     public String dedicatedOwnerId;
 
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
-     * <br>
-     * <p>*   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): performs a dry run and sends the request.</p>
+     * <ul>
+     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>*   If you do not set **MaxResults**, it indicates that you do not need to query results in batches. The value of **MaxResults** indicates the total number of entries.</p>
-     * <br>
-     * <p>*   If a value is specified for **MaxResults**, it indicates that you need to query results in batches. Valid values: **1** to **100**. We recommend that you set **MaxResults** to **20**.</p>
-     * <br>
-     * <p>    The value of **MaxResults** in the response indicates the number of entries in the current batch.</p>
+     * <p>The number of entries per page.</p>
+     * <ul>
+     * <li><p>If you do not specify a value for <strong>MaxResults</strong>, entries are returned in one response. After you send the request, the value of <strong>MaxResults</strong> includes all entries.</p>
+     * </li>
+     * <li><p>If you specify a value for <strong>MaxResults</strong>, entries are returned in batches. Valid values: <strong>1</strong> to <strong>100</strong>. We recommend that you set <strong>MaxResults</strong> to <strong>20</strong>.</p>
+     * <p>The value of <strong>MaxResults</strong> in the response indicates that number of entries in the current batch.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that determines the start point of the query. Valid values:</p>
-     * <br>
-     * <p>*   If this is your first query or no subsequent query is to be sent, ignore this parameter.</p>
-     * <p>*   If a subsequent query is to be sent, set the value to the value of **NextToken** that is returned from the last call.</p>
+     * <ul>
+     * <li>If this is your first query or no subsequent query is to be sent, ignore this parameter.</li>
+     * <li>If a subsequent query is to be sent, set the value to the value of <strong>NextToken</strong> that is returned from the last call.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -83,11 +112,12 @@ public class ListTransitRouterCidrAllocationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the transit router is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The region ID of the transit router.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -100,16 +130,20 @@ public class ListTransitRouterCidrAllocationRequest extends TeaModel {
 
     /**
      * <p>The ID of the CIDR block.</p>
-     * <br>
-     * <p>You can call the [ListTransitRouterCidr](https://help.aliyun.com/document_detail/462772.html) operation to query the ID of a CIDR block.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/462772.html">ListTransitRouterCidr</a> operation to query the ID of a CIDR block.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cidr-0zv0q9crqpntzz****</p>
      */
     @NameInMap("TransitRouterCidrId")
     public String transitRouterCidrId;
 
     /**
      * <p>The ID of the transit router.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-p0w3x8c9em72a40nw****</p>
      */
     @NameInMap("TransitRouterId")
     public String transitRouterId;

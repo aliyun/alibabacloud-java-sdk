@@ -6,30 +6,44 @@ import com.aliyun.tea.*;
 public class ListTransitRouterVpcAttachmentsRequest extends TeaModel {
     /**
      * <p>The IDs of the CEN instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-j3jzhw1zpau2km****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **20**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that determines the start point of the query. Valid values:</p>
-     * <br>
-     * <p>*   If this is your first query and no subsequent queries are to be sent, ignore this parameter.</p>
-     * <p>*   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     * <ul>
+     * <li>If this is your first query and no subsequent queries are to be sent, ignore this parameter.</li>
+     * <li>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The entity that pays the fees of the network instance. Valid values:</p>
-     * <br>
-     * <p>*   **PayByCenOwner**: the Alibaba Cloud account that owns the CEN instance.</p>
-     * <p>*   **PayByResourceOwner**: the Alibaba Cloud account that owns the network instance.</p>
+     * <ul>
+     * <li><strong>PayByCenOwner</strong>: the Alibaba Cloud account that owns the CEN instance.</li>
+     * <li><strong>PayByResourceOwner</strong>: the Alibaba Cloud account that owns the network instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PayByCenOwner</p>
      */
     @NameInMap("OrderType")
     public String orderType;
@@ -42,8 +56,10 @@ public class ListTransitRouterVpcAttachmentsRequest extends TeaModel {
 
     /**
      * <p>The region ID of the Enterprise Edition transit router.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -56,17 +72,20 @@ public class ListTransitRouterVpcAttachmentsRequest extends TeaModel {
 
     /**
      * <p>Specifies whether the network instance is attached to the CEN instance. Valid values:</p>
-     * <br>
-     * <p>*   **Attaching**: being attached to the CEN instance.</p>
-     * <p>*   **Attached**: attached to the CEN instance.</p>
-     * <p>*   **Detaching**: being detached from the CEN instance.</p>
+     * <ul>
+     * <li><strong>Attaching</strong>: being attached to the CEN instance.</li>
+     * <li><strong>Attached</strong>: attached to the CEN instance.</li>
+     * <li><strong>Detaching</strong>: being detached from the CEN instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Attached</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The information about the tags.</p>
-     * <br>
      * <p>You can specify at most 20 tags in each call.</p>
      */
     @NameInMap("Tag")
@@ -74,18 +93,27 @@ public class ListTransitRouterVpcAttachmentsRequest extends TeaModel {
 
     /**
      * <p>The ID of the VPC connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-attach-nls9fzkfat8934****</p>
      */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 
     /**
      * <p>The ID of the Enterprise Edition transit router.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-bp1su1ytdxtataupl****</p>
      */
     @NameInMap("TransitRouterId")
     public String transitRouterId;
 
     /**
      * <p>The ID of the VPC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1kbjcre9vtsebo1****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -210,20 +238,22 @@ public class ListTransitRouterVpcAttachmentsRequest extends TeaModel {
     public static class ListTransitRouterVpcAttachmentsRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
-         * <br>
-         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
-         * <br>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>You can specify at most 20 tag keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tagtest</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
-         * <br>
-         * <p>The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
-         * <br>
+         * <p>The tag value can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tagtest</p>
          */
         @NameInMap("Value")
         public String value;

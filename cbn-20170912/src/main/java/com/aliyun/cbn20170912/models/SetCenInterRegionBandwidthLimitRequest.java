@@ -5,28 +5,52 @@ import com.aliyun.tea.*;
 
 public class SetCenInterRegionBandwidthLimitRequest extends TeaModel {
     /**
+     * <p>The maximum bandwidth value of the inter-region connection. Unit: Mbit/s.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8</p>
      */
     @NameInMap("BandwidthLimit")
     public Long bandwidthLimit;
 
+    /**
+     * <p>The bandwidth allocation method. Valid values:</p>
+     * <p><strong>BandwidthPackage</strong>: allocates bandwidth from a bandwidth plan.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BandwidthPackage</p>
+     */
     @NameInMap("BandwidthType")
     public String bandwidthType;
 
     /**
+     * <p>The ID of the CEN instance.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-7qthudw0ll6jmx****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
+     * <p>The ID of the local region.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query regions where you can attach network instances to a CEN instance.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("LocalRegionId")
     public String localRegionId;
 
     /**
+     * <p>The ID of the peer region.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>us-west-1</p>
      */
     @NameInMap("OppositeRegionId")
     public String oppositeRegionId;

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class TempUpgradeCenBandwidthPackageSpecRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cenbwp-y08yosedeqlpua****</p>
      */
     @NameInMap("CenBandwidthPackageId")
     public String cenBandwidthPackageId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-07-24T13:00:52Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;

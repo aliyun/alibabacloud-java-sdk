@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class ListTransitRoutersResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>68521297-5FA6-46CB-B4EB-658F1C68C8CC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,12 +94,18 @@ public class ListTransitRoutersResponseBody extends TeaModel {
     public static class ListTransitRoutersResponseBodyTransitRoutersTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagValue</p>
          */
         @NameInMap("Value")
         public String value;
@@ -118,38 +136,53 @@ public class ListTransitRoutersResponseBody extends TeaModel {
     public static class ListTransitRoutersResponseBodyTransitRoutersTransitRouterCidrList extends TeaModel {
         /**
          * <p>The CIDR block of the transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.0/24</p>
          */
         @NameInMap("Cidr")
         public String cidr;
 
         /**
          * <p>The description of the CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CIDRdesc</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CIDRname</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>Indicates whether the system is allowed to automatically add a route to the route table of the transit router. Valid values:</p>
-         * <br>
-         * <p>- **true**: yes</p>
-         * <br>
-         * <p>  A value of **true** indicates that after you create a private VPN connection and create a route learning correlation for the private VPC connection, the system automatically adds the following route to the route table of the transit router that is in route learning correlation with the private VPN connection: A blackhole route whose destination CIDR block is the CIDR block of the transit router. The CIDR block of the transit router refers to the CIDR block from which gateway IP addresses are allocated to IPsec-VPN connections. </p>
-         * <p>         </p>
-         * <p>  The blackhole route is advertised only to the route tables of virtual border routers (VBRs) that are connected to the transit router. </p>
-         * <br>
-         * <p>- **false**: no</p>
+         * <ul>
+         * <li><p><strong>true</strong>: yes</p>
+         * <p>A value of <strong>true</strong> indicates that after you create a private VPN connection and create a route learning correlation for the private VPC connection, the system automatically adds the following route to the route table of the transit router that is in route learning correlation with the private VPN connection: A blackhole route whose destination CIDR block is the CIDR block of the transit router. The CIDR block of the transit router refers to the CIDR block from which gateway IP addresses are allocated to IPsec-VPN connections. </p>
+         * <p>The blackhole route is advertised only to the route tables of virtual border routers (VBRs) that are connected to the transit router. </p>
+         * </li>
+         * <li><p><strong>false</strong>: no</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("PublishCidrRoute")
         public Boolean publishCidrRoute;
 
         /**
          * <p>The ID of the CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cidr-46p5ceg21e8152****</p>
          */
         @NameInMap("TransitRouterCidrId")
         public String transitRouterCidrId;
@@ -204,47 +237,66 @@ public class ListTransitRoutersResponseBody extends TeaModel {
     public static class ListTransitRoutersResponseBodyTransitRouters extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account to which the CEN instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1210123456123456</p>
          */
         @NameInMap("AliUid")
         public Long aliUid;
 
         /**
          * <p>The ID of the CEN instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-j3jzhw1zpau2km****</p>
          */
         @NameInMap("CenId")
         public String cenId;
 
         /**
          * <p>The time when the transit router was created.</p>
-         * <br>
-         * <p>The time follows the ISO8601 standard in the `YYYY-MM-DDThh:mmZ` format. The time is displayed in UTC.</p>
+         * <p>The time follows the ISO8601 standard in the <code>YYYY-MM-DDThh:mmZ</code> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-15T09:39Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The ID of the region where the transit router is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The status of the transit router. Valid values:</p>
-         * <br>
-         * <p>*   **Creating**: The transit router is being created.</p>
-         * <p>*   **Active**: The transit router is available.</p>
-         * <p>*   **Modifying**: The transit router is being modified</p>
-         * <p>*   **Deleting**: The transit router is being deleted.</p>
-         * <p>*   **Upgrading**: The transit router is being upgraded.</p>
+         * <ul>
+         * <li><strong>Creating</strong>: The transit router is being created.</li>
+         * <li><strong>Active</strong>: The transit router is available.</li>
+         * <li><strong>Modifying</strong>: The transit router is being modified</li>
+         * <li><strong>Deleting</strong>: The transit router is being deleted.</li>
+         * <li><strong>Upgrading</strong>: The transit router is being upgraded.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>Indicates whether multicast is enabled for the transit router. Valid values:</p>
-         * <br>
-         * <p>*   **true**: enabled</p>
-         * <p>*   **false**: disabled</p>
+         * <ul>
+         * <li><strong>true</strong>: enabled</li>
+         * <li><strong>false</strong>: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("SupportMulticast")
         public Boolean supportMulticast;
@@ -263,27 +315,40 @@ public class ListTransitRoutersResponseBody extends TeaModel {
 
         /**
          * <p>The description of the transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdesc</p>
          */
         @NameInMap("TransitRouterDescription")
         public String transitRouterDescription;
 
         /**
          * <p>The ID of the transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-bp1su1ytdxtataupl****</p>
          */
         @NameInMap("TransitRouterId")
         public String transitRouterId;
 
         /**
          * <p>The name of the transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testname</p>
          */
         @NameInMap("TransitRouterName")
         public String transitRouterName;
 
         /**
          * <p>The edition of the transit router. Valid values:</p>
-         * <br>
-         * <p>*   **Enterprise**: Enhance Edition</p>
-         * <p>*   **Basic**: Basic Edition</p>
+         * <ul>
+         * <li><strong>Enterprise</strong>: Enhance Edition</li>
+         * <li><strong>Basic</strong>: Basic Edition</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enterprise</p>
          */
         @NameInMap("Type")
         public String type;

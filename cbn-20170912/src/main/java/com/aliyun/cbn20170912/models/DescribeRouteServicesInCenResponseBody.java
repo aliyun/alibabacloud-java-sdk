@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeRouteServicesInCenResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>196C99CA-6997-5951-9721-AE89720DF856</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +39,9 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -101,12 +113,18 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
     public static class DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry extends TeaModel {
         /**
          * <p>The ID of the region where the cloud service is accessed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("AccessRegionId")
         public String accessRegionId;
 
         /**
          * <p>The ID of the CEN instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-pfa6ugf3xl0qsd****</p>
          */
         @NameInMap("CenId")
         public String cenId;
@@ -119,34 +137,50 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
 
         /**
          * <p>The description of the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>descname</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The service address of the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.118.28.0/24</p>
          */
         @NameInMap("Host")
         public String host;
 
         /**
          * <p>The region ID of the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("HostRegionId")
         public String hostRegionId;
 
         /**
          * <p>The ID of the VPC associated with the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1h8vbrbcgohcju5****</p>
          */
         @NameInMap("HostVpcId")
         public String hostVpcId;
 
         /**
          * <p>The status of the cloud service. Valid values:</p>
-         * <br>
-         * <p>*   **Creating**</p>
-         * <p>*   **Active**</p>
-         * <p>*   **Deleting**</p>
+         * <ul>
+         * <li><strong>Creating</strong></li>
+         * <li><strong>Active</strong></li>
+         * <li><strong>Deleting</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("Status")
         public String status;

@@ -4,6 +4,10 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class UnroutePrivateZoneInCenToVpcResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>C0245BEF-52AC-44A8-A776-EF96FD26A5CA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

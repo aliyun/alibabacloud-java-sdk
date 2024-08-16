@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class OpenTransitRouterServiceResponseBody extends TeaModel {
     /**
      * <p>The ID of the order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21370700730****</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>866DEBE1-6411-51EC-80D8-975349B9FB4A</p>
      */
     @NameInMap("RequestId")
     public String requestId;

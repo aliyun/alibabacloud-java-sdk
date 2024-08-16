@@ -6,18 +6,21 @@ import com.aliyun.tea.*;
 public class DeleteCenRouteMapRequest extends TeaModel {
     /**
      * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-7qthudw0ll6jm****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
      * <p>The ID of the region in which the routing policy is applied.</p>
-     * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("CenRegionId")
     public String cenRegionId;
@@ -36,8 +39,10 @@ public class DeleteCenRouteMapRequest extends TeaModel {
 
     /**
      * <p>The ID of the routing policy.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cenrmap-abcdedfghij****</p>
      */
     @NameInMap("RouteMapId")
     public String routeMapId;

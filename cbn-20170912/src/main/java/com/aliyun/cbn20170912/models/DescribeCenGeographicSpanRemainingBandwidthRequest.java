@@ -6,36 +6,44 @@ import com.aliyun.tea.*;
 public class DescribeCenGeographicSpanRemainingBandwidthRequest extends TeaModel {
     /**
      * <p>The ID of the Cloud Enterprise Network (CEN) instance to which the bandwidth plan is associated.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-nh98vzx8gfhlwn****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
      * <p>The ID of one of the connected areas of the bandwidth plan. Valid values:</p>
-     * <br>
-     * <p>*   **China**: Chinese mainland</p>
-     * <p>*   **North-America**: North America</p>
-     * <p>*   **Asia-Pacific**: Asia Pacific</p>
-     * <p>*   **Europe**: Europe</p>
-     * <p>*   **Australia**: Australia</p>
-     * <br>
+     * <ul>
+     * <li><strong>China</strong>: Chinese mainland</li>
+     * <li><strong>North-America</strong>: North America</li>
+     * <li><strong>Asia-Pacific</strong>: Asia Pacific</li>
+     * <li><strong>Europe</strong>: Europe</li>
+     * <li><strong>Australia</strong>: Australia</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>China</p>
      */
     @NameInMap("GeographicRegionAId")
     public String geographicRegionAId;
 
     /**
      * <p>The ID of the other area connected by the bandwidth plan. Valid values:</p>
-     * <br>
-     * <p>*   **China**: Chinese mainland</p>
-     * <p>*   **North-America**: North America</p>
-     * <p>*   **Asia-Pacific**: Asia Pacific</p>
-     * <p>*   **Europe**: Europe</p>
-     * <p>*   **Australia**: Australia</p>
-     * <br>
+     * <ul>
+     * <li><strong>China</strong>: Chinese mainland</li>
+     * <li><strong>North-America</strong>: North America</li>
+     * <li><strong>Asia-Pacific</strong>: Asia Pacific</li>
+     * <li><strong>Europe</strong>: Europe</li>
+     * <li><strong>Australia</strong>: Australia</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>North-America</p>
      */
     @NameInMap("GeographicRegionBId")
     public String geographicRegionBId;
@@ -47,13 +55,19 @@ public class DescribeCenGeographicSpanRemainingBandwidthRequest extends TeaModel
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

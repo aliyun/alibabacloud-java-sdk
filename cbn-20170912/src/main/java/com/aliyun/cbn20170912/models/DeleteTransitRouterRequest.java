@@ -6,19 +6,26 @@ import com.aliyun.tea.*;
 public class DeleteTransitRouterRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <blockquote>
+     * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> may be different for each API request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>02fb3da4-130e-11e9-8e44-001****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether only to precheck the request. Check items include permissions and the status of the transit router. Valid values:</p>
-     * <br>
-     * <p>*   **false** (default): sends the request. If the request passes the precheck, the transit router is deleted.</p>
-     * <p>*   **true**: prechecks the request but does not delete the transit router. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
+     * <ul>
+     * <li><strong>false</strong> (default): sends the request. If the request passes the precheck, the transit router is deleted.</li>
+     * <li><strong>true</strong>: prechecks the request but does not delete the transit router. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -37,8 +44,10 @@ public class DeleteTransitRouterRequest extends TeaModel {
 
     /**
      * <p>The ID of the transit router.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-uf654ttymmljlvh2x****</p>
      */
     @NameInMap("TransitRouterId")
     public String transitRouterId;

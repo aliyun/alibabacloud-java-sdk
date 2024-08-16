@@ -6,26 +6,33 @@ import com.aliyun.tea.*;
 public class CreateCenRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>02fb3da4-130e-11e9-8e44-001****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The description of the CEN instance.</p>
-     * <br>
      * <p>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testdesc</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The name of the CEN instance.</p>
-     * <br>
      * <p>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testname</p>
      */
     @NameInMap("Name")
     public String name;
@@ -38,8 +45,10 @@ public class CreateCenRequest extends TeaModel {
 
     /**
      * <p>The level of CIDR block overlapping.</p>
-     * <br>
-     * <p>Set the value to **REDUCED** (default). This value specifies that CIDR blocks can overlap but cannot be the same.</p>
+     * <p>Set the value to <strong>REDUCED</strong> (default). This value specifies that CIDR blocks can overlap but cannot be the same.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>REDUCED</p>
      */
     @NameInMap("ProtectionLevel")
     public String protectionLevel;
@@ -52,7 +61,6 @@ public class CreateCenRequest extends TeaModel {
 
     /**
      * <p>The tags.</p>
-     * <br>
      * <p>You can specify up to 20 tags in each call.</p>
      */
     @NameInMap("Tag")
@@ -138,20 +146,22 @@ public class CreateCenRequest extends TeaModel {
     public static class CreateCenRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
-         * <br>
-         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
-         * <br>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>You can specify up to 20 tag keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tagtest</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
-         * <br>
-         * <p>The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
-         * <br>
+         * <p>The tag value can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>Each tag key must have a unique tag value. You can specify up to 20 tag values in each call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tagtest</p>
          */
         @NameInMap("Value")
         public String value;

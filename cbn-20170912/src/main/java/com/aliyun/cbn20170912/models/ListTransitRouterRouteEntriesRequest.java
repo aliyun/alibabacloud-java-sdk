@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterRouteEntriesRequest extends TeaModel {
     /**
-     * <p>The number of entries per page. Valid values: **1** to **100**. Default value: **20**.</p>
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   You do not need to specify this parameter for the first request.</p>
-     * <p>*   You must specify the token that is obtained from the previous query as the value of **NextToken**.</p>
+     * <ul>
+     * <li>You do not need to specify this parameter for the first request.</li>
+     * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>fce19****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -27,6 +34,9 @@ public class ListTransitRouterRouteEntriesRequest extends TeaModel {
 
     /**
      * <p>The prefix list ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pl-6ehtn5kqxgeyy08fi****</p>
      */
     @NameInMap("PrefixListId")
     public String prefixListId;
@@ -44,7 +54,10 @@ public class ListTransitRouterRouteEntriesRequest extends TeaModel {
     public java.util.List<ListTransitRouterRouteEntriesRequestRouteFilter> routeFilter;
 
     /**
-     * <p>The destination CIDR block of the route. **This parameter is to be deprecated. We recommend that you use the RouteFilter parameter**.</p>
+     * <p>The destination CIDR block of the route. <strong>This parameter is to be deprecated. We recommend that you use the RouteFilter parameter</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.0.0/24</p>
      */
     @NameInMap("TransitRouterRouteEntryDestinationCidrBlock")
     @Deprecated
@@ -52,99 +65,129 @@ public class ListTransitRouterRouteEntriesRequest extends TeaModel {
 
     /**
      * <p>The route ID.</p>
-     * <br>
-     * <p>>  You can use this parameter to query only static routes in the specified route table. This parameter is incompatible with query conditions other than TransitRouterRouteEntryNames.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rte-oklkgwmj97z6dn****</p>
      */
     @NameInMap("TransitRouterRouteEntryIds")
     public java.util.List<String> transitRouterRouteEntryIds;
 
     /**
-     * <p>The name of the route.</p>
-     * <br>
-     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
-     * <br>
-     * <p>>  You can use this parameter to query only static routes in the specified route table. This parameter conflicts with other query conditions except for TransitRouterRouteEntryIds.</p>
+     * <p>The route name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testname</p>
      */
     @NameInMap("TransitRouterRouteEntryNames")
     public java.util.List<String> transitRouterRouteEntryNames;
 
     /**
      * <p>The ID of the network instance connection that you want to specify as the next hop.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-attach-nls9fzkfat8934****</p>
      */
     @NameInMap("TransitRouterRouteEntryNextHopId")
     public String transitRouterRouteEntryNextHopId;
 
     /**
      * <p>The next hop ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-m5ent6du8deaq5*****</p>
      */
     @NameInMap("TransitRouterRouteEntryNextHopResourceId")
     public String transitRouterRouteEntryNextHopResourceId;
 
     /**
      * <p>The next hop type. Valid values:</p>
-     * <br>
-     * <p>*   **VPC**</p>
-     * <p>*   **VBR**</p>
-     * <p>*   **TR**</p>
-     * <p>*   **VPN**</p>
+     * <ul>
+     * <li><strong>VPC</strong></li>
+     * <li><strong>VBR</strong></li>
+     * <li><strong>TR</strong></li>
+     * <li><strong>VPN</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
      */
     @NameInMap("TransitRouterRouteEntryNextHopResourceType")
     public String transitRouterRouteEntryNextHopResourceType;
 
     /**
      * <p>The next hop type. Valid values:</p>
-     * <br>
-     * <p>*   **BlackHole**: routes network traffic to a black hole.</p>
-     * <p>*   **Attachment**: routes network traffic to a network instance connection.</p>
+     * <ul>
+     * <li><strong>BlackHole</strong>: routes network traffic to a black hole.</li>
+     * <li><strong>Attachment</strong>: routes network traffic to a network instance connection.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Attachment</p>
      */
     @NameInMap("TransitRouterRouteEntryNextHopType")
     public String transitRouterRouteEntryNextHopType;
 
     /**
      * <p>The source instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-m5ent6du8deaq5*****</p>
      */
     @NameInMap("TransitRouterRouteEntryOriginResourceId")
     public String transitRouterRouteEntryOriginResourceId;
 
     /**
      * <p>The source instance type. Valid values:</p>
-     * <br>
-     * <p>*   **VPC**</p>
-     * <p>*   **VBR**</p>
-     * <p>*   **TR**</p>
-     * <p>*   **VPN**</p>
+     * <ul>
+     * <li><strong>VPC</strong></li>
+     * <li><strong>VBR</strong></li>
+     * <li><strong>TR</strong></li>
+     * <li><strong>VPN</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
      */
     @NameInMap("TransitRouterRouteEntryOriginResourceType")
     public String transitRouterRouteEntryOriginResourceType;
 
     /**
      * <p>The status of the route. Valid values:</p>
-     * <br>
-     * <p>*   **All**</p>
-     * <p>*   **Active** (default)</p>
-     * <p>*   **Rejected**</p>
-     * <p>*   **Prohibited**</p>
-     * <p>*   **Standby**</p>
-     * <p>*   **Candidate**</p>
-     * <br>
+     * <ul>
+     * <li><strong>All</strong></li>
+     * <li><strong>Active</strong> (default)</li>
+     * <li><strong>Rejected</strong></li>
+     * <li><strong>Prohibited</strong></li>
+     * <li><strong>Standby</strong></li>
+     * <li><strong>Candidate</strong></li>
+     * </ul>
      * <p>If you do not specify a value, routes in the active state are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Active</p>
      */
     @NameInMap("TransitRouterRouteEntryStatus")
     public String transitRouterRouteEntryStatus;
 
     /**
      * <p>The route type. Valid values:</p>
-     * <br>
-     * <p>*   **Propagated**: automatically learned by the route table.</p>
-     * <p>*   **Static**: static routes.</p>
+     * <ul>
+     * <li><strong>Propagated</strong>: automatically learned by the route table.</li>
+     * <li><strong>Static</strong>: static routes.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Propagated</p>
      */
     @NameInMap("TransitRouterRouteEntryType")
     public String transitRouterRouteEntryType;
 
     /**
      * <p>The ID of the route table of the Enterprise Edition transit router.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vtb-bp1dudbh2d5na6b50****</p>
      */
     @NameInMap("TransitRouterRouteTableId")
     public String transitRouterRouteTableId;
@@ -317,13 +360,16 @@ public class ListTransitRouterRouteEntriesRequest extends TeaModel {
     public static class ListTransitRouterRouteEntriesRequestRouteFilter extends TeaModel {
         /**
          * <p>The match pattern for filtering CIDR blocks. Valid values:</p>
-         * <br>
-         * <p>*   **PrefixExactMatchCidrs**: exact matching.</p>
-         * <p>*   **LongestPrefixMatchCidrs**: longest prefix matching. The specified IP address and CIDR block are considered a match.</p>
-         * <p>*   **SubnetOfMatchCidrs**: subnet matching. The specified CIDR block is considered a match.</p>
-         * <p>*   **SupernetOfMatchCidrs**: supernet matching. The specified CIDR block is considered a match.</p>
-         * <br>
-         * <p>By default, the logical operator among filter conditions is **AND**. Information about a route entry is returned only if the route entry matches all filter conditions. Filter conditions must be unique.</p>
+         * <ul>
+         * <li><strong>PrefixExactMatchCidrs</strong>: exact matching.</li>
+         * <li><strong>LongestPrefixMatchCidrs</strong>: longest prefix matching. The specified IP address and CIDR block are considered a match.</li>
+         * <li><strong>SubnetOfMatchCidrs</strong>: subnet matching. The specified CIDR block is considered a match.</li>
+         * <li><strong>SupernetOfMatchCidrs</strong>: supernet matching. The specified CIDR block is considered a match.</li>
+         * </ul>
+         * <p>By default, the logical operator among filter conditions is <strong>AND</strong>. Information about a route entry is returned only if the route entry matches all filter conditions. Filter conditions must be unique.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrefixExactMatchCidrs</p>
          */
         @NameInMap("Key")
         public String key;

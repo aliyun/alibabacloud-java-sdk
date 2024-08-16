@@ -6,19 +6,26 @@ import com.aliyun.tea.*;
 public class CreateTransitRouterRouteTableRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>02fb3da4-130e-11e9-8e44-001****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to precheck the request. Check items include permissions and the status of the specified cloud resources. Valid values:</p>
-     * <br>
-     * <p>*   **false** (default): sends the request. If the request passes the precheck, the custom route table is created.</p>
-     * <p>*   **true**: prechecks the request but does not create the custom route table. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the check, the system returns the ID of the request.</p>
+     * <ul>
+     * <li><strong>false</strong> (default): sends the request. If the request passes the precheck, the custom route table is created.</li>
+     * <li><strong>true</strong>: prechecks the request but does not create the custom route table. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the check, the system returns the ID of the request.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -43,7 +50,6 @@ public class CreateTransitRouterRouteTableRequest extends TeaModel {
 
     /**
      * <p>The tags.</p>
-     * <br>
      * <p>You can specify at most 20 tags in each call.</p>
      */
     @NameInMap("Tag")
@@ -51,24 +57,30 @@ public class CreateTransitRouterRouteTableRequest extends TeaModel {
 
     /**
      * <p>The ID of the Enterprise Edition transit router.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-bp1su1ytdxtataupl****</p>
      */
     @NameInMap("TransitRouterId")
     public String transitRouterId;
 
     /**
      * <p>The description of the custom route table.</p>
-     * <br>
      * <p>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testdesc</p>
      */
     @NameInMap("TransitRouterRouteTableDescription")
     public String transitRouterRouteTableDescription;
 
     /**
      * <p>The name of the custom route table.</p>
-     * <br>
      * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testname</p>
      */
     @NameInMap("TransitRouterRouteTableName")
     public String transitRouterRouteTableName;
@@ -169,9 +181,13 @@ public class CreateTransitRouterRouteTableRequest extends TeaModel {
     public static class CreateTransitRouterRouteTableRequestRouteTableOptions extends TeaModel {
         /**
          * <p>Specifies whether to enable multi-region equal-cost multi-path (ECMP) routing. Valid values:</p>
-         * <br>
-         * <p>*   **disable**(default) If multi-region ECMP routing is disabled, routes that are learned from different regions but have the same prefix and attributes select the transit router with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</p>
-         * <p>*   **enable** If multi-region ECMP routing is enabled, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</p>
+         * <ul>
+         * <li><strong>disable</strong>(default) If multi-region ECMP routing is disabled, routes that are learned from different regions but have the same prefix and attributes select the transit router with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</li>
+         * <li><strong>enable</strong> If multi-region ECMP routing is enabled, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>disable</p>
          */
         @NameInMap("MultiRegionECMP")
         public String multiRegionECMP;
@@ -194,20 +210,22 @@ public class CreateTransitRouterRouteTableRequest extends TeaModel {
     public static class CreateTransitRouterRouteTableRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
-         * <br>
-         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
-         * <br>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>You can specify at most 20 tag keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
-         * <br>
-         * <p>The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
-         * <br>
+         * <p>The tag value can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tagtest</p>
          */
         @NameInMap("Value")
         public String value;

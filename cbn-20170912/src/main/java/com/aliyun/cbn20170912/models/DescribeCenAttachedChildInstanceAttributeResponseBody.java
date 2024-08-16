@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaModel {
     /**
      * <p>The ID of the CEN instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-5mv960yjhja0dh****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
      * <p>The time when the network instance was attached to the CEN instance.</p>
-     * <br>
      * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-07-30T07:53Z</p>
      */
     @NameInMap("ChildInstanceAttachTime")
     public String childInstanceAttachTime;
@@ -26,50 +31,73 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
 
     /**
      * <p>The ID of the network instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-2zebdboka7d7t37vo****</p>
      */
     @NameInMap("ChildInstanceId")
     public String childInstanceId;
 
     /**
      * <p>The name of the network instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>defaultvpc</p>
      */
     @NameInMap("ChildInstanceName")
     public String childInstanceName;
 
     /**
      * <p>The ID of the Alibaba Cloud account to which the network instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1688000000000000</p>
      */
     @NameInMap("ChildInstanceOwnerId")
     public Long childInstanceOwnerId;
 
     /**
      * <p>The region ID of the network instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("ChildInstanceRegionId")
     public String childInstanceRegionId;
 
     /**
      * <p>The type of the network instance. Valid values:</p>
-     * <br>
-     * <p>*   **VPC**: VPC</p>
-     * <p>*   **VBR**: VBR</p>
-     * <p>*   **CCN**: CCN instance</p>
+     * <ul>
+     * <li><strong>VPC</strong>: VPC</li>
+     * <li><strong>VBR</strong>: VBR</li>
+     * <li><strong>CCN</strong>: CCN instance</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
      */
     @NameInMap("ChildInstanceType")
     public String childInstanceType;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ADD98358-D265-4060-87CB-A2427F5A8944</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the network instance is attached to the CEN instance.</p>
-     * <br>
-     * <p>*   **Attaching**: The network instance is being attached to the CEN instance.</p>
-     * <p>*   **Attached**: The network instance is attached to the CEN instance.</p>
-     * <p>*   **Detaching**: The network instance is being detached from the CEN instance.</p>
+     * <ul>
+     * <li><strong>Attaching</strong>: The network instance is being attached to the CEN instance.</li>
+     * <li><strong>Attached</strong>: The network instance is attached to the CEN instance.</li>
+     * <li><strong>Detaching</strong>: The network instance is being detached from the CEN instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Attached</p>
      */
     @NameInMap("Status")
     public String status;
@@ -162,19 +190,27 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
     public static class DescribeCenAttachedChildInstanceAttributeResponseBodyChildInstanceAttributesIpv6CidrBlocksIpv6CidrBlock extends TeaModel {
         /**
          * <p>The IPv6 CIDR block of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2408:XXXX:0:6a::/56</p>
          */
         @NameInMap("Ipv6CidrBlock")
         public String ipv6CidrBlock;
 
         /**
          * <p>The type of the IPv6 CIDR block of the VPC. Valid values:</p>
-         * <br>
-         * <p>*   BGP (default): Alibaba Cloud Border Gateway Protocol (BGP) IPv6</p>
-         * <p>*   ChinaMobile: China Mobile (single line)</p>
-         * <p>*   ChinaUnicom: China Unicom (single line)</p>
-         * <p>*   ChinaTelecom: China Telecom (single line)</p>
-         * <br>
-         * <p>>  If you are on the whitelist of single-line bandwidth, you can set this parameter to ChinaTelecom, ChinaUnicom, or ChinaMobile.</p>
+         * <ul>
+         * <li>BGP (default): Alibaba Cloud Border Gateway Protocol (BGP) IPv6</li>
+         * <li>ChinaMobile: China Mobile (single line)</li>
+         * <li>ChinaUnicom: China Unicom (single line)</li>
+         * <li>ChinaTelecom: China Telecom (single line)</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you are on the whitelist of single-line bandwidth, you can set this parameter to ChinaTelecom, ChinaUnicom, or ChinaMobile.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>BGP</p>
          */
         @NameInMap("Ipv6Isp")
         public String ipv6Isp;
@@ -243,12 +279,18 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
     public static class DescribeCenAttachedChildInstanceAttributeResponseBodyChildInstanceAttributes extends TeaModel {
         /**
          * <p>The IPv4 CIDR block of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0/16</p>
          */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
         /**
          * <p>The IPv6 CIDR block of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2408:XXXX:0:a600::/56</p>
          */
         @NameInMap("Ipv6CidrBlock")
         public String ipv6CidrBlock;

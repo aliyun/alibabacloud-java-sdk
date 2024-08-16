@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaModel {
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that determines the start point of the query. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** was not returned, it indicates that no additional results exist.</p>
-     * <p>*   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> was not returned, it indicates that no additional results exist.</li>
+     * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>a415****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F6B1D9AB-176D-4399-801D-8BC576F4EB0D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -85,40 +98,57 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
     public static class ListTransitRouterRouteTableAssociationsResponseBodyTransitRouterAssociations extends TeaModel {
         /**
          * <p>The ID of the next hop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1h8vbrbcgohcju5****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The type of next hop. Valid values:</p>
-         * <br>
-         * <p>*   **VPC**: VPC</p>
-         * <p>*   **VBR**: VBR</p>
-         * <p>*   **TR**: transit router</p>
-         * <p>*   **VPN** :VPN attachment</p>
+         * <ul>
+         * <li><strong>VPC</strong>: VPC</li>
+         * <li><strong>VBR</strong>: VBR</li>
+         * <li><strong>TR</strong>: transit router</li>
+         * <li><strong>VPN</strong> :VPN attachment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The status of the associated forwarding correlation. Valid values:</p>
-         * <br>
-         * <p>*   **Active**: The associated forwarding correlation is available.</p>
-         * <p>*   **Associating**: The associated forwarding correlation is being created.</p>
-         * <p>*   **Dissociating**: The associated forwarding correlation is being deleted.</p>
-         * <p>*   **Deleted**: The associated forwarding correlation is deleted.</p>
+         * <ul>
+         * <li><strong>Active</strong>: The associated forwarding correlation is available.</li>
+         * <li><strong>Associating</strong>: The associated forwarding correlation is being created.</li>
+         * <li><strong>Dissociating</strong>: The associated forwarding correlation is being deleted.</li>
+         * <li><strong>Deleted</strong>: The associated forwarding correlation is deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Associating</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the network instance connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-nls9fzkfat8934****</p>
          */
         @NameInMap("TransitRouterAttachmentId")
         public String transitRouterAttachmentId;
 
         /**
          * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-bp1dudbh2d5na6b50****</p>
          */
         @NameInMap("TransitRouterRouteTableId")
         public String transitRouterRouteTableId;

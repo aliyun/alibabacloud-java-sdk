@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateCenResponseBody extends TeaModel {
     /**
      * <p>The CEN instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-dc4vwznpwbobrl****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0C2EE7A8-74D4-4081-8236-CEBDE3BBCF50</p>
      */
     @NameInMap("RequestId")
     public String requestId;

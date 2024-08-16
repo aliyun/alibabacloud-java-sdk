@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteCenRouteMapResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5903EE99-D542-4E14-BC65-AAC1CB2D3D03</p>
      */
     @NameInMap("RequestId")
     public String requestId;

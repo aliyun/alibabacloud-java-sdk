@@ -6,13 +6,24 @@ import com.aliyun.tea.*;
 public class ListTransitRouterMulticastDomainVSwitchesRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-44m0p68spvlrqq****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -33,6 +44,9 @@ public class ListTransitRouterMulticastDomainVSwitchesRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-p0wr1cd4fcuxy3ui0****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

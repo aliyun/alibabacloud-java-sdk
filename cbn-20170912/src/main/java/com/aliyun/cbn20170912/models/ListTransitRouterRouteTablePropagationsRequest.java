@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterRouteTablePropagationsRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page. Default value: **50**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>50</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that determines the start point of the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dd20****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -30,41 +36,57 @@ public class ListTransitRouterRouteTablePropagationsRequest extends TeaModel {
 
     /**
      * <p>The status of the route learning correlation. Valid values:</p>
-     * <br>
-     * <p>*   **Active**: available</p>
-     * <p>*   **Enabling**: being enabled</p>
-     * <p>*   **Disabling**: being disabled</p>
+     * <ul>
+     * <li><strong>Active</strong>: available</li>
+     * <li><strong>Enabling</strong>: being enabled</li>
+     * <li><strong>Disabling</strong>: being disabled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Active</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The ID of the network instance connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-attach-vx6iwhjr1x1j78****</p>
      */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 
     /**
      * <p>The ID of the network instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1h8vbrbcgohcju5****</p>
      */
     @NameInMap("TransitRouterAttachmentResourceId")
     public String transitRouterAttachmentResourceId;
 
     /**
      * <p>The type of the network instance. Valid values:</p>
-     * <br>
-     * <p>*   **VPC**: virtual private cloud (VPC)</p>
-     * <p>*   **VBR**: virtual border router (VBR)</p>
-     * <p>*   **TR**: transit router</p>
-     * <p>*   **VPN**: VPN connection</p>
+     * <ul>
+     * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
+     * <li><strong>VBR</strong>: virtual border router (VBR)</li>
+     * <li><strong>TR</strong>: transit router</li>
+     * <li><strong>VPN</strong>: VPN connection</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
      */
     @NameInMap("TransitRouterAttachmentResourceType")
     public String transitRouterAttachmentResourceType;
 
     /**
      * <p>The ID of the route table of the Enterprise Edition transit router.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vtb-bp1dudbh2d5na6b50****</p>
      */
     @NameInMap("TransitRouterRouteTableId")
     public String transitRouterRouteTableId;

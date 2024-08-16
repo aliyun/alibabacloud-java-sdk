@@ -6,29 +6,41 @@ import com.aliyun.tea.*;
 public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends TeaModel {
     /**
      * <p>The ID of the CEN instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-dc4vwznpwbobrl****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
      * <p>The ID of the route table configured on the network instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vtb-bp174d1gje79u1g4t****</p>
      */
     @NameInMap("ChildInstanceRouteTableId")
     public String childInstanceRouteTableId;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **20**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that determines the start point of the query. Valid values:</p>
-     * <br>
-     * <p>*   If this is your first query and no subsequent queries are to be sent, ignore this parameter.</p>
-     * <p>*   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     * <ul>
+     * <li>If this is your first query and no subsequent queries are to be sent, ignore this parameter.</li>
+     * <li>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -53,14 +65,19 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends TeaMode
 
     /**
      * <p>Specifies whether to host the route. If you leave the parameter empty, the route is not hosted. A value of TR specifies that the route is hosted on a transit router.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TR</p>
      */
     @NameInMap("ServiceType")
     public String serviceType;
 
     /**
      * <p>The ID of the network instance connection.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-attach-r6g0m3epjehw57****</p>
      */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
@@ -161,8 +178,12 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends TeaMode
     public static class ListCenChildInstanceRouteEntriesToAttachmentRequestRouteFilter extends TeaModel {
         /**
          * <p>The match mode of the route.</p>
-         * <br>
-         * <p>*   **prefix-exact-match**: exact match.</p>
+         * <ul>
+         * <li><strong>prefix-exact-match</strong>: exact match.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>prefix-exact-match</p>
          */
         @NameInMap("Key")
         public String key;

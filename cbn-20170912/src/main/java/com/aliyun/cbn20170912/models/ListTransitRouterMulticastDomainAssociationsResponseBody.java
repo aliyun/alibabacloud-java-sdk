@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class ListTransitRouterMulticastDomainAssociationsResponseBody extends TeaModel {
     /**
      * <p>The number of entries returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that determines the start point of the query. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is empty, it indicates that no subsequent query is to be sent.</p>
-     * <p>*   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, it indicates that no subsequent query is to be sent.</li>
+     * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1CD0969B-A605-5D2D-BFF0-699FD182FB7F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -85,48 +98,69 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
     public static class ListTransitRouterMulticastDomainAssociationsResponseBodyTransitRouterMulticastAssociations extends TeaModel {
         /**
          * <p>The ID of the resource associated with the multicast domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-p0w9b7g9l90yofr0n****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the resource associated with the multicast domain belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1210123456123456</p>
          */
         @NameInMap("ResourceOwnerId")
         public Long resourceOwnerId;
 
         /**
          * <p>The type of resource associated with the multicast domain.</p>
-         * <br>
-         * <p>Valid value: **VPC**.</p>
+         * <p>Valid value: <strong>VPC</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The association status. Valid values:</p>
-         * <br>
-         * <p>*   **Associated**: The resource is associated with the multicast domain.</p>
-         * <p>*   **Associating**: The resource is being associated with the multicast domain.</p>
-         * <p>*   **Dissociating**: The resource is being disassociated from the multicast domain.</p>
+         * <ul>
+         * <li><strong>Associated</strong>: The resource is associated with the multicast domain.</li>
+         * <li><strong>Associating</strong>: The resource is being associated with the multicast domain.</li>
+         * <li><strong>Dissociating</strong>: The resource is being disassociated from the multicast domain.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Dissociating</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the network instance connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-p90y3ymbbwuvy5****</p>
          */
         @NameInMap("TransitRouterAttachmentId")
         public String transitRouterAttachmentId;
 
         /**
          * <p>The ID of the multicast domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-mcast-domain-91wpg6wbhchjeq****</p>
          */
         @NameInMap("TransitRouterMulticastDomainId")
         public String transitRouterMulticastDomainId;
 
         /**
          * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-p0wxk12u6okfkr8xy****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;

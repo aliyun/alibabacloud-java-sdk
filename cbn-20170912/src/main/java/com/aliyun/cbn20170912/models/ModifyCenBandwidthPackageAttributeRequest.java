@@ -6,24 +6,30 @@ import com.aliyun.tea.*;
 public class ModifyCenBandwidthPackageAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the bandwidth plan.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cenbwp-4c2zaavbvh5fx****</p>
      */
     @NameInMap("CenBandwidthPackageId")
     public String cenBandwidthPackageId;
 
     /**
      * <p>The new description of the bandwidth plan.</p>
-     * <br>
      * <p>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Bandwidth Plans</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The new name of the bandwidth plan.</p>
-     * <br>
      * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;

@@ -6,25 +6,35 @@ import com.aliyun.tea.*;
 public class DescribeTransitRouteTableAggregationRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can only contain ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
+     * <blockquote>
+     * <p> If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>02fb3da4-130e-11e9-8e44-001****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **20**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     /**
      * <p>The token that determines the start point of the query. Valid values:</p>
-     * <br>
-     * <p>*   If this is your first query or no subsequent query is to be sent, ignore this parameter.</p>
-     * <p>*   If a next query is to be sent, set the value to the value of **NextToken** that is returned from the last call.</p>
+     * <ul>
+     * <li>If this is your first query or no subsequent query is to be sent, ignore this parameter.</li>
+     * <li>If a next query is to be sent, set the value to the value of <strong>NextToken</strong> that is returned from the last call.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -43,14 +53,19 @@ public class DescribeTransitRouteTableAggregationRequest extends TeaModel {
 
     /**
      * <p>The destination CIDR block of the aggregate route.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.10.0/24</p>
      */
     @NameInMap("TransitRouteTableAggregationCidr")
     public String transitRouteTableAggregationCidr;
 
     /**
      * <p>The ID of the route table of the Enterprise Edition transit router.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vtb-6ehgc262hr170qgyc****</p>
      */
     @NameInMap("TransitRouteTableId")
     public String transitRouteTableId;

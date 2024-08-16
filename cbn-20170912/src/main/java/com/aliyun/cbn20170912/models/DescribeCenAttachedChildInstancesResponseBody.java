@@ -12,24 +12,36 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B2063B16-852B-5B66-B73D-4ED4D1A5E5C2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,52 +94,74 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
     public static class DescribeCenAttachedChildInstancesResponseBodyChildInstancesChildInstance extends TeaModel {
         /**
          * <p>The ID of the CEN instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-j3jzhw1zpau2km****</p>
          */
         @NameInMap("CenId")
         public String cenId;
 
         /**
          * <p>The time when the network instance was attached to the CEN instance.</p>
-         * <br>
          * <p>The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-08-10T06:27Z</p>
          */
         @NameInMap("ChildInstanceAttachTime")
         public String childInstanceAttachTime;
 
         /**
          * <p>The ID of the network instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-8vb1lu55yt9rlwgxl****</p>
          */
         @NameInMap("ChildInstanceId")
         public String childInstanceId;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the network instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1688000000000000</p>
          */
         @NameInMap("ChildInstanceOwnerId")
         public Long childInstanceOwnerId;
 
         /**
          * <p>The ID of the region where the network instance is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou</p>
          */
         @NameInMap("ChildInstanceRegionId")
         public String childInstanceRegionId;
 
         /**
          * <p>The type of the network instance. Valid values:</p>
-         * <br>
-         * <p>*   **VPC**: VPC</p>
-         * <p>*   **VBR**: VBR</p>
-         * <p>*   **CCN**: CCN instance</p>
+         * <ul>
+         * <li><strong>VPC</strong>: VPC</li>
+         * <li><strong>VBR</strong>: VBR</li>
+         * <li><strong>CCN</strong>: CCN instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("ChildInstanceType")
         public String childInstanceType;
 
         /**
          * <p>The status of the network instance. Valid values:</p>
-         * <br>
-         * <p>*   **Attaching**: The network instance is being created on the transit router.</p>
-         * <p>*   **Attached**: The network instance has been created on the transit router.</p>
-         * <p>*   **Detaching**: The network instance is being deleted from the transit router.</p>
+         * <ul>
+         * <li><strong>Attaching</strong>: The network instance is being created on the transit router.</li>
+         * <li><strong>Attached</strong>: The network instance has been created on the transit router.</li>
+         * <li><strong>Detaching</strong>: The network instance is being deleted from the transit router.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Attached</p>
          */
         @NameInMap("Status")
         public String status;

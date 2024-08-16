@@ -12,14 +12,19 @@ public class TagResourcesRequest extends TeaModel {
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The IDs of the resources. You can enter most at 20 resource IDs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-7qthudw0ll6jmc****</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -31,16 +36,17 @@ public class TagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource. Set the value to **cen**, which specifies a CEN instance.</p>
-     * <br>
+     * <p>The type of the resource. Set the value to <strong>cen</strong>, which specifies a CEN instance.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The list of tags that you want to associate with the resources.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -118,20 +124,22 @@ public class TagResourcesRequest extends TeaModel {
     public static class TagResourcesRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
-         * <br>
-         * <p>You can enter multiple tag keys. Valid values of **N**: **1** to **20**.</p>
-         * <br>
-         * <p>The key cannot exceed 64 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <p>You can enter multiple tag keys. Valid values of <strong>N</strong>: <strong>1</strong> to <strong>20</strong>.</p>
+         * <p>The key cannot exceed 64 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
-         * <br>
-         * <p>Each tag key corresponds to a tag value. Valid values of **N**: **1** to **20**.</p>
-         * <br>
-         * <p>The value cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <p>Each tag key corresponds to a tag value. Valid values of <strong>N</strong>: <strong>1</strong> to <strong>20</strong>.</p>
+         * <p>The value cannot exceed 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagValue</p>
          */
         @NameInMap("Value")
         public String value;

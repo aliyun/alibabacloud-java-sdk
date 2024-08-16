@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteTransitRouteTableAggregationResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0C2EE7A8-74D4-4081-8236-CEBDE3BBCF50</p>
      */
     @NameInMap("RequestId")
     public String requestId;

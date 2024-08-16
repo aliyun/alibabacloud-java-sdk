@@ -6,63 +6,83 @@ import com.aliyun.tea.*;
 public class EnableCenVbrHealthCheckRequest extends TeaModel {
     /**
      * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-hahhfskfkseig****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
      * <p>The description of the health check.</p>
-     * <br>
-     * <p>The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.</p>
+     * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testdesc</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The time interval at which probe packets are sent during a health check. Unit: seconds. Default value: **2**. Valid values: **2 to 3**.</p>
+     * <p>The time interval at which probe packets are sent during a health check. Unit: seconds. Default value: <strong>2</strong>. Valid values: <strong>2 to 3</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("HealthCheckInterval")
     public Integer healthCheckInterval;
 
     /**
      * <p>Specifies whether to enable probing during the health check. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <br>
-     * <p>        If you enable probing, the system does not switch to another route if the detected route is not reachable. </p>
-     * <br>
-     * <p>          Make sure that a redundant route is available. Otherwise, network disconnections may occur. </p>
-     * <br>
-     * <p>*   **false** (default): no</p>
-     * <br>
-     * <p>        Probing is disabled by default. If a redundant route is specified, the system switches to the redundant route if the detected route is not reachable.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: yes</p>
+     * <pre><code>If you enable probing, the system does not switch to another route if the detected route is not reachable. 
+     * 
+     *   Make sure that a redundant route is available. Otherwise, network disconnections may occur. 
+     * </code></pre>
+     * </li>
+     * <li><p><strong>false</strong> (default): no</p>
+     * <pre><code>Probing is disabled by default. If a redundant route is specified, the system switches to the redundant route if the detected route is not reachable.
+     * </code></pre>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("HealthCheckOnly")
     public Boolean healthCheckOnly;
 
     /**
      * <p>The source IP address for the health check. You can set the source IP address in the following ways:</p>
-     * <br>
-     * <p>*   **Automatic IP Address** (recommended): The system automatically assigns an IP address from the 100.96.0.0/16 CIDR block.</p>
-     * <p>*   **Custom IP Address**: You must specify an idle IP address from the 10.0.0.0/8, 192.168.0.0/16, or 172.16.0.0/12 CIDR block. The specified IP address cannot be the IP address of the VBR on the Alibaba Cloud side, the IP address of the VBR on the customer side, or other IP addresses with which the VBR communicates through the CEN instance.</p>
+     * <ul>
+     * <li><strong>Automatic IP Address</strong> (recommended): The system automatically assigns an IP address from the 100.96.0.0/16 CIDR block.</li>
+     * <li><strong>Custom IP Address</strong>: You must specify an idle IP address from the 10.0.0.0/8, 192.168.0.0/16, or 172.16.0.0/12 CIDR block. The specified IP address cannot be the IP address of the VBR on the Alibaba Cloud side, the IP address of the VBR on the customer side, or other IP addresses with which the VBR communicates through the CEN instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>192.XX.XX.1</p>
      */
     @NameInMap("HealthCheckSourceIp")
     public String healthCheckSourceIp;
 
     /**
      * <p>The destination IP address for the health check.</p>
-     * <br>
      * <p>Set the destination IP address to the IP address of the VBR on the customer side.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.XX.XX.1</p>
      */
     @NameInMap("HealthCheckTargetIp")
     public String healthCheckTargetIp;
 
     /**
-     * <p>The number of probe packets that are sent during a health check. Unit: packets. Valid values: **3 to 8**. Default value: **8**.</p>
+     * <p>The number of probe packets that are sent during a health check. Unit: packets. Valid values: <strong>3 to 8</strong>. Default value: <strong>8</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8</p>
      */
     @NameInMap("HealthyThreshold")
     public Integer healthyThreshold;
@@ -81,26 +101,33 @@ public class EnableCenVbrHealthCheckRequest extends TeaModel {
 
     /**
      * <p>The ID of the VBR.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vbr-wz95o9aylj181n5mzk****</p>
      */
     @NameInMap("VbrInstanceId")
     public String vbrInstanceId;
 
     /**
      * <p>The ID of the Alibaba Cloud account to which the VBR belongs.</p>
-     * <br>
-     * <p>> This parameter is required if the VBR and the CEN instance belong to different Alibaba Cloud accounts.</p>
+     * <blockquote>
+     * <p>This parameter is required if the VBR and the CEN instance belong to different Alibaba Cloud accounts.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1250123456123456</p>
      */
     @NameInMap("VbrInstanceOwnerId")
     public Long vbrInstanceOwnerId;
 
     /**
      * <p>The ID of the region where the VBR is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shenzhen</p>
      */
     @NameInMap("VbrInstanceRegionId")
     public String vbrInstanceRegionId;

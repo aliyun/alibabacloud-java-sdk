@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateTransitRouterVpnAttachmentResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8B5DD40A-3A29-5AC0-B8DA-05FD10D5C893</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the VPN attachment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-attach-y5dup2qwfyh9lu****</p>
      */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;

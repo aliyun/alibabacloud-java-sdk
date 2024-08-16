@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class DescribeCenGeographicSpansRequest extends TeaModel {
     /**
      * <p>The ID of the areas that are connected by the CEN instance.</p>
-     * <br>
-     * <p>> If you do not set this parameter, the system queries the information about all areas supported by CEN.</p>
+     * <blockquote>
+     * <p>If you do not set this parameter, the system queries the information about all areas supported by CEN.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>china_asia-pacific</p>
      */
     @NameInMap("GeographicSpanId")
     public String geographicSpanId;
@@ -19,13 +23,19 @@ public class DescribeCenGeographicSpansRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.</p>
+     * <p>The number of entries per page. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

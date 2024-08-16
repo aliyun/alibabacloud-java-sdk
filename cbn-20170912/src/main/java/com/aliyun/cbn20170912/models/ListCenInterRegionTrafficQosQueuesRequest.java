@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListCenInterRegionTrafficQosQueuesRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the query.</p>
-     * <br>
-     * <p>- If NextToken was not returned in the previous query, it indicates that no additional results exist.</p>
-     * <p>- If NextToken was returned in the previous query, specify the value to obtain the next set of results.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2ca1ed1573cb****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -33,36 +40,56 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends TeaModel {
 
     /**
      * <p>The ID of the QoS policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qos-rnghap5gc8155x****</p>
      */
     @NameInMap("TrafficQosPolicyId")
     public String trafficQosPolicyId;
 
     /**
-     * <p>The description of the queue.</p>
+     * <p>The description of the QoS queue.</p>
+     * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qosQueueDescription</p>
      */
     @NameInMap("TrafficQosQueueDescription")
     public String trafficQosQueueDescription;
 
     /**
      * <p>The ID of the queue.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qos-queue-siakjb2nn9gz5z****</p>
      */
     @NameInMap("TrafficQosQueueId")
     public String trafficQosQueueId;
 
     /**
-     * <p>The name of the queue.</p>
+     * <p>The name of the QoS queue.</p>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qosQueueName</p>
      */
     @NameInMap("TrafficQosQueueName")
     public String trafficQosQueueName;
 
     /**
      * <p>The ID of the inter-region connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-attach-a6p8voaodog5c0****</p>
      */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 
     /**
      * <p>The ID of the transit router.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-bp1rmwxnk221e3fas****</p>
      */
     @NameInMap("TransitRouterId")
     public String transitRouterId;

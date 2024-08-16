@@ -12,18 +12,26 @@ public class DescribeCenBandwidthPackagesRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to include renewal data. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IncludeReservationData")
     public Boolean includeReservationData;
 
     /**
      * <p>The logical operator between the filter conditions. Valid values:</p>
-     * <br>
-     * <p>*   **false** (default): **AND** Bandwidth plans that meet all filter conditions are returned.</p>
-     * <p>*   **true**: **OR** Bandwidth plans that meet one of the filter conditions are returned.</p>
+     * <ul>
+     * <li><strong>false</strong> (default): <strong>AND</strong> Bandwidth plans that meet all filter conditions are returned.</li>
+     * <li><strong>true</strong>: <strong>OR</strong> Bandwidth plans that meet one of the filter conditions are returned.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsOrKey")
     public Boolean isOrKey;
@@ -35,19 +43,28 @@ public class DescribeCenBandwidthPackagesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfnwjeo4tv****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -60,7 +77,6 @@ public class DescribeCenBandwidthPackagesRequest extends TeaModel {
 
     /**
      * <p>The information about the tags.</p>
-     * <br>
      * <p>You can specify at most 20 tags in each call.</p>
      */
     @NameInMap("Tag")
@@ -162,23 +178,32 @@ public class DescribeCenBandwidthPackagesRequest extends TeaModel {
     public static class DescribeCenBandwidthPackagesRequestFilter extends TeaModel {
         /**
          * <p>The filter conditions. You can use filter conditions to filter the bandwidth plans that you want to query. The following filter conditions are supported:</p>
-         * <br>
-         * <p>*   **CenId**: CEN instance ID</p>
-         * <br>
-         * <p>*   **Status**: bandwidth plan status. Valid values:</p>
-         * <br>
-         * <p>    *   **Idle**: not associated with a CEN instance.</p>
-         * <p>    *   **InUse**: associated with a CEN instance.</p>
-         * <br>
-         * <p>*   **CenBandwidthPackageId**: bandwidth plan ID</p>
-         * <br>
-         * <p>*   **Name**: bandwidth plan name You can specify one or more filter conditions. The maximum value of **N** is **5**.</p>
+         * <ul>
+         * <li><p><strong>CenId</strong>: CEN instance ID</p>
+         * </li>
+         * <li><p><strong>Status</strong>: bandwidth plan status. Valid values:</p>
+         * <ul>
+         * <li><strong>Idle</strong>: not associated with a CEN instance.</li>
+         * <li><strong>InUse</strong>: associated with a CEN instance.</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>CenBandwidthPackageId</strong>: bandwidth plan ID</p>
+         * </li>
+         * <li><p><strong>Name</strong>: bandwidth plan name You can specify one or more filter conditions. The maximum value of <strong>N</strong> is <strong>5</strong>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CenId</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>Specify a filter value based on the **Key** parameter. You can specify multiple filter values for each **Key**. The logical operator between filter values is **OR**. If one filter value is matched, the filter condition is matched.</p>
+         * <p>Specify a filter value based on the <strong>Key</strong> parameter. You can specify multiple filter values for each <strong>Key</strong>. The logical operator between filter values is <strong>OR</strong>. If one filter value is matched, the filter condition is matched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Idle</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;
@@ -209,20 +234,22 @@ public class DescribeCenBandwidthPackagesRequest extends TeaModel {
     public static class DescribeCenBandwidthPackagesRequestTag extends TeaModel {
         /**
          * <p>The tag keys.</p>
-         * <br>
-         * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
-         * <br>
+         * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>You can specify at most 20 tag keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag values.</p>
-         * <br>
-         * <p>The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
-         * <br>
+         * <p>The tag values can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>The tag value of each tag key must be unique. You can specify at most 20 tag values in each call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagValue</p>
          */
         @NameInMap("Value")
         public String value;

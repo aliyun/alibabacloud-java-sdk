@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that determines the start point of the next query. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is not returned, it indicates that no additional results exist.</p>
-     * <p>*   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is not returned, it indicates that no additional results exist.</li>
+     * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3D5530D2-3BBB-524E-8E98-59AB06A250E4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -85,12 +98,18 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
     public static class ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachmentsTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value_A1</p>
          */
         @NameInMap("Value")
         public String value;
@@ -121,8 +140,10 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
     public static class ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachmentsZones extends TeaModel {
         /**
          * <p>The zone ID.</p>
-         * <br>
-         * <p>You can call the [DescribeZones](https://help.aliyun.com/document_detail/36064.html) operation to query the most recent zone list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query the most recent zone list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
@@ -145,52 +166,79 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
     public static class ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachments extends TeaModel {
         /**
          * <p>Indicates the transit router can automatically advertise routes to the IPsec connection. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AutoPublishRouteEnabled")
         public Boolean autoPublishRouteEnabled;
 
         /**
          * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-j3jzhw1zpau2km****</p>
          */
         @NameInMap("CenId")
         public String cenId;
 
         /**
          * <p>The billing method of the VPN attachment.</p>
-         * <br>
          * <p>Only POSTPAY may be returned, which is the default pay-as-you-go billing method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POSTPAY</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
          * <p>The time when the VPN connection was created.</p>
-         * <br>
          * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-08T08:45Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The entity that pays the fees of the network instance. Valid values:</p>
+         * <ul>
+         * <li><strong>PayByCenOwner</strong>: the Alibaba Cloud account that owns the CEN instance.</li>
+         * <li><strong>PayByResourceOwner</strong>: the Alibaba Cloud account that owns the network instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PayByCenOwner</p>
+         */
         @NameInMap("OrderType")
         public String orderType;
 
         /**
          * <p>The type of resource attached to the transit router.</p>
-         * <br>
-         * <p>Only **VPN** may be returned, which indicates that an IPsec-VPN connection is attached to the transit router.</p>
+         * <p>Only <strong>VPN</strong> may be returned, which indicates that an IPsec-VPN connection is attached to the transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPN</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The status of the VPN connection. Valid values:</p>
-         * <br>
-         * <p>*   **Attached**</p>
-         * <p>*   **Attaching**</p>
-         * <p>*   **Detaching**</p>
+         * <ul>
+         * <li><strong>Attached</strong></li>
+         * <li><strong>Attaching</strong></li>
+         * <li><strong>Detaching</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Attached</p>
          */
         @NameInMap("Status")
         public String status;
@@ -203,44 +251,64 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
 
         /**
          * <p>The description of the IPsec-VPN connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desctest</p>
          */
         @NameInMap("TransitRouterAttachmentDescription")
         public String transitRouterAttachmentDescription;
 
         /**
          * <p>The ID of the VPN attachment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-a6p8voaodog5c0****</p>
          */
         @NameInMap("TransitRouterAttachmentId")
         public String transitRouterAttachmentId;
 
         /**
          * <p>The name of the VPN attachment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nametest</p>
          */
         @NameInMap("TransitRouterAttachmentName")
         public String transitRouterAttachmentName;
 
         /**
          * <p>The ID of the transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-p0wm740vjnbaprv0m****</p>
          */
         @NameInMap("TransitRouterId")
         public String transitRouterId;
 
         /**
          * <p>The ID of the IPsec-VPN connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vco-p0wtu1xgd0l7fjo7k****</p>
          */
         @NameInMap("VpnId")
         public String vpnId;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the IPsec-VPN connection belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1210123456123456</p>
          */
         @NameInMap("VpnOwnerId")
         public Long vpnOwnerId;
 
         /**
-         * <p>The region ID of the IPsec-VPN connection.</p>
-         * <br>
-         * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+         * <p>The ID of the region to which the IPsec-VPN connection belongs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("VpnRegionId")
         public String vpnRegionId;

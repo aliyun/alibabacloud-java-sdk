@@ -6,46 +6,61 @@ import com.aliyun.tea.*;
 public class DescribeFlowlogsRequest extends TeaModel {
     /**
      * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-7qthudw0ll6jmc****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
+     * <blockquote>
+     * <p> If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The description of the flow log.</p>
-     * <br>
-     * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>The description is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>myFlowlog</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the flow log.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>flowlog-m5evbtbpt****</p>
      */
     @NameInMap("FlowLogId")
     public String flowLogId;
 
     /**
      * <p>The name of the flow log.</p>
-     * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>The name is optional. If you enter a name, it must be 1 to 128 characters in length, and cannot start with http:// or https://.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>myFlowlog</p>
      */
     @NameInMap("FlowLogName")
     public String flowLogName;
 
     /**
      * <p>The name of the Logstore where the flow log is stored.</p>
-     * <br>
      * <p>The name must be 3 to 63 characters in length, and can contain lowercase letters, digits, underscores (_), and hyphens (-). It must start or end with a lowercase letter or a digit.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FlowLogStore</p>
      */
     @NameInMap("LogStoreName")
     public String logStoreName;
@@ -57,29 +72,39 @@ public class DescribeFlowlogsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Minimum value: **1**. Default value: **20**.</p>
+     * <p>The number of entries per page. Minimum value: <strong>1</strong>. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The name of the project where the flow log is stored.</p>
-     * <br>
      * <p>The name must be 3 to 63 characters in length, and can contain lowercase letters, digits, and hyphens (-). It must start or end with a lowercase letter or a digit.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FlowLogProject</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
      * <p>The ID of the region where the flow log is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -92,16 +117,19 @@ public class DescribeFlowlogsRequest extends TeaModel {
 
     /**
      * <p>The status of the flow log. Valid values:</p>
-     * <br>
-     * <p>*   **Active**: The flow log is enabled.</p>
-     * <p>*   **Inactive**: The flow log is disabled.</p>
+     * <ul>
+     * <li><strong>Active</strong>: The flow log is enabled.</li>
+     * <li><strong>Inactive</strong>: The flow log is disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Active</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The information about the tags.</p>
-     * <br>
      * <p>You can specify at most 20 tags in each call.</p>
      */
     @NameInMap("Tag")
@@ -109,6 +137,9 @@ public class DescribeFlowlogsRequest extends TeaModel {
 
     /**
      * <p>The ID of the network instance connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-attach-qieks13jnt1cchy****</p>
      */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
@@ -257,20 +288,22 @@ public class DescribeFlowlogsRequest extends TeaModel {
     public static class DescribeFlowlogsRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
-         * <br>
-         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
-         * <br>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>You can specify at most 20 tag keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
-         * <br>
-         * <p>The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
-         * <br>
+         * <p>The tag value can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagValue</p>
          */
         @NameInMap("Value")
         public String value;

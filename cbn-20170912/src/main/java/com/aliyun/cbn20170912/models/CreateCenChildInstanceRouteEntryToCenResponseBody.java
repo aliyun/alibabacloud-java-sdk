@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateCenChildInstanceRouteEntryToCenResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>437ED236-BE47-5370-8695-15C58C7A8014</p>
      */
     @NameInMap("RequestId")
     public String requestId;

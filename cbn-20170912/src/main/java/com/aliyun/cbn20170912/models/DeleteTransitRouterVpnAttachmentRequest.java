@@ -6,28 +6,39 @@ import com.aliyun.tea.*;
 public class DeleteTransitRouterVpnAttachmentRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
-     * <br>
-     * <p>*   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): performs a dry run and sends the request.</p>
+     * <ul>
+     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>Specifies whether to forcefully delete the VPN attachment. Valid values:</p>
-     * <br>
-     * <p>*   **false** (default): Check for resource dependencies, such as associated forwarding and route learning, before the VPN attachment is deleted. If such resources exist, the VPN attachment is not deleted and an error message is returned.</p>
-     * <p>*   **true**: Delete the resource dependencies along with the VPN attachment.</p>
+     * <ul>
+     * <li><strong>false</strong> (default): Check for resource dependencies, such as associated forwarding and route learning, before the VPN attachment is deleted. If such resources exist, the VPN attachment is not deleted and an error message is returned.</li>
+     * <li><strong>true</strong>: Delete the resource dependencies along with the VPN attachment.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Force")
     public Boolean force;
@@ -46,8 +57,10 @@ public class DeleteTransitRouterVpnAttachmentRequest extends TeaModel {
 
     /**
      * <p>The ID of the VPN attachment.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-attach-b9xj1dv69600kj****</p>
      */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;

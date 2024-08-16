@@ -4,6 +4,10 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>C46FF5A8-C5F0-4024-8262-B16B639225A0</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

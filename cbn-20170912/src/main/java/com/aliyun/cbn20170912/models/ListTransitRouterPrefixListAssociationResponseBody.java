@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -24,12 +30,18 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6005CA94-676E-1FEE-985E-7602EFAADD6A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,58 +94,85 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
     public static class ListTransitRouterPrefixListAssociationResponseBodyPrefixLists extends TeaModel {
         /**
          * <p>The ID of the next hop.</p>
-         * <br>
-         * <p>> A value of **BlackHole** indicates that all the CIDR blocks in the prefix list are blackhole routes. Packets destined for the CIDR blocks are dropped.</p>
+         * <blockquote>
+         * <p>A value of <strong>BlackHole</strong> indicates that all the CIDR blocks in the prefix list are blackhole routes. Packets destined for the CIDR blocks are dropped.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-flbq507rg2ckrj****</p>
          */
         @NameInMap("NextHop")
         public String nextHop;
 
         /**
          * <p>The ID of the network instance associated with the next hop connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-6eh7fp9hdqa2wv85t****</p>
          */
         @NameInMap("NextHopInstanceId")
         public String nextHopInstanceId;
 
         /**
          * <p>The type of the next hop. Valid values:</p>
-         * <br>
-         * <p>*   **BlackHole**: All the CIDR blocks in the prefix list are blackhole routes. Packets destined for the CIDR blocks are dropped.</p>
-         * <p>*   **VPC**: The next hop of the CIDR blocks in the prefix list is a VPC connection.</p>
-         * <p>*   **VBR**: The next hop of the CIDR blocks in the prefix list is a VBR connection.</p>
-         * <p>*   **TR**: The next hop of the CIDR blocks in the prefix list is an inter-region connection.</p>
+         * <ul>
+         * <li><strong>BlackHole</strong>: All the CIDR blocks in the prefix list are blackhole routes. Packets destined for the CIDR blocks are dropped.</li>
+         * <li><strong>VPC</strong>: The next hop of the CIDR blocks in the prefix list is a VPC connection.</li>
+         * <li><strong>VBR</strong>: The next hop of the CIDR blocks in the prefix list is a VBR connection.</li>
+         * <li><strong>TR</strong>: The next hop of the CIDR blocks in the prefix list is an inter-region connection.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("NextHopType")
         public String nextHopType;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the prefix list belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1210123456123456</p>
          */
         @NameInMap("OwnerUid")
         public Long ownerUid;
 
         /**
          * <p>The ID of the prefix list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pl-6ehtn5kqxgeyy08fi****</p>
          */
         @NameInMap("PrefixListId")
         public String prefixListId;
 
         /**
          * <p>The status of the prefix list. Valid values:</p>
-         * <br>
-         * <p>*   **Active**: The prefix list is effective.</p>
-         * <p>*   **Updating**: The prefix list is being updated.</p>
+         * <ul>
+         * <li><strong>Active</strong>: The prefix list is effective.</li>
+         * <li><strong>Updating</strong>: The prefix list is being updated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-6ehx7q2jze8ch5ji0****</p>
          */
         @NameInMap("TransitRouterId")
         public String transitRouterId;
 
         /**
          * <p>The ID of the route table of the transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-6ehgc262hr170qgyc****</p>
          */
         @NameInMap("TransitRouterTableId")
         public String transitRouterTableId;

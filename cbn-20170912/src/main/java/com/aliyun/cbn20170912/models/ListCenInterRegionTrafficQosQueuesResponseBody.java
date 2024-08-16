@@ -5,22 +5,29 @@ import com.aliyun.tea.*;
 
 public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
     /**
-     * <p>The token that determines the start point of the query. Valid values:</p>
-     * <br>
-     * <p>- If NextToken was not returned, it indicates that no additional results exist.</p>
-     * <p>- If NextToken was returned in the previous query, specify the value to obtain the next set of results.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0151fa6aa1ed****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1D1E15D2-416D-54F3-BDD9-BC27DE4C6352</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>A list of queues.</p>
+     * <p>The information about the QoS queue.</p>
      */
     @NameInMap("TrafficQosQueues")
     public java.util.List<ListCenInterRegionTrafficQosQueuesResponseBodyTrafficQosQueues> trafficQosQueues;
@@ -56,61 +63,85 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
 
     public static class ListCenInterRegionTrafficQosQueuesResponseBodyTrafficQosQueues extends TeaModel {
         /**
-         * <p>The differentiated services code point (DSCP) value that matches the current queue.</p>
+         * <p>The Differentiated Services Code Point (DSCP) value that matches the current QoS queue.</p>
          */
         @NameInMap("Dscps")
         public java.util.List<Integer> dscps;
 
         /**
-         * <p>The percentage of bandwidth resources that can be allocated to the current queue.</p>
-         * <br>
-         * <p>For example, a value of 1 indicates that 1 percent of bandwidth resources can be allocated to the queue.</p>
+         * <p>The percentage of the inter-region bandwidth that can be consumed by the QoS queue.</p>
+         * <p>A value of <strong>1</strong> indicates that the QoS queue can consume at most 1% of the inter-region bandwidth.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RemainBandwidthPercent")
         public Integer remainBandwidthPercent;
 
         /**
-         * <p>The status of the queue. Valid values:</p>
-         * <br>
-         * <p>- **Creating**: The queue is being created. </p>
-         * <p>- **Active**: The queue is available. </p>
-         * <p>- **Deleting**: The queue is being deleted.</p>
+         * <p>The status of the QoS queue. Valid values:</p>
+         * <ul>
+         * <li><strong>Creating</strong></li>
+         * <li><strong>Active</strong></li>
+         * <li><strong>Deleting</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the QoS policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qos-fv2qq9yqrsjowp****</p>
          */
         @NameInMap("TrafficQosPolicyId")
         public String trafficQosPolicyId;
 
         /**
-         * <p>The description of the queue.</p>
+         * <p>The description of the QoS queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qosQueueDescription</p>
          */
         @NameInMap("TrafficQosQueueDescription")
         public String trafficQosQueueDescription;
 
         /**
-         * <p>The ID of the queue.</p>
+         * <p>The ID of the QoS queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qos-queue-siakjb2nn9gz5z****</p>
          */
         @NameInMap("TrafficQosQueueId")
         public String trafficQosQueueId;
 
         /**
-         * <p>The name of the queue.</p>
+         * <p>The name of the QoS queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qosQueueName</p>
          */
         @NameInMap("TrafficQosQueueName")
         public String trafficQosQueueName;
 
         /**
          * <p>The ID of the inter-region connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-nzrcv25d7ezt23****</p>
          */
         @NameInMap("TransitRouterAttachmentId")
         public String transitRouterAttachmentId;
 
         /**
          * <p>The ID of the transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-p0wwagjv6fvxt4b7y****</p>
          */
         @NameInMap("TransitRouterId")
         public String transitRouterId;

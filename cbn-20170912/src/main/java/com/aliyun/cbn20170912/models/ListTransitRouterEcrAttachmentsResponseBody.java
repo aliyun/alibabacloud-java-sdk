@@ -4,18 +4,45 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>461EC1B5-04A8-4706-8764-8F5BCEF48A6F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The information about the ECR connections.</p>
+     */
     @NameInMap("TransitRouterAttachments")
     public java.util.List<ListTransitRouterEcrAttachmentsResponseBodyTransitRouterAttachments> transitRouterAttachments;
 
@@ -65,9 +92,21 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
     }
 
     public static class ListTransitRouterEcrAttachmentsResponseBodyTransitRouterAttachmentsTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -95,45 +134,139 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
     }
 
     public static class ListTransitRouterEcrAttachmentsResponseBodyTransitRouterAttachments extends TeaModel {
+        /**
+         * <p>Indicates whether the Enterprise Edition transit router can automatically advertise routes to ECRs.</p>
+         * <p>The value is <strong>true</strong>, which indicates that the Enterprise Edition transit router can automatically advertise routes to ECRs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AutoPublishRouteEnabled")
         public Boolean autoPublishRouteEnabled;
 
+        /**
+         * <p>The ID of the CEN instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-j3jzhw1zpau2km****</p>
+         */
         @NameInMap("CenId")
         public String cenId;
 
+        /**
+         * <p>The time when the ECR connection was created.</p>
+         * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-15T02:14Z</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The ID of the ECR with which the ECR connection is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecr-n78omt2qsko06y****</p>
+         */
         @NameInMap("EcrId")
         public String ecrId;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the ECR connection belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1688111111111111</p>
+         */
         @NameInMap("EcrOwnerId")
         public Long ecrOwnerId;
 
+        /**
+         * <p>The entity that pays the fees of the network instance. Valid values: Valid values:</p>
+         * <ul>
+         * <li><strong>PayByCenOwner</strong>: The Alibaba Cloud account to which the transit router belongs pays the connection and data forwarding fees of the ECR.</li>
+         * <li><strong>PayByResourceOwner</strong>: The Alibaba Cloud account to which the ECR belongs pays the connection and data forwarding fees of the ECR.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PayByCenOwner</p>
+         */
         @NameInMap("OrderType")
         public String orderType;
 
+        /**
+         * <p>The type of resource to which the transit router is connected. Valid values:</p>
+         * <p>The value is <strong>ECR</strong>, which indicates ECR connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECR</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The status of the ECR connection. Valid values:</p>
+         * <ul>
+         * <li><strong>Attached</strong></li>
+         * <li><strong>Attaching</strong></li>
+         * <li><strong>Detaching</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Attached</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListTransitRouterEcrAttachmentsResponseBodyTransitRouterAttachmentsTags> tags;
 
+        /**
+         * <p>The description of the ECR connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desctest</p>
+         */
         @NameInMap("TransitRouterAttachmentDescription")
         public String transitRouterAttachmentDescription;
 
+        /**
+         * <p>The ID of the ECR connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-nls9fzkfat8934****</p>
+         */
         @NameInMap("TransitRouterAttachmentId")
         public String transitRouterAttachmentId;
 
+        /**
+         * <p>The name of the ECR connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testname</p>
+         */
         @NameInMap("TransitRouterAttachmentName")
         public String transitRouterAttachmentName;
 
+        /**
+         * <p>The ID of the Enterprise Edition transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-bp1su1ytdxtataupl****</p>
+         */
         @NameInMap("TransitRouterId")
         public String transitRouterId;
 
+        /**
+         * <p>The region ID of the transit router.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("TransitRouterRegionId")
         public String transitRouterRegionId;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteTransitRouterPrefixListAssociationResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>835E7F4B-B380-4E0F-96A5-6EA572388047</p>
      */
     @NameInMap("RequestId")
     public String requestId;

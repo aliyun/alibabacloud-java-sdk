@@ -4,18 +4,34 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RegionIds")
     public DescribeGeographicRegionMembershipResponseBodyRegionIds regionIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DC9EB0C9-60AF-4A09-A36C-608F70130274</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,6 +81,10 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
     }
 
     public static class DescribeGeographicRegionMembershipResponseBodyRegionIdsRegionId extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>us-west-1</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

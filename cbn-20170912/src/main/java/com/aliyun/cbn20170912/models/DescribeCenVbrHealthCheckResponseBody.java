@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B8C9702E-304A-4E18-AC89-BE2D91C2C176</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,62 +94,91 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
     public static class DescribeCenVbrHealthCheckResponseBodyVbrHealthChecksVbrHealthCheck extends TeaModel {
         /**
          * <p>The ID of the CEN instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-6hpdgj7ni6pz1k****</p>
          */
         @NameInMap("CenId")
         public String cenId;
 
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>healthcheck_description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The time interval at which probe packets are sent during the health check. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("HealthCheckInterval")
         public Integer healthCheckInterval;
 
         /**
          * <p>Indicates whether probing is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**: Probing is enabled.</p>
-         * <br>
-         * <p>        If you enable probing, the system does not switch to another route if the detected route is not reachable.</p>
-         * <br>
-         * <p>*   **false**: Probing is disabled.</p>
-         * <br>
-         * <p>          If probing is disabled and a redundant route is specified, the system switches to the redundant route when the detected route is not reachable.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Probing is enabled.</p>
+         * <pre><code>If you enable probing, the system does not switch to another route if the detected route is not reachable.
+         * </code></pre>
+         * </li>
+         * <li><p><strong>false</strong>: Probing is disabled.</p>
+         * <pre><code>  If probing is disabled and a redundant route is specified, the system switches to the redundant route when the detected route is not reachable.
+         * </code></pre>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("HealthCheckOnly")
         public Boolean healthCheckOnly;
 
         /**
          * <p>The source IP address of the health check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.XX.XX.1</p>
          */
         @NameInMap("HealthCheckSourceIp")
         public String healthCheckSourceIp;
 
         /**
          * <p>The destination IP address of the health check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.XX.XX.1</p>
          */
         @NameInMap("HealthCheckTargetIp")
         public String healthCheckTargetIp;
 
         /**
          * <p>The number of probe packets that are sent during the health check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("HealthyThreshold")
         public Integer healthyThreshold;
 
         /**
          * <p>The VBR ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vbr-bp1kznorjeembsuhl****</p>
          */
         @NameInMap("VbrInstanceId")
         public String vbrInstanceId;
 
         /**
          * <p>The ID of the region where the VBR is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("VbrInstanceRegionId")
         public String vbrInstanceRegionId;

@@ -6,46 +6,58 @@ import com.aliyun.tea.*;
 public class AttachCenChildInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the CEN instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-7qthudw0ll6jmc****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
      * <p>The ID of the network instance that you want to attach to the CEN instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp18sth14qii3pnvx****</p>
      */
     @NameInMap("ChildInstanceId")
     public String childInstanceId;
 
     /**
      * <p>The ID of the Alibaba Cloud account to which the network instance belongs.</p>
-     * <br>
-     * <p>> If the network instance and the CEN instance belong to different Alibaba Cloud accounts, this parameter is required.</p>
+     * <blockquote>
+     * <p>If the network instance and the CEN instance belong to different Alibaba Cloud accounts, this parameter is required.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1688000000000000</p>
      */
     @NameInMap("ChildInstanceOwnerId")
     public Long childInstanceOwnerId;
 
     /**
      * <p>The ID of the region where the network instance is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("ChildInstanceRegionId")
     public String childInstanceRegionId;
 
     /**
      * <p>The type of the network instance. Valid values:</p>
-     * <br>
-     * <p>*   **VPC**: VPC</p>
-     * <p>*   **VBR**: VBR</p>
-     * <p>*   **CCN**: CCN instance</p>
-     * <br>
+     * <ul>
+     * <li><strong>VPC</strong>: VPC</li>
+     * <li><strong>VBR</strong>: VBR</li>
+     * <li><strong>CCN</strong>: CCN instance</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
      */
     @NameInMap("ChildInstanceType")
     public String childInstanceType;

@@ -11,29 +11,44 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
     public DescribeGrantRulesToCenResponseBodyGrantRules grantRules;
 
     /**
-     * <p>*   If no value is specified for **MaxResults**, query results are returned in one batch. The value of **MaxResults** indicates the total number of entries.</p>
-     * <p>*   If a value is specified for **MaxResults**, it indicates that you need to query results in batches. The value of **MaxResults** in the response indicates the number of entries in the current batch.</p>
+     * <ul>
+     * <li>If no value is specified for <strong>MaxResults</strong>, query results are returned in one batch. The value of <strong>MaxResults</strong> indicates the total number of entries.</li>
+     * <li>If a value is specified for <strong>MaxResults</strong>, it indicates that you need to query results in batches. The value of <strong>MaxResults</strong> in the response indicates the number of entries in the current batch.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     /**
      * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is empty, no next page exists.</p>
-     * <p>*   If a value of **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If a value of <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4906B209-8613-5C19-9CC9-B7A3FFDA731C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -86,58 +101,83 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
     public static class DescribeGrantRulesToCenResponseBodyGrantRulesGrantRule extends TeaModel {
         /**
          * <p>The ID of the CEN instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-nye53d7p3hzyu4****</p>
          */
         @NameInMap("CenId")
         public String cenId;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the CEN instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1210123456123456</p>
          */
         @NameInMap("CenOwnerId")
         public Long cenOwnerId;
 
         /**
          * <p>The ID of the network instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1rgeww9mdstuuar****</p>
          */
         @NameInMap("ChildInstanceId")
         public String childInstanceId;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the network instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1250123456123456</p>
          */
         @NameInMap("ChildInstanceOwnerId")
         public Long childInstanceOwnerId;
 
         /**
          * <p>The region ID of the network instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("ChildInstanceRegionId")
         public String childInstanceRegionId;
 
         /**
          * <p>The type of the network instance. Valid values:</p>
-         * <br>
-         * <p>*   **VPC**: VPC</p>
-         * <p>*   **VBR**: VBR</p>
-         * <p>*   **CCN**: CCN instance</p>
-         * <p>*   **VPN**: IPsec-VPN connection</p>
+         * <ul>
+         * <li><strong>VPC</strong>: VPC</li>
+         * <li><strong>VBR</strong>: VBR</li>
+         * <li><strong>CCN</strong>: CCN instance</li>
+         * <li><strong>VPN</strong>: IPsec-VPN connection</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("ChildInstanceType")
         public String childInstanceType;
 
         /**
          * <p>The time when the permissions were granted to the CEN instance.</p>
-         * <br>
          * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-24T16:27Z</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The entity that pays the fees of the network instance. Valid values:</p>
-         * <br>
-         * <p>*   **PayByCenOwner**: The fees of the connections and data forwarding on the transit router are paid by the Alibaba Cloud account to which the CEN instance belongs.</p>
-         * <p>*   **PayByResourceOwner**: The fees of the connections and data forwarding on the transit router are paid by the Alibaba Cloud account to which the network instance belongs.</p>
+         * <ul>
+         * <li><strong>PayByCenOwner</strong>: The fees of the connections and data forwarding on the transit router are paid by the Alibaba Cloud account to which the CEN instance belongs.</li>
+         * <li><strong>PayByResourceOwner</strong>: The fees of the connections and data forwarding on the transit router are paid by the Alibaba Cloud account to which the network instance belongs.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PayByCenOwner</p>
          */
         @NameInMap("OrderType")
         public String orderType;

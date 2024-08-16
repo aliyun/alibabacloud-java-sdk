@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateTransitRouterVbrAttachmentAttributeResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>91B36DC3-FF8A-45C3-AC1E-456B1789136D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
