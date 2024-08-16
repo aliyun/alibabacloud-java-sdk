@@ -12,24 +12,36 @@ public class CreateInstanceResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9CC37B9F-F4B4-5FF1-939B-AEE78DC70130</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -82,12 +94,18 @@ public class CreateInstanceResponseBody extends TeaModel {
     public static class CreateInstanceResponseBodyData extends TeaModel {
         /**
          * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidVpcOrVSwitch.NotAvailable</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgpostcn-cn-xxxxxx</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -100,15 +118,22 @@ public class CreateInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>217523224780172</p>
          */
         @NameInMap("OrderId")
         public String orderId;
 
         /**
          * <p>Indicates whether the instance was created.</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Success")
         public String success;

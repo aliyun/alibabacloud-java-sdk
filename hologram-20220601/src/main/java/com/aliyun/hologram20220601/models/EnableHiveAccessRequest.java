@@ -4,6 +4,10 @@ package com.aliyun.hologram20220601.models;
 import com.aliyun.tea.*;
 
 public class EnableHiveAccessRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

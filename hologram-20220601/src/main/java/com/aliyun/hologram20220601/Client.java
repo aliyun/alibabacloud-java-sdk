@@ -26,6 +26,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>更改资源组</p>
+     * 
+     * @param request ChangeResourceGroupRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ChangeResourceGroupResponse
+     */
     public ChangeResourceGroupResponse changeResourceGroupWithOptions(ChangeResourceGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -55,6 +64,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeResourceGroupResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>更改资源组</p>
+     * 
+     * @param request ChangeResourceGroupRequest
+     * @return ChangeResourceGroupResponse
+     */
     public ChangeResourceGroupResponse changeResourceGroup(ChangeResourceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -62,30 +78,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.
-      * *   For more information about the billing details of Hologres, see [Pricing](https://www.alibabacloud.com/help/en/hologres/developer-reference/api-hologram-2022-06-01-createinstance).
-      * *   When you purchase a Hologres instance, you must specify the region and zone in which the Hologres instance resides. A region may correspond to multiple zones. Example:
-      * <!---->
-      *     cn-hangzhou: cn-hangzhou-h, cn-hangzhou-j
-      *        cn-shanghai: cn-shanghai-e, cn-shanghai-f
-      *        cn-beijing: cn-beijing-i, cn-beijing-g
-      *        cn-zhangjiakou: cn-zhangjiakou-b
-      *        cn-shenzhen: cn-shenzhen-e
-      *        cn-hongkong: cn-hongkong-b
-      *        cn-shanghai-finance-1: cn-shanghai-finance-1z
-      *        ap-northeast-1: ap-northeast-1a
-      *        ap-southeast-1: ap-southeast-1c
-      *        ap-southeast-3: ap-southeast-3b
-      *        ap-southeast-5: ap-southeast-5b
-      *        ap-south-1: ap-south-1b
-      *        eu-central-1: eu-central-1a
-      *        us-east-1: us-east-1a
-      *        us-west-1: us-west-1b
-      *
-      * @param request CreateInstanceRequest
-      * @param headers map
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateInstanceResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</p>
+     * </blockquote>
+     * <ul>
+     * <li>For more information about the billing details of Hologres, see <a href="https://www.alibabacloud.com/help/en/hologres/developer-reference/api-hologram-2022-06-01-createinstance">Pricing</a>.</li>
+     * <li>When you purchase a Hologres instance, you must specify the region and zone in which the Hologres instance resides. A region may correspond to multiple zones. Example:<!---->
+     * cn-hangzhou: cn-hangzhou-h, cn-hangzhou-j
+     *    cn-shanghai: cn-shanghai-e, cn-shanghai-f
+     *    cn-beijing: cn-beijing-i, cn-beijing-g
+     *    cn-zhangjiakou: cn-zhangjiakou-b
+     *    cn-shenzhen: cn-shenzhen-e
+     *    cn-hongkong: cn-hongkong-b
+     *    cn-shanghai-finance-1: cn-shanghai-finance-1z
+     *    ap-northeast-1: ap-northeast-1a
+     *    ap-southeast-1: ap-southeast-1c
+     *    ap-southeast-3: ap-southeast-3b
+     *    ap-southeast-5: ap-southeast-5b
+     *    ap-south-1: ap-south-1b
+     *    eu-central-1: eu-central-1a
+     *    us-east-1: us-east-1a
+     *    us-west-1: us-west-1b</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a Hologres instance.</p>
+     * 
+     * @param request CreateInstanceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateInstanceResponse
      */
     public CreateInstanceResponse createInstanceWithOptions(CreateInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -185,28 +208,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.
-      * *   For more information about the billing details of Hologres, see [Pricing](https://www.alibabacloud.com/help/en/hologres/developer-reference/api-hologram-2022-06-01-createinstance).
-      * *   When you purchase a Hologres instance, you must specify the region and zone in which the Hologres instance resides. A region may correspond to multiple zones. Example:
-      * <!---->
-      *     cn-hangzhou: cn-hangzhou-h, cn-hangzhou-j
-      *        cn-shanghai: cn-shanghai-e, cn-shanghai-f
-      *        cn-beijing: cn-beijing-i, cn-beijing-g
-      *        cn-zhangjiakou: cn-zhangjiakou-b
-      *        cn-shenzhen: cn-shenzhen-e
-      *        cn-hongkong: cn-hongkong-b
-      *        cn-shanghai-finance-1: cn-shanghai-finance-1z
-      *        ap-northeast-1: ap-northeast-1a
-      *        ap-southeast-1: ap-southeast-1c
-      *        ap-southeast-3: ap-southeast-3b
-      *        ap-southeast-5: ap-southeast-5b
-      *        ap-south-1: ap-south-1b
-      *        eu-central-1: eu-central-1a
-      *        us-east-1: us-east-1a
-      *        us-west-1: us-west-1b
-      *
-      * @param request CreateInstanceRequest
-      * @return CreateInstanceResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</p>
+     * </blockquote>
+     * <ul>
+     * <li>For more information about the billing details of Hologres, see <a href="https://www.alibabacloud.com/help/en/hologres/developer-reference/api-hologram-2022-06-01-createinstance">Pricing</a>.</li>
+     * <li>When you purchase a Hologres instance, you must specify the region and zone in which the Hologres instance resides. A region may correspond to multiple zones. Example:<!---->
+     * cn-hangzhou: cn-hangzhou-h, cn-hangzhou-j
+     *    cn-shanghai: cn-shanghai-e, cn-shanghai-f
+     *    cn-beijing: cn-beijing-i, cn-beijing-g
+     *    cn-zhangjiakou: cn-zhangjiakou-b
+     *    cn-shenzhen: cn-shenzhen-e
+     *    cn-hongkong: cn-hongkong-b
+     *    cn-shanghai-finance-1: cn-shanghai-finance-1z
+     *    ap-northeast-1: ap-northeast-1a
+     *    ap-southeast-1: ap-southeast-1c
+     *    ap-southeast-3: ap-southeast-3b
+     *    ap-southeast-5: ap-southeast-5b
+     *    ap-south-1: ap-south-1b
+     *    eu-central-1: eu-central-1a
+     *    us-east-1: us-east-1a
+     *    us-west-1: us-west-1b</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a Hologres instance.</p>
+     * 
+     * @param request CreateInstanceRequest
+     * @return CreateInstanceResponse
      */
     public CreateInstanceResponse createInstance(CreateInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -215,15 +245,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > Before you call this operation, read the documentation and make sure that you understand the prerequisites and impacts of this operation.
-      * *   After you delete a Hologres instance, data and objects in the instance cannot be restored. Proceed with caution. For more information, see [Billing overview](https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview#section-h6a-x58-jc0).
-      * *   You can delete only pay-as-you-go instances.
-      * *   If you want to unsubscribe from a subscription instance, submit a ticket.[](https://help.aliyun.com/document_detail/150284.html#section-ogc-9vc-858)
-      *
-      * @param request DeleteInstanceRequest
-      * @param headers map
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteInstanceResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Before you call this operation, read the documentation and make sure that you understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li>After you delete a Hologres instance, data and objects in the instance cannot be restored. Proceed with caution. For more information, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview#section-h6a-x58-jc0">Billing overview</a>.</li>
+     * <li>You can delete only pay-as-you-go instances.</li>
+     * <li>If you want to unsubscribe from a subscription instance, submit a ticket.<a href="https://help.aliyun.com/document_detail/150284.html#section-ogc-9vc-858"></a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a Hologres instance.</p>
+     * 
+     * @param request DeleteInstanceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteInstanceResponse
      */
     public DeleteInstanceResponse deleteInstanceWithOptions(String instanceId, DeleteInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -251,13 +289,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > Before you call this operation, read the documentation and make sure that you understand the prerequisites and impacts of this operation.
-      * *   After you delete a Hologres instance, data and objects in the instance cannot be restored. Proceed with caution. For more information, see [Billing overview](https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview#section-h6a-x58-jc0).
-      * *   You can delete only pay-as-you-go instances.
-      * *   If you want to unsubscribe from a subscription instance, submit a ticket.[](https://help.aliyun.com/document_detail/150284.html#section-ogc-9vc-858)
-      *
-      * @param request DeleteInstanceRequest
-      * @return DeleteInstanceResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Before you call this operation, read the documentation and make sure that you understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li>After you delete a Hologres instance, data and objects in the instance cannot be restored. Proceed with caution. For more information, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview#section-h6a-x58-jc0">Billing overview</a>.</li>
+     * <li>You can delete only pay-as-you-go instances.</li>
+     * <li>If you want to unsubscribe from a subscription instance, submit a ticket.<a href="https://help.aliyun.com/document_detail/150284.html#section-ogc-9vc-858"></a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a Hologres instance.</p>
+     * 
+     * @param request DeleteInstanceRequest
+     * @return DeleteInstanceResponse
      */
     public DeleteInstanceResponse deleteInstance(String instanceId, DeleteInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -265,6 +311,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteInstanceWithOptions(instanceId, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>关闭数据湖加速</p>
+     * 
+     * @param request DisableHiveAccessRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableHiveAccessResponse
+     */
     public DisableHiveAccessResponse disableHiveAccessWithOptions(String instanceId, DisableHiveAccessRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -290,12 +345,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DisableHiveAccessResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>关闭数据湖加速</p>
+     * 
+     * @param request DisableHiveAccessRequest
+     * @return DisableHiveAccessResponse
+     */
     public DisableHiveAccessResponse disableHiveAccess(String instanceId, DisableHiveAccessRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.disableHiveAccessWithOptions(instanceId, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>打开数据湖加速</p>
+     * 
+     * @param request EnableHiveAccessRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableHiveAccessResponse
+     */
     public EnableHiveAccessResponse enableHiveAccessWithOptions(String instanceId, EnableHiveAccessRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -321,12 +392,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new EnableHiveAccessResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>打开数据湖加速</p>
+     * 
+     * @param request EnableHiveAccessRequest
+     * @return EnableHiveAccessResponse
+     */
     public EnableHiveAccessResponse enableHiveAccess(String instanceId, EnableHiveAccessRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.enableHiveAccessWithOptions(instanceId, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the details of an instance.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetInstanceResponse
+     */
     public GetInstanceResponse getInstanceWithOptions(String instanceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -345,12 +431,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the details of an instance.</p>
+     * @return GetInstanceResponse
+     */
     public GetInstanceResponse getInstance(String instanceId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getInstanceWithOptions(instanceId, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries details of a virtual warehouse instance.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetWarehouseDetailResponse
+     */
     public GetWarehouseDetailResponse getWarehouseDetailWithOptions(String instanceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -369,12 +468,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetWarehouseDetailResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries details of a virtual warehouse instance.</p>
+     * @return GetWarehouseDetailResponse
+     */
     public GetWarehouseDetailResponse getWarehouseDetail(String instanceId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getWarehouseDetailWithOptions(instanceId, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of instances.</p>
+     * 
+     * @param request ListInstancesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListInstancesResponse
+     */
     public ListInstancesResponse listInstancesWithOptions(ListInstancesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -408,12 +521,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstancesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of instances.</p>
+     * 
+     * @param request ListInstancesRequest
+     * @return ListInstancesResponse
+     */
     public ListInstancesResponse listInstances(ListInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listInstancesWithOptions(request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of virtual warehouse instances.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListWarehousesResponse
+     */
     public ListWarehousesResponse listWarehousesWithOptions(String instanceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -432,6 +560,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListWarehousesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of virtual warehouse instances.</p>
+     * @return ListWarehousesResponse
+     */
     public ListWarehousesResponse listWarehouses(String instanceId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -439,15 +572,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.
-      * *   For more information about billing details of Hologres, see [Pricing](https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview).
-      * *   For more information about how to renew a Hologres instance, see [Manage renewals](https://www.alibabacloud.com/help/en/hologres/product-overview/manage-renewals?spm=a2c63.p38356.0.0.73f27c8d1Q0FUi).
-      * *   You can renew only subscription instances.
-      *
-      * @param request RenewInstanceRequest
-      * @param headers map
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return RenewInstanceResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</p>
+     * </blockquote>
+     * <ul>
+     * <li>For more information about billing details of Hologres, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview">Pricing</a>.</li>
+     * <li>For more information about how to renew a Hologres instance, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/manage-renewals?spm=a2c63.p38356.0.0.73f27c8d1Q0FUi">Manage renewals</a>.</li>
+     * <li>You can renew only subscription instances.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Manually renews a Hologres instance. You can enable monthly auto-renewal when you renew a Hologres instance.</p>
+     * 
+     * @param request RenewInstanceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RenewInstanceResponse
      */
     public RenewInstanceResponse renewInstanceWithOptions(String instanceId, RenewInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -479,13 +620,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.
-      * *   For more information about billing details of Hologres, see [Pricing](https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview).
-      * *   For more information about how to renew a Hologres instance, see [Manage renewals](https://www.alibabacloud.com/help/en/hologres/product-overview/manage-renewals?spm=a2c63.p38356.0.0.73f27c8d1Q0FUi).
-      * *   You can renew only subscription instances.
-      *
-      * @param request RenewInstanceRequest
-      * @return RenewInstanceResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</p>
+     * </blockquote>
+     * <ul>
+     * <li>For more information about billing details of Hologres, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview">Pricing</a>.</li>
+     * <li>For more information about how to renew a Hologres instance, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/manage-renewals?spm=a2c63.p38356.0.0.73f27c8d1Q0FUi">Manage renewals</a>.</li>
+     * <li>You can renew only subscription instances.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Manually renews a Hologres instance. You can enable monthly auto-renewal when you renew a Hologres instance.</p>
+     * 
+     * @param request RenewInstanceRequest
+     * @return RenewInstanceResponse
      */
     public RenewInstanceResponse renewInstance(String instanceId, RenewInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -493,6 +642,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.renewInstanceWithOptions(instanceId, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>重启实例</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RestartInstanceResponse
+     */
     public RestartInstanceResponse restartInstanceWithOptions(String instanceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -511,12 +668,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RestartInstanceResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>重启实例</p>
+     * @return RestartInstanceResponse
+     */
     public RestartInstanceResponse restartInstance(String instanceId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.restartInstanceWithOptions(instanceId, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Resumes a suspended instance.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ResumeInstanceResponse
+     */
     public ResumeInstanceResponse resumeInstanceWithOptions(String instanceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -535,6 +705,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ResumeInstanceResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Resumes a suspended instance.</p>
+     * @return ResumeInstanceResponse
+     */
     public ResumeInstanceResponse resumeInstance(String instanceId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -542,14 +717,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.
-      * *   For more information about the billing of Hologres, see [Billing overview](https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview).
-      * *   During the change of computing resource specifications of a Hologres instance, the instance is unavailable. During the change of storage resource specifications of a Hologres instance, the instance can work normally. Do not frequently change instance specifications. For more information, see [Upgrade or downgrade instance specifications](https://www.alibabacloud.com/help/en/hologres/product-overview/upgrade-or-downgrade-instance-specifications).
-      *
-      * @param request ScaleInstanceRequest
-      * @param headers map
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ScaleInstanceResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</p>
+     * </blockquote>
+     * <ul>
+     * <li>For more information about the billing of Hologres, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.</li>
+     * <li>During the change of computing resource specifications of a Hologres instance, the instance is unavailable. During the change of storage resource specifications of a Hologres instance, the instance can work normally. Do not frequently change instance specifications. For more information, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/upgrade-or-downgrade-instance-specifications">Upgrade or downgrade instance specifications</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the specifications and storage space of a Hologres instance.</p>
+     * 
+     * @param request ScaleInstanceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ScaleInstanceResponse
      */
     public ScaleInstanceResponse scaleInstanceWithOptions(String instanceId, ScaleInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -597,12 +780,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.
-      * *   For more information about the billing of Hologres, see [Billing overview](https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview).
-      * *   During the change of computing resource specifications of a Hologres instance, the instance is unavailable. During the change of storage resource specifications of a Hologres instance, the instance can work normally. Do not frequently change instance specifications. For more information, see [Upgrade or downgrade instance specifications](https://www.alibabacloud.com/help/en/hologres/product-overview/upgrade-or-downgrade-instance-specifications).
-      *
-      * @param request ScaleInstanceRequest
-      * @return ScaleInstanceResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</p>
+     * </blockquote>
+     * <ul>
+     * <li>For more information about the billing of Hologres, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.</li>
+     * <li>During the change of computing resource specifications of a Hologres instance, the instance is unavailable. During the change of storage resource specifications of a Hologres instance, the instance can work normally. Do not frequently change instance specifications. For more information, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/upgrade-or-downgrade-instance-specifications">Upgrade or downgrade instance specifications</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the specifications and storage space of a Hologres instance.</p>
+     * 
+     * @param request ScaleInstanceRequest
+     * @return ScaleInstanceResponse
      */
     public ScaleInstanceResponse scaleInstance(String instanceId, ScaleInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -610,6 +801,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.scaleInstanceWithOptions(instanceId, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>暂停实例</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopInstanceResponse
+     */
     public StopInstanceResponse stopInstanceWithOptions(String instanceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -628,12 +827,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StopInstanceResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>暂停实例</p>
+     * @return StopInstanceResponse
+     */
     public StopInstanceResponse stopInstance(String instanceId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.stopInstanceWithOptions(instanceId, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Changes the name of an instance.</p>
+     * 
+     * @param request UpdateInstanceNameRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateInstanceNameResponse
+     */
     public UpdateInstanceNameResponse updateInstanceNameWithOptions(String instanceId, UpdateInstanceNameRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -659,12 +872,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateInstanceNameResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Changes the name of an instance.</p>
+     * 
+     * @param request UpdateInstanceNameRequest
+     * @return UpdateInstanceNameResponse
+     */
     public UpdateInstanceNameResponse updateInstanceName(String instanceId, UpdateInstanceNameRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateInstanceNameWithOptions(instanceId, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the network configuration of an instance.</p>
+     * 
+     * @param request UpdateInstanceNetworkTypeRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateInstanceNetworkTypeResponse
+     */
     public UpdateInstanceNetworkTypeResponse updateInstanceNetworkTypeWithOptions(String instanceId, UpdateInstanceNetworkTypeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -710,6 +939,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateInstanceNetworkTypeResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the network configuration of an instance.</p>
+     * 
+     * @param request UpdateInstanceNetworkTypeRequest
+     * @return UpdateInstanceNetworkTypeResponse
+     */
     public UpdateInstanceNetworkTypeResponse updateInstanceNetworkType(String instanceId, UpdateInstanceNetworkTypeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();

@@ -9,6 +9,9 @@ public class ListInstancesRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmvscak73zmby</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
@@ -51,12 +54,18 @@ public class ListInstancesRequest extends TeaModel {
     public static class ListInstancesRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mytag</p>
          */
         @NameInMap("key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         @NameInMap("value")
         public String value;

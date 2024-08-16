@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListInstancesResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>404</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Internal server error.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
@@ -30,12 +39,18 @@ public class ListInstancesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D1303CD4-AA70-5998-8025-F55B22C50840</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -96,108 +111,114 @@ public class ListInstancesResponseBody extends TeaModel {
     public static class ListInstancesResponseBodyInstanceListEndpoints extends TeaModel {
         /**
          * <p>Indicates whether the endpoint is enabled.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   false</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>false</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
          * <p>The endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgpostcn-cn-aaab9ad2d8fb-cn-hangzhou-internal.hologres.aliyuncs.com:80</p>
          */
         @NameInMap("Endpoint")
         public String endpoint;
 
         /**
          * <p>The network type.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   VPCSingleTunnel</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    virtual private cloud (VPC)</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
-         * <br>
-         * <p>*   Intranet</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    internal network</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   VPCAnyTunnel</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    : This value is not supported by new instances</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
-         * <br>
-         * <p>*   Internet</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    Internet</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
+         * <ul>
+         * <li><p>VPCSingleTunnel</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>virtual private cloud (VPC)</p>
+         * <!-- -->
+         * 
+         * <p>.</p>
+         * </li>
+         * <li><p>Intranet</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>internal network</p>
+         * <!-- -->
+         * </li>
+         * <li><p>VPCAnyTunnel</p>
+         * <!-- -->
+         * 
+         * <p>: This value is not supported by new instances</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <p>.</p>
+         * </li>
+         * <li><p>Internet</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>Internet</p>
+         * <!-- -->
+         * 
+         * <p>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Internet</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-wz9oap28raidjevhuszg4</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
          * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf6mrahzyu7uorlqqpz5f</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The ID of the VPC to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgpostcn-cn-wwo3665tx004-frontend-st</p>
          */
         @NameInMap("VpcInstanceId")
         public String vpcInstanceId;
@@ -260,12 +281,18 @@ public class ListInstancesResponseBody extends TeaModel {
     public static class ListInstancesResponseBodyInstanceListTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         @NameInMap("Value")
         public String value;
@@ -296,36 +323,43 @@ public class ListInstancesResponseBody extends TeaModel {
     public static class ListInstancesResponseBodyInstanceList extends TeaModel {
         /**
          * <p>The commodity code, which is the same as that on the Billing Management page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hologram_postpay_public_cn</p>
          */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
         /**
          * <p>The time when the cluster was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-16T02:24:05Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>Indicates whether lakehouse acceleration is enabled.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   false</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>false</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EnableHiveAccess")
         public String enableHiveAccess;
@@ -338,136 +372,143 @@ public class ListInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The time when the cluster expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-04T16:00:00.000Z</p>
          */
         @NameInMap("ExpirationTime")
         public String expirationTime;
 
         /**
          * <p>The billing method of the instance. Valid values:</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   PostPaid</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    pay-as-you-go</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
-         * <br>
-         * <p>*   PrePaid</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    subscription</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
+         * <ul>
+         * <li><p>PostPaid</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>pay-as-you-go</p>
+         * <!-- -->
+         * 
+         * <p>.</p>
+         * </li>
+         * <li><p>PrePaid</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>subscription</p>
+         * <!-- -->
+         * 
+         * <p>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgpostcn-cn-aaab9ad2d8fb</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_instance</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The status of the instance.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Creating</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Running</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Suspended</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Allocating</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>Creating</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Running</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Suspended</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Allocating</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("InstanceStatus")
         public String instanceStatus;
 
         /**
          * <p>The type of the instance.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Follower</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    read-only secondary instance</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
-         * <br>
-         * <p>*   Standard</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    normal instance</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
+         * <ul>
+         * <li><p>Follower</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>read-only secondary instance</p>
+         * <!-- -->
+         * 
+         * <p>.</p>
+         * </li>
+         * <li><p>Standard</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>normal instance</p>
+         * <!-- -->
+         * 
+         * <p>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The ID of the primary instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgprecn-cn-2r42sqvxm006</p>
          */
         @NameInMap("LeaderInstanceId")
         public String leaderInstanceId;
@@ -477,12 +518,18 @@ public class ListInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmvscak73zmby</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The reason for the suspension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Manual</p>
          */
         @NameInMap("SuspendReason")
         public String suspendReason;
@@ -495,6 +542,9 @@ public class ListInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The version of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.3.37</p>
          */
         @NameInMap("Version")
         public String version;

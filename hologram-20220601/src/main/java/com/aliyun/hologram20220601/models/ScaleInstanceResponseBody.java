@@ -12,24 +12,36 @@ public class ScaleInstanceResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D3AE84AB-0873-5FC7-A4C4-8CF869D2FA70</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -82,42 +94,52 @@ public class ScaleInstanceResponseBody extends TeaModel {
     public static class ScaleInstanceResponseBodyData extends TeaModel {
         /**
          * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidScaleType.Unsupported</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The error details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>219183853450000</p>
          */
         @NameInMap("OrderId")
         public String orderId;
 
         /**
          * <p>Indicates whether the change to specifications was successful.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   false</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>false</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Success")
         public Boolean success;
