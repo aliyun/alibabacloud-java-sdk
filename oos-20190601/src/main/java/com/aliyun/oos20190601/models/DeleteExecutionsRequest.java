@@ -15,6 +15,9 @@ public class DeleteExecutionsRequest extends TeaModel {
     @NameInMap("ExecutionIds")
     public String executionIds;
 
+    @NameInMap("Force")
+    public Boolean force;
+
     /**
      * <p>The region ID.</p>
      * 
@@ -35,6 +38,14 @@ public class DeleteExecutionsRequest extends TeaModel {
     }
     public String getExecutionIds() {
         return this.executionIds;
+    }
+
+    public DeleteExecutionsRequest setForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    public Boolean getForce() {
+        return this.force;
     }
 
     public DeleteExecutionsRequest setRegionId(String regionId) {

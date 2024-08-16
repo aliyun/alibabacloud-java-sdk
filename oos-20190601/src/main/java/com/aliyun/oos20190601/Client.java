@@ -1015,6 +1015,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ExecutionIds", request.executionIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.force)) {
+            query.put("Force", request.force);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
