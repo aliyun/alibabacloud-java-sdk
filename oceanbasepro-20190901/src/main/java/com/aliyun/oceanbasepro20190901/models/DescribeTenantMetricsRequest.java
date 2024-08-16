@@ -62,8 +62,6 @@ public class DescribeTenantMetricsRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>tfafd34fs****</p>
      */
@@ -72,8 +70,6 @@ public class DescribeTenantMetricsRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>[tdak3nac****,tdakc42df****]</p>
      */
