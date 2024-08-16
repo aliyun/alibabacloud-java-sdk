@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class ModifyCenBandwidthPackageSpecRequest extends TeaModel {
     /**
      * <p>The new maximum bandwidth value of the bandwidth plan. Unit: Mbit/s.</p>
-     * <br>
-     * <p>Valid values: **2** to **10000**.</p>
+     * <p>Valid values: <strong>2</strong> to <strong>10000</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
     /**
      * <p>The ID of the bandwidth plan.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cenbwp-4c2zaavbvh5x****</p>
      */
     @NameInMap("CenBandwidthPackageId")
     public String cenBandwidthPackageId;

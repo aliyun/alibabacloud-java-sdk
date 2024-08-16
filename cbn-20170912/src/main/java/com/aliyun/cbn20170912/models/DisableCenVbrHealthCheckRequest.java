@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DisableCenVbrHealthCheckRequest extends TeaModel {
     /**
      * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-sjfoejfghhjgghjghkg****</p>
      */
     @NameInMap("CenId")
     public String cenId;
@@ -26,26 +28,33 @@ public class DisableCenVbrHealthCheckRequest extends TeaModel {
 
     /**
      * <p>The ID of the VBR.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vbr-wz95o9aylj181n5****</p>
      */
     @NameInMap("VbrInstanceId")
     public String vbrInstanceId;
 
     /**
      * <p>The ID of the Alibaba Cloud account to which the VBR belongs.</p>
-     * <br>
-     * <p>> This parameter is required if the VBR and the CEN instance belong to different Alibaba Cloud accounts.</p>
+     * <blockquote>
+     * <p>This parameter is required if the VBR and the CEN instance belong to different Alibaba Cloud accounts.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1250123456123456</p>
      */
     @NameInMap("VbrInstanceOwnerId")
     public Long vbrInstanceOwnerId;
 
     /**
      * <p>The ID of the region where the VBR is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("VbrInstanceRegionId")
     public String vbrInstanceRegionId;

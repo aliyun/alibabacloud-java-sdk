@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class ListGrantVSwitchesToCenResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A9288C78-881A-5D30-A8A9-68E05EE0A086</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,24 +94,36 @@ public class ListGrantVSwitchesToCenResponseBody extends TeaModel {
     public static class ListGrantVSwitchesToCenResponseBodyVSwitches extends TeaModel {
         /**
          * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1194lh263wx1gsk****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
          * <p>The name of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nametest</p>
          */
         @NameInMap("VSwitchName")
         public String vSwitchName;
 
         /**
          * <p>The ID of the VPC to which the vSwitch belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp12ge2tq5gzdc915****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The ID of the zone to which the vSwitch belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

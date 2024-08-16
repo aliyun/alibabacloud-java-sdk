@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is empty, no next page exists.</p>
-     * <p>*   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8A0F93D1-FD6C-56FC-B6D2-668FC92D12D2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -85,12 +98,18 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
     public static class ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagValue</p>
          */
         @NameInMap("Value")
         public String value;
@@ -121,22 +140,29 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
     public static class ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomains extends TeaModel {
         /**
          * <p>The CEN instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-a7syd349kne38g****</p>
          */
         @NameInMap("CenId")
         public String cenId;
 
         /**
          * <p>The region ID of the transit router.</p>
-         * <br>
-         * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The status of the multicast domain.</p>
-         * <br>
-         * <p>The valid value is **Active**, which indicates that the multicast domain is available.</p>
+         * <p>The valid value is <strong>Active</strong>, which indicates that the multicast domain is available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("Status")
         public String status;
@@ -149,24 +175,36 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
 
         /**
          * <p>The transit router ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-bp1c23ijrl6d6c226h***</p>
          */
         @NameInMap("TransitRouterId")
         public String transitRouterId;
 
         /**
          * <p>The description of the multicast domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desctest</p>
          */
         @NameInMap("TransitRouterMulticastDomainDescription")
         public String transitRouterMulticastDomainDescription;
 
         /**
          * <p>The ID of the multicast domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-mcast-domain-3r3bvbypxqheej****</p>
          */
         @NameInMap("TransitRouterMulticastDomainId")
         public String transitRouterMulticastDomainId;
 
         /**
          * <p>The name of the multicast domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nametest</p>
          */
         @NameInMap("TransitRouterMulticastDomainName")
         public String transitRouterMulticastDomainName;

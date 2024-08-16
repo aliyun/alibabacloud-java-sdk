@@ -6,19 +6,26 @@ import com.aliyun.tea.*;
 public class UpdateTransitRouterRouteTableRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>02fb3da4-130e-11e9-8e44-001****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to perform a dry run. Default values:</p>
-     * <br>
-     * <p>*   **false** (default): performs a dry run and sends the request.</p>
-     * <p>*   **true**: performs a dry run. The system checks the required parameters and the request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <ul>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
+     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters and the request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -43,24 +50,30 @@ public class UpdateTransitRouterRouteTableRequest extends TeaModel {
 
     /**
      * <p>The description of the route table.</p>
-     * <br>
      * <p>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testdesc</p>
      */
     @NameInMap("TransitRouterRouteTableDescription")
     public String transitRouterRouteTableDescription;
 
     /**
      * <p>The ID of the route table of the Enterprise Edition transit router.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vtb-bp1dudbh2d5na6b50****</p>
      */
     @NameInMap("TransitRouterRouteTableId")
     public String transitRouterRouteTableId;
 
     /**
      * <p>The name of the route table.</p>
-     * <br>
      * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testname</p>
      */
     @NameInMap("TransitRouterRouteTableName")
     public String transitRouterRouteTableName;
@@ -153,9 +166,13 @@ public class UpdateTransitRouterRouteTableRequest extends TeaModel {
     public static class UpdateTransitRouterRouteTableRequestRouteTableOptions extends TeaModel {
         /**
          * <p>Indicates whether multi-region ECMP routing is enabled. Valid values:</p>
-         * <br>
-         * <p>- **disable**: If multi-region ECMP routing is disabled, routes that are learned from different regions but have the same prefix and attributes select the transit router with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</p>
-         * <p>- **enable**: If multi-region ECMP routing is enabled, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</p>
+         * <ul>
+         * <li><strong>disable</strong>: If multi-region ECMP routing is disabled, routes that are learned from different regions but have the same prefix and attributes select the transit router with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</li>
+         * <li><strong>enable</strong>: If multi-region ECMP routing is enabled, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>disable</p>
          */
         @NameInMap("MultiRegionECMP")
         public String multiRegionECMP;

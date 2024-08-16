@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * <p>The token that determines the start point of the query. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** was not returned, it indicates that no additional results exist.</p>
-     * <p>*   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> was not returned, it indicates that no additional results exist.</li>
+     * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>165B5C86-2033-5954-A89D-4CD83BA06C85</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,44 +64,46 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
         /**
          * <p>The ID of the CEN instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-8z69wtwqel33lq****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The type of the resource. Valid values:</p>
-         * <br>
-         * <p>**Cen**: CEN instance</p>
-         * <br>
-         * <p>**BandwidthPackage**: bandwidth plan</p>
-         * <br>
-         * <p>**TransitRouter**: transit router</p>
-         * <br>
-         * <p>**TransitRouterVpcAttachment**: virtual private cloud (VPC) connection</p>
-         * <br>
-         * <p>**TransitRouterVbrAttachment**: virtual border router (VBR) connection</p>
-         * <br>
-         * <p>**TransitRouterPeerAttachment**: inter-region connection</p>
-         * <br>
-         * <p>**TransitRouterVpnAttachment**: VPN connection</p>
-         * <br>
-         * <p>**TransitRouterRouteTable**: route table</p>
-         * <br>
-         * <p>**Flowlog**: flow log</p>
-         * <br>
-         * <p>**TransitRouterMulticastDomain**: multicast domain</p>
+         * <p><strong>Cen</strong>: CEN instance</p>
+         * <p><strong>BandwidthPackage</strong>: bandwidth plan</p>
+         * <p><strong>TransitRouter</strong>: transit router</p>
+         * <p><strong>TransitRouterVpcAttachment</strong>: virtual private cloud (VPC) connection</p>
+         * <p><strong>TransitRouterVbrAttachment</strong>: virtual border router (VBR) connection</p>
+         * <p><strong>TransitRouterPeerAttachment</strong>: inter-region connection</p>
+         * <p><strong>TransitRouterVpnAttachment</strong>: VPN connection</p>
+         * <p><strong>TransitRouterRouteTable</strong>: route table</p>
+         * <p><strong>Flowlog</strong>: flow log</p>
+         * <p><strong>TransitRouterMulticastDomain</strong>: multicast domain</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEN</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bp</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

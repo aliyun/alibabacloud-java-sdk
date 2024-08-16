@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class ListGrantVSwitchesToCenRequest extends TeaModel {
     /**
      * <p>The CEN instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-44m0p68spvlrqq****</p>
      */
     @NameInMap("CenId")
     public String cenId;
@@ -19,23 +21,30 @@ public class ListGrantVSwitchesToCenRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the page to return. Default value: **1**.</p>
+     * <p>The page number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID of the VPC.</p>
-     * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -48,19 +57,24 @@ public class ListGrantVSwitchesToCenRequest extends TeaModel {
 
     /**
      * <p>The VPC ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp12ge2tq5gzdc915****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
      * <p>The ID of the zone.</p>
-     * <br>
-     * <p>*   If you specify a zone ID, the system queries the information about the vSwitches in the specified zone.</p>
-     * <p>*   If you do not specify a zone ID, the system queries the information about the vSwitches in all zones.</p>
-     * <br>
-     * <p>You can call the [DescribeZones](https://help.aliyun.com/document_detail/36064.html) operation to query the most recent zone list.</p>
+     * <ul>
+     * <li>If you specify a zone ID, the system queries the information about the vSwitches in the specified zone.</li>
+     * <li>If you do not specify a zone ID, the system queries the information about the vSwitches in all zones.</li>
+     * </ul>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query the most recent zone list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-h</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

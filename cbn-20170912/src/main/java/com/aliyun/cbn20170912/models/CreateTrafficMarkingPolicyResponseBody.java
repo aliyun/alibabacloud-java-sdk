@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateTrafficMarkingPolicyResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0876E54E-3E36-5C31-89F0-9EE8A9266F9A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the traffic marking policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tm-u9nxup5kww5po8****</p>
      */
     @NameInMap("TrafficMarkingPolicyId")
     public String trafficMarkingPolicyId;

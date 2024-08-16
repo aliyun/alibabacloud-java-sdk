@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
     /**
      * <p>The number of entries returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that determines the start point of the query.</p>
-     * <br>
-     * <p>*   If **NextToken** was not returned in the previous query, it indicates that no additional results exist.</p>
-     * <p>*   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> was not returned in the previous query, it indicates that no additional results exist.</li>
+     * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>699989E4-64A0-5F78-8B93-CDB32D98971F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -85,6 +98,9 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
     public static class ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPoliciesTrafficMatchRules extends TeaModel {
         /**
          * <p>The destination CIDR block that is used to match packets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.120.0/24</p>
          */
         @NameInMap("DstCidr")
         public String dstCidr;
@@ -97,22 +113,33 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
 
         /**
          * <p>The DSCP value used to match data packets.</p>
-         * <br>
-         * <p>>  If the value of the **MatchDscp** parameter is -1, data packets are considered a match regardless of the DSCP value.</p>
+         * <blockquote>
+         * <p> If the value of the <strong>MatchDscp</strong> parameter is -1, data packets are considered a match regardless of the DSCP value.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("MatchDscp")
         public Integer matchDscp;
 
         /**
          * <p>The protocol that is used to match packets.</p>
-         * <br>
-         * <p>>  Traffic marking policies support multiple protocols. For more information, see the documentation of CEN.</p>
+         * <blockquote>
+         * <p> Traffic marking policies support multiple protocols. For more information, see the documentation of CEN.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         @NameInMap("Protocol")
         public String protocol;
 
         /**
          * <p>The source CIDR block that is used to match packets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.10.0/24</p>
          */
         @NameInMap("SrcCidr")
         public String srcCidr;
@@ -125,28 +152,41 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
 
         /**
          * <p>The description of the traffic classification rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desctest</p>
          */
         @NameInMap("TrafficMatchRuleDescription")
         public String trafficMatchRuleDescription;
 
         /**
          * <p>The ID of the traffic classification rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tm-rule-fa9kgq1e90rmhc****</p>
          */
         @NameInMap("TrafficMatchRuleId")
         public String trafficMatchRuleId;
 
         /**
          * <p>The name of the traffic classification rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nametest</p>
          */
         @NameInMap("TrafficMatchRuleName")
         public String trafficMatchRuleName;
 
         /**
          * <p>The status of the traffic classification rule. Valid values:</p>
-         * <br>
-         * <p>*   **Creating**: The rule is being created.</p>
-         * <p>*   **Active**: The rule is available.</p>
-         * <p>*   **Deleting**: The rule is being deleted.</p>
+         * <ul>
+         * <li><strong>Creating</strong>: The rule is being created.</li>
+         * <li><strong>Active</strong>: The rule is available.</li>
+         * <li><strong>Deleting</strong>: The rule is being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Creating</p>
          */
         @NameInMap("TrafficMatchRuleStatus")
         public String trafficMatchRuleStatus;
@@ -241,43 +281,61 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
     public static class ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPolicies extends TeaModel {
         /**
          * <p>The Differentiated Service Code Point (DSCP) value of the traffic marking policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("MarkingDscp")
         public Integer markingDscp;
 
         /**
          * <p>The priority of the traffic marking policy.</p>
-         * <br>
          * <p>A lower value indicates a higher priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("Priority")
         public Integer priority;
 
         /**
          * <p>The description of the traffic marking policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desctest</p>
          */
         @NameInMap("TrafficMarkingPolicyDescription")
         public String trafficMarkingPolicyDescription;
 
         /**
          * <p>The ID of the traffic marking policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tm-iz5egnyitxiroq****</p>
          */
         @NameInMap("TrafficMarkingPolicyId")
         public String trafficMarkingPolicyId;
 
         /**
          * <p>The name of the traffic marking policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nametest</p>
          */
         @NameInMap("TrafficMarkingPolicyName")
         public String trafficMarkingPolicyName;
 
         /**
          * <p>The status of the traffic marking policy. Valid values:</p>
-         * <br>
-         * <p>*   **Creating**: The policy is being created.</p>
-         * <p>*   **Active**: The policy is available.</p>
-         * <p>*   **Modifying**: The policy is being modified.</p>
-         * <p>*   **Deleting**: The policy is being deleted.</p>
+         * <ul>
+         * <li><strong>Creating</strong>: The policy is being created.</li>
+         * <li><strong>Active</strong>: The policy is available.</li>
+         * <li><strong>Modifying</strong>: The policy is being modified.</li>
+         * <li><strong>Deleting</strong>: The policy is being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Creating</p>
          */
         @NameInMap("TrafficMarkingPolicyStatus")
         public String trafficMarkingPolicyStatus;
@@ -290,6 +348,9 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-ccni***</p>
          */
         @NameInMap("TransitRouterId")
         public String transitRouterId;

@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class AssociateCenBandwidthPackageRequest extends TeaModel {
     /**
      * <p>The ID of the bandwidth plan.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cenbwp-4c2zaavbvh5fx****</p>
      */
     @NameInMap("CenBandwidthPackageId")
     public String cenBandwidthPackageId;
 
     /**
      * <p>The ID of the CEN instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-7qthudw0ll6jmc****</p>
      */
     @NameInMap("CenId")
     public String cenId;

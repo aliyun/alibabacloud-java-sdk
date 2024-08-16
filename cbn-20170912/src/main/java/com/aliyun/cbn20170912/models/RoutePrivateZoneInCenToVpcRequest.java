@@ -6,36 +6,42 @@ import com.aliyun.tea.*;
 public class RoutePrivateZoneInCenToVpcRequest extends TeaModel {
     /**
      * <p>The ID of the region where PrivateZone is accessed.</p>
-     * <br>
      * <p>This region refers to the region in which PrivateZone is accessed by clients.</p>
-     * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("AccessRegionId")
     public String accessRegionId;
 
     /**
      * <p>The ID of the CEN instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-7qthudw0ll6jmc****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
      * <p>The ID of the region where PrivateZone is deployed.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("HostRegionId")
     public String hostRegionId;
 
     /**
      * <p>The ID of the VPC that is associated with PrivateZone.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1h8vbrbcgohcju5****</p>
      */
     @NameInMap("HostVpcId")
     public String hostVpcId;

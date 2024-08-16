@@ -4,6 +4,10 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class RefreshTransitRouteTableAggregationRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>02fb3da4-130e-11e9-8e44-001****</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -21,12 +25,18 @@ public class RefreshTransitRouteTableAggregationRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.53.0/24</p>
      */
     @NameInMap("TransitRouteTableAggregationCidr")
     public String transitRouteTableAggregationCidr;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vtb-iq8qgruq1ry8jc7vt****</p>
      */
     @NameInMap("TransitRouteTableId")
     public String transitRouteTableId;

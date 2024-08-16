@@ -5,19 +5,22 @@ import com.aliyun.tea.*;
 
 public class DescribeCenRegionDomainRouteEntriesRequest extends TeaModel {
     /**
-     * <p>The ID of the CEN instance.</p>
-     * <br>
+     * <p>The CEN instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-7qthudw0ll6j****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
-     * <p>The ID of the region that you want to query.</p>
-     * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("CenRegionId")
     public String cenRegionId;
@@ -29,13 +32,19 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.</p>
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>500</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -47,13 +56,17 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The status of the routes that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   **Active** (default value): active routes</p>
-     * <p>*   **Candidate**: standby routes</p>
-     * <p>*   **Rejected**: rejected routes</p>
-     * <p>*   **Prohibited**: prohibited routes</p>
-     * <p>*   **All**: all routes</p>
+     * <p>The route status. Valid values:</p>
+     * <ul>
+     * <li><strong>Active</strong> (default): available</li>
+     * <li><strong>Candidate</strong>: standby</li>
+     * <li><strong>Rejected</strong>: rejected</li>
+     * <li><strong>Prohibited</strong>: prohibited</li>
+     * <li><strong>All</strong> (default value): all routes</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Active</p>
      */
     @NameInMap("Status")
     public String status;

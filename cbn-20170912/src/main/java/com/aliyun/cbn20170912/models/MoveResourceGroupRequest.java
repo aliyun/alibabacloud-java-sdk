@@ -6,27 +6,36 @@ import com.aliyun.tea.*;
 public class MoveResourceGroupRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e456****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
-     * <br>
-     * <p>*   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false:** performs a dry run and sends the request.</p>
+     * <ul>
+     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false:</strong> performs a dry run and sends the request.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>The ID of the resource group to which you want to move the CEN instance or bandwidth plan.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekzqqurtfg****</p>
      */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
@@ -39,8 +48,10 @@ public class MoveResourceGroupRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-nye53d7p3hzyu4****</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -53,11 +64,14 @@ public class MoveResourceGroupRequest extends TeaModel {
 
     /**
      * <p>The type of the resource. Valid values:</p>
-     * <br>
-     * <p>*   **CEN**: CEN instance</p>
-     * <p>*   **bandwidthpackage**: bandwidth plan</p>
-     * <br>
+     * <ul>
+     * <li><strong>CEN</strong>: CEN instance</li>
+     * <li><strong>bandwidthpackage</strong>: bandwidth plan</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

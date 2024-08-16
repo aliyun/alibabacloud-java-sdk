@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
     /**
      * <p>The ID of the CEN instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-7qthudw0ll6jmc****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The IP address of the DNS server used by PrivateZone.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100.100.XX.XX/32,100.100.XX.XX/32</p>
      */
     @NameInMap("PrivateZoneDnsServers")
     public String privateZoneDnsServers;
@@ -36,12 +48,18 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>461EC1B5-04A8-4706-8764-8F5BCEF48A6F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -110,28 +128,41 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
     public static class DescribeCenPrivateZoneRoutesResponseBodyPrivateZoneInfosPrivateZoneInfo extends TeaModel {
         /**
          * <p>The ID of the region where PrivateZone is accessed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("AccessRegionId")
         public String accessRegionId;
 
         /**
          * <p>The ID of the region where PrivateZone is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("HostRegionId")
         public String hostRegionId;
 
         /**
          * <p>The ID of the VPC that is associated with PrivateZone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp18sth14qii3pnvo****</p>
          */
         @NameInMap("HostVpcId")
         public String hostVpcId;
 
         /**
          * <p>The status of PrivateZone. Valid values:</p>
-         * <br>
-         * <p>*   **Creating**: being created</p>
-         * <p>*   **Active**: available</p>
-         * <p>*   **Deleting**: being deleted</p>
+         * <ul>
+         * <li><strong>Creating</strong>: being created</li>
+         * <li><strong>Active</strong>: available</li>
+         * <li><strong>Deleting</strong>: being deleted</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("Status")
         public String status;

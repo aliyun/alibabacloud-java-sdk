@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeRouteConflictResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE3A2CC7-41F1-58DB-8306-CFC99D9C747B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +39,9 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,37 +94,54 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
     public static class DescribeRouteConflictResponseBodyRouteConflictsRouteConflict extends TeaModel {
         /**
          * <p>The destination CIDR block of the overlapping route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.0.0/16</p>
          */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
         /**
          * <p>The ID of the peer network instance on which the overlapping routes are found.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccn-0q3b7oviikmm9h****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The type of the peer network instance on which the overlapping routes are found.</p>
-         * <br>
-         * <p>*   **VPC**: VPC</p>
-         * <p>*   **VBR**: VBR</p>
-         * <p>*   **CCN**: CCN instance</p>
+         * <ul>
+         * <li><strong>VPC</strong>: VPC</li>
+         * <li><strong>VBR</strong>: VBR</li>
+         * <li><strong>CCN</strong>: CCN instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CCN</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The region ID of the peer network instance on which the overlapping routes are found is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccn-cn-shanghai</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The cause of the route error. Valid values:</p>
-         * <br>
-         * <p>*   **conflict**: The routes have the same destination CIDR block.</p>
-         * <p>*   **overflow**: The number of routes in the route table configured on another network instance has reached the upper limit.</p>
+         * <ul>
+         * <li><strong>conflict</strong>: The routes have the same destination CIDR block.</li>
+         * <li><strong>overflow</strong>: The number of routes in the route table configured on another network instance has reached the upper limit.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>conflict</p>
          */
         @NameInMap("Status")
         public String status;

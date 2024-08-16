@@ -5,31 +5,43 @@ import com.aliyun.tea.*;
 
 public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
     /**
-     * <p>The array of routes.</p>
+     * <p>A list of route entries.</p>
      */
     @NameInMap("CenRouteEntries")
     public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntries cenRouteEntries;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>004E99FB-E996-5777-888E-BA1D8F215407</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -100,13 +112,19 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
 
     public static class DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenOutRouteMapRecordsCenOutRouteMapRecord extends TeaModel {
         /**
-         * <p>The ID of the region where the route map is applied.</p>
+         * <p>The ID of the region where the routing policy is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccn-cn-shanghai</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The ID of the route map.</p>
+         * <p>The ID of the routing policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cenrmap-dbarzidzp7ek4k****</p>
          */
         @NameInMap("RouteMapId")
         public String routeMapId;
@@ -155,13 +173,19 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
 
     public static class DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecordsCenRouteMapRecord extends TeaModel {
         /**
-         * <p>The ID of the region where the route map is applied.</p>
+         * <p>The ID of the region where the routing policy is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The ID of the route map.</p>
+         * <p>The ID of the routing policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cenrmap-cz5axczdxb7yfu****</p>
          */
         @NameInMap("RouteMapId")
         public String routeMapId;
@@ -229,92 +253,119 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
 
     public static class DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry extends TeaModel {
         /**
-         * <p>The AS paths of the routes.</p>
+         * <p>The AS paths of the route.</p>
          */
         @NameInMap("AsPaths")
         public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryAsPaths asPaths;
 
         /**
-         * <p>The route maps that the routes match in the outbound direction.</p>
+         * <p>The routing policy that the routes match in the outbound direction.</p>
          */
         @NameInMap("CenOutRouteMapRecords")
         public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenOutRouteMapRecords cenOutRouteMapRecords;
 
         /**
-         * <p>The route maps that the routes match in the inbound direction.</p>
+         * <p>The routing policy that the routes match in the inbound direction.</p>
          */
         @NameInMap("CenRouteMapRecords")
         public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecords cenRouteMapRecords;
 
         /**
-         * <p>The community attributes of the routes.</p>
+         * <p>The communities of the route.</p>
          */
         @NameInMap("Communities")
         public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCommunities communities;
 
         /**
          * <p>The destination CIDR block of the route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.0/24</p>
          */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
         /**
          * <p>The ID of the instance specified as the next hop in the route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1j8728mm6pweeod****</p>
          */
         @NameInMap("NextHopInstanceId")
         public String nextHopInstanceId;
 
         /**
-         * <p>The ID of the region where the network instance specified as the next hop in the route belongs.</p>
+         * <p>The ID of the region to which the network instance specified as the next hop in the route belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("NextHopRegionId")
         public String nextHopRegionId;
 
         /**
-         * <p>The type of the network instance specified as the next hop in the route. </p>
-         * <br>
-         * <p>- **VPC**</p>
-         * <p>- **VBR**</p>
-         * <p>- **CCN**</p>
-         * <p>- **local_service**: system route. No next hop is specified.</p>
+         * <p>The type of the instance specified as the next hop in the route. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
+         * <li><strong>VBR</strong>: virtual border router (VBR)</li>
+         * <li><strong>CCN</strong>: Cloud Connect Network (CCN) instance</li>
+         * <li><strong>local_service</strong>: system route. No next hop is specified.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("NextHopType")
         public String nextHopType;
 
         /**
-         * <p>The priority of the route. </p>
-         * <br>
-         * <p>> A smaller value indicates a higher priority.</p>
+         * <p>The route priority.</p>
+         * <p>A smaller value indicates a higher priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("Preference")
         public Integer preference;
 
         /**
-         * <p>The status of the route. Valid values: </p>
-         * <br>
-         * <p>- **Active**: The route is active.</p>
-         * <p>- **Candidate**: The route is a standby route.</p>
-         * <p>- **Rejected**: The route is rejected.</p>
-         * <p>- **Prohibited**: The route is prohibited.</p>
+         * <p>The route status. Valid values:</p>
+         * <ul>
+         * <li><strong>Active</strong>: available</li>
+         * <li><strong>Candidate</strong>: standby</li>
+         * <li><strong>Rejected</strong>: rejected</li>
+         * <li><strong>Prohibited</strong>: prohibited</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>Whether the route can be advertised to other regions. Valid values: </p>
-         * <br>
-         * <p>- **Active**: The route can be advertised to other regions.</p>
-         * <p>- **Prohibited**: The route cannot be advertised to other regions.</p>
+         * <p>Indicates whether the route can be advertised to other regions. Valid values:</p>
+         * <ul>
+         * <li><strong>Active</strong>: The route can be advertised to other regions.</li>
+         * <li><strong>Prohibited</strong>: The route cannot be advertised to other regions.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("ToOtherRegionStatus")
         public String toOtherRegionStatus;
 
         /**
-         * <p>The type of the route. Valid values: </p>
-         * <br>
-         * <p>- **CEN**: route that is advertised through CEN</p>
-         * <p>- **Custom**: custom route</p>
-         * <p>- **System**: system route</p>
+         * <p>The route type. Valid values:</p>
+         * <ul>
+         * <li><strong>CEN</strong>: route that is advertised through CEN</li>
+         * <li><strong>Custom</strong>: custom route</li>
+         * <li><strong>System</strong>: system route</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CEN</p>
          */
         @NameInMap("Type")
         public String type;

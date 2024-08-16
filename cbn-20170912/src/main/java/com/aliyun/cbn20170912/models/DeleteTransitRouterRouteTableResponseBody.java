@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteTransitRouterRouteTableResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EAB2F133-8556-4D7C-9E91-7EE4FE9CC7D2</p>
      */
     @NameInMap("RequestId")
     public String requestId;

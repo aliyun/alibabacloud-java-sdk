@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CreateCenBandwidthPackageResponseBody extends TeaModel {
     /**
      * <p>The ID of the bandwidth plan.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cenbwp-4c2zaavbvh5fx****</p>
      */
     @NameInMap("CenBandwidthPackageId")
     public String cenBandwidthPackageId;
 
     /**
      * <p>The ID of the order for the bandwidth plan.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20156420004****</p>
      */
     @NameInMap("CenBandwidthPackageOrderId")
     public String cenBandwidthPackageOrderId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E4B345CD-2CBA-4881-AF6D-E5D9BAE1CA7B</p>
      */
     @NameInMap("RequestId")
     public String requestId;

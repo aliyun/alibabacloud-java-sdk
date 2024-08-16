@@ -12,19 +12,26 @@ public class UpdateTransitRouterVpcAttachmentZonesRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
+     * <blockquote>
+     * <p> If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
-     * <br>
-     * <p>*   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): performs a dry run and sends the request.</p>
+     * <ul>
+     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -49,8 +56,10 @@ public class UpdateTransitRouterVpcAttachmentZonesRequest extends TeaModel {
 
     /**
      * <p>The ID of the VPC connection.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-attach-9bbqyygouv4cpn****</p>
      */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
@@ -135,19 +144,24 @@ public class UpdateTransitRouterVpcAttachmentZonesRequest extends TeaModel {
     public static class UpdateTransitRouterVpcAttachmentZonesRequestAddZoneMappings extends TeaModel {
         /**
          * <p>The ID of the vSwitch that you want to add to the VPC connection.</p>
-         * <br>
          * <p>You can specify at most 10 vSwitches in each call.</p>
-         * <br>
-         * <p>*   If the VPC connection belongs to the current Alibaba Cloud account, you can call the [DescribeVSwitches](https://help.aliyun.com/document_detail/35748.html) operation to query the IDs of the vSwitches and zones of the VPC.</p>
-         * <p>*   If the VPC connection belongs to another Alibaba Cloud account, you can call the [ListGrantVSwitchesToCen](https://help.aliyun.com/document_detail/427599.html) operation to query the IDs of the vSwitches and zones of the VPC.</p>
+         * <ul>
+         * <li>If the VPC connection belongs to the current Alibaba Cloud account, you can call the <a href="https://help.aliyun.com/document_detail/35748.html">DescribeVSwitches</a> operation to query the IDs of the vSwitches and zones of the VPC.</li>
+         * <li>If the VPC connection belongs to another Alibaba Cloud account, you can call the <a href="https://help.aliyun.com/document_detail/427599.html">ListGrantVSwitchesToCen</a> operation to query the IDs of the vSwitches and zones of the VPC.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-wz988dda8ldm4uvmx****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
          * <p>The ID of the zone where the vSwitch that you want to add to the VPC connection is deployed.</p>
-         * <br>
          * <p>You can specify at most 10 vSwitches in each call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
@@ -178,14 +192,19 @@ public class UpdateTransitRouterVpcAttachmentZonesRequest extends TeaModel {
     public static class UpdateTransitRouterVpcAttachmentZonesRequestRemoveZoneMappings extends TeaModel {
         /**
          * <p>The ID of the vSwitch that you want to remove from the VPC connection.</p>
-         * <br>
          * <p>You can remove at most 10 vSwitches from a VPC in each call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-wz9f5izl6wshndmta****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
          * <p>The ID of the zone where the vSwitch that you want to remove from the VPC connection is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

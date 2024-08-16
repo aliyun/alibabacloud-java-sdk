@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class ListTransitRouterVpnAttachmentsRequest extends TeaModel {
     /**
      * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-rsgxs8ng2awen2****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **20**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that determines the start point of the next query. Valid values:</p>
-     * <br>
-     * <p>*   If this is your first query and no subsequent queries are to be sent, ignore this parameter.</p>
-     * <p>*   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     * <ul>
+     * <li>If this is your first query and no subsequent queries are to be sent, ignore this parameter.</li>
+     * <li>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -32,9 +42,11 @@ public class ListTransitRouterVpnAttachmentsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the transit router is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
+     * <p>The region ID of the transit router.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -47,7 +59,6 @@ public class ListTransitRouterVpnAttachmentsRequest extends TeaModel {
 
     /**
      * <p>The information about the tags that are added to the CEN instance.</p>
-     * <br>
      * <p>You can query at most 20 tags in each call.</p>
      */
     @NameInMap("Tag")
@@ -55,12 +66,18 @@ public class ListTransitRouterVpnAttachmentsRequest extends TeaModel {
 
     /**
      * <p>The ID of the VPN attachment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-attach-a6p8voaodog5c0****</p>
      */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 
     /**
      * <p>The ID of the transit router.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-p0wm740vjnbaprv0m****</p>
      */
     @NameInMap("TransitRouterId")
     public String transitRouterId;
@@ -161,20 +178,22 @@ public class ListTransitRouterVpnAttachmentsRequest extends TeaModel {
     public static class ListTransitRouterVpnAttachmentsRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
-         * <br>
-         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
-         * <br>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>You can specify at most 20 tag keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tagtest</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
-         * <br>
-         * <p>The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
-         * <br>
+         * <p>The tag value can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value_A1</p>
          */
         @NameInMap("Value")
         public String value;

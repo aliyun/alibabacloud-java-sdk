@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateTransitRouterVpcAttachmentResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C087A369-82B9-43EF-91F4-4B63A9C6E6B6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the VPC connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-attach-ia340z7xis7t5s****</p>
      */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;

@@ -6,38 +6,46 @@ import com.aliyun.tea.*;
 public class DescribeCenAttachedChildInstanceAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the CEN instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-5mv960yjhja0dh****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
      * <p>The ID of the network instance that is attached to the CEN instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-2zebdboka7d7t37vo****</p>
      */
     @NameInMap("ChildInstanceId")
     public String childInstanceId;
 
     /**
      * <p>The region ID of the network instance.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("ChildInstanceRegionId")
     public String childInstanceRegionId;
 
     /**
      * <p>The type of the network instance. Valid values:</p>
-     * <br>
-     * <p>*   **VPC**: virtual private cloud (VPC)</p>
-     * <p>*   **VBR**: virtual border router (VBR)</p>
-     * <p>*   **CCN**: Cloud Connect Network (CCN) instance</p>
-     * <br>
+     * <ul>
+     * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
+     * <li><strong>VBR</strong>: virtual border router (VBR)</li>
+     * <li><strong>CCN</strong>: Cloud Connect Network (CCN) instance</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
      */
     @NameInMap("ChildInstanceType")
     public String childInstanceType;

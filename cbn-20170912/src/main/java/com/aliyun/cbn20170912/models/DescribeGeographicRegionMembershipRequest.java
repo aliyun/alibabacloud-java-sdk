@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeGeographicRegionMembershipRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>china</p>
      */
     @NameInMap("GeographicRegionId")
     public String geographicRegionId;
@@ -16,9 +19,17 @@ public class DescribeGeographicRegionMembershipRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

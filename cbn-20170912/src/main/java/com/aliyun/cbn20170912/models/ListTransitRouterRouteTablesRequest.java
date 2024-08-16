@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterRouteTablesRequest extends TeaModel {
     /**
-     * <p>The number of entries per page. Valid values: **1** to **100**. Default value: **20**.</p>
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that determines the start point of the query. Valid values:</p>
-     * <br>
-     * <p>*   If this is your first query or no subsequent query is to be sent, ignore this parameter.</p>
-     * <p>*   If a subsequent query is to be sent, set the value to the value of **NextToken** that is returned from the last call.</p>
+     * <ul>
+     * <li>If this is your first query or no subsequent query is to be sent, ignore this parameter.</li>
+     * <li>If a subsequent query is to be sent, set the value to the value of <strong>NextToken</strong> that is returned from the last call.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>dd20****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -39,7 +46,6 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
 
     /**
      * <p>The information about the tags.</p>
-     * <br>
      * <p>You can specify at most 20 tags in each call.</p>
      */
     @NameInMap("Tag")
@@ -47,43 +53,59 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
 
     /**
      * <p>The ID of the Enterprise Edition transit router.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-uf654ttymmljlvh2x****</p>
      */
     @NameInMap("TransitRouterId")
     public String transitRouterId;
 
     /**
      * <p>The ID of the route table.</p>
-     * <br>
-     * <p>You can query multiple route tables in each call. Maximum value of **N**: **20**.</p>
+     * <p>You can query multiple route tables in each call. Maximum value of <strong>N</strong>: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vtb-bp1l8awdb4iuo9uwu****</p>
      */
     @NameInMap("TransitRouterRouteTableIds")
     public java.util.List<String> transitRouterRouteTableIds;
 
     /**
      * <p>The name of the route table.</p>
-     * <br>
-     * <p>You can query multiple route tables in each call. Maximum value of **N**: **20**.</p>
-     * <br>
-     * <p>> If you set both **TransitRouterRouteTableNames.N** and **TransitRouterRouteTableIds.N**, make sure that the specified name and ID belong to the same route table.</p>
+     * <p>You can query multiple route tables in each call. Maximum value of <strong>N</strong>: <strong>20</strong>.</p>
+     * <blockquote>
+     * <p>If you set both <strong>TransitRouterRouteTableNames.N</strong> and <strong>TransitRouterRouteTableIds.N</strong>, make sure that the specified name and ID belong to the same route table.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>testname</p>
      */
     @NameInMap("TransitRouterRouteTableNames")
     public java.util.List<String> transitRouterRouteTableNames;
 
     /**
      * <p>The status of the route table. Valid values:</p>
-     * <br>
-     * <p>*   **Creating**: The route table is being created.</p>
-     * <p>*   **Deleting**: The route table is being deleted.</p>
-     * <p>*   **Active**: The route table is available.</p>
+     * <ul>
+     * <li><strong>Creating</strong>: The route table is being created.</li>
+     * <li><strong>Deleting</strong>: The route table is being deleted.</li>
+     * <li><strong>Active</strong>: The route table is available.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Active</p>
      */
     @NameInMap("TransitRouterRouteTableStatus")
     public String transitRouterRouteTableStatus;
 
     /**
      * <p>The type of the route table. Valid values:</p>
-     * <br>
-     * <p>*   **Custom**: a custom route table</p>
-     * <p>*   **System**: the default route table</p>
+     * <ul>
+     * <li><strong>Custom</strong>: a custom route table</li>
+     * <li><strong>System</strong>: the default route table</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Custom</p>
      */
     @NameInMap("TransitRouterRouteTableType")
     public String transitRouterRouteTableType;
@@ -200,9 +222,13 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
     public static class ListTransitRouterRouteTablesRequestRouteTableOptions extends TeaModel {
         /**
          * <p>Specifies whether to enable equal-cost multi-path (ECMP) routing. Valid values:</p>
-         * <br>
-         * <p>*   **disable**: disables ECMP routing If you disable ECMP routing, routes that are learned from different regions but have the same prefix and attributes select the transit router with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</p>
-         * <p>*   **enable**: enables ECMP routing. If you enable ECMP routing, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</p>
+         * <ul>
+         * <li><strong>disable</strong>: disables ECMP routing If you disable ECMP routing, routes that are learned from different regions but have the same prefix and attributes select the transit router with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</li>
+         * <li><strong>enable</strong>: enables ECMP routing. If you enable ECMP routing, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>disable</p>
          */
         @NameInMap("MultiRegionECMP")
         public String multiRegionECMP;
@@ -225,20 +251,22 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
     public static class ListTransitRouterRouteTablesRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
-         * <br>
-         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
-         * <br>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>You can specify at most 20 tag keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
-         * <br>
-         * <p>The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
-         * <br>
+         * <p>The tag value can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Value")
         public String value;

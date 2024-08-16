@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -24,12 +30,18 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FF1A7B2A-677F-4F71-96EA-6002B329F437</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,37 +94,54 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
     public static class DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntryConflictsConflict extends TeaModel {
         /**
          * <p>The destination CIDR block of the conflicting route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.20.0/24</p>
          */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
         /**
          * <p>The ID of the peer network instance on which conflicting routes are found.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccn-0q3b7oviikmm9h****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The type of the peer network instance on which the conflicting routes are found. Valid values:</p>
-         * <br>
-         * <p>*   **VPC**: VPC</p>
-         * <p>*   **VBR**: VBR</p>
-         * <p>*   **CCN**: CCN instance</p>
+         * <ul>
+         * <li><strong>VPC</strong>: VPC</li>
+         * <li><strong>VBR</strong>: VBR</li>
+         * <li><strong>CCN</strong>: CCN instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CCN</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The ID of the region where the peer network instance on which the conflicting routes are found is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccn-cn-shanghai</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The cause of the route confliction. Valid values:</p>
-         * <br>
-         * <p>*   **conflict**: The routes have the same destination CIDR block.</p>
-         * <p>*   **overflow**: The number of routes in the route table configured on another network instance has reached the upper limit.</p>
+         * <ul>
+         * <li><strong>conflict</strong>: The routes have the same destination CIDR block.</li>
+         * <li><strong>overflow</strong>: The number of routes in the route table configured on another network instance has reached the upper limit.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>conflict</p>
          */
         @NameInMap("Status")
         public String status;
@@ -186,6 +215,9 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
     public static class DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntry extends TeaModel {
         /**
          * <p>The ID of the route table configured on the network instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-il7qut3mjgtlcbpk2****</p>
          */
         @NameInMap("ChildInstanceRouteTableId")
         public String childInstanceRouteTableId;
@@ -198,68 +230,90 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
 
         /**
          * <p>The destination CIDR block of the route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.0.0/16</p>
          */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
         /**
          * <p>The ID of the instance specified as the next hop in the route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs-bp18sth14qii3pn****</p>
          */
         @NameInMap("NextHopId")
         public String nextHopId;
 
         /**
          * <p>The type of the instance specified as the next hop in the route.</p>
-         * <br>
-         * <p>*   **Instance**: ECS instance</p>
-         * <p>*   **HaVip**: high-availability virtual IP address (HAVIP).</p>
-         * <p>*   **RouterInterface**: router interface.</p>
-         * <p>*   **NetworkInterface**: elastic network interface (ENI).</p>
-         * <p>*   **VpnGateway**: VPN gateway.</p>
-         * <p>*   **IPv6Gateway**: IPv6 gateway.</p>
-         * <p>*   **NatGateway**: NAT gateway.</p>
-         * <p>*   **Attachment**: network instance connection</p>
-         * <p>*   **service**: cloud service</p>
-         * <p>*   **VBR**: VBR</p>
-         * <p>*   **CCN**: CCN instance</p>
-         * <p>*   **VPC**: VPC</p>
-         * <p>*   **local**: system route. No next hop is specified.</p>
-         * <p>*   **TR**: transit router</p>
-         * <p>*   **BlackHole**: blackhole route. No next hop is specified.</p>
-         * <p>*   **EcRouterInterface**: router interface for Express Connect</p>
-         * <p>*   **HealthCheck**: health check</p>
-         * <p>*   **AS**: access gateway for CCN</p>
-         * <p>*   **classicLink**: classic network-type instance</p>
-         * <p>*   **GatewayEndpoint**: gateway endpoint</p>
-         * <p>*   **CPE**: data center connected to the VBR</p>
+         * <ul>
+         * <li><strong>Instance</strong>: ECS instance</li>
+         * <li><strong>HaVip</strong>: high-availability virtual IP address (HAVIP).</li>
+         * <li><strong>RouterInterface</strong>: router interface.</li>
+         * <li><strong>NetworkInterface</strong>: elastic network interface (ENI).</li>
+         * <li><strong>VpnGateway</strong>: VPN gateway.</li>
+         * <li><strong>IPv6Gateway</strong>: IPv6 gateway.</li>
+         * <li><strong>NatGateway</strong>: NAT gateway.</li>
+         * <li><strong>Attachment</strong>: network instance connection</li>
+         * <li><strong>service</strong>: cloud service</li>
+         * <li><strong>VBR</strong>: VBR</li>
+         * <li><strong>CCN</strong>: CCN instance</li>
+         * <li><strong>VPC</strong>: VPC</li>
+         * <li><strong>local</strong>: system route. No next hop is specified.</li>
+         * <li><strong>TR</strong>: transit router</li>
+         * <li><strong>BlackHole</strong>: blackhole route. No next hop is specified.</li>
+         * <li><strong>EcRouterInterface</strong>: router interface for Express Connect</li>
+         * <li><strong>HealthCheck</strong>: health check</li>
+         * <li><strong>AS</strong>: access gateway for CCN</li>
+         * <li><strong>classicLink</strong>: classic network-type instance</li>
+         * <li><strong>GatewayEndpoint</strong>: gateway endpoint</li>
+         * <li><strong>CPE</strong>: data center connected to the VBR</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance</p>
          */
         @NameInMap("NextHopType")
         public String nextHopType;
 
         /**
          * <p>Indicates whether the route is allowed to be advertised to or withdrawn from the CEN instance. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The route is allowed to be advertised to or withdrawn from the CEN instance.</p>
-         * <p>*   **false**: The route is not allowed to be advertised to or withdrawn from the CEN instance.</p>
+         * <ul>
+         * <li><strong>true</strong>: The route is allowed to be advertised to or withdrawn from the CEN instance.</li>
+         * <li><strong>false</strong>: The route is not allowed to be advertised to or withdrawn from the CEN instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("OperationalMode")
         public Boolean operationalMode;
 
         /**
          * <p>Indicates whether the route is advertised to the CEN instance. Valid values:</p>
-         * <br>
-         * <p>*   **Published**: The route is advertised to the CEN instance.</p>
-         * <p>*   **NonPublished**: The route is not advertised to the CEN instance.</p>
+         * <ul>
+         * <li><strong>Published</strong>: The route is advertised to the CEN instance.</li>
+         * <li><strong>NonPublished</strong>: The route is not advertised to the CEN instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Published</p>
          */
         @NameInMap("PublishStatus")
         public String publishStatus;
 
         /**
          * <p>The type of the route. Valid values:</p>
-         * <br>
-         * <p>*   **CEN**: route that is advertised through CEN</p>
-         * <p>*   **System**: system route</p>
-         * <p>*   **Custom**: custom route</p>
+         * <ul>
+         * <li><strong>CEN</strong>: route that is advertised through CEN</li>
+         * <li><strong>System</strong>: system route</li>
+         * <li><strong>Custom</strong>: custom route</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         @NameInMap("RouteType")
         public String routeType;

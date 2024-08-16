@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyTransitRouterMulticastDomainResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>26273D23-5CB0-5EFC-AF5F-78A5448084C9</p>
      */
     @NameInMap("RequestId")
     public String requestId;

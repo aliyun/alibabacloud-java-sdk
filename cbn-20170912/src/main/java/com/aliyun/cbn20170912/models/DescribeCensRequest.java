@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class DescribeCensRequest extends TeaModel {
     /**
      * <p>The filter conditions.</p>
-     * <br>
      * <p>You can specify at most five filter conditions in each call.</p>
      */
     @NameInMap("Filter")
@@ -19,19 +18,28 @@ public class DescribeCensRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the resource group to which the CEN instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm3unpnuw****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -44,7 +52,6 @@ public class DescribeCensRequest extends TeaModel {
 
     /**
      * <p>The tags.</p>
-     * <br>
      * <p>You can specify at most 20 tags in each call.</p>
      */
     @NameInMap("Tag")
@@ -130,23 +137,26 @@ public class DescribeCensRequest extends TeaModel {
     public static class DescribeCensRequestFilter extends TeaModel {
         /**
          * <p>The key of the filter. Valid values:</p>
-         * <br>
-         * <p>*   **CenId**: the ID of a CEN instance.</p>
-         * <p>*   **Name**: the name of a CEN instance.</p>
-         * <br>
-         * <p>By default, the logical operator among filter conditions is **AND**. Information about a CEN instance is returned only if the CEN instance matches all filter conditions.</p>
-         * <br>
+         * <ul>
+         * <li><strong>CenId</strong>: the ID of a CEN instance.</li>
+         * <li><strong>Name</strong>: the name of a CEN instance.</li>
+         * </ul>
+         * <p>By default, the logical operator among filter conditions is <strong>AND</strong>. Information about a CEN instance is returned only if the CEN instance matches all filter conditions.</p>
          * <p>You can specify at most five filter conditions in each call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CenId</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the filter condition.</p>
-         * <br>
-         * <p>Specify a filter value based on the **Key** parameter. You can specify multiple values for a filter **key**. The logical operator among multiple filter values is **OR**. If a CEN instance matches one or more of the values that you specify, the CEN instance matches the filter condition.</p>
-         * <br>
+         * <p>Specify a filter value based on the <strong>Key</strong> parameter. You can specify multiple values for a filter <strong>key</strong>. The logical operator among multiple filter values is <strong>OR</strong>. If a CEN instance matches one or more of the values that you specify, the CEN instance matches the filter condition.</p>
          * <p>You can specify at most five values in each filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-0xyeagctz5sfg9****</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;
@@ -177,20 +187,22 @@ public class DescribeCensRequest extends TeaModel {
     public static class DescribeCensRequestTag extends TeaModel {
         /**
          * <p>The tag keys.</p>
-         * <br>
-         * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
-         * <br>
+         * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>You can specify at most 20 tag keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tagtest</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag values.</p>
-         * <br>
-         * <p>The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
-         * <br>
+         * <p>The tag values can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tagtest</p>
          */
         @NameInMap("Value")
         public String value;

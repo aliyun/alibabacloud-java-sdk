@@ -6,40 +6,54 @@ import com.aliyun.tea.*;
 public class CreateTransitRouterPrefixListAssociationRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     * <blockquote>
+     * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-4266****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
-     * <br>
-     * <p>*   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): performs a dry run and sends the request.</p>
+     * <ul>
+     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>The ID of the next hop.</p>
-     * <br>
-     * <p>> If **NextHopType** is set to **BlackHole**, you must set this parameter to **BlackHole**.</p>
-     * <br>
+     * <blockquote>
+     * <p>If <strong>NextHopType</strong> is set to <strong>BlackHole</strong>, you must set this parameter to <strong>BlackHole</strong>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-attach-flbq507rg2ckrj****</p>
      */
     @NameInMap("NextHop")
     public String nextHop;
 
     /**
      * <p>The type of the next hop. Valid values:</p>
-     * <br>
-     * <p>*   **BlackHole**: specifies that all the CIDR blocks in the prefix list are blackhole routes. Packets destined for the CIDR blocks are dropped.</p>
-     * <p>*   **VPC**: specifies that the next hop of the CIDR blocks in the prefix list is a virtual private cloud (VPC) connection.</p>
-     * <p>*   **VBR**: specifies that the next hop of the CIDR blocks in the prefix list is a virtual border router (VBR) connection.</p>
-     * <p>*   **TR**: specifies that the next hop of the CIDR blocks in the prefix list is an inter-region connection.</p>
+     * <ul>
+     * <li><strong>BlackHole</strong>: specifies that all the CIDR blocks in the prefix list are blackhole routes. Packets destined for the CIDR blocks are dropped.</li>
+     * <li><strong>VPC</strong>: specifies that the next hop of the CIDR blocks in the prefix list is a virtual private cloud (VPC) connection.</li>
+     * <li><strong>VBR</strong>: specifies that the next hop of the CIDR blocks in the prefix list is a virtual border router (VBR) connection.</li>
+     * <li><strong>TR</strong>: specifies that the next hop of the CIDR blocks in the prefix list is an inter-region connection.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
      */
     @NameInMap("NextHopType")
     public String nextHopType;
@@ -52,24 +66,30 @@ public class CreateTransitRouterPrefixListAssociationRequest extends TeaModel {
 
     /**
      * <p>The ID of the Alibaba Cloud account to which the prefix list belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1210123456123456</p>
      */
     @NameInMap("OwnerUid")
     public Long ownerUid;
 
     /**
      * <p>The ID of the prefix list.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pl-6ehtn5kqxgeyy08fi****</p>
      */
     @NameInMap("PrefixListId")
     public String prefixListId;
 
     /**
      * <p>The ID of the region where the transit router is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -82,16 +102,20 @@ public class CreateTransitRouterPrefixListAssociationRequest extends TeaModel {
 
     /**
      * <p>The ID of the transit router.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-6ehx7q2jze8ch5ji0****</p>
      */
     @NameInMap("TransitRouterId")
     public String transitRouterId;
 
     /**
      * <p>The ID of the route table of the transit router.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vtb-6ehgc262hr170qgyc****</p>
      */
     @NameInMap("TransitRouterTableId")
     public String transitRouterTableId;

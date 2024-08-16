@@ -6,10 +6,13 @@ import com.aliyun.tea.*;
 public class DescribeTransitRouteTableAggregationDetailRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId may be different for each request.</p>
+     * <blockquote>
+     * <p> If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>02fb3da4-130e-11e9-8e44-001****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -28,16 +31,20 @@ public class DescribeTransitRouteTableAggregationDetailRequest extends TeaModel 
 
     /**
      * <p>The destination CIDR block of the aggregate route.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.10.0/24</p>
      */
     @NameInMap("TransitRouteTableAggregationCidr")
     public String transitRouteTableAggregationCidr;
 
     /**
      * <p>The ID of the route table of the Enterprise Edition transit router.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vtb-6ehgc262hr170qgyc****</p>
      */
     @NameInMap("TransitRouteTableId")
     public String transitRouteTableId;

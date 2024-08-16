@@ -6,19 +6,26 @@ import com.aliyun.tea.*;
 public class DeleteTransitRouterRouteEntryRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.</p>
-     * <br>
-     * <p>> If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The value of **RequestId** for each API request may be different.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the system automatically uses the value of <strong>RequestId</strong> as the value of <strong>ClientToken</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>02fb3da4-130e-11e9-8e44-001****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to check the request but not perform the operation. The system checks the permissions and the status of the specified instances. Valid values:</p>
-     * <br>
-     * <p>*   **false** (default): sends the request. If the request passes the precheck, the route is deleted.</p>
-     * <p>*   **true**: sends a precheck request. The route is not deleted after the request passes the precheck. If you use this value, the system checks the required parameters and the request syntax. If the check fails, the corresponding error message is returned. If the request passes the check, the system returns the ID of the request.</p>
+     * <ul>
+     * <li><strong>false</strong> (default): sends the request. If the request passes the precheck, the route is deleted.</li>
+     * <li><strong>true</strong>: sends a precheck request. The route is not deleted after the request passes the precheck. If you use this value, the system checks the required parameters and the request syntax. If the check fails, the corresponding error message is returned. If the request passes the check, the system returns the ID of the request.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -37,33 +44,49 @@ public class DeleteTransitRouterRouteEntryRequest extends TeaModel {
 
     /**
      * <p>The destination CIDR block.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.0.0/24</p>
      */
     @NameInMap("TransitRouterRouteEntryDestinationCidrBlock")
     public String transitRouterRouteEntryDestinationCidrBlock;
 
     /**
      * <p>The ID of the route entry.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rte-75eg4jprkvk0pw****</p>
      */
     @NameInMap("TransitRouterRouteEntryId")
     public String transitRouterRouteEntryId;
 
     /**
      * <p>The ID of the network instance connection that you want to specify as the next hop.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-attach-nls9fzkfat8934****</p>
      */
     @NameInMap("TransitRouterRouteEntryNextHopId")
     public String transitRouterRouteEntryNextHopId;
 
     /**
      * <p>The type of the next hop. Valid values:</p>
-     * <br>
-     * <p>*   **BlackHole**: a blackhole route. You do not need to specify a next hop.</p>
-     * <p>*   **Attachment**: a network instance connection. You must specify a network instance connection as the next hop.</p>
+     * <ul>
+     * <li><strong>BlackHole</strong>: a blackhole route. You do not need to specify a next hop.</li>
+     * <li><strong>Attachment</strong>: a network instance connection. You must specify a network instance connection as the next hop.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>BlackHole</p>
      */
     @NameInMap("TransitRouterRouteEntryNextHopType")
     public String transitRouterRouteEntryNextHopType;
 
     /**
      * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vtb-bp1dudbh2d5na6b50****</p>
      */
     @NameInMap("TransitRouterRouteTableId")
     public String transitRouterRouteTableId;

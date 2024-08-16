@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class DescribeCenRouteMapsRequest extends TeaModel {
     /**
      * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-wx12mmlt17ld82****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
      * <p>The region ID of the routing policy.</p>
-     * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("CenRegionId")
     public String cenRegionId;
@@ -27,13 +31,19 @@ public class DescribeCenRouteMapsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -46,26 +56,35 @@ public class DescribeCenRouteMapsRequest extends TeaModel {
 
     /**
      * <p>The routing policy ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cenrmap-y40mxdvf7joc12****</p>
      */
     @NameInMap("RouteMapId")
     public String routeMapId;
 
     /**
      * <p>The route table ID of the transit router with which the routing policy is associated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vtb-gw8nx3515m1mbd1z1****</p>
      */
     @NameInMap("TransitRouterRouteTableId")
     public String transitRouterRouteTableId;
 
     /**
      * <p>The direction in which the routing policy is applied. Valid values:</p>
-     * <br>
-     * <p>*   **RegionIn**: Routes are advertised to the gateways in the regions that are connected by the CEN instance.</p>
-     * <br>
+     * <ul>
+     * <li><strong>RegionIn</strong>: Routes are advertised to the gateways in the regions that are connected by the CEN instance.</li>
+     * </ul>
      * <p>For example, routes are advertised from network instances deployed in the current region or other regions to the gateway deployed in the current region.</p>
-     * <br>
-     * <p>*   **RegionOut**: Routes are advertised from the gateways in the regions that are connected by the CEN instance.</p>
-     * <br>
+     * <ul>
+     * <li><strong>RegionOut</strong>: Routes are advertised from the gateways in the regions that are connected by the CEN instance.</li>
+     * </ul>
      * <p>For example, routes are advertised from the gateway deployed in the current region to network instances deployed in the current region, or to gateways deployed in other regions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RegionOut</p>
      */
     @NameInMap("TransmitDirection")
     public String transmitDirection;

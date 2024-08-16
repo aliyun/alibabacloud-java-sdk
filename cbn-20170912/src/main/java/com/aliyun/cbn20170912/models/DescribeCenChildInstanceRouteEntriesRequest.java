@@ -6,42 +6,54 @@ import com.aliyun.tea.*;
 public class DescribeCenChildInstanceRouteEntriesRequest extends TeaModel {
     /**
      * <p>The ID of the CEN instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-7qthudw0ll6jmc****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
      * <p>The ID of the network instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp18sth14qii3pnvo****</p>
      */
     @NameInMap("ChildInstanceId")
     public String childInstanceId;
 
     /**
      * <p>The ID of the region where the network instance is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("ChildInstanceRegionId")
     public String childInstanceRegionId;
 
     /**
      * <p>The ID of the route table of the network instance. If you do not specify a route table ID, the system queries the routes in the system route tables of the VPCs by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vtb-p0wxx3apzgn6uqp3r****</p>
      */
     @NameInMap("ChildInstanceRouteTableId")
     public String childInstanceRouteTableId;
 
     /**
      * <p>The type of the network instance. Valid values:</p>
-     * <br>
-     * <p>*   **VPC**: virtual private cloud (VPC)</p>
-     * <p>*   **VBR**: virtual border router (VBR)</p>
-     * <p>*   **CCN**: Cloud Connect Network (CCN) instance</p>
-     * <br>
+     * <ul>
+     * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
+     * <li><strong>VBR</strong>: virtual border router (VBR)</li>
+     * <li><strong>CCN</strong>: Cloud Connect Network (CCN) instance</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
      */
     @NameInMap("ChildInstanceType")
     public String childInstanceType;
@@ -53,13 +65,19 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.</p>
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>500</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -72,12 +90,16 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends TeaModel {
 
     /**
      * <p>The status of the route. Valid values:</p>
-     * <br>
-     * <p>*   **Active**: available</p>
-     * <p>*   **Candidate**: standby</p>
-     * <p>*   **Rejected**: rejected</p>
-     * <p>*   **Prohibited**: prohibited</p>
-     * <p>*   **All** (default): all routes</p>
+     * <ul>
+     * <li><strong>Active</strong>: available</li>
+     * <li><strong>Candidate</strong>: standby</li>
+     * <li><strong>Rejected</strong>: rejected</li>
+     * <li><strong>Prohibited</strong>: prohibited</li>
+     * <li><strong>All</strong> (default): all routes</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Active</p>
      */
     @NameInMap("Status")
     public String status;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GrantInstanceToTransitRouterResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C6E5992C-A57B-5A6C-9B26-568074DC68BA</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterRouteTableAssociationsRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page. Default value: **50**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>50</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that determines the start point of the query. Valid values:</p>
-     * <br>
-     * <p>*   If this is your first query or no subsequent query is to be sent, ignore this parameter.</p>
-     * <p>*   If a next query is to be sent, set the value to the value of **NextToken** that is returned from the last call.</p>
+     * <ul>
+     * <li>If this is your first query or no subsequent query is to be sent, ignore this parameter.</li>
+     * <li>If a next query is to be sent, set the value to the value of <strong>NextToken</strong> that is returned from the last call.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>a415****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -33,39 +40,56 @@ public class ListTransitRouterRouteTableAssociationsRequest extends TeaModel {
 
     /**
      * <p>The status of the associated forwarding correlation. Valid values:</p>
-     * <br>
-     * <p>*   **Active**: The associated forwarding correlation is available.</p>
-     * <p>*   **Associating**: The associated forwarding correlation is being created.</p>
-     * <p>*   **Dissociating**: The associated forwarding correlation is being deleted.</p>
+     * <ul>
+     * <li><strong>Active</strong>: The associated forwarding correlation is available.</li>
+     * <li><strong>Associating</strong>: The associated forwarding correlation is being created.</li>
+     * <li><strong>Dissociating</strong>: The associated forwarding correlation is being deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Active</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The ID of the network instance connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-attach-nls9fzkfat8934****</p>
      */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 
     /**
      * <p>The ID of the next hop.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1h8vbrbcgohcju5****</p>
      */
     @NameInMap("TransitRouterAttachmentResourceId")
     public String transitRouterAttachmentResourceId;
 
     /**
      * <p>The type of next hop. Valid values:</p>
-     * <br>
-     * <p>*   **VPC**: virtual private cloud (VPC)</p>
-     * <p>*   **VBR**: virtual border router (VBR)</p>
-     * <p>*   **TR**: transit router</p>
-     * <p>*   **VPN**: VPN attachment</p>
+     * <ul>
+     * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
+     * <li><strong>VBR</strong>: virtual border router (VBR)</li>
+     * <li><strong>TR</strong>: transit router</li>
+     * <li><strong>VPN</strong>: VPN attachment</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
      */
     @NameInMap("TransitRouterAttachmentResourceType")
     public String transitRouterAttachmentResourceType;
 
     /**
      * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vtb-bp1dudbh2d5na6b50****</p>
      */
     @NameInMap("TransitRouterRouteTableId")
     public String transitRouterRouteTableId;

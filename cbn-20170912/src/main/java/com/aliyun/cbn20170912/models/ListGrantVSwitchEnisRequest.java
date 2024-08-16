@@ -6,19 +6,24 @@ import com.aliyun.tea.*;
 public class ListGrantVSwitchEnisRequest extends TeaModel {
     /**
      * <p>The ID of the CEN instance to which the VPC is attached.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-a7syd349kne38g****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
      * <p>The number of entries to return on each page. Valid values: 10 to 500.</p>
-     * <br>
      * <p>Default value:</p>
-     * <br>
-     * <p>*   If you do not specify a value, the default value is 20.</p>
-     * <p>*   If this parameter is set to a value greater than 500, the default value is 500.</p>
+     * <ul>
+     * <li>If you do not specify a value, the default value is 20.</li>
+     * <li>If this parameter is set to a value greater than 500, the default value is 500.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
@@ -31,12 +36,18 @@ public class ListGrantVSwitchEnisRequest extends TeaModel {
 
     /**
      * <p>The name of the ENI.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-eni-name</p>
      */
     @NameInMap("NetworkInterfaceName")
     public String networkInterfaceName;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAdDWBF2****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -49,6 +60,9 @@ public class ListGrantVSwitchEnisRequest extends TeaModel {
 
     /**
      * <p>The primary private IPv4 address of the ENI.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.XX.XX</p>
      */
     @NameInMap("PrimaryIpAddress")
     public String primaryIpAddress;
@@ -61,16 +75,20 @@ public class ListGrantVSwitchEnisRequest extends TeaModel {
 
     /**
      * <p>The ID of a vSwitch in the VPC. You can specify only one vSwitch in each call.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-p0w9s2ig1jnwgrbzl****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The ID of the VPC.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-p0w9alkte4w2htrqe****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RegisterTransitRouterMulticastGroupMembersResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EB985B7E-2CF8-5EC9-A7DB-F7C82ABD3ACE</p>
      */
     @NameInMap("RequestId")
     public String requestId;

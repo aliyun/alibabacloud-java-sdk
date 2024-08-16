@@ -12,24 +12,36 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7A30C665-8766-5AAA-9274-C97380E2D850</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,50 +94,81 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
     public static class DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimitsCenInterRegionBandwidthLimit extends TeaModel {
         /**
          * <p>The maximum bandwidth of the inter-region connection. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("BandwidthLimit")
         public Long bandwidthLimit;
 
         /**
          * <p>The ID of the bandwidth plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cenbwp-uenczwb592fnvv****</p>
          */
         @NameInMap("BandwidthPackageId")
         public String bandwidthPackageId;
 
+        /**
+         * <p>The bandwidth allocation method. Valid values:</p>
+         * <ul>
+         * <li><strong>BandwidthPackage</strong>: allocates bandwidth from a bandwidth plan.</li>
+         * <li><strong>DataTransfer</strong>: bandwidth is billed based on the pay-by-data-transfer metering method.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BandwidthPackage</p>
+         */
         @NameInMap("BandwidthType")
         public String bandwidthType;
 
         /**
          * <p>The CEN instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-pfa6ugf3xl0qsd****</p>
          */
         @NameInMap("CenId")
         public String cenId;
 
         /**
          * <p>The IDs of the local and peer regions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>china_china</p>
          */
         @NameInMap("GeographicSpanId")
         public String geographicSpanId;
 
         /**
          * <p>The ID of the local region.</p>
-         * <br>
-         * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccn-cn-shanghai</p>
          */
         @NameInMap("LocalRegionId")
         public String localRegionId;
 
         /**
          * <p>The ID of the peer region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("OppositeRegionId")
         public String oppositeRegionId;
 
         /**
          * <p>The bandwidth status of the inter-region connection. Valid values:</p>
-         * <br>
-         * <p>*   **Active**</p>
-         * <p>*   **Modifying**</p>
+         * <ul>
+         * <li><strong>Active</strong></li>
+         * <li><strong>Modifying</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("Status")
         public String status;

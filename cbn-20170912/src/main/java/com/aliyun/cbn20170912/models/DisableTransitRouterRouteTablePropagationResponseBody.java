@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DisableTransitRouterRouteTablePropagationResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A7C43F99-B1E5-4A53-AB64-4BAE8AF4484E</p>
      */
     @NameInMap("RequestId")
     public String requestId;

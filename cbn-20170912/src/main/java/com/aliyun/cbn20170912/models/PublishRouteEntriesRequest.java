@@ -6,53 +6,65 @@ import com.aliyun.tea.*;
 public class PublishRouteEntriesRequest extends TeaModel {
     /**
      * <p>The ID of the CEN instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-7qthudw0ll6jmc****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
      * <p>The ID of the network instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-rj9gt5nll27onu****</p>
      */
     @NameInMap("ChildInstanceId")
     public String childInstanceId;
 
     /**
      * <p>The ID of the region where the network instance is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>us-west-1</p>
      */
     @NameInMap("ChildInstanceRegionId")
     public String childInstanceRegionId;
 
     /**
      * <p>The ID of the route table configured on the network instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vtb-bp174d1gje7****</p>
      */
     @NameInMap("ChildInstanceRouteTableId")
     public String childInstanceRouteTableId;
 
     /**
      * <p>The type of the network instance. Valid values:</p>
-     * <br>
-     * <p>*   **VPC**: VPC</p>
-     * <p>*   **VBR**: VBR</p>
-     * <br>
+     * <ul>
+     * <li><strong>VPC</strong>: VPC</li>
+     * <li><strong>VBR</strong>: VBR</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
      */
     @NameInMap("ChildInstanceType")
     public String childInstanceType;
 
     /**
      * <p>The destination CIDR block of the route that you want to advertise.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172.16.1.0/24</p>
      */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;

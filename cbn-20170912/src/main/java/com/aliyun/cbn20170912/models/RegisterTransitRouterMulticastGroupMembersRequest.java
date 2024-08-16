@@ -6,29 +6,37 @@ import com.aliyun.tea.*;
 public class RegisterTransitRouterMulticastGroupMembersRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
-     * <br>
-     * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): performs a dry run and performs the request.</p>
+     * <ul>
+     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and performs the request.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The IP address of the multicast group to which the multicast members belong. Valid values: **224.0.0.1** to **239.255.255.254**.</p>
-     * <br>
+     * <p>The IP address of the multicast group to which the multicast members belong. Valid values: <strong>224.0.0.1</strong> to <strong>239.255.255.254</strong>.</p>
      * <p>If the multicast group does not exist in the specified multicast domain, the system automatically creates the multicast group in the multicast domain.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>239.XX.XX.2</p>
      */
     @NameInMap("GroupIpAddress")
     public String groupIpAddress;
@@ -59,17 +67,23 @@ public class RegisterTransitRouterMulticastGroupMembersRequest extends TeaModel 
 
     /**
      * <p>The ID of the multicast domain to which the multicast members belong.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-mcast-domain-91wpg6wbhchjeq****</p>
      */
     @NameInMap("TransitRouterMulticastDomainId")
     public String transitRouterMulticastDomainId;
 
     /**
      * <p>The ID of the VPC to which the ENI belongs.</p>
-     * <br>
-     * <p>*   If the ENI belongs to the current Alibaba Cloud account, ignore this parameter.</p>
-     * <p>*   If the ENI belongs to a different Alibaba Cloud account, you must set this parameter.</p>
+     * <ul>
+     * <li>If the ENI belongs to the current Alibaba Cloud account, ignore this parameter.</li>
+     * <li>If the ENI belongs to a different Alibaba Cloud account, you must set this parameter.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-wz9fusm6zq8uy7cfa****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

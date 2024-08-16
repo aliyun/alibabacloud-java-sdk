@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteCenBandwidthPackageRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cenbwp-4c2zaavbvh5f42****</p>
      */
     @NameInMap("CenBandwidthPackageId")
     public String cenBandwidthPackageId;

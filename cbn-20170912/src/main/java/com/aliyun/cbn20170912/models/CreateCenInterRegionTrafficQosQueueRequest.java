@@ -4,9 +4,17 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class CreateCenInterRegionTrafficQosQueueRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426****</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -22,14 +30,23 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>desctest</p>
+     */
     @NameInMap("QosQueueDescription")
     public String qosQueueDescription;
 
+    /**
+     * <strong>example:</strong>
+     * <p>nametest</p>
+     */
     @NameInMap("QosQueueName")
     public String qosQueueName;
 
     /**
-     * <p>This parameter is required.</p>
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("RemainBandwidthPercent")
     public String remainBandwidthPercent;
@@ -42,6 +59,9 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qos-qdvybn468kaoxx****</p>
      */
     @NameInMap("TrafficQosPolicyId")
     public String trafficQosPolicyId;

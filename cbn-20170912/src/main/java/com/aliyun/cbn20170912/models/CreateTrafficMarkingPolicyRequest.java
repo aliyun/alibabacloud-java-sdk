@@ -6,29 +6,37 @@ import com.aliyun.tea.*;
 public class CreateTrafficMarkingPolicyRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     * <blockquote>
+     * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
-     * <br>
-     * <p>*   **true**: performs a dry run. The system checks the required parameters, request format, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): performs a dry run and sends the request.</p>
+     * <ul>
+     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request format, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The differentiated services code point (DSCP) value to be added to packets that match the traffic classification rule. Valid values: **0** to **63**.</p>
-     * <br>
+     * <p>The differentiated services code point (DSCP) value to be added to packets that match the traffic classification rule. Valid values: <strong>0</strong> to <strong>63</strong>.</p>
      * <p>The DSCP value of each traffic marking policy on a transit router must be unique.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("MarkingDscp")
     public Integer markingDscp;
@@ -40,11 +48,12 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The priority value of the traffic marking policy. Valid values: **1** to **100**.</p>
-     * <br>
+     * <p>The priority value of the traffic marking policy. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
      * <p>The priority value of each traffic marking policy on a transit router must be unique. A smaller value specifies a higher priority.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("Priority")
     public Integer priority;
@@ -57,25 +66,27 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
 
     /**
      * <p>The description of the traffic marking policy.</p>
-     * <br>
      * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>desctest</p>
      */
     @NameInMap("TrafficMarkingPolicyDescription")
     public String trafficMarkingPolicyDescription;
 
     /**
      * <p>The name of the traffic marking policy.</p>
-     * <br>
      * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nametest</p>
      */
     @NameInMap("TrafficMarkingPolicyName")
     public String trafficMarkingPolicyName;
 
     /**
      * <p>The traffic classification rules in the traffic marking policy.</p>
-     * <br>
      * <p>Data packets that meet the traffic classification rule is assigned the DSCP value of quality of service (QoS) policy.</p>
-     * <br>
      * <p>You can create up to 50 traffic classification rules.</p>
      */
     @NameInMap("TrafficMatchRules")
@@ -83,8 +94,10 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
 
     /**
      * <p>The ID of the transit router.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-8vbuqeo5h5pu3m01d****</p>
      */
     @NameInMap("TransitRouterId")
     public String transitRouterId;
@@ -193,88 +206,89 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
     public static class CreateTrafficMarkingPolicyRequestTrafficMatchRules extends TeaModel {
         /**
          * <p>The destination CIDR block that is used to match packets.</p>
-         * <br>
          * <p>Packets whose destination IP addresses fall into the specified destination CIDR block meet the traffic classification rule. If you do not specify a destination CIDR block, all packets meet the traffic classification rule.</p>
-         * <br>
          * <p>You can create up to 50 traffic classification rules in each call You can specify a destination CIDR block for each traffic classification rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.10.10.0/24</p>
          */
         @NameInMap("DstCidr")
         public String dstCidr;
 
         /**
-         * <p>The destination port range that is used to match packets. Valid values: **-1** and **1** to **65535**.</p>
-         * <br>
+         * <p>The destination port range that is used to match packets. Valid values: <strong>-1</strong> and <strong>1</strong> to <strong>65535</strong>.</p>
          * <p>Packets whose destination ports fall within the destination port range meet the traffic classification rule. If you do not specify destination port range, all packets meet the traffic classification rule.</p>
-         * <br>
          * <p>You can enter up to two port numbers. Take note of the following rules:</p>
-         * <br>
-         * <p>*   If you enter only one port number, such as 1, packets whose destination port is 1 meet the traffic classification rule.</p>
-         * <p>*   If you enter two port numbers, such as 1 and 200, packets whose destination ports fall into 1 and 200 meet the traffic classification rule.</p>
-         * <p>*   If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, all packets meet the traffic classification rule.</p>
-         * <br>
+         * <ul>
+         * <li>If you enter only one port number, such as 1, packets whose destination port is 1 meet the traffic classification rule.</li>
+         * <li>If you enter two port numbers, such as 1 and 200, packets whose destination ports fall into 1 and 200 meet the traffic classification rule.</li>
+         * <li>If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, all packets meet the traffic classification rule.</li>
+         * </ul>
          * <p>You can create up to 50 traffic classification rules in each call. You can specify a destination port range for each traffic classification rule.</p>
          */
         @NameInMap("DstPortRange")
         public java.util.List<Integer> dstPortRange;
 
         /**
-         * <p>The DSCP value that is used to match packets. Valid values: **0** to **63**.</p>
-         * <br>
+         * <p>The DSCP value that is used to match packets. Valid values: <strong>0</strong> to <strong>63</strong>.</p>
          * <p>Packets that carry the specified DSCP value meet the traffic classification rule. If you do not specify a DSCP value, all packets meet the traffic classification rule.</p>
-         * <br>
-         * <p>>  The DSCP value that you specify for this parameter is the DSCP value that packets carry before they are transmitted over the inter-region connection.</p>
-         * <br>
+         * <blockquote>
+         * <p> The DSCP value that you specify for this parameter is the DSCP value that packets carry before they are transmitted over the inter-region connection.</p>
+         * </blockquote>
          * <p>You can create up to 50 traffic classification rules in each call. You can specify a DSCP value for each traffic classification rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("MatchDscp")
         public Integer matchDscp;
 
         /**
          * <p>The protocol that is used to match packets.</p>
-         * <br>
-         * <p>Traffic classification rules support the following protocols: **HTTP**, **HTTPS**, **TCP**, **UDP**, **SSH**, and **Telnet**. For more information, log on to the [CEN console](https://cen.console.aliyun.com/cen/list).</p>
-         * <br>
-         * <p>**Some protocols use a fixed port. Click to view protocols and ports.**</p>
-         * <br>
-         * <p>*   If the protocol is **ICMP**, the destination port must be **-1**.</p>
-         * <p>*   If the protocol is **GRE**, the destination port must be **1**.</p>
-         * <p>*   If the protocol is **SSH**, the destination port must be **22**.</p>
-         * <p>*   If the protocol is **Telnet**, the destination port must be **23**.</p>
-         * <p>*   If the protocol is **HTTP**, the destination port must be **80**.</p>
-         * <p>*   If the protocol is **HTTPS**, the destination port must be **443**.</p>
-         * <p>*   If the protocol is **MS SQL**, the destination port must be **1443**.</p>
-         * <p>*   If the protocol is **Oracle**, the destination port must be **1521**.</p>
-         * <p>*   If the protocol is **Mysql**, the destination port must be **3306**.</p>
-         * <p>*   If the protocol is **RDP**, the destination port must be **3389**.</p>
-         * <p>*   If the protocol is **Postgre SQL**, the destination port must be **5432**.</p>
-         * <p>*   If the protocol is **Redis**, the destination port must be **6379**.</p>
-         * <br>
+         * <p>Traffic classification rules support the following protocols: <strong>HTTP</strong>, <strong>HTTPS</strong>, <strong>TCP</strong>, <strong>UDP</strong>, <strong>SSH</strong>, and <strong>Telnet</strong>. For more information, log on to the <a href="https://cen.console.aliyun.com/cen/list">CEN console</a>.</p>
+         * <p><strong>Some protocols use a fixed port. Click to view protocols and ports.</strong></p>
+         * <ul>
+         * <li>If the protocol is <strong>ICMP</strong>, the destination port must be <strong>-1</strong>.</li>
+         * <li>If the protocol is <strong>GRE</strong>, the destination port must be <strong>1</strong>.</li>
+         * <li>If the protocol is <strong>SSH</strong>, the destination port must be <strong>22</strong>.</li>
+         * <li>If the protocol is <strong>Telnet</strong>, the destination port must be <strong>23</strong>.</li>
+         * <li>If the protocol is <strong>HTTP</strong>, the destination port must be <strong>80</strong>.</li>
+         * <li>If the protocol is <strong>HTTPS</strong>, the destination port must be <strong>443</strong>.</li>
+         * <li>If the protocol is <strong>MS SQL</strong>, the destination port must be <strong>1443</strong>.</li>
+         * <li>If the protocol is <strong>Oracle</strong>, the destination port must be <strong>1521</strong>.</li>
+         * <li>If the protocol is <strong>Mysql</strong>, the destination port must be <strong>3306</strong>.</li>
+         * <li>If the protocol is <strong>RDP</strong>, the destination port must be <strong>3389</strong>.</li>
+         * <li>If the protocol is <strong>Postgre SQL</strong>, the destination port must be <strong>5432</strong>.</li>
+         * <li>If the protocol is <strong>Redis</strong>, the destination port must be <strong>6379</strong>.</li>
+         * </ul>
          * <p>You can create up to 50 traffic classification rules in each call. You can specify a protocol for each traffic classification rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         @NameInMap("Protocol")
         public String protocol;
 
         /**
          * <p>The source CIDR block that is used to match packets.</p>
-         * <br>
          * <p>Packets whose source IP addresses fall into the specified source CIDR block meet the traffic classification rule. If you do not specify a source CIDR block, all packets meet the traffic classification rule.</p>
-         * <br>
          * <p>You can create up to 50 traffic classification rules in each call. You can specify a source CIDR block for each traffic classification rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.10.0/24</p>
          */
         @NameInMap("SrcCidr")
         public String srcCidr;
 
         /**
-         * <p>The source port range that is used to match packets. Valid values: **-1** and **1** to **65535**.</p>
-         * <br>
+         * <p>The source port range that is used to match packets. Valid values: <strong>-1</strong> and <strong>1</strong> to <strong>65535</strong>.</p>
          * <p>Packets whose source ports fall into the source port range meet the traffic classification rule. If you do not specify a source port range, all packets meet the traffic classification rule.</p>
-         * <br>
          * <p>You can enter up to two port numbers. Take note of the following rules:</p>
-         * <br>
-         * <p>*   If you enter only one port number, such as 1, packets whose source port is 1 meet the traffic classification rule.</p>
-         * <p>*   If you enter two port numbers, such as 1 and 200, packets whose source ports fall into 1 and 200 meet the traffic classification rule.</p>
-         * <p>*   If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, all packets meet the traffic classification rule.</p>
-         * <br>
+         * <ul>
+         * <li>If you enter only one port number, such as 1, packets whose source port is 1 meet the traffic classification rule.</li>
+         * <li>If you enter two port numbers, such as 1 and 200, packets whose source ports fall into 1 and 200 meet the traffic classification rule.</li>
+         * <li>If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, all packets meet the traffic classification rule.</li>
+         * </ul>
          * <p>You can create up to 50 traffic classification rules in each call. You can specify a source port range for each traffic classification rule.</p>
          */
         @NameInMap("SrcPortRange")
@@ -282,20 +296,22 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
 
         /**
          * <p>The description of the traffic classification rule.</p>
-         * <br>
          * <p>You can create up to 50 traffic classification rules in each call. You can specify a description for each traffic classification rule.</p>
-         * <br>
          * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desctest</p>
          */
         @NameInMap("TrafficMatchRuleDescription")
         public String trafficMatchRuleDescription;
 
         /**
          * <p>The name of the traffic classification rule.</p>
-         * <br>
          * <p>You can create up to 50 traffic classification rules in each call. You can specify a name for each traffic classification rule.</p>
-         * <br>
          * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nametest</p>
          */
         @NameInMap("TrafficMatchRuleName")
         public String trafficMatchRuleName;

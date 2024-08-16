@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that determines the start point of the query.</p>
-     * <br>
-     * <p>*   If **NextToken** was not returned in the previous query, it indicates that no additional results exist.</p>
-     * <p>*   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> was not returned in the previous query, it indicates that no additional results exist.</li>
+     * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>113BFD47-63DF-5D9D-972C-033FB9C360CD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -91,24 +104,36 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
 
         /**
          * <p>The description of the queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desctest</p>
          */
         @NameInMap("QosQueueDescription")
         public String qosQueueDescription;
 
         /**
          * <p>The queue ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qos-queue-njcrmr9fiu1jii****</p>
          */
         @NameInMap("QosQueueId")
         public String qosQueueId;
 
         /**
          * <p>The name of the queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>namtest</p>
          */
         @NameInMap("QosQueueName")
         public String qosQueueName;
 
         /**
          * <p>The percentage of the inter-region bandwidth that can be used by the queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RemainBandwidthPercent")
         public Integer remainBandwidthPercent;
@@ -163,29 +188,42 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
     public static class ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPolicies extends TeaModel {
         /**
          * <p>The description of the QoS policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desctest</p>
          */
         @NameInMap("TrafficQosPolicyDescription")
         public String trafficQosPolicyDescription;
 
         /**
          * <p>The ID of the QoS policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qos-rnghap5gc8155x****</p>
          */
         @NameInMap("TrafficQosPolicyId")
         public String trafficQosPolicyId;
 
         /**
          * <p>The name of the QoS policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nametest</p>
          */
         @NameInMap("TrafficQosPolicyName")
         public String trafficQosPolicyName;
 
         /**
          * <p>The status of the QoS policy.</p>
-         * <br>
-         * <p>*   **Creating**: The QoS policy is being created.</p>
-         * <p>*   **Active**: The QoS policy is available.</p>
-         * <p>*   **Modifying**: The policy is being modified.</p>
-         * <p>*   **Deleting**: The QoS policy is being deleted.</p>
+         * <ul>
+         * <li><strong>Creating</strong>: The QoS policy is being created.</li>
+         * <li><strong>Active</strong>: The QoS policy is available.</li>
+         * <li><strong>Modifying</strong>: The policy is being modified.</li>
+         * <li><strong>Deleting</strong>: The QoS policy is being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Creating</p>
          */
         @NameInMap("TrafficQosPolicyStatus")
         public String trafficQosPolicyStatus;
@@ -198,12 +236,18 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the network instance connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-q7ct7c06jpw***</p>
          */
         @NameInMap("TransitRouterAttachmentId")
         public String transitRouterAttachmentId;
 
         /**
          * <p>The ID of the transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-2ze4ta4v32umj0rb***</p>
          */
         @NameInMap("TransitRouterId")
         public String transitRouterId;

@@ -5,40 +5,56 @@ import com.aliyun.tea.*;
 
 public class DescribeFlowlogsResponseBody extends TeaModel {
     /**
-     * <p>A list of flow logs.</p>
+     * <p>The information about the flow log.</p>
      */
     @NameInMap("FlowLogs")
     public DescribeFlowlogsResponseBodyFlowLogs flowLogs;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F7DDDC17-FA06-4AC2-8F35-59D2470FCFC1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -99,12 +115,18 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
     public static class DescribeFlowlogsResponseBodyFlowLogsFlowLogTagsTag extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagValue</p>
          */
         @NameInMap("Value")
         public String value;
@@ -153,33 +175,47 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
 
     public static class DescribeFlowlogsResponseBodyFlowLogsFlowLog extends TeaModel {
         /**
-         * <p>The ID of the CEN instance.</p>
+         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-7qthudw0ll6jmc****</p>
          */
         @NameInMap("CenId")
         public String cenId;
 
         /**
          * <p>The time when the flow log was created.</p>
-         * <br>
          * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-24T13:00:52Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of the flow log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myFlowlog</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the flow log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flowlog-m5evbtbpt****</p>
          */
         @NameInMap("FlowLogId")
         public String flowLogId;
 
         /**
          * <p>The name of the flow log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myFlowlog</p>
          */
         @NameInMap("FlowLogName")
         public String flowLogName;
@@ -188,7 +224,10 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         public String flowLogVersion;
 
         /**
-         * <p>The time window for collecting log data. Unit: seconds. Valid values: **60** and **600**. Default value: **600**.</p>
+         * <p>The time window for collecting log data. Unit: seconds. Valid values: <strong>60</strong> or <strong>600</strong> Default value: <strong>600</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("Interval")
         public Long interval;
@@ -197,28 +236,41 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         public String logFormatString;
 
         /**
-         * <p>The name of the Logstore where the flow log is stored.</p>
+         * <p>The Logstore that stores the captured traffic data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FlowLogStore</p>
          */
         @NameInMap("LogStoreName")
         public String logStoreName;
 
         /**
-         * <p>The name of the project where the flow log is stored.</p>
+         * <p>The name of the project that stores the captured traffic data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FlowLogProject</p>
          */
         @NameInMap("ProjectName")
         public String projectName;
 
         /**
-         * <p>The ID of the region where the flow log is deployed.</p>
+         * <p>The region ID of the flow log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The status of the flow log. Valid values:</p>
-         * <br>
-         * <p>*   **Active**: The flow log is enabled.</p>
-         * <p>*   **Inactive**: The flow log is disabled.</p>
+         * <ul>
+         * <li><strong>Active</strong>: The flow log is enabled.</li>
+         * <li><strong>Inactive</strong>: The flow log is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("Status")
         public String status;
@@ -230,7 +282,10 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         public DescribeFlowlogsResponseBodyFlowLogsFlowLogTags tags;
 
         /**
-         * <p>The ID of the network instance connection.</p>
+         * <p>The ID of the network instance connection</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-5x4o4ynzuqbv6g****</p>
          */
         @NameInMap("TransitRouterAttachmentId")
         public String transitRouterAttachmentId;

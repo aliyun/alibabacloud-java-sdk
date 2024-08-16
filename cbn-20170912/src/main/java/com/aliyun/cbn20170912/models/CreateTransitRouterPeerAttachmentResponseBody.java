@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateTransitRouterPeerAttachmentResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>59422BF5-BAAD-4CFD-9019-9557BD3ACFA3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the inter-region connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-attach-nwkiqfvw22qesz****</p>
      */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;

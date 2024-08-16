@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateTransitRouterMulticastDomainResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>94E19C6F-206F-5223-9A63-64B85851BC04</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the multicast domain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-mcast-domain-40cwj0rgzgdtam****</p>
      */
     @NameInMap("TransitRouterMulticastDomainId")
     public String transitRouterMulticastDomainId;

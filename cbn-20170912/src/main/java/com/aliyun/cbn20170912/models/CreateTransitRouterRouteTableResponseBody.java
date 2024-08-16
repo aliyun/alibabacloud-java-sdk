@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateTransitRouterRouteTableResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>599904C8-A3DA-4E5F-83B6-D5364E664247</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the custom route table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vtb-bp1xbcgpgcz9axl9m****</p>
      */
     @NameInMap("TransitRouterRouteTableId")
     public String transitRouterRouteTableId;

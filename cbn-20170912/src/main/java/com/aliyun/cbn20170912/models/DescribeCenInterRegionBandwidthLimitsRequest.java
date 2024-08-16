@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeCenInterRegionBandwidthLimitsRequest extends TeaModel {
     /**
      * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-pfa6ugf3xl0qsd****</p>
      */
     @NameInMap("CenId")
     public String cenId;
@@ -17,13 +20,19 @@ public class DescribeCenInterRegionBandwidthLimitsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -36,8 +45,10 @@ public class DescribeCenInterRegionBandwidthLimitsRequest extends TeaModel {
 
     /**
      * <p>The region ID of the transit router.</p>
-     * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccn-cn-shanghai</p>
      */
     @NameInMap("TrRegionId")
     public String trRegionId;

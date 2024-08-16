@@ -6,40 +6,50 @@ import com.aliyun.tea.*;
 public class DeleteRouteServiceInCenRequest extends TeaModel {
     /**
      * <p>The ID of the region where the cloud service is accessed.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("AccessRegionId")
     public String accessRegionId;
 
     /**
      * <p>The ID of the CEN instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-7qthudw0ll6jmc****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
      * <p>The IP addresses or CIDR blocks of the cloud service.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100.118.28.0/24</p>
      */
     @NameInMap("Host")
     public String host;
 
     /**
      * <p>The region ID of the cloud service.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("HostRegionId")
     public String hostRegionId;
 
     /**
      * <p>The ID of the virtual private cloud (VPC) that is associated with the cloud service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1t36rn9l53iwbsf****</p>
      */
     @NameInMap("HostVpcId")
     public String hostVpcId;
