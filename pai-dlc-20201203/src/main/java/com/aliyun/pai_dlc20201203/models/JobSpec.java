@@ -4,6 +4,9 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class JobSpec extends TeaModel {
+    @NameInMap("AssignNodeSpec")
+    public AssignNodeSpec assignNodeSpec;
+
     /**
      * <strong>example:</strong>
      * <p>ecs.c6.large</p>
@@ -54,6 +57,14 @@ public class JobSpec extends TeaModel {
     public static JobSpec build(java.util.Map<String, ?> map) throws Exception {
         JobSpec self = new JobSpec();
         return TeaModel.build(map, self);
+    }
+
+    public JobSpec setAssignNodeSpec(AssignNodeSpec assignNodeSpec) {
+        this.assignNodeSpec = assignNodeSpec;
+        return this;
+    }
+    public AssignNodeSpec getAssignNodeSpec() {
+        return this.assignNodeSpec;
     }
 
     public JobSpec setEcsSpec(String ecsSpec) {
