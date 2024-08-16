@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class GetRumOcuStatisticDataShrinkRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. Unit: milliseconds.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1687849260000</p>
@@ -39,6 +40,7 @@ public class GetRumOcuStatisticDataShrinkRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -48,6 +50,7 @@ public class GetRumOcuStatisticDataShrinkRequest extends TeaModel {
 
     /**
      * <p>The number of entries per page.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -75,6 +78,7 @@ public class GetRumOcuStatisticDataShrinkRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1600063200000</p>

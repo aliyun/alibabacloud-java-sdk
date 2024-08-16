@@ -19,6 +19,8 @@ public class GetRumDataForPageRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>1713774233</p>
      */
@@ -40,6 +42,8 @@ public class GetRumDataForPageRequest extends TeaModel {
     public String pid;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li>and app.id: xxxx@586810fbxxxx19f</li>
@@ -58,6 +62,8 @@ public class GetRumDataForPageRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>1713687833</p>
      */

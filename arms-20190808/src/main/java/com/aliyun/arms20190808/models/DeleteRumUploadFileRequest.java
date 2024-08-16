@@ -4,6 +4,20 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteRumUploadFileRequest extends TeaModel {
+    /**
+     * <p>Information of files to be deleted in JSON array format. If a single file needs to be deleted, this field should be left empty. If multiple files need to be deleted, just fill in this field.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{
+     *     &quot;fileName&quot; : &quot;test.js.map&quot;,
+     *     &quot;version&quot; : &quot;1.0.0&quot;
+     *   },
+     *   {
+     *     &quot;fileName&quot; : &quot;test.dSYM&quot;,
+     *     &quot;version&quot; : &quot;1.20.1&quot;,
+     *     &quot;uuid&quot; : &quot;xxxx-xxxx-xxxx-xxxx&quot;
+     *   }]</p>
+     */
     @NameInMap("BatchItems")
     public String batchItems;
 

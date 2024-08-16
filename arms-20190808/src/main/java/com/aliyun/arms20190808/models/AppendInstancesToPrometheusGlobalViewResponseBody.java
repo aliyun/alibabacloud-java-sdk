@@ -4,6 +4,12 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class AppendInstancesToPrometheusGlobalViewResponseBody extends TeaModel {
+    /**
+     * <p>Status code. 200 means success, other status codes are exceptions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
@@ -13,6 +19,12 @@ public class AppendInstancesToPrometheusGlobalViewResponseBody extends TeaModel 
     @NameInMap("Data")
     public AppendInstancesToPrometheusGlobalViewResponseBodyData data;
 
+    /**
+     * <p>Additional message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 

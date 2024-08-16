@@ -15,6 +15,7 @@ public class GetRumAppInfoRequest extends TeaModel {
 
     /**
      * <p>The application ID.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>atc889zkcf@d8deedfa9bf****</p>

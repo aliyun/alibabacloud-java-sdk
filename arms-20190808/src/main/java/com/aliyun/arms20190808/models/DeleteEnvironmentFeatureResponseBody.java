@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteEnvironmentFeatureResponseBody extends TeaModel {
     /**
+     * <p>The status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DeleteEnvironmentFeatureResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,6 +23,8 @@ public class DeleteEnvironmentFeatureResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -26,7 +32,7 @@ public class DeleteEnvironmentFeatureResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2A0CEDF1-06FE-44AC-8E21-21A5BE65****</p>
@@ -35,6 +41,8 @@ public class DeleteEnvironmentFeatureResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

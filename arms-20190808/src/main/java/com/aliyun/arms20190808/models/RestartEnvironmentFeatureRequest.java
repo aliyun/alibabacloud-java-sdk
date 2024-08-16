@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RestartEnvironmentFeatureRequest extends TeaModel {
     /**
+     * <p>The ID of the environment.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class RestartEnvironmentFeatureRequest extends TeaModel {
     public String environmentId;
 
     /**
+     * <p>The feature name. Valid values: app-agent-pilot, metric-agent, ebpf-agent, and service-check.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class RestartEnvironmentFeatureRequest extends TeaModel {
     public String featureName;
 
     /**
+     * <p>The region ID. Default value: cn-hangzhou.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

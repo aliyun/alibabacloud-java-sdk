@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class ListPrometheusGlobalViewResponseBody extends TeaModel {
     /**
+     * <p>Status code. Description 200 means success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The list of global aggregation instances. The value of this parameter is a string in the JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[ {groupName: &quot;the name of the global aggregation instance&quot;, clusterId: &quot;global-v2-clusterid&quot;, endpoint: &quot;cn-hangzhou&quot;}, // ..... more items ]</p>
+     */
     @NameInMap("Data")
     public String data;
 
     /**
+     * <p>More information.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +32,8 @@ public class ListPrometheusGlobalViewResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>DBDCE95A-A0DD-5FC5-97CC-EEFC3D814385</p>
      */

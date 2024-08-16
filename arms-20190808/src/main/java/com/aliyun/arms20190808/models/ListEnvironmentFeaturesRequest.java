@@ -6,11 +6,15 @@ import com.aliyun.tea.*;
 public class ListEnvironmentFeaturesRequest extends TeaModel {
     /**
      * <p>The language. Valid values: zh and en. Default value: zh.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("AliyunLang")
     public String aliyunLang;
 
     /**
+     * <p>The environment ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +24,8 @@ public class ListEnvironmentFeaturesRequest extends TeaModel {
     public String environmentId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

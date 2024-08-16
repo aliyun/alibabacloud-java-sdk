@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeleteIntegrationsResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the alert integration is deleted. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +18,8 @@ public class DeleteIntegrationsResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>34ED024E-9E31-434A-9E4E-D9D15C3****</p>
      */

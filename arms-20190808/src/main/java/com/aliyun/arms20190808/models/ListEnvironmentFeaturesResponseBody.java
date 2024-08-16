@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListEnvironmentFeaturesResponseBody extends TeaModel {
     /**
+     * <p>Status Code. Description 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -18,6 +20,8 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
     public java.util.List<ListEnvironmentFeaturesResponseBodyData> data;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -34,6 +38,12 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the alert rule was deleted. Valid values:</p>
+     * <ul>
+     * <li><code>true</code>: The alert rule was deleted.</li>
+     * <li><code>false</code>: The alert rule failed to be deleted.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -88,6 +98,9 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
     public static class ListEnvironmentFeaturesResponseBodyData extends TeaModel {
         /**
          * <p>The alias of the feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Prometheus Agent</p>
          */
         @NameInMap("Alias")
         public String alias;
@@ -100,6 +113,9 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
 
         /**
          * <p>The description of the feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Collect Metric data using the Prometheus collection specification.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -144,6 +160,12 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
         @NameInMap("LatestVersion")
         public String latestVersion;
 
+        /**
+         * <p>Whether hosted scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Managed")
         public Boolean managed;
 
