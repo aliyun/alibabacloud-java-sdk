@@ -164,6 +164,9 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
         @NameInMap("ParentId")
         public String parentId;
 
+        @NameInMap("RegionId")
+        public String regionId;
+
         /**
          * <strong>example:</strong>
          * <p>RDS</p>
@@ -313,6 +316,14 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
         }
         public String getParentId() {
             return this.parentId;
+        }
+
+        public DescribeParentInstanceResponseBodyItems setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public DescribeParentInstanceResponseBodyItems setResourceType(String resourceType) {

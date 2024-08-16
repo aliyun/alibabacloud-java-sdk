@@ -245,6 +245,9 @@ public class DescribeColumnsResponseBody extends TeaModel {
         @NameInMap("ProductCode")
         public String productCode;
 
+        @NameInMap("RegionId")
+        public String regionId;
+
         /**
          * <p>The ID of the revision record.</p>
          * 
@@ -447,6 +450,14 @@ public class DescribeColumnsResponseBody extends TeaModel {
         }
         public String getProductCode() {
             return this.productCode;
+        }
+
+        public DescribeColumnsResponseBodyItems setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public DescribeColumnsResponseBodyItems setRevisionId(Long revisionId) {
