@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteIntegrationsRequest extends TeaModel {
     /**
+     * <p>The ID of the alert integration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

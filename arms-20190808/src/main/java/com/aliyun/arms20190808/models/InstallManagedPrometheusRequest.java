@@ -23,7 +23,14 @@ public class InstallManagedPrometheusRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The type of the cluster. Valid values: ask and ecs.</p>
+     * <p>The cluster type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>ecs: ECS</li>
+     * <li>one: ACK One</li>
+     * <li>ask: ASK</li>
+     * <li>pro: Container Monitoring Pro</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +40,7 @@ public class InstallManagedPrometheusRequest extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>The ID of the Grafana workspace in which the cluster resides. If you set this parameter to free or leave this parameter empty, the cluster is deployed in a shared Grafana workspace.</p>
+     * <p>The ID of the managed Grafana workspace that is associated with the cluster. If you set this parameter to free or leave this parameter empty, the cluster is associated with a shared Grafana workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>grafana-bp1*****</p>
@@ -42,7 +49,7 @@ public class InstallManagedPrometheusRequest extends TeaModel {
     public String grafanaInstanceId;
 
     /**
-     * <p>The parameter is not supported.</p>
+     * <p>This parameter is not supported.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -65,8 +72,6 @@ public class InstallManagedPrometheusRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Prometheus实例的资源组ID。</p>
-     * 
      * <strong>example:</strong>
      * <p>rg-acfmxyexli2****</p>
      */

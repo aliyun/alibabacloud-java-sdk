@@ -4,6 +4,10 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DataBonreeSDKConfigModuleConfigVersionConfigsValue extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("useCustom")
     public Boolean useCustom;
 
@@ -13,6 +17,10 @@ public class DataBonreeSDKConfigModuleConfigVersionConfigsValue extends TeaModel
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1721112372055</p>
+     */
     @NameInMap("updateTime")
     public Long updateTime;
 

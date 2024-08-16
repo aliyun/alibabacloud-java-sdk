@@ -4030,7 +4030,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除feature信息</p>
+     * <p>Deletes a feature.</p>
      * 
      * @param request DeleteEnvironmentFeatureRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4070,7 +4070,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除feature信息</p>
+     * <p>Deletes a feature.</p>
      * 
      * @param request DeleteEnvironmentFeatureRequest
      * @return DeleteEnvironmentFeatureResponse
@@ -4426,7 +4426,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The ID of the alert rule. You can call the ListPrometheusAlertRules operation to query the ID of the alert rule.</p>
+     * <p>Deletes an alert rule of Prometheus Service.</p>
      * 
      * @param request DeletePrometheusAlertRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4462,7 +4462,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The ID of the alert rule. You can call the ListPrometheusAlertRules operation to query the ID of the alert rule.</p>
+     * <p>Deletes an alert rule of Prometheus Service.</p>
      * 
      * @param request DeletePrometheusAlertRuleRequest
      * @return DeletePrometheusAlertRuleResponse
@@ -10034,7 +10034,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取账号下聚合实例列表</p>
+     * <p>Creates a global aggregation instance in Prometheus Service and obtains the list of global aggregation instances.</p>
      * 
      * @param request ListPrometheusGlobalViewRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10066,7 +10066,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取账号下聚合实例列表</p>
+     * <p>Creates a global aggregation instance in Prometheus Service and obtains the list of global aggregation instances.</p>
      * 
      * @param request ListPrometheusGlobalViewRequest
      * @return ListPrometheusGlobalViewResponse
@@ -11470,7 +11470,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重新启动 feature信息</p>
+     * <p>Restarts a feature.</p>
      * 
      * @param request RestartEnvironmentFeatureRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11510,7 +11510,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重新启动 feature信息</p>
+     * <p>Restarts a feature.</p>
      * 
      * @param request RestartEnvironmentFeatureRequest
      * @return RestartEnvironmentFeatureResponse
@@ -12486,7 +12486,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动定时拨测任务</p>
+     * <p>Starts scheduled synthetic monitoring tasks.</p>
      * 
      * @param tmpReq StartTimingSyntheticTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12528,7 +12528,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动定时拨测任务</p>
+     * <p>Starts scheduled synthetic monitoring tasks.</p>
      * 
      * @param request StartTimingSyntheticTaskRequest
      * @return StartTimingSyntheticTaskResponse
@@ -12794,10 +12794,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Make sure that the ASK cluster or ECS instance is monitored in Managed Service for Prometheus.</p>
+     * <p>This operation is available only for ASK, ECS, and ACK One clusters. Before you call this operation, make sure that a managed Prometheus agent is installed for your cluster.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes a Prometheus instance from a serverless Kubernetes (ASK) cluster or an Elastic Compute Service (ECS) instance.</p>
+     * <p>Uninstalls a managed Prometheus agent for a serverless Kubernetes (ASK) cluster, Distributed Cloud Container Platform for Kubernetes (ACK One) cluster, or Elastic Compute Service (ECS) cluster.</p>
      * 
      * @deprecated OpenAPI UninstallManagedPrometheus is deprecated
      * 
@@ -12849,10 +12849,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Make sure that the ASK cluster or ECS instance is monitored in Managed Service for Prometheus.</p>
+     * <p>This operation is available only for ASK, ECS, and ACK One clusters. Before you call this operation, make sure that a managed Prometheus agent is installed for your cluster.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes a Prometheus instance from a serverless Kubernetes (ASK) cluster or an Elastic Compute Service (ECS) instance.</p>
+     * <p>Uninstalls a managed Prometheus agent for a serverless Kubernetes (ASK) cluster, Distributed Cloud Container Platform for Kubernetes (ACK One) cluster, or Elastic Compute Service (ECS) cluster.</p>
      * 
      * @deprecated OpenAPI UninstallManagedPrometheus is deprecated
      * 
@@ -14566,7 +14566,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新 feature信息</p>
+     * <p>Updates the feature information of an environment.</p>
      * 
      * @param request UpgradeEnvironmentFeatureRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14618,7 +14618,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新 feature信息</p>
+     * <p>Updates the feature information of an environment.</p>
      * 
      * @param request UpgradeEnvironmentFeatureRequest
      * @return UpgradeEnvironmentFeatureResponse

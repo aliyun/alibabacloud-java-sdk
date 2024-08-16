@@ -4,13 +4,27 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeletePrometheusAlertRuleResponseBody extends TeaModel {
+    /**
+     * <p>Status code. 200 means success, other status codes are exceptions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>More Information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>9FEA6D00-317F-45E3-9004-7FB8B0B7****</p>
      */
@@ -18,7 +32,11 @@ public class DeletePrometheusAlertRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Indicates whether the alert rule was deleted. Valid values:</p>
+     * <ul>
+     * <li><code>true</code>: The alert rule was deleted.</li>
+     * <li><code>false</code>: The alert rule failed to be deleted.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

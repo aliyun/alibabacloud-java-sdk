@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryMetricByPageRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: <code>1</code>.</p>
+     * <p>The page number. Default value: <code>1</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -45,7 +45,7 @@ public class QueryMetricByPageRequest extends TeaModel {
     public java.util.List<QueryMetricByPageRequestFilters> filters;
 
     /**
-     * <p>The time interval at which data entries are aggregated. Unit: milliseconds. Minimum value: 60000.</p>
+     * <p>The time interval at which you want to query metric data. Unit: milliseconds. Minimum value: 60000.</p>
      * 
      * <strong>example:</strong>
      * <p>100000</p>
@@ -98,7 +98,7 @@ public class QueryMetricByPageRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The number of entries to return on each page. This parameter is no longer supported. The number of entries to return on each page.</p>
+     * <p>This parameter is no longer supported. The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

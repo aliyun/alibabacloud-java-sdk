@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpgradeEnvironmentFeatureResponseBody extends TeaModel {
     /**
+     * <p>The status code. The status code 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The status of the job.</p>
+     */
     @NameInMap("Data")
     public java.util.Map<String, String> data;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,7 +29,7 @@ public class UpgradeEnvironmentFeatureResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>01FF8DD9-A09C-47A1-895A-B6E321BE77B6</p>
@@ -31,6 +38,12 @@ public class UpgradeEnvironmentFeatureResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

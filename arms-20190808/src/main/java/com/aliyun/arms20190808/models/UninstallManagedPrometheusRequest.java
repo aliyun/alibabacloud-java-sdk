@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UninstallManagedPrometheusRequest extends TeaModel {
     /**
-     * <p>The ID of the ASK cluster. This parameter is required if the ClusterType parameter is set to ask.</p>
+     * <p>The ID of the Container Service for Kubernetes (ACK) cluster. This parameter is required when the ClusterType parameter is set to ask or one.</p>
      * 
      * <strong>example:</strong>
      * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
@@ -14,7 +14,7 @@ public class UninstallManagedPrometheusRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The type of the monitoring object. Valid values: ask and ecs.</p>
+     * <p>The cluster type. Valid values: ask, ecs, and one.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class UninstallManagedPrometheusRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The virtual private cloud (VPC) where the ASK cluster or ECS instance resides.</p>
+     * <p>The ID of the virtual private cloud (VPC) where the cluster resides.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-rpn**********</p>

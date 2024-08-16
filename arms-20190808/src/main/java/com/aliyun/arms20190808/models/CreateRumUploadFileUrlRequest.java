@@ -24,6 +24,7 @@ public class CreateRumUploadFileUrlRequest extends TeaModel {
 
     /**
      * <p>The file name.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>test.js.map</p>
@@ -33,6 +34,7 @@ public class CreateRumUploadFileUrlRequest extends TeaModel {
 
     /**
      * <p>The application ID.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>iioe7jcnuk@582846f37******</p>

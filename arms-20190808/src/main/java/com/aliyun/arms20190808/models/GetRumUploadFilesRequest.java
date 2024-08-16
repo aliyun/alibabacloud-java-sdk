@@ -15,6 +15,7 @@ public class GetRumUploadFilesRequest extends TeaModel {
 
     /**
      * <p>The application ID.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>aoxxxxxly@741623b4e91****</p>

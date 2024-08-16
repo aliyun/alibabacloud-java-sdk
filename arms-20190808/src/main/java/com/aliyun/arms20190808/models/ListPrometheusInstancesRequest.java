@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class ListPrometheusInstancesRequest extends TeaModel {
     /**
-     * <p>Optional instance types (if left blank, all types of instances will be queried):</p>
+     * <p>The cluster type. If you do not specify this parameter, all cluster types are queried. Valid values:</p>
      * <ul>
-     * <li>cloud-product-prometheus</li>
-     * <li>ManagedKubernetes</li>
-     * <li>satellite</li>
-     * <li>Ask</li>
-     * <li>remote-write-prometheus</li>
-     * <li>cloud-monitor-cmee</li>
-     * <li>ExternalKubernetes</li>
-     * <li>vpc-prometheus</li>
-     * <li>cloud-monitor-direct</li>
-     * <li>Edge Kubernetes</li>
+     * <li>cloud-product-prometheus: Prometheus instance for cloud services</li>
+     * <li>ManagedKubernetes: ACK managed cluster</li>
+     * <li>satellite: Prometheus instance for ARMS OpenTelemetry</li>
+     * <li>Ask: ACK Serverless cluster</li>
+     * <li>remote-write-prometheus: general-purpose Prometheus instance</li>
+     * <li>cloud-monitor-cmee: Hybrid Cloud Monitoring</li>
+     * <li>ExternalKubernetes: external Kubernetes cluster registered in ACK</li>
+     * <li>vpc-prometheus: Prometheus instance for ECS</li>
+     * <li>cloud-monitor-direct: cloud service self-monitoring</li>
+     * <li>Edge Kubernetes: ACK Edge cluster</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -116,6 +116,10 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         @NameInMap("defaultConfig")
         public java.util.Map<String, DataBonreeSDKConfigModuleConfigDefaultConfigValue> defaultConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("enable")
         public Boolean enable;
 
@@ -303,6 +307,10 @@ public class GetRumAppInfoResponseBody extends TeaModel {
     }
 
     public static class GetRumAppInfoResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("AppGroup")
         public String appGroup;
 
@@ -319,6 +327,8 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         public GetRumAppInfoResponseBodyDataBonreeSDKConfig bonreeSDKConfig;
 
         /**
+         * <p>The domain name of the SDK.</p>
+         * 
          * <strong>example:</strong>
          * <p>b59xxxxxxxx-sdk.rum.aliyuncs.com/v2/browser-sdk.js</p>
          */

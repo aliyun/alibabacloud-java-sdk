@@ -33,6 +33,9 @@ public class DeleteRumUploadFileResponseBody extends TeaModel {
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Internal error, please contact the administrator.</p>
      */
     @NameInMap("Message")
     public String message;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpgradeEnvironmentFeatureRequest extends TeaModel {
     /**
+     * <p>The language. Valid values: zh and en. Default value: zh.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,7 @@ public class UpgradeEnvironmentFeatureRequest extends TeaModel {
     public String aliyunLang;
 
     /**
+     * <p>The environment ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class UpgradeEnvironmentFeatureRequest extends TeaModel {
     public String environmentId;
 
     /**
+     * <p>The feature name. Valid values: app-agent-pilot, metric-agent, ebpf-agent, and service-check.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class UpgradeEnvironmentFeatureRequest extends TeaModel {
     public String featureName;
 
     /**
+     * <p>The version of the feature.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.1.17</p>
      */
@@ -37,6 +43,8 @@ public class UpgradeEnvironmentFeatureRequest extends TeaModel {
     public String featureVersion;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -44,6 +52,8 @@ public class UpgradeEnvironmentFeatureRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Specifies whether to enable service discovery. For PodAnnotation, set the value to run or mini. For PodMonitor and ServiceMonitor, set the value to true or false.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;PodAnnotation&quot;:&quot;run&quot;}</p>
      */

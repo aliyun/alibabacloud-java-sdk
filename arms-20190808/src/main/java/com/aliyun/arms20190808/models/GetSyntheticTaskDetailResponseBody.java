@@ -432,6 +432,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long endMinute;
 
         /**
+         * <p>周期结束时间 ，格式为yyyy-MM-dd HH。</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-05-03 11:40</p>
          */
@@ -466,6 +468,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long startMinute;
 
         /**
+         * <p>周期开始时间，格式yyyy-MM-dd HH 。</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-02-26 11:40</p>
          */
@@ -538,16 +542,42 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
     public static class GetSyntheticTaskDetailResponseBodyTaskDetailMonitorList extends TeaModel {
         /**
          * <p>城市编码。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110100</p>
          */
         @NameInMap("CityCode")
         public Long cityCode;
 
+        /**
+         * <p>监测类型：</p>
+         * <ul>
+         * <li>IDC</li>
+         * <li>LastMilie</li>
+         * <li>Mobile</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IDC</p>
+         */
         @NameInMap("MonitorType")
         public Long monitorType;
 
+        /**
+         * <p>运营商ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12001</p>
+         */
         @NameInMap("NetServiceId")
         public Long netServiceId;
 
+        /**
+         * <p>下发次数。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("SendCount")
         public Long sendCount;
 
@@ -682,6 +712,10 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         @NameInMap("NavCustomHost")
         public Long navCustomHost;
 
+        /**
+         * <strong>example:</strong>
+         * <p>119.119.53.156/32</p>
+         */
         @NameInMap("NavCustomHostIp")
         public String navCustomHostIp;
 
@@ -1692,6 +1726,10 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long intervalTime;
 
         /**
+         * <p>监测周期类型：</p>
+         * <p>0：每天
+         * 1：自定义扩展频率</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1699,12 +1737,20 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long intervalType;
 
         /**
+         * <p>IP类型：</p>
+         * <p>0：自动
+         * 1：IPv4
+         * 2：IPv6</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("IpType")
         public Long ipType;
 
+        /**
+         * <p>拨测任务的检测点列表。</p>
+         */
         @NameInMap("MonitorList")
         public java.util.List<GetSyntheticTaskDetailResponseBodyTaskDetailMonitorList> monitorList;
 
@@ -1743,6 +1789,13 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String taskName;
 
         /**
+         * <p>任务类型：</p>
+         * <p>3：网页性能-IE
+         * 34：网页性能-Chrome
+         * 0：网络质量
+         * 40：文件下载
+         * 7：API性能</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

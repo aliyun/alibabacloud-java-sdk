@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class GetMultipleTraceRequest extends TeaModel {
     /**
      * <p>The time when the trace ends. The value is a timestamp. Unit: milliseconds.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1663999380000</p>
@@ -25,6 +26,7 @@ public class GetMultipleTraceRequest extends TeaModel {
 
     /**
      * <p>The start time of the trace. The value is a timestamp. Unit: milliseconds.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1657692507000</p>

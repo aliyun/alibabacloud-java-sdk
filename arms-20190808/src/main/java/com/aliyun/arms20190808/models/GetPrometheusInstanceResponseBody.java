@@ -14,7 +14,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The response parameters.</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Data")
     public GetPrometheusInstanceResponseBodyData data;
@@ -179,7 +179,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String clusterType;
 
         /**
-         * <p>Backend data storage status.</p>
+         * <p>The data storage status at the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -188,7 +188,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String dbInstanceStatus;
 
         /**
-         * <p>Whether to enable access token authentication.</p>
+         * <p>Indicates whether access token authentication is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -237,11 +237,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String paymentType;
 
         /**
-         * <p>The product to which the prometheus instance belongs.</p>
-         * <ul>
-         * <li>arms</li>
-         * <li>cms</li>
-         * </ul>
+         * <p>The product to which the Prometheus instance belongs. Valid values: arms and cms.</p>
          * 
          * <strong>example:</strong>
          * <p>arms</p>
