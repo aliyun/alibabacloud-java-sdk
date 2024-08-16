@@ -13,6 +13,9 @@ public class DescribeColumnsRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    @NameInMap("EngineType")
+    public String engineType;
+
     /**
      * <p>The ID of the instance to which data in the column of the table belongs.</p>
      * <blockquote>
@@ -47,6 +50,9 @@ public class DescribeColumnsRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("ModelTagId")
+    public String modelTagId;
+
     /**
      * <p>The search keyword. Fuzzy match is supported.</p>
      * <p>For example, if you enter <strong>test</strong>, all columns whose names contain <strong>test</strong> are retrieved.</p>
@@ -74,6 +80,9 @@ public class DescribeColumnsRequest extends TeaModel {
      */
     @NameInMap("ProductCode")
     public String productCode;
+
+    @NameInMap("ProductId")
+    public String productId;
 
     /**
      * <p>The sensitivity level of the sensitive data that hits the sensitive data detection rule. Valid values:</p>
@@ -149,6 +158,12 @@ public class DescribeColumnsRequest extends TeaModel {
     @NameInMap("TableName")
     public String tableName;
 
+    @NameInMap("TemplateId")
+    public String templateId;
+
+    @NameInMap("TemplateRuleId")
+    public String templateRuleId;
+
     public static DescribeColumnsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeColumnsRequest self = new DescribeColumnsRequest();
         return TeaModel.build(map, self);
@@ -160,6 +175,14 @@ public class DescribeColumnsRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public DescribeColumnsRequest setEngineType(String engineType) {
+        this.engineType = engineType;
+        return this;
+    }
+    public String getEngineType() {
+        return this.engineType;
     }
 
     public DescribeColumnsRequest setInstanceId(Long instanceId) {
@@ -186,6 +209,14 @@ public class DescribeColumnsRequest extends TeaModel {
         return this.lang;
     }
 
+    public DescribeColumnsRequest setModelTagId(String modelTagId) {
+        this.modelTagId = modelTagId;
+        return this;
+    }
+    public String getModelTagId() {
+        return this.modelTagId;
+    }
+
     public DescribeColumnsRequest setName(String name) {
         this.name = name;
         return this;
@@ -208,6 +239,14 @@ public class DescribeColumnsRequest extends TeaModel {
     }
     public String getProductCode() {
         return this.productCode;
+    }
+
+    public DescribeColumnsRequest setProductId(String productId) {
+        this.productId = productId;
+        return this;
+    }
+    public String getProductId() {
+        return this.productId;
     }
 
     public DescribeColumnsRequest setRiskLevelId(Long riskLevelId) {
@@ -256,6 +295,22 @@ public class DescribeColumnsRequest extends TeaModel {
     }
     public String getTableName() {
         return this.tableName;
+    }
+
+    public DescribeColumnsRequest setTemplateId(String templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+    public String getTemplateId() {
+        return this.templateId;
+    }
+
+    public DescribeColumnsRequest setTemplateRuleId(String templateRuleId) {
+        this.templateRuleId = templateRuleId;
+        return this;
+    }
+    public String getTemplateRuleId() {
+        return this.templateRuleId;
     }
 
 }
