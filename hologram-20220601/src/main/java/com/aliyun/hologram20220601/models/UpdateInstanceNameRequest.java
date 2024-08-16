@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateInstanceNameRequest extends TeaModel {
     /**
      * <p>The new name of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>new_name</p>
      */
     @NameInMap("instanceName")
     public String instanceName;

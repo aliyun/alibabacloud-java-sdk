@@ -4,11 +4,17 @@ package com.aliyun.hologram20220601.models;
 import com.aliyun.tea.*;
 
 public class ListWarehousesResponseBody extends TeaModel {
+    /**
+     * <p>The list of virtual warehouse instances.</p>
+     */
     @NameInMap("WarehouseList")
     public java.util.List<ListWarehousesResponseBodyWarehouseList> warehouseList;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>819A7F0F-2951-540F-BD94-6A41ECF0281F</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -36,26 +42,93 @@ public class ListWarehousesResponseBody extends TeaModel {
 
     public static class ListWarehousesResponseBodyWarehouseList extends TeaModel {
         /**
-         * <p>cpu</p>
+         * <p>The number of CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         @NameInMap("Cpu")
         public Long cpu;
 
         /**
-         * <p>id</p>
+         * <p>The ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The memory capacity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128</p>
+         */
         @NameInMap("Mem")
         public Long mem;
 
+        /**
+         * <p>The name of the virtual warehouse instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyWarehouse</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The number of compute nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("NodeCount")
         public Long nodeCount;
 
+        /**
+         * <p>The status.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>kRunning</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>kSuspended</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>kInit</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>kFailed</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>kAllocating</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>kRunning</p>
+         */
         @NameInMap("Status")
         public String status;
 

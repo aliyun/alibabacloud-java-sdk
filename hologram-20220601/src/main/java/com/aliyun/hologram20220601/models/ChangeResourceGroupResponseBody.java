@@ -4,11 +4,18 @@ package com.aliyun.hologram20220601.models;
 import com.aliyun.tea.*;
 
 public class ChangeResourceGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Data")
     public Boolean data;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AB71198A-2DB1-511B-AE4D-690BAA97F076</p>
      */
     @NameInMap("RequestId")
     public String requestId;

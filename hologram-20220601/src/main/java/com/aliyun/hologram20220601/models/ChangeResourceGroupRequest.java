@@ -4,9 +4,17 @@ package com.aliyun.hologram20220601.models;
 import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>hgprecn-cn-zvp25ysv3006</p>
+     */
     @NameInMap("instanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-acfmxwerqwerasfd</p>
+     */
     @NameInMap("newResourceGroupId")
     public String newResourceGroupId;
 

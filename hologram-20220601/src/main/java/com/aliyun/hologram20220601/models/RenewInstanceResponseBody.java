@@ -12,30 +12,45 @@ public class RenewInstanceResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D3AE84AB-0873-5FC7-A4C4-8CF869D2FA70</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The request result, which indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Success")
     public String success;
@@ -96,6 +111,9 @@ public class RenewInstanceResponseBody extends TeaModel {
     public static class RenewInstanceResponseBodyData extends TeaModel {
         /**
          * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidChargeType.UnRenewable</p>
          */
         @NameInMap("Code")
         public String code;
@@ -108,15 +126,22 @@ public class RenewInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>221625608580893</p>
          */
         @NameInMap("OrderId")
         public String orderId;
 
         /**
          * <p>Indicates whether the renewal was successful.</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Success")
         public Boolean success;

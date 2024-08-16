@@ -5,11 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetWarehouseDetailResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D3AE84AB-0873-5FC7-A4C4-8CF869D2FA70</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The values returned.</p>
+     */
     @NameInMap("WarehouseDetail")
     public GetWarehouseDetailResponseBodyWarehouseDetail warehouseDetail;
 
@@ -36,26 +42,102 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
 
     public static class GetWarehouseDetailResponseBodyWarehouseDetailWarehouseList extends TeaModel {
         /**
-         * <p>cpu</p>
+         * <p>The number of CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         @NameInMap("Cpu")
         public Long cpu;
 
+        @NameInMap("DefaultWarehouse")
+        public Boolean defaultWarehouse;
+
+        @NameInMap("ElasticCpu")
+        public Long elasticCpu;
+
         /**
-         * <p>id</p>
+         * <p>The ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The memory capacity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128</p>
+         */
         @NameInMap("Mem")
         public Long mem;
 
+        /**
+         * <p>The name of the virtual warehouse instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyWarehouse</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The number of compute nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("NodeCount")
         public Long nodeCount;
 
+        @NameInMap("RebalanceStatus")
+        public String rebalanceStatus;
+
+        /**
+         * <p>The status.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>kRunning</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>kSuspended</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>kInit</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>kFailed</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>kAllocating</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>kRunning</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -70,6 +152,22 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         }
         public Long getCpu() {
             return this.cpu;
+        }
+
+        public GetWarehouseDetailResponseBodyWarehouseDetailWarehouseList setDefaultWarehouse(Boolean defaultWarehouse) {
+            this.defaultWarehouse = defaultWarehouse;
+            return this;
+        }
+        public Boolean getDefaultWarehouse() {
+            return this.defaultWarehouse;
+        }
+
+        public GetWarehouseDetailResponseBodyWarehouseDetailWarehouseList setElasticCpu(Long elasticCpu) {
+            this.elasticCpu = elasticCpu;
+            return this;
+        }
+        public Long getElasticCpu() {
+            return this.elasticCpu;
         }
 
         public GetWarehouseDetailResponseBodyWarehouseDetailWarehouseList setId(Long id) {
@@ -104,6 +202,14 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             return this.nodeCount;
         }
 
+        public GetWarehouseDetailResponseBodyWarehouseDetailWarehouseList setRebalanceStatus(String rebalanceStatus) {
+            this.rebalanceStatus = rebalanceStatus;
+            return this;
+        }
+        public String getRebalanceStatus() {
+            return this.rebalanceStatus;
+        }
+
         public GetWarehouseDetailResponseBodyWarehouseDetailWarehouseList setStatus(String status) {
             this.status = status;
             return this;
@@ -115,12 +221,30 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
     }
 
     public static class GetWarehouseDetailResponseBodyWarehouseDetail extends TeaModel {
+        /**
+         * <p>The remaining unallocated computing resources of the virtual warehouse instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("RemainingCpu")
         public String remainingCpu;
 
+        /**
+         * <p>The reserved computing resources. The amount of computing resources in all running virtual warehouses in an instance cannot exceed the amount of reserved computing resources in the virtual warehouses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64</p>
+         */
         @NameInMap("ReservedCpu")
         public String reservedCpu;
 
+        @NameInMap("TimedElasticCpu")
+        public String timedElasticCpu;
+
+        /**
+         * <p>The list of virtual warehouses.</p>
+         */
         @NameInMap("WarehouseList")
         public java.util.List<GetWarehouseDetailResponseBodyWarehouseDetailWarehouseList> warehouseList;
 
@@ -143,6 +267,14 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         }
         public String getReservedCpu() {
             return this.reservedCpu;
+        }
+
+        public GetWarehouseDetailResponseBodyWarehouseDetail setTimedElasticCpu(String timedElasticCpu) {
+            this.timedElasticCpu = timedElasticCpu;
+            return this;
+        }
+        public String getTimedElasticCpu() {
+            return this.timedElasticCpu;
         }
 
         public GetWarehouseDetailResponseBodyWarehouseDetail setWarehouseList(java.util.List<GetWarehouseDetailResponseBodyWarehouseDetailWarehouseList> warehouseList) {
