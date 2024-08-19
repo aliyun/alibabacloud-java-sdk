@@ -42,8 +42,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("dialogue", request.dialogue);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.exampleList)) {
-            body.put("exampleList", request.exampleList);
+        if (!com.aliyun.teautil.Common.isUnset(request.examples)) {
+            body.put("examples", request.examples);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.fields)) {
