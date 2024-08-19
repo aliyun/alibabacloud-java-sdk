@@ -97,6 +97,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("sessionId", request.sessionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.timeRange)) {
+            query.put("timeRange", request.timeRange);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
