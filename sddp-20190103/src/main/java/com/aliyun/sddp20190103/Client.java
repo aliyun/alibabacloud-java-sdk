@@ -3612,6 +3612,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建文件扫描任务</p>
+     * 
+     * @param tmpReq ScanOssObjectV1Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ScanOssObjectV1Response
+     */
+    public ScanOssObjectV1Response scanOssObjectV1WithOptions(ScanOssObjectV1Request tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ScanOssObjectV1ShrinkRequest request = new ScanOssObjectV1ShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.objectKeyList)) {
+            request.objectKeyListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.objectKeyList, "ObjectKeyList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bucketName)) {
+            query.put("BucketName", request.bucketName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectKeyListShrink)) {
+            query.put("ObjectKeyList", request.objectKeyListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceRegionId)) {
+            query.put("ServiceRegionId", request.serviceRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ScanOssObjectV1"),
+            new TeaPair("version", "2019-01-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ScanOssObjectV1Response());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建文件扫描任务</p>
+     * 
+     * @param request ScanOssObjectV1Request
+     * @return ScanOssObjectV1Response
+     */
+    public ScanOssObjectV1Response scanOssObjectV1(ScanOssObjectV1Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.scanOssObjectV1WithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation to stop a de-identification task that is running. For example, you can stop a de-identification task that is used to de-identify specific data.</p>
      * <h1>Limits</h1>
