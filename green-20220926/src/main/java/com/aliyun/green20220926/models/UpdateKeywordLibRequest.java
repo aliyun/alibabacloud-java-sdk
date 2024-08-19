@@ -1,0 +1,53 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.green20220926.models;
+
+import com.aliyun.tea.*;
+
+public class UpdateKeywordLibRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>custom_xxxx</p>
+     */
+    @NameInMap("LibId")
+    public String libId;
+
+    @NameInMap("LibName")
+    public String libName;
+
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
+
+    public static UpdateKeywordLibRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateKeywordLibRequest self = new UpdateKeywordLibRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public UpdateKeywordLibRequest setLibId(String libId) {
+        this.libId = libId;
+        return this;
+    }
+    public String getLibId() {
+        return this.libId;
+    }
+
+    public UpdateKeywordLibRequest setLibName(String libName) {
+        this.libName = libName;
+        return this;
+    }
+    public String getLibName() {
+        return this.libName;
+    }
+
+    public UpdateKeywordLibRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+}

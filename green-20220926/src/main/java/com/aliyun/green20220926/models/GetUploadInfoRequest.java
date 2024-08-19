@@ -7,9 +7,17 @@ public class GetUploadInfoRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>image</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

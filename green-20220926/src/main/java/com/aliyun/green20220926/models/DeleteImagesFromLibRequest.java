@@ -4,12 +4,24 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class DeleteImagesFromLibRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>[158794]</p>
+     */
     @NameInMap("ImageIds")
     public String imageIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>customxx_xxxx</p>
+     */
     @NameInMap("LibId")
     public String libId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,12 +4,24 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class AddImages2LibRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>upload/ea7a98f9-f8bd-4905-a79b-963c9da419c5.jpg</p>
+     */
     @NameInMap("ImgUrl")
     public String imgUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("LibId")
     public String libId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

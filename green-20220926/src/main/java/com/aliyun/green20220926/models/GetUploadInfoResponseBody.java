@@ -4,42 +4,90 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class GetUploadInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>LTAI5t9HM*****EXQmw3DVH</p>
+     */
     @NameInMap("AccessId")
     public String accessId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>900</p>
+     */
     @NameInMap("Expire")
     public Long expire;
 
+    /**
+     * <strong>example:</strong>
+     * <p>image/upload/xxx</p>
+     */
     @NameInMap("Folder")
     public String folder;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com">https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com</a></p>
+     */
     @NameInMap("Host")
     public String host;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>image/upload/xxx</p>
+     */
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Msg")
     public String msg;
 
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxxx</p>
+     */
     @NameInMap("Policy")
     public String policy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iyu7VHblYj+mEF9p46cdGOlNPAw=</p>
+     */
     @NameInMap("Signature")
     public String signature;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
