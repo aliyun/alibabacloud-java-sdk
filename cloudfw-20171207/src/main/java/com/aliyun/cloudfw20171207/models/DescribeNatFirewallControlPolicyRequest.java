@@ -6,124 +6,172 @@ import com.aliyun.tea.*;
 public class DescribeNatFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The action that Cloud Firewall performs on the traffic.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   **accept**: allows the traffic.</p>
-     * <p>*   **drop**: denies the traffic.</p>
-     * <p>*   **log**: monitors the traffic.</p>
+     * <ul>
+     * <li><strong>accept</strong>: allows the traffic.</li>
+     * <li><strong>drop</strong>: denies the traffic.</li>
+     * <li><strong>log</strong>: monitors the traffic.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>accept</p>
      */
     @NameInMap("AclAction")
     public String aclAction;
 
     /**
      * <p>The UUID of the access control policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>303f0697-2a21-4e43-b142-4a77adf7b358</p>
      */
     @NameInMap("AclUuid")
     public String aclUuid;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public String currentPage;
 
     /**
      * <p>The description of the access control policy. Fuzzy match is supported.</p>
-     * <br>
-     * <p>> If you do not specify this parameter, the descriptions of all policies are queried.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the descriptions of all policies are queried.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The destination address in the access control policy. Fuzzy match is supported. The value of this parameter varies based on the value of the DestinationType parameter.</p>
-     * <br>
-     * <p>*   If DestinationType is set to `net`, the value of Destination must be a CIDR block. Example: 10.0.3.0/24.</p>
-     * <p>*   If DestinationType is set to `domain`, the value of Destination must be a domain name. Example: aliyun.</p>
-     * <p>*   If DestinationType is set to `group`, the value of Destination must be the name of an address book. Example: db_group.</p>
-     * <p>*   If DestinationType is set to `location`, the value of Destination is a location. For more information about location codes, see [AddControlPolicy](https://help.aliyun.com/document_detail/474128.html). Example: ["BJ11", "ZB"].</p>
-     * <br>
-     * <p>> If you do not specify this parameter, all types of destination addresses are queried.</p>
+     * <ul>
+     * <li>If DestinationType is set to <code>net</code>, the value of Destination must be a CIDR block. Example: 10.0.3.0/24.</li>
+     * <li>If DestinationType is set to <code>domain</code>, the value of Destination must be a domain name. Example: aliyun.</li>
+     * <li>If DestinationType is set to <code>group</code>, the value of Destination must be the name of an address book. Example: db_group.</li>
+     * <li>If DestinationType is set to <code>location</code>, the value of Destination is a location. For more information about location codes, see <a href="https://help.aliyun.com/document_detail/474128.html">AddControlPolicy</a>. Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you do not specify this parameter, all types of destination addresses are queried.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>x.x.x.x/32</p>
      */
     @NameInMap("Destination")
     public String destination;
 
     /**
      * <p>The direction of the traffic to which the access control policy applies. Valid values:</p>
-     * <br>
-     * <p>*   **out**: outbound traffic</p>
-     * <br>
+     * <ul>
+     * <li><strong>out</strong>: outbound traffic</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>out</p>
      */
     @NameInMap("Direction")
     public String direction;
 
     /**
      * <p>The language of the content within the response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese (default)</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese (default)</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The ID of the NAT gateway.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ngw-xxxxxx</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
     /**
      * <p>The number of entries per page. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The type of the protocol in the access control policy. Valid values:</p>
-     * <br>
-     * <p>*   **TCP**</p>
-     * <p>*   **UDP**</p>
-     * <p>*   **ICMP**</p>
-     * <p>*   **ANY**: all types of protocols</p>
-     * <br>
-     * <p>> If you do not specify this parameter, access control policies of all protocol types are queried.</p>
+     * <ul>
+     * <li><strong>TCP</strong></li>
+     * <li><strong>UDP</strong></li>
+     * <li><strong>ICMP</strong></li>
+     * <li><strong>ANY</strong>: all types of protocols</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you do not specify this parameter, access control policies of all protocol types are queried.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ANY</p>
      */
     @NameInMap("Proto")
     public String proto;
 
     /**
      * <p>Specifies whether the access control policy is enabled. By default, an access control policy is enabled after it is created. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Release")
     public String release;
 
     /**
      * <p>The recurrence type for the access control policy to take effect. Valid values:</p>
-     * <br>
-     * <p>*   **Permanent** (default): The policy always takes effect.</p>
-     * <p>*   **None**: The policy takes effect only once.</p>
-     * <p>*   **Daily**: The policy takes effect on a daily basis.</p>
-     * <p>*   **Weekly**: The policy takes effect on a weekly basis.</p>
-     * <p>*   **Monthly**: The policy takes effect on a monthly basis.</p>
+     * <ul>
+     * <li><strong>Permanent</strong> (default): The policy always takes effect.</li>
+     * <li><strong>None</strong>: The policy takes effect only once.</li>
+     * <li><strong>Daily</strong>: The policy takes effect on a daily basis.</li>
+     * <li><strong>Weekly</strong>: The policy takes effect on a weekly basis.</li>
+     * <li><strong>Monthly</strong>: The policy takes effect on a monthly basis.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Permanent</p>
      */
     @NameInMap("RepeatType")
     public String repeatType;
 
     /**
      * <p>The source address in the access control policy. Fuzzy match is supported. The value of this parameter varies based on the value of the SourceType parameter.</p>
-     * <br>
-     * <p>*   If SourceType is set to `net`, the value of Source must be a CIDR block. Example: 192.0.XX.XX/24.</p>
-     * <p>*   If SourceType is set to `group`, the value of Source must be the name of an address book. Example: db_group. If the db_group address book does not contain addresses, all source addresses are queried.</p>
-     * <p>*   If SourceType is set to `location`, the value of Source must be a location. Example: beijing.</p>
-     * <br>
-     * <p>> If you do not specify this parameter, all types of source addresses are queried.</p>
+     * <ul>
+     * <li>If SourceType is set to <code>net</code>, the value of Source must be a CIDR block. Example: 192.0.XX.XX/24.</li>
+     * <li>If SourceType is set to <code>group</code>, the value of Source must be the name of an address book. Example: db_group. If the db_group address book does not contain addresses, all source addresses are queried.</li>
+     * <li>If SourceType is set to <code>location</code>, the value of Source must be a location. Example: beijing.</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you do not specify this parameter, all types of source addresses are queried.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1.1.1.1/32</p>
      */
     @NameInMap("Source")
     public String source;

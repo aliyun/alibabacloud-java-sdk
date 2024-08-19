@@ -5,28 +5,38 @@ import com.aliyun.tea.*;
 
 public class DescribeTrFirewallPolicyBackUpAssociationListShrinkRequest extends TeaModel {
     /**
-     * <p>An array that consists of the details about the traffic redirection instance.</p>
+     * <p>The traffic redirection instances.</p>
      */
     @NameInMap("CandidateList")
     public String candidateListShrink;
 
     /**
      * <p>The instance ID of the VPC firewall.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vfw-tr-8b268ce1b26e4c68****</p>
      */
     @NameInMap("FirewallId")
     public String firewallId;
 
     /**
      * <p>The language of the content within the response. Valid values:</p>
-     * <br>
-     * <p>*   **zh** (default): Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The ID of the routing policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>policy-5dcafb12ff794a56****</p>
      */
     @NameInMap("TrFirewallRoutePolicyId")
     public String trFirewallRoutePolicyId;

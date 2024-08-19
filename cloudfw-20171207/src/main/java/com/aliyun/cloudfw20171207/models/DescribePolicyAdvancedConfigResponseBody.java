@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class DescribePolicyAdvancedConfigResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the strict mode is enabled for the access control policy. Valid values:</p>
-     * <br>
-     * <p>*   **on**: The strict mode is enabled.</p>
-     * <p>*   **off**: The strict mode is disabled.</p>
+     * <ul>
+     * <li><strong>on</strong>: The strict mode is enabled.</li>
+     * <li><strong>off</strong>: The strict mode is disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
      */
     @NameInMap("InternetSwitch")
     public String internetSwitch;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>850A84D6-0DE4-4797-A1E8-00090125EEB1</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,45 +6,59 @@ import com.aliyun.tea.*;
 public class ModifyNatFirewallControlPolicyPositionRequest extends TeaModel {
     /**
      * <p>The UUID of the access control policy.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>66961eea-e659-4225-84c9-9b6da76ec401</p>
      */
     @NameInMap("AclUuid")
     public String aclUuid;
 
     /**
      * <p>The direction of the traffic to which the access control policy applies.</p>
-     * <br>
-     * <p>*   Set the value to **out**.</p>
+     * <ul>
+     * <li>Set the value to <strong>out</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>out</p>
      */
     @NameInMap("Direction")
     public String direction;
 
     /**
      * <p>The language of the content within the response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese (default)</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese (default)</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The ID of the NAT gateway.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ngw-xxxxxx</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
     /**
      * <p>The new priority of the IPv4 access control policy. You must specify a numeric value for this parameter. The value 1 indicates the highest priority. A larger value indicates a lower priority.</p>
-     * <br>
-     * <p>> Make sure that the value of this parameter is within the priority range of existing IPv4 access control policies. Otherwise, an error occurs when you call this operation.</p>
-     * <br>
+     * <blockquote>
+     * <p>Make sure that the value of this parameter is within the priority range of existing IPv4 access control policies. Otherwise, an error occurs when you call this operation.</p>
+     * </blockquote>
      * <p>Before you call this operation, we recommend that you call the DescribeNatFirewallPolicyPriorUsed operation to query the priority range of the IPv4 access control policies in the specified traffic direction.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("NewOrder")
     public Integer newOrder;

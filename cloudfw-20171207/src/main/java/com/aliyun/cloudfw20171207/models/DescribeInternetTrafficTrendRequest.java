@@ -6,42 +6,56 @@ import com.aliyun.tea.*;
 public class DescribeInternetTrafficTrendRequest extends TeaModel {
     /**
      * <p>The direction of the internet traffic.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   **in**: inbound traffic</p>
-     * <p>*   **out**: outbound traffic</p>
+     * <ul>
+     * <li><strong>in</strong>: inbound traffic</li>
+     * <li><strong>out</strong>: outbound traffic</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>in</p>
      */
     @NameInMap("Direction")
     public String direction;
 
     /**
      * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1674958929</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The language of the content in the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh** (default): Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The source code.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yundun</p>
      */
     @NameInMap("SourceCode")
     public String sourceCode;
 
     /**
      * <p>The IP address of the access source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>101.80.171.196</p>
      */
     @NameInMap("SourceIp")
     @Deprecated
@@ -49,29 +63,41 @@ public class DescribeInternetTrafficTrendRequest extends TeaModel {
 
     /**
      * <p>The private IP address of the source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.100.134.60</p>
      */
     @NameInMap("SrcPrivateIP")
     public String srcPrivateIP;
 
     /**
      * <p>The public IP address of the source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>47.112.210.136</p>
      */
     @NameInMap("SrcPublicIP")
     public String srcPublicIP;
 
     /**
      * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1670307484</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The type of the traffic that is captured. Valid values:</p>
-     * <br>
-     * <p>*   **max** (default): peak traffic</p>
-     * <p>*   **avg**: average traffic</p>
+     * <ul>
+     * <li><strong>max</strong> (default): peak traffic</li>
+     * <li><strong>avg</strong>: average traffic</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>max</p>
      */
     @NameInMap("TrafficType")
     public String trafficType;

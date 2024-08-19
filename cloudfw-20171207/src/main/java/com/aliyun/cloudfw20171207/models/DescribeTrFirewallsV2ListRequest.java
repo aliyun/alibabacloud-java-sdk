@@ -6,49 +6,70 @@ import com.aliyun.tea.*;
 public class DescribeTrFirewallsV2ListRequest extends TeaModel {
     /**
      * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-rig0t5zi96crkl****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The instance ID of the VPC firewall.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vfw-tr-f1799baa9e254651****</p>
      */
     @NameInMap("FirewallId")
     public String firewallId;
 
     /**
      * <p>The name of the VPC firewall.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("FirewallName")
     public String firewallName;
 
     /**
      * <p>The status of the VPC firewall. Valid values:</p>
-     * <br>
-     * <p>*   **opened**: The VPC firewall is enabled.</p>
-     * <p>*   **closed**: The VPC firewall is disabled.</p>
-     * <p>*   **notconfigured**: The VPC firewall is not created.</p>
-     * <p>*   **configured**: The VPC firewall is created but is not enabled.</p>
-     * <p>*   **creating**: The VPC firewall is being created.</p>
-     * <p>*   **opening**: The VPC firewall is being enabled.</p>
-     * <p>*   **deleting**: The VPC firewall is being deleted.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, VPC firewalls in all states are queried.</p>
+     * <ul>
+     * <li><strong>opened</strong>: The VPC firewall is enabled.</li>
+     * <li><strong>closed</strong>: The VPC firewall is disabled.</li>
+     * <li><strong>notconfigured</strong>: The VPC firewall is not created.</li>
+     * <li><strong>configured</strong>: The VPC firewall is created but is not enabled.</li>
+     * <li><strong>creating</strong>: The VPC firewall is being created.</li>
+     * <li><strong>opening</strong>: The VPC firewall is being enabled.</li>
+     * <li><strong>deleting</strong>: The VPC firewall is being deleted.</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you do not specify this parameter, VPC firewalls in all states are queried.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>opened</p>
      */
     @NameInMap("FirewallSwitchStatus")
     public String firewallSwitchStatus;
 
     /**
      * <p>The language of the content within the response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese (default)</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese (default)</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
@@ -58,29 +79,43 @@ public class DescribeTrFirewallsV2ListRequest extends TeaModel {
 
     /**
      * <p>The number of entries per page. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID of the transit router.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionNo")
     public String regionNo;
 
     /**
      * <p>The routing mode of the VPC firewall. Valid values:</p>
-     * <br>
-     * <p>*   **managed**: automatic mode</p>
-     * <p>*   **manual**: manual mode</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, VPC firewalls in all routing modes are queried.</p>
+     * <ul>
+     * <li><strong>managed</strong>: automatic mode</li>
+     * <li><strong>manual</strong>: manual mode</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you do not specify this parameter, VPC firewalls in all routing modes are queried.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>managed</p>
      */
     @NameInMap("RouteMode")
     public String routeMode;
 
     /**
      * <p>The ID of the transit router.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-uf6egtvyaedvt20xl****</p>
      */
     @NameInMap("TransitRouterId")
     public String transitRouterId;

@@ -4,17 +4,39 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class SwitchSecurityProxyRequest extends TeaModel {
+    /**
+     * <p>The language of the content within the request and the response. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong> (default)</li>
+     * <li><strong>en</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
     /**
+     * <p>The ID of the NAT firewall.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>proxy-natbfd2fafbb77042308d1b</p>
      */
     @NameInMap("ProxyId")
     public String proxyId;
 
     /**
+     * <p>Specifies whether to enable the NAT firewall. Valid values:</p>
+     * <ul>
+     * <li>open: yes</li>
+     * <li>close: no</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>open</p>
      */
     @NameInMap("Switch")
     public String _switch;

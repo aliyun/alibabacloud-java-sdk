@@ -12,9 +12,13 @@ public class DescribeInstanceRiskLevelsRequest extends TeaModel {
 
     /**
      * <p>The language of the content within the response. Valid values:</p>
-     * <br>
-     * <p>*   **zh** (default): Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
@@ -43,6 +47,9 @@ public class DescribeInstanceRiskLevelsRequest extends TeaModel {
     public static class DescribeInstanceRiskLevelsRequestInstances extends TeaModel {
         /**
          * <p>The instance ID of your Cloud Firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vipcloudfw-cn-7mz2fj8nm0u</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -55,12 +62,18 @@ public class DescribeInstanceRiskLevelsRequest extends TeaModel {
 
         /**
          * <p>The private IP address of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.17.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>The UUID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>181ad081-e4f2-4e3e-b925-03b67f648397</p>
          */
         @NameInMap("Uuid")
         public String uuid;

@@ -4,9 +4,17 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class CreateSecurityProxyResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>proxy-nat97ac4d7cc3834a5daf40</p>
+     */
     @NameInMap("ProxyId")
     public String proxyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15FCCC52-1E23-57AE-B5EF-3E00A3DC3CAB</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

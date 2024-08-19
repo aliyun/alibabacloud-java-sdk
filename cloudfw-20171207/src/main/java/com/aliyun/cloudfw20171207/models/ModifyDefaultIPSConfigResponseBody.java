@@ -4,6 +4,12 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class ModifyDefaultIPSConfigResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>65885B52-00EC-5728-96******</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

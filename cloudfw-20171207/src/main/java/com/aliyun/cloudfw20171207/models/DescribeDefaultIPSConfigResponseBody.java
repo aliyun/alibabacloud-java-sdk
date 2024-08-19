@@ -4,44 +4,84 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
-    @NameInMap("AiRules")
-    public Integer aiRules;
-
+    /**
+     * <p>Indicates whether basic protection is enabled. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: yes</li>
+     * <li><strong>0</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("BasicRules")
     public Integer basicRules;
 
+    /**
+     * <p>Indicates whether threat intelligence is enabled. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: yes</li>
+     * <li><strong>0</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("CtiRules")
     public Integer ctiRules;
 
-    @NameInMap("EnableAllPatch")
-    public Integer enableAllPatch;
-
-    @NameInMap("EnableDefault")
-    public Integer enableDefault;
-
+    /**
+     * <p>Indicates whether virtual patching is enabled. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: yes</li>
+     * <li><strong>0</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("PatchRules")
     public Integer patchRules;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>133173B9-8010-5DF5-8B93-********</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The level of the rule group for the IPS. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: loose</li>
+     * <li><strong>2</strong>: medium</li>
+     * <li><strong>3</strong>: strict</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("RuleClass")
     public Integer ruleClass;
 
+    /**
+     * <p>The mode of the IPS. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: block mode</li>
+     * <li><strong>0</strong>: monitor mode</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("RunMode")
     public Integer runMode;
 
     public static DescribeDefaultIPSConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDefaultIPSConfigResponseBody self = new DescribeDefaultIPSConfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDefaultIPSConfigResponseBody setAiRules(Integer aiRules) {
-        this.aiRules = aiRules;
-        return this;
-    }
-    public Integer getAiRules() {
-        return this.aiRules;
     }
 
     public DescribeDefaultIPSConfigResponseBody setBasicRules(Integer basicRules) {
@@ -58,22 +98,6 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
     }
     public Integer getCtiRules() {
         return this.ctiRules;
-    }
-
-    public DescribeDefaultIPSConfigResponseBody setEnableAllPatch(Integer enableAllPatch) {
-        this.enableAllPatch = enableAllPatch;
-        return this;
-    }
-    public Integer getEnableAllPatch() {
-        return this.enableAllPatch;
-    }
-
-    public DescribeDefaultIPSConfigResponseBody setEnableDefault(Integer enableDefault) {
-        this.enableDefault = enableDefault;
-        return this;
-    }
-    public Integer getEnableDefault() {
-        return this.enableDefault;
     }
 
     public DescribeDefaultIPSConfigResponseBody setPatchRules(Integer patchRules) {

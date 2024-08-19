@@ -6,122 +6,167 @@ import com.aliyun.tea.*;
 public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The action that Cloud Firewall performs on the traffic. Valid values:</p>
-     * <br>
-     * <p>*   **accept**: allows the traffic.</p>
-     * <p>*   **drop**: blocks the traffic.</p>
-     * <p>*   **log**: monitors the traffic.</p>
-     * <br>
-     * <p>> If you do not specify this parameter, access control policies are queried based on all actions.</p>
+     * <ul>
+     * <li><strong>accept</strong>: allows the traffic.</li>
+     * <li><strong>drop</strong>: blocks the traffic.</li>
+     * <li><strong>log</strong>: monitors the traffic.</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you do not specify this parameter, access control policies are queried based on all actions.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>accept</p>
      */
     @NameInMap("AclAction")
     public String aclAction;
 
     /**
      * <p>The unique ID of the access control policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4037fbf7-3e39-4634-92a4-d0155247****</p>
      */
     @NameInMap("AclUuid")
     public String aclUuid;
 
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public String currentPage;
 
     /**
      * <p>The description of the access control policy. Fuzzy match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The destination address in the access control policy. Fuzzy match is supported.</p>
-     * <br>
-     * <p>> The value of this parameter can be a CIDR block or an address book name.</p>
+     * <blockquote>
+     * <p>The value of this parameter can be a CIDR block or an address book name.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.XX.XX/24</p>
      */
     @NameInMap("Destination")
     public String destination;
 
     /**
      * <p>The language of the content within the request and response.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese (default)</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese (default)</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>258039427902****</p>
      */
     @NameInMap("MemberUid")
     public String memberUid;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Maximum value: 50.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The protocol type in the access control policy. Valid values:</p>
-     * <br>
-     * <p>*   **TCP**</p>
-     * <p>*   **UDP**</p>
-     * <p>*   **ICMP**</p>
-     * <p>*   **ANY**: all protocol types</p>
-     * <br>
-     * <p>> If you do not specify this parameter, access control policies of all protocol types are queried.</p>
+     * <ul>
+     * <li><strong>TCP</strong></li>
+     * <li><strong>UDP</strong></li>
+     * <li><strong>ICMP</strong></li>
+     * <li><strong>ANY</strong>: all protocol types</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you do not specify this parameter, access control policies of all protocol types are queried.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>TCP</p>
      */
     @NameInMap("Proto")
     public String proto;
 
     /**
      * <p>The status of the access control policy. Valid values:</p>
-     * <br>
-     * <p>*   **true**: enabled</p>
-     * <p>*   **false**: disabled</p>
+     * <ul>
+     * <li><strong>true</strong>: enabled</li>
+     * <li><strong>false</strong>: disabled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Release")
     public String release;
 
     /**
      * <p>The recurrence type for the access control policy to take effect. Valid values:</p>
-     * <br>
-     * <p>*   **Permanent** (default): The policy always takes effect.</p>
-     * <p>*   **None**: The policy takes effect for only once.</p>
-     * <p>*   **Daily**: The policy takes effect on a daily basis.</p>
-     * <p>*   **Weekly**: The policy takes effect on a weekly basis.</p>
-     * <p>*   **Monthly**: The policy takes effect on a monthly basis.</p>
+     * <ul>
+     * <li><strong>Permanent</strong> (default): The policy always takes effect.</li>
+     * <li><strong>None</strong>: The policy takes effect for only once.</li>
+     * <li><strong>Daily</strong>: The policy takes effect on a daily basis.</li>
+     * <li><strong>Weekly</strong>: The policy takes effect on a weekly basis.</li>
+     * <li><strong>Monthly</strong>: The policy takes effect on a monthly basis.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Permanent</p>
      */
     @NameInMap("RepeatType")
     public String repeatType;
 
     /**
      * <p>The source address in the access control policy. Fuzzy match is supported.</p>
-     * <br>
-     * <p>> The value of this parameter can be a CIDR block or an address book name.</p>
+     * <blockquote>
+     * <p>The value of this parameter can be a CIDR block or an address book name.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.XX.XX/24</p>
      */
     @NameInMap("Source")
     public String source;
 
     /**
      * <p>The instance ID of the VPC firewall. Valid values:</p>
-     * <br>
-     * <p>*   If the VPC firewall protects the traffic between two VPCs that are connected by using a CEN instance, the value of this parameter must be the ID of the CEN instance.</p>
-     * <p>*   If the VPC firewall protects the traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter must be the instance ID of the VPC firewall.</p>
-     * <br>
-     * <p>> You can call the [DescribeVpcFirewallAclGroupList](https://help.aliyun.com/document_detail/159760.html) operation to query the ID.</p>
-     * <br>
+     * <ul>
+     * <li>If the VPC firewall protects the traffic between two VPCs that are connected by using a CEN instance, the value of this parameter must be the ID of the CEN instance.</li>
+     * <li>If the VPC firewall protects the traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter must be the instance ID of the VPC firewall.</li>
+     * </ul>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to query the ID.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vfw-a42bbb7b887148c9****</p>
      */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;

@@ -6,30 +6,44 @@ import com.aliyun.tea.*;
 public class DescribeVpcZoneRequest extends TeaModel {
     /**
      * <p>The environment. Valid values:</p>
-     * <br>
-     * <p>*   **VPC**</p>
-     * <p>*   **TransitRouter**</p>
+     * <ul>
+     * <li><strong>VPC</strong></li>
+     * <li><strong>TransitRouter</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
      */
     @NameInMap("Environment")
     public String environment;
 
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh** (default): Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The UID of the member in Cloud Firewall.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1415189284827022</p>
      */
     @NameInMap("MemberUid")
     public String memberUid;
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionNo")
     public String regionNo;

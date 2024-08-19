@@ -6,25 +6,33 @@ import com.aliyun.tea.*;
 public class DescribeVpcFirewallIPSWhitelistRequest extends TeaModel {
     /**
      * <p>The language of the content within the request and response.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   **zh** (default): Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The UID of the member in Cloud Firewall.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1766185894104675</p>
      */
     @NameInMap("MemberUid")
     public Long memberUid;
 
     /**
      * <p>The instance ID of the VPC firewall.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vfw-3547deab1c9b4190a53f</p>
      */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;

@@ -18,6 +18,9 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6B780BD6-282C-51A9-A8E6-59F636BAFA54</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,44 +57,64 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
     public static class DescribeInternetOpenIpResponseBodyDataList extends TeaModel {
         /**
          * <p>The reason why recommended intelligent policies are unavailable. Valid values:</p>
-         * <br>
-         * <p>*   No recommended intelligent policies are available.</p>
-         * <p>*   This feature is available only to some users.</p>
-         * <p>*   The policy configuration has been modified. No recommended intelligent policies are available.</p>
-         * <p>*   The recommended intelligent policies have been configured. No new recommended intelligent policies are available.</p>
+         * <ul>
+         * <li>No recommended intelligent policies are available.</li>
+         * <li>This feature is available only to some users.</li>
+         * <li>The policy configuration has been modified. No recommended intelligent policies are available.</li>
+         * <li>The recommended intelligent policies have been configured. No new recommended intelligent policies are available.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>No recommended intelligent policies are available.</p>
          */
         @NameInMap("AclRecommendDetail")
         public String aclRecommendDetail;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1ix9w22kv6aew9****</p>
          */
         @NameInMap("AssetsInstanceId")
         public String assetsInstanceId;
 
         /**
          * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>launch-advisor-2023****</p>
          */
         @NameInMap("AssetsName")
         public String assetsName;
 
         /**
          * <p>The asset type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EcsEIP</p>
          */
         @NameInMap("AssetsType")
         public String assetsType;
 
         /**
          * <p>The total number of ports.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("DetailNum")
         public Integer detailNum;
 
         /**
          * <p>Specifies whether an access control policy is recommended. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("HasAclRecommend")
         public Boolean hasAclRecommend;
@@ -104,29 +127,42 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
 
         /**
          * <p>The public IP address of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.0.113.1</p>
          */
         @NameInMap("PublicIp")
         public String publicIp;
 
         /**
          * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         @NameInMap("RegionNo")
         public String regionNo;
 
         /**
          * <p>The risk level. Valid values:</p>
-         * <br>
-         * <p>*   **3**: high risk</p>
-         * <p>*   **2**: medium risk</p>
-         * <p>*   **1**: low risk</p>
-         * <p>*   **0**: no risk</p>
+         * <ul>
+         * <li><strong>3</strong>: high risk</li>
+         * <li><strong>2</strong>: medium risk</li>
+         * <li><strong>1</strong>: low risk</li>
+         * <li><strong>0</strong>: no risk</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
 
         /**
          * <p>The reason for the risk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Previous traffic is all malicious traffic.</p>
          */
         @NameInMap("RiskReason")
         public String riskReason;
@@ -139,18 +175,27 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
 
         /**
          * <p>The percentage of traffic of a day. Unit: percent (%).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11.1</p>
          */
         @NameInMap("TrafficPercent1Day")
         public String trafficPercent1Day;
 
         /**
          * <p>The percentage of traffic of 30 days. Unit: percent (%).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99.9</p>
          */
         @NameInMap("TrafficPercent30Day")
         public String trafficPercent30Day;
 
         /**
          * <p>The percentage of traffic of seven days. Unit: percent (%).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>77.7</p>
          */
         @NameInMap("TrafficPercent7Day")
         public String trafficPercent7Day;
@@ -285,18 +330,27 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
     public static class DescribeInternetOpenIpResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

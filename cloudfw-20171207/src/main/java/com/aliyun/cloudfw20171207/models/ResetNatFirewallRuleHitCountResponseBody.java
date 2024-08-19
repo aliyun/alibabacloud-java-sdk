@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ResetNatFirewallRuleHitCountResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5CAA0FFD-4B94-5BB9-8B0A-ECFC86A0E666</p>
      */
     @NameInMap("RequestId")
     public String requestId;

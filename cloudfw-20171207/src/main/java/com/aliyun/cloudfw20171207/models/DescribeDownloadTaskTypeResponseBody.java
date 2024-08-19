@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDownloadTaskTypeResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B835494C-D093-5524-BBDE-BD272077B40E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,6 +21,9 @@ public class DescribeDownloadTaskTypeResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -54,12 +60,18 @@ public class DescribeDownloadTaskTypeResponseBody extends TeaModel {
     public static class DescribeDownloadTaskTypeResponseBodyTaskTypeArray extends TeaModel {
         /**
          * <p>The name of the task type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Internet Boundary Firewall Assets</p>
          */
         @NameInMap("TaskName")
         public String taskName;
 
         /**
          * <p>The type of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternetFirewallAsset</p>
          */
         @NameInMap("TaskType")
         public String taskType;

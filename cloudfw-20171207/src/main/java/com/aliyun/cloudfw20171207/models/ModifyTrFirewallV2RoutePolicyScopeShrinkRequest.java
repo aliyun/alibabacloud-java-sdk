@@ -4,26 +4,60 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class ModifyTrFirewallV2RoutePolicyScopeShrinkRequest extends TeaModel {
+    /**
+     * <p>The secondary traffic redirection instances.</p>
+     */
     @NameInMap("DestCandidateList")
     public String destCandidateListShrink;
 
     /**
+     * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vfw-tr-6520de0253bc4669bbd9</p>
      */
     @NameInMap("FirewallId")
     public String firewallId;
 
+    /**
+     * <p>The language of the content within the response. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Specifies whether to restore the traffic redirection configurations. Valid values:</p>
+     * <ul>
+     * <li>true: roll back</li>
+     * <li>false: withdraw</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ShouldRecover")
     public String shouldRecover;
 
+    /**
+     * <p>The primary traffic redirection instances.</p>
+     */
     @NameInMap("SrcCandidateList")
     public String srcCandidateListShrink;
 
     /**
+     * <p>The ID of the routing policy.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>policy-4d724d0139df48f18091</p>
      */
     @NameInMap("TrFirewallRoutePolicyId")
     public String trFirewallRoutePolicyId;

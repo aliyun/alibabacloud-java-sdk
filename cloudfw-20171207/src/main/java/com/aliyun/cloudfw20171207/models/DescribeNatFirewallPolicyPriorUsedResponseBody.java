@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeNatFirewallPolicyPriorUsedResponseBody extends TeaModel {
     /**
      * <p>The lowest priority for the access control policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>28</p>
      */
     @NameInMap("End")
     public Integer end;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BCDF3907-1011-5504-B015-CC7603C0E6B6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The highest priority for the access control policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Start")
     public Integer start;

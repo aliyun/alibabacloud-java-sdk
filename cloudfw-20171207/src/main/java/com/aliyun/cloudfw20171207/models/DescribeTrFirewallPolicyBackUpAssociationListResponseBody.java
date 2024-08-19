@@ -12,6 +12,9 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C264A756-9B48-57E3-B312-716941E146C6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,30 +43,45 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
     public static class DescribeTrFirewallPolicyBackUpAssociationListResponseBodyPolicyAssociationBackupConfigs extends TeaModel {
         /**
          * <p>The ID of the traffic redirection instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-wz9grb8ng3y7h7lf2****</p>
          */
         @NameInMap("CandidateId")
         public String candidateId;
 
         /**
          * <p>The name of the traffic redirection instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("CandidateName")
         public String candidateName;
 
         /**
          * <p>The type of the traffic redirection instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("CandidateType")
         public String candidateType;
 
         /**
          * <p>The route table that is used after traffic redirection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-wz9898grickmh5j09****</p>
          */
         @NameInMap("CurrentRouteTableId")
         public String currentRouteTableId;
 
         /**
          * <p>The ID of the route table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-wz9slp3s7m4qrzvnq****</p>
          */
         @NameInMap("OriginalRouteTableId")
         public String originalRouteTableId;

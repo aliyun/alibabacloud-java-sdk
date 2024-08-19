@@ -6,20 +6,35 @@ import com.aliyun.tea.*;
 public class CreateDownloadTaskRequest extends TeaModel {
     /**
      * <p>The language of the content within the response.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese (default)</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese (default)</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The query condition of the download task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;SearchItem\&quot;:\&quot;\&quot;,\&quot;UserType\&quot;:\&quot;buy\&quot;,\&quot;IpVersion\&quot;:\&quot;4\&quot;}</p>
      */
     @NameInMap("TaskData")
     public String taskData;
+
+    /**
+     * <p>The time zone of the time information in the downloaded file. The value must be an identifier of a time zone in the Internet Assigned Numbers Authority (IANA) database. The default value is Asia/Shanghai, which indicates UTC+8.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Asia/Shanghai</p>
+     */
+    @NameInMap("TimeZone")
+    public String timeZone;
 
     public static CreateDownloadTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDownloadTaskRequest self = new CreateDownloadTaskRequest();
@@ -40,6 +55,14 @@ public class CreateDownloadTaskRequest extends TeaModel {
     }
     public String getTaskData() {
         return this.taskData;
+    }
+
+    public CreateDownloadTaskRequest setTimeZone(String timeZone) {
+        this.timeZone = timeZone;
+        return this;
+    }
+    public String getTimeZone() {
+        return this.timeZone;
     }
 
 }

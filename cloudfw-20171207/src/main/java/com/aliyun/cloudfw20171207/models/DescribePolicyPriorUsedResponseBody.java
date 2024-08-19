@@ -6,22 +6,33 @@ import com.aliyun.tea.*;
 public class DescribePolicyPriorUsedResponseBody extends TeaModel {
     /**
      * <p>The lowest priority of existing access control policies.</p>
-     * <br>
-     * <p>>  The value -1 indicates the lowest priority.</p>
+     * <blockquote>
+     * <p> The value -1 indicates the lowest priority.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>150</p>
      */
     @NameInMap("End")
     public Integer end;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The highest priority of existing access control policies.</p>
-     * <br>
-     * <p>>  The value 0 indicates the highest priority.</p>
+     * <blockquote>
+     * <p> The value 0 indicates the highest priority.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>-1</p>
      */
     @NameInMap("Start")
     public Integer start;

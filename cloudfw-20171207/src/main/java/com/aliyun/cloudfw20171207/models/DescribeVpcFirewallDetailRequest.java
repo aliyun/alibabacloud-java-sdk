@@ -6,31 +6,44 @@ import com.aliyun.tea.*;
 public class DescribeVpcFirewallDetailRequest extends TeaModel {
     /**
      * <p>The natural language of the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese (default)</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese (default)</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The ID of the local VPC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-8vbwbo90rq0anm6t****</p>
      */
     @NameInMap("LocalVpcId")
     public String localVpcId;
 
     /**
      * <p>The ID of the peer VPC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-90rq0anm6t8vbwbo****</p>
      */
     @NameInMap("PeerVpcId")
     public String peerVpcId;
 
     /**
      * <p>The instance ID of the VPC firewall.</p>
-     * <br>
-     * <p>>  You can call the [DescribeVpcFirewallList](https://help.aliyun.com/document_detail/342932.html) operation to query the instance IDs of VPC firewalls.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> operation to query the instance IDs of VPC firewalls.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vfw-m5e7dbc4y****</p>
      */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;

@@ -6,26 +6,36 @@ import com.aliyun.tea.*;
 public class ModifyPolicyAdvancedConfigRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the strict mode for the access control policy. Valid values:</p>
-     * <br>
-     * <p>*   **on**: enables the strict mode.</p>
-     * <p>*   **off**: disables the strict mode.</p>
-     * <br>
+     * <ul>
+     * <li><strong>on</strong>: enables the strict mode.</li>
+     * <li><strong>off</strong>: disables the strict mode.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
      */
     @NameInMap("InternetSwitch")
     public String internetSwitch;
 
     /**
      * <p>The natural language of the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese (default)</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese (default)</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.XX.XX</p>
      */
     @NameInMap("SourceIp")
     @Deprecated

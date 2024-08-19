@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0525EADE-C112-5702-A5BC-0E2F6F94DB23</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>132</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
     /**
-     * <p>The traffic statistics.</p>
+     * <p>The statistics on traffic.</p>
      */
     @NameInMap("TrafficList")
     public java.util.List<DescribePostpayTrafficDetailResponseBodyTrafficList> trafficList;
@@ -53,52 +59,81 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
 
     public static class DescribePostpayTrafficDetailResponseBodyTrafficList extends TeaModel {
         /**
-         * <p>The inbound network throughput, which indicates the total number of bytes that are received. Unit: bytes.</p>
+         * <p>The inbound network throughput, which indicates the total number of bytes that are received Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1115096939</p>
          */
         @NameInMap("InBytes")
         public Long inBytes;
 
         /**
          * <p>The instance ID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-8vb2d7c9mtn0bo9qcraq</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The type of the asset. This value takes effect only for the Internet firewall.</p>
+         * <p>The asset type. This value takes effect only for the Internet firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EcsPublicIP</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The outbound network throughput, which indicates the total number of bytes that are sent. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000000</p>
          */
         @NameInMap("OutBytes")
         public Long outBytes;
 
+        @NameInMap("ProtectionDuration")
+        public Long protectionDuration;
+
         /**
          * <p>The resource ID. The resource ID for the Internet firewall is the public IP address that is protected the Internet firewall, and the resource ID for a NAT firewall is the instance ID of the NAT firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39.106.146.214</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The total inbound and outbound network throughput, which indicates the total number of bytes that are sent and received. Unit: bytes.</p>
+         * <p>The total inbound and outbound network throughput, which indicates the total number of bytes that are received and sent. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1215096939</p>
          */
         @NameInMap("TotalBytes")
         public Long totalBytes;
 
         /**
          * <p>The date on which the statistics are collected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20231001</p>
          */
         @NameInMap("TrafficDay")
         public String trafficDay;
 
         /**
          * <p>The traffic type. Valid values:</p>
-         * <br>
-         * <p>*   **EIP_TRAFFIC**: traffic for the Internet firewall</p>
-         * <p>*   **NatGateway_TRAFFIC**: traffic for the NAT firewall</p>
+         * <ul>
+         * <li><strong>EIP_TRAFFIC</strong>: traffic for the Internet firewall</li>
+         * <li><strong>NatGateway_TRAFFIC</strong>: traffic for NAT firewalls</li>
+         * <li><strong>VPC_TRAFFIC</strong>: traffic for VPC firewalls</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>EIP_TRAFFIC</p>
          */
         @NameInMap("TrafficType")
         public String trafficType;
@@ -138,6 +173,14 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         }
         public Long getOutBytes() {
             return this.outBytes;
+        }
+
+        public DescribePostpayTrafficDetailResponseBodyTrafficList setProtectionDuration(Long protectionDuration) {
+            this.protectionDuration = protectionDuration;
+            return this;
+        }
+        public Long getProtectionDuration() {
+            return this.protectionDuration;
         }
 
         public DescribePostpayTrafficDetailResponseBodyTrafficList setResourceId(String resourceId) {

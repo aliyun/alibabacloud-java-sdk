@@ -12,12 +12,18 @@ public class DescribeAssetListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of the assets that are protected by Cloud Firewall.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -54,173 +60,246 @@ public class DescribeAssetListResponseBody extends TeaModel {
     public static class DescribeAssetListResponseBodyAssets extends TeaModel {
         /**
          * <p>The UID of the Alibaba Cloud account.</p>
-         * <br>
-         * <p>>  The value of this parameter indicates the management account to which the member is added.</p>
+         * <blockquote>
+         * <p> The value of this parameter indicates the management account to which the member is added.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>158039427902****</p>
          */
         @NameInMap("AliUid")
         public Long aliUid;
 
         /**
          * <p>The ID of the cloud resource with which the asset is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-8vbdrjrxzt78****</p>
          */
         @NameInMap("BindInstanceId")
         public String bindInstanceId;
 
         /**
          * <p>The instance name of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance01</p>
          */
         @NameInMap("BindInstanceName")
         public String bindInstanceName;
 
         /**
          * <p>The timestamp when the asset is added to Cloud Firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-28 10:29:58</p>
          */
         @NameInMap("CreateTimeStamp")
         public String createTimeStamp;
 
         /**
          * <p>The public IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         @NameInMap("InternetAddress")
         public String internetAddress;
 
         /**
          * <p>The internal IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("IntranetAddress")
         public String intranetAddress;
 
         /**
          * <p>The IP version of the asset that is protected by Cloud Firewall.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   **4**: IPv4</p>
-         * <p>*   **6**: IPv6</p>
+         * <ul>
+         * <li><strong>4</strong>: IPv4</li>
+         * <li><strong>6</strong>: IPv6</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("IpVersion")
         public Integer ipVersion;
 
         /**
          * <p>The UID of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>258039427902****</p>
          */
         @NameInMap("MemberUid")
         public Long memberUid;
 
         /**
          * <p>The instance name of the asset that is protected by Cloud Firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance01</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The time when the asset was added. Valid values:</p>
-         * <br>
-         * <p>*   **discovered in 1 hour**: within one hour.</p>
-         * <p>*   **discovered in 1 day**: within one day.</p>
-         * <p>*   **discovered in 7 days**: within seven days.</p>
+         * <ul>
+         * <li><strong>discovered in 1 hour</strong>: within one hour.</li>
+         * <li><strong>discovered in 1 day</strong>: within one day.</li>
+         * <li><strong>discovered in 7 days</strong>: within seven days.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>discovered in 1 hour</p>
          */
         @NameInMap("NewResourceTag")
         public String newResourceTag;
 
         /**
          * <p>The remarks of the asset. Valid values:</p>
-         * <br>
-         * <p>*   **REGION_NOT_SUPPORT**: The region is not supported.</p>
-         * <p>*   **NETWORK_NOT_SUPPORT**: The network is not supported.</p>
+         * <ul>
+         * <li><strong>REGION_NOT_SUPPORT</strong>: The region is not supported.</li>
+         * <li><strong>NETWORK_NOT_SUPPORT</strong>: The network is not supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>REGION_NOT_SUPPORT</p>
          */
         @NameInMap("Note")
         public String note;
 
         /**
          * <p>The status of the firewall. Valid values:</p>
-         * <br>
-         * <p>*   **open**: enabled.</p>
-         * <p>*   **opening**: being enabled.</p>
-         * <p>*   **closed**: disabled.</p>
-         * <p>*   **closing**: being disabled.</p>
+         * <ul>
+         * <li><strong>open</strong>: enabled.</li>
+         * <li><strong>opening</strong>: being enabled.</li>
+         * <li><strong>closed</strong>: disabled.</li>
+         * <li><strong>closing</strong>: being disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>open</p>
          */
         @NameInMap("ProtectStatus")
         public String protectStatus;
 
         /**
          * <p>The ID of the region in which the asset resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionID")
         public String regionID;
 
         /**
          * <p>Indicates whether the firewall is supported in the region in which the asset resides. Valid values:</p>
-         * <br>
-         * <p>*   **enable**: yes</p>
-         * <p>*   **disable**: no</p>
+         * <ul>
+         * <li><strong>enable</strong>: yes</li>
+         * <li><strong>disable</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         @NameInMap("RegionStatus")
         public String regionStatus;
 
         /**
          * <p>The instance ID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-8vbdrjrxzt78****</p>
          */
         @NameInMap("ResourceInstanceId")
         public String resourceInstanceId;
 
         /**
          * <p>The type of the asset. Valid values:</p>
-         * <br>
-         * <p>*   **BastionHostEgressIP**: the egress IP address of a bastion host</p>
-         * <p>*   **BastionHostIngressIP**: the ingress IP address of a bastion host</p>
-         * <p>*   **EcsEIP**: the elastic IP address (EIP) of an Elastic Compute Service (ECS) instance</p>
-         * <p>*   **EcsPublicIP**: the public IP address of an ECS instance</p>
-         * <p>*   **EIP**: the EIP</p>
-         * <p>*   **EniEIP**: the EIP of an elastic network interface (ENI)</p>
-         * <p>*   **NatEIP**: the EIP of a NAT gateway</p>
-         * <p>*   **SlbEIP**: the EIP of a Server Load Balancer (SLB) instance</p>
-         * <p>*   **SlbPublicIP**: the public IP address of an SLB instance</p>
-         * <p>*   **NatPublicIP**: the public IP address of a NAT gateway</p>
-         * <p>*   **HAVIP**: the high-availability virtual IP address (HAVIP)</p>
+         * <ul>
+         * <li><strong>BastionHostEgressIP</strong>: the egress IP address of a bastion host</li>
+         * <li><strong>BastionHostIngressIP</strong>: the ingress IP address of a bastion host</li>
+         * <li><strong>EcsEIP</strong>: the elastic IP address (EIP) of an Elastic Compute Service (ECS) instance</li>
+         * <li><strong>EcsPublicIP</strong>: the public IP address of an ECS instance</li>
+         * <li><strong>EIP</strong>: the EIP</li>
+         * <li><strong>EniEIP</strong>: the EIP of an elastic network interface (ENI)</li>
+         * <li><strong>NatEIP</strong>: the EIP of a NAT gateway</li>
+         * <li><strong>SlbEIP</strong>: the EIP of a Server Load Balancer (SLB) instance</li>
+         * <li><strong>SlbPublicIP</strong>: the public IP address of an SLB instance</li>
+         * <li><strong>NatPublicIP</strong>: the public IP address of a NAT gateway</li>
+         * <li><strong>HAVIP</strong>: the high-availability virtual IP address (HAVIP)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>EIP</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The risk level of the asset. Valid values:</p>
-         * <br>
-         * <p>*   **low**: low</p>
-         * <p>*   **middle**: medium</p>
-         * <p>*   **hight**: high</p>
-         * <br>
-         * <p>>  The value of this parameter is returned only when the UserType parameter is set to free.</p>
+         * <ul>
+         * <li><strong>low</strong>: low</li>
+         * <li><strong>middle</strong>: medium</li>
+         * <li><strong>hight</strong>: high</li>
+         * </ul>
+         * <blockquote>
+         * <p> The value of this parameter is returned only when the UserType parameter is set to free.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>low</p>
          */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
         /**
          * <p>The status of the security group policy. Valid values:</p>
-         * <br>
-         * <p>*   **pass**: applied</p>
-         * <p>*   **block**: not applied</p>
-         * <p>*   **unsupport**: unsupported</p>
+         * <ul>
+         * <li><strong>pass</strong>: applied</li>
+         * <li><strong>block</strong>: not applied</li>
+         * <li><strong>unsupport</strong>: unsupported</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>block</p>
          */
         @NameInMap("SgStatus")
         public String sgStatus;
 
         /**
          * <p>The time when the status of the security group was last checked. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1615082937</p>
          */
         @NameInMap("SgStatusTime")
         public Long sgStatusTime;
 
         /**
          * <p>Indicates whether traffic redirection is supported for the asset. Valid values:</p>
-         * <br>
-         * <p>*   **enable**: yes</p>
-         * <p>*   **disable**: no</p>
+         * <ul>
+         * <li><strong>enable</strong>: yes</li>
+         * <li><strong>disable</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         @NameInMap("SyncStatus")
         public String syncStatus;
 
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip</p>
          */
         @NameInMap("Type")
         public String type;

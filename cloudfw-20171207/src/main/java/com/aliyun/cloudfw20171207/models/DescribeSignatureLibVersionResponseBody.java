@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeSignatureLibVersionResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9C50C2A9-4BBB-5504-8ADA-C41A79B8C946</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>132</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -54,40 +60,40 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
     public static class DescribeSignatureLibVersionResponseBodyVersion extends TeaModel {
         /**
          * <p>The type.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   ips</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    Basic Rules and Virtual Patching</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
-         * <br>
-         * <p>*   intelligence</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    Threat Intelligence</p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>ips</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>Basic Rules and Virtual Patching</p>
+         * <!-- -->
+         * 
+         * <p>.</p>
+         * </li>
+         * <li><p>intelligence</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>Threat Intelligence</p>
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ips</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IPS-2307-02</p>
          */
         @NameInMap("Version")
         public String version;

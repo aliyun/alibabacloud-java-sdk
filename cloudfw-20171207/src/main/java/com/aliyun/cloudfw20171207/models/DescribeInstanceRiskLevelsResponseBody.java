@@ -12,6 +12,9 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9AABB1B7-C81F-5158-9EF9-B2DD5D3DA014</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,20 +43,30 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
     public static class DescribeInstanceRiskLevelsResponseBodyInstanceRisksDetails extends TeaModel {
         /**
          * <p>The IP addresses of servers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.107.XX.XX</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The risk levels. Valid values:</p>
-         * <br>
-         * <p>*   **medium**</p>
+         * <ul>
+         * <li><strong>medium</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>medium</p>
          */
         @NameInMap("Level")
         public String level;
 
         /**
          * <p>The type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ResourceNotProtected</p>
          */
         @NameInMap("Type")
         public String type;
@@ -98,14 +111,21 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
 
         /**
          * <p>The instance ID of your Cloud Firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vipcloudfw-cn-7mz2fj8nm0u</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The risk levels. Valid values:</p>
-         * <br>
-         * <p>*   **medium**</p>
+         * <ul>
+         * <li><strong>medium</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>medium</p>
          */
         @NameInMap("Level")
         public String level;

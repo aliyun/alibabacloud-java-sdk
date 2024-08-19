@@ -12,24 +12,36 @@ public class DescribeAddressBookResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public String pageNo;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B36F150A-1E27-43AA-B72C-D2AC712F09DA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of the returned address books.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -82,12 +94,18 @@ public class DescribeAddressBookResponseBody extends TeaModel {
     public static class DescribeAddressBookResponseBodyAclsTagList extends TeaModel {
         /**
          * <p>The key of the ECS tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>company</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The value of the ECS tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -124,52 +142,75 @@ public class DescribeAddressBookResponseBody extends TeaModel {
 
         /**
          * <p>The number of addresses in the address book.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("AddressListCount")
         public Integer addressListCount;
 
         /**
          * <p>Indicates whether the public IP addresses of ECS instances are automatically added to the address book if the instances match the specified tags. The setting takes effect on both newly purchased ECS instances whose tag settings are complete and ECS instances whose tag settings are modified. Valid values:</p>
-         * <br>
-         * <p>*   **1**: yes</p>
-         * <p>*   **0**: no</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AutoAddTagEcs")
         public Integer autoAddTagEcs;
 
         /**
          * <p>The description of the address book.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my address book</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the address book.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo_address_book</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The type of the address book. Valid values:</p>
-         * <br>
-         * <p>*   **ip**: IP address book</p>
-         * <p>*   **domain**: domain address book</p>
-         * <p>*   **port**: port address book</p>
-         * <p>*   **tag**: ECS tag-based address book</p>
-         * <p>*   **allCloud**: cloud service address book</p>
-         * <p>*   **threat**: threat intelligence address book</p>
+         * <ul>
+         * <li><strong>ip</strong>: IP address book</li>
+         * <li><strong>domain</strong>: domain address book</li>
+         * <li><strong>port</strong>: port address book</li>
+         * <li><strong>tag</strong>: ECS tag-based address book</li>
+         * <li><strong>allCloud</strong>: cloud service address book</li>
+         * <li><strong>threat</strong>: threat intelligence address book</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ip</p>
          */
         @NameInMap("GroupType")
         public String groupType;
 
         /**
          * <p>The UUID of the address book.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f04ac7ce-628b-4cb7-be61-310222b7****</p>
          */
         @NameInMap("GroupUuid")
         public String groupUuid;
 
         /**
          * <p>The number of times that the address book is referenced.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("ReferenceCount")
         public Integer referenceCount;
@@ -182,9 +223,13 @@ public class DescribeAddressBookResponseBody extends TeaModel {
 
         /**
          * <p>The logical relationship among ECS tags. Valid values:</p>
-         * <br>
-         * <p>*   **and**: Only the public IP addresses of ECS instances that match all the specified tags can be added to the address book.</p>
-         * <p>*   **or**: The public IP addresses of ECS instances that match any of the specified tags can be added to the address book.</p>
+         * <ul>
+         * <li><strong>and</strong>: Only the public IP addresses of ECS instances that match all the specified tags can be added to the address book.</li>
+         * <li><strong>or</strong>: The public IP addresses of ECS instances that match any of the specified tags can be added to the address book.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>and</p>
          */
         @NameInMap("TagRelation")
         public String tagRelation;

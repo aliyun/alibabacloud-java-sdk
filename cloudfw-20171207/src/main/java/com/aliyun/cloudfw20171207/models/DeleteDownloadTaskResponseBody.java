@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteDownloadTaskResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>064022A8-F415-572C-B3C1-657152833F11</p>
      */
     @NameInMap("RequestId")
     public String requestId;

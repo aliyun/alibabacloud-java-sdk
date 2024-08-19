@@ -6,34 +6,46 @@ import com.aliyun.tea.*;
 public class DescribeDomainResolveRequest extends TeaModel {
     /**
      * <p>The domain name whose DNS record you want to query.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
      * <p>The IP version of the asset that is protected by Cloud Firewall. Valid values:</p>
-     * <br>
-     * <p>*   **4**: IPv4 (default)</p>
-     * <p>*   **6**: IPv6</p>
+     * <ul>
+     * <li><strong>4</strong>: IPv4 (default)</li>
+     * <li><strong>6</strong>: IPv6</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>6</p>
      */
     @NameInMap("IpVersion")
     public String ipVersion;
 
     /**
      * <p>The language of the content within the response.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese (default)</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese (default)</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.XX.XX</p>
      */
     @NameInMap("SourceIp")
     @Deprecated

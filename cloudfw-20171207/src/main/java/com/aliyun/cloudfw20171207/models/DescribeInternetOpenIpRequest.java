@@ -6,90 +6,129 @@ import com.aliyun.tea.*;
 public class DescribeInternetOpenIpRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-uf6faknmuby7ezht****</p>
      */
     @NameInMap("AssetsInstanceId")
     public String assetsInstanceId;
 
     /**
      * <p>The instance name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>launch-advisor-2023****</p>
      */
     @NameInMap("AssetsInstanceName")
     public String assetsInstanceName;
 
     /**
      * <p>The asset type of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EcsEIP</p>
      */
     @NameInMap("AssetsType")
     public String assetsType;
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public String currentPage;
 
     /**
      * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1663640336</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The language of the content within the response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese (default)</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese (default)</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The port number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("Port")
     public String port;
 
     /**
      * <p>The public IP address of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>203.0.113.1</p>
      */
     @NameInMap("PublicIp")
     public String publicIp;
 
     /**
      * <p>The region ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionNo")
     public String regionNo;
 
     /**
      * <p>The risk level. If you leave this parameter empty, all risk levels are queried. Valid values:</p>
-     * <br>
-     * <p>*   **3**: high risk</p>
-     * <p>*   **2**: medium risk</p>
-     * <p>*   **1**: low risk</p>
-     * <p>*   **0**: no risk</p>
+     * <ul>
+     * <li><strong>3</strong>: high risk</li>
+     * <li><strong>2</strong>: medium risk</li>
+     * <li><strong>1</strong>: low risk</li>
+     * <li><strong>0</strong>: no risk</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("RiskLevel")
     public String riskLevel;
 
     /**
      * <p>The application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SSH</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;
 
     /**
      * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1681957629</p>
      */
     @NameInMap("StartTime")
     public String startTime;

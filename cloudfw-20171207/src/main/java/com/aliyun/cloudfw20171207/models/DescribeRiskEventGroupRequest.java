@@ -5,204 +5,284 @@ import com.aliyun.tea.*;
 
 public class DescribeRiskEventGroupRequest extends TeaModel {
     /**
-     * <p>The names of attacked applications. Set the value in the `["AttackApp1","AttackApp2"]` format.</p>
+     * <p>The names of attacked applications. Set the value in the <code>[&quot;AttackApp1&quot;,&quot;AttackApp2&quot;]</code> format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;MySql&quot;,&quot;DNS&quot;]</p>
      */
     @NameInMap("AttackApp")
     public java.util.List<String> attackApp;
 
     /**
      * <p>The attack type of the intrusion events. Valid values:</p>
-     * <br>
-     * <p>*   **1**: suspicious connection</p>
-     * <p>*   **2**: command execution</p>
-     * <p>*   **3**: brute-force attack</p>
-     * <p>*   **4**: scanning</p>
-     * <p>*   **5**: others</p>
-     * <p>*   **6**: information leak</p>
-     * <p>*   **7**: DoS attack</p>
-     * <p>*   **8**: buffer overflow attack</p>
-     * <p>*   **9**: web attack</p>
-     * <p>*   **10**: trojan backdoor</p>
-     * <p>*   **11**: computer worm</p>
-     * <p>*   **12**: mining</p>
-     * <p>*   **13**: reverse shell</p>
-     * <br>
-     * <p>> If you do not specify this parameter, the intrusion events of all attack types are queried.</p>
+     * <ul>
+     * <li><strong>1</strong>: suspicious connection</li>
+     * <li><strong>2</strong>: command execution</li>
+     * <li><strong>3</strong>: brute-force attack</li>
+     * <li><strong>4</strong>: scanning</li>
+     * <li><strong>5</strong>: others</li>
+     * <li><strong>6</strong>: information leak</li>
+     * <li><strong>7</strong>: DoS attack</li>
+     * <li><strong>8</strong>: buffer overflow attack</li>
+     * <li><strong>9</strong>: web attack</li>
+     * <li><strong>10</strong>: trojan backdoor</li>
+     * <li><strong>11</strong>: computer worm</li>
+     * <li><strong>12</strong>: mining</li>
+     * <li><strong>13</strong>: reverse shell</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the intrusion events of all attack types are queried.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("AttackType")
     public String attackType;
 
     /**
      * <p>The edition of Cloud Firewall that you purchase. Valid values:</p>
-     * <br>
-     * <p>*   **2**: Premium Edition</p>
-     * <p>*   **3**: Enterprise Edition</p>
-     * <p>*   **4**: Ultimate Edition</p>
-     * <p>*   **10**: Cloud Firewall that uses the pay-as-you-go billing method</p>
+     * <ul>
+     * <li><strong>2</strong>: Premium Edition</li>
+     * <li><strong>3</strong>: Enterprise Edition</li>
+     * <li><strong>4</strong>: Ultimate Edition</li>
+     * <li><strong>10</strong>: Cloud Firewall that uses the pay-as-you-go billing method</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("BuyVersion")
     public Long buyVersion;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public String currentPage;
 
     /**
-     * <p>The type of the risk events.\\</p>
-     * <p>Set the value to **session**, which indicates intrusion events.</p>
-     * <br>
+     * <p>The type of the risk events.\
+     * Set the value to <strong>session</strong>, which indicates intrusion events.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>session</p>
      */
     @NameInMap("DataType")
     public String dataType;
 
     /**
      * <p>The direction of the traffic for the intrusion events. Valid values:</p>
-     * <br>
-     * <p>*   **in**: inbound</p>
-     * <p>*   **out**: outbound</p>
-     * <br>
-     * <p>> If you do not specify this parameter, the intrusion events that are recorded for both inbound and outbound traffic are queried.</p>
+     * <ul>
+     * <li><strong>in</strong>: inbound</li>
+     * <li><strong>out</strong>: outbound</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the intrusion events that are recorded for both inbound and outbound traffic are queried.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>in</p>
      */
     @NameInMap("Direction")
     public String direction;
 
     /**
      * <p>The destination IP address to query. If you specify this parameter, all intrusion events with the specified destination IP address are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.XX.XX</p>
      */
     @NameInMap("DstIP")
     public String dstIP;
 
     /**
      * <p>The ID of the destination VPC.</p>
-     * <br>
-     * <p>> If the FirewallType parameter is set to VpcFirewall, you must specify this parameter.</p>
+     * <blockquote>
+     * <p>If the FirewallType parameter is set to VpcFirewall, you must specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-uf6e9a9zyokj2ywuo****</p>
      */
     @NameInMap("DstNetworkInstanceId")
     public String dstNetworkInstanceId;
 
     /**
      * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1534408267</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The name of the intrusion event.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Webshell communication</p>
      */
     @NameInMap("EventName")
     public String eventName;
 
     /**
      * <p>The type of the firewall. Valid values:</p>
-     * <br>
-     * <p>*   **VpcFirewall**: virtual private cloud (VPC) firewall</p>
-     * <p>*   **InternetFirewall**: Internet firewall (default)</p>
+     * <ul>
+     * <li><strong>VpcFirewall</strong>: virtual private cloud (VPC) firewall</li>
+     * <li><strong>InternetFirewall</strong>: Internet firewall (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InternetFirewall</p>
      */
     @NameInMap("FirewallType")
     public String firewallType;
 
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese (default)</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese (default)</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>Specifies whether to query the information about the geographical locations of IP addresses.</p>
-     * <br>
-     * <p>*   **true**: does not query the information about the geographical locations of IP addresses.</p>
-     * <p>*   **false**: queries the information about the geographical locations of IP addresses. This is the default value.</p>
+     * <ul>
+     * <li><strong>true</strong>: does not query the information about the geographical locations of IP addresses.</li>
+     * <li><strong>false</strong>: queries the information about the geographical locations of IP addresses. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("NoLocation")
     public String noLocation;
 
     /**
      * <p>The order in which you want to sort the results. Valid values:</p>
-     * <br>
-     * <p>*   **asc**: the ascending order.</p>
-     * <p>*   **desc**: the descending order. This is the default value.</p>
+     * <ul>
+     * <li><strong>asc</strong>: the ascending order.</li>
+     * <li><strong>desc</strong>: the descending order. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>desc</p>
      */
     @NameInMap("Order")
     public String order;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>Default value: **6**. Maximum value: **10**.</p>
+     * <p>Default value: <strong>6</strong>. Maximum value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The status of the firewall. Valid values:</p>
-     * <br>
-     * <p>*   **1**: alerting</p>
-     * <p>*   **2**: blocking</p>
-     * <br>
-     * <p>> If you do not specify this parameter, all intrusion events that are detected by the firewall are queried, regardless of the firewall status.</p>
+     * <ul>
+     * <li><strong>1</strong>: alerting</li>
+     * <li><strong>2</strong>: blocking</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you do not specify this parameter, all intrusion events that are detected by the firewall are queried, regardless of the firewall status.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("RuleResult")
     public String ruleResult;
 
     /**
      * <p>The module of the rule that is used to detect the intrusion events. Valid values:</p>
-     * <br>
-     * <p>*   **1**: basic protection</p>
-     * <p>*   **2**: virtual patching</p>
-     * <p>*   **4**: threat intelligence</p>
-     * <br>
-     * <p>> If you do not specify this parameter, the intrusion events that are detected by all rules are queried.</p>
+     * <ul>
+     * <li><strong>1</strong>: basic protection</li>
+     * <li><strong>2</strong>: virtual patching</li>
+     * <li><strong>4</strong>: threat intelligence</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the intrusion events that are detected by all rules are queried.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("RuleSource")
     public String ruleSource;
 
     /**
      * <p>The field based on which you want to sort the results. Valid values:</p>
-     * <br>
-     * <p>*   **VulLevel**: The results are sorted based on the risk level field. This is the default value.</p>
-     * <p>*   **LastTime**: The results are sorted based on the most recent occurrence time.</p>
+     * <ul>
+     * <li><strong>VulLevel</strong>: The results are sorted based on the risk level field. This is the default value.</li>
+     * <li><strong>LastTime</strong>: The results are sorted based on the most recent occurrence time.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>LastTime</p>
      */
     @NameInMap("Sort")
     public String sort;
 
     /**
      * <p>The source IP address to query. If you specify this parameter, all intrusion events with the specified source IP address are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.XX.XX</p>
      */
     @NameInMap("SrcIP")
     public String srcIP;
 
     /**
      * <p>The ID of the source VPC.</p>
-     * <br>
-     * <p>> If the FirewallType parameter is set to VpcFirewall, you must specify this parameter.</p>
+     * <blockquote>
+     * <p>If the FirewallType parameter is set to VpcFirewall, you must specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-uf6e9a9zyokj2ywuo****</p>
      */
     @NameInMap("SrcNetworkInstanceId")
     public String srcNetworkInstanceId;
 
     /**
      * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1534408189</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The risk level of the intrusion events. Valid values:</p>
-     * <br>
-     * <p>*   **1**: low</p>
-     * <p>*   **2**: medium</p>
-     * <p>*   **3**: high</p>
-     * <br>
-     * <p>> If you do not specify this parameter, the intrusion events that are at all risk levels are queried.</p>
+     * <ul>
+     * <li><strong>1</strong>: low</li>
+     * <li><strong>2</strong>: medium</li>
+     * <li><strong>3</strong>: high</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the intrusion events that are at all risk levels are queried.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("VulLevel")
     public String vulLevel;

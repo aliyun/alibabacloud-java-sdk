@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeVpcZoneResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>694DFBF3-C060-529F-92D0-7FC7E0DA1E21</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class DescribeVpcZoneResponseBody extends TeaModel {
     public static class DescribeVpcZoneResponseBodyZoneList extends TeaModel {
         /**
          * <p>The name of the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou Zone B</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
          * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
 
         /**
          * <p>The zone type. Default value: AvailabilityZone. This value indicates Alibaba Cloud zones.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AvailabilityZone</p>
          */
         @NameInMap("ZoneType")
         public String zoneType;

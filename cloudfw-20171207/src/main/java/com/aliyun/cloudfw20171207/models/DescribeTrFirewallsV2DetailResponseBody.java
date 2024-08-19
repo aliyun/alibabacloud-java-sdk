@@ -6,119 +6,174 @@ import com.aliyun.tea.*;
 public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     /**
      * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-37nddhri7jf0d2****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
      * <p>The description of the VPC firewall.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC Firewall</p>
      */
     @NameInMap("FirewallDescription")
     public String firewallDescription;
 
     /**
      * <p>The ID of the Elastic Network Interface (ENI) with which the VPC firewall is associated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eni-uf621u00nafypeex****</p>
      */
     @NameInMap("FirewallEniId")
     public String firewallEniId;
 
     /**
      * <p>The ID of the VPC to which the ENI is attached.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-2zeppcci782zeh2bk****</p>
      */
     @NameInMap("FirewallEniVpcId")
     public String firewallEniVpcId;
 
     /**
      * <p>The ID of the vSwitch with which the ENI is associated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-uf6ptq1kl1c1d9pw9****</p>
      */
     @NameInMap("FirewallEniVswitchId")
     public String firewallEniVswitchId;
 
     /**
      * <p>The instance ID of the VPC firewall.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vfw-tr-9c7c711abdfa4d80****</p>
      */
     @NameInMap("FirewallId")
     public String firewallId;
 
     /**
      * <p>The name of the VPC firewall.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cloudfirewall-manual</p>
      */
     @NameInMap("FirewallName")
     public String firewallName;
 
     /**
      * <p>The status of the VPC firewall. Valid values:</p>
-     * <br>
-     * <p>*   Creating</p>
-     * <p>*   Deleting</p>
-     * <p>*   Ready</p>
+     * <ul>
+     * <li>Creating</li>
+     * <li>Deleting</li>
+     * <li>Ready</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Ready</p>
      */
     @NameInMap("FirewallStatus")
     public String firewallStatus;
 
     /**
      * <p>The subnet CIDR block of the VPC in which the ENI of the firewall is stored in automatic mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.1.0/24</p>
      */
     @NameInMap("FirewallSubnetCidr")
     public String firewallSubnetCidr;
 
     /**
      * <p>The status of the VPC firewall. Valid values:</p>
-     * <br>
-     * <p>*   **opened**: The VPC firewall is enabled.</p>
-     * <p>*   **closed**: The VPC firewall is disabled.</p>
-     * <p>*   **notconfigured**: The VPC firewall is not created.</p>
-     * <p>*   **configured**: The VPC firewall is created but is not enabled.</p>
-     * <p>*   **creating**: The VPC firewall is being created.</p>
-     * <p>*   **opening**: The VPC firewall is being enabled.</p>
-     * <p>*   **deleting**: The VPC firewall is being deleted.</p>
-     * <br>
-     * <p>> If you do not specify this parameter, VPC firewalls in all states are queried.</p>
+     * <ul>
+     * <li><strong>opened</strong>: The VPC firewall is enabled.</li>
+     * <li><strong>closed</strong>: The VPC firewall is disabled.</li>
+     * <li><strong>notconfigured</strong>: The VPC firewall is not created.</li>
+     * <li><strong>configured</strong>: The VPC firewall is created but is not enabled.</li>
+     * <li><strong>creating</strong>: The VPC firewall is being created.</li>
+     * <li><strong>opening</strong>: The VPC firewall is being enabled.</li>
+     * <li><strong>deleting</strong>: The VPC firewall is being deleted.</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you do not specify this parameter, VPC firewalls in all states are queried.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>opened</p>
      */
     @NameInMap("FirewallSwitchStatus")
     public String firewallSwitchStatus;
 
     /**
      * <p>The CIDR block that is allocated to the VPC created for the VPC firewall in automatic mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.0.0/16</p>
      */
     @NameInMap("FirewallVpcCidr")
     public String firewallVpcCidr;
 
     /**
      * <p>The region ID of the transit router.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionNo")
     public String regionNo;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7E53A7FB-3EB9-5E33-8E50-B8F417D1E02B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The routing mode of the VPC firewall. Valid values:</p>
-     * <br>
-     * <p>*   **managed**: automatic mode</p>
-     * <p>*   **manual**: manual mode</p>
+     * <ul>
+     * <li><strong>managed</strong>: automatic mode</li>
+     * <li><strong>manual</strong>: manual mode</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>managed</p>
      */
     @NameInMap("RouteMode")
     public String routeMode;
 
     /**
      * <p>The primary subnet CIDR block that the VPC uses to connect to the transit router in automatic mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.2.0/24</p>
      */
     @NameInMap("TrAttachmentMasterCidr")
     public String trAttachmentMasterCidr;
 
     /**
      * <p>The secondary subnet CIDR block that the VPC uses to connect to the transit router in automatic mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.3.0/24</p>
      */
     @NameInMap("TrAttachmentSlaveCidr")
     public String trAttachmentSlaveCidr;
 
     /**
      * <p>The ID of the transit router.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-wz9y8sgug8b1xb416****</p>
      */
     @NameInMap("TransitRouterId")
     public String transitRouterId;

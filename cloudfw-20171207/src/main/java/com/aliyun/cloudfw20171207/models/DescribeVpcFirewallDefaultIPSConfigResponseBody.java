@@ -6,33 +6,51 @@ import com.aliyun.tea.*;
 public class DescribeVpcFirewallDefaultIPSConfigResponseBody extends TeaModel {
     /**
      * <p>Indicates whether basic policies are enabled. Valid values:</p>
-     * <br>
-     * <p>*   **1**: yes</p>
-     * <p>*   **0**: no</p>
+     * <ul>
+     * <li><strong>1</strong>: yes</li>
+     * <li><strong>0</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("BasicRules")
     public Integer basicRules;
 
     /**
      * <p>Indicates whether virtual patching is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **1**: yes</p>
-     * <p>*   **0**: no</p>
+     * <ul>
+     * <li><strong>1</strong>: yes</li>
+     * <li><strong>0</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("EnableAllPatch")
     public Integer enableAllPatch;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>850A84D6-0DE4-4797-A1E8-00090125adf1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("RuleClass")
+    public Integer ruleClass;
+
     /**
      * <p>The mode of the intrusion prevention system (IPS). Valid values:</p>
-     * <br>
-     * <p>*   **1**: block mode</p>
-     * <p>*   **0**: monitor mode</p>
+     * <ul>
+     * <li><strong>1</strong>: block mode</li>
+     * <li><strong>0</strong>: monitor mode</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("RunMode")
     public Integer runMode;
@@ -64,6 +82,14 @@ public class DescribeVpcFirewallDefaultIPSConfigResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeVpcFirewallDefaultIPSConfigResponseBody setRuleClass(Integer ruleClass) {
+        this.ruleClass = ruleClass;
+        return this;
+    }
+    public Integer getRuleClass() {
+        return this.ruleClass;
     }
 
     public DescribeVpcFirewallDefaultIPSConfigResponseBody setRunMode(Integer runMode) {

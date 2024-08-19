@@ -6,96 +6,124 @@ import com.aliyun.tea.*;
 public class CreateVpcFirewallCenConfigureRequest extends TeaModel {
     /**
      * <p>The ID of the CEN instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-x5jayxou71ad73****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
      * <p>Specifies whether to enable the VPC firewall. Valid values:</p>
-     * <br>
-     * <p>*   **open**: After you create the VPC firewall, the VPC firewall is automatically enabled. This is the default value.</p>
-     * <p>*   **close**: After you create the VPC firewall, the VPC firewall is disabled. You can call the [ModifyVpcFirewallCenSwitchStatus](https://help.aliyun.com/document_detail/345780.html) operation to manually enable the VPC firewall.</p>
-     * <br>
+     * <ul>
+     * <li><strong>open</strong>: After you create the VPC firewall, the VPC firewall is automatically enabled. This is the default value.</li>
+     * <li><strong>close</strong>: After you create the VPC firewall, the VPC firewall is disabled. You can call the <a href="https://help.aliyun.com/document_detail/345780.html">ModifyVpcFirewallCenSwitchStatus</a> operation to manually enable the VPC firewall.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>open</p>
      */
     @NameInMap("FirewallSwitch")
     public String firewallSwitch;
 
     /**
      * <p>The CIDR block of the vSwitch that is automatically created for the VPC firewall. You must specify a CIDR block for the Cloud_Firewall_VSWITCH VPC that is automatically created for the VPC firewall for traffic redirection. The CIDR block does not conflict with your network plan. The subnet mask of the CIDR block must be less than or equal to 29 bits in length. The CIDR block of the vSwitch must be within the network segment of the VPC.</p>
-     * <br>
      * <p>If you do not specify a value, the CIDR block 10.219.219.216/29 is automatically allocated.</p>
-     * <br>
-     * <p>>  This parameter takes effect only when you create a VPC firewall for the first time in the current CEN instance and region.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only when you create a VPC firewall for the first time in the current CEN instance and region.</p>
+     * </blockquote>
      */
     @NameInMap("FirewallVSwitchCidrBlock")
     public String firewallVSwitchCidrBlock;
 
     /**
      * <p>The CIDR block of the VPC that is automatically created for the VPC firewall. You must specify a CIDR block for the Cloud_Firewall_VPC VPC that is automatically created for the VPC firewall for traffic redirection. The subnet mask of the CIDR block must be less than or equal to 28 bits in length.</p>
-     * <br>
      * <p>If you do not specify a value, the CIDR block 10.0.0.0/8 is automatically allocated.</p>
-     * <br>
-     * <p>>  This parameter takes effect only when you create a VPC firewall for the first time in the current CEN instance and region.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only when you create a VPC firewall for the first time in the current CEN instance and region.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.0.0/8</p>
      */
     @NameInMap("FirewallVpcCidrBlock")
     public String firewallVpcCidrBlock;
 
     /**
      * <p>The ID of the zone to which the vSwitch belongs. If your service is latency-sensitive, you can specify the same zone for the vSwitch of the firewall and the vSwitch of your business VPC to minimize latency.</p>
-     * <br>
      * <p>If you do not specify a value, a zone is automatically assigned for the vSwitch.</p>
-     * <br>
-     * <p>>  This parameter takes effect only when you create a VPC firewall for the first time in the current CEN instance and region. For more information about zones that are supported by each region, see [Query zones](https://help.aliyun.com/document_detail/36064.html).</p>
+     * <blockquote>
+     * <p> This parameter takes effect only when you create a VPC firewall for the first time in the current CEN instance and region. For more information about zones that are supported by each region, see <a href="https://help.aliyun.com/document_detail/36064.html">Query zones</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-a</p>
      */
     @NameInMap("FirewallVpcZoneId")
     public String firewallVpcZoneId;
 
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese (default)</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese (default)</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>258039427902****</p>
      */
     @NameInMap("MemberUid")
     public String memberUid;
 
     /**
      * <p>The ID of the VPC for which you want to create the VPC firewall.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp10zlifxh6j0232w****</p>
      */
     @NameInMap("NetworkInstanceId")
     public String networkInstanceId;
 
     /**
      * <p>The ID of the vSwitch that is used to associate with the elastic network interface (ENI) required by the VPC firewall.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-qzeaol304m***</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The instance name of the VPC firewall.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test instance</p>
      */
     @NameInMap("VpcFirewallName")
     public String vpcFirewallName;
 
     /**
      * <p>The ID of the region to which the VPC belongs.</p>
-     * <br>
-     * <p>> For more information about the regions, see [Supported regions](https://help.aliyun.com/document_detail/195657.html).</p>
-     * <br>
+     * <blockquote>
+     * <p>For more information about the regions, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("VpcRegion")
     public String vpcRegion;

@@ -6,48 +6,68 @@ import com.aliyun.tea.*;
 public class DescribeVpcFirewallCenListRequest extends TeaModel {
     /**
      * <p>The ID of the CEN instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-x5jayxou71ad73****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public String currentPage;
 
     /**
      * <p>The status of the VPC firewall. Valid values:</p>
-     * <br>
-     * <p>*   **opened**: The VPC firewall is enabled.</p>
-     * <p>*   **closed**: The VPC firewall is disabled.</p>
-     * <p>*   **notconfigured**: The VPC firewall is not configured.</p>
-     * <p>*   **configured**: The VPC firewall is configured but is not enabled.</p>
-     * <br>
-     * <p>> If you do not specify this parameter, VPC firewalls in all states are queried.</p>
+     * <ul>
+     * <li><strong>opened</strong>: The VPC firewall is enabled.</li>
+     * <li><strong>closed</strong>: The VPC firewall is disabled.</li>
+     * <li><strong>notconfigured</strong>: The VPC firewall is not configured.</li>
+     * <li><strong>configured</strong>: The VPC firewall is configured but is not enabled.</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you do not specify this parameter, VPC firewalls in all states are queried.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>opened</p>
      */
     @NameInMap("FirewallSwitchStatus")
     public String firewallSwitchStatus;
 
     /**
      * <p>The language of the content within the response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese (default)</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese (default)</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The UID of the member that is managed by your Alibaba Cloud account. The member is also an Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>258039427902****</p>
      */
     @NameInMap("MemberUid")
     public String memberUid;
 
     /**
      * <p>The ID of the network instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-8vbwbo90rq0anm6t****</p>
      */
     @NameInMap("NetworkInstanceId")
     public String networkInstanceId;
@@ -57,48 +77,69 @@ public class DescribeVpcFirewallCenListRequest extends TeaModel {
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Default value: 10. Maximum value: 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The region ID of the VPC.</p>
-     * <br>
-     * <p>> For more information about the regions, see [Supported regions](https://help.aliyun.com/document_detail/195657.html).</p>
+     * <blockquote>
+     * <p>For more information about the regions, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionNo")
     public String regionNo;
 
     /**
      * <p>The routing mode of the VPC firewall. Valid values:</p>
-     * <br>
-     * <p>*   **auto**: automatic mode</p>
-     * <p>*   **manual**: manual mode</p>
-     * <br>
-     * <p>> If you do not specify this parameter, VPC firewalls in all routing modes are queried.</p>
+     * <ul>
+     * <li><strong>auto</strong>: automatic mode</li>
+     * <li><strong>manual</strong>: manual mode</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you do not specify this parameter, VPC firewalls in all routing modes are queried.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>auto</p>
      */
     @NameInMap("RouteMode")
     public String routeMode;
 
     /**
      * <p>The type of the transit router. Valid values:</p>
-     * <br>
-     * <p>*   **Basic**: Basic Edition transit router</p>
-     * <p>*   **Enterprise**: Enterprise Edition transit router</p>
+     * <ul>
+     * <li><strong>Basic</strong>: Basic Edition transit router</li>
+     * <li><strong>Enterprise</strong>: Enterprise Edition transit router</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Basic</p>
      */
     @NameInMap("TransitRouterType")
     public String transitRouterType;
 
     /**
      * <p>The instance ID of the VPC firewall.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vfw-m5e7dbc4y****</p>
      */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;
 
     /**
      * <p>The instance name of the VPC firewall.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test firewall</p>
      */
     @NameInMap("VpcFirewallName")
     public String vpcFirewallName;

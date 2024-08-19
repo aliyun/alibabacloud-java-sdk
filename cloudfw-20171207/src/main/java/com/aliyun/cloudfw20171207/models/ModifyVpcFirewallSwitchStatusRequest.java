@@ -6,36 +6,49 @@ import com.aliyun.tea.*;
 public class ModifyVpcFirewallSwitchStatusRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the VPC firewall. Valid values:</p>
-     * <br>
-     * <p>*   **open**: yes</p>
-     * <p>*   **close**: no</p>
-     * <br>
+     * <ul>
+     * <li><strong>open</strong>: yes</li>
+     * <li><strong>close</strong>: no</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>open</p>
      */
     @NameInMap("FirewallSwitch")
     public String firewallSwitch;
 
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese (default)</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese (default)</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>258039427902****</p>
      */
     @NameInMap("MemberUid")
     public String memberUid;
 
     /**
      * <p>The instance ID of the VPC firewall.</p>
-     * <br>
-     * <p>> You can call the [DescribeVpcFirewallList](https://help.aliyun.com/document_detail/342932.html) operation to query the instance IDs of VPC firewalls.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> operation to query the instance IDs of VPC firewalls.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vfw-m5e7dbc4y****</p>
      */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;

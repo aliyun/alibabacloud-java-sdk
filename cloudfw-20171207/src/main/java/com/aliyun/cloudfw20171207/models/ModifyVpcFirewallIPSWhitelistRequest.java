@@ -6,51 +6,69 @@ import com.aliyun.tea.*;
 public class ModifyVpcFirewallIPSWhitelistRequest extends TeaModel {
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh** (default): Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The type of the list. Valid values:</p>
-     * <br>
-     * <p>*   **1**: user-defined</p>
-     * <p>*   **2**: address book</p>
-     * <br>
+     * <ul>
+     * <li><strong>1</strong>: user-defined</li>
+     * <li><strong>2</strong>: address book</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ListType")
     public Long listType;
 
     /**
      * <p>The entry in the list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.130.0.0/20,10.130.17.11/32</p>
      */
     @NameInMap("ListValue")
     public String listValue;
 
     /**
      * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1415189284827022</p>
      */
     @NameInMap("MemberUid")
     public Long memberUid;
 
     /**
      * <p>The instance ID of the VPC firewall.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vfw-d7b8ce273791475b9b0b</p>
      */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;
 
     /**
      * <p>The type of the whitelist. Valid values:</p>
-     * <br>
-     * <p>*   **1**: destination</p>
-     * <p>*   **2**: source</p>
-     * <br>
+     * <ul>
+     * <li><strong>1</strong>: destination</li>
+     * <li><strong>2</strong>: source</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("WhiteType")
     public Long whiteType;

@@ -4,33 +4,108 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeNatFirewallListRequest extends TeaModel {
+    /**
+     * <p>The language of the content within the response. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong> (default)</li>
+     * <li><strong>en</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>147783******</p>
+     */
     @NameInMap("MemberUid")
     public Long memberUid;
 
+    /**
+     * <p>The ID of the NAT gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nat-bp123456g******</p>
+     */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
+    /**
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Long pageNo;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * <p>Default value: 10. </p>
+     * <p> Maximum value: 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The ID of the NAT firewall.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>proxy-nat97a******</p>
+     */
     @NameInMap("ProxyId")
     public String proxyId;
 
+    /**
+     * <p>The name of the NAT firewall. The name must be 4 to 50 characters in length, and can contain letters, digits, and underscores (_). The name cannot start with an underscore.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>proxy-******</p>
+     */
     @NameInMap("ProxyName")
     public String proxyName;
 
+    /**
+     * <p>The region ID of the virtual private cloud (VPC).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionNo")
     public String regionNo;
 
+    /**
+     * <p>The status of the NAT firewall. Valid values:</p>
+     * <ul>
+     * <li>configuring</li>
+     * <li>deleting</li>
+     * <li>normal</li>
+     * <li>abnormal</li>
+     * <li>opening</li>
+     * <li>closing</li>
+     * <li>closed</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The ID of the VPC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-8vbwbo90rq0anm6t****</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

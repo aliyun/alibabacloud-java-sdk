@@ -4,12 +4,34 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class ModifyTrFirewallV2ConfigurationRequest extends TeaModel {
+    /**
+     * <p>The instance ID of the VPC firewall.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vfw-tr-bcdf89d405ce4bd2****</p>
+     */
     @NameInMap("FirewallId")
     public String firewallId;
 
+    /**
+     * <p>The instance name of the VPC firewall.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test instance</p>
+     */
     @NameInMap("FirewallName")
     public String firewallName;
 
+    /**
+     * <p>The language of the content within the response. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

@@ -6,54 +6,76 @@ import com.aliyun.tea.*;
 public class ModifyVpcFirewallDefaultIPSConfigRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable basic protection. Valid values:</p>
-     * <br>
-     * <p>*   **1**: yes</p>
-     * <p>*   **0**: no</p>
-     * <br>
+     * <ul>
+     * <li><strong>1</strong>: yes</li>
+     * <li><strong>0</strong>: no</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("BasicRules")
     public String basicRules;
 
     /**
      * <p>Specifies whether to enable virtual patching. Valid values:</p>
-     * <br>
-     * <p>*   **1**: yes</p>
-     * <p>*   **0**: no</p>
-     * <br>
+     * <ul>
+     * <li><strong>1</strong>: yes</li>
+     * <li><strong>0</strong>: no</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("EnableAllPatch")
     public String enableAllPatch;
 
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese (default)</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese (default)</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>258039427902****</p>
      */
     @NameInMap("MemberUid")
     public String memberUid;
 
+    @NameInMap("RuleClass")
+    public String ruleClass;
+
     /**
      * <p>The mode of the intrusion prevention system (IPS). Valid values:</p>
-     * <br>
-     * <p>*   **1**: block mode</p>
-     * <p>*   **0**: monitor mode</p>
-     * <br>
+     * <ul>
+     * <li><strong>1</strong>: block mode</li>
+     * <li><strong>0</strong>: monitor mode</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("RunMode")
     public String runMode;
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.XX.XX</p>
      */
     @NameInMap("SourceIp")
     @Deprecated
@@ -61,11 +83,14 @@ public class ModifyVpcFirewallDefaultIPSConfigRequest extends TeaModel {
 
     /**
      * <p>The instance ID of the VPC firewall. Valid values:</p>
-     * <br>
-     * <p>*   If the VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance, the value of this parameter is the ID of the CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. You can call the [DescribeVpcFirewallCenList](https://help.aliyun.com/document_detail/345777.html) operation to query the IDs of CEN instances.</p>
-     * <p>*   If the VPC firewall protects mutual access traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter is the ID of the VPC firewall. You can call the [DescribeVpcFirewallList](https://help.aliyun.com/document_detail/342932.html) operation to query the instance IDs of VPC firewalls.</p>
-     * <br>
+     * <ul>
+     * <li>If the VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance, the value of this parameter is the ID of the CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. You can call the <a href="https://help.aliyun.com/document_detail/345777.html">DescribeVpcFirewallCenList</a> operation to query the IDs of CEN instances.</li>
+     * <li>If the VPC firewall protects mutual access traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter is the ID of the VPC firewall. You can call the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> operation to query the instance IDs of VPC firewalls.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vfw-m5e7dbc4y****</p>
      */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;
@@ -105,6 +130,14 @@ public class ModifyVpcFirewallDefaultIPSConfigRequest extends TeaModel {
     }
     public String getMemberUid() {
         return this.memberUid;
+    }
+
+    public ModifyVpcFirewallDefaultIPSConfigRequest setRuleClass(String ruleClass) {
+        this.ruleClass = ruleClass;
+        return this;
+    }
+    public String getRuleClass() {
+        return this.ruleClass;
     }
 
     public ModifyVpcFirewallDefaultIPSConfigRequest setRunMode(String runMode) {

@@ -6,23 +6,33 @@ import com.aliyun.tea.*;
 public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
     /**
      * <p>The bandwidth of the Express Connect circuit. Unit: Mbit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
     /**
-     * <p>The connection type of the VPC firewall. The value is fixed as **expressconnect**, which indicates Express Connect circuits.</p>
+     * <p>The connection type of the VPC firewall. The value is fixed as <strong>expressconnect</strong>, which indicates Express Connect circuits.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>expressconnect</p>
      */
     @NameInMap("ConnectType")
     public String connectType;
 
     /**
      * <p>The status of the VPC firewall. Valid values:</p>
-     * <br>
-     * <p>*   **opened**: The VPC firewall is enabled.</p>
-     * <p>*   **closed**: The VPC firewall is disabled.</p>
-     * <p>*   **notconfigured**: The VPC firewall is not configured.</p>
-     * <p>*   **configured**: The VPC firewall is configured.</p>
+     * <ul>
+     * <li><strong>opened</strong>: The VPC firewall is enabled.</li>
+     * <li><strong>closed</strong>: The VPC firewall is disabled.</li>
+     * <li><strong>notconfigured</strong>: The VPC firewall is not configured.</li>
+     * <li><strong>configured</strong>: The VPC firewall is configured.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>opened</p>
      */
     @NameInMap("FirewallSwitchStatus")
     public String firewallSwitchStatus;
@@ -35,6 +45,9 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
 
     /**
      * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>258039427902****</p>
      */
     @NameInMap("MemberUid")
     public String memberUid;
@@ -47,18 +60,27 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>850A84D6-0DE4-4797-A1E8-00090125g4d2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The instance ID of the VPC firewall.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vfw-m5e7dbc4y****</p>
      */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;
 
     /**
      * <p>The instance name of the VPC firewall.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tf-test</p>
      */
     @NameInMap("VpcFirewallName")
     public String vpcFirewallName;
@@ -143,12 +165,18 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
     public static class DescribeVpcFirewallDetailResponseBodyLocalVpcVpcCidrTableListRouteEntryList extends TeaModel {
         /**
          * <p>The destination CIDR block of the local VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX/24</p>
          */
         @NameInMap("DestinationCidr")
         public String destinationCidr;
 
         /**
          * <p>The instance ID of the next hop for the local VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vrt-m5eb5me6c3l5sezae****</p>
          */
         @NameInMap("NextHopInstanceId")
         public String nextHopInstanceId;
@@ -185,6 +213,9 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the route table for the local VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-1234</p>
          */
         @NameInMap("RouteTableId")
         public String routeTableId;
@@ -215,24 +246,36 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
     public static class DescribeVpcFirewallDetailResponseBodyLocalVpc extends TeaModel {
         /**
          * <p>The ID of the ENI for the local VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-8vbhfosfqv2rff42****</p>
          */
         @NameInMap("EniId")
         public String eniId;
 
         /**
          * <p>The private IP address of the elastic network interface (ENI) for the local VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("EniPrivateIpAddress")
         public String eniPrivateIpAddress;
 
         /**
          * <p>The region ID of the local VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionNo")
         public String regionNo;
 
         /**
          * <p>The router interface ID of the local VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vrt-m5eb5me6c3l5sezae****</p>
          */
         @NameInMap("RouterInterfaceId")
         public String routerInterfaceId;
@@ -245,12 +288,18 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the local VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-8vbwbo90rq0anm6t****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The name of the local VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Vitasoy</p>
          */
         @NameInMap("VpcName")
         public String vpcName;
@@ -321,12 +370,18 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
     public static class DescribeVpcFirewallDetailResponseBodyPeerVpcVpcCidrTableListRouteEntryList extends TeaModel {
         /**
          * <p>The destination CIDR block of the peer VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX/24</p>
          */
         @NameInMap("DestinationCidr")
         public String destinationCidr;
 
         /**
          * <p>The instance ID of the next hop for the peer VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vrt-m5eb5me6c3l5sezae****</p>
          */
         @NameInMap("NextHopInstanceId")
         public String nextHopInstanceId;
@@ -363,6 +418,9 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the route table for the peer VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-1256</p>
          */
         @NameInMap("RouteTableId")
         public String routeTableId;
@@ -393,24 +451,36 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
     public static class DescribeVpcFirewallDetailResponseBodyPeerVpc extends TeaModel {
         /**
          * <p>The ID of the ENI for the peer VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-8vbhfosfqv2rff42****</p>
          */
         @NameInMap("EniId")
         public String eniId;
 
         /**
          * <p>The private IP address of the ENI for the peer VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("EniPrivateIpAddress")
         public String eniPrivateIpAddress;
 
         /**
          * <p>The region ID of the peer VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionNo")
         public String regionNo;
 
         /**
          * <p>The router interface ID of the peer VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vrt-m5eb5me6c3l5sezae****</p>
          */
         @NameInMap("RouterInterfaceId")
         public String routerInterfaceId;
@@ -423,12 +493,18 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the peer VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-90rq0anm6t8vbwbo****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The name of the peer VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zcy_prod</p>
          */
         @NameInMap("VpcName")
         public String vpcName;

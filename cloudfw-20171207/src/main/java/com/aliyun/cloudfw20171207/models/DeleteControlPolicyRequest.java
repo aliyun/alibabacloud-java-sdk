@@ -5,41 +5,49 @@ import com.aliyun.tea.*;
 
 public class DeleteControlPolicyRequest extends TeaModel {
     /**
-     * <p>The ID of the access control policy.</p>
-     * <br>
-     * <p>To delete an access control policy, you must provide the ID of the policy. You can call the [DescribeControlPolicy](https://help.aliyun.com/document_detail/138866.html) operation to query the ID.</p>
-     * <br>
+     * <p>The UUID of the access control policy.</p>
+     * <p>To delete an access control policy, you must specify the UUID of the policy. You can call the <a href="https://help.aliyun.com/document_detail/138866.html">DescribeControlPolicy</a> operation to query the UUID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>00281255-d220-4db1-8f4f-c4df221ad84c</p>
      */
     @NameInMap("AclUuid")
     public String aclUuid;
 
     /**
      * <p>The direction of the traffic to which the access control policy applies.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   **in**: inbound traffic</p>
-     * <p>*   **out**: outbound traffic</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <ul>
+     * <li><strong>in</strong>: inbound traffic</li>
+     * <li><strong>out</strong>: outbound traffic</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>in</p>
      */
     @NameInMap("Direction")
     public String direction;
 
     /**
-     * <p>The natural language of the request and response.</p>
-     * <br>
+     * <p>The language of the content within the request and response.</p>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese (default)</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong> (default)</li>
+     * <li><strong>en</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The source IP address of the traffic.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.XX.XX</p>
      */
     @NameInMap("SourceIp")
     @Deprecated

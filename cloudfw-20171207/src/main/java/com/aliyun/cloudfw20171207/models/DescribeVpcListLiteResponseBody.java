@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeVpcListLiteResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>55E56A55-D93A-5614-AE00-BE2F8077F891</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class DescribeVpcListLiteResponseBody extends TeaModel {
     public static class DescribeVpcListLiteResponseBodyVpcList extends TeaModel {
         /**
          * <p>The region ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionNo")
         public String regionNo;
 
         /**
          * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-wz9dqhljd10fk0b4eh885</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The name of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cloud_Firewall_VPC</p>
          */
         @NameInMap("VpcName")
         public String vpcName;

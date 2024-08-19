@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B5EE02F9-4F21-56CA-AA49-F9F8D69483C1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,21 +43,31 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
     public static class DescribeVpcFirewallIPSWhitelistResponseBodyWhitelists extends TeaModel {
         /**
          * <p>The type of the list. Valid values:</p>
-         * <br>
-         * <p>*   **1**: user-defined</p>
-         * <p>*   **2**: address book</p>
+         * <ul>
+         * <li><strong>1</strong>: user-defined</li>
+         * <li><strong>2</strong>: address book</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ListType")
         public Long listType;
 
         /**
          * <p>The entries in the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.10.200.4/32,10.10.200.25/32</p>
          */
         @NameInMap("ListValue")
         public String listValue;
 
         /**
          * <p>The instance ID of the VPC firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vfw-57431e9abe424852a578</p>
          */
         @NameInMap("VpcFirewallId")
         public String vpcFirewallId;
@@ -67,9 +80,13 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
 
         /**
          * <p>The type of the whitelist. Valid values:</p>
-         * <br>
-         * <p>*   **1**: destination</p>
-         * <p>*   **2**: source</p>
+         * <ul>
+         * <li><strong>1</strong>: destination</li>
+         * <li><strong>2</strong>: source</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("WhiteType")
         public Long whiteType;

@@ -6,32 +6,40 @@ import com.aliyun.tea.*;
 public class CreateDownloadTaskResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E7F333E0-7B70-54DA-A307-4B2B49DEE923</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The status of the task. Valid values:</p>
-     * <br>
      * <p>finish: The task finished. You can query the task to obtain the download link of the file.</p>
-     * <br>
      * <p>start: The task start.</p>
-     * <br>
      * <p>error: An error occurred.</p>
-     * <br>
      * <p>expire: The task file is invalid and cannot be downloaded.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>start</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The unique ID of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>132</p>
      */
     @NameInMap("TaskId")
     public Long taskId;
 
     /**
      * <p>The name of the file download task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Internet Boundary Firewall Assets - IPv4</p>
      */
     @NameInMap("TaskName")
     public String taskName;

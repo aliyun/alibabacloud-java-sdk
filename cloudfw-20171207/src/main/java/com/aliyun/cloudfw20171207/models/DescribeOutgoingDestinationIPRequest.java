@@ -6,163 +6,208 @@ import com.aliyun.tea.*;
 public class DescribeOutgoingDestinationIPRequest extends TeaModel {
     /**
      * <p>The application type in the access control policy. Valid values:</p>
-     * <br>
-     * <p>*   **FTP**</p>
-     * <p>*   **HTTP**</p>
-     * <p>*   **HTTPS**</p>
-     * <p>*   **Memcache**</p>
-     * <p>*   **MongoDB**</p>
-     * <p>*   **MQTT**</p>
-     * <p>*   **MySQL**</p>
-     * <p>*   **RDP**</p>
-     * <p>*   **Redis**</p>
-     * <p>*   **SMTP**</p>
-     * <p>*   **SMTPS**</p>
-     * <p>*   **SSH**</p>
-     * <p>*   **SSL_No_Cert**</p>
-     * <p>*   **SSL**</p>
-     * <p>*   **VNC**</p>
-     * <br>
-     * <p>>  The value of this parameter depends on the value of Proto. If you set Proto to TCP, you can set ApplicationNameList to any valid value. If you specify both ApplicationNameList and ApplicationName, only the value of ApplicationNameList is used.</p>
+     * <ul>
+     * <li><strong>FTP</strong></li>
+     * <li><strong>HTTP</strong></li>
+     * <li><strong>HTTPS</strong></li>
+     * <li><strong>Memcache</strong></li>
+     * <li><strong>MongoDB</strong></li>
+     * <li><strong>MQTT</strong></li>
+     * <li><strong>MySQL</strong></li>
+     * <li><strong>RDP</strong></li>
+     * <li><strong>Redis</strong></li>
+     * <li><strong>SMTP</strong></li>
+     * <li><strong>SMTPS</strong></li>
+     * <li><strong>SSH</strong></li>
+     * <li><strong>SSL_No_Cert</strong></li>
+     * <li><strong>SSL</strong></li>
+     * <li><strong>VNC</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> The value of this parameter depends on the value of Proto. If you set Proto to TCP, you can set ApplicationNameList to any valid value. If you specify both ApplicationNameList and ApplicationName, only the value of ApplicationNameList is used.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>FTP</p>
      */
     @NameInMap("ApplicationName")
     public String applicationName;
 
     /**
      * <p>The ID of the service to which the destination IP address belongs. This parameter is left empty by default. Valid values:</p>
-     * <br>
-     * <p>*   **All**: all services</p>
-     * <p>*   **RiskDomain**: risky domain names</p>
-     * <p>*   **RiskIP**: risky IP addresses</p>
-     * <p>*   **AliYun**: Alibaba Cloud services</p>
-     * <p>*   **NotAliYun**: third-party services</p>
+     * <ul>
+     * <li><strong>All</strong>: all services</li>
+     * <li><strong>RiskDomain</strong>: risky domain names</li>
+     * <li><strong>RiskIP</strong>: risky IP addresses</li>
+     * <li><strong>AliYun</strong>: Alibaba Cloud services</li>
+     * <li><strong>NotAliYun</strong>: third-party services</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>All</p>
      */
     @NameInMap("CategoryId")
     public String categoryId;
 
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public String currentPage;
 
     /**
      * <p>The destination IP address in the outbound connection that is initiated to access a domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.XX.XX</p>
      */
     @NameInMap("DstIP")
     public String dstIP;
 
     /**
      * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1656923760</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The language of the content within the response. Valid values:</p>
-     * <br>
-     * <p>*   **zh** (default): Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The method that is used to sort the results. Valid values:</p>
-     * <br>
-     * <p>*   **asc**: the ascending order.</p>
-     * <p>*   **desc** (default): the descending order.</p>
+     * <ul>
+     * <li><strong>asc</strong>: the ascending order.</li>
+     * <li><strong>desc</strong> (default): the descending order.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>desc</p>
      */
     @NameInMap("Order")
     public String order;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Default value: 6. Maximum value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The port number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("Port")
     public String port;
 
     /**
      * <p>The private IP address of the ECS instance that initiates the outbound connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.XX.XX</p>
      */
     @NameInMap("PrivateIP")
     public String privateIP;
 
     /**
      * <p>The public IP address of the Elastic Compute Service (ECS) instance that initiates the outbound connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.XX.XX</p>
      */
     @NameInMap("PublicIP")
     public String publicIP;
 
     /**
      * <p>The field based on which you want to sort the query results. Valid values:</p>
-     * <br>
-     * <p>*   **SessionCount** (default): the number of requests.</p>
-     * <p>*   **TotalBytes**: the total volume of traffic.</p>
+     * <ul>
+     * <li><strong>SessionCount</strong> (default): the number of requests.</li>
+     * <li><strong>TotalBytes</strong>: the total volume of traffic.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SessionCount</p>
      */
     @NameInMap("Sort")
     public String sort;
 
     /**
      * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1656837360</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The ID of the tag. Valid values:</p>
-     * <br>
-     * <p>*   **AliYun**: Alibaba Cloud service</p>
-     * <p>*   **RiskDomain**: risky domain name</p>
-     * <p>*   **RiskIP**: risky IP address</p>
-     * <p>*   **TrustedDomain**: trusted website</p>
-     * <p>*   **AliPay**: Alipay</p>
-     * <p>*   **DingDing**: DingTalk</p>
-     * <p>*   **WeChat**: WeChat</p>
-     * <p>*   **QQ**: Tencent QQ</p>
-     * <p>*   **SecurityService**: security service</p>
-     * <p>*   **Microsoft**: Microsoft</p>
-     * <p>*   **Amazon**: Amazon Web Services (AWS)</p>
-     * <p>*   **Pan**: cloud disk</p>
-     * <p>*   **Map**: map</p>
-     * <p>*   **Code**: code hosting</p>
-     * <p>*   **SystemService**: system service</p>
-     * <p>*   **Taobao**: Taobao</p>
-     * <p>*   **Google**: Google</p>
-     * <p>*   **ThirdPartyService**: third-party service</p>
-     * <p>*   **FirstFlow**: the first time</p>
-     * <p>*   **Downloader**: malicious download</p>
-     * <p>*   **Alexa Top1M**: popular website</p>
-     * <p>*   **Miner**: mining pool</p>
-     * <p>*   **Intelligence**: threat intelligence</p>
-     * <p>*   **DDoS**: DDoS trojan</p>
-     * <p>*   **Ransomware**: ransomware</p>
-     * <p>*   **Spyware**: spyware</p>
-     * <p>*   **Rogue**: rogue software</p>
-     * <p>*   **Botnet**: botnet</p>
-     * <p>*   **Suspicious**: suspicious website</p>
-     * <p>*   **C\\&C**: command and control (C\\&C)</p>
-     * <p>*   **Gang**: gang</p>
-     * <p>*   **CVE**: Common Vulnerabilities and Exposures (CVE)</p>
-     * <p>*   **Backdoor**: webshell</p>
-     * <p>*   **Phishing**: phishing website</p>
-     * <p>*   **APT**: advanced persistent threat (APT) attack</p>
-     * <p>*   **Supply Chain Attack**: supply chain attack</p>
-     * <p>*   **Malicious software**: malware</p>
+     * <ul>
+     * <li><strong>AliYun</strong>: Alibaba Cloud service</li>
+     * <li><strong>RiskDomain</strong>: risky domain name</li>
+     * <li><strong>RiskIP</strong>: risky IP address</li>
+     * <li><strong>TrustedDomain</strong>: trusted website</li>
+     * <li><strong>AliPay</strong>: Alipay</li>
+     * <li><strong>DingDing</strong>: DingTalk</li>
+     * <li><strong>WeChat</strong>: WeChat</li>
+     * <li><strong>QQ</strong>: Tencent QQ</li>
+     * <li><strong>SecurityService</strong>: security service</li>
+     * <li><strong>Microsoft</strong>: Microsoft</li>
+     * <li><strong>Amazon</strong>: Amazon Web Services (AWS)</li>
+     * <li><strong>Pan</strong>: cloud disk</li>
+     * <li><strong>Map</strong>: map</li>
+     * <li><strong>Code</strong>: code hosting</li>
+     * <li><strong>SystemService</strong>: system service</li>
+     * <li><strong>Taobao</strong>: Taobao</li>
+     * <li><strong>Google</strong>: Google</li>
+     * <li><strong>ThirdPartyService</strong>: third-party service</li>
+     * <li><strong>FirstFlow</strong>: the first time</li>
+     * <li><strong>Downloader</strong>: malicious download</li>
+     * <li><strong>Alexa Top1M</strong>: popular website</li>
+     * <li><strong>Miner</strong>: mining pool</li>
+     * <li><strong>Intelligence</strong>: threat intelligence</li>
+     * <li><strong>DDoS</strong>: DDoS trojan</li>
+     * <li><strong>Ransomware</strong>: ransomware</li>
+     * <li><strong>Spyware</strong>: spyware</li>
+     * <li><strong>Rogue</strong>: rogue software</li>
+     * <li><strong>Botnet</strong>: botnet</li>
+     * <li><strong>Suspicious</strong>: suspicious website</li>
+     * <li><strong>C\&amp;C</strong>: command and control (C\&amp;C)</li>
+     * <li><strong>Gang</strong>: gang</li>
+     * <li><strong>CVE</strong>: Common Vulnerabilities and Exposures (CVE)</li>
+     * <li><strong>Backdoor</strong>: webshell</li>
+     * <li><strong>Phishing</strong>: phishing website</li>
+     * <li><strong>APT</strong>: advanced persistent threat (APT) attack</li>
+     * <li><strong>Supply Chain Attack</strong>: supply chain attack</li>
+     * <li><strong>Malicious software</strong>: malware</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>AliYun</p>
      */
     @NameInMap("TagIdNew")
     public String tagIdNew;

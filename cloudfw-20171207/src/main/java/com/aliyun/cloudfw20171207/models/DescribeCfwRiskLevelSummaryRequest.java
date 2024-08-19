@@ -6,25 +6,35 @@ import com.aliyun.tea.*;
 public class DescribeCfwRiskLevelSummaryRequest extends TeaModel {
     /**
      * <p>The instance type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EcsEIP</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
      * <p>The language of the content within the response.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   **zh** (default): Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The region ID of your Cloud Firewall.</p>
-     * <br>
-     * <p>>  For more information about Cloud Firewall supported regions, see [Supported regions](https://help.aliyun.com/document_detail/195657.html).</p>
+     * <blockquote>
+     * <p> For more information about Cloud Firewall supported regions, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;

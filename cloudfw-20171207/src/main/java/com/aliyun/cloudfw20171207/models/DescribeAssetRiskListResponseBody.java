@@ -12,12 +12,18 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>443C5781-1C03-5FCD-8EC5-FB9C0B9AC396</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -54,33 +60,46 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
     public static class DescribeAssetRiskListResponseBodyAssetList extends TeaModel {
         /**
          * <p>The IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39.108.XX.XX</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The IP version of the asset that is protected by Cloud Firewall.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   **4**: IPv4</p>
-         * <p>*   **6**: IPv6</p>
+         * <ul>
+         * <li><strong>4</strong>: IPv4</li>
+         * <li><strong>6</strong>: IPv6</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("IpVersion")
         public Long ipVersion;
 
         /**
          * <p>The reason for the risk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>other</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
          * <p>The risk level. Valid values:</p>
-         * <br>
-         * <p>*   **low**</p>
-         * <p>*   **middle**</p>
-         * <p>*   **high**</p>
+         * <ul>
+         * <li><strong>low</strong></li>
+         * <li><strong>middle</strong></li>
+         * <li><strong>high</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>low</p>
          */
         @NameInMap("RiskLevel")
         public String riskLevel;

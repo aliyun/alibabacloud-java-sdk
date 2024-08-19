@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateTrFirewallV2ResponseBody extends TeaModel {
     /**
      * <p>The instance ID of the VPC firewall.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vfw-tr-37e22bf0d9b34870****</p>
      */
     @NameInMap("FirewallId")
     public String firewallId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>822B9125-6E1A-551C-8EAF-6E7AE7444B00</p>
      */
     @NameInMap("RequestId")
     public String requestId;
