@@ -17,6 +17,9 @@ public class GetDocStructureResultRequest extends TeaModel {
     @NameInMap("RevealMarkdown")
     public Boolean revealMarkdown;
 
+    @NameInMap("UseUrlResponseBody")
+    public Boolean useUrlResponseBody;
+
     public static GetDocStructureResultRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDocStructureResultRequest self = new GetDocStructureResultRequest();
         return TeaModel.build(map, self);
@@ -44,6 +47,14 @@ public class GetDocStructureResultRequest extends TeaModel {
     }
     public Boolean getRevealMarkdown() {
         return this.revealMarkdown;
+    }
+
+    public GetDocStructureResultRequest setUseUrlResponseBody(Boolean useUrlResponseBody) {
+        this.useUrlResponseBody = useUrlResponseBody;
+        return this;
+    }
+    public Boolean getUseUrlResponseBody() {
+        return this.useUrlResponseBody;
     }
 
 }

@@ -31,6 +31,9 @@ public class SubmitDigitalDocStructureJobAdvanceRequest extends TeaModel {
     @NameInMap("RevealMarkdown")
     public Boolean revealMarkdown;
 
+    @NameInMap("UseUrlResponseBody")
+    public Boolean useUrlResponseBody;
+
     public static SubmitDigitalDocStructureJobAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitDigitalDocStructureJobAdvanceRequest self = new SubmitDigitalDocStructureJobAdvanceRequest();
         return TeaModel.build(map, self);
@@ -74,6 +77,14 @@ public class SubmitDigitalDocStructureJobAdvanceRequest extends TeaModel {
     }
     public Boolean getRevealMarkdown() {
         return this.revealMarkdown;
+    }
+
+    public SubmitDigitalDocStructureJobAdvanceRequest setUseUrlResponseBody(Boolean useUrlResponseBody) {
+        this.useUrlResponseBody = useUrlResponseBody;
+        return this;
+    }
+    public Boolean getUseUrlResponseBody() {
+        return this.useUrlResponseBody;
     }
 
 }

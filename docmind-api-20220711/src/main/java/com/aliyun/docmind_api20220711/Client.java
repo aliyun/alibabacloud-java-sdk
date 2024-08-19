@@ -152,6 +152,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>文档结构化流式接口</p>
+     * 
+     * @param request GetDocParserResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDocParserResultResponse
+     */
+    public GetDocParserResultResponse getDocParserResultWithOptions(GetDocParserResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.layoutNum)) {
+            query.put("LayoutNum", request.layoutNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.layoutStepSize)) {
+            query.put("LayoutStepSize", request.layoutStepSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDocParserResult"),
+            new TeaPair("version", "2022-07-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDocParserResultResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>文档结构化流式接口</p>
+     * 
+     * @param request GetDocParserResultRequest
+     * @return GetDocParserResultResponse
+     */
+    public GetDocParserResultResponse getDocParserResult(GetDocParserResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDocParserResultWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>文档智能解析结果查询</p>
      * 
      * @param request GetDocStructureResultRequest
@@ -171,6 +223,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.revealMarkdown)) {
             query.put("RevealMarkdown", request.revealMarkdown);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.useUrlResponseBody)) {
+            query.put("UseUrlResponseBody", request.useUrlResponseBody);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -420,6 +476,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetTableUnderstandingResultResponse getTableUnderstandingResult(GetTableUnderstandingResultRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getTableUnderstandingResultWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文档智能解析处理状态</p>
+     * 
+     * @param request QueryDocParserStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryDocParserStatusResponse
+     */
+    public QueryDocParserStatusResponse queryDocParserStatusWithOptions(QueryDocParserStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryDocParserStatus"),
+            new TeaPair("version", "2022-07-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDocParserStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文档智能解析处理状态</p>
+     * 
+     * @param request QueryDocParserStatusRequest
+     * @return QueryDocParserStatusResponse
+     */
+    public QueryDocParserStatusResponse queryDocParserStatus(QueryDocParserStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryDocParserStatusWithOptions(request, runtime);
     }
 
     /**
@@ -1209,6 +1309,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RevealMarkdown", request.revealMarkdown);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.useUrlResponseBody)) {
+            query.put("UseUrlResponseBody", request.useUrlResponseBody);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1311,6 +1415,137 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         SubmitDigitalDocStructureJobResponse submitDigitalDocStructureJobResp = this.submitDigitalDocStructureJobWithOptions(submitDigitalDocStructureJobReq, runtime);
         return submitDigitalDocStructureJobResp;
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>文档智能解析流式输出</p>
+     * 
+     * @param request SubmitDocParserJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitDocParserJobResponse
+     */
+    public SubmitDocParserJobResponse submitDocParserJobWithOptions(SubmitDocParserJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
+            query.put("FileName", request.fileName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileNameExtension)) {
+            query.put("FileNameExtension", request.fileNameExtension);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileUrl)) {
+            query.put("FileUrl", request.fileUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.formulaEnhancement)) {
+            query.put("FormulaEnhancement", request.formulaEnhancement);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitDocParserJob"),
+            new TeaPair("version", "2022-07-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitDocParserJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>文档智能解析流式输出</p>
+     * 
+     * @param request SubmitDocParserJobRequest
+     * @return SubmitDocParserJobResponse
+     */
+    public SubmitDocParserJobResponse submitDocParserJob(SubmitDocParserJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitDocParserJobWithOptions(request, runtime);
+    }
+
+    public SubmitDocParserJobResponse submitDocParserJobAdvance(SubmitDocParserJobAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        // Step 0: init client
+        String accessKeyId = _credential.getAccessKeyId();
+        String accessKeySecret = _credential.getAccessKeySecret();
+        String securityToken = _credential.getSecurityToken();
+        String credentialType = _credential.getType();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
+        if (com.aliyun.teautil.Common.isUnset(credentialType)) {
+            credentialType = "access_key";
+        }
+
+        com.aliyun.teaopenapi.models.Config authConfig = com.aliyun.teaopenapi.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
+            new TeaPair("accessKeySecret", accessKeySecret),
+            new TeaPair("securityToken", securityToken),
+            new TeaPair("type", credentialType),
+            new TeaPair("endpoint", openPlatformEndpoint),
+            new TeaPair("protocol", _protocol),
+            new TeaPair("regionId", _regionId)
+        ));
+        com.aliyun.openplatform20191219.Client authClient = new com.aliyun.openplatform20191219.Client(authConfig);
+        com.aliyun.openplatform20191219.models.AuthorizeFileUploadRequest authRequest = com.aliyun.openplatform20191219.models.AuthorizeFileUploadRequest.build(TeaConverter.buildMap(
+            new TeaPair("product", "docmind-api"),
+            new TeaPair("regionId", _regionId)
+        ));
+        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
+        com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
+            new TeaPair("accessKeySecret", accessKeySecret),
+            new TeaPair("type", "access_key"),
+            new TeaPair("protocol", _protocol),
+            new TeaPair("regionId", _regionId)
+        ));
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
+        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
+        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
+        com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
+        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
+        com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
+        SubmitDocParserJobRequest submitDocParserJobReq = new SubmitDocParserJobRequest();
+        com.aliyun.openapiutil.Client.convert(request, submitDocParserJobReq);
+        if (!com.aliyun.teautil.Common.isUnset(request.fileUrlObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.body.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.body.endpoint, authResponse.body.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.body.objectKey),
+                new TeaPair("content", request.fileUrlObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.body.accessKeyId),
+                new TeaPair("policy", authResponse.body.encodedPolicy),
+                new TeaPair("signature", authResponse.body.signature),
+                new TeaPair("key", authResponse.body.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.body.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            submitDocParserJobReq.fileUrl = "http://" + authResponse.body.bucket + "." + authResponse.body.endpoint + "/" + authResponse.body.objectKey + "";
+        }
+
+        SubmitDocParserJobResponse submitDocParserJobResp = this.submitDocParserJobWithOptions(submitDocParserJobReq, runtime);
+        return submitDocParserJobResp;
     }
 
     /**
