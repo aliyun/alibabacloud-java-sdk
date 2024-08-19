@@ -4659,8 +4659,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You cannot create a failover test in the following scenarios:</p>
+     * <ul>
+     * <li>You have created a failover test in the region and its type is StartNow.</li>
+     * <li>The Express Connect circuit or hosted connection has pending orders or overdue payments.</li>
+     * <li>A failover test is already performed on the Express Connect circuit or hosted connection.</li>
+     * <li>More than one hosted connection is created over the Express Connect circuit.</li>
+     * <li>More than one cross-account VBR is created on the Express Connect circuit.</li>
+     * <li>No VBR is associated with the hosted connection.</li>
+     * <li>The VLAN ID of the hosted connection is set to 0.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建故障演练任务</p>
+     * <p>Creates a failover test.</p>
      * 
      * @param request CreateFailoverTestJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4739,8 +4751,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You cannot create a failover test in the following scenarios:</p>
+     * <ul>
+     * <li>You have created a failover test in the region and its type is StartNow.</li>
+     * <li>The Express Connect circuit or hosted connection has pending orders or overdue payments.</li>
+     * <li>A failover test is already performed on the Express Connect circuit or hosted connection.</li>
+     * <li>More than one hosted connection is created over the Express Connect circuit.</li>
+     * <li>More than one cross-account VBR is created on the Express Connect circuit.</li>
+     * <li>No VBR is associated with the hosted connection.</li>
+     * <li>The VLAN ID of the hosted connection is set to 0.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建故障演练任务</p>
+     * <p>Creates a failover test.</p>
      * 
      * @param request CreateFailoverTestJobRequest
      * @return CreateFailoverTestJobResponse
@@ -6729,7 +6753,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates an order for resource usage fees.</p>
+     * <p>Creates an order for resource occupation of an Express Connect circuit.</p>
      * 
      * @param request CreatePhysicalConnectionOccupancyOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6806,7 +6830,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates an order for resource usage fees.</p>
+     * <p>Creates an order for resource occupation of an Express Connect circuit.</p>
      * 
      * @param request CreatePhysicalConnectionOccupancyOrderRequest
      * @return CreatePhysicalConnectionOccupancyOrderResponse
@@ -24948,6 +24972,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询路由发布情况</p>
+     * 
+     * @param request ListVpcPublishedRouteEntriesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListVpcPublishedRouteEntriesResponse
+     */
+    public ListVpcPublishedRouteEntriesResponse listVpcPublishedRouteEntriesWithOptions(ListVpcPublishedRouteEntriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationCidrBlock)) {
+            query.put("DestinationCidrBlock", request.destinationCidrBlock);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeTableId)) {
+            query.put("RouteTableId", request.routeTableId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetInstanceId)) {
+            query.put("TargetInstanceId", request.targetInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetType)) {
+            query.put("TargetType", request.targetType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListVpcPublishedRouteEntries"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListVpcPublishedRouteEntriesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询路由发布情况</p>
+     * 
+     * @param request ListVpcPublishedRouteEntriesRequest
+     * @return ListVpcPublishedRouteEntriesResponse
+     */
+    public ListVpcPublishedRouteEntriesResponse listVpcPublishedRouteEntries(ListVpcPublishedRouteEntriesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listVpcPublishedRouteEntriesWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>When you call <strong>ListVpnCertificateAssociations</strong>, take note of the following information:</p>
      * <ul>
@@ -30724,6 +30836,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>发布VPC路由</p>
+     * 
+     * @param request PublishVpcRouteEntriesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PublishVpcRouteEntriesResponse
+     */
+    public PublishVpcRouteEntriesResponse publishVpcRouteEntriesWithOptions(PublishVpcRouteEntriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeEntries)) {
+            query.put("RouteEntries", request.routeEntries);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetInstanceId)) {
+            query.put("TargetInstanceId", request.targetInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetType)) {
+            query.put("TargetType", request.targetType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PublishVpcRouteEntries"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PublishVpcRouteEntriesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>发布VPC路由</p>
+     * 
+     * @param request PublishVpcRouteEntriesRequest
+     * @return PublishVpcRouteEntriesResponse
+     */
+    public PublishVpcRouteEntriesResponse publishVpcRouteEntries(PublishVpcRouteEntriesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.publishVpcRouteEntriesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Advertises a VPN route to a VPC.</p>
      * 
      * @param request PublishVpnRouteEntryRequest
@@ -34774,5 +34966,85 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public VpcDescribeVpcNatGatewayNetworkInterfaceQuotaResponse vpcDescribeVpcNatGatewayNetworkInterfaceQuota(VpcDescribeVpcNatGatewayNetworkInterfaceQuotaRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.vpcDescribeVpcNatGatewayNetworkInterfaceQuotaWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>撤回VPC已发布路由</p>
+     * 
+     * @param request WithdrawVpcPublishedRouteEntriesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return WithdrawVpcPublishedRouteEntriesResponse
+     */
+    public WithdrawVpcPublishedRouteEntriesResponse withdrawVpcPublishedRouteEntriesWithOptions(WithdrawVpcPublishedRouteEntriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeEntries)) {
+            query.put("RouteEntries", request.routeEntries);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetInstanceId)) {
+            query.put("TargetInstanceId", request.targetInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetType)) {
+            query.put("TargetType", request.targetType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "WithdrawVpcPublishedRouteEntries"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new WithdrawVpcPublishedRouteEntriesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>撤回VPC已发布路由</p>
+     * 
+     * @param request WithdrawVpcPublishedRouteEntriesRequest
+     * @return WithdrawVpcPublishedRouteEntriesResponse
+     */
+    public WithdrawVpcPublishedRouteEntriesResponse withdrawVpcPublishedRouteEntries(WithdrawVpcPublishedRouteEntriesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.withdrawVpcPublishedRouteEntriesWithOptions(request, runtime);
     }
 }
