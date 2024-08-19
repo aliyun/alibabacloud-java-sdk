@@ -32,6 +32,9 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     @NameInMap("LocalDrive")
     public String localDrive;
 
+    @NameInMap("NetRedirectPolicy")
+    public ModifyPolicyGroupRequestNetRedirectPolicy netRedirectPolicy;
+
     /**
      * <strong>example:</strong>
      * <p>pg-4bi18ebi9tfjh****</p>
@@ -93,6 +96,14 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         return this.localDrive;
     }
 
+    public ModifyPolicyGroupRequest setNetRedirectPolicy(ModifyPolicyGroupRequestNetRedirectPolicy netRedirectPolicy) {
+        this.netRedirectPolicy = netRedirectPolicy;
+        return this;
+    }
+    public ModifyPolicyGroupRequestNetRedirectPolicy getNetRedirectPolicy() {
+        return this.netRedirectPolicy;
+    }
+
     public ModifyPolicyGroupRequest setPolicyGroupId(String policyGroupId) {
         this.policyGroupId = policyGroupId;
         return this;
@@ -123,6 +134,77 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     }
     public Integer getResolutionWidth() {
         return this.resolutionWidth;
+    }
+
+    public static class ModifyPolicyGroupRequestNetRedirectPolicyNetRedirectRule extends TeaModel {
+        @NameInMap("Policy")
+        public String policy;
+
+        @NameInMap("RuleType")
+        public String ruleType;
+
+        @NameInMap("Target")
+        public String target;
+
+        public static ModifyPolicyGroupRequestNetRedirectPolicyNetRedirectRule build(java.util.Map<String, ?> map) throws Exception {
+            ModifyPolicyGroupRequestNetRedirectPolicyNetRedirectRule self = new ModifyPolicyGroupRequestNetRedirectPolicyNetRedirectRule();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyPolicyGroupRequestNetRedirectPolicyNetRedirectRule setPolicy(String policy) {
+            this.policy = policy;
+            return this;
+        }
+        public String getPolicy() {
+            return this.policy;
+        }
+
+        public ModifyPolicyGroupRequestNetRedirectPolicyNetRedirectRule setRuleType(String ruleType) {
+            this.ruleType = ruleType;
+            return this;
+        }
+        public String getRuleType() {
+            return this.ruleType;
+        }
+
+        public ModifyPolicyGroupRequestNetRedirectPolicyNetRedirectRule setTarget(String target) {
+            this.target = target;
+            return this;
+        }
+        public String getTarget() {
+            return this.target;
+        }
+
+    }
+
+    public static class ModifyPolicyGroupRequestNetRedirectPolicy extends TeaModel {
+        @NameInMap("NetRedirect")
+        public String netRedirect;
+
+        @NameInMap("NetRedirectRule")
+        public java.util.List<ModifyPolicyGroupRequestNetRedirectPolicyNetRedirectRule> netRedirectRule;
+
+        public static ModifyPolicyGroupRequestNetRedirectPolicy build(java.util.Map<String, ?> map) throws Exception {
+            ModifyPolicyGroupRequestNetRedirectPolicy self = new ModifyPolicyGroupRequestNetRedirectPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyPolicyGroupRequestNetRedirectPolicy setNetRedirect(String netRedirect) {
+            this.netRedirect = netRedirect;
+            return this;
+        }
+        public String getNetRedirect() {
+            return this.netRedirect;
+        }
+
+        public ModifyPolicyGroupRequestNetRedirectPolicy setNetRedirectRule(java.util.List<ModifyPolicyGroupRequestNetRedirectPolicyNetRedirectRule> netRedirectRule) {
+            this.netRedirectRule = netRedirectRule;
+            return this;
+        }
+        public java.util.List<ModifyPolicyGroupRequestNetRedirectPolicyNetRedirectRule> getNetRedirectRule() {
+            return this.netRedirectRule;
+        }
+
     }
 
 }

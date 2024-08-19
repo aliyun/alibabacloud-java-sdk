@@ -4,6 +4,9 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class CreateCustomImageResponseBody extends TeaModel {
+    @NameInMap("ImageId")
+    public String imageId;
+
     /**
      * <strong>example:</strong>
      * <p>20393E53-8FF1-524C-B494-B478A5369733</p>
@@ -14,6 +17,14 @@ public class CreateCustomImageResponseBody extends TeaModel {
     public static CreateCustomImageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateCustomImageResponseBody self = new CreateCustomImageResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateCustomImageResponseBody setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
     }
 
     public CreateCustomImageResponseBody setRequestId(String requestId) {

@@ -10,6 +10,9 @@ public class InstallAppRequest extends TeaModel {
     @NameInMap("InstanceGroupIdList")
     public java.util.List<String> instanceGroupIdList;
 
+    @NameInMap("InstanceIdList")
+    public java.util.List<String> instanceIdList;
+
     public static InstallAppRequest build(java.util.Map<String, ?> map) throws Exception {
         InstallAppRequest self = new InstallAppRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class InstallAppRequest extends TeaModel {
     }
     public java.util.List<String> getInstanceGroupIdList() {
         return this.instanceGroupIdList;
+    }
+
+    public InstallAppRequest setInstanceIdList(java.util.List<String> instanceIdList) {
+        this.instanceIdList = instanceIdList;
+        return this;
+    }
+    public java.util.List<String> getInstanceIdList() {
+        return this.instanceIdList;
     }
 
 }

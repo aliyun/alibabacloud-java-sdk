@@ -11,17 +11,12 @@ public class RecoveryFileRequest extends TeaModel {
     public java.util.List<String> androidInstanceIdList;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>bf-azhps4rdyi2th****</p>
      */
     @NameInMap("BackupFileId")
     public String backupFileId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("BackupFilePath")
     public String backupFilePath;
 

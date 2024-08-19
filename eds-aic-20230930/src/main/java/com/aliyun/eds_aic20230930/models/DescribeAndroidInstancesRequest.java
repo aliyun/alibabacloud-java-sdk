@@ -21,6 +21,9 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     @NameInMap("InstanceGroupId")
     public String instanceGroupId;
 
+    @NameInMap("InstanceGroupIds")
+    public java.util.List<String> instanceGroupIds;
+
     /**
      * <strong>example:</strong>
      * <p>kp-5hh431emkpuoi****</p>
@@ -83,6 +86,14 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     }
     public String getInstanceGroupId() {
         return this.instanceGroupId;
+    }
+
+    public DescribeAndroidInstancesRequest setInstanceGroupIds(java.util.List<String> instanceGroupIds) {
+        this.instanceGroupIds = instanceGroupIds;
+        return this;
+    }
+    public java.util.List<String> getInstanceGroupIds() {
+        return this.instanceGroupIds;
     }
 
     public DescribeAndroidInstancesRequest setKeyPairId(String keyPairId) {

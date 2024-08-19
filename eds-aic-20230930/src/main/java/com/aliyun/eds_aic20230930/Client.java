@@ -272,6 +272,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ChargeType", request.chargeType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.gpuAcceleration)) {
             query.put("GpuAcceleration", request.gpuAcceleration);
         }
@@ -418,6 +422,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateCustomImageResponse createCustomImageWithOptions(CreateCustomImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("Description", request.description);
         }
@@ -507,12 +515,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>创建策略</p>
      * 
-     * @param request CreatePolicyGroupRequest
+     * @param tmpReq CreatePolicyGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreatePolicyGroupResponse
      */
-    public CreatePolicyGroupResponse createPolicyGroupWithOptions(CreatePolicyGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreatePolicyGroupResponse createPolicyGroupWithOptions(CreatePolicyGroupRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreatePolicyGroupShrinkRequest request = new CreatePolicyGroupShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.netRedirectPolicy)) {
+            request.netRedirectPolicyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.netRedirectPolicy, "NetRedirectPolicy", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.cameraRedirect)) {
             body.put("CameraRedirect", request.cameraRedirect);
@@ -528,6 +542,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.localDrive)) {
             body.put("LocalDrive", request.localDrive);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.netRedirectPolicyShrink)) {
+            body.put("NetRedirectPolicy", request.netRedirectPolicyShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.policyGroupName)) {
@@ -892,6 +910,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceGroupId)) {
             query.put("InstanceGroupId", request.instanceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceGroupIds)) {
+            query.put("InstanceGroupIds", request.instanceGroupIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.keyPairId)) {
@@ -1720,6 +1742,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceGroupIdList", request.instanceGroupIdList);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIdList)) {
+            query.put("InstanceIdList", request.instanceIdList);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -2013,12 +2039,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>修改policy</p>
      * 
-     * @param request ModifyPolicyGroupRequest
+     * @param tmpReq ModifyPolicyGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyPolicyGroupResponse
      */
-    public ModifyPolicyGroupResponse modifyPolicyGroupWithOptions(ModifyPolicyGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ModifyPolicyGroupResponse modifyPolicyGroupWithOptions(ModifyPolicyGroupRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyPolicyGroupShrinkRequest request = new ModifyPolicyGroupShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.netRedirectPolicy)) {
+            request.netRedirectPolicyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.netRedirectPolicy, "NetRedirectPolicy", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.cameraRedirect)) {
             body.put("CameraRedirect", request.cameraRedirect);
@@ -2034,6 +2066,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.localDrive)) {
             body.put("LocalDrive", request.localDrive);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.netRedirectPolicyShrink)) {
+            body.put("NetRedirectPolicy", request.netRedirectPolicyShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.policyGroupId)) {
@@ -2130,6 +2166,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>文件恢复</p>
+     * 
      * @param request RecoveryFileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecoveryFileResponse
@@ -2175,6 +2214,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>文件恢复</p>
+     * 
      * @param request RecoveryFileRequest
      * @return RecoveryFileResponse
      */
