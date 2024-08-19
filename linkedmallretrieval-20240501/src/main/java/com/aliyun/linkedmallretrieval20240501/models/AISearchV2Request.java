@@ -4,6 +4,9 @@ package com.aliyun.linkedmallretrieval20240501.models;
 import com.aliyun.tea.*;
 
 public class AISearchV2Request extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("query")
     public String query;
 
@@ -13,6 +16,9 @@ public class AISearchV2Request extends TeaModel {
      */
     @NameInMap("sessionId")
     public String sessionId;
+
+    @NameInMap("timeRange")
+    public String timeRange;
 
     public static AISearchV2Request build(java.util.Map<String, ?> map) throws Exception {
         AISearchV2Request self = new AISearchV2Request();
@@ -33,6 +39,14 @@ public class AISearchV2Request extends TeaModel {
     }
     public String getSessionId() {
         return this.sessionId;
+    }
+
+    public AISearchV2Request setTimeRange(String timeRange) {
+        this.timeRange = timeRange;
+        return this;
+    }
+    public String getTimeRange() {
+        return this.timeRange;
     }
 
 }
