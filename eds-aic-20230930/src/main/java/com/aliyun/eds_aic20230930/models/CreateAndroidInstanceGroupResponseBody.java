@@ -7,6 +7,9 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
     @NameInMap("InstanceGroupIds")
     public java.util.List<String> instanceGroupIds;
 
+    @NameInMap("InstanceGroupInfos")
+    public java.util.List<CreateAndroidInstanceGroupResponseBodyInstanceGroupInfos> instanceGroupInfos;
+
     /**
      * <strong>example:</strong>
      * <p>22365781890****</p>
@@ -34,6 +37,14 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
         return this.instanceGroupIds;
     }
 
+    public CreateAndroidInstanceGroupResponseBody setInstanceGroupInfos(java.util.List<CreateAndroidInstanceGroupResponseBodyInstanceGroupInfos> instanceGroupInfos) {
+        this.instanceGroupInfos = instanceGroupInfos;
+        return this;
+    }
+    public java.util.List<CreateAndroidInstanceGroupResponseBodyInstanceGroupInfos> getInstanceGroupInfos() {
+        return this.instanceGroupInfos;
+    }
+
     public CreateAndroidInstanceGroupResponseBody setOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -48,6 +59,36 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public static class CreateAndroidInstanceGroupResponseBodyInstanceGroupInfos extends TeaModel {
+        @NameInMap("InstanceGroupId")
+        public String instanceGroupId;
+
+        @NameInMap("InstanceIds")
+        public java.util.List<String> instanceIds;
+
+        public static CreateAndroidInstanceGroupResponseBodyInstanceGroupInfos build(java.util.Map<String, ?> map) throws Exception {
+            CreateAndroidInstanceGroupResponseBodyInstanceGroupInfos self = new CreateAndroidInstanceGroupResponseBodyInstanceGroupInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAndroidInstanceGroupResponseBodyInstanceGroupInfos setInstanceGroupId(String instanceGroupId) {
+            this.instanceGroupId = instanceGroupId;
+            return this;
+        }
+        public String getInstanceGroupId() {
+            return this.instanceGroupId;
+        }
+
+        public CreateAndroidInstanceGroupResponseBodyInstanceGroupInfos setInstanceIds(java.util.List<String> instanceIds) {
+            this.instanceIds = instanceIds;
+            return this;
+        }
+        public java.util.List<String> getInstanceIds() {
+            return this.instanceIds;
+        }
+
     }
 
 }

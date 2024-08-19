@@ -65,6 +65,77 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicyNetRedirectRule extends TeaModel {
+        @NameInMap("Policy")
+        public String policy;
+
+        @NameInMap("RuleType")
+        public String ruleType;
+
+        @NameInMap("Target")
+        public String target;
+
+        public static ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicyNetRedirectRule build(java.util.Map<String, ?> map) throws Exception {
+            ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicyNetRedirectRule self = new ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicyNetRedirectRule();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicyNetRedirectRule setPolicy(String policy) {
+            this.policy = policy;
+            return this;
+        }
+        public String getPolicy() {
+            return this.policy;
+        }
+
+        public ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicyNetRedirectRule setRuleType(String ruleType) {
+            this.ruleType = ruleType;
+            return this;
+        }
+        public String getRuleType() {
+            return this.ruleType;
+        }
+
+        public ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicyNetRedirectRule setTarget(String target) {
+            this.target = target;
+            return this;
+        }
+        public String getTarget() {
+            return this.target;
+        }
+
+    }
+
+    public static class ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicy extends TeaModel {
+        @NameInMap("NetRedirect")
+        public String netRedirect;
+
+        @NameInMap("NetRedirectRule")
+        public java.util.List<ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicyNetRedirectRule> netRedirectRule;
+
+        public static ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicy build(java.util.Map<String, ?> map) throws Exception {
+            ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicy self = new ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicy setNetRedirect(String netRedirect) {
+            this.netRedirect = netRedirect;
+            return this;
+        }
+        public String getNetRedirect() {
+            return this.netRedirect;
+        }
+
+        public ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicy setNetRedirectRule(java.util.List<ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicyNetRedirectRule> netRedirectRule) {
+            this.netRedirectRule = netRedirectRule;
+            return this;
+        }
+        public java.util.List<ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicyNetRedirectRule> getNetRedirectRule() {
+            return this.netRedirectRule;
+        }
+
+    }
+
     public static class ListPolicyGroupsResponseBodyPolicyGroupModel extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -100,6 +171,9 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
          */
         @NameInMap("LocalDrive")
         public String localDrive;
+
+        @NameInMap("NetRedirectPolicy")
+        public ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicy netRedirectPolicy;
 
         /**
          * <strong>example:</strong>
@@ -168,6 +242,14 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         }
         public String getLocalDrive() {
             return this.localDrive;
+        }
+
+        public ListPolicyGroupsResponseBodyPolicyGroupModel setNetRedirectPolicy(ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicy netRedirectPolicy) {
+            this.netRedirectPolicy = netRedirectPolicy;
+            return this;
+        }
+        public ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicy getNetRedirectPolicy() {
+            return this.netRedirectPolicy;
         }
 
         public ListPolicyGroupsResponseBodyPolicyGroupModel setPolicyGroupId(String policyGroupId) {
