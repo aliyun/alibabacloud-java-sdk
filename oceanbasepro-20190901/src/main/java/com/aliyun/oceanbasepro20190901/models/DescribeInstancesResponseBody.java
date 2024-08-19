@@ -789,6 +789,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("Mem")
         public Long mem;
 
+        @NameInMap("ObRpmVersion")
+        public String obRpmVersion;
+
         /**
          * <p>The billing method for the OceanBase cluster. Valid values:  </p>
          * <ul>
@@ -1095,6 +1098,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public Long getMem() {
             return this.mem;
+        }
+
+        public DescribeInstancesResponseBodyInstances setObRpmVersion(String obRpmVersion) {
+            this.obRpmVersion = obRpmVersion;
+            return this;
+        }
+        public String getObRpmVersion() {
+            return this.obRpmVersion;
         }
 
         public DescribeInstancesResponseBodyInstances setPayType(String payType) {
