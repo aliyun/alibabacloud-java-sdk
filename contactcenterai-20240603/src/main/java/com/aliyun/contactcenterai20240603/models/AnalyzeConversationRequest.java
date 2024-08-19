@@ -10,8 +10,8 @@ public class AnalyzeConversationRequest extends TeaModel {
     @NameInMap("dialogue")
     public AnalyzeConversationRequestDialogue dialogue;
 
-    @NameInMap("exampleList")
-    public java.util.List<AnalyzeConversationRequestExampleList> exampleList;
+    @NameInMap("examples")
+    public java.util.List<AnalyzeConversationRequestExamples> examples;
 
     @NameInMap("fields")
     public java.util.List<AnalyzeConversationRequestFields> fields;
@@ -57,12 +57,12 @@ public class AnalyzeConversationRequest extends TeaModel {
         return this.dialogue;
     }
 
-    public AnalyzeConversationRequest setExampleList(java.util.List<AnalyzeConversationRequestExampleList> exampleList) {
-        this.exampleList = exampleList;
+    public AnalyzeConversationRequest setExamples(java.util.List<AnalyzeConversationRequestExamples> examples) {
+        this.examples = examples;
         return this;
     }
-    public java.util.List<AnalyzeConversationRequestExampleList> getExampleList() {
-        return this.exampleList;
+    public java.util.List<AnalyzeConversationRequestExamples> getExamples() {
+        return this.examples;
     }
 
     public AnalyzeConversationRequest setFields(java.util.List<AnalyzeConversationRequestFields> fields) {
@@ -189,19 +189,12 @@ public class AnalyzeConversationRequest extends TeaModel {
 
     }
 
-    public static class AnalyzeConversationRequestExampleListSentenceList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>chat-01</p>
-         */
+    public static class AnalyzeConversationRequestExamplesSentences extends TeaModel {
         @NameInMap("chatId")
         public String chatId;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>user</p>
          */
         @NameInMap("role")
         public String role;
@@ -212,12 +205,12 @@ public class AnalyzeConversationRequest extends TeaModel {
         @NameInMap("text")
         public String text;
 
-        public static AnalyzeConversationRequestExampleListSentenceList build(java.util.Map<String, ?> map) throws Exception {
-            AnalyzeConversationRequestExampleListSentenceList self = new AnalyzeConversationRequestExampleListSentenceList();
+        public static AnalyzeConversationRequestExamplesSentences build(java.util.Map<String, ?> map) throws Exception {
+            AnalyzeConversationRequestExamplesSentences self = new AnalyzeConversationRequestExamplesSentences();
             return TeaModel.build(map, self);
         }
 
-        public AnalyzeConversationRequestExampleListSentenceList setChatId(String chatId) {
+        public AnalyzeConversationRequestExamplesSentences setChatId(String chatId) {
             this.chatId = chatId;
             return this;
         }
@@ -225,7 +218,7 @@ public class AnalyzeConversationRequest extends TeaModel {
             return this.chatId;
         }
 
-        public AnalyzeConversationRequestExampleListSentenceList setRole(String role) {
+        public AnalyzeConversationRequestExamplesSentences setRole(String role) {
             this.role = role;
             return this;
         }
@@ -233,7 +226,7 @@ public class AnalyzeConversationRequest extends TeaModel {
             return this.role;
         }
 
-        public AnalyzeConversationRequestExampleListSentenceList setText(String text) {
+        public AnalyzeConversationRequestExamplesSentences setText(String text) {
             this.text = text;
             return this;
         }
@@ -243,7 +236,7 @@ public class AnalyzeConversationRequest extends TeaModel {
 
     }
 
-    public static class AnalyzeConversationRequestExampleList extends TeaModel {
+    public static class AnalyzeConversationRequestExamples extends TeaModel {
         /**
          * <p>This parameter is required.</p>
          */
@@ -253,15 +246,15 @@ public class AnalyzeConversationRequest extends TeaModel {
         /**
          * <p>This parameter is required.</p>
          */
-        @NameInMap("sentenceList")
-        public java.util.List<AnalyzeConversationRequestExampleListSentenceList> sentenceList;
+        @NameInMap("sentences")
+        public java.util.List<AnalyzeConversationRequestExamplesSentences> sentences;
 
-        public static AnalyzeConversationRequestExampleList build(java.util.Map<String, ?> map) throws Exception {
-            AnalyzeConversationRequestExampleList self = new AnalyzeConversationRequestExampleList();
+        public static AnalyzeConversationRequestExamples build(java.util.Map<String, ?> map) throws Exception {
+            AnalyzeConversationRequestExamples self = new AnalyzeConversationRequestExamples();
             return TeaModel.build(map, self);
         }
 
-        public AnalyzeConversationRequestExampleList setOutput(String output) {
+        public AnalyzeConversationRequestExamples setOutput(String output) {
             this.output = output;
             return this;
         }
@@ -269,12 +262,12 @@ public class AnalyzeConversationRequest extends TeaModel {
             return this.output;
         }
 
-        public AnalyzeConversationRequestExampleList setSentenceList(java.util.List<AnalyzeConversationRequestExampleListSentenceList> sentenceList) {
-            this.sentenceList = sentenceList;
+        public AnalyzeConversationRequestExamples setSentences(java.util.List<AnalyzeConversationRequestExamplesSentences> sentences) {
+            this.sentences = sentences;
             return this;
         }
-        public java.util.List<AnalyzeConversationRequestExampleListSentenceList> getSentenceList() {
-            return this.sentenceList;
+        public java.util.List<AnalyzeConversationRequestExamplesSentences> getSentences() {
+            return this.sentences;
         }
 
     }
