@@ -2288,6 +2288,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>DescribeBackupEncryptedString</p>
+     * 
+     * @param request DescribeBackupEncryptedStringRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeBackupEncryptedStringResponse
+     */
+    public DescribeBackupEncryptedStringResponse describeBackupEncryptedStringWithOptions(DescribeBackupEncryptedStringRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeBackupEncryptedString"),
+            new TeaPair("version", "2019-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeBackupEncryptedStringResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DescribeBackupEncryptedString</p>
+     * 
+     * @param request DescribeBackupEncryptedStringRequest
+     * @return DescribeBackupEncryptedStringResponse
+     */
+    public DescribeBackupEncryptedStringResponse describeBackupEncryptedString(DescribeBackupEncryptedStringRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeBackupEncryptedStringWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>You can call this operation to query the link for downloading a backup set of OceanBase Database.</p>
      * 
      * @param request DescribeBackupSetDownloadLinkRequest
@@ -2708,6 +2756,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeInstanceSecurityConfigsResponse describeInstanceSecurityConfigs(DescribeInstanceSecurityConfigsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeInstanceSecurityConfigsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>工作台首页获取用户集群数汇总。</p>
+     * 
+     * @param request DescribeInstanceSummaryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeInstanceSummaryResponse
+     */
+    public DescribeInstanceSummaryResponse describeInstanceSummaryWithOptions(DescribeInstanceSummaryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeInstanceSummary"),
+            new TeaPair("version", "2019-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInstanceSummaryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>工作台首页获取用户集群数汇总。</p>
+     * 
+     * @param request DescribeInstanceSummaryRequest
+     * @return DescribeInstanceSummaryResponse
+     */
+    public DescribeInstanceSummaryResponse describeInstanceSummary(DescribeInstanceSummaryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeInstanceSummaryWithOptions(request, runtime);
     }
 
     /**
@@ -4170,6 +4266,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取可恢复租户</p>
+     * 
+     * @param request DescribeRestorableTenantsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRestorableTenantsResponse
+     */
+    public DescribeRestorableTenantsResponse describeRestorableTenantsWithOptions(DescribeRestorableTenantsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isOnline)) {
+            body.put("IsOnline", request.isOnline);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isRemote)) {
+            body.put("IsRemote", request.isRemote);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.method)) {
+            body.put("Method", request.method);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.restoreMode)) {
+            body.put("RestoreMode", request.restoreMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.restoreObjectType)) {
+            body.put("RestoreObjectType", request.restoreObjectType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.setId)) {
+            body.put("SetId", request.setId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeRestorableTenants"),
+            new TeaPair("version", "2019-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRestorableTenantsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取可恢复租户</p>
+     * 
+     * @param request DescribeRestorableTenantsRequest
+     * @return DescribeRestorableTenantsResponse
+     */
+    public DescribeRestorableTenantsResponse describeRestorableTenants(DescribeRestorableTenantsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeRestorableTenantsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>The username.</p>
      * 
      * @param request DescribeSQLDetailsRequest
@@ -4796,6 +4960,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeSlowSQLListResponse describeSlowSQLList(DescribeSlowSQLListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSlowSQLListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DescribeStandbyCreateMode</p>
+     * 
+     * @param request DescribeStandbyCreateModeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeStandbyCreateModeResponse
+     */
+    public DescribeStandbyCreateModeResponse describeStandbyCreateModeWithOptions(DescribeStandbyCreateModeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeStandbyCreateMode"),
+            new TeaPair("version", "2019-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeStandbyCreateModeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DescribeStandbyCreateMode</p>
+     * 
+     * @param request DescribeStandbyCreateModeRequest
+     * @return DescribeStandbyCreateModeResponse
+     */
+    public DescribeStandbyCreateModeResponse describeStandbyCreateMode(DescribeStandbyCreateModeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeStandbyCreateModeWithOptions(request, runtime);
     }
 
     /**
