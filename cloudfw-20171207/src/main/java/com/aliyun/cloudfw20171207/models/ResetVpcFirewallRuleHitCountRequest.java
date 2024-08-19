@@ -6,19 +6,24 @@ import com.aliyun.tea.*;
 public class ResetVpcFirewallRuleHitCountRequest extends TeaModel {
     /**
      * <p>The ID of the access control policy.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>00281255-d220-4db1-8f4f-c4df221a****</p>
      */
     @NameInMap("AclUuid")
     public String aclUuid;
 
     /**
      * <p>The natural language of the request and response. </p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>- **zh**: Chinese (default)</p>
-     * <p>- **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese (default)</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;

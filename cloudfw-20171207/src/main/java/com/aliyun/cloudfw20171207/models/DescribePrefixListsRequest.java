@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribePrefixListsRequest extends TeaModel {
     /**
      * <p>The region ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shenzhen</p>
      */
     @NameInMap("RegionNo")
     public String regionNo;
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>47.100.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

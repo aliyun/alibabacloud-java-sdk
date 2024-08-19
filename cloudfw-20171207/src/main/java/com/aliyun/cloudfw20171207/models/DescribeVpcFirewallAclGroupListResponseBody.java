@@ -12,12 +12,18 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of the policy groups that are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -54,45 +60,62 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
     public static class DescribeVpcFirewallAclGroupListResponseBodyAclGroupList extends TeaModel {
         /**
          * <p>The ID of the policy group.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   If the VPC firewall is used to protect a Cloud Enterprise Network (CEN) instance, the value of this parameter is the ID of the CEN instance.</p>
-         * <br>
-         * <p>    Example: cen-ervw0g12b5jbw\\*\\*\\*\\*</p>
-         * <br>
-         * <p>*   If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the instance ID of the VPC firewall.</p>
-         * <br>
-         * <p>    Example: vfw-a42bbb7b887148c9\\*\\*\\*\\*</p>
+         * <ul>
+         * <li><p>If the VPC firewall is used to protect a Cloud Enterprise Network (CEN) instance, the value of this parameter is the ID of the CEN instance.</p>
+         * <p>Example: cen-ervw0g12b5jbw\<em>\</em>\<em>\</em></p>
+         * </li>
+         * <li><p>If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the instance ID of the VPC firewall.</p>
+         * <p>Example: vfw-a42bbb7b887148c9\<em>\</em>\<em>\</em></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>vfw-a42bbb7b887148c9****</p>
          */
         @NameInMap("AclGroupId")
         public String aclGroupId;
 
         /**
          * <p>The name of the policy group. Valid values:</p>
-         * <br>
-         * <p>*   If the VPC firewall is used to protect a CEN instance, the value of this parameter is the name of the CEN instance.</p>
-         * <p>*   If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the instance name of the VPC firewall.</p>
+         * <ul>
+         * <li>If the VPC firewall is used to protect a CEN instance, the value of this parameter is the name of the CEN instance.</li>
+         * <li>If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the instance name of the VPC firewall.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>group_test</p>
          */
         @NameInMap("AclGroupName")
         public String aclGroupName;
 
         /**
          * <p>The number of access control policies in the policy group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         @NameInMap("AclRuleCount")
         public Integer aclRuleCount;
 
         /**
          * <p>是否是默认防火墙。取值：</p>
-         * <p>- **true**：是默认防火墙。</p>
-         * <p>- **false**：不是默认防火墙。</p>
+         * <ul>
+         * <li><strong>true</strong>：是默认防火墙。</li>
+         * <li><strong>false</strong>：不是默认防火墙。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
         /**
          * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>258039427902****</p>
          */
         @NameInMap("MemberUid")
         public String memberUid;

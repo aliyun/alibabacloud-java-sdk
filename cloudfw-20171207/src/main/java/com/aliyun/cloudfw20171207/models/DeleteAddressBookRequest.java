@@ -6,25 +6,33 @@ import com.aliyun.tea.*;
 public class DeleteAddressBookRequest extends TeaModel {
     /**
      * <p>The ID of the address book.</p>
-     * <br>
      * <p>To delete the address book, you must provide the ID of the address book. You can call the DescribeAddressBook operation to query the ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0657ab9d-fe8b-4174-b2a6-6baf358e****</p>
      */
     @NameInMap("GroupUuid")
     public String groupUuid;
 
     /**
      * <p>The natural language of the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese (default)</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese (default)</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.XX.XX</p>
      */
     @NameInMap("SourceIp")
     @Deprecated

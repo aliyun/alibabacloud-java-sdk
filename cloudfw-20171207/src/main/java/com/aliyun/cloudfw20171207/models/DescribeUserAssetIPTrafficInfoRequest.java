@@ -6,25 +6,33 @@ import com.aliyun.tea.*;
 public class DescribeUserAssetIPTrafficInfoRequest extends TeaModel {
     /**
      * <p>The IP address of the asset.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.XX.XX</p>
      */
     @NameInMap("AssetIP")
     public String assetIP;
 
     /**
      * <p>The language of the content within the response. Valid values:</p>
-     * <br>
-     * <p>*   **zh** (default): Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1656923760</p>
      */
     @NameInMap("TrafficTime")
     public String trafficTime;

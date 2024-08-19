@@ -31,12 +31,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an address book for access control. Supported address book types are IP address books, Elastic Compute Service (ECS) tag-based address books, port address books, and domain address books. An ECS tag-based address book includes the public IP addresses of the ECS instances that have specific tags.
-     *
-     * @description You can call the AddAddressBook operation to create an address book for access control. The address book can be an IP address book, an ECS tag-based address book, a port address book, or a domain address book.
-     * ## [](#qps)Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the AddAddressBook operation to create an address book for access control. The address book can be an IP address book, an ECS tag-based address book, a port address book, or a domain address book.</p>
+     * <h2><a href="#qps"></a>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an address book for access control. Supported address book types are IP address books, Elastic Compute Service (ECS) tag-based address books, port address books, and domain address books. An ECS tag-based address book includes the public IP addresses of the ECS instances that have specific tags.</p>
+     * 
      * @param request AddAddressBookRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddAddressBookResponse
@@ -98,12 +100,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an address book for access control. Supported address book types are IP address books, Elastic Compute Service (ECS) tag-based address books, port address books, and domain address books. An ECS tag-based address book includes the public IP addresses of the ECS instances that have specific tags.
-     *
-     * @description You can call the AddAddressBook operation to create an address book for access control. The address book can be an IP address book, an ECS tag-based address book, a port address book, or a domain address book.
-     * ## [](#qps)Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the AddAddressBook operation to create an address book for access control. The address book can be an IP address book, an ECS tag-based address book, a port address book, or a domain address book.</p>
+     * <h2><a href="#qps"></a>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an address book for access control. Supported address book types are IP address books, Elastic Compute Service (ECS) tag-based address books, port address books, and domain address books. An ECS tag-based address book includes the public IP addresses of the ECS instances that have specific tags.</p>
+     * 
      * @param request AddAddressBookRequest
      * @return AddAddressBookResponse
      */
@@ -113,12 +117,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an access control policy.
-     *
-     * @description You can call the AddControlPolicy operation to create an access control policy to allow, block, or monitor traffic that reaches Cloud Firewall.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the AddControlPolicy operation to create an access control policy to allow, block, or monitor traffic that reaches Cloud Firewall.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an access control policy.</p>
+     * 
      * @param request AddControlPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddControlPolicyResponse
@@ -164,6 +170,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.direction)) {
             query.put("Direction", request.direction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainResolveType)) {
+            query.put("DomainResolveType", request.domainResolveType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
@@ -240,12 +250,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an access control policy.
-     *
-     * @description You can call the AddControlPolicy operation to create an access control policy to allow, block, or monitor traffic that reaches Cloud Firewall.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the AddControlPolicy operation to create an access control policy to allow, block, or monitor traffic that reaches Cloud Firewall.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an access control policy.</p>
+     * 
      * @param request AddControlPolicyRequest
      * @return AddControlPolicyResponse
      */
@@ -255,12 +267,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds members to Cloud Firewall.
-     *
-     * @description You can call the AddInstanceMembers operation to add members to Cloud Firewall. 
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the AddInstanceMembers operation to add members to Cloud Firewall. </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds members to Cloud Firewall.</p>
+     * 
      * @param request AddInstanceMembersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddInstanceMembersResponse
@@ -290,12 +304,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds members to Cloud Firewall.
-     *
-     * @description You can call the AddInstanceMembers operation to add members to Cloud Firewall. 
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the AddInstanceMembers operation to add members to Cloud Firewall. </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds members to Cloud Firewall.</p>
+     * 
      * @param request AddInstanceMembersRequest
      * @return AddInstanceMembersResponse
      */
@@ -305,15 +321,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Copies all access control policies from a policy group of a source virtual private cloud (VPC) firewall to a policy group of a destination VPC firewall.
-     *
-     * @description You can call the BatchCopyVpcFirewallControlPolicy operation to copy all access control policies from a policy group of a source VPC firewall to a policy group of a destination VPC firewall.  
-     * Before you call this operation, we recommend that you back up access control policies. For more information about how to back up an access control policy, see [Back up an access control policy](https://www.alibabacloud.com/help/en/cloud-firewall/latest/back-up-and-roll-back-an-access-control-policy).  
-     * After you call this operation, all the access control policies in the policy group of the destination VPC firewall are replaced.  
-     * The policy groups of the source VPC firewall and the destination VPC firewall must belong to the same Alibaba Cloud account.  
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. When the number of calls to this operation per second exceeds the limit, throttling is triggered. Throttling may affect your business. We recommend that you take note of the limit on this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the BatchCopyVpcFirewallControlPolicy operation to copy all access control policies from a policy group of a source VPC firewall to a policy group of a destination VPC firewall.<br>Before you call this operation, we recommend that you back up access control policies. For more information about how to back up an access control policy, see <a href="https://www.alibabacloud.com/help/en/cloud-firewall/latest/back-up-and-roll-back-an-access-control-policy">Back up an access control policy</a>.<br>After you call this operation, all the access control policies in the policy group of the destination VPC firewall are replaced.<br>The policy groups of the source VPC firewall and the destination VPC firewall must belong to the same Alibaba Cloud account.  </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. When the number of calls to this operation per second exceeds the limit, throttling is triggered. Throttling may affect your business. We recommend that you take note of the limit on this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Copies all access control policies from a policy group of a source virtual private cloud (VPC) firewall to a policy group of a destination VPC firewall.</p>
+     * 
      * @param request BatchCopyVpcFirewallControlPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchCopyVpcFirewallControlPolicyResponse
@@ -355,15 +370,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Copies all access control policies from a policy group of a source virtual private cloud (VPC) firewall to a policy group of a destination VPC firewall.
-     *
-     * @description You can call the BatchCopyVpcFirewallControlPolicy operation to copy all access control policies from a policy group of a source VPC firewall to a policy group of a destination VPC firewall.  
-     * Before you call this operation, we recommend that you back up access control policies. For more information about how to back up an access control policy, see [Back up an access control policy](https://www.alibabacloud.com/help/en/cloud-firewall/latest/back-up-and-roll-back-an-access-control-policy).  
-     * After you call this operation, all the access control policies in the policy group of the destination VPC firewall are replaced.  
-     * The policy groups of the source VPC firewall and the destination VPC firewall must belong to the same Alibaba Cloud account.  
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. When the number of calls to this operation per second exceeds the limit, throttling is triggered. Throttling may affect your business. We recommend that you take note of the limit on this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the BatchCopyVpcFirewallControlPolicy operation to copy all access control policies from a policy group of a source VPC firewall to a policy group of a destination VPC firewall.<br>Before you call this operation, we recommend that you back up access control policies. For more information about how to back up an access control policy, see <a href="https://www.alibabacloud.com/help/en/cloud-firewall/latest/back-up-and-roll-back-an-access-control-policy">Back up an access control policy</a>.<br>After you call this operation, all the access control policies in the policy group of the destination VPC firewall are replaced.<br>The policy groups of the source VPC firewall and the destination VPC firewall must belong to the same Alibaba Cloud account.  </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. When the number of calls to this operation per second exceeds the limit, throttling is triggered. Throttling may affect your business. We recommend that you take note of the limit on this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Copies all access control policies from a policy group of a source virtual private cloud (VPC) firewall to a policy group of a destination VPC firewall.</p>
+     * 
      * @param request BatchCopyVpcFirewallControlPolicyRequest
      * @return BatchCopyVpcFirewallControlPolicyResponse
      */
@@ -373,8 +387,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes multiple access control policies for a virtual private cloud (VPC) firewall at a time.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes multiple access control policies for a virtual private cloud (VPC) firewall at a time.</p>
+     * 
      * @param request BatchDeleteVpcFirewallControlPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchDeleteVpcFirewallControlPolicyResponse
@@ -408,8 +423,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes multiple access control policies for a virtual private cloud (VPC) firewall at a time.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes multiple access control policies for a virtual private cloud (VPC) firewall at a time.</p>
+     * 
      * @param request BatchDeleteVpcFirewallControlPolicyRequest
      * @return BatchDeleteVpcFirewallControlPolicyResponse
      */
@@ -419,8 +435,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a file download task.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a file download task.</p>
+     * 
      * @param request CreateDownloadTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDownloadTaskResponse
@@ -434,6 +451,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.taskData)) {
             query.put("TaskData", request.taskData);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeZone)) {
+            query.put("TimeZone", request.timeZone);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -454,8 +475,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a file download task.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a file download task.</p>
+     * 
      * @param request CreateDownloadTaskRequest
      * @return CreateDownloadTaskResponse
      */
@@ -465,10 +487,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an access control policy for a NAT firewall.
-     *
-     * @description You can call this operation to create a policy that allows, denies, or monitors the traffic that passes through the NAT firewall.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to create a policy that allows, denies, or monitors the traffic that passes through the NAT firewall.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an access control policy for a NAT firewall.</p>
+     * 
      * @param request CreateNatFirewallControlPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateNatFirewallControlPolicyResponse
@@ -590,10 +614,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an access control policy for a NAT firewall.
-     *
-     * @description You can call this operation to create a policy that allows, denies, or monitors the traffic that passes through the NAT firewall.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to create a policy that allows, denies, or monitors the traffic that passes through the NAT firewall.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an access control policy for a NAT firewall.</p>
+     * 
      * @param request CreateNatFirewallControlPolicyRequest
      * @return CreateNatFirewallControlPolicyResponse
      */
@@ -603,6 +629,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建安全正向代理</p>
+     * 
      * @param request CreateSecurityProxyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateSecurityProxyResponse
@@ -672,6 +701,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建安全正向代理</p>
+     * 
      * @param request CreateSecurityProxyRequest
      * @return CreateSecurityProxyResponse
      */
@@ -681,8 +713,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a virtual private cloud (VPC) firewall for a transit router.
-     *
+     * <b>summary</b> : 
+     * <p>创建云防火墙SLS日志投递</p>
+     * 
+     * @param request CreateSlsLogDispatchRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSlsLogDispatchResponse
+     */
+    public CreateSlsLogDispatchResponse createSlsLogDispatchWithOptions(CreateSlsLogDispatchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.slsRegionId)) {
+            body.put("SlsRegionId", request.slsRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ttl)) {
+            body.put("Ttl", request.ttl);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSlsLogDispatch"),
+            new TeaPair("version", "2017-12-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSlsLogDispatchResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建云防火墙SLS日志投递</p>
+     * 
+     * @param request CreateSlsLogDispatchRequest
+     * @return CreateSlsLogDispatchResponse
+     */
+    public CreateSlsLogDispatchResponse createSlsLogDispatch(CreateSlsLogDispatchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createSlsLogDispatchWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a virtual private cloud (VPC) firewall for a transit router.</p>
+     * 
      * @param request CreateTrFirewallV2Request
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateTrFirewallV2Response
@@ -768,8 +849,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a virtual private cloud (VPC) firewall for a transit router.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a virtual private cloud (VPC) firewall for a transit router.</p>
+     * 
      * @param request CreateTrFirewallV2Request
      * @return CreateTrFirewallV2Response
      */
@@ -779,6 +861,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a routing policy for a VPC firewall of a transit router.</p>
+     * 
      * @param tmpReq CreateTrFirewallV2RoutePolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateTrFirewallV2RoutePolicyResponse
@@ -842,6 +927,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a routing policy for a VPC firewall of a transit router.</p>
+     * 
      * @param request CreateTrFirewallV2RoutePolicyRequest
      * @return CreateTrFirewallV2RoutePolicyResponse
      */
@@ -851,12 +939,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a virtual private cloud (VPC) firewall to protect traffic between a specified VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-     *
-     * @description You can call the CreateVpcFirewallCenConfigure operation to create a VPC firewall. The VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. The VPC firewall cannot protect mutual access traffic between VBRs, between CCN instances, or between VBRs and CCN instances. For more information, see [VPC firewall limits](https://help.aliyun.com/document_detail/172295.html).
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the CreateVpcFirewallCenConfigure operation to create a VPC firewall. The VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. The VPC firewall cannot protect mutual access traffic between VBRs, between CCN instances, or between VBRs and CCN instances. For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">VPC firewall limits</a>.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a virtual private cloud (VPC) firewall to protect traffic between a specified VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.</p>
+     * 
      * @param request CreateVpcFirewallCenConfigureRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateVpcFirewallCenConfigureResponse
@@ -926,12 +1016,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a virtual private cloud (VPC) firewall to protect traffic between a specified VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-     *
-     * @description You can call the CreateVpcFirewallCenConfigure operation to create a VPC firewall. The VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. The VPC firewall cannot protect mutual access traffic between VBRs, between CCN instances, or between VBRs and CCN instances. For more information, see [VPC firewall limits](https://help.aliyun.com/document_detail/172295.html).
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the CreateVpcFirewallCenConfigure operation to create a VPC firewall. The VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. The VPC firewall cannot protect mutual access traffic between VBRs, between CCN instances, or between VBRs and CCN instances. For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">VPC firewall limits</a>.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a virtual private cloud (VPC) firewall to protect traffic between a specified VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.</p>
+     * 
      * @param request CreateVpcFirewallCenConfigureRequest
      * @return CreateVpcFirewallCenConfigureResponse
      */
@@ -941,12 +1033,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a Virtual Private Cloud (VPC) firewall to protect traffic between two VPCs that are connected by using an Express Connect.
-     *
-     * @description You can call this operation to create a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. The VPC firewall does not control the mutual access traffic between VPCs that reside in different regions or belong to different Alibaba Cloud accounts. The firewall also does not control the mutual access traffic between VPCs and virtual border routers (VBRs). For more information, see [VPC firewall limits](https://help.aliyun.com/document_detail/172295.html).
-     * ### [](#qps)QPS limit
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to create a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. The VPC firewall does not control the mutual access traffic between VPCs that reside in different regions or belong to different Alibaba Cloud accounts. The firewall also does not control the mutual access traffic between VPCs and virtual border routers (VBRs). For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">VPC firewall limits</a>.</p>
+     * <h3><a href="#qps"></a>QPS limit</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a Virtual Private Cloud (VPC) firewall to protect traffic between two VPCs that are connected by using an Express Connect.</p>
+     * 
      * @param request CreateVpcFirewallConfigureRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateVpcFirewallConfigureResponse
@@ -1012,12 +1106,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a Virtual Private Cloud (VPC) firewall to protect traffic between two VPCs that are connected by using an Express Connect.
-     *
-     * @description You can call this operation to create a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. The VPC firewall does not control the mutual access traffic between VPCs that reside in different regions or belong to different Alibaba Cloud accounts. The firewall also does not control the mutual access traffic between VPCs and virtual border routers (VBRs). For more information, see [VPC firewall limits](https://help.aliyun.com/document_detail/172295.html).
-     * ### [](#qps)QPS limit
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to create a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. The VPC firewall does not control the mutual access traffic between VPCs that reside in different regions or belong to different Alibaba Cloud accounts. The firewall also does not control the mutual access traffic between VPCs and virtual border routers (VBRs). For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">VPC firewall limits</a>.</p>
+     * <h3><a href="#qps"></a>QPS limit</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a Virtual Private Cloud (VPC) firewall to protect traffic between two VPCs that are connected by using an Express Connect.</p>
+     * 
      * @param request CreateVpcFirewallConfigureRequest
      * @return CreateVpcFirewallConfigureResponse
      */
@@ -1027,12 +1123,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an access control policy in a specified policy group for a virtual private cloud (VPC) firewall.
-     *
-     * @description You can call the CreateVpcFirewallControlPolicy operation to create an access control policy in a specified policy group for a VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.  
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the CreateVpcFirewallControlPolicy operation to create an access control policy in a specified policy group for a VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.  </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an access control policy in a specified policy group for a virtual private cloud (VPC) firewall.</p>
+     * 
      * @param request CreateVpcFirewallControlPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateVpcFirewallControlPolicyResponse
@@ -1074,6 +1172,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.destinationType)) {
             query.put("DestinationType", request.destinationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainResolveType)) {
+            query.put("DomainResolveType", request.domainResolveType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
@@ -1150,12 +1252,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an access control policy in a specified policy group for a virtual private cloud (VPC) firewall.
-     *
-     * @description You can call the CreateVpcFirewallControlPolicy operation to create an access control policy in a specified policy group for a VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.  
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the CreateVpcFirewallControlPolicy operation to create an access control policy in a specified policy group for a VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.  </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an access control policy in a specified policy group for a virtual private cloud (VPC) firewall.</p>
+     * 
      * @param request CreateVpcFirewallControlPolicyRequest
      * @return CreateVpcFirewallControlPolicyResponse
      */
@@ -1165,12 +1269,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an address book for access control.
-     *
-     * @description You can call the DeleteAddressBook operation to delete an address book for access control.  
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DeleteAddressBook operation to delete an address book for access control.  </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an address book for access control.</p>
+     * 
      * @param request DeleteAddressBookRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAddressBookResponse
@@ -1208,12 +1314,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an address book for access control.
-     *
-     * @description You can call the DeleteAddressBook operation to delete an address book for access control.  
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DeleteAddressBook operation to delete an address book for access control.  </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an address book for access control.</p>
+     * 
      * @param request DeleteAddressBookRequest
      * @return DeleteAddressBookResponse
      */
@@ -1223,12 +1331,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an access control policy.
-     *
-     * @description You can call the DeleteControlPolicy operation to delete an access control policy that applies to inbound or outbound traffic.  
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DeleteControlPolicy operation to delete an access control policy that applies to inbound or outbound traffic.</p>
+     * <h2><a href="#qps-"></a>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an access control policy.</p>
+     * 
      * @param request DeleteControlPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteControlPolicyResponse
@@ -1270,12 +1380,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an access control policy.
-     *
-     * @description You can call the DeleteControlPolicy operation to delete an access control policy that applies to inbound or outbound traffic.  
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DeleteControlPolicy operation to delete an access control policy that applies to inbound or outbound traffic.</p>
+     * <h2><a href="#qps-"></a>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an access control policy.</p>
+     * 
      * @param request DeleteControlPolicyRequest
      * @return DeleteControlPolicyResponse
      */
@@ -1285,8 +1397,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an access control policy template.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes an access control policy template.</p>
+     * 
      * @param request DeleteControlPolicyTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteControlPolicyTemplateResponse
@@ -1328,8 +1441,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an access control policy template.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes an access control policy template.</p>
+     * 
      * @param request DeleteControlPolicyTemplateRequest
      * @return DeleteControlPolicyTemplateResponse
      */
@@ -1339,12 +1453,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes file download tasks.
-     *
-     * @description You can call this operation to delete file download tasks and delete the files.
+     * <b>description</b> :
+     * <p>You can call this operation to delete file download tasks and delete the files.
      * **
-     * **Warning** Both tasks and involved files are deleted. You can no longer download the involved files by using the download links. This operation is irreversible. Proceed with caution.
-     *
+     * <strong>Warning</strong> Both tasks and involved files are deleted. You can no longer download the involved files by using the download links. This operation is irreversible. Proceed with caution.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes file download tasks.</p>
+     * 
      * @param request DeleteDownloadTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDownloadTaskResponse
@@ -1378,12 +1494,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes file download tasks.
-     *
-     * @description You can call this operation to delete file download tasks and delete the files.
+     * <b>description</b> :
+     * <p>You can call this operation to delete file download tasks and delete the files.
      * **
-     * **Warning** Both tasks and involved files are deleted. You can no longer download the involved files by using the download links. This operation is irreversible. Proceed with caution.
-     *
+     * <strong>Warning</strong> Both tasks and involved files are deleted. You can no longer download the involved files by using the download links. This operation is irreversible. Proceed with caution.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes file download tasks.</p>
+     * 
      * @param request DeleteDownloadTaskRequest
      * @return DeleteDownloadTaskResponse
      */
@@ -1393,6 +1511,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes routing policies for a virtual private cloud (VPC) firewall of a transit router.</p>
+     * 
      * @param request DeleteFirewallV2RoutePoliciesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteFirewallV2RoutePoliciesResponse
@@ -1430,6 +1551,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes routing policies for a virtual private cloud (VPC) firewall of a transit router.</p>
+     * 
      * @param request DeleteFirewallV2RoutePoliciesRequest
      * @return DeleteFirewallV2RoutePoliciesResponse
      */
@@ -1439,12 +1563,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes members from Cloud Firewall.
-     *
-     * @description You can call the DeleteInstanceMembers operation to remove members from Cloud Firewall. 
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DeleteInstanceMembers operation to remove members from Cloud Firewall. </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes members from Cloud Firewall.</p>
+     * 
      * @param request DeleteInstanceMembersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteInstanceMembersResponse
@@ -1474,12 +1600,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes members from Cloud Firewall.
-     *
-     * @description You can call the DeleteInstanceMembers operation to remove members from Cloud Firewall. 
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DeleteInstanceMembers operation to remove members from Cloud Firewall. </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes members from Cloud Firewall.</p>
+     * 
      * @param request DeleteInstanceMembersRequest
      * @return DeleteInstanceMembersResponse
      */
@@ -1489,10 +1617,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an access control policy that is created for a NAT firewall.
-     *
-     * @description You can use this operation to delete an outbound access control policy that is created for a NAT firewall.
-     *
+     * <b>description</b> :
+     * <p>You can use this operation to delete an outbound access control policy that is created for a NAT firewall.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an access control policy that is created for a NAT firewall.</p>
+     * 
      * @param request DeleteNatFirewallControlPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteNatFirewallControlPolicyResponse
@@ -1534,10 +1664,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an access control policy that is created for a NAT firewall.
-     *
-     * @description You can use this operation to delete an outbound access control policy that is created for a NAT firewall.
-     *
+     * <b>description</b> :
+     * <p>You can use this operation to delete an outbound access control policy that is created for a NAT firewall.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an access control policy that is created for a NAT firewall.</p>
+     * 
      * @param request DeleteNatFirewallControlPolicyRequest
      * @return DeleteNatFirewallControlPolicyResponse
      */
@@ -1547,8 +1679,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes access control policies that are created for a NAT firewall at a time.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes access control policies that are created for a NAT firewall at a time.</p>
+     * 
      * @param request DeleteNatFirewallControlPolicyBatchRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteNatFirewallControlPolicyBatchResponse
@@ -1590,8 +1723,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes access control policies that are created for a NAT firewall at a time.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes access control policies that are created for a NAT firewall at a time.</p>
+     * 
      * @param request DeleteNatFirewallControlPolicyBatchRequest
      * @return DeleteNatFirewallControlPolicyBatchResponse
      */
@@ -1601,6 +1735,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a NAT firewall.</p>
+     * 
      * @param request DeleteSecurityProxyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteSecurityProxyResponse
@@ -1634,6 +1771,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a NAT firewall.</p>
+     * 
      * @param request DeleteSecurityProxyRequest
      * @return DeleteSecurityProxyResponse
      */
@@ -1643,8 +1783,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a virtual private cloud (VPC) firewall that is created for a transit router.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a virtual private cloud (VPC) firewall that is created for a transit router.</p>
+     * 
      * @param request DeleteTrFirewallV2Request
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteTrFirewallV2Response
@@ -1678,8 +1819,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a virtual private cloud (VPC) firewall that is created for a transit router.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a virtual private cloud (VPC) firewall that is created for a transit router.</p>
+     * 
      * @param request DeleteTrFirewallV2Request
      * @return DeleteTrFirewallV2Response
      */
@@ -1689,12 +1831,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-     *
-     * @description You can call the DeleteVpcFirewallCenConfigure operation to delete a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. Before you call this operation, make sure that you have created a VPC firewall by calling the [CreateVpcFirewallCenConfigure](https://help.aliyun.com/document_detail/345772.html) operation.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DeleteVpcFirewallCenConfigure operation to delete a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. Before you call this operation, make sure that you have created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> operation.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.</p>
+     * 
      * @param request DeleteVpcFirewallCenConfigureRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteVpcFirewallCenConfigureResponse
@@ -1732,12 +1876,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-     *
-     * @description You can call the DeleteVpcFirewallCenConfigure operation to delete a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. Before you call this operation, make sure that you have created a VPC firewall by calling the [CreateVpcFirewallCenConfigure](https://help.aliyun.com/document_detail/345772.html) operation.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DeleteVpcFirewallCenConfigure operation to delete a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. Before you call this operation, make sure that you have created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> operation.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.</p>
+     * 
      * @param request DeleteVpcFirewallCenConfigureRequest
      * @return DeleteVpcFirewallCenConfigureResponse
      */
@@ -1747,12 +1893,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a virtual private cloud (VPC) firewall that controls traffic between two VPCs. The VPCs are connected by using an Express Connect circuit.
-     *
-     * @description You can call the DeleteVpcFirewallConfigure operation to delete a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://help.aliyun.com/document_detail/342893.html) operation.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DeleteVpcFirewallConfigure operation to delete a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. Before you call the operation, make sure that you created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a virtual private cloud (VPC) firewall that controls traffic between two VPCs. The VPCs are connected by using an Express Connect circuit.</p>
+     * 
      * @param request DeleteVpcFirewallConfigureRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteVpcFirewallConfigureResponse
@@ -1790,12 +1938,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a virtual private cloud (VPC) firewall that controls traffic between two VPCs. The VPCs are connected by using an Express Connect circuit.
-     *
-     * @description You can call the DeleteVpcFirewallConfigure operation to delete a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://help.aliyun.com/document_detail/342893.html) operation.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DeleteVpcFirewallConfigure operation to delete a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. Before you call the operation, make sure that you created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a virtual private cloud (VPC) firewall that controls traffic between two VPCs. The VPCs are connected by using an Express Connect circuit.</p>
+     * 
      * @param request DeleteVpcFirewallConfigureRequest
      * @return DeleteVpcFirewallConfigureResponse
      */
@@ -1805,12 +1955,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an access control policy from a specific policy group for a virtual private cloud (VPC) firewall.
-     *
-     * @description You can call the DeleteVpcFirewallControlPolicy operation to delete an access control policy from a specific policy group for a VPC firewall. Different access control policies are used for the VPC firewall that is used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewall that is used to protect each Express Connect circuit. 
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DeleteVpcFirewallControlPolicy operation to delete an access control policy from a specific policy group for a VPC firewall. Different access control policies are used for the VPC firewall that is used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewall that is used to protect each Express Connect circuit. </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an access control policy from a specific policy group for a virtual private cloud (VPC) firewall.</p>
+     * 
      * @param request DeleteVpcFirewallControlPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteVpcFirewallControlPolicyResponse
@@ -1848,12 +2000,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an access control policy from a specific policy group for a virtual private cloud (VPC) firewall.
-     *
-     * @description You can call the DeleteVpcFirewallControlPolicy operation to delete an access control policy from a specific policy group for a VPC firewall. Different access control policies are used for the VPC firewall that is used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewall that is used to protect each Express Connect circuit. 
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DeleteVpcFirewallControlPolicy operation to delete an access control policy from a specific policy group for a VPC firewall. Different access control policies are used for the VPC firewall that is used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewall that is used to protect each Express Connect circuit. </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an access control policy from a specific policy group for a virtual private cloud (VPC) firewall.</p>
+     * 
      * @param request DeleteVpcFirewallControlPolicyRequest
      * @return DeleteVpcFirewallControlPolicyResponse
      */
@@ -1863,8 +2017,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the statistics on the requests that are blocked by the access control list (ACL) feature.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the statistics on the requests that are blocked by the access control list (ACL) feature.</p>
+     * 
      * @param request DescribeACLProtectTrendRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeACLProtectTrendResponse
@@ -1910,8 +2065,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the statistics on the requests that are blocked by the access control list (ACL) feature.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the statistics on the requests that are blocked by the access control list (ACL) feature.</p>
+     * 
      * @param request DescribeACLProtectTrendRequest
      * @return DescribeACLProtectTrendResponse
      */
@@ -1921,12 +2077,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about an address book for an access control policy.
-     *
-     * @description You can call this operation to query the details about an address book for an access control policy.
-     * ## [](#qps)Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to query the details about an address book for an access control policy.</p>
+     * <h2><a href="#qps"></a>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details about an address book for an access control policy.</p>
+     * 
      * @param request DescribeAddressBookRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAddressBookResponse
@@ -1976,12 +2134,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about an address book for an access control policy.
-     *
-     * @description You can call this operation to query the details about an address book for an access control policy.
-     * ## [](#qps)Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to query the details about an address book for an access control policy.</p>
+     * <h2><a href="#qps"></a>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details about an address book for an access control policy.</p>
+     * 
      * @param request DescribeAddressBookRequest
      * @return DescribeAddressBookResponse
      */
@@ -1991,12 +2151,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the assets that are protected by Cloud Firewall.
-     *
-     * @description You can call the DescribeAssetList operation to query the assets that are protected by Cloud Firewall.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DescribeAssetList operation to query the assets that are protected by Cloud Firewall.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the assets that are protected by Cloud Firewall.</p>
+     * 
      * @param request DescribeAssetListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAssetListResponse
@@ -2074,12 +2236,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the assets that are protected by Cloud Firewall.
-     *
-     * @description You can call the DescribeAssetList operation to query the assets that are protected by Cloud Firewall.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DescribeAssetList operation to query the assets that are protected by Cloud Firewall.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the assets that are protected by Cloud Firewall.</p>
+     * 
      * @param request DescribeAssetListRequest
      * @return DescribeAssetListResponse
      */
@@ -2089,8 +2253,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the risk levels of assets.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the risk levels of assets.</p>
+     * 
      * @param request DescribeAssetRiskListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAssetRiskListResponse
@@ -2132,8 +2297,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the risk levels of assets.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the risk levels of assets.</p>
+     * 
      * @param request DescribeAssetRiskListRequest
      * @return DescribeAssetRiskListResponse
      */
@@ -2143,8 +2309,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the firewall risk level.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the firewall risk level.</p>
+     * 
      * @param request DescribeCfwRiskLevelSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCfwRiskLevelSummaryResponse
@@ -2182,8 +2349,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the firewall risk level.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the firewall risk level.</p>
+     * 
      * @param request DescribeCfwRiskLevelSummaryRequest
      * @return DescribeCfwRiskLevelSummaryResponse
      */
@@ -2193,12 +2361,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about all access control policies.
-     *
-     * @description You can call the DescribeControlPolicy operation to query the details about access control policies by page.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DescribeControlPolicy operation to query the details about access control policies by page.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details about all access control policies.</p>
+     * 
      * @param request DescribeControlPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeControlPolicyResponse
@@ -2280,12 +2450,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about all access control policies.
-     *
-     * @description You can call the DescribeControlPolicy operation to query the details about access control policies by page.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DescribeControlPolicy operation to query the details about access control policies by page.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details about all access control policies.</p>
+     * 
      * @param request DescribeControlPolicyRequest
      * @return DescribeControlPolicyResponse
      */
@@ -2295,6 +2467,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the default configurations of the intrusion prevention system (IPS).</p>
+     * 
      * @param request DescribeDefaultIPSConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDefaultIPSConfigResponse
@@ -2304,10 +2479,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             query.put("Lang", request.lang);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
-            query.put("SourceIp", request.sourceIp);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2328,6 +2499,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the default configurations of the intrusion prevention system (IPS).</p>
+     * 
      * @param request DescribeDefaultIPSConfigRequest
      * @return DescribeDefaultIPSConfigResponse
      */
@@ -2337,12 +2511,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Domain Name System (DNS) records.
-     *
-     * @description You can use this operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can use this operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries Domain Name System (DNS) records.</p>
+     * 
      * @param request DescribeDomainResolveRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainResolveResponse
@@ -2388,12 +2564,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Domain Name System (DNS) records.
-     *
-     * @description You can use this operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can use this operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries Domain Name System (DNS) records.</p>
+     * 
      * @param request DescribeDomainResolveRequest
      * @return DescribeDomainResolveResponse
      */
@@ -2403,8 +2581,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries file download tasks, including the task information and download URLs.
-     *
+     * <b>summary</b> : 
+     * <p>Queries file download tasks, including the task information and download URLs.</p>
+     * 
      * @param request DescribeDownloadTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDownloadTaskResponse
@@ -2446,8 +2625,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries file download tasks, including the task information and download URLs.
-     *
+     * <b>summary</b> : 
+     * <p>Queries file download tasks, including the task information and download URLs.</p>
+     * 
      * @param request DescribeDownloadTaskRequest
      * @return DescribeDownloadTaskResponse
      */
@@ -2457,8 +2637,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the types of download tasks. The type corresponds to the TaskType fields in the download task-related operations.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the types of download tasks. The type corresponds to the TaskType fields in the download task-related operations.</p>
+     * 
      * @param request DescribeDownloadTaskTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDownloadTaskTypeResponse
@@ -2500,8 +2681,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the types of download tasks. The type corresponds to the TaskType fields in the download task-related operations.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the types of download tasks. The type corresponds to the TaskType fields in the download task-related operations.</p>
+     * 
      * @param request DescribeDownloadTaskTypeRequest
      * @return DescribeDownloadTaskTypeResponse
      */
@@ -2511,12 +2693,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about members in Cloud Firewall.
-     *
-     * @description You can use this operation to query the information about members in Cloud Firewall.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can use this operation to query the information about members in Cloud Firewall.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about members in Cloud Firewall.</p>
+     * 
      * @param request DescribeInstanceMembersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstanceMembersResponse
@@ -2562,12 +2746,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about members in Cloud Firewall.
-     *
-     * @description You can use this operation to query the information about members in Cloud Firewall.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can use this operation to query the information about members in Cloud Firewall.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about members in Cloud Firewall.</p>
+     * 
      * @param request DescribeInstanceMembersRequest
      * @return DescribeInstanceMembersResponse
      */
@@ -2577,8 +2763,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the risk levels of instances.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the risk levels of instances.</p>
+     * 
      * @param request DescribeInstanceRiskLevelsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstanceRiskLevelsResponse
@@ -2612,8 +2799,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the risk levels of instances.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the risk levels of instances.</p>
+     * 
      * @param request DescribeInstanceRiskLevelsRequest
      * @return DescribeInstanceRiskLevelsResponse
      */
@@ -2623,8 +2811,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the IP addresses that are open to the Internet.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the IP addresses that are open to the Internet.</p>
+     * 
      * @param request DescribeInternetOpenIpRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInternetOpenIpResponse
@@ -2702,8 +2891,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the IP addresses that are open to the Internet.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the IP addresses that are open to the Internet.</p>
+     * 
      * @param request DescribeInternetOpenIpRequest
      * @return DescribeInternetOpenIpResponse
      */
@@ -2713,8 +2903,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the trends of Internet traffic.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the trends of Internet traffic.</p>
+     * 
      * @param request DescribeInternetTrafficTrendRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInternetTrafficTrendResponse
@@ -2780,8 +2971,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the trends of Internet traffic.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the trends of Internet traffic.</p>
+     * 
      * @param request DescribeInternetTrafficTrendRequest
      * @return DescribeInternetTrafficTrendResponse
      */
@@ -2791,8 +2983,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about the breach awareness events of a firewall.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about the breach awareness events of a firewall.</p>
+     * 
      * @param request DescribeInvadeEventListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInvadeEventListResponse
@@ -2882,8 +3075,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about the breach awareness events of a firewall.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about the breach awareness events of a firewall.</p>
+     * 
      * @param request DescribeInvadeEventListRequest
      * @return DescribeInvadeEventListResponse
      */
@@ -2893,8 +3087,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the pagination status of NAT firewalls.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the pagination status of NAT firewalls.</p>
+     * 
      * @param request DescribeNatAclPageStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeNatAclPageStatusResponse
@@ -2924,8 +3119,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the pagination status of NAT firewalls.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the pagination status of NAT firewalls.</p>
+     * 
      * @param request DescribeNatAclPageStatusRequest
      * @return DescribeNatAclPageStatusResponse
      */
@@ -2935,10 +3131,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about all access control policies that are created for NAT firewalls.
-     *
-     * @description You can use this operation to query the information about all access control policies that are created for NAT firewalls by page.
-     *
+     * <b>description</b> :
+     * <p>You can use this operation to query the information about all access control policies that are created for NAT firewalls by page.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about all access control policies that are created for NAT firewalls.</p>
+     * 
      * @param request DescribeNatFirewallControlPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeNatFirewallControlPolicyResponse
@@ -3016,10 +3214,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about all access control policies that are created for NAT firewalls.
-     *
-     * @description You can use this operation to query the information about all access control policies that are created for NAT firewalls by page.
-     *
+     * <b>description</b> :
+     * <p>You can use this operation to query the information about all access control policies that are created for NAT firewalls by page.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about all access control policies that are created for NAT firewalls.</p>
+     * 
      * @param request DescribeNatFirewallControlPolicyRequest
      * @return DescribeNatFirewallControlPolicyResponse
      */
@@ -3029,8 +3229,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取 NAT 防火墙列表
-     *
+     * <b>summary</b> : 
+     * <p>Queries details of NAT firewalls.</p>
+     * 
      * @param request DescribeNatFirewallListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeNatFirewallListResponse
@@ -3100,8 +3301,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取 NAT 防火墙列表
-     *
+     * <b>summary</b> : 
+     * <p>Queries details of NAT firewalls.</p>
+     * 
      * @param request DescribeNatFirewallListRequest
      * @return DescribeNatFirewallListResponse
      */
@@ -3111,10 +3313,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the priority range of access control policies that are created for a NAT firewall.
-     *
-     * @description You can use this operation to query the priority range of access control policies that are created for a NAT firewall.
-     *
+     * <b>description</b> :
+     * <p>You can use this operation to query the priority range of access control policies that are created for a NAT firewall.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the priority range of access control policies that are created for a NAT firewall.</p>
+     * 
      * @param request DescribeNatFirewallPolicyPriorUsedRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeNatFirewallPolicyPriorUsedResponse
@@ -3156,10 +3360,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the priority range of access control policies that are created for a NAT firewall.
-     *
-     * @description You can use this operation to query the priority range of access control policies that are created for a NAT firewall.
-     *
+     * <b>description</b> :
+     * <p>You can use this operation to query the priority range of access control policies that are created for a NAT firewall.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the priority range of access control policies that are created for a NAT firewall.</p>
+     * 
      * @param request DescribeNatFirewallPolicyPriorUsedRequest
      * @return DescribeNatFirewallPolicyPriorUsedResponse
      */
@@ -3169,8 +3375,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about the destination IP addresses in outbound connections.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about the destination IP addresses in outbound connections.</p>
+     * 
      * @param request DescribeOutgoingDestinationIPRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeOutgoingDestinationIPResponse
@@ -3252,8 +3459,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about the destination IP addresses in outbound connections.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about the destination IP addresses in outbound connections.</p>
+     * 
      * @param request DescribeOutgoingDestinationIPRequest
      * @return DescribeOutgoingDestinationIPResponse
      */
@@ -3263,8 +3471,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about the domain names in outbound connections.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about the domain names in outbound connections.</p>
+     * 
      * @param request DescribeOutgoingDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeOutgoingDomainResponse
@@ -3334,8 +3543,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about the domain names in outbound connections.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about the domain names in outbound connections.</p>
+     * 
      * @param request DescribeOutgoingDomainRequest
      * @return DescribeOutgoingDomainResponse
      */
@@ -3345,12 +3555,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries whether the strict mode is enabled for an access control policy.
-     *
-     * @description You can call the DescribePolicyAdvancedConfig operation to query whether the strict mode is enabled for an access control policy.  
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DescribePolicyAdvancedConfig operation to query whether the strict mode is enabled for an access control policy.  </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries whether the strict mode is enabled for an access control policy.</p>
+     * 
      * @param request DescribePolicyAdvancedConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePolicyAdvancedConfigResponse
@@ -3388,12 +3600,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries whether the strict mode is enabled for an access control policy.
-     *
-     * @description You can call the DescribePolicyAdvancedConfig operation to query whether the strict mode is enabled for an access control policy.  
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DescribePolicyAdvancedConfig operation to query whether the strict mode is enabled for an access control policy.  </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries whether the strict mode is enabled for an access control policy.</p>
+     * 
      * @param request DescribePolicyAdvancedConfigRequest
      * @return DescribePolicyAdvancedConfigResponse
      */
@@ -3403,12 +3617,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the priority range of the access control policies that match specific query conditions.
-     *
-     * @description You can call the DescribePolicyPriorUsed operation to query the priority range of the access control policies that match specific query conditions.  
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DescribePolicyPriorUsed operation to query the priority range of the access control policies that match specific query conditions.  </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the priority range of the access control policies that match specific query conditions.</p>
+     * 
      * @param request DescribePolicyPriorUsedRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePolicyPriorUsedResponse
@@ -3450,12 +3666,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the priority range of the access control policies that match specific query conditions.
-     *
-     * @description You can call the DescribePolicyPriorUsed operation to query the priority range of the access control policies that match specific query conditions.  
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DescribePolicyPriorUsed operation to query the priority range of the access control policies that match specific query conditions.  </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the priority range of the access control policies that match specific query conditions.</p>
+     * 
      * @param request DescribePolicyPriorUsedRequest
      * @return DescribePolicyPriorUsedResponse
      */
@@ -3465,8 +3683,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the traffic details of Cloud Firewall that uses the pay-as-you-go billing method.
-     *
+     * <b>description</b> :
+     * <p>If you use Cloud Firewall that uses the pay-as-you-go billing method, you can call this operation to query traffic details accurate to the granularity of specific resource instances. If you use Cloud Firewall that uses the subscription billing method, you can call this operation to query the overall traffic details.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of traffic billed based on the pay-as-you-go billing method.</p>
+     * 
      * @param request DescribePostpayTrafficDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePostpayTrafficDetailResponse
@@ -3524,8 +3746,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the traffic details of Cloud Firewall that uses the pay-as-you-go billing method.
-     *
+     * <b>description</b> :
+     * <p>If you use Cloud Firewall that uses the pay-as-you-go billing method, you can call this operation to query traffic details accurate to the granularity of specific resource instances. If you use Cloud Firewall that uses the subscription billing method, you can call this operation to query the overall traffic details.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of traffic billed based on the pay-as-you-go billing method.</p>
+     * 
      * @param request DescribePostpayTrafficDetailRequest
      * @return DescribePostpayTrafficDetailResponse
      */
@@ -3535,8 +3761,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the total traffic of Cloud Firewall that uses the pay-as-you-go billing method. The traffic for each type of firewall is queried.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to query statistics of the current Cloud Firewall from the date of purchase.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the total volume of traffic that is billed based on the pay-as-you-go billing method, including all firewalls within the current account.</p>
+     * 
      * @param request DescribePostpayTrafficTotalRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePostpayTrafficTotalResponse
@@ -3566,8 +3796,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the total traffic of Cloud Firewall that uses the pay-as-you-go billing method. The traffic for each type of firewall is queried.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to query statistics of the current Cloud Firewall from the date of purchase.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the total volume of traffic that is billed based on the pay-as-you-go billing method, including all firewalls within the current account.</p>
+     * 
      * @param request DescribePostpayTrafficTotalRequest
      * @return DescribePostpayTrafficTotalResponse
      */
@@ -3577,8 +3811,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries prefix lists.
-     *
+     * <b>summary</b> : 
+     * <p>Queries prefix lists.</p>
+     * 
      * @param request DescribePrefixListsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePrefixListsResponse
@@ -3604,8 +3839,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries prefix lists.
-     *
+     * <b>summary</b> : 
+     * <p>Queries prefix lists.</p>
+     * 
      * @param request DescribePrefixListsRequest
      * @return DescribePrefixListsResponse
      */
@@ -3615,12 +3851,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of intrusion events.
-     *
-     * @description You can call the DescribeRiskEventGroup operation to query and download the details of intrusion events. We recommend that you query the details of 5 to 10 intrusion events at a time. If you do not need to query the geographical information about IP addresses, you can set the NoLocation parameter to true to prevent query timeout.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DescribeRiskEventGroup operation to query and download the details of intrusion events. We recommend that you query the details of 5 to 10 intrusion events at a time. If you do not need to query the geographical information about IP addresses, you can set the NoLocation parameter to true to prevent query timeout.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of intrusion events.</p>
+     * 
      * @param request DescribeRiskEventGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRiskEventGroupResponse
@@ -3738,12 +3976,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of intrusion events.
-     *
-     * @description You can call the DescribeRiskEventGroup operation to query and download the details of intrusion events. We recommend that you query the details of 5 to 10 intrusion events at a time. If you do not need to query the geographical information about IP addresses, you can set the NoLocation parameter to true to prevent query timeout.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DescribeRiskEventGroup operation to query and download the details of intrusion events. We recommend that you query the details of 5 to 10 intrusion events at a time. If you do not need to query the geographical information about IP addresses, you can set the NoLocation parameter to true to prevent query timeout.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of intrusion events.</p>
+     * 
      * @param request DescribeRiskEventGroupRequest
      * @return DescribeRiskEventGroupResponse
      */
@@ -3753,8 +3993,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the attack payloads of intrusion events.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the attack payloads of intrusion events.</p>
+     * 
      * @param request DescribeRiskEventPayloadRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRiskEventPayloadResponse
@@ -3816,8 +4057,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the attack payloads of intrusion events.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the attack payloads of intrusion events.</p>
+     * 
      * @param request DescribeRiskEventPayloadRequest
      * @return DescribeRiskEventPayloadResponse
      */
@@ -3827,8 +4069,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about signature library versions.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about signature library versions.</p>
+     * 
      * @param request DescribeSignatureLibVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSignatureLibVersionResponse
@@ -3850,8 +4093,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about signature library versions.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about signature library versions.</p>
      * @return DescribeSignatureLibVersionResponse
      */
     public DescribeSignatureLibVersionResponse describeSignatureLibVersion() throws Exception {
@@ -3860,8 +4103,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information about the transit routers that are associated with a virtual private cloud (VPC) firewall created for a transit router.
-     *
+     * <b>summary</b> : 
+     * <p>Queries information about the transit routers that are associated with a virtual private cloud (VPC) firewall created for a transit router.</p>
+     * 
      * @param tmpReq DescribeTrFirewallPolicyBackUpAssociationListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeTrFirewallPolicyBackUpAssociationListResponse
@@ -3909,8 +4153,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information about the transit routers that are associated with a virtual private cloud (VPC) firewall created for a transit router.
-     *
+     * <b>summary</b> : 
+     * <p>Queries information about the transit routers that are associated with a virtual private cloud (VPC) firewall created for a transit router.</p>
+     * 
      * @param request DescribeTrFirewallPolicyBackUpAssociationListRequest
      * @return DescribeTrFirewallPolicyBackUpAssociationListResponse
      */
@@ -3920,8 +4165,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the routing policies of a virtual private cloud (VPC) firewall that is created for a transit router.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the routing policies of a virtual private cloud (VPC) firewall that is created for a transit router.</p>
+     * 
      * @param request DescribeTrFirewallV2RoutePolicyListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeTrFirewallV2RoutePolicyListResponse
@@ -3967,8 +4213,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the routing policies of a virtual private cloud (VPC) firewall that is created for a transit router.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the routing policies of a virtual private cloud (VPC) firewall that is created for a transit router.</p>
+     * 
      * @param request DescribeTrFirewallV2RoutePolicyListRequest
      * @return DescribeTrFirewallV2RoutePolicyListResponse
      */
@@ -3978,8 +4225,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of the virtual private cloud (VPC) firewalls that are created for transit routers.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of the virtual private cloud (VPC) firewalls that are created for transit routers.</p>
+     * 
      * @param request DescribeTrFirewallsV2DetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeTrFirewallsV2DetailResponse
@@ -4013,8 +4261,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of the virtual private cloud (VPC) firewalls that are created for transit routers.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of the virtual private cloud (VPC) firewalls that are created for transit routers.</p>
+     * 
      * @param request DescribeTrFirewallsV2DetailRequest
      * @return DescribeTrFirewallsV2DetailResponse
      */
@@ -4024,8 +4273,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the virtual private cloud (VPC) firewalls that are created for transit routers.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the virtual private cloud (VPC) firewalls that are created for transit routers.</p>
+     * 
      * @param request DescribeTrFirewallsV2ListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeTrFirewallsV2ListResponse
@@ -4095,8 +4345,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the virtual private cloud (VPC) firewalls that are created for transit routers.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the virtual private cloud (VPC) firewalls that are created for transit routers.</p>
+     * 
      * @param request DescribeTrFirewallsV2ListRequest
      * @return DescribeTrFirewallsV2ListResponse
      */
@@ -4106,6 +4357,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the route tables of the VPC firewalls that are created for transit routers.</p>
+     * 
      * @param request DescribeTrFirewallsV2RouteListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeTrFirewallsV2RouteListResponse
@@ -4151,6 +4405,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the route tables of the VPC firewalls that are created for transit routers.</p>
+     * 
      * @param request DescribeTrFirewallsV2RouteListRequest
      * @return DescribeTrFirewallsV2RouteListResponse
      */
@@ -4160,8 +4417,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about the traffic of a specified asset that belongs to your Alibaba Cloud account.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about the traffic of a specified asset that belongs to your Alibaba Cloud account.</p>
+     * 
      * @param request DescribeUserAssetIPTrafficInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUserAssetIPTrafficInfoResponse
@@ -4187,8 +4445,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about the traffic of a specified asset that belongs to your Alibaba Cloud account.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about the traffic of a specified asset that belongs to your Alibaba Cloud account.</p>
+     * 
      * @param request DescribeUserAssetIPTrafficInfoRequest
      * @return DescribeUserAssetIPTrafficInfoResponse
      */
@@ -4244,12 +4503,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about all policy groups of access control policies that are created for virtual private cloud (VPC) firewalls.
-     *
-     * @description You can call the DescribeVpcFirewallAclGroupList operation to query the information about all policy groups of access control policies that are created for VPC firewalls.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DescribeVpcFirewallAclGroupList operation to query the information about all policy groups of access control policies that are created for VPC firewalls.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about all policy groups of access control policies that are created for virtual private cloud (VPC) firewalls.</p>
+     * 
      * @param request DescribeVpcFirewallAclGroupListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeVpcFirewallAclGroupListResponse
@@ -4291,12 +4552,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about all policy groups of access control policies that are created for virtual private cloud (VPC) firewalls.
-     *
-     * @description You can call the DescribeVpcFirewallAclGroupList operation to query the information about all policy groups of access control policies that are created for VPC firewalls.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DescribeVpcFirewallAclGroupList operation to query the information about all policy groups of access control policies that are created for VPC firewalls.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about all policy groups of access control policies that are created for virtual private cloud (VPC) firewalls.</p>
+     * 
      * @param request DescribeVpcFirewallAclGroupListRequest
      * @return DescribeVpcFirewallAclGroupListResponse
      */
@@ -4306,12 +4569,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about a virtual private cloud (VPC) firewall. The VPC firewall protects access traffic between a VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-     *
-     * @description You can call the DescribeVpcFirewallCenDetail operation to query the details about a VPC firewall. The VPC firewall protects access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DescribeVpcFirewallCenDetail operation to query the details about a VPC firewall. The VPC firewall protects access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details about a virtual private cloud (VPC) firewall. The VPC firewall protects access traffic between a VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.</p>
+     * 
      * @param request DescribeVpcFirewallCenDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeVpcFirewallCenDetailResponse
@@ -4353,12 +4618,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about a virtual private cloud (VPC) firewall. The VPC firewall protects access traffic between a VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-     *
-     * @description You can call the DescribeVpcFirewallCenDetail operation to query the details about a VPC firewall. The VPC firewall protects access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DescribeVpcFirewallCenDetail operation to query the details about a VPC firewall. The VPC firewall protects access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details about a virtual private cloud (VPC) firewall. The VPC firewall protects access traffic between a VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.</p>
+     * 
      * @param request DescribeVpcFirewallCenDetailRequest
      * @return DescribeVpcFirewallCenDetailResponse
      */
@@ -4368,12 +4635,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries virtual private cloud (VPC) firewalls. Each VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-     *
-     * @description You can call the DescribeVpcFirewallCenList operation to query VPC firewalls. A VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DescribeVpcFirewallCenList operation to query VPC firewalls. A VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries virtual private cloud (VPC) firewalls. Each VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.</p>
+     * 
      * @param request DescribeVpcFirewallCenListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeVpcFirewallCenListResponse
@@ -4455,12 +4724,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries virtual private cloud (VPC) firewalls. Each VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-     *
-     * @description You can call the DescribeVpcFirewallCenList operation to query VPC firewalls. A VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DescribeVpcFirewallCenList operation to query VPC firewalls. A VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries virtual private cloud (VPC) firewalls. Each VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance.</p>
+     * 
      * @param request DescribeVpcFirewallCenListRequest
      * @return DescribeVpcFirewallCenListResponse
      */
@@ -4470,12 +4741,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about the access control policies for a specified virtual private cloud (VPC) firewall.
-     *
-     * @description You can call the DescribeVpcFirewallControlPolicy operation to query the information about all access control policies that are created for a specified VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DescribeVpcFirewallControlPolicy operation to query the information about all access control policies that are created for a specified VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about the access control policies for a specified virtual private cloud (VPC) firewall.</p>
+     * 
      * @param request DescribeVpcFirewallControlPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeVpcFirewallControlPolicyResponse
@@ -4553,12 +4826,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about the access control policies for a specified virtual private cloud (VPC) firewall.
-     *
-     * @description You can call the DescribeVpcFirewallControlPolicy operation to query the information about all access control policies that are created for a specified VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DescribeVpcFirewallControlPolicy operation to query the information about all access control policies that are created for a specified VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about the access control policies for a specified virtual private cloud (VPC) firewall.</p>
+     * 
      * @param request DescribeVpcFirewallControlPolicyRequest
      * @return DescribeVpcFirewallControlPolicyResponse
      */
@@ -4568,12 +4843,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the intrusion prevention configurations of a virtual private cloud (VPC) firewall.
-     *
-     * @description You can call the DescribeVpcFirewallDefaultIPSConfig operation to query the intrusion prevention configurations of a VPC firewall.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DescribeVpcFirewallDefaultIPSConfig operation to query the intrusion prevention configurations of a VPC firewall.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the intrusion prevention configurations of a virtual private cloud (VPC) firewall.</p>
+     * 
      * @param request DescribeVpcFirewallDefaultIPSConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeVpcFirewallDefaultIPSConfigResponse
@@ -4607,12 +4884,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the intrusion prevention configurations of a virtual private cloud (VPC) firewall.
-     *
-     * @description You can call the DescribeVpcFirewallDefaultIPSConfig operation to query the intrusion prevention configurations of a VPC firewall.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DescribeVpcFirewallDefaultIPSConfig operation to query the intrusion prevention configurations of a VPC firewall.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the intrusion prevention configurations of a virtual private cloud (VPC) firewall.</p>
+     * 
      * @param request DescribeVpcFirewallDefaultIPSConfigRequest
      * @return DescribeVpcFirewallDefaultIPSConfigResponse
      */
@@ -4622,13 +4901,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about a virtual private cloud (VPC) firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.
-     *
-     * @description You can call the DescribeVpcFirewallDetail operation to query the details about a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.  
-     * Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallconfigure) operation.  
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DescribeVpcFirewallDetail operation to query the details about a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.<br>Before you call the operation, make sure that you created a VPC firewall by calling the <a href="https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallconfigure">CreateVpcFirewallConfigure</a> operation.  </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details about a virtual private cloud (VPC) firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.</p>
+     * 
      * @param request DescribeVpcFirewallDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeVpcFirewallDetailResponse
@@ -4674,13 +4954,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about a virtual private cloud (VPC) firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.
-     *
-     * @description You can call the DescribeVpcFirewallDetail operation to query the details about a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.  
-     * Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallconfigure) operation.  
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DescribeVpcFirewallDetail operation to query the details about a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.<br>Before you call the operation, make sure that you created a VPC firewall by calling the <a href="https://www.alibabacloud.com/help/en/cloud-firewall/latest/createvpcfirewallconfigure">CreateVpcFirewallConfigure</a> operation.  </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details about a virtual private cloud (VPC) firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.</p>
+     * 
      * @param request DescribeVpcFirewallDetailRequest
      * @return DescribeVpcFirewallDetailResponse
      */
@@ -4690,8 +4971,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the IPS whitelist of a virtual private cloud (VPC) firewall.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the IPS whitelist of a virtual private cloud (VPC) firewall.</p>
+     * 
      * @param request DescribeVpcFirewallIPSWhitelistRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeVpcFirewallIPSWhitelistResponse
@@ -4729,8 +5011,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the IPS whitelist of a virtual private cloud (VPC) firewall.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the IPS whitelist of a virtual private cloud (VPC) firewall.</p>
+     * 
      * @param request DescribeVpcFirewallIPSWhitelistRequest
      * @return DescribeVpcFirewallIPSWhitelistResponse
      */
@@ -4740,12 +5023,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about virtual private cloud (VPC) firewalls by page. Each VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.
-     *
-     * @description You can call the DescribeVpcFirewallList operation to query the details about VPC firewalls by page. Each VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.
-     * ### Limits
-     * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DescribeVpcFirewallList operation to query the details about VPC firewalls by page. Each VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.</p>
+     * <h3>Limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details about virtual private cloud (VPC) firewalls by page. Each VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.</p>
+     * 
      * @param request DescribeVpcFirewallListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeVpcFirewallListResponse
@@ -4819,12 +5104,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about virtual private cloud (VPC) firewalls by page. Each VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.
-     *
-     * @description You can call the DescribeVpcFirewallList operation to query the details about VPC firewalls by page. Each VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.
-     * ### Limits
-     * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DescribeVpcFirewallList operation to query the details about VPC firewalls by page. Each VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.</p>
+     * <h3>Limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details about virtual private cloud (VPC) firewalls by page. Each VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.</p>
+     * 
      * @param request DescribeVpcFirewallListRequest
      * @return DescribeVpcFirewallListResponse
      */
@@ -4834,12 +5121,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the priority range of access control policies that are created for a virtual private cloud (VPC) firewall in a specific policy group.
-     *
-     * @description You can call the DescribeVpcFirewallPolicyPriorUsed operation to query the priority range of access control policies that are created for a VPC firewall in a specific policy group.  
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DescribeVpcFirewallPolicyPriorUsed operation to query the priority range of access control policies that are created for a VPC firewall in a specific policy group.  </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the priority range of access control policies that are created for a virtual private cloud (VPC) firewall in a specific policy group.</p>
+     * 
      * @param request DescribeVpcFirewallPolicyPriorUsedRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeVpcFirewallPolicyPriorUsedResponse
@@ -4873,12 +5162,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the priority range of access control policies that are created for a virtual private cloud (VPC) firewall in a specific policy group.
-     *
-     * @description You can call the DescribeVpcFirewallPolicyPriorUsed operation to query the priority range of access control policies that are created for a VPC firewall in a specific policy group.  
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the DescribeVpcFirewallPolicyPriorUsed operation to query the priority range of access control policies that are created for a VPC firewall in a specific policy group.  </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the priority range of access control policies that are created for a virtual private cloud (VPC) firewall in a specific policy group.</p>
+     * 
      * @param request DescribeVpcFirewallPolicyPriorUsedRequest
      * @return DescribeVpcFirewallPolicyPriorUsedResponse
      */
@@ -4888,8 +5179,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries virtual private clouds (VPCs).
-     *
+     * <b>summary</b> : 
+     * <p>Queries virtual private clouds (VPCs).</p>
+     * 
      * @param request DescribeVpcListLiteRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeVpcListLiteResponse
@@ -4935,8 +5227,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries virtual private clouds (VPCs).
-     *
+     * <b>summary</b> : 
+     * <p>Queries virtual private clouds (VPCs).</p>
+     * 
      * @param request DescribeVpcListLiteRequest
      * @return DescribeVpcListLiteResponse
      */
@@ -4946,8 +5239,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries virtual private cloud (VPC) zones.
-     *
+     * <b>summary</b> : 
+     * <p>Queries virtual private cloud (VPC) zones.</p>
+     * 
      * @param request DescribeVpcZoneRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeVpcZoneResponse
@@ -4989,8 +5283,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries virtual private cloud (VPC) zones.
-     *
+     * <b>summary</b> : 
+     * <p>Queries virtual private cloud (VPC) zones.</p>
+     * 
      * @param request DescribeVpcZoneRequest
      * @return DescribeVpcZoneResponse
      */
@@ -5000,8 +5295,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the vulnerabilities that are supported by Cloud Firewall.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the vulnerabilities that are supported by Cloud Firewall.</p>
+     * 
      * @param request DescribeVulnerabilityProtectedListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeVulnerabilityProtectedListResponse
@@ -5099,8 +5395,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the vulnerabilities that are supported by Cloud Firewall.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the vulnerabilities that are supported by Cloud Firewall.</p>
+     * 
      * @param request DescribeVulnerabilityProtectedListRequest
      * @return DescribeVulnerabilityProtectedListResponse
      */
@@ -5110,12 +5407,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the address book that is configured for access control.
-     *
-     * @description You can call the ModifyAddressBook operation to modify the address book that is configured for access control.  
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the ModifyAddressBook operation to modify the address book that is configured for access control.  </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the address book that is configured for access control.</p>
+     * 
      * @param request ModifyAddressBookRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyAddressBookResponse
@@ -5145,6 +5444,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modifyMode)) {
+            query.put("ModifyMode", request.modifyMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
@@ -5177,12 +5480,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the address book that is configured for access control.
-     *
-     * @description You can call the ModifyAddressBook operation to modify the address book that is configured for access control.  
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the ModifyAddressBook operation to modify the address book that is configured for access control.  </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the address book that is configured for access control.</p>
+     * 
      * @param request ModifyAddressBookRequest
      * @return ModifyAddressBookResponse
      */
@@ -5192,12 +5497,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of an access control policy.
-     *
-     * @description You can call this operation to modify the configurations of an access control policy. The policy allows Cloud Firewall to allow, deny, or monitor the traffic that passes through Cloud Firewall.
-     * ## [](#qps)Limit
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to modify the configurations of an access control policy. The policy allows Cloud Firewall to allow, deny, or monitor the traffic that passes through Cloud Firewall.</p>
+     * <h2><a href="#qps"></a>Limit</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of an access control policy.</p>
+     * 
      * @param request ModifyControlPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyControlPolicyResponse
@@ -5247,6 +5554,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.direction)) {
             query.put("Direction", request.direction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainResolveType)) {
+            query.put("DomainResolveType", request.domainResolveType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
@@ -5311,12 +5622,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of an access control policy.
-     *
-     * @description You can call this operation to modify the configurations of an access control policy. The policy allows Cloud Firewall to allow, deny, or monitor the traffic that passes through Cloud Firewall.
-     * ## [](#qps)Limit
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to modify the configurations of an access control policy. The policy allows Cloud Firewall to allow, deny, or monitor the traffic that passes through Cloud Firewall.</p>
+     * <h2><a href="#qps"></a>Limit</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of an access control policy.</p>
+     * 
      * @param request ModifyControlPolicyRequest
      * @return ModifyControlPolicyResponse
      */
@@ -5326,12 +5639,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the priority of an IPv4 access control policy for the Internet firewall. An IPv4 access control policy refers to a policy whose source IP address and destination IP address are IPv4 addresses.
-     *
-     * @description You can use this operation to modify the priority of an IPv4 access control policy for the Internet firewall. No API operations are provided for you to modify the priority of an IPv6 access control policy for the Internet firewall.
-     * ## [](#qps)Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can use this operation to modify the priority of an IPv4 access control policy for the Internet firewall. No API operations are provided for you to modify the priority of an IPv6 access control policy for the Internet firewall.</p>
+     * <h2><a href="#qps"></a>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the priority of an IPv4 access control policy for the Internet firewall. An IPv4 access control policy refers to a policy whose source IP address and destination IP address are IPv4 addresses.</p>
+     * 
      * @param request ModifyControlPolicyPositionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyControlPolicyPositionResponse
@@ -5377,12 +5692,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the priority of an IPv4 access control policy for the Internet firewall. An IPv4 access control policy refers to a policy whose source IP address and destination IP address are IPv4 addresses.
-     *
-     * @description You can use this operation to modify the priority of an IPv4 access control policy for the Internet firewall. No API operations are provided for you to modify the priority of an IPv6 access control policy for the Internet firewall.
-     * ## [](#qps)Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can use this operation to modify the priority of an IPv4 access control policy for the Internet firewall. No API operations are provided for you to modify the priority of an IPv6 access control policy for the Internet firewall.</p>
+     * <h2><a href="#qps"></a>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the priority of an IPv4 access control policy for the Internet firewall. An IPv4 access control policy refers to a policy whose source IP address and destination IP address are IPv4 addresses.</p>
+     * 
      * @param request ModifyControlPolicyPositionRequest
      * @return ModifyControlPolicyPositionResponse
      */
@@ -5392,6 +5709,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the default configuration of the intrusion prevention system (IPS).</p>
+     * 
      * @param request ModifyDefaultIPSConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDefaultIPSConfigResponse
@@ -5399,24 +5719,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyDefaultIPSConfigResponse modifyDefaultIPSConfigWithOptions(ModifyDefaultIPSConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.aiRules)) {
-            query.put("AiRules", request.aiRules);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.basicRules)) {
             query.put("BasicRules", request.basicRules);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ctiRules)) {
             query.put("CtiRules", request.ctiRules);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.enableAllPatch)) {
-            query.put("EnableAllPatch", request.enableAllPatch);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.enableDefault)) {
-            query.put("EnableDefault", request.enableDefault);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
@@ -5433,10 +5741,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.runMode)) {
             query.put("RunMode", request.runMode);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
-            query.put("SourceIp", request.sourceIp);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -5457,6 +5761,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the default configuration of the intrusion prevention system (IPS).</p>
+     * 
      * @param request ModifyDefaultIPSConfigRequest
      * @return ModifyDefaultIPSConfigResponse
      */
@@ -5466,8 +5773,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the status of a routing policy.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the status of a routing policy.</p>
+     * 
      * @param request ModifyFirewallV2RoutePolicySwitchRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyFirewallV2RoutePolicySwitchResponse
@@ -5513,8 +5821,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the status of a routing policy.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the status of a routing policy.</p>
+     * 
      * @param request ModifyFirewallV2RoutePolicySwitchRequest
      * @return ModifyFirewallV2RoutePolicySwitchResponse
      */
@@ -5524,12 +5833,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the information about members in Cloud Firewall.
-     *
-     * @description You can call the ModifyInstanceMemberAttributes operation to update the information about members in Cloud Firewall.  
-     * ## Limits
-     * You can call this operation up to 10 times per second for each account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the ModifyInstanceMemberAttributes operation to update the information about members in Cloud Firewall.  </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second for each account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the information about members in Cloud Firewall.</p>
+     * 
      * @param request ModifyInstanceMemberAttributesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyInstanceMemberAttributesResponse
@@ -5559,12 +5870,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the information about members in Cloud Firewall.
-     *
-     * @description You can call the ModifyInstanceMemberAttributes operation to update the information about members in Cloud Firewall.  
-     * ## Limits
-     * You can call this operation up to 10 times per second for each account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the ModifyInstanceMemberAttributes operation to update the information about members in Cloud Firewall.  </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second for each account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the information about members in Cloud Firewall.</p>
+     * 
      * @param request ModifyInstanceMemberAttributesRequest
      * @return ModifyInstanceMemberAttributesResponse
      */
@@ -5574,10 +5887,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of an access control policy that is created for a NAT firewall.
-     *
-     * @description You can use this operation to modify the configurations of an access control policy. The policy is used to allow, deny, or monitor traffic that reaches a NAT firewall.
-     *
+     * <b>description</b> :
+     * <p>You can use this operation to modify the configurations of an access control policy. The policy is used to allow, deny, or monitor traffic that reaches a NAT firewall.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of an access control policy that is created for a NAT firewall.</p>
+     * 
      * @param request ModifyNatFirewallControlPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyNatFirewallControlPolicyResponse
@@ -5695,10 +6010,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of an access control policy that is created for a NAT firewall.
-     *
-     * @description You can use this operation to modify the configurations of an access control policy. The policy is used to allow, deny, or monitor traffic that reaches a NAT firewall.
-     *
+     * <b>description</b> :
+     * <p>You can use this operation to modify the configurations of an access control policy. The policy is used to allow, deny, or monitor traffic that reaches a NAT firewall.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of an access control policy that is created for a NAT firewall.</p>
+     * 
      * @param request ModifyNatFirewallControlPolicyRequest
      * @return ModifyNatFirewallControlPolicyResponse
      */
@@ -5708,8 +6025,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the priority of an access control policy that is created for a NAT firewall.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the priority of an access control policy that is created for a NAT firewall.</p>
+     * 
      * @param request ModifyNatFirewallControlPolicyPositionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyNatFirewallControlPolicyPositionResponse
@@ -5755,8 +6073,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the priority of an access control policy that is created for a NAT firewall.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the priority of an access control policy that is created for a NAT firewall.</p>
+     * 
      * @param request ModifyNatFirewallControlPolicyPositionRequest
      * @return ModifyNatFirewallControlPolicyPositionResponse
      */
@@ -5766,12 +6085,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables the strict mode for an access control policy.
-     *
-     * @description You can call the ModifyPolicyAdvancedConfig operation to enable or disable the strict mode for an access control policy.  
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>summary</b> : 
+     * <p>修改对象组操作</p>
+     * 
+     * @param request ModifyObjectGroupOperationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyObjectGroupOperationResponse
+     */
+    public ModifyObjectGroupOperationResponse modifyObjectGroupOperationWithOptions(ModifyObjectGroupOperationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.comment)) {
+            query.put("Comment", request.comment);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.direction)) {
+            query.put("Direction", request.direction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectList)) {
+            query.put("ObjectList", request.objectList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectOperation)) {
+            query.put("ObjectOperation", request.objectOperation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectType)) {
+            query.put("ObjectType", request.objectType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
+            query.put("SourceIp", request.sourceIp);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyObjectGroupOperation"),
+            new TeaPair("version", "2017-12-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyObjectGroupOperationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改对象组操作</p>
+     * 
+     * @param request ModifyObjectGroupOperationRequest
+     * @return ModifyObjectGroupOperationResponse
+     */
+    public ModifyObjectGroupOperationResponse modifyObjectGroupOperation(ModifyObjectGroupOperationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyObjectGroupOperationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can call the ModifyPolicyAdvancedConfig operation to enable or disable the strict mode for an access control policy.  </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables or disables the strict mode for an access control policy.</p>
+     * 
      * @param request ModifyPolicyAdvancedConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyPolicyAdvancedConfigResponse
@@ -5809,12 +6198,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables the strict mode for an access control policy.
-     *
-     * @description You can call the ModifyPolicyAdvancedConfig operation to enable or disable the strict mode for an access control policy.  
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the ModifyPolicyAdvancedConfig operation to enable or disable the strict mode for an access control policy.  </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables or disables the strict mode for an access control policy.</p>
+     * 
      * @param request ModifyPolicyAdvancedConfigRequest
      * @return ModifyPolicyAdvancedConfigResponse
      */
@@ -5824,6 +6215,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the configuration of a virtual private cloud (VPC) firewall that is created for a transit router.</p>
+     * 
      * @param request ModifyTrFirewallV2ConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyTrFirewallV2ConfigurationResponse
@@ -5861,6 +6255,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the configuration of a virtual private cloud (VPC) firewall that is created for a transit router.</p>
+     * 
      * @param request ModifyTrFirewallV2ConfigurationRequest
      * @return ModifyTrFirewallV2ConfigurationResponse
      */
@@ -5870,6 +6267,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the effective scope of the routing policy created for the VPC firewall for a transit router.</p>
+     * 
      * @param tmpReq ModifyTrFirewallV2RoutePolicyScopeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyTrFirewallV2RoutePolicyScopeResponse
@@ -5929,6 +6329,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the effective scope of the routing policy created for the VPC firewall for a transit router.</p>
+     * 
      * @param request ModifyTrFirewallV2RoutePolicyScopeRequest
      * @return ModifyTrFirewallV2RoutePolicyScopeResponse
      */
@@ -6004,12 +6407,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-     *
-     * @description You can call the ModifyVpcFirewallCenConfigure operation to modify the configurations of a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. Before you call this operation, make sure that you have created a VPC firewall by calling the [CreateVpcFirewallCenConfigure](https://help.aliyun.com/document_detail/345772.html) operation.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the ModifyVpcFirewallCenConfigure operation to modify the configurations of a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. Before you call this operation, make sure that you have created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> operation.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.</p>
+     * 
      * @param request ModifyVpcFirewallCenConfigureRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyVpcFirewallCenConfigureResponse
@@ -6051,12 +6456,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-     *
-     * @description You can call the ModifyVpcFirewallCenConfigure operation to modify the configurations of a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. Before you call this operation, make sure that you have created a VPC firewall by calling the [CreateVpcFirewallCenConfigure](https://help.aliyun.com/document_detail/345772.html) operation.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the ModifyVpcFirewallCenConfigure operation to modify the configurations of a VPC firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. Before you call this operation, make sure that you have created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> operation.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.</p>
+     * 
      * @param request ModifyVpcFirewallCenConfigureRequest
      * @return ModifyVpcFirewallCenConfigureResponse
      */
@@ -6066,13 +6473,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-     *
-     * @description You can call the ModifyVpcFirewallCenSwitchStatus operation to enable or disable a VPC firewall. A VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. After you enable the VPC firewall, the VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. After you disable the VPC firewall, the VPC firewall no longer protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance.
-     * Before you call this operation, make sure that you have created a VPC firewall by calling the [CreateVpcFirewallCenConfigure](https://help.aliyun.com/document_detail/345772.html) operation.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the ModifyVpcFirewallCenSwitchStatus operation to enable or disable a VPC firewall. A VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. After you enable the VPC firewall, the VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. After you disable the VPC firewall, the VPC firewall no longer protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance.
+     * Before you call this operation, make sure that you have created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> operation.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables or disables a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.</p>
+     * 
      * @param request ModifyVpcFirewallCenSwitchStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyVpcFirewallCenSwitchStatusResponse
@@ -6114,13 +6523,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.
-     *
-     * @description You can call the ModifyVpcFirewallCenSwitchStatus operation to enable or disable a VPC firewall. A VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. After you enable the VPC firewall, the VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. After you disable the VPC firewall, the VPC firewall no longer protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance.
-     * Before you call this operation, make sure that you have created a VPC firewall by calling the [CreateVpcFirewallCenConfigure](https://help.aliyun.com/document_detail/345772.html) operation.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the ModifyVpcFirewallCenSwitchStatus operation to enable or disable a VPC firewall. A VPC firewall protects mutual access traffic between a specified VPC and a network instance that is attached to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. After you enable the VPC firewall, the VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance. After you disable the VPC firewall, the VPC firewall no longer protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance.
+     * Before you call this operation, make sure that you have created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> operation.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables or disables a virtual private cloud (VPC) firewall. The VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance.</p>
+     * 
      * @param request ModifyVpcFirewallCenSwitchStatusRequest
      * @return ModifyVpcFirewallCenSwitchStatusResponse
      */
@@ -6130,12 +6541,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of a virtual private cloud (VPC) firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.
-     *
-     * @description You can call the ModifyVpcFirewallConfigure operation to modify the configurations of a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://help.aliyun.com/document_detail/342893.html) operation.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the ModifyVpcFirewallConfigure operation to modify the configurations of a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. Before you call the operation, make sure that you created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of a virtual private cloud (VPC) firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.</p>
+     * 
      * @param request ModifyVpcFirewallConfigureRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyVpcFirewallConfigureResponse
@@ -6185,12 +6598,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of a virtual private cloud (VPC) firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.
-     *
-     * @description You can call the ModifyVpcFirewallConfigure operation to modify the configurations of a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://help.aliyun.com/document_detail/342893.html) operation.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the ModifyVpcFirewallConfigure operation to modify the configurations of a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. Before you call the operation, make sure that you created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of a virtual private cloud (VPC) firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.</p>
+     * 
      * @param request ModifyVpcFirewallConfigureRequest
      * @return ModifyVpcFirewallConfigureResponse
      */
@@ -6200,12 +6615,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of an access control policy that is created for a virtual private cloud (VPC) firewall in a specified policy group.
-     *
-     * @description You can call the ModifyVpcFirewallControlPolicy operation to modify the configurations of an access control policy that is created for a VPC firewall in a specified policy group. Different access control policies are used for the VPC firewalls that are used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewalls that are used to protect each Express Connect circuit.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the ModifyVpcFirewallControlPolicy operation to modify the configurations of an access control policy that is created for a VPC firewall in a specified policy group. Different access control policies are used for the VPC firewalls that are used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewalls that are used to protect each Express Connect circuit.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of an access control policy that is created for a virtual private cloud (VPC) firewall in a specified policy group.</p>
+     * 
      * @param request ModifyVpcFirewallControlPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyVpcFirewallControlPolicyResponse
@@ -6251,6 +6668,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.destinationType)) {
             query.put("DestinationType", request.destinationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainResolveType)) {
+            query.put("DomainResolveType", request.domainResolveType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
@@ -6319,12 +6740,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of an access control policy that is created for a virtual private cloud (VPC) firewall in a specified policy group.
-     *
-     * @description You can call the ModifyVpcFirewallControlPolicy operation to modify the configurations of an access control policy that is created for a VPC firewall in a specified policy group. Different access control policies are used for the VPC firewalls that are used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewalls that are used to protect each Express Connect circuit.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the ModifyVpcFirewallControlPolicy operation to modify the configurations of an access control policy that is created for a VPC firewall in a specified policy group. Different access control policies are used for the VPC firewalls that are used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewalls that are used to protect each Express Connect circuit.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of an access control policy that is created for a virtual private cloud (VPC) firewall in a specified policy group.</p>
+     * 
      * @param request ModifyVpcFirewallControlPolicyRequest
      * @return ModifyVpcFirewallControlPolicyResponse
      */
@@ -6334,12 +6757,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the priority of an access control policy that is created for a virtual private cloud (VPC) firewall in a specific policy group.
-     *
-     * @description You can use this operation to modify the priority of an access control policy that is created for a VPC firewall in a specific policy group.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can use this operation to modify the priority of an access control policy that is created for a VPC firewall in a specific policy group.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the priority of an access control policy that is created for a virtual private cloud (VPC) firewall in a specific policy group.</p>
+     * 
      * @param request ModifyVpcFirewallControlPolicyPositionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyVpcFirewallControlPolicyPositionResponse
@@ -6385,12 +6810,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the priority of an access control policy that is created for a virtual private cloud (VPC) firewall in a specific policy group.
-     *
-     * @description You can use this operation to modify the priority of an access control policy that is created for a VPC firewall in a specific policy group.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can use this operation to modify the priority of an access control policy that is created for a VPC firewall in a specific policy group.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the priority of an access control policy that is created for a virtual private cloud (VPC) firewall in a specific policy group.</p>
+     * 
      * @param request ModifyVpcFirewallControlPolicyPositionRequest
      * @return ModifyVpcFirewallControlPolicyPositionResponse
      */
@@ -6400,12 +6827,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the intrusion prevention configurations of a virtual private cloud (VPC) firewall.
-     *
-     * @description You can call the ModifyVpcFirewallDefaultIPSConfig operation to modify the intrusion prevention configurations of a VPC firewall.  
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the ModifyVpcFirewallDefaultIPSConfig operation to modify the intrusion prevention configurations of a VPC firewall.  </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the intrusion prevention configurations of a virtual private cloud (VPC) firewall.</p>
+     * 
      * @param request ModifyVpcFirewallDefaultIPSConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyVpcFirewallDefaultIPSConfigResponse
@@ -6427,6 +6856,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.memberUid)) {
             query.put("MemberUid", request.memberUid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleClass)) {
+            query.put("RuleClass", request.ruleClass);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.runMode)) {
@@ -6459,12 +6892,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the intrusion prevention configurations of a virtual private cloud (VPC) firewall.
-     *
-     * @description You can call the ModifyVpcFirewallDefaultIPSConfig operation to modify the intrusion prevention configurations of a VPC firewall.  
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the ModifyVpcFirewallDefaultIPSConfig operation to modify the intrusion prevention configurations of a VPC firewall.  </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the intrusion prevention configurations of a virtual private cloud (VPC) firewall.</p>
+     * 
      * @param request ModifyVpcFirewallDefaultIPSConfigRequest
      * @return ModifyVpcFirewallDefaultIPSConfigResponse
      */
@@ -6474,8 +6909,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the IPS whitelist of a virtual private cloud (VPC) firewall.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the IPS whitelist of a virtual private cloud (VPC) firewall.</p>
+     * 
      * @param request ModifyVpcFirewallIPSWhitelistRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyVpcFirewallIPSWhitelistResponse
@@ -6525,8 +6961,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the IPS whitelist of a virtual private cloud (VPC) firewall.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the IPS whitelist of a virtual private cloud (VPC) firewall.</p>
+     * 
      * @param request ModifyVpcFirewallIPSWhitelistRequest
      * @return ModifyVpcFirewallIPSWhitelistResponse
      */
@@ -6536,13 +6973,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables a virtual private cloud (VPC) firewall. The VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.
-     *
-     * @description You can call the ModifyVpcFirewallSwitchStatus operation to enable or disable a VPC firewall. The VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit. After you enable the VPC firewall, the VPC firewall protects access traffic between two VPCs that are connected by using an Express Connect circuit. After you disable the VPC firewall, the VPC firewall no longer protects access traffic between two VPCs that are connected by using an Express Connect circuit.
-     * Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://help.aliyun.com/document_detail/342893.html) operation.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the ModifyVpcFirewallSwitchStatus operation to enable or disable a VPC firewall. The VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit. After you enable the VPC firewall, the VPC firewall protects access traffic between two VPCs that are connected by using an Express Connect circuit. After you disable the VPC firewall, the VPC firewall no longer protects access traffic between two VPCs that are connected by using an Express Connect circuit.
+     * Before you call the operation, make sure that you created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables or disables a virtual private cloud (VPC) firewall. The VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.</p>
+     * 
      * @param request ModifyVpcFirewallSwitchStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyVpcFirewallSwitchStatusResponse
@@ -6584,13 +7023,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables a virtual private cloud (VPC) firewall. The VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.
-     *
-     * @description You can call the ModifyVpcFirewallSwitchStatus operation to enable or disable a VPC firewall. The VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit. After you enable the VPC firewall, the VPC firewall protects access traffic between two VPCs that are connected by using an Express Connect circuit. After you disable the VPC firewall, the VPC firewall no longer protects access traffic between two VPCs that are connected by using an Express Connect circuit.
-     * Before you call the operation, make sure that you created a VPC firewall by calling the [CreateVpcFirewallConfigure](https://help.aliyun.com/document_detail/342893.html) operation.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the ModifyVpcFirewallSwitchStatus operation to enable or disable a VPC firewall. The VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit. After you enable the VPC firewall, the VPC firewall protects access traffic between two VPCs that are connected by using an Express Connect circuit. After you disable the VPC firewall, the VPC firewall no longer protects access traffic between two VPCs that are connected by using an Express Connect circuit.
+     * Before you call the operation, make sure that you created a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables or disables a virtual private cloud (VPC) firewall. The VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.</p>
+     * 
      * @param request ModifyVpcFirewallSwitchStatusRequest
      * @return ModifyVpcFirewallSwitchStatusResponse
      */
@@ -6600,12 +7041,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Turns off all firewall switches.
-     *
-     * @description You can call the PutDisableAllFwSwitch operation to turn off all firewall switches.
-     * ## [](#qps-)QPS limits
-     * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the PutDisableAllFwSwitch operation to turn off all firewall switches.</p>
+     * <h2><a href="#qps-"></a>QPS limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Turns off all firewall switches.</p>
+     * 
      * @param request PutDisableAllFwSwitchRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PutDisableAllFwSwitchResponse
@@ -6643,12 +7086,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Turns off all firewall switches.
-     *
-     * @description You can call the PutDisableAllFwSwitch operation to turn off all firewall switches.
-     * ## [](#qps-)QPS limits
-     * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the PutDisableAllFwSwitch operation to turn off all firewall switches.</p>
+     * <h2><a href="#qps-"></a>QPS limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Turns off all firewall switches.</p>
+     * 
      * @param request PutDisableAllFwSwitchRequest
      * @return PutDisableAllFwSwitchResponse
      */
@@ -6658,12 +7103,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Disable a firewall for specific assets.
-     *
-     * @description You can call the PutDisableFwSwitch operation to disable a firewall for specific assets. After you disable the firewall, traffic does not pass through Cloud Firewall.  
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the PutDisableFwSwitch operation to disable a firewall for specific assets. After you disable the firewall, traffic does not pass through Cloud Firewall.  </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Disable a firewall for specific assets.</p>
+     * 
      * @param request PutDisableFwSwitchRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PutDisableFwSwitchResponse
@@ -6709,12 +7156,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Disable a firewall for specific assets.
-     *
-     * @description You can call the PutDisableFwSwitch operation to disable a firewall for specific assets. After you disable the firewall, traffic does not pass through Cloud Firewall.  
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the PutDisableFwSwitch operation to disable a firewall for specific assets. After you disable the firewall, traffic does not pass through Cloud Firewall.  </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Disable a firewall for specific assets.</p>
+     * 
      * @param request PutDisableFwSwitchRequest
      * @return PutDisableFwSwitchResponse
      */
@@ -6724,12 +7173,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables a firewall for all public IP addresses within your Alibaba Cloud account.
-     *
-     * @description You can call the PutEnableAllFwSwitch operation to enable a firewall for all public IP addresses within your Alibaba Cloud account.  
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the PutEnableAllFwSwitch operation to enable a firewall for all public IP addresses within your Alibaba Cloud account.  </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables a firewall for all public IP addresses within your Alibaba Cloud account.</p>
+     * 
      * @param request PutEnableAllFwSwitchRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PutEnableAllFwSwitchResponse
@@ -6767,12 +7218,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables a firewall for all public IP addresses within your Alibaba Cloud account.
-     *
-     * @description You can call the PutEnableAllFwSwitch operation to enable a firewall for all public IP addresses within your Alibaba Cloud account.  
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the PutEnableAllFwSwitch operation to enable a firewall for all public IP addresses within your Alibaba Cloud account.  </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables a firewall for all public IP addresses within your Alibaba Cloud account.</p>
+     * 
      * @param request PutEnableAllFwSwitchRequest
      * @return PutEnableAllFwSwitchResponse
      */
@@ -6782,12 +7235,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables firewalls for specific assets.
-     *
-     * @description You can call the PutEnableFwSwitch operation to enable a firewall. After you enable a firewall, traffic passes through Cloud Firewall.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the PutEnableFwSwitch operation to enable a firewall. After you enable a firewall, traffic passes through Cloud Firewall.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables firewalls for specific assets.</p>
+     * 
      * @param request PutEnableFwSwitchRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PutEnableFwSwitchResponse
@@ -6833,12 +7288,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables firewalls for specific assets.
-     *
-     * @description You can call the PutEnableFwSwitch operation to enable a firewall. After you enable a firewall, traffic passes through Cloud Firewall.
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the PutEnableFwSwitch operation to enable a firewall. After you enable a firewall, traffic passes through Cloud Firewall.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables firewalls for specific assets.</p>
+     * 
      * @param request PutEnableFwSwitchRequest
      * @return PutEnableFwSwitchResponse
      */
@@ -6848,8 +7305,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 释放按量付费实例
-     *
+     * <b>summary</b> : 
+     * <p>Releases Cloud Firewall that uses the pay-as-you-go billing method.</p>
+     * 
      * @param request ReleasePostInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ReleasePostInstanceResponse
@@ -6879,8 +7337,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 释放按量付费实例
-     *
+     * <b>summary</b> : 
+     * <p>Releases Cloud Firewall that uses the pay-as-you-go billing method.</p>
+     * 
      * @param request ReleasePostInstanceRequest
      * @return ReleasePostInstanceResponse
      */
@@ -6890,8 +7349,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Resets the number of NAT firewall hits.
-     *
+     * <b>summary</b> : 
+     * <p>Resets the number of NAT firewall hits.</p>
+     * 
      * @param request ResetNatFirewallRuleHitCountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ResetNatFirewallRuleHitCountResponse
@@ -6929,8 +7389,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Resets the number of NAT firewall hits.
-     *
+     * <b>summary</b> : 
+     * <p>Resets the number of NAT firewall hits.</p>
+     * 
      * @param request ResetNatFirewallRuleHitCountRequest
      * @return ResetNatFirewallRuleHitCountResponse
      */
@@ -6940,12 +7401,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Clears the count on hits of an access control policy that is created for a virtual private cloud (VPC) firewall in a specific policy group.
-     *
-     * @description You can call the ResetVpcFirewallRuleHitCount operation to clear the count on hits of an access control policy that is created for a VPC firewall in a specific policy group.  
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the ResetVpcFirewallRuleHitCount operation to clear the count on hits of an access control policy that is created for a VPC firewall in a specific policy group.  </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Clears the count on hits of an access control policy that is created for a virtual private cloud (VPC) firewall in a specific policy group.</p>
+     * 
      * @param request ResetVpcFirewallRuleHitCountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ResetVpcFirewallRuleHitCountResponse
@@ -6979,12 +7442,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Clears the count on hits of an access control policy that is created for a virtual private cloud (VPC) firewall in a specific policy group.
-     *
-     * @description You can call the ResetVpcFirewallRuleHitCount operation to clear the count on hits of an access control policy that is created for a VPC firewall in a specific policy group.  
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>You can call the ResetVpcFirewallRuleHitCount operation to clear the count on hits of an access control policy that is created for a VPC firewall in a specific policy group.  </p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Clears the count on hits of an access control policy that is created for a virtual private cloud (VPC) firewall in a specific policy group.</p>
+     * 
      * @param request ResetVpcFirewallRuleHitCountRequest
      * @return ResetVpcFirewallRuleHitCountResponse
      */
@@ -6994,6 +7459,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Enables or disables a NAT firewall.</p>
+     * 
      * @param request SwitchSecurityProxyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SwitchSecurityProxyResponse
@@ -7031,6 +7499,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Enables or disables a NAT firewall.</p>
+     * 
      * @param request SwitchSecurityProxyRequest
      * @return SwitchSecurityProxyResponse
      */

@@ -6,41 +6,52 @@ import com.aliyun.tea.*;
 public class DescribePolicyPriorUsedRequest extends TeaModel {
     /**
      * <p>The direction of the traffic to which the access control policy applies.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   **in**: inbound traffic</p>
-     * <p>*   **out**: outbound traffic</p>
-     * <br>
+     * <ul>
+     * <li><strong>in</strong>: inbound traffic</li>
+     * <li><strong>out</strong>: outbound traffic</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>in</p>
      */
     @NameInMap("Direction")
     public String direction;
 
     /**
      * <p>The IP version of the asset that is protected by Cloud Firewall.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   **4**: IPv4 (default)</p>
-     * <p>*   **6**: IPv6</p>
+     * <ul>
+     * <li><strong>4</strong>: IPv4 (default)</li>
+     * <li><strong>6</strong>: IPv6</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>6</p>
      */
     @NameInMap("IpVersion")
     public String ipVersion;
 
     /**
      * <p>The natural language of the request and response.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese (default)</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese (default)</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.XX.XX</p>
      */
     @NameInMap("SourceIp")
     @Deprecated

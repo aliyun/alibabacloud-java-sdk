@@ -12,6 +12,9 @@ public class DescribePrefixListsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>67FD76C2-C493-5815-8107-643FD7AB77C7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,45 +43,67 @@ public class DescribePrefixListsResponseBody extends TeaModel {
     public static class DescribePrefixListsResponseBodyPrefixList extends TeaModel {
         /**
          * <p>The IP address family of the prefix list. Valid values:</p>
-         * <br>
-         * <p>*   IPv4</p>
-         * <p>*   IPv6</p>
+         * <ul>
+         * <li>IPv4</li>
+         * <li>IPv6</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         @NameInMap("AddressFamily")
         public String addressFamily;
 
         /**
          * <p>The number of associated resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("AssociationCount")
         public Integer associationCount;
 
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-10-16T08:31:06Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TCP_14900-14911</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The maximum number of entries in the prefix list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("MaxEntries")
         public Integer maxEntries;
 
         /**
          * <p>The ID of the prefix list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pl-uf64nco3ujjqchx6aaji</p>
          */
         @NameInMap("PrefixListId")
         public String prefixListId;
 
         /**
          * <p>The name of the prefix list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>participant-name</p>
          */
         @NameInMap("PrefixListName")
         public String prefixListName;

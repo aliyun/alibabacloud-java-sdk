@@ -6,96 +6,143 @@ import com.aliyun.tea.*;
 public class CreateTrFirewallV2Request extends TeaModel {
     /**
      * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-4xbjup276au29r****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
      * <p>The description of the firewall.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vfw-sz</p>
      */
     @NameInMap("FirewallDescription")
     public String firewallDescription;
 
     /**
      * <p>The name of the firewall.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cfw_test2</p>
      */
     @NameInMap("FirewallName")
     public String firewallName;
 
     /**
      * <p>The subnet CIDR block of the VPC in which the ENI of the firewall is stored in automatic mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.1.0/24</p>
      */
     @NameInMap("FirewallSubnetCidr")
     public String firewallSubnetCidr;
 
     /**
      * <p>The CIDR block that is allocated to the VPC created for the VPC firewall in automatic mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.0.0/16</p>
      */
     @NameInMap("FirewallVpcCidr")
     public String firewallVpcCidr;
 
     /**
      * <p>The ID of the VPC in which the ENI associated with the VPC firewall is created in manual mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-wz9r5qvryn0lg3atb****</p>
      */
     @NameInMap("FirewallVpcId")
     public String firewallVpcId;
 
     /**
      * <p>The ID of the vSwitch that is used to create the ENI in manual mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-uf6ydz3vqj77mr5l6****</p>
      */
     @NameInMap("FirewallVswitchId")
     public String firewallVswitchId;
 
     /**
      * <p>The language of the content within the response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese (default)</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese (default)</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The region ID of the route router.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionNo")
     public String regionNo;
 
     /**
      * <p>The routing mode of the VPC firewall. Valid values:</p>
-     * <br>
-     * <p>*   **managed**: automatic mode</p>
-     * <p>*   **manual**: manual mode</p>
+     * <ul>
+     * <li><strong>managed</strong>: automatic mode</li>
+     * <li><strong>manual</strong>: manual mode</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>managed</p>
      */
     @NameInMap("RouteMode")
     public String routeMode;
 
     /**
      * <p>The primary subnet CIDR block that the VPC uses to connect to the transit router in automatic mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.3.0/24</p>
      */
     @NameInMap("TrAttachmentMasterCidr")
     public String trAttachmentMasterCidr;
 
     /**
      * <p>The primary zone for the vSwitch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-chengdu-a</p>
      */
     @NameInMap("TrAttachmentMasterZone")
     public String trAttachmentMasterZone;
 
     /**
      * <p>The secondary subnet CIDR block that the VPC uses to connect to the transit router in automatic mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.0.16/28</p>
      */
     @NameInMap("TrAttachmentSlaveCidr")
     public String trAttachmentSlaveCidr;
 
     /**
      * <p>The secondary zone for the vSwitch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-chengdu-b</p>
      */
     @NameInMap("TrAttachmentSlaveZone")
     public String trAttachmentSlaveZone;
 
     /**
      * <p>The ID of the transit router.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tr-m5etmb2q7e0mxcur****</p>
      */
     @NameInMap("TransitRouterId")
     public String transitRouterId;

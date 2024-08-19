@@ -6,34 +6,41 @@ import com.aliyun.tea.*;
 public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The action that Cloud Firewall performs on the traffic. Valid values:</p>
-     * <br>
-     * <p>- **accept**: allows the traffic.</p>
-     * <p>- **drop**: blocks the traffic.</p>
-     * <p>- **log**: monitors the traffic.</p>
-     * <br>
+     * <ul>
+     * <li><strong>accept</strong>: allows the traffic.</li>
+     * <li><strong>drop</strong>: blocks the traffic.</li>
+     * <li><strong>log</strong>: monitors the traffic.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>accept</p>
      */
     @NameInMap("AclAction")
     public String aclAction;
 
     /**
      * <p>The type of the applications that the access control policy supports. Valid values:</p>
-     * <br>
-     * <p>- **FTP**</p>
-     * <p>- **HTTP**</p>
-     * <p>- **HTTPS**</p>
-     * <p>- **MySQL**</p>
-     * <p>- **SMTP**</p>
-     * <p>- **SMTPS**</p>
-     * <p>- **RDP**</p>
-     * <p>- **VNC**</p>
-     * <p>- **SSH**</p>
-     * <p>- **Redis**</p>
-     * <p>- **MQTT**</p>
-     * <p>- **MongoDB**</p>
-     * <p>- **Memcache**</p>
-     * <p>- **SSL**</p>
-     * <p>- **ANY**: all types of applications</p>
+     * <ul>
+     * <li><strong>FTP</strong></li>
+     * <li><strong>HTTP</strong></li>
+     * <li><strong>HTTPS</strong></li>
+     * <li><strong>MySQL</strong></li>
+     * <li><strong>SMTP</strong></li>
+     * <li><strong>SMTPS</strong></li>
+     * <li><strong>RDP</strong></li>
+     * <li><strong>VNC</strong></li>
+     * <li><strong>SSH</strong></li>
+     * <li><strong>Redis</strong></li>
+     * <li><strong>MQTT</strong></li>
+     * <li><strong>MongoDB</strong></li>
+     * <li><strong>Memcache</strong></li>
+     * <li><strong>SSL</strong></li>
+     * <li><strong>ANY</strong>: all types of applications</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>HTTP</p>
      */
     @NameInMap("ApplicationName")
     public String applicationName;
@@ -46,198 +53,270 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
 
     /**
      * <p>The description of the access control policy.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The destination port in the access control policy. </p>
-     * <br>
-     * <p>>  If **DestPortType** is set to `port`, you must specify this parameter.</p>
+     * <blockquote>
+     * <p> If <strong>DestPortType</strong> is set to <code>port</code>, you must specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("DestPort")
     public String destPort;
 
     /**
      * <p>The name of the destination port address book in the access control policy. </p>
-     * <br>
-     * <p>>  If **DestPortType** is set to `group`, you must specify this parameter.</p>
+     * <blockquote>
+     * <p> If <strong>DestPortType</strong> is set to <code>group</code>, you must specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>my_port_group</p>
      */
     @NameInMap("DestPortGroup")
     public String destPortGroup;
 
     /**
      * <p>The type of the destination port in the access control policy. Valid values:</p>
-     * <br>
-     * <p>- **port**: port</p>
-     * <p>- **group**: port address book</p>
+     * <ul>
+     * <li><strong>port</strong>: port</li>
+     * <li><strong>group</strong>: port address book</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>port</p>
      */
     @NameInMap("DestPortType")
     public String destPortType;
 
     /**
      * <p>The destination address in the access control policy. Valid values:</p>
-     * <br>
-     * <p>- If **DestinationType** is set to `net`, the value of **Destination** must be a CIDR block.</p>
-     * <p>- If **DestinationType** is set to `group`, the value of **Destination** must be an address book.</p>
-     * <p>- If **DestinationType** is set to `domain`, the value of **Destination** must be a domain name.</p>
-     * <br>
+     * <ul>
+     * <li>If <strong>DestinationType</strong> is set to <code>net</code>, the value of <strong>Destination</strong> must be a CIDR block.</li>
+     * <li>If <strong>DestinationType</strong> is set to <code>group</code>, the value of <strong>Destination</strong> must be an address book.</li>
+     * <li>If <strong>DestinationType</strong> is set to <code>domain</code>, the value of <strong>Destination</strong> must be a domain name.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.2.XX.XX/24</p>
      */
     @NameInMap("Destination")
     public String destination;
 
     /**
      * <p>The type of the destination address in the access control policy. Valid values:</p>
-     * <br>
-     * <p>- **net**: CIDR block</p>
-     * <p>- **group**: address book</p>
-     * <p>- **domain**: domain name</p>
-     * <br>
+     * <ul>
+     * <li><strong>net</strong>: CIDR block</li>
+     * <li><strong>group</strong>: address book</li>
+     * <li><strong>domain</strong>: domain name</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>net</p>
      */
     @NameInMap("DestinationType")
     public String destinationType;
 
+    @NameInMap("DomainResolveType")
+    public String domainResolveType;
+
     /**
      * <p>The time when the access control policy stops taking effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes later than the start time.</p>
-     * <br>
-     * <p>>  If you set RepeatType to Permanent, leave this parameter empty. If you set RepeatType to None, Daily, Weekly, or Monthly, you must specify this parameter.</p>
+     * <blockquote>
+     * <p> If you set RepeatType to Permanent, leave this parameter empty. If you set RepeatType to None, Daily, Weekly, or Monthly, you must specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1694764800</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>- **zh**: Chinese (default)</p>
-     * <p>- **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese (default)</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>258039427902****</p>
      */
     @NameInMap("MemberUid")
     public String memberUid;
 
     /**
      * <p>The priority of the access control policy. </p>
-     * <br>
      * <p>The priority value starts from 1. A smaller priority value indicates a higher priority.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("NewOrder")
     public String newOrder;
 
     /**
      * <p>The type of the protocol in the access control policy. Valid values:</p>
-     * <br>
-     * <p>- **ANY** (If you are not sure about the protocol type, you can set this parameter to ANY.)</p>
-     * <p>- **TCP**</p>
-     * <p>- **UDP**</p>
-     * <p>- **ICMP**</p>
-     * <br>
+     * <ul>
+     * <li><strong>ANY</strong> (If you are not sure about the protocol type, you can set this parameter to ANY.)</li>
+     * <li><strong>TCP</strong></li>
+     * <li><strong>UDP</strong></li>
+     * <li><strong>ICMP</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TCP</p>
      */
     @NameInMap("Proto")
     public String proto;
 
     /**
      * <p>Specifies whether to enable the access control policy. By default, an access control policy is enabled after the policy is created. Valid values: </p>
-     * <br>
-     * <p>- **true**: enables the access control policy.</p>
-     * <p>- **false**: disables the access control policy.</p>
+     * <ul>
+     * <li><strong>true</strong>: enables the access control policy.</li>
+     * <li><strong>false</strong>: disables the access control policy.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Release")
     public String release;
 
     /**
      * <p>The days of a week or of a month on which the access control policy takes effect.</p>
-     * <br>
-     * <p>*   If you set RepeatType to `Permanent`, `None`, or `Daily`, leave this parameter empty. Example: [].</p>
-     * <p>*   If you set RepeatType to Weekly, you must specify this parameter. Example: [0, 6].</p>
-     * <br>
-     * <p>>  If you set RepeatType to Weekly, the fields in the value of this parameter cannot be repeated.</p>
-     * <br>
-     * <p>*   If you set RepeatType to `Monthly`, you must specify this parameter. Example: [1, 31].</p>
-     * <br>
-     * <p>>  If you set RepeatType to Monthly, the fields in the value of this parameter cannot be repeated.</p>
+     * <ul>
+     * <li>If you set RepeatType to <code>Permanent</code>, <code>None</code>, or <code>Daily</code>, leave this parameter empty. Example: [].</li>
+     * <li>If you set RepeatType to Weekly, you must specify this parameter. Example: [0, 6].</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you set RepeatType to Weekly, the fields in the value of this parameter cannot be repeated.</p>
+     * </blockquote>
+     * <ul>
+     * <li>If you set RepeatType to <code>Monthly</code>, you must specify this parameter. Example: [1, 31].</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you set RepeatType to Monthly, the fields in the value of this parameter cannot be repeated.</p>
+     * </blockquote>
      */
     @NameInMap("RepeatDays")
     public java.util.List<Long> repeatDays;
 
     /**
      * <p>The point in time when the recurrence ends. Example: 23:30. The value must be on the hour or on the half hour, and at least 30 minutes later than the start time.</p>
-     * <br>
-     * <p>>  If you set RepeatType to Permanent or None, leave this parameter empty. If you set RepeatType to Daily, Weekly, or Monthly, you must specify this parameter.</p>
+     * <blockquote>
+     * <p> If you set RepeatType to Permanent or None, leave this parameter empty. If you set RepeatType to Daily, Weekly, or Monthly, you must specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>23:30</p>
      */
     @NameInMap("RepeatEndTime")
     public String repeatEndTime;
 
     /**
      * <p>The point in time when the recurrence starts. Example: 08:00. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the end time.</p>
-     * <br>
-     * <p>>  If you set RepeatType to Permanent or None, leave this parameter empty. If you set RepeatType to Daily, Weekly, or Monthly, you must specify this parameter.</p>
+     * <blockquote>
+     * <p> If you set RepeatType to Permanent or None, leave this parameter empty. If you set RepeatType to Daily, Weekly, or Monthly, you must specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>08:00</p>
      */
     @NameInMap("RepeatStartTime")
     public String repeatStartTime;
 
     /**
      * <p>The recurrence type for the access control policy to take effect. Valid values:</p>
-     * <br>
-     * <p>*   **Permanent** (default): The policy always takes effect.</p>
-     * <p>*   **None**: The policy takes effect for only once.</p>
-     * <p>*   **Daily**: The policy takes effect on a daily basis.</p>
-     * <p>*   **Weekly**: The policy takes effect on a weekly basis.</p>
-     * <p>*   **Monthly**: The policy takes effect on a monthly basis.</p>
+     * <ul>
+     * <li><strong>Permanent</strong> (default): The policy always takes effect.</li>
+     * <li><strong>None</strong>: The policy takes effect for only once.</li>
+     * <li><strong>Daily</strong>: The policy takes effect on a daily basis.</li>
+     * <li><strong>Weekly</strong>: The policy takes effect on a weekly basis.</li>
+     * <li><strong>Monthly</strong>: The policy takes effect on a monthly basis.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Permanent</p>
      */
     @NameInMap("RepeatType")
     public String repeatType;
 
     /**
      * <p>The source address in the access control policy. </p>
-     * <br>
-     * <p>- If SourceType is set to `net`, the value of Source must be a CIDR block.</p>
-     * <p>- If SourceType is set to `group`, the value of Source must be an address book.</p>
-     * <br>
+     * <ul>
+     * <li>If SourceType is set to <code>net</code>, the value of Source must be a CIDR block.</li>
+     * <li>If SourceType is set to <code>group</code>, the value of Source must be an address book.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.2.XX.XX/24</p>
      */
     @NameInMap("Source")
     public String source;
 
     /**
      * <p>The type of the source address in the access control policy. Valid values:</p>
-     * <br>
-     * <p>- **net**: CIDR block</p>
-     * <p>- **group**: address book</p>
-     * <br>
+     * <ul>
+     * <li><strong>net</strong>: CIDR block</li>
+     * <li><strong>group</strong>: address book</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>net</p>
      */
     @NameInMap("SourceType")
     public String sourceType;
 
     /**
      * <p>The time when the access control policy starts to take effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the end time.</p>
-     * <br>
-     * <p>>  If you set RepeatType to Permanent, leave this parameter empty. If you set RepeatType to None, Daily, Weekly, or Monthly, you must specify this parameter.</p>
+     * <blockquote>
+     * <p> If you set RepeatType to Permanent, leave this parameter empty. If you set RepeatType to None, Daily, Weekly, or Monthly, you must specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1694761200</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
 
     /**
      * <p>The ID of the policy group in which you want to create the access control policy. </p>
-     * <br>
-     * <p>- If a VPC firewall protects the traffic between two VPCs that are connected by using a CEN instance, the value of this parameter must be the ID of the CEN instance.</p>
-     * <p>- If a VPC firewall protects the traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter must be the instance ID of the VPC firewall.</p>
-     * <br>
-     * <p>>  You can call the [DescribeVpcFirewallAclGroupList](https://www.alibabacloud.com/help/en/cloud-firewall/latest/describevpcfirewallaclgrouplist) operation to query the IDs.</p>
-     * <br>
+     * <ul>
+     * <li>If a VPC firewall protects the traffic between two VPCs that are connected by using a CEN instance, the value of this parameter must be the ID of the CEN instance.</li>
+     * <li>If a VPC firewall protects the traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter must be the instance ID of the VPC firewall.</li>
+     * </ul>
+     * <blockquote>
+     * <p> You can call the <a href="https://www.alibabacloud.com/help/en/cloud-firewall/latest/describevpcfirewallaclgrouplist">DescribeVpcFirewallAclGroupList</a> operation to query the IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vfw-a42bbb7b887148c9****</p>
      */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;
@@ -317,6 +396,14 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
     }
     public String getDestinationType() {
         return this.destinationType;
+    }
+
+    public CreateVpcFirewallControlPolicyRequest setDomainResolveType(String domainResolveType) {
+        this.domainResolveType = domainResolveType;
+        return this;
+    }
+    public String getDomainResolveType() {
+        return this.domainResolveType;
     }
 
     public CreateVpcFirewallControlPolicyRequest setEndTime(Long endTime) {

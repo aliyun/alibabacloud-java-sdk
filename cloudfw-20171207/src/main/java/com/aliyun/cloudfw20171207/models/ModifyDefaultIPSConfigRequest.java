@@ -4,56 +4,91 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class ModifyDefaultIPSConfigRequest extends TeaModel {
-    @NameInMap("AiRules")
-    public String aiRules;
-
     /**
+     * <p>Specifies whether to enable basic protection. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: yes</li>
+     * <li><strong>0</strong>: no</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("BasicRules")
     public String basicRules;
 
     /**
+     * <p>Specifies whether to enable threat intelligence. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: yes</li>
+     * <li><strong>0</strong>: no</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("CtiRules")
     public String ctiRules;
 
-    @NameInMap("EnableAllPatch")
-    public String enableAllPatch;
-
-    @NameInMap("EnableDefault")
-    public String enableDefault;
-
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong> (default)</li>
+     * <li><strong>en</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Specifies whether to enable virtual patching. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: yes</li>
+     * <li><strong>0</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PatchRules")
     public String patchRules;
 
+    /**
+     * <p>The level of the rule group for the IPS. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: loose</li>
+     * <li><strong>2</strong>: medium</li>
+     * <li><strong>3</strong>: strict</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RuleClass")
     public String ruleClass;
 
     /**
+     * <p>The mode of the IPS. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: block mode</li>
+     * <li><strong>0</strong>: monitor mode</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("RunMode")
     public String runMode;
 
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     public static ModifyDefaultIPSConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDefaultIPSConfigRequest self = new ModifyDefaultIPSConfigRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyDefaultIPSConfigRequest setAiRules(String aiRules) {
-        this.aiRules = aiRules;
-        return this;
-    }
-    public String getAiRules() {
-        return this.aiRules;
     }
 
     public ModifyDefaultIPSConfigRequest setBasicRules(String basicRules) {
@@ -70,22 +105,6 @@ public class ModifyDefaultIPSConfigRequest extends TeaModel {
     }
     public String getCtiRules() {
         return this.ctiRules;
-    }
-
-    public ModifyDefaultIPSConfigRequest setEnableAllPatch(String enableAllPatch) {
-        this.enableAllPatch = enableAllPatch;
-        return this;
-    }
-    public String getEnableAllPatch() {
-        return this.enableAllPatch;
-    }
-
-    public ModifyDefaultIPSConfigRequest setEnableDefault(String enableDefault) {
-        this.enableDefault = enableDefault;
-        return this;
-    }
-    public String getEnableDefault() {
-        return this.enableDefault;
     }
 
     public ModifyDefaultIPSConfigRequest setLang(String lang) {
@@ -118,14 +137,6 @@ public class ModifyDefaultIPSConfigRequest extends TeaModel {
     }
     public String getRunMode() {
         return this.runMode;
-    }
-
-    public ModifyDefaultIPSConfigRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
 }

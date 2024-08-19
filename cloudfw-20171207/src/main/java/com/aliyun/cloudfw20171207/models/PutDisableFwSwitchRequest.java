@@ -6,39 +6,58 @@ import com.aliyun.tea.*;
 public class PutDisableFwSwitchRequest extends TeaModel {
     /**
      * <p>The IP addresses.</p>
-     * <br>
-     * <p>>  You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.</p>
+     * <blockquote>
+     * <p> You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;192.0.XX.XX&quot;,&quot;192.0.XX.XX&quot;]</p>
      */
     @NameInMap("IpaddrList")
     public java.util.List<String> ipaddrList;
 
     /**
      * <p>The language of the content within the response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese (default)</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese (default)</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The regions.</p>
-     * <br>
-     * <p>>  You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.</p>
+     * <blockquote>
+     * <p> You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;cn-hangzhou&quot;,&quot;cn-shanghai&quot;]</p>
      */
     @NameInMap("RegionList")
     public java.util.List<String> regionList;
 
     /**
      * <p>The types of the assets.</p>
-     * <br>
-     * <p>> You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.</p>
+     * <blockquote>
+     * <p>You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;EcsPublicIp&quot;,&quot;NatEip&quot;]</p>
      */
     @NameInMap("ResourceTypeList")
     public java.util.List<String> resourceTypeList;
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.XX.XX</p>
      */
     @NameInMap("SourceIp")
     @Deprecated

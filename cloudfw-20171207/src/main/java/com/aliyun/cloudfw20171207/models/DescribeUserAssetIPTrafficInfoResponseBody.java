@@ -6,54 +6,81 @@ import com.aliyun.tea.*;
 public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
     /**
      * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1656923760</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>The network throughput, which indicates the inbound traffic rate. Unit: bit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4520</p>
      */
     @NameInMap("InBps")
     public Long inBps;
 
     /**
      * <p>The inbound network throughput, which indicates the number of packets that are sent inbound per second. Unit: packets per second (pps).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>233</p>
      */
     @NameInMap("InPps")
     public Long inPps;
 
     /**
      * <p>The new connection creation rate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>43</p>
      */
     @NameInMap("NewConn")
     public Long newConn;
 
     /**
      * <p>The network throughput, which indicates the outbound traffic rate. Unit: bit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4180</p>
      */
     @NameInMap("OutBps")
     public Long outBps;
 
     /**
      * <p>The outbound network throughput, which indicates the number of packets that are sent outbound per second. Unit: pps.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>224</p>
      */
     @NameInMap("OutPps")
     public Long outPps;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F0F82705-CFC7-5F83-86C8-A063892F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of requests.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("SessionCount")
     public Long sessionCount;
 
     /**
      * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1656837360</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

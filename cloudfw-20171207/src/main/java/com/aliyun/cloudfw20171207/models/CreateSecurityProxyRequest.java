@@ -4,14 +4,25 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class CreateSecurityProxyRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>close</p>
+     */
     @NameInMap("FirewallSwitch")
     public String firewallSwitch;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ngw-bp1okz6k7s4n4mnk5f1g3</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
@@ -24,31 +35,56 @@ public class CreateSecurityProxyRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nat-idmp-fir</p>
      */
     @NameInMap("ProxyName")
     public String proxyName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionNo")
     public String regionNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("StrictMode")
     public Integer strictMode;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-uf6b5lyul0xfgv74i01ph</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("VswitchAuto")
     public String vswitchAuto;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.0.0.0/0</p>
+     */
     @NameInMap("VswitchCidr")
     public String vswitchCidr;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-bp1sqg9wms9w9y1uxcs1x</p>
+     */
     @NameInMap("VswitchId")
     public String vswitchId;
 
@@ -148,24 +184,36 @@ public class CreateSecurityProxyRequest extends TeaModel {
     public static class CreateSecurityProxyRequestNatRouteEntryList extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.0.0/0</p>
          */
         @NameInMap("DestinationCidr")
         public String destinationCidr;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-bp1okz6k7s4n4mnk5f1g3</p>
          */
         @NameInMap("NextHopId")
         public String nextHopId;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NatGateway</p>
          */
         @NameInMap("NextHopType")
         public String nextHopType;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-2ze13wrgz7wsu9yiqeffg</p>
          */
         @NameInMap("RouteTableId")
         public String routeTableId;

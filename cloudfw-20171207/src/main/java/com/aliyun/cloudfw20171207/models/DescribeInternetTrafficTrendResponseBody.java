@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
     /**
      * <p>The average inbound network throughput, which indicates the average number of bits that are sent inbound per second. Unit: bit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6114152</p>
      */
     @NameInMap("AvgInBps")
     public Long avgInBps;
 
     /**
      * <p>The average outbound network throughput, which indicates the average number of bits that are sent outbound per second. Unit: bit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>70148993</p>
      */
     @NameInMap("AvgOutBps")
     public Long avgOutBps;
 
     /**
      * <p>The average number of requests.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>79013</p>
      */
     @NameInMap("AvgSession")
     public Long avgSession;
 
     /**
      * <p>The total average inbound and outbound network throughput, which indicates the average number of bits that are sent inbound and outbound per second. Unit: bit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2306</p>
      */
     @NameInMap("AvgTotalBps")
     public Long avgTotalBps;
@@ -36,66 +48,108 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
 
     /**
      * <p>The timestamp generated when the bandwidth reaches the peak value. The value is a UNIX timestamp. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1672736400</p>
      */
     @NameInMap("MaxBandwidthTime")
     public Long maxBandwidthTime;
 
+    /**
+     * <p>The maximum volume of excess traffic allowed per day.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>873</p>
+     */
     @NameInMap("MaxDayExceedBytes")
     public Long maxDayExceedBytes;
 
     /**
      * <p>The maximum inbound network throughput, which indicates the maximum number of bits that are sent inbound per second. Unit: bit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10275643</p>
      */
     @NameInMap("MaxInBps")
     public Long maxInBps;
 
     /**
      * <p>The maximum outbound network throughput, which indicates the maximum number of bits that are sent outbound per second. Unit: bit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>395188</p>
      */
     @NameInMap("MaxOutBps")
     public Long maxOutBps;
 
     /**
      * <p>The number of requests during the peak hour of the network throughout.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>931641</p>
      */
     @NameInMap("MaxSession")
     public Long maxSession;
 
     /**
      * <p>The total maximum inbound and outbound network throughput, which indicates the maximum number of bits that are sent inbound and outbound per second. Unit: bit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>89783147</p>
      */
     @NameInMap("MaxTotalBps")
     public Long maxTotalBps;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C7E837BE-0379-565E-B7B4-DE595C8D337C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total inbound and outbound network throughput, which indicates the total number of bytes that are sent inbound and outbound. Unit: bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>963227674958</p>
      */
     @NameInMap("TotalBytes")
     public Long totalBytes;
 
+    /**
+     * <p>The total volume of excess traffic.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4243873</p>
+     */
     @NameInMap("TotalExceedBytes")
     public Long totalExceedBytes;
 
     /**
      * <p>The inbound network throughput, which indicates the total number of bytes that are sent inbound. Unit: bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>41536824243873</p>
      */
     @NameInMap("TotalInBytes")
     public Long totalInBytes;
 
     /**
      * <p>The outbound network throughput, which indicates the total number of bytes that are sent outbound. Unit: bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2660894567178</p>
      */
     @NameInMap("TotalOutBytes")
     public Long totalOutBytes;
 
     /**
      * <p>The total number of requests.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1061449</p>
      */
     @NameInMap("TotalSession")
     public Long totalSession;
@@ -244,60 +298,91 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
     public static class DescribeInternetTrafficTrendResponseBodyDataList extends TeaModel {
         /**
          * <p>The inbound network throughput, which indicates the number of bits that are sent inbound per second. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>187</p>
          */
         @NameInMap("InBps")
         public Long inBps;
 
         /**
          * <p>The inbound network throughput, which indicates the total number of bytes that are sent inbound. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>235</p>
          */
         @NameInMap("InBytes")
         public Long inBytes;
 
         /**
          * <p>The inbound network throughput, which indicates the number of packets that are sent inbound per second. Unit: packets per second (pps).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("InPps")
         public Long inPps;
 
         /**
          * <p>The number of new connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27</p>
          */
         @NameInMap("NewConn")
         public Long newConn;
 
         /**
-         * <p>The outbound network throughput, which indicates the number of bits that are sent inbound per second. Unit: bit/s.</p>
+         * <p>The outbound network throughput, which indicates the number of bits that are sent outbound per second. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45</p>
          */
         @NameInMap("OutBps")
         public Long outBps;
 
         /**
          * <p>The outbound network throughput, which indicates the total number of bytes that are sent outbound. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1123</p>
          */
         @NameInMap("OutBytes")
         public Long outBytes;
 
         /**
          * <p>The outbound network throughput, which indicates the number of packets that are sent outbound per second. Unit: pps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("OutPps")
         public Long outPps;
 
         /**
          * <p>The number of requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27</p>
          */
         @NameInMap("SessionCount")
         public Long sessionCount;
 
         /**
          * <p>The time when traffic is generated. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>If processing is not complete at this point in time, -1 is returned for all other fields.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1659405600</p>
          */
         @NameInMap("Time")
         public Integer time;
 
         /**
          * <p>The total outbound and inbound network throughput, which indicates the total number of bits that are sent inbound and outbound per second. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>323</p>
          */
         @NameInMap("TotalBps")
         public Long totalBps;

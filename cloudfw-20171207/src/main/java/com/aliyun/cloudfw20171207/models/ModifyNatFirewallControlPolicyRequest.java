@@ -6,22 +6,26 @@ import com.aliyun.tea.*;
 public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The action that Cloud Firewall performs on the traffic. Valid values:</p>
-     * <br>
-     * <p>*   **accept**: allows the traffic.</p>
-     * <p>*   **drop**: denies the traffic.</p>
-     * <p>*   **log**: monitors the traffic.</p>
-     * <br>
+     * <ul>
+     * <li><strong>accept</strong>: allows the traffic.</li>
+     * <li><strong>drop</strong>: denies the traffic.</li>
+     * <li><strong>log</strong>: monitors the traffic.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>log</p>
      */
     @NameInMap("AclAction")
     public String aclAction;
 
     /**
      * <p>The UUID of the access control policy.</p>
-     * <br>
      * <p>To modify the configurations of an access control policy, you must provide the UUID of the policy. You can call the DescribeNatFirewallControlPolicy operation to query the UUIDs of access control policies.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>61ab1c02-926a-4d1b-9ef7-595eed8c4226</p>
      */
     @NameInMap("AclUuid")
     public String aclUuid;
@@ -34,199 +38,274 @@ public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
 
     /**
      * <p>The description of the access control policy. Fuzzy match is supported.</p>
-     * <br>
-     * <p>> If you do not specify this parameter, the descriptions of all policies are queried.</p>
-     * <br>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the descriptions of all policies are queried.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The destination port in the access control policy.</p>
-     * <br>
-     * <p>> If **DestPortType** is set to `port`, you must specify this parameter.</p>
+     * <blockquote>
+     * <p>If <strong>DestPortType</strong> is set to <code>port</code>, you must specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("DestPort")
     public String destPort;
 
     /**
      * <p>The name of the destination port address book in the access control policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my_dest_port_group</p>
      */
     @NameInMap("DestPortGroup")
     public String destPortGroup;
 
     /**
      * <p>The type of the destination port in the access control policy. Valid values:</p>
-     * <br>
-     * <p>*   **port**: port</p>
-     * <p>*   **group**: port address book</p>
+     * <ul>
+     * <li><strong>port</strong>: port</li>
+     * <li><strong>group</strong>: port address book</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>port</p>
      */
     @NameInMap("DestPortType")
     public String destPortType;
 
     /**
      * <p>The destination address in the access control policy.</p>
-     * <br>
-     * <p>*   If **DestinationType** is set to net, the value of **Destination** is a CIDR block. Example: 1.2.3.4/24</p>
-     * <p>*   If **DestinationType** is set to group, the value of **Destination** is an address book. Example: db_group</p>
-     * <p>*   If **DestinationType** is set to domain, the value of **Destination** is a domain name. Example: \\*.aliyuncs.com</p>
-     * <p>*   If **DestinationType** is set to location, the value of **Destination** is a location. For more information about the location codes, see the "AddControlPolicy" topic. Example: ["BJ11", "ZB"]</p>
-     * <br>
+     * <ul>
+     * <li>If <strong>DestinationType</strong> is set to net, the value of <strong>Destination</strong> is a CIDR block. Example: 1.2.3.4/24</li>
+     * <li>If <strong>DestinationType</strong> is set to group, the value of <strong>Destination</strong> is an address book. Example: db_group</li>
+     * <li>If <strong>DestinationType</strong> is set to domain, the value of <strong>Destination</strong> is a domain name. Example: \*.aliyuncs.com</li>
+     * <li>If <strong>DestinationType</strong> is set to location, the value of <strong>Destination</strong> is a location. For more information about the location codes, see the &quot;AddControlPolicy&quot; topic. Example: [&quot;BJ11&quot;, &quot;ZB&quot;]</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>x.x.x.x/32</p>
      */
     @NameInMap("Destination")
     public String destination;
 
     /**
      * <p>The type of the destination address in the access control policy. Valid values:</p>
-     * <br>
-     * <p>*   **net**: CIDR block</p>
-     * <p>*   **group**: address book</p>
-     * <p>*   **domain**: domain name</p>
-     * <p>*   **location**: destination location</p>
-     * <br>
+     * <ul>
+     * <li><strong>net</strong>: CIDR block</li>
+     * <li><strong>group</strong>: address book</li>
+     * <li><strong>domain</strong>: domain name</li>
+     * <li><strong>location</strong>: destination location</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>net</p>
      */
     @NameInMap("DestinationType")
     public String destinationType;
 
     /**
      * <p>The direction of the traffic to which the access control policy applies.</p>
-     * <br>
-     * <p>*   Set the value to **out**.</p>
+     * <ul>
+     * <li>Set the value to <strong>out</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>out</p>
      */
     @NameInMap("Direction")
     public String direction;
 
     /**
      * <p>The domain name resolution method of the access control policy. Valid values:</p>
-     * <br>
-     * <p>*   **0**: Fully qualified domain name (FQDN)-based resolution</p>
-     * <p>*   **1**: Domain Name System (DNS)-based dynamic resolution</p>
-     * <p>*   **2**: FQDN and DNS-based dynamic resolution</p>
+     * <ul>
+     * <li><strong>0</strong>: Fully qualified domain name (FQDN)-based resolution</li>
+     * <li><strong>1</strong>: Domain Name System (DNS)-based dynamic resolution</li>
+     * <li><strong>2</strong>: FQDN and DNS-based dynamic resolution</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("DomainResolveType")
     public String domainResolveType;
 
     /**
      * <p>The time when the access control policy stops taking effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes later than the value of StartTime.</p>
-     * <br>
-     * <p>>  If RepeatType is set to Permanent, EndTime is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, EndTime must be specified.</p>
+     * <blockquote>
+     * <p> If RepeatType is set to Permanent, EndTime is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, EndTime must be specified.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1694764800</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>The language of the content within the request and the response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese (default)</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese (default)</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The ID of the NAT gateway.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ngw-xxxxxx</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
     /**
-     * <p>The protocol type supported by the access control policy. Valid values:</p>
-     * <br>
-     * <p>*   **ANY**</p>
-     * <p>*   **TCP**</p>
-     * <p>*   **UDP**</p>
-     * <p>*   **ICMP**</p>
-     * <br>
-     * <p>> The value **ANY** indicates all types of protocols.</p>
-     * <br>
+     * <p>The protocol type in the access control policy. Valid values:</p>
+     * <ul>
+     * <li><strong>ANY</strong></li>
+     * <li><strong>TCP</strong></li>
+     * <li><strong>UDP</strong></li>
+     * <li><strong>ICMP</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> The value <strong>ANY</strong> indicates all types of applications.</p>
+     * </blockquote>
+     * <blockquote>
+     * <p> If the destination address type is a threat intelligence address book of the domain name type or a cloud service address book, you can set Proto to TCP. If you set Proto to TCP, you can set application types to HTTP, HTTPS, SMTP, SMTPS, and SSL.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TCP</p>
      */
     @NameInMap("Proto")
     public String proto;
 
     /**
      * <p>The status of the access control policy. Valid values:</p>
-     * <br>
-     * <p>*   **true**: enabled</p>
-     * <p>*   **false**: disabled</p>
+     * <ul>
+     * <li><strong>true</strong>: enabled</li>
+     * <li><strong>false</strong>: disabled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Release")
     public String release;
 
     /**
      * <p>The days of a week or of a month on which the access control policy takes effect.</p>
-     * <br>
-     * <p>*   If RepeatType is set to `Permanent`, `None`, or `Daily`, RepeatDays is left empty. Example: [].</p>
-     * <p>*   If RepeatType is set to Weekly, RepeatDays must be specified. Example: [0, 6].</p>
-     * <br>
-     * <p>>  If RepeatType is set to Weekly, the fields in the value of RepeatDays cannot be repeated.</p>
-     * <br>
-     * <p>*   If RepeatType is set to `Monthly`, RepeatDays must be specified. Example: [1, 31].</p>
-     * <br>
-     * <p>>  If RepeatType is set to Monthly, the fields in the value of RepeatDays cannot be repeated.</p>
+     * <ul>
+     * <li>If RepeatType is set to <code>Permanent</code>, <code>None</code>, or <code>Daily</code>, RepeatDays is left empty. Example: [].</li>
+     * <li>If RepeatType is set to Weekly, RepeatDays must be specified. Example: [0, 6].</li>
+     * </ul>
+     * <blockquote>
+     * <p> If RepeatType is set to Weekly, the fields in the value of RepeatDays cannot be repeated.</p>
+     * </blockquote>
+     * <ul>
+     * <li>If RepeatType is set to <code>Monthly</code>, RepeatDays must be specified. Example: [1, 31].</li>
+     * </ul>
+     * <blockquote>
+     * <p> If RepeatType is set to Monthly, the fields in the value of RepeatDays cannot be repeated.</p>
+     * </blockquote>
      */
     @NameInMap("RepeatDays")
     public java.util.List<Long> repeatDays;
 
     /**
      * <p>The point in time when the recurrence ends. Example: 23:30. The value must be on the hour or on the half hour, and at least 30 minutes later than the value of RepeatStartTime.</p>
-     * <br>
-     * <p>>  If RepeatType is set to Permanent or None, RepeatEndTime is left empty. If RepeatType is set to Daily, Weekly, or Monthly, RepeatEndTime must be specified.</p>
+     * <blockquote>
+     * <p> If RepeatType is set to Permanent or None, RepeatEndTime is left empty. If RepeatType is set to Daily, Weekly, or Monthly, RepeatEndTime must be specified.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>23:30</p>
      */
     @NameInMap("RepeatEndTime")
     public String repeatEndTime;
 
     /**
      * <p>The point in time when the recurrence starts. Example: 08:00. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the value of RepeatEndTime.</p>
-     * <br>
-     * <p>>  If RepeatType is set to Permanent or None, RepeatStartTime is left empty. If RepeatType is set to Daily, Weekly, or Monthly, this parameter must be specified.</p>
+     * <blockquote>
+     * <p> If RepeatType is set to Permanent or None, RepeatStartTime is left empty. If RepeatType is set to Daily, Weekly, or Monthly, this parameter must be specified.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>08:00</p>
      */
     @NameInMap("RepeatStartTime")
     public String repeatStartTime;
 
     /**
      * <p>The recurrence type for the access control policy to take effect. Valid values:</p>
-     * <br>
-     * <p>*   **Permanent** (default): The policy always takes effect.</p>
-     * <p>*   **None**: The policy takes effect for only once.</p>
-     * <p>*   **Daily**: The policy takes effect on a daily basis.</p>
-     * <p>*   **Weekly**: The policy takes effect on a weekly basis.</p>
-     * <p>*   **Monthly**: The policy takes effect on a monthly basis.</p>
+     * <ul>
+     * <li><strong>Permanent</strong> (default): The policy always takes effect.</li>
+     * <li><strong>None</strong>: The policy takes effect for only once.</li>
+     * <li><strong>Daily</strong>: The policy takes effect on a daily basis.</li>
+     * <li><strong>Weekly</strong>: The policy takes effect on a weekly basis.</li>
+     * <li><strong>Monthly</strong>: The policy takes effect on a monthly basis.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Permanent</p>
      */
     @NameInMap("RepeatType")
     public String repeatType;
 
     /**
      * <p>The source address in the access control policy. Valid values:</p>
-     * <br>
-     * <p>*   If **SourceType** is set to `net`, the value of this parameter is a CIDR block. Example: 10.2.XX.XX/24.</p>
-     * <p>*   If **SourceType** is set to `group`, the value of this parameter is an address book name. Example: db_group.</p>
-     * <br>
+     * <ul>
+     * <li>If <strong>SourceType</strong> is set to <code>net</code>, the value of this parameter is a CIDR block. Example: 10.2.XX.XX/24.</li>
+     * <li>If <strong>SourceType</strong> is set to <code>group</code>, the value of this parameter is an address book name. Example: db_group.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.0.25/32</p>
      */
     @NameInMap("Source")
     public String source;
 
     /**
      * <p>The type of the source address in the access control policy. Valid values:</p>
-     * <br>
-     * <p>*   **net**: CIDR block</p>
-     * <p>*   **group**: address book</p>
-     * <br>
+     * <ul>
+     * <li><strong>net</strong>: CIDR block</li>
+     * <li><strong>group</strong>: address book</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>net</p>
      */
     @NameInMap("SourceType")
     public String sourceType;
 
     /**
      * <p>The time when the access control policy starts to take effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the value of EndTime.</p>
-     * <br>
-     * <p>>  If RepeatType is set to Permanent, StartTime is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, StartTime must be specified.</p>
+     * <blockquote>
+     * <p> If RepeatType is set to Permanent, StartTime is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, StartTime must be specified.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1694761200</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

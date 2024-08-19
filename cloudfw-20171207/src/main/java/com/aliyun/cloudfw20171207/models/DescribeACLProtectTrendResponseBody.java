@@ -6,36 +6,54 @@ import com.aliyun.tea.*;
 public class DescribeACLProtectTrendResponseBody extends TeaModel {
     /**
      * <p>The number of internal requests that are blocked by the ACL feature.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("InProtectCnt")
     public Long inProtectCnt;
 
     /**
      * <p>This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("InterVPCProtectCnt")
     public Long interVPCProtectCnt;
 
     /**
      * <p>The interval for returning data. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>86400</p>
      */
     @NameInMap("Interval")
     public Integer interval;
 
     /**
      * <p>The number of external requests that are blocked by the ACL feature.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("OutProtectCnt")
     public Long outProtectCnt;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9063AB86-6FFA-5B2D-A16D-697C966DECA3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of requests that are blocked by the ACL feature.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
      */
     @NameInMap("TotalProtectCnt")
     public Long totalProtectCnt;
@@ -110,12 +128,18 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
     public static class DescribeACLProtectTrendResponseBodyTrendList extends TeaModel {
         /**
          * <p>The number of requests that are blocked by ACL on the current day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("ProtectCnt")
         public Integer protectCnt;
 
         /**
          * <p>The UNIX timestamp at midnight (00:00:00) of each day, which indicates the date of the current day. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1697299200</p>
          */
         @NameInMap("Time")
         public Long time;

@@ -5,17 +5,24 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
     /**
-     * <p>The connection type of the VPC firewall. The value is fixed as **cen**, which indicates CEN instances.</p>
+     * <p>The connection type of the VPC firewall. The value is fixed as <strong>cen</strong>, which indicates CEN instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen</p>
      */
     @NameInMap("ConnectType")
     public String connectType;
 
     /**
      * <p>The status of the VPC firewall. Valid values:</p>
-     * <br>
-     * <p>*   **opened**: enabled</p>
-     * <p>*   **closed**: disabled</p>
-     * <p>*   **notconfigured**: not configured</p>
+     * <ul>
+     * <li><strong>opened</strong>: enabled</li>
+     * <li><strong>closed</strong>: disabled</li>
+     * <li><strong>notconfigured</strong>: not configured</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>opened</p>
      */
     @NameInMap("FirewallSwitchStatus")
     public String firewallSwitchStatus;
@@ -34,18 +41,27 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>850A84D6-0DE4-4797-A1E8-00090125g4d2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The instance ID of the VPC firewall.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vfw-m5e7dbc4y****</p>
      */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;
 
     /**
      * <p>The instance name of the VPC firewall.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test firewall</p>
      */
     @NameInMap("VpcFirewallName")
     public String vpcFirewallName;
@@ -114,39 +130,58 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
     public static class DescribeVpcFirewallCenDetailResponseBodyFirewallVpc extends TeaModel {
         /**
          * <p>Indicates whether you can specify a CIDR block when you create a VPC firewall for a Basic Edition transit router of a CEN instance. Valid values:</p>
-         * <br>
-         * <p>*   **1**: yes</p>
-         * <p>*   **0**: no</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AllowConfiguration")
         public Integer allowConfiguration;
 
         /**
          * <p>The CIDR block of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.0/8</p>
          */
         @NameInMap("VpcCidr")
         public String vpcCidr;
 
         /**
          * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1245k5oagy2bp74****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The CIDR block of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.1/24</p>
          */
         @NameInMap("VswitchCidr")
         public String vswitchCidr;
 
         /**
          * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1sqg9wms9wxcs1****</p>
          */
         @NameInMap("VswitchId")
         public String vswitchId;
 
         /**
          * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
@@ -209,18 +244,27 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
     public static class DescribeVpcFirewallCenDetailResponseBodyLocalVpcEniList extends TeaModel {
         /**
          * <p>The ID of the ENI that belongs to the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-8vbhfosfqv2rff42****</p>
          */
         @NameInMap("EniId")
         public String eniId;
 
         /**
          * <p>The private IP address of the ENI that belongs to the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("EniPrivateIpAddress")
         public String eniPrivateIpAddress;
 
         /**
          * <p>The ID of the vSwitch to which the ENI is connected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-wz9viido7j436b0n1****</p>
          */
         @NameInMap("EniVSwitchId")
         public String eniVSwitchId;
@@ -259,12 +303,18 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
     public static class DescribeVpcFirewallCenDetailResponseBodyLocalVpcVpcCidrTableListRouteEntryList extends TeaModel {
         /**
          * <p>The destination CIDR block of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX/24</p>
          */
         @NameInMap("DestinationCidr")
         public String destinationCidr;
 
         /**
          * <p>The instance ID of the next hop for the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vrt-m5eb5me6c3l5sezae****</p>
          */
         @NameInMap("NextHopInstanceId")
         public String nextHopInstanceId;
@@ -301,6 +351,9 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
 
         /**
          * <p>The route table ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-1234</p>
          */
         @NameInMap("RouteTableId")
         public String routeTableId;
@@ -331,12 +384,18 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
     public static class DescribeVpcFirewallCenDetailResponseBodyLocalVpc extends TeaModel {
         /**
          * <p>The ID of the connection between two network instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-sxig7bye51fid5****</p>
          */
         @NameInMap("AttachmentId")
         public String attachmentId;
 
         /**
          * <p>The name of the connection between two network instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Local test</p>
          */
         @NameInMap("AttachmentName")
         public String attachmentName;
@@ -355,69 +414,102 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the specified vSwitch when the routing mode is manual.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-zeq4o875u****</p>
          */
         @NameInMap("ManualVSwitchId")
         public String manualVSwitchId;
 
         /**
          * <p>The ID of the VPC for which the VPC firewall is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2zefk9fbn8j7v585g****</p>
          */
         @NameInMap("NetworkInstanceId")
         public String networkInstanceId;
 
         /**
          * <p>The name of the network instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test VPC</p>
          */
         @NameInMap("NetworkInstanceName")
         public String networkInstanceName;
 
         /**
-         * <p>The type of the network instance. The value is fixed as **VPC**.</p>
+         * <p>The type of the network instance. The value is fixed as <strong>VPC</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("NetworkInstanceType")
         public String networkInstanceType;
 
         /**
          * <p>The UID of the Alibaba Cloud account to which the VPC belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>158039427902****</p>
          */
         @NameInMap("OwnerId")
         public String ownerId;
 
         /**
          * <p>The ID of the region in which the VPC resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionNo")
         public String regionNo;
 
         /**
          * <p>The routing mode. Valid values:</p>
-         * <br>
-         * <p>*   auto: automatic mode</p>
-         * <p>*   manual: manual mode</p>
+         * <ul>
+         * <li>auto: automatic mode</li>
+         * <li>manual: manual mode</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>auto</p>
          */
         @NameInMap("RouteMode")
         public String routeMode;
 
         /**
          * <p>Indicates whether the manual routing mode is supported. Valid values:</p>
-         * <br>
-         * <p>*   **1**: yes</p>
-         * <p>*   **0**: no</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("SupportManualMode")
         public String supportManualMode;
 
         /**
          * <p>The instance ID of the CEN transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-2zetwxskej633l3u1****</p>
          */
         @NameInMap("TransitRouterId")
         public String transitRouterId;
 
         /**
          * <p>The edition of the CEN transit router. Valid values:</p>
-         * <br>
-         * <p>*   **Basic**: Basic Edition</p>
-         * <p>*   **Enterprise**: Enterprise Edition</p>
+         * <ul>
+         * <li><strong>Basic</strong>: Basic Edition</li>
+         * <li><strong>Enterprise</strong>: Enterprise Edition</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Basic</p>
          */
         @NameInMap("TransitRouterType")
         public String transitRouterType;
@@ -430,12 +522,18 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-8vbwbo90rq0anm6t****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The name of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test instance</p>
          */
         @NameInMap("VpcName")
         public String vpcName;

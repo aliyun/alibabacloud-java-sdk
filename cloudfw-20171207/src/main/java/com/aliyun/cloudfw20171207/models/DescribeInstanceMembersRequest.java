@@ -5,33 +5,47 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceMembersRequest extends TeaModel {
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public String currentPage;
 
     /**
      * <p>The remarks of the member. The remarks must be 1 to 256 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>renewal</p>
      */
     @NameInMap("MemberDesc")
     public String memberDesc;
 
     /**
      * <p>The name of the member.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cloudfirewall_2</p>
      */
     @NameInMap("MemberDisplayName")
     public String memberDisplayName;
 
     /**
      * <p>The UID of the member.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>258039427902****</p>
      */
     @NameInMap("MemberUid")
     public String memberUid;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
-     * <p>Default value: **20**.</p>
+     * <p>Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public String pageSize;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyVpcFirewallIPSWhitelistResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F2E8D49A-E5AA-5FF8-8822-25282DCF4BE8</p>
      */
     @NameInMap("RequestId")
     public String requestId;

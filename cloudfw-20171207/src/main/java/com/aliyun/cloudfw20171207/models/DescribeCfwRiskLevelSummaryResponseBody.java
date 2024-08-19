@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeCfwRiskLevelSummaryResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F1F30435-FA0A-52DA-A5DE-C16FD6C171DA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,20 +43,30 @@ public class DescribeCfwRiskLevelSummaryResponseBody extends TeaModel {
     public static class DescribeCfwRiskLevelSummaryResponseBodyRiskList extends TeaModel {
         /**
          * <p>The risk levels. Valid values:</p>
-         * <br>
-         * <p>*   **medium**</p>
+         * <ul>
+         * <li><strong>medium</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>medium</p>
          */
         @NameInMap("Level")
         public String level;
 
         /**
          * <p>The number of at-risk Elastic Compute Service (ECS) instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("Num")
         public String num;
 
         /**
          * <p>The type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ResourceNotProtected</p>
          */
         @NameInMap("Type")
         public String type;

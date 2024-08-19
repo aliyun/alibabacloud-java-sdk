@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDownloadTaskResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3F2BED13-F3D0-5984-80D6-D5F298CFEA88</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,6 +21,9 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
 
     /**
      * <p>The total number of tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>132</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -54,53 +60,78 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
     public static class DescribeDownloadTaskResponseBodyTasks extends TeaModel {
         /**
          * <p>The time when the task was created. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1706595827</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The time when the task expires. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1714371828</p>
          */
         @NameInMap("ExpireTime")
         public Long expireTime;
 
         /**
          * <p>The size of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24.04KB</p>
          */
         @NameInMap("FileSize")
         public String fileSize;
 
         /**
          * <p>The URL of the OSS file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://cfw-table-download-cn.oss-cn-hangzhou.aliyuncs.com/%E4%BA%92%E8%81%94%E7%BD%91%E8%BE%B9%E7%95%8C%E9%98%B2%E7%81%AB%E5%A2%99%E8%B5%84%E4%BA%A7-IPv4_1069.csv?Expires=1708583913&OSSAccessKeyId=****&Signature=******%3D">https://cfw-table-download-cn.oss-cn-hangzhou.aliyuncs.com/%E4%BA%92%E8%81%94%E7%BD%91%E8%BE%B9%E7%95%8C%E9%98%B2%E7%81%AB%E5%A2%99%E8%B5%84%E4%BA%A7-IPv4_1069.csv?Expires=1708583913&amp;OSSAccessKeyId=****&amp;Signature=******%3D</a></p>
          */
         @NameInMap("FileURL")
         public String fileURL;
 
         /**
          * <p>The status of the task. Valid values:</p>
-         * <br>
-         * <p>*   **finish**</p>
-         * <p>*   **start**</p>
-         * <p>*   **error**</p>
-         * <p>*   **expire**: The task file is invalid and cannot be downloaded.</p>
+         * <ul>
+         * <li><strong>finish</strong></li>
+         * <li><strong>start</strong></li>
+         * <li><strong>error</strong></li>
+         * <li><strong>expire</strong>: The task file is invalid and cannot be downloaded.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>finish</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1111</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
          * <p>The name of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Internet Boundary Firewall Assets - IPv4</p>
          */
         @NameInMap("TaskName")
         public String taskName;
 
         /**
          * <p>The type of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternetFirewallAsset</p>
          */
         @NameInMap("TaskType")
         public String taskType;

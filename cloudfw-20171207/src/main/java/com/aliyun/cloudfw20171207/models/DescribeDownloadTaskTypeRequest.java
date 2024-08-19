@@ -5,28 +5,41 @@ import com.aliyun.tea.*;
 
 public class DescribeDownloadTaskTypeRequest extends TeaModel {
     /**
-     * <p>The page number. Pages start from page 1. Default value: **1**.</p>
+     * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public String currentPage;
 
     /**
      * <p>The language of the content within the response. Valid values:</p>
-     * <br>
-     * <p>*   **zh** (default): Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The type of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InternetFirewallAsset</p>
      */
     @NameInMap("TaskType")
     public String taskType;

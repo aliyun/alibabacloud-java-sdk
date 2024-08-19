@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class PutDisableAllFwSwitchResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B2841452-CB8D-4F7D-B247-38E1CF7334F8</p>
      */
     @NameInMap("RequestId")
     public String requestId;

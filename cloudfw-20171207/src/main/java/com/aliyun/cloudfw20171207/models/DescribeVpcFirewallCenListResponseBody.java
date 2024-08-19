@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>850A84D6-0DE4-4797-A1E8-00090125k8g2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of VPC firewalls.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -54,27 +60,42 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
     public static class DescribeVpcFirewallCenListResponseBodyVpcFirewallsIpsConfig extends TeaModel {
         /**
          * <p>Indicates whether basic protection is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **1**: yes</p>
-         * <p>*   **0**: no</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("BasicRules")
         public Integer basicRules;
 
         /**
          * <p>Indicates whether virtual patching is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **1**: yes</p>
-         * <p>*   **0**: no</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("EnableAllPatch")
         public Integer enableAllPatch;
 
+        @NameInMap("RuleClass")
+        public Integer ruleClass;
+
         /**
          * <p>The mode of the IPS. Valid values:</p>
-         * <br>
-         * <p>*   **1**: block mode</p>
-         * <p>*   **0**: monitor mode</p>
+         * <ul>
+         * <li><strong>1</strong>: block mode</li>
+         * <li><strong>0</strong>: monitor mode</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RunMode")
         public Integer runMode;
@@ -100,6 +121,14 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
             return this.enableAllPatch;
         }
 
+        public DescribeVpcFirewallCenListResponseBodyVpcFirewallsIpsConfig setRuleClass(Integer ruleClass) {
+            this.ruleClass = ruleClass;
+            return this;
+        }
+        public Integer getRuleClass() {
+            return this.ruleClass;
+        }
+
         public DescribeVpcFirewallCenListResponseBodyVpcFirewallsIpsConfig setRunMode(Integer runMode) {
             this.runMode = runMode;
             return this;
@@ -113,12 +142,18 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
     public static class DescribeVpcFirewallCenListResponseBodyVpcFirewallsLocalVpcVpcCidrTableListRouteEntryList extends TeaModel {
         /**
          * <p>The destination CIDR block of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX/24</p>
          */
         @NameInMap("DestinationCidr")
         public String destinationCidr;
 
         /**
          * <p>The instance ID of the next hop for the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vrt-m5eb5me6c3l5sezae****</p>
          */
         @NameInMap("NextHopInstanceId")
         public String nextHopInstanceId;
@@ -155,6 +190,9 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
 
         /**
          * <p>The route table ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-1234</p>
          */
         @NameInMap("RouteTableId")
         public String routeTableId;
@@ -184,7 +222,10 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
 
     public static class DescribeVpcFirewallCenListResponseBodyVpcFirewallsLocalVpc extends TeaModel {
         /**
-         * <p>Indicates whether the VPC is granted the required permissions. The value is fixed as **authorized**, which indicates that the VPC is granted the required permissions.</p>
+         * <p>Indicates whether the VPC is granted the required permissions. The value is fixed as <strong>authorized</strong>, which indicates that the VPC is granted the required permissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>authorized</p>
          */
         @NameInMap("AuthorizationStatus")
         public String authorizationStatus;
@@ -197,67 +238,98 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the specified vSwitch when the routing mode is manual.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-zeq4o875u****</p>
          */
         @NameInMap("ManualVSwitchId")
         public String manualVSwitchId;
 
         /**
          * <p>The ID of the network instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2zefk9fbn8j7v585g****</p>
          */
         @NameInMap("NetworkInstanceId")
         public String networkInstanceId;
 
         /**
          * <p>The name of the network instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test VPC</p>
          */
         @NameInMap("NetworkInstanceName")
         public String networkInstanceName;
 
         /**
          * <p>The type of the network instance. Valid values:</p>
-         * <br>
-         * <p>*   **VPC**</p>
-         * <p>*   **VBR**</p>
-         * <p>*   **CCN**</p>
+         * <ul>
+         * <li><strong>VPC</strong></li>
+         * <li><strong>VBR</strong></li>
+         * <li><strong>CCN</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("NetworkInstanceType")
         public String networkInstanceType;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the VPC belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>158039427902****</p>
          */
         @NameInMap("OwnerId")
         public Long ownerId;
 
         /**
          * <p>The region ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionNo")
         public String regionNo;
 
         /**
          * <p>The routing mode of the VPC firewall. Valid values:</p>
-         * <br>
-         * <p>*   **auto**: automatic mode</p>
-         * <p>*   **manual**: manual mode</p>
+         * <ul>
+         * <li><strong>auto</strong>: automatic mode</li>
+         * <li><strong>manual</strong>: manual mode</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>auto</p>
          */
         @NameInMap("RouteMode")
         public String routeMode;
 
         /**
          * <p>Indicates whether the manual routing mode is supported. Valid values:</p>
-         * <br>
-         * <p>*   **1**: yes</p>
-         * <p>*   **0**: no</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("SupportManualMode")
         public String supportManualMode;
 
         /**
          * <p>The edition of the CEN transit router. Valid values:</p>
-         * <br>
-         * <p>*   **Basic**: Basic Edition transit router</p>
-         * <p>*   **Enterprise**: Enterprise Edition transit router</p>
+         * <ul>
+         * <li><strong>Basic</strong>: Basic Edition transit router</li>
+         * <li><strong>Enterprise</strong>: Enterprise Edition transit router</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Basic</p>
          */
         @NameInMap("TransitRouterType")
         public String transitRouterType;
@@ -270,12 +342,18 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-8vbwbo90rq0anm6t****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The name of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test instance</p>
          */
         @NameInMap("VpcName")
         public String vpcName;
@@ -402,28 +480,41 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
     public static class DescribeVpcFirewallCenListResponseBodyVpcFirewalls extends TeaModel {
         /**
          * <p>The ID of the CEN instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-x5jayxou71ad73****</p>
          */
         @NameInMap("CenId")
         public String cenId;
 
         /**
          * <p>The name of the CEN instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test CEN instance</p>
          */
         @NameInMap("CenName")
         public String cenName;
 
         /**
          * <p>The connection type of the VPC firewall. The value is fixed as cen, which indicates a CEN instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen</p>
          */
         @NameInMap("ConnectType")
         public String connectType;
 
         /**
          * <p>The status of the VPC firewall. Valid values:</p>
-         * <br>
-         * <p>*   **opened**: The VPC firewall is enabled.</p>
-         * <p>*   **closed**: The VPC firewall is disabled.</p>
-         * <p>*   **notconfigured**: The VPC firewall is not configured.</p>
+         * <ul>
+         * <li><strong>opened</strong>: The VPC firewall is enabled.</li>
+         * <li><strong>closed</strong>: The VPC firewall is disabled.</li>
+         * <li><strong>notconfigured</strong>: The VPC firewall is not configured.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>opened</p>
          */
         @NameInMap("FirewallSwitchStatus")
         public String firewallSwitchStatus;
@@ -442,49 +533,70 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
 
         /**
          * <p>The UID of the member that is manged by your Alibaba Cloud account. The member is also an Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>258039427902****</p>
          */
         @NameInMap("MemberUid")
         public String memberUid;
 
         /**
          * <p>Indicates whether the VPC firewall can be automatically enabled to protect VPC traffic based on route learning. Valid values:</p>
-         * <br>
-         * <p>*   **passed**: The VPC firewall can be automatically enabled.</p>
-         * <p>*   **failed**: The VPC firewall cannot be automatically enabled.</p>
-         * <p>*   **unknown**: The VPC firewall is in an unknown state.</p>
+         * <ul>
+         * <li><strong>passed</strong>: The VPC firewall can be automatically enabled.</li>
+         * <li><strong>failed</strong>: The VPC firewall cannot be automatically enabled.</li>
+         * <li><strong>unknown</strong>: The VPC firewall is in an unknown state.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>failed</p>
          */
         @NameInMap("PrecheckStatus")
         public String precheckStatus;
 
         /**
          * <p>Indicates whether you can create a VPC firewall in a specified region. Valid values:</p>
-         * <br>
-         * <p>*   **enable**: yes</p>
-         * <p>*   **disable**: no</p>
+         * <ul>
+         * <li><strong>enable</strong>: yes</li>
+         * <li><strong>disable</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         @NameInMap("RegionStatus")
         public String regionStatus;
 
         /**
          * <p>The result code of the operation that creates the VPC firewall. Valid values:</p>
-         * <br>
-         * <p>*   **Unauthorized**: Cloud Firewall is not authorized to access the VPC for which the VPC firewall is created, and the VPC firewall cannot be created.</p>
-         * <p>*   **RegionDisable**: VPC Firewall is not supported in the region of the VPC for which the VPC firewall is created, and the VPC firewall cannot be created.</p>
-         * <p>*   **OpsDisable**: You are not allowed to create the VPC firewall.</p>
-         * <p>*   **VbrNotSupport**: The VPC firewall cannot be created for a VBR that is attached to the CEN instance.</p>
-         * <p>*   Empty string: You can create a VPC firewall for the network instance.</p>
+         * <ul>
+         * <li><strong>Unauthorized</strong>: Cloud Firewall is not authorized to access the VPC for which the VPC firewall is created, and the VPC firewall cannot be created.</li>
+         * <li><strong>RegionDisable</strong>: VPC Firewall is not supported in the region of the VPC for which the VPC firewall is created, and the VPC firewall cannot be created.</li>
+         * <li><strong>OpsDisable</strong>: You are not allowed to create the VPC firewall.</li>
+         * <li><strong>VbrNotSupport</strong>: The VPC firewall cannot be created for a VBR that is attached to the CEN instance.</li>
+         * <li>Empty string: You can create a VPC firewall for the network instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Unauthorized</p>
          */
         @NameInMap("ResultCode")
         public String resultCode;
 
         /**
          * <p>The instance ID of the VPC firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vfw-m5e7dbc4y****</p>
          */
         @NameInMap("VpcFirewallId")
         public String vpcFirewallId;
 
         /**
          * <p>The instance name of the VPC firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test firewall</p>
          */
         @NameInMap("VpcFirewallName")
         public String vpcFirewallName;

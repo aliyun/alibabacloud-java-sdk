@@ -4,9 +4,21 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class ModifyTrFirewallV2RoutePolicyScopeResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E7D4D635-0C70-5CEB-A609-851E94D51FBB</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the routing policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>policy-4d724d0139df48f18091</p>
+     */
     @NameInMap("TrFirewallRoutePolicyId")
     public String trFirewallRoutePolicyId;
 

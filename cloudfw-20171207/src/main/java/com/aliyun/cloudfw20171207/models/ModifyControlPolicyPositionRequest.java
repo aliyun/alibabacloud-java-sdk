@@ -6,44 +6,59 @@ import com.aliyun.tea.*;
 public class ModifyControlPolicyPositionRequest extends TeaModel {
     /**
      * <p>The direction of the traffic to which the IPv4 access control policy applies. Valid values:</p>
-     * <br>
-     * <p>*   in: inbound traffic</p>
-     * <p>*   out: outbound traffic</p>
-     * <br>
+     * <ul>
+     * <li>in: inbound traffic</li>
+     * <li>out: outbound traffic</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>in</p>
      */
     @NameInMap("Direction")
     public String direction;
 
     /**
      * <p>The language of the content within the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese (default)</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese (default)</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The new priority of the IPv4 access control policy. You must specify a numeric value for this parameter. The value 1 indicates the highest priority. A larger value indicates a lower priority.</p>
-     * <br>
-     * <p>>  The new priority cannot exceed the priority range of the IPv4 access control policy. Otherwise, an error occurs when you call this operation. Before you call this operation, we recommend that you use the [DescribePolicyPriorUsed](https://help.aliyun.com/document_detail/138862.html) operation to query the priority range of the IPv4 access control policy in the specified direction.</p>
-     * <br>
+     * <blockquote>
+     * <p> The new priority cannot exceed the priority range of the IPv4 access control policy. Otherwise, an error occurs when you call this operation. Before you call this operation, we recommend that you use the <a href="https://help.aliyun.com/document_detail/138862.html">DescribePolicyPriorUsed</a> operation to query the priority range of the IPv4 access control policy in the specified direction.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("NewOrder")
     public String newOrder;
 
     /**
      * <p>The original priority of the IPv4 access control policy.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("OldOrder")
     public String oldOrder;
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.XX.XX</p>
      */
     @NameInMap("SourceIp")
     @Deprecated

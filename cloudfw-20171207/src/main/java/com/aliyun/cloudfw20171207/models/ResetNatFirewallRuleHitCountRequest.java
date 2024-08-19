@@ -6,23 +6,32 @@ import com.aliyun.tea.*;
 public class ResetNatFirewallRuleHitCountRequest extends TeaModel {
     /**
      * <p>The UUID of the access control policy.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3de3aed5-6de7-4ecd-9106-cfe994b9c49f</p>
      */
     @NameInMap("AclUuid")
     public String aclUuid;
 
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh** (default): Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The ID of the NAT gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ngw-zm0h3c1exm5bifuorg8c5</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;

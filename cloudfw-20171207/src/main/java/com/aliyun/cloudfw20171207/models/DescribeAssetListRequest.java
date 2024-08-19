@@ -6,122 +6,169 @@ import com.aliyun.tea.*;
 public class DescribeAssetListRequest extends TeaModel {
     /**
      * <p>The page number. Valid values: 1 to 50.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public String currentPage;
 
     /**
      * <p>The IP version of the asset that is protected by Cloud Firewall. Valid values:</p>
-     * <br>
-     * <p>*   **4**: IPv4 (default)</p>
-     * <p>*   **6**: IPv6</p>
+     * <ul>
+     * <li><strong>4</strong>: IPv4 (default)</li>
+     * <li><strong>6</strong>: IPv6</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("IpVersion")
     public String ipVersion;
 
     /**
      * <p>The language of the content within the response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese (default)</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese (default)</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The UID of the member that is added to Cloud Firewall.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>258039427902****</p>
      */
     @NameInMap("MemberUid")
     public Long memberUid;
 
     /**
      * <p>The time when the asset was added. Valid values:</p>
-     * <br>
-     * <p>*   **discovered in 1 hour**: within one hour.</p>
-     * <p>*   **discovered in 1 day**: within one day.</p>
-     * <p>*   **discovered in 7 days**: within seven days.</p>
+     * <ul>
+     * <li><strong>discovered in 1 hour</strong>: within one hour.</li>
+     * <li><strong>discovered in 1 day</strong>: within one day.</li>
+     * <li><strong>discovered in 7 days</strong>: within seven days.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>discovered in 1 hour</p>
      */
     @NameInMap("NewResourceTag")
     public String newResourceTag;
 
     /**
      * <p>The number of entries per page. Valid values: 1 to 50.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The region ID of your Cloud Firewall.</p>
-     * <br>
-     * <p>> For more information about the regions, see [Supported regions](https://help.aliyun.com/document_detail/195657.html).</p>
+     * <blockquote>
+     * <p>For more information about the regions, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionNo")
     public String regionNo;
 
     /**
      * <p>The type of the asset. Valid values:</p>
-     * <br>
-     * <p>*   **BastionHostEgressIP**: the egress IP address of a bastion host</p>
-     * <p>*   **BastionHostIngressIP**: the ingress IP address of a bastion host</p>
-     * <p>*   **EcsEIP**: the elastic IP address (EIP) of an Elastic Compute Service (ECS) instance</p>
-     * <p>*   **EcsPublicIP**: the public IP address of an ECS instance</p>
-     * <p>*   **EIP**: the EIP</p>
-     * <p>*   **EniEIP**: the EIP of an elastic network interface (ENI)</p>
-     * <p>*   **NatEIP**: the EIP of a NAT gateway</p>
-     * <p>*   **SlbEIP**: the EIP of a Server Load Balancer (SLB) instance or a Classic Load Balancer (CLB) instance</p>
-     * <p>*   **SlbPublicIP**: the public IP address of an SLB instance or a CLB instance</p>
-     * <p>*   **NatPublicIP**: the public IP address of a NAT gateway</p>
-     * <p>*   **HAVIP**: the high-availability virtual IP address (HAVIP)</p>
+     * <ul>
+     * <li><strong>BastionHostEgressIP</strong>: the egress IP address of a bastion host</li>
+     * <li><strong>BastionHostIngressIP</strong>: the ingress IP address of a bastion host</li>
+     * <li><strong>EcsEIP</strong>: the elastic IP address (EIP) of an Elastic Compute Service (ECS) instance</li>
+     * <li><strong>EcsPublicIP</strong>: the public IP address of an ECS instance</li>
+     * <li><strong>EIP</strong>: the EIP</li>
+     * <li><strong>EniEIP</strong>: the EIP of an elastic network interface (ENI)</li>
+     * <li><strong>NatEIP</strong>: the EIP of a NAT gateway</li>
+     * <li><strong>SlbEIP</strong>: the EIP of a Server Load Balancer (SLB) instance or a Classic Load Balancer (CLB) instance</li>
+     * <li><strong>SlbPublicIP</strong>: the public IP address of an SLB instance or a CLB instance</li>
+     * <li><strong>NatPublicIP</strong>: the public IP address of a NAT gateway</li>
+     * <li><strong>HAVIP</strong>: the high-availability virtual IP address (HAVIP)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>EIP</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The instance ID or IP address of the asset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.XX.XX</p>
      */
     @NameInMap("SearchItem")
     public String searchItem;
 
     /**
      * <p>The status of the security group policy. Valid values:</p>
-     * <br>
-     * <p>*   **pass**: delivered</p>
-     * <p>*   **block**: undelivered</p>
-     * <p>*   **unsupport**: unsupported</p>
-     * <br>
-     * <p>> If you do not specify this parameter, the assets on which security group policies in all states take effect are queried.</p>
+     * <ul>
+     * <li><strong>pass</strong>: delivered</li>
+     * <li><strong>block</strong>: undelivered</li>
+     * <li><strong>unsupport</strong>: unsupported</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the assets on which security group policies in all states take effect are queried.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>pass</p>
      */
     @NameInMap("SgStatus")
     public String sgStatus;
 
     /**
      * <p>The status of the firewall. Valid values:</p>
-     * <br>
-     * <p>*   **open**: The firewall is enabled.</p>
-     * <p>*   **opening**: The firewall is being enabled.</p>
-     * <p>*   **closed**: The firewall is disabled.</p>
-     * <p>*   **closing**: The firewall is being disabled.</p>
-     * <br>
-     * <p>> If you do not specify this parameter, the assets that are configured for firewalls in all states are queried.</p>
+     * <ul>
+     * <li><strong>open</strong>: The firewall is enabled.</li>
+     * <li><strong>opening</strong>: The firewall is being enabled.</li>
+     * <li><strong>closed</strong>: The firewall is disabled.</li>
+     * <li><strong>closing</strong>: The firewall is being disabled.</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the assets that are configured for firewalls in all states are queried.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>open</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eip</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>The edition of Cloud Firewall. Valid values:</p>
-     * <br>
-     * <p>*   **buy**: a paid edition (default)</p>
-     * <p>*   **free**: Free Edition</p>
+     * <ul>
+     * <li><strong>buy</strong>: a paid edition (default)</li>
+     * <li><strong>free</strong>: Free Edition</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>buy</p>
      */
     @NameInMap("UserType")
     public String userType;

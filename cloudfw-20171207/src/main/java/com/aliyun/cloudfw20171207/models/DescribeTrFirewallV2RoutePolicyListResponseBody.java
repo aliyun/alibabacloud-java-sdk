@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>95EB5F3A-67FE-5780-92BD-5ECBA772AB7E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -54,12 +60,18 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
     public static class DescribeTrFirewallV2RoutePolicyListResponseBodyTrFirewallRoutePoliciesDestCandidateList extends TeaModel {
         /**
          * <p>The ID of the secondary traffic redirection instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2ze9epancaw8t4sha****</p>
          */
         @NameInMap("CandidateId")
         public String candidateId;
 
         /**
          * <p>The type of the secondary traffic redirection instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("CandidateType")
         public String candidateType;
@@ -90,12 +102,18 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
     public static class DescribeTrFirewallV2RoutePolicyListResponseBodyTrFirewallRoutePoliciesSrcCandidateList extends TeaModel {
         /**
          * <p>The ID of the primary traffic redirection instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2ze9epancaw8t4sha****</p>
          */
         @NameInMap("CandidateId")
         public String candidateId;
 
         /**
          * <p>The type of the primary traffic redirection instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("CandidateType")
         public String candidateType;
@@ -132,35 +150,49 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
 
         /**
          * <p>The description of the routing policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("PolicyDescription")
         public String policyDescription;
 
         /**
          * <p>The name of the routing policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TEST_VPC_FW</p>
          */
         @NameInMap("PolicyName")
         public String policyName;
 
         /**
          * <p>The status of the routing policy. Valid values:</p>
-         * <br>
-         * <p>*   creating: The policy is being created.</p>
-         * <p>*   deleting: The policy is being deleted.</p>
-         * <p>*   opening: The policy is being enabled.</p>
-         * <p>*   opened: The policy is enabled.</p>
-         * <p>*   closing: The policy is being disabled.</p>
-         * <p>*   closed: The policy is disabled.</p>
+         * <ul>
+         * <li>creating: The policy is being created.</li>
+         * <li>deleting: The policy is being deleted.</li>
+         * <li>opening: The policy is being enabled.</li>
+         * <li>opened: The policy is enabled.</li>
+         * <li>closing: The policy is being disabled.</li>
+         * <li>closed: The policy is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>opened</p>
          */
         @NameInMap("PolicyStatus")
         public String policyStatus;
 
         /**
          * <p>The type of the traffic redirection scenario of the VPC firewall. Valid values:</p>
-         * <br>
-         * <p>*   **fullmesh**: interconnected instances</p>
-         * <p>*   **one_to_one**: instance to instance</p>
-         * <p>*   **end_to_end**: instance to instances</p>
+         * <ul>
+         * <li><strong>fullmesh</strong>: interconnected instances</li>
+         * <li><strong>one_to_one</strong>: instance to instance</li>
+         * <li><strong>end_to_end</strong>: instance to instances</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>fullmesh</p>
          */
         @NameInMap("PolicyType")
         public String policyType;
@@ -173,6 +205,9 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the routing policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policy-7b66257c14e141fb****</p>
          */
         @NameInMap("TrFirewallRoutePolicyId")
         public String trFirewallRoutePolicyId;

@@ -6,53 +6,72 @@ import com.aliyun.tea.*;
 public class PutEnableFwSwitchRequest extends TeaModel {
     /**
      * <p>The IP addresses.</p>
-     * <br>
-     * <p>> You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.</p>
+     * <blockquote>
+     * <p>You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;192.0.X.X&quot;,&quot;192.0.X.X&quot;]</p>
      */
     @NameInMap("IpaddrList")
     public java.util.List<String> ipaddrList;
 
     /**
      * <p>The language of the content within the response.</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The regions.</p>
-     * <br>
-     * <p>> You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.</p>
+     * <blockquote>
+     * <p>You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;cn-hangzhou&quot;,&quot;cn-shanghai&quot;]</p>
      */
     @NameInMap("RegionList")
     public java.util.List<String> regionList;
 
     /**
      * <p>The types of the assets.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   BastionHostIP: the egress IP address of a bastion host</p>
-     * <p>*   BastionHostIngressIP: the ingress IP address of a bastion host</p>
-     * <p>*   EcsEIP: the elastic IP address (EIP) of an Elastic Compute Service (ECS) instance</p>
-     * <p>*   EcsPublicIP: the public IP address of an ECS instance</p>
-     * <p>*   EIP: the EIP</p>
-     * <p>*   EniEIP: the EIP of an elastic network interface (ENI)</p>
-     * <p>*   NatEIP: the EIP of a NAT gateway</p>
-     * <p>*   SlbEIP: the EIP of a Server Load Balancer (SLB) instance</p>
-     * <p>*   SlbPublicIP: the public IP address of an SLB instance</p>
-     * <p>*   NatPublicIP: the public IP address of a NAT gateway</p>
-     * <p>*   HAVIP: the high-availability virtual IP address (HAVIP)</p>
-     * <br>
-     * <p>> You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.</p>
+     * <ul>
+     * <li>BastionHostIP: the egress IP address of a bastion host</li>
+     * <li>BastionHostIngressIP: the ingress IP address of a bastion host</li>
+     * <li>EcsEIP: the elastic IP address (EIP) of an Elastic Compute Service (ECS) instance</li>
+     * <li>EcsPublicIP: the public IP address of an ECS instance</li>
+     * <li>EIP: the EIP</li>
+     * <li>EniEIP: the EIP of an elastic network interface (ENI)</li>
+     * <li>NatEIP: the EIP of a NAT gateway</li>
+     * <li>SlbEIP: the EIP of a Server Load Balancer (SLB) instance</li>
+     * <li>SlbPublicIP: the public IP address of an SLB instance</li>
+     * <li>NatPublicIP: the public IP address of a NAT gateway</li>
+     * <li>HAVIP: the high-availability virtual IP address (HAVIP)</li>
+     * </ul>
+     * <blockquote>
+     * <p>You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;EcsPublicIp&quot;,&quot;NatEip&quot;]</p>
      */
     @NameInMap("ResourceTypeList")
     public java.util.List<String> resourceTypeList;
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.X.X</p>
      */
     @NameInMap("SourceIp")
     @Deprecated

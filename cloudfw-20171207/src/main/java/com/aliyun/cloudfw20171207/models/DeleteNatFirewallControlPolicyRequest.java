@@ -6,39 +6,48 @@ import com.aliyun.tea.*;
 public class DeleteNatFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The UUID of the access control policy.</p>
-     * <br>
      * <p>To delete an access control policy, you must provide the ID of the policy. You can call the DescribeNatFirewallControlPolicy operation to query the UUIDs of access control policies.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b6c8f905-2eb6-442a-ba35-9416e9dbb2c5</p>
      */
     @NameInMap("AclUuid")
     public String aclUuid;
 
     /**
      * <p>The direction of the traffic to which the access control policy applies.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   **out**: outbound traffic</p>
-     * <br>
+     * <ul>
+     * <li><strong>out</strong>: outbound traffic</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>out</p>
      */
     @NameInMap("Direction")
     public String direction;
 
     /**
      * <p>The language of the content within the response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese (default)</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese (default)</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The ID of the NAT gateway.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ngw-xxxxxx</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;

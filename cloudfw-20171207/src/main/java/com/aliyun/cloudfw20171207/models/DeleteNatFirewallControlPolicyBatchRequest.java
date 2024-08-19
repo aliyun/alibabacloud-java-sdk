@@ -12,25 +12,35 @@ public class DeleteNatFirewallControlPolicyBatchRequest extends TeaModel {
 
     /**
      * <p>The direction of the traffic to which the access control policy applies. Valid values:</p>
-     * <br>
-     * <p>*   **out**: outbound traffic</p>
+     * <ul>
+     * <li><strong>out</strong>: outbound traffic</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>out</p>
      */
     @NameInMap("Direction")
     public String direction;
 
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh** (default): Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The ID of the NAT gateway.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ngw-uf6j0426ap74vd6vrb676</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;

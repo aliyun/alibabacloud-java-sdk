@@ -4,24 +4,69 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class CreateTrFirewallV2RoutePolicyShrinkRequest extends TeaModel {
+    /**
+     * <p>The secondary traffic redirection instances.</p>
+     */
     @NameInMap("DestCandidateList")
     public String destCandidateListShrink;
 
+    /**
+     * <p>The instance ID of the VPC firewall.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vfw-tr-f8ce36689b224f77****</p>
+     */
     @NameInMap("FirewallId")
     public String firewallId;
 
+    /**
+     * <p>The language of the content within the response. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The description of the traffic redirection instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("PolicyDescription")
     public String policyDescription;
 
+    /**
+     * <p>The name of the traffic redirection instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TEST_VPC_FW</p>
+     */
     @NameInMap("PolicyName")
     public String policyName;
 
+    /**
+     * <p>The type of the traffic redirection scenario of the VPC firewall. Valid values:</p>
+     * <ul>
+     * <li><strong>fullmesh</strong>: interconnected instances</li>
+     * <li><strong>one_to_one</strong>: instance to instance</li>
+     * <li><strong>end_to_end</strong>: instance to instances</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>fullmesh</p>
+     */
     @NameInMap("PolicyType")
     public String policyType;
 
+    /**
+     * <p>The primary traffic redirection instances.</p>
+     */
     @NameInMap("SrcCandidateList")
     public String srcCandidateListShrink;
 

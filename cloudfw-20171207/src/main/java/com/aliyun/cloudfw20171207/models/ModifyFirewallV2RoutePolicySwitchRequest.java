@@ -6,39 +6,57 @@ import com.aliyun.tea.*;
 public class ModifyFirewallV2RoutePolicySwitchRequest extends TeaModel {
     /**
      * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vfw-tr-5b202e7f0be64611****</p>
      */
     @NameInMap("FirewallId")
     public String firewallId;
 
     /**
      * <p>The language of the content within the response. Valid values:</p>
-     * <br>
-     * <p>*   **zh** (default): Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>Specifies whether to restore the traffic redirection configurations. Valid values:</p>
-     * <br>
-     * <p>*   true: roll back</p>
-     * <p>*   false: withdraw</p>
+     * <ul>
+     * <li>true: roll back</li>
+     * <li>false: withdraw</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ShouldRecover")
     public String shouldRecover;
 
     /**
      * <p>The ID of the routing policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>policy-93684cc5caa44b2e****</p>
      */
     @NameInMap("TrFirewallRoutePolicyId")
     public String trFirewallRoutePolicyId;
 
     /**
      * <p>The status of the routing policy. Valid values:</p>
-     * <br>
-     * <p>*   open: enabled</p>
-     * <p>*   close: disabled</p>
+     * <ul>
+     * <li>open: enabled</li>
+     * <li>close: disabled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>open</p>
      */
     @NameInMap("TrFirewallRoutePolicySwitchStatus")
     public String trFirewallRoutePolicySwitchStatus;

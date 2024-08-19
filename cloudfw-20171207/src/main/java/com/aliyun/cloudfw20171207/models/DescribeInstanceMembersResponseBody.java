@@ -18,6 +18,9 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A531AE1A-FBA2-48B6-BAB8-84D02BD409EE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,39 +57,58 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
     public static class DescribeInstanceMembersResponseBodyMembers extends TeaModel {
         /**
          * <p>The time when the member was added to Cloud Firewall. The value is a timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1615189819</p>
          */
         @NameInMap("CreateTime")
         public Integer createTime;
 
         /**
          * <p>The remarks of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>renewal</p>
          */
         @NameInMap("MemberDesc")
         public String memberDesc;
 
         /**
          * <p>The name of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloudfirewall_2</p>
          */
         @NameInMap("MemberDisplayName")
         public String memberDisplayName;
 
         /**
          * <p>The status of the member. Valid values:</p>
-         * <br>
-         * <p>*   **normal**</p>
-         * <p>*   **deleting**</p>
+         * <ul>
+         * <li><strong>normal</strong></li>
+         * <li><strong>deleting</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         @NameInMap("MemberStatus")
         public String memberStatus;
 
         /**
          * <p>The UID of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>258039427902****</p>
          */
         @NameInMap("MemberUid")
         public Long memberUid;
 
         /**
          * <p>The time when the member was last modified. The value is a timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1615189819</p>
          */
         @NameInMap("ModifyTime")
         public Integer modifyTime;
@@ -149,18 +171,27 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
     public static class DescribeInstanceMembersResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of the members.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
