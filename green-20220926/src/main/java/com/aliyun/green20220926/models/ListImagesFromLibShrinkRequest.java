@@ -4,27 +4,55 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class ListImagesFromLibShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-08-24 10:01:55</p>
+     */
     @NameInMap("EndDate")
     public String endDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>112</p>
+     */
     @NameInMap("ImgId")
     public String imgId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>custom_xxxx</p>
+     */
     @NameInMap("LibId")
     public String libId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("Sort")
     public String sortShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-08-11 09:00:19</p>
+     */
     @NameInMap("StartDate")
     public String startDate;
 
