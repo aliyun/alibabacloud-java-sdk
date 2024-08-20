@@ -6,24 +6,37 @@ import com.aliyun.tea.*;
 public class ListDcdnKvRequest extends TeaModel {
     /**
      * <p>The name of the namespace.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ns1</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The number of the page to return. The product of PageNumber and PageSize cannot exceed 50,000.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Default value: 50. Maximum value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The prefix to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>prefix-</p>
      */
     @NameInMap("Prefix")
     public String prefix;

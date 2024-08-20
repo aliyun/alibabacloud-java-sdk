@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeDcdnDomainOriginBpsDataResponseBody extends TeaModel {
     /**
      * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
      * <p>The accelerated domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The end of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-12-11T00:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -30,12 +39,18 @@ public class DescribeDcdnDomainOriginBpsDataResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7CBCD6AD-B016-42E5-AE0B-B3731DE8F755</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The start of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-12-10T00:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -96,36 +111,54 @@ public class DescribeDcdnDomainOriginBpsDataResponseBody extends TeaModel {
     public static class DescribeDcdnDomainOriginBpsDataResponseBodyOriginBpsDataPerIntervalDataModule extends TeaModel {
         /**
          * <p>The bandwidth that was consumed for fetching dynamic content from the origin over HTTP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("DynamicHttpOriginBps")
         public Float dynamicHttpOriginBps;
 
         /**
          * <p>The bandwidth that was consumed for fetching dynamic content from the origin over HTTPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("DynamicHttpsOriginBps")
         public Float dynamicHttpsOriginBps;
 
         /**
          * <p>The bandwidth that was consumed for fetching content from the origin.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("OriginBps")
         public Float originBps;
 
         /**
          * <p>The bandwidth that was consumed for fetching static content from the origin over HTTP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("StaticHttpOriginBps")
         public Float staticHttpOriginBps;
 
         /**
          * <p>The bandwidth that was consumed for fetching static content from the origin over HTTPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("StaticHttpsOriginBps")
         public Float staticHttpsOriginBps;
 
         /**
          * <p>The timestamp of the returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-10T00:00:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

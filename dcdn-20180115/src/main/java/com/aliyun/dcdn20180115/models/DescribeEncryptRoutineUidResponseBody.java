@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeEncryptRoutineUidResponseBody extends TeaModel {
     /**
      * <p>The returned ciphertext, which contains the Alibaba Cloud account ID, timestamp, and time to live (TTL).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>XXXXXj20p4UB/xgdOH5LtXXXXXX</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4DBA68F5-04A9-406B-B1E4-F2CB635E103F</p>
      */
     @NameInMap("RequestId")
     public String requestId;

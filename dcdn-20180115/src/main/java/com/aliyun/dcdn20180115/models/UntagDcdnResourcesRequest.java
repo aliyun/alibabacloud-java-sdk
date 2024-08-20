@@ -6,29 +6,43 @@ import com.aliyun.tea.*;
 public class UntagDcdnResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to delete all tags. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
-     * <br>
-     * <p>Default value: **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * <p>Default value: <strong>false</strong></p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("All")
     public Boolean all;
 
     /**
-     * <p>The ID of the resource. Valid values of N: **1** to **50**.</p>
+     * <p>The ID of the resource. Valid values of N: <strong>1</strong> to <strong>50</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource. Set the value to **DOMAIN**.</p>
+     * <p>The type of the resource. Set the value to <strong>DOMAIN</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DOMAIN</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The key of the tag. Valid values of N: **1** to **20**.</p>
+     * <p>The key of the tag. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>env</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

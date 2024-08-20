@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeRDDomainsRequest extends TeaModel {
     /**
      * <p>The number of the page to return. Valid values: 1 to 100000.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. The default value is 20. Valid values: an integer between 1 and 500. Default value: 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

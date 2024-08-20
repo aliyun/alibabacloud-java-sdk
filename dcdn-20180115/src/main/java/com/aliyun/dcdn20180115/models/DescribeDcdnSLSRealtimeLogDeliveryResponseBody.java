@@ -12,6 +12,9 @@ public class DescribeDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F32C57AA-7BF8-49AE-A2CC-9F42390F5A19</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,73 +43,108 @@ public class DescribeDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
     public static class DescribeDcdnSLSRealtimeLogDeliveryResponseBodyContent extends TeaModel {
         /**
          * <p>The type of the collected logs. Default value: cdn_log_access_l1. Valid values:</p>
-         * <br>
-         * <p>*   **cdn_log_access_l1**: access logs of Dynamic Content Delivery Network (DCDN) points of presence (POPs)</p>
-         * <p>*   **cdn_log_origin**: back-to-origin logs</p>
-         * <p>*   **cdn_log_er**: EdgeRoutine logs</p>
+         * <ul>
+         * <li><strong>cdn_log_access_l1</strong>: access logs of Dynamic Content Delivery Network (DCDN) points of presence (POPs)</li>
+         * <li><strong>cdn_log_origin</strong>: back-to-origin logs</li>
+         * <li><strong>cdn_log_er</strong>: EdgeRoutine logs</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cdn_log_access_l1</p>
          */
         @NameInMap("BusinessType")
         public String businessType;
 
         /**
          * <p>The region from which logs were collected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn</p>
          */
         @NameInMap("DataCenter")
         public String dataCenter;
 
         /**
          * <p>The domain names from which logs were collected. You can specify one or more domain names. Separate multiple domain names with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com,example.org</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
-         * <p>The name of the field. For more information about fields in real-time log entries, see [Fields in a real-time log](~~324199~~).</p>
+         * <p>The name of the field. For more information about fields in real-time log entries, see <a href="https://help.aliyun.com/document_detail/324199.html">Fields in a real-time log</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>field1,field2</p>
          */
         @NameInMap("FieldName")
         public String fieldName;
 
         /**
          * <p>The name of the project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         @NameInMap("ProjectName")
         public String projectName;
 
         /**
          * <p>The name of the Logstore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-cn</p>
          */
         @NameInMap("SLSLogStore")
         public String SLSLogStore;
 
         /**
          * <p>The name of the log file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-cn</p>
          */
         @NameInMap("SLSProject")
         public String SLSProject;
 
         /**
          * <p>The region to which logs were delivered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("SLSRegion")
         public String SLSRegion;
 
         /**
          * <p>The sampling rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         @NameInMap("SamplingRate")
         public String samplingRate;
 
         /**
          * <p>The status of real-time logs.</p>
-         * <br>
-         * <p>*   **success**</p>
-         * <p>*   **fail**</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>fail</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The type of log delivery. Only **SLS_POST** is supported.</p>
+         * <p>The type of log delivery. Only <strong>SLS_POST</strong> is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SLS_POST</p>
          */
         @NameInMap("Type")
         public String type;

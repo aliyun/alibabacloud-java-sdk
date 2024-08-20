@@ -6,15 +6,24 @@ import com.aliyun.tea.*;
 public class VerifyDcdnDomainOwnerRequest extends TeaModel {
     /**
      * <p>The domain name of which you want to verify the ownership. You can specify only one domain name in each call.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong>example</strong>.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The verification method. Valid values:</p>
-     * <br>
-     * <p>*   **dnsCheck**: by DNS record</p>
-     * <p>*   **fileCheck**: by verification file</p>
+     * <ul>
+     * <li><strong>dnsCheck</strong>: by DNS record</li>
+     * <li><strong>fileCheck</strong>: by verification file</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dnsCheck</p>
      */
     @NameInMap("VerifyType")
     public String verifyType;

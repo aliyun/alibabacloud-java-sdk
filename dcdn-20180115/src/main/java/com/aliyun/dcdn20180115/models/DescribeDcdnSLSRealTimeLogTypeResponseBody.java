@@ -12,6 +12,9 @@ public class DescribeDcdnSLSRealTimeLogTypeResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,16 +43,23 @@ public class DescribeDcdnSLSRealTimeLogTypeResponseBody extends TeaModel {
     public static class DescribeDcdnSLSRealTimeLogTypeResponseBodyContentBusiness extends TeaModel {
         /**
          * <p>The type of real-time logs. Valid values:</p>
-         * <br>
-         * <p>*   **dcdn_log_access_l1**: access logs.</p>
-         * <p>*   **dcdn_log_er**: EdgeRoutine logs</p>
-         * <p>*   **dcdn_log_waf**: WAF interception logs</p>
+         * <ul>
+         * <li><strong>dcdn_log_access_l1</strong>: access logs.</li>
+         * <li><strong>dcdn_log_er</strong>: EdgeRoutine logs</li>
+         * <li><strong>dcdn_log_waf</strong>: WAF interception logs</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>dcdn_log_access_l1</p>
          */
         @NameInMap("BusinessType")
         public String businessType;
 
         /**
          * <p>The description of the real-time log type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>product_U8JE</p>
          */
         @NameInMap("Desc")
         public String desc;

@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class DeleteRoutineConfEnvsShrinkRequest extends TeaModel {
     /**
      * <p>The custom canary release environments that you want to delete.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;presetCanaryZheJiang&quot;]</p>
      */
     @NameInMap("Envs")
     public String envsShrink;
 
     /**
      * <p>The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;

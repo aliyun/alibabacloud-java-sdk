@@ -5,32 +5,48 @@ import com.aliyun.tea.*;
 
 public class SetDcdnFullDomainsBlockIPRequest extends TeaModel {
     /**
-     * <p>The duration for which IP addresses or CIDR blocks are blocked. Unit: seconds. The value **0** specifies that IP addresses or CIDR blocks are permanently blocked. This parameter is available only if you set **OperationType** to **block**.</p>
+     * <p>The duration for which IP addresses or CIDR blocks are blocked. Unit: seconds. The value <strong>0</strong> specifies that IP addresses or CIDR blocks are permanently blocked. This parameter is available only if you set <strong>OperationType</strong> to <strong>block</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3000</p>
      */
     @NameInMap("BlockInterval")
     public Integer blockInterval;
 
     /**
      * <p>The IP addresses that you want to block or unblock. Separate multiple IP addresses with commas (,). You can specify up to 1,000 IP addresses.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.XXX.XXX.1,2.XXX.XXX.2</p>
      */
     @NameInMap("IPList")
     public String IPList;
 
     /**
      * <p>The action that you want to perform. Valid values:</p>
-     * <br>
-     * <p>*   **block**</p>
-     * <p>*   **unblock**</p>
+     * <ul>
+     * <li><strong>block</strong></li>
+     * <li><strong>unblock</strong></li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>block</p>
      */
     @NameInMap("OperationType")
     public String operationType;
 
     /**
-     * <p>The type of the blocking duration. This parameter is available only if you set **OperationType** to **block**. Valid values:</p>
-     * <br>
-     * <p>*   **cover**: the blocking duration that is specified in the request takes effect.</p>
-     * <p>*   **uncover**: the longer one of the blocking duration that is specified in the request and the remaining blocking duration takes effect.</p>
-     * <p>*   Default value: cover.</p>
+     * <p>The type of the blocking duration. This parameter is available only if you set <strong>OperationType</strong> to <strong>block</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>cover</strong>: the blocking duration that is specified in the request takes effect.</li>
+     * <li><strong>uncover</strong>: the longer one of the blocking duration that is specified in the request and the remaining blocking duration takes effect.</li>
+     * <li>Default value: cover.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cover</p>
      */
     @NameInMap("UpdateType")
     public String updateType;

@@ -6,32 +6,48 @@ import com.aliyun.tea.*;
 public class DescribeDcdnWafUsageDataRequest extends TeaModel {
     /**
      * <p>The timestamp of the data returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     * <br>
-     * <p>>  The end time must be later than the start time.</p>
+     * <blockquote>
+     * <p> The end time must be later than the start time.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-10-01T16:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The number of used SeCUs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
      */
     @NameInMap("Interval")
     public String interval;
 
     /**
      * <p>The WAF information about the accelerated domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>domain</p>
      */
     @NameInMap("SplitBy")
     public String splitBy;
 
     /**
      * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-09-30T16:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

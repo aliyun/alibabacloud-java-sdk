@@ -12,6 +12,9 @@ public class CreateDcdnSLSRealTimeLogDeliveryResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F32C57AA-7BF8-49AE-A2CC-9F42390F5A19</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class CreateDcdnSLSRealTimeLogDeliveryResponseBody extends TeaModel {
     public static class CreateDcdnSLSRealTimeLogDeliveryResponseBodyContentDomains extends TeaModel {
         /**
          * <p>The description of the returned result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         @NameInMap("Desc")
         public String desc;
 
         /**
          * <p>The domain name from which real-time logs were collected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The region to which real-time logs were delivered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The status of real-time logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;

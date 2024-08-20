@@ -12,24 +12,36 @@ public class DescribeDcdnWafPolicyValidDomainsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page, which is the same as the PageNumber parameter in request parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of domain names returned per page, which is the same as the PageSize parameter in request parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3C6CCEC4-6B88-4D4A-93E4-D47B3D92C630</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of domain names returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,18 +94,27 @@ public class DescribeDcdnWafPolicyValidDomainsResponseBody extends TeaModel {
     public static class DescribeDcdnWafPolicyValidDomainsResponseBodyDomainsPolicies extends TeaModel {
         /**
          * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000002</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test2</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The type of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         @NameInMap("Type")
         public String type;
@@ -132,6 +153,9 @@ public class DescribeDcdnWafPolicyValidDomainsResponseBody extends TeaModel {
     public static class DescribeDcdnWafPolicyValidDomainsResponseBodyDomains extends TeaModel {
         /**
          * <p>The protected domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
@@ -144,21 +168,31 @@ public class DescribeDcdnWafPolicyValidDomainsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the protection policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000001</p>
          */
         @NameInMap("PolicyId")
         public Long policyId;
 
         /**
          * <p>The name of the protection policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         @NameInMap("PolicyName")
         public String policyName;
 
         /**
          * <p>Indicates whether the protection policy is the default policy. Valid values:</p>
-         * <br>
-         * <p>*   default: The protection policy is the default policy.</p>
-         * <p>*   custom: The protection policy is not the default policy.</p>
+         * <ul>
+         * <li>default: The protection policy is the default policy.</li>
+         * <li>custom: The protection policy is not the default policy.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("PolicyType")
         public String policyType;

@@ -6,68 +6,96 @@ import com.aliyun.tea.*;
 public class DescribeDcdnDomainRealTimeDetailDataRequest extends TeaModel {
     /**
      * <p>The accelerated domain name. Separate multiple accelerated domain names with commas (,).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     * <br>
-     * <p>> The end time must be later than the start time, and the maximum time range to query is 10 minutes.</p>
+     * <blockquote>
+     * <p>The end time must be later than the start time, and the maximum time range to query is 10 minutes.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-11-30T05:40:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The type of information that you want to query. Separate multiple types with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **qps**: queries per second (QPS)</p>
-     * <p>*   **bps**: bandwidth</p>
-     * <p>*   **http_code**: HTTP status code</p>
+     * <ul>
+     * <li><strong>qps</strong>: queries per second (QPS)</li>
+     * <li><strong>bps</strong>: bandwidth</li>
+     * <li><strong>http_code</strong>: HTTP status code</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bps</p>
      */
     @NameInMap("Field")
     public String field;
 
     /**
-     * <p>The name of the ISP. You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query the ISP name.</p>
-     * <br>
+     * <p>The name of the ISP. You can call the <a href="https://help.aliyun.com/document_detail/207199.html">DescribeDcdnRegionAndIsp</a> operation to query the ISP name.</p>
      * <p>If you leave this parameter empty, all ISPs are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>unicom</p>
      */
     @NameInMap("IspNameEn")
     public String ispNameEn;
 
     /**
-     * <p>The name of the region. You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query the region name.</p>
-     * <br>
+     * <p>The name of the region. You can call the <a href="https://help.aliyun.com/document_detail/207199.html">DescribeDcdnRegionAndIsp</a> operation to query the region name.</p>
      * <p>If you leave this parameter empty, all regions are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>beijing</p>
      */
     @NameInMap("LocationNameEn")
     public String locationNameEn;
 
     /**
      * <p>Specifies whether to return a summary value. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
-     * <br>
-     * <p>Default value: **false**.</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * <p>Default value: <strong>false</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Merge")
     public String merge;
 
     /**
-     * <p>Specifies whether to return a summary value of **LocationNameEn** and **IspNameEn**. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
-     * <br>
-     * <p>Default value: **false**.</p>
+     * <p>Specifies whether to return a summary value of <strong>LocationNameEn</strong> and <strong>IspNameEn</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * <p>Default value: <strong>false</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("MergeLocIsp")
     public String mergeLocIsp;
 
     /**
      * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-11-30T05:33:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

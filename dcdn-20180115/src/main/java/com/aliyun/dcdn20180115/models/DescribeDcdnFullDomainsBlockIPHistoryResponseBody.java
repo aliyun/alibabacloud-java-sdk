@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class DescribeDcdnFullDomainsBlockIPHistoryResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
-     * <br>
      * <p>The value of Code is not 0 in the following scenarios:</p>
-     * <br>
-     * <p>*   The format of the IP address is invalid.</p>
-     * <p>*   The format of the time is invalid.</p>
-     * <p>*   Other abnormal scenarios</p>
+     * <ul>
+     * <li>The format of the IP address is invalid.</li>
+     * <li>The format of the time is invalid.</li>
+     * <li>Other abnormal scenarios</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The description of the status returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Description")
     public String description;
@@ -30,6 +36,9 @@ public class DescribeDcdnFullDomainsBlockIPHistoryResponseBody extends TeaModel 
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>13A2B792-9212-1CC9-8525-59EBEF3FFE01</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -74,21 +83,31 @@ public class DescribeDcdnFullDomainsBlockIPHistoryResponseBody extends TeaModel 
     public static class DescribeDcdnFullDomainsBlockIPHistoryResponseBodyIPBlockInfo extends TeaModel {
         /**
          * <p>The blocked IP address or CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.XXX.XXX.0~1.XXX.XXX.255</p>
          */
         @NameInMap("BlockIP")
         public String blockIP;
 
         /**
          * <p>The delivery time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-24 18:49:37</p>
          */
         @NameInMap("DeliverTime")
         public String deliverTime;
 
         /**
          * <p>The delivery status.</p>
-         * <br>
-         * <p>*   Success</p>
-         * <p>*   Failed</p>
+         * <ul>
+         * <li>Success</li>
+         * <li>Failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("Status")
         public String status;

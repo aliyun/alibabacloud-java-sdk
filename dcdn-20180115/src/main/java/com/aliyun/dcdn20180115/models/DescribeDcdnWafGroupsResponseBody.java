@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **20**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of WAF rule groups.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,21 +94,31 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
     public static class DescribeDcdnWafGroupsResponseBodyWafGroupsPolicies extends TeaModel {
         /**
          * <p>The ID of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30000165</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wasm-testmaster</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The type of the policy. Valid values:</p>
-         * <br>
-         * <p>*   **custom**: a custom policy</p>
-         * <p>*   **default**: the default policy</p>
+         * <ul>
+         * <li><strong>custom</strong>: a custom policy</li>
+         * <li><strong>default</strong>: the default policy</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Type")
         public String type;
@@ -135,18 +157,27 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
     public static class DescribeDcdnWafGroupsResponseBodyWafGroups extends TeaModel {
         /**
          * <p>The time when the WAF rule group was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-04-12 22:25:11</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The ID of the custom WAF rule group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30000156</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name of the WAF rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DCDN-test-operation-reports-1</p>
          */
         @NameInMap("Name")
         public String name;
@@ -159,21 +190,31 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
 
         /**
          * <p>The number of WAF rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>452</p>
          */
         @NameInMap("RuleCount")
         public Integer ruleCount;
 
         /**
          * <p>Indicates whether to enable subscription. Valid values:</p>
-         * <br>
-         * <p>*   **on**</p>
-         * <p>*   **off**</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("Subscribe")
         public String subscribe;
 
         /**
          * <p>The ID of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1012</p>
          */
         @NameInMap("TemplateId")
         public Long templateId;

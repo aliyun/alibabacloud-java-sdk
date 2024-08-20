@@ -6,10 +6,14 @@ import com.aliyun.tea.*;
 public class DescribeDcdnUserRealTimeDeliveryFieldRequest extends TeaModel {
     /**
      * <p>The type of the collected logs. Default value: cdn_log_access_l1. Valid values:</p>
-     * <br>
-     * <p>*   **cdn_log_access_l1**: access logs of L1 Dynamic Content Delivery Network (DCDN) points of presence (POPs)</p>
-     * <p>*   **cdn_log_origin**: back-to-origin logs</p>
-     * <p>*   **cdn_log_er**: EdgeRoutine logs</p>
+     * <ul>
+     * <li><strong>cdn_log_access_l1</strong>: access logs of L1 Dynamic Content Delivery Network (DCDN) points of presence (POPs)</li>
+     * <li><strong>cdn_log_origin</strong>: back-to-origin logs</li>
+     * <li><strong>cdn_log_er</strong>: EdgeRoutine logs</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cdn_log_access_l1</p>
      */
     @NameInMap("BusinessType")
     public String businessType;

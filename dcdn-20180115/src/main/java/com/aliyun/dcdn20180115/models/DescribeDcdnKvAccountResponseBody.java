@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeDcdnKvAccountResponseBody extends TeaModel {
     /**
      * <p>The available capacity of all namespaces.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2GB</p>
      */
     @NameInMap("CapacityString")
     public String capacityString;
 
     /**
      * <p>All namespaces have used capacity.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200 MB</p>
      */
     @NameInMap("CapacityUsedString")
     public String capacityUsedString;
@@ -24,27 +30,40 @@ public class DescribeDcdnKvAccountResponseBody extends TeaModel {
 
     /**
      * <p>The maximum number of namespaces that you can apply for by using your account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("NamespaceQuota")
     public Integer namespaceQuota;
 
     /**
      * <p>The number of namespaces that you applied for by using your account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("NamespaceUsed")
     public Integer namespaceUsed;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D61E4801-EAFF-4A63-AAE1-FBF6CE1CFD1C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The status of the account.</p>
-     * <br>
-     * <p>*   **online**: enabled</p>
-     * <p>*   **offline**: disabled</p>
+     * <ul>
+     * <li><strong>online</strong>: enabled</li>
+     * <li><strong>offline</strong>: disabled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>online,offline</p>
      */
     @NameInMap("Status")
     public String status;
@@ -111,43 +130,68 @@ public class DescribeDcdnKvAccountResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnKvAccountResponseBodyNamespaceList extends TeaModel {
+        @NameInMap("Capacity")
+        public Long capacity;
+
         /**
          * <p>The available capacity of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1 GB</p>
          */
         @NameInMap("CapacityString")
         public String capacityString;
 
+        @NameInMap("CapacityUsed")
+        public Long capacityUsed;
+
         /**
          * <p>The namespace has used capacity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100 MB</p>
          */
         @NameInMap("CapacityUsedString")
         public String capacityUsedString;
 
         /**
          * <p>The description of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>the first namespace</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ns1</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12423131231****</p>
          */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
         /**
          * <p>The status of the namespace. Valid values:</p>
-         * <br>
-         * <p>*   **online**: normal</p>
-         * <p>*   **delete**: pending delete</p>
-         * <p>*   **deleting**: being deleted</p>
-         * <p>*   **deleted**: deleted</p>
+         * <ul>
+         * <li><strong>online</strong>: normal</li>
+         * <li><strong>delete</strong>: pending delete</li>
+         * <li><strong>deleting</strong>: being deleted</li>
+         * <li><strong>deleted</strong>: deleted</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         @NameInMap("Status")
         public String status;
@@ -157,12 +201,28 @@ public class DescribeDcdnKvAccountResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeDcdnKvAccountResponseBodyNamespaceList setCapacity(Long capacity) {
+            this.capacity = capacity;
+            return this;
+        }
+        public Long getCapacity() {
+            return this.capacity;
+        }
+
         public DescribeDcdnKvAccountResponseBodyNamespaceList setCapacityString(String capacityString) {
             this.capacityString = capacityString;
             return this;
         }
         public String getCapacityString() {
             return this.capacityString;
+        }
+
+        public DescribeDcdnKvAccountResponseBodyNamespaceList setCapacityUsed(Long capacityUsed) {
+            this.capacityUsed = capacityUsed;
+            return this;
+        }
+        public Long getCapacityUsed() {
+            return this.capacityUsed;
         }
 
         public DescribeDcdnKvAccountResponseBodyNamespaceList setCapacityUsedString(String capacityUsedString) {

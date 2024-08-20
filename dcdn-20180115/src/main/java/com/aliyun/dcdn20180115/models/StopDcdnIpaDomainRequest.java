@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class StopDcdnIpaDomainRequest extends TeaModel {
     /**
      * <p>The name of the accelerated domain that you want to disable. You can specify only one domain name at a time.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;

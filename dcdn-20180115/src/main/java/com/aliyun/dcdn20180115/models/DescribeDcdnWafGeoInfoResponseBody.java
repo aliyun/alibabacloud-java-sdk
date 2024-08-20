@@ -12,6 +12,9 @@ public class DescribeDcdnWafGeoInfoResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>66A98669-CC6E-4F3E-80A6-3014697B11AE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeDcdnWafGeoInfoResponseBody extends TeaModel {
     public static class DescribeDcdnWafGeoInfoResponseBodyContentContinentsRegions extends TeaModel {
         /**
          * <p>The name of the country or region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Beijing</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The code of the country or region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110000</p>
          */
         @NameInMap("Value")
         public String value;
@@ -76,6 +85,9 @@ public class DescribeDcdnWafGeoInfoResponseBody extends TeaModel {
     public static class DescribeDcdnWafGeoInfoResponseBodyContentContinents extends TeaModel {
         /**
          * <p>The district to which the country or region belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China</p>
          */
         @NameInMap("Name")
         public String name;
@@ -118,9 +130,13 @@ public class DescribeDcdnWafGeoInfoResponseBody extends TeaModel {
 
         /**
          * <p>The type of the region.</p>
-         * <br>
-         * <p>*   CN: China</p>
-         * <p>*   Other: outside China</p>
+         * <ul>
+         * <li>CN: China</li>
+         * <li>Other: outside China</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
          */
         @NameInMap("Type")
         public String type;

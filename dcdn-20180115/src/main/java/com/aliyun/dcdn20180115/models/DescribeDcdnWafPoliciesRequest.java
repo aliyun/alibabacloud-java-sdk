@@ -5,21 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnWafPoliciesRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Valid values: **1** to **100000**. Default value: **1**.</p>
+     * <p>The number of the page to return. Valid values: <strong>1</strong> to <strong>100000</strong>. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of protection policies to return on each page. Valid values: an integer from **1** to **500**. Default value: **20**.</p>
+     * <p>The number of protection policies to return on each page. Valid values: an integer from <strong>1</strong> to <strong>500</strong>. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The query conditions. The value is a JSON string. The format is `QueryArgs={"PolicyIds":"The IDs of protection policies","RuleIds":"The IDs of protection rules","PolicyNameLike":"The name of the protection policy","DomainNames":"The protected domain names","PolicyType":"default","DefenseScenes":"waf_group","PolicyStatus":"on","OrderBy":"GmtModified","Desc":"false"}`</p>
-     * <br>
-     * <p>> If you do not set this parameter, all protection policies are queried.</p>
+     * <p>The query conditions. The value is a JSON string. The format is <code>QueryArgs={&quot;PolicyIds&quot;:&quot;The IDs of protection policies&quot;,&quot;RuleIds&quot;:&quot;The IDs of protection rules&quot;,&quot;PolicyNameLike&quot;:&quot;The name of the protection policy&quot;,&quot;DomainNames&quot;:&quot;The protected domain names&quot;,&quot;PolicyType&quot;:&quot;default&quot;,&quot;DefenseScenes&quot;:&quot;waf_group&quot;,&quot;PolicyStatus&quot;:&quot;on&quot;,&quot;OrderBy&quot;:&quot;GmtModified&quot;,&quot;Desc&quot;:&quot;false&quot;}</code></p>
+     * <blockquote>
+     * <p>If you do not set this parameter, all protection policies are queried.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;PolicyNameLIike&quot;:&quot;test_policy&quot;}</p>
      */
     @NameInMap("QueryArgs")
     public String queryArgs;

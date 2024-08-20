@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeDcdnWafBotAppKeyResponseBody extends TeaModel {
     /**
      * <p>The SDK authentication key for the Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>examp1eapp_key_xxxiuMWTX4Gw</p>
      */
     @NameInMap("AppKey")
     public String appKey;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F2542B96-B535-5BF9-8EEE-1CF11B20CCA8</p>
      */
     @NameInMap("RequestId")
     public String requestId;

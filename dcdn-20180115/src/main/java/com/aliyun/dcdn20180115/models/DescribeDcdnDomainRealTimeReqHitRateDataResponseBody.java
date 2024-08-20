@@ -12,6 +12,9 @@ public class DescribeDcdnDomainRealTimeReqHitRateDataResponseBody extends TeaMod
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B955107D-E658-4E77-B913-E0AC3D31693E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeDcdnDomainRealTimeReqHitRateDataResponseBody extends TeaMod
     public static class DescribeDcdnDomainRealTimeReqHitRateDataResponseBodyDataReqHitRateDataModel extends TeaModel {
         /**
          * <p>The request hit ratio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.8956940476262277</p>
          */
         @NameInMap("ReqHitRate")
         public Float reqHitRate;
 
         /**
          * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-10-20T04:00:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

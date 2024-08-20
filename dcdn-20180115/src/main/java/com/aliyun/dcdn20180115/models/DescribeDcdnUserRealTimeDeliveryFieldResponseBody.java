@@ -12,6 +12,9 @@ public class DescribeDcdnUserRealTimeDeliveryFieldResponseBody extends TeaModel 
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3EACD23C-F49F-4BF7-B9AD-C2CD3BA888C4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,21 +43,31 @@ public class DescribeDcdnUserRealTimeDeliveryFieldResponseBody extends TeaModel 
     public static class DescribeDcdnUserRealTimeDeliveryFieldResponseBodyContentFields extends TeaModel {
         /**
          * <p>The description of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The timestamp of the request</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>unixtime</p>
          */
         @NameInMap("FieldName")
         public String fieldName;
 
         /**
          * <p>Indicates whether the field was selected.</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Selected")
         public Boolean selected;

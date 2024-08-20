@@ -12,6 +12,9 @@ public class DescribeDcdnWafPolicyResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>66A98669-CC6E-4F3E-80A6-3014697B11AE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,64 +43,94 @@ public class DescribeDcdnWafPolicyResponseBody extends TeaModel {
     public static class DescribeDcdnWafPolicyResponseBodyPolicy extends TeaModel {
         /**
          * <p>The type of the protection policy. Valid values:</p>
-         * <br>
-         * <p>*   waf_group: basic web protection</p>
-         * <p>*   custom_acl: custom protection</p>
-         * <p>*   whitelist: whitelist</p>
+         * <ul>
+         * <li>waf_group: basic web protection</li>
+         * <li>custom_acl: custom protection</li>
+         * <li>whitelist: whitelist</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_group</p>
          */
         @NameInMap("DefenseScene")
         public String defenseScene;
 
         /**
          * <p>The number of domain names that use the protection policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         @NameInMap("DomainCount")
         public Integer domainCount;
 
         /**
          * <p>The time when the protection policy was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-29T17:08:45Z</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The ID of the protection policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100001</p>
          */
         @NameInMap("PolicyId")
         public Long policyId;
 
         /**
          * <p>The name of the protection policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policy_test</p>
          */
         @NameInMap("PolicyName")
         public String policyName;
 
         /**
          * <p>The status of the protection policy. Valid values:</p>
-         * <br>
-         * <p>*   on</p>
-         * <p>*   off</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("PolicyStatus")
         public String policyStatus;
 
         /**
          * <p>Indicates whether the current policy is the default policy. Valid values:</p>
-         * <br>
-         * <p>*   default</p>
-         * <p>*   custom</p>
+         * <ul>
+         * <li>default</li>
+         * <li>custom</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("PolicyType")
         public String policyType;
 
         /**
-         * <p>The protection rule configurations corresponding to the protection policy. The configurations only support Bot management. For more information, see [BatchCreateDcdnWafRules](~~BatchCreateDcdnWafRules~~).</p>
+         * <p>The protection rule configurations corresponding to the protection policy. The configurations only support Bot management. For more information, see <a href="~~BatchCreateDcdnWafRules~~">BatchCreateDcdnWafRules</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{     &quot;type&quot;:&quot;target_type&quot;,     &quot;status&quot;:&quot;on&quot;,     &quot;config&quot;:{&quot;target&quot;:&quot;app&quot;},     &quot;action&quot;:&quot;&quot;   }</p>
          */
         @NameInMap("RuleConfigs")
         public String ruleConfigs;
 
         /**
          * <p>The number of protection rules in the protection policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         @NameInMap("RuleCount")
         public Long ruleCount;

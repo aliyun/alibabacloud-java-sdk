@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class PreloadDcdnObjectCachesResponseBody extends TeaModel {
     /**
      * <p>The ID of the prefetch task. Multiple IDs are separated by commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>95248880</p>
      */
     @NameInMap("PreloadTaskId")
     public String preloadTaskId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E5BD4B50-7A02-493A-AE0B-97B9024B4135</p>
      */
     @NameInMap("RequestId")
     public String requestId;

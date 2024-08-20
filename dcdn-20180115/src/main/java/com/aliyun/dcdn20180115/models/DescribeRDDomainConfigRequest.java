@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class DescribeRDDomainConfigRequest extends TeaModel {
     /**
      * <p>The accelerated domain name.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The name of the feature. Default value: source_group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>source_group</p>
      */
     @NameInMap("FunctionName")
     public String functionName;

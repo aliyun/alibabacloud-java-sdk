@@ -12,6 +12,9 @@ public class DescribeDcdnWafDomainDetailResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>153ca2cd-3c01-44be-82C0-64dbc6c88630</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,22 +43,32 @@ public class DescribeDcdnWafDomainDetailResponseBody extends TeaModel {
     public static class DescribeDcdnWafDomainDetailResponseBodyDomainDefenseScenes extends TeaModel {
         /**
          * <p>The type of the protection policy. Valid values:</p>
-         * <br>
-         * <p>*   waf_group: basic web protection</p>
-         * <p>*   custom_acl: custom protection</p>
-         * <p>*   whitelist: whitelist</p>
+         * <ul>
+         * <li>waf_group: basic web protection</li>
+         * <li>custom_acl: custom protection</li>
+         * <li>whitelist: whitelist</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_group</p>
          */
         @NameInMap("DefenseScene")
         public String defenseScene;
 
         /**
          * <p>The ID of the protection policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000002</p>
          */
         @NameInMap("PolicyId")
         public Long policyId;
 
         /**
          * <p>The IDs of the protection policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000001,10000004</p>
          */
         @NameInMap("PolicyIds")
         public String policyIds;
@@ -100,6 +113,9 @@ public class DescribeDcdnWafDomainDetailResponseBody extends TeaModel {
 
         /**
          * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;

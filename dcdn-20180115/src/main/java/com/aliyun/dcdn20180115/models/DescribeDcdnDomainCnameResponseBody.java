@@ -12,6 +12,9 @@ public class DescribeDcdnDomainCnameResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class DescribeDcdnDomainCnameResponseBody extends TeaModel {
     public static class DescribeDcdnDomainCnameResponseBodyCnameDatasData extends TeaModel {
         /**
          * <p>The CNAME assigned to the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>*.com</p>
          */
         @NameInMap("Cname")
         public String cname;
 
         /**
          * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>.example.com</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
          * <p>The configuration status of the CNAME record. If the operation returns 0 for the parameter, the configuration was successful. Otherwise, the configuration failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Status")
         public Integer status;

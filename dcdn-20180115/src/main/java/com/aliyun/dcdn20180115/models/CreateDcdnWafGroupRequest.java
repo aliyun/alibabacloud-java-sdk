@@ -6,23 +6,32 @@ import com.aliyun.tea.*;
 public class CreateDcdnWafGroupRequest extends TeaModel {
     /**
      * <p>The name of the WAF rule group. The name can be up to 128 characters in length. This parameter is required when you create a custom WAF rule group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>Specifies whether to enable subscription. Valid values:</p>
-     * <br>
-     * <p>*   **on**</p>
-     * <p>*   **off**</p>
-     * <br>
+     * <ul>
+     * <li><strong>on</strong></li>
+     * <li><strong>off</strong></li>
+     * </ul>
      * <p>When you replicate a custom rule group, do not specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
      */
     @NameInMap("Subscribe")
     public String subscribe;
 
     /**
-     * <p>The ID of the rule group to be replicated. This parameter is required when you replicate a custom WAF rule group. You can call the [DescribeDcdnWafGroups](~~DescribeDcdnWafGroups~~) operation to query the ID of the rule group. If no template is used, set the value to 0 or do not specify this parameter.</p>
+     * <p>The ID of the rule group to be replicated. This parameter is required when you replicate a custom WAF rule group. You can call the <a href="~~DescribeDcdnWafGroups~~">DescribeDcdnWafGroups</a> operation to query the ID of the rule group. If no template is used, set the value to 0 or do not specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("TemplateId")
     public Long templateId;

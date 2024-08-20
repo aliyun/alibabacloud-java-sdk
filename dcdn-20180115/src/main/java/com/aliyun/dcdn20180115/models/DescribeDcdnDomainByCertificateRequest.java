@@ -5,27 +5,38 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainByCertificateRequest extends TeaModel {
     /**
-     * <p>Specifies whether the domain name list to return match the SSL certificate.</p>
-     * <br>
-     * <p>- **true**: The domain name list match the SSL certificate.</p>
-     * <p>- **false**: The domain name list do not match the SSL certificate.</p>
+     * <p>Specifies whether the domain name list to return matches the SSL certificate.</p>
+     * <ul>
+     * <li><strong>true</strong>: The domain name list matches the SSL certificate.</li>
+     * <li><strong>false</strong>: The domain name list does not match the SSL certificate.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Exact")
     public Boolean exact;
 
     /**
      * <p>The public key of the certificate.</p>
-     * <br>
      * <p>You must use Base64 encoding schemes and then the encodeURIComponent method to encode the public key. PEM files are supported.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
      */
     @NameInMap("SSLPub")
     public String SSLPub;
 
     /**
      * <p>Specifies whether the domain name list to return contains only domain names with HTTPS enabled or disabled.</p>
-     * <br>
-     * <p>*   true: The list contains only domain names with HTTPS enabled.</p>
-     * <p>*   false: The list contains only domain names with HTTPS disabled.</p>
+     * <ul>
+     * <li>true: The list contains only domain names with HTTPS enabled.</li>
+     * <li>false: The list contains only domain names with HTTPS disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("SSLStatus")
     public Boolean SSLStatus;

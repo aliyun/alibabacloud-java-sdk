@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class SetDcdnUserConfigRequest extends TeaModel {
     /**
      * <p>The configuration parameters of the feature.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>\&quot;argId\&quot;:12,\&quot;argValue\&quot;:\&quot;on\&quot;</p>
      */
     @NameInMap("Configs")
     public String configs;
 
     /**
      * <p>The ID of the feature.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6</p>
      */
     @NameInMap("FunctionId")
     public Integer functionId;

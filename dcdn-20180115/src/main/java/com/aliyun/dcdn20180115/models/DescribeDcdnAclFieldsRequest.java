@@ -6,9 +6,14 @@ import com.aliyun.tea.*;
 public class DescribeDcdnAclFieldsRequest extends TeaModel {
     /**
      * <p>The access language. Default value: en. Valid values:</p>
-     * <br>
-     * <p>*   **en**: English</p>
-     * <p>*   **zh**: Chinese</p>
+     * <ul>
+     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;

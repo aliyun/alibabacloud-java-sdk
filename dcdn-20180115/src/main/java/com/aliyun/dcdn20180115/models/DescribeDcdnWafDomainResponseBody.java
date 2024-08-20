@@ -12,12 +12,18 @@ public class DescribeDcdnWafDomainResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CB1A380B-09F0-41BB-802B-72F8FD6DA2FE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of accelerated domain names returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -54,43 +60,62 @@ public class DescribeDcdnWafDomainResponseBody extends TeaModel {
     public static class DescribeDcdnWafDomainResponseBodyOutPutDomains extends TeaModel {
         /**
          * <p>The status of the ACL. Valid values:</p>
-         * <br>
-         * <p>*   0: disabled</p>
-         * <p>*   1: enabled</p>
+         * <ul>
+         * <li>0: disabled</li>
+         * <li>1: enabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AclStatus")
         public Integer aclStatus;
 
         /**
          * <p>The status of protection against HTTP flood attacks. Valid values:</p>
-         * <br>
-         * <p>*   0: disabled</p>
-         * <p>*   1: enabled</p>
+         * <ul>
+         * <li>0: disabled</li>
+         * <li>1: enabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CcStatus")
         public Integer ccStatus;
 
         /**
          * <p>The domain name that has WAF enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
          * <p>The status of the domain name. Valid values:</p>
-         * <br>
-         * <p>*   1: The domain name is added to WAF, or the domain name is valid.</p>
-         * <p>*   10: The domain name is being added to WAF.</p>
-         * <p>*   11: The domain name failed to be added to WAF.</p>
+         * <ul>
+         * <li>1: The domain name is added to WAF, or the domain name is valid.</li>
+         * <li>10: The domain name is being added to WAF.</li>
+         * <li>11: The domain name failed to be added to WAF.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The status of WAF. Valid values:</p>
-         * <br>
-         * <p>*   0: disabled</p>
-         * <p>*   1: enabled</p>
+         * <ul>
+         * <li>0: disabled</li>
+         * <li>1: enabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("WafStatus")
         public Integer wafStatus;

@@ -6,78 +6,117 @@ import com.aliyun.tea.*;
 public class DescribeDcdnRefreshQuotaResponseBody extends TeaModel {
     /**
      * <p>The maximum number of URLs that can be blocked.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("BlockQuota")
     public String blockQuota;
 
     /**
      * <p>The remaining number of URLs that can be blocked on the current day.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("BlockRemain")
     public String blockRemain;
 
     /**
      * <p>The maximum number of directories that can be refreshed on the current day.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("DirQuota")
     public String dirQuota;
 
     /**
      * <p>The remaining number of directories that can be refreshed on the current day.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("DirRemain")
     public String dirRemain;
 
     /**
      * <p>The maximum number of URLs or directories with parameters ignored that can be refreshed on the current day.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("IgnoreParamsQuota")
     public String ignoreParamsQuota;
 
     /**
      * <p>The number of remaining URLs or directories that can be refreshed with parameters ignored on the current day.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("IgnoreParamsRemain")
     public String ignoreParamsRemain;
 
     /**
      * <p>The maximum number of URLs that can be prefetched on the current day.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>500</p>
      */
     @NameInMap("PreloadQuota")
     public String preloadQuota;
 
     /**
      * <p>The remaining number of URLs that can be prefetched on the current day.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>500</p>
      */
     @NameInMap("PreloadRemain")
     public String preloadRemain;
 
     /**
      * <p>The maximum number of URLs or directories that can be refreshed by using regular expressions on the current day.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("RegexQuota")
     public String regexQuota;
 
     /**
      * <p>The remaining number of URLs or directories that can be refreshed by using regular expressions on the current day.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("RegexRemain")
     public String regexRemain;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>42E0554B-80F4-4921-AED6-ACFB22CAAAD0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The maximum number of URLs that can be refreshed on the current day.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2000</p>
      */
     @NameInMap("UrlQuota")
     public String urlQuota;
 
     /**
      * <p>The remaining number of URLs that can be refreshed on the current day.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2000</p>
      */
     @NameInMap("UrlRemain")
     public String urlRemain;

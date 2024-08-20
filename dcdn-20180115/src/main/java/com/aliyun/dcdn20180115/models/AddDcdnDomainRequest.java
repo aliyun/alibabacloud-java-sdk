@@ -6,24 +6,34 @@ import com.aliyun.tea.*;
 public class AddDcdnDomainRequest extends TeaModel {
     /**
      * <p>The URL that is used for health checks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("CheckUrl")
     public String checkUrl;
 
     /**
      * <p>The domain name that you want to add. You can specify only one domain name in each request.</p>
-     * <br>
      * <p>Wildcard domain names are supported. A wildcard domain name must start with a period (.), such as .example.com.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>Computing service type. Valid values:</p>
-     * <br>
-     * <p>*   **routine**</p>
-     * <p>*   **image**</p>
-     * <p>*   **cloudFunction**</p>
+     * <ul>
+     * <li><strong>routine</strong></li>
+     * <li><strong>image</strong></li>
+     * <li><strong>cloudFunction</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>routine</p>
      */
     @NameInMap("FunctionType")
     public String functionType;
@@ -36,29 +46,39 @@ public class AddDcdnDomainRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource group. If you do not specify a value for this parameter, the system automatically assigns the ID of the default resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmyuji4b6r4**</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The Acceleration scen. Supported:</p>
-     * <br>
-     * <p>* apiscene:API acceleration.</p>
-     * <p>* webservicescene: accelerate website business.</p>
-     * <p>* staticscene: video and graphic acceleration.</p>
-     * <p>* (Empty): no scene.</p>
+     * <ul>
+     * <li>apiscene:API acceleration.</li>
+     * <li>webservicescene: accelerate website business.</li>
+     * <li>staticscene: video and graphic acceleration.</li>
+     * <li>(Empty): no scene.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>apiscene</p>
      */
     @NameInMap("Scene")
     public String scene;
 
     /**
      * <p>The acceleration region. Valid values:</p>
-     * <br>
-     * <p>*   **domestic**: Chinese mainland</p>
-     * <p>*   **overseas**: outside the Chinese mainland</p>
-     * <p>*   **global**: global</p>
-     * <br>
-     * <p>Default value: **domestic**.</p>
+     * <ul>
+     * <li><strong>domestic</strong>: Chinese mainland</li>
+     * <li><strong>overseas</strong>: outside the Chinese mainland</li>
+     * <li><strong>global</strong>: global</li>
+     * </ul>
+     * <p>Default value: <strong>domestic</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>domestic</p>
      */
     @NameInMap("Scope")
     public String scope;
@@ -68,6 +88,9 @@ public class AddDcdnDomainRequest extends TeaModel {
 
     /**
      * <p>The information about the addresses of origin servers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;content&quot;:&quot;10.10.10.10&quot;,&quot;type&quot;:&quot;ipaddr&quot;,&quot;priority&quot;:&quot;20&quot;,&quot;port&quot;:80}]</p>
      */
     @NameInMap("Sources")
     public String sources;
@@ -80,6 +103,9 @@ public class AddDcdnDomainRequest extends TeaModel {
 
     /**
      * <p>The top-level domain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourTopLevelDomain</p>
      */
     @NameInMap("TopLevelDomain")
     public String topLevelDomain;
@@ -187,13 +213,19 @@ public class AddDcdnDomainRequest extends TeaModel {
 
     public static class AddDcdnDomainRequestTag extends TeaModel {
         /**
-         * <p>The key of a tag. Valid values of N: **1 to 20**.</p>
+         * <p>The key of a tag. Valid values of N: <strong>1 to 20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of a tag. Valid values of N: **1 to 20**.</p>
+         * <p>The value of a tag. Valid values of N: <strong>1 to 20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         @NameInMap("Value")
         public String value;

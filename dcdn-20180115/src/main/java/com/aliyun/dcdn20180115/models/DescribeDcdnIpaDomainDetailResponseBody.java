@@ -12,6 +12,9 @@ public class DescribeDcdnIpaDomainDetailResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>09ABE829-6CD3-4FE0-AFEE-556113E29727</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,40 +43,59 @@ public class DescribeDcdnIpaDomainDetailResponseBody extends TeaModel {
     public static class DescribeDcdnIpaDomainDetailResponseBodyDomainDetailSourcesSource extends TeaModel {
         /**
          * <p>The address of the origin server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx.oss-cn-hangzhou.aliyuncs.com</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         @NameInMap("Enabled")
         public String enabled;
 
         /**
-         * <p>The custom port. Valid values: **0** to **65535**.</p>
+         * <p>The custom port. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("Priority")
         public String priority;
 
         /**
          * <p>The type of the origin server. Valid values:</p>
-         * <br>
-         * <p>*   **ipaddr**: an origin IP address</p>
-         * <p>*   **domain**: a domain name.</p>
-         * <p>*   **oss**: Object Storage Service (OSS) buckets are not supported.</p>
+         * <ul>
+         * <li><strong>ipaddr</strong>: an origin IP address</li>
+         * <li><strong>domain</strong>: a domain name.</li>
+         * <li><strong>oss</strong>: Object Storage Service (OSS) buckets are not supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>oss</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The weight of the origin server if multiple origin servers have been specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Weight")
         public String weight;
@@ -155,80 +177,116 @@ public class DescribeDcdnIpaDomainDetailResponseBody extends TeaModel {
     public static class DescribeDcdnIpaDomainDetailResponseBodyDomainDetail extends TeaModel {
         /**
          * <p>Indicates the name of the certificate if the HTTPS protocol is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourCertName</p>
          */
         @NameInMap("CertName")
         public String certName;
 
         /**
          * <p>The CNAME assigned to the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("Cname")
         public String cname;
 
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>audit failed</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The accelerated domain names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The status of the accelerated domain name. Valid values:</p>
-         * <br>
-         * <p>*   **online**: enabled</p>
-         * <p>*   **offline**: disabled</p>
-         * <p>*   **configuring**: configuring</p>
-         * <p>*   **configure_failed**: configuration failed</p>
-         * <p>*   **checking**: reviewing</p>
-         * <p>*   **check_failed:** review failed</p>
+         * <ul>
+         * <li><strong>online</strong>: enabled</li>
+         * <li><strong>offline</strong>: disabled</li>
+         * <li><strong>configuring</strong>: configuring</li>
+         * <li><strong>configure_failed</strong>: configuration failed</li>
+         * <li><strong>checking</strong>: reviewing</li>
+         * <li><strong>check_failed:</strong> review failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         @NameInMap("DomainStatus")
         public String domainStatus;
 
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-11-27T06:51:26Z</p>
          */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
         /**
          * <p>The time when the domain name was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-11-27T06:51:26Z</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyuji4b6xxxx</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>Indicates whether the Security Socket Layer (SSL) certificate is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **on**</p>
-         * <p>*   **off**.</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("SSLProtocol")
         public String SSLProtocol;
 
         /**
          * <p>The public key of the certificate if HTTPS is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SSLPub</p>
          */
         @NameInMap("SSLPub")
         public String SSLPub;
 
         /**
          * <p>The acceleration region. Valid values:</p>
-         * <br>
-         * <p>*   domestic: Chinese mainland</p>
-         * <p>*   overseas: outside the Chinese mainland</p>
-         * <p>*   global: global</p>
+         * <ul>
+         * <li>domestic: Chinese mainland</li>
+         * <li>overseas: outside the Chinese mainland</li>
+         * <li>global: global</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>overseas</p>
          */
         @NameInMap("Scope")
         public String scope;

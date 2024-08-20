@@ -6,54 +6,76 @@ import com.aliyun.tea.*;
 public class DescribeDcdnIpaUserDomainsRequest extends TeaModel {
     /**
      * <p>Specifies whether to display domain names that are under review, failed the review, or failed to be configured. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("CheckDomainShow")
     public Boolean checkDomainShow;
 
     /**
      * <p>The domain name that is used as a keyword to filter domain names. Fuzzy match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The search method. Default value: full_match. Valid values:</p>
-     * <br>
-     * <p>*   **fuzzy_match**: fuzzy match</p>
-     * <p>*   **pre_match**: prefix match</p>
-     * <p>*   **suf_match**: suffix match</p>
-     * <p>*   **full_match**: exact match</p>
+     * <ul>
+     * <li><strong>fuzzy_match</strong>: fuzzy match</li>
+     * <li><strong>pre_match</strong>: prefix match</li>
+     * <li><strong>suf_match</strong>: suffix match</li>
+     * <li><strong>full_match</strong>: exact match</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>fuzzy_match</p>
      */
     @NameInMap("DomainSearchType")
     public String domainSearchType;
 
     /**
      * <p>The status of the domain name. Valid values:</p>
-     * <br>
-     * <p>*   **online**: enabled</p>
-     * <p>*   **offline**: disabled</p>
-     * <p>*   **configuring**: configuring</p>
-     * <p>*   **configure_failed**: configuration failed</p>
-     * <p>*   **checking**: reviewing</p>
-     * <p>*   **check_failed:** review failed</p>
+     * <ul>
+     * <li><strong>online</strong>: enabled</li>
+     * <li><strong>offline</strong>: disabled</li>
+     * <li><strong>configuring</strong>: configuring</li>
+     * <li><strong>configure_failed</strong>: configuration failed</li>
+     * <li><strong>checking</strong>: reviewing</li>
+     * <li><strong>check_failed:</strong> review failed</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>online</p>
      */
     @NameInMap("DomainStatus")
     public String domainStatus;
 
     /**
      * <p>The status of the feature.</p>
-     * <br>
-     * <p>*   config: The feature is enabled.</p>
-     * <p>*   unconfig: The feature is not enabled.</p>
+     * <ul>
+     * <li>config: The feature is enabled.</li>
+     * <li>unconfig: The feature is not enabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>config</p>
      */
     @NameInMap("FuncFilter")
     public String funcFilter;
 
     /**
-     * <p>The ID of the feature. For example, a value of 7 specifies the feature of configuring an expiration rule for a specific directory. For more information about feature IDs, see [Parameters for configuring features for domain names](~~410622~~).</p>
+     * <p>The ID of the feature. For example, a value of 7 specifies the feature of configuring an expiration rule for a specific directory. For more information about feature IDs, see <a href="https://help.aliyun.com/document_detail/410622.html">Parameters for configuring features for domain names</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
      */
     @NameInMap("FuncId")
     public String funcId;
@@ -62,19 +84,28 @@ public class DescribeDcdnIpaUserDomainsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the returned page. Valid values: **1** to **100000**. Default value: **1**.</p>
+     * <p>The page number. Valid values: <strong>1</strong> to <strong>100000</strong>. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of domain names to return on each page. Default value: **20**. Maximum value: **500**. Valid values: an integer between **1** and **500**.</p>
+     * <p>The number of domain names per page. Default value: <strong>20</strong>.**** Valid values: <strong>1</strong> to <strong>500</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abcd1234abcd****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -181,12 +212,18 @@ public class DescribeDcdnIpaUserDomainsRequest extends TeaModel {
     public static class DescribeDcdnIpaUserDomainsRequestTag extends TeaModel {
         /**
          * <p>The tag key. Valid values of N: 1 to 20. You can call the TagDcdnResources operation to set a tag for a domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value. Valid values of N: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Value")
         public String value;

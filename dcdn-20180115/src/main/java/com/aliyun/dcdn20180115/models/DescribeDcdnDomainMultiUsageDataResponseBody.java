@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
     /**
      * <p>The end of the time range that was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2017-12-10T21:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3C6CCEC4-6B88-4D4A-93E4-D47B3D92CF8F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -24,6 +30,9 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
 
     /**
      * <p>The beginning of the time range that was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2017-12-10T20:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -82,24 +91,36 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
     public static class DescribeDcdnDomainMultiUsageDataResponseBodyRequestPerIntervalRequestDataModule extends TeaModel {
         /**
          * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
          * <p>The number of requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1128</p>
          */
         @NameInMap("Request")
         public Long request;
 
         /**
          * <p>The timestamp of the data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-10T20:00:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
          * <p>The type of the requests. Valid values: StaticHttps, DynamicHttps, DynamicHttp, StaticQuic, and DynamicQuic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DynamicHttp</p>
          */
         @NameInMap("Type")
         public String type;
@@ -165,30 +186,45 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
     public static class DescribeDcdnDomainMultiUsageDataResponseBodyTrafficPerIntervalTrafficDataModule extends TeaModel {
         /**
          * <p>The name of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
          */
         @NameInMap("Area")
         public String area;
 
         /**
          * <p>The number of bits per second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11288111.1</p>
          */
         @NameInMap("Bps")
         public Float bps;
 
         /**
          * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
          * <p>The timestamp of the data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-10T20:00:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
          * <p>The type of the network traffic. Valid values: Simple, IPA, and WebSocket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Simple</p>
          */
         @NameInMap("Type")
         public String type;

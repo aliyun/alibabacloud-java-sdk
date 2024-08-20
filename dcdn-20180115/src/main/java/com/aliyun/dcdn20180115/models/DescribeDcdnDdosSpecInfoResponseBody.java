@@ -6,58 +6,83 @@ import com.aliyun.tea.*;
 public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
     /**
      * <p>The bandwidth limit of a single instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40Gbps</p>
      */
     @NameInMap("BandwidthLimit")
     public String bandwidthLimit;
 
     /**
      * <p>The version. Valid values:</p>
-     * <br>
-     * <p>* **poc**: POC Edition</p>
-     * <p>* **basic**: Basic Edition</p>
-     * <p>* **insurance**: Insurance Edition</p>
-     * <p>* **unlimited**: Unlimited Edition</p>
-     * <p>* **port_enhancement**: Special Port Enhanced Edition</p>
+     * <ul>
+     * <li><strong>poc</strong>: POC Edition</li>
+     * <li><strong>basic</strong>: Basic Edition</li>
+     * <li><strong>insurance</strong>: Insurance Edition</li>
+     * <li><strong>unlimited</strong>: Unlimited Edition</li>
+     * <li><strong>port_enhancement</strong>: Special Port Enhanced Edition</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>insurance</p>
      */
     @NameInMap("Edition")
     public String edition;
 
     /**
      * <p>Specifies whether to enable DDoS mitigation. Valid values:</p>
-     * <br>
-     * <p>*   **on:**</p>
-     * <p>*   **off**.</p>
+     * <ul>
+     * <li><strong>on:</strong></li>
+     * <li><strong>off</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
      */
     @NameInMap("Enable")
     public String enable;
 
     /**
      * <p>Specifies whether custom ports are supported. Valid values:</p>
-     * <br>
-     * <p>*   **yes**</p>
-     * <p>*   **no**</p>
+     * <ul>
+     * <li><strong>yes</strong></li>
+     * <li><strong>no</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>no</p>
      */
     @NameInMap("IsSpecialPort")
     public String isSpecialPort;
 
     /**
      * <p>Protected region. Valid values:</p>
-     * <br>
-     * <p>* **global**: global</p>
-     * <p>* **chinese_mainland**: Chinese mainland</p>
-     * <p>* **global_excluding_the_chinese_mainland**: outside the Chinese mainland</p>
+     * <ul>
+     * <li><strong>global</strong>: global</li>
+     * <li><strong>chinese_mainland</strong>: Chinese mainland</li>
+     * <li><strong>global_excluding_the_chinese_mainland</strong>: outside the Chinese mainland</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>global</p>
      */
     @NameInMap("ProtectedArea")
     public String protectedArea;
 
     /**
      * <p>The QPS limit.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("QpsLimit")
     public String qpsLimit;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DEA8E7BE-33C6-56F5-AC56-74D50547CF34</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -140,25 +165,35 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
     public static class DescribeDcdnDdosSpecInfoResponseBodySpecInfosConfigs extends TeaModel {
         /**
          * <p>The configuration code of the version rule. Valid values:</p>
-         * <br>
-         * <p>*   **total_defense_num**: the total number of mitigation sessions of the version.</p>
-         * <p>*   **consume_defense_num**: the number of used mitigation sessions of the version.</p>
-         * <p>*   **max_domain_num**: the limit on the number of added domain names.</p>
-         * <p>*   **emain_domain_num**: the number of added domain names.</p>
-         * <p>*   **defence_package_num**: the total number of purchased additional mitigation sessions.</p>
-         * <p>*   **consume_defence_package_num**: the number of used additional mitigation sessions.</p>
+         * <ul>
+         * <li><strong>total_defense_num</strong>: the total number of mitigation sessions of the version.</li>
+         * <li><strong>consume_defense_num</strong>: the number of used mitigation sessions of the version.</li>
+         * <li><strong>max_domain_num</strong>: the limit on the number of added domain names.</li>
+         * <li><strong>emain_domain_num</strong>: the number of added domain names.</li>
+         * <li><strong>defence_package_num</strong>: the total number of purchased additional mitigation sessions.</li>
+         * <li><strong>consume_defence_package_num</strong>: the number of used additional mitigation sessions.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>total_defense_num</p>
          */
         @NameInMap("Config")
         public String config;
 
         /**
          * <p>The configuration expression of the version rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>equal</p>
          */
         @NameInMap("Expr")
         public String expr;
 
         /**
          * <p>The value of the configuration expression of the version rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Value")
         public String value;
@@ -203,10 +238,14 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
 
         /**
          * <p>The version rule. Valid values:</p>
-         * <br>
-         * <p>*   **version_defense_num**: the rule for the number of version mitigation sessions</p>
-         * <p>*   **domain_num**: the rule for the limit on the number of domain names</p>
-         * <p>*   **defence_package_num**: the rule for extra mitigation session plans</p>
+         * <ul>
+         * <li><strong>version_defense_num</strong>: the rule for the number of version mitigation sessions</li>
+         * <li><strong>domain_num</strong>: the rule for the limit on the number of domain names</li>
+         * <li><strong>defence_package_num</strong>: the rule for extra mitigation session plans</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>version_defense_num</p>
          */
         @NameInMap("Rule")
         public String rule;

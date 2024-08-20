@@ -6,32 +6,45 @@ import com.aliyun.tea.*;
 public class DescribeDcdnRefreshTasksRequest extends TeaModel {
     /**
      * <p>The accelerated domain name. You can specify only one domain name in each request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     * <br>
-     * <p>> The end time must be later than the start time.</p>
+     * <blockquote>
+     * <p>The end time must be later than the start time.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2017-01-01T12:13:20Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The path of the object. The path is used as a condition for exact matching.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://example.com/examplefile.txt">http://example.com/examplefile.txt</a></p>
      */
     @NameInMap("ObjectPath")
     public String objectPath;
 
     /**
      * <p>The type of the task.</p>
-     * <br>
-     * <p>*   **file**: URL-based refresh</p>
-     * <p>*   **directory**: directory-based refresh</p>
-     * <p>*   **preload**: URL-based prefetch</p>
-     * <br>
-     * <p>If you set **DomainName** or **Status**, you must also set this parameter.</p>
+     * <ul>
+     * <li><strong>file</strong>: URL-based refresh</li>
+     * <li><strong>directory</strong>: directory-based refresh</li>
+     * <li><strong>preload</strong>: URL-based prefetch</li>
+     * </ul>
+     * <p>If you set <strong>DomainName</strong> or <strong>Status</strong>, you must also set this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>file</p>
      */
     @NameInMap("ObjectType")
     public String objectType;
@@ -40,13 +53,19 @@ public class DescribeDcdnRefreshTasksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Valid values: **1** to **100000**.</p>
+     * <p>The number of the page to return. Valid values: <strong>1</strong> to <strong>100000</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **20**. Maximum value: **50**. Valid values: **1** to **50**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>20</strong>. Maximum value: <strong>50</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -56,22 +75,32 @@ public class DescribeDcdnRefreshTasksRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2017-01-01T12:12:20Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The status of the task.</p>
-     * <br>
-     * <p>*   **Complete**: The task is complete.</p>
-     * <p>*   **Refreshing**: The task is in progress.</p>
-     * <p>*   **Failed**: The task failed.</p>
+     * <ul>
+     * <li><strong>Complete</strong>: The task is complete.</li>
+     * <li><strong>Refreshing</strong>: The task is in progress.</li>
+     * <li><strong>Failed</strong>: The task failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Complete</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The ID of the task. A task ID is assigned when you create a refresh or prefetch task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>704225667</p>
      */
     @NameInMap("TaskId")
     public String taskId;

@@ -6,18 +6,28 @@ import com.aliyun.tea.*;
 public class ModifyDcdnWafGroupRequest extends TeaModel {
     /**
      * <p>The ID of the custom WAF rule group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30000110</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The name of the custom WAF rule group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The incremental modification of the rules in the custom WAF rule group. The value is a string in the JSON format.</p>
+     * <p>The incremental modifications of the rules in the custom WAF rule group. The value is a JSON string.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;All\&quot;:false,\&quot;Op\&quot;:\&quot;del\&quot;,\&quot;List\&quot;:\&quot;900109\&quot;}</p>
      */
     @NameInMap("Rules")
     public String rules;

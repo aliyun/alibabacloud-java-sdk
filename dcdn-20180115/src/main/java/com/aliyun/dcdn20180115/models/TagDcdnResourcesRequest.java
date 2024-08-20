@@ -5,19 +5,28 @@ import com.aliyun.tea.*;
 
 public class TagDcdnResourcesRequest extends TeaModel {
     /**
-     * <p>The ID of the resource. Valid values of N: **1** to **50**.</p>
+     * <p>The ID of the resource. Valid values of N: <strong>1</strong> to <strong>50</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource. Set the value to **DOMAIN**.</p>
+     * <p>The type of the resource. Set the value to <strong>DOMAIN</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DOMAIN</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The tags.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagDcdnResourcesRequestTag> tag;
@@ -53,13 +62,20 @@ public class TagDcdnResourcesRequest extends TeaModel {
 
     public static class TagDcdnResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag. Valid values of N: **1** to **20**.</p>
+         * <p>The key of the tag. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of a tag. Valid values of N: **1** to **20**.</p>
+         * <p>The value of a tag. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         @NameInMap("Value")
         public String value;

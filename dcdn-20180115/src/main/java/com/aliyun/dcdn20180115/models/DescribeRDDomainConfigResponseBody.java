@@ -12,6 +12,9 @@ public class DescribeRDDomainConfigResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C80705BF-0F76-41FA-BAD1-5B59296A4E59</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeRDDomainConfigResponseBody extends TeaModel {
     public static class DescribeRDDomainConfigResponseBodyDomainConfigsFunctionArgs extends TeaModel {
         /**
          * <p>The name of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>source_group_name</p>
          */
         @NameInMap("ArgName")
         public String argName;
 
         /**
          * <p>The value of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("ArgValue")
         public String argValue;
@@ -76,6 +85,9 @@ public class DescribeRDDomainConfigResponseBody extends TeaModel {
     public static class DescribeRDDomainConfigResponseBodyDomainConfigs extends TeaModel {
         /**
          * <p>The ID of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6295</p>
          */
         @NameInMap("ConfigId")
         public Long configId;
@@ -88,23 +100,33 @@ public class DescribeRDDomainConfigResponseBody extends TeaModel {
 
         /**
          * <p>The name of the feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>set_req_host_header</p>
          */
         @NameInMap("FunctionName")
         public String functionName;
 
         /**
          * <p>The ID of the advanced condition configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567</p>
          */
         @NameInMap("ParentId")
         public String parentId;
 
         /**
          * <p>The status. Valid values:</p>
-         * <br>
-         * <p>*   **success**</p>
-         * <p>*   **testing**</p>
-         * <p>*   **failed**</p>
-         * <p>*   **configuring**</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>testing</strong></li>
+         * <li><strong>failed</strong></li>
+         * <li><strong>configuring</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;

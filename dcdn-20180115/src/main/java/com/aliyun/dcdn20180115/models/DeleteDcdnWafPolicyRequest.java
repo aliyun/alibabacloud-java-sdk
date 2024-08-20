@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteDcdnWafPolicyRequest extends TeaModel {
     /**
      * <p>The ID of the protection policy that you want to delete. You can specify only one ID in each request.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000001</p>
      */
     @NameInMap("PolicyId")
     public Long policyId;

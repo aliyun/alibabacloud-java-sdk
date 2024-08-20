@@ -5,22 +5,32 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnWafUsageDataResponseBody extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeDcdnWafUsageData**.</p>
+     * <p>The operation that you want to perform. Set the value to <strong>DescribeDcdnWafUsageData</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-10-01T16:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>Specifies how query results are grouped. By default, this parameter is empty. Valid values:</p>
-     * <br>
-     * <p>*   domain: Query results are grouped by accelerated domain name.</p>
-     * <p>*   An empty string: Query results are not grouped.</p>
+     * <ul>
+     * <li>domain: Query results are grouped by accelerated domain name.</li>
+     * <li>An empty string: Query results are not grouped.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CB1A380B-09F0-41BB-802B-72F8FD6DA2FE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The accelerated domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-09-30T16:00:00Z&quot;,</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -71,38 +81,55 @@ public class DescribeDcdnWafUsageDataResponseBody extends TeaModel {
     public static class DescribeDcdnWafUsageDataResponseBodyWafUsageDataWafUsageDataItem extends TeaModel {
         /**
          * <p>The number of blocked requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         @NameInMap("AccessCnt")
         public Long accessCnt;
 
         /**
          * <p>The number of allowed requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         @NameInMap("BlockCnt")
         public Long blockCnt;
 
         /**
          * <p>The domain name that you want to query. If you do not specify an accelerated domain name, all accelerated domain names are queried by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
          * <p>The end of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         @NameInMap("ObserveCnt")
         public Long observeCnt;
 
         /**
          * <p>The time granularity for a query. Unit: seconds.</p>
-         * <br>
          * <p>The time granularity varies with the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("SecCu")
         public Long secCu;
 
         /**
          * <p>The beginning of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-09-30T16:00:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

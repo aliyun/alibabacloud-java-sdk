@@ -6,23 +6,35 @@ import com.aliyun.tea.*;
 public class BatchSetDcdnDomainCertificateRequest extends TeaModel {
     /**
      * <p>The name of the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cert-te**.com</p>
      */
     @NameInMap("CertName")
     public String certName;
 
     /**
      * <p>The type of the certificate. Valid values:</p>
-     * <br>
-     * <p>*   **upload**: a custom certificate that you upload.</p>
-     * <p>*   **cas**: a certificate that is acquired through Certificate Management Service.</p>
+     * <ul>
+     * <li><strong>upload</strong>: a custom certificate that you upload.</li>
+     * <li><strong>cas</strong>: a certificate that is acquired through Certificate Management Service.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cas</p>
      */
     @NameInMap("CertType")
     public String certType;
 
     /**
      * <p>The accelerated domain name for which you want to configure the HTTPS certificate. The accelerated domain must have HTTPS acceleration enabled. You can specify multiple domain names and separate them with commas (,).</p>
-     * <br>
-     * <p>> You can configure up to 10 domain names in each request.</p>
+     * <blockquote>
+     * <p>You can configure up to 10 domain names in each request.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong>example</strong>.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -32,29 +44,42 @@ public class BatchSetDcdnDomainCertificateRequest extends TeaModel {
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
      * <p>The private key. This parameter is required only if you enable the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>y****</p>
      */
     @NameInMap("SSLPri")
     public String SSLPri;
 
     /**
      * <p>Specifies whether to enable the HTTPS certificate. Valid values:</p>
-     * <br>
-     * <p>*   **on**: enables the HTTPS certificate.</p>
-     * <p>*   **off**: does not enable the HTTPS certificate.</p>
-     * <br>
+     * <ul>
+     * <li><strong>on</strong>: enables the HTTPS certificate.</li>
+     * <li><strong>off</strong>: does not enable the HTTPS certificate.</li>
+     * </ul>
      * <p>This is the default value.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
      */
     @NameInMap("SSLProtocol")
     public String SSLProtocol;
 
     /**
      * <p>The content of the certificate. This parameter is required only if you enable the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>x****</p>
      */
     @NameInMap("SSLPub")
     public String SSLPub;

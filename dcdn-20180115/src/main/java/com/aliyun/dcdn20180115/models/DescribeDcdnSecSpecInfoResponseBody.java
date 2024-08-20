@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDcdnSecSpecInfoResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>32f6cbb7-13e5-403a-9941-4d4e978dd227</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,6 +21,9 @@ public class DescribeDcdnSecSpecInfoResponseBody extends TeaModel {
 
     /**
      * <p>The version of secure DCDN.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>enterprise</p>
      */
     @NameInMap("Version")
     public String version;
@@ -54,18 +60,27 @@ public class DescribeDcdnSecSpecInfoResponseBody extends TeaModel {
     public static class DescribeDcdnSecSpecInfoResponseBodySpecInfosRuleConfigs extends TeaModel {
         /**
          * <p>The configuration code of the security rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom_****_number</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The configuration expression of the security rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>equal</p>
          */
         @NameInMap("Expr")
         public String expr;
 
         /**
          * <p>The value of the configuration expression of the security rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Value")
         public String value;
@@ -104,6 +119,9 @@ public class DescribeDcdnSecSpecInfoResponseBody extends TeaModel {
     public static class DescribeDcdnSecSpecInfoResponseBodySpecInfos extends TeaModel {
         /**
          * <p>The code of the security rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>accurate_***</p>
          */
         @NameInMap("RuleCode")
         public String ruleCode;

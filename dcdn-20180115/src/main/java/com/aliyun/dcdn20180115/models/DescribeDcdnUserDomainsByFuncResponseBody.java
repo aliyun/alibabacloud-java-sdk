@@ -12,24 +12,36 @@ public class DescribeDcdnUserDomainsByFuncResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the page returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AA75AADB-5E25-4970-B480-EAA1F5658483</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of domain names returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -82,30 +94,45 @@ public class DescribeDcdnUserDomainsByFuncResponseBody extends TeaModel {
     public static class DescribeDcdnUserDomainsByFuncResponseBodyDomainsPageDataSourcesSource extends TeaModel {
         /**
          * <p>The origin server address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image.developer.aliyundoc.com</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>The port of the origin server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Priority")
         public String priority;
 
         /**
          * <p>The type of the origin server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The weight of the origin server if multiple origin servers have been specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Weight")
         public String weight;
@@ -179,55 +206,80 @@ public class DescribeDcdnUserDomainsByFuncResponseBody extends TeaModel {
     public static class DescribeDcdnUserDomainsByFuncResponseBodyDomainsPageData extends TeaModel {
         /**
          * <p>The CNAME assigned to the accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com.w.alikunlun.net</p>
          */
         @NameInMap("Cname")
         public String cname;
 
         /**
          * <p>The reason why the accelerated domain name failed the review.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>audit failed</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The status of the accelerated domain name. Valid values:</p>
-         * <br>
-         * <p>*   **online**</p>
-         * <p>*   **offline**</p>
-         * <p>*   **configuring**</p>
-         * <p>*   **configure_failed**</p>
-         * <p>*   **checking**</p>
-         * <p>*   **check_failed**</p>
+         * <ul>
+         * <li><strong>online</strong></li>
+         * <li><strong>offline</strong></li>
+         * <li><strong>configuring</strong></li>
+         * <li><strong>configure_failed</strong></li>
+         * <li><strong>checking</strong></li>
+         * <li><strong>check_failed</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>configure_failed</p>
          */
         @NameInMap("DomainStatus")
         public String domainStatus;
 
         /**
          * <p>The time when the accelerated domain name was added to Dynamic Content Delivery Network (DCDN).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-10-28T09:32:51Z</p>
          */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
         /**
          * <p>The time when the accelerated domain name was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-10-28T11:05:50Z</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyuji4b6r4**</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>Indicates whether the accelerated domain name was in a sandbox.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         @NameInMap("Sandbox")
         public String sandbox;
@@ -240,9 +292,13 @@ public class DescribeDcdnUserDomainsByFuncResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether HTTPS is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **on**: HTTPS is enabled.</p>
-         * <p>*   **off**: HTTPS is disabled.</p>
+         * <ul>
+         * <li><strong>on</strong>: HTTPS is enabled.</li>
+         * <li><strong>off</strong>: HTTPS is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("SslProtocol")
         public String sslProtocol;

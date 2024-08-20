@@ -12,6 +12,9 @@ public class DescribeDcdnCertificateListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FC0E34AC-0239-44A7-AB0E-800DE522C8DA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,36 +43,54 @@ public class DescribeDcdnCertificateListResponseBody extends TeaModel {
     public static class DescribeDcdnCertificateListResponseBodyCertificateListModelCertListCert extends TeaModel {
         /**
          * <p>The ID of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("CertId")
         public Long certId;
 
         /**
          * <p>The name of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Certificate 2</p>
          */
         @NameInMap("CertName")
         public String certName;
 
         /**
          * <p>The Common Name (CN) attribute of the certificate. In most cases, the CN is a domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("Common")
         public String common;
 
         /**
          * <p>The fingerprint of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0151xxxx</p>
          */
         @NameInMap("Fingerprint")
         public String fingerprint;
 
         /**
          * <p>The certificate authority (CA) that issued the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DigiCert</p>
          */
         @NameInMap("Issuer")
         public String issuer;
 
         /**
          * <p>The timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1548065550</p>
          */
         @NameInMap("LastTime")
         public Long lastTime;
@@ -157,6 +178,9 @@ public class DescribeDcdnCertificateListResponseBody extends TeaModel {
 
         /**
          * <p>The number of certificates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Count")
         public Integer count;

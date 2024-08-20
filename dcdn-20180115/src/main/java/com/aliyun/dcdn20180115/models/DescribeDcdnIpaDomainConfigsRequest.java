@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class DescribeDcdnIpaDomainConfigsRequest extends TeaModel {
     /**
      * <p>The accelerated domain name. Separate multiple domain names with commas (,).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The name of the feature. Set the value to protogw, which indicates IP Application Accelerator (IPA).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>protogw</p>
      */
     @NameInMap("FunctionNames")
     public String functionNames;

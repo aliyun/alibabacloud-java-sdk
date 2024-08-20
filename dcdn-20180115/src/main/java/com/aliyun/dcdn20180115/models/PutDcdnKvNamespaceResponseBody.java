@@ -6,35 +6,51 @@ import com.aliyun.tea.*;
 public class PutDcdnKvNamespaceResponseBody extends TeaModel {
     /**
      * <p>The description of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>the first namespace</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The name of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ns1</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The ID of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12423131231****</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D61E4801-EAFF-4A63-AAE1-FBF6CE1CFD1C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The status of the namespace. Valid values:</p>
-     * <br>
-     * <p>*   **online**: normal</p>
-     * <p>*   **delete**: pending delete</p>
-     * <p>*   **deleting**: being deleted</p>
-     * <p>*   **deleted**: deleted</p>
+     * <ul>
+     * <li><strong>online</strong>: normal</li>
+     * <li><strong>delete</strong>: pending delete</li>
+     * <li><strong>deleting</strong>: being deleted</li>
+     * <li><strong>deleted</strong>: deleted</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>online</p>
      */
     @NameInMap("Status")
     public String status;

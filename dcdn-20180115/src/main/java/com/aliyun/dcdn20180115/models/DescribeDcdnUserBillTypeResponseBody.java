@@ -12,6 +12,9 @@ public class DescribeDcdnUserBillTypeResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C370DAF1-C838-4288-A1A0-9A87633D248E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,54 +43,74 @@ public class DescribeDcdnUserBillTypeResponseBody extends TeaModel {
     public static class DescribeDcdnUserBillTypeResponseBodyBillTypeDataBillTypeDataItem extends TeaModel {
         /**
          * <p>The metering method. Valid values:</p>
-         * <br>
-         * <p>*   **hour_flow**: pay by hourly traffic</p>
-         * <p>*   **day_bandwidth**: pay by daily bandwidth</p>
-         * <p>*   **month\_95**: pay by monthly 95th percentile</p>
-         * <p>*   **month_avg_day_bandwidth**: pay by average daily peak bandwidth per month</p>
-         * <p>*   **month\_4th_day_bandwidth**: pay by 4th peak bandwidth per month</p>
-         * <p>*   **month_avg_day\_95**: pay by average daily 95th percentile per month</p>
-         * <p>*   **month\_95\_night_half**: pay by 95th percentile (50% off during nighttime)</p>
-         * <p>*   **hour_vas**: pay by value-added service per month</p>
-         * <p>*   **quic_hour_count**: pay by QUIC request per hour</p>
-         * <p>*   **hour_count**: pay by request per hour</p>
-         * <p>*   **rtlog_count_day**: pay by the number of real-time logs per day</p>
+         * <ul>
+         * <li><strong>hour_flow</strong>: pay by hourly traffic</li>
+         * <li><strong>day_bandwidth</strong>: pay by daily bandwidth</li>
+         * <li><strong>month_95</strong>: pay by monthly 95th percentile</li>
+         * <li><strong>month_avg_day_bandwidth</strong>: pay by average daily peak bandwidth per month</li>
+         * <li><strong>month_4th_day_bandwidth</strong>: pay by 4th peak bandwidth per month</li>
+         * <li><strong>month_avg_day_95</strong>: pay by average daily 95th percentile per month</li>
+         * <li><strong>month_95_night_half</strong>: pay by 95th percentile (50% off during nighttime)</li>
+         * <li><strong>hour_vas</strong>: pay by value-added service per month</li>
+         * <li><strong>quic_hour_count</strong>: pay by QUIC request per hour</li>
+         * <li><strong>hour_count</strong>: pay by request per hour</li>
+         * <li><strong>rtlog_count_day</strong>: pay by the number of real-time logs per day</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>month_avg_day_bandwidth_overseas</p>
          */
         @NameInMap("BillType")
         public String billType;
 
         /**
          * <p>The metering cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>month</p>
          */
         @NameInMap("BillingCycle")
         public String billingCycle;
 
         /**
          * <p>The dimension. Valid values:</p>
-         * <br>
-         * <p>*   **flow**: network traffic and bandwidth</p>
-         * <p>*   **vas**: value-added services (HTTPS and requests for dynamic content)</p>
-         * <p>*   **websocket**: WebSocket</p>
-         * <p>*   **quic**: QUIC requests</p>
-         * <p>*   **rtlog2sls**: log entries delivered to Log Service in real time</p>
+         * <ul>
+         * <li><strong>flow</strong>: network traffic and bandwidth</li>
+         * <li><strong>vas</strong>: value-added services (HTTPS and requests for dynamic content)</li>
+         * <li><strong>websocket</strong>: WebSocket</li>
+         * <li><strong>quic</strong>: QUIC requests</li>
+         * <li><strong>rtlog2sls</strong>: log entries delivered to Log Service in real time</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>flow</p>
          */
         @NameInMap("Dimension")
         public String dimension;
 
         /**
          * <p>The time when the metering method ends.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-10-31T16:00:00Z</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dcdn</p>
          */
         @NameInMap("Product")
         public String product;
 
         /**
          * <p>The time when the metering method takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-10-30T16:00:00Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;

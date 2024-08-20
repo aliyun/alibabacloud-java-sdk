@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateDcdnUserRealTimeDeliveryFieldResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3EACD23C-F49F-4BF7-B9AD-C2CD3BA888C4</p>
      */
     @NameInMap("RequestId")
     public String requestId;

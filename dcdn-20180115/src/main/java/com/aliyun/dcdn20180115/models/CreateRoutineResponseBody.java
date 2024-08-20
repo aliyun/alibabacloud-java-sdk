@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateRoutineResponseBody extends TeaModel {
     /**
-     * <p>The message returned, such as ""Status": "OK"".</p>
+     * <p>The message returned, such as &quot;&quot;Status&quot;: &quot;OK&quot;&quot;.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;Status&quot;: &quot;OK&quot;</p>
      */
     @NameInMap("Content")
     public java.util.Map<String, ?> content;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -4,12 +4,24 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class PutDcdnKvWithHighCapacityResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("Length")
     public Integer length;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Value")
     public String value;
 

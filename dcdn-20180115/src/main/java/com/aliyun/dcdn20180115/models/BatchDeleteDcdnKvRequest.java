@@ -4,9 +4,18 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class BatchDeleteDcdnKvRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Keys")
     public java.util.List<String> keys;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_namespace</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 

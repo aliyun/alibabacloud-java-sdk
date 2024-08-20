@@ -7,6 +7,10 @@ public class BatchPutDcdnKvWithHighCapacityResponseBody extends TeaModel {
     @NameInMap("FailKeys")
     public java.util.List<String> failKeys;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

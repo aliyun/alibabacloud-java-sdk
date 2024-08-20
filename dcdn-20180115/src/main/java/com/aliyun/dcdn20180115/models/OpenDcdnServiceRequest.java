@@ -6,9 +6,14 @@ import com.aliyun.tea.*;
 public class OpenDcdnServiceRequest extends TeaModel {
     /**
      * <p>The metering method of DCDN. Valid values:</p>
-     * <br>
-     * <p>*   **PayByTraffic**: pay-by-traffic</p>
-     * <p>*   **PayByBandwidth**: pay-by-bandwidth</p>
+     * <ul>
+     * <li><strong>PayByTraffic</strong>: pay-by-traffic</li>
+     * <li><strong>PayByBandwidth</strong>: pay-by-bandwidth</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PayByTraffic</p>
      */
     @NameInMap("BillType")
     public String billType;
@@ -21,9 +26,14 @@ public class OpenDcdnServiceRequest extends TeaModel {
 
     /**
      * <p>The metering method of WebSocket. Valid values:</p>
-     * <br>
-     * <p>*   **websockettraffic**: pay-by-data-transfer</p>
-     * <p>*   **websocketbps**: pay-by-bandwidth</p>
+     * <ul>
+     * <li><strong>websockettraffic</strong>: pay-by-data-transfer</li>
+     * <li><strong>websocketbps</strong>: pay-by-bandwidth</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>websockettraffic</p>
      */
     @NameInMap("WebsocketBillType")
     public String websocketBillType;

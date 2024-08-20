@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateDcdnWafGroupResponseBody extends TeaModel {
     /**
      * <p>The ID of the created WAF rule group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30000166</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>675F4820-400E-5929-8B03-2C031A5D5391</p>
      */
     @NameInMap("RequestId")
     public String requestId;

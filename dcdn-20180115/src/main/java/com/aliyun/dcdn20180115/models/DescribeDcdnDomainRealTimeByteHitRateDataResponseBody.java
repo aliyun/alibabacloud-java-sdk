@@ -12,6 +12,9 @@ public class DescribeDcdnDomainRealTimeByteHitRateDataResponseBody extends TeaMo
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B955107D-E658-4E77-B913-E0AC3D31693E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeDcdnDomainRealTimeByteHitRateDataResponseBody extends TeaMo
     public static class DescribeDcdnDomainRealTimeByteHitRateDataResponseBodyDataByteHitRateDataModel extends TeaModel {
         /**
          * <p>The byte hit ratio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.8956940476262277</p>
          */
         @NameInMap("ByteHitRate")
         public Float byteHitRate;
 
         /**
          * <p>The timestamp of the data returned. The time follows the ISO 8601 standard. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-10-20T04:00:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

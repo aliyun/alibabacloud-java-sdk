@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
     /**
      * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
      * <p>The accelerated domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The end of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2017-12-10T21:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -30,12 +39,18 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The start of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2017-12-10T20:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -96,66 +111,99 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
     public static class DescribeDcdnDomainQpsDataResponseBodyQpsDataPerIntervalDataModule extends TeaModel {
         /**
          * <p>The total number of requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Acc")
         public Float acc;
 
         /**
          * <p>The number of requests for dynamic content delivery over HTTP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DynamicHttpAcc")
         public Float dynamicHttpAcc;
 
         /**
          * <p>The QPS for dynamic content delivery over HTTP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DynamicHttpQps")
         public Float dynamicHttpQps;
 
         /**
          * <p>The number of requests for dynamic content delivery over HTTPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DynamicHttpsAcc")
         public Float dynamicHttpsAcc;
 
         /**
          * <p>The QPS for dynamic content delivery over HTTPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DynamicHttpsQps")
         public Float dynamicHttpsQps;
 
         /**
          * <p>The total QPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.56</p>
          */
         @NameInMap("Qps")
         public Float qps;
 
         /**
          * <p>The number of requests for static content delivery over HTTP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("StaticHttpAcc")
         public Float staticHttpAcc;
 
         /**
          * <p>The QPS for static content delivery over HTTP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("StaticHttpQps")
         public Float staticHttpQps;
 
         /**
          * <p>The number of requests for static content delivery over HTTPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("StaticHttpsAcc")
         public Float staticHttpsAcc;
 
         /**
          * <p>The QPS for static content delivery over HTTPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("StaticHttpsQps")
         public Float staticHttpsQps;
 
         /**
          * <p>The timestamp of the returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-10T21:00:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

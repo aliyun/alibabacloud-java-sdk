@@ -12,6 +12,9 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>153ca2cd-3c01-44be-204c-64dbc6c88630</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
     public static class DescribeDcdnWafFilterInfoResponseBodyContentFieldsLogicalSymbolRegexp extends TeaModel {
         /**
          * <p>The error message returned when no items match the regular expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specify this field.</p>
          */
         @NameInMap("ErrMsg")
         public String errMsg;
 
         /**
          * <p>The regular expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>^\S+$</p>
          */
         @NameInMap("Pattern")
         public String pattern;
@@ -75,28 +84,39 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
 
     public static class DescribeDcdnWafFilterInfoResponseBodyContentFieldsLogicalSymbol extends TeaModel {
         /**
-         * <p>The configurable attributes, which are bit-field variables that are shown in the following list.\</p>
-         * <p>For example, 1(00000001) indicates that case sensitivity can be enabled and stream match cannot be enabled, and 3(00000011) indicates that case sensitivity and stream match can be enabled.</p>
-         * <br>
-         * <p>*   Bit (low to high) - Description</p>
-         * <p>*   1 - Case sensitivity</p>
-         * <p>*   2 - Stream match</p>
+         * <p>The configurable attributes, which are bit-field variables that are shown in the following list.\
+         * For example, 1(00000001) indicates that case sensitivity can be enabled and stream match cannot be enabled, and 3(00000011) indicates that case sensitivity and stream match can be enabled.</p>
+         * <ul>
+         * <li>Bit (low to high) - Description</li>
+         * <li>1 - Case sensitivity</li>
+         * <li>2 - Stream match</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Attributes")
         public Integer attributes;
 
         /**
          * <p>The logical symbol that is displayed in the Dynamic Content Delivery Network (DCDN) console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Equal to one of multiple values.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The maximum number of match items that can be returned. The value of this parameter varies based on the value of the Type parameter. Valid values:</p>
-         * <br>
-         * <p>*   If **multi** is returned for the Type parameter, the value of this parameter indicates the maximum number of match items.</p>
-         * <p>*   If **single** is returned for the Type parameter, the value of this parameter is 1.</p>
-         * <p>*   If **none** is returned for the Type parameter, the value of this parameter is 0.</p>
+         * <ul>
+         * <li>If <strong>multi</strong> is returned for the Type parameter, the value of this parameter indicates the maximum number of match items.</li>
+         * <li>If <strong>single</strong> is returned for the Type parameter, the value of this parameter is 1.</li>
+         * <li>If <strong>none</strong> is returned for the Type parameter, the value of this parameter is 0.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("MaxLength")
         public Integer maxLength;
@@ -109,22 +129,32 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
 
         /**
          * <p>The logical symbol that is passed to the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>match-one</p>
          */
         @NameInMap("Symbol")
         public String symbol;
 
         /**
          * <p>The tips that are displayed in the match item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You can enter up to 50 tips. Press the Enter key.</p>
          */
         @NameInMap("Tip")
         public String tip;
 
         /**
          * <p>The number of match items. Valid values:</p>
-         * <br>
-         * <p>*   multi: You can specify multiple match items.</p>
-         * <p>*   single: You can specify only a match item.</p>
-         * <p>*   none: no match items.</p>
+         * <ul>
+         * <li>multi: You can specify multiple match items.</li>
+         * <li>single: You can specify only a match item.</li>
+         * <li>none: no match items.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>multi</p>
          */
         @NameInMap("Type")
         public String type;
@@ -195,6 +225,9 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
     public static class DescribeDcdnWafFilterInfoResponseBodyContentFields extends TeaModel {
         /**
          * <p>The description of the match field. This parameter is not returned or is empty if no match fields are found.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom Header</p>
          */
         @NameInMap("ExtendField")
         public String extendField;
@@ -207,6 +240,9 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
 
         /**
          * <p>The match field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Header</p>
          */
         @NameInMap("MatchField")
         public String matchField;
@@ -245,6 +281,9 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
     public static class DescribeDcdnWafFilterInfoResponseBodyContent extends TeaModel {
         /**
          * <p>The type of the protection policy. The value of this parameter is the same as that of the DefenseScenes parameter in the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom_acl</p>
          */
         @NameInMap("DefenseScene")
         public String defenseScene;

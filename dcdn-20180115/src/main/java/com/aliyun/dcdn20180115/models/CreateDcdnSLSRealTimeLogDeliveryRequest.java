@@ -6,58 +6,90 @@ import com.aliyun.tea.*;
 public class CreateDcdnSLSRealTimeLogDeliveryRequest extends TeaModel {
     /**
      * <p>The type of the collected logs. Default value: cdn_log_access_l1. Valid values:</p>
-     * <br>
-     * <p>*   **cdn_log_access_l1**: access logs of Dynamic Content Delivery Network (DCDN) points of presence (POPs)</p>
-     * <p>*   **cdn_log_origin**: back-to-origin logs</p>
-     * <p>*   **cdn_log_er**: EdgeRoutine logs</p>
+     * <ul>
+     * <li><strong>cdn_log_access_l1</strong>: access logs of Dynamic Content Delivery Network (DCDN) points of presence (POPs)</li>
+     * <li><strong>cdn_log_origin</strong>: back-to-origin logs</li>
+     * <li><strong>cdn_log_er</strong>: EdgeRoutine logs</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cdn_log_access_l1</p>
      */
     @NameInMap("BusinessType")
     public String businessType;
 
     /**
      * <p>The data center. Valid values:</p>
-     * <br>
-     * <p>*   cn: China</p>
-     * <p>*   sg: Singapore</p>
-     * <p>*   in: India</p>
-     * <p>*   eu: Europe</p>
-     * <p>*   us: United States</p>
+     * <ul>
+     * <li>cn: China</li>
+     * <li>sg: Singapore</li>
+     * <li>in: India</li>
+     * <li>eu: Europe</li>
+     * <li>us: United States</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn</p>
      */
     @NameInMap("DataCenter")
     public String dataCenter;
 
     /**
      * <p>The domain names from which logs were collected. You can specify one or more domain names. Separate multiple domain names with commas (,).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The name of a real-time log delivery project.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
      * <p>The name of the Log Service Logstore.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo</p>
      */
     @NameInMap("SLSLogStore")
     public String SLSLogStore;
 
     /**
      * <p>The name of the Log Service project.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aliyundoc</p>
      */
     @NameInMap("SLSProject")
     public String SLSProject;
 
     /**
      * <p>The region to which real-time logs are delivered.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("SLSRegion")
     public String SLSRegion;
 
     /**
      * <p>The sampling rate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0</p>
      */
     @NameInMap("SamplingRate")
     public String samplingRate;

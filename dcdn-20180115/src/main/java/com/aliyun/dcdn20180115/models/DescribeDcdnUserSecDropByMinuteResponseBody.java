@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
     /**
      * <p>The description of HTTP responses.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Len")
     public Integer len;
 
     /**
      * <p>The number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8143fA8A-B2B2-4915-538D-546B538D25FA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -42,6 +57,9 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5738</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -110,36 +128,54 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
     public static class DescribeDcdnUserSecDropByMinuteResponseBodyRows extends TeaModel {
         /**
          * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
          * <p>The number of packets blocked within 5 minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>264</p>
          */
         @NameInMap("Drops")
         public Integer drops;
 
         /**
          * <p>The object that triggered rate limiting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal Mode</p>
          */
         @NameInMap("Object")
         public String object;
 
         /**
          * <p>The rule that was triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal Mode</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
          * <p>The security feature that blocked the packets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>robot</p>
          */
         @NameInMap("SecFunc")
         public String secFunc;
 
         /**
          * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-31T15:04:04Z</p>
          */
         @NameInMap("TmStr")
         public String tmStr;

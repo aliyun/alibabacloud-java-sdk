@@ -6,14 +6,21 @@ import com.aliyun.tea.*;
 public class DeleteDcdnSpecificStagingConfigRequest extends TeaModel {
     /**
      * <p>The ID of the configuration to be deleted. You can specify multiple configuration IDs and separate them with commas (,).</p>
-     * <br>
      * <p>You can call the DescribeDcdnDomainStagingConfig operation to query the environment configuration.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2317</p>
      */
     @NameInMap("ConfigId")
     public String configId;
 
     /**
      * <p>The accelerated domain name. You can specify only one domain name in each call.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;

@@ -6,30 +6,39 @@ import com.aliyun.tea.*;
 public class DescribeDcdnDomainHitRateDataRequest extends TeaModel {
     /**
      * <p>The accelerated domain name. You can specify only one domain name.</p>
-     * <br>
      * <p>If you do not specify a value for this parameter, all domain names are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time needs to be in UTC.</p>
-     * <br>
      * <p>The end time needs to be later than the start time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-03-02T15:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The time granularity for a query. Unit: seconds.</p>
-     * <br>
-     * <p>The time granularity varies with the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see **Usage notes**.</p>
+     * <p>The time granularity varies with the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see <strong>Usage notes</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
      */
     @NameInMap("Interval")
     public String interval;
 
     /**
      * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time needs to be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-03-02T12:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

@@ -12,24 +12,36 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of domain names returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AA75AADB-5E25-4970-B480-EAA1F5658483</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of domain names returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -82,30 +94,45 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
     public static class DescribeDcdnIpaUserDomainsResponseBodyDomainsPageDataSourcesSource extends TeaModel {
         /**
          * <p>The address of the origin server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>*.aliyuncs.com</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>The port of the origin server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Priority")
         public String priority;
 
         /**
          * <p>The type of the origin server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS Domain</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The weight of the origin server if multiple origin servers have been specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Weight")
         public String weight;
@@ -179,64 +206,93 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
     public static class DescribeDcdnIpaUserDomainsResponseBodyDomainsPageData extends TeaModel {
         /**
          * <p>The CNAME assigned to the accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com.*.com</p>
          */
         @NameInMap("Cname")
         public String cname;
 
         /**
          * <p>The reason why the accelerated domain name failed the review.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>audit failed</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The status of the accelerated domain name. Valid values:</p>
-         * <br>
-         * <p>*   **online**: enabled</p>
-         * <p>*   **offline**: disabled</p>
-         * <p>*   **configuring**: configuring</p>
-         * <p>*   **configure_failed**: configuration failed</p>
-         * <p>*   **checking**: reviewing</p>
-         * <p>*   **check_failed:** review failed</p>
+         * <ul>
+         * <li><strong>online</strong>: enabled</li>
+         * <li><strong>offline</strong>: disabled</li>
+         * <li><strong>configuring</strong>: configuring</li>
+         * <li><strong>configure_failed</strong>: configuration failed</li>
+         * <li><strong>checking</strong>: reviewing</li>
+         * <li><strong>check_failed:</strong> review failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         @NameInMap("DomainStatus")
         public String domainStatus;
 
         /**
          * <p>The time when the accelerated domain name was added to Alibaba Cloud CDN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-10-28T09:32:51Z</p>
          */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
         /**
          * <p>The time when the accelerated domain name was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-10-28T11:05:52Z</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcd1234abcd****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The status of HTTPS.</p>
-         * <br>
-         * <p>*   **on**</p>
-         * <p>*   **off**</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("SSLProtocol")
         public String SSLProtocol;
 
         /**
          * <p>Indicates whether the accelerated domain name was in a sandbox.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         @NameInMap("Sandbox")
         public String sandbox;

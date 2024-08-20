@@ -12,6 +12,9 @@ public class DescribeDcdnDomainCertificateInfoResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5C1E43DC-9E51-4771-82C0-7D5ECEB547A1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,89 +43,128 @@ public class DescribeDcdnDomainCertificateInfoResponseBody extends TeaModel {
     public static class DescribeDcdnDomainCertificateInfoResponseBodyCertInfosCertInfo extends TeaModel {
         /**
          * <p>The domain name that matches the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("CertDomainName")
         public String certDomainName;
 
         /**
          * <p>The time at which the certificate expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-06-03T22:03:39Z</p>
          */
         @NameInMap("CertExpireTime")
         public String certExpireTime;
 
         /**
          * <p>The ID of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9002448</p>
          */
         @NameInMap("CertId")
         public String certId;
 
         /**
-         * <p>The validity period of the certificate. Unit: **months** or **years**.</p>
+         * <p>The validity period of the certificate. Unit: <strong>months</strong> or <strong>years</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3 months</p>
          */
         @NameInMap("CertLife")
         public String certLife;
 
         /**
          * <p>The name of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cert-example.com</p>
          */
         @NameInMap("CertName")
         public String certName;
 
         /**
          * <p>The certificate authority (CA) that issued the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Let\&quot;s Encrypt</p>
          */
         @NameInMap("CertOrg")
         public String certOrg;
 
         /**
          * <p>The region where the certificate is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("CertRegion")
         public String certRegion;
 
         /**
          * <p>The type of the certificate.</p>
-         * <br>
-         * <p>*   **cas**: a certificate that is purchased by using Certificates Management Service</p>
-         * <p>*   **upload**: a custom certificate that you upload</p>
+         * <ul>
+         * <li><strong>cas</strong>: a certificate that is purchased by using Certificates Management Service</li>
+         * <li><strong>upload</strong>: a custom certificate that you upload</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cas</p>
          */
         @NameInMap("CertType")
         public String certType;
 
         /**
          * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The status of HTTPS. Valid values:</p>
-         * <br>
-         * <p>*   **on**</p>
-         * <p>*   **off**</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("SSLProtocol")
         public String SSLProtocol;
 
         /**
          * <p>The public key of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         @NameInMap("SSLPub")
         public String SSLPub;
 
         /**
          * <p>The status of the certificate. Valid values:</p>
-         * <br>
-         * <p>*   **success**: The certificate has taken effect.</p>
-         * <p>*   **checking**: The system is checking whether the domain name is using Dynamic Route for CDN (DCDN).</p>
-         * <p>*   **cname_error**: The domain name is not using DCDN.</p>
-         * <p>*   **domain_invalid**: The domain name contains invalid characters.</p>
-         * <p>*   **unsupport_wildcard**: The wildcard domain name is not supported.</p>
-         * <p>*   **applying**: Certificate application is in progress.</p>
-         * <p>*   **get_token_timeout**: The certificate application request has timed out.</p>
-         * <p>*   **check_token_timeout**: The verification has timed out.</p>
-         * <p>*   **get_cert_timeout**: The request to obtain the certificate has timed out.</p>
-         * <p>*   **failed**: The certificate application request failed.</p>
+         * <ul>
+         * <li><strong>success</strong>: The certificate has taken effect.</li>
+         * <li><strong>checking</strong>: The system is checking whether the domain name is using Dynamic Route for CDN (DCDN).</li>
+         * <li><strong>cname_error</strong>: The domain name is not using DCDN.</li>
+         * <li><strong>domain_invalid</strong>: The domain name contains invalid characters.</li>
+         * <li><strong>unsupport_wildcard</strong>: The wildcard domain name is not supported.</li>
+         * <li><strong>applying</strong>: Certificate application is in progress.</li>
+         * <li><strong>get_token_timeout</strong>: The certificate application request has timed out.</li>
+         * <li><strong>check_token_timeout</strong>: The verification has timed out.</li>
+         * <li><strong>get_cert_timeout</strong>: The request to obtain the certificate has timed out.</li>
+         * <li><strong>failed</strong>: The certificate application request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;

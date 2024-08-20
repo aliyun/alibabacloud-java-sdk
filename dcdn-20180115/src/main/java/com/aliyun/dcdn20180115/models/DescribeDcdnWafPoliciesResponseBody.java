@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnWafPoliciesResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page. Valid values: **1** to **100000**. Default value: **1**.</p>
+     * <p>The page number of the returned page. Valid values: <strong>1</strong> to <strong>100000</strong>. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of protection policies returned per page. Valid values: an integer from **1** to **500**. Default value: **20**.</p>
+     * <p>The number of protection policies returned per page. Valid values: an integer from <strong>1</strong> to <strong>500</strong>. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -24,12 +30,18 @@ public class DescribeDcdnWafPoliciesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>153ca2cd-3c01-44be-2e83-64dbc6c88630</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of protection policies.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,48 +94,72 @@ public class DescribeDcdnWafPoliciesResponseBody extends TeaModel {
     public static class DescribeDcdnWafPoliciesResponseBodyPolicies extends TeaModel {
         /**
          * <p>The type of the protection policy, which is the same as the DefenseScenes field in the QueryArgs parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom_acl</p>
          */
         @NameInMap("DefenseScene")
         public String defenseScene;
 
         /**
          * <p>The number of domain names that use the protection policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         @NameInMap("DomainCount")
         public Integer domainCount;
 
         /**
          * <p>The time when the protection policy was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-29T17:08:45Z</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The ID of the protection policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100001</p>
          */
         @NameInMap("PolicyId")
         public Long policyId;
 
         /**
          * <p>The name of the protection policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policy_test</p>
          */
         @NameInMap("PolicyName")
         public String policyName;
 
         /**
          * <p>The status of the protection policy, which is the same as the PolicyStatus field in the QueryArgs parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("PolicyStatus")
         public String policyStatus;
 
         /**
          * <p>Indicates whether this protection policy is the default policy, which is the same as the PolicyType field in the QueryArgs parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("PolicyType")
         public String policyType;
 
         /**
          * <p>The number of protection rules in the protection policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         @NameInMap("RuleCount")
         public Long ruleCount;

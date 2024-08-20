@@ -6,20 +6,29 @@ import com.aliyun.tea.*;
 public class DescribeDcdnDomainRealTimeReqHitRateDataRequest extends TeaModel {
     /**
      * <p>The accelerated domain name. Separate multiple accelerated domain names with commas (,).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     * <br>
      * <p>The end time needs to be later than the start time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-12-10T20:03:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-12-10T20:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

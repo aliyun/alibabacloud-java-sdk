@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteDcdnWafGroupRequest extends TeaModel {
     /**
      * <p>The ID of the custom WAF rule group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30000135</p>
      */
     @NameInMap("Id")
     public Long id;

@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class DescribeDcdnDomainIspDataResponseBody extends TeaModel {
     /**
      * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>86400</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
      * <p>The accelerated domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The end of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-12-06T12:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2E5AD83F-BD7B-462E-8319-2E30E305519A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The start of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-12-05T12:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -96,66 +111,99 @@ public class DescribeDcdnDomainIspDataResponseBody extends TeaModel {
     public static class DescribeDcdnDomainIspDataResponseBodyValueIspProportionData extends TeaModel {
         /**
          * <p>The average response size. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>800019.0</p>
          */
         @NameInMap("AvgObjectSize")
         public String avgObjectSize;
 
         /**
          * <p>The average response speed. Unit: byte/ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>154.3345765545624</p>
          */
         @NameInMap("AvgResponseRate")
         public String avgResponseRate;
 
         /**
          * <p>The average response time. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5183.666666666667</p>
          */
         @NameInMap("AvgResponseTime")
         public String avgResponseTime;
 
         /**
          * <p>The bandwidth.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>380.9614285714286</p>
          */
         @NameInMap("Bps")
         public String bps;
 
         /**
          * <p>The proportion of network traffic. For example, a value of 90 indicates that 90% of network traffic was coming from the specified ISP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.003544181046236794</p>
          */
         @NameInMap("BytesProportion")
         public String bytesProportion;
 
         /**
          * <p>The information about the ISP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China Unicom</p>
          */
         @NameInMap("Isp")
         public String isp;
 
         /**
          * <p>The name of the ISP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>unicom</p>
          */
         @NameInMap("IspEname")
         public String ispEname;
 
         /**
          * <p>The proportion of the HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.01155980271270037</p>
          */
         @NameInMap("Proportion")
         public String proportion;
 
         /**
          * <p>The number of queries per second (QPS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.9523809523809524E-5</p>
          */
         @NameInMap("Qps")
         public String qps;
 
         /**
          * <p>The total volume of traffic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2400057</p>
          */
         @NameInMap("TotalBytes")
         public String totalBytes;
 
         /**
          * <p>The total number of requests that are destined for your website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("TotalQuery")
         public String totalQuery;

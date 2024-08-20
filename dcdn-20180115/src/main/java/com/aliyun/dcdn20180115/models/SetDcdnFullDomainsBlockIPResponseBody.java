@@ -6,20 +6,28 @@ import com.aliyun.tea.*;
 public class SetDcdnFullDomainsBlockIPResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
-     * <br>
      * <p>If the value of Code is not 0, specific required parameters are missing or the parameter format is invalid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CB1A380B-09F0-41BB-802B-72F8FD6DA2FE</p>
      */
     @NameInMap("RequestId")
     public String requestId;

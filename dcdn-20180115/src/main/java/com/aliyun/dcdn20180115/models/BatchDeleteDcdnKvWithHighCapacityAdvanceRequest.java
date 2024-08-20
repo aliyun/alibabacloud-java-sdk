@@ -3,7 +3,7 @@ package com.aliyun.dcdn20180115.models;
 
 import com.aliyun.tea.*;
 
-public class BatchDeleteDcdnKvWithHighCapacityRequest extends TeaModel {
+public class BatchDeleteDcdnKvWithHighCapacityAdvanceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      * 
@@ -20,14 +20,14 @@ public class BatchDeleteDcdnKvWithHighCapacityRequest extends TeaModel {
      * <p><a href="https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7">https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7</a></p>
      */
     @NameInMap("Url")
-    public String url;
+    public java.io.InputStream urlObject;
 
-    public static BatchDeleteDcdnKvWithHighCapacityRequest build(java.util.Map<String, ?> map) throws Exception {
-        BatchDeleteDcdnKvWithHighCapacityRequest self = new BatchDeleteDcdnKvWithHighCapacityRequest();
+    public static BatchDeleteDcdnKvWithHighCapacityAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
+        BatchDeleteDcdnKvWithHighCapacityAdvanceRequest self = new BatchDeleteDcdnKvWithHighCapacityAdvanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public BatchDeleteDcdnKvWithHighCapacityRequest setNamespace(String namespace) {
+    public BatchDeleteDcdnKvWithHighCapacityAdvanceRequest setNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
@@ -35,12 +35,12 @@ public class BatchDeleteDcdnKvWithHighCapacityRequest extends TeaModel {
         return this.namespace;
     }
 
-    public BatchDeleteDcdnKvWithHighCapacityRequest setUrl(String url) {
-        this.url = url;
+    public BatchDeleteDcdnKvWithHighCapacityAdvanceRequest setUrlObject(java.io.InputStream urlObject) {
+        this.urlObject = urlObject;
         return this;
     }
-    public String getUrl() {
-        return this.url;
+    public java.io.InputStream getUrlObject() {
+        return this.urlObject;
     }
 
 }

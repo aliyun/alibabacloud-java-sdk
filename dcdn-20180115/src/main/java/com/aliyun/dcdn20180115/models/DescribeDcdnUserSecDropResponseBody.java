@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class DescribeDcdnUserSecDropResponseBody extends TeaModel {
     /**
      * <p>The number of packets that are blocked.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>233023208</p>
      */
     @NameInMap("Drops")
     public Integer drops;
 
     /**
      * <p>Indicates whether the information is found.</p>
-     * <br>
-     * <p>*   Found</p>
-     * <p>*   Not Found</p>
+     * <ul>
+     * <li>Found</li>
+     * <li>Not Found</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Found</p>
      */
     @NameInMap("Msg")
     public String msg;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4A1295C0-7A5C-4F27-8D70-C3A648E7037F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The character string that is concatenated based on the request parameters and is used to locate causes when data is not found.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1day10811******6429wafDCDN</p>
      */
     @NameInMap("UuidStr")
     public String uuidStr;

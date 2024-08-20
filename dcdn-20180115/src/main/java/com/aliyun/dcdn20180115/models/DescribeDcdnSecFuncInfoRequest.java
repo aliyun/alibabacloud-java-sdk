@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class DescribeDcdnSecFuncInfoRequest extends TeaModel {
     /**
      * <p>The language. Valid values: en and zh. Default value: en.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The type of the drop-down list. Valid values: RobotRuleName and RobotObject.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RobotRuleName</p>
      */
     @NameInMap("SecFuncType")
     public String secFuncType;

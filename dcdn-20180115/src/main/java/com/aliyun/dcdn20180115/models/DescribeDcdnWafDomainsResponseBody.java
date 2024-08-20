@@ -12,24 +12,36 @@ public class DescribeDcdnWafDomainsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page, which is the same as the PageNumber parameter in request parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of domain names returned per page, which is the same as the PageSize parameter in request parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>153ca2cd-3c01-44be-b408-64dbc6c88630</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of protected domain names.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,18 +94,27 @@ public class DescribeDcdnWafDomainsResponseBody extends TeaModel {
     public static class DescribeDcdnWafDomainsResponseBodyDomains extends TeaModel {
         /**
          * <p>The header of IP address of the client that is connected to the point of presence (POP).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>X-Forwarded-For</p>
          */
         @NameInMap("ClientIpTag")
         public String clientIpTag;
 
         /**
          * <p>The protected domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The number of protection policies that were configured for the protected domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("PolicyCount")
         public Integer policyCount;

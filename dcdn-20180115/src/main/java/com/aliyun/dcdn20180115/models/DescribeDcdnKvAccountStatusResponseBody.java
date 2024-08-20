@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class DescribeDcdnKvAccountStatusResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5C1E43DC-9E51-4771-82C0-7D5ECEB547A1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The status of the account.</p>
-     * <br>
-     * <p>*   **online**</p>
-     * <p>*   **offline**</p>
+     * <ul>
+     * <li><strong>online</strong></li>
+     * <li><strong>offline</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>online</p>
      */
     @NameInMap("Status")
     public String status;

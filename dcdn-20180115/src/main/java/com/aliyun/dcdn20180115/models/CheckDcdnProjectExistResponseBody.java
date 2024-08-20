@@ -12,6 +12,9 @@ public class CheckDcdnProjectExistResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b021e538-9dde-46ed-a1f2-9469da8f3e77</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,9 +43,13 @@ public class CheckDcdnProjectExistResponseBody extends TeaModel {
     public static class CheckDcdnProjectExistResponseBodyContent extends TeaModel {
         /**
          * <p>Indicates whether the real-time log delivery project exists. Valid values:</p>
-         * <br>
-         * <p>*   **false**</p>
-         * <p>*   **true**</p>
+         * <ul>
+         * <li><strong>false</strong></li>
+         * <li><strong>true</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Exist")
         public String exist;

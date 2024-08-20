@@ -6,16 +6,24 @@ import com.aliyun.tea.*;
 public class UpdateDcdnUserRealTimeDeliveryFieldRequest extends TeaModel {
     /**
      * <p>The type of the collected logs. Default value: cdn_log_access_l1. Valid values:</p>
-     * <br>
-     * <p>*   **cdn_log_access_l1**: access logs of L1 Dynamic Route for CDN (DCDN) points of presence (POPs)</p>
-     * <p>*   **cdn_log_origin**: back-to-origin logs</p>
-     * <p>*   **cdn_log_er**: EdgeRoutine logs</p>
+     * <ul>
+     * <li><strong>cdn_log_access_l1</strong>: access logs of L1 Dynamic Route for CDN (DCDN) points of presence (POPs)</li>
+     * <li><strong>cdn_log_origin</strong>: back-to-origin logs</li>
+     * <li><strong>cdn_log_er</strong>: EdgeRoutine logs</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cdn_log_access_l1</p>
      */
     @NameInMap("BusinessType")
     public String businessType;
 
     /**
-     * <p>The list of fields. Separate multiple fields with commas (,). For more information, see [Fields in a real-time log](~~324199~~).</p>
+     * <p>The list of fields. Separate multiple fields with commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/324199.html">Fields in a real-time log</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>body_bytes_sent,client_ip,content_type</p>
      */
     @NameInMap("Fields")
     public String fields;

@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class PutDcdnKvNamespaceRequest extends TeaModel {
     /**
      * <p>The description of the namespace.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>the first namespace</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The name of the namespace. The name can contain letters, digits, hyphens (-), and underscores (\_).</p>
+     * <p>The name of the namespace. The name can contain letters, digits, hyphens (-), and underscores (_).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ns1</p>
      */
     @NameInMap("Namespace")
     public String namespace;

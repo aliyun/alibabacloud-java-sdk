@@ -12,24 +12,36 @@ public class DescribeDcdnWafPolicyDomainsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page, which is the same as the PageNumber parameter in request parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of domain names returned per page, which is the same as the PageSize parameter in request parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>153ca2cd-3c01-44be-b480-64dbc6c88630</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of domain names returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,6 +94,9 @@ public class DescribeDcdnWafPolicyDomainsResponseBody extends TeaModel {
     public static class DescribeDcdnWafPolicyDomainsResponseBodyDomains extends TeaModel {
         /**
          * <p>The accelerated domain name that is protected by the specified protection policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;

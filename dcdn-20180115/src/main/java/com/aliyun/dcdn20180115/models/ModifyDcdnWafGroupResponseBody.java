@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyDcdnWafGroupResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>79B78B62-9006-5D6A-9DAB-303E134CD7AA</p>
      */
     @NameInMap("RequestId")
     public String requestId;

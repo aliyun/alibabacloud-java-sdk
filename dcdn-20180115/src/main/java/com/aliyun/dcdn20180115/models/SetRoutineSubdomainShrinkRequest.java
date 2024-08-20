@@ -6,12 +6,15 @@ import com.aliyun.tea.*;
 public class SetRoutineSubdomainShrinkRequest extends TeaModel {
     /**
      * <p>The parameters of the subdomain.</p>
-     * <br>
      * <p>The parameters are in the following format:</p>
-     * <br>
-     * <p>    Subdomains: [</p>
-     * <p>        "subdomain-test"</p>
-     * <p>    ]</p>
+     * <pre><code>Subdomains: [
+     *     &quot;subdomain-test&quot;
+     * ]
+     * </code></pre>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;subdomain-test&quot;]</p>
      */
     @NameInMap("Subdomains")
     public String subdomainsShrink;

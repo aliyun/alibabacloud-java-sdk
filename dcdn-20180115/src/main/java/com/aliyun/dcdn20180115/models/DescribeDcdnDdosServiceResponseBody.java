@@ -6,116 +6,167 @@ import com.aliyun.tea.*;
 public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
     /**
      * <p>The time when the renewed service takes effect. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-03-31T16:00:00Z</p>
      */
     @NameInMap("ChangingAffectTime")
     public String changingAffectTime;
 
     /**
      * <p>The metering method after the configuration changes Valid values:</p>
-     * <br>
-     * <p>*   **PayByBandwidth**</p>
-     * <p>*   **PayByTraffic**</p>
-     * <p>*   **PayByBandwidth95**</p>
+     * <ul>
+     * <li><strong>PayByBandwidth</strong></li>
+     * <li><strong>PayByTraffic</strong></li>
+     * <li><strong>PayByBandwidth95</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PayByBandwidth</p>
      */
     @NameInMap("ChangingChargeType")
     public String changingChargeType;
 
     /**
      * <p>The number of protected domain names.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("ChangingDomianNum")
     public Integer changingDomianNum;
 
     /**
      * <p>The protection edition for which the configuration changes take effect. Valid values:</p>
-     * <br>
-     * <p>*   **poc**: POC Edition</p>
-     * <p>*   **basic**: Basic Edition</p>
-     * <p>*   **insurance**: Insurance Edition</p>
-     * <p>*   **unlimited**: Unlimited Edition</p>
+     * <ul>
+     * <li><strong>poc</strong>: POC Edition</li>
+     * <li><strong>basic</strong>: Basic Edition</li>
+     * <li><strong>insurance</strong>: Insurance Edition</li>
+     * <li><strong>unlimited</strong>: Unlimited Edition</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>basic</p>
      */
     @NameInMap("ChangingEdition")
     public String changingEdition;
 
     /**
      * <p>The number of mitigation sessions with configuration changes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("ChangingProtectNum")
     public Integer changingProtectNum;
 
     /**
      * <p>The billing method. Valid values:</p>
-     * <br>
-     * <p>*   **PayByBandwidth**</p>
-     * <p>*   **PayByTraffic**</p>
-     * <p>*   **PayByBandwidth95**</p>
+     * <ul>
+     * <li><strong>PayByBandwidth</strong></li>
+     * <li><strong>PayByTraffic</strong></li>
+     * <li><strong>PayByBandwidth95</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PayByTraffic</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
      * <p>The number of protected domain names.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("DomianNum")
     public Integer domianNum;
 
     /**
      * <p>The protection edition. Valid values:</p>
-     * <br>
-     * <p>*   **poc**: POC Edition</p>
-     * <p>*   **basic**: Basic Edition</p>
-     * <p>*   **insurance**: Insurance Edition</p>
-     * <p>*   **unlimited**: Unlimited Edition</p>
+     * <ul>
+     * <li><strong>poc</strong>: POC Edition</li>
+     * <li><strong>basic</strong>: Basic Edition</li>
+     * <li><strong>insurance</strong>: Insurance Edition</li>
+     * <li><strong>unlimited</strong>: Unlimited Edition</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>poc</p>
      */
     @NameInMap("Edition")
     public String edition;
 
     /**
      * <p>The activation status of the service. Valid values:</p>
-     * <br>
-     * <p>*   **on**</p>
-     * <p>*   **off**</p>
+     * <ul>
+     * <li><strong>on</strong></li>
+     * <li><strong>off</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
      */
     @NameInMap("Enabled")
     public String enabled;
 
     /**
      * <p>The service expiration time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-09-26T16:00:00Z</p>
      */
     @NameInMap("EndingTime")
     public String endingTime;
 
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx-12345</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The time when the service was enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-09-26T16:00:00Z</p>
      */
     @NameInMap("OpeningTime")
     public String openingTime;
 
     /**
      * <p>The number of mitigation sessions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("ProtectNum")
     public Integer protectNum;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C370DAF1-C838-4288-A1A0-9A87633D248E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The status of the service. Valid values:</p>
-     * <br>
-     * <p>*   **Normal**</p>
-     * <p>*   **WaitForExpire**</p>
-     * <p>*   **expired**</p>
-     * <p>*   **Released**</p>
+     * <ul>
+     * <li><strong>Normal</strong></li>
+     * <li><strong>WaitForExpire</strong></li>
+     * <li><strong>expired</strong></li>
+     * <li><strong>Released</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
      */
     @NameInMap("Status")
     public String status;

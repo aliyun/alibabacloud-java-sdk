@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class UploadStagingRoutineCodeRequest extends TeaModel {
     /**
      * <p>The description of the version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>desc</p>
      */
     @NameInMap("CodeDescription")
     public String codeDescription;
 
     /**
      * <p>The name of the routine. The name needs to be unique among the routines that belong to the same Alibaba Cloud account.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;

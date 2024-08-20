@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class GetDcdnKvStatusRequest extends TeaModel {
     /**
      * <p>The name of the key that you want to query.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>key1</p>
      */
     @NameInMap("Key")
     public String key;
 
     /**
      * <p>The name of the namespace.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ns1</p>
      */
     @NameInMap("Namespace")
     public String namespace;

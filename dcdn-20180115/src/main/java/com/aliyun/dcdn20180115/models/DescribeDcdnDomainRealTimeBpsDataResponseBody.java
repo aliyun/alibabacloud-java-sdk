@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainRealTimeBpsDataResponseBody extends TeaModel {
     /**
-     * <p>The list of the data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public DescribeDcdnDomainRealTimeBpsDataResponseBodyData data;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B49E6DDA-F413-422B-B58E-2FA23F286726</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,13 +42,19 @@ public class DescribeDcdnDomainRealTimeBpsDataResponseBody extends TeaModel {
 
     public static class DescribeDcdnDomainRealTimeBpsDataResponseBodyDataBpsModel extends TeaModel {
         /**
-         * <p>The bandwidth, in bit/s.</p>
+         * <p>The bandwidth. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16710625.733333332</p>
          */
         @NameInMap("Bps")
         public Float bps;
 
         /**
          * <p>The timestamp of the data returned. The time follows the ISO 8601 standard. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-01-02T11:05:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

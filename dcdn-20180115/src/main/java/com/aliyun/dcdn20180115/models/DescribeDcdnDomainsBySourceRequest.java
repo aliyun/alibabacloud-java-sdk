@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeDcdnDomainsBySourceRequest extends TeaModel {
     /**
      * <p>The list of origin servers. Separate origin servers with commas (,). You can specify a maximum of 20 origin servers. Fuzzy match is not supported.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.org</p>
      */
     @NameInMap("Sources")
     public String sources;

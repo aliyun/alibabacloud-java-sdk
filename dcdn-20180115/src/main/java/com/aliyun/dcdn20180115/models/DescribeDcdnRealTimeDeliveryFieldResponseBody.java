@@ -12,6 +12,9 @@ public class DescribeDcdnRealTimeDeliveryFieldResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3EACD23C-F49F-4BF7-B9AD-C2CD3BA888C4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeDcdnRealTimeDeliveryFieldResponseBody extends TeaModel {
     public static class DescribeDcdnRealTimeDeliveryFieldResponseBodyContentFields extends TeaModel {
         /**
          * <p>The description of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Access time</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The name of the field. For more information about fields in real-time log entries, see [Fields in a real-time log](~~324199~~).</p>
+         * <p>The name of the field. For more information about fields in real-time log entries, see <a href="https://help.aliyun.com/document_detail/324199.html">Fields in a real-time log</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>unixtime</p>
          */
         @NameInMap("FieldName")
         public String fieldName;

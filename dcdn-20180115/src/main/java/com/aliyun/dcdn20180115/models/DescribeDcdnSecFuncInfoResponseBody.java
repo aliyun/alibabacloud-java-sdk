@@ -12,27 +12,40 @@ public class DescribeDcdnSecFuncInfoResponseBody extends TeaModel {
 
     /**
      * <p>The description of HTTP responses.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatus")
     public String httpStatus;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30A3A25A-86B3-4C1D-BAA8-12B8607A5CFD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The return value for HTTP requests. Valid values:</p>
-     * <br>
-     * <p>*   0: OK.</p>
-     * <p>*   Values other than 0: an error.</p>
+     * <ul>
+     * <li>0: OK.</li>
+     * <li>Values other than 0: an error.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("RetCode")
     public String retCode;
@@ -85,12 +98,18 @@ public class DescribeDcdnSecFuncInfoResponseBody extends TeaModel {
     public static class DescribeDcdnSecFuncInfoResponseBodyContent extends TeaModel {
         /**
          * <p>The language (Chinese or English).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ai_defense</p>
          */
         @NameInMap("Label")
         public String label;
 
         /**
          * <p>The options in the drop-down list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ai_defense</p>
          */
         @NameInMap("Value")
         public String value;
