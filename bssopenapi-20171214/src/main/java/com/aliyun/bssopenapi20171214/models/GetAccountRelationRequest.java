@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetAccountRelationRequest extends TeaModel {
     /**
-     * <p>The ID of the financial relationship.</p>
+     * <p>The ID of the financial relationship. Value returned by calling the AddAccountRelation operation.</p>
      * 
      * <strong>example:</strong>
-     * <p>Value returned by calling the AddAccountRelation operation</p>
+     * <p>1234</p>
      */
     @NameInMap("RelationId")
     public Long relationId;

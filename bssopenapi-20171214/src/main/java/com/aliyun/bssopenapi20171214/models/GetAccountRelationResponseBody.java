@@ -148,6 +148,15 @@ public class GetAccountRelationResponseBody extends TeaModel {
 
         /**
          * <p>The status of the financial relationship between the management account and the member.</p>
+         * <ul>
+         * <li>RELATED 【Association established】</li>
+         * <li>CONFIRMING 【To be confirmed by the other party】</li>
+         * <li>REJECTED 【Refused by the other party】</li>
+         * <li>CONNECTION_CANCELED 【Financial sub-account cancel request】</li>
+         * <li>CONNECTION_MASTER_CANCEL 【Financial master account cancel invitation】</li>
+         * <li>CHANGE_CONFIRMING 【Relationship change to be confirmed】</li>
+         * <li>INITIAL 【Initial new relationship status】</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>RELATED</p>

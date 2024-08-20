@@ -88,7 +88,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>1\. For more information about a financial relationship, see <a href="https://help.aliyun.com/document_detail/100376.html?spm=a2c4g.11186623.6.563.52a83908ypl4yE">Financial relationships</a> or <a href="https://www.alibabacloud.com/help/en/doc-detail/116383.html">Financial relationships</a>. 2. If enterprise names used by the management account and a member for real-name verification are the same, you do not need to call an API operation for confirmation. Otherwise, you must call the ConfirmRelation operation for confirmation.</p>
+     * <p>For more information about a financial relationship, see <a href="https://help.aliyun.com/document_detail/100376.html?spm=a2c4g.11186623.6.563.52a83908ypl4yE">Financial relationships</a> or <a href="https://www.alibabacloud.com/help/en/doc-detail/116383.html">Financial relationships</a>. 
+     * If enterprise names used by the management account and a member for real-name verification are the same, you do not need to call an API operation for confirmation. Otherwise, you must call the ConfirmRelation operation for confirmation.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a financial relationship.</p>
@@ -147,7 +148,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>1\. For more information about a financial relationship, see <a href="https://help.aliyun.com/document_detail/100376.html?spm=a2c4g.11186623.6.563.52a83908ypl4yE">Financial relationships</a> or <a href="https://www.alibabacloud.com/help/en/doc-detail/116383.html">Financial relationships</a>. 2. If enterprise names used by the management account and a member for real-name verification are the same, you do not need to call an API operation for confirmation. Otherwise, you must call the ConfirmRelation operation for confirmation.</p>
+     * <p>For more information about a financial relationship, see <a href="https://help.aliyun.com/document_detail/100376.html?spm=a2c4g.11186623.6.563.52a83908ypl4yE">Financial relationships</a> or <a href="https://www.alibabacloud.com/help/en/doc-detail/116383.html">Financial relationships</a>. 
+     * If enterprise names used by the management account and a member for real-name verification are the same, you do not need to call an API operation for confirmation. Otherwise, you must call the ConfirmRelation operation for confirmation.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a financial relationship.</p>
@@ -2199,6 +2201,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the usage details of savings plans.</p>
+     * 
      * @param request DescribeSavingsPlansUsageDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSavingsPlansUsageDetailResponse
@@ -2248,6 +2253,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the usage details of savings plans.</p>
+     * 
      * @param request DescribeSavingsPlansUsageDetailRequest
      * @return DescribeSavingsPlansUsageDetailResponse
      */
@@ -5141,6 +5149,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QuerySavingsPlansInstanceResponse querySavingsPlansInstanceWithOptions(QuerySavingsPlansInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.commodityCode)) {
+            query.put("CommodityCode", request.commodityCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("EndTime", request.endTime);
         }
@@ -6081,6 +6093,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modify the quota ledger and consumption ledger.</p>
+     * 
      * @param request SetResellerUserQuotaRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetResellerUserQuotaResponse
@@ -6122,6 +6137,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modify the quota ledger and consumption ledger.</p>
+     * 
      * @param request SetResellerUserQuotaRequest
      * @return SetResellerUserQuotaResponse
      */

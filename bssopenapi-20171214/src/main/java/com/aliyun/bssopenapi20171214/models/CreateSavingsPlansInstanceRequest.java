@@ -34,6 +34,8 @@ public class CreateSavingsPlansInstanceRequest extends TeaModel {
     public String effectiveDate;
 
     /**
+     * <p>The extended parameters.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -66,7 +68,7 @@ public class CreateSavingsPlansInstanceRequest extends TeaModel {
     public String poolValue;
 
     /**
-     * <p>The unit of the service duration. This parameter is used together with the During parameter. Valid values:</p>
+     * <p>The unit of the subscription duration. This parameter is used together with Duration. Valid values:</p>
      * <ul>
      * <li>Year</li>
      * <li>Month</li>
@@ -114,7 +116,7 @@ public class CreateSavingsPlansInstanceRequest extends TeaModel {
      * <p>The type of the savings plan. Valid values:</p>
      * <ul>
      * <li>universal: general-purpose type</li>
-     * <li>ecs: ECS compute type</li>
+     * <li>ecs: Elastic Compute Service (ECS) compute type</li>
      * <li>elasticy: elastic type</li>
      * </ul>
      * <p>This parameter is required.</p>

@@ -4,6 +4,9 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QuerySavingsPlansInstanceRequest extends TeaModel {
+    @NameInMap("CommodityCode")
+    public String commodityCode;
+
     /**
      * <p>The end of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
      * 
@@ -84,6 +87,14 @@ public class QuerySavingsPlansInstanceRequest extends TeaModel {
     public static QuerySavingsPlansInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         QuerySavingsPlansInstanceRequest self = new QuerySavingsPlansInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QuerySavingsPlansInstanceRequest setCommodityCode(String commodityCode) {
+        this.commodityCode = commodityCode;
+        return this;
+    }
+    public String getCommodityCode() {
+        return this.commodityCode;
     }
 
     public QuerySavingsPlansInstanceRequest setEndTime(String endTime) {

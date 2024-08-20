@@ -142,6 +142,12 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
         @NameInMap("MybankCreditAmount")
         public String mybankCreditAmount;
 
+        /**
+         * <p>The quota limit for eco customers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000.00</p>
+         */
         @NameInMap("QuotaLimit")
         public String quotaLimit;
 

@@ -137,6 +137,12 @@ public class QueryCashCouponsResponseBody extends TeaModel {
         @NameInMap("CashCouponNo")
         public String cashCouponNo;
 
+        /**
+         * <p>The description of the voucher.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This voucher is used for testing product function</p>
+         */
         @NameInMap("Description")
         public String description;
 

@@ -102,6 +102,8 @@ public class QueryBillOverviewResponseBody extends TeaModel {
         public Float adjustAmount;
 
         /**
+         * <p>The amount paid after the tax is deducted.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -246,6 +248,8 @@ public class QueryBillOverviewResponseBody extends TeaModel {
         public Float paymentAmount;
 
         /**
+         * <p>The currency used for payment.</p>
+         * 
          * <strong>example:</strong>
          * <p>USD</p>
          */
@@ -271,6 +275,8 @@ public class QueryBillOverviewResponseBody extends TeaModel {
         public Float pretaxAmount;
 
         /**
+         * <p>The pretax amount paid in local currency.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -345,6 +351,8 @@ public class QueryBillOverviewResponseBody extends TeaModel {
         public String subscriptionType;
 
         /**
+         * <p>The tax.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

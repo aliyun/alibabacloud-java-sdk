@@ -44,6 +44,7 @@ public class AddAccountRelationRequest extends TeaModel {
      * <li>MANAGE_TARGET_INVOICE: allows the member to manage invoices.</li>
      * <li>CHECK_TARGET_CONSUMPTION: allows the member to view the bills.</li>
      * </ul>
+     * <p>The params[PermissionCodes, RoleCodes] can not be null at the same time.</p>
      * 
      * <strong>example:</strong>
      * <p>CHECK_TARGET_CONSUMPTION</p>

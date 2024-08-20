@@ -14,7 +14,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>data</p>
      */
     @NameInMap("Data")
     public QuerySavingsPlansDiscountResponseBodyData data;
@@ -160,6 +160,12 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/26231.html">DescribeDBInstanceAttribute</a> operation to query the region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionCode")
         public String regionCode;
 

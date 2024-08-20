@@ -26,6 +26,11 @@ public class QuerySavingsPlansDiscountRequest extends TeaModel {
 
     /**
      * <p>The identifier of the language.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>EN: English.</li>
+     * <li>ZH: Chinese.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>ZH</p>
@@ -61,7 +66,7 @@ public class QuerySavingsPlansDiscountRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The payment mode.</p>
+     * <p>The payment mode. Valid values: total: all upfront. half: half upfront. zero: no upfront.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -88,8 +93,11 @@ public class QuerySavingsPlansDiscountRequest extends TeaModel {
     @NameInMap("Spec")
     public String spec;
 
+    @NameInMap("SpnCommodityCode")
+    public String spnCommodityCode;
+
     /**
-     * <p>The type of the savings plan.</p>
+     * <p>The type of the savings plan. Valid values: ecs: Elastic Compute Service (ECS) compute type. universal: general-purpose type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -173,6 +181,14 @@ public class QuerySavingsPlansDiscountRequest extends TeaModel {
     }
     public String getSpec() {
         return this.spec;
+    }
+
+    public QuerySavingsPlansDiscountRequest setSpnCommodityCode(String spnCommodityCode) {
+        this.spnCommodityCode = spnCommodityCode;
+        return this;
+    }
+    public String getSpnCommodityCode() {
+        return this.spnCommodityCode;
     }
 
     public QuerySavingsPlansDiscountRequest setSpnType(String spnType) {
