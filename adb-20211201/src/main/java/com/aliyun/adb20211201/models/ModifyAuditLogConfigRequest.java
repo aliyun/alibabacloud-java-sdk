@@ -34,6 +34,9 @@ public class ModifyAuditLogConfigRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    @NameInMap("EngineType")
+    public String engineType;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -78,6 +81,14 @@ public class ModifyAuditLogConfigRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public ModifyAuditLogConfigRequest setEngineType(String engineType) {
+        this.engineType = engineType;
+        return this;
+    }
+    public String getEngineType() {
+        return this.engineType;
     }
 
     public ModifyAuditLogConfigRequest setOwnerAccount(String ownerAccount) {

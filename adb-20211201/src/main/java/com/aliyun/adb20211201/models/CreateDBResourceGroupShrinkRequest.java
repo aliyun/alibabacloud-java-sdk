@@ -45,6 +45,12 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     @NameInMap("EnableSpot")
     public Boolean enableSpot;
 
+    @NameInMap("Engine")
+    public String engine;
+
+    @NameInMap("EngineParams")
+    public String engineParamsShrink;
+
     /**
      * <p>The name of the resource group.</p>
      * <ul>
@@ -174,6 +180,22 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     }
     public Boolean getEnableSpot() {
         return this.enableSpot;
+    }
+
+    public CreateDBResourceGroupShrinkRequest setEngine(String engine) {
+        this.engine = engine;
+        return this;
+    }
+    public String getEngine() {
+        return this.engine;
+    }
+
+    public CreateDBResourceGroupShrinkRequest setEngineParamsShrink(String engineParamsShrink) {
+        this.engineParamsShrink = engineParamsShrink;
+        return this;
+    }
+    public String getEngineParamsShrink() {
+        return this.engineParamsShrink;
     }
 
     public CreateDBResourceGroupShrinkRequest setGroupName(String groupName) {
