@@ -144,6 +144,9 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
         @NameInMap("LogTime")
         public Long logTime;
 
+        @NameInMap("Protocol")
+        public String protocol;
+
         /**
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -218,6 +221,14 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
         }
         public Long getLogTime() {
             return this.logTime;
+        }
+
+        public DescribeInternetDnsLogsResponseBodyLogsLog setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
         }
 
         public DescribeInternetDnsLogsResponseBodyLogsLog setQueryName(String queryName) {
