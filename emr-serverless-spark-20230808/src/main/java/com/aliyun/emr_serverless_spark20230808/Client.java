@@ -728,8 +728,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("configurationOverrides", request.configurationOverrides);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.displayReleaseVersion)) {
+            body.put("displayReleaseVersion", request.displayReleaseVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.executionTimeoutSeconds)) {
             body.put("executionTimeoutSeconds", request.executionTimeoutSeconds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fusion)) {
+            body.put("fusion", request.fusion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.jobDriver)) {

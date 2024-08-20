@@ -183,6 +183,9 @@ public class ListJobRunsResponseBody extends TeaModel {
         @NameInMap("creator")
         public String creator;
 
+        @NameInMap("displayReleaseVersion")
+        public String displayReleaseVersion;
+
         /**
          * <p>The end time of the job.</p>
          * 
@@ -200,6 +203,9 @@ public class ListJobRunsResponseBody extends TeaModel {
          */
         @NameInMap("executionTimeoutSeconds")
         public Integer executionTimeoutSeconds;
+
+        @NameInMap("fusion")
+        public Boolean fusion;
 
         /**
          * <p>The information about Spark Driver.</p>
@@ -317,6 +323,14 @@ public class ListJobRunsResponseBody extends TeaModel {
             return this.creator;
         }
 
+        public ListJobRunsResponseBodyJobRuns setDisplayReleaseVersion(String displayReleaseVersion) {
+            this.displayReleaseVersion = displayReleaseVersion;
+            return this;
+        }
+        public String getDisplayReleaseVersion() {
+            return this.displayReleaseVersion;
+        }
+
         public ListJobRunsResponseBodyJobRuns setEndTime(Long endTime) {
             this.endTime = endTime;
             return this;
@@ -331,6 +345,14 @@ public class ListJobRunsResponseBody extends TeaModel {
         }
         public Integer getExecutionTimeoutSeconds() {
             return this.executionTimeoutSeconds;
+        }
+
+        public ListJobRunsResponseBodyJobRuns setFusion(Boolean fusion) {
+            this.fusion = fusion;
+            return this;
+        }
+        public Boolean getFusion() {
+            return this.fusion;
         }
 
         public ListJobRunsResponseBodyJobRuns setJobDriver(JobDriver jobDriver) {
