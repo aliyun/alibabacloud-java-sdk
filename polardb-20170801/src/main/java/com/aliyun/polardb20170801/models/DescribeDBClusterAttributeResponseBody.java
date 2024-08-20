@@ -474,6 +474,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("SourceDBCluster")
     public String sourceDBCluster;
 
+    @NameInMap("SourceRegionId")
+    public String sourceRegionId;
+
     /**
      * <p>Indicates whether the cross-zone disaster recovery feature is enabled. Valid values: ON OFF 0: Customer Drill Mode</p>
      * 
@@ -976,6 +979,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
     public String getSourceDBCluster() {
         return this.sourceDBCluster;
+    }
+
+    public DescribeDBClusterAttributeResponseBody setSourceRegionId(String sourceRegionId) {
+        this.sourceRegionId = sourceRegionId;
+        return this;
+    }
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     public DescribeDBClusterAttributeResponseBody setStandbyHAMode(String standbyHAMode) {
