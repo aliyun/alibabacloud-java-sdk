@@ -621,6 +621,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateDBResourceGroupShrinkRequest request = new CreateDBResourceGroupShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.engineParams)) {
+            request.engineParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.engineParams, "EngineParams", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.rules)) {
             request.rulesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.rules, "Rules", "json");
         }
@@ -640,6 +644,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableSpot)) {
             query.put("EnableSpot", request.enableSpot);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.engine)) {
+            query.put("Engine", request.engine);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.engineParamsShrink)) {
+            query.put("EngineParams", request.engineParamsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
@@ -7256,6 +7268,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBClusterId", request.DBClusterId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.engineType)) {
+            query.put("EngineType", request.engineType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
@@ -7747,6 +7763,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ModifyDBResourceGroupShrinkRequest request = new ModifyDBResourceGroupShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.engineParams)) {
+            request.engineParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.engineParams, "EngineParams", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.rules)) {
             request.rulesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.rules, "Rules", "json");
         }
@@ -7766,6 +7786,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableSpot)) {
             query.put("EnableSpot", request.enableSpot);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.engineParamsShrink)) {
+            query.put("EngineParams", request.engineParamsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {

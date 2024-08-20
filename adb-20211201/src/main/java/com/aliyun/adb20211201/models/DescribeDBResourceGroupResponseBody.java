@@ -150,6 +150,12 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         @NameInMap("EnableSpot")
         public String enableSpot;
 
+        @NameInMap("Engine")
+        public String engine;
+
+        @NameInMap("EngineParams")
+        public java.util.Map<String, ?> engineParams;
+
         /**
          * <p>The name of the resource group.</p>
          * 
@@ -201,6 +207,12 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
          */
         @NameInMap("MaxComputeResource")
         public String maxComputeResource;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("Message")
+        public String message;
 
         /**
          * <p>A reserved parameter.</p>
@@ -303,6 +315,22 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             return this.enableSpot;
         }
 
+        public DescribeDBResourceGroupResponseBodyGroupsInfo setEngine(String engine) {
+            this.engine = engine;
+            return this;
+        }
+        public String getEngine() {
+            return this.engine;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfo setEngineParams(java.util.Map<String, ?> engineParams) {
+            this.engineParams = engineParams;
+            return this;
+        }
+        public java.util.Map<String, ?> getEngineParams() {
+            return this.engineParams;
+        }
+
         public DescribeDBResourceGroupResponseBodyGroupsInfo setGroupName(String groupName) {
             this.groupName = groupName;
             return this;
@@ -341,6 +369,14 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         }
         public String getMaxComputeResource() {
             return this.maxComputeResource;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfo setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
         }
 
         public DescribeDBResourceGroupResponseBodyGroupsInfo setMinClusterCount(Integer minClusterCount) {

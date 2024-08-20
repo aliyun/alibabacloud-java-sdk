@@ -45,6 +45,9 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
     @NameInMap("EnableSpot")
     public Boolean enableSpot;
 
+    @NameInMap("EngineParams")
+    public java.util.Map<String, ?> engineParams;
+
     /**
      * <p>The name of the resource group.</p>
      * <blockquote>
@@ -172,6 +175,14 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
     }
     public Boolean getEnableSpot() {
         return this.enableSpot;
+    }
+
+    public ModifyDBResourceGroupRequest setEngineParams(java.util.Map<String, ?> engineParams) {
+        this.engineParams = engineParams;
+        return this;
+    }
+    public java.util.Map<String, ?> getEngineParams() {
+        return this.engineParams;
     }
 
     public ModifyDBResourceGroupRequest setGroupName(String groupName) {
