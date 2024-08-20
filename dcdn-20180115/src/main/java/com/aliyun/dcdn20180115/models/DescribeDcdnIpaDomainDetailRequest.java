@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeDcdnIpaDomainDetailRequest extends TeaModel {
     /**
      * <p>The accelerated domain names for which you want to query basic information. You can specify only one domain name in each request.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;

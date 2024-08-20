@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDcdnUserTagsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>34AB41F1-04A5-496F-8C8D-634BDBE6A9FB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class DescribeDcdnUserTagsResponseBody extends TeaModel {
     public static class DescribeDcdnUserTagsResponseBodyTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>region</p>
          */
         @NameInMap("Key")
         public String key;

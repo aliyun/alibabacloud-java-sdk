@@ -12,6 +12,9 @@ public class UpdateDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F32C57AA-7BF8-49AE-A2CC-9F42390F5A19</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,27 +43,40 @@ public class UpdateDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
     public static class UpdateDcdnSLSRealtimeLogDeliveryResponseBodyContentDomains extends TeaModel {
         /**
          * <p>The description of the returned result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>created</p>
          */
         @NameInMap("Desc")
         public String desc;
 
         /**
          * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The name of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>Indicates whether the real-time log delivery project was successfully updated. Valid values:</p>
-         * <br>
-         * <p>*   **success**</p>
-         * <p>*   **fail**</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>fail</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;

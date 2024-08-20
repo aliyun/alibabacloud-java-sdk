@@ -12,6 +12,9 @@ public class DescribeDcdnUserBillHistoryResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ED61C6C3-8241-4187-AAA7-5157AE175CEC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,30 +43,45 @@ public class DescribeDcdnUserBillHistoryResponseBody extends TeaModel {
     public static class DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataBillingDataItem extends TeaModel {
         /**
          * <p>The bandwidth. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4839</p>
          */
         @NameInMap("Bandwidth")
         public Float bandwidth;
 
         /**
-         * <p>The region for which the billing records are generated. Valid values: **CN**, **OverSeas**, **AP1**, **AP2**, **AP3**, **NA**, **SA**, **EU**, and **MEAA**.</p>
+         * <p>The region for which the billing records are generated. Valid values: <strong>CN</strong>, <strong>OverSeas</strong>, <strong>AP1</strong>, <strong>AP2</strong>, <strong>AP3</strong>, <strong>NA</strong>, <strong>SA</strong>, <strong>EU</strong>, and <strong>MEAA</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AP1</p>
          */
         @NameInMap("CdnRegion")
         public String cdnRegion;
 
         /**
-         * <p>The billing method of the disk. Valid values: Valid values: **StaticHttp**, **DynamicHttp**, and **DynamicHttps**.</p>
+         * <p>The billing method of the disk. Valid values: <strong>StaticHttp</strong>, <strong>DynamicHttp</strong>, and <strong>DynamicHttps</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DynamicHttp</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
          * <p>The number of billing entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>205624</p>
          */
         @NameInMap("Count")
         public Float count;
 
         /**
          * <p>The amount of network traffic. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2456</p>
          */
         @NameInMap("Flow")
         public Float flow;
@@ -137,12 +155,18 @@ public class DescribeDcdnUserBillHistoryResponseBody extends TeaModel {
     public static class DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem extends TeaModel {
         /**
          * <p>The beginning of the time range that was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-09-30T17:00:00Z</p>
          */
         @NameInMap("BillTime")
         public String billTime;
 
         /**
          * <p>The metering method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>month_4th_day_bandwidth</p>
          */
         @NameInMap("BillType")
         public String billType;
@@ -155,6 +179,9 @@ public class DescribeDcdnUserBillHistoryResponseBody extends TeaModel {
 
         /**
          * <p>The dimension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vas</p>
          */
         @NameInMap("Dimension")
         public String dimension;

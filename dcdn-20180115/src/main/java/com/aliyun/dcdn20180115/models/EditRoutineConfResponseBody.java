@@ -12,6 +12,9 @@ public class EditRoutineConfResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BAECB354-6D42-42C1-87DA-C9992EF1E7C8</p>
      */
     @NameInMap("RequestId")
     public String requestId;

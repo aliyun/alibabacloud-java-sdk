@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateSlrAndSlsProjectResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fe33a379-5053-4f22-a73c-826e2b44355d</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class CreateSlrAndSlsProjectResponseBody extends TeaModel {
     public static class CreateSlrAndSlsProjectResponseBodySlsInfo extends TeaModel {
         /**
          * <p>The endpoint of Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai.log.*.com</p>
          */
         @NameInMap("EndPoint")
         public String endPoint;
 
         /**
          * <p>The Logstore of Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dcdn-edge-trlog</p>
          */
         @NameInMap("LogStore")
         public String logStore;
 
         /**
          * <p>The project of Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dcdn-edge-rtlog-cn-cfc7****</p>
          */
         @NameInMap("Project")
         public String project;
 
         /**
          * <p>The region where Log Service resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         @NameInMap("Region")
         public String region;

@@ -6,29 +6,38 @@ import com.aliyun.tea.*;
 public class DescribeDcdnDomainTopUrlVisitRequest extends TeaModel {
     /**
      * <p>The accelerated domain name. You can specify only one domain name in each request.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The sorting order. Valid values:</p>
-     * <br>
-     * <p>*   **traf**: by network traffic</p>
-     * <p>*   **pv**: by the number of visits</p>
-     * <br>
-     * <p>Default value: **pv**</p>
+     * <ul>
+     * <li><strong>traf</strong>: by network traffic</li>
+     * <li><strong>pv</strong>: by the number of visits</li>
+     * </ul>
+     * <p>Default value: <strong>pv</strong></p>
+     * 
+     * <strong>example:</strong>
+     * <p>pv</p>
      */
     @NameInMap("SortBy")
     public String sortBy;
 
     /**
      * <p>The start of the time range to query.</p>
-     * <br>
      * <p>Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
-     * <br>
      * <p>To query the data on a specified day, use the format: yyyy-MM-ddT16:00:00Z.</p>
-     * <br>
-     * <p>> If you do not specify this parameter, the data in the last 24 hours is queried.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the data in the last 24 hours is queried.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-10-03T16:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

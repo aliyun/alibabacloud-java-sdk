@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class DescribeDcdnDomainPropertyResponseBody extends TeaModel {
     /**
      * <p>The accelerated domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The protocol. Valid values:</p>
-     * <br>
-     * <p>*   **udp**</p>
-     * <p>*   **tcp**</p>
+     * <ul>
+     * <li><strong>udp</strong></li>
+     * <li><strong>tcp</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>udp</p>
      */
     @NameInMap("Protocol")
     public String protocol;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>34AB41F1-04A5-496F-8C8D-634BDBE6A9FB</p>
      */
     @NameInMap("RequestId")
     public String requestId;

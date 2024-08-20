@@ -5,13 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeRoutineRelatedDomainsResponseBody extends TeaModel {
     /**
-     * <p>The list of domain names associated with the routine.</p>
+     * <p>The domain names associated with a routine.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;Domains&quot;: [
+     *             &quot;xxx.com&quot;,
+     *             &quot;yyy.com&quot;,
+     *             ...
+     *         ]</p>
      */
     @NameInMap("Content")
     public java.util.Map<String, ?> content;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FC0E34AC-0239-44A7-AB0E-800DE522C8DA</p>
      */
     @NameInMap("RequestId")
     public String requestId;

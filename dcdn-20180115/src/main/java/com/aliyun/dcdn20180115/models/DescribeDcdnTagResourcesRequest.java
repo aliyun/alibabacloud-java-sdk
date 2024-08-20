@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class DescribeDcdnTagResourcesRequest extends TeaModel {
     /**
      * <p>The list of resource IDs. You can specify a maximum of 50 resource IDs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource. Set the value to **DOMAIN**.</p>
+     * <p>The type of the resource. Set the value to <strong>DOMAIN</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DOMAIN</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -54,12 +62,18 @@ public class DescribeDcdnTagResourcesRequest extends TeaModel {
     public static class DescribeDcdnTagResourcesRequestTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>product</p>
          */
         @NameInMap("Value")
         public String value;

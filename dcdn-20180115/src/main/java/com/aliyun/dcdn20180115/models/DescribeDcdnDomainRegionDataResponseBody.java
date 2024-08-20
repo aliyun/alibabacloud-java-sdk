@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class DescribeDcdnDomainRegionDataResponseBody extends TeaModel {
     /**
      * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>86400</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
      * <p>The accelerated domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The end of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2015-12-07T12:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2E5AD83F-BD7B-462E-8319-2E30E305519A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The start of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2015-12-05T12:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -96,66 +111,99 @@ public class DescribeDcdnDomainRegionDataResponseBody extends TeaModel {
     public static class DescribeDcdnDomainRegionDataResponseBodyValueRegionProportionData extends TeaModel {
         /**
          * <p>The average response size. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AvgObjectSize")
         public String avgObjectSize;
 
         /**
          * <p>The average response speed. Unit: byte/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AvgResponseRate")
         public String avgResponseRate;
 
         /**
          * <p>The average response time. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AvgResponseTime")
         public String avgResponseTime;
 
         /**
          * <p>The bandwidth.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Bps")
         public String bps;
 
         /**
          * <p>The proportion of network traffic. For example, a value of 90 indicates that 90% of network traffic was coming from the specified ISP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.003544181046236794</p>
          */
         @NameInMap("BytesProportion")
         public String bytesProportion;
 
         /**
          * <p>The proportion of requests from the specified region based on the total number of requests in percentile. For example, a value of 90 indicates that 90% of the requests were coming from the specified region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Proportion")
         public String proportion;
 
         /**
          * <p>The number of queries per second (QPS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Qps")
         public String qps;
 
         /**
          * <p>The information of the regions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Chongqing</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The name of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chongqing</p>
          */
         @NameInMap("RegionEname")
         public String regionEname;
 
         /**
          * <p>The total amount of network traffic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("TotalBytes")
         public String totalBytes;
 
         /**
          * <p>The total number of requests that are destined for your website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("TotalQuery")
         public String totalQuery;

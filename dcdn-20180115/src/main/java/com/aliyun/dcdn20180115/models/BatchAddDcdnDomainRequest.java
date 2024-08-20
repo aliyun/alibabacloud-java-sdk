@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class BatchAddDcdnDomainRequest extends TeaModel {
     /**
      * <p>The URL that is used for health checks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.example.com/test.html">www.example.com/test.html</a></p>
      */
     @NameInMap("CheckUrl")
     public String checkUrl;
 
     /**
      * <p>You can add up to 20 domain names to DCDN for each of your Alibaba Cloud account. If you specify multiple domain names, separate them with commas (,).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com,example.org</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -24,16 +31,23 @@ public class BatchAddDcdnDomainRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource group. If you do not specify a value for this parameter, the system uses the ID of the default resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testID</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The acceleration region. Default value: domestic. Valid values:</p>
-     * <br>
-     * <p>*   domestic: Chinese mainland</p>
-     * <p>*   overseas: global (excluding the Chinese mainland)</p>
-     * <p>*   global: global</p>
+     * <ul>
+     * <li>domestic: Chinese mainland</li>
+     * <li>overseas: global (excluding the Chinese mainland)</li>
+     * <li>global: global</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>domestic</p>
      */
     @NameInMap("Scope")
     public String scope;
@@ -43,12 +57,19 @@ public class BatchAddDcdnDomainRequest extends TeaModel {
 
     /**
      * <p>The information about the addresses of origin servers.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;content&quot;:&quot;10.10.10.10&quot;,&quot;type&quot;:&quot;ipaddr&quot;,&quot;priority&quot;:&quot;20&quot;,&quot;port&quot;:80,&quot;weight&quot;:&quot;15&quot;}]</p>
      */
     @NameInMap("Sources")
     public String sources;
 
     /**
      * <p>The top-level domain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("TopLevelDomain")
     public String topLevelDomain;

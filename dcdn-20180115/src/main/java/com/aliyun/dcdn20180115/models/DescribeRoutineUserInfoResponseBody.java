@@ -12,6 +12,9 @@ public class DescribeRoutineUserInfoResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>691DEEE5-4BDB-47F3-930E-F57176427717</p>
      */
     @NameInMap("RequestId")
     public String requestId;

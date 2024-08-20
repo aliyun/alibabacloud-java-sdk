@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeDcdnIpInfoRequest extends TeaModel {
     /**
      * <p>The IP address. You can specify only one IP address.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.10.10.10</p>
      */
     @NameInMap("IP")
     public String IP;

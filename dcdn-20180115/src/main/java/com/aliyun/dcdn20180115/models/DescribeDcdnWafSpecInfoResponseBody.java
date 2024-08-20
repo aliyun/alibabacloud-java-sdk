@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeDcdnWafSpecInfoResponseBody extends TeaModel {
     /**
      * <p>The version of WAF.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dcdnwaf_afterpay</p>
      */
     @NameInMap("Edition")
     public String edition;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7281593a-f414-42c1-b7ba-2ce65e21cc00</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,18 +60,27 @@ public class DescribeDcdnWafSpecInfoResponseBody extends TeaModel {
     public static class DescribeDcdnWafSpecInfoResponseBodySpecInfosConfigs extends TeaModel {
         /**
          * <p>The configuration code of the protection rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         @NameInMap("Config")
         public String config;
 
         /**
          * <p>The configuration expression of the protection rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>equal</p>
          */
         @NameInMap("Expr")
         public String expr;
 
         /**
          * <p>The value of the configuration expression of the protection rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("Value")
         public String value;
@@ -110,13 +125,17 @@ public class DescribeDcdnWafSpecInfoResponseBody extends TeaModel {
 
         /**
          * <p>The type of the protection policy. Valid values:</p>
-         * <br>
-         * <p>*   waf_group: basic web protection</p>
-         * <p>*   custom_acl: custom</p>
-         * <p>*   whitelist: whitelist</p>
-         * <p>*   ip_blacklist: IP address blacklist</p>
-         * <p>*   region_block: region blacklist</p>
-         * <p>*   bot: bot management</p>
+         * <ul>
+         * <li>waf_group: basic web protection</li>
+         * <li>custom_acl: custom</li>
+         * <li>whitelist: whitelist</li>
+         * <li>ip_blacklist: IP address blacklist</li>
+         * <li>region_block: region blacklist</li>
+         * <li>bot: bot management</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>custom_acl</p>
          */
         @NameInMap("DefenseScene")
         public String defenseScene;

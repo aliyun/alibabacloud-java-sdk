@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeHighlightInfoResponseBody extends TeaModel {
     /**
-     * <p>The model of the highlighted data.</p>
+     * <p>The data model of the highlighted data.</p>
      */
     @NameInMap("DataModule")
     public java.util.List<DescribeHighlightInfoResponseBodyDataModule> dataModule;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class DescribeHighlightInfoResponseBody extends TeaModel {
     public static class DescribeHighlightInfoResponseBodyDataModule extends TeaModel {
         /**
          * <p>The highlighted data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[\&quot;data:image/php;base64\&quot;]</p>
          */
         @NameInMap("Hit")
         public String hit;
 
         /**
-         * <p>The type of the highlight data.</p>
+         * <p>The type of the highlighted data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>URL</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>Complete data.</p>
+         * <p>The complete data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>data:image/php;base64,PD9waHAXXXXXXanVzdHR0dHXXXXXB0ZXN0Ijs/Pg==</p>
          */
         @NameInMap("Raw")
         public String raw;

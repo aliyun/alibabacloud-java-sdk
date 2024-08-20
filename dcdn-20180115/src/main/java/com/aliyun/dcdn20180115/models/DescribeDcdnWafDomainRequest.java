@@ -6,18 +6,28 @@ import com.aliyun.tea.*;
 public class DescribeDcdnWafDomainRequest extends TeaModel {
     /**
      * <p>The accelerated domain name. If you do not specify an accelerated domain name, all accelerated domain names are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The region where WAF is enabled.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group. If you leave this parameter empty, the default resource group is used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

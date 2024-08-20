@@ -6,50 +6,73 @@ import com.aliyun.tea.*;
 public class DescribeDcdnWafServiceResponseBody extends TeaModel {
     /**
      * <p>The edition of WAF.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dcdnwaf_afterpay</p>
      */
     @NameInMap("Edition")
     public String edition;
 
     /**
      * <p>The status of WAF. Valid values:</p>
-     * <br>
-     * <p>*   on</p>
-     * <p>*   off</p>
+     * <ul>
+     * <li>on</li>
+     * <li>off</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
      */
     @NameInMap("Enabled")
     public String enabled;
 
     /**
      * <p>The time when WAF was enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-09-26T16:00:00Z</p>
      */
     @NameInMap("OpeningTime")
     public String openingTime;
 
     /**
      * <p>The metering method for requests.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dcdn_waf_req</p>
      */
     @NameInMap("RequestBillingType")
     public String requestBillingType;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4A95CA90-E0F2-1BF6-99E0-8C1510CAF649</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The metering method for rules. You are charged for the number of SeCUs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dcdn_waf_rule</p>
      */
     @NameInMap("RuleBillingType")
     public String ruleBillingType;
 
     /**
      * <p>The status of WAF. Valid values:</p>
-     * <br>
-     * <p>*   Normal</p>
-     * <p>*   WaitForExpire</p>
-     * <p>*   Expired</p>
-     * <p>*   Released</p>
+     * <ul>
+     * <li>Normal</li>
+     * <li>WaitForExpire</li>
+     * <li>Expired</li>
+     * <li>Released</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
      */
     @NameInMap("Status")
     public String status;

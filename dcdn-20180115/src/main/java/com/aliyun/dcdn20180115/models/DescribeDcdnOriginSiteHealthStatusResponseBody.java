@@ -12,6 +12,9 @@ public class DescribeDcdnOriginSiteHealthStatusResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,17 +43,24 @@ public class DescribeDcdnOriginSiteHealthStatusResponseBody extends TeaModel {
     public static class DescribeDcdnOriginSiteHealthStatusResponseBodyOriginSiteStatus extends TeaModel {
         /**
          * <p>The health status of the origin server. Each point of presence (POP) periodically initiates a probe request to the configured origin domain name. If the POP receives a response from the origin server in 5 seconds, the probe is considered successful. After the probe data for each POP is collected, the health status of the origin server is calculated based on the proportion of successful probes. Valid values:</p>
-         * <br>
-         * <p>*   unknown: The probe data of the origin server is not obtained because the configurations of the origin server have been changed recently. Try again later.</p>
-         * <p>*   healthy: The proportion of successful probes is higher than 80%.</p>
-         * <p>*   degraded: The proportion of successful probes is higher than 0% and lower than or equal to 80%.</p>
-         * <p>*   critical: All probing requests to the origin server failed.</p>
+         * <ul>
+         * <li>unknown: The probe data of the origin server is not obtained because the configurations of the origin server have been changed recently. Try again later.</li>
+         * <li>healthy: The proportion of successful probes is higher than 80%.</li>
+         * <li>degraded: The proportion of successful probes is higher than 0% and lower than or equal to 80%.</li>
+         * <li>critical: All probing requests to the origin server failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>healthy</p>
          */
         @NameInMap("HealthStatus")
         public String healthStatus;
 
         /**
          * <p>The origin domain name that you configured in the DCDN console, which can be an IPv4 address, IPv6 address, common domain name, or Object Storage Service (OSS) domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>host.com</p>
          */
         @NameInMap("Host")
         public String host;

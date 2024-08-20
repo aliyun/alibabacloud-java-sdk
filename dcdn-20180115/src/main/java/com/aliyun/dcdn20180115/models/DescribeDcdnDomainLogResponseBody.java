@@ -12,12 +12,18 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
 
     /**
      * <p>The domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>95594003-CAC5-5636-AF72-2A094364****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,32 +60,46 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
     public static class DescribeDcdnDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail extends TeaModel {
         /**
          * <p>The end of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-07T18:00:00Z</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The name of the log file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com_2021_11_08_010000_020000.gz</p>
          */
         @NameInMap("LogName")
         public String logName;
 
         /**
          * <p>The path of the log file.</p>
-         * <br>
-         * <p>Take note of the Expires field (expiration timestamp) in the response parameter LogPath. If the log download URL expires, you must obtain it again. For more information, see [LogPath field](~~31952~~).</p>
+         * <p>Take note of the Expires field (expiration timestamp) in the response parameter LogPath. If the log download URL expires, you must obtain it again. For more information, see <a href="https://help.aliyun.com/document_detail/31952.html">LogPath field</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com /v1.l1cache/105252530/example.com/2021_11_08/example.com_2021_11_08_010000_020000.gz?Expires=1636963354&amp;OSSAccessKeyId=LTAIviCc6zy8****&amp;Signature=u0V6foRfZniHE8i%2BHUdxGOhZsK****</p>
          */
         @NameInMap("LogPath")
         public String logPath;
 
         /**
          * <p>The size of the log file. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192</p>
          */
         @NameInMap("LogSize")
         public Long logSize;
 
         /**
          * <p>The start of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-07T17:00:00Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -153,18 +173,27 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
     public static class DescribeDcdnDomainLogResponseBodyDomainLogDetailsDomainLogDetailPageInfos extends TeaModel {
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageIndex")
         public Long pageIndex;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Long pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("Total")
         public Long total;
@@ -203,6 +232,9 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
     public static class DescribeDcdnDomainLogResponseBodyDomainLogDetailsDomainLogDetail extends TeaModel {
         /**
          * <p>The total number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("LogCount")
         public Long logCount;

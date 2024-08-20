@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeDcdnDomainCnameRequest extends TeaModel {
     /**
      * <p>The accelerated domain name. Separate multiple domain names with commas (,).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com,example.org</p>
      */
     @NameInMap("DomainName")
     public String domainName;

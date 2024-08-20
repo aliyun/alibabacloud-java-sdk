@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class PreloadDcdnObjectCachesRequest extends TeaModel {
     /**
      * <p>The acceleration region in which you want to prefetch content. If you do not specify a region, the value overseas is used.</p>
-     * <br>
-     * <p>*   **domestic**: Chinese mainland</p>
-     * <p>*   **overseas**: outside the Chinese mainland</p>
+     * <ul>
+     * <li><strong>domestic</strong>: Chinese mainland</li>
+     * <li><strong>overseas</strong>: outside the Chinese mainland</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>domestic</p>
      */
     @NameInMap("Area")
     public String area;
 
     /**
      * <p>Specifies whether to prefetch content to POPs. Valid values:</p>
-     * <br>
-     * <p>*   **true**: prefetches content to nodes that include L2 DCDN nodes.</p>
-     * <p>*   **false**: prefetches content to L2 POPs or L3 POPs.</p>
+     * <ul>
+     * <li><strong>true</strong>: prefetches content to nodes that include L2 DCDN nodes.</li>
+     * <li><strong>false</strong>: prefetches content to L2 POPs or L3 POPs.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("L2Preload")
     public Boolean l2Preload;
 
     /**
      * <p>The path of the content that you want to prefetch. Separate multiple URLs with line feed characters (\n) or a pair of carriage return and line feed characters (\r\n).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com/examplefile.txt</p>
      */
     @NameInMap("ObjectPath")
     public String objectPath;
@@ -36,6 +48,13 @@ public class PreloadDcdnObjectCachesRequest extends TeaModel {
 
     /**
      * <p>The custom header for prefetch in the JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *       &quot;Accept-Encoding&quot;: [
+     *             &quot;gzip&quot;
+     *       ]
+     * }</p>
      */
     @NameInMap("WithHeader")
     public String withHeader;

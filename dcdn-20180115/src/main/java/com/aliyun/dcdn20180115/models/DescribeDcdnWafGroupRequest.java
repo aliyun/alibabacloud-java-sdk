@@ -5,47 +5,70 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnWafGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the WAF rule group. You can query the ID by calling the [DescribeDcdnWafGroups](~~DescribeDcdnWafGroups~~) operation.</p>
+     * <p>The ID of the WAF rule group. You can query the ID by calling the <a href="~~DescribeDcdnWafGroups~~">DescribeDcdnWafGroups</a> operation.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1012</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   **en**: English</p>
-     * <p>*    **zh**: Chinese</p>
+     * <ul>
+     * <li><strong>en</strong>: English.</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Language")
     public String language;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **20**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The query conditions. The value needs to be a JSON string in the following format: Format:</p>
-     * <br>
-     * <p>`QueryArgs={"PolicyIds":"IDs of protection policies","RuleIds":"IDs of protection rules","RuleNameLike":"Names of protection rules","DomainNames":"Protected domain names","DefenseScenes":"waf_group","RuleStatus":"on","OrderBy":"GmtModified","Desc":"false"}`</p>
-     * <br>
-     * <p>> If you do not specify this parameter, all protection rules are queried.</p>
+     * <p>The query conditions. The value is a JSON string in the following format:</p>
+     * <p><code>QueryArgs={&quot;PolicyIds&quot;:&quot;The range of protection policy IDs&quot;,&quot;RuleIds&quot;:&quot;The range of protection rule IDs&quot;,&quot;RuleNameLike&quot;:&quot;The name of the protection rule&quot;,&quot;DomainNames&quot;:&quot;The protected domain names&quot;,&quot;DefenseScenes&quot;:&quot;waf_group&quot;,&quot;RuleStatus&quot;:&quot;on&quot;,&quot;OrderBy&quot;:&quot;GmtModified&quot;,&quot;Desc&quot;:&quot;false&quot;}</code></p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, all protection rules are queried.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;RiskLevel\&quot;:\&quot;\&quot;,\&quot;ProtectionType\&quot;:\&quot;\&quot;,\&quot;ApplicationType\&quot;:\&quot;\&quot;,\&quot;RuleIdLike\&quot;:\&quot;\&quot;}</p>
      */
     @NameInMap("QueryArgs")
     public String queryArgs;
 
     /**
      * <p>The range of the rule group to be queried.</p>
-     * <br>
-     * <p>*   **in**: rules in the rule group are returned.</p>
-     * <p>*  **out**: rules that are in the full rule set but are not in the rule group are returned.</p>
+     * <ul>
+     * <li><strong>in</strong>: Rules in the rule group are returned.</li>
+     * <li><strong>out</strong>: Rules that are in the full rule set but are not in the rule group are returned.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>in</p>
      */
     @NameInMap("Scope")
     public String scope;

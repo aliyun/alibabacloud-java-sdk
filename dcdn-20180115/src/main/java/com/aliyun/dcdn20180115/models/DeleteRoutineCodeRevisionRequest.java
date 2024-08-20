@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class DeleteRoutineCodeRevisionRequest extends TeaModel {
     /**
      * <p>The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The number of the version that you want to delete.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("SelectCodeRevision")
     public String selectCodeRevision;

@@ -12,6 +12,9 @@ public class DescribeDcdnDomainDetailResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>09ABE829-6CD3-4FE0-AFEE-556113E29727</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,40 +43,59 @@ public class DescribeDcdnDomainDetailResponseBody extends TeaModel {
     public static class DescribeDcdnDomainDetailResponseBodyDomainDetailSourcesSource extends TeaModel {
         /**
          * <p>The address of the origin server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.org</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         @NameInMap("Enabled")
         public String enabled;
 
         /**
          * <p>The port over which requests are redirected to the origin server. Ports 443 and 80 are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("Priority")
         public String priority;
 
         /**
          * <p>The type of the origin server. Valid values:</p>
-         * <br>
-         * <p>*   **ipaddr**: an IP address</p>
-         * <p>*   **domain**: an origin domain name</p>
-         * <p>*   **oss**: the domain name of an Object Storage Service (OSS) bucket</p>
+         * <ul>
+         * <li><strong>ipaddr</strong>: an IP address</li>
+         * <li><strong>domain</strong>: an origin domain name</li>
+         * <li><strong>oss</strong>: the domain name of an Object Storage Service (OSS) bucket</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>oss</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The weight of the origin server if multiple origin servers are specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Weight")
         public String weight;
@@ -155,95 +177,136 @@ public class DescribeDcdnDomainDetailResponseBody extends TeaModel {
     public static class DescribeDcdnDomainDetailResponseBodyDomainDetail extends TeaModel {
         /**
          * <p>The CNAME that is assigned to the accelerated domain name. You must add the CNAME record to the system of your Domain Name System (DNS) provider to map the accelerated domain name to the CNAME.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
          */
         @NameInMap("Cname")
         public String cname;
 
         /**
          * <p>The information about the Internet content provider (ICP) filing of the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Beijing ICP Filing No. 1703xxxx</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The status of the accelerated domain name. Valid values:</p>
-         * <br>
-         * <p>*   **online**</p>
-         * <p>*   **offline**</p>
-         * <p>*   **configuring**</p>
-         * <p>*   **configure_failed**</p>
-         * <p>*   **checking**</p>
-         * <p>*   **check_failed**</p>
+         * <ul>
+         * <li><strong>online</strong></li>
+         * <li><strong>offline</strong></li>
+         * <li><strong>configuring</strong></li>
+         * <li><strong>configure_failed</strong></li>
+         * <li><strong>checking</strong></li>
+         * <li><strong>check_failed</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         @NameInMap("DomainStatus")
         public String domainStatus;
 
         /**
          * <p>Computing service type. Valid values:</p>
-         * <br>
-         * <p>*   **routine**</p>
-         * <p>*   **image**</p>
-         * <p>*   **cloudFunction**</p>
+         * <ul>
+         * <li><strong>routine</strong></li>
+         * <li><strong>image</strong></li>
+         * <li><strong>cloudFunction</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>routine</p>
          */
         @NameInMap("FunctionType")
         public String functionType;
 
         /**
          * <p>The time when the domain name was added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-11-27T06:51:26Z</p>
          */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
         /**
          * <p>The time when the domain name was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-11-27T06:51:25Z</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyuji4b6r4**</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>Indicates whether the Security Socket Layer (SSL) certificate is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **on**: **enabled**</p>
-         * <p>*   **off**: **disabled**</p>
+         * <ul>
+         * <li><strong>on</strong>: <strong>enabled</strong></li>
+         * <li><strong>off</strong>: <strong>disabled</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("SSLProtocol")
         public String SSLProtocol;
 
         /**
          * <p>The public key of the certificate if HTTPS is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         @NameInMap("SSLPub")
         public String SSLPub;
 
         /**
          * <p>Acceleration scenario. Valid values:</p>
-         * <br>
-         * <p>*   **apiscene**: API acceleration.</p>
-         * <p>*   **webservicescene**: website acceleration.</p>
-         * <p>*   **staticscene**: video, image, and text acceleration.</p>
-         * <p>*   **an empty string**: no acceleration scenario is used.</p>
+         * <ul>
+         * <li><strong>apiscene</strong>: API acceleration.</li>
+         * <li><strong>webservicescene</strong>: website acceleration.</li>
+         * <li><strong>staticscene</strong>: video, image, and text acceleration.</li>
+         * <li><strong>an empty string</strong>: no acceleration scenario is used.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>apiscene</p>
          */
         @NameInMap("Scene")
         public String scene;
 
         /**
          * <p>The acceleration region. Default value: domestic. Valid values:</p>
-         * <br>
-         * <p>*   **domestic**: Chinese mainland</p>
-         * <p>*   **overseas**: global (excluding the Chinese mainland)</p>
-         * <p>*   **global**: global</p>
+         * <ul>
+         * <li><strong>domestic</strong>: Chinese mainland</li>
+         * <li><strong>overseas</strong>: global (excluding the Chinese mainland)</li>
+         * <li><strong>global</strong>: global</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>overseas</p>
          */
         @NameInMap("Scope")
         public String scope;

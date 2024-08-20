@@ -12,12 +12,18 @@ public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
 
     /**
      * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,42 +60,63 @@ public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
     public static class DescribeDcdnDomainBpsDataByLayerResponseBodyBpsDataIntervalDataModule extends TeaModel {
         /**
          * <p>The traffic that is used to deliver dynamic content. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("DynamicTrafficValue")
         public String dynamicTrafficValue;
 
         /**
          * <p>The bandwidth that is used to deliver dynamic content. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.34</p>
          */
         @NameInMap("DynamicValue")
         public String dynamicValue;
 
         /**
          * <p>The traffic that is used to deliver static content. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>131</p>
          */
         @NameInMap("StaticTrafficValue")
         public String staticTrafficValue;
 
         /**
          * <p>The bandwidth that is used to deliver static content. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.22</p>
          */
         @NameInMap("StaticValue")
         public String staticValue;
 
         /**
          * <p>The timestamp of the data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-10T21:00:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
          * <p>The total traffic. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>331</p>
          */
         @NameInMap("TrafficValue")
         public String trafficValue;
 
         /**
          * <p>The total bandwidth. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.56</p>
          */
         @NameInMap("Value")
         public String value;

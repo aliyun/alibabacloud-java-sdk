@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class DeleteDcdnKvRequest extends TeaModel {
     /**
      * <p>The name of the key that you want to delete.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_key_1</p>
      */
     @NameInMap("Key")
     public String key;
 
     /**
      * <p>The namespace that you specify when you call the PutDcdnKvNamespace operation.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ns1</p>
      */
     @NameInMap("Namespace")
     public String namespace;

@@ -6,24 +6,38 @@ import com.aliyun.tea.*;
 public class PublishRoutineCodeRevisionRequest extends TeaModel {
     /**
      * <p>The environment to which you want to publish the code.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   production: the name of the environment, including the environment name (SpecName) and the domain name whitelist (AllowedHosts).</p>
-     * <br>
-     * <p>*   presetCanary: You can add canary release environments based on your business requirements. This parameter is optional.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>production: the name of the environment, including the environment name (SpecName) and the domain name whitelist (AllowedHosts).</p>
+     * </li>
+     * <li><p>presetCanary: You can add canary release environments based on your business requirements. This parameter is optional.</p>
+     * </li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;production&quot;,&quot;presetCanaryZhejiang&quot;]</p>
      */
     @NameInMap("Envs")
     public java.util.Map<String, ?> envs;
 
     /**
      * <p>The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The version of the routine code that you want to publish.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1620876959997924701</p>
      */
     @NameInMap("SelectCodeRevision")
     public String selectCodeRevision;

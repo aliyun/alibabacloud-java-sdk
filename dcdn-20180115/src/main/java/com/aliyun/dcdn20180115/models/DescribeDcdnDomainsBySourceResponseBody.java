@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
     /**
      * <p>The information about each origin server and the corresponding domain names.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainInfo")
     public java.util.List<DescribeDcdnDomainsBySourceResponseBodyDomainInfo> domainInfo;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F61CDR30-E83C-4FDA-BF73-9A94CDD44229</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,46 +44,66 @@ public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
     public static class DescribeDcdnDomainsBySourceResponseBodyDomainInfoDomainList extends TeaModel {
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-08-21T03:05:20+08:00</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The CNAME record assigned to the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.org.alikunlun.com</p>
          */
         @NameInMap("DomainCname")
         public String domainCname;
 
         /**
          * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.org</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The workload type of the accelerated domain name. Valid value:</p>
-         * <br>
-         * <p>*   **ipa**: layer 4 acceleration</p>
-         * <p>*   **dynamic**: layer 7 acceleration</p>
+         * <ul>
+         * <li><strong>ipa</strong>: layer 4 acceleration</li>
+         * <li><strong>dynamic</strong>: layer 7 acceleration</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>dynamic</p>
          */
         @NameInMap("DomainType")
         public String domainType;
 
         /**
          * <p>The status of the domain name. Valid value:</p>
-         * <br>
-         * <p>*   **applying**: The domain name is under review.</p>
-         * <p>*   **configuring**: The domain name is being configured.</p>
-         * <p>*   **online**: The domain name is working as expected.</p>
-         * <p>*   **stopping**: The domain name is being stopped.</p>
-         * <p>*   **offline**: The domain name is disabled.</p>
-         * <p>*   **disabling**: The domain name is being removed.</p>
+         * <ul>
+         * <li><strong>applying</strong>: The domain name is under review.</li>
+         * <li><strong>configuring</strong>: The domain name is being configured.</li>
+         * <li><strong>online</strong>: The domain name is working as expected.</li>
+         * <li><strong>stopping</strong>: The domain name is being stopped.</li>
+         * <li><strong>offline</strong>: The domain name is disabled.</li>
+         * <li><strong>disabling</strong>: The domain name is being removed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The time when the domain name was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-01T03:26:55+08:00</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
@@ -148,6 +172,9 @@ public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
 
         /**
          * <p>The origin server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("Source")
         public String source;

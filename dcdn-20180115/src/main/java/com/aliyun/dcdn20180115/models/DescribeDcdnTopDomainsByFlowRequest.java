@@ -6,20 +6,28 @@ import com.aliyun.tea.*;
 public class DescribeDcdnTopDomainsByFlowRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     * <br>
      * <p>The end time must be later than the start time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2016-03-14T07:34:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The maximum number of domain names to return. Valid values: **1** to **100**. Default value: **20**.</p>
+     * <p>The maximum number of domain names to return. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("Limit")
     public Long limit;
 
     /**
      * <p>The start of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2016-03-01T04:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

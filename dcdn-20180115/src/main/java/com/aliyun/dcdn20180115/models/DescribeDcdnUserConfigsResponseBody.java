@@ -12,6 +12,9 @@ public class DescribeDcdnUserConfigsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>06D29681-B7CD-4034-A8CC-28AFFA213539</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,28 +43,37 @@ public class DescribeDcdnUserConfigsResponseBody extends TeaModel {
     public static class DescribeDcdnUserConfigsResponseBodyConfigs extends TeaModel {
         /**
          * <p>The name of the configuration.</p>
-         * <br>
          * <p>The configuration is specified by enterprise users and public service sectors.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>allow_function</p>
          */
         @NameInMap("ArgName")
         public String argName;
 
         /**
          * <p>The value of the configuration. Valid values:</p>
-         * <br>
-         * <p>*   cc_rule: HTTP flood protection</p>
-         * <p>*   ddos_dispatch: DDoS mitigation</p>
-         * <p>*   edge_safe: application security on points of presence (POPs)</p>
-         * <p>*   blocked_regions: region blacklist</p>
-         * <p>*   http_acl_policy: precise access control</p>
-         * <p>*   bot_manager: bot traffic management</p>
-         * <p>*   ip_reputation: IP reputation library</p>
+         * <ul>
+         * <li>cc_rule: HTTP flood protection</li>
+         * <li>ddos_dispatch: DDoS mitigation</li>
+         * <li>edge_safe: application security on points of presence (POPs)</li>
+         * <li>blocked_regions: region blacklist</li>
+         * <li>http_acl_policy: precise access control</li>
+         * <li>bot_manager: bot traffic management</li>
+         * <li>ip_reputation: IP reputation library</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;dcdn_allow\&quot;:[\&quot;cc_rule\&quot;,\&quot;ddos_dispatch\&quot;]}</p>
          */
         @NameInMap("ArgValue")
         public String argValue;
 
         /**
          * <p>The name of the feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>domain_business_control</p>
          */
         @NameInMap("FunctionName")
         public String functionName;

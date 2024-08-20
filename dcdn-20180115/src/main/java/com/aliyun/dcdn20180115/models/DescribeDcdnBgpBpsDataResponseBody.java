@@ -12,18 +12,27 @@ public class DescribeDcdnBgpBpsDataResponseBody extends TeaModel {
 
     /**
      * <p>The end of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-11-30T00:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E9D3257A-1B7C-414C-90C1-8D07AC47BCAC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The start of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-11-29T00:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -68,18 +77,27 @@ public class DescribeDcdnBgpBpsDataResponseBody extends TeaModel {
     public static class DescribeDcdnBgpBpsDataResponseBodyBgpDataInterval extends TeaModel {
         /**
          * <p>The inbound bandwidth. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>318</p>
          */
         @NameInMap("In")
         public Float in;
 
         /**
          * <p>The outbound bandwidth. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>183</p>
          */
         @NameInMap("Out")
         public Float out;
 
         /**
          * <p>The timestamp of the returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-11-29T20:00:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

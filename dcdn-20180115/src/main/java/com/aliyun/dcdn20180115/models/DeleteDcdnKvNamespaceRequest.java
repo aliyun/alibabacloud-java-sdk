@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteDcdnKvNamespaceRequest extends TeaModel {
     /**
-     * <p>The name of the namespace.</p>
+     * <p>The name of the namespace. You can call the <a href="~~PutDcdnKvNamespace~~">PutDcdnKvNamespace</a> operation to query the name of a namespace.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ns1</p>
      */
     @NameInMap("Namespace")
     public String namespace;

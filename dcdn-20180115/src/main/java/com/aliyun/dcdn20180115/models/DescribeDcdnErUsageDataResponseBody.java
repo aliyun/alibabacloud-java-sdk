@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDcdnErUsageDataResponseBody extends TeaModel {
     /**
      * <p>The end of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-10-31T16:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -18,12 +21,18 @@ public class DescribeDcdnErUsageDataResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C370DAF1-C838-4288-A1A0-9A87633D248E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The start of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-10-30T16:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -68,24 +77,36 @@ public class DescribeDcdnErUsageDataResponseBody extends TeaModel {
     public static class DescribeDcdnErUsageDataResponseBodyErAccDataErAccItem extends TeaModel {
         /**
          * <p>The number of requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>125</p>
          */
         @NameInMap("ErAcc")
         public Long erAcc;
 
         /**
          * <p>The ID of the routine. This parameter is returned only when SplitBy is set to routine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>routine1.test</p>
          */
         @NameInMap("Routine")
         public String routine;
 
         /**
          * <p>The specification of the routine. This parameter is returned only when SplitBy is set to spec.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50ms</p>
          */
         @NameInMap("Spec")
         public String spec;
 
         /**
          * <p>The timestamp of the returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-10-30T13:00:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

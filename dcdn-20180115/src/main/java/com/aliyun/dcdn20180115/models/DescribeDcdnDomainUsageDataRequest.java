@@ -6,88 +6,119 @@ import com.aliyun.tea.*;
 public class DescribeDcdnDomainUsageDataRequest extends TeaModel {
     /**
      * <p>The billable region. Valid values:</p>
-     * <br>
-     * <p>*   **CN**: Chinese mainland</p>
-     * <p>*   **OverSeas**: outside the Chinese mainland</p>
-     * <p>*   **AP1**: Asia Pacific 1</p>
-     * <p>*   **AP2**: Asia Pacific 2</p>
-     * <p>*   **AP3**: Asia Pacific 3</p>
-     * <p>*   **NA**: North America</p>
-     * <p>*   **SA**: South America</p>
-     * <p>*   **EU**: Europe</p>
-     * <p>*   **MEAA**: Middle East and Africa</p>
-     * <p>*   **all**: all the preceding billable regions</p>
-     * <br>
-     * <p>Default value: **CN**</p>
+     * <ul>
+     * <li><strong>CN</strong>: Chinese mainland</li>
+     * <li><strong>OverSeas</strong>: outside the Chinese mainland</li>
+     * <li><strong>AP1</strong>: Asia Pacific 1</li>
+     * <li><strong>AP2</strong>: Asia Pacific 2</li>
+     * <li><strong>AP3</strong>: Asia Pacific 3</li>
+     * <li><strong>NA</strong>: North America</li>
+     * <li><strong>SA</strong>: South America</li>
+     * <li><strong>EU</strong>: Europe</li>
+     * <li><strong>MEAA</strong>: Middle East and Africa</li>
+     * <li><strong>all</strong>: all the preceding billable regions</li>
+     * </ul>
+     * <p>Default value: <strong>CN</strong></p>
+     * 
+     * <strong>example:</strong>
+     * <p>CN</p>
      */
     @NameInMap("Area")
     public String area;
 
     /**
      * <p>The protocol of the data to query. Valid values:</p>
-     * <br>
-     * <p>*   **quic**: Quick UDP Internet Connections (QUIC)</p>
-     * <p>*   **https**: HTTPS</p>
-     * <p>*   **http**: HTTP</p>
-     * <p>*   **all**: all the preceding protocols</p>
-     * <br>
-     * <p>Default value: **all**</p>
+     * <ul>
+     * <li><strong>quic</strong>: Quick UDP Internet Connections (QUIC)</li>
+     * <li><strong>https</strong>: HTTPS</li>
+     * <li><strong>http</strong>: HTTP</li>
+     * <li><strong>all</strong>: all the preceding protocols</li>
+     * </ul>
+     * <p>Default value: <strong>all</strong></p>
+     * 
+     * <strong>example:</strong>
+     * <p>all</p>
      */
     @NameInMap("DataProtocol")
     public String dataProtocol;
 
     /**
      * <p>The accelerated domain name. You can specify up to 100 domain names in each request. Separate multiple domain names with commas (,).</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the usage data of all accelerated domain names that belong to your Alibaba Cloud account is returned.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the usage data of all accelerated domain names that belong to your Alibaba Cloud account is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     * <br>
-     * <p>>  The end time must be later than the start time. The maximum time range that can be queried is 31 days.</p>
+     * <blockquote>
+     * <p> The end time must be later than the start time. The maximum time range that can be queried is 31 days.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2015-12-10T22:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The type of data that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   **bps**: bandwidth</p>
-     * <p>*   **traf**: traffic</p>
-     * <p>*   **acc**: requests</p>
-     * <br>
-     * <p>>  **acc** does not support the **Area** parameter.</p>
+     * <ul>
+     * <li><strong>bps</strong>: bandwidth</li>
+     * <li><strong>traf</strong>: traffic</li>
+     * <li><strong>acc</strong>: requests</li>
+     * </ul>
+     * <blockquote>
+     * <p> <strong>acc</strong> does not support the <strong>Area</strong> parameter.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bps</p>
      */
     @NameInMap("Field")
     public String field;
 
     /**
      * <p>The time interval between the data entries to return. Unit: seconds.</p>
-     * <br>
-     * <p>The time interval varies with the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see **Usage notes**.</p>
+     * <p>The time interval varies with the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see <strong>Usage notes</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
      */
     @NameInMap("Interval")
     public String interval;
 
     /**
      * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     * <br>
-     * <p>>  The minimum time granularity at which the data is queried is 5 minutes.</p>
+     * <blockquote>
+     * <p> The minimum time granularity at which the data is queried is 5 minutes.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2015-12-10T20:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The type of the requests. Valid values:</p>
-     * <br>
-     * <p>*   **static**: static requests</p>
-     * <p>*   **dynamic**: dynamic requests</p>
-     * <p>*   **all**: all requests</p>
-     * <br>
-     * <p>Default value: **all**</p>
+     * <ul>
+     * <li><strong>static</strong>: static requests</li>
+     * <li><strong>dynamic</strong>: dynamic requests</li>
+     * <li><strong>all</strong>: all requests</li>
+     * </ul>
+     * <p>Default value: <strong>all</strong></p>
+     * 
+     * <strong>example:</strong>
+     * <p>dynamic</p>
      */
     @NameInMap("Type")
     public String type;

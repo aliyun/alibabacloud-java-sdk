@@ -6,35 +6,48 @@ import com.aliyun.tea.*;
 public class DescribeDcdnDomainIpaConnDataRequest extends TeaModel {
     /**
      * <p>The domain names accelerated by IPA. Separate multiple domain names with commas (,).</p>
-     * <br>
-     * <p>> If you do not specify this parameter, the merged data of all accelerated domain names is returned.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the merged data of all accelerated domain names is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>example1.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The end of the time range to query.</p>
-     * <br>
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     * <br>
-     * <p>> The end time must be later than the start time.</p>
+     * <blockquote>
+     * <p>The end time must be later than the start time.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2015-02-22T7:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>Specifies how query results are grouped. By default, this parameter is empty. Valid values:</p>
-     * <br>
-     * <p>*   domain: Query results are grouped by accelerated domain name.</p>
-     * <p>*   An empty string: Query results are not grouped.</p>
+     * <ul>
+     * <li>domain: Query results are grouped by accelerated domain name.</li>
+     * <li>An empty string: Query results are not grouped.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>domain</p>
      */
     @NameInMap("SplitBy")
     public String splitBy;
 
     /**
      * <p>The start of the time range to query.</p>
-     * <br>
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2015-02-21T07:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

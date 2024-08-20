@@ -6,10 +6,15 @@ import com.aliyun.tea.*;
 public class DescribeDcdnUserConfigsRequest extends TeaModel {
     /**
      * <p>The configuration that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   domain_business_control: user configurations</p>
-     * <p>*   bot_basic: the basic edition of bot traffic management, which supports authorized crawlers and provides threat intelligence</p>
-     * <p>*   bot_Advance: the advanced edition of bot traffic management, which supports authorized crawlers and AI intelligent protection and provides threat intelligence</p>
+     * <ul>
+     * <li>domain_business_control: user configurations</li>
+     * <li>bot_basic: the basic edition of bot traffic management, which supports authorized crawlers and provides threat intelligence</li>
+     * <li>bot_Advance: the advanced edition of bot traffic management, which supports authorized crawlers and AI intelligent protection and provides threat intelligence</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>domain_business_control</p>
      */
     @NameInMap("FunctionName")
     public String functionName;

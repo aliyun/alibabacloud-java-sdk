@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class SetDcdnUserConfigResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F8AA0364-0FDB-4AD5-AC74-D69FAB8924ED</p>
      */
     @NameInMap("RequestId")
     public String requestId;

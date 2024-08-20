@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class BatchSetDcdnIpaDomainConfigsRequest extends TeaModel {
     /**
      * <p>The domain names accelerated by IPA. Separate multiple domain names with commas (,).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainNames")
     public String domainNames;
 
     /**
-     * <p>The list of features. `[{"functionArgs":[{"argName":"parameter name","argValue":"parameter value"}],"functionName":"feature name"}]`</p>
+     * <p>The list of features. <code>[{&quot;functionArgs&quot;:[{&quot;argName&quot;:&quot;parameter name&quot;,&quot;argValue&quot;:&quot;parameter value&quot;}],&quot;functionName&quot;:&quot;feature name&quot;}]</code></p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;functionArgs&quot;:[{&quot;argName&quot;:&quot;domain_name&quot;,&quot;argValue&quot;:&quot;api.*com&quot;}],&quot;functionName&quot;:&quot;protogw&quot;}]</p>
      */
     @NameInMap("Functions")
     public String functions;

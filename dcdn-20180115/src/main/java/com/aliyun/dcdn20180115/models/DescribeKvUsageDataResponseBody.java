@@ -6,24 +6,33 @@ import com.aliyun.tea.*;
 public class DescribeKvUsageDataResponseBody extends TeaModel {
     /**
      * <p>The end of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-11-18T15:59:59Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The detailed usage data.</p>
+     * <p>The usage details.</p>
      */
     @NameInMap("KvUsageData")
     public java.util.List<DescribeKvUsageDataResponseBodyKvUsageData> kvUsageData;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9732E117-8A37-49FD-A36F-ABBB87556CA7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The beginning of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-11-06T16:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -68,24 +77,36 @@ public class DescribeKvUsageDataResponseBody extends TeaModel {
     public static class DescribeKvUsageDataResponseBodyKvUsageData extends TeaModel {
         /**
          * <p>The number of visits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1340000</p>
          */
         @NameInMap("Acc")
         public Long acc;
 
         /**
-         * <p>The request method. This parameter is returned only if **SplitBy** is set to **type**.</p>
+         * <p>The request method. This parameter is available only when the <strong>SplitBy</strong> parameter is set to <strong>type</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>get</p>
          */
         @NameInMap("AccessType")
         public String accessType;
 
         /**
-         * <p>The ID of the namespace. This parameter is returned only if **SplitBy** is set to **namespace**.</p>
+         * <p>The namespace ID. This parameter is available only when the <strong>SplitBy</strong> parameter is set to <strong>namespace</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>534167033424646144</p>
          */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
         /**
          * <p>The timestamp of the data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-14T15:00:03Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

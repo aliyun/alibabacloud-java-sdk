@@ -12,6 +12,9 @@ public class DescribeDcdnDomainStagingConfigResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C80705BF-0F76-41FA-BAD1-5B59296A4E59</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeDcdnDomainStagingConfigResponseBody extends TeaModel {
     public static class DescribeDcdnDomainStagingConfigResponseBodyDomainConfigsFunctionArgs extends TeaModel {
         /**
          * <p>The name of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>auth_type</p>
          */
         @NameInMap("ArgName")
         public String argName;
 
         /**
          * <p>The value of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>req_auth</p>
          */
         @NameInMap("ArgValue")
         public String argValue;
@@ -76,6 +85,9 @@ public class DescribeDcdnDomainStagingConfigResponseBody extends TeaModel {
     public static class DescribeDcdnDomainStagingConfigResponseBodyDomainConfigs extends TeaModel {
         /**
          * <p>The ID of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6295</p>
          */
         @NameInMap("ConfigId")
         public String configId;
@@ -88,17 +100,24 @@ public class DescribeDcdnDomainStagingConfigResponseBody extends TeaModel {
 
         /**
          * <p>The name of the feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliauth</p>
          */
         @NameInMap("FunctionName")
         public String functionName;
 
         /**
          * <p>The status. Valid values:</p>
-         * <br>
-         * <p>*   success: The configuration is successful.</p>
-         * <p>*   testing: The configuration is under testing.</p>
-         * <p>*   failed: The task failed.</p>
-         * <p>*   configuring: The feature is being configured.</p>
+         * <ul>
+         * <li>success: The configuration is successful.</li>
+         * <li>testing: The configuration is under testing.</li>
+         * <li>failed: The task failed.</li>
+         * <li>configuring: The feature is being configured.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;

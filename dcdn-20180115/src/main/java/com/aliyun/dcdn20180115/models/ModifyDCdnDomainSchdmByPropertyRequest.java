@@ -6,16 +6,25 @@ import com.aliyun.tea.*;
 public class ModifyDCdnDomainSchdmByPropertyRequest extends TeaModel {
     /**
      * <p>The name of the accelerated domain for which you want to change the acceleration region. You can specify only one domain name.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The region where the acceleration service is deployed. Valid values:</p>
-     * <br>
-     * <p>*   **domestic**: Chinese mainland</p>
-     * <p>*   **overseas**: global (excluding mainland China)</p>
-     * <p>*   **global**: global</p>
+     * <ul>
+     * <li><strong>domestic</strong>: Chinese mainland</li>
+     * <li><strong>overseas</strong>: global (excluding mainland China)</li>
+     * <li><strong>global</strong>: global</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;coverage&quot;:&quot;overseas&quot;}</p>
      */
     @NameInMap("Property")
     public String property;

@@ -6,17 +6,24 @@ import com.aliyun.tea.*;
 public class DescribeDcdnUserVipsByDomainRequest extends TeaModel {
     /**
      * <p>Specifies whether to query the virtual IP addresses of only healthy POPs. Valid value:</p>
-     * <br>
-     * <p>*   **on**: queries healthy VIPs.</p>
-     * <p>*   **off**: queries all VIPs.</p>
+     * <ul>
+     * <li><strong>on</strong>: queries healthy VIPs.</li>
+     * <li><strong>off</strong>: queries all VIPs.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
      */
     @NameInMap("Available")
     public String available;
 
     /**
      * <p>The accelerated domain name. You can specify only one domain name.</p>
-     * <br>
      * <p>Enumeration values: example.com</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;

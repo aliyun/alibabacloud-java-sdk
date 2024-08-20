@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeDcdnCertificateDetailRequest extends TeaModel {
     /**
      * <p>The name of the certificate.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("CertName")
     public String certName;

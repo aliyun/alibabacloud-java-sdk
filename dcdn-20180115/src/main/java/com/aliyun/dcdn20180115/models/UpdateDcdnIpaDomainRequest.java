@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class UpdateDcdnIpaDomainRequest extends TeaModel {
     /**
      * <p>The accelerated domain name that you want to modify. You can specify only one domain name in each request.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -15,6 +19,9 @@ public class UpdateDcdnIpaDomainRequest extends TeaModel {
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmyuji4b6r4**</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -24,12 +31,18 @@ public class UpdateDcdnIpaDomainRequest extends TeaModel {
 
     /**
      * <p>The information about the addresses of the origin server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;content&quot;:&quot;10.10.10.10&quot;,&quot;type&quot;:&quot;ipaddr&quot;,&quot;priority&quot;:&quot;20&quot;,&quot;port&quot;:80,&quot;weight&quot;:&quot;15&quot;}]</p>
      */
     @NameInMap("Sources")
     public String sources;
 
     /**
      * <p>The top-level domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.edu</p>
      */
     @NameInMap("TopLevelDomain")
     public String topLevelDomain;

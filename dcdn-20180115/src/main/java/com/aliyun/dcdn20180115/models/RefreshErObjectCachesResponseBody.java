@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class RefreshErObjectCachesResponseBody extends TeaModel {
     /**
      * <p>The ID of the refresh task. Separate multiple IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>95248880</p>
      */
     @NameInMap("RefreshTaskId")
     public String refreshTaskId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3C6CCEC4-6B88-4D4A-93E4-D47B3D92CF8F</p>
      */
     @NameInMap("RequestId")
     public String requestId;

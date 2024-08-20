@@ -12,24 +12,36 @@ public class DescribeDcdnDomainCcActivityLogResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageIndex")
     public Long pageIndex;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3C6CCEC4-6B88-4D4A-93E4-D47B3D92CF8F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("Total")
     public Long total;
@@ -82,42 +94,63 @@ public class DescribeDcdnDomainCcActivityLogResponseBody extends TeaModel {
     public static class DescribeDcdnDomainCcActivityLogResponseBodyActivityLog extends TeaModel {
         /**
          * <p>The action that was triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deny</p>
          */
         @NameInMap("Action")
         public String action;
 
         /**
          * <p>The accelerated domain name whose ICP filing status you want to update.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The name of the rule that was triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test2</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
          * <p>The timestamp of the data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-10T20:00:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
          * <p>The object that triggered the blocking event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IP</p>
          */
         @NameInMap("TriggerObject")
         public String triggerObject;
 
         /**
          * <p>The period of time during which rate limiting remains effective.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         @NameInMap("Ttl")
         public Long ttl;
 
         /**
          * <p>The value of the trigger for rate limiting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.10.10.10</p>
          */
         @NameInMap("Value")
         public String value;

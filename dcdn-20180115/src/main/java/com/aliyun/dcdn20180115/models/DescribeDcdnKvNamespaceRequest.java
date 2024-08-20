@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeDcdnKvNamespaceRequest extends TeaModel {
     /**
      * <p>The name of the namespace.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ns1</p>
      */
     @NameInMap("Namespace")
     public String namespace;

@@ -6,37 +6,56 @@ import com.aliyun.tea.*;
 public class CreateDcdnWafPolicyRequest extends TeaModel {
     /**
      * <p>The type of the WAF protection policy. Valid values:</p>
-     * <br>
-     * <p>*   waf_group: basic web protection</p>
-     * <p>*   custom_acl: custom protection</p>
-     * <p>*   whitelist: IP address whitelist</p>
-     * <p>*   ip_blacklist: IP address blacklist</p>
-     * <p>*   region_block: region blacklist</p>
-     * <p>*   bot: bot management</p>
+     * <ul>
+     * <li>waf_group: basic web protection</li>
+     * <li>custom_acl: custom protection</li>
+     * <li>whitelist: IP address whitelist</li>
+     * <li>ip_blacklist: IP address blacklist</li>
+     * <li>region_block: region blacklist</li>
+     * <li>bot: bot management</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>waf_group</p>
      */
     @NameInMap("DefenseScene")
     public String defenseScene;
 
     /**
-     * <p>The name of the protection policy. The name can be up to 64 characters in length and can contain letters, digits, and underscores (\_).</p>
+     * <p>The name of the protection policy. The name can be up to 64 characters in length and can contain letters, digits, and underscores (_).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>policy_test</p>
      */
     @NameInMap("PolicyName")
     public String policyName;
 
     /**
      * <p>The status of the protection policy. Valid values:</p>
-     * <br>
-     * <p>*   on: The policy is enabled.</p>
-     * <p>*   off: The policy is disabled.</p>
+     * <ul>
+     * <li>on: The policy is enabled.</li>
+     * <li>off: The policy is disabled.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
      */
     @NameInMap("PolicyStatus")
     public String policyStatus;
 
     /**
      * <p>Specifies whether to set the current policy as the default policy. Valid values:</p>
-     * <br>
-     * <p>*   default: sets the current policy as the default policy.</p>
-     * <p>*   custom: does not set the current policy as the default policy.</p>
+     * <ul>
+     * <li>default: sets the current policy as the default policy.</li>
+     * <li>custom: does not set the current policy as the default policy.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("PolicyType")
     public String policyType;

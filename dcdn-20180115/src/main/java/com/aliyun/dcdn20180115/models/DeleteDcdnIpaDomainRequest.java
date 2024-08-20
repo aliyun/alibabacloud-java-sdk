@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteDcdnIpaDomainRequest extends TeaModel {
     /**
      * <p>The accelerated domain name that you want to delete. You can specify only one accelerated domain name in each request.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;

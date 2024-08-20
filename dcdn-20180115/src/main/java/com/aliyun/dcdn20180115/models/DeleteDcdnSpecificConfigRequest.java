@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class DeleteDcdnSpecificConfigRequest extends TeaModel {
     /**
-     * <p>The ID of the configuration. Separate multiple configuration IDs with commas (,). For more information about ConfigId, see [Usage notes on ConfigId](~~410558~~).</p>
+     * <p>The ID of the configuration. Separate multiple configuration IDs with commas (,). For more information about ConfigId, see <a href="https://help.aliyun.com/document_detail/410558.html">Usage notes on ConfigId</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2117</p>
      */
     @NameInMap("ConfigId")
     public String configId;
 
     /**
      * <p>The accelerated domain name. You can specify only one domain name.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;

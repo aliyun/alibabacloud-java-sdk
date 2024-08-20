@@ -6,18 +6,28 @@ import com.aliyun.tea.*;
 public class DescribeDcdnDomainConfigsRequest extends TeaModel {
     /**
      * <p>The ID of the configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5003576</p>
      */
     @NameInMap("ConfigId")
     public String configId;
 
     /**
      * <p>The accelerated domain name. You can specify only one domain name in each request.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The names of the features to query. Separate features with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>filetype_based_ttl_set,set_req_host_header</p>
      */
     @NameInMap("FunctionNames")
     public String functionNames;

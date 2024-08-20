@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
     /**
      * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
      * <p>The accelerated domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The end of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2017-12-10T21:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -30,12 +39,18 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A666D44F-19D6-490E-97CF-1A64AB962C57</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The beginning of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2017-12-10T20:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -96,36 +111,54 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
     public static class DescribeDcdnDomainOriginTrafficDataResponseBodyOriginTrafficDataPerIntervalDataModule extends TeaModel {
         /**
          * <p>The amount of back-to-origin traffic that was consumed to deliver dynamic content over HTTP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("DynamicHttpOriginTraffic")
         public Float dynamicHttpOriginTraffic;
 
         /**
          * <p>The amount of back-to-origin traffic that was consumed to deliver dynamic content over HTTPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         @NameInMap("DynamicHttpsOriginTraffic")
         public Float dynamicHttpsOriginTraffic;
 
         /**
          * <p>The amount of back-to-origin traffic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("OriginTraffic")
         public Float originTraffic;
 
         /**
          * <p>The amount of back-to-origin traffic that was consumed to deliver static content over HTTP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("StaticHttpOriginTraffic")
         public Float staticHttpOriginTraffic;
 
         /**
          * <p>The amount of back-to-origin traffic that was consumed to deliver static content over HTTPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("StaticHttpsOriginTraffic")
         public Float staticHttpsOriginTraffic;
 
         /**
          * <p>The timestamp of the data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-10T21:00:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

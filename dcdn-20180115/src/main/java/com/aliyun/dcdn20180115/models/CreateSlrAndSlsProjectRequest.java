@@ -6,27 +6,36 @@ import com.aliyun.tea.*;
 public class CreateSlrAndSlsProjectRequest extends TeaModel {
     /**
      * <p>The type of the collected logs. Default value: cdn_log_access_l1. Valid values:</p>
-     * <br>
-     * <p>*   **cdn_log_access_l1**: access logs of L1 Dynamic Route for CDN (DCDN) points of presence (POPs)</p>
-     * <p>*   **cdn_log_origin**: back-to-origin logs</p>
-     * <p>*   **cdn_log_er**: EdgeRoutine logs</p>
+     * <ul>
+     * <li><strong>cdn_log_access_l1</strong>: access logs of L1 Dynamic Route for CDN (DCDN) points of presence (POPs)</li>
+     * <li><strong>cdn_log_origin</strong>: back-to-origin logs</li>
+     * <li><strong>cdn_log_er</strong>: EdgeRoutine logs</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cdn_log_access_l1</p>
      */
     @NameInMap("BusinessType")
     public String businessType;
 
     /**
      * <p>The region where Log Service resides. Valid values:</p>
-     * <br>
-     * <p>*   **cn-hangzhou**</p>
-     * <p>*   **cn-shanghai**</p>
-     * <p>*   **cn-qingdao**</p>
-     * <p>*   **cn-beijing**</p>
-     * <p>*   **cn-zhangjiakou**</p>
-     * <p>*   **cn-shenzhen**</p>
-     * <p>*   **eu-central-1**</p>
-     * <p>*   **us-west-1**</p>
-     * <p>*   **ap-south-1**</p>
-     * <p>*   **ap-southeast-1**</p>
+     * <ul>
+     * <li><strong>cn-hangzhou</strong></li>
+     * <li><strong>cn-shanghai</strong></li>
+     * <li><strong>cn-qingdao</strong></li>
+     * <li><strong>cn-beijing</strong></li>
+     * <li><strong>cn-zhangjiakou</strong></li>
+     * <li><strong>cn-shenzhen</strong></li>
+     * <li><strong>eu-central-1</strong></li>
+     * <li><strong>us-west-1</strong></li>
+     * <li><strong>ap-south-1</strong></li>
+     * <li><strong>ap-southeast-1</strong></li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("Region")
     public String region;

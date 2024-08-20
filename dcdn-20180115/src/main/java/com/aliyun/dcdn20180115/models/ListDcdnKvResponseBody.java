@@ -12,24 +12,36 @@ public class ListDcdnKvResponseBody extends TeaModel {
 
     /**
      * <p>The total number of pages returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D61E4801-EAFF-4A63-AAE1-FBF6CE1CFD1C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1024</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,12 +94,18 @@ public class ListDcdnKvResponseBody extends TeaModel {
     public static class ListDcdnKvResponseBodyKeys extends TeaModel {
         /**
          * <p>The value of the key obtained in this traversal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Key1</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The time when the key was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-13T07:46:03Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

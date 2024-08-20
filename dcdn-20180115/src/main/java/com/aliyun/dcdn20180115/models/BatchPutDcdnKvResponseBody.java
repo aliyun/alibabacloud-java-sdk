@@ -12,6 +12,9 @@ public class BatchPutDcdnKvResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>156A6B-677B1A-4297B7-9187B7-2B44792</p>
      */
     @NameInMap("RequestId")
     public String requestId;

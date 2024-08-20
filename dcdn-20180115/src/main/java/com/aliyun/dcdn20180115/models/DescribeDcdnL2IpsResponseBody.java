@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDcdnL2IpsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C370DAF1-C838-4288-A1A0-9A87633D248E</p>
      */
     @NameInMap("RequestId")
     public String requestId;

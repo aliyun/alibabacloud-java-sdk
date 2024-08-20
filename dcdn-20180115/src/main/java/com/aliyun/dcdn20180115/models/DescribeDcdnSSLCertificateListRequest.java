@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDcdnSSLCertificateListRequest extends TeaModel {
     /**
      * <p>The accelerated domain secured by the SSL certificate. HTTPS secure acceleration is enabled for the accelerated domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.example.com">www.example.com</a></p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -15,18 +18,27 @@ public class DescribeDcdnSSLCertificateListRequest extends TeaModel {
 
     /**
      * <p>The number of the page. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The maximum number of entries to return on each page. Valid values: **1 to 1000**.</p>
+     * <p>The maximum number of entries to return on each page. Valid values: <strong>1 to 1000</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The keyword that is used to query the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>taobao</p>
      */
     @NameInMap("SearchKeyword")
     public String searchKeyword;

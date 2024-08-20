@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeRoutineRelatedDomainsRequest extends TeaModel {
     /**
      * <p>The name of the routine. The name is unique in the same account.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>routine_test</p>
      */
     @NameInMap("Name")
     public String name;

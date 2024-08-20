@@ -4,11 +4,18 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class BatchPutDcdnKvRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("KvList")
     public java.util.List<BatchPutDcdnKvRequestKvList> kvList;
 
     /**
      * <p>The name of the namespace.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ns1</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -41,9 +48,15 @@ public class BatchPutDcdnKvRequest extends TeaModel {
         @NameInMap("ExpirationTtl")
         public Long expirationTtl;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Value")
         public String value;
 

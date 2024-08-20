@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeDcdnWafPolicyRequest extends TeaModel {
     /**
      * <p>The ID of the protection policy. You can specify only one ID in each request.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000001</p>
      */
     @NameInMap("PolicyId")
     public Long policyId;

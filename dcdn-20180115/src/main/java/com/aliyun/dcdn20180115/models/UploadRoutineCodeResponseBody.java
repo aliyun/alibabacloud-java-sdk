@@ -12,6 +12,9 @@ public class UploadRoutineCodeResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DFA2027F-86C0-4421-9593-581A7993696C</p>
      */
     @NameInMap("RequestId")
     public String requestId;

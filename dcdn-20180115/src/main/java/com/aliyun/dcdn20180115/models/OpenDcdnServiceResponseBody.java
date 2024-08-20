@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class OpenDcdnServiceResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>97C68796-EB7F-4D41-9D5B-12B909D76503</p>
      */
     @NameInMap("RequestId")
     public String requestId;

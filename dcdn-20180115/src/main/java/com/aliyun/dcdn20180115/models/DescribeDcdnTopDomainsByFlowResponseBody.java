@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
     /**
      * <p>The total number of accelerated domains under your account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>68</p>
      */
     @NameInMap("DomainCount")
     public Long domainCount;
 
     /**
-     * <p>The total number of accelerated domains that are in the **Enabled** state under your account.</p>
+     * <p>The total number of accelerated domains that are in the <strong>Enabled</strong> state under your account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>68</p>
      */
     @NameInMap("DomainOnlineCount")
     public Long domainOnlineCount;
 
     /**
      * <p>The end of the reporting period.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2016-03-14T07:34:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4E09C5D7-E1CF-4CAA-A45E-8727F4C8FD70</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The beginning of the reporting period.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2016-03-14T06:34:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -96,42 +111,63 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
     public static class DescribeDcdnTopDomainsByFlowResponseBodyTopDomainsTopDomain extends TeaModel {
         /**
          * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The peak bandwidth value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22139626</p>
          */
         @NameInMap("MaxBps")
         public Long maxBps;
 
         /**
          * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-11-01T08:10:00Z</p>
          */
         @NameInMap("MaxBpsTime")
         public String maxBpsTime;
 
         /**
          * <p>The ranking of the accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Rank")
         public Long rank;
 
         /**
          * <p>The number of visits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("TotalAccess")
         public Long totalAccess;
 
         /**
          * <p>The total amount of network traffic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("TotalTraffic")
         public String totalTraffic;
 
         /**
          * <p>The proportion of network traffic consumed to access the URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21.686305274906182</p>
          */
         @NameInMap("TrafficPercent")
         public String trafficPercent;

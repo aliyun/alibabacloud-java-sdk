@@ -6,46 +6,63 @@ import com.aliyun.tea.*;
 public class DescribeDcdnServiceResponseBody extends TeaModel {
     /**
      * <p>The time when the renewed secure DCDN takes effect. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-03-31T16:00:00Z</p>
      */
     @NameInMap("ChangingAffectTime")
     public String changingAffectTime;
 
     /**
      * <p>The new metering method for the renewed secure DCDN. Valid values:</p>
-     * <br>
-     * <p>*   **PayByTraffic**: pay by data transfer</p>
-     * <p>*   **PayByBandwidth**: pay by bandwidth</p>
-     * <p>*   **PayByBandwidth95**: pay by 95th percentile bandwidth</p>
-     * <p>*   **PayByBandwidth_monthavg**: pay by monthly average bandwidth</p>
-     * <p>*   **PayByBandwidth_month4th**: pay by fourth peak bandwidth per month</p>
-     * <p>*   **PayByBandwidth_monthday95avg**: pay by monthly average 95th percentile bandwidth</p>
-     * <p>*   **PayByBandwidth_nighthalf95**: pay by 95th percentile bandwidth (50% off during nighttime)</p>
+     * <ul>
+     * <li><strong>PayByTraffic</strong>: pay by data transfer</li>
+     * <li><strong>PayByBandwidth</strong>: pay by bandwidth</li>
+     * <li><strong>PayByBandwidth95</strong>: pay by 95th percentile bandwidth</li>
+     * <li><strong>PayByBandwidth_monthavg</strong>: pay by monthly average bandwidth</li>
+     * <li><strong>PayByBandwidth_month4th</strong>: pay by fourth peak bandwidth per month</li>
+     * <li><strong>PayByBandwidth_monthday95avg</strong>: pay by monthly average 95th percentile bandwidth</li>
+     * <li><strong>PayByBandwidth_nighthalf95</strong>: pay by 95th percentile bandwidth (50% off during nighttime)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PayByBandwidth</p>
      */
     @NameInMap("ChangingChargeType")
     public String changingChargeType;
 
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FP-mkqgwxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The current metering method. Valid values:</p>
-     * <br>
-     * <p>*   **PayByTraffic**: pay by data transfer</p>
-     * <p>*   **PayByBandwidth**: pay by bandwidth</p>
-     * <p>*   **PayByBandwidth95**: pay by 95th percentile bandwidth</p>
-     * <p>*   **PayByBandwidth_monthavg**: pay by monthly average bandwidth</p>
-     * <p>*   **PayByBandwidth_month4th**: pay by fourth peak bandwidth per month</p>
-     * <p>*   **PayByBandwidth_monthday95avg**: pay by monthly average 95th percentile bandwidth</p>
-     * <p>*   **PayByBandwidth_nighthalf95**: pay by 95th percentile bandwidth (50% off during nighttime)</p>
+     * <ul>
+     * <li><strong>PayByTraffic</strong>: pay by data transfer</li>
+     * <li><strong>PayByBandwidth</strong>: pay by bandwidth</li>
+     * <li><strong>PayByBandwidth95</strong>: pay by 95th percentile bandwidth</li>
+     * <li><strong>PayByBandwidth_monthavg</strong>: pay by monthly average bandwidth</li>
+     * <li><strong>PayByBandwidth_month4th</strong>: pay by fourth peak bandwidth per month</li>
+     * <li><strong>PayByBandwidth_monthday95avg</strong>: pay by monthly average 95th percentile bandwidth</li>
+     * <li><strong>PayByBandwidth_nighthalf95</strong>: pay by 95th percentile bandwidth (50% off during nighttime)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PayByTraffic</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
     /**
      * <p>The time when the DCDN service was activated. The time follows the ISO 8601 standard.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-03-19T11:16:11Z</p>
      */
     @NameInMap("OpeningTime")
     public String openingTime;
@@ -58,24 +75,36 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EF2AEBC2-EDBD-41CF-BF64-7E095D42D6EF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The time when the changes of the WebSocket configuration take effect. The value is the same as that of the ChangingAffectTime parameter. This parameter can be displayed in the console only if the specified time is later than the current time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-03-19T11:16:11Z</p>
      */
     @NameInMap("WebsocketChangingTime")
     public String websocketChangingTime;
 
     /**
-     * <p>The next effective billing method of WebSocket. Valid values: **websockettraffic** and **websocketbps**. A value of websockettraffic indicates that you are billed based on the traffic volume. A value of websocketbps indicates that you are billed based on the bandwidth.</p>
+     * <p>The next effective billing method of WebSocket. Valid values: <strong>websockettraffic</strong> and <strong>websocketbps</strong>. A value of websockettraffic indicates that you are billed based on the traffic volume. A value of websocketbps indicates that you are billed based on the bandwidth.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>websocketbps</p>
      */
     @NameInMap("WebsocketChangingType")
     public String websocketChangingType;
 
     /**
-     * <p>The current billing method of WebSocket. Valid values: **websockettraffic** and **websocketbps**. A value of websockettraffic indicates that you are billed based on the traffic volume. A value of websocketbps indicates that you are billed based on the bandwidth.</p>
+     * <p>The current billing method of WebSocket. Valid values: <strong>websockettraffic</strong> and <strong>websocketbps</strong>. A value of websockettraffic indicates that you are billed based on the traffic volume. A value of websocketbps indicates that you are billed based on the bandwidth.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>websocketbps</p>
      */
     @NameInMap("WebsocketType")
     public String websocketType;
@@ -168,6 +197,9 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
     public static class DescribeDcdnServiceResponseBodyOperationLocksLockReason extends TeaModel {
         /**
          * <p>The reason why secure DCDN was locked. For example, a value of financial indicates that an overdue payment exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>financial</p>
          */
         @NameInMap("LockReason")
         public String lockReason;

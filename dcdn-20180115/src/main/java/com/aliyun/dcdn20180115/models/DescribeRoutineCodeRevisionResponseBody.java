@@ -12,6 +12,9 @@ public class DescribeRoutineCodeRevisionResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D24F0C48-1B27-4C58-8B84-1A0C001A514E</p>
      */
     @NameInMap("RequestId")
     public String requestId;

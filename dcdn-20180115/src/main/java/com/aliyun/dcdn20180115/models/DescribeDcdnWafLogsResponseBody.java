@@ -12,6 +12,9 @@ public class DescribeDcdnWafLogsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0985A362-C81E-5A56-891D-90226BEECA7C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,30 +43,45 @@ public class DescribeDcdnWafLogsResponseBody extends TeaModel {
     public static class DescribeDcdnWafLogsResponseBodyDomainLogDetailsLogInfos extends TeaModel {
         /**
          * <p>The end of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-05-23T14:00:00Z</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The name of the log file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo.aliyundoc.com_2015_05_23_2100_2200.xxxxxx.gz</p>
          */
         @NameInMap("LogName")
         public String logName;
 
         /**
          * <p>The path of the log file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>guide.aliyundoc.com-hangzhou.xxx</p>
          */
         @NameInMap("LogPath")
         public String logPath;
 
         /**
          * <p>The size of the log file. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>258</p>
          */
         @NameInMap("LogSize")
         public Long logSize;
 
         /**
          * <p>The beginning of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-05-23T13:00:00Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -118,18 +136,27 @@ public class DescribeDcdnWafLogsResponseBody extends TeaModel {
     public static class DescribeDcdnWafLogsResponseBodyDomainLogDetailsPageInfos extends TeaModel {
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageIndex")
         public Long pageIndex;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Long pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Total")
         public Long total;
@@ -168,12 +195,18 @@ public class DescribeDcdnWafLogsResponseBody extends TeaModel {
     public static class DescribeDcdnWafLogsResponseBodyDomainLogDetails extends TeaModel {
         /**
          * <p>The WAF domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The total number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("LogCount")
         public Long logCount;

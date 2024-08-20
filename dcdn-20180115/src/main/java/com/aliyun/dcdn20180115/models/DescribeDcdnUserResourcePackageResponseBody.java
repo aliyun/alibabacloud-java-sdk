@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDcdnUserResourcePackageResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>96ED3127-EC7A-57C5-AFA6-A689B24B2530</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,63 +43,93 @@ public class DescribeDcdnUserResourcePackageResponseBody extends TeaModel {
     public static class DescribeDcdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo extends TeaModel {
         /**
          * <p>The commodity code of the resource plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dcdnpaybag</p>
          */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
         /**
          * <p>The remaining quota of the resource plan.</p>
-         * <br>
-         * <p>*   The unit for traffic: bytes.</p>
-         * <p>*   The unit for requests: count.</p>
+         * <ul>
+         * <li>The unit for traffic: bytes.</li>
+         * <li>The unit for requests: count.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10000000</p>
          */
         @NameInMap("CurrCapacity")
         public String currCapacity;
 
         /**
          * <p>The name of the resource plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTPS requests for static content</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The expiration time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-24T16:00:00Z</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The total quota of the resource plan.</p>
-         * <br>
-         * <p>*   The unit for traffic: bytes.</p>
-         * <p>*   The unit for requests: count.</p>
+         * <ul>
+         * <li>The unit for traffic: bytes.</li>
+         * <li>The unit for requests: count.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10000000</p>
          */
         @NameInMap("InitCapacity")
         public String initCapacity;
 
         /**
          * <p>The ID of the resource plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CDNFLOWBAG-cn-7pp2bihrb01ii0</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The validation time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-08-24T04:09:22Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The status of the resource plan. Valid values:</p>
-         * <br>
-         * <p>*   **valid**: valid</p>
-         * <p>*   **closed**: expired</p>
+         * <ul>
+         * <li><strong>valid</strong>: valid</li>
+         * <li><strong>closed</strong>: expired</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>valid</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The name of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FPT_dcdnpaybag_deadlineAcc_1541151058</p>
          */
         @NameInMap("TemplateName")
         public String templateName;

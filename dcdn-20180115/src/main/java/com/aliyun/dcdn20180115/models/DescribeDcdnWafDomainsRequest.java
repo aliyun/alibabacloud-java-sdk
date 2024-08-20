@@ -5,21 +5,29 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnWafDomainsRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Valid values: **1** to **100000**.</p>
-     * <br>
-     * <p>Default value: **1**.</p>
+     * <p>The number of the page to return. Valid values: <strong>1</strong> to <strong>100000</strong>.</p>
+     * <p>Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of domain names to return on each page. Valid values: an integer from **1** to **500**. Default value: **20**.</p>
+     * <p>The number of domain names to return on each page. Valid values: an integer from <strong>1</strong> to <strong>500</strong>. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The query conditions. You can filter domain names by name. Fuzzy match is supported `QueryArgs={"DomainName":"Accelerated domain name"}`</p>
+     * <p>The query conditions. You can filter domain names by name. Fuzzy match is supported <code>QueryArgs={&quot;DomainName&quot;:&quot;Accelerated domain name&quot;}</code></p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;DomainName&quot;:&quot;example.com&quot;}</p>
      */
     @NameInMap("QueryArgs")
     public String queryArgs;

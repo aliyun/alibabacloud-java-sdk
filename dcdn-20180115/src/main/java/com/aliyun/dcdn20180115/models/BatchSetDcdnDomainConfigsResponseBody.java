@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class BatchSetDcdnDomainConfigsResponseBody extends TeaModel {
     /**
-     * <p>域名配置清单。</p>
+     * <p>The list of domain configurations.</p>
      */
     @NameInMap("DomainConfigList")
     public BatchSetDcdnDomainConfigsResponseBodyDomainConfigList domainConfigList;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,19 +42,28 @@ public class BatchSetDcdnDomainConfigsResponseBody extends TeaModel {
 
     public static class BatchSetDcdnDomainConfigsResponseBodyDomainConfigListDomainConfigModel extends TeaModel {
         /**
-         * <p>配置ID，如果返回为0，则表示该条配置未配置成功，需要重新配置。</p>
+         * <p>The ID of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         @NameInMap("ConfigId")
         public Long configId;
 
         /**
-         * <p>域名。</p>
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
-         * <p>功能名称。</p>
+         * <p>The name of the feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>set_resp_header</p>
          */
         @NameInMap("FunctionName")
         public String functionName;

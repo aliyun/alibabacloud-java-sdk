@@ -6,58 +6,81 @@ import com.aliyun.tea.*;
 public class DescribeDcdnsecServiceResponseBody extends TeaModel {
     /**
      * <p>The time when the renewed service takes effect. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-09-30T16:00:00Z</p>
      */
     @NameInMap("ChangingAffectTime")
     public String changingAffectTime;
 
     /**
      * <p>The new metering method for the renewed DCDN. Valid values:</p>
-     * <br>
-     * <p>*   **PayByTraffic**: pay by data transfer</p>
-     * <p>*   **PayByBandwidth**: pay by bandwidth</p>
-     * <p>*   **PayByBandwidth95**: pay by 95th percentile bandwidth</p>
-     * <p>*   **PayByBandwidth_monthavg**: pay by monthly average bandwidth</p>
-     * <p>*   **PayByBandwidth_month4th**: pay by fourth peak bandwidth per month</p>
-     * <p>*   **PayByBandwidth_monthday95avg**: pay by monthly average 95th percentile bandwidth</p>
-     * <p>*   **PayByBandwidth_nighthalf95**: pay by 95th percentile bandwidth (50% off during nighttime)</p>
+     * <ul>
+     * <li><strong>PayByTraffic</strong>: pay by data transfer</li>
+     * <li><strong>PayByBandwidth</strong>: pay by bandwidth</li>
+     * <li><strong>PayByBandwidth95</strong>: pay by 95th percentile bandwidth</li>
+     * <li><strong>PayByBandwidth_monthavg</strong>: pay by monthly average bandwidth</li>
+     * <li><strong>PayByBandwidth_month4th</strong>: pay by fourth peak bandwidth per month</li>
+     * <li><strong>PayByBandwidth_monthday95avg</strong>: pay by monthly average 95th percentile bandwidth</li>
+     * <li><strong>PayByBandwidth_nighthalf95</strong>: pay by 95th percentile bandwidth (50% off during nighttime)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PayByBandwidth</p>
      */
     @NameInMap("ChangingChargeType")
     public String changingChargeType;
 
     /**
      * <p>The number of accelerated domain names that use DCDN.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>130</p>
      */
     @NameInMap("DomainNum")
     public String domainNum;
 
     /**
      * <p>The service expiration time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-09-26T16:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The metering method for traffic.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PayBySecTraffic</p>
      */
     @NameInMap("FlowType")
     public String flowType;
 
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dcdn_dcdnsec_public_cn-123***</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The current metering method. Valid values:</p>
-     * <br>
-     * <p>*   **PayByTraffic**: pay by data transfer</p>
-     * <p>*   **PayByBandwidth**: pay by bandwidth</p>
-     * <p>*   **PayByBandwidth95**: pay by 95th percentile bandwidth</p>
-     * <p>*   **PayByBandwidth_monthavg**: pay by monthly average bandwidth</p>
-     * <p>*   **PayByBandwidth_month4th**: pay by fourth peak bandwidth per month</p>
-     * <p>*   **PayByBandwidth_monthday95avg**: pay by monthly average 95th percentile bandwidth</p>
-     * <p>*   **PayByBandwidth_nighthalf95**: pay by 95th percentile bandwidth (50% off during nighttime)</p>
+     * <ul>
+     * <li><strong>PayByTraffic</strong>: pay by data transfer</li>
+     * <li><strong>PayByBandwidth</strong>: pay by bandwidth</li>
+     * <li><strong>PayByBandwidth95</strong>: pay by 95th percentile bandwidth</li>
+     * <li><strong>PayByBandwidth_monthavg</strong>: pay by monthly average bandwidth</li>
+     * <li><strong>PayByBandwidth_month4th</strong>: pay by fourth peak bandwidth per month</li>
+     * <li><strong>PayByBandwidth_monthday95avg</strong>: pay by monthly average 95th percentile bandwidth</li>
+     * <li><strong>PayByBandwidth_nighthalf95</strong>: pay by 95th percentile bandwidth (50% off during nighttime)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PayByTraffic</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
@@ -70,24 +93,36 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E20B46E1-9BCD-10E5-AAEF-6D7B737467A1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The metering method for requests.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PayBySecRequest</p>
      */
     @NameInMap("RequestType")
     public String requestType;
 
     /**
      * <p>The service activation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-08-26T02:52:08Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The version number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>enterprise</p>
      */
     @NameInMap("Version")
     public String version;
@@ -196,6 +231,9 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
     public static class DescribeDcdnsecServiceResponseBodyOperationLocksLockReason extends TeaModel {
         /**
          * <p>The reason why the instance was locked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>financial</p>
          */
         @NameInMap("LockReason")
         public String lockReason;

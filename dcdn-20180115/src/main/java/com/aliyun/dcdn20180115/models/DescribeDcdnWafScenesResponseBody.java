@@ -12,6 +12,9 @@ public class DescribeDcdnWafScenesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3D7BB13C-DD84-5654-A835-B8E1385DE274</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class DescribeDcdnWafScenesResponseBody extends TeaModel {
     public static class DescribeDcdnWafScenesResponseBodyDefenseScenes extends TeaModel {
         /**
          * <p>The type of the protection policy, which is the same as the DefenseScenes parameter in request parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_group</p>
          */
         @NameInMap("DefenseScene")
         public String defenseScene;
 
         /**
          * <p>The total number of policies of this type that were configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PolicyCount")
         public Integer policyCount;
 
         /**
          * <p>The total number of protection rules that were configured in this type of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("RuleCount")
         public Integer ruleCount;

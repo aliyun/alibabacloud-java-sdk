@@ -12,18 +12,27 @@ public class DescribeDcdnDomainIpaConnDataResponseBody extends TeaModel {
 
     /**
      * <p>The end of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2015-02-22T15:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A2A1EEF8-043E-43A1-807C-BEAC18EA1807</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The beginning of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2015-02-21T15:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -68,18 +77,27 @@ public class DescribeDcdnDomainIpaConnDataResponseBody extends TeaModel {
     public static class DescribeDcdnDomainIpaConnDataResponseBodyConnectionDataPerIntervalDataModule extends TeaModel {
         /**
          * <p>The number of IPA user connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>189095</p>
          */
         @NameInMap("Connections")
         public Long connections;
 
         /**
          * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example1.com</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
          * <p>The timestamp of the data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-21T15:00:00+08:00</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

@@ -6,14 +6,20 @@ import com.aliyun.tea.*;
 public class AddDcdnIpaDomainRequest extends TeaModel {
     /**
      * <p>The URL that is used for health checks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com/image_01.png</p>
      */
     @NameInMap("CheckUrl")
     public String checkUrl;
 
     /**
      * <p>The domain name to be added to IPA.</p>
-     * <br>
      * <p>A wildcard domain that starts with a period (.) is supported, such as .example.com.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -26,29 +32,38 @@ public class AddDcdnIpaDomainRequest extends TeaModel {
 
     /**
      * <p>The protocol. Valid values:</p>
-     * <br>
-     * <p>*   **udp**</p>
-     * <p>*   **tcp**</p>
-     * <br>
+     * <ul>
+     * <li><strong>udp</strong></li>
+     * <li><strong>tcp</strong></li>
+     * </ul>
      * <p>**</p>
-     * <br>
-     * <p>**Description** For example: `{"protocol":"udp"}`.</p>
+     * <p><strong>Description</strong> For example: <code>{&quot;protocol&quot;:&quot;udp&quot;}</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>udp</p>
      */
     @NameInMap("Protocol")
     public String protocol;
 
     /**
      * <p>The ID of the resource group. If you do not specify a value for this parameter, the system automatically assigns the ID of the default resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The acceleration region. Default value: domestic. Valid values:</p>
-     * <br>
-     * <p>*   **domestic**: Chinese mainland</p>
-     * <p>*   **overseas**: outside the Chinese mainland</p>
-     * <p>*   **global**: global</p>
+     * <ul>
+     * <li><strong>domestic</strong>: Chinese mainland</li>
+     * <li><strong>overseas</strong>: outside the Chinese mainland</li>
+     * <li><strong>global</strong>: global</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>domestic</p>
      */
     @NameInMap("Scope")
     public String scope;
@@ -58,12 +73,19 @@ public class AddDcdnIpaDomainRequest extends TeaModel {
 
     /**
      * <p>The information about the addresses of origin servers.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;content&quot;:&quot;10.10.10.10&quot;,&quot;type&quot;:&quot;ipaddr&quot;,&quot;priority&quot;:&quot;20&quot;,&quot;port&quot;:80,&quot;weight&quot;:&quot;15&quot;}]</p>
      */
     @NameInMap("Sources")
     public String sources;
 
     /**
      * <p>The top-level domain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>*.com</p>
      */
     @NameInMap("TopLevelDomain")
     public String topLevelDomain;

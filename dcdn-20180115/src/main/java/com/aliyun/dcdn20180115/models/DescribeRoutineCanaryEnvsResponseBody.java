@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeRoutineCanaryEnvsResponseBody extends TeaModel {
     /**
      * <p>The canary release environments that are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>presetCanaryShanghai</p>
      */
     @NameInMap("Content")
     public java.util.Map<String, ?> content;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CDCD94C0-F7FE-412F-B8F8-7E3C610C78E5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
