@@ -107,6 +107,12 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         @NameInMap("cpuArchitectures")
         public java.util.List<String> cpuArchitectures;
 
+        @NameInMap("displayReleaseVersion")
+        public String displayReleaseVersion;
+
+        @NameInMap("fusion")
+        public Boolean fusion;
+
         /**
          * <p>The creation time.</p>
          * 
@@ -180,6 +186,22 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         }
         public java.util.List<String> getCpuArchitectures() {
             return this.cpuArchitectures;
+        }
+
+        public ListReleaseVersionsResponseBodyReleaseVersions setDisplayReleaseVersion(String displayReleaseVersion) {
+            this.displayReleaseVersion = displayReleaseVersion;
+            return this;
+        }
+        public String getDisplayReleaseVersion() {
+            return this.displayReleaseVersion;
+        }
+
+        public ListReleaseVersionsResponseBodyReleaseVersions setFusion(Boolean fusion) {
+            this.fusion = fusion;
+            return this;
+        }
+        public Boolean getFusion() {
+            return this.fusion;
         }
 
         public ListReleaseVersionsResponseBodyReleaseVersions setGmtCreate(Long gmtCreate) {

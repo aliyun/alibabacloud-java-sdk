@@ -278,11 +278,17 @@ public class ListSessionClustersResponseBody extends TeaModel {
         @NameInMap("autoStopConfiguration")
         public ListSessionClustersResponseBodySessionClustersAutoStopConfiguration autoStopConfiguration;
 
+        @NameInMap("displayReleaseVersion")
+        public String displayReleaseVersion;
+
         @NameInMap("domain")
         public String domain;
 
         @NameInMap("draftId")
         public String draftId;
+
+        @NameInMap("fusion")
+        public Boolean fusion;
 
         @NameInMap("kind")
         public String kind;
@@ -391,6 +397,14 @@ public class ListSessionClustersResponseBody extends TeaModel {
             return this.autoStopConfiguration;
         }
 
+        public ListSessionClustersResponseBodySessionClusters setDisplayReleaseVersion(String displayReleaseVersion) {
+            this.displayReleaseVersion = displayReleaseVersion;
+            return this;
+        }
+        public String getDisplayReleaseVersion() {
+            return this.displayReleaseVersion;
+        }
+
         public ListSessionClustersResponseBodySessionClusters setDomain(String domain) {
             this.domain = domain;
             return this;
@@ -405,6 +419,14 @@ public class ListSessionClustersResponseBody extends TeaModel {
         }
         public String getDraftId() {
             return this.draftId;
+        }
+
+        public ListSessionClustersResponseBodySessionClusters setFusion(Boolean fusion) {
+            this.fusion = fusion;
+            return this;
+        }
+        public Boolean getFusion() {
+            return this.fusion;
         }
 
         public ListSessionClustersResponseBodySessionClusters setKind(String kind) {

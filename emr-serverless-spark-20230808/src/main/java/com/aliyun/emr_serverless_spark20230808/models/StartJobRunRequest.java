@@ -33,6 +33,9 @@ public class StartJobRunRequest extends TeaModel {
     @NameInMap("configurationOverrides")
     public StartJobRunRequestConfigurationOverrides configurationOverrides;
 
+    @NameInMap("displayReleaseVersion")
+    public String displayReleaseVersion;
+
     /**
      * <p>The timeout period of the job.</p>
      * 
@@ -41,6 +44,9 @@ public class StartJobRunRequest extends TeaModel {
      */
     @NameInMap("executionTimeoutSeconds")
     public Integer executionTimeoutSeconds;
+
+    @NameInMap("fusion")
+    public Boolean fusion;
 
     /**
      * <p>The information about Spark Driver.</p>
@@ -128,12 +134,28 @@ public class StartJobRunRequest extends TeaModel {
         return this.configurationOverrides;
     }
 
+    public StartJobRunRequest setDisplayReleaseVersion(String displayReleaseVersion) {
+        this.displayReleaseVersion = displayReleaseVersion;
+        return this;
+    }
+    public String getDisplayReleaseVersion() {
+        return this.displayReleaseVersion;
+    }
+
     public StartJobRunRequest setExecutionTimeoutSeconds(Integer executionTimeoutSeconds) {
         this.executionTimeoutSeconds = executionTimeoutSeconds;
         return this;
     }
     public Integer getExecutionTimeoutSeconds() {
         return this.executionTimeoutSeconds;
+    }
+
+    public StartJobRunRequest setFusion(Boolean fusion) {
+        this.fusion = fusion;
+        return this;
+    }
+    public Boolean getFusion() {
+        return this.fusion;
     }
 
     public StartJobRunRequest setJobDriver(JobDriver jobDriver) {

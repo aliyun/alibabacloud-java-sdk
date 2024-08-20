@@ -52,6 +52,9 @@ public class Task extends TeaModel {
     @NameInMap("files")
     public java.util.List<String> files;
 
+    @NameInMap("fusion")
+    public Boolean fusion;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -279,6 +282,14 @@ public class Task extends TeaModel {
     }
     public java.util.List<String> getFiles() {
         return this.files;
+    }
+
+    public Task setFusion(Boolean fusion) {
+        this.fusion = fusion;
+        return this;
+    }
+    public Boolean getFusion() {
+        return this.fusion;
     }
 
     public Task setGmtCreated(String gmtCreated) {

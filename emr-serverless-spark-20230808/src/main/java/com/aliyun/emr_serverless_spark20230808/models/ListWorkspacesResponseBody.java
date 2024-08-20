@@ -179,6 +179,9 @@ public class ListWorkspacesResponseBody extends TeaModel {
         @NameInMap("dlfCatalogId")
         public String dlfCatalogId;
 
+        @NameInMap("dlfType")
+        public String dlfType;
+
         /**
          * <p>The subscription period. This parameter is required only if the paymentType parameter is set to Subscription.</p>
          * 
@@ -345,6 +348,14 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
         public String getDlfCatalogId() {
             return this.dlfCatalogId;
+        }
+
+        public ListWorkspacesResponseBodyWorkspaces setDlfType(String dlfType) {
+            this.dlfType = dlfType;
+            return this;
+        }
+        public String getDlfType() {
+            return this.dlfType;
         }
 
         public ListWorkspacesResponseBodyWorkspaces setDuration(Integer duration) {

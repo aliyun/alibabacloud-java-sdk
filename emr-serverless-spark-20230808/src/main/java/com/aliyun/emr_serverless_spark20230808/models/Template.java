@@ -10,6 +10,12 @@ public class Template extends TeaModel {
     @NameInMap("creator")
     public Long creator;
 
+    @NameInMap("displaySparkVersion")
+    public String displaySparkVersion;
+
+    @NameInMap("fusion")
+    public Boolean fusion;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -87,6 +93,22 @@ public class Template extends TeaModel {
     }
     public Long getCreator() {
         return this.creator;
+    }
+
+    public Template setDisplaySparkVersion(String displaySparkVersion) {
+        this.displaySparkVersion = displaySparkVersion;
+        return this;
+    }
+    public String getDisplaySparkVersion() {
+        return this.displaySparkVersion;
+    }
+
+    public Template setFusion(Boolean fusion) {
+        this.fusion = fusion;
+        return this;
+    }
+    public Boolean getFusion() {
+        return this.fusion;
     }
 
     public Template setGmtCreated(String gmtCreated) {
