@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImageModerationResponseBody extends TeaModel {
     /**
-     * <p>The returned HTTP status code.</p>
+     * <p>The returned HTTP status code. The status code 200 indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ImageModerationResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The moderation results.</p>
      */
     @NameInMap("Data")
     public ImageModerationResponseBodyData data;
@@ -29,7 +29,7 @@ public class ImageModerationResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID, which is used to locate and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>6CF2815C-C8C7-4A01-B52E-FF6E24F53492</p>
@@ -420,15 +420,39 @@ public class ImageModerationResponseBody extends TeaModel {
     }
 
     public static class ImageModerationResponseBodyDataExtPublicFigureLocation extends TeaModel {
+        /**
+         * <p>The height</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44</p>
+         */
         @NameInMap("H")
         public Integer h;
 
+        /**
+         * <p>The weight</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33</p>
+         */
         @NameInMap("W")
         public Integer w;
 
+        /**
+         * <p>X coordinate</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
+         */
         @NameInMap("X")
         public Integer x;
 
+        /**
+         * <p>Y coordinate</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
+         */
         @NameInMap("Y")
         public Integer y;
 
@@ -490,6 +514,9 @@ public class ImageModerationResponseBody extends TeaModel {
         @NameInMap("FigureName")
         public String figureName;
 
+        /**
+         * <p>the data array of location info</p>
+         */
         @NameInMap("Location")
         public java.util.List<ImageModerationResponseBodyDataExtPublicFigureLocation> location;
 
@@ -892,8 +919,11 @@ public class ImageModerationResponseBody extends TeaModel {
         @NameInMap("Confidence")
         public Float confidence;
 
+        @NameInMap("Description")
+        public String description;
+
         /**
-         * <p>The labels returned after the image moderation.</p>
+         * <p>The labels returned after the image moderation. Multiple risk labels and the corresponding scores of confidence levels may be returned for an image.</p>
          * 
          * <strong>example:</strong>
          * <p>violent_explosion</p>
@@ -914,6 +944,14 @@ public class ImageModerationResponseBody extends TeaModel {
             return this.confidence;
         }
 
+        public ImageModerationResponseBodyDataResult setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
         public ImageModerationResponseBodyDataResult setLabel(String label) {
             this.label = label;
             return this;
@@ -927,6 +965,9 @@ public class ImageModerationResponseBody extends TeaModel {
     public static class ImageModerationResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the moderated object.</p>
+         * <blockquote>
+         * <p> If you specify the dataId parameter in the request, the value of the dataId parameter is returned in the response.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>fb5ffab1-993b-449f-b8d6-b97d5e3331f2</p>
@@ -941,7 +982,7 @@ public class ImageModerationResponseBody extends TeaModel {
         public ImageModerationResponseBodyDataExt ext;
 
         /**
-         * <p>The results of image moderation parameters such as the label parameter and the confidence parameter.</p>
+         * <p>The results of image moderation parameters such as the label parameter and the confidence parameter, which are an array structure.</p>
          */
         @NameInMap("Result")
         public java.util.List<ImageModerationResponseBodyDataResult> result;
