@@ -4,6 +4,9 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class CreateJobRequest extends TeaModel {
+    @NameInMap("Accessibility")
+    public String accessibility;
+
     @NameInMap("CodeSource")
     public CreateJobRequestCodeSource codeSource;
 
@@ -120,6 +123,14 @@ public class CreateJobRequest extends TeaModel {
     public static CreateJobRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateJobRequest self = new CreateJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateJobRequest setAccessibility(String accessibility) {
+        this.accessibility = accessibility;
+        return this;
+    }
+    public String getAccessibility() {
+        return this.accessibility;
     }
 
     public CreateJobRequest setCodeSource(CreateJobRequestCodeSource codeSource) {
