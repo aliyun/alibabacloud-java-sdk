@@ -104,6 +104,12 @@ public class DescribeInstanceBillRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The code of the service. The code is the same as that in Cost Center.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rds</p>
+     */
     @NameInMap("PipCode")
     public String pipCode;
 

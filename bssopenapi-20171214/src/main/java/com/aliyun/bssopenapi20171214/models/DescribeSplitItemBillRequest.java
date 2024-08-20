@@ -55,6 +55,16 @@ public class DescribeSplitItemBillRequest extends TeaModel {
     @NameInMap("InstanceID")
     public String instanceID;
 
+    /**
+     * <p>Specifies whether to filter bills if both the pretax gross amount and pretax amount are 0. Valid values:</p>
+     * <ul>
+     * <li>false: does not filter bills.</li>
+     * <li>true: filters bills.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsHideZeroCharge")
     public Boolean isHideZeroCharge;
 
@@ -79,6 +89,12 @@ public class DescribeSplitItemBillRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The code of the service. The code is the same as that in Cost Center.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rds</p>
+     */
     @NameInMap("PipCode")
     public String pipCode;
 

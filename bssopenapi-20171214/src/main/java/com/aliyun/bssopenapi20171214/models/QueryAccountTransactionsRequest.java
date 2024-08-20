@@ -23,7 +23,7 @@ public class QueryAccountTransactionsRequest extends TeaModel {
     public String createTimeStart;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The number of the page to return. Default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class QueryAccountTransactionsRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries to return on each page. Default value is 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

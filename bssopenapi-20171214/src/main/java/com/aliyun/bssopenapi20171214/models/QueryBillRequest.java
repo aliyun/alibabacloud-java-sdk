@@ -90,8 +90,7 @@ public class QueryBillRequest extends TeaModel {
      * <li>Subscription</li>
      * <li>PayAsYouGo</li>
      * </ul>
-     * <p>**</p>
-     * <p>****This parameter must be used together with the ProductCode parameter.</p>
+     * <p>This parameter must be used together with the ProductCode parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Subscription</p>

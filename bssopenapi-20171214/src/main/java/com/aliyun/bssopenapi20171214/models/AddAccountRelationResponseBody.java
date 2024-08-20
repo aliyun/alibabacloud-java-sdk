@@ -93,7 +93,7 @@ public class AddAccountRelationResponseBody extends TeaModel {
 
     public static class AddAccountRelationResponseBodyData extends TeaModel {
         /**
-         * <p>HostId</p>
+         * <p>The IP address of the request</p>
          * 
          * <strong>example:</strong>
          * <p>HostId</p>

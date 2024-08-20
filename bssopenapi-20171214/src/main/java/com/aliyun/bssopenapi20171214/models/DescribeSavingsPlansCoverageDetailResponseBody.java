@@ -146,6 +146,10 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
         @NameInMap("InstanceSpec")
         public String instanceSpec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1906589291020438</p>
+         */
         @NameInMap("OwnerId")
         public Long ownerId;
 
