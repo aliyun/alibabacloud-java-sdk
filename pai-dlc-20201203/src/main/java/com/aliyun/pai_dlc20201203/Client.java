@@ -90,6 +90,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateJobResponse createJobWithOptions(CreateJobRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessibility)) {
+            body.put("Accessibility", request.accessibility);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.codeSource)) {
             body.put("CodeSource", request.codeSource);
         }
@@ -213,6 +217,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateTensorboardResponse createTensorboardWithOptions(CreateTensorboardRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessibility)) {
+            body.put("Accessibility", request.accessibility);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.cpu)) {
             body.put("Cpu", request.cpu);
         }
@@ -1090,6 +1098,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessibility)) {
+            query.put("Accessibility", request.accessibility);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.businessUserId)) {
             query.put("BusinessUserId", request.businessUserId);
         }
@@ -1217,6 +1229,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListTensorboardsResponse listTensorboardsWithOptions(ListTensorboardsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessibility)) {
+            query.put("Accessibility", request.accessibility);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
             query.put("DisplayName", request.displayName);
         }

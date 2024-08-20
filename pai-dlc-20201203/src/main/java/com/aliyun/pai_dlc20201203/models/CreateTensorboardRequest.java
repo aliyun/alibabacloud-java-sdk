@@ -4,6 +4,9 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class CreateTensorboardRequest extends TeaModel {
+    @NameInMap("Accessibility")
+    public String accessibility;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -116,6 +119,14 @@ public class CreateTensorboardRequest extends TeaModel {
     public static CreateTensorboardRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTensorboardRequest self = new CreateTensorboardRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateTensorboardRequest setAccessibility(String accessibility) {
+        this.accessibility = accessibility;
+        return this;
+    }
+    public String getAccessibility() {
+        return this.accessibility;
     }
 
     public CreateTensorboardRequest setCpu(Long cpu) {

@@ -4,6 +4,9 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class ListJobsShrinkRequest extends TeaModel {
+    @NameInMap("Accessibility")
+    public String accessibility;
+
     /**
      * <strong>example:</strong>
      * <p>16****</p>
@@ -138,6 +141,14 @@ public class ListJobsShrinkRequest extends TeaModel {
     public static ListJobsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListJobsShrinkRequest self = new ListJobsShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListJobsShrinkRequest setAccessibility(String accessibility) {
+        this.accessibility = accessibility;
+        return this;
+    }
+    public String getAccessibility() {
+        return this.accessibility;
     }
 
     public ListJobsShrinkRequest setBusinessUserId(String businessUserId) {
