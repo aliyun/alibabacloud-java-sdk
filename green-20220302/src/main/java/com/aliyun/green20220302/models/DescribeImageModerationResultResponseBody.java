@@ -84,6 +84,9 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         @NameInMap("Confidence")
         public Float confidence;
 
+        @NameInMap("Description")
+        public String description;
+
         /**
          * <p>The labels returned after the image moderation.</p>
          * 
@@ -104,6 +107,14 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         }
         public Float getConfidence() {
             return this.confidence;
+        }
+
+        public DescribeImageModerationResultResponseBodyDataResult setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribeImageModerationResultResponseBodyDataResult setLabel(String label) {

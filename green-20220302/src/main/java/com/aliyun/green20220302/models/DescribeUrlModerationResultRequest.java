@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUrlModerationResultRequest extends TeaModel {
     /**
-     * <p>The reqId field returned by the Url Async Moderation API.</p>
+     * <p>The ReqId field returned by an asynchronous URL moderation operation.</p>
      * 
      * <strong>example:</strong>
      * <p>B0963D30-BAB4-562F-9ED0-7A23AEC51C7C</p>

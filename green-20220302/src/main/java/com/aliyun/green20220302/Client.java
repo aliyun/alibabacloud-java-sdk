@@ -221,8 +221,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Billing: This operation is free of charge.</p>
+     * <ul>
+     * <li>Query timeout: We recommend that you query moderation results at least 480 seconds after you send an asynchronous moderation request. Content Moderation retains moderation results for up to 3 days. After 3 days, the results are deleted.</li>
+     * <li>You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询 url 检测结果</p>
+     * <p>Queries the moderation results based on the ReqId returned by asynchronous URL moderation.</p>
      * 
      * @param request DescribeUrlModerationResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -253,8 +260,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Billing: This operation is free of charge.</p>
+     * <ul>
+     * <li>Query timeout: We recommend that you query moderation results at least 480 seconds after you send an asynchronous moderation request. Content Moderation retains moderation results for up to 3 days. After 3 days, the results are deleted.</li>
+     * <li>You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询 url 检测结果</p>
+     * <p>Queries the moderation results based on the ReqId returned by asynchronous URL moderation.</p>
      * 
      * @param request DescribeUrlModerationResultRequest
      * @return DescribeUrlModerationResultResponse
@@ -361,8 +375,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>*Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/467826.html">billing</a><a href="https://www.aliyun.com/price/product?#/lvwang/detail/cdibag"></a> of Image Moderation 2.0.</p>
+     * 
      * <b>summary</b> : 
-     * <p>图片审核</p>
+     * <p>Identifies whether an image contains content or elements that violate relevant regulations on network content dissemination, affect the content order of a specific platform, or affect user experience. Image Moderation 2.0 supports over 90 content risk labels and over 100 risk control items. Image Moderation 2.0 of Content Moderation allows you to develop further moderation or governance measures for specific image content based on business scenarios, platform-specific content governance rules, or rich risk labels and scores of confidence levels returned by API calls.</p>
      * 
      * @param request ImageModerationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -397,8 +414,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>*Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/467826.html">billing</a><a href="https://www.aliyun.com/price/product?#/lvwang/detail/cdibag"></a> of Image Moderation 2.0.</p>
+     * 
      * <b>summary</b> : 
-     * <p>图片审核</p>
+     * <p>Identifies whether an image contains content or elements that violate relevant regulations on network content dissemination, affect the content order of a specific platform, or affect user experience. Image Moderation 2.0 supports over 90 content risk labels and over 100 risk control items. Image Moderation 2.0 of Content Moderation allows you to develop further moderation or governance measures for specific image content based on business scenarios, platform-specific content governance rules, or rich risk labels and scores of confidence levels returned by API calls.</p>
      * 
      * @param request ImageModerationRequest
      * @return ImageModerationResponse

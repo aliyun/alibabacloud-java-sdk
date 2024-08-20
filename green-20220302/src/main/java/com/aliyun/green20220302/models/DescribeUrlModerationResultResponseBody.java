@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUrlModerationResultResponseBody extends TeaModel {
     /**
-     * <p>The returned HTTP status code.</p>
+     * <p>The returned HTTP status code. The status code 200 indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -76,7 +76,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
 
     public static class DescribeUrlModerationResultResponseBodyDataExtraInfo extends TeaModel {
         /**
-         * <p>ICP record number.</p>
+         * <p>The ICP number.</p>
          * 
          * <strong>example:</strong>
          * <p>xx</p>
@@ -85,7 +85,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
         public String icpNo;
 
         /**
-         * <p>ICP filing type.</p>
+         * <p>The type of the ICP filing.</p>
          * 
          * <strong>example:</strong>
          * <p>xx</p>
@@ -93,6 +93,12 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
         @NameInMap("IcpType")
         public String icpType;
 
+        /**
+         * <p>The type of site</p>
+         * 
+         * <strong>example:</strong>
+         * <p>game</p>
+         */
         @NameInMap("SiteType")
         public String siteType;
 
@@ -129,7 +135,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
 
     public static class DescribeUrlModerationResultResponseBodyDataResult extends TeaModel {
         /**
-         * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places. Some labels do not have scores of confidence levels.</p>
+         * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.</p>
          * 
          * <strong>example:</strong>
          * <p>81.22</p>
@@ -138,7 +144,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
         public Float confidence;
 
         /**
-         * <p>The labels returned after the url async moderation.</p>
+         * <p>The labels returned after the asynchronous URL moderation.</p>
          * 
          * <strong>example:</strong>
          * <p>sexual_url</p>
@@ -171,7 +177,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
 
     public static class DescribeUrlModerationResultResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the moderated object.</p>
+         * <p>The value of dataId that is specified in the API request. If this parameter is not specified in the API request, this field is not available in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>26769ada6e264e7ba9aa048241e12be9</p>
@@ -180,13 +186,13 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
         public String dataId;
 
         /**
-         * <p>Supplementary information.</p>
+         * <p>The supplementary information.</p>
          */
         @NameInMap("ExtraInfo")
         public DescribeUrlModerationResultResponseBodyDataExtraInfo extraInfo;
 
         /**
-         * <p>The reqId field returned by the Url Async Moderation API.</p>
+         * <p>The ReqId field returned by an asynchronous URL moderation operation.</p>
          * 
          * <strong>example:</strong>
          * <p>B0963D30-BAB4-562F-9ED0-7A23AEC51C7C</p>
@@ -195,7 +201,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
         public String reqId;
 
         /**
-         * <p>The results of url async moderation parameters such as the label parameter and the confidence parameter.</p>
+         * <p>The returned results.</p>
          */
         @NameInMap("Result")
         public java.util.List<DescribeUrlModerationResultResponseBodyDataResult> result;
