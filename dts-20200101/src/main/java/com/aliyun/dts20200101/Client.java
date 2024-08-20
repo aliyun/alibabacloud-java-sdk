@@ -1574,6 +1574,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DestinationRegion", request.destinationRegion);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dtsRegion)) {
+            query.put("DtsRegion", request.dtsRegion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.du)) {
             query.put("Du", request.du);
         }

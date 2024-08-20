@@ -101,6 +101,9 @@ public class CreateDtsInstanceRequest extends TeaModel {
     @NameInMap("DestinationRegion")
     public String destinationRegion;
 
+    @NameInMap("DtsRegion")
+    public String dtsRegion;
+
     /**
      * <p>The number of DTS units (DUs) that are assigned to a DTS task that is run on a DTS dedicated cluster. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
      * <blockquote>
@@ -373,6 +376,14 @@ public class CreateDtsInstanceRequest extends TeaModel {
     }
     public String getDestinationRegion() {
         return this.destinationRegion;
+    }
+
+    public CreateDtsInstanceRequest setDtsRegion(String dtsRegion) {
+        this.dtsRegion = dtsRegion;
+        return this;
+    }
+    public String getDtsRegion() {
+        return this.dtsRegion;
     }
 
     public CreateDtsInstanceRequest setDu(Integer du) {
