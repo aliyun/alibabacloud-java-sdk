@@ -1517,15 +1517,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Take note of the following items:</p>
      * <ul>
-     * <li>The ENI must be in the <strong>Available</strong> state. You can attach an ENI to only one instance that resides in the same zone and VPC as the ENI.``</li>
-     * <li>The instance must be in the Running or Stopped state. When you attach ENIs to instances of specific instance types, make sure that the instances are in the Stopped state. For more information, see the &quot;Instance types of the ECS instances that must be in the Stopped (Stopped) state&quot; section in the <a href="https://help.aliyun.com/document_detail/58503.html">Bind an ENI</a> topic.
-     * **
-     * <strong>Note</strong>If the last start time of the instance (including the start time of the instance if it is a new instance, the last restart time of the instance, and the last reactivation time of the instance) is before April 1st, 2018 and the instance is in the Running state, you must call the RebootInstance operation to restart the instance. If you do not call the RebootInstance operation to restart the instance, you cannot attach the ENI to the instance.</li>
+     * <li>The ENI must be in the <strong>Available</strong> state. You can attach an ENI to only one instance that resides in the same zone and VPC as the ENI.</li>
+     * <li>The instance must be in the Running or Stopped state. When you attach ENIs to instances of specific instance types, make sure that the instances are in the Stopped state. For more information, see the &quot;Instance types of the ECS instances that must be in the Stopped (Stopped) state&quot; section in the <a href="https://help.aliyun.com/document_detail/58503.html">Bind an ENI</a> topic.<blockquote>
+     * <p>If the last start time of the instance (including the start time of the instance if it is a new instance, the last restart time of the instance, and the last reactivation time of the instance) is before April 1st, 2018 and the instance is in the Running state, you must call the RebootInstance operation to restart the instance. If you do not call the RebootInstance operation to restart the instance, you cannot attach the ENI to the instance.</p>
+     * </blockquote>
+     * </li>
      * <li>You can attach multiple ENIs to one instance. For more information, see <a href="https://help.aliyun.com/document_detail/58496.html">ENI overview</a>.</li>
      * <li>The vSwitch to which the ENI is connected must be in the same zone and VPC as the vSwitch to which the instance is connected.</li>
      * <li>This operation is an asynchronous operation. After you call this operation to attach an ENI, you can view the status or events of the ENI to check whether the ENI is attached. The following figure shows the transitions between the statuses of the ENI.
-     * <img src="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/file-manage-files/zh-CN/20221124/esgu/AttachNetworkInterface.jpg" alt=""> If the ENI is in the Attaching state, the ENI attachment request is sent and the ENI is being attached to the specified instance. If the ENI is in the InUse state, the ENI is attached to the specified instance. If the ENI is in the Available state, the ENI failed to be attached.
-     * **For examples on how to call this operation, see **<a href="https://help.aliyun.com/document_detail/471550.html">Attach an ENI</a>.</li>
+     * <img src="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/file-manage-files/en-US/20230223/vqky/AttachNetworkInterface.png" alt=""></li>
+     * </ul>
+     * <ul>
+     * <li>If the ENI is in the Attaching state, the ENI attachment request is sent and the ENI is being attached to the specified instance. </li>
+     * <li>If the ENI is in the InUse state, the ENI is attached to the specified instance.</li>
+     * <li>If the ENI is in the Available state, the ENI failed to be attached.
+     * <strong>For examples on how to call this operation, see</strong> <a href="https://help.aliyun.com/document_detail/471550.html">Attach an ENI</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1603,15 +1609,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Take note of the following items:</p>
      * <ul>
-     * <li>The ENI must be in the <strong>Available</strong> state. You can attach an ENI to only one instance that resides in the same zone and VPC as the ENI.``</li>
-     * <li>The instance must be in the Running or Stopped state. When you attach ENIs to instances of specific instance types, make sure that the instances are in the Stopped state. For more information, see the &quot;Instance types of the ECS instances that must be in the Stopped (Stopped) state&quot; section in the <a href="https://help.aliyun.com/document_detail/58503.html">Bind an ENI</a> topic.
-     * **
-     * <strong>Note</strong>If the last start time of the instance (including the start time of the instance if it is a new instance, the last restart time of the instance, and the last reactivation time of the instance) is before April 1st, 2018 and the instance is in the Running state, you must call the RebootInstance operation to restart the instance. If you do not call the RebootInstance operation to restart the instance, you cannot attach the ENI to the instance.</li>
+     * <li>The ENI must be in the <strong>Available</strong> state. You can attach an ENI to only one instance that resides in the same zone and VPC as the ENI.</li>
+     * <li>The instance must be in the Running or Stopped state. When you attach ENIs to instances of specific instance types, make sure that the instances are in the Stopped state. For more information, see the &quot;Instance types of the ECS instances that must be in the Stopped (Stopped) state&quot; section in the <a href="https://help.aliyun.com/document_detail/58503.html">Bind an ENI</a> topic.<blockquote>
+     * <p>If the last start time of the instance (including the start time of the instance if it is a new instance, the last restart time of the instance, and the last reactivation time of the instance) is before April 1st, 2018 and the instance is in the Running state, you must call the RebootInstance operation to restart the instance. If you do not call the RebootInstance operation to restart the instance, you cannot attach the ENI to the instance.</p>
+     * </blockquote>
+     * </li>
      * <li>You can attach multiple ENIs to one instance. For more information, see <a href="https://help.aliyun.com/document_detail/58496.html">ENI overview</a>.</li>
      * <li>The vSwitch to which the ENI is connected must be in the same zone and VPC as the vSwitch to which the instance is connected.</li>
      * <li>This operation is an asynchronous operation. After you call this operation to attach an ENI, you can view the status or events of the ENI to check whether the ENI is attached. The following figure shows the transitions between the statuses of the ENI.
-     * <img src="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/file-manage-files/zh-CN/20221124/esgu/AttachNetworkInterface.jpg" alt=""> If the ENI is in the Attaching state, the ENI attachment request is sent and the ENI is being attached to the specified instance. If the ENI is in the InUse state, the ENI is attached to the specified instance. If the ENI is in the Available state, the ENI failed to be attached.
-     * **For examples on how to call this operation, see **<a href="https://help.aliyun.com/document_detail/471550.html">Attach an ENI</a>.</li>
+     * <img src="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/file-manage-files/en-US/20230223/vqky/AttachNetworkInterface.png" alt=""></li>
+     * </ul>
+     * <ul>
+     * <li>If the ENI is in the Attaching state, the ENI attachment request is sent and the ENI is being attached to the specified instance. </li>
+     * <li>If the ENI is in the InUse state, the ENI is attached to the specified instance.</li>
+     * <li>If the ENI is in the Available state, the ENI failed to be attached.
+     * <strong>For examples on how to call this operation, see</strong> <a href="https://help.aliyun.com/document_detail/471550.html">Attach an ENI</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9530,11 +9542,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>The ENI is automatically removed from all security groups.</li>
      * </ul>
      * </li>
-     * <li>The DeleteNetworkInterface operation is an asynchronous operation. After this operation is called to delete an ENI, you can check the status or events of the ENI to determine whether the ENI is deleted. The following figure shows the transitions between the states of the ENI.<img src="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/file-manage-files/zh-CN/20221208/xual/DeleteNetworkInterface.jpg" alt=""><ul>
+     * <li>The DeleteNetworkInterface operation is an asynchronous operation. After this operation is called to delete an ENI, you can check the status or events of the ENI to determine whether the ENI is deleted. The following figure shows the transitions between the states of the ENI.
+     * <img src="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/file-manage-files/en-US/20230223/krcd/DeleteNetworkInterface.png" alt=""><ul>
      * <li>If the ENI is in the Deleting state, the ENI deletion request is sent and the ENI is being deleted.</li>
      * <li>If the ENI is not found, the ENI is deleted.</li>
      * <li>If the ENI is stuck in the Deleting state, the ENI fails to be deleted. You can re-initiate the request to delete the ENI.
-     * **For information about examples on how to call the DeleteNetworkInterface operation, see **<a href="https://help.aliyun.com/document_detail/471553.html">Delete an ENI</a>.</li>
+     * For information about examples on how to call the DeleteNetworkInterface operation, see<a href="https://help.aliyun.com/document_detail/471553.html">Delete an ENI</a>.</li>
      * </ul>
      * </li>
      * </ul>
@@ -9605,11 +9618,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>The ENI is automatically removed from all security groups.</li>
      * </ul>
      * </li>
-     * <li>The DeleteNetworkInterface operation is an asynchronous operation. After this operation is called to delete an ENI, you can check the status or events of the ENI to determine whether the ENI is deleted. The following figure shows the transitions between the states of the ENI.<img src="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/file-manage-files/zh-CN/20221208/xual/DeleteNetworkInterface.jpg" alt=""><ul>
+     * <li>The DeleteNetworkInterface operation is an asynchronous operation. After this operation is called to delete an ENI, you can check the status or events of the ENI to determine whether the ENI is deleted. The following figure shows the transitions between the states of the ENI.
+     * <img src="https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/file-manage-files/en-US/20230223/krcd/DeleteNetworkInterface.png" alt=""><ul>
      * <li>If the ENI is in the Deleting state, the ENI deletion request is sent and the ENI is being deleted.</li>
      * <li>If the ENI is not found, the ENI is deleted.</li>
      * <li>If the ENI is stuck in the Deleting state, the ENI fails to be deleted. You can re-initiate the request to delete the ENI.
-     * **For information about examples on how to call the DeleteNetworkInterface operation, see **<a href="https://help.aliyun.com/document_detail/471553.html">Delete an ENI</a>.</li>
+     * For information about examples on how to call the DeleteNetworkInterface operation, see<a href="https://help.aliyun.com/document_detail/471553.html">Delete an ENI</a>.</li>
      * </ul>
      * </li>
      * </ul>
@@ -14485,7 +14499,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the accounts with which a custom image is shared. The response can be displayed by page. By default, 10 entries are displayed per page.</p>
+     * <p>Queries the accounts with which a custom image is shared. When you call this operation, you can specify parameters, such as RegionId and ImageId, in the request. The response can be displayed by page. By default, 10 entries are displayed on each page.</p>
      * 
      * @param request DescribeImageSharePermissionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14545,7 +14559,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the accounts with which a custom image is shared. The response can be displayed by page. By default, 10 entries are displayed per page.</p>
+     * <p>Queries the accounts with which a custom image is shared. When you call this operation, you can specify parameters, such as RegionId and ImageId, in the request. The response can be displayed by page. By default, 10 entries are displayed on each page.</p>
      * 
      * @param request DescribeImageSharePermissionRequest
      * @return DescribeImageSharePermissionResponse
@@ -30213,6 +30227,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Scope", request.scope);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
             query.put("Tag", request.tag);
         }
@@ -33787,10 +33805,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>$.parameters[2].schema.example</p>
+     * <p>Take note of the following items:</p>
+     * <ul>
+     * <li>The ECS instance must be in the <code>Stopped</code> state.</li>
+     * <li>If <code>OperationLocks</code> in the response of the DescribeInstances operation contains <code>&quot;LockReason&quot; : &quot;security&quot;</code> for an instance, the instance is <a href="https://help.aliyun.com/document_detail/25695.html">locked for security reasons</a> and cannot be started.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>$.parameters[2].schema.description</p>
+     * <p>Starts an Elastic Compute Service (ECS) instance. After the operation is called, the instance enters the Starting state.</p>
      * 
      * @param request StartInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -33846,10 +33868,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>$.parameters[2].schema.example</p>
+     * <p>Take note of the following items:</p>
+     * <ul>
+     * <li>The ECS instance must be in the <code>Stopped</code> state.</li>
+     * <li>If <code>OperationLocks</code> in the response of the DescribeInstances operation contains <code>&quot;LockReason&quot; : &quot;security&quot;</code> for an instance, the instance is <a href="https://help.aliyun.com/document_detail/25695.html">locked for security reasons</a> and cannot be started.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>$.parameters[2].schema.description</p>
+     * <p>Starts an Elastic Compute Service (ECS) instance. After the operation is called, the instance enters the Starting state.</p>
      * 
      * @param request StartInstanceRequest
      * @return StartInstanceResponse
@@ -33861,16 +33887,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>Take note of the following items:</p>
+     * <p>When you call this operation, take note of the following items:</p>
      * <ul>
-     * <li>The instances to be started must be in the <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
-     * <li>If the response contains <code>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</code> when you query the information of an instance, the instance is locked for security reasons. No operations are allowed on the instance.</li>
-     * <li>You can use <code>BatchOptimization</code> to specify the batch operation mode and restart multiple instances at a time.</li>
+     * <li>The ECS instances that you want to start must be in the <strong>Stopped</strong> state.``</li>
+     * <li>If the response contains <code>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</code>, the ECS instance is locked to ensure security. No operations are allowed on the ECS instance.</li>
+     * <li>You can start multiple ECS instances at the same time and use the <code>BatchOptimization</code> parameter to specify the batch operation mode.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Starts Elastic Compute Service (ECS) instances that are in the Stopped state. After the operation is called, the instances enter the Starting state.</p>
+     * <p>Starts Elastic Compute Service (ECS) instances that are in the Stopped state.</p>
      * 
      * @param request StartInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -33930,16 +33955,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>Take note of the following items:</p>
+     * <p>When you call this operation, take note of the following items:</p>
      * <ul>
-     * <li>The instances to be started must be in the <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
-     * <li>If the response contains <code>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</code> when you query the information of an instance, the instance is locked for security reasons. No operations are allowed on the instance.</li>
-     * <li>You can use <code>BatchOptimization</code> to specify the batch operation mode and restart multiple instances at a time.</li>
+     * <li>The ECS instances that you want to start must be in the <strong>Stopped</strong> state.``</li>
+     * <li>If the response contains <code>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</code>, the ECS instance is locked to ensure security. No operations are allowed on the ECS instance.</li>
+     * <li>You can start multiple ECS instances at the same time and use the <code>BatchOptimization</code> parameter to specify the batch operation mode.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Starts Elastic Compute Service (ECS) instances that are in the Stopped state. After the operation is called, the instances enter the Starting state.</p>
+     * <p>Starts Elastic Compute Service (ECS) instances that are in the Stopped state.</p>
      * 
      * @param request StartInstancesRequest
      * @return StartInstancesResponse

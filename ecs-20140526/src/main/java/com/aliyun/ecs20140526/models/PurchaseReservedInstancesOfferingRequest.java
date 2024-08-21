@@ -169,6 +169,9 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     @NameInMap("Scope")
     public String scope;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     /**
      * <p>The list of tags.</p>
      */
@@ -331,6 +334,14 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     }
     public String getScope() {
         return this.scope;
+    }
+
+    public PurchaseReservedInstancesOfferingRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public PurchaseReservedInstancesOfferingRequest setTag(java.util.List<PurchaseReservedInstancesOfferingRequestTag> tag) {

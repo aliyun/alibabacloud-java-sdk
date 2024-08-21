@@ -5,7 +5,12 @@ import com.aliyun.tea.*;
 
 public class StartInstancesRequest extends TeaModel {
     /**
-     * <p>The IDs of the ECS instances. You can specify up to 100 ECS instance IDs.</p>
+     * <p>The batch operation mode. Valid values:</p>
+     * <ul>
+     * <li>AllTogether: starts all ECS instances at the same time. If all ECS instances are started, a success message is returned. If an ECS instance fails to be started, all the specified instances fail to be started and an error message is returned.</li>
+     * <li>SuccessFirst: separately starts each ECS instance. The response contains the operation results of each ECS instance.</li>
+     * </ul>
+     * <p>Default value: AllTogether.</p>
      * 
      * <strong>example:</strong>
      * <p>AllTogether</p>
@@ -14,7 +19,17 @@ public class StartInstancesRequest extends TeaModel {
     public String batchOptimization;
 
     /**
-     * <p>The region ID of the ECS instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <ul>
+     * <li>true: performs only a dry run. The system checks the request for potential issues, including required parameters, request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, <code>DRYRUN.SUCCESS</code> is returned.</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you set <code>BatchOptimization</code> to <code>SuccessFirst</code> and <code>DryRun</code> to true, only <code>DRYRUN.SUCCESS</code> is returned regardless of whether the request passes the dry run.</p>
+     * </blockquote>
+     * <ul>
+     * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.</li>
+     * </ul>
+     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -23,7 +38,7 @@ public class StartInstancesRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ID of instance N. Valid values of N: 1 to 100.</p>
+     * <p>The IDs of the ECS instances. You can specify up to 100 ECS instance IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,12 +54,7 @@ public class StartInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The batch operation mode. Valid values:</p>
-     * <ul>
-     * <li>AllTogether: starts all ECS instances at the same time. If all ECS instances are started, a success message is returned. If an ECS instance fails to be started, all the specified instances fail to be started and an error message is returned.</li>
-     * <li>SuccessFirst: separately starts each ECS instance. The response contains the operation results of each ECS instance.</li>
-     * </ul>
-     * <p>Default value: AllTogether.</p>
+     * <p>The region ID of the ECS instance. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

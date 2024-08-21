@@ -171,23 +171,23 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
          * <p>The error message returned when the command failed to be sent or run. Valid values:</p>
          * <ul>
          * <li>If this parameter is empty, the command was run as expected.</li>
-         * <li>the specified instance does not exists</li>
-         * <li>the instance has released when create task</li>
-         * <li>the instance is not running when create task</li>
-         * <li>the command is not applicable</li>
-         * <li>the specified account does not exists</li>
-         * <li>the specified directory does not exists</li>
-         * <li>the cron job expression is invalid</li>
-         * <li>the aliyun service is not running on the instance</li>
-         * <li>the aliyun service in the instance does not response</li>
-         * <li>the aliyun service in the instance is upgrading now</li>
-         * <li>the aliyun service in the instance need upgrade</li>
-         * <li>the command delivery has been timeout</li>
-         * <li>the command execution has been timeout</li>
-         * <li>the command execution got an exception</li>
-         * <li>the command execution has been interrupted</li>
-         * <li>the command execution exit code is not zero</li>
-         * <li>the specified instance has been released</li>
+         * <li>The security group rules denied access to the aliyun service.</li>
+         * <li>The specified instance does not exist.</li>
+         * <li>The specified instance was released during task execution.</li>
+         * <li>The specified instance was not running during task execution.</li>
+         * <li>The OS type of the instance does not support the specified command type.</li>
+         * <li>The specified account does not exist.</li>
+         * <li>The specified directory does not exist.</li>
+         * <li>The cron expression is invalid.</li>
+         * <li>The aliyun service is not running on the instance.</li>
+         * <li>The aliyun service in the instance does not response.</li>
+         * <li>The aliyun service in the instance is upgrading during task execution.</li>
+         * <li>The aliyun service in the instance need to be upgraded to at least version to support the feature. indicates the earliest version that supports the feature. indicates the name of the feature.</li>
+         * <li>The command delivery has been timeout.</li>
+         * <li>The command execution has been timeout.</li>
+         * <li>The command execution got an exception.</li>
+         * <li>The command execution exit code is not zero.</li>
+         * <li>The specified instance was released during task execution.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -322,6 +322,12 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         @NameInMap("InvokeRecordStatus")
         public String invokeRecordStatus;
 
+        /**
+         * <p>The launcher for script execution. The value cannot exceed 1 KB in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>python3 -u {{ACS::ScriptFileName|Ext(&quot;.py&quot;)}}</p>
+         */
         @NameInMap("Launcher")
         public String launcher;
 
