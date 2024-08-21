@@ -4,12 +4,30 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class EncryptResponseBody extends TeaModel {
+    /**
+     * <p>The unique identifier of the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345678-1234-1234-1234-12345678****</p>
+     */
     @NameInMap("CertIdentifier")
     public String certIdentifier;
 
+    /**
+     * <p>The data after encryption. The value is encoded in Base64.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ZOyIygCyaOW6Gj****MlNKiuyjfzw=</p>
+     */
     @NameInMap("CiphertextBlob")
     public String ciphertextBlob;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5979d897-d69f-4fc9-87dd-f3bb73c40b80</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

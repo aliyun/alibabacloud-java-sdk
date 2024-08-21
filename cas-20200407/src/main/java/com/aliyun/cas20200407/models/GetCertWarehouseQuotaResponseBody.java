@@ -4,12 +4,30 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class GetCertWarehouseQuotaResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total quota for certificate repositories, including the free quota and purchased quota.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5000</p>
+     */
     @NameInMap("TotalQuota")
     public Long totalQuota;
 
+    /**
+     * <p>The used quota.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("UseCount")
     public Long useCount;
 

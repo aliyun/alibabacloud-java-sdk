@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class CancelOrderRequestResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>082FAB35-6AB9-4FD5-8750-D36673548E76</p>
      */
     @NameInMap("RequestId")
     public String requestId;

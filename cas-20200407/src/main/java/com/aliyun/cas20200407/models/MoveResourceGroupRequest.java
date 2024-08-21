@@ -5,34 +5,46 @@ import com.aliyun.tea.*;
 
 public class MoveResourceGroupRequest extends TeaModel {
     /**
-     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
-     * <br>
-     * <p>*   cn-hangzhou: Your assets reside in regions in China.</p>
-     * <p>*   ap-southeast-1: Your assets reside in regions outside China.</p>
+     * <p>The region of the organization to which the owner of the certificate belongs. Valid values: ap-southeast-1 and cn-hangzhou.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmykgxu5d46ey</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The resource ID.</p>
-     * <br>
+     * <p>The ID of the resource.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cas-cn-4591d3xa****</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
-     * <p>The type of the resource.</p>
-     * <br>
+     * <p>The type of the resource.\
+     * Default value: <strong>instance</strong></p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>instance: certificate order</li>
+     * <li>Certificate: certificate</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

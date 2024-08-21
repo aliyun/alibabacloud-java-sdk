@@ -5,31 +5,43 @@ import com.aliyun.tea.*;
 
 public class ListCertResponseBody extends TeaModel {
     /**
-     * <p>The certificates.</p>
+     * <p>An array that consists of the certificates.</p>
      */
     @NameInMap("CertList")
     public java.util.List<ListCertResponseBodyCertList> certList;
 
     /**
      * <p>The page number of the returned page. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Long currentPage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of entries returned per page. Default value: 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("ShowSize")
     public Long showSize;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -82,84 +94,124 @@ public class ListCertResponseBody extends TeaModel {
     public static class ListCertResponseBodyCertList extends TeaModel {
         /**
          * <p>The expiration time of the certificate. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1634283958000</p>
          */
         @NameInMap("AfterDate")
         public Long afterDate;
 
         /**
          * <p>The issuance time of the certificate. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1665819958000</p>
          */
         @NameInMap("BeforeDate")
         public Long beforeDate;
 
         /**
-         * <p>The type of the certificate.</p>
-         * <br>
-         * <p>*   **CA**: the CA certificate.</p>
-         * <p>*   **CERT**: a issued certificate.</p>
+         * <p>证书的类型 。取值：</p>
+         * <ul>
+         * <li><strong>CA</strong>：表示CA证书。</li>
+         * <li><strong>CERT</strong>：表示签发的证书。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CERT</p>
          */
         @NameInMap("CertType")
         public String certType;
 
         /**
          * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun.alibaba.com</p>
          */
         @NameInMap("CommonName")
         public String commonName;
 
         /**
          * <p>Indicates whether the certificate contains a private key. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("ExistPrivateKey")
         public Boolean existPrivateKey;
 
         /**
          * <p>The unique identifier of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14dcc8afc7578e</p>
          */
         @NameInMap("Identifier")
         public String identifier;
 
         /**
          * <p>The issuer of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mySSL</p>
          */
         @NameInMap("Issuer")
         public String issuer;
 
         /**
-         * <p>All domain names that are bound to the certificate. Multiple domain names are separated by commas (,).</p>
+         * <p>The domain names that are bound to the certificate. Multiple domain names are separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>*.alibaba.com,aliyun.alibaba.com</p>
          */
         @NameInMap("Sans")
         public String sans;
 
         /**
          * <p>The source of the certificate. Valid values:</p>
-         * <br>
-         * <p>*   **upload**: uploaded certificate</p>
-         * <p>*   **aliyun**: Alibaba Cloud certificate</p>
+         * <ul>
+         * <li><strong>upload</strong>: uploaded certificate</li>
+         * <li><strong>aliyun</strong>: Alibaba Cloud certificate</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
 
         /**
          * <p>The status of the certificate. Valid values:</p>
-         * <br>
-         * <p>*   **ISSUE**: issued</p>
-         * <p>*   **REVOKE**: revoked</p>
+         * <ul>
+         * <li><strong>ISSUE</strong>: issued</li>
+         * <li><strong>REVOKE</strong>: revoked</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ISSUE</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The ID of the certificate application repository.</p>
+         * <p>The ID of the certificate repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("WhId")
         public Long whId;
 
         /**
-         * <p>The instance ID of the certificate application repository.</p>
+         * <p>The instance ID of the certificate repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_whInstanceId</p>
          */
         @NameInMap("WhInstanceId")
         public String whInstanceId;

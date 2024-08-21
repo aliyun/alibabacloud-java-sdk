@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteUserCertificateResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3E50D480-9765-5CFD-9650-9BACCECA5135</p>
      */
     @NameInMap("RequestId")
     public String requestId;

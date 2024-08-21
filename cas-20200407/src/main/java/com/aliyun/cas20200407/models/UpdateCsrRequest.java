@@ -5,15 +5,21 @@ import com.aliyun.tea.*;
 
 public class UpdateCsrRequest extends TeaModel {
     /**
-     * <p>CSR ID。</p>
-     * <br>
+     * <p>The ID of the CSR.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5209</p>
      */
     @NameInMap("CsrId")
     public Long csrId;
 
     /**
+     * <p>The private key content of the certificate in the PEM format.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-----BEGIN RSA PRIVATE KEY----- MII.... -----END RSA PRIVATE KEY-----</p>
      */
     @NameInMap("Key")
     public String key;

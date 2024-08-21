@@ -3,9 +3,9 @@ package com.aliyun.cas20200407.models;
 
 import com.aliyun.tea.*;
 
-public class ListCloudResourcesRequest extends TeaModel {
+public class ListCloudResourcesShrinkRequest extends TeaModel {
     @NameInMap("CertIds")
-    public java.util.List<Long> certIds;
+    public String certIdsShrink;
 
     /**
      * <p>The cloud service provider.</p>
@@ -66,20 +66,20 @@ public class ListCloudResourcesRequest extends TeaModel {
     @NameInMap("ShowSize")
     public Integer showSize;
 
-    public static ListCloudResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListCloudResourcesRequest self = new ListCloudResourcesRequest();
+    public static ListCloudResourcesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListCloudResourcesShrinkRequest self = new ListCloudResourcesShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListCloudResourcesRequest setCertIds(java.util.List<Long> certIds) {
-        this.certIds = certIds;
+    public ListCloudResourcesShrinkRequest setCertIdsShrink(String certIdsShrink) {
+        this.certIdsShrink = certIdsShrink;
         return this;
     }
-    public java.util.List<Long> getCertIds() {
-        return this.certIds;
+    public String getCertIdsShrink() {
+        return this.certIdsShrink;
     }
 
-    public ListCloudResourcesRequest setCloudName(String cloudName) {
+    public ListCloudResourcesShrinkRequest setCloudName(String cloudName) {
         this.cloudName = cloudName;
         return this;
     }
@@ -87,7 +87,7 @@ public class ListCloudResourcesRequest extends TeaModel {
         return this.cloudName;
     }
 
-    public ListCloudResourcesRequest setCloudProduct(String cloudProduct) {
+    public ListCloudResourcesShrinkRequest setCloudProduct(String cloudProduct) {
         this.cloudProduct = cloudProduct;
         return this;
     }
@@ -95,7 +95,7 @@ public class ListCloudResourcesRequest extends TeaModel {
         return this.cloudProduct;
     }
 
-    public ListCloudResourcesRequest setCurrentPage(Integer currentPage) {
+    public ListCloudResourcesShrinkRequest setCurrentPage(Integer currentPage) {
         this.currentPage = currentPage;
         return this;
     }
@@ -103,7 +103,7 @@ public class ListCloudResourcesRequest extends TeaModel {
         return this.currentPage;
     }
 
-    public ListCloudResourcesRequest setKeyword(String keyword) {
+    public ListCloudResourcesShrinkRequest setKeyword(String keyword) {
         this.keyword = keyword;
         return this;
     }
@@ -111,7 +111,7 @@ public class ListCloudResourcesRequest extends TeaModel {
         return this.keyword;
     }
 
-    public ListCloudResourcesRequest setSecretId(String secretId) {
+    public ListCloudResourcesShrinkRequest setSecretId(String secretId) {
         this.secretId = secretId;
         return this;
     }
@@ -119,7 +119,7 @@ public class ListCloudResourcesRequest extends TeaModel {
         return this.secretId;
     }
 
-    public ListCloudResourcesRequest setShowSize(Integer showSize) {
+    public ListCloudResourcesShrinkRequest setShowSize(Integer showSize) {
         this.showSize = showSize;
         return this;
     }

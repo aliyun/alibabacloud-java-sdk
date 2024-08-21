@@ -4,15 +4,53 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class ListDeploymentJobRequest extends TeaModel {
+    /**
+     * <p>The page number. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The type of the deployment task.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>cloud: multi-cloud deployment task.</li>
+     * <li>user: cloud service deployment task. This type of task does not support Elastic Compute Service (ECS) instances.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>user</p>
+     */
     @NameInMap("JobType")
     public String jobType;
 
+    /**
+     * <p>The number of certificates per page. Default value: <strong>50</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("ShowSize")
     public Integer showSize;
 
+    /**
+     * <p>The status of the deployment task.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>success</li>
+     * <li>pending</li>
+     * <li>scheduling</li>
+     * <li>processing</li>
+     * <li>error</li>
+     * <li>editing</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>pending</p>
+     */
     @NameInMap("Status")
     public String status;
 

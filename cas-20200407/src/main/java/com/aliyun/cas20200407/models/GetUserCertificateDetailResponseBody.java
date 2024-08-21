@@ -6,150 +6,259 @@ import com.aliyun.tea.*;
 public class GetUserCertificateDetailResponseBody extends TeaModel {
     /**
      * <p>The algorithm.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RSA</p>
      */
     @NameInMap("Algorithm")
     public String algorithm;
 
     /**
      * <p>Indicates whether the certificate was purchased from Alibaba Cloud. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("BuyInAliyun")
     public Boolean buyInAliyun;
 
     /**
-     * <p>The content of the certificate.</p>
+     * <p>The content of the certificate if the certificate does not use an SM algorithm. If certFilter is set to false, this parameter is returned. Otherwise, this parameter is not returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>---BEGIN CERTIFICATE----- MIIF...... -----END CERTIFICATE-----</p>
      */
     @NameInMap("Cert")
     public String cert;
 
     /**
      * <p>The city of the company or organization to which the certificate purchaser belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hangzhou</p>
      */
     @NameInMap("City")
     public String city;
 
     /**
-     * <p>The parent domain name that is bound to the certificate.</p>
+     * <p>The primary domain name that is bound to the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>*.com</p>
      */
     @NameInMap("Common")
     public String common;
 
     /**
      * <p>The country or region of the company or organization to which the certificate purchaser belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CN</p>
      */
     @NameInMap("Country")
     public String country;
 
     /**
-     * <p>The content of the encryption certificate in PEM format.</p>
+     * <p>The content of the encryption certificate if the certificate uses an SM algorithm and is encoded in the PEM format. If certFilter is set to false, this parameter is returned. Otherwise, this parameter is not returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-----BEGIN CERTIFICATE-----
+     * MIICDzCCA***
+     * -----END CERTIFICATE-----</p>
      */
     @NameInMap("EncryptCert")
     public String encryptCert;
 
     /**
-     * <p>The private key of the encryption certificate in the PEM format.</p>
+     * <p>The private key of the encryption certificate if the certificate uses an SM algorithm and is encoded in the PEM format. If certFilter is set to false, this parameter is returned. Otherwise, this parameter is not returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-----BEGIN EC PRIVATE KEY-----
+     * MHcCAQEEI****
+     * -----END EC PRIVATE KEY-----</p>
      */
     @NameInMap("EncryptPrivateKey")
     public String encryptPrivateKey;
 
     /**
      * <p>The expiration date of the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-10-25</p>
      */
     @NameInMap("EndDate")
     public String endDate;
 
     /**
      * <p>Indicates whether the certificate has expired. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Expired")
     public Boolean expired;
 
     /**
      * <p>The fingerprint of the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1D7801BBE772D5DE55CBF1F88AEB41A42402DA07</p>
      */
     @NameInMap("Fingerprint")
     public String fingerprint;
 
     /**
      * <p>The ID of the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>121345</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cas-upload-50yf1q</p>
+     */
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    /**
      * <p>The certificate authority (CA) that issued the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Digicert</p>
      */
     @NameInMap("Issuer")
     public String issuer;
 
     /**
-     * <p>The private key.</p>
+     * <p>The private key of the certificate if the certificate does not use an SM algorithm. If certFilter is set to false, this parameter is returned. Otherwise, this parameter is not returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-----BEGIN RSA PRIVATE KEY----- MII.... -----END RSA PRIVATE KEY-----</p>
      */
     @NameInMap("Key")
     public String key;
 
     /**
      * <p>The name of the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cert_name</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The ID of the certificate application order.</p>
+     * <p>The order ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
      * <p>The name of the company or organization to which the certificate purchaser belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Alibaba</p>
      */
     @NameInMap("OrgName")
     public String orgName;
 
     /**
      * <p>The province of the company or organization to which the certificate purchaser belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zhejiang</p>
      */
     @NameInMap("Province")
     public String province;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the resource group to which the certificate belongs.</p>
+     * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aek****wia</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>All domain names that are bound to the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>*.com</p>
      */
     @NameInMap("Sans")
     public String sans;
 
     /**
-     * <p>The content of the signing certificate in the PEM format.</p>
+     * <p>The certificate serial No.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>06ea4879591ddf84e6c8b6ba43607ccf</p>
+     */
+    @NameInMap("SerialNo")
+    public String serialNo;
+
+    /**
+     * <p>The certificate sha2 value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>840707695D5EE41323102DDC2CB4924AA561012FBDC4E1A6324147119ED3C339</p>
+     */
+    @NameInMap("Sha2")
+    public String sha2;
+
+    /**
+     * <p>The content of the signing certificate if the certificate uses an SM algorithm and is encoded in the PEM format. If certFilter is set to false, this parameter is returned. Otherwise, this parameter is not returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-----BEGIN CERTIFICATE-----
+     * MIICDzCCAbagAw****
+     * -----END CERTIFICATE-----</p>
      */
     @NameInMap("SignCert")
     public String signCert;
 
     /**
-     * <p>The private key of the signing certificate in the PEM format.</p>
+     * <p>The private key of the signing certificate if the certificate uses an SM algorithm and is encoded in the PEM format. If certFilter is set to false, this parameter is returned. Otherwise, this parameter is not returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-----BEGIN EC PRIVATE KEY-----
+     * MHcCAQEEILR****
+     * -----END EC PRIVATE KEY-----</p>
      */
     @NameInMap("SignPrivateKey")
     public String signPrivateKey;
 
     /**
      * <p>The issuance date of the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-07-13</p>
      */
     @NameInMap("StartDate")
     public String startDate;
@@ -255,6 +364,14 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         return this.id;
     }
 
+    public GetUserCertificateDetailResponseBody setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
     public GetUserCertificateDetailResponseBody setIssuer(String issuer) {
         this.issuer = issuer;
         return this;
@@ -325,6 +442,22 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     }
     public String getSans() {
         return this.sans;
+    }
+
+    public GetUserCertificateDetailResponseBody setSerialNo(String serialNo) {
+        this.serialNo = serialNo;
+        return this;
+    }
+    public String getSerialNo() {
+        return this.serialNo;
+    }
+
+    public GetUserCertificateDetailResponseBody setSha2(String sha2) {
+        this.sha2 = sha2;
+        return this;
+    }
+    public String getSha2() {
+        return this.sha2;
     }
 
     public GetUserCertificateDetailResponseBody setSignCert(String signCert) {

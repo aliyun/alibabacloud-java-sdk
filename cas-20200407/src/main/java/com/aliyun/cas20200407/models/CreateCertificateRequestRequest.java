@@ -6,61 +6,76 @@ import com.aliyun.tea.*;
 public class CreateCertificateRequestRequest extends TeaModel {
     /**
      * <p>The domain name that you want to bind to the certificate. You can specify only one domain name.</p>
-     * <br>
-     * <p>> The domain name must match the certificate specifications that you specify for the **ProductCode** parameter. If you apply for a single-domain certificate, you must specify a single domain name for this parameter. If you apply for a wildcard certificate, you must specify a wildcard domain name such as `*.aliyundoc.com` for this parameter.</p>
-     * <br>
+     * <blockquote>
+     * <p> The domain name must match the certificate specifications that you specify for the <strong>ProductCode</strong> parameter. If you apply for a single-domain certificate, you must specify a single domain name for this parameter. If you apply for a wildcard certificate, you must specify a wildcard domain name such as <code>*.aliyundoc.com</code> for this parameter.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
-     * <p>The email address of the applicant.</p>
-     * <br>
+     * <p>The contact email address of the applicant.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:username@example.com">username@example.com</a></p>
      */
     @NameInMap("Email")
     public String email;
 
     /**
      * <p>The phone number of the applicant.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1390000****</p>
      */
     @NameInMap("Phone")
     public String phone;
 
     /**
      * <p>The specifications of the certificate. Valid values:</p>
-     * <br>
-     * <p>*   **digicert-free-1-free**: DigiCert single-domain DV certificate in 3 months free trial. This is the default value.</p>
-     * <p>*   **symantec-free-1-free**: DigiCert single-domain DV certificate in 1 year free trial.</p>
-     * <p>*   **symantec-dv-1-starter**: DigiCert wildcard DV certificate.</p>
-     * <p>*   **geotrust-dv-1-starter**: GeoTrust single-domain DV certificate.</p>
-     * <p>*   **geotrust-dv-w-starter**: GeoTrust wildcard DV certificate.</p>
-     * <p>*   **globalsign-dv-1-personal**: GlobalSign single-domain DV certificate.</p>
-     * <p>*   **globalsign-dv-w-advanced**: GlobalSign wildcard DV certificate.</p>
+     * <ul>
+     * <li><strong>digicert-free-1-free</strong> (default): DigiCert single-domain DV certificate, which is free and valid for 3 months.</li>
+     * <li><strong>symantec-free-1-free</strong>: DigiCert single-domain DV certificate, which is free and valid for 1 year. This value is available only on the China site (aliyun.com).</li>
+     * <li><strong>symantec-dv-1-starter</strong>: DigiCert wildcard DV certificate.</li>
+     * <li><strong>geotrust-dv-1-starter</strong>: GeoTrust single-domain DV certificate.</li>
+     * <li><strong>geotrust-dv-w-starter</strong>: GeoTrust wildcard DV certificate.</li>
+     * <li><strong>globalsign-dv-1-personal</strong>: GlobalSign single-domain DV certificate.</li>
+     * <li><strong>globalsign-dv-w-advanced</strong>: GlobalSign wildcard DV certificate.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>symantec-free-1-free</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
      * <p>The name of the applicant.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Tom</p>
      */
     @NameInMap("Username")
     public String username;
 
     /**
-     * <p>The verification method of the domain name ownership. Valid values:</p>
-     * <br>
-     * <p>*   **DNS**: DNS verification. If you use this method, you must add a TXT record to the DNS records of the domain name in the management platform of the domain name. You must have operation permissions on domain name resolution to verify the ownership of the domain name.</p>
-     * <p>*   **FILE**: file verification. If you use this method, you must create a specified file on the DNS server. You must have administrative rights on the DNS server to verify the ownership of the domain name.</p>
-     * <br>
-     * <p>For more information about the verification methods, see [Verify the ownership of a domain name](https://help.aliyun.com/document_detail/48016.html).</p>
-     * <br>
+     * <p>The method to verify the ownership of a domain name. Valid values:</p>
+     * <ul>
+     * <li><strong>DNS</strong>: DNS verification. If you use this method, you must add a TXT record to the DNS records of the domain name in the management platform of the domain name. You must have operation permissions on domain name resolution to verify the ownership of the domain name.</li>
+     * <li><strong>FILE</strong>: file verification. If you use this method, you must create a specified file on the DNS server. You must have administrative rights on the DNS server to verify the ownership of the domain name.</li>
+     * </ul>
+     * <p>For more information about the verification methods, see <a href="https://help.aliyun.com/document_detail/48016.html">Verify the ownership of a domain name</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DNS</p>
      */
     @NameInMap("ValidateType")
     public String validateType;

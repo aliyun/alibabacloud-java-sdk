@@ -5,52 +5,76 @@ import com.aliyun.tea.*;
 
 public class ListCertRequest extends TeaModel {
     /**
-     * <p>The type of the certificate.</p>
-     * <br>
-     * <p>*   **CA**: the CA certificate.</p>
-     * <p>*   **CERT**: a issued certificate.</p>
+     * <p>证书的类型 。取值：</p>
+     * <ul>
+     * <li><strong>CA</strong>：表示CA证书。</li>
+     * <li><strong>CERT</strong>：表示签发的证书。</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CERT</p>
      */
     @NameInMap("CertType")
     public String certType;
 
     /**
      * <p>The number of the page to return. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Long currentPage;
 
     /**
-     * <p>The keyword that is used for queries. The value can be a name, domain name, or subject alternative name (SAN) attribute. Fuzzy match is supported.</p>
+     * <p>The keyword for the query. You can enter a name, domain name, or Subject Alternative Name (SAN) extension. Fuzzy match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_name</p>
      */
     @NameInMap("KeyWord")
     public String keyWord;
 
     /**
      * <p>The number of entries to return on each page. Default value: 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("ShowSize")
     public Long showSize;
 
     /**
      * <p>The source of the certificate. Valid values:</p>
-     * <br>
-     * <p>*   **upload**: uploaded certificate</p>
-     * <p>*   **aliyun**: Alibaba Cloud certificate</p>
+     * <ul>
+     * <li><strong>upload</strong>: uploaded certificate</li>
+     * <li><strong>aliyun</strong>: Alibaba Cloud certificate</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>aliyun</p>
      */
     @NameInMap("SourceType")
     public String sourceType;
 
     /**
      * <p>The status of the certificate. Valid values:</p>
-     * <br>
-     * <p>*   **ISSUE**: issued</p>
-     * <p>*   **REVOKE**: revoked</p>
+     * <ul>
+     * <li><strong>ISSUE</strong>: issued</li>
+     * <li><strong>REVOKE</strong>: revoked</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ISSUE</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The ID of the certificate repository. You can call the ListCertWarehouse API operation to query the IDs of certificate repositories.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("WarehouseId")
     public Long warehouseId;

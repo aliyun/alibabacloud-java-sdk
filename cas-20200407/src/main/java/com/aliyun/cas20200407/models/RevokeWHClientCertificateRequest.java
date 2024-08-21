@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class RevokeWHClientCertificateRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the client certificate or server certificate that you want to revoke.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>160ae6bb538d538c70c01f81dcf2****</p>
      */
     @NameInMap("Identifier")
     public String identifier;

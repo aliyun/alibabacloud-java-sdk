@@ -6,14 +6,21 @@ import com.aliyun.tea.*;
 public class CreateCertificateForPackageRequestResponseBody extends TeaModel {
     /**
      * <p>The ID of the certificate application order.</p>
-     * <br>
-     * <p>> You can use the ID to query the status of the certificate application order. For more information, see [DescribeCertificateState](https://help.aliyun.com/document_detail/455800.html).</p>
+     * <blockquote>
+     * <p> You can use the ID to query the status of the certificate application order. For more information, see <a href="https://help.aliyun.com/document_detail/164111.html">DescribeCertificateState</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2021010</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5890029B-938A-589E-98B9-3DEC7BA7C400</p>
      */
     @NameInMap("RequestId")
     public String requestId;
