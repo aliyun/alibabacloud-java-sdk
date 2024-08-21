@@ -414,11 +414,17 @@ public class DescribeIngressResponseBody extends TeaModel {
         @NameInMap("NamespaceId")
         public String namespaceId;
 
+        @NameInMap("RequestTimeout")
+        public Integer requestTimeout;
+
         /**
          * <p>The ID of the application specified in the forwarding rule.</p>
          */
         @NameInMap("Rules")
         public java.util.List<DescribeIngressResponseBodyDataRules> rules;
+
+        @NameInMap("SecurityPolicyId")
+        public String securityPolicyId;
 
         /**
          * <p>The type of the SLB instance based on the IP address. Valid values:</p>
@@ -527,12 +533,28 @@ public class DescribeIngressResponseBody extends TeaModel {
             return this.namespaceId;
         }
 
+        public DescribeIngressResponseBodyData setRequestTimeout(Integer requestTimeout) {
+            this.requestTimeout = requestTimeout;
+            return this;
+        }
+        public Integer getRequestTimeout() {
+            return this.requestTimeout;
+        }
+
         public DescribeIngressResponseBodyData setRules(java.util.List<DescribeIngressResponseBodyDataRules> rules) {
             this.rules = rules;
             return this;
         }
         public java.util.List<DescribeIngressResponseBodyDataRules> getRules() {
             return this.rules;
+        }
+
+        public DescribeIngressResponseBodyData setSecurityPolicyId(String securityPolicyId) {
+            this.securityPolicyId = securityPolicyId;
+            return this;
+        }
+        public String getSecurityPolicyId() {
+            return this.securityPolicyId;
         }
 
         public DescribeIngressResponseBodyData setSlbId(String slbId) {

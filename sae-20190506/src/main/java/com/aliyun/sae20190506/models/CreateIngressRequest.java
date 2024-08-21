@@ -66,6 +66,9 @@ public class CreateIngressRequest extends TeaModel {
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    @NameInMap("RequestTimeout")
+    public Integer requestTimeout;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -74,6 +77,9 @@ public class CreateIngressRequest extends TeaModel {
      */
     @NameInMap("Rules")
     public String rules;
+
+    @NameInMap("SecurityPolicyId")
+    public String securityPolicyId;
 
     /**
      * <p>This parameter is required.</p>
@@ -153,12 +159,28 @@ public class CreateIngressRequest extends TeaModel {
         return this.namespaceId;
     }
 
+    public CreateIngressRequest setRequestTimeout(Integer requestTimeout) {
+        this.requestTimeout = requestTimeout;
+        return this;
+    }
+    public Integer getRequestTimeout() {
+        return this.requestTimeout;
+    }
+
     public CreateIngressRequest setRules(String rules) {
         this.rules = rules;
         return this;
     }
     public String getRules() {
         return this.rules;
+    }
+
+    public CreateIngressRequest setSecurityPolicyId(String securityPolicyId) {
+        this.securityPolicyId = securityPolicyId;
+        return this;
+    }
+    public String getSecurityPolicyId() {
+        return this.securityPolicyId;
     }
 
     public CreateIngressRequest setSlbId(String slbId) {

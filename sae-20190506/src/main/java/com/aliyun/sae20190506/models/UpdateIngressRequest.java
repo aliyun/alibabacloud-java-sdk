@@ -62,12 +62,18 @@ public class UpdateIngressRequest extends TeaModel {
     @NameInMap("LoadBalanceType")
     public String loadBalanceType;
 
+    @NameInMap("RequestTimeout")
+    public Integer requestTimeout;
+
     /**
      * <strong>example:</strong>
      * <p>[{&quot;appId&quot;:&quot;395b60e4-0550-458d-9c54-a265d036****&quot;,&quot;containerPort&quot;:8080,&quot;domain&quot;:&quot;<a href="http://www.sae.site%22,%22path%22:%22/path1%22%7D,%7B%22appId%22:%22666403ce-d25b-47cf-87fe-497565d2****%22,%22containerPort%22:8080,%22domain%22:%22sae.site%22,%22path%22:%22/path2%22%7D%5D">www.sae.site&quot;,&quot;path&quot;:&quot;/path1&quot;},{&quot;appId&quot;:&quot;666403ce-d25b-47cf-87fe-497565d2****&quot;,&quot;containerPort&quot;:8080,&quot;domain&quot;:&quot;sae.site&quot;,&quot;path&quot;:&quot;/path2&quot;}]</a></p>
      */
     @NameInMap("Rules")
     public String rules;
+
+    @NameInMap("SecurityPolicyId")
+    public String securityPolicyId;
 
     public static UpdateIngressRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateIngressRequest self = new UpdateIngressRequest();
@@ -138,12 +144,28 @@ public class UpdateIngressRequest extends TeaModel {
         return this.loadBalanceType;
     }
 
+    public UpdateIngressRequest setRequestTimeout(Integer requestTimeout) {
+        this.requestTimeout = requestTimeout;
+        return this;
+    }
+    public Integer getRequestTimeout() {
+        return this.requestTimeout;
+    }
+
     public UpdateIngressRequest setRules(String rules) {
         this.rules = rules;
         return this;
     }
     public String getRules() {
         return this.rules;
+    }
+
+    public UpdateIngressRequest setSecurityPolicyId(String securityPolicyId) {
+        this.securityPolicyId = securityPolicyId;
+        return this;
+    }
+    public String getSecurityPolicyId() {
+        return this.securityPolicyId;
     }
 
 }
