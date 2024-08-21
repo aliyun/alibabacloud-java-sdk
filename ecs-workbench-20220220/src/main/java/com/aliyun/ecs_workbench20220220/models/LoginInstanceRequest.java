@@ -43,27 +43,59 @@ public class LoginInstanceRequest extends TeaModel {
     }
 
     public static class LoginInstanceRequestInstanceLoginInfoOptionsContainerInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>abcdef</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("ContainerName")
         public String containerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("Deployment")
         public String deployment;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("Endpoint")
         public String endpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;abc&quot;:&quot;def&quot;}</p>
+         */
         @NameInMap("Headers")
         public java.util.Map<String, ?> headers;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("PodName")
         public String podName;
 
@@ -151,21 +183,41 @@ public class LoginInstanceRequest extends TeaModel {
         @NameInMap("FixedWidth")
         public Integer fixedWidth;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("NotificationEventTypes")
         public String notificationEventTypes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("NotificationRecipientUrl")
         public String notificationRecipientUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("NotificationRetryIntervalSeconds")
         public Integer notificationRetryIntervalSeconds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("NotificationRetryLimit")
         public Integer notificationRetryLimit;
 
         @NameInMap("OperationDisableSeconds")
         public Integer operationDisableSeconds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("SessionControl")
         public String sessionControl;
 
@@ -268,9 +320,18 @@ public class LoginInstanceRequest extends TeaModel {
     }
 
     public static class LoginInstanceRequestInstanceLoginInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>password/certificate</p>
+         */
         @NameInMap("AuthenticationType")
         public String authenticationType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>----begin----
+         * ----end----</p>
+         */
         @NameInMap("Certificate")
         public String certificate;
 
@@ -283,18 +344,38 @@ public class LoginInstanceRequest extends TeaModel {
         @NameInMap("DockerExec")
         public String dockerExec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("DurationSeconds")
         public Long durationSeconds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-11-30 00:00:00</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
+         */
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <strong>example:</strong>
+         * <p>i-123</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ecs/eci/ack</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
@@ -304,24 +385,48 @@ public class LoginInstanceRequest extends TeaModel {
         @NameInMap("LoginByInstanceShortcut")
         public Boolean loginByInstanceShortcut;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc/classic</p>
+         */
         @NameInMap("NetworkAccessMode")
         public String networkAccessMode;
 
         @NameInMap("Options")
         public LoginInstanceRequestInstanceLoginInfoOptions options;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxx</p>
+         */
         @NameInMap("PassPhrase")
         public String passPhrase;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxx</p>
+         */
         @NameInMap("Password")
         public String password;
 
+        /**
+         * <strong>example:</strong>
+         * <p>22/3389</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ssh/rdp/ack</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou/cn-beijing</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
@@ -331,9 +436,17 @@ public class LoginInstanceRequest extends TeaModel {
         @NameInMap("ShortcutToken")
         public String shortcutToken;
 
+        /**
+         * <strong>example:</strong>
+         * <p>root/Administrator</p>
+         */
         @NameInMap("Username")
         public String username;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-abc</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -529,9 +642,17 @@ public class LoginInstanceRequest extends TeaModel {
     }
 
     public static class LoginInstanceRequestPartnerInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("PartnerId")
         public String partnerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("PartnerName")
         public String partnerName;
 
@@ -559,6 +680,10 @@ public class LoginInstanceRequest extends TeaModel {
     }
 
     public static class LoginInstanceRequestUserAccountOptions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("LoginLimit")
         public Long loginLimit;
 
@@ -578,30 +703,62 @@ public class LoginInstanceRequest extends TeaModel {
     }
 
     public static class LoginInstanceRequestUserAccount extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("AccountId")
         public Long accountId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>aas</p>
+         */
         @NameInMap("AccountPlatform")
         public String accountPlatform;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2/3/4</p>
+         */
         @NameInMap("AccountStructure")
         public String accountStructure;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("DurationSeconds")
         public Long durationSeconds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123abc</p>
+         */
         @NameInMap("EmpId")
         public String empId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-11-30 00:00:00</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("LoginName")
         public String loginName;
 
         @NameInMap("Options")
         public LoginInstanceRequestUserAccountOptions options;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("ParentId")
         public Long parentId;
 
