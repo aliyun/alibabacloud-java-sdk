@@ -892,6 +892,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NamespaceId", request.namespaceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.requestTimeout)) {
+            query.put("RequestTimeout", request.requestTimeout);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityPolicyId)) {
+            query.put("SecurityPolicyId", request.securityPolicyId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.slbId)) {
             query.put("SlbId", request.slbId);
         }
@@ -6866,6 +6874,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.loadBalanceType)) {
             query.put("LoadBalanceType", request.loadBalanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestTimeout)) {
+            query.put("RequestTimeout", request.requestTimeout);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityPolicyId)) {
+            query.put("SecurityPolicyId", request.securityPolicyId);
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
