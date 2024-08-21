@@ -14,7 +14,7 @@ public class DescribeImageComponentsRequest extends TeaModel {
     public java.util.List<String> imageComponentId;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 500.</p>
+     * <p>The maximum number of entries per page. Valid values: 1 to 500.</p>
      * <p>Default value: 50.</p>
      * 
      * <strong>example:</strong>
