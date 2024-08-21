@@ -91,7 +91,7 @@ public class ModifyParameterRequest extends TeaModel {
     /**
      * <p>The time at which the modification takes effect. Valid values:</p>
      * <ul>
-     * <li><strong>Immediately</strong>: immediately modifies the parameter. This is the default value.</li>
+     * <li><strong>Immediate</strong>: immediately modifies the parameter. This is the default value.</li>
      * <li><strong>MaintainTime</strong>: modifies the parameter during the maintenance window of the instance. You can call the ModifyDBInstanceMaintainTime operation to change the maintenance window.</li>
      * <li><strong>ScheduleTime</strong>: modifies the parameter at the point in time that you specify. If you specify this value, you must also specify <strong>SwitchTime</strong>.</li>
      * </ul>

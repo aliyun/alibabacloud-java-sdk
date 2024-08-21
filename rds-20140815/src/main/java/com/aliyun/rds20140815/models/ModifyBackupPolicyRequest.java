@@ -213,7 +213,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
      * <p>Specifies whether to enable the log backup feature. Valid values:</p>
      * <ul>
      * <li><strong>True</strong> or <strong>1</strong>: enables the log backup feature.</li>
-     * <li><strong>False</strong> or <strong>0</strong>: enables the log backup feature.</li>
+     * <li><strong>False</strong> or <strong>0</strong>: disables the log backup feature.</li>
      * </ul>
      * <blockquote>
      * <ul>
@@ -251,8 +251,8 @@ public class ModifyBackupPolicyRequest extends TeaModel {
      * <p>Specifies whether to forcefully delete log backup files from the instance when the storage usage of the instance exceeds 80% or the amount of remaining storage on the instance is less than 5 GB. Valid values: <strong>Enable and Disable</strong>. You can retain the default value.</p>
      * <blockquote>
      * <ul>
-     * <li>This parameter must be specified when <strong>BackupPolicyMode</strong> is set to <strong>LogBackupPolicy</strong>.</li>
-     * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>LogBackupPolicy</strong>.</li>
+     * <li>You must specify this parameter when you set the <strong>BackupPolicyMode</strong> parameter to <strong>LogBackupPolicy</strong>.</li>
+     * <li>This parameter takes effect only when you set the <strong>BackupPolicyMode</strong> parameter to <strong>LogBackupPolicy</strong>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -316,7 +316,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
      * <blockquote>
      * <ul>
      * <li>This parameter takes effect only when you set the <strong>BackupPolicyMode</strong> parameter to <strong>LogBackupPolicy</strong>.</li>
-     * <li>If the instance runs MySQL, you can set this parameter to <strong>-1</strong>. The value <strong>-1</strong> specifies that an unlimited number of binary log files can be retained on the instance.</li>
+     * <li>If the instance runs MySQL, you can set this parameter to \<em>\</em>-1\<em>\</em>. The value \<em>\</em>-1\<em>\</em> specifies that an unlimited number of binary log files can be retained on the instance.</li>
      * </ul>
      * </blockquote>
      * 
@@ -388,14 +388,17 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String preferredBackupTime;
 
     /**
-     * <p>The policy that is used to retain archived backup files if the instance is released. Default value: None. Valid values:</p>
+     * <p>The policy that is used to retain archived backup files if the instance is released. Valid values:</p>
      * <ul>
      * <li><strong>None</strong>: No archived backup files are retained.</li>
      * <li><strong>Lastest</strong>: Only the last archived backup file is retained.</li>
      * <li><strong>All</strong>: All archived backup files are retained.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</p>
+     * <ul>
+     * <li>This parameter takes effect only when you set the <strong>BackupPolicyMode</strong> parameter to <strong>DataBackupPolicy</strong>.</li>
+     * <li>If the instance uses cloud disks and was created on or after February 1, 2024, this parameter is automatically set to <strong>Lastest</strong>. If the instance uses local disks in the same scenario, this parameter is automatically set to <strong>None</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/2836955.html">Backup for deleted instances</a>.</li>
+     * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>
