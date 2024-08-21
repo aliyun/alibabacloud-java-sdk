@@ -30,7 +30,7 @@ public class QueryRecommendByCodeRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
-    public String resourceOwnerId;
+    public Long resourceOwnerId;
 
     public static QueryRecommendByCodeRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryRecommendByCodeRequest self = new QueryRecommendByCodeRequest();
@@ -69,11 +69,11 @@ public class QueryRecommendByCodeRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public QueryRecommendByCodeRequest setResourceOwnerId(String resourceOwnerId) {
+    public QueryRecommendByCodeRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
-    public String getResourceOwnerId() {
+    public Long getResourceOwnerId() {
         return this.resourceOwnerId;
     }
 

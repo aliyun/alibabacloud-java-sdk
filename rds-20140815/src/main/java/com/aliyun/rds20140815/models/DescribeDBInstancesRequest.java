@@ -138,10 +138,10 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>Specifies whether to query instances that have expired. Valid values:</p>
+     * <p>Specifies whether the instances have expired. Valid values:</p>
      * <ul>
-     * <li><strong>True</strong>: queries instances that have expired.</li>
-     * <li><strong>False</strong>: does not query instances that have expired.</li>
+     * <li><strong>True</strong></li>
+     * <li><strong>False</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -215,7 +215,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Valid values: any non-zero positive integer.</p>
+     * <p>The page number. Pages start from 1.</p>
      * <p>Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
