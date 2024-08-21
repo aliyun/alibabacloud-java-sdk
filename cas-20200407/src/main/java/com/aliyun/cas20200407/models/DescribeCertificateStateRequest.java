@@ -6,10 +6,13 @@ import com.aliyun.tea.*;
 public class DescribeCertificateStateRequest extends TeaModel {
     /**
      * <p>The ID of the certificate application order that you want to query.</p>
-     * <br>
-     * <p>> After you call the [CreateCertificateForPackageRequest](https://help.aliyun.com/document_detail/455296.html), [CreateCertificateRequest](https://help.aliyun.com/document_detail/455292.html), or [CreateCertificateWithCsrRequest](https://help.aliyun.com/document_detail/455801.html) operation to submit a certificate application, you can obtain the ID of the certificate application order from the **OrderId** response parameter.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> operation to obtain the ID.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123451222</p>
      */
     @NameInMap("OrderId")
     public Long orderId;

@@ -4,12 +4,30 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class ListContactRequest extends TeaModel {
+    /**
+     * <p>The page number. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The keyword used in the query. For example, you can specify a keyword in names, email addresses, and mobile phone numbers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>186</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
+    /**
+     * <p>The number of contacts per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("ShowSize")
     public Integer showSize;
 

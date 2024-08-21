@@ -4,6 +4,12 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class DeleteWorkerResourceResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EA69E364-5CBB-50E8-BF09-E8CAA396A4F8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

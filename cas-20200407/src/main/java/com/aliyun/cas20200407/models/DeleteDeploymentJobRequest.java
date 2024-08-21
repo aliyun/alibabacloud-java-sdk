@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteDeploymentJobRequest extends TeaModel {
     /**
+     * <p>The ID of the deployment task.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8888</p>
      */
     @NameInMap("JobId")
     public Long jobId;

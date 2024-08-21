@@ -4,21 +4,45 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class CreateWHClientCertificateResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----\n</p>
+     */
     @NameInMap("CertificateChain")
     public String certificateChain;
 
+    /**
+     * <strong>example:</strong>
+     * <p>190ae6bb538d538c70c01f81dcf2****</p>
+     */
     @NameInMap("Identifier")
     public String identifier;
 
+    /**
+     * <strong>example:</strong>
+     * <p>-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----</p>
+     */
     @NameInMap("ParentX509Certificate")
     public String parentX509Certificate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8C467B38-3910-447D-87BC-AC049166F216</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----</p>
+     */
     @NameInMap("RootX509Certificate")
     public String rootX509Certificate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----</p>
+     */
     @NameInMap("X509Certificate")
     public String x509Certificate;
 

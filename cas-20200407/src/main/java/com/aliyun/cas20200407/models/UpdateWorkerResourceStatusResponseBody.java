@@ -4,9 +4,21 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class UpdateWorkerResourceStatusResponseBody extends TeaModel {
+    /**
+     * <p>The response parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
+     */
     @NameInMap("Data")
     public Object data;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345678-1234-1234-1234-123456789ABC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

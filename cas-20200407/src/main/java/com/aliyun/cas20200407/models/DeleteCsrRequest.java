@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteCsrRequest extends TeaModel {
     /**
-     * <p>CSR ID。</p>
-     * <br>
+     * <p>The ID of the CSR.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3013</p>
      */
     @NameInMap("CsrId")
     public Long csrId;

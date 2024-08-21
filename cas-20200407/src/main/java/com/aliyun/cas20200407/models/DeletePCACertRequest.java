@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeletePCACertRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccaf0c629c2be1e2ab</p>
      */
     @NameInMap("Identifier")
     public String identifier;

@@ -6,50 +6,85 @@ import com.aliyun.tea.*;
 public class UploadUserCertificateRequest extends TeaModel {
     /**
      * <p>The content of the certificate in the PEM format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-----BEGIN CERTIFICATE----- MIIF...... -----END CERTIFICATE-----</p>
      */
     @NameInMap("Cert")
     public String cert;
 
     /**
      * <p>The content of the encryption certificate in PEM format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-----BEGIN CERTIFICATE-----
+     * MIICDzCCA***
+     * -----END CERTIFICATE-----</p>
      */
     @NameInMap("EncryptCert")
     public String encryptCert;
 
     /**
      * <p>The private key of the encryption certificate in the PEM format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-----BEGIN EC PRIVATE KEY-----
+     * MHcCAQEEI****
+     * -----END EC PRIVATE KEY-----</p>
      */
     @NameInMap("EncryptPrivateKey")
     public String encryptPrivateKey;
 
     /**
      * <p>The private key of the certificate in the PEM format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-----BEGIN CERTIFICATE-----
+     * MIICDzCCAbagAw****
+     * -----END CERTIFICATE-----</p>
      */
     @NameInMap("Key")
     public String key;
 
     /**
      * <p>The name of the certificate. The name can contain up to 128 characters in length. The name can contain all types of characters, such as letters, digits, and underscores (_).</p>
-     * <br>
-     * <p>>  The name must be unique within an Alibaba Cloud account.</p>
+     * <blockquote>
+     * <p> The name must be unique within an Alibaba Cloud account.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cert-1</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>the resource group id.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-ae****vty</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The content of the signing certificate in the PEM format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-----BEGIN CERTIFICATE-----
+     * MIICDzCCAbagAw****
+     * -----END CERTIFICATE-----</p>
      */
     @NameInMap("SignCert")
     public String signCert;
 
     /**
      * <p>The private key of the signing certificate in the PEM format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-----BEGIN EC PRIVATE KEY-----
+     * MHcCAQEEILR****
+     * -----END EC PRIVATE KEY-----</p>
      */
     @NameInMap("SignPrivateKey")
     public String signPrivateKey;

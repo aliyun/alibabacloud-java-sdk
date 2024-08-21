@@ -4,9 +4,18 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudResourceStatusResponseBody extends TeaModel {
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeCloudResourceStatusResponseBodyData> data;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>09470F19-CEE8-5C63-BF2C-02B5E3F07A17</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +41,30 @@ public class DescribeCloudResourceStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudResourceStatusResponseBodyData extends TeaModel {
+        /**
+         * <p>The cloud service provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun</p>
+         */
         @NameInMap("CloudName")
         public String cloudName;
 
+        /**
+         * <p>The cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("CloudProduct")
         public String cloudProduct;
 
+        /**
+         * <p>The total number of cloud resources on which certificates are deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

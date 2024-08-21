@@ -5,7 +5,14 @@ import com.aliyun.tea.*;
 
 public class CancelCertificateForPackageRequestRequest extends TeaModel {
     /**
+     * <p>The order ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> operation to obtain the ID.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123451222</p>
      */
     @NameInMap("OrderId")
     public Long orderId;

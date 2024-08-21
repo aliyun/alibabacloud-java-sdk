@@ -4,18 +4,45 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class ListCloudAccessResponseBody extends TeaModel {
+    /**
+     * <p>The list of the AccessKey pairs.</p>
+     */
     @NameInMap("CloudAccessList")
     public java.util.List<ListCloudAccessResponseBodyCloudAccessList> cloudAccessList;
 
+    /**
+     * <p>The page number. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D3F1FA43-1C26-50A2-8F0F-7A03851DBB46</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of revoked certificates per page. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("ShowSize")
     public Integer showSize;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,15 +92,39 @@ public class ListCloudAccessResponseBody extends TeaModel {
     }
 
     public static class ListCloudAccessResponseBodyCloudAccessList extends TeaModel {
+        /**
+         * <p>The AccessKey ID used to access the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>888</p>
+         */
         @NameInMap("AccessId")
         public Long accessId;
 
+        /**
+         * <p>The cloud service provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tencent</p>
+         */
         @NameInMap("CloudName")
         public String cloudName;
 
+        /**
+         * <p>The AccessKey secret used to access the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LTAI4G5KAZCJQqdwPBAXXXX</p>
+         */
         @NameInMap("SecretId")
         public String secretId;
 
+        /**
+         * <p>The status of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
+         */
         @NameInMap("ServiceStatus")
         public String serviceStatus;
 

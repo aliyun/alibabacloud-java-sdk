@@ -6,14 +6,21 @@ import com.aliyun.tea.*;
 public class RenewCertificateOrderForPackageRequestResponseBody extends TeaModel {
     /**
      * <p>The ID of the certificate application order that is renewed.</p>
-     * <br>
-     * <p>> You can use the ID to query the status of the certificate application. For more information, see [DescribeCertificateState](https://help.aliyun.com/document_detail/455800.html).</p>
+     * <blockquote>
+     * <p> You can use the ID to query the status of the certificate application order. For more information, see <a href="https://help.aliyun.com/document_detail/164111.html">DescribeCertificateState</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>323451222</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>082FAB35-6AB9-4FD5-8750-D36673548E76</p>
      */
     @NameInMap("RequestId")
     public String requestId;

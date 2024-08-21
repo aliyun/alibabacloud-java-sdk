@@ -4,15 +4,39 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class ListCloudAccessRequest extends TeaModel {
+    /**
+     * <p>The cloud service provider.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Tencent</p>
+     */
     @NameInMap("CloudName")
     public String cloudName;
 
+    /**
+     * <p>The page number. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The AccessKey secret used to access the cloud service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>276</p>
+     */
     @NameInMap("SecretId")
     public String secretId;
 
+    /**
+     * <p>The number of certificates per page. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("ShowSize")
     public Integer showSize;
 

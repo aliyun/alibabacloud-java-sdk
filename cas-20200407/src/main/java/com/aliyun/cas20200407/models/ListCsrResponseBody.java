@@ -4,18 +4,45 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class ListCsrResponseBody extends TeaModel {
+    /**
+     * <p>The CSRs.</p>
+     */
     @NameInMap("CsrList")
     public java.util.List<ListCsrResponseBodyCsrList> csrList;
 
+    /**
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Long currentPage;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E865F6AD-0294-4A24-A58B-DAC6BE2BDD20</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of entries per page. Default value: 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("ShowSize")
     public Long showSize;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,45 +92,117 @@ public class ListCsrResponseBody extends TeaModel {
     }
 
     public static class ListCsrResponseBodyCsrList extends TeaModel {
+        /**
+         * <p>The algorithm. Valid values: RSA, SM2, and ECC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RSA</p>
+         */
         @NameInMap("Algorithm")
         public String algorithm;
 
+        /**
+         * <p>The primary domain name, which is a common name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("CommonName")
         public String commonName;
 
+        /**
+         * <p>The name of the company.</p>
+         */
         @NameInMap("CorpName")
         public String corpName;
 
+        /**
+         * <p>The code of the country or region in which the organization is located. For example, you can use CN to indicate China and use US to indicate the United States. The default value is the code of the country or region in which the organization is located. The organization is associated with the intermediate CA certificate from which the certificate is issued. For more information about country codes, see the &quot;Country codes&quot; section of the <a href="https://help.aliyun.com/document_detail/198289.html">Manage company profiles</a> topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
+         */
         @NameInMap("CountryCode")
         public String countryCode;
 
         /**
-         * <p>CSR ID。</p>
+         * <p>The ID of the CSR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3454</p>
          */
         @NameInMap("CsrId")
         public Long csrId;
 
+        /**
+         * <p>The department that uses the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IT</p>
+         */
         @NameInMap("Department")
         public String department;
 
+        /**
+         * <p>Indicates whether the certificate contains a private key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("HasPrivateKey")
         public Boolean hasPrivateKey;
 
+        /**
+         * <p>The public key that is calculated by using the SHA256 algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("KeySha2")
         public String keySha2;
 
+        /**
+         * <p>The key length that is used by the algorithm. The key length for RSA algorithms can be 2,048, 3,072, and 4,096 bits. The key length for ECC and SM2 algorithms can be 256 bits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
+         */
         @NameInMap("KeySize")
         public Integer keySize;
 
+        /**
+         * <p>The city where the company is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Beijing</p>
+         */
         @NameInMap("Locality")
         public String locality;
 
+        /**
+         * <p>The name of the CSR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The province or location.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Beijing</p>
+         */
         @NameInMap("Province")
         public String province;
 
+        /**
+         * <p>The secondary domain names. Separate multiple domain names with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com,www.aliyundoc.com">www.example.com,www.aliyundoc.com</a></p>
+         */
         @NameInMap("Sans")
         public String sans;
 

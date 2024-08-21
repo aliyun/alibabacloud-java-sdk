@@ -4,57 +4,120 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class CreateWHClientCertificateRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1665819958</p>
+     */
     @NameInMap("AfterTime")
     public Long afterTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>RSA_2048</p>
+     */
     @NameInMap("Algorithm")
     public String algorithm;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1634283958</p>
+     */
     @NameInMap("BeforeTime")
     public Long beforeTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>aliyun</p>
+     */
     @NameInMap("CommonName")
     public String commonName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CN</p>
+     */
     @NameInMap("Country")
     public String country;
 
+    /**
+     * <strong>example:</strong>
+     * <p>-----BEGIN CERTIFICATE REQUEST----- ...... -----END CERTIFICATE REQUEST-----</p>
+     */
     @NameInMap("Csr")
     public String csr;
 
+    /**
+     * <strong>example:</strong>
+     * <p>365</p>
+     */
     @NameInMap("Days")
     public Long days;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Immediately")
     public Long immediately;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Hangzhou</p>
+     */
     @NameInMap("Locality")
     public String locality;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("Months")
     public Long months;
 
     @NameInMap("Organization")
     public String organization;
 
+    /**
+     * <strong>example:</strong>
+     * <p>IT</p>
+     */
     @NameInMap("OrganizationUnit")
     public String organizationUnit;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>273ae6bb538d538c70c01f81jh2****</p>
      */
     @NameInMap("ParentIdentifier")
     public String parentIdentifier;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("SanType")
     public Long sanType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("SanValue")
     public String sanValue;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Zhejiang</p>
+     */
     @NameInMap("State")
     public String state;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Years")
     public Long years;
 
