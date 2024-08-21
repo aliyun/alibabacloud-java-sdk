@@ -4,6 +4,10 @@ package com.aliyun.ecs_workbench20220220.models;
 import com.aliyun.tea.*;
 
 public class LoginInstanceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>InvalidParamter</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -12,6 +16,9 @@ public class LoginInstanceResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc-123</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -19,6 +26,10 @@ public class LoginInstanceResponseBody extends TeaModel {
     @NameInMap("Root")
     public LoginInstanceResponseBodyRoot root;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true/false</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -68,9 +79,17 @@ public class LoginInstanceResponseBody extends TeaModel {
     }
 
     public static class LoginInstanceResponseBodyRootDisposableAccount extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("LoginFormActionUrl")
         public String loginFormActionUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("LoginUrl")
         public String loginUrl;
 
@@ -98,6 +117,10 @@ public class LoginInstanceResponseBody extends TeaModel {
     }
 
     public static class LoginInstanceResponseBodyRootInstanceLoginInfoListInstanceLoginView extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("DefaultViewUrl")
         public String defaultViewUrl;
 
@@ -117,15 +140,27 @@ public class LoginInstanceResponseBody extends TeaModel {
     }
 
     public static class LoginInstanceResponseBodyRootInstanceLoginInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>i-abc</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>134</p>
+         */
         @NameInMap("InstanceLoginToken")
         public String instanceLoginToken;
 
         @NameInMap("InstanceLoginView")
         public LoginInstanceResponseBodyRootInstanceLoginInfoListInstanceLoginView instanceLoginView;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("LoginSuccess")
         public Boolean loginSuccess;
 
@@ -169,6 +204,10 @@ public class LoginInstanceResponseBody extends TeaModel {
     }
 
     public static class LoginInstanceResponseBodyRootSessionControl extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("BaseUrl")
         public String baseUrl;
 
