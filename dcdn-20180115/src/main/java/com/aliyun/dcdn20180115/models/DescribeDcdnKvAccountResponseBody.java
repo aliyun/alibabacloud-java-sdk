@@ -4,6 +4,9 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnKvAccountResponseBody extends TeaModel {
+    @NameInMap("Capacity")
+    public Long capacity;
+
     /**
      * <p>The available capacity of all namespaces.</p>
      * 
@@ -12,6 +15,9 @@ public class DescribeDcdnKvAccountResponseBody extends TeaModel {
      */
     @NameInMap("CapacityString")
     public String capacityString;
+
+    @NameInMap("CapacityUsed")
+    public Long capacityUsed;
 
     /**
      * <p>All namespaces have used capacity.</p>
@@ -73,12 +79,28 @@ public class DescribeDcdnKvAccountResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeDcdnKvAccountResponseBody setCapacity(Long capacity) {
+        this.capacity = capacity;
+        return this;
+    }
+    public Long getCapacity() {
+        return this.capacity;
+    }
+
     public DescribeDcdnKvAccountResponseBody setCapacityString(String capacityString) {
         this.capacityString = capacityString;
         return this;
     }
     public String getCapacityString() {
         return this.capacityString;
+    }
+
+    public DescribeDcdnKvAccountResponseBody setCapacityUsed(Long capacityUsed) {
+        this.capacityUsed = capacityUsed;
+        return this;
+    }
+    public Long getCapacityUsed() {
+        return this.capacityUsed;
     }
 
     public DescribeDcdnKvAccountResponseBody setCapacityUsedString(String capacityUsedString) {
