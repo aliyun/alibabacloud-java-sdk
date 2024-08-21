@@ -59,6 +59,9 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
         @NameInMap("CertExpireTime")
         public String certExpireTime;
 
+        @NameInMap("CertId")
+        public String certId;
+
         /**
          * <p>The validity period of the certificate. Unit: months or years.</p>
          * 
@@ -86,6 +89,12 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
         @NameInMap("CertOrg")
         public String certOrg;
 
+        @NameInMap("CertRegion")
+        public String certRegion;
+
+        @NameInMap("CertStartTime")
+        public String certStartTime;
+
         /**
          * <p>The type of the certificate. Valid values:</p>
          * <ul>
@@ -100,6 +109,12 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
         @NameInMap("CertType")
         public String certType;
 
+        @NameInMap("CertUpdateTime")
+        public String certUpdateTime;
+
+        @NameInMap("DomainCnameStatus")
+        public String domainCnameStatus;
+
         /**
          * <p>The accelerated domain name whose ICP filing status you want to update.</p>
          * 
@@ -108,6 +123,9 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
          */
         @NameInMap("DomainName")
         public String domainName;
+
+        @NameInMap("ServerCertificate")
+        public String serverCertificate;
 
         /**
          * <p>The status of the SSL certificate.</p>
@@ -164,6 +182,14 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             return this.certExpireTime;
         }
 
+        public DescribeVodDomainCertificateInfoResponseBodyCertInfosCertInfo setCertId(String certId) {
+            this.certId = certId;
+            return this;
+        }
+        public String getCertId() {
+            return this.certId;
+        }
+
         public DescribeVodDomainCertificateInfoResponseBodyCertInfosCertInfo setCertLife(String certLife) {
             this.certLife = certLife;
             return this;
@@ -188,6 +214,22 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             return this.certOrg;
         }
 
+        public DescribeVodDomainCertificateInfoResponseBodyCertInfosCertInfo setCertRegion(String certRegion) {
+            this.certRegion = certRegion;
+            return this;
+        }
+        public String getCertRegion() {
+            return this.certRegion;
+        }
+
+        public DescribeVodDomainCertificateInfoResponseBodyCertInfosCertInfo setCertStartTime(String certStartTime) {
+            this.certStartTime = certStartTime;
+            return this;
+        }
+        public String getCertStartTime() {
+            return this.certStartTime;
+        }
+
         public DescribeVodDomainCertificateInfoResponseBodyCertInfosCertInfo setCertType(String certType) {
             this.certType = certType;
             return this;
@@ -196,12 +238,36 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             return this.certType;
         }
 
+        public DescribeVodDomainCertificateInfoResponseBodyCertInfosCertInfo setCertUpdateTime(String certUpdateTime) {
+            this.certUpdateTime = certUpdateTime;
+            return this;
+        }
+        public String getCertUpdateTime() {
+            return this.certUpdateTime;
+        }
+
+        public DescribeVodDomainCertificateInfoResponseBodyCertInfosCertInfo setDomainCnameStatus(String domainCnameStatus) {
+            this.domainCnameStatus = domainCnameStatus;
+            return this;
+        }
+        public String getDomainCnameStatus() {
+            return this.domainCnameStatus;
+        }
+
         public DescribeVodDomainCertificateInfoResponseBodyCertInfosCertInfo setDomainName(String domainName) {
             this.domainName = domainName;
             return this;
         }
         public String getDomainName() {
             return this.domainName;
+        }
+
+        public DescribeVodDomainCertificateInfoResponseBodyCertInfosCertInfo setServerCertificate(String serverCertificate) {
+            this.serverCertificate = serverCertificate;
+            return this;
+        }
+        public String getServerCertificate() {
+            return this.serverCertificate;
         }
 
         public DescribeVodDomainCertificateInfoResponseBodyCertInfosCertInfo setServerCertificateStatus(String serverCertificateStatus) {

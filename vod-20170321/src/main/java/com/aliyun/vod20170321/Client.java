@@ -5660,6 +5660,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询证书列表，支持翻页</p>
+     * 
+     * @param request DescribeVodSSLCertificateListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeVodSSLCertificateListResponse
+     */
+    public DescribeVodSSLCertificateListResponse describeVodSSLCertificateListWithOptions(DescribeVodSSLCertificateListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchKeyword)) {
+            query.put("SearchKeyword", request.searchKeyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVodSSLCertificateList"),
+            new TeaPair("version", "2017-03-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVodSSLCertificateListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询证书列表，支持翻页</p>
+     * 
+     * @param request DescribeVodSSLCertificateListRequest
+     * @return DescribeVodSSLCertificateListResponse
+     */
+    public DescribeVodSSLCertificateListResponse describeVodSSLCertificateList(DescribeVodSSLCertificateListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVodSSLCertificateListWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <ul>
@@ -10431,6 +10495,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SetVodDomainCertificateResponse setVodDomainCertificate(SetVodDomainCertificateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setVodDomainCertificateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>设置证书</p>
+     * 
+     * @param request SetVodDomainSSLCertificateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetVodDomainSSLCertificateResponse
+     */
+    public SetVodDomainSSLCertificateResponse setVodDomainSSLCertificateWithOptions(SetVodDomainSSLCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.certId)) {
+            query.put("CertId", request.certId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certName)) {
+            query.put("CertName", request.certName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certRegion)) {
+            query.put("CertRegion", request.certRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certType)) {
+            query.put("CertType", request.certType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.env)) {
+            query.put("Env", request.env);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.SSLPri)) {
+            query.put("SSLPri", request.SSLPri);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.SSLProtocol)) {
+            query.put("SSLProtocol", request.SSLProtocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.SSLPub)) {
+            query.put("SSLPub", request.SSLPub);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetVodDomainSSLCertificate"),
+            new TeaPair("version", "2017-03-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetVodDomainSSLCertificateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>设置证书</p>
+     * 
+     * @param request SetVodDomainSSLCertificateRequest
+     * @return SetVodDomainSSLCertificateResponse
+     */
+    public SetVodDomainSSLCertificateResponse setVodDomainSSLCertificate(SetVodDomainSSLCertificateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setVodDomainSSLCertificateWithOptions(request, runtime);
     }
 
     /**
