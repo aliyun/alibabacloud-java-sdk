@@ -4,6 +4,9 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
+    @NameInMap("AssetStatus")
+    public Integer assetStatus;
+
     /**
      * <p>The payment status. Valid values:</p>
      * <ul>
@@ -148,6 +151,14 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
     public static DescribeDdosOriginInstanceBillResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDdosOriginInstanceBillResponseBody self = new DescribeDdosOriginInstanceBillResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDdosOriginInstanceBillResponseBody setAssetStatus(Integer assetStatus) {
+        this.assetStatus = assetStatus;
+        return this;
+    }
+    public Integer getAssetStatus() {
+        return this.assetStatus;
     }
 
     public DescribeDdosOriginInstanceBillResponseBody setDebtStatus(Long debtStatus) {
