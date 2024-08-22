@@ -94,6 +94,9 @@ public class DescribeTasksResponseBody extends TeaModel {
         @NameInMap("ResourceId")
         public String resourceId;
 
+        @NameInMap("Result")
+        public String result;
+
         /**
          * <strong>example:</strong>
          * <p>2022-10-11T08:53:32Z</p>
@@ -157,6 +160,14 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
         public String getResourceId() {
             return this.resourceId;
+        }
+
+        public DescribeTasksResponseBodyData setResult(String result) {
+            this.result = result;
+            return this;
+        }
+        public String getResult() {
+            return this.result;
         }
 
         public DescribeTasksResponseBodyData setStartTime(String startTime) {
