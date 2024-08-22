@@ -4,9 +4,24 @@ package com.aliyun.cloudcontrol20220830.models;
 import com.aliyun.tea.*;
 
 public class GetPriceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("regionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{
+     *         &quot;LoadBalancerName&quot;: &quot;cc-test&quot;,
+     *         &quot;LoadBalancerSpec&quot;: &quot;slb.s3.small&quot;,
+     *         &quot;InternetChargeType&quot;: &quot;paybybandwidth&quot;,
+     *         &quot;AddressType&quot;: &quot;internet&quot;,
+     *         &quot;PaymentType&quot;: &quot;PayAsYouGo&quot;,
+     *         &quot;Bandwidth&quot;: 6
+     *       }</p>
+     */
     @NameInMap("resourceAttributes")
     public java.util.Map<String, ?> resourceAttributes;
 

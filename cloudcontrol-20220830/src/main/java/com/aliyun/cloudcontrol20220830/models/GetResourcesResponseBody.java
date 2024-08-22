@@ -4,12 +4,24 @@ package com.aliyun.cloudcontrol20220830.models;
 import com.aliyun.tea.*;
 
 public class GetResourcesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("maxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAdDWBF2****</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -19,6 +31,10 @@ public class GetResourcesResponseBody extends TeaModel {
     @NameInMap("resources")
     public java.util.List<GetResourcesResponseBodyResources> resources;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("totalCount")
     public Integer totalCount;
 
@@ -76,9 +92,17 @@ public class GetResourcesResponseBody extends TeaModel {
     }
 
     public static class GetResourcesResponseBodyResource extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;Status&quot;:&quot;Available&quot;,&quot;Description&quot;:&quot;&quot;,&quot;AccountPrivilege&quot;:&quot;RoleReadWrite&quot;,&quot;InstanceId&quot;:&quot;r-8vbf5abe31c9c4d4&quot;,&quot;RegionId&quot;:&quot;cn-zhangjiakou&quot;,&quot;AccountType&quot;:&quot;Normal&quot;,&quot;TypeInfo&quot;:{},&quot;AccountName&quot;:&quot;cctest&quot;}</p>
+         */
         @NameInMap("resourceAttributes")
         public java.util.Map<String, ?> resourceAttributes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cctest</p>
+         */
         @NameInMap("resourceId")
         public String resourceId;
 
@@ -106,9 +130,17 @@ public class GetResourcesResponseBody extends TeaModel {
     }
 
     public static class GetResourcesResponseBodyResources extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;Status&quot;:&quot;Available&quot;,&quot;Description&quot;:&quot;&quot;,&quot;AccountPrivilege&quot;:&quot;RoleReadWrite&quot;,&quot;InstanceId&quot;:&quot;r-8vbf5abe31c9c4d4&quot;,&quot;RegionId&quot;:&quot;cn-zhangjiakou&quot;,&quot;AccountType&quot;:&quot;Normal&quot;,&quot;TypeInfo&quot;:{},&quot;AccountName&quot;:&quot;cctest&quot;}</p>
+         */
         @NameInMap("resourceAttributes")
         public java.util.Map<String, ?> resourceAttributes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cctest</p>
+         */
         @NameInMap("resourceId")
         public String resourceId;
 

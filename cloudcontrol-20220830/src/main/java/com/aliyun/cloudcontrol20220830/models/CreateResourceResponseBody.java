@@ -4,15 +4,31 @@ package com.aliyun.cloudcontrol20220830.models;
 import com.aliyun.tea.*;
 
 public class CreateResourceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cctest</p>
+     */
     @NameInMap("resourceId")
     public String resourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Instance/r-8vbf5abe31c9c4d4/Account/cctest</p>
+     */
     @NameInMap("resourcePath")
     public String resourcePath;
 
+    /**
+     * <strong>example:</strong>
+     * <p>task-433aead756057fff8189a7ce5****</p>
+     */
     @NameInMap("taskId")
     public String taskId;
 

@@ -4,6 +4,10 @@ package com.aliyun.cloudcontrol20220830.models;
 import com.aliyun.tea.*;
 
 public class GetTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,9 +36,21 @@ public class GetTaskResponseBody extends TeaModel {
     }
 
     public static class GetTaskResponseBodyTaskError extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>OperationFailure.OperationFailed</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{
+         *      &quot;requestId&quot;: &quot;123****&quot;,
+         *      &quot;errorCode&quot;: &quot;InvalidRamUser.NoPermission&quot;,
+         *      &quot;errorMsg&quot;: &quot;Ram user is not authorized to perform the operation.&quot;
+         * }</p>
+         */
         @NameInMap("message")
         public String message;
 
@@ -62,33 +78,70 @@ public class GetTaskResponseBody extends TeaModel {
     }
 
     public static class GetTaskResponseBodyTask extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-10-09T00:46:03Z</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
         @NameInMap("error")
         public GetTaskResponseBodyTaskError error;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ECS</p>
+         */
         @NameInMap("product")
         public String product;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("regionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>i-8vbascjthm7kzhp3****</p>
+         */
         @NameInMap("resourceId")
         public String resourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Instance/i-8vbascjthm7kzhp3****
+         * Instance/r-8vbf5abe31c9c4d4/Account/cctest</p>
+         */
         @NameInMap("resourcePath")
         public String resourcePath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Instance</p>
+         */
         @NameInMap("resourceType")
         public String resourceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Create</p>
+         */
         @NameInMap("taskAction")
         public String taskAction;
 
+        /**
+         * <strong>example:</strong>
+         * <p>task-433aead756057fff8189a7ce5****</p>
+         */
         @NameInMap("taskId")
         public String taskId;
 

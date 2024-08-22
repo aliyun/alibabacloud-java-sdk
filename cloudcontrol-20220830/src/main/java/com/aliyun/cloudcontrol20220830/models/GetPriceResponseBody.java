@@ -7,6 +7,10 @@ public class GetPriceResponseBody extends TeaModel {
     @NameInMap("price")
     public GetPriceResponseBodyPrice price;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,23 +36,47 @@ public class GetPriceResponseBody extends TeaModel {
     }
 
     public static class GetPriceResponseBodyPriceModuleDetails extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.02</p>
+         */
         @NameInMap("costAfterDiscount")
         public Float costAfterDiscount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0</p>
+         */
         @NameInMap("invoiceDiscount")
         public Float invoiceDiscount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>InstanceRent</p>
+         */
         @NameInMap("moduleCode")
         public String moduleCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>InstanceRent</p>
+         */
         @NameInMap("moduleName")
         public String moduleName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000.0</p>
+         */
         @NameInMap("originalCost")
         public Float originalCost;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("priceType")
-        public Float priceType;
+        public String priceType;
 
         public static GetPriceResponseBodyPriceModuleDetails build(java.util.Map<String, ?> map) throws Exception {
             GetPriceResponseBodyPriceModuleDetails self = new GetPriceResponseBodyPriceModuleDetails();
@@ -95,17 +123,21 @@ public class GetPriceResponseBody extends TeaModel {
             return this.originalCost;
         }
 
-        public GetPriceResponseBodyPriceModuleDetails setPriceType(Float priceType) {
+        public GetPriceResponseBodyPriceModuleDetails setPriceType(String priceType) {
             this.priceType = priceType;
             return this;
         }
-        public Float getPriceType() {
+        public String getPriceType() {
             return this.priceType;
         }
 
     }
 
     public static class GetPriceResponseBodyPricePromotionDetails extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>37284</p>
+         */
         @NameInMap("promotionDesc")
         public String promotionDesc;
 
@@ -147,21 +179,37 @@ public class GetPriceResponseBody extends TeaModel {
     }
 
     public static class GetPriceResponseBodyPrice extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CNY</p>
+         */
         @NameInMap("currency")
         public String currency;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0</p>
+         */
         @NameInMap("discountPrice")
         public Float discountPrice;
 
         @NameInMap("moduleDetails")
         public java.util.List<GetPriceResponseBodyPriceModuleDetails> moduleDetails;
 
+        /**
+         * <strong>example:</strong>
+         * <p>760.0</p>
+         */
         @NameInMap("originalPrice")
         public Float originalPrice;
 
         @NameInMap("promotionDetails")
         public java.util.List<GetPriceResponseBodyPricePromotionDetails> promotionDetails;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0</p>
+         */
         @NameInMap("tradePrice")
         public Float tradePrice;
 
