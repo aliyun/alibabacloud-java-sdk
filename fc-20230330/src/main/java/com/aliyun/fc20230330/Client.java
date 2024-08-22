@@ -69,8 +69,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If you wish to access applications or functions created in Function Compute via a fixed domain name in a production environment, or if you need to address the forced download behavior when accessing HTTP triggers, you can achieve this by binding a custom domain to your application or function.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建自定义域名。</p>
+     * <p>Creates a custom domain name.</p>
      * 
      * @param request CreateCustomDomainRequest
      * @param headers map
@@ -98,8 +101,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If you wish to access applications or functions created in Function Compute via a fixed domain name in a production environment, or if you need to address the forced download behavior when accessing HTTP triggers, you can achieve this by binding a custom domain to your application or function.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建自定义域名。</p>
+     * <p>Creates a custom domain name.</p>
      * 
      * @param request CreateCustomDomainRequest
      * @return CreateCustomDomainResponse
@@ -111,6 +117,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>In Function Compute, a function serves as the smallest unit of resource scheduling and execution, typically referring to a piece of code written by users that can execute independently in response to specific events or requests.</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates a function.</p>
      * 
@@ -140,6 +149,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>In Function Compute, a function serves as the smallest unit of resource scheduling and execution, typically referring to a piece of code written by users that can execute independently in response to specific events or requests.</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates a function.</p>
      * 
@@ -1574,6 +1586,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListFunctionsResponse listFunctionsWithOptions(ListFunctionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fcVersion)) {
+            query.put("fcVersion", request.fcVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
             query.put("limit", request.limit);
         }
@@ -2281,6 +2297,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Tags are used to identify resources. Tags allow you to categorize, search for, and aggregate resources that have the same characteristics from different dimensions. This facilitates resource management. For more information, see <a href="https://help.aliyun.com/document_detail/156983.html">Tag overview</a>.</p>
+     * 
      * <b>summary</b> : 
      * <p>Adds tags to a resource.</p>
      * 
@@ -2310,6 +2329,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Tags are used to identify resources. Tags allow you to categorize, search for, and aggregate resources that have the same characteristics from different dimensions. This facilitates resource management. For more information, see <a href="https://help.aliyun.com/document_detail/156983.html">Tag overview</a>.</p>
+     * 
      * <b>summary</b> : 
      * <p>Adds tags to a resource.</p>
      * 

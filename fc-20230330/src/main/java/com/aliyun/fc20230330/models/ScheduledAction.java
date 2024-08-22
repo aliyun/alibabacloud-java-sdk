@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ScheduledAction extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>2024-03-10T10:10:10Z</p>
+     * <p>2024-03-10T10:10:10</p>
      */
     @NameInMap("endTime")
     public String endTime;
@@ -31,7 +31,7 @@ public class ScheduledAction extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>2023-03-10T10:10:10Z</p>
+     * <p>2023-03-10T10:10:10</p>
      */
     @NameInMap("startTime")
     public String startTime;
@@ -44,6 +44,13 @@ public class ScheduledAction extends TeaModel {
      */
     @NameInMap("target")
     public Long target;
+
+    /**
+     * <strong>example:</strong>
+     * <p>Asia/Shanghai</p>
+     */
+    @NameInMap("timeZone")
+    public String timeZone;
 
     public static ScheduledAction build(java.util.Map<String, ?> map) throws Exception {
         ScheduledAction self = new ScheduledAction();
@@ -88,6 +95,14 @@ public class ScheduledAction extends TeaModel {
     }
     public Long getTarget() {
         return this.target;
+    }
+
+    public ScheduledAction setTimeZone(String timeZone) {
+        this.timeZone = timeZone;
+        return this;
+    }
+    public String getTimeZone() {
+        return this.timeZone;
     }
 
 }

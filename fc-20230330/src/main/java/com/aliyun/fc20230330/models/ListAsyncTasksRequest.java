@@ -48,7 +48,7 @@ public class ListAsyncTasksRequest extends TeaModel {
     public String prefix;
 
     /**
-     * <p>The function version or alias.</p>
+     * <p>The version or alias of the function.</p>
      * 
      * <strong>example:</strong>
      * <p>LATEST</p>
@@ -70,7 +70,7 @@ public class ListAsyncTasksRequest extends TeaModel {
     public String sortOrderByTime;
 
     /**
-     * <p>The start time of the period in which the asynchronous tasks are launched.</p>
+     * <p>The start time of the period during which the asynchronous tasks are initiated.</p>
      * 
      * <strong>example:</strong>
      * <p>1640966400000</p>
@@ -79,7 +79,7 @@ public class ListAsyncTasksRequest extends TeaModel {
     public Long startedTimeBegin;
 
     /**
-     * <p>The end time of the period in which the asynchronous tasks are launched.</p>
+     * <p>The end time of the period during which the asynchronous tasks are initiated.</p>
      * 
      * <strong>example:</strong>
      * <p>1640966400000</p>

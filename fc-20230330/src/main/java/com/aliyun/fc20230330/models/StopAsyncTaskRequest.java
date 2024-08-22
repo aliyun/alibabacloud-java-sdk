@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopAsyncTaskRequest extends TeaModel {
     /**
-     * <p>The function version or alias.</p>
+     * <p>The version or alias of the function.</p>
      * 
      * <strong>example:</strong>
      * <p>LATEST</p>

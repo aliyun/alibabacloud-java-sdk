@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListFunctionsRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>v3</p>
+     */
+    @NameInMap("fcVersion")
+    public String fcVersion;
+
+    /**
      * <p>The number of functions to return. The minimum value is 1 and the maximum value is 100.</p>
      * 
      * <strong>example:</strong>
@@ -34,6 +41,14 @@ public class ListFunctionsRequest extends TeaModel {
     public static ListFunctionsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListFunctionsRequest self = new ListFunctionsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListFunctionsRequest setFcVersion(String fcVersion) {
+        this.fcVersion = fcVersion;
+        return this;
+    }
+    public String getFcVersion() {
+        return this.fcVersion;
     }
 
     public ListFunctionsRequest setLimit(Integer limit) {

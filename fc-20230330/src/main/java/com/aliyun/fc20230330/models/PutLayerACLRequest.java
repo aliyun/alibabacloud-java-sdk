@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PutLayerACLRequest extends TeaModel {
     /**
+     * <p>Specify the access permission of the layer. A value of 1 indicates public and a value of 0 indicates private. The default value is 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,7 +14,7 @@ public class PutLayerACLRequest extends TeaModel {
     public String acl;
 
     /**
-     * <p>Specifies whether the layer is a public layer. Valid values: true and false.</p>
+     * <p>Specify whether the layer is a public layer. Valid values: true and false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

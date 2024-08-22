@@ -1,3 +1,7 @@
+2024-08-22 Version: 4.1.2
+- Update API ListFunctions: add param fcVersion.
+
+
 2024-07-15 Version: 4.1.1
 - Update API PutLayerACL: add param acl.
 - Update API PutLayerACL: update param public.
