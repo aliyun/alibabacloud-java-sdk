@@ -7,12 +7,24 @@ public class GetResourcesRequest extends TeaModel {
     @NameInMap("filter")
     public java.util.Map<String, ?> filter;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("maxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAdDWBF2****</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("regionId")
     public String regionId;
 

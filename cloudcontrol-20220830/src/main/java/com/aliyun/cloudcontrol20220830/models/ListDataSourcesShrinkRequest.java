@@ -4,6 +4,12 @@ package com.aliyun.cloudcontrol20220830.models;
 import com.aliyun.tea.*;
 
 public class ListDataSourcesShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RegionId</p>
+     */
     @NameInMap("attributeName")
     public String attributeName;
 

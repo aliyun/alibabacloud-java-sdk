@@ -4,18 +4,34 @@ package com.aliyun.cloudcontrol20220830.models;
 import com.aliyun.tea.*;
 
 public class ListResourceTypesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("maxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ECS::Disk</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("resourceTypes")
     public java.util.List<ListResourceTypesResponseBodyResourceTypes> resourceTypes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("totalCount")
     public Integer totalCount;
 
@@ -223,15 +239,31 @@ public class ListResourceTypesResponseBody extends TeaModel {
     }
 
     public static class ListResourceTypesResponseBodyResourceTypesInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>paid</p>
+         */
         @NameInMap("chargeType")
         public String chargeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>region</p>
+         */
         @NameInMap("deliveryScope")
         public String deliveryScope;
 
+        /**
+         * <strong>example:</strong>
+         * <p>An ECS instance is equivalent to a virtual machine, including the most basic computing components such as CPU, memory, operating system, network, and disk. You can easily customize and change the configuration of the instance. You have full control over the virtual machine.</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Instance</p>
+         */
         @NameInMap("title")
         public String title;
 
@@ -302,9 +334,17 @@ public class ListResourceTypesResponseBody extends TeaModel {
         @NameInMap("listResponseProperties")
         public java.util.List<String> listResponseProperties;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/properties/InstanceId</p>
+         */
         @NameInMap("primaryIdentifier")
         public String primaryIdentifier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ECS</p>
+         */
         @NameInMap("product")
         public String product;
 
@@ -320,6 +360,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
         @NameInMap("required")
         public java.util.List<String> required;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Instance</p>
+         */
         @NameInMap("resourceType")
         public String resourceType;
 

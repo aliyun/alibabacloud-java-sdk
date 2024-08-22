@@ -7,6 +7,10 @@ public class ListProductsHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh_CH</p>
+     */
     @NameInMap("x-acs-accept-language")
     public String xAcsAcceptLanguage;
 

@@ -4,9 +4,17 @@ package com.aliyun.cloudcontrol20220830.models;
 import com.aliyun.tea.*;
 
 public class ListProductsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("maxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ECS</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 

@@ -4,18 +4,34 @@ package com.aliyun.cloudcontrol20220830.models;
 import com.aliyun.tea.*;
 
 public class ListProductsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("maxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Redis</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
     @NameInMap("products")
     public java.util.List<ListProductsResponseBodyProducts> products;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("totalCount")
     public Integer totalCount;
 
@@ -65,9 +81,17 @@ public class ListProductsResponseBody extends TeaModel {
     }
 
     public static class ListProductsResponseBodyProducts extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ECS</p>
+         */
         @NameInMap("productCode")
         public String productCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Elastic Compute Service</p>
+         */
         @NameInMap("productName")
         public String productName;
 

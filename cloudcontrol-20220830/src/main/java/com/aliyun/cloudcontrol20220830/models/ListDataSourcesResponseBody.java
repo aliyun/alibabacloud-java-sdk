@@ -7,6 +7,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
     @NameInMap("dataSources")
     public java.util.List<ListDataSourcesResponseBodyDataSources> dataSources;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
     }
 
     public static class ListDataSourcesResponseBodyDataSources extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("id")
         public String id;
 
