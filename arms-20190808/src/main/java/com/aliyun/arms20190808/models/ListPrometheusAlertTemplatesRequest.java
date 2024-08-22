@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPrometheusAlertTemplatesRequest extends TeaModel {
     /**
+     * <p>The ID of the cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>c0bad479465464e1d8c1e641b0afb****</p>
      */
@@ -12,6 +14,7 @@ public class ListPrometheusAlertTemplatesRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The ID of the region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

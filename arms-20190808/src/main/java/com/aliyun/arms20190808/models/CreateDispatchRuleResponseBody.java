@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDispatchRuleResponseBody extends TeaModel {
     /**
+     * <p>The ID of the dispatch policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>10413</p>
      */
@@ -12,6 +14,8 @@ public class CreateDispatchRuleResponseBody extends TeaModel {
     public Long dispatchRuleId;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>A5EC8221-08F2-4C95-9AF1-49FD998C****</p>
      */

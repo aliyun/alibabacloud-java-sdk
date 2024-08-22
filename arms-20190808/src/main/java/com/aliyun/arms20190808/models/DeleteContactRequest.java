@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteContactRequest extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to <strong>DeleteContact</strong>.</p>
+     * <p>The ID of the alert contact.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

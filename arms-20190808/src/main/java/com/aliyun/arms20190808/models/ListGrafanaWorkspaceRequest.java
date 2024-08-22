@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListGrafanaWorkspaceRequest extends TeaModel {
     /**
+     * <p>The language. Valid values: zh and en. Default value: zh.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,7 @@ public class ListGrafanaWorkspaceRequest extends TeaModel {
     public String aliyunLang;
 
     /**
+     * <p>The region ID. Default value: cn-hangzhou.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +24,7 @@ public class ListGrafanaWorkspaceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the resource group to which the Prometheus instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxyexli2****</p>
@@ -29,6 +32,9 @@ public class ListGrafanaWorkspaceRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<ListGrafanaWorkspaceRequestTags> tags;
 
@@ -71,6 +77,8 @@ public class ListGrafanaWorkspaceRequest extends TeaModel {
 
     public static class ListGrafanaWorkspaceRequestTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestKey</p>
          */
@@ -78,6 +86,8 @@ public class ListGrafanaWorkspaceRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestValue</p>
          */

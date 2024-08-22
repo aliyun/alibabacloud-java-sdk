@@ -4,10 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetRetcodeLogstoreResponseBody extends TeaModel {
+    /**
+     * <p>The returned struct.</p>
+     */
     @NameInMap("Data")
     public GetRetcodeLogstoreResponseBodyData data;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1A9C645C-C83F-4C9D-8CCB-29BEC9E1****</p>
      */
@@ -37,6 +42,8 @@ public class GetRetcodeLogstoreResponseBody extends TeaModel {
 
     public static class GetRetcodeLogstoreResponseBodyDataRetcodeSLSConfig extends TeaModel {
         /**
+         * <p>The Log Service Logstore.</p>
+         * 
          * <strong>example:</strong>
          * <p>log-test-220431</p>
          */
@@ -44,6 +51,8 @@ public class GetRetcodeLogstoreResponseBody extends TeaModel {
         public String logstore;
 
         /**
+         * <p>The Log Service project.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-project</p>
          */
@@ -51,6 +60,8 @@ public class GetRetcodeLogstoreResponseBody extends TeaModel {
         public String project;
 
         /**
+         * <p>The ID of the region.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -90,16 +101,23 @@ public class GetRetcodeLogstoreResponseBody extends TeaModel {
 
     public static class GetRetcodeLogstoreResponseBodyData extends TeaModel {
         /**
+         * <p>The content of the log.</p>
+         * 
          * <strong>example:</strong>
          * <p>retcode app or task can not be found!</p>
          */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The information about Log Service.</p>
+         */
         @NameInMap("RetcodeSLSConfig")
         public GetRetcodeLogstoreResponseBodyDataRetcodeSLSConfig retcodeSLSConfig;
 
         /**
+         * <p>The status of the request.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

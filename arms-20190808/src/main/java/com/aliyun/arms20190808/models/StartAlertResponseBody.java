@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class StartAlertResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * <ul>
+     * <li><code>true</code>: The call was successful.</li>
+     * <li><code>false</code>: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +18,8 @@ public class StartAlertResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>27E653FA-5958-45BE-8AA9-14D884DC****</p>
      */

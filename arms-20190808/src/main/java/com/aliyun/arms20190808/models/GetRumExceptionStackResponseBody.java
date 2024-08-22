@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetRumExceptionStackResponseBody extends TeaModel {
     /**
+     * <p>The responses code. The status code 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public GetRumExceptionStackResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,7 +29,7 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned if the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>Internal error. Please try again. Contact the DingTalk service account if the issue                              persists after multiple retries.</p>
@@ -31,7 +38,7 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>Id of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>B6A00968-82A8-4F14-9D1B-B53827DB****</p>
@@ -40,6 +47,12 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><code>true</code></li>
+     * <li><code>false</code></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -100,10 +113,15 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
     }
 
     public static class GetRumExceptionStackResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of stacks.</p>
+         */
         @NameInMap("Lines")
         public java.util.List<String> lines;
 
         /**
+         * <p>The thread ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>16643</p>
          */

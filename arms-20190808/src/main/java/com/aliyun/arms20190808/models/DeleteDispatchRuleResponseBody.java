@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteDispatchRuleResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>16AF921B-8187-489F-9913-43C808B4****</p>
      */
@@ -12,6 +14,8 @@ public class DeleteDispatchRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

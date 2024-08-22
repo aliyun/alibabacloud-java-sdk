@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSyntheticDetailResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code returned. The status code 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -18,6 +20,8 @@ public class ListSyntheticDetailResponseBody extends TeaModel {
     public ListSyntheticDetailResponseBodyData data;
 
     /**
+     * <p>The error message returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -78,6 +82,8 @@ public class ListSyntheticDetailResponseBody extends TeaModel {
         public java.util.List<java.util.Map<String, ?>> items;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -85,16 +91,26 @@ public class ListSyntheticDetailResponseBody extends TeaModel {
         public Integer page;
 
         /**
+         * <p>The number of entries returned on each page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>A reserved field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("TaskCreateTime")
         public Long taskCreateTime;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */

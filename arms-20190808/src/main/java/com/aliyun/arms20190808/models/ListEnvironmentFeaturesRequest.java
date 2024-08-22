@@ -5,7 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListEnvironmentFeaturesRequest extends TeaModel {
     /**
-     * <p>The language. Valid values: zh and en. Default value: zh.</p>
+     * <p>The language. Default value: zh.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>en: English.</li>
+     * <li>zh: Chinese.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>en</p>

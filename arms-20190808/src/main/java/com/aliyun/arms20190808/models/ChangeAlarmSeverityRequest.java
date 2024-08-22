@@ -16,6 +16,8 @@ public class ChangeAlarmSeverityRequest extends TeaModel {
     public Long alarmId;
 
     /**
+     * <p>The ID of the handler.</p>
+     * 
      * <strong>example:</strong>
      * <p>2046076</p>
      */
@@ -23,6 +25,7 @@ public class ChangeAlarmSeverityRequest extends TeaModel {
     public Long handlerId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

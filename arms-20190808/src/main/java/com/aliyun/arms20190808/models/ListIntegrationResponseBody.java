@@ -4,10 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListIntegrationResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListIntegrationResponseBodyPageInfo pageInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>34ED024E-9E31-434A-9E4E-D9D15C3****</p>
      */
@@ -37,6 +42,12 @@ public class ListIntegrationResponseBody extends TeaModel {
 
     public static class ListIntegrationResponseBodyPageInfoIntegrationsIntegrationDetail extends TeaModel {
         /**
+         * <p>Indicates whether alert events are automatically cleared. Valid values:</p>
+         * <ul>
+         * <li>true (default)</li>
+         * <li>false</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -44,26 +55,41 @@ public class ListIntegrationResponseBody extends TeaModel {
         public Boolean autoRecover;
 
         /**
+         * <p>The description of the alert integration.</p>
+         * 
          * <strong>example:</strong>
-         * <p>测试</p>
+         * <p>Test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The fields whose values are deduplicated.</p>
+         * 
          * <strong>example:</strong>
          * <p>LABEL.alertname::LABEL.severity</p>
          */
         @NameInMap("DuplicateKey")
         public String duplicateKey;
 
+        /**
+         * <p>The extended mapped fields of the alert source.</p>
+         */
         @NameInMap("ExtendedFieldRedefineRules")
         public java.util.List<java.util.Map<String, ?>> extendedFieldRedefineRules;
 
+        /**
+         * <p>The predefined mapped fields of the alert source.</p>
+         */
         @NameInMap("FieldRedefineRules")
         public java.util.List<java.util.Map<String, ?>> fieldRedefineRules;
 
         /**
+         * <p>The field for clearing alert events. The system queries alert events based on the field of alert clearing events and clears the alert events.</p>
+         * <blockquote>
+         * <p>Only the Log Service alert integration supports the parameter.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>$.status</p>
          */
@@ -71,6 +97,11 @@ public class ListIntegrationResponseBody extends TeaModel {
         public String initiativeRecoverField;
 
         /**
+         * <p>The value of the field for clearing alert events. The system queries alert events based on the field of alert clearing events and clears the alert events.</p>
+         * <blockquote>
+         * <p>Only the Log Service alert integration supports the parameter.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>ok</p>
          */
@@ -78,12 +109,17 @@ public class ListIntegrationResponseBody extends TeaModel {
         public String initiativeRecoverValue;
 
         /**
+         * <p>The time when alert events are automatically cleared. Unit: seconds. Default value: 300.</p>
+         * 
          * <strong>example:</strong>
          * <p>300</p>
          */
         @NameInMap("RecoverTime")
         public Long recoverTime;
 
+        /**
+         * <p>The total number of alert events and the number of abnormal alert events in the last hour.</p>
+         */
         @NameInMap("Stat")
         public java.util.List<Long> stat;
 
@@ -168,6 +204,8 @@ public class ListIntegrationResponseBody extends TeaModel {
 
     public static class ListIntegrationResponseBodyPageInfoIntegrations extends TeaModel {
         /**
+         * <p>The endpoint of the alert integration.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://alerts.aliyuncs.com/api/v1/integrations/custom/ymQBN">https://alerts.aliyuncs.com/api/v1/integrations/custom/ymQBN</a>******</p>
          */
@@ -175,16 +213,23 @@ public class ListIntegrationResponseBody extends TeaModel {
         public String apiEndpoint;
 
         /**
+         * <p>The time when the alert integration was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-06-18</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The information about the alert events.</p>
+         */
         @NameInMap("IntegrationDetail")
         public ListIntegrationResponseBodyPageInfoIntegrationsIntegrationDetail integrationDetail;
 
         /**
+         * <p>The ID of the alert integration.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
@@ -192,13 +237,21 @@ public class ListIntegrationResponseBody extends TeaModel {
         public Long integrationId;
 
         /**
+         * <p>The name of the alert integration.</p>
+         * 
          * <strong>example:</strong>
-         * <p>云监控集成</p>
+         * <p>CloudMonitor integration</p>
          */
         @NameInMap("IntegrationName")
         public String integrationName;
 
         /**
+         * <p>The type of the alert integration. Valid values:</p>
+         * <ul>
+         * <li>CLOUD_MONITOR: CloudMonitor</li>
+         * <li>LOG_SERVICE: Log Service</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CLOUD_MONITOR</p>
          */
@@ -206,6 +259,8 @@ public class ListIntegrationResponseBody extends TeaModel {
         public String integrationProductType;
 
         /**
+         * <p>The activity of the alert integration</p>
+         * 
          * <strong>example:</strong>
          * <p>ready</p>
          */
@@ -213,6 +268,8 @@ public class ListIntegrationResponseBody extends TeaModel {
         public String liveness;
 
         /**
+         * <p>The authentication token of the alert integration.</p>
+         * 
          * <strong>example:</strong>
          * <p>ymQBN******</p>
          */
@@ -220,6 +277,12 @@ public class ListIntegrationResponseBody extends TeaModel {
         public String shortToken;
 
         /**
+         * <p>Indicates whether the alert integration was enabled. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -306,10 +369,15 @@ public class ListIntegrationResponseBody extends TeaModel {
     }
 
     public static class ListIntegrationResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The information about each alert integration.</p>
+         */
         @NameInMap("Integrations")
         public java.util.List<ListIntegrationResponseBodyPageInfoIntegrations> integrations;
 
         /**
+         * <p>The page number of the returned page.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -317,6 +385,8 @@ public class ListIntegrationResponseBody extends TeaModel {
         public Long page;
 
         /**
+         * <p>The number of alert integrations returned per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -324,6 +394,8 @@ public class ListIntegrationResponseBody extends TeaModel {
         public Long size;
 
         /**
+         * <p>The total number of alert integrations.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

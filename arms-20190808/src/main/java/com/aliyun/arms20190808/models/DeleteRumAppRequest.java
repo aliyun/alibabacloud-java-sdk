@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteRumAppRequest extends TeaModel {
     /**
+     * <p>The group where the application resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -12,6 +14,7 @@ public class DeleteRumAppRequest extends TeaModel {
     public String appGroup;
 
     /**
+     * <p>The ID of the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class DeleteRumAppRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The ID of the region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -544,6 +544,12 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicy extends TeaModel {
+        /**
+         * <p>Specifies whether to enable simple mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("DirectedMode")
         public Boolean directedMode;
 

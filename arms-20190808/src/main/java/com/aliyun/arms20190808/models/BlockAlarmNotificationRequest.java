@@ -25,6 +25,7 @@ public class BlockAlarmNotificationRequest extends TeaModel {
     public Long handlerId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

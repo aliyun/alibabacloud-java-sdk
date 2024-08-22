@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEnvironmentFeatureRequest extends TeaModel {
     /**
-     * <p>Language, en | zh.</p>
+     * <p>The language. Valid values: en and zh.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>

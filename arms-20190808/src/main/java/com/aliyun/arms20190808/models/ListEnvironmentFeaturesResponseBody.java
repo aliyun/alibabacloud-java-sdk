@@ -161,7 +161,7 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
         public String latestVersion;
 
         /**
-         * <p>Whether hosted scenario.</p>
+         * <p>Indicates whether the component is fully managed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

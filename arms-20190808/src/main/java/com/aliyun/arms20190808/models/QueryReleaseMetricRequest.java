@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryReleaseMetricRequest extends TeaModel {
     /**
+     * <p>The ID of the change order.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class QueryReleaseMetricRequest extends TeaModel {
     public String changeOrderId;
 
     /**
+     * <p>The time when the change order was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>1634005438000</p>
      */
@@ -21,6 +24,8 @@ public class QueryReleaseMetricRequest extends TeaModel {
     public Long createTime;
 
     /**
+     * <p>The type of the metric that you want to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>SystemContrast</p>
      */
@@ -28,6 +33,7 @@ public class QueryReleaseMetricRequest extends TeaModel {
     public String metricType;
 
     /**
+     * <p>The ID of the Enterprise Distributed Application Service (EDAS) or Kubernetes application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,8 @@ public class QueryReleaseMetricRequest extends TeaModel {
     public String pid;
 
     /**
+     * <p>This parameter is not in use.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -44,6 +52,7 @@ public class QueryReleaseMetricRequest extends TeaModel {
     public String proxyUserId;
 
     /**
+     * <p>The end time of the version release.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +62,7 @@ public class QueryReleaseMetricRequest extends TeaModel {
     public Long releaseEndTime;
 
     /**
+     * <p>The start time of the version release.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,6 +72,8 @@ public class QueryReleaseMetricRequest extends TeaModel {
     public Long releaseStartTime;
 
     /**
+     * <p>The service that you want to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>clothservice</p>
      */

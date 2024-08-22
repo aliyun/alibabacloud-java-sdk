@@ -156,7 +156,7 @@ public class ListAddonsResponseBody extends TeaModel {
 
     public static class ListAddonsResponseBodyDataEnvironmentsDependencies extends TeaModel {
         /**
-         * <p>Dependency cluster types.</p>
+         * <p>The supported cluster types.</p>
          */
         @NameInMap("ClusterTypes")
         public java.util.List<String> clusterTypes;

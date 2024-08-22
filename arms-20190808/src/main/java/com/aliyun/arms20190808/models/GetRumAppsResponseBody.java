@@ -30,6 +30,9 @@ public class GetRumAppsResponseBody extends TeaModel {
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Internal error, please contact customer service.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -249,6 +252,9 @@ public class GetRumAppsResponseBody extends TeaModel {
 
         /**
          * <p>The description of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TEST</p>
          */
         @NameInMap("Description")
         public String description;
@@ -273,6 +279,9 @@ public class GetRumAppsResponseBody extends TeaModel {
 
         /**
          * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>home page</p>
          */
         @NameInMap("Name")
         public String name;

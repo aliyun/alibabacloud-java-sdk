@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAlertContactGroupResponseBody extends TeaModel {
     /**
+     * <p>The ID of the alert contact group.</p>
+     * 
      * <strong>example:</strong>
      * <p>446*</p>
      */
@@ -12,6 +14,8 @@ public class CreateAlertContactGroupResponseBody extends TeaModel {
     public String contactGroupId;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>70675725-8F11-4817-8106-CFE0AD71****</p>
      */

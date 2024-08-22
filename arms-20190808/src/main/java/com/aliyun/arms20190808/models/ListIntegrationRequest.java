@@ -5,13 +5,20 @@ import com.aliyun.tea.*;
 
 public class ListIntegrationRequest extends TeaModel {
     /**
+     * <p>The name of the alert integration.</p>
+     * 
      * <strong>example:</strong>
-     * <p>云监控集成</p>
+     * <p>CloudMonitor integration</p>
      */
     @NameInMap("IntegrationName")
     public String integrationName;
 
     /**
+     * <p>The type of the alert integration. Valid values:</p>
+     * <ul>
+     * <li>CLOUD_MONITOR: CloudMonitor</li>
+     * <li>LOG_SERVICE: Log Service</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +28,12 @@ public class ListIntegrationRequest extends TeaModel {
     public String integrationProductType;
 
     /**
+     * <p>Specifies whether to display the details of each alert integration:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -28,6 +41,7 @@ public class ListIntegrationRequest extends TeaModel {
     public Boolean isDetail;
 
     /**
+     * <p>The number of the page to return.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +51,7 @@ public class ListIntegrationRequest extends TeaModel {
     public Long page;
 
     /**
+     * <p>The number of alert integrations to return on each page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

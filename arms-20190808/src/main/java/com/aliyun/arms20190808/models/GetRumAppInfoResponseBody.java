@@ -113,16 +113,24 @@ public class GetRumAppInfoResponseBody extends TeaModel {
     }
 
     public static class GetRumAppInfoResponseBodyDataBonreeSDKConfigModuleConfig extends TeaModel {
+        /**
+         * <p>The default configuration of the application.</p>
+         */
         @NameInMap("defaultConfig")
         public java.util.Map<String, DataBonreeSDKConfigModuleConfigDefaultConfigValue> defaultConfig;
 
         /**
+         * <p>Indicates whether the configuration is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("enable")
         public Boolean enable;
 
+        /**
+         * <p>The version configurations of the application.</p>
+         */
         @NameInMap("versionConfigs")
         public java.util.Map<String, DataBonreeSDKConfigModuleConfigVersionConfigsValue> versionConfigs;
 
@@ -158,6 +166,9 @@ public class GetRumAppInfoResponseBody extends TeaModel {
     }
 
     public static class GetRumAppInfoResponseBodyDataBonreeSDKConfig extends TeaModel {
+        /**
+         * <p>The module configuration.</p>
+         */
         @NameInMap("moduleConfig")
         public GetRumAppInfoResponseBodyDataBonreeSDKConfigModuleConfig moduleConfig;
 
@@ -308,6 +319,8 @@ public class GetRumAppInfoResponseBody extends TeaModel {
 
     public static class GetRumAppInfoResponseBodyData extends TeaModel {
         /**
+         * <p>The group to which the application belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -323,6 +336,9 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         @NameInMap("AppType")
         public String appType;
 
+        /**
+         * <p>The mobile collection configurations.</p>
+         */
         @NameInMap("BonreeSDKConfig")
         public GetRumAppInfoResponseBodyDataBonreeSDKConfig bonreeSDKConfig;
 

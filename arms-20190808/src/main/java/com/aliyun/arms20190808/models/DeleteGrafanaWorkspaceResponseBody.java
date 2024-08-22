@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteGrafanaWorkspaceResponseBody extends TeaModel {
     /**
+     * <p>The status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,12 @@ public class DeleteGrafanaWorkspaceResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Indicates whether the workspace was deleted. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +27,8 @@ public class DeleteGrafanaWorkspaceResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -26,6 +36,8 @@ public class DeleteGrafanaWorkspaceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>27E653FA-5958-45BE-8AA9-14D884DC****</p>
      */
@@ -33,6 +45,12 @@ public class DeleteGrafanaWorkspaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><code>true</code></li>
+     * <li><code>false</code></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -40,6 +58,8 @@ public class DeleteGrafanaWorkspaceResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+     * 
      * <strong>example:</strong>
      * <p>eac0a8048716731735000007137d000b</p>
      */

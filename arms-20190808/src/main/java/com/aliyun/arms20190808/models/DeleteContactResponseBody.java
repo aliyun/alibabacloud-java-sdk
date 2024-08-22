@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeleteContactResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the alert contact is deleted. Valid values:</p>
+     * <ul>
+     * <li><code>true</code>: The alert contact is deleted.</li>
+     * <li><code>false</code>: The alert contact is not deleted.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +18,8 @@ public class DeleteContactResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>C21AB7CF-B7AF-410F-BD61-82D1567F****</p>
      */

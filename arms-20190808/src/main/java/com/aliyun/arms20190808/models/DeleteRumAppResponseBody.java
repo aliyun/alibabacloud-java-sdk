@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteRumAppResponseBody extends TeaModel {
     /**
+     * <p>The status code. The status code 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DeleteRumAppResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,7 +23,7 @@ public class DeleteRumAppResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The message returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -37,6 +41,8 @@ public class DeleteRumAppResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-aek2eq4peca****</p>
      */
@@ -44,7 +50,7 @@ public class DeleteRumAppResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Indicates whether the application is deleted.</p>
+     * <p>The message that appears when the application is deleted.</p>
      * 
      * <strong>example:</strong>
      * <p>Success to delete app.</p>
@@ -53,6 +59,8 @@ public class DeleteRumAppResponseBody extends TeaModel {
     public String result;
 
     /**
+     * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

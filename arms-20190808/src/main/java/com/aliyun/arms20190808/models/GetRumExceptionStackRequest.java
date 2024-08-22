@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetRumExceptionStackRequest extends TeaModel {
     /**
+     * <p>The binary images, which represent all executable files loaded into the process address space when a crash occurs.</p>
+     * 
      * <strong>example:</strong>
      * <p>iOSDemo:arm64%3B1489F4D3-6DE2-300C-90E9-E1B869675351%3B0x0000000104064000\nAlibabaCloudRUM:arm64%3BAB7B3A8E-6CEE-325D-BCBB-8DA50E61804F%3B0x0000000106660000\nlibdispatch.dylib:arm</p>
      */
@@ -12,6 +14,8 @@ public class GetRumExceptionStackRequest extends TeaModel {
     public String exceptionBinaryImages;
 
     /**
+     * <p>The exception stack information. Set the value to a JSON string. call_stack.info represents the stack information, call_stack.thread.name represents the thread name, and call_stack.thread.id represents the thread ID. This parameter is exactly the same as the exception.stack parameter in the logstore-rum Logstore of Simple Log Service.</p>
+     * 
      * <strong>example:</strong>
      * <p>[
      * {
@@ -25,6 +29,8 @@ public class GetRumExceptionStackRequest extends TeaModel {
     public String exceptionStack;
 
     /**
+     * <p>The ID of the exception thread.</p>
+     * 
      * <strong>example:</strong>
      * <p>16643</p>
      */
@@ -32,6 +38,7 @@ public class GetRumExceptionStackRequest extends TeaModel {
     public String exceptionThreadId;
 
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +48,8 @@ public class GetRumExceptionStackRequest extends TeaModel {
     public String pid;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

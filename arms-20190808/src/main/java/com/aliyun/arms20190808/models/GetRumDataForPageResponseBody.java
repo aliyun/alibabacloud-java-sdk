@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetRumDataForPageResponseBody extends TeaModel {
     /**
+     * <p>The responses code. The status code 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The result of the operation.</p>
+     */
     @NameInMap("Data")
     public GetRumDataForPageResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,7 +29,7 @@ public class GetRumDataForPageResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned if the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>StartTime is mandatory for this action.</p>
@@ -31,7 +38,7 @@ public class GetRumDataForPageResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>78901766-3806-4E96-8E47-CFEF59E4****</p>
@@ -40,6 +47,12 @@ public class GetRumDataForPageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><code>true</code></li>
+     * <li><code>false</code></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -100,20 +113,33 @@ public class GetRumDataForPageResponseBody extends TeaModel {
     }
 
     public static class GetRumDataForPageResponseBodyData extends TeaModel {
+        /**
+         * <p>A reserved parameter. Ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("Authentication")
         public String authentication;
 
         /**
+         * <p>Indicates whether the query ends. Valid values: true and false.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("Completion")
         public String completion;
 
+        /**
+         * <p>The queried data.</p>
+         */
         @NameInMap("Items")
         public java.util.List<java.util.Map<String, ?>> items;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -121,16 +147,26 @@ public class GetRumDataForPageResponseBody extends TeaModel {
         public String page;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
         @NameInMap("PageSize")
         public String pageSize;
 
+        /**
+         * <p>A reserved parameter. Ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("Preference")
         public String preference;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */

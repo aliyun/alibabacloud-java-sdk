@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListGrafanaWorkspaceResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GrafanaWorkspace> data;
 
     /**
+     * <p>The error message returned if the request parameters are invalid.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class ListGrafanaWorkspaceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0080BE65-167F-5CB6-A691-14E2EFD474BC</p>
      */
@@ -29,6 +38,8 @@ public class ListGrafanaWorkspaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -36,6 +47,8 @@ public class ListGrafanaWorkspaceResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The trace ID that is used to query the details of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>eac0a8048716731735000007137d000b</p>
      */

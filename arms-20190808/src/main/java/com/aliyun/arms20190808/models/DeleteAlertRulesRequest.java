@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAlertRulesRequest extends TeaModel {
     /**
+     * <p>The IDs of the alert rules that you want to delete. The value is a JSON array, for example, <code>[123, 234]</code>. You can call the SearchAlertRules operation and view the <code>Id</code> parameter in the response to obtain the alert rule ID. For more information, see <a href="https://help.aliyun.com/document_detail/175825.html">SearchAlertRules</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteAlertRulesRequest extends TeaModel {
     public String alertIds;
 
     /**
+     * <p>The region ID. Default value: <code>cn-hangzhou</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

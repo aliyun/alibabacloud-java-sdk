@@ -15,6 +15,8 @@ public class ListSyntheticDetailRequest extends TeaModel {
     public java.util.List<ListSyntheticDetailRequestAdvancedFilters> advancedFilters;
 
     /**
+     * <p>The type of the results. Set the value to SYNTHETIC.</p>
+     * 
      * <strong>example:</strong>
      * <p>SYNTHETIC</p>
      */
@@ -40,12 +42,17 @@ public class ListSyntheticDetailRequest extends TeaModel {
     public String detail;
 
     /**
+     * <p>The timestamp of the end time of the query. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1684480557772</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>A reserved field.</p>
+     */
     @NameInMap("ExactFilters")
     public java.util.List<ListSyntheticDetailRequestExactFilters> exactFilters;
 
@@ -60,6 +67,12 @@ public class ListSyntheticDetailRequest extends TeaModel {
     public java.util.Map<String, String> filters;
 
     /**
+     * <p>The order in which results are sorted. Valid values:</p>
+     * <ul>
+     * <li><code>ASC</code>: ascending order</li>
+     * <li><code>DESC</code>: descending order</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>DESC</p>
      */
@@ -67,6 +80,8 @@ public class ListSyntheticDetailRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The field based on which results are sorted. Set the value to timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>timestamp</p>
      */
@@ -74,6 +89,8 @@ public class ListSyntheticDetailRequest extends TeaModel {
     public String orderBy;
 
     /**
+     * <p>The page number. Pages start from page 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -81,6 +98,8 @@ public class ListSyntheticDetailRequest extends TeaModel {
     public Integer page;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -88,6 +107,8 @@ public class ListSyntheticDetailRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the region. Set the value to cn-hangzhou.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -95,6 +116,8 @@ public class ListSyntheticDetailRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The timestamp of the start time of the query. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1684110343127</p>
      */
@@ -102,6 +125,8 @@ public class ListSyntheticDetailRequest extends TeaModel {
     public Long startTime;
 
     /**
+     * <p>The type of the synthetic test. Valid values: 1 and 2. 1 represents an immediate test, and 2 represents a scheduled test.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -281,12 +306,30 @@ public class ListSyntheticDetailRequest extends TeaModel {
     }
 
     public static class ListSyntheticDetailRequestExactFilters extends TeaModel {
+        /**
+         * <p>A reserved field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>A reserved field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("OpType")
         public String opType;
 
+        /**
+         * <p>A reserved field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("Value")
         public Object value;
 
