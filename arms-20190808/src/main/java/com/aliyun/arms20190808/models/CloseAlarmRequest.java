@@ -36,6 +36,9 @@ public class CloseAlarmRequest extends TeaModel {
 
     /**
      * <p>The alert solution.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Restart Repair</p>
      */
     @NameInMap("Solution")
     public String solution;

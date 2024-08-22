@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSyntheticTaskMonitorsRequest extends TeaModel {
     /**
+     * <p>The ID of the region in which the application is located.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

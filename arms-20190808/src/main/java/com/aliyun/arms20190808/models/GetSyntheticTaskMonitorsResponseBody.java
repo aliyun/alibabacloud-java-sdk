@@ -5,16 +5,31 @@ import com.aliyun.tea.*;
 
 public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
     /**
+     * <p>The status code returned.</p>
+     * <ul>
+     * <li>1001: The request was successful.</li>
+     * <li>1002: The request failed.</li>
+     * <li>1003: Parameter errors occurred.</li>
+     * <li>1004: Authentication failed.</li>
+     * <li>1006: The task does not exist.</li>
+     * <li>1099: Internal errors occurred.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1001</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The details of the monitoring point.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetSyntheticTaskMonitorsResponseBodyData> data;
 
     /**
+     * <p>The message that is returned when the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +37,8 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
     public String msg;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>21E85B16-75A6-429A-9F65-8AAC9A54****</p>
      */
@@ -67,16 +84,30 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
 
     public static class GetSyntheticTaskMonitorsResponseBodyData extends TeaModel {
         /**
+         * <p>The task status.</p>
+         * <ul>
+         * <li>0: active</li>
+         * <li>1: busy</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("Busy")
         public Long busy;
 
+        /**
+         * <p>The name of the city to which the monitoring point belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Beijing</p>
+         */
         @NameInMap("City")
         public String city;
 
         /**
+         * <p>The ID of the city to which the monitoring point belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>1100101</p>
          */
@@ -84,16 +115,30 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
         public Long cityCode;
 
         /**
+         * <p>The client type:</p>
+         * <ul>
+         * <li>1: IDC</li>
+         * <li>2: Last mile</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("ClientType")
         public Long clientType;
 
+        /**
+         * <p>The region to which the monitoring point belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Beijing</p>
+         */
         @NameInMap("District")
         public String district;
 
         /**
+         * <p>The ID of the carrier.</p>
+         * 
          * <strong>example:</strong>
          * <p>18</p>
          */
@@ -101,6 +146,8 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
         public Long netServiceId;
 
         /**
+         * <p>The name of the carrier.</p>
+         * 
          * <strong>example:</strong>
          * <p>XXX</p>
          */

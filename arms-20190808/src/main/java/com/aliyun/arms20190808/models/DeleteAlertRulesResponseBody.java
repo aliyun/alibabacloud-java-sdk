@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeleteAlertRulesResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the alert rule was deleted.</p>
+     * <ul>
+     * <li><code>true</code>: The alert rule was deleted.</li>
+     * <li><code>false</code>: The alert rule failed to be deleted.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +18,8 @@ public class DeleteAlertRulesResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>C21AB7CF-B7AF-410F-BD61-82D1567F****</p>
      */

@@ -153,7 +153,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         public String latestVersion;
 
         /**
-         * <p>Whether or not it is a managed component.</p>
+         * <p>Indicates whether the component is fully managed.</p>
          */
         @NameInMap("Managed")
         public Boolean managed;
@@ -346,7 +346,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
 
     public static class DescribeEnvironmentFeatureResponseBodyDataFeatureStatus extends TeaModel {
         /**
-         * <p>Binded resource ID.</p>
+         * <p>The ID of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>c013823b55e4b4d6bb6b6f28682bd38a7</p>
@@ -361,7 +361,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         public java.util.List<DescribeEnvironmentFeatureResponseBodyDataFeatureStatusFeatureContainers> featureContainers;
 
         /**
-         * <p>IPs for Pod.</p>
+         * <p>The IP address of the pod.</p>
          */
         @NameInMap("Ips")
         public java.util.List<String> ips;
@@ -385,7 +385,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The security group ID.</p>
+         * <p>The ID of the security group.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-bp1c9fcexoalq9po6cp8</p>
@@ -408,7 +408,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>The ID of the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp1qt6ict0dbxgv4wer8l</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetRumDataForPageRequest extends TeaModel {
     /**
+     * <p>The group to which the application belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -12,6 +14,8 @@ public class GetRumDataForPageRequest extends TeaModel {
     public String appGroup;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,7 @@ public class GetRumDataForPageRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The beginning of the time range to query. The time is accurate to seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,8 @@ public class GetRumDataForPageRequest extends TeaModel {
     public Integer endTime;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -35,6 +42,8 @@ public class GetRumDataForPageRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>iixxxjcnuk@582846f37******</p>
      */
@@ -42,6 +51,7 @@ public class GetRumDataForPageRequest extends TeaModel {
     public String pid;
 
     /**
+     * <p>A query statement that complies with the query syntax of Simple Log Service Logstore. For more information, see the parameters corresponding to this operation on the console page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +63,7 @@ public class GetRumDataForPageRequest extends TeaModel {
     public String query;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,6 +73,7 @@ public class GetRumDataForPageRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The beginning of the time range to query. The time is accurate to seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -14,7 +14,7 @@ public class GetRumUploadFilesRequest extends TeaModel {
     public String appType;
 
     /**
-     * <p>The application ID.</p>
+     * <p>The process ID (PID) of the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class GetRumUploadFilesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The version ID. When this field is not provided, the default response includes all versions.</p>
+     * <p>The version number of the files. If you do not specify this parameter, all versions of the files are returned by default.</p>
      * 
      * <strong>example:</strong>
      * <p>1.0.0</p>

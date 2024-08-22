@@ -4,16 +4,42 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateSyntheticTaskShrinkRequest extends TeaModel {
+    /**
+     * <p>The common parameters.</p>
+     */
     @NameInMap("CommonParam")
     public String commonParamShrink;
 
+    /**
+     * <p>The file download task.</p>
+     */
     @NameInMap("Download")
     public String downloadShrink;
 
+    /**
+     * <p>The frequency.</p>
+     */
     @NameInMap("ExtendInterval")
     public String extendIntervalShrink;
 
     /**
+     * <p>The interval at which synthetic monitoring is performed. Unit: minutes. Valid values:</p>
+     * <ul>
+     * <li>1</li>
+     * <li>5</li>
+     * <li>10</li>
+     * <li>15</li>
+     * <li>20</li>
+     * <li>30</li>
+     * <li>60</li>
+     * <li>120</li>
+     * <li>180</li>
+     * <li>240</li>
+     * <li>360</li>
+     * <li>480</li>
+     * <li>720</li>
+     * <li>1440</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +49,11 @@ public class CreateSyntheticTaskShrinkRequest extends TeaModel {
     public String intervalTime;
 
     /**
+     * <p>The interval type.</p>
+     * <ul>
+     * <li>0: daily</li>
+     * <li>1: custom frequency</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +63,12 @@ public class CreateSyntheticTaskShrinkRequest extends TeaModel {
     public String intervalType;
 
     /**
+     * <p>The IP address type:</p>
+     * <ul>
+     * <li>0: an automatic IP address</li>
+     * <li>1: IPv4</li>
+     * <li>2: IPv6</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,21 +78,32 @@ public class CreateSyntheticTaskShrinkRequest extends TeaModel {
     public Long ipType;
 
     /**
+     * <p>The list of monitoring points.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("MonitorList")
     public String monitorListShrink;
 
+    /**
+     * <p>The monitoring items that are associated with the browse tasks.</p>
+     */
     @NameInMap("Navigation")
     public String navigationShrink;
 
+    /**
+     * <p>The network synthetic monitoring task.</p>
+     */
     @NameInMap("Net")
     public String netShrink;
 
+    /**
+     * <p>The API performance synthetic monitoring task.</p>
+     */
     @NameInMap("Protocol")
     public String protocolShrink;
 
     /**
+     * <p>The ID of the region in which the application is located.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,12 +113,24 @@ public class CreateSyntheticTaskShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The name of the task. To update a synthetic monitoring task, enter the task name and set the <strong>UpdateTask</strong> parameter to <strong>true</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Network synthetic monitoring task</p>
      */
     @NameInMap("TaskName")
     public String taskName;
 
     /**
+     * <p>The type of the monitoring task. Valid values:</p>
+     * <ol>
+     * <li>3: web page performance - IE</li>
+     * <li>34: web Page Performance - Chrome</li>
+     * <li>0: network quality</li>
+     * <li>40: file download</li>
+     * <li>7:API performance</li>
+     * </ol>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -80,6 +140,12 @@ public class CreateSyntheticTaskShrinkRequest extends TeaModel {
     public Long taskType;
 
     /**
+     * <p>Specifies whether to update existing synthetic monitoring tasks.</p>
+     * <ul>
+     * <li>true: updates existing synthetic monitoring tasks.</li>
+     * <li>false: creates new synthetic monitoring tasks.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -87,6 +153,7 @@ public class CreateSyntheticTaskShrinkRequest extends TeaModel {
     public Boolean updateTask;
 
     /**
+     * <p>The URL for synthetic monitoring.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

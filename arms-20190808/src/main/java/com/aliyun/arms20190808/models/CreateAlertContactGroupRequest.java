@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAlertContactGroupRequest extends TeaModel {
     /**
+     * <p>The name of the alert contact group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class CreateAlertContactGroupRequest extends TeaModel {
     public String contactGroupName;
 
     /**
+     * <p>The IDs of contacts in the contact group. Separate multiple contact IDs with spaces. You can call the SearchAlertContact operation to query the contact IDs. For more information, see <a href="https://help.aliyun.com/document_detail/130703.html">SearchAlertContact</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>12* 23* 34*</p>
      */
@@ -21,6 +24,7 @@ public class CreateAlertContactGroupRequest extends TeaModel {
     public String contactIds;
 
     /**
+     * <p>The ID of the region. Default value: <code>cn-hangzhou</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

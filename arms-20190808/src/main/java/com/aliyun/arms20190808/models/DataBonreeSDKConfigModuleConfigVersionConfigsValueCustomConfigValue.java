@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DataBonreeSDKConfigModuleConfigVersionConfigsValueCustomConfigValue extends TeaModel {
     /**
+     * <p>Indicates whether the configuration is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

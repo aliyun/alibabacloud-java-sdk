@@ -5,19 +5,29 @@ import com.aliyun.tea.*;
 
 public class DataBonreeSDKConfigModuleConfigVersionConfigsValue extends TeaModel {
     /**
+     * <p>Indicates whether the custom configuration is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("useCustom")
     public Boolean useCustom;
 
+    /**
+     * <p>The custom configuration.</p>
+     */
     @NameInMap("customConfig")
     public java.util.Map<String, DataBonreeSDKConfigModuleConfigVersionConfigsValueCustomConfigValue> customConfig;
 
+    /**
+     * <p>The description of the version configuration.</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>The time when the version configuration was updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>1721112372055</p>
      */

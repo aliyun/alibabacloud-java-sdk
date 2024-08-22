@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateDispatchRuleResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>A5EC8221-08F2-4C95-9AF1-49FD998C****</p>
      */
@@ -12,6 +14,12 @@ public class UpdateDispatchRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
