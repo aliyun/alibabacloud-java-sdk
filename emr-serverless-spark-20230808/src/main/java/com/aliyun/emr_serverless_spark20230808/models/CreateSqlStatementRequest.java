@@ -41,7 +41,7 @@ public class CreateSqlStatementRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The SQL Compute ID. You can create an SQL Compute in the workspace created in EMR Serverless Spark.</p>
+     * <p>The SQL compute ID. You can create an SQL compute in the workspace created in EMR Serverless Spark.</p>
      * 
      * <strong>example:</strong>
      * <p>sc-dfahdfjafhajd****</p>

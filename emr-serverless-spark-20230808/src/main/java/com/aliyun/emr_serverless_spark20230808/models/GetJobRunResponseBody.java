@@ -120,10 +120,13 @@ public class GetJobRunResponseBody extends TeaModel {
         public String codeType;
 
         /**
-         * <p>The task configurations of Spark.</p>
+         * <p>The job configurations of Spark.</p>
          */
         @NameInMap("configurationOverrides")
         public GetJobRunResponseBodyJobRunConfigurationOverrides configurationOverrides;
+
+        @NameInMap("displayReleaseVersion")
+        public String displayReleaseVersion;
 
         /**
          * <p>The end time of the job.</p>
@@ -142,6 +145,9 @@ public class GetJobRunResponseBody extends TeaModel {
          */
         @NameInMap("executionTimeoutSeconds")
         public Integer executionTimeoutSeconds;
+
+        @NameInMap("fusion")
+        public Boolean fusion;
 
         /**
          * <p>The information about Spark Driver.</p>
@@ -269,6 +275,14 @@ public class GetJobRunResponseBody extends TeaModel {
             return this.configurationOverrides;
         }
 
+        public GetJobRunResponseBodyJobRun setDisplayReleaseVersion(String displayReleaseVersion) {
+            this.displayReleaseVersion = displayReleaseVersion;
+            return this;
+        }
+        public String getDisplayReleaseVersion() {
+            return this.displayReleaseVersion;
+        }
+
         public GetJobRunResponseBodyJobRun setEndTime(Long endTime) {
             this.endTime = endTime;
             return this;
@@ -283,6 +297,14 @@ public class GetJobRunResponseBody extends TeaModel {
         }
         public Integer getExecutionTimeoutSeconds() {
             return this.executionTimeoutSeconds;
+        }
+
+        public GetJobRunResponseBodyJobRun setFusion(Boolean fusion) {
+            this.fusion = fusion;
+            return this;
+        }
+        public Boolean getFusion() {
+            return this.fusion;
         }
 
         public GetJobRunResponseBodyJobRun setJobDriver(JobDriver jobDriver) {
