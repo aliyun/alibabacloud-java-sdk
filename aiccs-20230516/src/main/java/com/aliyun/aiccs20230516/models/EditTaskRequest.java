@@ -20,6 +20,24 @@ public class EditTaskRequest extends TeaModel {
     public String callbackUrl;
 
     /**
+     * <p>当发送闪信配置为1时，闪信模板ID必填</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
+    @NameInMap("FlashSmsTemplateId")
+    public Long flashSmsTemplateId;
+
+    /**
+     * <p>发送闪信配置,默认为0,0不发送闪信.1发送闪信</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
+    @NameInMap("FlashSmsType")
+    public Long flashSmsType;
+
+    /**
      * <p>并发数</p>
      * 
      * <strong>example:</strong>
@@ -174,6 +192,22 @@ public class EditTaskRequest extends TeaModel {
     }
     public String getCallbackUrl() {
         return this.callbackUrl;
+    }
+
+    public EditTaskRequest setFlashSmsTemplateId(Long flashSmsTemplateId) {
+        this.flashSmsTemplateId = flashSmsTemplateId;
+        return this;
+    }
+    public Long getFlashSmsTemplateId() {
+        return this.flashSmsTemplateId;
+    }
+
+    public EditTaskRequest setFlashSmsType(Long flashSmsType) {
+        this.flashSmsType = flashSmsType;
+        return this;
+    }
+    public Long getFlashSmsType() {
+        return this.flashSmsType;
     }
 
     public EditTaskRequest setMaxConcurrency(Long maxConcurrency) {
