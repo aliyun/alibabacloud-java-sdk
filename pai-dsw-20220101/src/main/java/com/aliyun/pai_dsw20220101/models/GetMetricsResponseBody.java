@@ -11,12 +11,8 @@ public class GetMetricsResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <strong>example:</strong>
-     * <p>[{&quot;timestamp&quot;:1548777660000,&quot;userId&quot;:&quot;120886317861****&quot;,&quot;instanceId&quot;:&quot;i-abc****&quot;,&quot;Minimum&quot;:9.92,&quot;Average&quot;:9.92,&quot;Maximum&quot;:9.92}]</p>
-     */
-    @NameInMap("DataPoints")
-    public String dataPoints;
+    @NameInMap("Datapoints")
+    public String datapoints;
 
     /**
      * <strong>example:</strong>
@@ -66,12 +62,12 @@ public class GetMetricsResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetMetricsResponseBody setDataPoints(String dataPoints) {
-        this.dataPoints = dataPoints;
+    public GetMetricsResponseBody setDatapoints(String datapoints) {
+        this.datapoints = datapoints;
         return this;
     }
-    public String getDataPoints() {
-        return this.dataPoints;
+    public String getDatapoints() {
+        return this.datapoints;
     }
 
     public GetMetricsResponseBody setMessage(String message) {

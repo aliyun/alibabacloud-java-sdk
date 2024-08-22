@@ -21,6 +21,12 @@ public class ListInstancesShrinkRequest extends TeaModel {
     @NameInMap("CreateUserId")
     public String createUserId;
 
+    @NameInMap("GpuType")
+    public String gpuType;
+
+    @NameInMap("ImageName")
+    public String imageName;
+
     /**
      * <strong>example:</strong>
      * <p>dsw-730xxxxxxxxxx</p>
@@ -37,6 +43,30 @@ public class ListInstancesShrinkRequest extends TeaModel {
 
     @NameInMap("Labels")
     public String labelsShrink;
+
+    @NameInMap("MaxCpu")
+    public String maxCpu;
+
+    @NameInMap("MaxGpu")
+    public String maxGpu;
+
+    @NameInMap("MaxGpuMemory")
+    public String maxGpuMemory;
+
+    @NameInMap("MaxMemory")
+    public String maxMemory;
+
+    @NameInMap("MinCpu")
+    public String minCpu;
+
+    @NameInMap("MinGpu")
+    public String minGpu;
+
+    @NameInMap("MinGpuMemory")
+    public String minGpuMemory;
+
+    @NameInMap("MinMemory")
+    public String minMemory;
 
     /**
      * <strong>example:</strong>
@@ -123,6 +153,22 @@ public class ListInstancesShrinkRequest extends TeaModel {
         return this.createUserId;
     }
 
+    public ListInstancesShrinkRequest setGpuType(String gpuType) {
+        this.gpuType = gpuType;
+        return this;
+    }
+    public String getGpuType() {
+        return this.gpuType;
+    }
+
+    public ListInstancesShrinkRequest setImageName(String imageName) {
+        this.imageName = imageName;
+        return this;
+    }
+    public String getImageName() {
+        return this.imageName;
+    }
+
     public ListInstancesShrinkRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -145,6 +191,70 @@ public class ListInstancesShrinkRequest extends TeaModel {
     }
     public String getLabelsShrink() {
         return this.labelsShrink;
+    }
+
+    public ListInstancesShrinkRequest setMaxCpu(String maxCpu) {
+        this.maxCpu = maxCpu;
+        return this;
+    }
+    public String getMaxCpu() {
+        return this.maxCpu;
+    }
+
+    public ListInstancesShrinkRequest setMaxGpu(String maxGpu) {
+        this.maxGpu = maxGpu;
+        return this;
+    }
+    public String getMaxGpu() {
+        return this.maxGpu;
+    }
+
+    public ListInstancesShrinkRequest setMaxGpuMemory(String maxGpuMemory) {
+        this.maxGpuMemory = maxGpuMemory;
+        return this;
+    }
+    public String getMaxGpuMemory() {
+        return this.maxGpuMemory;
+    }
+
+    public ListInstancesShrinkRequest setMaxMemory(String maxMemory) {
+        this.maxMemory = maxMemory;
+        return this;
+    }
+    public String getMaxMemory() {
+        return this.maxMemory;
+    }
+
+    public ListInstancesShrinkRequest setMinCpu(String minCpu) {
+        this.minCpu = minCpu;
+        return this;
+    }
+    public String getMinCpu() {
+        return this.minCpu;
+    }
+
+    public ListInstancesShrinkRequest setMinGpu(String minGpu) {
+        this.minGpu = minGpu;
+        return this;
+    }
+    public String getMinGpu() {
+        return this.minGpu;
+    }
+
+    public ListInstancesShrinkRequest setMinGpuMemory(String minGpuMemory) {
+        this.minGpuMemory = minGpuMemory;
+        return this;
+    }
+    public String getMinGpuMemory() {
+        return this.minGpuMemory;
+    }
+
+    public ListInstancesShrinkRequest setMinMemory(String minMemory) {
+        this.minMemory = minMemory;
+        return this;
+    }
+    public String getMinMemory() {
+        return this.minMemory;
     }
 
     public ListInstancesShrinkRequest setOrder(String order) {
