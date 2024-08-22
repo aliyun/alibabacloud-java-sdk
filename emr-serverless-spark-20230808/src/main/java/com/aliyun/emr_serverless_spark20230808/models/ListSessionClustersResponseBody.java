@@ -32,7 +32,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The SQL Computes.</p>
+     * <p>The SQL computes.</p>
      */
     @NameInMap("sessionClusters")
     public java.util.List<ListSessionClustersResponseBodySessionClusters> sessionClusters;
