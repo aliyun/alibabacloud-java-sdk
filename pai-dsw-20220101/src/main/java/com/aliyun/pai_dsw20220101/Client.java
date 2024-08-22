@@ -1214,6 +1214,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CreateUserId", request.createUserId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.gpuType)) {
+            query.put("GpuType", request.gpuType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageName)) {
+            query.put("ImageName", request.imageName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -1224,6 +1232,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.labelsShrink)) {
             query.put("Labels", request.labelsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxCpu)) {
+            query.put("MaxCpu", request.maxCpu);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxGpu)) {
+            query.put("MaxGpu", request.maxGpu);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxGpuMemory)) {
+            query.put("MaxGpuMemory", request.maxGpuMemory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxMemory)) {
+            query.put("MaxMemory", request.maxMemory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minCpu)) {
+            query.put("MinCpu", request.minCpu);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minGpu)) {
+            query.put("MinGpu", request.minGpu);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minGpuMemory)) {
+            query.put("MinGpuMemory", request.minGpuMemory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minMemory)) {
+            query.put("MinMemory", request.minMemory);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.order)) {

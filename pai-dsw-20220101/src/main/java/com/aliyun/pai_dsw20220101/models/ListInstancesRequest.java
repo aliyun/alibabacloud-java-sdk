@@ -21,6 +21,12 @@ public class ListInstancesRequest extends TeaModel {
     @NameInMap("CreateUserId")
     public String createUserId;
 
+    @NameInMap("GpuType")
+    public String gpuType;
+
+    @NameInMap("ImageName")
+    public String imageName;
+
     /**
      * <strong>example:</strong>
      * <p>dsw-730xxxxxxxxxx</p>
@@ -37,6 +43,30 @@ public class ListInstancesRequest extends TeaModel {
 
     @NameInMap("Labels")
     public java.util.Map<String, ?> labels;
+
+    @NameInMap("MaxCpu")
+    public String maxCpu;
+
+    @NameInMap("MaxGpu")
+    public String maxGpu;
+
+    @NameInMap("MaxGpuMemory")
+    public String maxGpuMemory;
+
+    @NameInMap("MaxMemory")
+    public String maxMemory;
+
+    @NameInMap("MinCpu")
+    public String minCpu;
+
+    @NameInMap("MinGpu")
+    public String minGpu;
+
+    @NameInMap("MinGpuMemory")
+    public String minGpuMemory;
+
+    @NameInMap("MinMemory")
+    public String minMemory;
 
     /**
      * <strong>example:</strong>
@@ -123,6 +153,22 @@ public class ListInstancesRequest extends TeaModel {
         return this.createUserId;
     }
 
+    public ListInstancesRequest setGpuType(String gpuType) {
+        this.gpuType = gpuType;
+        return this;
+    }
+    public String getGpuType() {
+        return this.gpuType;
+    }
+
+    public ListInstancesRequest setImageName(String imageName) {
+        this.imageName = imageName;
+        return this;
+    }
+    public String getImageName() {
+        return this.imageName;
+    }
+
     public ListInstancesRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -145,6 +191,70 @@ public class ListInstancesRequest extends TeaModel {
     }
     public java.util.Map<String, ?> getLabels() {
         return this.labels;
+    }
+
+    public ListInstancesRequest setMaxCpu(String maxCpu) {
+        this.maxCpu = maxCpu;
+        return this;
+    }
+    public String getMaxCpu() {
+        return this.maxCpu;
+    }
+
+    public ListInstancesRequest setMaxGpu(String maxGpu) {
+        this.maxGpu = maxGpu;
+        return this;
+    }
+    public String getMaxGpu() {
+        return this.maxGpu;
+    }
+
+    public ListInstancesRequest setMaxGpuMemory(String maxGpuMemory) {
+        this.maxGpuMemory = maxGpuMemory;
+        return this;
+    }
+    public String getMaxGpuMemory() {
+        return this.maxGpuMemory;
+    }
+
+    public ListInstancesRequest setMaxMemory(String maxMemory) {
+        this.maxMemory = maxMemory;
+        return this;
+    }
+    public String getMaxMemory() {
+        return this.maxMemory;
+    }
+
+    public ListInstancesRequest setMinCpu(String minCpu) {
+        this.minCpu = minCpu;
+        return this;
+    }
+    public String getMinCpu() {
+        return this.minCpu;
+    }
+
+    public ListInstancesRequest setMinGpu(String minGpu) {
+        this.minGpu = minGpu;
+        return this;
+    }
+    public String getMinGpu() {
+        return this.minGpu;
+    }
+
+    public ListInstancesRequest setMinGpuMemory(String minGpuMemory) {
+        this.minGpuMemory = minGpuMemory;
+        return this;
+    }
+    public String getMinGpuMemory() {
+        return this.minGpuMemory;
+    }
+
+    public ListInstancesRequest setMinMemory(String minMemory) {
+        this.minMemory = minMemory;
+        return this;
+    }
+    public String getMinMemory() {
+        return this.minMemory;
     }
 
     public ListInstancesRequest setOrder(String order) {
