@@ -4,6 +4,9 @@ package com.aliyun.aiccs20230516.models;
 import com.aliyun.tea.*;
 
 public class EditTaskResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     /**
      * <strong>example:</strong>
      * <p>0</p>
@@ -45,6 +48,14 @@ public class EditTaskResponseBody extends TeaModel {
     public static EditTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         EditTaskResponseBody self = new EditTaskResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public EditTaskResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public EditTaskResponseBody setCode(Long code) {

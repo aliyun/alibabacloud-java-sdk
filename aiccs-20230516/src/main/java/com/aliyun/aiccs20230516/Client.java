@@ -133,6 +133,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CallbackUrl", request.callbackUrl);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.flashSmsTemplateId)) {
+            query.put("FlashSmsTemplateId", request.flashSmsTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flashSmsType)) {
+            query.put("FlashSmsType", request.flashSmsType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxConcurrency)) {
             query.put("MaxConcurrency", request.maxConcurrency);
         }
@@ -523,6 +531,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.callbackUrl)) {
             query.put("CallbackUrl", request.callbackUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flashSmsTemplateId)) {
+            query.put("FlashSmsTemplateId", request.flashSmsTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flashSmsType)) {
+            query.put("FlashSmsType", request.flashSmsType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxConcurrency)) {

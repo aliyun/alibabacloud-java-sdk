@@ -195,6 +195,33 @@ public class TaskListResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>闪信模板id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99</p>
+         */
+        @NameInMap("FlashSmsTemplateId")
+        public Long flashSmsTemplateId;
+
+        /**
+         * <p>闪信模板名称</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
+         */
+        @NameInMap("FlashSmsTemplateName")
+        public String flashSmsTemplateName;
+
+        /**
+         * <p>发送闪信配置，可选0，1；0表示否，1表示是</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("FlashSmsType")
+        public Long flashSmsType;
+
+        /**
          * <p>最近导入时间</p>
          * 
          * <strong>example:</strong>
@@ -375,6 +402,30 @@ public class TaskListResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public TaskListResponseBodyModel setFlashSmsTemplateId(Long flashSmsTemplateId) {
+            this.flashSmsTemplateId = flashSmsTemplateId;
+            return this;
+        }
+        public Long getFlashSmsTemplateId() {
+            return this.flashSmsTemplateId;
+        }
+
+        public TaskListResponseBodyModel setFlashSmsTemplateName(String flashSmsTemplateName) {
+            this.flashSmsTemplateName = flashSmsTemplateName;
+            return this;
+        }
+        public String getFlashSmsTemplateName() {
+            return this.flashSmsTemplateName;
+        }
+
+        public TaskListResponseBodyModel setFlashSmsType(Long flashSmsType) {
+            this.flashSmsType = flashSmsType;
+            return this;
+        }
+        public Long getFlashSmsType() {
+            return this.flashSmsType;
         }
 
         public TaskListResponseBodyModel setImportTime(String importTime) {
