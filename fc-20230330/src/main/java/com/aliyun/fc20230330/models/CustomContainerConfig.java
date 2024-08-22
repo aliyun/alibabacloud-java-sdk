@@ -44,6 +44,9 @@ public class CustomContainerConfig extends TeaModel {
     @NameInMap("port")
     public Integer port;
 
+    @NameInMap("registryConfig")
+    public RegistryConfig registryConfig;
+
     /**
      * <strong>example:</strong>
      * <p>stand-sh-registry-vpc.cn-shanghai.cr.aliyuncs.com/fc-demo2/springboot-helloworld@sha256:68d1****0d64d6</p>
@@ -118,6 +121,14 @@ public class CustomContainerConfig extends TeaModel {
     }
     public Integer getPort() {
         return this.port;
+    }
+
+    public CustomContainerConfig setRegistryConfig(RegistryConfig registryConfig) {
+        this.registryConfig = registryConfig;
+        return this;
+    }
+    public RegistryConfig getRegistryConfig() {
+        return this.registryConfig;
     }
 
     public CustomContainerConfig setResolvedImageUri(String resolvedImageUri) {

@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class TargetTrackingPolicy extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>2024-03-10T10:10:10Z</p>
+     * <p>2024-03-10T10:10:10</p>
      */
     @NameInMap("endTime")
     public String endTime;
@@ -58,10 +58,17 @@ public class TargetTrackingPolicy extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>2023-03-10T10:10:10Z</p>
+     * <p>2023-03-10T10:10:10</p>
      */
     @NameInMap("startTime")
     public String startTime;
+
+    /**
+     * <strong>example:</strong>
+     * <p>Asia/Shanghai</p>
+     */
+    @NameInMap("timeZone")
+    public String timeZone;
 
     public static TargetTrackingPolicy build(java.util.Map<String, ?> map) throws Exception {
         TargetTrackingPolicy self = new TargetTrackingPolicy();
@@ -122,6 +129,14 @@ public class TargetTrackingPolicy extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
+    }
+
+    public TargetTrackingPolicy setTimeZone(String timeZone) {
+        this.timeZone = timeZone;
+        return this;
+    }
+    public String getTimeZone() {
+        return this.timeZone;
     }
 
 }
