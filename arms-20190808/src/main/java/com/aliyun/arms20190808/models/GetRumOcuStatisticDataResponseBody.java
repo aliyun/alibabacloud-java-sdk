@@ -21,6 +21,9 @@ public class GetRumOcuStatisticDataResponseBody extends TeaModel {
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("Message")
     public String message;

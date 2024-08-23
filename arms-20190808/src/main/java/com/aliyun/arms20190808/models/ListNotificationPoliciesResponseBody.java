@@ -42,7 +42,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
 
     public static class ListNotificationPoliciesResponseBodyPageBeanNotificationPoliciesGroupRule extends TeaModel {
         /**
-         * <p>The time interval for grouping. Unit: seconds. Default value: 30.</p>
+         * <p>The time interval of grouping. Unit: seconds. Default value: 30.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -60,10 +60,10 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
         public Long groupWait;
 
         /**
-         * <p>The fields that are used to group events.</p>
+         * <p>An array of alert event group objects.</p>
          * <ul>
-         * <li>If this parameter is not returned, all alert notifications are sent to the alert contacts that belong to the <code>alertname</code> group. By default, this parameter is not returned.</li>
-         * <li>If this parameter is returned, alerts with the same fields are sent to the alert contacts in one notification.</li>
+         * <li>If you do not specify the groupingFields field, all alerts will be sent to contacts based on <code>alertname</code>.</li>
+         * <li>If you specify the groupingFields field, alerts with the same field will be sent to contacts in one notification.</li>
          * </ul>
          */
         @NameInMap("GroupingFields")
@@ -270,7 +270,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
 
     public static class ListNotificationPoliciesResponseBodyPageBeanNotificationPoliciesNotifyRule extends TeaModel {
         /**
-         * <p>The notification methods.</p>
+         * <p>The notification method.</p>
          */
         @NameInMap("NotifyChannels")
         public java.util.List<String> notifyChannels;
@@ -343,13 +343,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
          * <p>The content of the alert notification sent by email.</p>
          * 
          * <strong>example:</strong>
-         * <p>Alert Name: {{ .commonLabels.alertname }}{{if .commonLabels.clustername }}
-         * Cluster Name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}
-         * App Name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}
-         * Notification Policy: {{ .dispatchRuleName }}
-         * Alert Time: {{ .startTime }}
-         * Description: {{ for .alerts }} {{ .annotations.message }}  {{if .generatorURL }}  &lt;a href=&quot;{{.generatorURL}}&quot; &gt; Details&lt;/a&gt;
-         *  {{ end }} {{ end }}</p>
+         * <p>Alert name: {{ .commonLabels.alertname }}{{if .commonLabels.clustername }} Cluster name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} Application name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} Notification policy: {{ .dispatchRuleName }} Alert time: {{ .startTime }} Alert content: {{ for .alerts }} {{.annotations.message}} {{if .generatorURL }} \<a href="{{.generatorURL}}" >Link\</a> {{end}} {{end}}</p>
          */
         @NameInMap("EmailContent")
         public String emailContent;
@@ -358,13 +352,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
          * <p>The content of the alert resolution notification sent by email.</p>
          * 
          * <strong>example:</strong>
-         * <p>Alert Name: {{ .commonLabels.alertname }}{{if .commonLabels.clustername }}
-         * Cluster Name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}
-         * App Name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}
-         * Notification Policy: {{ .dispatchRuleName }}
-         * Recover Time: {{ .endTime }}
-         * Description: {{ for .alerts }} {{ .annotations.message }}  {{if .generatorURL }} &lt;a href=&quot;{{.generatorURL}}&quot; &gt; Details&lt;/a&gt;
-         *  {{ end }} {{ end }}</p>
+         * <p>Alert name: {{ .commonLabels.alertname }}{{if .commonLabels.clustername }} Cluster name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} Application name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} Notification policy: {{ .dispatchRuleName }} Alert resolution time: {{ .endTime }} Alert content: {{ for .alerts }} {{.annotations.message}} {{if .generatorURL }} \<a href="{{.generatorURL}}" >Link\</a> {{end}} {{end}}</p>
          */
         @NameInMap("EmailRecoverContent")
         public String emailRecoverContent;
@@ -391,12 +379,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
          * <p>The content of the alert notification sent by an IM chatbot.</p>
          * 
          * <strong>example:</strong>
-         * <p>{{if .commonLabels.clustername }}</p>
-         * <p> &gt;  Cluster Name: {{ .commonLabels.clustername }} </p>
-         * <p> {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}</p>
-         * <p> &gt;  App Name: {{ .commonLabels._aliyun_arms_involvedObject_name }} </p>
-         * <p> {{ end }}{{ for .alerts }} &gt;  {{ .annotations.message }} {{if .generatorURL }} <a href="%7B%7B.generatorURL%7D%7D">Details</a>  {{end}} {{if .annotations._aliyun_arms_insights_analyze_link }}[&lt;font color=\&quot;#ff0000\&quot;&gt;diagnostic analysis&lt;/font&gt;]({{ .annotations._aliyun_arms_insights_analyze_link}}){{ end }}{{if  eq &quot;1&quot; .labels._aliyun_arms_denoise_code }} (Important:{{.labels._aliyun_arms_important_reason }}) {{end}}</p>
-         * <p>{{end}}</p>
+         * <p>{{if .commonLabels.clustername }} &gt; Cluster name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} &gt; Application name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}{{ for .alerts }}&gt; {{.annotations.message}} {{if .generatorURL }} [Link]\({{.generatorURL}}) {{ end }} {{if eq &quot;true&quot; .labels._aliyun_arms_is_denoise_filtered }} (Suspected noise) {{end}} {{end}}</p>
          */
         @NameInMap("RobotContent")
         public String robotContent;
@@ -405,13 +388,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
          * <p>The content of the alert notification sent by text message.</p>
          * 
          * <strong>example:</strong>
-         * <p>{{ .level }}Alert Occurs
-         * Alert Name: {{ .commonLabels.alertname }}{{if .commonLabels.clustername }}
-         * Cluster Name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}
-         * App Name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}
-         * Notification Policy: {{ .dispatchRuleName }}
-         * Alert Time: {{ .startTime }}
-         * Description: {{ for .alerts }} {{ .annotations.message }} {{ end }}</p>
+         * <p>\<SmsContent>Notification on the occurrence of a {{ .level }} alert. Alert name: {{ .commonLabels.alertname }}{{if .commonLabels.clustername }} Cluster name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} Application name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} Notification policy: {{ .dispatchRuleName }} Alert time: {{ .startTime }} Alert content: {{ for .alerts }} {{.annotations.message}} {{ end }}\</SmsContent></p>
          */
         @NameInMap("SmsContent")
         public String smsContent;
@@ -420,13 +397,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
          * <p>The content of the alert resolution notification sent by text message.</p>
          * 
          * <strong>example:</strong>
-         * <p>Alert Recovery Notification
-         * Alert Name: {{ .commonLabels.alertname }}{{if .commonLabels.clustername }}
-         * Cluster Name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}
-         * App Name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}
-         * Notification Policy: {{ .dispatchRuleName }}
-         * Recover Time: {{ .endTime }}
-         * Description: {{ for .alerts }} {{ .annotations.message }} {{ end }}</p>
+         * <p>\<SmsRecoverContent>Alert resolution notification. Alert name: {{ .commonLabels.alertname }}{{if .commonLabels.clustername }} Cluster name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} Application name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} Notification policy: {{ .dispatchRuleName }} Alert resolution time: {{ .endTime }} Alert content: {{ for .alerts }} {{.annotations.message}} {{ end }}\</SmsRecoverContent></p>
          */
         @NameInMap("SmsRecoverContent")
         public String smsRecoverContent;
@@ -435,12 +406,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
          * <p>The content of the alert notification sent by phone.</p>
          * 
          * <strong>example:</strong>
-         * <p>Alert Name: {{ .commonLabels.alertname }}{{if .commonLabels.clustername }}
-         * Cluster Name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}
-         * App Name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}
-         * Notification Policy: {{ .dispatchRuleName }}
-         * Alert Time: {{ .startTime }}
-         * Description: {{ for .alerts }} {{ .annotations.message }} {{ end }}</p>
+         * <p>\<TtsContent>Alert name: {{ .commonLabels.alertname }}{{if .commonLabels.clustername }} Cluster name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} Application name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} Notification policy: {{ .dispatchRuleName }} Alert time: {{ .startTime }} Alert content: {{ for .alerts }} {{.annotations.message}} {{ end }}\</TtsContent></p>
          */
         @NameInMap("TtsContent")
         public String ttsContent;
@@ -449,12 +415,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
          * <p>The content of the alert resolution notification sent by phone.</p>
          * 
          * <strong>example:</strong>
-         * <p>Alert Name: {{ .commonLabels.alertname }}{{if .commonLabels.clustername }}
-         * Cluster Name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}
-         * App Name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}
-         * Notification Policy: {{ .dispatchRuleName }}
-         * Recover Time: {{ .endTime }}
-         * Description: {{ for .alerts }} {{ .annotations.message }} {{ end }}</p>
+         * <p>\<TtsRecoverContent>Alert name: {{ .commonLabels.alertname }}{{if .commonLabels.clustername }} Cluster name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} Application name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} Notification policy: {{ .dispatchRuleName }} Alert resolution time: {{ .endTime }} Alert content: {{ for .alerts }} {{.annotations.message}} {{ end }}\</TtsRecoverContent></p>
          */
         @NameInMap("TtsRecoverContent")
         public String ttsRecoverContent;
@@ -541,6 +502,9 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
     public static class ListNotificationPoliciesResponseBodyPageBeanNotificationPolicies extends TeaModel {
         /**
          * <p>Indicates whether simple mode is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DirectedMode")
         public Boolean directedMode;
@@ -619,7 +583,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
         public Boolean repeat;
 
         /**
-         * <p>The time interval at which notifications are resent for a long-lasting unresolved alert. Unit: seconds.</p>
+         * <p>The time interval at which a notification is resent for a long-lasting unresolved alert. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>600</p>

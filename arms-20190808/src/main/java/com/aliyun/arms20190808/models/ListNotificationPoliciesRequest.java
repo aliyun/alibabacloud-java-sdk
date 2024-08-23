@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListNotificationPoliciesRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable simple mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("DirectedMode")
     public Boolean directedMode;
@@ -52,7 +55,7 @@ public class ListNotificationPoliciesRequest extends TeaModel {
     public Long page;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The ID of the region. Default value: <strong>cn-hangzhou</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

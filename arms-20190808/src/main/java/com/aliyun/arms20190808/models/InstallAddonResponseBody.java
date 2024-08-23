@@ -291,6 +291,9 @@ public class InstallAddonResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the component is fully managed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Managed")
         public Boolean managed;

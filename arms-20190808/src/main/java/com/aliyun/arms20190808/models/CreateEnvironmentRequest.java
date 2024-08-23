@@ -84,6 +84,9 @@ public class CreateEnvironmentRequest extends TeaModel {
     /**
      * <p>The ID of the Grafana workspace associated with the environment. If this parameter is left empty, the default shared Grafana workspace is used.</p>
      * 
+     * <strong>example:</strong>
+     * <p>grafana-rnglkcdrntlhk0****</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
