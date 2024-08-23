@@ -187,6 +187,9 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
     @NameInMap("TargetMajorVersion")
     public String targetMajorVersion;
 
+    @NameInMap("UpgradeMode")
+    public String upgradeMode;
+
     /**
      * <p>A reserved parameter. You do not need to specify this parameter.</p>
      * 
@@ -365,6 +368,14 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
     }
     public String getTargetMajorVersion() {
         return this.targetMajorVersion;
+    }
+
+    public UpgradeDBInstanceMajorVersionRequest setUpgradeMode(String upgradeMode) {
+        this.upgradeMode = upgradeMode;
+        return this;
+    }
+    public String getUpgradeMode() {
+        return this.upgradeMode;
     }
 
     public UpgradeDBInstanceMajorVersionRequest setUsedTime(String usedTime) {
