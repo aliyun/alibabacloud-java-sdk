@@ -116,6 +116,12 @@ public class InvokeCommandRequest extends TeaModel {
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
+    /**
+     * <p>The launcher for script execution. The value cannot exceed 1 KB in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>python3 -u {{ACS::ScriptFileName|Ext(&quot;.py&quot;)}}</p>
+     */
     @NameInMap("Launcher")
     public String launcher;
 
@@ -201,6 +207,9 @@ public class InvokeCommandRequest extends TeaModel {
     @NameInMap("ResourceTag")
     public java.util.List<InvokeCommandRequestResourceTag> resourceTag;
 
+    /**
+     * <p>The tags of the command.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<InvokeCommandRequestTag> tag;
 
@@ -458,8 +467,8 @@ public class InvokeCommandRequest extends TeaModel {
          * <ul>
          * <li>This parameter and InstanceId.N are mutually exclusive.</li>
          * <li>Valid values of N: 1 to 10. The tag key cannot be an empty string.</li>
-         * <li>The number of instances that have the specified tags cannot exceed 50. If more than 50 instances have the specified tags, we recommend that you use batch tags such as batch: b1 to group the instances into batches of up to 50 instances.</li>
-         * <li>The tag key can be up to 64 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</li>
+         * <li>The number of instances that have the specified tags cannot exceed 100. If more than 100 instances have the specified tags, we recommend that you use batch tags such as batch: b1 to group the instances into batches of up to 100 instances.</li>
+         * <li>The tag key can be up to 64 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</li>
          * </ul>
          * 
          * <strong>example:</strong>

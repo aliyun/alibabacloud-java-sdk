@@ -54,22 +54,22 @@ public class DescribeInstanceTypesRequest extends TeaModel {
      * <p> Valid values of N: 1 to 10.</p>
      * </blockquote>
      * <ul>
-     * <li>General-purpose</li>
-     * <li>Compute-optimized</li>
-     * <li>Memory-optimized</li>
-     * <li>Big data</li>
-     * <li>Local SSDs</li>
-     * <li>High Clock Speed</li>
-     * <li>Enhanced</li>
-     * <li>Shared</li>
-     * <li>Compute-optimized with GPU</li>
-     * <li>Visual Compute-optimized</li>
-     * <li>Heterogeneous Service</li>
-     * <li>Compute-optimized with FPGA</li>
-     * <li>Compute-optimized with NPU</li>
-     * <li>ECS Bare Metal</li>
-     * <li>Super Computing Cluster</li>
-     * <li>High Performance Compute</li>
+     * <li>General-purpose: general-purpose instance type</li>
+     * <li>Compute-optimized: compute-optimized instance type</li>
+     * <li>Memory-optimized: memory-optimized instance type</li>
+     * <li>Big data: big data instance type</li>
+     * <li>Local SSDs: instance type with local SSDs</li>
+     * <li>High Clock Speed: instance type with high clock speeds</li>
+     * <li>Enhanced: enhanced instance type</li>
+     * <li>Shared: shared instance type</li>
+     * <li>Compute-optimized with GPU: GPU-accelerated compute-optimized instance type</li>
+     * <li>Visual Compute-optimized: visual compute-optimized instance type</li>
+     * <li>Heterogeneous Service: heterogeneous service instance type</li>
+     * <li>Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type</li>
+     * <li>Compute-optimized with NPU: NPU-accelerated compute-optimized instance type</li>
+     * <li>ECS Bare Metal: ECS Bare Metal Instance type</li>
+     * <li>Super Computing Cluster: SCC instance type</li>
+     * <li>High Performance Compute: high-performance computing instance type</li>
      * </ul>
      */
     @NameInMap("InstanceCategories")
@@ -157,6 +157,11 @@ public class DescribeInstanceTypesRequest extends TeaModel {
      * <li>local_hdd_pro: local Serial Advanced Technology Attachment (SATA) HDDs, which are attached to d1ne or d1 instances.</li>
      * <li>local_ssd_pro: local Non-Volatile Memory Express (NVMe) SSDs, which are attached to i2, i2g, i1, ga1, or gn5 instances.</li>
      * </ul>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>local_hdd_pro</li>
+     * <li>local_ssd_pro</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>local_ssd_pro</p>
@@ -165,7 +170,7 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public String localStorageCategory;
 
     /**
-     * <p>The maximum number of entries per page. Maximum value: 1600.</p>
+     * <p>The maximum number of entries per page. Valid values: 1 to 1600.</p>
      * <p>Default value: 1600.</p>
      * 
      * <strong>example:</strong>

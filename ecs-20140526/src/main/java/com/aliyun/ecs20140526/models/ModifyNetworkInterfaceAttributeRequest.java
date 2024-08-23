@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     /**
-     * <p>This parameter is not publicly available.</p>
+     * <blockquote>
+     * <p> This parameter is in invitational preview and is not publicly available.</p>
+     * </blockquote>
      */
     @NameInMap("ConnectionTrackingConfiguration")
     public ModifyNetworkInterfaceAttributeRequestConnectionTrackingConfiguration connectionTrackingConfiguration;
@@ -274,19 +276,34 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
 
     public static class ModifyNetworkInterfaceAttributeRequestConnectionTrackingConfiguration extends TeaModel {
         /**
-         * <p>This parameter is not publicly available.</p>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("TcpClosedAndTimeWaitTimeout")
         public Integer tcpClosedAndTimeWaitTimeout;
 
         /**
-         * <p>This parameter is not publicly available.</p>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>910</p>
          */
         @NameInMap("TcpEstablishedTimeout")
         public Integer tcpEstablishedTimeout;
 
         /**
-         * <p>This parameter is not publicly available.</p>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("UdpTimeout")
         public Integer udpTimeout;
@@ -325,6 +342,9 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     public static class ModifyNetworkInterfaceAttributeRequestEnhancedNetwork extends TeaModel {
         /**
          * <p>This parameter is not publicly available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EnableSriov")
         public Boolean enableSriov;

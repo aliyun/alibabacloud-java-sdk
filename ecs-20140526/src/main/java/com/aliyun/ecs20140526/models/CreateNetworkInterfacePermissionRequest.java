@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNetworkInterfacePermissionRequest extends TeaModel {
     /**
-     * <p>The ID of the ENI.</p>
+     * <p>The ID of the Alibaba Cloud partner (a certified ISV) or individual user.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +15,7 @@ public class CreateNetworkInterfacePermissionRequest extends TeaModel {
     public Long accountId;
 
     /**
-     * <p>The permission on the ENI. Set the value to InstanceAttach.</p>
-     * <p>InstanceAttach: allows authorized users to attach the ENI to an ECS instance. The ENI and the ECS instance must reside in the same zone.</p>
+     * <p>The ID of the ENI.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +31,8 @@ public class CreateNetworkInterfacePermissionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The permission on the ENI. Valid values:</p>
+     * <p>InstanceAttach: the permission to attach the ENI to an ECS instance. The ENI and the ECS instance must be in the same zone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class CreateNetworkInterfacePermissionRequest extends TeaModel {
     public String permission;
 
     /**
-     * <p>The ID of the Alibaba Cloud partner (a certified ISV) or individual user.</p>
+     * <p>The region ID of the ENI. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

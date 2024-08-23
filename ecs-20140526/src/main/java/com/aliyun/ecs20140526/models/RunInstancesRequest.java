@@ -37,7 +37,7 @@ public class RunInstancesRequest extends TeaModel {
     public String affinity;
 
     /**
-     * <p>The desired number of ECS instances. Valid values: 1 to 100.</p>
+     * <p>The desired number of ECS instances that you want to create. Valid values: 1 to 100.</p>
      * <p>The number of ECS instances that can be created varies based on the Amount and MinAmount values.</p>
      * <ul>
      * <li><p>If you do not specify MinAmount, the RunInstances operation creates ECS instances based on the Amount value. If the available resources are insufficient to create the desired number of ECS instances, the RunInstances operation returns an error response and no ECS instances are created.</p>
@@ -59,7 +59,9 @@ public class RunInstancesRequest extends TeaModel {
     public Integer amount;
 
     /**
-     * <p>This parameter is not publicly available.</p>
+     * <blockquote>
+     * <p> This parameter is not publicly available.</p>
+     * </blockquote>
      */
     @NameInMap("Arn")
     public java.util.List<RunInstancesRequestArn> arn;
@@ -155,7 +157,7 @@ public class RunInstancesRequest extends TeaModel {
     public java.util.List<RunInstancesRequestDataDisk> dataDisk;
 
     /**
-     * <p>The ID of the dedicated host on which to create the instance. If you set the <code>DedicatedHostId</code> parameter, the <code>SpotStrategy</code> and <code>SpotPriceLimit</code> parameters are ignored. This is because preemptible instances cannot be created on dedicated hosts.</p>
+     * <p>The ID of the dedicated host on which to create the instance. Preemptible instances cannot be created on dedicated hosts. If you specify <code>DedicatedHostId</code>, <code>SpotStrategy</code> and <code>SpotPriceLimit</code> are ignored.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/134242.html">DescribeDedicatedHosts</a> operation to query the list of dedicated host IDs.</p>
      * 
      * <strong>example:</strong>
@@ -312,10 +314,12 @@ public class RunInstancesRequest extends TeaModel {
 
     /**
      * <p>The name of the image family. You can set this parameter to obtain the latest available custom image from the specified image family to create instances.</p>
+     * <p>The name must be 2 to 128 characters in length. The name cannot start with a digit, a special character, http://, or https://. The name can contain letters, digits, periods (.), underscores (_), hyphens (-), and colons (:).</p>
+     * <p>Take note of the following items:</p>
      * <ul>
      * <li>If you specify <code>ImageId</code>, you cannot specify ImageFamily.</li>
-     * <li>If you do not specify <code>ImageId</code> but use the <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> parameter to specify a launch template that has the <code>ImageId</code> parameter specified, you cannot specify ImageFamily.</li>
-     * <li>If you do not specify <code>ImageId</code> but use the <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> parameter to specify a launch template that does not have the <code>ImageId</code> parameter specified, you can specify ImageFamily.</li>
+     * <li>If you do not specify <code>ImageId</code> but use <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to specify a launch template that has <code>ImageId</code> specified, you cannot specify ImageFamily.</li>
+     * <li>If you do not specify <code>ImageId</code> but use <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to specify a launch template that does not have <code>ImageId</code> specified, you can specify ImageFamily.</li>
      * <li>If you do not specify <code>ImageId</code>, <code>LaunchTemplateId</code>, or <code>LaunchTemplateName</code>, you can specify ImageFamily.</li>
      * </ul>
      * <blockquote>
@@ -516,7 +520,7 @@ public class RunInstancesRequest extends TeaModel {
     public Long launchTemplateVersion;
 
     /**
-     * <p>The minimum number of ECS instances to be created. Valid values: 1 to 100.</p>
+     * <p>The minimum number of ECS instances that you want to create. Valid values: 1 to 100.</p>
      * <p>The number of ECS instances that can be created varies based on the Amount and MinAmount values.</p>
      * <ul>
      * <li><p>If you do not specify MinAmount, the RunInstances operation creates ECS instances based on the Amount value. If the available resources are insufficient to create the desired number of ECS instances, the RunInstances operation returns an error response and no ECS instances are created.</p>
@@ -626,6 +630,11 @@ public class RunInstancesRequest extends TeaModel {
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    /**
+     * <blockquote>
+     * <p> This parameter is in invitational preview and is not publicly available.</p>
+     * </blockquote>
+     */
     @NameInMap("PrivateDnsNameOptions")
     public RunInstancesRequestPrivateDnsNameOptions privateDnsNameOptions;
 
@@ -749,7 +758,7 @@ public class RunInstancesRequest extends TeaModel {
      * <ul>
      * <li><p>Terminate: The instance is released.</p>
      * </li>
-     * <li><p>Stop: The instance is stopped in economical mode. To use the economical mode, submit a ticket.</p>
+     * <li><p>Stop: The instance is stopped in economical mode.</p>
      * <p>For information about the economical mode, see <a href="https://help.aliyun.com/document_detail/63353.html">Economical mode</a>.</p>
      * </li>
      * </ul>
@@ -2040,7 +2049,9 @@ public class RunInstancesRequest extends TeaModel {
 
     public static class RunInstancesRequestArn extends TeaModel {
         /**
-         * <p>This parameter is not publicly available.</p>
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -2049,7 +2060,9 @@ public class RunInstancesRequest extends TeaModel {
         public Long assumeRoleFor;
 
         /**
-         * <p>This parameter is not publicly available.</p>
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -2058,7 +2071,9 @@ public class RunInstancesRequest extends TeaModel {
         public String roleType;
 
         /**
-         * <p>This parameter is not publicly available.</p>
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -2110,8 +2125,8 @@ public class RunInstancesRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable the performance burst feature for data disk N. Valid values:</p>
          * <ul>
-         * <li>true: enables the performance burst feature for the data disk.</li>
-         * <li>false: disables the performance burst feature for the data disk.</li>
+         * <li>true</li>
+         * <li>false</li>
          * </ul>
          * <blockquote>
          * <p> This parameter is available only if you set DataDisk.N.Category to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
@@ -2156,8 +2171,8 @@ public class RunInstancesRequest extends TeaModel {
         /**
          * <p>Specifies whether to release data disk N when the instance is released. Valid values:</p>
          * <ul>
-         * <li>true: releases data disk N when the instance is released.</li>
-         * <li>false: does not release data disk N when the instance is released.</li>
+         * <li>true</li>
+         * <li>false</li>
          * </ul>
          * <p>Default value: true.</p>
          * 
@@ -2215,8 +2230,8 @@ public class RunInstancesRequest extends TeaModel {
         /**
          * <p>Specifies whether to encrypt data disk N. Valid values:</p>
          * <ul>
-         * <li>true: encrypts data disk N.</li>
-         * <li>false: does not encrypt data disk N.</li>
+         * <li>true</li>
+         * <li>false</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -2911,18 +2926,58 @@ public class RunInstancesRequest extends TeaModel {
     }
 
     public static class RunInstancesRequestPrivateDnsNameOptions extends TeaModel {
+        /**
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableInstanceIdDnsAAAARecord")
         public Boolean enableInstanceIdDnsAAAARecord;
 
+        /**
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("EnableInstanceIdDnsARecord")
         public Boolean enableInstanceIdDnsARecord;
 
+        /**
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableIpDnsARecord")
         public Boolean enableIpDnsARecord;
 
+        /**
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("EnableIpDnsPtrRecord")
         public Boolean enableIpDnsPtrRecord;
 
+        /**
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom</p>
+         */
         @NameInMap("HostnameType")
         public String hostnameType;
 

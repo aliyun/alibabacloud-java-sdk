@@ -14,6 +14,8 @@ public class ResizeDiskResponseBody extends TeaModel {
     public String orderId;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>F3CD6886-D8D0-4FEE-B93E-1B732396****</p>
      */

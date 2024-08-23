@@ -728,6 +728,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("Primary")
         public Boolean primary;
 
+        /**
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>dnsTestName</p>
+         */
         @NameInMap("PrivateDnsName")
         public String privateDnsName;
 
@@ -837,7 +845,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String primaryIpAddress;
 
         /**
-         * <p>Details about the private IP addresses of the ENI.</p>
+         * <p>The private IP addresses of the ENI.</p>
          */
         @NameInMap("PrivateIpSets")
         public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSets privateIpSets;
@@ -1014,18 +1022,58 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstancePrivateDnsNameOptions extends TeaModel {
+        /**
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("EnableInstanceIdDnsAAAARecord")
         public Boolean enableInstanceIdDnsAAAARecord;
 
+        /**
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("EnableInstanceIdDnsARecord")
         public Boolean enableInstanceIdDnsARecord;
 
+        /**
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableIpDnsARecord")
         public Boolean enableIpDnsARecord;
 
+        /**
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableIpDnsPtrRecord")
         public Boolean enableIpDnsPtrRecord;
 
+        /**
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom</p>
+         */
         @NameInMap("HostnameType")
         public String hostnameType;
 
@@ -1701,6 +1749,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("OperationLocks")
         public DescribeInstancesResponseBodyInstancesInstanceOperationLocks operationLocks;
 
+        /**
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         */
         @NameInMap("PrivateDnsNameOptions")
         public DescribeInstancesResponseBodyInstancesInstancePrivateDnsNameOptions privateDnsNameOptions;
 

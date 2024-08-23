@@ -906,7 +906,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Assigns secondary private IP addresses to an elastic network interface (ENI). You can specify available private IP addresses within the CIDR block of the vSwitch that is connected to the ENI. Alternatively, you can specify a number of private IP addresses to automatically assign from the CIDR block of the vSwitch to the ENI.</p>
+     * <p>Assigns one or more secondary private IP addresses to an elastic network interface (ENI). You can specify available private IP addresses within the CIDR block of the vSwitch that is connected to the ENI. Alternatively, you can specify a number of private IP addresses to automatically assign from the CIDR block of the vSwitch to the ENI.</p>
      * 
      * @param request AssignPrivateIpAddressesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -991,7 +991,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Assigns secondary private IP addresses to an elastic network interface (ENI). You can specify available private IP addresses within the CIDR block of the vSwitch that is connected to the ENI. Alternatively, you can specify a number of private IP addresses to automatically assign from the CIDR block of the vSwitch to the ENI.</p>
+     * <p>Assigns one or more secondary private IP addresses to an elastic network interface (ENI). You can specify available private IP addresses within the CIDR block of the vSwitch that is connected to the ENI. Alternatively, you can specify a number of private IP addresses to automatically assign from the CIDR block of the vSwitch to the ENI.</p>
      * 
      * @param request AssignPrivateIpAddressesRequest
      * @return AssignPrivateIpAddressesResponse
@@ -1535,7 +1535,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Attaches an elastic network interface (ENI) to an Elastic Compute Service (ECS) instance that resides in a virtual private cloud (VPC).</p>
+     * <p>Attaches an elastic network interface (ENI) to an Elastic Compute Service (ECS) instance that resides in a virtual private cloud (VPC). When you call this operation, you can specify parameters, such as NetworkInterfaceId, InstanceId, and NetworkCardIndex, in the request.</p>
      * 
      * @param request AttachNetworkInterfaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1627,7 +1627,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Attaches an elastic network interface (ENI) to an Elastic Compute Service (ECS) instance that resides in a virtual private cloud (VPC).</p>
+     * <p>Attaches an elastic network interface (ENI) to an Elastic Compute Service (ECS) instance that resides in a virtual private cloud (VPC). When you call this operation, you can specify parameters, such as NetworkInterfaceId, InstanceId, and NetworkCardIndex, in the request.</p>
      * 
      * @param request AttachNetworkInterfaceRequest
      * @return AttachNetworkInterfaceResponse
@@ -2693,8 +2693,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>Only custom images that are in the <code>Available</code> state can be copied.</li>
      * <li>Custom images that you want to copy must belong to your Alibaba Cloud account or be shared to you by others, and cannot be copied across accounts.</li>
-     * <li>When an image is being copied, the image cannot be deleted by calling the <a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a> operation. However, you can cancel the ongoing image copy task by calling the <a href="https://help.aliyun.com/document_detail/25539.html">CancelCopyImage</a> operation.</li>
-     * <li>A region can have only one ongoing image copy task at a time. Other image copy tasks queue up to run in sequence after the ongoing task is completed.</li>
+     * <li>When an image is being copied, the image copy cannot be deleted by calling the <a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a> operation. However, you can cancel the ongoing image copy task by calling the <a href="https://help.aliyun.com/document_detail/25539.html">CancelCopyImage</a> operation.</li>
+     * <li>A region supports only up to five concurrent image copy tasks. Excess image copy tasks are queued for execution.</li>
      * <li>You can configure <code>ResourceGroupId</code> to specify the resource group to which to assign the new image. If you do not configure <code>ResourceGroupId</code>, the new image is assigned to the default resource group.</li>
      * </ul>
      * 
@@ -2789,8 +2789,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>Only custom images that are in the <code>Available</code> state can be copied.</li>
      * <li>Custom images that you want to copy must belong to your Alibaba Cloud account or be shared to you by others, and cannot be copied across accounts.</li>
-     * <li>When an image is being copied, the image cannot be deleted by calling the <a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a> operation. However, you can cancel the ongoing image copy task by calling the <a href="https://help.aliyun.com/document_detail/25539.html">CancelCopyImage</a> operation.</li>
-     * <li>A region can have only one ongoing image copy task at a time. Other image copy tasks queue up to run in sequence after the ongoing task is completed.</li>
+     * <li>When an image is being copied, the image copy cannot be deleted by calling the <a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a> operation. However, you can cancel the ongoing image copy task by calling the <a href="https://help.aliyun.com/document_detail/25539.html">CancelCopyImage</a> operation.</li>
+     * <li>A region supports only up to five concurrent image copy tasks. Excess image copy tasks are queued for execution.</li>
      * <li>You can configure <code>ResourceGroupId</code> to specify the resource group to which to assign the new image. If you do not configure <code>ResourceGroupId</code>, the new image is assigned to the default resource group.</li>
      * </ul>
      * 
@@ -2927,20 +2927,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you use an activation code to register a server that is not provided by Alibaba Cloud as an Alibaba Cloud managed instance, you can use various online services of Alibaba Cloud, such as Cloud Assistant, CloudOps Orchestration Service (OOS), and Apsara Devops, on the managed instance. 
-     * If a server is not provided by Alibaba Cloud, you can register the server as an Alibaba Cloud managed instance only if the server has Internet connectivity and runs an operating system of one of the following versions: </p>
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>After you use an activation code to register a server that is not provided by Alibaba Cloud as an Alibaba Cloud managed instance, you can use a variety of online services provided by Alibaba Cloud, such as Cloud Assistant, CloudOps Orchestration Service (OOS), and Apsara Devops on the managed instance.
+     * If a server is not provided by Alibaba Cloud, you can register the server as an Alibaba Cloud managed instance only if the server has Internet connectivity and runs one of the following operating systems:</p>
      * <ul>
-     * <li>Alibaba Cloud Linux 2, Alibaba Cloud Linux 3, and later</li>
-     * <li>CentOS 6, CentOS 7, CentOS 8, and later</li>
-     * <li>Debian 8, Debian 9, Debian 10, and later</li>
-     * <li>Ubuntu 12, Ubuntu 14, Ubuntu 16, Ubuntu 18, and later</li>
+     * <li>Alibaba Cloud Linux 2 and Alibaba Cloud Linux 3 and later</li>
+     * <li>CentOS 6, CentOS 7, and CentOS 8 and later</li>
+     * <li>Debian 8, Debian 9, and Debian 10 and later</li>
+     * <li>Ubuntu 12, Ubuntu 14, Ubuntu 16, and Ubuntu 18 and later</li>
      * <li>CoreOS</li>
      * <li>OpenSUSE</li>
-     * <li>Red Hat 5, Red Hat 6, Red Hat 7, and later</li>
-     * <li>SUSE Linux Enterprise Server (SLES) 11, SLES 12, SLES 15, and later</li>
-     * <li>Windows Server 2012, Windows Server 2016, Windows Server 2019, and later
-     * You can have up to 5,000 activation codes per Alibaba Cloud region. When the number of activation codes exceeds 1,000, the usage of the activation codes must be greater than 50% before you can proceed to create more activation codes. <blockquote>
-     * <p>To query the usage of activation codes, go to the Cloud Assistant page in the Elastic Compute Service (ECS) console, click the Manage Instances tab, and then click Register Instance.</p>
+     * <li>Red Hat 5, Red Hat 6, and Red Hat 7 and later</li>
+     * <li>SUSE Linux Enterprise Server 11, SUSE Linux Enterprise Server 12, and SUSE Linux Enterprise Server 15 and later</li>
+     * <li>Windows Server 2012, Windows Server 2016, and Windows Server 2019 and later
+     * You can have up to 5,000 activation codes per Alibaba Cloud region. When the number of activation codes exceeds 1,000, the usage of the activation codes must be greater than 50% before you can create additional activation codes.<blockquote>
+     * <p> To obtain the usage of activation codes, go to the <strong>ECS Cloud Assistant</strong> page, click the <strong>Manage Instances</strong> tab, and then click <strong>Register Instance</strong>.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -3026,20 +3027,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you use an activation code to register a server that is not provided by Alibaba Cloud as an Alibaba Cloud managed instance, you can use various online services of Alibaba Cloud, such as Cloud Assistant, CloudOps Orchestration Service (OOS), and Apsara Devops, on the managed instance. 
-     * If a server is not provided by Alibaba Cloud, you can register the server as an Alibaba Cloud managed instance only if the server has Internet connectivity and runs an operating system of one of the following versions: </p>
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>After you use an activation code to register a server that is not provided by Alibaba Cloud as an Alibaba Cloud managed instance, you can use a variety of online services provided by Alibaba Cloud, such as Cloud Assistant, CloudOps Orchestration Service (OOS), and Apsara Devops on the managed instance.
+     * If a server is not provided by Alibaba Cloud, you can register the server as an Alibaba Cloud managed instance only if the server has Internet connectivity and runs one of the following operating systems:</p>
      * <ul>
-     * <li>Alibaba Cloud Linux 2, Alibaba Cloud Linux 3, and later</li>
-     * <li>CentOS 6, CentOS 7, CentOS 8, and later</li>
-     * <li>Debian 8, Debian 9, Debian 10, and later</li>
-     * <li>Ubuntu 12, Ubuntu 14, Ubuntu 16, Ubuntu 18, and later</li>
+     * <li>Alibaba Cloud Linux 2 and Alibaba Cloud Linux 3 and later</li>
+     * <li>CentOS 6, CentOS 7, and CentOS 8 and later</li>
+     * <li>Debian 8, Debian 9, and Debian 10 and later</li>
+     * <li>Ubuntu 12, Ubuntu 14, Ubuntu 16, and Ubuntu 18 and later</li>
      * <li>CoreOS</li>
      * <li>OpenSUSE</li>
-     * <li>Red Hat 5, Red Hat 6, Red Hat 7, and later</li>
-     * <li>SUSE Linux Enterprise Server (SLES) 11, SLES 12, SLES 15, and later</li>
-     * <li>Windows Server 2012, Windows Server 2016, Windows Server 2019, and later
-     * You can have up to 5,000 activation codes per Alibaba Cloud region. When the number of activation codes exceeds 1,000, the usage of the activation codes must be greater than 50% before you can proceed to create more activation codes. <blockquote>
-     * <p>To query the usage of activation codes, go to the Cloud Assistant page in the Elastic Compute Service (ECS) console, click the Manage Instances tab, and then click Register Instance.</p>
+     * <li>Red Hat 5, Red Hat 6, and Red Hat 7 and later</li>
+     * <li>SUSE Linux Enterprise Server 11, SUSE Linux Enterprise Server 12, and SUSE Linux Enterprise Server 15 and later</li>
+     * <li>Windows Server 2012, Windows Server 2016, and Windows Server 2019 and later
+     * You can have up to 5,000 activation codes per Alibaba Cloud region. When the number of activation codes exceeds 1,000, the usage of the activation codes must be greater than 50% before you can create additional activation codes.<blockquote>
+     * <p> To obtain the usage of activation codes, go to the <strong>ECS Cloud Assistant</strong> page, click the <strong>Manage Instances</strong> tab, and then click <strong>Register Instance</strong>.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -3865,7 +3867,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The name of the deployment set. The name must be 2 to 128 characters in length, It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The name of the deployment set. The name must be 2 to 128 characters in length, It must start with a letter and cannot start with \<code>http://\\</code> or \<code>https://\\</code>. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
      * 
      * @param request CreateDeploymentSetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3945,7 +3947,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The name of the deployment set. The name must be 2 to 128 characters in length, It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The name of the deployment set. The name must be 2 to 128 characters in length, It must start with a letter and cannot start with \<code>http://\\</code> or \<code>https://\\</code>. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
      * 
      * @param request CreateDeploymentSetRequest
      * @return CreateDeploymentSetResponse
@@ -6141,7 +6143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an elastic network interface (ENI).</p>
+     * <p>Creates an elastic network interface (ENI). When you call this operation, you can specify parameters, such as VSwitchId and PrimaryIpAddress, in the request.</p>
      * 
      * @param request CreateNetworkInterfaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6323,7 +6325,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an elastic network interface (ENI).</p>
+     * <p>Creates an elastic network interface (ENI). When you call this operation, you can specify parameters, such as VSwitchId and PrimaryIpAddress, in the request.</p>
      * 
      * @param request CreateNetworkInterfaceRequest
      * @return CreateNetworkInterfaceResponse
@@ -6334,8 +6336,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, submit a ticket to apply for using this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>The region ID of the ENI. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>Grants a permission on an elastic network interface (ENI) to an Alibaba Cloud partner (a certified ISV) or an individual user.</p>
      * 
      * @param request CreateNetworkInterfacePermissionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6398,8 +6403,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, submit a ticket to apply for using this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>The region ID of the ENI. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>Grants a permission on an elastic network interface (ENI) to an Alibaba Cloud partner (a certified ISV) or an individual user.</p>
      * 
      * @param request CreateNetworkInterfacePermissionRequest
      * @return CreateNetworkInterfacePermissionResponse
@@ -9547,7 +9555,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>If the ENI is in the Deleting state, the ENI deletion request is sent and the ENI is being deleted.</li>
      * <li>If the ENI is not found, the ENI is deleted.</li>
      * <li>If the ENI is stuck in the Deleting state, the ENI fails to be deleted. You can re-initiate the request to delete the ENI.
-     * For information about examples on how to call the DeleteNetworkInterface operation, see<a href="https://help.aliyun.com/document_detail/471553.html">Delete an ENI</a>.</li>
+     * For information about examples on how to call the DeleteNetworkInterface operation, see <a href="https://help.aliyun.com/document_detail/471553.html">Delete an ENI</a>.</li>
      * </ul>
      * </li>
      * </ul>
@@ -9623,7 +9631,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>If the ENI is in the Deleting state, the ENI deletion request is sent and the ENI is being deleted.</li>
      * <li>If the ENI is not found, the ENI is deleted.</li>
      * <li>If the ENI is stuck in the Deleting state, the ENI fails to be deleted. You can re-initiate the request to delete the ENI.
-     * For information about examples on how to call the DeleteNetworkInterface operation, see<a href="https://help.aliyun.com/document_detail/471553.html">Delete an ENI</a>.</li>
+     * For information about examples on how to call the DeleteNetworkInterface operation, see <a href="https://help.aliyun.com/document_detail/471553.html">Delete an ENI</a>.</li>
      * </ul>
      * </li>
      * </ul>
@@ -17321,7 +17329,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p><a href="https://api.aliyun.com/#product=Ecs%5C&api=DescribeNetworkInterfaceAttribute%5C&type=RPC%5C&version=2014-05-26">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of an elastic network interface (ENI).</p>
+     * <p>Queries the details of an elastic network interface (ENI). When you call this operation, you can specify parameters, such as NetworkInterfaceId and Attribute, in the request.</p>
      * 
      * @param request DescribeNetworkInterfaceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17389,7 +17397,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p><a href="https://api.aliyun.com/#product=Ecs%5C&api=DescribeNetworkInterfaceAttribute%5C&type=RPC%5C&version=2014-05-26">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of an elastic network interface (ENI).</p>
+     * <p>Queries the details of an elastic network interface (ENI). When you call this operation, you can specify parameters, such as NetworkInterfaceId and Attribute, in the request.</p>
      * 
      * @param request DescribeNetworkInterfaceAttributeRequest
      * @return DescribeNetworkInterfaceAttributeResponse
@@ -17482,13 +17490,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2><a href="#"></a>Usage notes</h2>
-     * <p>The <code>DescribeNetworkInterfaces</code> operation supports paged queries. During a paged query, when you call the DescribeNetworkInterfaces operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token that can be used in the next call to retrieve a new page of results. When you call the DescribeNetworkInterfaces operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</p>
-     * <blockquote>
-     * <p> If you specify <code>MaxResults</code> or <code>NextToken</code>, the system uses the preceding paged query method to return results. Otherwise, the system returns results based on the combination of <code>PageNumber</code> and <code>PageSize</code>.</p>
-     * </blockquote>
+     * <p>You can call the <code>DescribeNetworkInterfaces</code> operation for paged query by specifying the <code>MaxResults</code> or <code>NextToken</code> parameter. Take note of the following items:</p>
+     * <ul>
+     * <li>During a paged query, when you call the DescribeNetworkInterfaces operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token that can be used in the next call to retrieve a new page of results.</li>
+     * <li>When you call the DescribeNetworkInterfaces operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of one or more elastic network interfaces (ENIs).</p>
+     * <p>Queries the details of one or more elastic network interfaces (ENIs). When you call this operation, you can specify parameters, such as ResourceGroupId, VSwitchId, and InstanceId, in the request.</p>
      * 
      * @param request DescribeNetworkInterfacesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17617,13 +17626,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2><a href="#"></a>Usage notes</h2>
-     * <p>The <code>DescribeNetworkInterfaces</code> operation supports paged queries. During a paged query, when you call the DescribeNetworkInterfaces operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token that can be used in the next call to retrieve a new page of results. When you call the DescribeNetworkInterfaces operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</p>
-     * <blockquote>
-     * <p> If you specify <code>MaxResults</code> or <code>NextToken</code>, the system uses the preceding paged query method to return results. Otherwise, the system returns results based on the combination of <code>PageNumber</code> and <code>PageSize</code>.</p>
-     * </blockquote>
+     * <p>You can call the <code>DescribeNetworkInterfaces</code> operation for paged query by specifying the <code>MaxResults</code> or <code>NextToken</code> parameter. Take note of the following items:</p>
+     * <ul>
+     * <li>During a paged query, when you call the DescribeNetworkInterfaces operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token that can be used in the next call to retrieve a new page of results.</li>
+     * <li>When you call the DescribeNetworkInterfaces operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of one or more elastic network interfaces (ENIs).</p>
+     * <p>Queries the details of one or more elastic network interfaces (ENIs). When you call this operation, you can specify parameters, such as ResourceGroupId, VSwitchId, and InstanceId, in the request.</p>
      * 
      * @param request DescribeNetworkInterfacesRequest
      * @return DescribeNetworkInterfacesResponse
@@ -23312,7 +23322,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Triggers a Cloud Assistant command on one or more Elastic Compute Service (ECS) instances.</p>
+     * <p>Runs a Cloud Assistant command on one or more Elastic Compute Service (ECS) instances. When you call this operation, you can specify parameters, such as CommandId, InstanceId, and ResourceGroupId, in the request.</p>
      * 
      * @param tmpReq InvokeCommandRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23461,7 +23471,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Triggers a Cloud Assistant command on one or more Elastic Compute Service (ECS) instances.</p>
+     * <p>Runs a Cloud Assistant command on one or more Elastic Compute Service (ECS) instances. When you call this operation, you can specify parameters, such as CommandId, InstanceId, and ResourceGroupId, in the request.</p>
      * 
      * @param request InvokeCommandRequest
      * @return InvokeCommandResponse
@@ -27205,7 +27215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the metadata of an Elastic Compute Service (ECS) instance.</p>
+     * <p>Modifies the metadata of an Elastic Compute Service (ECS) instance. When you call this operation, you can specify parameters, such as InstanceID and HttpEndpoint, in the request.</p>
      * 
      * @param request ModifyInstanceMetadataOptionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -27269,7 +27279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the metadata of an Elastic Compute Service (ECS) instance.</p>
+     * <p>Modifies the metadata of an Elastic Compute Service (ECS) instance. When you call this operation, you can specify parameters, such as InstanceID and HttpEndpoint, in the request.</p>
      * 
      * @param request ModifyInstanceMetadataOptionsRequest
      * @return ModifyInstanceMetadataOptionsResponse
@@ -28095,7 +28105,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the attributes, such as the name, description, and security group of an elastic network interface (ENI).</p>
+     * <p>Modifies the attributes, such as the name, description, and security groups, of an elastic network interface (ENI). When you call this operation, you can specify parameters, such as NetworkInterfaceId and SecurityGroupId, in the request.</p>
      * 
      * @param request ModifyNetworkInterfaceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -28191,7 +28201,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the attributes, such as the name, description, and security group of an elastic network interface (ENI).</p>
+     * <p>Modifies the attributes, such as the name, description, and security groups, of an elastic network interface (ENI). When you call this operation, you can specify parameters, such as NetworkInterfaceId and SecurityGroupId, in the request.</p>
      * 
      * @param request ModifyNetworkInterfaceAttributeRequest
      * @return ModifyNetworkInterfaceAttributeResponse
@@ -30277,6 +30287,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
      * <p>Before you call this operation, make sure that you are familiar with the billing and pricing of SCUs. For more information, see <a href="https://help.aliyun.com/document_detail/137897.html">Storage capacity units</a>.</p>
      * 
      * <b>summary</b> : 
@@ -30368,6 +30379,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
      * <p>Before you call this operation, make sure that you are familiar with the billing and pricing of SCUs. For more information, see <a href="https://help.aliyun.com/document_detail/137897.html">Storage capacity units</a>.</p>
      * 
      * <b>summary</b> : 
@@ -31565,6 +31577,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RenewDedicatedHostsResponse renewDedicatedHosts(RenewDedicatedHostsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.renewDedicatedHostsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>续费</p>
+     * 
+     * @param request RenewElasticityAssurancesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RenewElasticityAssurancesResponse
+     */
+    public RenewElasticityAssurancesResponse renewElasticityAssurancesWithOptions(RenewElasticityAssurancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
+            query.put("AutoPay", request.autoPay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.periodUnit)) {
+            query.put("PeriodUnit", request.periodUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.privatePoolOptions)) {
+            query.put("PrivatePoolOptions", request.privatePoolOptions);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RenewElasticityAssurances"),
+            new TeaPair("version", "2014-05-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RenewElasticityAssurancesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>续费</p>
+     * 
+     * @param request RenewElasticityAssurancesRequest
+     * @return RenewElasticityAssurancesResponse
+     */
+    public RenewElasticityAssurancesResponse renewElasticityAssurances(RenewElasticityAssurancesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.renewElasticityAssurancesWithOptions(request, runtime);
     }
 
     /**
@@ -32774,7 +32866,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Runs a shell, PowerShell, or batch command on Elastic Compute Service (ECS) instances.</p>
+     * <p>Runs a shell, PowerShell, or batch command on one or more Elastic Compute Service (ECS) instances. When you call this operation, you can specify parameters, such as Type and CommandContent, in the request.</p>
      * 
      * @param tmpReq RunCommandRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32953,7 +33045,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Runs a shell, PowerShell, or batch command on Elastic Compute Service (ECS) instances.</p>
+     * <p>Runs a shell, PowerShell, or batch command on one or more Elastic Compute Service (ECS) instances. When you call this operation, you can specify parameters, such as Type and CommandContent, in the request.</p>
      * 
      * @param request RunCommandRequest
      * @return RunCommandResponse
@@ -33093,7 +33185,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      *     &amp;<Common request parameters></p>
      * 
      * <b>summary</b> : 
-     * <p>Creates pay-as-you-go or subscription Elastic Compute Service (ECS) instances.</p>
+     * <p>Creates one or more pay-as-you-go or subscription Elastic Compute Service (ECS) instances. When you call this operation, you can specify multiple parameters, such as ImageId, InstanceType, SecurityGroupId, and VSwitchId, in the request.</p>
      * 
      * @param request RunInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -33561,7 +33653,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      *     &amp;<Common request parameters></p>
      * 
      * <b>summary</b> : 
-     * <p>Creates pay-as-you-go or subscription Elastic Compute Service (ECS) instances.</p>
+     * <p>Creates one or more pay-as-you-go or subscription Elastic Compute Service (ECS) instances. When you call this operation, you can specify multiple parameters, such as ImageId, InstanceType, SecurityGroupId, and VSwitchId, in the request.</p>
      * 
      * @param request RunInstancesRequest
      * @return RunInstancesResponse
@@ -34290,10 +34382,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>  If you stop the process of a command that runs only once, the executions that have started are not interrupted. The executions that have not started are canceled.</p>
-     * <ul>
-     * <li>If you stop the process of a scheduled invocation command, the executions that have started are not interrupted. However, the execution does not start in the next period.</li>
-     * </ul>
+     * <p>\*   If you stop the process of a command that runs only once, the executions that have started are not interrupted. The executions that have not started are canceled.
+     * \*   If you stop the process of a scheduled invocation command, the executions that have started are not interrupted. However, the execution does not start in the next period.</p>
      * 
      * @param request StopInvocationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -34360,10 +34450,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>  If you stop the process of a command that runs only once, the executions that have started are not interrupted. The executions that have not started are canceled.</p>
-     * <ul>
-     * <li>If you stop the process of a scheduled invocation command, the executions that have started are not interrupted. However, the execution does not start in the next period.</li>
-     * </ul>
+     * <p>\*   If you stop the process of a command that runs only once, the executions that have started are not interrupted. The executions that have not started are canceled.
+     * \*   If you stop the process of a scheduled invocation command, the executions that have started are not interrupted. However, the execution does not start in the next period.</p>
      * 
      * @param request StopInvocationRequest
      * @return StopInvocationResponse
