@@ -66,7 +66,7 @@ public class AISearchV2ResponseBody extends TeaModel {
          * <p>1403</p>
          */
         @NameInMap("responseTime")
-        public String responseTime;
+        public Long responseTime;
 
         public static AISearchV2ResponseBodyHeader build(java.util.Map<String, ?> map) throws Exception {
             AISearchV2ResponseBodyHeader self = new AISearchV2ResponseBodyHeader();
@@ -89,11 +89,11 @@ public class AISearchV2ResponseBody extends TeaModel {
             return this.eventId;
         }
 
-        public AISearchV2ResponseBodyHeader setResponseTime(String responseTime) {
+        public AISearchV2ResponseBodyHeader setResponseTime(Long responseTime) {
             this.responseTime = responseTime;
             return this;
         }
-        public String getResponseTime() {
+        public Long getResponseTime() {
             return this.responseTime;
         }
 
