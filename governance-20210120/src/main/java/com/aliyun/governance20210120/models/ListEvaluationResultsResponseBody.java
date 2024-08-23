@@ -50,6 +50,36 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
         return this.results;
     }
 
+    public static class ListEvaluationResultsResponseBodyResultsMetricResultsErrorInfo extends TeaModel {
+        @NameInMap("Code")
+        public String code;
+
+        @NameInMap("Message")
+        public String message;
+
+        public static ListEvaluationResultsResponseBodyResultsMetricResultsErrorInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListEvaluationResultsResponseBodyResultsMetricResultsErrorInfo self = new ListEvaluationResultsResponseBodyResultsMetricResultsErrorInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEvaluationResultsResponseBodyResultsMetricResultsErrorInfo setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public ListEvaluationResultsResponseBodyResultsMetricResultsErrorInfo setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+    }
+
     public static class ListEvaluationResultsResponseBodyResultsMetricResultsResourcesSummary extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -74,6 +104,9 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
     }
 
     public static class ListEvaluationResultsResponseBodyResultsMetricResults extends TeaModel {
+        @NameInMap("ErrorInfo")
+        public ListEvaluationResultsResponseBodyResultsMetricResultsErrorInfo errorInfo;
+
         /**
          * <strong>example:</strong>
          * <p>2023-12-13T03:34:02Z</p>
@@ -115,6 +148,14 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
         public static ListEvaluationResultsResponseBodyResultsMetricResults build(java.util.Map<String, ?> map) throws Exception {
             ListEvaluationResultsResponseBodyResultsMetricResults self = new ListEvaluationResultsResponseBodyResultsMetricResults();
             return TeaModel.build(map, self);
+        }
+
+        public ListEvaluationResultsResponseBodyResultsMetricResults setErrorInfo(ListEvaluationResultsResponseBodyResultsMetricResultsErrorInfo errorInfo) {
+            this.errorInfo = errorInfo;
+            return this;
+        }
+        public ListEvaluationResultsResponseBodyResultsMetricResultsErrorInfo getErrorInfo() {
+            return this.errorInfo;
         }
 
         public ListEvaluationResultsResponseBodyResultsMetricResults setEvaluationTime(String evaluationTime) {
