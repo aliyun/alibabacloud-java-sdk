@@ -57,6 +57,9 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
+    @NameInMap("ExternalDataServiceId")
+    public String externalDataServiceId;
+
     /**
      * <p>The JDBC connection string.</p>
      * 
@@ -83,6 +86,9 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
      */
     @NameInMap("JDBCUserName")
     public String JDBCUserName;
+
+    @NameInMap("ModifyTime")
+    public String modifyTime;
 
     /**
      * <strong>example:</strong>
@@ -151,6 +157,14 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
         return this.dataSourceType;
     }
 
+    public DescribeJDBCDataSourceResponseBody setExternalDataServiceId(String externalDataServiceId) {
+        this.externalDataServiceId = externalDataServiceId;
+        return this;
+    }
+    public String getExternalDataServiceId() {
+        return this.externalDataServiceId;
+    }
+
     public DescribeJDBCDataSourceResponseBody setJDBCConnectionString(String JDBCConnectionString) {
         this.JDBCConnectionString = JDBCConnectionString;
         return this;
@@ -173,6 +187,14 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
     }
     public String getJDBCUserName() {
         return this.JDBCUserName;
+    }
+
+    public DescribeJDBCDataSourceResponseBody setModifyTime(String modifyTime) {
+        this.modifyTime = modifyTime;
+        return this;
+    }
+    public String getModifyTime() {
+        return this.modifyTime;
     }
 
     public DescribeJDBCDataSourceResponseBody setRequestId(String requestId) {

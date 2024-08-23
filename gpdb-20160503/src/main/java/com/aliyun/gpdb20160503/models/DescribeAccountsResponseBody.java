@@ -73,6 +73,9 @@ public class DescribeAccountsResponseBody extends TeaModel {
         @NameInMap("AccountStatus")
         public String accountStatus;
 
+        @NameInMap("AccountType")
+        public String accountType;
+
         /**
          * <p>The ID of the instance.</p>
          * 
@@ -109,6 +112,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
         public String getAccountStatus() {
             return this.accountStatus;
+        }
+
+        public DescribeAccountsResponseBodyAccountsDBInstanceAccount setAccountType(String accountType) {
+            this.accountType = accountType;
+            return this;
+        }
+        public String getAccountType() {
+            return this.accountType;
         }
 
         public DescribeAccountsResponseBodyAccountsDBInstanceAccount setDBInstanceId(String DBInstanceId) {

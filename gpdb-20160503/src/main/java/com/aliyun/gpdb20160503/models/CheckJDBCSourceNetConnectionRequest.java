@@ -14,9 +14,11 @@ public class CheckJDBCSourceNetConnectionRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("DataSourceId")
+    public String dataSourceId;
+
     /**
      * <p>The JDBC connection string.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -25,6 +27,8 @@ public class CheckJDBCSourceNetConnectionRequest extends TeaModel {
     public String jdbcConnectionString;
 
     /**
+     * <p>The region ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -42,6 +46,14 @@ public class CheckJDBCSourceNetConnectionRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public CheckJDBCSourceNetConnectionRequest setDataSourceId(String dataSourceId) {
+        this.dataSourceId = dataSourceId;
+        return this;
+    }
+    public String getDataSourceId() {
+        return this.dataSourceId;
     }
 
     public CheckJDBCSourceNetConnectionRequest setJdbcConnectionString(String jdbcConnectionString) {

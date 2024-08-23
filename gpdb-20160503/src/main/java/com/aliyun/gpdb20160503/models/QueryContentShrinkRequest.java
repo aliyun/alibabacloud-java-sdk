@@ -40,6 +40,13 @@ public class QueryContentShrinkRequest extends TeaModel {
     public String fileUrl;
 
     /**
+     * <p>The filter condition that is used to query data. Specify the parameter in the WHERE clause format. The parameter is an expression that returns a Boolean value of TRUE or FALSE. The parameter can contain comparison operators, such as Equal To (=), Not Equal To (&lt;&gt; or !=), Greater Than (&gt;), Less Than (&lt;), Greater Than or Equal To (&gt;=), and Less Than or Equal To (&lt;=), logical operators, such as AND, OR, and NOT, and keywords, such as IN, BETWEEN, and LIKE.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>For more information, see <a href="https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/">https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/</a>.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>title = \&quot;test\&quot;</p>
      */
@@ -90,6 +97,8 @@ public class QueryContentShrinkRequest extends TeaModel {
     public String hybridSearchArgsShrink;
 
     /**
+     * <p>Specifies whether to return the URL of the document. Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

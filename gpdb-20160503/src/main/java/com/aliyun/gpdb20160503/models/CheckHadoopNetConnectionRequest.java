@@ -14,9 +14,11 @@ public class CheckHadoopNetConnectionRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("DataSourceId")
+    public String dataSourceId;
+
     /**
      * <p>The E-MapReduce (EMR) Hadoop cluster ID.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>c-xxx</p>
@@ -42,6 +44,14 @@ public class CheckHadoopNetConnectionRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public CheckHadoopNetConnectionRequest setDataSourceId(String dataSourceId) {
+        this.dataSourceId = dataSourceId;
+        return this;
+    }
+    public String getDataSourceId() {
+        return this.dataSourceId;
     }
 
     public CheckHadoopNetConnectionRequest setEmrInstanceId(String emrInstanceId) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
     /**
-     * <p>The time when the table was last deleted, inserted, or updated.</p>
+     * <p>The queried index usage.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeDBInstanceIndexUsageResponseBodyItems> items;
@@ -109,7 +109,7 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
          * <p>50000</p>
          */
         @NameInMap("IndexScanTimes")
-        public Integer indexScanTimes;
+        public Long indexScanTimes;
 
         /**
          * <p>The size of the index. Unit: bytes.</p>
@@ -198,11 +198,11 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
             return this.indexName;
         }
 
-        public DescribeDBInstanceIndexUsageResponseBodyItems setIndexScanTimes(Integer indexScanTimes) {
+        public DescribeDBInstanceIndexUsageResponseBodyItems setIndexScanTimes(Long indexScanTimes) {
             this.indexScanTimes = indexScanTimes;
             return this;
         }
-        public Integer getIndexScanTimes() {
+        public Long getIndexScanTimes() {
             return this.indexScanTimes;
         }
 

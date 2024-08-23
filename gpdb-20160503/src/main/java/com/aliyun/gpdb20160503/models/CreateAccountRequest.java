@@ -44,6 +44,9 @@ public class CreateAccountRequest extends TeaModel {
     @NameInMap("AccountPassword")
     public String accountPassword;
 
+    @NameInMap("AccountType")
+    public String accountType;
+
     /**
      * <p>The ID of the instance.</p>
      * <blockquote>
@@ -105,6 +108,14 @@ public class CreateAccountRequest extends TeaModel {
     }
     public String getAccountPassword() {
         return this.accountPassword;
+    }
+
+    public CreateAccountRequest setAccountType(String accountType) {
+        this.accountType = accountType;
+        return this;
+    }
+    public String getAccountType() {
+        return this.accountType;
     }
 
     public CreateAccountRequest setDBInstanceId(String DBInstanceId) {

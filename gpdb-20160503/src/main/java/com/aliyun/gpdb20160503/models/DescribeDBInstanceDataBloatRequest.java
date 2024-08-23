@@ -17,6 +17,12 @@ public class DescribeDBInstanceDataBloatRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("Database")
+    public String database;
+
+    @NameInMap("OrderBy")
+    public String orderBy;
+
     /**
      * <p>The number of the page to return. The value must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
      * 
@@ -52,6 +58,22 @@ public class DescribeDBInstanceDataBloatRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public DescribeDBInstanceDataBloatRequest setDatabase(String database) {
+        this.database = database;
+        return this;
+    }
+    public String getDatabase() {
+        return this.database;
+    }
+
+    public DescribeDBInstanceDataBloatRequest setOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    public String getOrderBy() {
+        return this.orderBy;
     }
 
     public DescribeDBInstanceDataBloatRequest setPageNumber(Integer pageNumber) {
