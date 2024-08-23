@@ -5,15 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteSourceMapShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the SourceMap file.</p>
+     * <p>The IDs of the SourceMap files.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("FidList")
     public String fidListShrink;
 
     /**
-     * <p>The process ID (PID) of the application.</p>
-     * <p>Log on to the ARMS console. In the left-side navigation pane, choose <strong>Browser Monitoring</strong> &gt; <strong>Browser Monitoring</strong>. On the <strong>Browser Monitoring</strong> page, click the name of an application. The URL in the browser address bar contains the PID of this application in the format of <code>pid=xxx</code>. As the browser is encoded, the PID needs to be modified. Assume that the PID contained is <code>xxx%4074xxx</code>. You need to <strong>replace</strong> \<em>\</em>%40 with @\<em>\</em> and change the PID to <code>xxx@74xxx</code>.</p>
+     * <p>The process identifier (PID) of the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +22,7 @@ public class DeleteSourceMapShrinkRequest extends TeaModel {
     public String pid;
 
     /**
+     * <p>The ID of the region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

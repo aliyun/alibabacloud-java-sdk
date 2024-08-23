@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeleteSourceMapResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the SourceMap files are deleted. Valid values:</p>
+     * <ul>
+     * <li>success: The SourceMap files are deleted.</li>
+     * <li>false: The SourceMap files fail to be deleted.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -12,6 +18,8 @@ public class DeleteSourceMapResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1A9C645C-C83F-4C9D-8CCB-29BEC9E1****</p>
      */

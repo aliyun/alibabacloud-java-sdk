@@ -25,14 +25,11 @@ public class CreateOrUpdateNotificationPolicyRequest extends TeaModel {
     /**
      * <p>An array of alert event group objects.</p>
      * <ul>
-     * <li><p>If you do not specify the groupingFields field, all alerts will be sent to contacts based on <code>alertname</code>.</p>
-     * </li>
-     * <li><p>If you specify the groupingFields field, alerts with the same field will be sent to contacts in one notification.</p>
-     * <p>Sample statement:</p>
-     * </li>
+     * <li>If you do not specify the groupingFields field, all alerts will be sent to contacts based on <code>alertname</code>.</li>
+     * <li>If you specify the groupingFields field, alerts with the same field will be sent to contacts in one notification.</li>
      * </ul>
-     * <pre><code>
-     * { 
+     * <p>Sample statement:</p>
+     * <pre><code>{ 
      * &quot;groupWait&quot;:5,    // The waiting time for grouping. 
      * &quot;groupInterval&quot;:30,     // The time interval of grouping. 
      * &quot;groupingFields&quot;:[&quot;alertname&quot;]       // The field that is used to group alert events. 
@@ -68,9 +65,8 @@ public class CreateOrUpdateNotificationPolicyRequest extends TeaModel {
     public Long integrationId;
 
     /**
-     * <p>The matching rules. Sample statement:</p>
-     * <pre><code>
-     * [
+     * <p>The matching rules. Format:</p>
+     * <pre><code>[
      *  {
      *  &quot;matchingConditions&quot;: [
      *  { 
@@ -106,14 +102,9 @@ public class CreateOrUpdateNotificationPolicyRequest extends TeaModel {
      *  &quot;notifyEndTime&quot;:&quot;23:59&quot;,       // The end time of the notification window. 
      *  &quot;notifyChannels&quot;:[&quot;dingTalk&quot;, &quot;email&quot;, &quot;sms&quot;, &quot;tts&quot;, &quot;webhook&quot;],       // The notification methods. Valid values: dingTalk, email, sms, tts, and webhook. 
      *  &quot;notifyObjects&quot;:[{       // An array of notification objects. 
-     *  &quot;notifyObjectType&quot;:&quot;CONTACT&quot;,       // The type of the notification object. Valid values: CONTACT (contact), CONTACT_GROUP (contact group), ARMS_CONTACT (ARMS contact), ARMS_CONTACT_GROUP (ARMS contact group), DING_ROBOT_GROUP (DingTalk, Lark, WeCom, or IM chatbot), and CONTACT_SCHEDULE (user on duty defined by a schedule). 
+     *  &quot;notifyObjectType&quot;:&quot;CONTACT&quot;,       // The type of the notification object. Valid values: CONTACT (contact), CONTACT_GROUP (contact group), ARMS_CONTACT (ARMS contact), ARMS_CONTACT_GROUP (ARMS contact group), DING_ROBOT_GROUP (DingTalk, Lark, WeCom, or IM robot), and CONTACT_SCHEDULE (user on duty defined by a schedule). 
      *  &quot;notifyObjectId&quot;:123,       // The ID of the notification object. 
      *  &quot;notifyObjectName&quot;:&quot;test&quot;       // The name of the notification object. 
-     *  &quot;notifyChannels&quot;: [ // The notification methods specified for a contact. Valid values: email, sms, and tts.
-     *                 &quot;email&quot;,		
-     *                 &quot;sms&quot;,
-     *                 &quot;tts&quot;
-     *             ],
      *  }]
      * </code></pre>
      * <p>This parameter is required.</p>
@@ -128,12 +119,7 @@ public class CreateOrUpdateNotificationPolicyRequest extends TeaModel {
      * <p>The notification template. The default notification template is provided below the table.</p>
      * 
      * <strong>example:</strong>
-     * <p>{{if .commonLabels.clustername }}</p>
-     * <p> &gt;  Cluster Name: {{ .commonLabels.clustername }} </p>
-     * <p> {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}</p>
-     * <p> &gt;  App Name: {{ .commonLabels._aliyun_arms_involvedObject_name }} </p>
-     * <p> {{ end }}{{ for .alerts }} &gt;  {{ .annotations.message }} {{if .generatorURL }} <a href="%7B%7B.generatorURL%7D%7D">Details</a>  {{end}} {{if .annotations._aliyun_arms_insights_analyze_link }}[&lt;font color=\&quot;#ff0000\&quot;&gt;diagnostic analysis&lt;/font&gt;]({{ .annotations._aliyun_arms_insights_analyze_link}}){{ end }}{{if  eq &quot;1&quot; .labels._aliyun_arms_denoise_code }} (Important:{{.labels._aliyun_arms_important_reason }}) {{end}}</p>
-     * <p>{{end}}</p>
+     * <p>&quot;robotContent&quot;:&quot;{{if .commonLabels.clustername }} &gt; Cluster name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} &gt; Application name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}{{ for .alerts }} &gt; {{.annotations.message}} {{if .generatorURL }} [Link]\({{.generatorURL}}) {{ end }} {{if eq &quot;true&quot; .labels._aliyun_arms_is_denoise_filtered }} (Suspected noise) {{end}} {{end}}&quot;</p>
      */
     @NameInMap("NotifyTemplate")
     public String notifyTemplate;
@@ -170,7 +156,7 @@ public class CreateOrUpdateNotificationPolicyRequest extends TeaModel {
     public Long repeatInterval;
 
     /**
-     * <p>Indicates whether the system sends a notification to the contacts when the status of an alert changes to Resolved. Default value: true. Valid values:</p>
+     * <p>Specifies whether the status of an alert automatically changes to Resolved when all events related to the alert change to the Restored state. ARMS notifies contacts when the alert status changes to Resolved.</p>
      * <ul>
      * <li><code>true</code>: The system sends a notification.</li>
      * <li><code>false</code>: The system does not send a notification.</li>

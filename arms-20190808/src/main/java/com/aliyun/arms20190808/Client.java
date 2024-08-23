@@ -4930,7 +4930,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete s SourceMap file that was uploaded to Browser Monitoring.</p>
+     * <p>Deletes the SourceMap files uploaded in Browser Monitoring.</p>
      * 
      * @param tmpReq DeleteSourceMapRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4976,7 +4976,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete s SourceMap file that was uploaded to Browser Monitoring.</p>
+     * <p>Deletes the SourceMap files uploaded in Browser Monitoring.</p>
      * 
      * @param request DeleteSourceMapRequest
      * @return DeleteSourceMapResponse
@@ -5894,7 +5894,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>执行Insights相关的操作</p>
+     * <p>Performs the corresponding operation based on the specified module type.</p>
      * 
      * @param request DoInsightsActionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5930,7 +5930,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>执行Insights相关的操作</p>
+     * <p>Performs the corresponding operation based on the specified module type.</p>
      * 
      * @param request DoInsightsActionRequest
      * @return DoInsightsActionResponse
@@ -9864,7 +9864,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries notification policies based on specific conditions.</p>
+     * <p>Queries notification policies based on specified conditions.</p>
      * 
      * @param request ListNotificationPoliciesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9920,7 +9920,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries notification policies based on specific conditions.</p>
+     * <p>Queries notification policies based on specified conditions.</p>
      * 
      * @param request ListNotificationPoliciesRequest
      * @return ListNotificationPoliciesResponse
