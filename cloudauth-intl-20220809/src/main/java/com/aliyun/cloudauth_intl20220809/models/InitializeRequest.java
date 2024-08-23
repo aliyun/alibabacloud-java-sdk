@@ -132,6 +132,12 @@ public class InitializeRequest extends TeaModel {
     @NameInMap("SecurityLevel")
     public String securityLevel;
 
+    @NameInMap("ShowAlbumIcon")
+    public String showAlbumIcon;
+
+    @NameInMap("ShowOcrResult")
+    public String showOcrResult;
+
     @NameInMap("StyleConfig")
     public String styleConfig;
 
@@ -330,6 +336,22 @@ public class InitializeRequest extends TeaModel {
     }
     public String getSecurityLevel() {
         return this.securityLevel;
+    }
+
+    public InitializeRequest setShowAlbumIcon(String showAlbumIcon) {
+        this.showAlbumIcon = showAlbumIcon;
+        return this;
+    }
+    public String getShowAlbumIcon() {
+        return this.showAlbumIcon;
+    }
+
+    public InitializeRequest setShowOcrResult(String showOcrResult) {
+        this.showOcrResult = showOcrResult;
+        return this;
+    }
+    public String getShowOcrResult() {
+        return this.showOcrResult;
     }
 
     public InitializeRequest setStyleConfig(String styleConfig) {
