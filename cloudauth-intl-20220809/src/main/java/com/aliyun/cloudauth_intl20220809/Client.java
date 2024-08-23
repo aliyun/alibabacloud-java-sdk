@@ -1195,6 +1195,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SecurityLevel", request.securityLevel);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.showAlbumIcon)) {
+            query.put("ShowAlbumIcon", request.showAlbumIcon);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.showOcrResult)) {
+            query.put("ShowOcrResult", request.showOcrResult);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.styleConfig)) {
             query.put("StyleConfig", request.styleConfig);
         }
