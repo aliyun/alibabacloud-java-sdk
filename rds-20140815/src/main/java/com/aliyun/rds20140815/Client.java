@@ -29121,6 +29121,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TargetMajorVersion", request.targetMajorVersion);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.upgradeMode)) {
+            query.put("UpgradeMode", request.upgradeMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.usedTime)) {
             query.put("UsedTime", request.usedTime);
         }
