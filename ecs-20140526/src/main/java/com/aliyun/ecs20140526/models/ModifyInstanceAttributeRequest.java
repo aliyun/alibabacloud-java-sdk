@@ -44,9 +44,11 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable the Jumbo Frames feature for the instance. Valid values:</p>
-     * <p>true</p>
-     * <p>false</p>
-     * <p>You can enable the Jumbo Frames feature only for specific instance types. For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">MTUs</a>.</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * <p>You can enable the Jumbo Frames feature only for specific instance types. For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">MTU and jumbo frames</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -121,6 +123,11 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <blockquote>
+     * <p> This parameter is in invitational preview and is not publicly available.</p>
+     * </blockquote>
+     */
     @NameInMap("PrivateDnsNameOptions")
     public ModifyInstanceAttributeRequestPrivateDnsNameOptions privateDnsNameOptions;
 
@@ -157,7 +164,7 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
      * <li>You can move the instance to security groups of a different type. However, the list cannot contain the IDs of both basic and advanced security groups.</li>
      * <li>The security groups and the instance must belong to the same VPC.</li>
      * <li>The valid values of N vary based on the maximum number of security groups to which the instance can belong. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section in the &quot;Limits and quotas&quot; topic.</li>
-     * <li>New security groups become valid for the instance after a short latency.</li>
+     * <li>New security groups become valid for the instance after a short delay.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -372,18 +379,58 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     }
 
     public static class ModifyInstanceAttributeRequestPrivateDnsNameOptions extends TeaModel {
+        /**
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("EnableInstanceIdDnsAAAARecord")
         public Boolean enableInstanceIdDnsAAAARecord;
 
+        /**
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("EnableInstanceIdDnsARecord")
         public Boolean enableInstanceIdDnsARecord;
 
+        /**
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("EnableIpDnsARecord")
         public Boolean enableIpDnsARecord;
 
+        /**
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("EnableIpDnsPtrRecord")
         public Boolean enableIpDnsPtrRecord;
 
+        /**
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom</p>
+         */
         @NameInMap("HostnameType")
         public String hostnameType;
 

@@ -169,6 +169,10 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     @NameInMap("Scope")
     public String scope;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-07-04T15Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

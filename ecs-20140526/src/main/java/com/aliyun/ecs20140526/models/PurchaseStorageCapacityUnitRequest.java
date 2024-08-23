@@ -111,8 +111,8 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The time at which the SCU takes effect. It can be up to six months later than the time at which the SCU is created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     * <p>This parameter is empty by default. If this parameter is left empty, the SCU takes effect immediately after it is created.</p>
+     * <p>The time at which the SCU takes effect. The time can be up to six months from the creation time of the SCU. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHHZ format. The time must be in UTC.</p>
+     * <p>This parameter is left empty by default, which indicates that the SCU takes effect immediately after it is created.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-09-09T02:00:00Z</p>

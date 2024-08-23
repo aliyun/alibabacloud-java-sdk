@@ -12,7 +12,7 @@ public class ModifyInstanceMetadataOptionsRequest extends TeaModel {
      * </ul>
      * <p>Default value: enabled.</p>
      * <blockquote>
-     * <p>For more information about instance metadata, see <a href="https://help.aliyun.com/document_detail/49122.html">Overview of ECS instance metadata</a>.</p>
+     * <p> For information about instance metadata, see <a href="https://help.aliyun.com/document_detail/49122.html">Obtain instance metadata</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -24,7 +24,7 @@ public class ModifyInstanceMetadataOptionsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is in invitational preview and is not publicly available.</p>
+     * <p> This parameter is in invitational preview and is not publicly available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -34,14 +34,14 @@ public class ModifyInstanceMetadataOptionsRequest extends TeaModel {
     public Integer httpPutResponseHopLimit;
 
     /**
-     * <p>Specifies whether to forcefully use the security-enhanced mode (IMDSv2) to access instance metadata. Valid values:</p>
+     * <p>Specifies whether to forcefully use the security hardening mode (IMDSv2) to access instance metadata. Valid values:</p>
      * <ul>
-     * <li>optional: does not forcefully use the security-enhanced mode (IMDSv2).</li>
-     * <li>required: forcefully uses the security-enhanced mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.</li>
+     * <li>optional: does not forcefully use the security hardening mode (IMDSv2).</li>
+     * <li>required: forcefully uses the security hardening mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.</li>
      * </ul>
      * <p>Default value: optional.</p>
      * <blockquote>
-     * <p>For more information about the modes of accessing instance metadata, see <a href="https://help.aliyun.com/document_detail/150575.html">Access mode of instance metadata</a>.</p>
+     * <p> For more information about modes of accessing instance metadata, see <a href="https://help.aliyun.com/document_detail/150575.html">Obtain instance metadata</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

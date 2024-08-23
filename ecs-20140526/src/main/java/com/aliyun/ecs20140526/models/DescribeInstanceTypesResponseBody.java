@@ -59,13 +59,27 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
     public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeEnhancedNetwork extends TeaModel {
         /**
-         * <p>This parameter is unavailable for public use.</p>
+         * <ul>
+         * <li></li>
+         * <li></li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("SriovSupport")
         public Boolean sriovSupport;
 
         /**
-         * <p>This parameter is unavailable for public use.</p>
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("VfQueueNumberPerEni")
         public Integer vfQueueNumberPerEni;
@@ -216,7 +230,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public Integer diskQuantity;
 
         /**
-         * <p>This parameter is unavailable for public use.</p>
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
          */
         @NameInMap("EnhancedNetwork")
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeEnhancedNetwork enhancedNetwork;
@@ -474,7 +490,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public Integer networkCardQuantity;
 
         /**
-         * <p>The information of the network cards.</p>
+         * <p>The information about the network cards.</p>
          */
         @NameInMap("NetworkCards")
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkCards networkCards;

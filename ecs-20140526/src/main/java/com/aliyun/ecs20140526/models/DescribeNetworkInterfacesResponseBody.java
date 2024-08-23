@@ -443,6 +443,14 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         @NameInMap("Primary")
         public Boolean primary;
 
+        /**
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>DnsTestName</p>
+         */
         @NameInMap("PrivateDnsName")
         public String privateDnsName;
 

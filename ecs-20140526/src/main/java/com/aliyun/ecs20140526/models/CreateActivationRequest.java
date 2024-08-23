@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateActivationRequest extends TeaModel {
     /**
-     * <p>The description of the activation code. It must be 1 to 100 characters in length.</p>
+     * <p>The description of the activation code. The description must be 1 to 100 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>This is description.</p>
@@ -24,9 +24,9 @@ public class CreateActivationRequest extends TeaModel {
     public Integer instanceCount;
 
     /**
-     * <p>The default instance name prefix. The instance name prefix must be 2 to 50 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, periods (.), underscores (_), hyphens (-), and colons (:).</p>
-     * <p>If you use the activation code that is created by calling this operation (CreateActivation) to register managed instances, the instances are assigned sequential names that are prefixed by the value of this parameter. You can also specify a new instance name to replace the assigned sequential name when you register a managed instance.</p>
-     * <p>If you specify InstanceName when you register a managed instance, an instance name in the format of <code>&lt;InstanceName&gt;-&lt;Number&gt;</code> is generated. The number of digits in the \<Number> value is determined by that in the <code>InstanceCount</code> value. Example: <code>001</code>. If you do not specify InstanceName, the hostname (Hostname) is used as the instance name.</p>
+     * <p>The default instance name prefix. The prefix must be 2 to 50 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and colons (:). The prefix must start with a letter and cannot start with a digit, a special character, <code>http://</code>, or <code>https://</code>.</p>
+     * <p>If you use the activation code that is created by calling the CreateActivation operation to register managed instances, the instances are assigned sequential names that include the value of this parameter as a prefix. You can also specify a new instance name to replace the assigned sequential name when you register a managed instance.</p>
+     * <p>If you specify InstanceName when you register a managed instance, an instance name in the <code>&lt;InstanceName&gt;-&lt;Number&gt;</code> format is generated. The number of digits in the \<Number> value varies based on the number of digits in the <code>InstanceCount</code> value. Example: <code>001</code>. If you do not specify InstanceName, the hostname (Hostname) is used as the instance name.</p>
      * 
      * <strong>example:</strong>
      * <p>test-InstanceName</p>
@@ -50,8 +50,7 @@ public class CreateActivationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region in which to create the activation code. Supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Ulanqab), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), China (Guangzhou), China (Chengdu), China (Hong Kong), Singapore, Japan (Tokyo), US (Silicon Valley), and US (Virginia).</p>
-     * <p>You can all the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. Supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Ulanqab), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), China (Guangzhou), China (Chengdu), China (Hong Kong), Singapore, Japan (Tokyo), US (Silicon Valley), and US (Virginia). You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,7 +81,7 @@ public class CreateActivationRequest extends TeaModel {
     public java.util.List<CreateActivationRequestTag> tag;
 
     /**
-     * <p>The validity period of the activation code. The activation code can no longer be used to register instances after the period expires. Unit: hours. Valid values: 1 to 876576, which represents a range of time from 1 hour to 100 years.</p>
+     * <p>The validity period of the activation code. After the validity period ends, you can no longer use the activation code to register managed instances. Unit: hours. Valid values: 1 to 876576. 876576 hours is equal to 100 years.</p>
      * <p>Default value: 4.</p>
      * 
      * <strong>example:</strong>
