@@ -17,6 +17,12 @@ public class DescribeDBInstanceIndexUsageRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("Database")
+    public String database;
+
+    @NameInMap("OrderBy")
+    public String orderBy;
+
     /**
      * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
      * 
@@ -52,6 +58,22 @@ public class DescribeDBInstanceIndexUsageRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public DescribeDBInstanceIndexUsageRequest setDatabase(String database) {
+        this.database = database;
+        return this;
+    }
+    public String getDatabase() {
+        return this.database;
+    }
+
+    public DescribeDBInstanceIndexUsageRequest setOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    public String getOrderBy() {
+        return this.orderBy;
     }
 
     public DescribeDBInstanceIndexUsageRequest setPageNumber(Integer pageNumber) {

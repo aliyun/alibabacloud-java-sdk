@@ -88,7 +88,7 @@ public class ExecuteStatementRequest extends TeaModel {
     public java.util.List<String> sqls;
 
     /**
-     * <p>The name of the set of SQL statements that you want to execute.</p>
+     * <p>The name of the set of SQL statements that you want to execute. This parameter takes effect when the RunType parameter is set to asynchronous.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

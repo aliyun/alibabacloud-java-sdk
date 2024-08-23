@@ -13,6 +13,9 @@ public class DescribeAccountsRequest extends TeaModel {
     @NameInMap("AccountName")
     public String accountName;
 
+    @NameInMap("AccountType")
+    public String accountType;
+
     /**
      * <p>The instance ID.</p>
      * <blockquote>
@@ -37,6 +40,14 @@ public class DescribeAccountsRequest extends TeaModel {
     }
     public String getAccountName() {
         return this.accountName;
+    }
+
+    public DescribeAccountsRequest setAccountType(String accountType) {
+        this.accountType = accountType;
+        return this;
+    }
+    public String getAccountType() {
+        return this.accountType;
     }
 
     public DescribeAccountsRequest setDBInstanceId(String DBInstanceId) {

@@ -30,6 +30,11 @@ public class QueryCollectionDataRequest extends TeaModel {
     public String content;
 
     /**
+     * <p>The instance ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>gp-xxxxxxxxx</p>
      */
@@ -37,6 +42,13 @@ public class QueryCollectionDataRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The filter condition that is used to query data. Specify the parameter in the WHERE clause format. The parameter is an expression that returns a Boolean value of TRUE or FALSE. The parameter can contain comparison operators, such as Equal To (=), Not Equal To (&lt;&gt; or !=), Greater Than (&gt;), Less Than (&lt;), Greater Than or Equal To (&gt;=), and Less Than or Equal To (&lt;=), logical operators, such as AND, OR, and NOT, and keywords, such as IN, BETWEEN, and LIKE.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>For more information, see <a href="https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/">https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/</a>.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>response &gt; 200</p>
      */
@@ -207,6 +219,10 @@ public class QueryCollectionDataRequest extends TeaModel {
     @NameInMap("Vector")
     public java.util.List<Double> vector;
 
+    /**
+     * <strong>example:</strong>
+     * <p>gp-ws-*****</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

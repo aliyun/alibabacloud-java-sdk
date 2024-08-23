@@ -79,6 +79,9 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
     @NameInMap("EmrInstanceId")
     public String emrInstanceId;
 
+    @NameInMap("ExternalDataServiceId")
+    public String externalDataServiceId;
+
     /**
      * <p>The content of the Hadoop hdfs-site.xml file.</p>
      * 
@@ -139,6 +142,9 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
      */
     @NameInMap("MapReduceConf")
     public String mapReduceConf;
+
+    @NameInMap("ModifyTime")
+    public String modifyTime;
 
     /**
      * <p>The request ID.</p>
@@ -236,6 +242,14 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         return this.emrInstanceId;
     }
 
+    public DescribeHadoopDataSourceResponseBody setExternalDataServiceId(String externalDataServiceId) {
+        this.externalDataServiceId = externalDataServiceId;
+        return this;
+    }
+    public String getExternalDataServiceId() {
+        return this.externalDataServiceId;
+    }
+
     public DescribeHadoopDataSourceResponseBody setHDFSConf(String HDFSConf) {
         this.HDFSConf = HDFSConf;
         return this;
@@ -282,6 +296,14 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
     }
     public String getMapReduceConf() {
         return this.mapReduceConf;
+    }
+
+    public DescribeHadoopDataSourceResponseBody setModifyTime(String modifyTime) {
+        this.modifyTime = modifyTime;
+        return this;
+    }
+    public String getModifyTime() {
+        return this.modifyTime;
     }
 
     public DescribeHadoopDataSourceResponseBody setRequestId(String requestId) {
