@@ -1025,6 +1025,36 @@ public class SearchMediaResponseBody extends TeaModel {
 
     }
 
+    public static class SearchMediaResponseBodyMediaInfoListIndexStatusList extends TeaModel {
+        @NameInMap("IndexStatus")
+        public String indexStatus;
+
+        @NameInMap("IndexType")
+        public String indexType;
+
+        public static SearchMediaResponseBodyMediaInfoListIndexStatusList build(java.util.Map<String, ?> map) throws Exception {
+            SearchMediaResponseBodyMediaInfoListIndexStatusList self = new SearchMediaResponseBodyMediaInfoListIndexStatusList();
+            return TeaModel.build(map, self);
+        }
+
+        public SearchMediaResponseBodyMediaInfoListIndexStatusList setIndexStatus(String indexStatus) {
+            this.indexStatus = indexStatus;
+            return this;
+        }
+        public String getIndexStatus() {
+            return this.indexStatus;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListIndexStatusList setIndexType(String indexType) {
+            this.indexType = indexType;
+            return this;
+        }
+        public String getIndexType() {
+            return this.indexType;
+        }
+
+    }
+
     public static class SearchMediaResponseBodyMediaInfoListMediaBasicInfo extends TeaModel {
         /**
          * <p>The business to which the media asset belongs.</p>
@@ -1434,6 +1464,9 @@ public class SearchMediaResponseBody extends TeaModel {
         @NameInMap("FileInfoList")
         public java.util.List<SearchMediaResponseBodyMediaInfoListFileInfoList> fileInfoList;
 
+        @NameInMap("IndexStatusList")
+        public java.util.List<SearchMediaResponseBodyMediaInfoListIndexStatusList> indexStatusList;
+
         /**
          * <p>The basic information about the media asset.</p>
          */
@@ -1476,6 +1509,14 @@ public class SearchMediaResponseBody extends TeaModel {
         }
         public java.util.List<SearchMediaResponseBodyMediaInfoListFileInfoList> getFileInfoList() {
             return this.fileInfoList;
+        }
+
+        public SearchMediaResponseBodyMediaInfoList setIndexStatusList(java.util.List<SearchMediaResponseBodyMediaInfoListIndexStatusList> indexStatusList) {
+            this.indexStatusList = indexStatusList;
+            return this;
+        }
+        public java.util.List<SearchMediaResponseBodyMediaInfoListIndexStatusList> getIndexStatusList() {
+            return this.indexStatusList;
         }
 
         public SearchMediaResponseBodyMediaInfoList setMediaBasicInfo(SearchMediaResponseBodyMediaInfoListMediaBasicInfo mediaBasicInfo) {
