@@ -5,13 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetVideoPreviewPlayInfoResponseBody extends TeaModel {
     /**
-     * <strong>example:</strong>
-     * <p>VideoPreviewWaitAndRetry</p>
-     */
-    @NameInMap("code")
-    public String code;
-
-    /**
      * <p>The domain ID.</p>
      * 
      * <strong>example:</strong>
@@ -38,16 +31,6 @@ public class GetVideoPreviewPlayInfoResponseBody extends TeaModel {
     @NameInMap("file_id")
     public String fileId;
 
-    @NameInMap("master_url")
-    public String masterUrl;
-
-    /**
-     * <strong>example:</strong>
-     * <p>media is transcoding, please wait and retry.</p>
-     */
-    @NameInMap("message")
-    public String message;
-
     /**
      * <p>The share ID.</p>
      * 
@@ -66,14 +49,6 @@ public class GetVideoPreviewPlayInfoResponseBody extends TeaModel {
     public static GetVideoPreviewPlayInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetVideoPreviewPlayInfoResponseBody self = new GetVideoPreviewPlayInfoResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetVideoPreviewPlayInfoResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public GetVideoPreviewPlayInfoResponseBody setDomainId(String domainId) {
@@ -98,22 +73,6 @@ public class GetVideoPreviewPlayInfoResponseBody extends TeaModel {
     }
     public String getFileId() {
         return this.fileId;
-    }
-
-    public GetVideoPreviewPlayInfoResponseBody setMasterUrl(String masterUrl) {
-        this.masterUrl = masterUrl;
-        return this;
-    }
-    public String getMasterUrl() {
-        return this.masterUrl;
-    }
-
-    public GetVideoPreviewPlayInfoResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public GetVideoPreviewPlayInfoResponseBody setShareId(String shareId) {

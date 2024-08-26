@@ -10,6 +10,9 @@ public class KnowledgeFile extends TeaModel {
     @NameInMap("drive_id")
     public String driveId;
 
+    @NameInMap("drive_name")
+    public String driveName;
+
     @NameInMap("file_category")
     public String fileCategory;
 
@@ -24,6 +27,12 @@ public class KnowledgeFile extends TeaModel {
 
     @NameInMap("file_image_time")
     public Long fileImageTime;
+
+    @NameInMap("file_last_modifier_id")
+    public String fileLastModifierId;
+
+    @NameInMap("file_last_modifier_type")
+    public String fileLastModifierType;
 
     @NameInMap("file_name")
     public String fileName;
@@ -70,6 +79,14 @@ public class KnowledgeFile extends TeaModel {
         return this.driveId;
     }
 
+    public KnowledgeFile setDriveName(String driveName) {
+        this.driveName = driveName;
+        return this;
+    }
+    public String getDriveName() {
+        return this.driveName;
+    }
+
     public KnowledgeFile setFileCategory(String fileCategory) {
         this.fileCategory = fileCategory;
         return this;
@@ -108,6 +125,22 @@ public class KnowledgeFile extends TeaModel {
     }
     public Long getFileImageTime() {
         return this.fileImageTime;
+    }
+
+    public KnowledgeFile setFileLastModifierId(String fileLastModifierId) {
+        this.fileLastModifierId = fileLastModifierId;
+        return this;
+    }
+    public String getFileLastModifierId() {
+        return this.fileLastModifierId;
+    }
+
+    public KnowledgeFile setFileLastModifierType(String fileLastModifierType) {
+        this.fileLastModifierType = fileLastModifierType;
+        return this;
+    }
+    public String getFileLastModifierType() {
+        return this.fileLastModifierType;
     }
 
     public KnowledgeFile setFileName(String fileName) {

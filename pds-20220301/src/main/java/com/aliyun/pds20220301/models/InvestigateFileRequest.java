@@ -10,15 +10,6 @@ public class InvestigateFileRequest extends TeaModel {
     @NameInMap("drive_file_ids")
     public java.util.List<InvestigateFileRequestDriveFileIds> driveFileIds;
 
-    @NameInMap("policy")
-    public InvestigateFileRequestPolicy policy;
-
-    @NameInMap("recursive")
-    public Boolean recursive;
-
-    @NameInMap("user_data")
-    public String userData;
-
     public static InvestigateFileRequest build(java.util.Map<String, ?> map) throws Exception {
         InvestigateFileRequest self = new InvestigateFileRequest();
         return TeaModel.build(map, self);
@@ -30,30 +21,6 @@ public class InvestigateFileRequest extends TeaModel {
     }
     public java.util.List<InvestigateFileRequestDriveFileIds> getDriveFileIds() {
         return this.driveFileIds;
-    }
-
-    public InvestigateFileRequest setPolicy(InvestigateFileRequestPolicy policy) {
-        this.policy = policy;
-        return this;
-    }
-    public InvestigateFileRequestPolicy getPolicy() {
-        return this.policy;
-    }
-
-    public InvestigateFileRequest setRecursive(Boolean recursive) {
-        this.recursive = recursive;
-        return this;
-    }
-    public Boolean getRecursive() {
-        return this.recursive;
-    }
-
-    public InvestigateFileRequest setUserData(String userData) {
-        this.userData = userData;
-        return this;
-    }
-    public String getUserData() {
-        return this.userData;
     }
 
     public static class InvestigateFileRequestDriveFileIds extends TeaModel {
@@ -94,47 +61,6 @@ public class InvestigateFileRequest extends TeaModel {
         }
         public String getFileId() {
             return this.fileId;
-        }
-
-    }
-
-    public static class InvestigateFileRequestPolicy extends TeaModel {
-        @NameInMap("first_product_name")
-        public String firstProductName;
-
-        @NameInMap("mtee_code")
-        public String mteeCode;
-
-        @NameInMap("provider")
-        public String provider;
-
-        public static InvestigateFileRequestPolicy build(java.util.Map<String, ?> map) throws Exception {
-            InvestigateFileRequestPolicy self = new InvestigateFileRequestPolicy();
-            return TeaModel.build(map, self);
-        }
-
-        public InvestigateFileRequestPolicy setFirstProductName(String firstProductName) {
-            this.firstProductName = firstProductName;
-            return this;
-        }
-        public String getFirstProductName() {
-            return this.firstProductName;
-        }
-
-        public InvestigateFileRequestPolicy setMteeCode(String mteeCode) {
-            this.mteeCode = mteeCode;
-            return this;
-        }
-        public String getMteeCode() {
-            return this.mteeCode;
-        }
-
-        public InvestigateFileRequestPolicy setProvider(String provider) {
-            this.provider = provider;
-            return this;
-        }
-        public String getProvider() {
-            return this.provider;
         }
 
     }
