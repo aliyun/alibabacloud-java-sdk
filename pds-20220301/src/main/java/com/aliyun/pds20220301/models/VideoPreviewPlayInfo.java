@@ -14,6 +14,9 @@ public class VideoPreviewPlayInfo extends TeaModel {
     @NameInMap("live_transcoding_task_list")
     public java.util.List<VideoPreviewPlayInfoLiveTranscodingTaskList> liveTranscodingTaskList;
 
+    @NameInMap("master_url")
+    public String masterUrl;
+
     @NameInMap("meta")
     public VideoPreviewPlayInfoMeta meta;
 
@@ -39,6 +42,14 @@ public class VideoPreviewPlayInfo extends TeaModel {
     }
     public java.util.List<VideoPreviewPlayInfoLiveTranscodingTaskList> getLiveTranscodingTaskList() {
         return this.liveTranscodingTaskList;
+    }
+
+    public VideoPreviewPlayInfo setMasterUrl(String masterUrl) {
+        this.masterUrl = masterUrl;
+        return this;
+    }
+    public String getMasterUrl() {
+        return this.masterUrl;
     }
 
     public VideoPreviewPlayInfo setMeta(VideoPreviewPlayInfoMeta meta) {

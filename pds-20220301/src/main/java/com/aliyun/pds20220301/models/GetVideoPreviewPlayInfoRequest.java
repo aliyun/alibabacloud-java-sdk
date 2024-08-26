@@ -51,6 +51,9 @@ public class GetVideoPreviewPlayInfoRequest extends TeaModel {
     @NameInMap("get_without_url")
     public Boolean getWithoutUrl;
 
+    @NameInMap("re_transcode")
+    public Boolean reTranscode;
+
     /**
      * <p>The share ID. If you want to manage a file by using a sharing link, carry the <code>x-share-token</code> header in the request and specify share_id. In this case, <code>drive_id</code> is invalid. Otherwise, use an <code>AccessKey pair</code> or <code>access token</code> for authentication and specify <code>drive_id</code>. You must specify at least either <code>share_id</code> or <code>drive_id</code>.</p>
      * 
@@ -121,6 +124,14 @@ public class GetVideoPreviewPlayInfoRequest extends TeaModel {
     }
     public Boolean getGetWithoutUrl() {
         return this.getWithoutUrl;
+    }
+
+    public GetVideoPreviewPlayInfoRequest setReTranscode(Boolean reTranscode) {
+        this.reTranscode = reTranscode;
+        return this;
+    }
+    public Boolean getReTranscode() {
+        return this.reTranscode;
     }
 
     public GetVideoPreviewPlayInfoRequest setShareId(String shareId) {

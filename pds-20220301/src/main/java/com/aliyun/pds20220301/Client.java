@@ -3382,6 +3382,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("get_without_url", request.getWithoutUrl);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.reTranscode)) {
+            body.put("re_transcode", request.reTranscode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.shareId)) {
             body.put("share_id", request.shareId);
         }
@@ -3633,18 +3637,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.driveFileIds)) {
             body.put("drive_file_ids", request.driveFileIds);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.policy)) {
-            body.put("policy", request.policy);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.recursive)) {
-            body.put("recursive", request.recursive);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
-            body.put("user_data", request.userData);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
