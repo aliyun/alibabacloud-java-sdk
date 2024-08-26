@@ -4,6 +4,10 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class EmailVerifiedResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>BF014B60-C708-4253-B5F2-3F9B493F398B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

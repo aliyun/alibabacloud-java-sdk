@@ -4,27 +4,59 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class ListEmailVerificationRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1522080000000</p>
+     */
     @NameInMap("BeginCreateTime")
     public Long beginCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:username@example.com">username@example.com</a></p>
+     */
     @NameInMap("Email")
     public String email;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1522080000000</p>
+     */
     @NameInMap("EndCreateTime")
     public Long endCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>500</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("VerificationStatus")
     public Integer verificationStatus;
 

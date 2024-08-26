@@ -4,18 +4,44 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("DomainName")
     public java.util.List<String> domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RegistrantProfileId")
     public Long registrantProfileId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("TransferOutProhibited")
     public Boolean transferOutProhibited;
 
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 

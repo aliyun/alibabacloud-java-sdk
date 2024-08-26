@@ -4,15 +4,33 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class CheckProcessingServerLockApplyRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("FeePeriod")
     public Integer feePeriod;
 
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 

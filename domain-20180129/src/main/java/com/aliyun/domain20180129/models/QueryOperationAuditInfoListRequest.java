@@ -4,21 +4,45 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryOperationAuditInfoListRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("AuditStatus")
     public Integer auditStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("AuditType")
     public Integer auditType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

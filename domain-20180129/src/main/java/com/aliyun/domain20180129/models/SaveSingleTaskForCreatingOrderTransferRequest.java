@@ -4,33 +4,79 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SaveSingleTaskForCreatingOrderTransferRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testCode</p>
+     */
     @NameInMap("AuthorizationCode")
     public String authorizationCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("CouponNo")
     public String couponNo;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("PermitPremiumTransfer")
     public Boolean permitPremiumTransfer;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("PromotionNo")
     public String promotionNo;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("RegistrantProfileId")
     public Long registrantProfileId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("UseCoupon")
     public Boolean useCoupon;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("UsePromotion")
     public Boolean usePromotion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 

@@ -4,9 +4,21 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryDomainSpecialBizDetailRequest extends TeaModel {
+    /**
+     * <p>The business ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("BizId")
     public Long bizId;
 
+    /**
+     * <p>The IP address of the client.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 

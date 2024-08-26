@@ -4,12 +4,26 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class TransferInCheckMailTokenRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3bdbaa0e-faa2-4ad2-98f4-bcfeb0237054</p>
+     */
     @NameInMap("Token")
     public String token;
 
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 

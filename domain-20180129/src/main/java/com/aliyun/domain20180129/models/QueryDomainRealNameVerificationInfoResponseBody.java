@@ -4,27 +4,59 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryDomainRealNameVerificationInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>aliyundoc.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dGVzdA==</p>
+     */
     @NameInMap("IdentityCredential")
     public String identityCredential;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5****************9</p>
+     */
     @NameInMap("IdentityCredentialNo")
     public String identityCredentialNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SFZ</p>
+     */
     @NameInMap("IdentityCredentialType")
     public String identityCredentialType;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://dbu-nap-p.oss-cn-hangzhou.aliyuncs.com/20190219/140692647406xxxx_5d6baea3e7314fd986afdd86e33exxxx.jpg">http://dbu-nap-p.oss-cn-hangzhou.aliyuncs.com/20190219/140692647406xxxx_5d6baea3e7314fd986afdd86e33exxxx.jpg</a></p>
+     */
     @NameInMap("IdentityCredentialUrl")
     public String identityCredentialUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>S2019270W570****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4DF9D693-0D5B-4EB7-8922-7ECA6BD59314</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2018-03-28 00:41:42</p>
+     */
     @NameInMap("SubmissionDate")
     public String submissionDate;
 

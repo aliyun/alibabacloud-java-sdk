@@ -7,6 +7,10 @@ public class DeleteEmailVerificationResponseBody extends TeaModel {
     @NameInMap("FailList")
     public java.util.List<DeleteEmailVerificationResponseBodyFailList> failList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7A3D0E4A-0D4B-4BD0-90D7-A61DF8DD26AE</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,12 +47,24 @@ public class DeleteEmailVerificationResponseBody extends TeaModel {
     }
 
     public static class DeleteEmailVerificationResponseBodyFailList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ParameterIllegall</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:test1@aliyun.com">test1@aliyun.com</a></p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Parameter error</p>
+         */
         @NameInMap("Message")
         public String message;
 
@@ -84,12 +100,24 @@ public class DeleteEmailVerificationResponseBody extends TeaModel {
     }
 
     public static class DeleteEmailVerificationResponseBodySuccessList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:test2@aliyun.com">test2@aliyun.com</a></p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("Message")
         public String message;
 

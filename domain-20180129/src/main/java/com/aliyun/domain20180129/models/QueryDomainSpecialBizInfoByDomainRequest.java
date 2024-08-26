@@ -4,12 +4,32 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryDomainSpecialBizInfoByDomainRequest extends TeaModel {
+    /**
+     * <p>The business type.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>govRegister</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 
+    /**
+     * <p>The domain name.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test003.cn</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The IP address of the client.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 

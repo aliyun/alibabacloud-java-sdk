@@ -4,39 +4,106 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether retries are allowed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>False</p>
+     */
     @NameInMap("AllowRetry")
     public Boolean allowRetry;
 
+    /**
+     * <p>The name of the application for which the error code is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-com</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>The dynamic error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
+     */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
+    /**
+     * <p>The dynamic error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The array of error parameters that are returned.</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>110001</p>
+     */
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
+    /**
+     * <p>The HTTP status code that is directly returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Module")
     public QueryDomainSpecialBizInfoByDomainResponseBodyModule module;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>97663DFF-D24D-55AE-A577-6CC5AF20B732</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values: true and false</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>Indicates whether to perform synchronous processing.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Synchro")
     public Boolean synchro;
 
@@ -142,78 +209,215 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
     }
 
     public static class QueryDomainSpecialBizInfoByDomainResponseBodyModuleDomainSpecialBizContact extends TeaModel {
+        /**
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>258</p>
+         */
         @NameInMap("BizId")
         public Long bizId;
 
+        /**
+         * <p>The city.</p>
+         */
         @NameInMap("CCity")
         public String CCity;
 
+        /**
+         * <p>The organization name.</p>
+         */
         @NameInMap("CCompany")
         public String CCompany;
 
+        /**
+         * <p>The country code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
+         */
         @NameInMap("CCountry")
         public String CCountry;
 
+        /**
+         * <p>The contact name.</p>
+         */
         @NameInMap("CName")
         public String CName;
 
+        /**
+         * <p>The province.</p>
+         */
         @NameInMap("CProvince")
         public String CProvince;
 
+        /**
+         * <p>The address.</p>
+         */
         @NameInMap("CVenu")
         public String CVenu;
 
+        /**
+         * <p>The city in English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>an shan Shi</p>
+         */
         @NameInMap("ECity")
         public String ECity;
 
+        /**
+         * <p>The organization name in English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hebeihuiheguandaozhizaoyouxiangongsi</p>
+         */
         @NameInMap("ECompany")
         public String ECompany;
 
+        /**
+         * <p>The contact name in English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tong da wei</p>
+         */
         @NameInMap("EName")
         public String EName;
 
+        /**
+         * <p>The province in English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liao ning</p>
+         */
         @NameInMap("EProvince")
         public String EProvince;
 
+        /**
+         * <p>The address in English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tie xi qu xin kai jie 59-4 hao</p>
+         */
         @NameInMap("EVenu")
         public String EVenu;
 
+        /**
+         * <p>The email address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <p>The extended information.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("Extend")
         public String extend;
 
+        /**
+         * <p>The fax country code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86</p>
+         */
         @NameInMap("FaxArea")
         public String faxArea;
 
+        /**
+         * <p>The fax extension number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61284565</p>
+         */
         @NameInMap("FaxExt")
         public String faxExt;
 
+        /**
+         * <p>The fax number with an area code or mobile number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16604121234</p>
+         */
         @NameInMap("FaxMain")
         public String faxMain;
 
+        /**
+         * <p>The mobile number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>156********</p>
+         */
         @NameInMap("Mobile")
         public String mobile;
 
+        /**
+         * <p>The zip code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000</p>
+         */
         @NameInMap("Postalcode")
         public String postalcode;
 
+        /**
+         * <p>The contact type. Valid values: 1: individual. 2: enterprise.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RegType")
         public Integer regType;
 
+        /**
+         * <p>The registrant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121000002****</p>
+         */
         @NameInMap("RegistrantId")
         public String registrantId;
 
+        /**
+         * <p>The calling code of the country or region where the domain name contact is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86</p>
+         */
         @NameInMap("TelArea")
         public String telArea;
 
+        /**
+         * <p>The telephone extension number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2756</p>
+         */
         @NameInMap("TelExt")
         public String telExt;
 
+        /**
+         * <p>The landline number with an area code or mobile number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16604121234</p>
+         */
         @NameInMap("TelMain")
         public String telMain;
 
+        /**
+         * <p>The VSP contact ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121000001****</p>
+         */
         @NameInMap("VspContactId")
         public String vspContactId;
 
@@ -425,24 +629,66 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
     }
 
     public static class QueryDomainSpecialBizInfoByDomainResponseBodyModuleDomainSpecialBizCredentials extends TeaModel {
+        /**
+         * <p>The ID of the associated workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>T20220831150014000001</p>
+         */
         @NameInMap("BizId")
         public Long bizId;
 
+        /**
+         * <p>The certificate number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4111111111111110**</p>
+         */
         @NameInMap("CredentialNo")
         public String credentialNo;
 
+        /**
+         * <p>The certificate type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SFZ</p>
+         */
         @NameInMap("CredentialType")
         public String credentialType;
 
+        /**
+         * <p>The certificate URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://test.oss-cn-hangzhou.aliyuncs.com/20170522/1219541161213057_070445190.jpg">http://test.oss-cn-hangzhou.aliyuncs.com/20170522/1219541161213057_070445190.jpg</a></p>
+         */
         @NameInMap("CredentialUrl")
         public String credentialUrl;
 
+        /**
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test003.cn</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>Indicates whether the certificate belongs to the registrant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("HolderCert")
         public Integer holderCert;
 
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S20172315BJ37809</p>
+         */
         @NameInMap("SaleId")
         public String saleId;
 
@@ -510,60 +756,159 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
     }
 
     public static class QueryDomainSpecialBizInfoByDomainResponseBodyModule extends TeaModel {
+        /**
+         * <p>The review information.</p>
+         */
         @NameInMap("AuditMsg")
         public String auditMsg;
 
+        /**
+         * <p>The business name.</p>
+         */
         @NameInMap("BizName")
         public String bizName;
 
+        /**
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A83E1D74-E46B-505C-947A-8C6B7E41C012</p>
+         */
         @NameInMap("BizNo")
         public String bizNo;
 
+        /**
+         * <p>The business status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>REGISTRANT_VSP_AUDIT_SUCCESS</p>
+         */
         @NameInMap("BizStatus")
         public String bizStatus;
 
+        /**
+         * <p>The business type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>govRegister</p>
+         */
         @NameInMap("BizType")
         public String bizType;
 
+        /**
+         * <p>The time when the business was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-17 11:31:10</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test003.cn</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>The contact information.</p>
+         */
         @NameInMap("DomainSpecialBizContact")
         public QueryDomainSpecialBizInfoByDomainResponseBodyModuleDomainSpecialBizContact domainSpecialBizContact;
 
+        /**
+         * <p>The certificate information.</p>
+         */
         @NameInMap("DomainSpecialBizCredentials")
         public java.util.List<QueryDomainSpecialBizInfoByDomainResponseBodyModuleDomainSpecialBizCredentials> domainSpecialBizCredentials;
 
+        /**
+         * <p>The time when the business was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-21 15:10:04.0</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The time when the business was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-21 15:10:04.0</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The primary key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34083</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("OrderId")
         public String orderId;
 
+        /**
+         * <p>The service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ProductId")
         public String productId;
 
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S20172315BJ37809</p>
+         */
         @NameInMap("SaleId")
         public String saleId;
 
+        /**
+         * <p>The business status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The description of business status.</p>
+         */
         @NameInMap("StatusDesc")
         public String statusDesc;
 
+        /**
+         * <p>The time when the business was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-17 18:11:15</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
+        /**
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121000000****</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

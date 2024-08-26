@@ -4,12 +4,26 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class VerifyEmailRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0b32247496409441e9e179ea7c2e0****</p>
+     */
     @NameInMap("Token")
     public String token;
 
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 

@@ -4,12 +4,24 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryServerLockRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>S20181*****85212</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 

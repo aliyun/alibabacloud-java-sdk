@@ -4,60 +4,152 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>chao yang qu</p>
+     */
     @NameInMap("Address")
     public String address;
 
+    /**
+     * <strong>example:</strong>
+     * <p>bei jing shi</p>
+     */
     @NameInMap("City")
     public String city;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CN</p>
+     */
     @NameInMap("Country")
     public String country;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alibabacloud.com</p>
+     */
     @NameInMap("DomainName")
     public java.util.List<String> domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:test@aliyun.com">test@aliyun.com</a></p>
+     */
     @NameInMap("Email")
     public String email;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>h6UPhXz/ADP/2Q==</p>
+     */
     @NameInMap("IdentityCredential")
     public String identityCredential;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5****************9</p>
+     */
     @NameInMap("IdentityCredentialNo")
     public String identityCredentialNo;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SFZ</p>
+     */
     @NameInMap("IdentityCredentialType")
     public String identityCredentialType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("PostalCode")
     public String postalCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>bei jing</p>
+     */
     @NameInMap("Province")
     public String province;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ce shi</p>
+     */
     @NameInMap("RegistrantName")
     public String registrantName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ce shi</p>
+     */
     @NameInMap("RegistrantOrganization")
     public String registrantOrganization;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RegistrantType")
     public String registrantType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>86</p>
+     */
     @NameInMap("TelArea")
     public String telArea;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12345</p>
+     */
     @NameInMap("TelExt")
     public String telExt;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345678</p>
+     */
     @NameInMap("Telephone")
     public String telephone;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("TransferOutProhibited")
     public Boolean transferOutProhibited;
 
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 

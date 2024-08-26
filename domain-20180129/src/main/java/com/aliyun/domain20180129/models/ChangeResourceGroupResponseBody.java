@@ -4,9 +4,17 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class ChangeResourceGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>4EA05A10-D4BC-47EA-AD9E-370A46BB4FB9</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Result")
     public String result;
 

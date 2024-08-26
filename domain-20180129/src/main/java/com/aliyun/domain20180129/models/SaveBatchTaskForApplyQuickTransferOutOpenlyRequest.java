@@ -7,9 +7,17 @@ public class SaveBatchTaskForApplyQuickTransferOutOpenlyRequest extends TeaModel
     @NameInMap("DomainNames")
     public java.util.List<String> domainNames;
 
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 

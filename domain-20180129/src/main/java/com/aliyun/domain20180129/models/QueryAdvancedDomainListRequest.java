@@ -4,87 +4,202 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryAdvancedDomainListRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>-1</p>
+     */
     @NameInMap("DomainGroupId")
     public Long domainGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DomainNameSort")
     public Boolean domainNameSort;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("DomainStatus")
     public Integer domainStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1522080000000</p>
+     */
     @NameInMap("EndExpirationDate")
     public Long endExpirationDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("EndLength")
     public Integer endLength;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1522080000000</p>
+     */
     @NameInMap("EndRegistrationDate")
     public Long endRegistrationDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Excluded")
     public String excluded;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ExcludedPrefix")
     public Boolean excludedPrefix;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ExcludedSuffix")
     public Boolean excludedSuffix;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ExpirationDateSort")
     public Boolean expirationDateSort;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Form")
     public Integer form;
 
+    @NameInMap("IsPremiumDomain")
+    public Boolean isPremiumDomain;
+
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("KeyWord")
     public String keyWord;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("KeyWordPrefix")
     public Boolean keyWordPrefix;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("KeyWordSuffix")
     public Boolean keyWordSuffix;
 
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>gTLD</p>
+     */
     @NameInMap("ProductDomainType")
     public String productDomainType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ProductDomainTypeSort")
     public Boolean productDomainTypeSort;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("RegistrationDateSort")
     public Boolean registrationDateSort;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-acfmw6bpc6n7zai</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1522080000000</p>
+     */
     @NameInMap("StartExpirationDate")
     public Long startExpirationDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("StartLength")
     public Integer startLength;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1522080000000</p>
+     */
     @NameInMap("StartRegistrationDate")
     public Long startRegistrationDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>com.cn</p>
+     */
     @NameInMap("Suffixs")
     public String suffixs;
 
     @NameInMap("Tag")
     public java.util.List<QueryAdvancedDomainListRequestTag> tag;
 
+    /**
+     * <strong>example:</strong>
+     * <p>-1</p>
+     */
     @NameInMap("TradeType")
     public Integer tradeType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
@@ -179,6 +294,14 @@ public class QueryAdvancedDomainListRequest extends TeaModel {
     }
     public Integer getForm() {
         return this.form;
+    }
+
+    public QueryAdvancedDomainListRequest setIsPremiumDomain(Boolean isPremiumDomain) {
+        this.isPremiumDomain = isPremiumDomain;
+        return this;
+    }
+    public Boolean getIsPremiumDomain() {
+        return this.isPremiumDomain;
     }
 
     public QueryAdvancedDomainListRequest setKeyWord(String keyWord) {

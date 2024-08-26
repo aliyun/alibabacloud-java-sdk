@@ -4,21 +4,49 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryTaskListRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1522080000000</p>
+     */
     @NameInMap("BeginCreateTime")
     public Long beginCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1522080000000</p>
+     */
     @NameInMap("EndCreateTime")
     public Long endCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 

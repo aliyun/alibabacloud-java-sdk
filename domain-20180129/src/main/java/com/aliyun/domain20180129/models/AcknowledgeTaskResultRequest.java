@@ -4,12 +4,26 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class AcknowledgeTaskResultRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2659c29493e94416b297a7691340ccc4</p>
+     */
     @NameInMap("TaskDetailNo")
     public java.util.List<String> taskDetailNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 

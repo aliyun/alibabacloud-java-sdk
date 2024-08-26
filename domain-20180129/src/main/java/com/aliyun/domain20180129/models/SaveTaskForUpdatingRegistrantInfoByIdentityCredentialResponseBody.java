@@ -4,9 +4,17 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>EDC28FEC-6BE0-4583-95BC-test</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>880f1579-be51-4dd3-a69d-test</p>
+     */
     @NameInMap("TaskNo")
     public String taskNo;
 

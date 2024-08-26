@@ -4,30 +4,72 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SaveSingleTaskForCreatingOrderRenewRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>123123</p>
+     */
     @NameInMap("CouponNo")
     public String couponNo;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000</p>
+     */
     @NameInMap("CurrentExpirationDate")
     public Long currentExpirationDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123132</p>
+     */
     @NameInMap("PromotionNo")
     public String promotionNo;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SubscriptionDuration")
     public Integer subscriptionDuration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("UseCoupon")
     public Boolean useCoupon;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("UsePromotion")
     public Boolean usePromotion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 

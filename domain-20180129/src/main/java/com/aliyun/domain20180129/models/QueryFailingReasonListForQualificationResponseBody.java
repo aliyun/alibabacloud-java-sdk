@@ -7,6 +7,10 @@ public class QueryFailingReasonListForQualificationResponseBody extends TeaModel
     @NameInMap("Data")
     public java.util.List<QueryFailingReasonListForQualificationResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9DFCF6F8-243C-****-8035-4B12FEFD7D48</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class QueryFailingReasonListForQualificationResponseBody extends TeaModel
     }
 
     public static class QueryFailingReasonListForQualificationResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2017-03-17 11:08:02</p>
+         */
         @NameInMap("Date")
         public String date;
 

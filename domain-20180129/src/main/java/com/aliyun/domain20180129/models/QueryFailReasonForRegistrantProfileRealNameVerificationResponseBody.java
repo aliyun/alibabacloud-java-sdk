@@ -7,6 +7,10 @@ public class QueryFailReasonForRegistrantProfileRealNameVerificationResponseBody
     @NameInMap("Data")
     public java.util.List<QueryFailReasonForRegistrantProfileRealNameVerificationResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>548C407F-AEA2-4B5D-90DF-EC11EBB1D76F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class QueryFailReasonForRegistrantProfileRealNameVerificationResponseBody
     }
 
     public static class QueryFailReasonForRegistrantProfileRealNameVerificationResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2017-03-17 11:08:02</p>
+         */
         @NameInMap("Date")
         public String date;
 

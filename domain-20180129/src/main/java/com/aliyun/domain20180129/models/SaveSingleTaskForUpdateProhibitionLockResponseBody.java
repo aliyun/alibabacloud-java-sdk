@@ -4,9 +4,17 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SaveSingleTaskForUpdateProhibitionLockResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>F51977F9-2B40-462B-BCCD-CF5BB1E9DB56</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>d3babb0a-c939-4c25-8c65-c47b65f5492a</p>
+     */
     @NameInMap("TaskNo")
     public String taskNo;
 

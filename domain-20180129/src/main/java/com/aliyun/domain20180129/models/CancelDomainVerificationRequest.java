@@ -4,15 +4,50 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class CancelDomainVerificationRequest extends TeaModel {
+    /**
+     * <p>The action type. Valid values:</p>
+     * <ul>
+     * <li><strong>DOMAINAUDIT</strong>: review a domain name review.</li>
+     * <li><strong>AUDITCONTACT</strong>: review a contact.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AUDITCONTACT</p>
+     */
     @NameInMap("ActionType")
     public String actionType;
 
+    /**
+     * <p>Thee instance ID of the domain name. You can call the <a href="https://help.aliyun.com/document_detail/67712.html">QueryDomainList</a> operation to query the instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>S2019270W570xxxx</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The language of the error message to return if the request fails. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * <p>Default value: <strong>en</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The IP address of the client. Set the value to <strong>127.0.0.1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 

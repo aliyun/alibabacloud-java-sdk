@@ -13,12 +13,20 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
     @NameInMap("Objects")
     public java.util.List<QueryTaskInfoHistoryResponseBodyObjects> objects;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("PrePageCursor")
     public QueryTaskInfoHistoryResponseBodyPrePageCursor prePageCursor;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EB3FCCBA-CA1F-4D31-9F34-test</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -76,27 +84,59 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
     }
 
     public static class QueryTaskInfoHistoryResponseBodyCurrentPageCursor extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
+         */
         @NameInMap("Clientip")
         public String clientip;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2017-11-01 17:22:51</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1509528171000</p>
+         */
         @NameInMap("CreateTimeLong")
         public Long createTimeLong;
 
+        /**
+         * <strong>example:</strong>
+         * <p>aa634d3f-927e-4d17-9d2c-test</p>
+         */
         @NameInMap("TaskNo")
         public String taskNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TaskNum")
         public Integer taskNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>COMPLETE</p>
+         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("TaskStatusCode")
         public Integer taskStatusCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CHG_DNS</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 
@@ -183,27 +223,59 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
     }
 
     public static class QueryTaskInfoHistoryResponseBodyNextPageCursor extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
+         */
         @NameInMap("Clientip")
         public String clientip;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2017-10-27 13:07:07</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1509080827000</p>
+         */
         @NameInMap("CreateTimeLong")
         public Long createTimeLong;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8f112aa1-98be-48c3-82f8-test</p>
+         */
         @NameInMap("TaskNo")
         public String taskNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15</p>
+         */
         @NameInMap("TaskNum")
         public Integer taskNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>COMPLETE</p>
+         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("TaskStatusCode")
         public Integer taskStatusCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CHG_DNS</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 
@@ -290,27 +362,59 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
     }
 
     public static class QueryTaskInfoHistoryResponseBodyObjects extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
+         */
         @NameInMap("Clientip")
         public String clientip;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2017-11-01 17:22:51</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1509528171000</p>
+         */
         @NameInMap("CreateTimeLong")
         public Long createTimeLong;
 
+        /**
+         * <strong>example:</strong>
+         * <p>aa634d3f-927e-4d17-9d2c-test</p>
+         */
         @NameInMap("TaskNo")
         public String taskNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TaskNum")
         public Integer taskNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>COMPLETE</p>
+         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("TaskStatusCode")
         public Integer taskStatusCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CHG_DNS</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 
@@ -397,27 +501,59 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
     }
 
     public static class QueryTaskInfoHistoryResponseBodyPrePageCursor extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
+         */
         @NameInMap("Clientip")
         public String clientip;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2017-11-01 17:19:47</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1509527987000</p>
+         */
         @NameInMap("CreateTimeLong")
         public Long createTimeLong;
 
+        /**
+         * <strong>example:</strong>
+         * <p>f9baa3d5-33b9-4c81-8847-test</p>
+         */
         @NameInMap("TaskNo")
         public String taskNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15</p>
+         */
         @NameInMap("TaskNum")
         public Integer taskNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>COMPLETE</p>
+         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("TaskStatusCode")
         public Integer taskStatusCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CHG_DNS</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 

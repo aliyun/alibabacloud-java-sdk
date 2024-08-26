@@ -4,27 +4,55 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryOperationAuditInfoListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("CurrentPageNum")
     public Integer currentPageNum;
 
     @NameInMap("Data")
     public java.util.List<QueryOperationAuditInfoListResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("NextPage")
     public Boolean nextPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("PrePage")
     public Boolean prePage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9DFCF6F8-243C-40EC-8035-4B12FEFD7D48</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>199</p>
+     */
     @NameInMap("TotalItemNum")
     public Integer totalItemNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalPageNum")
     public Integer totalPageNum;
 
@@ -101,27 +129,51 @@ public class QueryOperationAuditInfoListResponseBody extends TeaModel {
         @NameInMap("AuditInfo")
         public String auditInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AuditStatus")
         public Integer auditStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AuditType")
         public Integer auditType;
 
         @NameInMap("BusinessName")
         public String businessName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1581919010101</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example.com,aliyundoc.com</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Id")
         public Long id;
 
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1581919010101</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 

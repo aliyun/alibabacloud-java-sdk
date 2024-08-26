@@ -7,96 +7,208 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     @NameInMap("DnsList")
     public QueryDomainByInstanceIdResponseBodyDnsList dnsList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234</p>
+     */
     @NameInMap("DomainGroupId")
     public Long domainGroupId;
 
     @NameInMap("DomainGroupName")
     public String domainGroupName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DomainNameProxyService")
     public Boolean domainNameProxyService;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NONAUDIT</p>
+     */
     @NameInMap("DomainNameVerificationStatus")
     public String domainNameVerificationStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("DomainStatus")
     public String domainStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>gTLD</p>
+     */
     @NameInMap("DomainType")
     public String domainType;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:username@example.com">username@example.com</a></p>
+     */
     @NameInMap("Email")
     public String email;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EmailVerificationClientHold")
     public Boolean emailVerificationClientHold;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("EmailVerificationStatus")
     public Integer emailVerificationStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>356</p>
+     */
     @NameInMap("ExpirationCurrDateDiff")
     public Integer expirationCurrDateDiff;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2019-12-07 17:02:13</p>
+     */
     @NameInMap("ExpirationDate")
     public String expirationDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1625111915000</p>
+     */
     @NameInMap("ExpirationDateLong")
     public Long expirationDateLong;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ExpirationDateStatus")
     public String expirationDateStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>S20179H1BBI9test</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Premium")
     public Boolean premium;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NONAUDIT</p>
+     */
     @NameInMap("RealNameStatus")
     public String realNameStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Test litm</p>
+     */
     @NameInMap("RegistrantName")
     public String registrantName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Test litm</p>
+     */
     @NameInMap("RegistrantOrganization")
     public String registrantOrganization;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RegistrantType")
     public String registrantType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
+     */
     @NameInMap("RegistrantUpdatingStatus")
     public String registrantUpdatingStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2017-12-07 17:02:13</p>
+     */
     @NameInMap("RegistrationDate")
     public String registrationDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1625111915000</p>
+     */
     @NameInMap("RegistrationDateLong")
     public Long registrationDateLong;
 
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <strong>example:</strong>
+     * <p>23C9B3C4-9E2C-4405-A88D-BD33E459D140</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-acfmw6bpc6n7zai</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     @NameInMap("Tag")
     public QueryDomainByInstanceIdResponseBodyTag tag;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
+     */
     @NameInMap("TransferOutStatus")
     public String transferOutStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CLOSE</p>
+     */
     @NameInMap("TransferProhibitionLock")
     public String transferProhibitionLock;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CLOSE</p>
+     */
     @NameInMap("UpdateProhibitionLock")
     public String updateProhibitionLock;
 
+    /**
+     * <strong>example:</strong>
+     * <p>121000000****</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

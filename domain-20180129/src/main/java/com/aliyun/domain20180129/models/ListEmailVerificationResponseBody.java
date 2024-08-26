@@ -4,27 +4,55 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class ListEmailVerificationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPageNum")
     public Integer currentPageNum;
 
     @NameInMap("Data")
     public java.util.List<ListEmailVerificationResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("NextPage")
     public Boolean nextPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>500</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("PrePage")
     public Boolean prePage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>78C60CC3-FF0A-44E2-989A-DDE0597791C3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalItemNum")
     public Integer totalItemNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalPageNum")
     public Integer totalPageNum;
 
@@ -98,33 +126,73 @@ public class ListEmailVerificationResponseBody extends TeaModel {
     }
 
     public static class ListEmailVerificationResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
+         */
         @NameInMap("ConfirmIp")
         public String confirmIp;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>00000a21fd374da99d9c95b48500000</p>
+         */
         @NameInMap("EmailVerificationNo")
         public String emailVerificationNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2017-12-25 03:38:46</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2017-12-25 03:41:11</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
+         */
         @NameInMap("SendIp")
         public String sendIp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2017-12-25 03:38:46</p>
+         */
         @NameInMap("TokenSendTime")
         public String tokenSendTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0000</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("VerificationStatus")
         public Integer verificationStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2017-12-25 03:41:11</p>
+         */
         @NameInMap("VerificationTime")
         public String verificationTime;
 

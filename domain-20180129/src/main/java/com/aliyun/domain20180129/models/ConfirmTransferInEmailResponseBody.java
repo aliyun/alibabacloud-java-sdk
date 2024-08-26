@@ -7,6 +7,10 @@ public class ConfirmTransferInEmailResponseBody extends TeaModel {
     @NameInMap("FailList")
     public ConfirmTransferInEmailResponseBodyFailList failList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>40F46D3D-F4F3-4CCB-AC30-2DD20E32E528</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,36 +4,80 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryServerLockResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>S20190N1DAI4****</p>
+     */
     @NameInMap("DomainInstanceId")
     public String domainInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2030-07-10 17:37:36</p>
+     */
     @NameInMap("ExpireDate")
     public String expireDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-07-10 17:37:36</p>
+     */
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-07-10 17:37:36</p>
+     */
     @NameInMap("GmtModified")
     public String gmtModified;
 
+    /**
+     * <strong>example:</strong>
+     * <p>S2021591IQ28****</p>
+     */
     @NameInMap("LockInstanceId")
     public String lockInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1807**</p>
+     */
     @NameInMap("LockProductId")
     public String lockProductId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9DFCF6F8-243C-****-8035-4B12FEFD7D48</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("ServerLockStatus")
     public Integer serverLockStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-07-10 17:37:36</p>
+     */
     @NameInMap("StartDate")
     public String startDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>121000000****</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

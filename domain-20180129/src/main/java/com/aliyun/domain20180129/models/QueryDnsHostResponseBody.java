@@ -7,6 +7,10 @@ public class QueryDnsHostResponseBody extends TeaModel {
     @NameInMap("DnsHostList")
     public java.util.List<QueryDnsHostResponseBodyDnsHostList> dnsHostList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>18A313DD-3AF3-40AA-84F9-56BA45DC511F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class QueryDnsHostResponseBody extends TeaModel {
     }
 
     public static class QueryDnsHostResponseBodyDnsHostList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ns3</p>
+         */
         @NameInMap("DnsName")
         public String dnsName;
 

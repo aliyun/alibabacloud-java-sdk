@@ -4,9 +4,17 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SubmitOperationAuditInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9DKCF6F8-243C-40EC-8035-4B12FEFD7C22</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

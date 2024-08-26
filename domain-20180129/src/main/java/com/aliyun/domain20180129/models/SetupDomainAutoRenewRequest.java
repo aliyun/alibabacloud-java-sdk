@@ -4,9 +4,21 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SetupDomainAutoRenewRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>S2019270W570xxxx</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SET</p>
+     */
     @NameInMap("Operation")
     public String operation;
 

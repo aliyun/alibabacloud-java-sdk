@@ -4,6 +4,10 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class BatchFuzzyMatchDomainSensitiveWordResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>C560A803-B975-481D-A66B-A4395EA863A1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class BatchFuzzyMatchDomainSensitiveWordResponseBody extends TeaModel {
     }
 
     public static class BatchFuzzyMatchDomainSensitiveWordResponseBodySensitiveWordMatchResultListSensitiveWordMatchResultMatchedSentiveWordsMatchedSensitiveWord extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("Word")
         public String word;
 
@@ -70,9 +78,17 @@ public class BatchFuzzyMatchDomainSensitiveWordResponseBody extends TeaModel {
     }
 
     public static class BatchFuzzyMatchDomainSensitiveWordResponseBodySensitiveWordMatchResultListSensitiveWordMatchResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Exist")
         public Boolean exist;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example.com,aliyundoc.com</p>
+         */
         @NameInMap("Keyword")
         public String keyword;
 

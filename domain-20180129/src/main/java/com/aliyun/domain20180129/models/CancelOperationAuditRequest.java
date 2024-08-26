@@ -4,9 +4,19 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class CancelOperationAuditRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("AuditRecordId")
     public Long auditRecordId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

@@ -4,15 +4,36 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SubmitDomainSpecialBizCredentialsRequest extends TeaModel {
+    /**
+     * <p>The business ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>219</p>
+     */
     @NameInMap("BizId")
     public Long bizId;
 
+    /**
+     * <p>The certificate information.</p>
+     */
     @NameInMap("Credentials")
     public String credentials;
 
+    /**
+     * <p>The extended information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;addTransferLock\&quot;:true}</p>
+     */
     @NameInMap("Extend")
     public String extend;
 
+    /**
+     * <p>The IP address of the client.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 

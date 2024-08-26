@@ -4,9 +4,17 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SaveBatchTaskForUpdatingContactInfoByNewContactResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>464AF466-CA8E-43A8-B61D-test</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>65de2165-ca09-491f-9fe0-test</p>
+     */
     @NameInMap("TaskNo")
     public String taskNo;
 

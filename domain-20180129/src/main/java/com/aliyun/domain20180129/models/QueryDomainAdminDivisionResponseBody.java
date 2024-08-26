@@ -7,6 +7,10 @@ public class QueryDomainAdminDivisionResponseBody extends TeaModel {
     @NameInMap("AdminDivisions")
     public QueryDomainAdminDivisionResponseBodyAdminDivisions adminDivisions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4EA05A10-D4BC-47EA-AD9E-370A46BB4FB9</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

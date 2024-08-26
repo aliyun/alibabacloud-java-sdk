@@ -4,9 +4,17 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SaveSingleTaskForApplyQuickTransferOutOpenlyResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>D200000-C0B9-4CD3-B92A-9B44A000000</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3cb1adc3-20e8-44ae-9e76-e812fa6fc9d8</p>
+     */
     @NameInMap("TaskNo")
     public String taskNo;
 

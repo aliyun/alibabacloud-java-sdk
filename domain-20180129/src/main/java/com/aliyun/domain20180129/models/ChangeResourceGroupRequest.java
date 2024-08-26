@@ -4,18 +4,42 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aek2tcx7os7bkmq</p>
+     */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>S20227H17A561968</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Domain</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 

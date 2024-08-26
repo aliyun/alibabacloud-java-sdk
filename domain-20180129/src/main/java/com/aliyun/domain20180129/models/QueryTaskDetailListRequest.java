@@ -4,27 +4,65 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryTaskDetailListRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>S20179H1BBI9test</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>75addb07-28a3-450e-b5ec-test</p>
+     */
     @NameInMap("TaskNo")
     public String taskNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TaskStatus")
     public Integer taskStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.0</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 

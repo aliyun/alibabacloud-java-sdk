@@ -4,39 +4,89 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SaveSingleTaskForSaveArtExtensionRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2019-10-01</p>
+     */
     @NameInMap("DateOrPeriod")
     public String dateOrPeriod;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20 cm</p>
+     */
     @NameInMap("Dimensions")
     public String dimensions;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test.art</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iconicity</p>
+     */
     @NameInMap("Features")
     public String features;
 
+    /**
+     * <strong>example:</strong>
+     * <p>realism</p>
+     */
     @NameInMap("InscriptionsAndMarkings")
     public String inscriptionsAndMarkings;
 
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zhang san</p>
+     */
     @NameInMap("Maker")
     public String maker;
 
+    /**
+     * <strong>example:</strong>
+     * <p>silk</p>
+     */
     @NameInMap("MaterialsAndTechniques")
     public String materialsAndTechniques;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The embroidery</p>
+     */
     @NameInMap("ObjectType")
     public String objectType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>drawings</p>
+     */
     @NameInMap("Reference")
     public String reference;
 
+    /**
+     * <strong>example:</strong>
+     * <p>peace</p>
+     */
     @NameInMap("Subject")
     public String subject;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Peace and friendship</p>
+     */
     @NameInMap("Title")
     public String title;
 

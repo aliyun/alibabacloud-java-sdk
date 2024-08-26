@@ -7,6 +7,10 @@ public class QueryDSRecordResponseBody extends TeaModel {
     @NameInMap("DSRecordList")
     public java.util.List<QueryDSRecordResponseBodyDSRecordList> DSRecordList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>814B2AF0-ED6F-4C13-B41C-8AC0B1023583</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,31 @@ public class QueryDSRecordResponseBody extends TeaModel {
     }
 
     public static class QueryDSRecordResponseBodyDSRecordList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Algorithm")
         public Integer algorithm;
 
+        /**
+         * <strong>example:</strong>
+         * <p>f58fa917424383934c7b0cf1a90f61d692745680fa06f5ecdbe0924e86de9598</p>
+         */
         @NameInMap("Digest")
         public String digest;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("DigestType")
         public Integer digestType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("KeyTag")
         public Integer keyTag;
 

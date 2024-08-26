@@ -4,36 +4,80 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryEmailVerificationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>42.<em>.</em>.31</p>
+     */
     @NameInMap("ConfirmIp")
     public String confirmIp;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:abc@aliyun.com">abc@aliyun.com</a></p>
+     */
     @NameInMap("Email")
     public String email;
 
+    /**
+     * <strong>example:</strong>
+     * <p>72b36ba0572e423bbb3f19640896****</p>
+     */
     @NameInMap("EmailVerificationNo")
     public String emailVerificationNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2019-02-19 16:38:07</p>
+     */
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2019-02-19 16:40:38</p>
+     */
     @NameInMap("GmtModified")
     public String gmtModified;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FC4F7D02-8A83-4E37-B935-2D48A1B8423E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>42.<em>.</em>.115</p>
+     */
     @NameInMap("SendIp")
     public String sendIp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2019-02-19 16:38:07</p>
+     */
     @NameInMap("TokenSendTime")
     public String tokenSendTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>140692647406****</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("VerificationStatus")
     public Integer verificationStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2019-02-19 16:40:38</p>
+     */
     @NameInMap("VerificationTime")
     public String verificationTime;
 

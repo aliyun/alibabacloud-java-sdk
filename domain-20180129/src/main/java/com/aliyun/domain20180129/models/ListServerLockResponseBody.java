@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListServerLockResponseBody extends TeaModel {
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("CurrentPageNum")
     public Integer currentPageNum;
@@ -18,36 +21,54 @@ public class ListServerLockResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the current page is followed by a page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("NextPage")
     public Boolean nextPage;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>Indicates whether the current page is preceded by a page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("PrePage")
     public Boolean prePage;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9DFCF6F8-243C-****-8035-4B12FEFD7D48</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalItemNum")
     public Integer totalItemNum;
 
     /**
      * <p>The total number of pages returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalPageNum")
     public Integer totalPageNum;
@@ -124,60 +145,90 @@ public class ListServerLockResponseBody extends TeaModel {
     public static class ListServerLockResponseBodyData extends TeaModel {
         /**
          * <p>The instance ID of the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S20190N1DAI4****</p>
          */
         @NameInMap("DomainInstanceId")
         public String domainInstanceId;
 
         /**
          * <p>The domain name that has valid registry lock information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2030-07-10 17:37:36</p>
          */
         @NameInMap("ExpireDate")
         public String expireDate;
 
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-02-19 16:38:07</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The time when the domain name was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-19 16:40:38</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The instance ID of the domain name for which the registry lock is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S2021591IQ28****</p>
          */
         @NameInMap("LockInstanceId")
         public String lockInstanceId;
 
         /**
          * <p>The ID of the product to which the domain name with the registry lock enabled belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1807**</p>
          */
         @NameInMap("LockProductId")
         public String lockProductId;
 
         /**
          * <p>The status of the registry lock.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ServerLockStatus")
         public String serverLockStatus;
 
         /**
          * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-10 17:37:36</p>
          */
         @NameInMap("StartDate")
         public String startDate;
 
         /**
          * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121000000****</p>
          */
         @NameInMap("UserId")
         public String userId;

@@ -4,18 +4,34 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SubmitOperationCredentialsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("AuditRecordId")
     public Long auditRecordId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("AuditType")
     public Integer auditType;
 
     @NameInMap("Credentials")
     public String credentials;
 
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RegType")
     public Integer regType;
 

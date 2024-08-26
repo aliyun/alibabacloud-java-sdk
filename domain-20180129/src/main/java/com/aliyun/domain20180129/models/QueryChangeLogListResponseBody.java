@@ -4,30 +4,62 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryChangeLogListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPageNum")
     public Integer currentPageNum;
 
     @NameInMap("Data")
     public QueryChangeLogListResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("NextPage")
     public Boolean nextPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("PrePage")
     public Boolean prePage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2DEDFF32-7827-46B1-BE90-3DB8ABD91A58</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ResultLimit")
     public Boolean resultLimit;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("TotalItemNum")
     public Integer totalItemNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("TotalPageNum")
     public Integer totalPageNum;
 
@@ -109,21 +141,45 @@ public class QueryChangeLogListResponseBody extends TeaModel {
     }
 
     public static class QueryChangeLogListResponseBodyDataChangeLog extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>dns1;dns2 -&gt; dns3;dns4</p>
+         */
         @NameInMap("Details")
         public String details;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DNS modification</p>
+         */
         @NameInMap("Operation")
         public String operation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
+         */
         @NameInMap("OperationIPAddress")
         public String operationIPAddress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Failed</p>
+         */
         @NameInMap("Result")
         public String result;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2017-12-26 12:00:00</p>
+         */
         @NameInMap("Time")
         public String time;
 
