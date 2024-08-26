@@ -4,6 +4,10 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SetDefaultRegistrantProfileResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>4D73432C-7600-4779-ACBB-C3B5CA145D32</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,24 +4,51 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SaveBatchTaskForCreatingOrderActivateRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("CouponNo")
     public String couponNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OrderActivateParam")
     public java.util.List<SaveBatchTaskForCreatingOrderActivateRequestOrderActivateParam> orderActivateParam;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123124</p>
+     */
     @NameInMap("PromotionNo")
     public String promotionNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("UseCoupon")
     public Boolean useCoupon;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("UsePromotion")
     public Boolean usePromotion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
@@ -87,69 +114,159 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends TeaModel {
     }
 
     public static class SaveBatchTaskForCreatingOrderActivateRequestOrderActivateParam extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>chao yan qu *** dasha *** hao</p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AliyunDns")
         public Boolean aliyunDns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>bei jing shi</p>
+         */
         @NameInMap("City")
         public String city;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CN</p>
+         */
         @NameInMap("Country")
         public String country;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ns2.aliyun.com</p>
+         */
         @NameInMap("Dns1")
         public String dns1;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ns1.aliyun.com</p>
+         */
         @NameInMap("Dns2")
         public String dns2;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableDomainProxy")
         public Boolean enableDomainProxy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("PermitPremiumActivation")
         public Boolean permitPremiumActivation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>102629</p>
+         */
         @NameInMap("PostalCode")
         public String postalCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>bei jing</p>
+         */
         @NameInMap("Province")
         public String province;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zhang san</p>
+         */
         @NameInMap("RegistrantName")
         public String registrantName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zhang san</p>
+         */
         @NameInMap("RegistrantOrganization")
         public String registrantOrganization;
 
+        /**
+         * <strong>example:</strong>
+         * <p>000000</p>
+         */
         @NameInMap("RegistrantProfileId")
         public Long registrantProfileId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RegistrantType")
         public String registrantType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rg-XX</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SubscriptionDuration")
         public Integer subscriptionDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>86</p>
+         */
         @NameInMap("TelArea")
         public String telArea;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("TelExt")
         public String telExt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1820000****</p>
+         */
         @NameInMap("Telephone")
         public String telephone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("TrademarkDomainActivation")
         public Boolean trademarkDomainActivation;
 

@@ -4,27 +4,55 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryTaskListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPageNum")
     public Integer currentPageNum;
 
     @NameInMap("Data")
     public QueryTaskListResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("NextPage")
     public Boolean nextPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("PrePage")
     public Boolean prePage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8D7D294A-8E99-481F-B64C-017EFC793059</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>43</p>
+     */
     @NameInMap("TotalItemNum")
     public Integer totalItemNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>22</p>
+     */
     @NameInMap("TotalPageNum")
     public Integer totalPageNum;
 
@@ -98,30 +126,66 @@ public class QueryTaskListResponseBody extends TeaModel {
     }
 
     public static class QueryTaskListResponseBodyDataTaskInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
+         */
         @NameInMap("Clientip")
         public String clientip;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Dec 26,2017 11:00:54</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INIT</p>
+         */
         @NameInMap("TaskCancelStatus")
         public String taskCancelStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TaskCancelStatusCode")
         public Integer taskCancelStatusCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8b1cd755-4928-4b02-adee-e5d41d7b1939</p>
+         */
         @NameInMap("TaskNo")
         public String taskNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TaskNum")
         public Integer taskNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>COMPLETE</p>
+         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TaskStatusCode")
         public Integer taskStatusCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CREATE_DNSHOST</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 

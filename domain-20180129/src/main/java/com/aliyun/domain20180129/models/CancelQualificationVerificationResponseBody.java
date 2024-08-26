@@ -4,6 +4,10 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class CancelQualificationVerificationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>9DFCF6F8-243C-****-8035-4B12FEFD7D48</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -10,6 +10,10 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
     @NameInMap("FailList")
     public java.util.List<SubmitEmailVerificationResponseBodyFailList> failList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E2A8A5EF-DF8A-4C48-8FD4-9F6BD71AB26D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,12 +58,24 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
     }
 
     public static class SubmitEmailVerificationResponseBodyExistList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>SendTokenQuotaExceeded</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>The maximum number of attempts allowed to send the email verification link is exceeded.</p>
+         */
         @NameInMap("Message")
         public String message;
 
@@ -95,12 +111,24 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
     }
 
     public static class SubmitEmailVerificationResponseBodyFailList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>SendTokenQuotaExceeded</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>The maximum number of attempts allowed to send the email verification link is exceeded</p>
+         */
         @NameInMap("Message")
         public String message;
 
@@ -136,12 +164,24 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
     }
 
     public static class SubmitEmailVerificationResponseBodySuccessList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("Message")
         public String message;
 

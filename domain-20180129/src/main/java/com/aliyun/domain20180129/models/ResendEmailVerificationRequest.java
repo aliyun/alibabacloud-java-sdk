@@ -4,12 +4,26 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class ResendEmailVerificationRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:test1@aliyun.com">test1@aliyun.com</a>,<a href="mailto:test2@aliyun.com">test2@aliyun.com</a></p>
+     */
     @NameInMap("Email")
     public String email;
 
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 

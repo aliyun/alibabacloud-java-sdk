@@ -4,27 +4,55 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryRegistrantProfilesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPageNum")
     public Integer currentPageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("NextPage")
     public Boolean nextPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("PrePage")
     public Boolean prePage;
 
     @NameInMap("RegistrantProfiles")
     public QueryRegistrantProfilesResponseBodyRegistrantProfiles registrantProfiles;
 
+    /**
+     * <strong>example:</strong>
+     * <p>94053D79-7455-4F71-BF06-20EB2DEDE6BD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9</p>
+     */
     @NameInMap("TotalItemNum")
     public Integer totalItemNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalPageNum")
     public Integer totalPageNum;
 
@@ -98,15 +126,31 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
     }
 
     public static class QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>zhe jiang sheng hang zhou shi shi li qu shi li zhen shi li da sha 1001 hao</p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hang zhou shi</p>
+         */
         @NameInMap("City")
         public String city;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CN</p>
+         */
         @NameInMap("Country")
         public String country;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-02-18 10:46:47</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
@@ -116,48 +160,111 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
         @NameInMap("CredentialType")
         public String credentialType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("DefaultRegistrantProfile")
         public Boolean defaultRegistrantProfile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>82106****@qq.com</p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("EmailVerificationStatus")
         public Integer emailVerificationStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>310024</p>
+         */
         @NameInMap("PostalCode")
         public String postalCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zhe jiang</p>
+         */
         @NameInMap("Province")
         public String province;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SUCCEED</p>
+         */
         @NameInMap("RealNameStatus")
         public String realNameStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>li si</p>
+         */
         @NameInMap("RegistrantName")
         public String registrantName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>li si</p>
+         */
         @NameInMap("RegistrantOrganization")
         public String registrantOrganization;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000001</p>
+         */
         @NameInMap("RegistrantProfileId")
         public Long registrantProfileId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>common</p>
+         */
         @NameInMap("RegistrantProfileType")
         public String registrantProfileType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RegistrantType")
         public String registrantType;
 
+        @NameInMap("Remark")
+        public String remark;
+
+        /**
+         * <strong>example:</strong>
+         * <p>86</p>
+         */
         @NameInMap("TelArea")
         public String telArea;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("TelExt")
         public String telExt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1829756****</p>
+         */
         @NameInMap("Telephone")
         public String telephone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-03-15 15:32:45</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
@@ -315,6 +422,14 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
         }
         public String getRegistrantType() {
             return this.registrantType;
+        }
+
+        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
         }
 
         public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setTelArea(String telArea) {

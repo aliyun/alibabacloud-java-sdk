@@ -4,6 +4,10 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryDomainSuffixResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>D1C9DE44-1D7F-4F66-9653-00000</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

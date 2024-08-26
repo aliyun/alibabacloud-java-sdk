@@ -4,54 +4,122 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SaveRegistrantProfileRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>zhe jiang sheng hang zhou shi shi li qu shi li zhen shi li da sha 1001 hao</p>
+     */
     @NameInMap("Address")
     public String address;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hang zhou shi</p>
+     */
     @NameInMap("City")
     public String city;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CN</p>
+     */
     @NameInMap("Country")
     public String country;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DefaultRegistrantProfile")
     public Boolean defaultRegistrantProfile;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:username@example.com">username@example.com</a></p>
+     */
     @NameInMap("Email")
     public String email;
 
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <strong>example:</strong>
+     * <p>310024</p>
+     */
     @NameInMap("PostalCode")
     public String postalCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zhe jiang</p>
+     */
     @NameInMap("Province")
     public String province;
 
+    /**
+     * <strong>example:</strong>
+     * <p>li si</p>
+     */
     @NameInMap("RegistrantName")
     public String registrantName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>li si</p>
+     */
     @NameInMap("RegistrantOrganization")
     public String registrantOrganization;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3600000</p>
+     */
     @NameInMap("RegistrantProfileId")
     public Long registrantProfileId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>common</p>
+     */
     @NameInMap("RegistrantProfileType")
     public String registrantProfileType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RegistrantType")
     public String registrantType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>86</p>
+     */
     @NameInMap("TelArea")
     public String telArea;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234</p>
+     */
     @NameInMap("TelExt")
     public String telExt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1829756****</p>
+     */
     @NameInMap("Telephone")
     public String telephone;
 
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 

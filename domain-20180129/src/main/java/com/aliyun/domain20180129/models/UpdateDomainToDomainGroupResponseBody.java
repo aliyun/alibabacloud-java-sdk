@@ -4,6 +4,10 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class UpdateDomainToDomainGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>40F46D3D-F4F3-4CCB-AC30-2DD20E32E528</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

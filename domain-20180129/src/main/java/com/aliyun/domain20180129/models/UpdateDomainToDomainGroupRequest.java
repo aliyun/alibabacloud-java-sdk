@@ -4,24 +4,58 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class UpdateDomainToDomainGroupRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("DataSource")
     public Integer dataSource;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
+     */
     @NameInMap("DomainGroupId")
     public Long domainGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("DomainName")
     public java.util.List<String> domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dGVzdA==</p>
+     */
     @NameInMap("FileToUpload")
     public String fileToUpload;
 
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Replace")
     public Boolean replace;
 
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 

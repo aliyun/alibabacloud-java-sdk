@@ -4,36 +4,80 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryArtExtensionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2019-10-01</p>
+     */
     @NameInMap("DateOrPeriod")
     public String dateOrPeriod;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20 cm</p>
+     */
     @NameInMap("Dimensions")
     public String dimensions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iconicity</p>
+     */
     @NameInMap("Features")
     public String features;
 
+    /**
+     * <strong>example:</strong>
+     * <p>realism</p>
+     */
     @NameInMap("InscriptionsAndMarkings")
     public String inscriptionsAndMarkings;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zhang san</p>
+     */
     @NameInMap("Maker")
     public String maker;
 
+    /**
+     * <strong>example:</strong>
+     * <p>silk</p>
+     */
     @NameInMap("MaterialsAndTechniques")
     public String materialsAndTechniques;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The embroidery</p>
+     */
     @NameInMap("ObjectType")
     public String objectType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>drawings</p>
+     */
     @NameInMap("Reference")
     public String reference;
 
+    /**
+     * <strong>example:</strong>
+     * <p>814B2AF0-ED6F-4C13-B41C-8AC0B1023583</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>peace</p>
+     */
     @NameInMap("Subject")
     public String subject;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Peace and friendship</p>
+     */
     @NameInMap("Title")
     public String title;
 

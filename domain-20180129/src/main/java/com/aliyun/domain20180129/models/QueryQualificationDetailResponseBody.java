@@ -4,15 +4,27 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryQualificationDetailResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("AuditStatus")
     public Integer auditStatus;
 
     @NameInMap("Credentials")
     public QueryQualificationDetailResponseBodyCredentials credentials;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9DFCF6F8-243C-****-8035-4B12FEFD7D48</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>943a1662898a****0acbdbeca91</p>
+     */
     @NameInMap("TrackId")
     public String trackId;
 
@@ -54,9 +66,17 @@ public class QueryQualificationDetailResponseBody extends TeaModel {
     }
 
     public static class QueryQualificationDetailResponseBodyCredentialsQualificationCredential extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>92610725MA7G2E****</p>
+         */
         @NameInMap("CredentialNo")
         public String credentialNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SHSQB</p>
+         */
         @NameInMap("CredentialType")
         public String credentialType;
 

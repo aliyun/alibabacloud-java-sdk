@@ -13,12 +13,20 @@ public class QueryTaskDetailHistoryResponseBody extends TeaModel {
     @NameInMap("Objects")
     public java.util.List<QueryTaskDetailHistoryResponseBodyObjects> objects;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("PrePageCursor")
     public QueryTaskDetailHistoryResponseBodyPrePageCursor prePageCursor;
 
+    /**
+     * <strong>example:</strong>
+     * <p>548CAE74-88F8-402F-8C12-97E747389C51</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -76,39 +84,79 @@ public class QueryTaskDetailHistoryResponseBody extends TeaModel {
     }
 
     public static class QueryTaskDetailHistoryResponseBodyCurrentPageCursor extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2019-07-30 00:00:00</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
+        /**
+         * <strong>example:</strong>
+         * <p>S1234456789</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>75addb07-28a3-450e-b5ec-2342</p>
+         */
         @NameInMap("TaskDetailNo")
         public String taskDetailNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>75addb07-28a3-450e-b5ec-test</p>
+         */
         @NameInMap("TaskNo")
         public String taskNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>EXECUTE_SUCCESS</p>
+         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("TaskStatusCode")
         public Integer taskStatusCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CHG_DNS</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 
         @NameInMap("TaskTypeDescription")
         public String taskTypeDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TryCount")
         public Integer tryCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-07-30 00:00:00</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
@@ -216,39 +264,79 @@ public class QueryTaskDetailHistoryResponseBody extends TeaModel {
     }
 
     public static class QueryTaskDetailHistoryResponseBodyNextPageCursor extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2019-07-30 00:00:00</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
+        /**
+         * <strong>example:</strong>
+         * <p>S1234567890</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>75addb07-28a3-450e-b5ec-2424</p>
+         */
         @NameInMap("TaskDetailNo")
         public String taskDetailNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>75addb07-28a3-450e-b5ec-test</p>
+         */
         @NameInMap("TaskNo")
         public String taskNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>EXECUTE_FAILURE</p>
+         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("TaskStatusCode")
         public Integer taskStatusCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CHG_DNS</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 
         @NameInMap("TaskTypeDescription")
         public String taskTypeDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("TryCount")
         public Integer tryCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-07-30 00:00:00</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
@@ -356,39 +444,79 @@ public class QueryTaskDetailHistoryResponseBody extends TeaModel {
     }
 
     public static class QueryTaskDetailHistoryResponseBodyObjects extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2019-07-30 00:00:00</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
+        /**
+         * <strong>example:</strong>
+         * <p>S123456789</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>75addb07-28a3-450e-b5ec-4234</p>
+         */
         @NameInMap("TaskDetailNo")
         public String taskDetailNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>75addb07-28a3-450e-b5ec-test</p>
+         */
         @NameInMap("TaskNo")
         public String taskNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>EXECUTE_FAILURE</p>
+         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("TaskStatusCode")
         public Integer taskStatusCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CHG_DNS</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 
         @NameInMap("TaskTypeDescription")
         public String taskTypeDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("TryCount")
         public Integer tryCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-07-30 00:00:00</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
@@ -496,39 +624,79 @@ public class QueryTaskDetailHistoryResponseBody extends TeaModel {
     }
 
     public static class QueryTaskDetailHistoryResponseBodyPrePageCursor extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2019-07-30 00:00:00</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
+        /**
+         * <strong>example:</strong>
+         * <p>S123456789</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>75addb07-28a3-450e-b5ec-123</p>
+         */
         @NameInMap("TaskDetailNo")
         public String taskDetailNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>75addb07-28a3-450e-b5ec-test</p>
+         */
         @NameInMap("TaskNo")
         public String taskNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>EXECUTE_FAILURE</p>
+         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("TaskStatusCode")
         public Integer taskStatusCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CHG_DNS</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 
         @NameInMap("TaskTypeDescription")
         public String taskTypeDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("TryCount")
         public Integer tryCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-07-30 00:00:00</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

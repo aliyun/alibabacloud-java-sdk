@@ -4,42 +4,94 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryContactInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>xi hu qu *** jiedao *** xiaoqu *** zhuang 101</p>
+     */
     @NameInMap("Address")
     public String address;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hang zhou shi</p>
+     */
     @NameInMap("City")
     public String city;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CN</p>
+     */
     @NameInMap("Country")
     public String country;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2019-03-20 11:37:29</p>
+     */
     @NameInMap("CreateDate")
     public String createDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:username@example.com">username@example.com</a></p>
+     */
     @NameInMap("Email")
     public String email;
 
+    /**
+     * <strong>example:</strong>
+     * <p>310024</p>
+     */
     @NameInMap("PostalCode")
     public String postalCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zhe jiang</p>
+     */
     @NameInMap("Province")
     public String province;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zhang san</p>
+     */
     @NameInMap("RegistrantName")
     public String registrantName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zhang san</p>
+     */
     @NameInMap("RegistrantOrganization")
     public String registrantOrganization;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C39ECA8A-BB5E-4F92-B013-6A032FA06B04</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>86</p>
+     */
     @NameInMap("TelArea")
     public String telArea;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234</p>
+     */
     @NameInMap("TelExt")
     public String telExt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1820000****</p>
+     */
     @NameInMap("Telephone")
     public String telephone;
 

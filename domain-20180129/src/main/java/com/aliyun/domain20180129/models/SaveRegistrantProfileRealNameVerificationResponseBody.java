@@ -4,9 +4,17 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SaveRegistrantProfileRealNameVerificationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1234567</p>
+     */
     @NameInMap("RegistrantProfileId")
     public Long registrantProfileId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4D73432C-7600-****-ACBB-C3B5CA145D32</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

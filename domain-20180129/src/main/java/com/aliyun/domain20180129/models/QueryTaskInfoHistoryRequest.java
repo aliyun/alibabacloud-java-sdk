@@ -4,24 +4,54 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryTaskInfoHistoryRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1522080000000</p>
+     */
     @NameInMap("BeginCreateTime")
     public Long beginCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1522080000000</p>
+     */
     @NameInMap("CreateTimeCursor")
     public Long createTimeCursor;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1522080000000</p>
+     */
     @NameInMap("EndCreateTime")
     public Long endCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>aa634d3f-927e-4d17-9d2c-test</p>
+     */
     @NameInMap("TaskNoCursor")
     public String taskNoCursor;
 
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 

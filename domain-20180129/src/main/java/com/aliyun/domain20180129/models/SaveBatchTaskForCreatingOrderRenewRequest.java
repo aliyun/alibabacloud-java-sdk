@@ -4,24 +4,51 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SaveBatchTaskForCreatingOrderRenewRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>12312412</p>
+     */
     @NameInMap("CouponNo")
     public String couponNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OrderRenewParam")
     public java.util.List<SaveBatchTaskForCreatingOrderRenewRequestOrderRenewParam> orderRenewParam;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123123123</p>
+     */
     @NameInMap("PromotionNo")
     public String promotionNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("UseCoupon")
     public Boolean useCoupon;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("UsePromotion")
     public Boolean usePromotion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
@@ -87,12 +114,24 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends TeaModel {
     }
 
     public static class SaveBatchTaskForCreatingOrderRenewRequestOrderRenewParam extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1522080000000</p>
+         */
         @NameInMap("CurrentExpirationDate")
         public Long currentExpirationDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Aliyun.com</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SubscriptionDuration")
         public Integer subscriptionDuration;
 

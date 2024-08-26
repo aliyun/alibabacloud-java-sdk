@@ -4,9 +4,19 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class GetOperationOssUploadPolicyRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("AuditType")
     public Integer auditType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

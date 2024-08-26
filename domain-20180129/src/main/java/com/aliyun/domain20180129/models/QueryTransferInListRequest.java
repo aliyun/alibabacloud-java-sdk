@@ -4,27 +4,63 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryTransferInListRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>INIT</p>
+     */
     @NameInMap("SimpleTransferInStatus")
     public String simpleTransferInStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1514428524669</p>
+     */
     @NameInMap("SubmissionEndDate")
     public Long submissionEndDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1514428524669</p>
+     */
     @NameInMap("SubmissionStartDate")
     public Long submissionStartDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 

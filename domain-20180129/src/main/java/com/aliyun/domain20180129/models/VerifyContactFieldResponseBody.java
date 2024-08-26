@@ -4,6 +4,10 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class VerifyContactFieldResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ABAC3BAC-FCFA-4DAE-B47C-FA4105CB07C6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

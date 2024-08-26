@@ -7,12 +7,24 @@ public class QueryDomainGroupListRequest extends TeaModel {
     @NameInMap("DomainGroupName")
     public String domainGroupName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ShowDeletingGroup")
     public Boolean showDeletingGroup;
 
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 

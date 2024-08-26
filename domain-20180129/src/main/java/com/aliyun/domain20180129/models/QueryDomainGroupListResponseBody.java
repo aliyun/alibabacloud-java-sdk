@@ -7,6 +7,10 @@ public class QueryDomainGroupListResponseBody extends TeaModel {
     @NameInMap("Data")
     public QueryDomainGroupListResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>80011ABC-F573-4795-B0E8-377BFBBA3422</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +36,48 @@ public class QueryDomainGroupListResponseBody extends TeaModel {
     }
 
     public static class QueryDomainGroupListResponseBodyDataDomainGroup extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("BeingDeleted")
         public Boolean beingDeleted;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2018-04-02 15:59:06</p>
+         */
         @NameInMap("CreationDate")
         public String creationDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("DomainGroupId")
         public String domainGroupId;
 
         @NameInMap("DomainGroupName")
         public String domainGroupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>COMPLETE</p>
+         */
         @NameInMap("DomainGroupStatus")
         public String domainGroupStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2018-04-02 15:59:06</p>
+         */
         @NameInMap("ModificationDate")
         public String modificationDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("TotalNumber")
         public Integer totalNumber;
 

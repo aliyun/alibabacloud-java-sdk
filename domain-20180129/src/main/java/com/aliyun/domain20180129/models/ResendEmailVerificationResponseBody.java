@@ -7,6 +7,10 @@ public class ResendEmailVerificationResponseBody extends TeaModel {
     @NameInMap("FailList")
     public java.util.List<ResendEmailVerificationResponseBodyFailList> failList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0EA54E99-DB48-4CE3-A099-6ED8E451B8AC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,12 +47,24 @@ public class ResendEmailVerificationResponseBody extends TeaModel {
     }
 
     public static class ResendEmailVerificationResponseBodyFailList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>SendTokenQuotaExceeded</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:test1@aliyun.com">test1@aliyun.com</a></p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>The maximum number of attempts allowed to send the email verification link is exceeded.</p>
+         */
         @NameInMap("Message")
         public String message;
 
@@ -84,12 +100,24 @@ public class ResendEmailVerificationResponseBody extends TeaModel {
     }
 
     public static class ResendEmailVerificationResponseBodySuccessList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:test2@aliyun.com">test2@aliyun.com</a></p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("Message")
         public String message;
 

@@ -4,69 +4,153 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryTransferInByInstanceIdResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:username@example.com">username@example.com</a></p>
+     */
     @NameInMap("Email")
     public String email;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2018-03-28 00:41:42</p>
+     */
     @NameInMap("ExpirationDate")
     public String expirationDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1514428524669</p>
+     */
     @NameInMap("ExpirationDateLong")
     public Long expirationDateLong;
 
+    /**
+     * <strong>example:</strong>
+     * <p>S20181T0WLI85212</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2018-03-28 00:41:42</p>
+     */
     @NameInMap("ModificationDate")
     public String modificationDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1514428524669</p>
+     */
     @NameInMap("ModificationDateLong")
     public Long modificationDateLong;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("NeedMailCheck")
     public Boolean needMailCheck;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("ProgressBarType")
     public Integer progressBarType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AF7D4DCE-0776-47F2-A9B2-6FB85A87AA60</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>clientCancelled</p>
+     */
     @NameInMap("ResultCode")
     public String resultCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2018-03-28 00:41:42</p>
+     */
     @NameInMap("ResultDate")
     public String resultDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1514428524669</p>
+     */
     @NameInMap("ResultDateLong")
     public Long resultDateLong;
 
     @NameInMap("ResultMsg")
     public String resultMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("SimpleTransferInStatus")
     public String simpleTransferInStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>11</p>
+     */
     @NameInMap("Status")
     public Integer status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2018-03-28 00:41:42</p>
+     */
     @NameInMap("SubmissionDate")
     public String submissionDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1514428524669</p>
+     */
     @NameInMap("SubmissionDateLong")
     public Long submissionDateLong;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2018-03-28 00:41:42</p>
+     */
     @NameInMap("TransferAuthorizationCodeSubmissionDate")
     public String transferAuthorizationCodeSubmissionDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1514428524669</p>
+     */
     @NameInMap("TransferAuthorizationCodeSubmissionDateLong")
     public Long transferAuthorizationCodeSubmissionDateLong;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("WhoisMailStatus")
     public Boolean whoisMailStatus;
 

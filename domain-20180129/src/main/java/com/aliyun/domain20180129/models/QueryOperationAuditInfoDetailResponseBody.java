@@ -7,30 +7,58 @@ public class QueryOperationAuditInfoDetailResponseBody extends TeaModel {
     @NameInMap("AuditInfo")
     public String auditInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("AuditStatus")
     public Integer auditStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("AuditType")
     public Integer auditType;
 
     @NameInMap("BusinessName")
     public String businessName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1581919010100</p>
+     */
     @NameInMap("CreateTime")
     public Long createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>example.com,aliyundoc.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Id")
     public String id;
 
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9DFCF6F8-243C-40EC-8035-4B12FEFD7D1L</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1581919010101</p>
+     */
     @NameInMap("UpdateTime")
     public Long updateTime;
 

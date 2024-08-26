@@ -4,9 +4,17 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SaveSingleTaskForCreatingDnsHostResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0F1B3547-BE50-4206-8F78-9540FFB85BC1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>e9b8e8b4-7334-4548-9cec-c30b6891f292</p>
+     */
     @NameInMap("TaskNo")
     public String taskNo;
 

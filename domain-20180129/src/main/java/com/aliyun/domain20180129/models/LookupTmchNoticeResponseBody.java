@@ -7,18 +7,38 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
     @NameInMap("Claims")
     public LookupTmchNoticeResponseBodyClaims claims;
 
+    /**
+     * <strong>example:</strong>
+     * <p>586608000000</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>noted</p>
+     */
     @NameInMap("Label")
     public String label;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2018-10-15T00:00:00.0Z</p>
+     */
     @NameInMap("NotAfter")
     public String notAfter;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2018-10-13T00:00:00.0Z</p>
+     */
     @NameInMap("NotBefore")
     public String notBefore;
 
+    /**
+     * <strong>example:</strong>
+     * <p>01C10C8E-0468-468C-BCD9-E709BDD0AE8F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -76,9 +96,17 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
     }
 
     public static class LookupTmchNoticeResponseBodyClaimsClaimClassDescsClassDesc extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>18</p>
+         */
         @NameInMap("ClassNum")
         public Integer classNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>New Zealand</p>
+         */
         @NameInMap("Desc")
         public String desc;
 
@@ -144,15 +172,31 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
     }
 
     public static class LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddr extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>NZ</p>
+         */
         @NameInMap("Cc")
         public String cc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Auckland</p>
+         */
         @NameInMap("City")
         public String city;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1010</p>
+         */
         @NameInMap("Pc")
         public String pc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Auckland</p>
+         */
         @NameInMap("Sp")
         public String sp;
 
@@ -210,21 +254,45 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         @NameInMap("Addr")
         public LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddr addr;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4472335**8</p>
+         */
         @NameInMap("Fax")
         public String fax;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Tom</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Tom</p>
+         */
         @NameInMap("Org")
         public String org;
 
+        /**
+         * <strong>example:</strong>
+         * <p>agent</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1390000****</p>
+         */
         @NameInMap("Voice")
         public String voice;
 
@@ -330,15 +398,31 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
     }
 
     public static class LookupTmchNoticeResponseBodyClaimsClaimHoldersHolderAddr extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>NZ</p>
+         */
         @NameInMap("Cc")
         public String cc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Wellington</p>
+         */
         @NameInMap("City")
         public String city;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6011</p>
+         */
         @NameInMap("Pc")
         public String pc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Wellington</p>
+         */
         @NameInMap("Sp")
         public String sp;
 
@@ -396,9 +480,17 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         @NameInMap("Addr")
         public LookupTmchNoticeResponseBodyClaimsClaimHoldersHolderAddr addr;
 
+        /**
+         * <strong>example:</strong>
+         * <p>owner</p>
+         */
         @NameInMap("Entitlement")
         public String entitlement;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Whitcoulls 2011 Limited</p>
+         */
         @NameInMap("Org")
         public String org;
 
@@ -453,9 +545,17 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
     }
 
     public static class LookupTmchNoticeResponseBodyClaimsClaimJurDesc extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>New Zealand</p>
+         */
         @NameInMap("Desc")
         public String desc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NZ</p>
+         */
         @NameInMap("JurCC")
         public String jurCC;
 
@@ -489,6 +589,10 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         @NameInMap("Contacts")
         public LookupTmchNoticeResponseBodyClaimsClaimContacts contacts;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Class 9: Calculators; bags, coverings,containers, carriers and holders for mobile phones, personal handheld computers and notebooks; headphones; speakers; blank storage media;batteries. Class 16: Paper</p>
+         */
         @NameInMap("GoodsAndServices")
         public String goodsAndServices;
 
@@ -498,6 +602,10 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         @NameInMap("JurDesc")
         public LookupTmchNoticeResponseBodyClaimsClaimJurDesc jurDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>POTED</p>
+         */
         @NameInMap("MarkName")
         public String markName;
 

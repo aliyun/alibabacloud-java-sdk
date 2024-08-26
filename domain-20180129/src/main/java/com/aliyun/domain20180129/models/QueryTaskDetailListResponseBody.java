@@ -4,27 +4,55 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryTaskDetailListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPageNum")
     public Integer currentPageNum;
 
     @NameInMap("Data")
     public QueryTaskDetailListResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("NextPage")
     public Boolean nextPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("PrePage")
     public Boolean prePage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6A2320E4-D870-49C9-A6DC-test</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalItemNum")
     public Integer totalItemNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalPageNum")
     public Integer totalPageNum;
 
@@ -98,42 +126,93 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
     }
 
     public static class QueryTaskDetailListResponseBodyDataTaskDetail extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2018-01-25 20:46:57</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>The operation is successful.</p>
+         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
+        @NameInMap("FailReason")
+        public String failReason;
+
+        /**
+         * <strong>example:</strong>
+         * <p>S20179H1BBI9test</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>75addb07-28a3-450e-b5ec-test</p>
+         */
         @NameInMap("TaskDetailNo")
         public String taskDetailNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60d6e201-8ee5-47ab-8fdc-test</p>
+         */
         @NameInMap("TaskNo")
         public String taskNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
         @NameInMap("TaskResult")
         public String taskResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p>EXECUTE_SUCCESS</p>
+         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("TaskStatusCode")
         public Integer taskStatusCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ORDER_RENEW</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 
         @NameInMap("TaskTypeDescription")
         public String taskTypeDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TryCount")
         public Integer tryCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2018-01-25 20:47:01</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
@@ -164,6 +243,14 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
         }
         public String getErrorMsg() {
             return this.errorMsg;
+        }
+
+        public QueryTaskDetailListResponseBodyDataTaskDetail setFailReason(String failReason) {
+            this.failReason = failReason;
+            return this;
+        }
+        public String getFailReason() {
+            return this.failReason;
         }
 
         public QueryTaskDetailListResponseBodyDataTaskDetail setInstanceId(String instanceId) {

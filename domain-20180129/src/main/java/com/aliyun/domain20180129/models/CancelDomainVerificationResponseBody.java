@@ -4,6 +4,12 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class CancelDomainVerificationResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0AC0AF67-D303-4EB9-B20E-B4D4B2C3F97B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

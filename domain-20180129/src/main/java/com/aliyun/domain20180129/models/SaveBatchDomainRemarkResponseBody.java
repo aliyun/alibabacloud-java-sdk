@@ -4,6 +4,10 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SaveBatchDomainRemarkResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>4189E320-961E-4786-8E15-0000</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,36 +4,83 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryRegistrantProfilesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DefaultRegistrantProfile")
     public Boolean defaultRegistrantProfile;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:username@example.com">username@example.com</a></p>
+     */
     @NameInMap("Email")
     public String email;
 
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>500</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCEED</p>
+     */
     @NameInMap("RealNameStatus")
     public String realNameStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>li si</p>
+     */
     @NameInMap("RegistrantOrganization")
     public String registrantOrganization;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234567</p>
+     */
     @NameInMap("RegistrantProfileId")
     public Long registrantProfileId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>common</p>
+     */
     @NameInMap("RegistrantProfileType")
     public String registrantProfileType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RegistrantType")
     public String registrantType;
 
+    @NameInMap("Remark")
+    public String remark;
+
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
@@ -123,6 +170,14 @@ public class QueryRegistrantProfilesRequest extends TeaModel {
     }
     public String getRegistrantType() {
         return this.registrantType;
+    }
+
+    public QueryRegistrantProfilesRequest setRemark(String remark) {
+        this.remark = remark;
+        return this;
+    }
+    public String getRemark() {
+        return this.remark;
     }
 
     public QueryRegistrantProfilesRequest setUserClientIp(String userClientIp) {

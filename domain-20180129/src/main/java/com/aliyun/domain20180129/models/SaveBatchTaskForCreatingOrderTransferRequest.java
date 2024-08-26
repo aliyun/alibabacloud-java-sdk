@@ -4,24 +4,51 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SaveBatchTaskForCreatingOrderTransferRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>123123</p>
+     */
     @NameInMap("CouponNo")
     public String couponNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OrderTransferParam")
     public java.util.List<SaveBatchTaskForCreatingOrderTransferRequestOrderTransferParam> orderTransferParam;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123123</p>
+     */
     @NameInMap("PromotionNo")
     public String promotionNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("UseCoupon")
     public Boolean useCoupon;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("UsePromotion")
     public Boolean usePromotion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
@@ -87,15 +114,31 @@ public class SaveBatchTaskForCreatingOrderTransferRequest extends TeaModel {
     }
 
     public static class SaveBatchTaskForCreatingOrderTransferRequestOrderTransferParam extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>testCode</p>
+         */
         @NameInMap("AuthorizationCode")
         public String authorizationCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("PermitPremiumTransfer")
         public Boolean permitPremiumTransfer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("RegistrantProfileId")
         public Long registrantProfileId;
 

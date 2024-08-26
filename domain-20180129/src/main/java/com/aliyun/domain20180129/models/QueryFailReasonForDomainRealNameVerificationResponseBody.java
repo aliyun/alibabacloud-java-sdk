@@ -7,6 +7,10 @@ public class QueryFailReasonForDomainRealNameVerificationResponseBody extends Te
     @NameInMap("Data")
     public java.util.List<QueryFailReasonForDomainRealNameVerificationResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1F1BA893-AD33-4248-8CB8-1657E3733052</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class QueryFailReasonForDomainRealNameVerificationResponseBody extends Te
     }
 
     public static class QueryFailReasonForDomainRealNameVerificationResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2017-03-17 11:08:02</p>
+         */
         @NameInMap("Date")
         public String date;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SUCCEED</p>
+         */
         @NameInMap("DomainNameVerificationStatus")
         public String domainNameVerificationStatus;
 
