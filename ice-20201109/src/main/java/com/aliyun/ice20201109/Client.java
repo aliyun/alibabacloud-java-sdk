@@ -10003,6 +10003,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>发起体育集锦任务</p>
+     * 
+     * @param request SubmitSportsHighlightsJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitSportsHighlightsJobResponse
+     */
+    public SubmitSportsHighlightsJobResponse submitSportsHighlightsJobWithOptions(SubmitSportsHighlightsJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputConfig)) {
+            query.put("OutputConfig", request.outputConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            query.put("UserData", request.userData);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.inputConfig)) {
+            body.put("InputConfig", request.inputConfig);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitSportsHighlightsJob"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitSportsHighlightsJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>发起体育集锦任务</p>
+     * 
+     * @param request SubmitSportsHighlightsJobRequest
+     * @return SubmitSportsHighlightsJobResponse
+     */
+    public SubmitSportsHighlightsJobResponse submitSportsHighlightsJob(SubmitSportsHighlightsJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitSportsHighlightsJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>提交标准版人声克隆训练任务</p>
      * 
      * @param request SubmitStandardCustomizedVoiceJobRequest
