@@ -6449,6 +6449,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取搜索库列表</p>
+     * 
+     * @param request ListSearchLibRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSearchLibResponse
+     */
+    public ListSearchLibResponse listSearchLibWithOptions(ListSearchLibRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSearchLib"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSearchLibResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取搜索库列表</p>
+     * 
+     * @param request ListSearchLibRequest
+     * @return ListSearchLibResponse
+     */
+    public ListSearchLibResponse listSearchLib(ListSearchLibRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listSearchLibWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>ListSmartJobs</p>
      * 
      * @param request ListSmartJobsRequest
@@ -7539,6 +7587,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SearchEditingProjectResponse searchEditingProject(SearchEditingProjectRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.searchEditingProjectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>搜索索引任务重新分析</p>
+     * 
+     * @param request SearchIndexJobRerunRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SearchIndexJobRerunResponse
+     */
+    public SearchIndexJobRerunResponse searchIndexJobRerunWithOptions(SearchIndexJobRerunRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaIds)) {
+            query.put("MediaIds", request.mediaIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchLibName)) {
+            query.put("SearchLibName", request.searchLibName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.task)) {
+            query.put("Task", request.task);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SearchIndexJobRerun"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchIndexJobRerunResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>搜索索引任务重新分析</p>
+     * 
+     * @param request SearchIndexJobRerunRequest
+     * @return SearchIndexJobRerunResponse
+     */
+    public SearchIndexJobRerunResponse searchIndexJobRerun(SearchIndexJobRerunRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.searchIndexJobRerunWithOptions(request, runtime);
     }
 
     /**
