@@ -529,6 +529,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>分页查询文档库列表</p>
+     * 
+     * @param request GetHistoryListByBizTypeRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetHistoryListByBizTypeResponse
+     */
+    public GetHistoryListByBizTypeResponse getHistoryListByBizTypeWithOptions(String workspaceId, GetHistoryListByBizTypeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("bizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            query.put("bizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetHistoryListByBizType"),
+            new TeaPair("version", "2024-06-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/api/history/list"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetHistoryListByBizTypeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询文档库列表</p>
+     * 
+     * @param request GetHistoryListByBizTypeRequest
+     * @return GetHistoryListByBizTypeResponse
+     */
+    public GetHistoryListByBizTypeResponse getHistoryListByBizType(String workspaceId, GetHistoryListByBizTypeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getHistoryListByBizTypeWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取文档库配置详情</p>
      * 
      * @param request GetLibraryRequest
@@ -949,6 +1008,121 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.runChatResultGenerationWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取生成式对话结果</p>
+     * 
+     * @param request RunLibraryChatGenerationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RunLibraryChatGenerationResponse
+     */
+    public RunLibraryChatGenerationResponse runLibraryChatGenerationWithOptions(String workspaceId, RunLibraryChatGenerationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.docIdList)) {
+            body.put("docIdList", request.docIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableFollowUp)) {
+            body.put("enableFollowUp", request.enableFollowUp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableMultiQuery)) {
+            body.put("enableMultiQuery", request.enableMultiQuery);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableOpenQa)) {
+            body.put("enableOpenQa", request.enableOpenQa);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.followUpLlm)) {
+            body.put("followUpLlm", request.followUpLlm);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.libraryId)) {
+            body.put("libraryId", request.libraryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.llmType)) {
+            body.put("llmType", request.llmType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.multiQueryLlm)) {
+            body.put("multiQueryLlm", request.multiQueryLlm);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            body.put("query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryCriteria)) {
+            body.put("queryCriteria", request.queryCriteria);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rerankType)) {
+            body.put("rerankType", request.rerankType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            body.put("sessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stream)) {
+            body.put("stream", request.stream);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subQueryList)) {
+            body.put("subQueryList", request.subQueryList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.textSearchParameter)) {
+            body.put("textSearchParameter", request.textSearchParameter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topK)) {
+            body.put("topK", request.topK);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vectorSearchParameter)) {
+            body.put("vectorSearchParameter", request.vectorSearchParameter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.withDocumentReference)) {
+            body.put("withDocumentReference", request.withDocumentReference);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RunLibraryChatGeneration"),
+            new TeaPair("version", "2024-06-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/api/run/library/chat/generation"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RunLibraryChatGenerationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取生成式对话结果</p>
+     * 
+     * @param request RunLibraryChatGenerationRequest
+     * @return RunLibraryChatGenerationResponse
+     */
+    public RunLibraryChatGenerationResponse runLibraryChatGeneration(String workspaceId, RunLibraryChatGenerationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.runLibraryChatGenerationWithOptions(workspaceId, request, headers, runtime);
     }
 
     /**
