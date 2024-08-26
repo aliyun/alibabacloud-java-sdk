@@ -14,6 +14,9 @@ public class UpdateServiceInstanceAttributeRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The License Data</p>
+     */
     @NameInMap("LicenseData")
     public UpdateServiceInstanceAttributeRequestLicenseData licenseData;
 
@@ -75,6 +78,12 @@ public class UpdateServiceInstanceAttributeRequest extends TeaModel {
     }
 
     public static class UpdateServiceInstanceAttributeRequestLicenseData extends TeaModel {
+        /**
+         * <p>The Custom Data</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Test&quot;}</p>
+         */
         @NameInMap("CustomData")
         public String customData;
 

@@ -1,3 +1,19 @@
+2024-08-26 Version: 7.0.0
+- Support API ApproveServiceUsage.
+- Support API CreateServiceUsage.
+- Support API ListServiceCategories.
+- Support API ListServiceSharedAccounts.
+- Support API RejectServiceUsage.
+- Support API RemoveServiceSharedAccounts.
+- Update API CreateService: add param DryRun.
+- Update API CreateService: update response param.
+- Update API GetServiceInstance: update response param.
+- Update API UpdateService: add param DryRun.
+- Update API UpdateService: update param Commodity.
+- Update API UpdateService: update param UpdateOption.
+- Update API UpdateService: update response param.
+
+
 2024-07-15 Version: 6.1.3
 - Update API UpdateService: add param Commodity.
 - Update API UpdateServiceInstanceAttribute: add param LicenseData.

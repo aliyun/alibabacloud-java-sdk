@@ -38,6 +38,9 @@ public class UpdateServiceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Bind Commodity Information</p>
+     */
     @NameInMap("Commodity")
     public UpdateServiceRequestCommodity commodity;
 
@@ -66,6 +69,9 @@ public class UpdateServiceRequest extends TeaModel {
      */
     @NameInMap("DeployType")
     public String deployType;
+
+    @NameInMap("DryRun")
+    public Boolean dryRun;
 
     /**
      * <p>The duration for which hosted O\&amp;M is implemented. Unit: seconds.</p>
@@ -306,6 +312,14 @@ public class UpdateServiceRequest extends TeaModel {
         return this.deployType;
     }
 
+    public UpdateServiceRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
     public UpdateServiceRequest setDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -451,9 +465,21 @@ public class UpdateServiceRequest extends TeaModel {
     }
 
     public static class UpdateServiceRequestCommodityComponentsMappings extends TeaModel {
+        /**
+         * <p>This parameter is not publicly accessible.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This parameter is not publicly accessible.</p>
+         */
         @NameInMap("Mappings")
-        public String mappings;
+        public java.util.Map<String, String> mappings;
 
+        /**
+         * <p>This parameter is not publicly accessible.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This parameter is not publicly accessible.</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 
@@ -462,11 +488,11 @@ public class UpdateServiceRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public UpdateServiceRequestCommodityComponentsMappings setMappings(String mappings) {
+        public UpdateServiceRequestCommodityComponentsMappings setMappings(java.util.Map<String, String> mappings) {
             this.mappings = mappings;
             return this;
         }
-        public String getMappings() {
+        public java.util.Map<String, String> getMappings() {
             return this.mappings;
         }
 
@@ -481,15 +507,45 @@ public class UpdateServiceRequest extends TeaModel {
     }
 
     public static class UpdateServiceRequestCommodityMeteringEntityExtraInfos extends TeaModel {
+        /**
+         * <p>The ID of the entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cmgj0006xxxx-Memory-1</p>
+         */
         @NameInMap("EntityId")
         public String entityId;
 
+        /**
+         * <p>Metric Name, filled in when Type is ComputeNestBill or ComputeNestPrometheus</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VirtualCpu/ecs.InstanceType</p>
+         */
         @NameInMap("MetricName")
         public String metricName;
 
+        /**
+         * <p>Custom prometheus query</p>
+         * 
+         * <strong>example:</strong>
+         * <p>avg_over_time(sum(rate(container_cpu_usage_seconds_total{namespace=~&quot;ALIYUN::StackName&quot;}[2m]))[1h:10s])</p>
+         */
         @NameInMap("Promql")
         public String promql;
 
+        /**
+         * <p>Type, value：</p>
+         * <ul>
+         * <li><strong>Custom</strong></li>
+         * <li><strong>ComputeNestBill</strong></li>
+         * <li><strong>ComputeNestPrometheus</strong></li>
+         * <li><strong>ComputeNestTime</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -533,12 +589,27 @@ public class UpdateServiceRequest extends TeaModel {
     }
 
     public static class UpdateServiceRequestCommodityMeteringEntityMappings extends TeaModel {
+        /**
+         * <p>The ID of the entity.</p>
+         */
         @NameInMap("EntityIds")
         public java.util.List<String> entityIds;
 
+        /**
+         * <p>The package name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>packageOne</p>
+         */
         @NameInMap("SpecificationName")
         public String specificationName;
 
+        /**
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TemplaceName</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 
@@ -574,12 +645,30 @@ public class UpdateServiceRequest extends TeaModel {
     }
 
     public static class UpdateServiceRequestCommoditySpecificationMappings extends TeaModel {
+        /**
+         * <p>Specification code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yuncode5767800001</p>
+         */
         @NameInMap("SpecificationCode")
         public String specificationCode;
 
+        /**
+         * <p>The package name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>packageOne</p>
+         */
         @NameInMap("SpecificationName")
         public String specificationName;
 
+        /**
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TemplaceName</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 
@@ -615,18 +704,36 @@ public class UpdateServiceRequest extends TeaModel {
     }
 
     public static class UpdateServiceRequestCommodity extends TeaModel {
+        /**
+         * <p>This parameter is not publicly accessible.</p>
+         */
         @NameInMap("ComponentsMappings")
         public java.util.List<UpdateServiceRequestCommodityComponentsMappings> componentsMappings;
 
+        /**
+         * <p>Metering Item Configuration Information (Cloud Marketplace - Pay-As-You-Go Use)</p>
+         */
         @NameInMap("MeteringEntityExtraInfos")
         public java.util.List<UpdateServiceRequestCommodityMeteringEntityExtraInfos> meteringEntityExtraInfos;
 
+        /**
+         * <p>Product Specifications and Template/specification mapping Relationships (Cloud Marketplace - Pay-As-You-Go Use)</p>
+         */
         @NameInMap("MeteringEntityMappings")
         public java.util.List<UpdateServiceRequestCommodityMeteringEntityMappings> meteringEntityMappings;
 
+        /**
+         * <p>Saas boost config information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("SaasBoostConfig")
         public String saasBoostConfig;
 
+        /**
+         * <p>Product Specifications and Template/specification mapping Relationships (Cloud Marketplace - Subscription/Permanent Use)</p>
+         */
         @NameInMap("SpecificationMappings")
         public java.util.List<UpdateServiceRequestCommoditySpecificationMappings> specificationMappings;
 
@@ -832,6 +939,15 @@ public class UpdateServiceRequest extends TeaModel {
 
     public static class UpdateServiceRequestUpdateOption extends TeaModel {
         /**
+         * <p>Is need to update the artifacts</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("UpdateArtifact")
+        public Boolean updateArtifact;
+
+        /**
          * <p>The options for update the service. Valid values:</p>
          * <ul>
          * <li>CODE</li>
@@ -847,6 +963,14 @@ public class UpdateServiceRequest extends TeaModel {
         public static UpdateServiceRequestUpdateOption build(java.util.Map<String, ?> map) throws Exception {
             UpdateServiceRequestUpdateOption self = new UpdateServiceRequestUpdateOption();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateServiceRequestUpdateOption setUpdateArtifact(Boolean updateArtifact) {
+            this.updateArtifact = updateArtifact;
+            return this;
+        }
+        public Boolean getUpdateArtifact() {
+            return this.updateArtifact;
         }
 
         public UpdateServiceRequestUpdateOption setUpdateFrom(String updateFrom) {

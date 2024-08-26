@@ -89,6 +89,9 @@ public class CreateServiceRequest extends TeaModel {
     @NameInMap("DeployType")
     public String deployType;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>The duration for which hosted O\&amp;M is implemented. Unit: seconds.</p>
      * 
@@ -339,6 +342,14 @@ public class CreateServiceRequest extends TeaModel {
     }
     public String getDeployType() {
         return this.deployType;
+    }
+
+    public CreateServiceRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public CreateServiceRequest setDuration(Long duration) {

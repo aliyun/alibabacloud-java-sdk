@@ -14,6 +14,9 @@ public class UpdateServiceInstanceAttributeShrinkRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The License Data</p>
+     */
     @NameInMap("LicenseData")
     public String licenseDataShrink;
 

@@ -38,6 +38,9 @@ public class UpdateServiceShrinkRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Bind Commodity Information</p>
+     */
     @NameInMap("Commodity")
     public String commodityShrink;
 
@@ -66,6 +69,9 @@ public class UpdateServiceShrinkRequest extends TeaModel {
      */
     @NameInMap("DeployType")
     public String deployType;
+
+    @NameInMap("DryRun")
+    public Boolean dryRun;
 
     /**
      * <p>The duration for which hosted O\&amp;M is implemented. Unit: seconds.</p>
@@ -304,6 +310,14 @@ public class UpdateServiceShrinkRequest extends TeaModel {
     }
     public String getDeployType() {
         return this.deployType;
+    }
+
+    public UpdateServiceShrinkRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public UpdateServiceShrinkRequest setDuration(Long duration) {

@@ -126,6 +126,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     @NameInMap("OperationEndTime")
     public String operationEndTime;
 
+    @NameInMap("OperationExtraInfo")
+    public String operationExtraInfo;
+
     /**
      * <p>The beginning of the time range during which hosted O\&amp;M is implemented.</p>
      * 
@@ -449,6 +452,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     }
     public String getOperationEndTime() {
         return this.operationEndTime;
+    }
+
+    public GetServiceInstanceResponseBody setOperationExtraInfo(String operationExtraInfo) {
+        this.operationExtraInfo = operationExtraInfo;
+        return this;
+    }
+    public String getOperationExtraInfo() {
+        return this.operationExtraInfo;
     }
 
     public GetServiceInstanceResponseBody setOperationStartTime(String operationStartTime) {
