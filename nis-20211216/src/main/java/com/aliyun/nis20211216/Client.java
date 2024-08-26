@@ -356,12 +356,374 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除报告</p>
+     * 
+     * @param request DeleteNisInspectionReportRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteNisInspectionReportResponse
+     */
+    public DeleteNisInspectionReportResponse deleteNisInspectionReportWithOptions(DeleteNisInspectionReportRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.inspectionReportId)) {
+            query.put("InspectionReportId", request.inspectionReportId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteNisInspectionReport"),
+            new TeaPair("version", "2021-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteNisInspectionReportResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除报告</p>
+     * 
+     * @param request DeleteNisInspectionReportRequest
+     * @return DeleteNisInspectionReportResponse
+     */
+    public DeleteNisInspectionReportResponse deleteNisInspectionReport(DeleteNisInspectionReportRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteNisInspectionReportWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除巡检任务</p>
+     * 
+     * @param request DeleteNisInspectionTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteNisInspectionTaskResponse
+     */
+    public DeleteNisInspectionTaskResponse deleteNisInspectionTaskWithOptions(DeleteNisInspectionTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.inspectionTaskId)) {
+            query.put("InspectionTaskId", request.inspectionTaskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteNisInspectionTask"),
+            new TeaPair("version", "2021-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteNisInspectionTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除巡检任务</p>
+     * 
+     * @param request DeleteNisInspectionTaskRequest
+     * @return DeleteNisInspectionTaskResponse
+     */
+    public DeleteNisInspectionTaskResponse deleteNisInspectionTask(DeleteNisInspectionTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteNisInspectionTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>受影响资源列表</p>
+     * 
+     * @param request DescribeNisInspectionRecommendationResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeNisInspectionRecommendationResourcesResponse
+     */
+    public DescribeNisInspectionRecommendationResourcesResponse describeNisInspectionRecommendationResourcesWithOptions(DescribeNisInspectionRecommendationResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.inspectionReportId)) {
+            query.put("InspectionReportId", request.inspectionReportId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recommendationCode)) {
+            query.put("RecommendationCode", request.recommendationCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeNisInspectionRecommendationResources"),
+            new TeaPair("version", "2021-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeNisInspectionRecommendationResourcesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>受影响资源列表</p>
+     * 
+     * @param request DescribeNisInspectionRecommendationResourcesRequest
+     * @return DescribeNisInspectionRecommendationResourcesResponse
+     */
+    public DescribeNisInspectionRecommendationResourcesResponse describeNisInspectionRecommendationResources(DescribeNisInspectionRecommendationResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeNisInspectionRecommendationResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>报告巡检项列表</p>
+     * 
+     * @param tmpReq DescribeNisInspectionReportCheckItemsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeNisInspectionReportCheckItemsResponse
+     */
+    public DescribeNisInspectionReportCheckItemsResponse describeNisInspectionReportCheckItemsWithOptions(DescribeNisInspectionReportCheckItemsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeNisInspectionReportCheckItemsShrinkRequest request = new DescribeNisInspectionReportCheckItemsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.resourceType)) {
+            request.resourceTypeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceType, "ResourceType", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.riskLevel)) {
+            request.riskLevelShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.riskLevel, "RiskLevel", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.categoryCode)) {
+            query.put("CategoryCode", request.categoryCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inspectionReportId)) {
+            query.put("InspectionReportId", request.inspectionReportId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceTypeShrink)) {
+            query.put("ResourceType", request.resourceTypeShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.riskLevelShrink)) {
+            query.put("RiskLevel", request.riskLevelShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeNisInspectionReportCheckItems"),
+            new TeaPair("version", "2021-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeNisInspectionReportCheckItemsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>报告巡检项列表</p>
+     * 
+     * @param request DescribeNisInspectionReportCheckItemsRequest
+     * @return DescribeNisInspectionReportCheckItemsResponse
+     */
+    public DescribeNisInspectionReportCheckItemsResponse describeNisInspectionReportCheckItems(DescribeNisInspectionReportCheckItemsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeNisInspectionReportCheckItemsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询报告状态</p>
+     * 
+     * @param request DescribeNisInspectionReportStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeNisInspectionReportStatusResponse
+     */
+    public DescribeNisInspectionReportStatusResponse describeNisInspectionReportStatusWithOptions(DescribeNisInspectionReportStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.inspectionReportId)) {
+            query.put("InspectionReportId", request.inspectionReportId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeNisInspectionReportStatus"),
+            new TeaPair("version", "2021-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeNisInspectionReportStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询报告状态</p>
+     * 
+     * @param request DescribeNisInspectionReportStatusRequest
+     * @return DescribeNisInspectionReportStatusResponse
+     */
+    public DescribeNisInspectionReportStatusResponse describeNisInspectionReportStatus(DescribeNisInspectionReportStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeNisInspectionReportStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>报告总结信息</p>
+     * 
+     * @param request DescribeNisInspectionReportSummaryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeNisInspectionReportSummaryResponse
+     */
+    public DescribeNisInspectionReportSummaryResponse describeNisInspectionReportSummaryWithOptions(DescribeNisInspectionReportSummaryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.inspectionReportId)) {
+            query.put("InspectionReportId", request.inspectionReportId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeNisInspectionReportSummary"),
+            new TeaPair("version", "2021-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeNisInspectionReportSummaryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>报告总结信息</p>
+     * 
+     * @param request DescribeNisInspectionReportSummaryRequest
+     * @return DescribeNisInspectionReportSummaryResponse
+     */
+    public DescribeNisInspectionReportSummaryResponse describeNisInspectionReportSummary(DescribeNisInspectionReportSummaryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeNisInspectionReportSummaryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询巡检任务</p>
+     * 
+     * @param request DescribeNisInspectionTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeNisInspectionTaskResponse
+     */
+    public DescribeNisInspectionTaskResponse describeNisInspectionTaskWithOptions(DescribeNisInspectionTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.inspectionTaskId)) {
+            query.put("InspectionTaskId", request.inspectionTaskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeNisInspectionTask"),
+            new TeaPair("version", "2021-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeNisInspectionTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询巡检任务</p>
+     * 
+     * @param request DescribeNisInspectionTaskRequest
+     * @return DescribeNisInspectionTaskResponse
+     */
+    public DescribeNisInspectionTaskResponse describeNisInspectionTask(DescribeNisInspectionTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeNisInspectionTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the rankings of Internet traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Internet traffic data can be ranked by metrics such as traffic volumes and the number of packets.</p>
+     * 
+     * @deprecated OpenAPI GetInternetTuple is deprecated, please use nis::2021-12-16::GetNisNetworkRanking instead.
      * 
      * @param tmpReq GetInternetTupleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetInternetTupleResponse
      */
+    @Deprecated
+    // Deprecated
     public GetInternetTupleResponse getInternetTupleWithOptions(GetInternetTupleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         GetInternetTupleShrinkRequest request = new GetInternetTupleShrinkRequest();
@@ -484,9 +846,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the rankings of Internet traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Internet traffic data can be ranked by metrics such as traffic volumes and the number of packets.</p>
      * 
+     * @deprecated OpenAPI GetInternetTuple is deprecated, please use nis::2021-12-16::GetNisNetworkRanking instead.
+     * 
      * @param request GetInternetTupleRequest
      * @return GetInternetTupleResponse
      */
+    @Deprecated
+    // Deprecated
     public GetInternetTupleResponse getInternetTuple(GetInternetTupleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getInternetTupleWithOptions(request, runtime);
@@ -496,10 +862,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the real-time SNAT performance ranking of a NAT gateway.</p>
      * 
+     * @deprecated OpenAPI GetNatTopN is deprecated, please use nis::2021-12-16::GetNisNetworkRanking instead.
+     * 
      * @param request GetNatTopNRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetNatTopNResponse
      */
+    @Deprecated
+    // Deprecated
     public GetNatTopNResponse getNatTopNWithOptions(GetNatTopNRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -552,9 +922,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the real-time SNAT performance ranking of a NAT gateway.</p>
      * 
+     * @deprecated OpenAPI GetNatTopN is deprecated, please use nis::2021-12-16::GetNisNetworkRanking instead.
+     * 
      * @param request GetNatTopNRequest
      * @return GetNatTopNResponse
      */
+    @Deprecated
+    // Deprecated
     public GetNatTopNResponse getNatTopN(GetNatTopNRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getNatTopNWithOptions(request, runtime);
@@ -802,10 +1176,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the rankings of inter-region traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Inter-region traffic data can be ranked by metrics such as traffic volumes and the number of packets.</p>
      * 
+     * @deprecated OpenAPI GetTransitRouterFlowTopN is deprecated, please use nis::2021-12-16::GetNisNetworkRanking instead.
+     * 
      * @param tmpReq GetTransitRouterFlowTopNRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTransitRouterFlowTopNResponse
      */
+    @Deprecated
+    // Deprecated
     public GetTransitRouterFlowTopNResponse getTransitRouterFlowTopNWithOptions(GetTransitRouterFlowTopNRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         GetTransitRouterFlowTopNShrinkRequest request = new GetTransitRouterFlowTopNShrinkRequest();
@@ -908,9 +1286,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the rankings of inter-region traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Inter-region traffic data can be ranked by metrics such as traffic volumes and the number of packets.</p>
      * 
+     * @deprecated OpenAPI GetTransitRouterFlowTopN is deprecated, please use nis::2021-12-16::GetNisNetworkRanking instead.
+     * 
      * @param request GetTransitRouterFlowTopNRequest
      * @return GetTransitRouterFlowTopNResponse
      */
+    @Deprecated
+    // Deprecated
     public GetTransitRouterFlowTopNResponse getTransitRouterFlowTopN(GetTransitRouterFlowTopNRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getTransitRouterFlowTopNWithOptions(request, runtime);
@@ -920,10 +1302,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the rankings of hybrid cloud traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Hybrid cloud traffic data can be ranked by metrics such as traffic volumes and the number of packets.</p>
      * 
+     * @deprecated OpenAPI GetVbrFlowTopN is deprecated, please use nis::2021-12-16::GetNisNetworkRanking instead.
+     * 
      * @param tmpReq GetVbrFlowTopNRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetVbrFlowTopNResponse
      */
+    @Deprecated
+    // Deprecated
     public GetVbrFlowTopNResponse getVbrFlowTopNWithOptions(GetVbrFlowTopNRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         GetVbrFlowTopNShrinkRequest request = new GetVbrFlowTopNShrinkRequest();
@@ -1026,11 +1412,257 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the rankings of hybrid cloud traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Hybrid cloud traffic data can be ranked by metrics such as traffic volumes and the number of packets.</p>
      * 
+     * @deprecated OpenAPI GetVbrFlowTopN is deprecated, please use nis::2021-12-16::GetNisNetworkRanking instead.
+     * 
      * @param request GetVbrFlowTopNRequest
      * @return GetVbrFlowTopNResponse
      */
+    @Deprecated
+    // Deprecated
     public GetVbrFlowTopNResponse getVbrFlowTopN(GetVbrFlowTopNRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getVbrFlowTopNWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>巡检资源类型列表</p>
+     * 
+     * @param request ListNisInspectionResourceTypeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListNisInspectionResourceTypeResponse
+     */
+    public ListNisInspectionResourceTypeResponse listNisInspectionResourceTypeWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListNisInspectionResourceType"),
+            new TeaPair("version", "2021-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListNisInspectionResourceTypeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>巡检资源类型列表</p>
+     * @return ListNisInspectionResourceTypeResponse
+     */
+    public ListNisInspectionResourceTypeResponse listNisInspectionResourceType() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listNisInspectionResourceTypeWithOptions(runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询巡检报告列表</p>
+     * 
+     * @param request ListNisInspectionTaskReportsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListNisInspectionTaskReportsResponse
+     */
+    public ListNisInspectionTaskReportsResponse listNisInspectionTaskReportsWithOptions(ListNisInspectionTaskReportsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.inspectionTaskId)) {
+            query.put("InspectionTaskId", request.inspectionTaskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListNisInspectionTaskReports"),
+            new TeaPair("version", "2021-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListNisInspectionTaskReportsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询巡检报告列表</p>
+     * 
+     * @param request ListNisInspectionTaskReportsRequest
+     * @return ListNisInspectionTaskReportsResponse
+     */
+    public ListNisInspectionTaskReportsResponse listNisInspectionTaskReports(ListNisInspectionTaskReportsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listNisInspectionTaskReportsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>巡检任务列表</p>
+     * 
+     * @param request ListNisInspectionTasksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListNisInspectionTasksResponse
+     */
+    public ListNisInspectionTasksResponse listNisInspectionTasksWithOptions(ListNisInspectionTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.inspectionName)) {
+            query.put("InspectionName", request.inspectionName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inspectionProject)) {
+            query.put("InspectionProject", request.inspectionProject);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inspectionTaskId)) {
+            query.put("InspectionTaskId", request.inspectionTaskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListNisInspectionTasks"),
+            new TeaPair("version", "2021-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListNisInspectionTasksResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>巡检任务列表</p>
+     * 
+     * @param request ListNisInspectionTasksRequest
+     * @return ListNisInspectionTasksResponse
+     */
+    public ListNisInspectionTasksResponse listNisInspectionTasks(ListNisInspectionTasksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listNisInspectionTasksWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>请补充描述开启任务</p>
+     * 
+     * @param request StartNisInspectionTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartNisInspectionTaskResponse
+     */
+    public StartNisInspectionTaskResponse startNisInspectionTaskWithOptions(StartNisInspectionTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.inspectionTaskId)) {
+            query.put("InspectionTaskId", request.inspectionTaskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartNisInspectionTask"),
+            new TeaPair("version", "2021-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartNisInspectionTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>请补充描述开启任务</p>
+     * 
+     * @param request StartNisInspectionTaskRequest
+     * @return StartNisInspectionTaskResponse
+     */
+    public StartNisInspectionTaskResponse startNisInspectionTask(StartNisInspectionTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.startNisInspectionTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改巡检项</p>
+     * 
+     * @param request UpdateNisInspectionTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateNisInspectionTaskResponse
+     */
+    public UpdateNisInspectionTaskResponse updateNisInspectionTaskWithOptions(UpdateNisInspectionTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.inspectionTaskId)) {
+            query.put("InspectionTaskId", request.inspectionTaskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateNisInspectionTask"),
+            new TeaPair("version", "2021-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateNisInspectionTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改巡检项</p>
+     * 
+     * @param request UpdateNisInspectionTaskRequest
+     * @return UpdateNisInspectionTaskResponse
+     */
+    public UpdateNisInspectionTaskResponse updateNisInspectionTask(UpdateNisInspectionTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateNisInspectionTaskWithOptions(request, runtime);
     }
 }
