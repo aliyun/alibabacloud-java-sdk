@@ -1,3 +1,7 @@
+2024-08-27 Version: 1.0.13
+- Update API ListDataReportForServiceGroup: update param body.
+
+
 2024-08-15 Version: 1.0.12
 - Update API CreateEscalationPlan: update param body.
 - Update API CreateService: update param body.
