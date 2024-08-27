@@ -22,12 +22,10 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public Integer amount;
 
     /**
-     * <p>是否自动创建代理。取值范围：</p>
+     * <p>Specifies whether to automatically create a proxy. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>：开启自动创建，默认为通用代理。</p>
-     * </li>
-     * <li><p><strong>false</strong>：不开启自动创建。</p>
-     * </li>
+     * <li><strong>true</strong>: automatically creates a proxy. By default, general-purpose proxies are enabled.</li>
+     * <li><strong>false</strong>: does not automatically create a proxy.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -101,7 +99,14 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public String bpeEnabled;
 
     /**
-     * <p>An invalid parameter. You do not need to specify this parameter.</p>
+     * <p>Specifies whether to enable the I/O burst feature of general ESSDs. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> For more information about the I/O burst feature of general ESSDs, see <a href="https://help.aliyun.com/document_detail/2340501.html">What are general ESSDs?</a></p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -157,7 +162,14 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>Specifies whether to enable the data archiving feature of general ESSDs. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> For more information about the data archiving feature of general ESSDs, see <a href="https://help.aliyun.com/document_detail/2701832.html">Use the data archiving feature of general ESSDs</a>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -258,10 +270,11 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
      * <p>The storage type of the instance. Valid values:</p>
      * <ul>
      * <li><strong>local_ssd</strong>: local SSD. This is the recommended storage type.</li>
+     * <li><strong>general_essd</strong>: general Enterprise SSD (ESSD). This is the recommended storage type.</li>
+     * <li><strong>cloud_essd</strong>: PL1 ESSD</li>
+     * <li><strong>cloud_essd2</strong>: PL2 ESSD</li>
+     * <li><strong>cloud_essd3</strong>: PL3 ESSD</li>
      * <li><strong>cloud_ssd</strong>: standard SSD. This storage type is not recommended. Standard SSDs are no longer available for purchase in some Alibaba Cloud regions.</li>
-     * <li><strong>cloud_essd</strong>: enhanced SSD (ESSD) of performance level 1 (PL1).</li>
-     * <li><strong>cloud_essd2</strong>: ESSD of PL2.</li>
-     * <li><strong>cloud_essd3</strong>: ESSD of PL3.</li>
      * </ul>
      * <p>The default value of this parameter is determined by the instance type specified by the <strong>DBInstanceClass</strong> parameter.</p>
      * <ul>
@@ -269,7 +282,7 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
      * <li>If the instance type specifies the standard SSD or ESSD storage type, the default value of this parameter is <strong>cloud_essd</strong>.</li>
      * </ul>
      * <blockquote>
-     * <p> Serverless instances use only ESSDs of PL1. If you create a serverless instance, you must set this parameter to <strong>cloud_essd</strong>.</p>
+     * <p> Serverless instances support only PL1 ESSDs and general ESSDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -453,15 +466,12 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
      * <li><strong>Classic</strong>: the classic network</li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>If the instance runs MySQL and uses cloud disks, you must set this parameter to <strong>VPC</strong>.</p>
-     * </li>
-     * <li><p>If the instance runs PostgreSQL or MariaDB, you must set this parameter to <strong>VPC</strong>.</p>
-     * </li>
-     * <li><p>If the instance runs SQL Server Basic or SQL Server Web, you can set this parameter to VPC or Classic. If the instance runs other database engine, you must set this parameter to <strong>VPC</strong>.</p>
-     * </li>
+     * <li>If the instance runs MySQL and uses cloud disks, you must set this parameter to <strong>VPC</strong>.</li>
+     * <li>If the instance runs PostgreSQL or MariaDB, you must set this parameter to <strong>VPC</strong>.</li>
+     * <li>If the instance runs SQL Server Basic or SQL Server Web, you can set this parameter to VPC or Classic. If the instance runs other database engine, you must set this parameter to <strong>VPC</strong>.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Classic</p>
@@ -470,7 +480,14 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public String instanceNetworkType;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>Specifies whether to enable the I/O acceleration feature of general ESSDs. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: enabled</li>
+     * <li><strong>0</strong>: disabled</li>
+     * </ul>
+     * <blockquote>
+     * <p> For more information about the I/O acceleration feature of general ESSDs, see <a href="https://help.aliyun.com/document_detail/2527067.html">Introduction</a>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>0</p>

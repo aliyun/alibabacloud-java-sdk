@@ -61,12 +61,11 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
     /**
      * <p>Specifies whether to replace the key. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: replaces the key.</li>
-     * <li><strong>false</strong>: does not replace the key.</li>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
      * </ul>
-     * <p>Default value: <strong>false</strong></p>
      * <blockquote>
-     * <p>This parameter is available only when the instance runs PostgreSQL.</p>
+     * <p> This parameter is available for only ApsaraDB RDS for PostgreSQL instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
