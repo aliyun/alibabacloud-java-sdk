@@ -12,6 +12,9 @@ public class ListGroupIdResponseBody extends TeaModel {
 
     /**
      * <p>The request ID. This parameter is a common parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>95996EEB-D894-44FA-A87C-940F5CD9****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,33 +43,49 @@ public class ListGroupIdResponseBody extends TeaModel {
     public static class ListGroupIdResponseBodyData extends TeaModel {
         /**
          * <p>The time when the group was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1564577317000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The queried group that belongs to the ApsaraMQ for MQTT instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_test1</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>Indicates whether a separate namespace is configured for the ApsaraMQ for MQTT instance. Valid values:</p>
-         * <br>
-         * <p>*   **true**: A separate namespace is configured for the ApsaraMQ for MQTT instance. Resource names must be unique within an ApsaraMQ for MQTT instance but can be the same across ApsaraMQ for MQTT instances.</p>
-         * <p>*   **false**: No separate namespace is configured for the ApsaraMQ for MQTT instance. Resource names must be globally unique within an ApsaraMQ for MQTT instance and across ApsaraMQ for MQTT instances.</p>
+         * <ul>
+         * <li><strong>true</strong>: A separate namespace is configured for the ApsaraMQ for MQTT instance. Resource names must be unique within an ApsaraMQ for MQTT instance but can be the same across ApsaraMQ for MQTT instances.</li>
+         * <li><strong>false</strong>: No separate namespace is configured for the ApsaraMQ for MQTT instance. Resource names must be globally unique within an ApsaraMQ for MQTT instance and across ApsaraMQ for MQTT instances.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IndependentNaming")
         public Boolean independentNaming;
 
         /**
          * <p>The ID of the ApsaraMQ for MQTT instance to which the group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>post-cn-45910tj****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The time when the group was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1564577317000</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;

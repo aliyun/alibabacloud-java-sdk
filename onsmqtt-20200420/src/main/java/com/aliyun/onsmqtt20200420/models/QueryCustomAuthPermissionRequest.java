@@ -4,21 +4,64 @@ package com.aliyun.onsmqtt20200420.models;
 import com.aliyun.tea.*;
 
 public class QueryCustomAuthPermissionRequest extends TeaModel {
+    /**
+     * <p>The username or client ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Identity")
     public String identity;
 
+    /**
+     * <p>The identity type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>USER</li>
+     * <li>CLIENT</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>USER</p>
+     */
     @NameInMap("IdentityType")
     public String identityType;
 
+    /**
+     * <p>The ID of the ApsaraMQ for MQTT instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>post-cn-0pp12gl****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The token that marks the end position of the previous returned page. To obtain the next batch of data, call the operation again by using the value of NextToken returned by the previous request. If you call this operation for the first time or want to query all results, set NextToken to an empty string.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAThmKW2HkRgzo4G7IRRTK2fC6zZmAk6y0bwoNPFOOcSP</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The number of queries to be returned. Maximum value: 100.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("Size")
     public Integer size;
 
+    /**
+     * <p>The topic whose authorization information you want to query. Multi-level topics and wildcard characters are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Topic")
     public String topic;
 

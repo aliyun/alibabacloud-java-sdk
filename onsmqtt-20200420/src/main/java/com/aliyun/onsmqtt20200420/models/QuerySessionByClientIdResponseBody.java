@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class QuerySessionByClientIdResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the ApsaraMQ for MQTT client is connected to the ApsaraMQ for MQTT broker. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("OnlineStatus")
     public Boolean onlineStatus;
 
     /**
      * <p>The request ID. This parameter is a common parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E4581CCF-62AF-44D9-B5B4-D1DBBC0E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

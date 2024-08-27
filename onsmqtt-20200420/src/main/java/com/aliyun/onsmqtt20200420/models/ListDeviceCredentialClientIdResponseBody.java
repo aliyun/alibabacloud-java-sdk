@@ -7,6 +7,10 @@ public class ListDeviceCredentialClientIdResponseBody extends TeaModel {
     @NameInMap("DeviceCredentialClientIdList")
     public ListDeviceCredentialClientIdResponseBodyDeviceCredentialClientIdList deviceCredentialClientIdList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>020F6A43-19E6-4B6E-B846-44EB31DF****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,12 +42,24 @@ public class ListDeviceCredentialClientIdResponseBody extends TeaModel {
         @NameInMap("NextToken")
         public String nextToken;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNo")
         public String pageNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("PageSize")
         public String pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Total")
         public String total;
 

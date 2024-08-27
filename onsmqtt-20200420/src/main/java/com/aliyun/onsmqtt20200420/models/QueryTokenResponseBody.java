@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class QueryTokenResponseBody extends TeaModel {
     /**
      * <p>The unique ID that the system generates for the request. This parameter is a common parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5C8AADD0-6A95-436D-AFA0-3405CCE3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The status of the queried token. Valid values:</p>
-     * <br>
-     * <p>*   **true**: indicates the token is valid.</p>
-     * <p>*   **false**: indicates the token is invalid.</p>
+     * <ul>
+     * <li><strong>true</strong>: indicates the token is valid.</li>
+     * <li><strong>false</strong>: indicates the token is invalid.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("TokenStatus")
     public Boolean tokenStatus;

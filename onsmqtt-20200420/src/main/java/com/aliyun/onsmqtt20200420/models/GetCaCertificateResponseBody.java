@@ -7,6 +7,10 @@ public class GetCaCertificateResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetCaCertificateResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>020F6A43-19E6-4B6E-B846-44EB31DF****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +36,59 @@ public class GetCaCertificateResponseBody extends TeaModel {
     }
 
     public static class GetCaCertificateResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----\nMIIDuzCCAqdGVzdC5jbi1xaW5n******\n-----END CERTIFICATE-----</p>
+         */
         @NameInMap("CaContent")
         public String caContent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mqtt_ca</p>
+         */
         @NameInMap("CaName")
         public String caName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>13274673-8f90-4630-bea1-9cccb25756ad2089******</p>
+         */
         @NameInMap("RegistrationCode")
         public String registrationCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>00f26900ba87******</p>
+         */
         @NameInMap("Sn")
         public String sn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1654137303000</p>
+         */
         @NameInMap("ValidBegin")
         public String validBegin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1969497303000</p>
+         */
         @NameInMap("ValidEnd")
         public String validEnd;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----\nMIID/DCCAu+Y5sRMpp9tnd+4s******\n-----END CERTIFICATE-----</p>
+         */
         @NameInMap("VerificationContent")
         public String verificationContent;
 

@@ -12,6 +12,9 @@ public class BatchQuerySessionByClientIdsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID. This parameter is a common parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>63309FDB-ED6C-46AE-B31C-A172FBA0****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,16 +42,23 @@ public class BatchQuerySessionByClientIdsResponseBody extends TeaModel {
 
     public static class BatchQuerySessionByClientIdsResponseBodyOnlineStatusList extends TeaModel {
         /**
-         * <p>The ID of the ApsaraMQ for MQTT client. For more information about client IDs, see [Terms](~~42420~~).</p>
+         * <p>The ID of the ApsaraMQ for MQTT client. For more information about client IDs, see <a href="https://help.aliyun.com/document_detail/42420.html">Terms</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_test@0001</p>
          */
         @NameInMap("ClientId")
         public String clientId;
 
         /**
          * <p>Indicates whether the ApsaraMQ for MQTT client is online. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("OnlineStatus")
         public Boolean onlineStatus;

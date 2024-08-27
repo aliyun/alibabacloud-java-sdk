@@ -4,21 +4,45 @@ package com.aliyun.onsmqtt20200420.models;
 import com.aliyun.tea.*;
 
 public class QueryCustomAuthConnectBlackResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code. The status code 200 indicates that the request is successful. Other status codes indicate that the request failed. For a list of error codes, see Error codes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public QueryCustomAuthConnectBlackResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>operation success.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>020F6A43-19E6-4B6E-B846-44EB31DF****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -68,12 +92,30 @@ public class QueryCustomAuthConnectBlackResponseBody extends TeaModel {
     }
 
     public static class QueryCustomAuthConnectBlackResponseBodyDataResults extends TeaModel {
+        /**
+         * <p>The client ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_TEST@@@test</p>
+         */
         @NameInMap("ClientId")
         public String clientId;
 
+        /**
+         * <p>Indicates whether to allow or deny access.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALLOW</p>
+         */
         @NameInMap("Effect")
         public String effect;
 
+        /**
+         * <p>The authorized permissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CONNECT</p>
+         */
         @NameInMap("PermitAction")
         public String permitAction;
 
@@ -109,9 +151,18 @@ public class QueryCustomAuthConnectBlackResponseBody extends TeaModel {
     }
 
     public static class QueryCustomAuthConnectBlackResponseBodyData extends TeaModel {
+        /**
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAZ0cM0HTqLXvgm7oMHWXcvc=</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 
+        /**
+         * <p>The returned results.</p>
+         */
         @NameInMap("Results")
         public java.util.List<QueryCustomAuthConnectBlackResponseBodyDataResults> results;
 

@@ -4,21 +4,63 @@ package com.aliyun.onsmqtt20200420.models;
 import com.aliyun.tea.*;
 
 public class AddCustomAuthPermissionRequest extends TeaModel {
+    /**
+     * <p>Specify whether to allow or deny the permissions.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALLOW</p>
+     */
     @NameInMap("Effect")
     public String effect;
 
+    /**
+     * <p>The username or client ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Identity")
     public String identity;
 
+    /**
+     * <p>The identity type. Valid values: USER and CLIENT.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>USER</p>
+     */
     @NameInMap("IdentityType")
     public String identityType;
 
+    /**
+     * <p>The ID of the ApsaraMQ for MQTT instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mqtt-cn-0pp12gl****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The permissions that you want to add.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PUB_SUB</p>
+     */
     @NameInMap("PermitAction")
     public String permitAction;
 
+    /**
+     * <p>The topic on which you want to add the permissions. Multi-level topics and wildcard characters are supported.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test/t1</p>
+     */
     @NameInMap("Topic")
     public String topic;
 

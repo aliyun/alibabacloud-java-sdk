@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class ListGroupIdRequest extends TeaModel {
     /**
      * <p>The ID of the ApsaraMQ for MQTT instance whose groups you want to query.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mqtt-cn-0pp1ldu****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

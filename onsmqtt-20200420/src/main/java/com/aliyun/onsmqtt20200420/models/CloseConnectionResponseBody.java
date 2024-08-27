@@ -3,7 +3,7 @@ package com.aliyun.onsmqtt20200420.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateCustomAuthPermissionResponseBody extends TeaModel {
+public class CloseConnectionResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>200</p>
@@ -22,7 +22,7 @@ public class UpdateCustomAuthPermissionResponseBody extends TeaModel {
      * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
-     * <p>8CC04203-679B-4DED-89D9-E7C2E979****</p>
+     * <p>82B9E503-F4A1-4F30-976F-C6999FF9****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -34,12 +34,12 @@ public class UpdateCustomAuthPermissionResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static UpdateCustomAuthPermissionResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        UpdateCustomAuthPermissionResponseBody self = new UpdateCustomAuthPermissionResponseBody();
+    public static CloseConnectionResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CloseConnectionResponseBody self = new CloseConnectionResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UpdateCustomAuthPermissionResponseBody setCode(Integer code) {
+    public CloseConnectionResponseBody setCode(Integer code) {
         this.code = code;
         return this;
     }
@@ -47,7 +47,7 @@ public class UpdateCustomAuthPermissionResponseBody extends TeaModel {
         return this.code;
     }
 
-    public UpdateCustomAuthPermissionResponseBody setMessage(String message) {
+    public CloseConnectionResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -55,7 +55,7 @@ public class UpdateCustomAuthPermissionResponseBody extends TeaModel {
         return this.message;
     }
 
-    public UpdateCustomAuthPermissionResponseBody setRequestId(String requestId) {
+    public CloseConnectionResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -63,7 +63,7 @@ public class UpdateCustomAuthPermissionResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpdateCustomAuthPermissionResponseBody setSuccess(Boolean success) {
+    public CloseConnectionResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

@@ -4,21 +4,45 @@ package com.aliyun.onsmqtt20200420.models;
 import com.aliyun.tea.*;
 
 public class QueryCustomAuthIdentityResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code. The status code 200 indicates that the request is successful. Other status codes indicate that the request failed. For a list of error codes, see Error codes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public QueryCustomAuthIdentityResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>operation success.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11568B5B-13A8-4E72-9DBA-3A14F7D3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -68,18 +92,52 @@ public class QueryCustomAuthIdentityResponseBody extends TeaModel {
     }
 
     public static class QueryCustomAuthIdentityResponseBodyDataResults extends TeaModel {
+        /**
+         * <p>The client ID if IdentityType is set to CLIENT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_ICP@@@4d378084</p>
+         */
         @NameInMap("ClientId")
         public String clientId;
 
+        /**
+         * <p>The identity type. Valid values:</p>
+         * <ul>
+         * <li>USER</li>
+         * <li>CLIENT</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>USER</p>
+         */
         @NameInMap("IdentityType")
         public String identityType;
 
+        /**
+         * <p>The AccessKey secret.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>62a5916d71767185b48907d85c2efae2</p>
+         */
         @NameInMap("Secret")
         public String secret;
 
+        /**
+         * <p>The signature verification mode. ORIGIN: compares the password and the AccessKey secret. SIGNED: uses the HMAC_SHA1 algorithm to sign the client ID to obtain a password and then compares the password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SIGNED</p>
+         */
         @NameInMap("SignMode")
         public String signMode;
 
+        /**
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Username")
         public String username;
 
@@ -131,9 +189,18 @@ public class QueryCustomAuthIdentityResponseBody extends TeaModel {
     }
 
     public static class QueryCustomAuthIdentityResponseBodyData extends TeaModel {
+        /**
+         * <p>If excess return values exist, this parameter is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAXA+GzVqTutYpgkFjBrchKzuvSbpuTqtt6OF9tsC9QnJ</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 
+        /**
+         * <p>The returned results.</p>
+         */
         @NameInMap("Results")
         public java.util.List<QueryCustomAuthIdentityResponseBodyDataResults> results;
 
