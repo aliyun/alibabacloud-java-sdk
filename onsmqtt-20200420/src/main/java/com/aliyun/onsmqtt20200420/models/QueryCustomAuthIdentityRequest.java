@@ -4,21 +4,64 @@ package com.aliyun.onsmqtt20200420.models;
 import com.aliyun.tea.*;
 
 public class QueryCustomAuthIdentityRequest extends TeaModel {
+    /**
+     * <p>The client ID if you set IdentityType to CLIENT.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GID_test@@@test</p>
+     */
     @NameInMap("ClientId")
     public String clientId;
 
+    /**
+     * <p>The identity type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>USER</li>
+     * <li>CLIENT</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>USER</p>
+     */
     @NameInMap("IdentityType")
     public String identityType;
 
+    /**
+     * <p>The ID of the ApsaraMQ for MQTT instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>post-111****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The token that marks the end position of the previous returned page. To obtain the next batch of data, call the operation again by using the value of NextToken returned by the previous request. If you call this operation for the first time or want to query all results, set NextToken to an empty string.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eyJhY2NvdW50IjoiMTM4MTcxODk3NDQzMjQ1OSIsImV2ZW50SWQiOiJGMkUxOUE3QS1FM0Q0LTVCOEYtQkU4OS1CNkMyM0RBM0UyRjIiLCJsb2dJZCI6IjY2LTEzODE3MTg5NzQ0MzI0NTkiLCJydyI6IlciLCJ0aW1lIjoxNjc4MzI2MTI1MDAwfQ</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The number of identities to be queried. Maximum value: 100.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("Size")
     public Integer size;
 
+    /**
+     * <p>The username.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Username")
     public String username;
 

@@ -4,18 +4,39 @@ package com.aliyun.onsmqtt20200420.models;
 import com.aliyun.tea.*;
 
 public class UpdateCustomAuthIdentityResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>operation success.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3F00084A-7F07-4B15-BADA-8903A4FB****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

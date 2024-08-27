@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class DeleteGroupIdRequest extends TeaModel {
     /**
      * <p>The ID of the group that you want to delete.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GID_test</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The ID of the ApsaraMQ for MQTT instance from which you want to delete a group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mqtt-cn-0pp1ldu****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

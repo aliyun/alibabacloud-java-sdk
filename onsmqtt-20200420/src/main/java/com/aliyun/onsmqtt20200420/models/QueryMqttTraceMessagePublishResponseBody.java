@@ -12,6 +12,9 @@ public class QueryMqttTraceMessagePublishResponseBody extends TeaModel {
 
     /**
      * <p>The request ID. You can use the ID to troubleshoot issues. This parameter is a common parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>69AD5550-BF22-438A-9202-A6E89185****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,45 +43,66 @@ public class QueryMqttTraceMessagePublishResponseBody extends TeaModel {
     public static class QueryMqttTraceMessagePublishResponseBodyMessageTraceLists extends TeaModel {
         /**
          * <p>The action on the message. Valid values:</p>
-         * <br>
-         * <p>*   **pub_mqtt**: indicates that the message was sent by an ApsaraMQ for MQTT client.</p>
-         * <p>*   **pub_mq**: indicates that the message was sent by an ApsaraMQ for RocketMQ client.</p>
+         * <ul>
+         * <li><strong>pub_mqtt</strong>: indicates that the message was sent by an ApsaraMQ for MQTT client.</li>
+         * <li><strong>pub_mq</strong>: indicates that the message was sent by an ApsaraMQ for RocketMQ client.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>pub_mqtt</p>
          */
         @NameInMap("Action")
         public String action;
 
         /**
          * <p>The returned code for the action on the message. Valid values:</p>
-         * <br>
-         * <p>*   **mqtt.trace.action.msg.pub.mqtt**: This value is returned if the value of Action is **pub_mqtt**.</p>
-         * <p>*   **mqtt.trace.action.msg.pub.mq**: This value is returned if the value of Action is **pub_mq**.</p>
+         * <ul>
+         * <li><strong>mqtt.trace.action.msg.pub.mqtt</strong>: This value is returned if the value of Action is <strong>pub_mqtt</strong>.</li>
+         * <li><strong>mqtt.trace.action.msg.pub.mq</strong>: This value is returned if the value of Action is <strong>pub_mq</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>mqtt.trace.action.msg.pub.mqtt</p>
          */
         @NameInMap("ActionCode")
         public String actionCode;
 
         /**
          * <p>The returned information for the action on the message. Valid values:</p>
-         * <br>
-         * <p>*   **Pub From Mqtt Client**: This value is returned if the value of Action is **pub_mqtt**.</p>
-         * <p>*   **Pub From MQ**: This value is returned if the value of Action is **pub_mq**.</p>
+         * <ul>
+         * <li><strong>Pub From Mqtt Client</strong>: This value is returned if the value of Action is <strong>pub_mqtt</strong>.</li>
+         * <li><strong>Pub From MQ</strong>: This value is returned if the value of Action is <strong>pub_mq</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Pub From Mqtt Client</p>
          */
         @NameInMap("ActionInfo")
         public String actionInfo;
 
         /**
          * <p>The ID of the client that sends the message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_test@@@producer</p>
          */
         @NameInMap("ClientId")
         public String clientId;
 
         /**
          * <p>The message ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AC1EC0030EAB78308DB16A3EC773BD95</p>
          */
         @NameInMap("MsgId")
         public String msgId;
 
         /**
          * <p>The time when the message was sent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-21 15:08:19.210</p>
          */
         @NameInMap("Time")
         public String time;

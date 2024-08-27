@@ -4,12 +4,30 @@ package com.aliyun.onsmqtt20200420.models;
 import com.aliyun.tea.*;
 
 public class ListCaCertificateRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>post-cn-7mz2d******</p>
+     */
     @NameInMap("MqttInstanceId")
     public String mqttInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PageNo")
     public String pageNo;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 

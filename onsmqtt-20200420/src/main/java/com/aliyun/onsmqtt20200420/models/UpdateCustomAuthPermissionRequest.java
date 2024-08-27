@@ -4,21 +4,57 @@ package com.aliyun.onsmqtt20200420.models;
 import com.aliyun.tea.*;
 
 public class UpdateCustomAuthPermissionRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALLOW</p>
+     */
     @NameInMap("Effect")
     public String effect;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Identity")
     public String identity;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>USER</p>
+     */
     @NameInMap("IdentityType")
     public String identityType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>post-cn-0pp12gl****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PUB_SUB</p>
+     */
     @NameInMap("PermitAction")
     public String permitAction;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test/t1</p>
+     */
     @NameInMap("Topic")
     public String topic;
 

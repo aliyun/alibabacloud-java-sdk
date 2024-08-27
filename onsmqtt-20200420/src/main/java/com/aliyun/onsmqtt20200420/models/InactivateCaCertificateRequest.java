@@ -4,9 +4,21 @@ package com.aliyun.onsmqtt20200420.models;
 import com.aliyun.tea.*;
 
 public class InactivateCaCertificateRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>post-cn-7mz2d******</p>
+     */
     @NameInMap("MqttInstanceId")
     public String mqttInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>007269004887******</p>
+     */
     @NameInMap("Sn")
     public String sn;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RevokeTokenResponseBody extends TeaModel {
     /**
      * <p>The request ID. This parameter is a common parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>833EDFCB-C447-4CE3-B21F-3A4C2D1B****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

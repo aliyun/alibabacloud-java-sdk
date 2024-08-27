@@ -4,18 +4,39 @@ package com.aliyun.onsmqtt20200420.models;
 import com.aliyun.tea.*;
 
 public class DeleteCustomAuthPermissionResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>operation success.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>34063BCA-0946-49C1-B824-2ED2C905****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

@@ -6,15 +6,24 @@ import com.aliyun.tea.*;
 public class CreateGroupIdRequest extends TeaModel {
     /**
      * <p>The ID of the group that you want to create. The group ID must meet the following conventions:</p>
-     * <br>
-     * <p>*   The ID must be 7 to 64 characters in length. It must start with GID\_ or GID- and can contain only letters, digits, hyphens (-), and underscores (\_).</p>
-     * <p>*   The ID cannot be changed after the group is created. For more information, see [Terms](~~42420~~).</p>
+     * <ul>
+     * <li>The ID must be 7 to 64 characters in length. It must start with GID_ or GID- and can contain only letters, digits, hyphens (-), and underscores (_).</li>
+     * <li>The ID cannot be changed after the group is created. For more information, see <a href="https://help.aliyun.com/document_detail/42420.html">Terms</a>.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GID_test</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The ID of the ApsaraMQ for MQTT instance to which the group belongs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mqtt-cn-0pp1ldu****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

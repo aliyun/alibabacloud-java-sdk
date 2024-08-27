@@ -12,6 +12,9 @@ public class RegisterDeviceCredentialResponseBody extends TeaModel {
 
     /**
      * <p>The request ID. This parameter is a common parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E4581CCF-62AF-44D9-B5B4-D1DBDC0E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,36 +43,54 @@ public class RegisterDeviceCredentialResponseBody extends TeaModel {
     public static class RegisterDeviceCredentialResponseBodyDeviceCredential extends TeaModel {
         /**
          * <p>The client ID of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_test@@@test</p>
          */
         @NameInMap("ClientId")
         public String clientId;
 
         /**
          * <p>The timestamp that indicates when the access credential of the device was created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1605541382000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The AccessKey ID of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC.Z5fXh9sRRVufyLi6wo****</p>
          */
         @NameInMap("DeviceAccessKeyId")
         public String deviceAccessKeyId;
 
         /**
          * <p>The AccessKey secret of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC.BJMkn4eMQJK2vaApTS****</p>
          */
         @NameInMap("DeviceAccessKeySecret")
         public String deviceAccessKeySecret;
 
         /**
          * <p>The ID of the ApsaraMQ for MQTT instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>post-cn-0pp12gl****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The timestamp that indicates when the access credential of the device was last updated. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1605541382000</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;

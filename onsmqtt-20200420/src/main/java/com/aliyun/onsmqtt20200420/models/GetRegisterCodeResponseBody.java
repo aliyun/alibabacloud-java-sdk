@@ -4,9 +4,17 @@ package com.aliyun.onsmqtt20200420.models;
 import com.aliyun.tea.*;
 
 public class GetRegisterCodeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>13274673-8f90-4630-bea1-9cccb25756ad2089******</p>
+     */
     @NameInMap("RegisterCode")
     public String registerCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>020F6A43-19E6-4B6E-B846-44EB31DF****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

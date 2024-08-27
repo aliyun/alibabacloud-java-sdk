@@ -4,18 +4,40 @@ package com.aliyun.onsmqtt20200420.models;
 import com.aliyun.tea.*;
 
 public class ListDeviceCredentialClientIdRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GID_xxx</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mqtt-xxxxxxxx</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public String pageNo;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 

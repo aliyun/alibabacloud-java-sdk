@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -18,18 +21,27 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The unique ID that the system generates for the request. You can use the ID to troubleshoot issues. This parameter is a common parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4E685844-ADAF-4D85-9EAC-F9471E8C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The returned delivery traces.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Total")
     public Long total;
@@ -82,45 +94,66 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
     public static class QueryMqttTraceMessageSubscribeResponseBodyMessageTraceLists extends TeaModel {
         /**
          * <p>The action on the message. Valid values:</p>
-         * <br>
-         * <p>*   **sub**: The ApsaraMQ for MQTT client subscribes to the message.</p>
-         * <p>*   **push_offline**: The ApsaraMQ for MQTT broker pushes the offline message to the ApsaraMQ for MQTT client.</p>
+         * <ul>
+         * <li><strong>sub</strong>: The ApsaraMQ for MQTT client subscribes to the message.</li>
+         * <li><strong>push_offline</strong>: The ApsaraMQ for MQTT broker pushes the offline message to the ApsaraMQ for MQTT client.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>sub</p>
          */
         @NameInMap("Action")
         public String action;
 
         /**
          * <p>The code returned for the action on the message. Valid values:</p>
-         * <br>
-         * <p>*   **mqtt.trace.action.msg.sub**: The value that is returned if the value of Action is **sub**.</p>
-         * <p>*   **mqtt.trace.action.msg.push.offline**: The value that is returned if the value of Action is **push_offline**.</p>
+         * <ul>
+         * <li><strong>mqtt.trace.action.msg.sub</strong>: The value that is returned if the value of Action is <strong>sub</strong>.</li>
+         * <li><strong>mqtt.trace.action.msg.push.offline</strong>: The value that is returned if the value of Action is <strong>push_offline</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>mqtt.trace.action.msg.sub</p>
          */
         @NameInMap("ActionCode")
         public String actionCode;
 
         /**
          * <p>The returned information for the action on the message. Valid values:</p>
-         * <br>
-         * <p>*   **Push To Mqtt Client**: The value that is returned if the value of Action is **sub**.</p>
-         * <p>*   **Push Offline Msg To Mqtt Client**: The value that is returned if the value of Action is **push_offline**.</p>
+         * <ul>
+         * <li><strong>Push To Mqtt Client</strong>: The value that is returned if the value of Action is <strong>sub</strong>.</li>
+         * <li><strong>Push Offline Msg To Mqtt Client</strong>: The value that is returned if the value of Action is <strong>push_offline</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Push To Mqtt Client</p>
          */
         @NameInMap("ActionInfo")
         public String actionInfo;
 
         /**
          * <p>The ID of the client that subscribes to the message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_test@@@consumer</p>
          */
         @NameInMap("ClientId")
         public String clientId;
 
         /**
          * <p>The message ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AC1EC1B33D5978308DB17F3245E4****</p>
          */
         @NameInMap("MsgId")
         public String msgId;
 
         /**
          * <p>The time when the message was delivered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-25 16:46:41.274</p>
          */
         @NameInMap("Time")
         public String time;

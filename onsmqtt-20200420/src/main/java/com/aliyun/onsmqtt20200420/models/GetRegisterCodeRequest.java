@@ -4,6 +4,12 @@ package com.aliyun.onsmqtt20200420.models;
 import com.aliyun.tea.*;
 
 public class GetRegisterCodeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>post-cn-7mz2d******</p>
+     */
     @NameInMap("MqttInstanceId")
     public String mqttInstanceId;
 

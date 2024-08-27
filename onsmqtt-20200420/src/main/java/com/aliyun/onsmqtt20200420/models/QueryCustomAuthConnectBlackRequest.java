@@ -4,15 +4,41 @@ package com.aliyun.onsmqtt20200420.models;
 import com.aliyun.tea.*;
 
 public class QueryCustomAuthConnectBlackRequest extends TeaModel {
+    /**
+     * <p>The ID of the client to be queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GID_test@@@test</p>
+     */
     @NameInMap("ClientId")
     public String clientId;
 
+    /**
+     * <p>The ID of the ApsaraMQ for MQTT instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>post-111****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The token that marks the end position of the previous returned page. To obtain the next batch of data, call the operation again by using the value of NextToken returned by the previous request. If you call this operation for the first time or want to query all results, set NextToken to an empty string.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xOfRU60sGEwN1OlFBIL8Ew==</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The number of clients to be queried. Maximum value: 100.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("Size")
     public Integer size;
 

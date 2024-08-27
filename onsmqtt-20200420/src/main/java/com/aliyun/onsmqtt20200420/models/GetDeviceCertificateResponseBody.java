@@ -7,6 +7,10 @@ public class GetDeviceCertificateResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetDeviceCertificateResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>020F6A43-19E6-4B6E-B846-44EB31DF****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +36,52 @@ public class GetDeviceCertificateResponseBody extends TeaModel {
     }
 
     public static class GetDeviceCertificateResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>00f26900ba87******</p>
+         */
         @NameInMap("CaSn")
         public String caSn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-----BEGIN DEVICECERTIFICATE-----\nMIIDuzCCAqdGVzdC5jbi1xaW5n******\n-----END DEVICECERTIFICATE-----</p>
+         */
         @NameInMap("DeviceContent")
         public String deviceContent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mqtt_device</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>356217374433******</p>
+         */
         @NameInMap("DeviceSn")
         public String deviceSn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1654137303000</p>
+         */
         @NameInMap("ValidBegin")
         public String validBegin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1969497303000</p>
+         */
         @NameInMap("ValidEnd")
         public String validEnd;
 
