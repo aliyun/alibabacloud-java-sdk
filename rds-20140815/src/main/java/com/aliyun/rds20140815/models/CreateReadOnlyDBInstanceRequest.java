@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     /**
-     * <p>是否自动创建代理。取值范围：</p>
+     * <p>Specifies whether to automatically create database proxies. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>：开启自动创建，默认为通用代理。</p>
-     * </li>
-     * <li><p><strong>false</strong>：不开启自动创建。</p>
-     * </li>
+     * <li><strong>true</strong>: enables the feature. By default, general-purpose database proxies are created.</li>
+     * <li><strong>false</strong>: disables the feature. No database proxies are created.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -94,6 +94,9 @@ public class CreateDdrInstanceRequest extends TeaModel {
     @NameInMap("DBInstanceStorageType")
     public String DBInstanceStorageType;
 
+    @NameInMap("EncryptionKey")
+    public String encryptionKey;
+
     /**
      * <p>The database engine of the destination instance. Valid values:</p>
      * <ul>
@@ -236,6 +239,9 @@ public class CreateDdrInstanceRequest extends TeaModel {
      */
     @NameInMap("RestoreType")
     public String restoreType;
+
+    @NameInMap("RoleARN")
+    public String roleARN;
 
     /**
      * <p>The IP address whitelist of the destination instance. If you want to add more than one entry to the IP address whitelist, separate the entries with commas (,). Each entry must be unique. You can add a maximum of 1,000 entries. For more information, see <a href="https://help.aliyun.com/document_detail/43185.html">Configure an IP address whitelist for an ApsaraDB RDS for MySQL instance</a>. The entries in the IP address whitelist must be in one of the following formats:</p>
@@ -411,6 +417,14 @@ public class CreateDdrInstanceRequest extends TeaModel {
         return this.DBInstanceStorageType;
     }
 
+    public CreateDdrInstanceRequest setEncryptionKey(String encryptionKey) {
+        this.encryptionKey = encryptionKey;
+        return this;
+    }
+    public String getEncryptionKey() {
+        return this.encryptionKey;
+    }
+
     public CreateDdrInstanceRequest setEngine(String engine) {
         this.engine = engine;
         return this;
@@ -521,6 +535,14 @@ public class CreateDdrInstanceRequest extends TeaModel {
     }
     public String getRestoreType() {
         return this.restoreType;
+    }
+
+    public CreateDdrInstanceRequest setRoleARN(String roleARN) {
+        this.roleARN = roleARN;
+        return this;
+    }
+    public String getRoleARN() {
+        return this.roleARN;
     }
 
     public CreateDdrInstanceRequest setSecurityIPList(String securityIPList) {

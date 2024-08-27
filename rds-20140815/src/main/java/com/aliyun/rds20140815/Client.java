@@ -3328,6 +3328,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBInstanceStorageType", request.DBInstanceStorageType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.encryptionKey)) {
+            query.put("EncryptionKey", request.encryptionKey);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.engine)) {
             query.put("Engine", request.engine);
         }
@@ -3382,6 +3386,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.restoreType)) {
             query.put("RestoreType", request.restoreType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleARN)) {
+            query.put("RoleARN", request.roleARN);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.securityIPList)) {
@@ -13035,7 +13043,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>事件中心事件统计</p>
+     * <p>Queries event statistics in the event center.</p>
      * 
      * @param request DescribeHistoryEventsStatRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13083,7 +13091,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>事件中心事件统计</p>
+     * <p>Queries event statistics in the event center.</p>
      * 
      * @param request DescribeHistoryEventsStatRequest
      * @return DescribeHistoryEventsStatResponse
