@@ -27,12 +27,12 @@ public class DescribeApiDocRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The environment to which the API is published. Valid values:</p>
+     * <p>The environment name. Valid values:</p>
      * <ul>
      * <li><strong>RELEASE</strong></li>
      * <li><strong>TEST</strong></li>
      * </ul>
-     * <p>If this parameter is not specified, the default value is used, which is RELEASE.</p>
+     * <p>If this parameter is not specified, the default value RELEASE is used.</p>
      * 
      * <strong>example:</strong>
      * <p>RELEASE</p>

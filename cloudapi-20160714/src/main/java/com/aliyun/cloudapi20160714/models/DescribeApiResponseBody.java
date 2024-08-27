@@ -1376,7 +1376,7 @@ public class DescribeApiResponseBody extends TeaModel {
         public String location;
 
         /**
-         * <p>The maximum parameter length when ParameterType is set to String.</p>
+         * <p>The maximum parameter length when <strong>ParameterType</strong> is set to String.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -1385,7 +1385,7 @@ public class DescribeApiResponseBody extends TeaModel {
         public Long maxLength;
 
         /**
-         * <p>The maximum parameter value when ParameterType is set to Int, Long, Float, or Double.</p>
+         * <p>The maximum parameter value when <strong>ParameterType</strong> is set to Int, Long, Float, or Double.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -1394,7 +1394,7 @@ public class DescribeApiResponseBody extends TeaModel {
         public Long maxValue;
 
         /**
-         * <p>The minimum parameter length when ParameterType is set to String.</p>
+         * <p>The minimum parameter length when <strong>ParameterType</strong> is set to String.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -1403,7 +1403,7 @@ public class DescribeApiResponseBody extends TeaModel {
         public Long minLength;
 
         /**
-         * <p>The minimum parameter value when ParameterType is set to Int, Long, Float, or Double.</p>
+         * <p>The minimum parameter value when <strong>ParameterType</strong> is set to Int, Long, Float, or Double.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -1421,7 +1421,7 @@ public class DescribeApiResponseBody extends TeaModel {
         public String parameterType;
 
         /**
-         * <p>The regular expression that is used for parameter validation when ParameterType is set to String.</p>
+         * <p>The regular expression that is used for parameter validation when <strong>ParameterType</strong> is set to String.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>

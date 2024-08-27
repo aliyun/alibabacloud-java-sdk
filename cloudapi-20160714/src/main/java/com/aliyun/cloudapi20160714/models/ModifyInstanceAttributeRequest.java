@@ -69,6 +69,9 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     @NameInMap("MaintainStartTime")
     public String maintainStartTime;
 
+    /**
+     * <p>The information about the CIDR block that API Gateway can use to access the virtual private cloud (VPC) of the backend service.</p>
+     */
     @NameInMap("ToConnectVpcIpBlock")
     public ModifyInstanceAttributeRequestToConnectVpcIpBlock toConnectVpcIpBlock;
 
@@ -189,6 +192,8 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
 
     public static class ModifyInstanceAttributeRequestToConnectVpcIpBlock extends TeaModel {
         /**
+         * <p>The CIDR block of the VSwitch.</p>
+         * 
          * <strong>example:</strong>
          * <p>172.16.0.0/16</p>
          */
@@ -196,6 +201,8 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
         public String cidrBlock;
 
         /**
+         * <p>Specifies whether the CIDR block is a custom CIDR block.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -203,6 +210,8 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
         public Boolean customized;
 
         /**
+         * <p>The vSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-wz94cqvaoe1ipxxxxxx</p>
          */
@@ -210,6 +219,8 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
         public String vswitchId;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-a</p>
          */

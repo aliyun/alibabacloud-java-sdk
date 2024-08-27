@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAppCodeRequest extends TeaModel {
     /**
+     * <p>The application AppCode.</p>
+     * 
      * <strong>example:</strong>
      * <p>3aaf905a0a1f4f0eabc6d891dfa08afc</p>
      */
@@ -12,6 +14,7 @@ public class CreateAppCodeRequest extends TeaModel {
     public String appCode;
 
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

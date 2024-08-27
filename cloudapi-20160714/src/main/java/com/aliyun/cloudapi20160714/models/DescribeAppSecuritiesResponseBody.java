@@ -4,10 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppSecuritiesResponseBody extends TeaModel {
+    /**
+     * <p>The associated security policy information.</p>
+     */
     @NameInMap("AppSecuritys")
     public DescribeAppSecuritiesResponseBodyAppSecuritys appSecuritys;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EF924FE4-2EDD-4CD3-89EC-34E4708574E7</p>
      */
@@ -37,6 +42,8 @@ public class DescribeAppSecuritiesResponseBody extends TeaModel {
 
     public static class DescribeAppSecuritiesResponseBodyAppSecuritysAppSecurity extends TeaModel {
         /**
+         * <p>The application AppCode.</p>
+         * 
          * <strong>example:</strong>
          * <p>d2350ecd62c44cbfbe35a7f182e35105</p>
          */
@@ -44,6 +51,8 @@ public class DescribeAppSecuritiesResponseBody extends TeaModel {
         public String appCode;
 
         /**
+         * <p>The application AppKey.</p>
+         * 
          * <strong>example:</strong>
          * <p>34379343</p>
          */
@@ -51,6 +60,8 @@ public class DescribeAppSecuritiesResponseBody extends TeaModel {
         public String appKey;
 
         /**
+         * <p>The application AppSecret.</p>
+         * 
          * <strong>example:</strong>
          * <p>ea5291a7aff343769eb3139a2f6de8c9</p>
          */
@@ -58,6 +69,8 @@ public class DescribeAppSecuritiesResponseBody extends TeaModel {
         public String appSecret;
 
         /**
+         * <p>The time when the AppKey was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-09-14T18:50:59</p>
          */
@@ -65,6 +78,8 @@ public class DescribeAppSecuritiesResponseBody extends TeaModel {
         public String createdTime;
 
         /**
+         * <p>The time when the AppSecret was last modified. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-08-14T18:03:00+08:00</p>
          */

@@ -1,3 +1,7 @@
+2024-08-27 Version: 3.10.1
+- Update API ModifyApiGroup: add param FilterAppCodeForBackend.
+
+
 2024-08-05 Version: 3.10.0
 - Support API ExportOAS.
 - Update API DescribeBackendInfo: update param BackendId.

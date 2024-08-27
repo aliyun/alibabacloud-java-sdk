@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeApisByVpcAccessRequest extends TeaModel {
     /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -12,6 +14,8 @@ public class DescribeApisByVpcAccessRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +26,8 @@ public class DescribeApisByVpcAccessRequest extends TeaModel {
     public String securityToken;
 
     /**
+     * <p>The name of the VPC access authorization.</p>
+     * 
      * <strong>example:</strong>
      * <p>lynkco-iov-uat</p>
      */

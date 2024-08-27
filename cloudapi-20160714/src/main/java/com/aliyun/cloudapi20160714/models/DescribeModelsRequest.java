@@ -50,6 +50,9 @@ public class DescribeModelsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeModelsRequestTag> tag;
 
@@ -107,9 +110,21 @@ public class DescribeModelsRequest extends TeaModel {
     }
 
     public static class DescribeModelsRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
+         */
         @NameInMap("Value")
         public String value;
 

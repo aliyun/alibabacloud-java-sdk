@@ -69,6 +69,9 @@ public class ModifyInstanceAttributeShrinkRequest extends TeaModel {
     @NameInMap("MaintainStartTime")
     public String maintainStartTime;
 
+    /**
+     * <p>The information about the CIDR block that API Gateway can use to access the virtual private cloud (VPC) of the backend service.</p>
+     */
     @NameInMap("ToConnectVpcIpBlock")
     public String toConnectVpcIpBlockShrink;
 

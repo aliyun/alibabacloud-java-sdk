@@ -93,7 +93,7 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
 
     public static class DescribeDeployedApisResponseBodyDeployedApisDeployedApiItem extends TeaModel {
         /**
-         * <p>The API ID.</p>
+         * <p>The ID of the API.</p>
          * 
          * <strong>example:</strong>
          * <p>c076144d7878437b8f82fb85890ce6a0</p>
@@ -102,8 +102,6 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
         public String apiId;
 
         /**
-         * <p>The HTTP method of the API request.</p>
-         * 
          * <strong>example:</strong>
          * <p>POST</p>
          */
@@ -111,7 +109,7 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
         public String apiMethod;
 
         /**
-         * <p>The API name.</p>
+         * <p>The name of the API.</p>
          * 
          * <strong>example:</strong>
          * <p>DescribeObjects</p>
@@ -120,8 +118,6 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
         public String apiName;
 
         /**
-         * <p>The request path of the API.</p>
-         * 
          * <strong>example:</strong>
          * <p>/trademark/search</p>
          */
@@ -129,7 +125,7 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
         public String apiPath;
 
         /**
-         * <p>The time when the API was published. The time is displayed in UTC.</p>
+         * <p>The publising time (UTC) of the API.</p>
          * 
          * <strong>example:</strong>
          * <p>2016-07-23T08:28:48Z</p>
@@ -138,16 +134,16 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
         public String deployedTime;
 
         /**
-         * <p>The API description.</p>
+         * <p>The description of the API.</p>
          * 
          * <strong>example:</strong>
-         * <p>Queries objects by page</p>
+         * <p>Queries objects by pages</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The API group ID.</p>
+         * <p>The ID of the API group.</p>
          * 
          * <strong>example:</strong>
          * <p>63be9002440b4778a61122f14c2b2bbb</p>
@@ -156,7 +152,7 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
         public String groupId;
 
         /**
-         * <p>The name of the API group to which the API belongs.</p>
+         * <p>The name of the group to which the API belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>myGroup3</p>
@@ -165,7 +161,7 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The region ID of the API.</p>
+         * <p>The region where the API is located.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-qingdao</p>
@@ -174,7 +170,7 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The environment name. Valid values:</p>
+         * <p>The name of the runtime environment. Valid values:</p>
          * <ul>
          * <li><strong>RELEASE</strong></li>
          * <li><strong>TEST</strong></li>

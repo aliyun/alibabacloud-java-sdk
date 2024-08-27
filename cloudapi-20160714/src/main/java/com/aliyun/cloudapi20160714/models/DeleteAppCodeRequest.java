@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAppCodeRequest extends TeaModel {
     /**
+     * <p>The application AppCode.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteAppCodeRequest extends TeaModel {
     public String appCode;
 
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

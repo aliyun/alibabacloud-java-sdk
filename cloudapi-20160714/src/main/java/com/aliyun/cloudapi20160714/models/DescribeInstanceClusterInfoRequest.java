@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceClusterInfoRequest extends TeaModel {
     /**
+     * <p>The name of the dedicated instance cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>testvpc</p>
      */

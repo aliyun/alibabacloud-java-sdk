@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SwitchApiRequest extends TeaModel {
     /**
-     * <p>The ID of the API.</p>
+     * <p>The API ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class SwitchApiRequest extends TeaModel {
     public String apiId;
 
     /**
-     * <p>The description of the switch operation.</p>
+     * <p>The description. The description can be up to 200 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class SwitchApiRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the API group.</p>
+     * <p>The API group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -34,7 +34,7 @@ public class SwitchApiRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The historical version that you want to switch to.</p>
+     * <p>The historical version number of the API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,10 +47,11 @@ public class SwitchApiRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The name of the runtime environment. Valid values:</p>
+     * <p>The environment. Valid values:</p>
      * <ul>
-     * <li><strong>RELEASE</strong></li>
-     * <li><strong>TEST</strong></li>
+     * <li><strong>RELEASE</strong>: the production environment</li>
+     * <li><strong>PRE</strong>: the staging environment</li>
+     * <li><strong>TEST</strong>: the test environment</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

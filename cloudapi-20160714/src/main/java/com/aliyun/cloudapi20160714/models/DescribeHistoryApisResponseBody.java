@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHistoryApisResponseBody extends TeaModel {
     /**
-     * <p>The returned API information. It is an array consisting of ApiHisItem data.</p>
+     * <p>The returned API information. It is an array consisting of ApiHisItems.</p>
      */
     @NameInMap("ApiHisItems")
     public DescribeHistoryApisResponseBodyApiHisItems apiHisItems;
@@ -93,7 +93,7 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
 
     public static class DescribeHistoryApisResponseBodyApiHisItemsApiHisItem extends TeaModel {
         /**
-         * <p>The ID of the API.</p>
+         * <p>The API ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5af418828f0344a3b588c0cc1331a3bc</p>
@@ -102,7 +102,7 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
         public String apiId;
 
         /**
-         * <p>The name of the API.</p>
+         * <p>The API name.</p>
          * 
          * <strong>example:</strong>
          * <p>v2_role_assign</p>
@@ -111,7 +111,7 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
         public String apiName;
 
         /**
-         * <p>The publising time (UTC) of the API.</p>
+         * <p>The time when the API was published. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2016-07-20T08:28:48Z</p>
@@ -120,7 +120,7 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
         public String deployedTime;
 
         /**
-         * <p>The description of the API.</p>
+         * <p>The API description.</p>
          * 
          * <strong>example:</strong>
          * <p>Creates an object</p>
@@ -129,7 +129,7 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the API group.</p>
+         * <p>The API group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1084f9034c744137901057206b39d2b6</p>
@@ -138,7 +138,7 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
         public String groupId;
 
         /**
-         * <p>The name of the group to which the API belongs.</p>
+         * <p>The name of the API group to which the API belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>myGroup2</p>
@@ -156,7 +156,7 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
         public String historyVersion;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-qingdao</p>
@@ -165,7 +165,7 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>Environmental alias</p>
+         * <p>The environment alias.</p>
          * 
          * <strong>example:</strong>
          * <p>Online</p>
@@ -174,10 +174,10 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
         public String stageAlias;
 
         /**
-         * <p>The name of the runtime environment. Valid values:</p>
+         * <p>The environment name. Valid values:</p>
          * <ul>
          * <li><strong>RELEASE</strong></li>
-         * <li>**TEST.</li>
+         * <li><strong>TEST</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>

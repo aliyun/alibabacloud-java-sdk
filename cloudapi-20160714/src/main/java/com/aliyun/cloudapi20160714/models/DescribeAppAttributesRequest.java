@@ -50,7 +50,7 @@ public class DescribeAppAttributesRequest extends TeaModel {
     public Boolean enableTagAuth;
 
     /**
-     * <p>The extended information.</p>
+     * <p>扩展信息</p>
      * 
      * <strong>example:</strong>
      * <p>110243810311</p>
@@ -196,8 +196,8 @@ public class DescribeAppAttributesRequest extends TeaModel {
 
     public static class DescribeAppAttributesRequestTag extends TeaModel {
         /**
-         * <p>The value of tag N.</p>
-         * <p>Valid values of n: <code>[1, 20]</code>.</p>
+         * <p>The key of the tag.</p>
+         * <p>N can be an integer from 1 to 20.``</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -207,8 +207,8 @@ public class DescribeAppAttributesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The key of tag N.</p>
-         * <p>Valid values of n: <code>[1, 20]</code>.</p>
+         * <p>The key of the tag.</p>
+         * <p>N can be an integer from 1 to 20.``</p>
          * 
          * <strong>example:</strong>
          * <p>\&quot; \&quot;</p>
