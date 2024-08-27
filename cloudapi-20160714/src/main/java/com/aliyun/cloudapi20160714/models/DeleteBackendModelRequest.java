@@ -27,13 +27,12 @@ public class DeleteBackendModelRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The environment to which the API is published. Valid values:</p>
+     * <p>The name of the runtime environment. Valid values:</p>
      * <ul>
      * <li><strong>RELEASE</strong></li>
      * <li><strong>PRE</strong></li>
      * <li><strong>TEST</strong></li>
      * </ul>
-     * <p>If you do not specify this parameter, APIs in the draft state are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>TEST</p>

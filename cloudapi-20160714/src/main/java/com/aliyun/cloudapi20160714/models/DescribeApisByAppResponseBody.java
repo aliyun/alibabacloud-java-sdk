@@ -157,7 +157,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The HTTP request method of the API.</p>
+         * <p>The HTTP method of the API.</p>
          * 
          * <strong>example:</strong>
          * <p>GET</p>
@@ -197,7 +197,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>Environmental alias.</p>
+         * <p>The environment alias.</p>
          * 
          * <strong>example:</strong>
          * <p>Online</p>
@@ -206,7 +206,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
         public String stageAlias;
 
         /**
-         * <p>The environment.</p>
+         * <p>The environment name.</p>
          * 
          * <strong>example:</strong>
          * <p>RELEASE</p>

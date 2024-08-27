@@ -219,12 +219,24 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigZookeeperConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://192.168.1.xxx:2181">http://192.168.1.xxx:2181</a></p>
+         */
         @NameInMap("ConnectString")
         public String connectString;
 
+        /**
+         * <strong>example:</strong>
+         * <p>provider</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>service</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
@@ -310,24 +322,52 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEdasConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>6cd0c599-dxxx-496d-b3d5-6a71c657xxxxx</p>
+         */
         @NameInMap("EdasAppId")
         public String edasAppId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou:edasNacos</p>
+         */
         @NameInMap("MicroserviceNamespace")
         public String microserviceNamespace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou:edasNacos</p>
+         */
         @NameInMap("MicroserviceNamespaceId")
         public String microserviceNamespaceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Edas-Nacos</p>
+         */
         @NameInMap("MicroserviceNamespaceName")
         public String microserviceNamespaceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mse-cn-jia3n1rxxxx</p>
+         */
         @NameInMap("MseInstanceId")
         public String mseInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>EDAS</p>
+         */
         @NameInMap("RegistryType")
         public String registryType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>service</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
@@ -617,12 +657,18 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
     public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfigMockHeaders extends TeaModel {
         /**
          * <p>The name of the header parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("HeaderName")
         public String headerName;
 
         /**
          * <p>The value of the header parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("HeaderValue")
         public String headerValue;
@@ -659,12 +705,18 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
         /**
          * <p>The result returned for service mocking.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("MockResult")
         public String mockResult;
 
         /**
          * <p>The status code that is returned for service mocking.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("MockStatusCode")
         public String mockStatusCode;
@@ -799,6 +851,9 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
         /**
          * <p>The host of the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>openapi.alipan.com</p>
          */
         @NameInMap("VpcTargetHostName")
         public String vpcTargetHostName;
@@ -918,6 +973,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         @NameInMap("ServiceAddress")
         public String serviceAddress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("ServiceTimeout")
         public Integer serviceTimeout;
 

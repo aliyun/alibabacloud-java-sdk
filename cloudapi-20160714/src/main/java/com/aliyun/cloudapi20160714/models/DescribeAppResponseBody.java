@@ -41,7 +41,7 @@ public class DescribeAppResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The extended information.</p>
+     * <p>扩展信息</p>
      * 
      * <strong>example:</strong>
      * <p>110243810311</p>

@@ -11,7 +11,7 @@ public class DescribeModelsResponseBody extends TeaModel {
     public DescribeModelsResponseBodyModelDetails modelDetails;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number of the page to return.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeModelsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class DescribeModelsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>40306469-2FB5-417A-B723-AF1F4A4FA204</p>
@@ -92,9 +92,21 @@ public class DescribeModelsResponseBody extends TeaModel {
     }
 
     public static class DescribeModelsResponseBodyModelDetailsModelDetailTagsTagInfo extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENV</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ST4</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -151,7 +163,7 @@ public class DescribeModelsResponseBody extends TeaModel {
         public String createdTime;
 
         /**
-         * <p>The definition of the model description.</p>
+         * <p>The description of the model definition.</p>
          * 
          * <strong>example:</strong>
          * <p>Model Description</p>
@@ -196,7 +208,7 @@ public class DescribeModelsResponseBody extends TeaModel {
         public String modelRef;
 
         /**
-         * <p>The last modification time of the model.</p>
+         * <p>The time when the model was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-01-29T11:07:48Z</p>
@@ -213,6 +225,9 @@ public class DescribeModelsResponseBody extends TeaModel {
         @NameInMap("Schema")
         public String schema;
 
+        /**
+         * <p>The tags of the model.</p>
+         */
         @NameInMap("Tags")
         public DescribeModelsResponseBodyModelDetailsModelDetailTags tags;
 

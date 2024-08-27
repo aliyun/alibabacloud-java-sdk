@@ -29,7 +29,7 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
     public String aclName;
 
     /**
-     * <p>The IP version. Valid values: <strong>ipv4</strong> and <strong>ipv6</strong>.</p>
+     * <p>The IP protocol version. Valid values: <strong>ipv4</strong> and <strong>ipv6</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>ipv4</p>
@@ -93,7 +93,7 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
 
     public static class DescribeAccessControlListAttributeResponseBodyAclEntrysAclEntry extends TeaModel {
         /**
-         * <p>The description of an entry.</p>
+         * <p>The entry description.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -102,7 +102,7 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         public String aclEntryComment;
 
         /**
-         * <p>The entries of the access control policy.</p>
+         * <p>The ACL entry.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.0/24</p>

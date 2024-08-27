@@ -15,10 +15,10 @@ public class CreateAccessControlListRequest extends TeaModel {
     public String aclName;
 
     /**
-     * <p>The IP version of the Classic Load Balancer (CLB) instance with which the ACL is associated. Valid values:</p>
+     * <p>The IP protocol version of the ACL. Valid values:</p>
      * <ul>
-     * <li><strong>ipv4</strong></li>
-     * <li><strong>ipv6</strong></li>
+     * <li><strong>IPv4</strong></li>
+     * <li><strong>IPv6</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>

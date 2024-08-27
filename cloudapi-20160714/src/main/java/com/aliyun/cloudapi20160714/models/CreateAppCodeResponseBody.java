@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAppCodeResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>418DAAE7-A0C2-5E9C-ADFF-4CD14A474F88</p>
      */

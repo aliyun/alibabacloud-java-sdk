@@ -116,7 +116,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The returned API frontend definition information. It is an array consisting of RequestConfig data.</p>
+     * <p>The returned API frontend definition. It is an array consisting of RequestConfig data.</p>
      */
     @NameInMap("RequestConfig")
     public DescribeApiDocResponseBodyRequestConfig requestConfig;
@@ -344,7 +344,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The description of the error code.</p>
+         * <p>The error description.</p>
          * 
          * <strong>example:</strong>
          * <p>Unauthorized</p>
@@ -576,7 +576,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
         public String demoValue;
 
         /**
-         * <p>The description.</p>
+         * <p>The parameter description.</p>
          * 
          * <strong>example:</strong>
          * <p>Parameters</p>
@@ -603,7 +603,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
         public String docShow;
 
         /**
-         * <p>The hash values that can be specified if the <strong>ParameterType</strong> parameter is set to Int, Long, Float, Double, or String. Separate multiple hash values with commas (,). Examples: 1,2,3,4,9 and A,B,C,E,F.</p>
+         * <p>The hash values that are supported when <strong>ParameterType</strong> is set to Int, Long, Float, Double, or String. Separate values with commas (,). Examples: 1,2,3,4,9 and A,B,C,E,F.</p>
          * 
          * <strong>example:</strong>
          * <p>boy,girl</p>
@@ -675,7 +675,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
         public String parameterType;
 
         /**
-         * <p>The regular expression that is used to validate the parameter if the <strong>ParameterType</strong> parameter is set to String.</p>
+         * <p>The regular expression that is used for parameter validation when <strong>ParameterType</strong> is set to String.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>

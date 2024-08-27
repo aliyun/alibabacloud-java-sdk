@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
     /**
+     * <p>The time when the cluster was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-10-10T18:29:27</p>
      */
@@ -12,16 +14,23 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
     public String createdTime;
 
     /**
+     * <p>The cluster description, which can be up to 200 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>v0.0.4</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The cluster details.</p>
+     */
     @NameInMap("InstanceClusterAttribute")
     public DescribeInstanceClusterInfoResponseBodyInstanceClusterAttribute instanceClusterAttribute;
 
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>apigateway-ht-04e41d95e9c1</p>
      */
@@ -29,6 +38,8 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
     public String instanceClusterId;
 
     /**
+     * <p>The cluster name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -36,6 +47,8 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
     public String instanceClusterName;
 
     /**
+     * <p>The cluster status.</p>
+     * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
      */
@@ -43,6 +56,8 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
     public String instanceClusterStatus;
 
     /**
+     * <p>The cluster type.</p>
+     * 
      * <strong>example:</strong>
      * <p>normal</p>
      */
@@ -50,16 +65,23 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
     public String instanceClusterType;
 
     /**
+     * <p>The cluster version.</p>
+     * 
      * <strong>example:</strong>
      * <p>3.5.3.856</p>
      */
     @NameInMap("InstanceClusterVersion")
     public String instanceClusterVersion;
 
+    /**
+     * <p>The dedicated instances contained in the cluster.</p>
+     */
     @NameInMap("InstanceList")
     public DescribeInstanceClusterInfoResponseBodyInstanceList instanceList;
 
     /**
+     * <p>The time when the cluster was last modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-06-19 10:40:29 +0800</p>
      */
@@ -67,6 +89,8 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
     public String modifiedTime;
 
     /**
+     * <p>The region ID of the cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -74,6 +98,8 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ015</p>
      */
@@ -183,6 +209,8 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
 
     public static class DescribeInstanceClusterInfoResponseBodyInstanceClusterAttribute extends TeaModel {
         /**
+         * <p>The internal CIDR block of the user VPC that can be accessed by the cluster if the cluster consists of VPC integration instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>[&quot;192.168.1.0/24&quot;,&quot;192.168.0.0/24&quot;]</p>
          */
@@ -190,6 +218,8 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         public String connectCidrBlocks;
 
         /**
+         * <p>The ID of the user VPC that is connected to the cluster if the cluster consists of VPC integration instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-p0w3kxxxxxxxxxxxxxxxx</p>
          */
@@ -197,6 +227,8 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         public String connectVpcId;
 
         /**
+         * <p>Indicates whether outbound IPv6 traffic is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -204,6 +236,8 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         public Boolean egressIpv6Enable;
 
         /**
+         * <p>The HTTPS security policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>HTTPS2_TLS1_0</p>
          */
@@ -211,6 +245,8 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         public String httpsPolicies;
 
         /**
+         * <p>The ID of the IPv4 access control list (ACL).</p>
+         * 
          * <strong>example:</strong>
          * <p>acl-t4n8i4rvvp70kcyuoXXXX</p>
          */
@@ -218,6 +254,8 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         public String IPV4AclId;
 
         /**
+         * <p>The name of the IPv4 ACL.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-black</p>
          */
@@ -225,6 +263,12 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         public String IPV4AclName;
 
         /**
+         * <p>Indicates whether IPv4 access control is enabled. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>on</p>
          */
@@ -232,6 +276,12 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         public String IPV4AclStatus;
 
         /**
+         * <p>The type of the IPv4 ACL.</p>
+         * <ul>
+         * <li>black: blacklist</li>
+         * <li>white: whitelist</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>black</p>
          */
@@ -239,6 +289,8 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         public String IPV4AclType;
 
         /**
+         * <p>The ID of the IPv6 ACL.</p>
+         * 
          * <strong>example:</strong>
          * <p>acl-t4nevzhwbpe7cup18XXXX</p>
          */
@@ -246,6 +298,8 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         public String IPV6AclId;
 
         /**
+         * <p>The name of the IPv6 ACL.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -253,6 +307,12 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         public String IPV6AclName;
 
         /**
+         * <p>Indicates whether IPv6 access control is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>on</p>
          */
@@ -260,6 +320,12 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         public String IPV6AclStatus;
 
         /**
+         * <p>The type of the IPv6 ACL. Valid values:</p>
+         * <ul>
+         * <li>black: blacklist</li>
+         * <li>white: whitelist</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>white</p>
          */
@@ -267,6 +333,8 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         public String IPV6AclType;
 
         /**
+         * <p>The outbound public IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>39.106.XX.XX</p>
          */
@@ -274,6 +342,8 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         public String internetEgressAddress;
 
         /**
+         * <p>The outbound private IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>100.104.XX.XX/26</p>
          */
@@ -281,6 +351,8 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         public String intranetEgressAddress;
 
         /**
+         * <p>The custom CIDR block. The configured CIDR block is considered as a private block.</p>
+         * 
          * <strong>example:</strong>
          * <p>123.0.0.1</p>
          */
@@ -288,6 +360,8 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         public String intranetSegments;
 
         /**
+         * <p>Indicates whether IPv6 traffic is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -295,6 +369,8 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         public Boolean supportIpv6;
 
         /**
+         * <p>The ID of the client VPC.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-2zew2v4vcg78mXXXX</p>
          */
@@ -302,6 +378,8 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         public String userVpcId;
 
         /**
+         * <p>The vSwitch of the client VPC.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-2zecr5r7ao44tslsXXXX</p>
          */
@@ -309,16 +387,23 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         public String userVswitchId;
 
         /**
+         * <p>The VIPs of the cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>VPC_INTERNET_IPV6</p>
          */
         @NameInMap("VipTypeList")
         public String vipTypeList;
 
+        /**
+         * <p>Indicates whether a virtual private cloud (VPC) domain name is enabled.</p>
+         */
         @NameInMap("VpcIntranetEnable")
         public Boolean vpcIntranetEnable;
 
         /**
+         * <p>The ID of the account to which the VPC belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>165438596694XXXX</p>
          */
@@ -326,6 +411,8 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         public Long vpcOwnerId;
 
         /**
+         * <p>Indicates whether self-calling is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -517,6 +604,8 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
 
     public static class DescribeInstanceClusterInfoResponseBodyInstanceListInstance extends TeaModel {
         /**
+         * <p>The error message returned if the call fails.</p>
+         * 
          * <strong>example:</strong>
          * <p>Instance not found.</p>
          */
@@ -524,6 +613,8 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>apigateway-ht-04e41d95e9c1</p>
          */
@@ -531,6 +622,8 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>tf-testacceu-central-1apigatewayinstance8752</p>
          */
@@ -538,6 +631,8 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         public String instanceName;
 
         /**
+         * <p>The instance status.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */

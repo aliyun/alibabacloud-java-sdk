@@ -8,6 +8,8 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
     public DescribeInstanceClusterListResponseBodyInstanceClusters instanceClusters;
 
     /**
+     * <p>The page number of the returned page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +17,8 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +26,8 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ015</p>
      */
@@ -29,6 +35,8 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -82,6 +90,8 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
 
     public static class DescribeInstanceClusterListResponseBodyInstanceClustersInstanceCluster extends TeaModel {
         /**
+         * <p>The time when the cluster was created. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-08-14T17:46:59+08:00</p>
          */
@@ -89,25 +99,53 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
         public String createdTime;
 
         /**
+         * <p>The cluster description.</p>
+         * 
          * <strong>example:</strong>
          * <p>Test TrafficControl</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apigateway-cluster-hz-xxxxxxxxxxxx</p>
+         */
         @NameInMap("InstanceClusterId")
         public String instanceClusterId;
 
+        /**
+         * <p>The cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-cluster</p>
+         */
         @NameInMap("InstanceClusterName")
         public String instanceClusterName;
 
+        /**
+         * <p>The cluster status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("InstanceClusterStatus")
         public String instanceClusterStatus;
 
+        /**
+         * <p>The cluster type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
+         */
         @NameInMap("InstanceClusterType")
         public String instanceClusterType;
 
         /**
+         * <p>The time when the cluster was last modified. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-12T10:11:08+08:00</p>
          */
@@ -115,6 +153,8 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
+         * <p>The region ID of the cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shenzhen</p>
          */

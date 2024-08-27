@@ -596,7 +596,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
 
     public static class DescribeApiGroupResponseBodyCustomDomainsDomainItem extends TeaModel {
         /**
-         * <p>Bind runtime environment alias</p>
+         * <p>The alias of the associated environment.</p>
          * 
          * <strong>example:</strong>
          * <p>TEST1</p>

@@ -4,13 +4,27 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceClusterListRequest extends TeaModel {
+    /**
+     * <p>The cluster ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>apigateway-cluster-hz-xxxxxxxxxxxx</p>
+     */
     @NameInMap("InstanceClusterId")
     public String instanceClusterId;
 
+    /**
+     * <p>The cluster name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-cluster</p>
+     */
     @NameInMap("InstanceClusterName")
     public String instanceClusterName;
 
     /**
+     * <p>The page number of the page to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -18,6 +32,8 @@ public class DescribeInstanceClusterListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

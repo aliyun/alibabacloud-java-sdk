@@ -32,11 +32,11 @@ public class CreateInstanceRequest extends TeaModel {
     /**
      * <p>The subscription duration of the instance.</p>
      * <ul>
-     * <li>Valid values if PricingCycle is set to <strong>Month</strong>: <strong>1</strong> to <strong>9</strong></li>
-     * <li>Valid values if PricingCycle is set to <strong>Year</strong>: <strong>1</strong> to <strong>3</strong></li>
+     * <li>If PricingCycle is set to <strong>Month</strong>, set this parameter to an integer ranges from <strong>1</strong> to <strong>9</strong>.</li>
+     * <li>If PricingCycle is set to <strong>Year</strong>, set this parameter to an integer ranges from <strong>1</strong> to <strong>3</strong>.</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is available and required only if the ChargeType parameter is set to <strong>PrePaid</strong>.</p>
+     * <p> This parameter is valid and required only if the ChargeType parameter is set to <strong>PrePaid</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class CreateInstanceRequest extends TeaModel {
      * <li><strong>month</strong></li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is available and required only if the ChargeType parameter is set to PrePaid.</p>
+     * <p> This parameter is required if the ChargeType parameter is set to Prepaid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -28,7 +28,7 @@ public class CreateApiStageVariableRequest extends TeaModel {
     public String stageId;
 
     /**
-     * <p>Environmental routing model.</p>
+     * <p>The routing model of the environment.</p>
      * 
      * <strong>example:</strong>
      * <p>{

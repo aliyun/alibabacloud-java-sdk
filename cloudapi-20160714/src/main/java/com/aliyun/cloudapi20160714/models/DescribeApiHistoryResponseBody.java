@@ -196,7 +196,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Configuration items of API requests sent by the consumer to API Gateway.</p>
+     * <p>The configuration items of API requests sent by the consumer to API Gateway.</p>
      * <p>For more information, see <a href="https://help.aliyun.com/document_detail/43985.html">RequestConfig</a>.</p>
      */
     @NameInMap("RequestConfig")
@@ -674,7 +674,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
 
     public static class DescribeApiHistoryResponseBodyConstantParametersConstantParameter extends TeaModel {
         /**
-         * <p>The constant value.</p>
+         * <p>The value of the constant parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>constance</p>
@@ -683,7 +683,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public String constantValue;
 
         /**
-         * <p>The description.</p>
+         * <p>The parameter description.</p>
          * 
          * <strong>example:</strong>
          * <p>for_test1</p>
@@ -701,7 +701,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public String location;
 
         /**
-         * <p>The name of the backend service parameter.</p>
+         * <p>The mapped parameter name in the backend service.</p>
          * 
          * <strong>example:</strong>
          * <p>constance</p>
@@ -769,7 +769,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
 
     public static class DescribeApiHistoryResponseBodyCustomSystemParametersCustomSystemParameter extends TeaModel {
         /**
-         * <p>Example</p>
+         * <p>The sample value.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.1</p>
@@ -778,7 +778,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public String demoValue;
 
         /**
-         * <p>The description of the custom system parameter.</p>
+         * <p>The parameter description.</p>
          * 
          * <strong>example:</strong>
          * <p>balabala</p>
@@ -796,7 +796,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public String location;
 
         /**
-         * <p>The name of the custom system parameter.</p>
+         * <p>The parameter name.</p>
          * 
          * <strong>example:</strong>
          * <p>CaClientIp</p>
@@ -805,7 +805,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public String parameterName;
 
         /**
-         * <p>The name of the corresponding backend parameter.</p>
+         * <p>The mapped parameter name in the backend service.</p>
          * 
          * <strong>example:</strong>
          * <p>clientIp</p>
@@ -881,7 +881,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
 
     public static class DescribeApiHistoryResponseBodyErrorCodeSamplesErrorCodeSample extends TeaModel {
         /**
-         * <p>The error code.</p>
+         * <p>The returned error code.</p>
          * 
          * <strong>example:</strong>
          * <p>400</p>
@@ -890,7 +890,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The description.</p>
+         * <p>The error description.</p>
          * 
          * <strong>example:</strong>
          * <p>Missing the parameter UserId</p>
@@ -899,7 +899,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The error message.</p>
+         * <p>The returned error message.</p>
          * 
          * <strong>example:</strong>
          * <p>MissingParameter</p>
@@ -1182,7 +1182,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
 
     public static class DescribeApiHistoryResponseBodyRequestParametersRequestParameter extends TeaModel {
         /**
-         * <p>The name of the API parameter.</p>
+         * <p>The name of the parameter in the API request.</p>
          * 
          * <strong>example:</strong>
          * <p>age</p>
@@ -1200,7 +1200,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public String arrayItemsType;
 
         /**
-         * <p>Default value</p>
+         * <p>The default value.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -1209,7 +1209,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public String defaultValue;
 
         /**
-         * <p>Examples</p>
+         * <p>The sample value.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -1218,7 +1218,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public String demoValue;
 
         /**
-         * <p>The description.</p>
+         * <p>The parameter description.</p>
          * 
          * <strong>example:</strong>
          * <p>modidyTest</p>
@@ -1227,7 +1227,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The order in the document.</p>
+         * <p>The order in which the parameter is sorted in the document.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1236,7 +1236,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public Integer docOrder;
 
         /**
-         * <p>Specifies whether the document is public. Valid values: PUBLIC and PRIVATE.</p>
+         * <p>Indicates whether the document is public. Valid values: <strong>PUBLIC</strong> and <strong>PRIVATE</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>PUBLIC</p>
@@ -1245,7 +1245,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public String docShow;
 
         /**
-         * <p>The hash values that can be entered when ParameterType is set to Int, Long, Float, Double, or String. Separate different values with commas (,), such as 1,2,3,4,9 or A,B,C,E,F.</p>
+         * <p>The hash values that are supported when <strong>ParameterType</strong> is set to Int, Long, Float, Double, or String. Separate values with commas (,). Examples: 1,2,3,4,9 and A,B,C,E,F.</p>
          * 
          * <strong>example:</strong>
          * <p>boy,girl</p>
@@ -1272,7 +1272,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public String location;
 
         /**
-         * <p>The maximum parameter length when ParameterType is set to String.</p>
+         * <p>The maximum parameter length when <strong>ParameterType</strong> is set to String.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -1281,7 +1281,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public Long maxLength;
 
         /**
-         * <p>The maximum parameter value when ParameterType is set to Int, Long, Float, or Double.</p>
+         * <p>The maximum parameter value when <strong>ParameterType</strong> is set to Int, Long, Float, or Double.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -1290,7 +1290,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public Long maxValue;
 
         /**
-         * <p>The minimum parameter length when ParameterType is set to String.</p>
+         * <p>The minimum parameter length when <strong>ParameterType</strong> is set to String.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -1299,7 +1299,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public Long minLength;
 
         /**
-         * <p>The minimum parameter value when ParameterType is set to Int, Long, Float, or Double.</p>
+         * <p>The minimum parameter value when <strong>ParameterType</strong> is set to Int, Long, Float, or Double.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -1308,7 +1308,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public Long minValue;
 
         /**
-         * <p>The type of a request parameter. Valid values: String, Int, Long, Float, Double, and Boolean.</p>
+         * <p>The data type of the parameter. Valid values: String, Int, Long, Float, Double, and Boolean.</p>
          * 
          * <strong>example:</strong>
          * <p>String</p>
@@ -1317,7 +1317,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public String parameterType;
 
         /**
-         * <p>The regular expression used for parameter validation when ParameterType is set to String.</p>
+         * <p>The regular expression that is used for parameter validation when <strong>ParameterType</strong> is set to String.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -1326,7 +1326,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public String regularExpression;
 
         /**
-         * <p>Indicates whether the parameter is required. Valid values: REQUIRED and OPTIONAL.</p>
+         * <p>Indicates whether the parameter is required. Valid values: <strong>REQUIRED</strong> and <strong>OPTIONAL</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>OPTIONAL</p>
@@ -1498,7 +1498,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
 
     public static class DescribeApiHistoryResponseBodyResultDescriptionsResultDescription extends TeaModel {
         /**
-         * <p>The description.</p>
+         * <p>The subnode description.</p>
          * 
          * <strong>example:</strong>
          * <p>for_test1</p>
@@ -1507,7 +1507,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Specifies whether a subnode exists.</p>
+         * <p>Indicates whether a subnode exists.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1516,7 +1516,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public Boolean hasChild;
 
         /**
-         * <p>The ID of the result.</p>
+         * <p>The result ID.</p>
          * 
          * <strong>example:</strong>
          * <p>id</p>
@@ -1534,7 +1534,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>Specifies whether the parameter is required.</p>
+         * <p>Indicates whether the parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1543,7 +1543,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public Boolean mandatory;
 
         /**
-         * <p>The name of the result.</p>
+         * <p>The result name.</p>
          * 
          * <strong>example:</strong>
          * <p>fwqf</p>
@@ -1561,7 +1561,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public String pid;
 
         /**
-         * <p>The type of the result.</p>
+         * <p>The result type.</p>
          * 
          * <strong>example:</strong>
          * <p>String</p>
@@ -1954,7 +1954,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
 
     public static class DescribeApiHistoryResponseBodyServiceConfigMockHeadersMockHeader extends TeaModel {
         /**
-         * <p>The name of the HTTP header parameter.</p>
+         * <p>The HTTP headers.</p>
          * 
          * <strong>example:</strong>
          * <p>Content-Type</p>
@@ -1963,7 +1963,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public String headerName;
 
         /**
-         * <p>The value of the HTTP header parameter.</p>
+         * <p>The values of the HTTP headers.</p>
          * 
          * <strong>example:</strong>
          * <p>86400</p>
@@ -2498,7 +2498,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public String location;
 
         /**
-         * <p>The data type of the back-end service parameter.</p>
+         * <p>The data type of the parameter. Valid values: STRING, NUMBER, and BOOLEAN.</p>
          * 
          * <strong>example:</strong>
          * <p>String</p>
@@ -2507,7 +2507,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public String parameterType;
 
         /**
-         * <p>The name of the backend service parameter.</p>
+         * <p>The mapped parameter name in the backend service.</p>
          * 
          * <strong>example:</strong>
          * <p>clientIp</p>
@@ -2567,7 +2567,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
 
     public static class DescribeApiHistoryResponseBodyServiceParametersMapServiceParameterMap extends TeaModel {
         /**
-         * <p>The corresponding frontend parameter. It must be included in RequestParametersObject and matches ApiParameterName in RequestParameter data.</p>
+         * <p>The corresponding frontend parameter name. The value must be contained in RequestParametersObject and match RequestParam.ApiParameterName.</p>
          * 
          * <strong>example:</strong>
          * <p>sex</p>
@@ -2576,7 +2576,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public String requestParameterName;
 
         /**
-         * <p>The name of the backend service parameter.</p>
+         * <p>The mapped parameter name in the backend service.</p>
          * 
          * <strong>example:</strong>
          * <p>sex</p>
@@ -2628,7 +2628,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
 
     public static class DescribeApiHistoryResponseBodySystemParametersSystemParameter extends TeaModel {
         /**
-         * <p>The sample value of the parameter.</p>
+         * <p>The sample value.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.1</p>
@@ -2655,7 +2655,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public String location;
 
         /**
-         * <p>The name of the system parameter. Valid values: CaClientIp, CaDomain, CaRequestHandleTime, CaAppId, CaRequestId, CaHttpSchema, and CaProxy.</p>
+         * <p>The system parameter. Valid values: CaClientIp, CaDomain, CaRequestHandleTime, CaAppId, CaRequestId, CaHttpSchema, and CaProxy.</p>
          * 
          * <strong>example:</strong>
          * <p>CaClientIp</p>
@@ -2664,7 +2664,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public String parameterName;
 
         /**
-         * <p>The name of the corresponding backend parameter.</p>
+         * <p>The mapped parameter name in the backend service.</p>
          * 
          * <strong>example:</strong>
          * <p>clientIp</p>

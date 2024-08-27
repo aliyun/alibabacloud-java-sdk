@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAppAttributesResponseBody extends TeaModel {
     /**
-     * <p>The returned application information. It is an array that consists of AppAttribute data.</p>
+     * <p>The returned app information. It is an array that consists of AppAttribute data.</p>
      */
     @NameInMap("Apps")
     public DescribeAppAttributesResponseBodyApps apps;
@@ -93,7 +93,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
 
     public static class DescribeAppAttributesResponseBodyAppsAppAttributeTagsTagInfo extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>appid</p>
@@ -102,7 +102,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -154,7 +154,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
 
     public static class DescribeAppAttributesResponseBodyAppsAppAttribute extends TeaModel {
         /**
-         * <p>The application ID.</p>
+         * <p>The ID of the app.</p>
          * 
          * <strong>example:</strong>
          * <p>20112314518278</p>
@@ -163,7 +163,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
         public Long appId;
 
         /**
-         * <p>The application name.</p>
+         * <p>The name of the app.</p>
          * 
          * <strong>example:</strong>
          * <p>CreateApptest</p>
@@ -172,7 +172,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The creation time (UTC) of the application.</p>
+         * <p>The creation time (UTC) of the app.</p>
          * 
          * <strong>example:</strong>
          * <p>2016-07-31T04:10:19Z</p>
@@ -181,7 +181,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
         public String createdTime;
 
         /**
-         * <p>The application description.</p>
+         * <p>The description of the app.</p>
          * 
          * <strong>example:</strong>
          * <p>App test</p>
@@ -190,7 +190,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The extended information.</p>
+         * <p>扩展信息</p>
          * 
          * <strong>example:</strong>
          * <p>110461946884</p>
@@ -199,7 +199,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
         public String extend;
 
         /**
-         * <p>The modification time (UTC) of the application.</p>
+         * <p>The modification time (UTC) of the app.</p>
          * 
          * <strong>example:</strong>
          * <p>2016-07-31T04:10:19Z</p>

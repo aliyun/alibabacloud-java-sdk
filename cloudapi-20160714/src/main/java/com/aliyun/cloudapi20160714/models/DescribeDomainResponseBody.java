@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainResponseBody extends TeaModel {
     /**
-     * <p>The certificate content.</p>
+     * <p>The content of the certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -23,7 +23,7 @@ public class DescribeDomainResponseBody extends TeaModel {
     public String certificateId;
 
     /**
-     * <p>The SSL certificate name.</p>
+     * <p>The name of the SSL certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>myCertificate</p>
@@ -41,7 +41,7 @@ public class DescribeDomainResponseBody extends TeaModel {
     public String certificatePrivateKey;
 
     /**
-     * <p>The time when the certificate expires. The value is a timestamp. Unit: milliseconds.</p>
+     * <p>证书失效时间戳（毫秒）</p>
      * 
      * <strong>example:</strong>
      * <p>1704038400000</p>
@@ -50,7 +50,7 @@ public class DescribeDomainResponseBody extends TeaModel {
     public Long certificateValidEnd;
 
     /**
-     * <p>The time when the certificate takes effect. The value is a timestamp. Unit: milliseconds.</p>
+     * <p>证书生效时间戳（毫秒）</p>
      * 
      * <strong>example:</strong>
      * <p>1672502400000</p>
@@ -61,8 +61,8 @@ public class DescribeDomainResponseBody extends TeaModel {
     /**
      * <p>The binding status of the custom domain name. Valid values:</p>
      * <ul>
-     * <li>BINDING: The domain name is bound to the API group.</li>
-     * <li>BOUND: The domain name is not bound to the API group.</li>
+     * <li>BINDING: The domain name has been bound.</li>
+     * <li>BOUND: The domain name has not been bound.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DescribeDomainResponseBody extends TeaModel {
      * <p>The validity status of the domain name. Valid values:</p>
      * <ul>
      * <li>NORMAL</li>
-     * <li>ABNORMAL: This status affects API calls and must be rectified as soon as possible.</li>
+     * <li>ABNORMAL: This status affects API calls and must be resolved as soon as possible.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -110,7 +110,7 @@ public class DescribeDomainResponseBody extends TeaModel {
      * <p>Remarks about the domain name, such as the cause of an exception.</p>
      * 
      * <strong>example:</strong>
-     * <p>The status of the domain name that uses WebSocket.</p>
+     * <p>The domain name does not have an ICP filing.</p>
      */
     @NameInMap("DomainRemark")
     public String domainRemark;
@@ -134,7 +134,7 @@ public class DescribeDomainResponseBody extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6EF60BEC-0242-43AF-BB20-270359FB54A7</p>

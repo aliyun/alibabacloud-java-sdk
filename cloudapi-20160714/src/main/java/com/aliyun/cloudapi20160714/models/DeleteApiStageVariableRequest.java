@@ -18,7 +18,7 @@ public class DeleteApiStageVariableRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The ID of the runtime environment.</p>
+     * <p>The ID of the environment.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
