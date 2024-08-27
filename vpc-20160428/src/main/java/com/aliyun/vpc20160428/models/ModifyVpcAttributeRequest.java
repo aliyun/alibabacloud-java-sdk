@@ -27,6 +27,9 @@ public class ModifyVpcAttributeRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("EnableDnsHostname")
+    public Boolean enableDnsHostname;
+
     /**
      * <p>Specifies whether to enable IPv6 CIDR blocks. Valid values:</p>
      * <ul>
@@ -128,6 +131,14 @@ public class ModifyVpcAttributeRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ModifyVpcAttributeRequest setEnableDnsHostname(Boolean enableDnsHostname) {
+        this.enableDnsHostname = enableDnsHostname;
+        return this;
+    }
+    public Boolean getEnableDnsHostname() {
+        return this.enableDnsHostname;
     }
 
     public ModifyVpcAttributeRequest setEnableIPv6(Boolean enableIPv6) {

@@ -53,6 +53,9 @@ public class CreateVpcRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    @NameInMap("EnableDnsHostname")
+    public Boolean enableDnsHostname;
+
     /**
      * <p>Specifies whether to enable IPv6. Valid values:</p>
      * <ul>
@@ -199,6 +202,14 @@ public class CreateVpcRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public CreateVpcRequest setEnableDnsHostname(Boolean enableDnsHostname) {
+        this.enableDnsHostname = enableDnsHostname;
+        return this;
+    }
+    public Boolean getEnableDnsHostname() {
+        return this.enableDnsHostname;
     }
 
     public CreateVpcRequest setEnableIpv6(Boolean enableIpv6) {

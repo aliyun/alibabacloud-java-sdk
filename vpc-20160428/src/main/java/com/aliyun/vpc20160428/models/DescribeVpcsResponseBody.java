@@ -378,6 +378,9 @@ public class DescribeVpcsResponseBody extends TeaModel {
         @NameInMap("DhcpOptionsSetStatus")
         public String dhcpOptionsSetStatus;
 
+        @NameInMap("DnsHostnameStatus")
+        public String dnsHostnameStatus;
+
         @NameInMap("EnabledIpv6")
         public Boolean enabledIpv6;
 
@@ -564,6 +567,14 @@ public class DescribeVpcsResponseBody extends TeaModel {
         }
         public String getDhcpOptionsSetStatus() {
             return this.dhcpOptionsSetStatus;
+        }
+
+        public DescribeVpcsResponseBodyVpcsVpc setDnsHostnameStatus(String dnsHostnameStatus) {
+            this.dnsHostnameStatus = dnsHostnameStatus;
+            return this;
+        }
+        public String getDnsHostnameStatus() {
+            return this.dnsHostnameStatus;
         }
 
         public DescribeVpcsResponseBodyVpcsVpc setEnabledIpv6(Boolean enabledIpv6) {
