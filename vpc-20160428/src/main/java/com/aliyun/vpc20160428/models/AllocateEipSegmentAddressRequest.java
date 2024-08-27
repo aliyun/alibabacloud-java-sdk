@@ -53,7 +53,7 @@ public class AllocateEipSegmentAddressRequest extends TeaModel {
     public String eipMask;
 
     /**
-     * <p>The metering method of the contiguous EIP group. Valid values:</p>
+     * <p>The metering method of contiguous EIPs. Valid values:</p>
      * <ul>
      * <li><strong>PayByBandwidth</strong> (default)</li>
      * <li><strong>PayByTraffic</strong></li>
