@@ -4897,6 +4897,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("endTime", request.endTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("pageSize", request.pageSize);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.serviceGroupName)) {
             body.put("serviceGroupName", request.serviceGroupName);
         }

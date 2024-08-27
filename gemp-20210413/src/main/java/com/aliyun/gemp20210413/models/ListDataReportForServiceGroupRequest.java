@@ -11,6 +11,12 @@ public class ListDataReportForServiceGroupRequest extends TeaModel {
     @NameInMap("endTime")
     public String endTime;
 
+    @NameInMap("pageNumber")
+    public Long pageNumber;
+
+    @NameInMap("pageSize")
+    public Long pageSize;
+
     /**
      * <strong>example:</strong>
      * <p>A服务组</p>
@@ -36,6 +42,22 @@ public class ListDataReportForServiceGroupRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public ListDataReportForServiceGroupRequest setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListDataReportForServiceGroupRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
     public ListDataReportForServiceGroupRequest setServiceGroupName(String serviceGroupName) {
