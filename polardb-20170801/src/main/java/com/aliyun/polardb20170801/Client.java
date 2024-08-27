@@ -4938,6 +4938,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBEndpointId", request.DBEndpointId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.DBNodeId)) {
+            query.put("DBNodeId", request.DBNodeId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("EndTime", request.endTime);
         }
