@@ -171,6 +171,9 @@ public class ListTerminalsResponseBody extends TeaModel {
         @NameInMap("LocationInfo")
         public String locationInfo;
 
+        @NameInMap("ManageTime")
+        public String manageTime;
+
         /**
          * <strong>example:</strong>
          * <p>US01</p>
@@ -198,6 +201,9 @@ public class ListTerminalsResponseBody extends TeaModel {
          */
         @NameInMap("SerialNumber")
         public String serialNumber;
+
+        @NameInMap("SetPasswordFreeLoginUserTime")
+        public String setPasswordFreeLoginUserTime;
 
         /**
          * <strong>example:</strong>
@@ -274,6 +280,14 @@ public class ListTerminalsResponseBody extends TeaModel {
             return this.locationInfo;
         }
 
+        public ListTerminalsResponseBodyData setManageTime(String manageTime) {
+            this.manageTime = manageTime;
+            return this;
+        }
+        public String getManageTime() {
+            return this.manageTime;
+        }
+
         public ListTerminalsResponseBodyData setModel(String model) {
             this.model = model;
             return this;
@@ -304,6 +318,14 @@ public class ListTerminalsResponseBody extends TeaModel {
         }
         public String getSerialNumber() {
             return this.serialNumber;
+        }
+
+        public ListTerminalsResponseBodyData setSetPasswordFreeLoginUserTime(String setPasswordFreeLoginUserTime) {
+            this.setPasswordFreeLoginUserTime = setPasswordFreeLoginUserTime;
+            return this;
+        }
+        public String getSetPasswordFreeLoginUserTime() {
+            return this.setPasswordFreeLoginUserTime;
         }
 
         public ListTerminalsResponseBodyData setTerminalGroupId(String terminalGroupId) {
