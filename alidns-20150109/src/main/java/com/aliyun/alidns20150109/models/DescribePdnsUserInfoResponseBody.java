@@ -38,6 +38,9 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
         @NameInMap("PdnsId")
         public Long pdnsId;
 
+        @NameInMap("SecretKey")
+        public String secretKey;
+
         @NameInMap("ServiceType")
         public String serviceType;
 
@@ -69,6 +72,14 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
         }
         public Long getPdnsId() {
             return this.pdnsId;
+        }
+
+        public DescribePdnsUserInfoResponseBodyUserInfo setSecretKey(String secretKey) {
+            this.secretKey = secretKey;
+            return this;
+        }
+        public String getSecretKey() {
+            return this.secretKey;
         }
 
         public DescribePdnsUserInfoResponseBodyUserInfo setServiceType(String serviceType) {

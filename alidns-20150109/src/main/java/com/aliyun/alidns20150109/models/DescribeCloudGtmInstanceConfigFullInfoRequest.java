@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudGtmInstanceConfigFullInfoRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh-CN: Chinese</li>
+     * <li>en-US (default): English</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>en-US</p>
      */
@@ -12,6 +18,8 @@ public class DescribeCloudGtmInstanceConfigFullInfoRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
      */
@@ -19,6 +27,9 @@ public class DescribeCloudGtmInstanceConfigFullInfoRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The configuration ID of the access domain name. Two configuration IDs exist when the access domain name is bound to the same GTM instance but an A record and an AAAA record are configured for the access domain name. The configuration ID uniquely identifies a configuration.</p>
+     * <p>You can call the <a href="~~ListCloudGtmInstanceConfigs~~">ListCloudGtmInstanceConfigs</a> operation to query the value of ConfigId for the access domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>Config-000**11</p>
      */
@@ -26,6 +37,8 @@ public class DescribeCloudGtmInstanceConfigFullInfoRequest extends TeaModel {
     public String configId;
 
     /**
+     * <p>The ID of the GTM 3.0 instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>gtm-cn-wwo3a3hbz**</p>
      */
