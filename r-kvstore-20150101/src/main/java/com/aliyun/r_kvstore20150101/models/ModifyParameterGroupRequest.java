@@ -49,6 +49,7 @@ public class ModifyParameterGroupRequest extends TeaModel {
      * <li>The name can contain letters, digits, and underscores (_). It must start with a letter and cannot contain Chinese characters.</li>
      * <li>The name can be 8 to 64 characters in length.</li>
      * </ul>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>testGroupName</p>

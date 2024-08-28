@@ -58,10 +58,8 @@ public class CreateInstanceRequest extends TeaModel {
     public String autoUseCoupon;
 
     /**
-     * <p>The ID of the backup file of the original instance. If you want to create an instance based on a backup file of a specified instance, you can specify this parameter after you specify the <strong>SrcDBInstanceId</strong> parameter. Then, the system creates an instance based on the backup file that is specified by this parameter. You can call the <a href="https://help.aliyun.com/document_detail/61081.html">DescribeBackups</a> operation to query the IDs of backup files.</p>
-     * <blockquote>
-     * <p>After you specify the <strong>SrcDBInstanceId</strong> parameter, you must use the <strong>BackupId</strong> or <strong>RestoreTime</strong> parameter to specify the backup file.</p>
-     * </blockquote>
+     * <p>If your instance is a cloud-native cluster instance, we recommend that you use <a href="https://help.aliyun.com/document_detail/2679158.html">DescribeClusterBackupList</a> to query the backup set ID of the cluster instance, such as cb-xx. Then, set the ClusterBackupId request parameter to the backup set ID to clone the cluster instance. This eliminates the need to specify the backup set ID of each shard.</p>
+     * <p>You can set the BackupId parameter to the backup set ID of the source instance. The system uses the data stored in the backup set to create an instance. You can call the <a href="https://help.aliyun.com/document_detail/61081.html">DescribeBackups</a> operation to query backup set IDs. If the source instance is a cluster instance, set the BackupId parameter to the backup set IDs of all shards of the source instance, separated by commas (,). Example: &quot;10\<em>\</em>,11\<em>\</em>,15\<em>\</em>&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>111111111</p>
@@ -104,7 +102,11 @@ public class CreateInstanceRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The backup set ID.</p>
+     * <p>This parameter is supported for specific new cluster instances. You can query the backup set ID by using the <a href="https://help.aliyun.com/document_detail/2679158.html">DescribeClusterBackupList</a> operation.</p>
+     * <ul>
+     * <li>If this parameter is supported, you can specify the backup set ID. In this case, you do not need to specify the <strong>BackupId</strong> parameter.</li>
+     * <li>If this parameter is not supported, set the BackupId parameter to the IDs of backup sets for all shards of the source instance, separated by commas (,). Example: &quot;2158\<em>\</em>\<em>\<em>20,2158\</em>\</em>\*\*22&quot;.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>cb-hyxdof5x9kqbtust</p>
@@ -153,9 +155,20 @@ public class CreateInstanceRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The database engine version of the instance. Valid values: <strong>4.0</strong>, <strong>5.0</strong>, <strong>6.0</strong>, and <strong>7.0</strong>.</p>
+     * <p>The engine version. Valid values for <strong>classic instances</strong>:</p>
+     * <ul>
+     * <li><strong>2.8</strong> (not recommended due to <a href="https://help.aliyun.com/document_detail/2674657.html">scheduled EOFS</a>)</li>
+     * <li><strong>4.0</strong> (not recommended)</li>
+     * <li><strong>5.0</strong></li>
+     * </ul>
+     * <p>Valid values for <strong>cloud-native instances</strong>:</p>
+     * <ul>
+     * <li><strong>5.0</strong></li>
+     * <li><strong>6.0</strong> (recommended)</li>
+     * <li><strong>7.0</strong></li>
+     * </ul>
      * <blockquote>
-     * <p>The default value is <strong>5.0</strong>.</p>
+     * <p> The default value is <strong>5.0</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -322,7 +335,10 @@ public class CreateInstanceRequest extends TeaModel {
     public String privateIpAddress;
 
     /**
-     * <p>The number of read-only nodes in the instance. This parameter is available only if you create a read/write splitting instance that uses cloud disks. Valid values: 1 to 5.</p>
+     * <p>The number of read replicas in the primary zone. This parameter applies only to read/write splitting instances that use cloud disks. You can use this parameter to customize the number of read replicas. Valid values: 1 to 9.</p>
+     * <blockquote>
+     * <p> The sum of the values of this parameter and SlaveReadOnlyCount cannot be greater than 9.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -359,10 +375,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The point in time at which the specified original instance is backed up. The point in time must be within the retention period of backup files of the original instance. If you want to create an instance based on a backup file of a specified instance, you can set this parameter to specify a point in time after you set the <strong>SrcDBInstanceId</strong> parameter. Then, the system creates an instance based on the backup file that was created at the specified point in time for the original instance. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
-     * <blockquote>
-     * <p>After you specify the <strong>SrcDBInstanceId</strong> parameter, you must use the <strong>BackupId</strong> or <strong>RestoreTime</strong> parameter to specify the backup file.</p>
-     * </blockquote>
+     * <p>If data flashback is enabled for the source instance, you can use this parameter to specify a point in time within the backup retention period of the source instance. The system uses the backup data of the source instance at the point in time to create an instance. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-06-19T16:00:00Z</p>
@@ -397,11 +410,23 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("ShardCount")
     public Integer shardCount;
 
+    /**
+     * <p>The number of read replicas in the secondary zone. This parameter is used to create a read/write splitting instance that is deployed across multiple zones. The sum of the values of this parameter and ReadOnlyCount cannot be greater than 9.</p>
+     * <blockquote>
+     * <p>When you create a multi-zone read/write splitting instance, you must specify both SlaveReadOnlyCount and SecondaryZoneId.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("SlaveReadOnlyCount")
     public Integer slaveReadOnlyCount;
 
     /**
-     * <p>The ID of the original instance. If you want to create an instance based on a backup file of a specified instance, you can specify this parameter and use the <strong>BackupId</strong> or <strong>RestoreTime</strong> parameter to specify the backup file.</p>
+     * <p>If you want to create an instance based on the backup set of an existing instance, set this parameter to the ID of the source instance.</p>
+     * <blockquote>
+     * <p> After you specify the SrcDBInstanceId parameter, use the <strong>BackupId</strong>, <strong>ClusterBackupId</strong> (recommended for cloud-native cluster instances), or <strong>RestoreTime</strong> parameter to specify the backup set or the specific point in time that you want to use to create an instance. The SrcDBInstanceId parameter must be used in combination with one of the preceding three parameters.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>r-bp1zxszhcgatnx****</p>

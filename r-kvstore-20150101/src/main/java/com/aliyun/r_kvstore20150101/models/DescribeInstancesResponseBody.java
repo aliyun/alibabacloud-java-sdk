@@ -208,6 +208,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("CloudType")
         public String cloudType;
 
+        @NameInMap("ComputingType")
+        public String computingType;
+
         /**
          * <p>The parameter configurations of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/43885.html">Modify parameters of an instance</a>.</p>
          * 
@@ -619,6 +622,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getCloudType() {
             return this.cloudType;
+        }
+
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setComputingType(String computingType) {
+            this.computingType = computingType;
+            return this;
+        }
+        public String getComputingType() {
+            return this.computingType;
         }
 
         public DescribeInstancesResponseBodyInstancesKVStoreInstance setConfig(String config) {

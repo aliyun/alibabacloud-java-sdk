@@ -7,8 +7,8 @@ public class DescribeParameterGroupSupportParamRequest extends TeaModel {
     /**
      * <p>The service category. Valid values:</p>
      * <ul>
-     * <li><strong>standard</strong>: Community Edition</li>
-     * <li><strong>enterprise</strong>: Enhanced Edition (Tair)</li>
+     * <li><strong>standard</strong>: ApsaraDB for Redis Community Edition</li>
+     * <li><strong>enterprise</strong>: ApsaraDB for Redis Enhanced Edition (Tair)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,9 +20,9 @@ public class DescribeParameterGroupSupportParamRequest extends TeaModel {
     /**
      * <p>The engine type. Valid values:</p>
      * <ul>
-     * <li><strong>redis</strong>: Redis or Tair DRAM-based instances</li>
-     * <li><strong>tair_pena</strong>: Tair persistent memory-optimized instances</li>
-     * <li><strong>tair_pdb</strong>: Tair ESSD-based instances</li>
+     * <li><strong>redis</strong>: ApsaraDB for Redis Community Edition instance or Tair DRAM-based instance</li>
+     * <li><strong>tair_pena</strong>: Tair persistent memory-optimized instance</li>
+     * <li><strong>tair_pdb</strong>: Tair ESSD/SSD-based instance</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,13 @@ public class DescribeParameterGroupSupportParamRequest extends TeaModel {
     public String engineType;
 
     /**
-     * <p>The engine version.</p>
+     * <p>The compatible engine version. Valid values:</p>
+     * <ul>
+     * <li>For ApsaraDB for Redis Community Edition instances, set the parameter to <strong>5.0</strong>, <strong>6.0</strong>, or <strong>7.0</strong>.</li>
+     * <li>For Tair DRAM-based instances that are compatible with Redis 5.0 or Redis 6.0, set the parameter to <strong>5.0</strong> or <strong>6.0</strong>.</li>
+     * <li>For Tair persistent memory-optimized instances that are compatible with Redis 6.0, set the parameter to <strong>1.0</strong>.</li>
+     * <li>For Tair ESSD-based instances that are compatible with Redis 6.0, set the parameter to <strong>1.0</strong>. For Tair SSD-based instances that are compatible with Redis 6.0, set the parameter to <strong>2.0</strong>.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

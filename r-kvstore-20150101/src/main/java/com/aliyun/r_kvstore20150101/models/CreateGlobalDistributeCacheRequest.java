@@ -4,6 +4,16 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class CreateGlobalDistributeCacheRequest extends TeaModel {
+    /**
+     * <p>The time when you want to restart the instance. Default value: Immediately. Valid values:</p>
+     * <ul>
+     * <li><strong>Immediately</strong>: immediately restarts the instance.</li>
+     * <li><strong>MaintainTime</strong>: restarts the instance during the maintenance window.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Immediately</p>
+     */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 

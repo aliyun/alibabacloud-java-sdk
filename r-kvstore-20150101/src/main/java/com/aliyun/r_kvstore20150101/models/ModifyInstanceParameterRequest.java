@@ -33,6 +33,12 @@ public class ModifyInstanceParameterRequest extends TeaModel {
     @NameInMap("Parameters")
     public String parameters;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -85,6 +91,14 @@ public class ModifyInstanceParameterRequest extends TeaModel {
     }
     public String getParameters() {
         return this.parameters;
+    }
+
+    public ModifyInstanceParameterRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifyInstanceParameterRequest setResourceOwnerAccount(String resourceOwnerAccount) {

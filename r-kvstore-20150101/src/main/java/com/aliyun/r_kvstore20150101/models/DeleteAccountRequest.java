@@ -39,6 +39,9 @@ public class DeleteAccountRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("SourceBiz")
+    public String sourceBiz;
+
     public static DeleteAccountRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteAccountRequest self = new DeleteAccountRequest();
         return TeaModel.build(map, self);
@@ -98,6 +101,14 @@ public class DeleteAccountRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public DeleteAccountRequest setSourceBiz(String sourceBiz) {
+        this.sourceBiz = sourceBiz;
+        return this;
+    }
+    public String getSourceBiz() {
+        return this.sourceBiz;
     }
 
 }

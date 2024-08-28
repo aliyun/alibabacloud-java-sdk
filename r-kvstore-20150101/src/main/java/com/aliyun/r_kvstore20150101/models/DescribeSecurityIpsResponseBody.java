@@ -64,9 +64,6 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
 
         /**
          * <p>The IP addresses in the whitelist. A maximum of 1,000 IP addresses can be specified in a whitelist.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100.100.202.<em><strong>/24,10.10.10.</strong></em></p>
          */
         @NameInMap("SecurityIpList")
         public String securityIpList;

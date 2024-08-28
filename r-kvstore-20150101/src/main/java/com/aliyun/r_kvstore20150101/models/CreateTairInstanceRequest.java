@@ -14,10 +14,10 @@ public class CreateTairInstanceRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable auto-renewal for the instance. Default value: false. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: enables auto-renewal.</li>
-     * <li><strong>false</strong>: disables auto-renewal.</li>
+     * <li><strong>false</strong> (default): disables auto-renewal.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,9 +27,9 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String autoRenew;
 
     /**
-     * <p>The subscription duration that is supported by auto-renewal. Unit: months. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>6</strong>, and <strong>12</strong>.</p>
+     * <p>The subscription duration that is supported by auto-renewal. Unit: month. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>6</strong>, and <strong>12</strong>.</p>
      * <blockquote>
-     * <p>This parameter is required only if the <strong>AutoRenew</strong> parameter is set to <strong>true</strong>.</p>
+     * <p> This parameter is required if the <strong>AutoRenew</strong> parameter is set to <strong>true</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,10 +39,10 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String autoRenewPeriod;
 
     /**
-     * <p>Specifies whether to use a coupon. Default value: false. Valid values:</p>
+     * <p>Specifies whether to use a coupon. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: uses a coupon.</li>
-     * <li><strong>false</strong>: does not use a coupon.</li>
+     * <li><strong>false</strong> (default): does not use a coupon.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,8 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String autoUseCoupon;
 
     /**
-     * <p>The ID of the backup set of the source instance. The system uses the data stored in the backup set to create an instance. You can call the <a href="https://help.aliyun.com/document_detail/61081.html">DescribeBackups</a> operation to query the backup set ID.</p>
+     * <p>If your instance is a cloud-native cluster instance, we recommend that you use <a href="https://help.aliyun.com/document_detail/2679158.html">DescribeClusterBackupList</a> to query the backup set ID of the cluster instance, such as cb-xx. Then, set the ClusterBackupId request parameter to the backup set ID to clone the cluster instance. This eliminates the need to specify the backup set ID of each shard.</p>
+     * <p>You can set the BackupId parameter to the backup set ID of the source instance. The system uses the data stored in the backup set to create an instance. You can call the <a href="https://help.aliyun.com/document_detail/61081.html">DescribeBackups</a> operation to query backup set IDs. If the source instance is a cluster instance, set the BackupId parameter to the backup set IDs of all shards of the source instance, separated by commas (,). Example: &quot;10\<em>\</em>,11\<em>\</em>,15\<em>\</em>&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>11111111</p>
@@ -70,10 +71,10 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String businessInfo;
 
     /**
-     * <p>The billing method of the instance. Default value: PrePaid. Valid values:</p>
+     * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li><strong>PrePaid</strong>: subscription</li>
-     * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+     * <li><strong>PrePaid</strong> (default): subscription</li>
+     * <li><strong>PostPaid:</strong> pay-as-you-go</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,7 +115,7 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String couponNo;
 
     /**
-     * <p>Specifies whether to perform a dry run. Default value: false. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: performs a dry run and does not create the instance. The system prechecks the request parameters, request format, service limits, and available resources. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
      * <li><strong>false</strong>: performs a dry run and sends the request. If the request passes the dry run, the instance is created.</li>
@@ -127,11 +128,11 @@ public class CreateTairInstanceRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The engine version. Default value: <strong>1.0</strong>. The parameter value varies with the Tair instance type.</p>
+     * <p>The database engine version. Default value: <strong>1.0</strong>. The parameter value varies based on the Tair instance series.</p>
      * <ul>
-     * <li>For Tair DRAM-based instances (tair_rdb) that are compatible with Redis 5.0 or 6.0, set this parameter to 5.0 or 6.0.</li>
-     * <li>For Tair persistent memory-optimized instances (tair_scm) that are compatible with Redis 6.0, set this parameter to 1.0.</li>
-     * <li>For Tair ESSD-based instances (tair_essd) that are compatible with Redis 4.0 or 6.0, set this parameter to 1.0 or 2.0.</li>
+     * <li>For Tair DRAM-based instances (tair_rdb) that are compatible with Redis 5.0 or 6.0, set this parameter to <strong>5.0</strong> or <strong>6.0</strong>.</li>
+     * <li>For Tair persistent memory-optimized instances (tair_scm) that are compatible with Redis 6.0, set this parameter to <strong>1.0</strong>.</li>
+     * <li>For Tair ESSD/SSD-based instances (tair_essd) that are compatible with Redis 6.0, set this parameter to <strong>1.0</strong> to create an ESSD-based instance, and set this parameter to <strong>2.0</strong> to create an SSD-based instance.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -195,11 +196,11 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The storage type of the instance. Valid values:</p>
+     * <p>The instance series. Valid values:</p>
      * <ul>
-     * <li><strong>tair_rdb</strong>: ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance</li>
-     * <li><strong>tair_scm</strong>: ApsaraDB for Redis Enhanced Edition (Tair) persistent memory-optimized instance</li>
-     * <li><strong>tair_essd</strong>: ApsaraDB for Redis Enhanced Edition (Tair) ESSD-based instance</li>
+     * <li><strong>tair_rdb</strong>: Tair DRAM-based instance</li>
+     * <li><strong>tair_scm</strong>: Tair persistent memory-optimized instance</li>
+     * <li><strong>tair_essd</strong>: ESSD/SSD-based instance</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -250,7 +251,7 @@ public class CreateTairInstanceRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The port number of the instance. Valid values: <strong>1024</strong> to <strong>65535</strong>. Default value: <strong>6379</strong>.</p>
+     * <p>The service port number of the instance. Valid values: 1024 to 65535. Default value: 6379.</p>
      * 
      * <strong>example:</strong>
      * <p>6379</p>
@@ -349,7 +350,7 @@ public class CreateTairInstanceRequest extends TeaModel {
      * <li><strong>2</strong> to <strong>32</strong>: You can create a <a href="https://help.aliyun.com/document_detail/52228.html">cluster instance</a> that contains the specified number of data nodes.</li>
      * </ul>
      * <blockquote>
-     * <p> When the <strong>InstanceType</strong> parameter is set to <strong>tair_rdb</strong> or <strong>tair_scm</strong>, this parameter can be set to <strong>2</strong> to <strong>32</strong>. Only DRAM-based and persistent memory-optimized instances support the cluster architecture.</p>
+     * <p> When the <strong>InstanceType</strong> parameter is set to <strong>tair_rdb</strong> or <strong>tair_scm</strong>, this parameter can be set to a value in the range of <strong>2</strong> to <strong>32</strong>. Only DRAM-based and persistent memory-optimized instances support the cluster architecture.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -359,10 +360,10 @@ public class CreateTairInstanceRequest extends TeaModel {
     public Integer shardCount;
 
     /**
-     * <p>The data shard type of the instance. Default value: MASTER_SLAVE. Valid values:</p>
+     * <p>The shard type of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>MASTER_SLAVE</strong>: runs in a master-replica architecture that provides high availability.</li>
-     * <li><strong>STAND_ALONE</strong>: runs in a standalone architecture. If the only node fails, the system creates a new instance and switches the workloads to the new instance. This may cause data loss. You can set this parameter to this value only if the instance uses the <strong>single-zone</strong> deployment type. If you set this parameter to this value, you cannot create cluster or read/write splitting instances.</li>
+     * <li><strong>MASTER_SLAVE</strong> (default): runs in a master-replica architecture that provides high availability.</li>
+     * <li><strong>STAND_ALONE</strong>: runs in a standalone architecture. If the only node fails, the system creates a new instance and switches the workloads to the new instance. This may cause data loss. You can set the ShardType parameter to this value only if the instance uses the <strong>single-zone</strong> deployment mode. If you set the ShardType parameter to this value, you cannot create cluster or read/write splitting instances.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -386,7 +387,7 @@ public class CreateTairInstanceRequest extends TeaModel {
     /**
      * <p>If you want to create an instance based on the backup set of an existing instance, set this parameter to the ID of the source instance.</p>
      * <blockquote>
-     * <p> Then, you can use the <strong>BackupId</strong>, <strong>ClusterBackupId</strong>, or <strong>RestoreTime</strong> parameter to specify the backup set that you want to use or the point in time. This parameter must be used in combination with one of the preceding three parameters.</p>
+     * <p> After you specify the SrcDBInstanceId parameter, use the <strong>BackupId</strong>, <strong>ClusterBackupId</strong> (recommended for cloud-native cluster instances), or <strong>RestoreTime</strong> parameter to specify the backup set or the specific point in time that you want to use to create an instance. The SrcDBInstanceId parameter must be used in combination with one of the preceding three parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -408,10 +409,17 @@ public class CreateTairInstanceRequest extends TeaModel {
     public Integer storage;
 
     /**
-     * <p>The storage type of the instance. Set the value to <strong>essd_pl1</strong>.</p>
+     * <p>The storage type. Example values: <strong>essd_pl1</strong>, <strong>essd_pl2</strong>, and <strong>essd_pl3</strong>.</p>
      * <blockquote>
-     * <p>This parameter is available only if the <strong>InstanceType</strong> parameter is set to <strong>tair_essd</strong>.</p>
+     * <p> This parameter is required only when you set the <strong>InstanceType</strong> parameter to <strong>tair_essd</strong> to create an ESSD-based instance.</p>
      * </blockquote>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>essd_pl0</li>
+     * <li>essd_pl1</li>
+     * <li>essd_pl2</li>
+     * <li>essd_pl3</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>essd_pl1</p>

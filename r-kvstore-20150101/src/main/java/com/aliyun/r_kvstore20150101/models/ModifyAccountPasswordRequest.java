@@ -62,6 +62,9 @@ public class ModifyAccountPasswordRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("SourceBiz")
+    public String sourceBiz;
+
     public static ModifyAccountPasswordRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyAccountPasswordRequest self = new ModifyAccountPasswordRequest();
         return TeaModel.build(map, self);
@@ -137,6 +140,14 @@ public class ModifyAccountPasswordRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public ModifyAccountPasswordRequest setSourceBiz(String sourceBiz) {
+        this.sourceBiz = sourceBiz;
+        return this;
+    }
+    public String getSourceBiz() {
+        return this.sourceBiz;
     }
 
 }
