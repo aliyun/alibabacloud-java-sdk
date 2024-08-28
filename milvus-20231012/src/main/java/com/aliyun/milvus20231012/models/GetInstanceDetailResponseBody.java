@@ -332,6 +332,124 @@ public class GetInstanceDetailResponseBody extends TeaModel {
 
     }
 
+    public static class GetInstanceDetailResponseBodyDataMeasureConfig extends TeaModel {
+        @NameInMap("DataNodeCuNum")
+        public Integer dataNodeCuNum;
+
+        @NameInMap("DataNodeReplica")
+        public Integer dataNodeReplica;
+
+        @NameInMap("IndexNodeCuNum")
+        public Integer indexNodeCuNum;
+
+        @NameInMap("IndexNodeReplica")
+        public Integer indexNodeReplica;
+
+        @NameInMap("MixCoodinatorNodeCuNum")
+        public Integer mixCoodinatorNodeCuNum;
+
+        @NameInMap("MixCoodinatorNodeReplica")
+        public Integer mixCoodinatorNodeReplica;
+
+        @NameInMap("ProxyNodeCuNum")
+        public Integer proxyNodeCuNum;
+
+        @NameInMap("ProxyNodeReplica")
+        public Integer proxyNodeReplica;
+
+        @NameInMap("QueryNodeCuNum")
+        public Integer queryNodeCuNum;
+
+        @NameInMap("QueryNodeReplica")
+        public Integer queryNodeReplica;
+
+        public static GetInstanceDetailResponseBodyDataMeasureConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceDetailResponseBodyDataMeasureConfig self = new GetInstanceDetailResponseBodyDataMeasureConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceDetailResponseBodyDataMeasureConfig setDataNodeCuNum(Integer dataNodeCuNum) {
+            this.dataNodeCuNum = dataNodeCuNum;
+            return this;
+        }
+        public Integer getDataNodeCuNum() {
+            return this.dataNodeCuNum;
+        }
+
+        public GetInstanceDetailResponseBodyDataMeasureConfig setDataNodeReplica(Integer dataNodeReplica) {
+            this.dataNodeReplica = dataNodeReplica;
+            return this;
+        }
+        public Integer getDataNodeReplica() {
+            return this.dataNodeReplica;
+        }
+
+        public GetInstanceDetailResponseBodyDataMeasureConfig setIndexNodeCuNum(Integer indexNodeCuNum) {
+            this.indexNodeCuNum = indexNodeCuNum;
+            return this;
+        }
+        public Integer getIndexNodeCuNum() {
+            return this.indexNodeCuNum;
+        }
+
+        public GetInstanceDetailResponseBodyDataMeasureConfig setIndexNodeReplica(Integer indexNodeReplica) {
+            this.indexNodeReplica = indexNodeReplica;
+            return this;
+        }
+        public Integer getIndexNodeReplica() {
+            return this.indexNodeReplica;
+        }
+
+        public GetInstanceDetailResponseBodyDataMeasureConfig setMixCoodinatorNodeCuNum(Integer mixCoodinatorNodeCuNum) {
+            this.mixCoodinatorNodeCuNum = mixCoodinatorNodeCuNum;
+            return this;
+        }
+        public Integer getMixCoodinatorNodeCuNum() {
+            return this.mixCoodinatorNodeCuNum;
+        }
+
+        public GetInstanceDetailResponseBodyDataMeasureConfig setMixCoodinatorNodeReplica(Integer mixCoodinatorNodeReplica) {
+            this.mixCoodinatorNodeReplica = mixCoodinatorNodeReplica;
+            return this;
+        }
+        public Integer getMixCoodinatorNodeReplica() {
+            return this.mixCoodinatorNodeReplica;
+        }
+
+        public GetInstanceDetailResponseBodyDataMeasureConfig setProxyNodeCuNum(Integer proxyNodeCuNum) {
+            this.proxyNodeCuNum = proxyNodeCuNum;
+            return this;
+        }
+        public Integer getProxyNodeCuNum() {
+            return this.proxyNodeCuNum;
+        }
+
+        public GetInstanceDetailResponseBodyDataMeasureConfig setProxyNodeReplica(Integer proxyNodeReplica) {
+            this.proxyNodeReplica = proxyNodeReplica;
+            return this;
+        }
+        public Integer getProxyNodeReplica() {
+            return this.proxyNodeReplica;
+        }
+
+        public GetInstanceDetailResponseBodyDataMeasureConfig setQueryNodeCuNum(Integer queryNodeCuNum) {
+            this.queryNodeCuNum = queryNodeCuNum;
+            return this;
+        }
+        public Integer getQueryNodeCuNum() {
+            return this.queryNodeCuNum;
+        }
+
+        public GetInstanceDetailResponseBodyDataMeasureConfig setQueryNodeReplica(Integer queryNodeReplica) {
+            this.queryNodeReplica = queryNodeReplica;
+            return this;
+        }
+        public Integer getQueryNodeReplica() {
+            return this.queryNodeReplica;
+        }
+
+    }
+
     public static class GetInstanceDetailResponseBodyData extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -392,6 +510,9 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         @NameInMap("InstanceStatus")
         public String instanceStatus;
 
+        @NameInMap("MeasureConfig")
+        public GetInstanceDetailResponseBodyDataMeasureConfig measureConfig;
+
         /**
          * <strong>example:</strong>
          * <p>true</p>
@@ -426,6 +547,13 @@ public class GetInstanceDetailResponseBody extends TeaModel {
          */
         @NameInMap("RegionId")
         public String regionId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>rg-123xxx</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
 
         /**
          * <strong>example:</strong>
@@ -560,6 +688,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             return this.instanceStatus;
         }
 
+        public GetInstanceDetailResponseBodyData setMeasureConfig(GetInstanceDetailResponseBodyDataMeasureConfig measureConfig) {
+            this.measureConfig = measureConfig;
+            return this;
+        }
+        public GetInstanceDetailResponseBodyDataMeasureConfig getMeasureConfig() {
+            return this.measureConfig;
+        }
+
         public GetInstanceDetailResponseBodyData setOpenPublicNet(Boolean openPublicNet) {
             this.openPublicNet = openPublicNet;
             return this;
@@ -598,6 +734,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public GetInstanceDetailResponseBodyData setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public GetInstanceDetailResponseBodyData setRunningTime(Long runningTime) {
