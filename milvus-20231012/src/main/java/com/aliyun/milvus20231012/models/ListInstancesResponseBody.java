@@ -393,6 +393,13 @@ public class ListInstancesResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>rg-123xxx</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <strong>example:</strong>
          * <p>536611</p>
          */
         @NameInMap("RunningTime")
@@ -517,6 +524,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public ListInstancesResponseBodyData setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListInstancesResponseBodyData setRunningTime(Integer runningTime) {
