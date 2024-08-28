@@ -201,6 +201,9 @@ public class QueryCollectionDataRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RelationalTableFilter")
+    public QueryCollectionDataRequestRelationalTableFilter relationalTableFilter;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -351,6 +354,14 @@ public class QueryCollectionDataRequest extends TeaModel {
         return this.regionId;
     }
 
+    public QueryCollectionDataRequest setRelationalTableFilter(QueryCollectionDataRequestRelationalTableFilter relationalTableFilter) {
+        this.relationalTableFilter = relationalTableFilter;
+        return this;
+    }
+    public QueryCollectionDataRequestRelationalTableFilter getRelationalTableFilter() {
+        return this.relationalTableFilter;
+    }
+
     public QueryCollectionDataRequest setTopK(Long topK) {
         this.topK = topK;
         return this;
@@ -373,6 +384,58 @@ public class QueryCollectionDataRequest extends TeaModel {
     }
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    public static class QueryCollectionDataRequestRelationalTableFilter extends TeaModel {
+        @NameInMap("CollectionMetadataField")
+        public String collectionMetadataField;
+
+        @NameInMap("Condition")
+        public String condition;
+
+        @NameInMap("TableField")
+        public String tableField;
+
+        @NameInMap("TableName")
+        public String tableName;
+
+        public static QueryCollectionDataRequestRelationalTableFilter build(java.util.Map<String, ?> map) throws Exception {
+            QueryCollectionDataRequestRelationalTableFilter self = new QueryCollectionDataRequestRelationalTableFilter();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryCollectionDataRequestRelationalTableFilter setCollectionMetadataField(String collectionMetadataField) {
+            this.collectionMetadataField = collectionMetadataField;
+            return this;
+        }
+        public String getCollectionMetadataField() {
+            return this.collectionMetadataField;
+        }
+
+        public QueryCollectionDataRequestRelationalTableFilter setCondition(String condition) {
+            this.condition = condition;
+            return this;
+        }
+        public String getCondition() {
+            return this.condition;
+        }
+
+        public QueryCollectionDataRequestRelationalTableFilter setTableField(String tableField) {
+            this.tableField = tableField;
+            return this;
+        }
+        public String getTableField() {
+            return this.tableField;
+        }
+
+        public QueryCollectionDataRequestRelationalTableFilter setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
+        }
+
     }
 
 }

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAccountRequest extends TeaModel {
     /**
-     * <p>The description of the privileged account.</p>
+     * <p>The description of the initial account.</p>
      * 
      * <strong>example:</strong>
      * <p>testacc02</p>
@@ -14,7 +14,7 @@ public class CreateAccountRequest extends TeaModel {
     public String accountDescription;
 
     /**
-     * <p>The name of the privileged account.</p>
+     * <p>The name of the initial account.</p>
      * <ul>
      * <li>The name can contain lowercase letters, digits, and underscores (_).</li>
      * <li>The name must start with a lowercase letter and end with a lowercase letter or a digit.</li>
@@ -30,7 +30,7 @@ public class CreateAccountRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The password of the privileged account.</p>
+     * <p>The password of the initial account.</p>
      * <ul>
      * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
      * <li>Special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></li>
@@ -44,6 +44,12 @@ public class CreateAccountRequest extends TeaModel {
     @NameInMap("AccountPassword")
     public String accountPassword;
 
+    /**
+     * <p>The type of the initial account. Default value: Super, which specifies a privileged account. To create a standard account, set the value to Normal.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Super</p>
+     */
     @NameInMap("AccountType")
     public String accountType;
 

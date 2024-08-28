@@ -563,15 +563,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you can use an AnalyticDB for PostgreSQL instance, you must create a privileged account for the instance.</p>
+     * <p>  Before you can use an AnalyticDB for PostgreSQL instance, you must create an initial account for the instance.</p>
      * <ul>
-     * <li>You can call this operation to create only privileged accounts. For information about how to create other types of accounts, see <a href="https://help.aliyun.com/document_detail/50206.html">Create a database account</a>.</li>
+     * <li>You can call this operation to create only initial accounts. For information about how to create other types of accounts, see <a href="https://help.aliyun.com/document_detail/50206.html">Create a database account</a>.</li>
      * </ul>
      * <h2>Limits</h2>
      * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a privileged account for an AnalyticDB for PostgreSQL instance.</p>
+     * <p>Creates an initial account for an AnalyticDB for PostgreSQL instance.</p>
      * 
      * @param request CreateAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -631,15 +631,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you can use an AnalyticDB for PostgreSQL instance, you must create a privileged account for the instance.</p>
+     * <p>  Before you can use an AnalyticDB for PostgreSQL instance, you must create an initial account for the instance.</p>
      * <ul>
-     * <li>You can call this operation to create only privileged accounts. For information about how to create other types of accounts, see <a href="https://help.aliyun.com/document_detail/50206.html">Create a database account</a>.</li>
+     * <li>You can call this operation to create only initial accounts. For information about how to create other types of accounts, see <a href="https://help.aliyun.com/document_detail/50206.html">Create a database account</a>.</li>
      * </ul>
      * <h2>Limits</h2>
      * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a privileged account for an AnalyticDB for PostgreSQL instance.</p>
+     * <p>Creates an initial account for an AnalyticDB for PostgreSQL instance.</p>
      * 
      * @param request CreateAccountRequest
      * @return CreateAccountResponse
@@ -10381,6 +10381,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.hybridSearchArgsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.hybridSearchArgs, "HybridSearchArgs", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.relationalTableFilter)) {
+            request.relationalTableFilterShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.relationalTableFilter, "RelationalTableFilter", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.vector)) {
             request.vectorShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.vector, "Vector", "json");
         }
@@ -10444,6 +10448,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.relationalTableFilterShrink)) {
+            query.put("RelationalTableFilter", request.relationalTableFilterShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.topK)) {
