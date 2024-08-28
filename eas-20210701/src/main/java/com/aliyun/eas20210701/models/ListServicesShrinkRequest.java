@@ -13,6 +13,12 @@ public class ListServicesShrinkRequest extends TeaModel {
     @NameInMap("Filter")
     public String filter;
 
+    /**
+     * <p>The ID of the private gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-1uhcqmsc7x22******</p>
+     */
     @NameInMap("Gateway")
     public String gateway;
 

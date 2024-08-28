@@ -3012,6 +3012,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取租户配置列表</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTenantAddonsResponse
+     */
+    public ListTenantAddonsResponse listTenantAddonsWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTenantAddons"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/tenantaddons"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTenantAddonsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取租户配置列表</p>
+     * @return ListTenantAddonsResponse
+     */
+    public ListTenantAddonsResponse listTenantAddons() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listTenantAddonsWithOptions(headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>重置租户配置</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ReinstallTenantAddonResponse
+     */
+    public ReinstallTenantAddonResponse reinstallTenantAddonWithOptions(String ClusterId, String TenantAddonName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ReinstallTenantAddon"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/tenantaddons/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantAddonName) + "/reinstall"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ReinstallTenantAddonResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>重置租户配置</p>
+     * @return ReinstallTenantAddonResponse
+     */
+    public ReinstallTenantAddonResponse reinstallTenantAddon(String ClusterId, String TenantAddonName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.reinstallTenantAddonWithOptions(ClusterId, TenantAddonName, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Performs canary release or blue-green release of a service.</p>
      * 
      * @param request ReleaseServiceRequest
