@@ -76,4 +76,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getTokenWithOptions(request, headers, runtime);
     }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分销报价接口</p>
+     * 
+     * @param request SearchRequest
+     * @param headers SearchHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SearchResponse
+     */
+    public SearchResponse searchWithOptions(SearchRequest request, SearchHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.scene)) {
+            body.put("scene", request.scene);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchParam)) {
+            body.put("searchParam", request.searchParam);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            body.put("source", request.source);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.terminal)) {
+            body.put("terminal", request.terminal);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("userId", request.userId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAirticketAccessToken)) {
+            realHeaders.put("xAcsAirticketAccessToken", com.aliyun.teautil.Common.toJSONString(headers.xAcsAirticketAccessToken));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAirticketLanguage)) {
+            realHeaders.put("xAcsAirticketLanguage", com.aliyun.teautil.Common.toJSONString(headers.xAcsAirticketLanguage));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "Search"),
+            new TeaPair("version", "2024-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/distribution/trade/search"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分销报价接口</p>
+     * 
+     * @param request SearchRequest
+     * @return SearchResponse
+     */
+    public SearchResponse search(SearchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        SearchHeaders headers = new SearchHeaders();
+        return this.searchWithOptions(request, headers, runtime);
+    }
 }

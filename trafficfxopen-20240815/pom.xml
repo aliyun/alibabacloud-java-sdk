@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>trafficfxopen20240815</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
   <packaging>jar</packaging>
   <name>trafficfxopen20240815</name>
   <description>Alibaba Cloud TrafficFxOpen (20240815) SDK for Java
