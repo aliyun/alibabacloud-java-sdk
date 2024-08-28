@@ -11,7 +11,7 @@ public class DescribeWebCustomDomainResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public WebCustomDomainBody body;
+    public WebCustomDomain body;
 
     public static DescribeWebCustomDomainResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeWebCustomDomainResponse self = new DescribeWebCustomDomainResponse();
@@ -34,11 +34,11 @@ public class DescribeWebCustomDomainResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeWebCustomDomainResponse setBody(WebCustomDomainBody body) {
+    public DescribeWebCustomDomainResponse setBody(WebCustomDomain body) {
         this.body = body;
         return this;
     }
-    public WebCustomDomainBody getBody() {
+    public WebCustomDomain getBody() {
         return this.body;
     }
 

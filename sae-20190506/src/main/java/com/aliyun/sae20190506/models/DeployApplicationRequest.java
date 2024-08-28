@@ -186,6 +186,9 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("EnableGreyTagRoute")
     public Boolean enableGreyTagRoute;
 
+    @NameInMap("EnableNewArms")
+    public Boolean enableNewArms;
+
     /**
      * <p>The environment variables. You can configure custom environment variables or reference a ConfigMap. If you want to reference a ConfigMap, you must first create a ConfigMap. For more information, see <a href="https://help.aliyun.com/document_detail/176914.html">CreateConfigMap</a>. Take note of the following rules:</p>
      * <ul>
@@ -819,6 +822,14 @@ public class DeployApplicationRequest extends TeaModel {
     }
     public Boolean getEnableGreyTagRoute() {
         return this.enableGreyTagRoute;
+    }
+
+    public DeployApplicationRequest setEnableNewArms(Boolean enableNewArms) {
+        this.enableNewArms = enableNewArms;
+        return this;
+    }
+    public Boolean getEnableNewArms() {
+        return this.enableNewArms;
     }
 
     public DeployApplicationRequest setEnvs(String envs) {

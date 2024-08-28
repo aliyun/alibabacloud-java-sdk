@@ -131,6 +131,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("EnableEbpf")
     public String enableEbpf;
 
+    @NameInMap("EnableNewArms")
+    public Boolean enableNewArms;
+
     /**
      * <p>[{&quot;name&quot;:&quot;envtmp&quot;,&quot;value&quot;:&quot;0&quot;}]</p>
      * 
@@ -633,6 +636,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getEnableEbpf() {
         return this.enableEbpf;
+    }
+
+    public CreateApplicationRequest setEnableNewArms(Boolean enableNewArms) {
+        this.enableNewArms = enableNewArms;
+        return this;
+    }
+    public Boolean getEnableNewArms() {
+        return this.enableNewArms;
     }
 
     public CreateApplicationRequest setEnvs(String envs) {

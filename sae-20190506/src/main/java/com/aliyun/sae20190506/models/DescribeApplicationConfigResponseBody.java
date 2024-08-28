@@ -553,6 +553,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("EnableIdle")
         public Boolean enableIdle;
 
+        @NameInMap("EnableNewArms")
+        public Boolean enableNewArms;
+
         /**
          * <p>The environment variables. Variable description:</p>
          * <ul>
@@ -1265,6 +1268,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public Boolean getEnableIdle() {
             return this.enableIdle;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setEnableNewArms(Boolean enableNewArms) {
+            this.enableNewArms = enableNewArms;
+            return this;
+        }
+        public Boolean getEnableNewArms() {
+            return this.enableNewArms;
         }
 
         public DescribeApplicationConfigResponseBodyData setEnvs(String envs) {
