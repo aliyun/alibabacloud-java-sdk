@@ -4,83 +4,110 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class DescribeGatewayResponseBody extends TeaModel {
-    @NameInMap("CallerUid")
-    public String callerUid;
-
     /**
-     * <p>网关创建时间</p>
+     * <p>The time when the private gateway was created. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-05-19T14:19:42Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The ID of the self-managed cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c935eadf284c14c2da57a2a13ad6******</p>
+     */
     @NameInMap("ExternalClusterId")
     public String externalClusterId;
 
     /**
-     * <p>网关ID</p>
+     * <p>The ID of the private gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-1uhcqmsc7x22******</p>
      */
     @NameInMap("GatewayId")
     public String gatewayId;
 
+    /**
+     * <p>The private gateway alias.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mygateway1</p>
+     */
     @NameInMap("GatewayName")
     public String gatewayName;
 
     /**
-     * <p>网关创建的实例种类</p>
+     * <p>The instance type used for the private gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.c6.4xlarge</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
-     * <p>The Internet access control policies.</p>
-     */
-    @NameInMap("InternetAclPolicyList")
-    public java.util.List<DescribeGatewayResponseBodyInternetAclPolicyList> internetAclPolicyList;
-
-    /**
-     * <p>网关内部域名</p>
+     * <p>The public endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-1uhcqmsc7x22******-1801786532******.cn-hangzhou.pai-eas.aliyuncs.com</p>
      */
     @NameInMap("InternetDomain")
     public String internetDomain;
 
+    /**
+     * <p>Indicates whether Internet access is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("InternetEnabled")
     public Boolean internetEnabled;
 
+    @NameInMap("InternetStatus")
+    public String internetStatus;
+
     /**
-     * <p>网关外部域名</p>
+     * <p>The internal endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-1uhcqmsc7x22******-1801786532******-vpc.cn-hangzhou.pai-eas.aliyuncs.com</p>
      */
     @NameInMap("IntranetDomain")
     public String intranetDomain;
 
-    @NameInMap("IntranetEnabled")
-    public Boolean intranetEnabled;
+    @NameInMap("IsDefault")
+    public Boolean isDefault;
 
-    @NameInMap("IntranetLinkedVpcList")
-    public java.util.List<DescribeGatewayResponseBodyIntranetLinkedVpcList> intranetLinkedVpcList;
-
-    /**
-     * <p>创建网关的用户ID</p>
-     */
-    @NameInMap("ParentUid")
-    public String parentUid;
+    @NameInMap("Replicas")
+    public Integer replicas;
 
     /**
-     * <p>网关所在地域</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40325405-579C-4D82****</p>
      */
-    @NameInMap("Region")
-    public String region;
-
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>网关现在的状态</p>
+     * <p>The state of the private gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PrivateGatewayRunning</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>网关最后一次的更新时间</p>
+     * <p>The time when the private gateway was updated. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-02-24T11:52:17Z</p>
      */
     @NameInMap("UpdateTime")
     public String updateTime;
@@ -88,14 +115,6 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public static DescribeGatewayResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeGatewayResponseBody self = new DescribeGatewayResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeGatewayResponseBody setCallerUid(String callerUid) {
-        this.callerUid = callerUid;
-        return this;
-    }
-    public String getCallerUid() {
-        return this.callerUid;
     }
 
     public DescribeGatewayResponseBody setCreateTime(String createTime) {
@@ -138,14 +157,6 @@ public class DescribeGatewayResponseBody extends TeaModel {
         return this.instanceType;
     }
 
-    public DescribeGatewayResponseBody setInternetAclPolicyList(java.util.List<DescribeGatewayResponseBodyInternetAclPolicyList> internetAclPolicyList) {
-        this.internetAclPolicyList = internetAclPolicyList;
-        return this;
-    }
-    public java.util.List<DescribeGatewayResponseBodyInternetAclPolicyList> getInternetAclPolicyList() {
-        return this.internetAclPolicyList;
-    }
-
     public DescribeGatewayResponseBody setInternetDomain(String internetDomain) {
         this.internetDomain = internetDomain;
         return this;
@@ -162,6 +173,14 @@ public class DescribeGatewayResponseBody extends TeaModel {
         return this.internetEnabled;
     }
 
+    public DescribeGatewayResponseBody setInternetStatus(String internetStatus) {
+        this.internetStatus = internetStatus;
+        return this;
+    }
+    public String getInternetStatus() {
+        return this.internetStatus;
+    }
+
     public DescribeGatewayResponseBody setIntranetDomain(String intranetDomain) {
         this.intranetDomain = intranetDomain;
         return this;
@@ -170,36 +189,20 @@ public class DescribeGatewayResponseBody extends TeaModel {
         return this.intranetDomain;
     }
 
-    public DescribeGatewayResponseBody setIntranetEnabled(Boolean intranetEnabled) {
-        this.intranetEnabled = intranetEnabled;
+    public DescribeGatewayResponseBody setIsDefault(Boolean isDefault) {
+        this.isDefault = isDefault;
         return this;
     }
-    public Boolean getIntranetEnabled() {
-        return this.intranetEnabled;
+    public Boolean getIsDefault() {
+        return this.isDefault;
     }
 
-    public DescribeGatewayResponseBody setIntranetLinkedVpcList(java.util.List<DescribeGatewayResponseBodyIntranetLinkedVpcList> intranetLinkedVpcList) {
-        this.intranetLinkedVpcList = intranetLinkedVpcList;
+    public DescribeGatewayResponseBody setReplicas(Integer replicas) {
+        this.replicas = replicas;
         return this;
     }
-    public java.util.List<DescribeGatewayResponseBodyIntranetLinkedVpcList> getIntranetLinkedVpcList() {
-        return this.intranetLinkedVpcList;
-    }
-
-    public DescribeGatewayResponseBody setParentUid(String parentUid) {
-        this.parentUid = parentUid;
-        return this;
-    }
-    public String getParentUid() {
-        return this.parentUid;
-    }
-
-    public DescribeGatewayResponseBody setRegion(String region) {
-        this.region = region;
-        return this;
-    }
-    public String getRegion() {
-        return this.region;
+    public Integer getReplicas() {
+        return this.replicas;
     }
 
     public DescribeGatewayResponseBody setRequestId(String requestId) {
@@ -224,170 +227,6 @@ public class DescribeGatewayResponseBody extends TeaModel {
     }
     public String getUpdateTime() {
         return this.updateTime;
-    }
-
-    public static class DescribeGatewayResponseBodyInternetAclPolicyList extends TeaModel {
-        /**
-         * <p>The description.</p>
-         */
-        @NameInMap("Comment")
-        public String comment;
-
-        /**
-         * <p>The accessible CIDR block.</p>
-         */
-        @NameInMap("Entry")
-        public String entry;
-
-        /**
-         * <p>The state of the private gateway.</p>
-         * <br>
-         * <p>Valid values:</p>
-         * <br>
-         * <p>*   Creating</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Running</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         */
-        @NameInMap("Status")
-        public String status;
-
-        public static DescribeGatewayResponseBodyInternetAclPolicyList build(java.util.Map<String, ?> map) throws Exception {
-            DescribeGatewayResponseBodyInternetAclPolicyList self = new DescribeGatewayResponseBodyInternetAclPolicyList();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeGatewayResponseBodyInternetAclPolicyList setComment(String comment) {
-            this.comment = comment;
-            return this;
-        }
-        public String getComment() {
-            return this.comment;
-        }
-
-        public DescribeGatewayResponseBodyInternetAclPolicyList setEntry(String entry) {
-            this.entry = entry;
-            return this;
-        }
-        public String getEntry() {
-            return this.entry;
-        }
-
-        public DescribeGatewayResponseBodyInternetAclPolicyList setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-    }
-
-    public static class DescribeGatewayResponseBodyIntranetLinkedVpcList extends TeaModel {
-        /**
-         * <p>The IP address.</p>
-         */
-        @NameInMap("Ip")
-        public String ip;
-
-        /**
-         * <p>The ID of the security group.</p>
-         */
-        @NameInMap("SecurityGroupId")
-        public String securityGroupId;
-
-        /**
-         * <p>The state of the private gateway.</p>
-         * <br>
-         * <p>Valid values:</p>
-         * <br>
-         * <p>*   Creating</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Running</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         */
-        @NameInMap("Status")
-        public String status;
-
-        /**
-         * <p>The vSwitch ID.</p>
-         */
-        @NameInMap("VSwitchId")
-        public String vSwitchId;
-
-        /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
-         */
-        @NameInMap("VpcId")
-        public String vpcId;
-
-        public static DescribeGatewayResponseBodyIntranetLinkedVpcList build(java.util.Map<String, ?> map) throws Exception {
-            DescribeGatewayResponseBodyIntranetLinkedVpcList self = new DescribeGatewayResponseBodyIntranetLinkedVpcList();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeGatewayResponseBodyIntranetLinkedVpcList setIp(String ip) {
-            this.ip = ip;
-            return this;
-        }
-        public String getIp() {
-            return this.ip;
-        }
-
-        public DescribeGatewayResponseBodyIntranetLinkedVpcList setSecurityGroupId(String securityGroupId) {
-            this.securityGroupId = securityGroupId;
-            return this;
-        }
-        public String getSecurityGroupId() {
-            return this.securityGroupId;
-        }
-
-        public DescribeGatewayResponseBodyIntranetLinkedVpcList setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeGatewayResponseBodyIntranetLinkedVpcList setVSwitchId(String vSwitchId) {
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-        public String getVSwitchId() {
-            return this.vSwitchId;
-        }
-
-        public DescribeGatewayResponseBodyIntranetLinkedVpcList setVpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
     }
 
 }

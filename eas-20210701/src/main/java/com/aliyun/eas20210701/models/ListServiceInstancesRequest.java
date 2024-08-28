@@ -4,65 +4,218 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class ListServiceInstancesRequest extends TeaModel {
+    /**
+     * <p>The keyword used to query instances. Instances can be queried based on instance name, instance IP address, IP address of the server where the instance resides, and instance type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.118.xx.xx</p>
+     */
     @NameInMap("Filter")
     public String filter;
 
+    /**
+     * <p>The IP address of the server where the instance resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.224.xx.xx</p>
+     */
     @NameInMap("HostIP")
     public String hostIP;
 
+    /**
+     * <p>The IP address of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.224.xx.xx</p>
+     */
     @NameInMap("InstanceIP")
     public String instanceIP;
 
+    /**
+     * <p>The instance name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>foo-bdc5xxxx-8l7rk</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>The instance state.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("InstanceStatus")
     public String instanceStatus;
 
+    /**
+     * <p>The instance type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.c7.large</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <p>Specifies whether the instance is a preemptible instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsSpot")
     public Boolean isSpot;
 
     /**
      * <p>The sorting order.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   asc: The instances are sorted in ascending order.</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   desc</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    : The instances are sorted in descending order.</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><p>asc</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <p>The instances are sorted in ascending order.</p>
+     * </li>
+     * <li><p>desc</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <p>The instances are sorted in descending order.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>desc</p>
      */
     @NameInMap("Order")
     public String order;
 
+    /**
+     * <p>The page number. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. Default value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The type of the resource group to which the instance belongs.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><p>PublicResource</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>DedicatedResource</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PublicResource</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The service role.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><p>DataSet</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>dataset service</p>
+     * <!-- -->
+     * 
+     * <p>.</p>
+     * </li>
+     * <li><p>SDProxy</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>Stable-Diffusion proxy service</p>
+     * <!-- -->
+     * 
+     * <p>.</p>
+     * </li>
+     * <li><p>Standard</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>standard service</p>
+     * <!-- -->
+     * 
+     * <p>.</p>
+     * </li>
+     * <li><p>Queue</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>queue service</p>
+     * <!-- -->
+     * 
+     * <p>.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Queue</p>
+     */
     @NameInMap("Role")
     public String role;
 
+    /**
+     * <p>The field that you use to sort the query results.</p>
+     * <ul>
+     * <li><p>Set the value to StartTime.</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <p>The value specifies that the query results are sorted based on the time when the instances were created</p>
+     * <!-- -->
+     * 
+     * <p>.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>StartTime</p>
+     */
     @NameInMap("Sort")
     public String sort;
 

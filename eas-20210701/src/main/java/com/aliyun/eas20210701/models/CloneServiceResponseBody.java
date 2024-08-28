@@ -4,24 +4,57 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class CloneServiceResponseBody extends TeaModel {
+    /**
+     * <p>The public endpoint of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://10123*****.cn-shanghai.aliyuncs.com/api/predict/echo">http://10123*****.cn-shanghai.aliyuncs.com/api/predict/echo</a></p>
+     */
     @NameInMap("InternetEndpoint")
     public String internetEndpoint;
 
+    /**
+     * <p>The private endpoint of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://10123*****.vpc.cn-shanghai.aliyuncs.com/api/predict/echo">http://10123*****.vpc.cn-shanghai.aliyuncs.com/api/predict/echo</a></p>
+     */
     @NameInMap("IntranetEndpoint")
     public String intranetEndpoint;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40325405-579C-4D82****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The service ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eas-m-r9knx7n9guf2p*****</p>
+     */
     @NameInMap("ServiceId")
     public String serviceId;
 
+    /**
+     * <p>The service name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>foo</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 
+    /**
+     * <p>The service status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Creating</p>
+     */
     @NameInMap("Status")
     public String status;
 

@@ -10,9 +10,21 @@ public class ListServiceContainersResponseBody extends TeaModel {
     @NameInMap("Containers")
     public java.util.List<ContainerInfo> containers;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40325405-579C-4D82****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The service name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>foo</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 

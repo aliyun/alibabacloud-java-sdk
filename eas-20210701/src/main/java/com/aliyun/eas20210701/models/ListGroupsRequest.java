@@ -4,15 +4,39 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class ListGroupsRequest extends TeaModel {
+    /**
+     * <p>The name of the filter that is used to filter out unwanted service groups. Fuzzy match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>foo</p>
+     */
     @NameInMap("Filter")
     public String filter;
 
+    /**
+     * <p>The page number. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of entries per page. Default value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123***</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

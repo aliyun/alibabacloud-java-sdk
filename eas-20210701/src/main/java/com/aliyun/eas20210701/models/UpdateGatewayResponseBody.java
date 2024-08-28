@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class UpdateGatewayResponseBody extends TeaModel {
     /**
      * <p>The ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-1uhcqmsc7x22******</p>
      */
     @NameInMap("GatewayId")
     public String gatewayId;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Gateway is updated</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40325405-579C-4D82***</p>
      */
     @NameInMap("RequestId")
     public String requestId;

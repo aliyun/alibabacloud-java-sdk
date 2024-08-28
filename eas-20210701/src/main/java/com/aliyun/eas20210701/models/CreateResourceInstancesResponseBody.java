@@ -4,12 +4,27 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class CreateResourceInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The instance IDs.</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Create 5 new ecs instance(s) in resource [eas-r-asdasdasd] successfully</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40325405-579C-4D82****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

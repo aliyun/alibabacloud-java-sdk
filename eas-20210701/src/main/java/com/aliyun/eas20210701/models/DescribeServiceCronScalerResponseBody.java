@@ -4,15 +4,33 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class DescribeServiceCronScalerResponseBody extends TeaModel {
+    /**
+     * <p>The points in time that are excluded when you schedule a CronHPA job. The points in time must be specified by using a cron expression.</p>
+     */
     @NameInMap("ExcludeDates")
     public java.util.List<String> excludeDates;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40325405-579C-4D82****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The CronHPA jobs.</p>
+     */
     @NameInMap("ScaleJobs")
     public java.util.List<DescribeServiceCronScalerResponseBodyScaleJobs> scaleJobs;
 
+    /**
+     * <p>The service name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>foo</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 
@@ -54,24 +72,66 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
     }
 
     public static class DescribeServiceCronScalerResponseBodyScaleJobs extends TeaModel {
+        /**
+         * <p>The time when the most recent CronHPA job was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-06-24T02:11:30Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The time when the most recent CronHPA job ran. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-24T06:31:00Z</p>
+         */
         @NameInMap("LastProbeTime")
         public String lastProbeTime;
 
+        /**
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;cron hpa job scale-jobs-0 executed successfully. current replicas:3, desired replicas:2.&quot;</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The name of the CronHPA job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scale-job-1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The cron expression that is used to configure the execution time of the CronHPA job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 18 * * * *</p>
+         */
         @NameInMap("Schedule")
         public String schedule;
 
+        /**
+         * <p>The status of the most recent CronHPA job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeed</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The number of instances that you expect to configure for the CronHPA job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TargetSize")
         public Integer targetSize;
 

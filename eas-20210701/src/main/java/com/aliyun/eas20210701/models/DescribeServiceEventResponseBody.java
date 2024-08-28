@@ -4,18 +4,45 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class DescribeServiceEventResponseBody extends TeaModel {
+    /**
+     * <p>The events.</p>
+     */
     @NameInMap("Events")
     public java.util.List<DescribeServiceEventResponseBodyEvents> events;
 
+    /**
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Long pageNum;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3D491C94-6239-5318-B4B4-799D859***</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>29</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <p>The total number of pages returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("TotalPageNum")
     public Long totalPageNum;
 
@@ -65,15 +92,43 @@ public class DescribeServiceEventResponseBody extends TeaModel {
     }
 
     public static class DescribeServiceEventResponseBodyEvents extends TeaModel {
+        /**
+         * <p>The returned message. The message is formatted and returned in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;versionId\&quot;:1,\&quot;message\&quot;:\&quot;Stage scale complete\&quot;,\&quot;availableInstance\&quot;:1,\&quot;unavailableInstance\&quot;:0}</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The cause of the event. The information about the change in the service status is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Updating</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
+        /**
+         * <p>The time when the event occurred. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-09 06:30:00</p>
+         */
         @NameInMap("Time")
         public String time;
 
+        /**
+         * <p>The event type. Valid values:</p>
+         * <ul>
+         * <li>Normal</li>
+         * <li>Warning</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("Type")
         public String type;
 

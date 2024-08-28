@@ -6,30 +6,42 @@ import com.aliyun.tea.*;
 public class ListBenchmarkTaskResponseBody extends TeaModel {
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40325405-579C-4D82****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The time when the stress testing task was updated.</p>
+     * <p>The stress testing tasks.</p>
      */
     @NameInMap("Tasks")
     public java.util.List<ListBenchmarkTaskResponseBodyTasks> tasks;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -80,30 +92,149 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
     }
 
     public static class ListBenchmarkTaskResponseBodyTasks extends TeaModel {
+        /**
+         * <p>The number of instances that are available for stress testing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("AvailableAgent")
         public Long availableAgent;
 
+        /**
+         * <p>The time when the stress testing task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-04T02:43:15Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Benchmark task [benchmark-larec-test-1076] is Running</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The region ID of the stress testing task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The name of the service on which you want to perform a stress testing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_quota</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
+        /**
+         * <p>The state of the stress testing task.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>Creating</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Starting</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>DeleteFailed</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Running</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Stopping</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Error</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Updating</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Deleting</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>CreateFailed</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the stress testing task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-b-gv4y86uvgt****i</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The name of the stress testing task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>benchmark-larec-test-1076</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
+        /**
+         * <p>The time when the stress testing task was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-06-24T03:11:30Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

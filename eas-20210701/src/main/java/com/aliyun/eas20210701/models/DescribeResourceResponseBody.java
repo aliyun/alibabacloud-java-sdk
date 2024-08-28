@@ -6,99 +6,148 @@ import com.aliyun.tea.*;
 public class DescribeResourceResponseBody extends TeaModel {
     /**
      * <p>The ID of the cluster to which the resource group belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The total number of CPU cores.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16</p>
      */
     @NameInMap("CpuCount")
     public Integer cpuCount;
 
     /**
      * <p>The time when the resource group was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-05-19T14:19:42Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
      * <p>The additional information, such as the connection status of a virtual private cloud (VPC) and the log status of Log Service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;vswitch_id&quot;:&quot;vsw-bp17uo6xebcusy****&quot;,&quot;gpu_share&quot;:true,&quot;aux_vswitch_id_list&quot;:[&quot;vsw-bp13b3pvjap3vxn****&quot;,&quot;vsw-bp1nls8o5hk8mt8*****&quot;],&quot;security_group_id&quot;:&quot;sg-bp1j1z7297hcink*****&quot;,&quot;vpc_id&quot;:&quot;vpc-bp1kjr3rfyhx01*****&quot;,&quot;destination_cidr&quot;:&quot;172.16.0.12/28&quot;,&quot;role_arn&quot;:&quot;acs:ram::1157703270*****:role/AliyunServiceRoleForPaiEas&quot;,&quot;sls_project&quot;:&quot;&quot;,&quot;sls_logstore&quot;:&quot;&quot;,&quot;sls_status&quot;:&quot;ResourceReady&quot;,&quot;sls_message&quot;:&quot;&quot;,&quot;update_time&quot;:&quot;&quot;}</p>
      */
     @NameInMap("ExtraData")
     public String extraData;
 
     /**
      * <p>The total number of GPUs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("GpuCount")
     public Integer gpuCount;
 
     /**
      * <p>The total number of instances in the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("InstanceCount")
     public Integer instanceCount;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Resource is ready</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the resource group owner.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>14401087478****</p>
      */
     @NameInMap("OwnerUid")
     public String ownerUid;
 
     /**
      * <p>The total number of pay-as-you-go instances in the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("PostPaidInstanceCount")
     public Integer postPaidInstanceCount;
 
     /**
      * <p>The total number of subscription instances in the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PrePaidInstanceCount")
     public Integer prePaidInstanceCount;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>902976F2-6FAF-5404-8A4D-6CC223***</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the Elastic Algorithm Service (EAS) resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eas-r-glkfpsxuw57x1h*****</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
      * <p>The name of the EAS resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-resouce****</p>
      */
     @NameInMap("ResourceName")
     public String resourceName;
 
     /**
-     * <p>The type of the resource. Valid values:</p>
-     * <br>
-     * <p>- Dedicated</p>
-     * <p>- SelfManaged</p>
+     * <p>The type of the resource group. Valid values:</p>
+     * <ul>
+     * <li>Dedicated: the dedicated resource group.</li>
+     * <li>SelfManaged: the self-managed resource group.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Dedicated</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The state of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ResourceReady</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The time when the resource group was last updated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-02-24T11:52:17Z</p>
      */
     @NameInMap("UpdateTime")
     public String updateTime;

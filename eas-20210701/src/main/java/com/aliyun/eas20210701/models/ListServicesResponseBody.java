@@ -4,18 +4,45 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class ListServicesResponseBody extends TeaModel {
+    /**
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40325405-579C-4D82****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The services.</p>
+     */
     @NameInMap("Services")
     public java.util.List<Service> services;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

@@ -4,6 +4,12 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class DescribeBenchmarkTaskReportRequest extends TeaModel {
+    /**
+     * <p>The report type of the stress testing task. Valid values: RAW and Report.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>report</p>
+     */
     @NameInMap("ReportType")
     public String reportType;
 

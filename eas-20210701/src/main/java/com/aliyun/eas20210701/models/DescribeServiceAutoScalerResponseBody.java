@@ -4,24 +4,66 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class DescribeServiceAutoScalerResponseBody extends TeaModel {
+    /**
+     * <p>The additional information about the Autoscaler policy, such as the interval of triggering Autoscaler.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *   &quot;behavior&quot;: {
+     *     &quot;scaleDown&quot;: {
+     *       &quot;stabilizationWindowSeconds&quot;: 150
+     *     }
+     *   }
+     * }</p>
+     */
     @NameInMap("Behavior")
     public java.util.Map<String, ?> behavior;
 
+    /**
+     * <p>The metrics.</p>
+     */
     @NameInMap("CurrentMetrics")
     public java.util.List<DescribeServiceAutoScalerResponseBodyCurrentMetrics> currentMetrics;
 
+    /**
+     * <p>The maximum number of instances in the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("MaxReplica")
     public Integer maxReplica;
 
+    /**
+     * <p>The minimum number of instances in the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("MinReplica")
     public Integer minReplica;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40325405-579C-4D82****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The auto scaling policies.</p>
+     */
     @NameInMap("ScaleStrategies")
     public java.util.List<DescribeServiceAutoScalerResponseBodyScaleStrategies> scaleStrategies;
 
+    /**
+     * <p>The service name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>foo</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 
@@ -87,12 +129,34 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
     }
 
     public static class DescribeServiceAutoScalerResponseBodyCurrentMetrics extends TeaModel {
+        /**
+         * <p>The metric name. Valid values:</p>
+         * <ul>
+         * <li>QPS</li>
+         * <li>CPU</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>qps</p>
+         */
         @NameInMap("metricName")
         public String metricName;
 
+        /**
+         * <p>The service for which the metric is specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo_svc</p>
+         */
         @NameInMap("service")
         public String service;
 
+        /**
+         * <p>The metric value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("value")
         public Float value;
 
@@ -128,12 +192,38 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
     }
 
     public static class DescribeServiceAutoScalerResponseBodyScaleStrategies extends TeaModel {
+        /**
+         * <p>The metric name. Valid values:</p>
+         * <ul>
+         * <li>QPS: the queries per second (QPS) for an individual instance.</li>
+         * <li>CPU: the CPU utilization.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>QPS</p>
+         */
         @NameInMap("metricName")
         public String metricName;
 
+        /**
+         * <p>The service for which the metric is specified. If you do not set this parameter, the current service is specified by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo_svc</p>
+         */
         @NameInMap("service")
         public String service;
 
+        /**
+         * <p>The threshold of the metric that triggers auto scaling.</p>
+         * <ul>
+         * <li>If you set metricName to QPS, scale-out is triggered when the average QPS for a single instance is greater than this threshold.</li>
+         * <li>If you set metricName to CPU, scale-out is triggered when the average CPU utilization for a single instance is greater than this threshold.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("threshold")
         public Float threshold;
 

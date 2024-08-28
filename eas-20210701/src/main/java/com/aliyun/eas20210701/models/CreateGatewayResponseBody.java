@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class CreateGatewayResponseBody extends TeaModel {
     /**
      * <p>The region ID of the private gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The private gateway ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-1uhcqmsc7x22******</p>
      */
     @NameInMap("GatewayId")
     public String gatewayId;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successfully create gateway.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40325405-579C-4D82****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

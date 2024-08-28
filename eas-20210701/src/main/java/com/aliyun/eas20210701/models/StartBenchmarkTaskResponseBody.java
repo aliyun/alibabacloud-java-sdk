@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class StartBenchmarkTaskResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Benchmark task [benchmark-larec-test-1076] is Starting</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40325405-579C-4D82****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

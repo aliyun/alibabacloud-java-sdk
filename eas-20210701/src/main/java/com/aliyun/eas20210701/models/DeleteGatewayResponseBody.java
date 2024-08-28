@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DeleteGatewayResponseBody extends TeaModel {
     /**
      * <p>The private gateway ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-1uhcqmsc7x22******</p>
      */
     @NameInMap("GatewayId")
     public String gatewayId;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Gateway is deleted.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40325405-579C-4D82****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

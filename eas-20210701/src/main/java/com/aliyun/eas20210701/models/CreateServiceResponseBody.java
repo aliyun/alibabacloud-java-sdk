@@ -4,24 +4,66 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceResponseBody extends TeaModel {
+    /**
+     * <p>The public endpoint of the created service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://pai-eas.vpc.cn-shanghai">http://pai-eas.vpc.cn-shanghai</a>.****</p>
+     */
     @NameInMap("InternetEndpoint")
     public String internetEndpoint;
 
+    /**
+     * <p>The internal endpoint of the created service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://pai-eas.cn-shanghai">http://pai-eas.cn-shanghai</a>.****</p>
+     */
     @NameInMap("IntranetEndpoint")
     public String intranetEndpoint;
 
+    /**
+     * <p>The region ID of the created service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40325405-579C-4D82****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the created service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eas-m-aaxxxddf</p>
+     */
     @NameInMap("ServiceId")
     public String serviceId;
 
+    /**
+     * <p>The name of the created service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourname</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 
+    /**
+     * <p>The service state.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Creating</p>
+     */
     @NameInMap("Status")
     public String status;
 

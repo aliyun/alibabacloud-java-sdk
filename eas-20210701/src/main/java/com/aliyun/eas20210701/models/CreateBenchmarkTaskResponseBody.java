@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class CreateBenchmarkTaskResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Benchmark  task [foo] is Creating</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the region where the stress testing task is performed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40325405-579C-4D82********</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The name of the stress testing task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>benchmark-larec-test-1076</p>
      */
     @NameInMap("TaskName")
     public String taskName;

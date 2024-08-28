@@ -4,8 +4,26 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class Instance extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0.444</p>
+     */
     @NameInMap("CurrentAmount")
     public Float currentAmount;
+
+    /**
+     * <strong>example:</strong>
+     * <p>192.168.1.100</p>
+     */
+    @NameInMap("ExternalIP")
+    public String externalIP;
+
+    /**
+     * <strong>example:</strong>
+     * <p>8080</p>
+     */
+    @NameInMap("ExternalInstancePort")
+    public Integer externalInstancePort;
 
     @NameInMap("HostIP")
     public String hostIP;
@@ -22,9 +40,17 @@ public class Instance extends TeaModel {
     @NameInMap("InstancePort")
     public Integer instancePort;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsSpot")
     public Boolean isSpot;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Isolated")
     public Boolean isolated;
 
@@ -34,6 +60,10 @@ public class Instance extends TeaModel {
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2.2</p>
+     */
     @NameInMap("OriginalAmount")
     public Float originalAmount;
 
@@ -43,29 +73,56 @@ public class Instance extends TeaModel {
     @NameInMap("Reason")
     public String reason;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PublicResource</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
     @NameInMap("RestartCount")
     public Integer restartCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Standard</p>
+     */
     @NameInMap("Role")
     public String role;
 
     @NameInMap("StartAt")
+    @Deprecated
     public String startAt;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>192.168.0.39</p>
+     */
     @NameInMap("TenantHostIP")
     public String tenantHostIP;
 
+    /**
+     * <strong>example:</strong>
+     * <p>192.168.0.39</p>
+     */
     @NameInMap("TenantInstanceIP")
     public String tenantInstanceIP;
 
     @NameInMap("TotalProcesses")
     public Integer totalProcesses;
+
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shanghai-a</p>
+     */
+    @NameInMap("Zone")
+    public String zone;
 
     public static Instance build(java.util.Map<String, ?> map) throws Exception {
         Instance self = new Instance();
@@ -78,6 +135,22 @@ public class Instance extends TeaModel {
     }
     public Float getCurrentAmount() {
         return this.currentAmount;
+    }
+
+    public Instance setExternalIP(String externalIP) {
+        this.externalIP = externalIP;
+        return this;
+    }
+    public String getExternalIP() {
+        return this.externalIP;
+    }
+
+    public Instance setExternalInstancePort(Integer externalInstancePort) {
+        this.externalInstancePort = externalInstancePort;
+        return this;
+    }
+    public Integer getExternalInstancePort() {
+        return this.externalInstancePort;
     }
 
     public Instance setHostIP(String hostIP) {
@@ -208,6 +281,14 @@ public class Instance extends TeaModel {
         return this.startAt;
     }
 
+    public Instance setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public Instance setStatus(String status) {
         this.status = status;
         return this;
@@ -238,6 +319,14 @@ public class Instance extends TeaModel {
     }
     public Integer getTotalProcesses() {
         return this.totalProcesses;
+    }
+
+    public Instance setZone(String zone) {
+        this.zone = zone;
+        return this;
+    }
+    public String getZone() {
+        return this.zone;
     }
 
 }

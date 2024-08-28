@@ -6,34 +6,46 @@ import com.aliyun.tea.*;
 public class CreateAppServiceRequest extends TeaModel {
     /**
      * <p>The quota ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abcdef</p>
      */
     @NameInMap("QuotaId")
     public String quotaId;
 
     /**
      * <p>The workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
     /**
      * <p>The application service type.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   LLM</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><p>LLM</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LLM</p>
      */
     @NameInMap("AppType")
     public String appType;
 
     /**
      * <p>The application version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1</p>
      */
     @NameInMap("AppVersion")
     public String appVersion;
@@ -46,29 +58,42 @@ public class CreateAppServiceRequest extends TeaModel {
 
     /**
      * <p>The number of instances.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Replicas")
     public Integer replicas;
 
     /**
      * <p>The service name.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>foo</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;
 
     /**
      * <p>The service specifications. Valid values:</p>
-     * <br>
-     * <p>*   llama\_7b_fp16</p>
-     * <p>*   llama\_7b_int8</p>
-     * <p>*   llama\_13b_fp16</p>
-     * <p>*   llama\_7b_int8</p>
-     * <p>*   chatglm\_6b_fp16</p>
-     * <p>*   chatglm\_6b_int8</p>
-     * <p>*   chatglm2\_6b_fp16</p>
-     * <p>*   baichuan\_7b_int8</p>
-     * <p>*   baichuan\_13b_fp16</p>
-     * <p>*   baichuan\_7b_fp16</p>
+     * <ul>
+     * <li>llama_7b_fp16</li>
+     * <li>llama_7b_int8</li>
+     * <li>llama_13b_fp16</li>
+     * <li>llama_7b_int8</li>
+     * <li>chatglm_6b_fp16</li>
+     * <li>chatglm_6b_int8</li>
+     * <li>chatglm2_6b_fp16</li>
+     * <li>baichuan_7b_int8</li>
+     * <li>baichuan_13b_fp16</li>
+     * <li>baichuan_7b_fp16</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>llama_7b_fp16</p>
      */
     @NameInMap("ServiceSpec")
     public String serviceSpec;
