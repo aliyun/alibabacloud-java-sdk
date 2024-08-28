@@ -4,6 +4,9 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListCenInterRegionTrafficQosQueuesRequest extends TeaModel {
+    @NameInMap("EffectiveBandwidthFilter")
+    public ListCenInterRegionTrafficQosQueuesRequestEffectiveBandwidthFilter effectiveBandwidthFilter;
+
     /**
      * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
@@ -97,6 +100,14 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends TeaModel {
     public static ListCenInterRegionTrafficQosQueuesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCenInterRegionTrafficQosQueuesRequest self = new ListCenInterRegionTrafficQosQueuesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListCenInterRegionTrafficQosQueuesRequest setEffectiveBandwidthFilter(ListCenInterRegionTrafficQosQueuesRequestEffectiveBandwidthFilter effectiveBandwidthFilter) {
+        this.effectiveBandwidthFilter = effectiveBandwidthFilter;
+        return this;
+    }
+    public ListCenInterRegionTrafficQosQueuesRequestEffectiveBandwidthFilter getEffectiveBandwidthFilter() {
+        return this.effectiveBandwidthFilter;
     }
 
     public ListCenInterRegionTrafficQosQueuesRequest setMaxResults(Integer maxResults) {
@@ -193,6 +204,36 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends TeaModel {
     }
     public String getTransitRouterId() {
         return this.transitRouterId;
+    }
+
+    public static class ListCenInterRegionTrafficQosQueuesRequestEffectiveBandwidthFilter extends TeaModel {
+        @NameInMap("Gte")
+        public Long gte;
+
+        @NameInMap("Lte")
+        public Long lte;
+
+        public static ListCenInterRegionTrafficQosQueuesRequestEffectiveBandwidthFilter build(java.util.Map<String, ?> map) throws Exception {
+            ListCenInterRegionTrafficQosQueuesRequestEffectiveBandwidthFilter self = new ListCenInterRegionTrafficQosQueuesRequestEffectiveBandwidthFilter();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCenInterRegionTrafficQosQueuesRequestEffectiveBandwidthFilter setGte(Long gte) {
+            this.gte = gte;
+            return this;
+        }
+        public Long getGte() {
+            return this.gte;
+        }
+
+        public ListCenInterRegionTrafficQosQueuesRequestEffectiveBandwidthFilter setLte(Long lte) {
+            this.lte = lte;
+            return this;
+        }
+        public Long getLte() {
+            return this.lte;
+        }
+
     }
 
 }

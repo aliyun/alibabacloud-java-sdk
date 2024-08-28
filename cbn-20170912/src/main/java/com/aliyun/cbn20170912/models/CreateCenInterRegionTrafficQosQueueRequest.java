@@ -4,6 +4,9 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class CreateCenInterRegionTrafficQosQueueRequest extends TeaModel {
+    @NameInMap("Bandwidth")
+    public Long bandwidth;
+
     /**
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426****</p>
@@ -69,6 +72,14 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends TeaModel {
     public static CreateCenInterRegionTrafficQosQueueRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCenInterRegionTrafficQosQueueRequest self = new CreateCenInterRegionTrafficQosQueueRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateCenInterRegionTrafficQosQueueRequest setBandwidth(Long bandwidth) {
+        this.bandwidth = bandwidth;
+        return this;
+    }
+    public Long getBandwidth() {
+        return this.bandwidth;
     }
 
     public CreateCenInterRegionTrafficQosQueueRequest setClientToken(String clientToken) {

@@ -4,6 +4,9 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends TeaModel {
+    @NameInMap("Bandwidth")
+    public Long bandwidth;
+
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
@@ -88,6 +91,14 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends TeaMode
     public static UpdateCenInterRegionTrafficQosQueueAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateCenInterRegionTrafficQosQueueAttributeRequest self = new UpdateCenInterRegionTrafficQosQueueAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateCenInterRegionTrafficQosQueueAttributeRequest setBandwidth(Long bandwidth) {
+        this.bandwidth = bandwidth;
+        return this;
+    }
+    public Long getBandwidth() {
+        return this.bandwidth;
     }
 
     public UpdateCenInterRegionTrafficQosQueueAttributeRequest setClientToken(String clientToken) {

@@ -4,6 +4,9 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class CreateCenInterRegionTrafficQosPolicyRequest extends TeaModel {
+    @NameInMap("BandwidthGuaranteeMode")
+    public String bandwidthGuaranteeMode;
+
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
@@ -89,6 +92,14 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends TeaModel {
     public static CreateCenInterRegionTrafficQosPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCenInterRegionTrafficQosPolicyRequest self = new CreateCenInterRegionTrafficQosPolicyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateCenInterRegionTrafficQosPolicyRequest setBandwidthGuaranteeMode(String bandwidthGuaranteeMode) {
+        this.bandwidthGuaranteeMode = bandwidthGuaranteeMode;
+        return this;
+    }
+    public String getBandwidthGuaranteeMode() {
+        return this.bandwidthGuaranteeMode;
     }
 
     public CreateCenInterRegionTrafficQosPolicyRequest setClientToken(String clientToken) {
@@ -180,6 +191,9 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends TeaModel {
     }
 
     public static class CreateCenInterRegionTrafficQosPolicyRequestTrafficQosQueues extends TeaModel {
+        @NameInMap("Bandwidth")
+        public String bandwidth;
+
         /**
          * <p>The Differentiated Services Code Point (DSCP) value that matches the current queue.</p>
          * <p>Each QoS policy supports at most three queues. You can specify at most 60 DSCP values for each queue. Separate multiple DCSP values with commas (,).</p>
@@ -226,6 +240,14 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends TeaModel {
         public static CreateCenInterRegionTrafficQosPolicyRequestTrafficQosQueues build(java.util.Map<String, ?> map) throws Exception {
             CreateCenInterRegionTrafficQosPolicyRequestTrafficQosQueues self = new CreateCenInterRegionTrafficQosPolicyRequestTrafficQosQueues();
             return TeaModel.build(map, self);
+        }
+
+        public CreateCenInterRegionTrafficQosPolicyRequestTrafficQosQueues setBandwidth(String bandwidth) {
+            this.bandwidth = bandwidth;
+            return this;
+        }
+        public String getBandwidth() {
+            return this.bandwidth;
         }
 
         public CreateCenInterRegionTrafficQosPolicyRequestTrafficQosQueues setDscps(java.util.List<Integer> dscps) {
