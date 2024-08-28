@@ -32,6 +32,9 @@ public class CreateIpamRequest extends TeaModel {
     @NameInMap("IpamName")
     public String ipamName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OperatingRegionList")
     public java.util.List<String> operatingRegionList;
 

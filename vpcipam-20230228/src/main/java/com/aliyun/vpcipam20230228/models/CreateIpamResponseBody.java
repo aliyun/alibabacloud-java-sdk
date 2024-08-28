@@ -4,6 +4,12 @@ package com.aliyun.vpcipam20230228.models;
 import com.aliyun.tea.*;
 
 public class CreateIpamResponseBody extends TeaModel {
+    @NameInMap("DefaultResourceDiscoveryAssociationId")
+    public String defaultResourceDiscoveryAssociationId;
+
+    @NameInMap("DefaultResourceDiscoveryId")
+    public String defaultResourceDiscoveryId;
+
     /**
      * <strong>example:</strong>
      * <p>ipam-ccxbnsbhew0d6t****</p>
@@ -32,9 +38,28 @@ public class CreateIpamResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceDiscoveryAssociationCount")
+    public Integer resourceDiscoveryAssociationCount;
+
     public static CreateIpamResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateIpamResponseBody self = new CreateIpamResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateIpamResponseBody setDefaultResourceDiscoveryAssociationId(String defaultResourceDiscoveryAssociationId) {
+        this.defaultResourceDiscoveryAssociationId = defaultResourceDiscoveryAssociationId;
+        return this;
+    }
+    public String getDefaultResourceDiscoveryAssociationId() {
+        return this.defaultResourceDiscoveryAssociationId;
+    }
+
+    public CreateIpamResponseBody setDefaultResourceDiscoveryId(String defaultResourceDiscoveryId) {
+        this.defaultResourceDiscoveryId = defaultResourceDiscoveryId;
+        return this;
+    }
+    public String getDefaultResourceDiscoveryId() {
+        return this.defaultResourceDiscoveryId;
     }
 
     public CreateIpamResponseBody setIpamId(String ipamId) {
@@ -67,6 +92,14 @@ public class CreateIpamResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CreateIpamResponseBody setResourceDiscoveryAssociationCount(Integer resourceDiscoveryAssociationCount) {
+        this.resourceDiscoveryAssociationCount = resourceDiscoveryAssociationCount;
+        return this;
+    }
+    public Integer getResourceDiscoveryAssociationCount() {
+        return this.resourceDiscoveryAssociationCount;
     }
 
 }

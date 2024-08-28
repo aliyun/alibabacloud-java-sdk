@@ -126,6 +126,12 @@ public class ListIpamsResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("DefaultResourceDiscoveryAssociationId")
+        public String defaultResourceDiscoveryAssociationId;
+
+        @NameInMap("DefaultResourceDiscoveryId")
+        public String defaultResourceDiscoveryId;
+
         /**
          * <strong>example:</strong>
          * <p>test description</p>
@@ -185,6 +191,9 @@ public class ListIpamsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ResourceDiscoveryAssociationCount")
+        public Integer resourceDiscoveryAssociationCount;
+
         /**
          * <strong>example:</strong>
          * <p>rg-aek2dbprgpt****</p>
@@ -213,6 +222,22 @@ public class ListIpamsResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public ListIpamsResponseBodyIpams setDefaultResourceDiscoveryAssociationId(String defaultResourceDiscoveryAssociationId) {
+            this.defaultResourceDiscoveryAssociationId = defaultResourceDiscoveryAssociationId;
+            return this;
+        }
+        public String getDefaultResourceDiscoveryAssociationId() {
+            return this.defaultResourceDiscoveryAssociationId;
+        }
+
+        public ListIpamsResponseBodyIpams setDefaultResourceDiscoveryId(String defaultResourceDiscoveryId) {
+            this.defaultResourceDiscoveryId = defaultResourceDiscoveryId;
+            return this;
+        }
+        public String getDefaultResourceDiscoveryId() {
+            return this.defaultResourceDiscoveryId;
         }
 
         public ListIpamsResponseBodyIpams setIpamDescription(String ipamDescription) {
@@ -285,6 +310,14 @@ public class ListIpamsResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public ListIpamsResponseBodyIpams setResourceDiscoveryAssociationCount(Integer resourceDiscoveryAssociationCount) {
+            this.resourceDiscoveryAssociationCount = resourceDiscoveryAssociationCount;
+            return this;
+        }
+        public Integer getResourceDiscoveryAssociationCount() {
+            return this.resourceDiscoveryAssociationCount;
         }
 
         public ListIpamsResponseBodyIpams setResourceGroupId(String resourceGroupId) {
