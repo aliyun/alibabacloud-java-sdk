@@ -96,11 +96,17 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPoliciesTrafficQosQueues extends TeaModel {
+        @NameInMap("Bandwidth")
+        public String bandwidth;
+
         /**
          * <p>The differentiated services code point (DSCP) value that is used to match packets.</p>
          */
         @NameInMap("Dscps")
         public java.util.List<Integer> dscps;
+
+        @NameInMap("EffectiveBandwidth")
+        public String effectiveBandwidth;
 
         /**
          * <p>The description of the queue.</p>
@@ -143,12 +149,28 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPoliciesTrafficQosQueues setBandwidth(String bandwidth) {
+            this.bandwidth = bandwidth;
+            return this;
+        }
+        public String getBandwidth() {
+            return this.bandwidth;
+        }
+
         public ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPoliciesTrafficQosQueues setDscps(java.util.List<Integer> dscps) {
             this.dscps = dscps;
             return this;
         }
         public java.util.List<Integer> getDscps() {
             return this.dscps;
+        }
+
+        public ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPoliciesTrafficQosQueues setEffectiveBandwidth(String effectiveBandwidth) {
+            this.effectiveBandwidth = effectiveBandwidth;
+            return this;
+        }
+        public String getEffectiveBandwidth() {
+            return this.effectiveBandwidth;
         }
 
         public ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPoliciesTrafficQosQueues setQosQueueDescription(String qosQueueDescription) {
@@ -186,6 +208,9 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPolicies extends TeaModel {
+        @NameInMap("BandwidthGuaranteeMode")
+        public String bandwidthGuaranteeMode;
+
         /**
          * <p>The description of the QoS policy.</p>
          * 
@@ -255,6 +280,14 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
         public static ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPolicies build(java.util.Map<String, ?> map) throws Exception {
             ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPolicies self = new ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPolicies();
             return TeaModel.build(map, self);
+        }
+
+        public ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPolicies setBandwidthGuaranteeMode(String bandwidthGuaranteeMode) {
+            this.bandwidthGuaranteeMode = bandwidthGuaranteeMode;
+            return this;
+        }
+        public String getBandwidthGuaranteeMode() {
+            return this.bandwidthGuaranteeMode;
         }
 
         public ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPolicies setTrafficQosPolicyDescription(String trafficQosPolicyDescription) {

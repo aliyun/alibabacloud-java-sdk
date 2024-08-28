@@ -62,11 +62,17 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
     }
 
     public static class ListCenInterRegionTrafficQosQueuesResponseBodyTrafficQosQueues extends TeaModel {
+        @NameInMap("Bandwidth")
+        public String bandwidth;
+
         /**
          * <p>The Differentiated Services Code Point (DSCP) value that matches the current QoS queue.</p>
          */
         @NameInMap("Dscps")
         public java.util.List<Integer> dscps;
+
+        @NameInMap("EffectiveBandwidth")
+        public String effectiveBandwidth;
 
         /**
          * <p>The percentage of the inter-region bandwidth that can be consumed by the QoS queue.</p>
@@ -151,12 +157,28 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListCenInterRegionTrafficQosQueuesResponseBodyTrafficQosQueues setBandwidth(String bandwidth) {
+            this.bandwidth = bandwidth;
+            return this;
+        }
+        public String getBandwidth() {
+            return this.bandwidth;
+        }
+
         public ListCenInterRegionTrafficQosQueuesResponseBodyTrafficQosQueues setDscps(java.util.List<Integer> dscps) {
             this.dscps = dscps;
             return this;
         }
         public java.util.List<Integer> getDscps() {
             return this.dscps;
+        }
+
+        public ListCenInterRegionTrafficQosQueuesResponseBodyTrafficQosQueues setEffectiveBandwidth(String effectiveBandwidth) {
+            this.effectiveBandwidth = effectiveBandwidth;
+            return this;
+        }
+        public String getEffectiveBandwidth() {
+            return this.effectiveBandwidth;
         }
 
         public ListCenInterRegionTrafficQosQueuesResponseBodyTrafficQosQueues setRemainBandwidthPercent(Integer remainBandwidthPercent) {
