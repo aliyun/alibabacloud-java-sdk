@@ -50,6 +50,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ConnectString")
         public String connectString;
 
+        @NameInMap("LockMode")
+        public String lockMode;
+
         /**
          * <p>The maximum number of connections to the Configserver node.</p>
          * 
@@ -133,6 +136,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getConnectString() {
             return this.connectString;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceConfigserverListConfigserverAttribute setLockMode(String lockMode) {
+            this.lockMode = lockMode;
+            return this;
+        }
+        public String getLockMode() {
+            return this.lockMode;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceConfigserverListConfigserverAttribute setMaxConnections(Integer maxConnections) {
@@ -229,6 +240,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         @NameInMap("ConnectSting")
         public String connectSting;
+
+        @NameInMap("LockMode")
+        public String lockMode;
 
         /**
          * <p>The maximum number of connections to the mongos node.</p>
@@ -337,6 +351,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getConnectSting() {
             return this.connectSting;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceMongosListMongosAttribute setLockMode(String lockMode) {
+            this.lockMode = lockMode;
+            return this;
+        }
+        public String getLockMode() {
+            return this.lockMode;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceMongosListMongosAttribute setMaxConnections(Integer maxConnections) {
@@ -613,6 +635,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ConnectString")
         public String connectString;
 
+        @NameInMap("LockMode")
+        public String lockMode;
+
         /**
          * <p>The maximum number of connections to the shard node.</p>
          * 
@@ -714,6 +739,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getConnectString() {
             return this.connectString;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardListShardAttribute setLockMode(String lockMode) {
+            this.lockMode = lockMode;
+            return this;
+        }
+        public String getLockMode() {
+            return this.lockMode;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardListShardAttribute setMaxConnections(Integer maxConnections) {
