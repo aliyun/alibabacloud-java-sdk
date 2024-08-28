@@ -6,12 +6,15 @@ import com.aliyun.tea.*;
 public class UpdateResourceRequest extends TeaModel {
     /**
      * <p>The new name of the resource group after the update. The name can be up to 27 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot</p>
      */
     @NameInMap("ResourceName")
     public String resourceName;
 
     /**
-     * <p>The configurable options for self managed resource group.</p>
+     * <p>The configuration items of the self-managed resource group.</p>
      */
     @NameInMap("SelfManagedResourceOptions")
     public UpdateResourceRequestSelfManagedResourceOptions selfManagedResourceOptions;
@@ -39,33 +42,48 @@ public class UpdateResourceRequest extends TeaModel {
 
     public static class UpdateResourceRequestSelfManagedResourceOptionsNodeTolerations extends TeaModel {
         /**
-         * <p>The effect.</p>
-         * <br>
-         * <p>Valid values:</p>
-         * <p>- PreferNoSchedule</p>
-         * <p>- NoSchedule</p>
-         * <p>- NoExecute</p>
+         * <p>The effect.
+         * Valid values:</p>
+         * <ul>
+         * <li>PreferNoSchedule</li>
+         * <li>NoSchedule</li>
+         * <li>NoExecute</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NoSchedule</p>
          */
         @NameInMap("effect")
         public String effect;
 
         /**
-         * <p>The name of the key.</p>
+         * <p>The key name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1</p>
          */
         @NameInMap("key")
         public String key;
 
         /**
-         * <p>Relationship between key names and key values.</p>
-         * <p>Valid values:</p>
-         * <p>- Equal</p>
-         * <p>- Exists</p>
+         * <p>Relationship between key names and key values.
+         * Valid values:</p>
+         * <ul>
+         * <li>Equal</li>
+         * <li>Exists</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Equal</p>
          */
         @NameInMap("operator")
         public String operator;
 
         /**
-         * <p>The name of the value.</p>
+         * <p>The key value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value1</p>
          */
         @NameInMap("value")
         public String value;
@@ -111,7 +129,7 @@ public class UpdateResourceRequest extends TeaModel {
 
     public static class UpdateResourceRequestSelfManagedResourceOptions extends TeaModel {
         /**
-         * <p>The key-value pairs for matched nodes.</p>
+         * <p>Tag tag key-value pairs for nodes.</p>
          */
         @NameInMap("NodeMatchLabels")
         public java.util.Map<String, String> nodeMatchLabels;

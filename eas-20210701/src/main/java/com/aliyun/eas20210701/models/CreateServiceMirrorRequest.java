@@ -4,9 +4,18 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceMirrorRequest extends TeaModel {
+    /**
+     * <p>The percentage of the traffic that is mirrored to the destination service. Valid values: 0 to 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("Ratio")
     public Integer ratio;
 
+    /**
+     * <p>The instances.</p>
+     */
     @NameInMap("Target")
     public java.util.List<String> target;
 

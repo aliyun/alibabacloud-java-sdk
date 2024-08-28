@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateGatewayIntranetLinkedVpcRequest extends TeaModel {
     /**
      * <p>The vSwitch ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-8vbqn2at0kljjxxxx****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The virtual private cloud (VPC) ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-uf66uio7md****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

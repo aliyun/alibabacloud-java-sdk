@@ -46,6 +46,9 @@ public class Resource extends TeaModel {
     @NameInMap("UpdateTime")
     public String updateTime;
 
+    @NameInMap("Vendor")
+    public String vendor;
+
     public static Resource build(java.util.Map<String, ?> map) throws Exception {
         Resource self = new Resource();
         return TeaModel.build(map, self);
@@ -161,6 +164,14 @@ public class Resource extends TeaModel {
     }
     public String getUpdateTime() {
         return this.updateTime;
+    }
+
+    public Resource setVendor(String vendor) {
+        this.vendor = vendor;
+        return this;
+    }
+    public String getVendor() {
+        return this.vendor;
     }
 
 }

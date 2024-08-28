@@ -4,9 +4,18 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class DescribeSpotDiscountHistoryResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40325405-579C-4D82***</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The discount for the preemptible instance.</p>
+     */
     @NameInMap("SpotDiscounts")
     public java.util.List<DescribeSpotDiscountHistoryResponseBodySpotDiscounts> spotDiscounts;
 
@@ -32,15 +41,39 @@ public class DescribeSpotDiscountHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeSpotDiscountHistoryResponseBodySpotDiscounts extends TeaModel {
+        /**
+         * <p>The type of the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c7.large</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The discount for the preemptible instance. For example, 0.1 represents a 90% discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1</p>
+         */
         @NameInMap("SpotDiscount")
         public String spotDiscount;
 
+        /**
+         * <p>The time when the discount is available. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-10T10:00:00Z</p>
+         */
         @NameInMap("Timestamp")
         public String timestamp;
 
+        /**
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class UpdateServiceLabelRequest extends TeaModel {
     /**
      * <p>The custom service tags.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Labels")
     public java.util.Map<String, String> labels;

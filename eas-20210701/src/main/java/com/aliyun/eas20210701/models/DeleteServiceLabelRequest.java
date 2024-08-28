@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class DeleteServiceLabelRequest extends TeaModel {
     /**
      * <p>The service tags that you want to delete.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Keys")
     public java.util.List<String> keys;

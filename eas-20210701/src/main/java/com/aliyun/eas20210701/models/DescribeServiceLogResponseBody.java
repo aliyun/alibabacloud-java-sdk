@@ -4,18 +4,45 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class DescribeServiceLogResponseBody extends TeaModel {
+    /**
+     * <p>The returned logs.</p>
+     */
     @NameInMap("Logs")
     public java.util.List<String> logs;
 
+    /**
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Long pageNum;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40325405-579C-4D82********</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <p>The total number of pages returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>500</p>
+     */
     @NameInMap("TotalPageNum")
     public Long totalPageNum;
 

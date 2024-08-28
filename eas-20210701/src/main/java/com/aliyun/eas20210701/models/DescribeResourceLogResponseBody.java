@@ -4,18 +4,48 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class DescribeResourceLogResponseBody extends TeaModel {
+    /**
+     * <p>The Logstore of Log Service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>access_log</p>
+     */
     @NameInMap("LogStore")
     public String logStore;
 
+    /**
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Network interfaces are updating</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The Log Service project that is associated with the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eas-r-asdasdasd-sls</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40325405-579C-4D82****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The state of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ResourceReady</p>
+     */
     @NameInMap("Status")
     public String status;
 

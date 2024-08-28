@@ -4,24 +4,54 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class DescribeResourceDLinkResponseBody extends TeaModel {
+    /**
+     * <p>The IDs of the secondary vSwitches that are directly connected.</p>
+     */
     @NameInMap("AuxVSwitchList")
     public java.util.List<String> auxVSwitchList;
 
     /**
-     * <p>The CIDR blocks of the clients that you want to connect to. The CIDR blocks are added to the back-to-origin route of the server.</p>
+     * <p>The CIDR blocks of the clients that you want to connect to. After this parameter is specified, the CIDR blocks are added to the back-to-origin route of the server. Either this parameter or the VSwitchIdList parameter can be used to determine CIDR blocks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>72.16.0.0/16</p>
      */
     @NameInMap("DestinationCIDRs")
     public String destinationCIDRs;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40325405-579C-4D82****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the security group that is directly connected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bp1j1z7297hcink9d****</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    /**
+     * <p>The ID of the primary vSwitch that is directly connected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-8vbqn2at0kljjxxxx****</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <p>The ID of the VPC that is directly connected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-uf66uio7md****</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

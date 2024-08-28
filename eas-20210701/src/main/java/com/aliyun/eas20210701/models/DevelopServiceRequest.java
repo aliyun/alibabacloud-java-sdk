@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class DevelopServiceRequest extends TeaModel {
     /**
      * <p>Specifies whether to exit development mode. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false (default)</p>
+     * <ul>
+     * <li>true: exits development mode.</li>
+     * <li>false (default): enters development mode.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Exit")
     public String exit;

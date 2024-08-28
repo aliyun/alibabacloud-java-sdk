@@ -4,9 +4,18 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class DescribeServiceDiagnosisResponseBody extends TeaModel {
+    /**
+     * <p>The diagnostics list.</p>
+     */
     @NameInMap("DiagnosisList")
     public java.util.List<DescribeServiceDiagnosisResponseBodyDiagnosisList> diagnosisList;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40325405-579C-4D82****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +41,24 @@ public class DescribeServiceDiagnosisResponseBody extends TeaModel {
     }
 
     public static class DescribeServiceDiagnosisResponseBodyDiagnosisList extends TeaModel {
+        /**
+         * <p>The suggestions about how to handle the errors.</p>
+         */
         @NameInMap("Advices")
         public java.util.List<String> advices;
 
+        /**
+         * <p>The causes of the errors.</p>
+         */
         @NameInMap("Causes")
         public java.util.List<String> causes;
 
+        /**
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Container worker0 failed to pull image.</p>
+         */
         @NameInMap("Error")
         public String error;
 

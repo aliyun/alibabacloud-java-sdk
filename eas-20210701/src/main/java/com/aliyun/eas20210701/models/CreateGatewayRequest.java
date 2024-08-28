@@ -6,51 +6,68 @@ import com.aliyun.tea.*;
 public class CreateGatewayRequest extends TeaModel {
     /**
      * <p>The name of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eas-r-4gt8twzwllfo******</p>
      */
     @NameInMap("ResourceName")
     public String resourceName;
 
     /**
      * <p>Specifies whether to enable Internet access. Default value: false.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   false</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><p>true</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>false</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("EnableInternet")
     public Boolean enableInternet;
 
     /**
      * <p>Specifies whether to enable internal network access. Default value: true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EnableIntranet")
     public Boolean enableIntranet;
 
     /**
      * <p>The instance type used for the private gateway.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.c6.4xlarge</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
      * <p>The private gateway alias.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mygateway1</p>
      */
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("Replicas")
+    public Integer replicas;
 
     public static CreateGatewayRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateGatewayRequest self = new CreateGatewayRequest();
@@ -95,6 +112,14 @@ public class CreateGatewayRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateGatewayRequest setReplicas(Integer replicas) {
+        this.replicas = replicas;
+        return this;
+    }
+    public Integer getReplicas() {
+        return this.replicas;
     }
 
 }

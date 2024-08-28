@@ -6,152 +6,182 @@ import com.aliyun.tea.*;
 public class DescribeBenchmarkTaskResponseBody extends TeaModel {
     /**
      * <p>The number of instances that you can test.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("AvailableAgent")
     public Long availableAgent;
 
     /**
      * <p>The ID of the operation caller.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1640133467****</p>
      */
     @NameInMap("CallerUid")
     public String callerUid;
 
     /**
      * <p>The number of instances that you want to test.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("DesiredAgent")
     public Long desiredAgent;
 
     /**
      * <p>The endpoint of the service gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192342311234.pai-eas.cn-chengdu.aliyuncs.com</p>
      */
     @NameInMap("Endpoint")
     public String endpoint;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Benchmar task is Running</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the Alibaba Cloud account that is used to call the operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1029728669****</p>
      */
     @NameInMap("ParentUid")
     public String parentUid;
 
     /**
      * <p>The event or reason that causes the current state of the stress testing task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RUNNING</p>
      */
     @NameInMap("Reason")
     public String reason;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40325405-579C-4D82****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The name of the service that you want to test.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>foo</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;
 
     /**
      * <p>The state of the stress testing task.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   Creating</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   Starting</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   DeleteFailed</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   Running</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   Stopping</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   Error</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   Updating</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   Deleting</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   CreateFailed</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><p>Creating</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>Starting</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>DeleteFailed</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>Running</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>Stopping</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>Error</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>Updating</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>Deleting</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>CreateFailed</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The ID of the stress testing task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eas-b-gv4y86u****</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
      * <p>The name of the stress testing task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>benchmark-larec-test-ae70</p>
      */
     @NameInMap("TaskName")
     public String taskName;
 
     /**
      * <p>The token for authentication when a stress testing task is created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6062787a-9301****</p>
      */
     @NameInMap("Token")
     public String token;

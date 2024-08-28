@@ -5,107 +5,305 @@ import com.aliyun.tea.*;
 
 public class ListServicesShrinkRequest extends TeaModel {
     /**
-     * <p>{</p>
-     * <p>  "RequestId": "40325405-579C-4D82-9624-EC2B1779848E",</p>
-     * <p>  "Services": [</p>
-     * <p>    {</p>
-     * <p>      "ServiceId": "200516454695942578",</p>
-     * <p>      "ServiceName": "vipserver",</p>
-     * <p>      "ParentUid": "1628454689805075",</p>
-     * <p>      "CallerUid": "eas",</p>
-     * <p>      "CurrentVersion": 1,</p>
-     * <p>      "Cpu": 1,</p>
-     * <p>      "Gpu": 0,</p>
-     * <p>      "Memory": 900,</p>
-     * <p>      "Image": "registry.cn-zhangjiakou.aliyuncs.com/eas/ndisearch_v1_inner_zhangbei:v0.0.3-20200302145109",</p>
-     * <p>      "Resource": "seccontent_inner_2080ti_5",</p>
-     * <p>      "Namespace": "vipserver",</p>
-     * <p>      "CreateTime": "2019-10-25T10:37:53Z",</p>
-     * <p>      "UpdateTime": "2019-10-30T16:50:59Z",</p>
-     * <p>      "TotalInstance": 1,</p>
-     * <p>      "RunningInstance": 1,</p>
-     * <p>      "PendingInstance": 0,</p>
-     * <p>      "LatestVersion": 1,</p>
-     * <p>      "Status": "Running",</p>
-     * <p>      "Reason": "RUNNING",</p>
-     * <p>      "Message": "Service is now scaling",</p>
-     * <p>      "AccessToken": "",</p>
-     * <p>      "Weight": 0</p>
-     * <p>    },</p>
-     * <p>    {</p>
-     * <p>      "ServiceId": 97097,</p>
-     * <p>      "ServiceName": "a1",</p>
-     * <p>      "CallerUid": "eas",</p>
-     * <p>      "CurrentVersion": 1,</p>
-     * <p>      "Cpu": 1,</p>
-     * <p>      "Gpu": 0,</p>
-     * <p>      "Memory": 900,</p>
-     * <p>      "Image": "registry.cn-hangzhou.aliyuncs.com/eas/pi_imemb_tb:v0.0.1-20191023130701",</p>
-     * <p>      "Resource": "seccontent_inner_b",</p>
-     * <p>      "Namespace": "a1",</p>
-     * <p>      "CreateTime": "2020-05-26T18:03:11Z",</p>
-     * <p>      "UpdateTime": "2020-05-26T18:03:11Z",</p>
-     * <p>      "TotalInstance": 1,</p>
-     * <p>      "RunningInstance": 0,</p>
-     * <p>      "PendingInstance": 1,</p>
-     * <p>      "LatestVersion": 1,</p>
-     * <p>      "Status": "Failed",</p>
-     * <p>      "Reason": "FAILED",</p>
-     * <p>      "Message": "the server could not find the requested resource (post services.meta.k8s.io)",</p>
-     * <p>      "AccessToken": "regression_test_token",</p>
-     * <p>      "Weight": 0</p>
-     * <p>    }</p>
-     * <p>  ],</p>
-     * <p>  "PageNumber": 1,</p>
-     * <p>  "PageSize": 2,</p>
-     * <p>  "TotalCount": 2</p>
-     * <p>}</p>
+     * <p>The field that is used for fuzzy matches. The system performs fuzzy matches only by service name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>foo</p>
      */
     @NameInMap("Filter")
     public String filter;
 
+    @NameInMap("Gateway")
+    public String gateway;
+
+    /**
+     * <p>The name of the service group. For more information about how to query the name of a service group, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>foo</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <p>The tag that is used to filter services.</p>
+     */
     @NameInMap("Label")
     public String labelShrink;
 
+    /**
+     * <p>The sorting order. Valid values:</p>
+     * <ul>
+     * <li>desc (default): The query results are sorted in descending order.</li>
+     * <li>asc: The query results are sorted in ascending order.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>asc</p>
+     */
     @NameInMap("Order")
     public String order;
 
     /**
-     * <p>376577</p>
+     * <p>The page number. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. Default value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the primary service that corresponds to the Band member service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eas-m-ijafy3c8cxxxx</p>
+     */
     @NameInMap("ParentServiceUid")
     public String parentServiceUid;
 
+    /**
+     * <p>The quota ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>quota12345</p>
+     */
     @NameInMap("QuotaId")
     public String quotaId;
 
+    /**
+     * <p>The name or ID of the resource group to which the service belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eas-r-hd0qwy8cxxxx</p>
+     */
     @NameInMap("ResourceName")
     public String resourceName;
 
+    /**
+     * <p>The service name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>echo_test</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 
+    /**
+     * <p>The service state.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><p>Creating</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>Stopped</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>Failed</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>Complete</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>Cloning</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>Stopping</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>Updating</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>Waiting</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>HotUpdate</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>Committing</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>Starting</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>DeleteFailed</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>Running</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>Developing</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>Scaling</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>Deleted</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>Pending</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>Deleting</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("ServiceStatus")
     public String serviceStatus;
 
+    /**
+     * <p>The service type. Valid values:</p>
+     * <ul>
+     * <li>Async</li>
+     * <li>Standard</li>
+     * <li>Offline Task</li>
+     * <li>Proxima</li>
+     * </ul>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><p>Async</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>Standard</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>OfflineTask</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>Proxima</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Standard</p>
+     */
     @NameInMap("ServiceType")
     public String serviceType;
 
+    /**
+     * <p>The user ID (UID) of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eas-m-c9iw3yitxxxx</p>
+     */
     @NameInMap("ServiceUid")
     public String serviceUid;
 
+    /**
+     * <p>The sort field. By default, the query results are sorted by the timestamp type in descending order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CreateTime</p>
+     */
     @NameInMap("Sort")
     public String sort;
 
+    /**
+     * <p>The workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -120,6 +318,14 @@ public class ListServicesShrinkRequest extends TeaModel {
     }
     public String getFilter() {
         return this.filter;
+    }
+
+    public ListServicesShrinkRequest setGateway(String gateway) {
+        this.gateway = gateway;
+        return this;
+    }
+    public String getGateway() {
+        return this.gateway;
     }
 
     public ListServicesShrinkRequest setGroupName(String groupName) {

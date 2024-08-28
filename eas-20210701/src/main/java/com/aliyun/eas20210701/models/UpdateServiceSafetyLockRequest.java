@@ -6,36 +6,15 @@ import com.aliyun.tea.*;
 public class UpdateServiceSafetyLockRequest extends TeaModel {
     /**
      * <p>The lock scope. Valid values:</p>
-     * <br>
-     * <p>*   all: locks all operations.</p>
-     * <p>*   dangerous: locks high-risk operations such as delete and stop operations.</p>
-     * <p>*   none: locks no operations.</p>
-     * <br>
-     * <p>Enumerated values:</p>
-     * <br>
-     * <p>*   all</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   dangerous</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   none</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li>all: locks all operations.</li>
+     * <li>dangerous: locks dangerous operations such as delete and stop operations.</li>
+     * <li>none: locks no operations.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dangerous</p>
      */
     @NameInMap("Lock")
     public String lock;
