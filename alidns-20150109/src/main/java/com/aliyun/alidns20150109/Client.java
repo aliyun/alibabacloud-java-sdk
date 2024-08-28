@@ -2695,6 +2695,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the complete configuration information about a Global Traffic Manager (GTM) instance, including the details about the access domain name, alert notifications, address pools, and addresses.</p>
+     * 
      * @param request DescribeCloudGtmInstanceConfigFullInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCloudGtmInstanceConfigFullInfoResponse
@@ -2736,6 +2739,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the complete configuration information about a Global Traffic Manager (GTM) instance, including the details about the access domain name, alert notifications, address pools, and addresses.</p>
+     * 
      * @param request DescribeCloudGtmInstanceConfigFullInfoRequest
      * @return DescribeCloudGtmInstanceConfigFullInfoResponse
      */

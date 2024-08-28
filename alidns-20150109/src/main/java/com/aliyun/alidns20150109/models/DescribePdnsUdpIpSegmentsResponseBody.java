@@ -79,6 +79,12 @@ public class DescribePdnsUdpIpSegmentsResponseBody extends TeaModel {
         @NameInMap("CreateDate")
         public String createDate;
 
+        @NameInMap("CreateTimestamp")
+        public Long createTimestamp;
+
+        @NameInMap("Id")
+        public String id;
+
         @NameInMap("Ip")
         public String ip;
 
@@ -87,6 +93,9 @@ public class DescribePdnsUdpIpSegmentsResponseBody extends TeaModel {
 
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("SecretKey")
+        public String secretKey;
 
         @NameInMap("State")
         public String state;
@@ -105,6 +114,22 @@ public class DescribePdnsUdpIpSegmentsResponseBody extends TeaModel {
         }
         public String getCreateDate() {
             return this.createDate;
+        }
+
+        public DescribePdnsUdpIpSegmentsResponseBodyIpSegments setCreateTimestamp(Long createTimestamp) {
+            this.createTimestamp = createTimestamp;
+            return this;
+        }
+        public Long getCreateTimestamp() {
+            return this.createTimestamp;
+        }
+
+        public DescribePdnsUdpIpSegmentsResponseBodyIpSegments setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
         public DescribePdnsUdpIpSegmentsResponseBodyIpSegments setIp(String ip) {
@@ -129,6 +154,14 @@ public class DescribePdnsUdpIpSegmentsResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribePdnsUdpIpSegmentsResponseBodyIpSegments setSecretKey(String secretKey) {
+            this.secretKey = secretKey;
+            return this;
+        }
+        public String getSecretKey() {
+            return this.secretKey;
         }
 
         public DescribePdnsUdpIpSegmentsResponseBodyIpSegments setState(String state) {
