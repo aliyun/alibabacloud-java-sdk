@@ -106,7 +106,7 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The major version to which you want to upgrade. When you change the configurations of an instance, you can upgrade the major version of the instance by setting this parameter. Valid values: <strong>4.0</strong> and <strong>5.0</strong>.</p>
+     * <p>The major version to which you want to upgrade the instance. When you change the configurations of an instance, you can upgrade the major version of the instance by setting this parameter. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, and <strong>5.0</strong>. We recommend that you upgrade the major version to 5.0.</p>
      * 
      * <strong>example:</strong>
      * <p>5.0</p>
@@ -115,6 +115,17 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public String majorVersion;
 
     /**
+     * <p>The node type. Valid values:</p>
+     * <ul>
+     * <li><strong>MASTER_SLAVE</strong>: high availability (master-replica)</li>
+     * <li><strong>STAND_ALONE</strong>: standalone</li>
+     * <li><strong>double</strong>: master-replica</li>
+     * <li><strong>single</strong>: standalone</li>
+     * </ul>
+     * <blockquote>
+     * <p> For cloud-native instances, set this parameter to <strong>MASTER_SLAVE</strong> or <strong>STAND_ALONE</strong>. For classic instances, set this parameter to <strong>double</strong> or <strong>single</strong>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>MASTER_SLAVE</p>
      */
@@ -128,11 +139,13 @@ public class ModifyInstanceSpecRequest extends TeaModel {
      * <li><strong>DOWNGRADE</strong>: downgrades the configurations of a subscription instance.</li>
      * </ul>
      * <blockquote>
-     * <ul>
-     * <li>To downgrade a subscription instance, you must set this parameter to <strong>DOWNGRADE</strong>.</li>
-     * <li>If the price of an instance increases after its configurations are changed, the instance is upgraded. If the price decreases, the instance is downgraded. For example, the price of an 8 GB read/write splitting instance with five read replicas is higher than that of a 16 GB cluster instance. If you want to change a 16 GB cluster instance to an 8 GB read/write splitting instance with five read replicas, you must upgrade the instance.</li>
-     * </ul>
      * </blockquote>
+     * <ul>
+     * <li><p>To downgrade a subscription instance, you must set this parameter to <strong>DOWNGRADE</strong>.</p>
+     * </li>
+     * <li><p>If the price of an instance increases after its configurations are changed, the instance is upgraded. If the price decreases, the instance is downgraded. For example, the price of an 8 GB read/write splitting instance with five read replicas is higher than that of a 16 GB cluster instance. If you want to change a 16 GB cluster instance to an 8 GB read/write splitting instance with five read replicas, you must upgrade the instance.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>DOWNGRADE</p>

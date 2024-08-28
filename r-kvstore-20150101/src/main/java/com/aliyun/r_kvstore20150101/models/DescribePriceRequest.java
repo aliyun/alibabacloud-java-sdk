@@ -185,6 +185,9 @@ public class DescribePriceRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("ShardCount")
+    public Integer shardCount;
+
     /**
      * <p>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/94527.html">DescribeZones</a> operation to query the most recent zone list.</p>
      * 
@@ -349,6 +352,14 @@ public class DescribePriceRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public DescribePriceRequest setShardCount(Integer shardCount) {
+        this.shardCount = shardCount;
+        return this;
+    }
+    public Integer getShardCount() {
+        return this.shardCount;
     }
 
     public DescribePriceRequest setZoneId(String zoneId) {

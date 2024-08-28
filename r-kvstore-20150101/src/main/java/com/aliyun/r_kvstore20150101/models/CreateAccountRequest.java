@@ -90,6 +90,9 @@ public class CreateAccountRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("SourceBiz")
+    public String sourceBiz;
+
     public static CreateAccountRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAccountRequest self = new CreateAccountRequest();
         return TeaModel.build(map, self);
@@ -181,6 +184,14 @@ public class CreateAccountRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public CreateAccountRequest setSourceBiz(String sourceBiz) {
+        this.sourceBiz = sourceBiz;
+        return this;
+    }
+    public String getSourceBiz() {
+        return this.sourceBiz;
     }
 
 }

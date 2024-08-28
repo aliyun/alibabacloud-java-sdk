@@ -53,6 +53,9 @@ public class GrantAccountPrivilegeRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("SourceBiz")
+    public String sourceBiz;
+
     public static GrantAccountPrivilegeRequest build(java.util.Map<String, ?> map) throws Exception {
         GrantAccountPrivilegeRequest self = new GrantAccountPrivilegeRequest();
         return TeaModel.build(map, self);
@@ -120,6 +123,14 @@ public class GrantAccountPrivilegeRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public GrantAccountPrivilegeRequest setSourceBiz(String sourceBiz) {
+        this.sourceBiz = sourceBiz;
+        return this;
+    }
+    public String getSourceBiz() {
+        return this.sourceBiz;
     }
 
 }
