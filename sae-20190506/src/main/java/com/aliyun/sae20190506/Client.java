@@ -391,6 +391,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EnableEbpf", request.enableEbpf);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableNewArms)) {
+            query.put("EnableNewArms", request.enableNewArms);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.envs)) {
             query.put("Envs", request.envs);
         }
@@ -712,7 +716,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>name</p>
+     * <p>Create a ConfigMap in a namespace.</p>
      * 
      * @param request CreateConfigMapRequest
      * @param headers map
@@ -760,7 +764,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>name</p>
+     * <p>Create a ConfigMap in a namespace.</p>
      * 
      * @param request CreateConfigMapRequest
      * @return CreateConfigMapResponse
@@ -2044,6 +2048,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableGreyTagRoute)) {
             query.put("EnableGreyTagRoute", request.enableGreyTagRoute);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableNewArms)) {
+            query.put("EnableNewArms", request.enableNewArms);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.envs)) {

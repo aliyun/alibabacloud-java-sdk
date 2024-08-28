@@ -14,6 +14,9 @@ public class UpdateWebCustomDomainInput extends TeaModel {
     @NameInMap("Protocol")
     public String protocol;
 
+    @NameInMap("RouteConfig")
+    public RouteConfig routeConfig;
+
     @NameInMap("WebCertConfig")
     public WebCertConfig webCertConfig;
 
@@ -42,6 +45,14 @@ public class UpdateWebCustomDomainInput extends TeaModel {
     }
     public String getProtocol() {
         return this.protocol;
+    }
+
+    public UpdateWebCustomDomainInput setRouteConfig(RouteConfig routeConfig) {
+        this.routeConfig = routeConfig;
+        return this;
+    }
+    public RouteConfig getRouteConfig() {
+        return this.routeConfig;
     }
 
     public UpdateWebCustomDomainInput setWebCertConfig(WebCertConfig webCertConfig) {

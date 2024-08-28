@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateConfigMapResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the ConfigMap instance was created. Valid values:</p>
+     * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The instance was created.</li>
-     * <li><strong>false</strong>: The call failed to be created.</li>
+     * <li><strong>2xx</strong>: The call was successful.</li>
+     * <li><strong>3xx</strong>: The call was redirected.</li>
+     * <li><strong>4xx</strong>: The call failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,25 +20,26 @@ public class CreateConfigMapResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The ID of the ConfigMap instance that was created.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public CreateConfigMapResponseBodyData data;
 
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The error code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: indicates that the call was successful.</li>
-     * <li><strong>3xx</strong>: indicates that the call was redirected.</li>
-     * <li><strong>4xx</strong>: indicates that the call failed.</li>
-     * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+     * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Empty</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -45,7 +48,7 @@ public class CreateConfigMapResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The returned information.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -54,6 +57,12 @@ public class CreateConfigMapResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the ConfigMap was created. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The ConfigMap was created.</li>
+     * <li><strong>false</strong>: The ConfigMap failed to be created.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -61,7 +70,7 @@ public class CreateConfigMapResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The trace ID that is used to query the details of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -132,11 +141,7 @@ public class CreateConfigMapResponseBody extends TeaModel {
 
     public static class CreateConfigMapResponseBodyData extends TeaModel {
         /**
-         * <p>The returned error code. Valid values:</p>
-         * <ul>
-         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
-         * </ul>
+         * <p>The ID of the ConfigMap that was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

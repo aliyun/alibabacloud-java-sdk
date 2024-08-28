@@ -6,13 +6,6 @@ import com.aliyun.tea.*;
 public class WebCustomDomain extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>123xxxxxx</p>
-     */
-    @NameInMap("AccountId")
-    public String accountId;
-
-    /**
-     * <strong>example:</strong>
      * <p>2023-03-30T08:02:19Z</p>
      */
     @NameInMap("CreatedTime")
@@ -49,6 +42,9 @@ public class WebCustomDomain extends TeaModel {
     @NameInMap("Protocol")
     public String protocol;
 
+    @NameInMap("RouteConfig")
+    public RouteConfig routeConfig;
+
     @NameInMap("WebCertConfig")
     public WebCertConfig webCertConfig;
 
@@ -58,17 +54,16 @@ public class WebCustomDomain extends TeaModel {
     @NameInMap("WebWAFConfig")
     public WebWAFConfig webWAFConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123xxxxxx</p>
+     */
+    @NameInMap("accountId")
+    public String accountId;
+
     public static WebCustomDomain build(java.util.Map<String, ?> map) throws Exception {
         WebCustomDomain self = new WebCustomDomain();
         return TeaModel.build(map, self);
-    }
-
-    public WebCustomDomain setAccountId(String accountId) {
-        this.accountId = accountId;
-        return this;
-    }
-    public String getAccountId() {
-        return this.accountId;
     }
 
     public WebCustomDomain setCreatedTime(String createdTime) {
@@ -119,6 +114,14 @@ public class WebCustomDomain extends TeaModel {
         return this.protocol;
     }
 
+    public WebCustomDomain setRouteConfig(RouteConfig routeConfig) {
+        this.routeConfig = routeConfig;
+        return this;
+    }
+    public RouteConfig getRouteConfig() {
+        return this.routeConfig;
+    }
+
     public WebCustomDomain setWebCertConfig(WebCertConfig webCertConfig) {
         this.webCertConfig = webCertConfig;
         return this;
@@ -141,6 +144,14 @@ public class WebCustomDomain extends TeaModel {
     }
     public WebWAFConfig getWebWAFConfig() {
         return this.webWAFConfig;
+    }
+
+    public WebCustomDomain setAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    public String getAccountId() {
+        return this.accountId;
     }
 
 }

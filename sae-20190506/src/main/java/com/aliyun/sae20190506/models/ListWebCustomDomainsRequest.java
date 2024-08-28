@@ -19,8 +19,6 @@ public class ListWebCustomDomainsRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
