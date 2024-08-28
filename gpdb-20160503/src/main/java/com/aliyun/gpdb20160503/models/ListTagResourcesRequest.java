@@ -45,11 +45,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The storage mode of the instance. Valid values:</p>
-     * <ul>
-     * <li><code>instance</code>: reserved storage mode</li>
-     * <li><code>ALIYUN::GPDB::INSTANCE</code>: elastic storage mode</li>
-     * </ul>
+     * <p>The resource type. Set the value to instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -201,6 +201,9 @@ public class QueryCollectionDataShrinkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RelationalTableFilter")
+    public String relationalTableFilterShrink;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -349,6 +352,14 @@ public class QueryCollectionDataShrinkRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public QueryCollectionDataShrinkRequest setRelationalTableFilterShrink(String relationalTableFilterShrink) {
+        this.relationalTableFilterShrink = relationalTableFilterShrink;
+        return this;
+    }
+    public String getRelationalTableFilterShrink() {
+        return this.relationalTableFilterShrink;
     }
 
     public QueryCollectionDataShrinkRequest setTopK(Long topK) {
