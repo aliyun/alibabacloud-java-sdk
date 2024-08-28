@@ -4,27 +4,65 @@ package com.aliyun.bpstudio20200710.models;
 import com.aliyun.tea.*;
 
 public class GetDeployDetailRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30GRJUY95TMYWBYJ</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("NextToken")
     public Long nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1713597738</p>
+     */
     @NameInMap("RefId")
     public String refId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-aekz44tg3bnpyba</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-xxxxxxxxxxxx</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rgm-ecs</p>
+     */
     @NameInMap("ResourceName")
     public String resourceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ecs</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
