@@ -26,6 +26,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>BillingApplication</p>
+     * 
+     * @param request BillingApplicationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BillingApplicationResponse
+     */
     public BillingApplicationResponse billingApplicationWithOptions(BillingApplicationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -58,11 +66,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BillingApplicationResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>BillingApplication</p>
+     * 
+     * @param request BillingApplicationRequest
+     * @return BillingApplicationResponse
+     */
     public BillingApplicationResponse billingApplication(BillingApplicationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.billingApplicationWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询部署清单</p>
+     * 
+     * @param request GetDeployDetailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDeployDetailResponse
+     */
     public GetDeployDetailResponse getDeployDetailWithOptions(GetDeployDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -115,6 +138,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetDeployDetailResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询部署清单</p>
+     * 
+     * @param request GetDeployDetailRequest
+     * @return GetDeployDetailResponse
+     */
     public GetDeployDetailResponse getDeployDetail(GetDeployDetailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getDeployDetailWithOptions(request, runtime);
