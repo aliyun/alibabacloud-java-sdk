@@ -44,6 +44,8 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>ipam</p>
      */
