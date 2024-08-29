@@ -14,6 +14,9 @@ public class ModifyRouteEntryRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("DestinationCidrBlock")
+    public String destinationCidrBlock;
+
     /**
      * <p>The ID of the new next hop instance.</p>
      * 
@@ -57,7 +60,6 @@ public class ModifyRouteEntryRequest extends TeaModel {
 
     /**
      * <p>The ID of the custom route entry.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>rte-acfvgfsghfdd****</p>
@@ -75,6 +77,9 @@ public class ModifyRouteEntryRequest extends TeaModel {
     @NameInMap("RouteEntryName")
     public String routeEntryName;
 
+    @NameInMap("RouteTableId")
+    public String routeTableId;
+
     public static ModifyRouteEntryRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyRouteEntryRequest self = new ModifyRouteEntryRequest();
         return TeaModel.build(map, self);
@@ -86,6 +91,14 @@ public class ModifyRouteEntryRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ModifyRouteEntryRequest setDestinationCidrBlock(String destinationCidrBlock) {
+        this.destinationCidrBlock = destinationCidrBlock;
+        return this;
+    }
+    public String getDestinationCidrBlock() {
+        return this.destinationCidrBlock;
     }
 
     public ModifyRouteEntryRequest setNewNextHopId(String newNextHopId) {
@@ -158,6 +171,14 @@ public class ModifyRouteEntryRequest extends TeaModel {
     }
     public String getRouteEntryName() {
         return this.routeEntryName;
+    }
+
+    public ModifyRouteEntryRequest setRouteTableId(String routeTableId) {
+        this.routeTableId = routeTableId;
+        return this;
+    }
+    public String getRouteTableId() {
+        return this.routeTableId;
     }
 
 }
