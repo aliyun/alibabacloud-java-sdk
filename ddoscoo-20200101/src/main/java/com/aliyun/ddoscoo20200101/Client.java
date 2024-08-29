@@ -1112,6 +1112,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.proxyEnable)) {
+            query.put("ProxyEnable", request.proxyEnable);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.realServers)) {
             query.put("RealServers", request.realServers);
         }
@@ -1970,7 +1974,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes custom frequency control rules of a website.</p>
+     * <p>Deletes a custom frequency control rule of a website.</p>
      * 
      * @deprecated OpenAPI DeleteWebCCRule is deprecated, please use ddoscoo::2020-01-01::DeleteWebCCRuleV2 instead.
      * 
@@ -2014,7 +2018,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes custom frequency control rules of a website.</p>
+     * <p>Deletes a custom frequency control rule of a website.</p>
      * 
      * @deprecated OpenAPI DeleteWebCCRule is deprecated, please use ddoscoo::2020-01-01::DeleteWebCCRuleV2 instead.
      * 
@@ -2514,7 +2518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the back-to-origin CIDR blocks of Anti-DDoS Pro or Anti-DDoS Premium.</p>
+     * <p>Queries the back-to-origin CIDR blocks of Anti-DDoS Proxy.</p>
      * 
      * @param request DescribeBackSourceCidrRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2554,7 +2558,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the back-to-origin CIDR blocks of Anti-DDoS Pro or Anti-DDoS Premium.</p>
+     * <p>Queries the back-to-origin CIDR blocks of Anti-DDoS Proxy.</p>
      * 
      * @param request DescribeBackSourceCidrRequest
      * @return DescribeBackSourceCidrResponse
@@ -3340,7 +3344,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询目的端口事件</p>
+     * <p>Queries the number of request packets received by the destination ports of the attacked IP address that is protected by Anti-DDoS Proxy.</p>
      * 
      * @param request DescribeDestinationPortEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3388,7 +3392,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询目的端口事件</p>
+     * <p>Queries the number of request packets received by the destination ports of the attacked IP address that is protected by Anti-DDoS Proxy.</p>
      * 
      * @param request DescribeDestinationPortEventRequest
      * @return DescribeDestinationPortEventResponse
@@ -7666,7 +7670,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables the Frequency Control policy for a website.</p>
+     * <p>Disables frequency control for a website.</p>
      * 
      * @param request DisableWebCCRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7702,7 +7706,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables the Frequency Control policy for a website.</p>
+     * <p>Disables frequency control for a website.</p>
      * 
      * @param request DisableWebCCRequest
      * @return DisableWebCCResponse
@@ -7714,7 +7718,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Turns off the Custom Rule switch of the Frequency Control policy for a website.</p>
+     * <p>Disables custom frequency control rules for a website.</p>
      * 
      * @param request DisableWebCCRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7750,7 +7754,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Turns off the Custom Rule switch of the Frequency Control policy for a website.</p>
+     * <p>Disables custom frequency control rules for a website.</p>
      * 
      * @param request DisableWebCCRuleRequest
      * @return DisableWebCCRuleResponse
@@ -8034,7 +8038,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Turns on the Custom Rule switch of the Frequency Control policy for a website.</p>
+     * <p>Enables custom frequency control rules for a website.</p>
      * 
      * @param request EnableWebCCRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8070,7 +8074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Turns on the Custom Rule switch of the Frequency Control policy for a website.</p>
+     * <p>Enables custom frequency control rules for a website.</p>
      * 
      * @param request EnableWebCCRuleRequest
      * @return EnableWebCCRuleResponse
@@ -8958,6 +8962,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.proxyEnable)) {
+            query.put("ProxyEnable", request.proxyEnable);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.realServers)) {
             query.put("RealServers", request.realServers);
         }
@@ -9268,7 +9276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the mode of the Intelligent Protection policy for a website.</p>
+     * <p>Changes the mode of the intelligent protection feature for a website.</p>
      * 
      * @param request ModifyWebAIProtectModeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9308,7 +9316,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the mode of the Intelligent Protection policy for a website.</p>
+     * <p>Changes the mode of the intelligent protection feature for a website.</p>
      * 
      * @param request ModifyWebAIProtectModeRequest
      * @return ModifyWebAIProtectModeResponse
@@ -9940,7 +9948,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables the Accurate Access Control policy for a website.</p>
+     * <p>Enables or disables accurate access control for a website.</p>
      * 
      * @param request ModifyWebPreciseAccessSwitchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9980,7 +9988,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables the Accurate Access Control policy for a website.</p>
+     * <p>Enables or disables accurate access control for a website.</p>
      * 
      * @param request ModifyWebPreciseAccessSwitchRequest
      * @return ModifyWebPreciseAccessSwitchResponse

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceDetailsResponseBody extends TeaModel {
     /**
-     * <p>The IP address and ISP line information about the instance.</p>
+     * <p>The IP address and ISP line information about the Anti-DDoS Proxy instance.</p>
      */
     @NameInMap("InstanceDetails")
     public java.util.List<DescribeInstanceDetailsResponseBodyInstanceDetails> instanceDetails;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3C814429-21A5-4673-827E-FDD19DC75681</p>
@@ -41,6 +41,12 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos extends TeaModel {
+        /**
+         * <p>Indicates whether a custom certificate is configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CertConfigured")
         public Boolean certConfigured;
 
@@ -53,6 +59,12 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
         @NameInMap("Eip")
         public String eip;
 
+        /**
+         * <p>The type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("FunctionVersion")
         public String functionVersion;
 
@@ -82,6 +94,12 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
         @NameInMap("IpVersion")
         public String ipVersion;
 
+        /**
+         * <p>Indicates whether the TLS 1.3 version is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Ssl13Enabled")
         public Boolean ssl13Enabled;
 
@@ -101,6 +119,12 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The Transport Layer Security (TLS) version that is configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tls1.2</p>
+         */
         @NameInMap("TlsVersion")
         public String tlsVersion;
 
@@ -177,7 +201,7 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
 
     public static class DescribeInstanceDetailsResponseBodyInstanceDetails extends TeaModel {
         /**
-         * <p>The information about the IP address of the instance.</p>
+         * <p>The IP address information about the Anti-DDoS Proxy instance.</p>
          */
         @NameInMap("EipInfos")
         public java.util.List<DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos> eipInfos;

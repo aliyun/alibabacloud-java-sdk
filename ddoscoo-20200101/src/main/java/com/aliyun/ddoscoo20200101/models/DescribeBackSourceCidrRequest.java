@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackSourceCidrRequest extends TeaModel {
     /**
-     * <p>The IP version of the back-to-origin CIDR block.</p>
+     * <p>The IP version of the back-to-origin CIDR blocks.</p>
      * <ul>
      * <li><strong>Ipv4</strong></li>
      * <li><strong>Ipv6</strong></li>

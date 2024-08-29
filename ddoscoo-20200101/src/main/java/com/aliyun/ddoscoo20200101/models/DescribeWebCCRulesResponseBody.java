@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeWebCCRulesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EAED912D-909E-45F0-AF74-AC0CCDCAE314</p>
@@ -14,7 +14,7 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned custom frequency control rules.</p>
+     * <p>The total number of custom frequency control rules.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
     public Long totalCount;
 
     /**
-     * <p>An array that consists of the details of the custom frequency control rule.</p>
+     * <p>The custom frequency control rule.</p>
      */
     @NameInMap("WebCCRules")
     public java.util.List<DescribeWebCCRulesResponseBodyWebCCRules> webCCRules;
@@ -59,10 +59,10 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
 
     public static class DescribeWebCCRulesResponseBodyWebCCRules extends TeaModel {
         /**
-         * <p>The blocking type. Valid values:</p>
+         * <p>The action triggered if the rule is matched. Valid values:</p>
          * <ul>
-         * <li><strong>close</strong>: blocks requests.</li>
-         * <li><strong>captcha</strong>: enables Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) verification.</li>
+         * <li><strong>close</strong>: The requests that match the rule are blocked.</li>
+         * <li><strong>captcha</strong>: Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) verification for the requests that match the rule is implemented.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
         public String act;
 
         /**
-         * <p>The number of requests that are allowed from an individual IP address. Valid values: <strong>2</strong> to <strong>2000</strong>.</p>
+         * <p>The number of requests that are allowed from a single IP address. Valid values: <strong>2</strong> to <strong>2000</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -81,7 +81,7 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The check intervals. Valid values: <strong>5</strong> to <strong>10800</strong>. Unit: seconds.</p>
+         * <p>The check interval. Valid values: <strong>5</strong> to <strong>10800</strong>. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -92,8 +92,8 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
         /**
          * <p>The match mode. Valid values:</p>
          * <ul>
-         * <li><strong>prefix</strong>: prefix match</li>
-         * <li><strong>match</strong>: exact match</li>
+         * <li><strong>prefix</strong>: prefix match.</li>
+         * <li><strong>match</strong>: exact match.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -112,7 +112,7 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The blocking duration. Valid values: <strong>1</strong> to <strong>1440</strong>. Unit: minutes.</p>
+         * <p>The validity period. Valid values: <strong>1</strong> to <strong>1440</strong>. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>

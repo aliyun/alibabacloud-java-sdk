@@ -50,6 +50,9 @@ public class CreatePortRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("ProxyEnable")
+    public Long proxyEnable;
+
     /**
      * <p>An array that consists of the IP addresses of origin servers.</p>
      * <p>This parameter is required.</p>
@@ -92,6 +95,14 @@ public class CreatePortRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public CreatePortRequest setProxyEnable(Long proxyEnable) {
+        this.proxyEnable = proxyEnable;
+        return this;
+    }
+    public Long getProxyEnable() {
+        return this.proxyEnable;
     }
 
     public CreatePortRequest setRealServers(java.util.List<String> realServers) {
