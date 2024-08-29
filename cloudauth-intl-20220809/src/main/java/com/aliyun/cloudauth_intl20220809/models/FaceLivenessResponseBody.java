@@ -66,12 +66,18 @@ public class FaceLivenessResponseBody extends TeaModel {
     }
 
     public static class FaceLivenessResponseBodyResultExtFaceInfo extends TeaModel {
+        @NameInMap("FaceAge")
+        public Integer faceAge;
+
         /**
          * <strong>example:</strong>
          * <p>Y</p>
          */
         @NameInMap("FaceAttack")
         public String faceAttack;
+
+        @NameInMap("FaceGender")
+        public String faceGender;
 
         /**
          * <strong>example:</strong>
@@ -92,12 +98,28 @@ public class FaceLivenessResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public FaceLivenessResponseBodyResultExtFaceInfo setFaceAge(Integer faceAge) {
+            this.faceAge = faceAge;
+            return this;
+        }
+        public Integer getFaceAge() {
+            return this.faceAge;
+        }
+
         public FaceLivenessResponseBodyResultExtFaceInfo setFaceAttack(String faceAttack) {
             this.faceAttack = faceAttack;
             return this;
         }
         public String getFaceAttack() {
             return this.faceAttack;
+        }
+
+        public FaceLivenessResponseBodyResultExtFaceInfo setFaceGender(String faceGender) {
+            this.faceGender = faceGender;
+            return this;
+        }
+        public String getFaceGender() {
+            return this.faceGender;
         }
 
         public FaceLivenessResponseBodyResultExtFaceInfo setFaceQualityScore(Double faceQualityScore) {
