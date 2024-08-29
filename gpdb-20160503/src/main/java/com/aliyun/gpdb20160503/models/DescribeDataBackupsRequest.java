@@ -73,7 +73,6 @@ public class DescribeDataBackupsRequest extends TeaModel {
 
     /**
      * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>2011-06-01T16:00Z</p>
@@ -107,7 +106,6 @@ public class DescribeDataBackupsRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>2011-06-01T15:00Z</p>
