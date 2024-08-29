@@ -14,6 +14,9 @@ public class CreateGlobalDatabaseNetworkRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    @NameInMap("EnableGlobalDomainName")
+    public Boolean enableGlobalDomainName;
+
     /**
      * <p>The description of the GDN. The description must meet the following requirements:</p>
      * <ul>
@@ -64,6 +67,14 @@ public class CreateGlobalDatabaseNetworkRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public CreateGlobalDatabaseNetworkRequest setEnableGlobalDomainName(Boolean enableGlobalDomainName) {
+        this.enableGlobalDomainName = enableGlobalDomainName;
+        return this;
+    }
+    public Boolean getEnableGlobalDomainName() {
+        return this.enableGlobalDomainName;
     }
 
     public CreateGlobalDatabaseNetworkRequest setGDNDescription(String GDNDescription) {

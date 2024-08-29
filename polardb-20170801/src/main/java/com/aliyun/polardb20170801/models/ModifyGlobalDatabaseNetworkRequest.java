@@ -4,6 +4,9 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class ModifyGlobalDatabaseNetworkRequest extends TeaModel {
+    @NameInMap("EnableGlobalDomainName")
+    public Boolean enableGlobalDomainName;
+
     /**
      * <p>The description of the GDN. The description must meet the following requirements:</p>
      * <ul>
@@ -12,7 +15,6 @@ public class ModifyGlobalDatabaseNetworkRequest extends TeaModel {
      * <li>It can contain letters, digits, underscores (_), and hyphens (-).</li>
      * <li>It must be 2 to 126 characters in length.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>GDN-fortest</p>
@@ -57,6 +59,14 @@ public class ModifyGlobalDatabaseNetworkRequest extends TeaModel {
     public static ModifyGlobalDatabaseNetworkRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyGlobalDatabaseNetworkRequest self = new ModifyGlobalDatabaseNetworkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyGlobalDatabaseNetworkRequest setEnableGlobalDomainName(Boolean enableGlobalDomainName) {
+        this.enableGlobalDomainName = enableGlobalDomainName;
+        return this;
+    }
+    public Boolean getEnableGlobalDomainName() {
+        return this.enableGlobalDomainName;
     }
 
     public ModifyGlobalDatabaseNetworkRequest setGDNDescription(String GDNDescription) {

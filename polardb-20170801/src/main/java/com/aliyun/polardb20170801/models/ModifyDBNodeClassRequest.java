@@ -82,6 +82,9 @@ public class ModifyDBNodeClassRequest extends TeaModel {
     @NameInMap("PlannedEndTime")
     public String plannedEndTime;
 
+    @NameInMap("PlannedFlashingOffTime")
+    public String plannedFlashingOffTime;
+
     /**
      * <p>The earliest start time to upgrade the specifications within the scheduled time period. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
      * <blockquote>
@@ -184,6 +187,14 @@ public class ModifyDBNodeClassRequest extends TeaModel {
     }
     public String getPlannedEndTime() {
         return this.plannedEndTime;
+    }
+
+    public ModifyDBNodeClassRequest setPlannedFlashingOffTime(String plannedFlashingOffTime) {
+        this.plannedFlashingOffTime = plannedFlashingOffTime;
+        return this;
+    }
+    public String getPlannedFlashingOffTime() {
+        return this.plannedFlashingOffTime;
     }
 
     public ModifyDBNodeClassRequest setPlannedStartTime(String plannedStartTime) {

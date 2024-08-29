@@ -135,6 +135,9 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
         @NameInMap("PlannedEndTime")
         public String plannedEndTime;
 
+        @NameInMap("PlannedFlashingOffTime")
+        public String plannedFlashingOffTime;
+
         /**
          * <p>The earliest start time of the task that you specified when you created the scheduled task. The time is displayed in UTC.</p>
          * 
@@ -244,6 +247,14 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
         }
         public String getPlannedEndTime() {
             return this.plannedEndTime;
+        }
+
+        public DescribeScheduleTasksResponseBodyDataTimerInfos setPlannedFlashingOffTime(String plannedFlashingOffTime) {
+            this.plannedFlashingOffTime = plannedFlashingOffTime;
+            return this;
+        }
+        public String getPlannedFlashingOffTime() {
+            return this.plannedFlashingOffTime;
         }
 
         public DescribeScheduleTasksResponseBodyDataTimerInfos setPlannedStartTime(String plannedStartTime) {

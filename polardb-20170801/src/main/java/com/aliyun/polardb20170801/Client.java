@@ -1576,6 +1576,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBClusterId", request.DBClusterId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableGlobalDomainName)) {
+            query.put("EnableGlobalDomainName", request.enableGlobalDomainName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.GDNDescription)) {
             query.put("GDNDescription", request.GDNDescription);
         }
@@ -9341,6 +9345,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PlannedEndTime", request.plannedEndTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.plannedFlashingOffTime)) {
+            query.put("PlannedFlashingOffTime", request.plannedFlashingOffTime);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.plannedStartTime)) {
             query.put("PlannedStartTime", request.plannedStartTime);
         }
@@ -9493,6 +9501,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PlannedEndTime", request.plannedEndTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.plannedFlashingOffTime)) {
+            query.put("PlannedFlashingOffTime", request.plannedFlashingOffTime);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.plannedStartTime)) {
             query.put("PlannedStartTime", request.plannedStartTime);
         }
@@ -9633,6 +9645,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyGlobalDatabaseNetworkResponse modifyGlobalDatabaseNetworkWithOptions(ModifyGlobalDatabaseNetworkRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enableGlobalDomainName)) {
+            query.put("EnableGlobalDomainName", request.enableGlobalDomainName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.GDNDescription)) {
             query.put("GDNDescription", request.GDNDescription);
         }
