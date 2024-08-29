@@ -92,6 +92,9 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
     @NameInMap("GDNStatus")
     public String GDNStatus;
 
+    @NameInMap("GlobalDomainName")
+    public String globalDomainName;
+
     /**
      * <p>The ID of the request.</p>
      * 
@@ -185,6 +188,14 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
     }
     public String getGDNStatus() {
         return this.GDNStatus;
+    }
+
+    public DescribeGlobalDatabaseNetworkResponseBody setGlobalDomainName(String globalDomainName) {
+        this.globalDomainName = globalDomainName;
+        return this;
+    }
+    public String getGlobalDomainName() {
+        return this.globalDomainName;
     }
 
     public DescribeGlobalDatabaseNetworkResponseBody setRequestId(String requestId) {
@@ -441,6 +452,9 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
     }
 
     public static class DescribeGlobalDatabaseNetworkResponseBodyDBClusters extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
         /**
          * <p>The description of the cluster.</p>
          * 
@@ -600,6 +614,14 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         public static DescribeGlobalDatabaseNetworkResponseBodyDBClusters build(java.util.Map<String, ?> map) throws Exception {
             DescribeGlobalDatabaseNetworkResponseBodyDBClusters self = new DescribeGlobalDatabaseNetworkResponseBodyDBClusters();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeGlobalDatabaseNetworkResponseBodyDBClusters setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
         }
 
         public DescribeGlobalDatabaseNetworkResponseBodyDBClusters setDBClusterDescription(String DBClusterDescription) {
