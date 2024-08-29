@@ -12,6 +12,9 @@ public class GetCompliancePackReportResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6EC7AED1-172F-42AE-9C12-295BC2ADB751</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,28 +43,41 @@ public class GetCompliancePackReportResponseBody extends TeaModel {
     public static class GetCompliancePackReportResponseBodyCompliancePackReport extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account to which the compliance package belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120886317861****</p>
          */
         @NameInMap("AccountId")
         public Long accountId;
 
         /**
          * <p>The ID of the compliance package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cp-fdc8626622af00f9****</p>
          */
         @NameInMap("CompliancePackId")
         public String compliancePackId;
 
         /**
          * <p>The timestamp when the compliance evaluation report was generated. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1624329965857</p>
          */
         @NameInMap("ReportCreateTimestamp")
         public Long reportCreateTimestamp;
 
         /**
          * <p>The status of the compliance evaluation report. Valid values:</p>
-         * <br>
-         * <p>*   NONE: The compliance evaluation report is not generated.</p>
-         * <p>*   CREATING: The compliance evaluation report is being generated.</p>
-         * <p>*   COMPLETE: The compliance evaluation report is generated.</p>
+         * <ul>
+         * <li>NONE: The compliance evaluation report is not generated.</li>
+         * <li>CREATING: The compliance evaluation report is being generated.</li>
+         * <li>COMPLETE: The compliance evaluation report is generated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETE</p>
          */
         @NameInMap("ReportStatus")
         public String reportStatus;

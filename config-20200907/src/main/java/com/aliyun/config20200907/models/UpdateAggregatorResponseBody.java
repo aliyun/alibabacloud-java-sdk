@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class UpdateAggregatorResponseBody extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ca-dacf86d8314e00eb****</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8195B664-9565-4685-89AC-8B5F04B44B92</p>
      */
     @NameInMap("RequestId")
     public String requestId;

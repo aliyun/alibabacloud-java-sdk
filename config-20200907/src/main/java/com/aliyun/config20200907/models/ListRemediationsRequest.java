@@ -6,20 +6,28 @@ import com.aliyun.tea.*;
 public class ListRemediationsRequest extends TeaModel {
     /**
      * <p>The rule IDs. Separate multiple rule IDs with commas (,).</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of a rule, see [ListConfigRules](https://help.aliyun.com/document_detail/169607.html).</p>
+     * <p>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cr-6b7c626622af00b4****</p>
      */
     @NameInMap("ConfigRuleIds")
     public String configRuleIds;
 
     /**
      * <p>The page number. Pages start from page 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries per page. Valid values: 1 to 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;

@@ -12,6 +12,9 @@ public class GetRemediationTemplateResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E232FC35-BD40-51E3-B2EB-09416A234939</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,14 +43,19 @@ public class GetRemediationTemplateResponseBody extends TeaModel {
     public static class GetRemediationTemplateResponseBodyRemediationTemplates extends TeaModel {
         /**
          * <p>The ID of the supported rule template.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alb-delete-protection-enabled</p>
          */
         @NameInMap("ManagedRuleIdentifier")
         public String managedRuleIdentifier;
 
         /**
          * <p>The type of the automatic remediation template. The value is set to OOS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OOS</p>
          */
         @NameInMap("RemediationType")
         public String remediationType;
@@ -60,7 +68,6 @@ public class GetRemediationTemplateResponseBody extends TeaModel {
 
         /**
          * <p>The description of the automatic remediation template.</p>
-         * <br>
          * <p>This parameter is required.</p>
          */
         @NameInMap("TemplateDescription")
@@ -68,6 +75,9 @@ public class GetRemediationTemplateResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the automatic remediation template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS-ALB-BulkyEnableDeletionProtection</p>
          */
         @NameInMap("TemplateIdentifier")
         public String templateIdentifier;

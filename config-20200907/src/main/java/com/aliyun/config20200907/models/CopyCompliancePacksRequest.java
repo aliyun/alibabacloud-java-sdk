@@ -6,26 +6,33 @@ import com.aliyun.tea.*;
 public class CopyCompliancePacksRequest extends TeaModel {
     /**
      * <p>The IDs of the destination account groups into which the compliance packages are replicated. Separate multiple account group IDs with commas (,).</p>
-     * <br>
-     * <p>> If this parameter is left empty, the compliance packages are replicated to the current account group.</p>
+     * <blockquote>
+     * <p>If this parameter is left empty, the compliance packages are replicated to the current account group.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ca-c73c626622af00f8****</p>
      */
     @NameInMap("DesAggregatorIds")
     public String desAggregatorIds;
 
     /**
      * <p>The ID of the account group to which the compliance packages belong.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
+     * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ca-05e6626622af0050****</p>
      */
     @NameInMap("SrcAggregatorId")
     public String srcAggregatorId;
 
     /**
      * <p>The IDs of the compliance packages. Separate multiple compliance package IDs with commas (,).</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of a compliance package, see [ListCompliancePacks](https://help.aliyun.com/document_detail/263332.html).</p>
-     * <br>
+     * <p>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/263332.html">ListCompliancePacks</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cp-4c02626622af0050****,cp-47c1626622af0050****</p>
      */
     @NameInMap("SrcCompliancePackIds")
     public String srcCompliancePackIds;

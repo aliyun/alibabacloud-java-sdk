@@ -6,10 +6,11 @@ import com.aliyun.tea.*;
 public class GetCompliancePackReportRequest extends TeaModel {
     /**
      * <p>The ID of the compliance package.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of a compliance package, see [ListCompliancePacks](https://help.aliyun.com/document_detail/263332.html).</p>
-     * <br>
+     * <p>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/263332.html">ListCompliancePacks</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cp-fdc8626622af00f9****</p>
      */
     @NameInMap("CompliancePackId")
     public String compliancePackId;

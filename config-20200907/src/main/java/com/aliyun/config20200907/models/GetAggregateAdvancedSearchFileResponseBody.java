@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetAggregateAdvancedSearchFileResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6DB86284-DB7F-5936-B210-3B53D6D41B03</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -46,17 +49,23 @@ public class GetAggregateAdvancedSearchFileResponseBody extends TeaModel {
 
         /**
          * <p>The time when the resource file was generated. The value is a timestamp.</p>
-         * <br>
          * <p>Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1691375618130</p>
          */
         @NameInMap("ResourceInventoryGenerateTime")
         public Long resourceInventoryGenerateTime;
 
         /**
          * <p>The generation status of the resource file. Valid values:</p>
-         * <br>
-         * <p>*   CREATING: The resource file is being generated.</p>
-         * <p>*   COMPLETE: The resource file is generated.</p>
+         * <ul>
+         * <li>CREATING: The resource file is being generated.</li>
+         * <li>COMPLETE: The resource file is generated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETE</p>
          */
         @NameInMap("Status")
         public String status;

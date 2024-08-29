@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class GetSupportedResourceRelationConfigRequest extends TeaModel {
     /**
      * <p>The resource type.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACS::ECS::Instance</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

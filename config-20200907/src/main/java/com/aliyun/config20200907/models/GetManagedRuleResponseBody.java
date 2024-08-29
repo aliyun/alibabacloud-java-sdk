@@ -12,6 +12,9 @@ public class GetManagedRuleResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7E6DDC09-87C1-5310-A924-3491EAAE6F90</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,7 +42,7 @@ public class GetManagedRuleResponseBody extends TeaModel {
 
     public static class GetManagedRuleResponseBodyManagedRuleScope extends TeaModel {
         /**
-         * <p>The type of resource to which the managed rule applies.</p>
+         * <p>The types of resources to which the managed rule applies.</p>
          */
         @NameInMap("ComplianceResourceTypes")
         public java.util.List<String> complianceResourceTypes;
@@ -61,22 +64,30 @@ public class GetManagedRuleResponseBody extends TeaModel {
 
     public static class GetManagedRuleResponseBodyManagedRuleSourceDetails extends TeaModel {
         /**
-         * <p>The interval at which the managed rule is triggered. Valid values:</p>
-         * <br>
-         * <p>*   One_Hour: 1 hour.</p>
-         * <p>*   Three_Hours: 3 hours.</p>
-         * <p>*   Six_Hours: 6 hours.</p>
-         * <p>*   Twelve_Hours: 12 hours</p>
-         * <p>*   TwentyFour_Hours: 24 hours</p>
+         * <p>The interval at which the rule is triggered. Valid values: Valid values:</p>
+         * <ul>
+         * <li>One_Hour</li>
+         * <li>Three_Hours</li>
+         * <li>Six_Hours</li>
+         * <li>Twelve_Hours</li>
+         * <li>TwentyFour_Hours</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TwentyFour_Hours</p>
          */
         @NameInMap("MaximumExecutionFrequency")
         public String maximumExecutionFrequency;
 
         /**
-         * <p>The trigger type of the managed rule. Valid values:</p>
-         * <br>
-         * <p>*   ConfigurationItemChangeNotification: The managed rule is triggered by configuration changes.</p>
-         * <p>*   ScheduledNotification: The managed rule is periodically triggered.</p>
+         * <p>The trigger type of the rule. Valid values:</p>
+         * <ul>
+         * <li>ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</li>
+         * <li>ScheduledNotification: The rule is periodically triggered.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ConfigurationItemChangeNotification</p>
          */
         @NameInMap("MessageType")
         public String messageType;
@@ -106,31 +117,46 @@ public class GetManagedRuleResponseBody extends TeaModel {
 
     public static class GetManagedRuleResponseBodyManagedRule extends TeaModel {
         /**
-         * <p>The settings of the required input parameters for the managed rule.</p>
+         * <p>The details of the required input parameters for the managed rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("CompulsoryInputParameterDetails")
         public java.util.Map<String, ?> compulsoryInputParameterDetails;
 
         /**
          * <p>The name of the managed rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cdn-domain-https-enabled</p>
          */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
 
         /**
          * <p>The description of the managed rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>If HTTPS encryption is enabled for the CDN domain name, the configuration is considered compliant.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The URL of the topic that provides guidance on remediation for the managed rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.aliyundoc.com">https://example.aliyundoc.com</a></p>
          */
         @NameInMap("HelpUrls")
         public String helpUrls;
 
         /**
          * <p>The identifier of the managed rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cdn-domain-https-enabled</p>
          */
         @NameInMap("Identifier")
         public String identifier;
@@ -142,17 +168,24 @@ public class GetManagedRuleResponseBody extends TeaModel {
         public java.util.List<String> labels;
 
         /**
-         * <p>The settings of the optional input parameters for the managed rule.</p>
+         * <p>The details of the optional input parameters for the managed rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("OptionalInputParameterDetails")
         public java.util.Map<String, ?> optionalInputParameterDetails;
 
         /**
-         * <p>The risk level of the resources that are not compliant with the managed rule. Valid values:</p>
-         * <br>
-         * <p>*   1: high risk level</p>
-         * <p>*   2: medium risk level</p>
-         * <p>*   3: low risk level</p>
+         * <p>The risk level of the managed rule. Valid values:</p>
+         * <ul>
+         * <li>1: high</li>
+         * <li>2: medium</li>
+         * <li>3: low</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RiskLevel")
         public Integer riskLevel;

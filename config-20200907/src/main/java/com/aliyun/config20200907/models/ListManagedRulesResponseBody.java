@@ -12,6 +12,9 @@ public class ListManagedRulesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B3E605AB-63D5-1EE0-BFA6-0BAC247B0461</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,7 +42,7 @@ public class ListManagedRulesResponseBody extends TeaModel {
 
     public static class ListManagedRulesResponseBodyManagedRulesManagedRuleListScope extends TeaModel {
         /**
-         * <p>The type of resource to which the managed rule applies.</p>
+         * <p>The types of resources to which the managed rule applies.</p>
          */
         @NameInMap("ComplianceResourceTypes")
         public java.util.List<String> complianceResourceTypes;
@@ -62,52 +65,74 @@ public class ListManagedRulesResponseBody extends TeaModel {
     public static class ListManagedRulesResponseBodyManagedRulesManagedRuleList extends TeaModel {
         /**
          * <p>The name of the managed rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-rule-name</p>
          */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
 
         /**
          * <p>The description of the managed rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The description of the test rule.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The URL of the topic that describes how the managed rule remediates the incompliant configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.aliyundoc.com">https://example.aliyundoc.com</a></p>
          */
         @NameInMap("HelpUrls")
         public String helpUrls;
 
         /**
          * <p>The unique identifier of the managed rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cdn-domain-https-enabled</p>
          */
         @NameInMap("Identifier")
         public String identifier;
 
         /**
-         * <p>Classification description of the managed rule.</p>
+         * <p>The classification description of the managed rule.</p>
          */
         @NameInMap("Labels")
         public java.util.List<String> labels;
 
         /**
-         * <p>Supported remediation template id.</p>
+         * <p>The ID of the remediation template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS-CDN-SetDomainServerCertificate</p>
          */
         @NameInMap("RemediationTemplateIdentifier")
         public String remediationTemplateIdentifier;
 
         /**
-         * <p>Supported remediation template name.</p>
+         * <p>The name of the remediation template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Configure encryption rules for OSS buckets</p>
          */
         @NameInMap("RemediationTemplateName")
         public String remediationTemplateName;
 
         /**
-         * <p>The risk level of the resources that do not comply with the managed rule. Valid values:</p>
-         * <br>
-         * <p>*   1: high risk level</p>
-         * <p>*   2: medium risk level</p>
-         * <p>*   3: low risk level</p>
+         * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
+         * <ul>
+         * <li>1: high</li>
+         * <li>2: medium</li>
+         * <li>3: low</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
@@ -119,11 +144,14 @@ public class ListManagedRulesResponseBody extends TeaModel {
         public ListManagedRulesResponseBodyManagedRulesManagedRuleListScope scope;
 
         /**
-         * <p>Whether pre-check is supported. Value:</p>
-         * <br>
-         * <p>- true: Supported</p>
-         * <br>
-         * <p>- false: not supported</p>
+         * <p>Indicates whether precheck is supported. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("SupportPreviewManagedRule")
         public Boolean supportPreviewManagedRule;
@@ -217,25 +245,35 @@ public class ListManagedRulesResponseBody extends TeaModel {
 
     public static class ListManagedRulesResponseBodyManagedRules extends TeaModel {
         /**
-         * <p>The name of the remediation template.</p>
+         * <p>The details of the managed rule.</p>
          */
         @NameInMap("ManagedRuleList")
         public java.util.List<ListManagedRulesResponseBodyManagedRulesManagedRuleList> managedRuleList;
 
         /**
-         * <p>The page number of the returned page. Minimum value: 1.</p>
+         * <p>The page number.</p>
+         * <p>Page start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries returned per page. Valid values: 1 to 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The total number of managed rules returned.</p>
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

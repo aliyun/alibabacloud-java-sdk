@@ -5,11 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetIntegratedServiceStatusRequest extends TeaModel {
     /**
-     * <p>The product code of the cloud product. Valid values:</p>
-     * <br>
-     * <p>cadt: Cloud Architecture Design Tool</p>
-     * <br>
+     * <p>The identity of the cloud service that is integrated with Cloud Config. Valid values:</p>
+     * <ul>
+     * <li>eventbridge: EventBridge</li>
+     * <li>cms: CloudMonitor</li>
+     * <li>bpstudio: Cloud Architect Design Tools</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cadt</p>
      */
     @NameInMap("ServiceCode")
     public String serviceCode;

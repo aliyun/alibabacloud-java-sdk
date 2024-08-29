@@ -12,6 +12,9 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C7817373-78CB-4F9A-8AFA-E7A88E9D64A2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,72 +43,110 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
     public static class ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>161259599160****</p>
          */
         @NameInMap("AccountId")
         public Long accountId;
 
         /**
          * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         @NameInMap("AvailabilityZone")
         public String availabilityZone;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The timestamp when the resource was created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1618675206000</p>
          */
         @NameInMap("ResourceCreationTime")
         public Long resourceCreationTime;
 
         /**
          * <p>The status of the resource. Valid values:</p>
-         * <br>
-         * <p>*   0: The resource is deleted.</p>
-         * <p>*   1: The resource is retained.</p>
+         * <ul>
+         * <li>0: The resource is deleted.</li>
+         * <li>1: The resource is retained.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ResourceDeleted")
         public Integer resourceDeleted;
 
         /**
          * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-hp31cqoba96jagtz****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The resource name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cloud Firewall</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;
 
         /**
          * <p>The status of the resource. The value of this parameter varies based on the resource type and may be empty. Examples:</p>
-         * <br>
-         * <p>*   If the ResourceType parameter is set to ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.</p>
-         * <p>*   If the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is left empty.</p>
+         * <ul>
+         * <li>If the ResourceType parameter is set to ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.</li>
+         * <li>If the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is left empty.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InUse</p>
          */
         @NameInMap("ResourceStatus")
         public String resourceStatus;
 
         /**
          * <p>The type of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::ECS::NetworkInterface</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The tags of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;key1\&quot;:[\&quot;value2\&quot;]}</p>
          */
         @NameInMap("Tags")
         public String tags;
 
+        @NameInMap("UpdateTime")
+        public Long updateTime;
+
         /**
          * <p>The version of the resource change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Version")
         public Long version;
@@ -195,6 +236,14 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
             return this.tags;
         }
 
+        public ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public Long getUpdateTime() {
+            return this.updateTime;
+        }
+
         public ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setVersion(Long version) {
             this.version = version;
             return this;
@@ -214,18 +263,27 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
 
         /**
          * <p>The maximum number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
         /**
          * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>161259599160****</p>
          */
         @NameInMap("NextToken")
         public String nextToken;
 
         /**
          * <p>The total number of resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

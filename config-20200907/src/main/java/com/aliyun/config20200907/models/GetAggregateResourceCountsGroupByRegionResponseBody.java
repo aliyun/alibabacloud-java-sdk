@@ -12,6 +12,9 @@ public class GetAggregateResourceCountsGroupByRegionResponseBody extends TeaMode
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>399BD94C-D20C-4D27-88D4-89E8D75C0595</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,20 +43,30 @@ public class GetAggregateResourceCountsGroupByRegionResponseBody extends TeaMode
     public static class GetAggregateResourceCountsGroupByRegionResponseBodyDiscoveredResourceCountsSummary extends TeaModel {
         /**
          * <p>The dimension by which statistics are collected.</p>
-         * <br>
-         * <p>>  In most cases, the `Region` parameter is returned instead of the GroupName parameter.</p>
+         * <blockquote>
+         * <p> In most cases, the <code>Region</code> parameter is returned instead of the GroupName parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The ID of the region by which statistics are collected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The total number of resources in the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("ResourceCount")
         public Long resourceCount;

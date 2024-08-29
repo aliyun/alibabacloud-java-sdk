@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListCompliancePackTemplatesResponseBody extends TeaModel {
     /**
-     * <p>The information about the compliance package templates.</p>
+     * <p>The information about the compliance package templates returned.</p>
      */
     @NameInMap("CompliancePackTemplatesResult")
     public ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResult compliancePackTemplatesResult;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D67FC82F-25AE-4268-A94C-3348340748F9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,22 +42,32 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
 
     public static class ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplatesConfigRulesConfigRuleParameters extends TeaModel {
         /**
-         * <p>The name of the input parameter.</p>
+         * <p>The name of the input parameter of the managed rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>days</p>
          */
         @NameInMap("ParameterName")
         public String parameterName;
 
         /**
-         * <p>The value of the input parameter.</p>
+         * <p>The value of the input parameter of the managed rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
 
         /**
-         * <p>Indicates whether the input parameter is required. Valid values:</p>
-         * <br>
-         * <p>*   true: The parameter is required.</p>
-         * <p>*   false: The input parameter is optional.</p>
+         * <p>Indicates whether the parameter is required in the managed rule. Valid values:</p>
+         * <ul>
+         * <li>true: required</li>
+         * <li>false: optional</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Required")
         public Boolean required;
@@ -92,42 +105,56 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
 
     public static class ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplatesConfigRules extends TeaModel {
         /**
-         * <p>The input parameters of the managed rule.</p>
+         * <p>The input parameter of the managed rule.</p>
          */
         @NameInMap("ConfigRuleParameters")
         public java.util.List<ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplatesConfigRulesConfigRuleParameters> configRuleParameters;
 
         /**
          * <p>The description of the regulation. This parameter is available only for regulation compliance packages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>No classic networks exist.</p>
          */
         @NameInMap("ControlDescription")
         public String controlDescription;
 
         /**
-         * <p>The ID of the regulation.</p>
-         * <br>
-         * <p>> This parameter is available only for regulation compliance packages.</p>
+         * <p>The regulation ID.</p>
+         * <blockquote>
+         * <p> This parameter is available only for regulation compliance packages.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3.1</p>
          */
         @NameInMap("ControlId")
         public String controlId;
 
         /**
-         * <p>Indicates whether the rule was enabled together with the compliance package. Default value: false. The value true indicates that the rule was enabled together with the compliance package. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <p>Indicates whether the rules are enabled together with the compliance package. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("DefaultEnable")
         public Boolean defaultEnable;
 
         /**
-         * <p>The description of the managed rule.</p>
+         * <p>The description of the rule.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The identifier of the managed rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>slb-servercertificate-expired-check</p>
          */
         @NameInMap("ManagedRuleIdentifier")
         public String managedRuleIdentifier;
@@ -139,17 +166,24 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
         public String managedRuleName;
 
         /**
-         * <p>The type of the resource evaluated based on the rule.</p>
+         * <p>The types of the resources evaluated based on the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::SLB::ServerCertificate</p>
          */
         @NameInMap("ResourceTypesScope")
         public String resourceTypesScope;
 
         /**
-         * <p>The risk level of the resources that are not compliant with the managed rule. Valid values:</p>
-         * <br>
-         * <p>*   1: high</p>
-         * <p>*   2: medium</p>
-         * <p>*   3: low</p>
+         * <p>The risk level of the managed rule. Valid values:</p>
+         * <ul>
+         * <li>1: high</li>
+         * <li>2: medium</li>
+         * <li>3: low</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
@@ -236,6 +270,9 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
     public static class ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplates extends TeaModel {
         /**
          * <p>The ID of the compliance package template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ct-d254ff4e06a300cf****</p>
          */
         @NameInMap("CompliancePackTemplateId")
         public String compliancePackTemplateId;
@@ -247,7 +284,7 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
         public String compliancePackTemplateName;
 
         /**
-         * <p>The information about managed rules in the compliance package.</p>
+         * <p>The default rules in the compliance package.</p>
          */
         @NameInMap("ConfigRules")
         public java.util.List<ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplatesConfigRules> configRules;
@@ -266,16 +303,23 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
 
         /**
          * <p>The time when the compliance package was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1663408308</p>
          */
         @NameInMap("LastUpdate")
         public Integer lastUpdate;
 
         /**
-         * <p>The risk level of the resources that are not compliant with the managed rules in the compliance package. Valid values:</p>
-         * <br>
-         * <p>*   1: high</p>
-         * <p>*   2: medium</p>
-         * <p>*   3: low</p>
+         * <p>The risk level of the managed rule in the compliance package. Valid values:</p>
+         * <ul>
+         * <li>1: high</li>
+         * <li>2: medium</li>
+         * <li>3: low</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
@@ -352,18 +396,27 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
 
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of the compliance package templates returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

@@ -6,15 +6,16 @@ import com.aliyun.tea.*;
 public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The region ID of the tags.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource IDs. You can add tags to up to 50 resources.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
@@ -22,23 +23,24 @@ public class TagResourcesRequest extends TeaModel {
 
     /**
      * <p>The resource type. Valid values:</p>
-     * <br>
-     * <p>*   `ACS::Config::Rule`</p>
-     * <p>*   `ACS::Config::AggregateConfigRule`</p>
-     * <p>*   `ACS::Config::Aggregator`</p>
-     * <p>*   `ACS::Config::CompliancePack`</p>
-     * <p>*   `ACS::Config::AggregateCompliancePack`</p>
-     * <br>
+     * <ul>
+     * <li><code>ACS::Config::Rule</code></li>
+     * <li><code>ACS::Config::AggregateConfigRule</code></li>
+     * <li><code>ACS::Config::Aggregator</code></li>
+     * <li><code>ACS::Config::CompliancePack</code></li>
+     * <li><code>ACS::Config::AggregateCompliancePack</code></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACS::Config::Rule</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The tag value of the resource.</p>
-     * <br>
      * <p>You can specify up to 20 tag values.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -84,16 +86,20 @@ public class TagResourcesRequest extends TeaModel {
     public static class TagResourcesRequestTag extends TeaModel {
         /**
          * <p>The key of the tag that is added to the resource.</p>
-         * <br>
          * <p>You can add up to 20 tag keys to a resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Env</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag that is added to the resource.</p>
-         * <br>
          * <p>You can add up to 20 tag values to a resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod</p>
          */
         @NameInMap("Value")
         public String value;

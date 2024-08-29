@@ -5,28 +5,40 @@ import com.aliyun.tea.*;
 
 public class StartConfigRuleEvaluationRequest extends TeaModel {
     /**
-     * <p>The ID of the compliance package.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of a compliance package, see [ListCompliancePacks](https://help.aliyun.com/document_detail/606968.html).</p>
-     * <br>
-     * <p>>  You must set either the CompliancePackId or ConfigRuleId parameter.</p>
+     * <p>The compliance package ID.</p>
+     * <p>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/606968.html">ListCompliancePacks</a>.</p>
+     * <blockquote>
+     * <p> You must configure either the <code>CompliancePackId</code> or <code>ConfigRuleId</code> parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cp-ac16626622af0053****</p>
      */
     @NameInMap("CompliancePackId")
     public String compliancePackId;
 
     /**
      * <p>The rule ID.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of a rule, see [ListConfigRules](https://help.aliyun.com/document_detail/609222.html).</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/609222.html">ListConfigRules</a> operation to obtain the rule ID.</p>
+     * <blockquote>
+     * <p> You must configure either the <code>CompliancePackId</code> or <code>ConfigRuleId</code> parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cr-9920626622af0035****</p>
      */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
     /**
-     * <p>Specifies whether to re-evaluate ignored non-compliant resources. Valid values:</p>
-     * <br>
-     * <p>*   true: re-evaluates ignored non-compliant resources based on the rule.</p>
-     * <p>*   false: continues to ignore non-compliant resources.</p>
+     * <p>Specifies whether to re-evaluate the ignored non-compliant resource. Valid values:</p>
+     * <ul>
+     * <li>true: re-evaluates the ignored non-compliant resource based on the rule.</li>
+     * <li>false (default): does not re-evaluate the ignored non-compliant resource based on the rule.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("RevertEvaluation")
     public Boolean revertEvaluation;

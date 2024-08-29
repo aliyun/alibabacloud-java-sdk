@@ -12,6 +12,9 @@ public class DeleteAggregateRemediationsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4BE28FB1-616A-5586-82E4-F34FB2AF7441</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,35 @@ public class DeleteAggregateRemediationsResponseBody extends TeaModel {
     public static class DeleteAggregateRemediationsResponseBodyRemediationDeleteResults extends TeaModel {
         /**
          * <p>The error code returned.</p>
-         * <br>
-         * <p>*   If the remediation template is deleted, no error code is returned.</p>
-         * <p>*   If the remediation template fails to be deleted, an error code is returned. For more information about error codes, see [Error codes](https://error-center.alibabacloud.com/status/product/Config).</p>
+         * <ul>
+         * <li>If the remediation template is deleted, no error code is returned.</li>
+         * <li>If the remediation template fails to be deleted, an error code is returned. For more information about error codes, see <a href="https://error-center.alibabacloud.com/status/product/Config">Error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RemediationConfigNotExist</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The ID of the remediation template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crr-909ba2d4716700eb****</p>
          */
         @NameInMap("RemediationId")
         public String remediationId;
 
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
-         * <br>
-         * <p>*   true: The request was successful.</p>
-         * <p>*   false: The request failed.</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Success")
         public Boolean success;

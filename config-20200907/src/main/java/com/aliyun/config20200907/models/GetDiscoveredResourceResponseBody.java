@@ -12,6 +12,9 @@ public class GetDiscoveredResourceResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E4D71ACE-6B0A-46E0-8352-56952378CC7F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class GetDiscoveredResourceResponseBody extends TeaModel {
     public static class GetDiscoveredResourceResponseBodyDiscoveredResourceDetail extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100931896542****</p>
          */
         @NameInMap("AccountId")
         public Long accountId;
 
         /**
          * <p>The ID of the zone in which the resource resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         @NameInMap("AvailabilityZone")
         public String availabilityZone;
@@ -55,60 +64,89 @@ public class GetDiscoveredResourceResponseBody extends TeaModel {
 
         /**
          * <p>The configuration of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;AccessControlList\&quot;:{\&quot;Grant\&quot;:\&quot;private\&quot;},\&quot;ServerSideEncryptionRule\&quot;:{\&quot;SSEAlgorithm\&quot;:\&quot;None\&quot;},\&quot;Comment\&quot;:\&quot;\&quot;,\&quot;CreationDate\&quot;:\&quot;2021-06-29T10:05:12.000Z\&quot;,\&quot;Owner\&quot;:{\&quot;DisplayName\&quot;:\&quot;100931896542****\&quot;,\&quot;ID\&quot;:\&quot;100931896542****\&quot;},\&quot;StorageClass\&quot;:\&quot;Standard\&quot;,\&quot;DataRedundancyType\&quot;:\&quot;LRS\&quot;,\&quot;AllowEmptyReferer\&quot;:\&quot;true\&quot;,\&quot;Name\&quot;:\&quot;new-bucket\&quot;,\&quot;BucketPolicy\&quot;:{\&quot;LogPrefix\&quot;:\&quot;\&quot;,\&quot;LogBucket\&quot;:\&quot;\&quot;},\&quot;ExtranetEndpoint\&quot;:\&quot;oss-cn-hangzhou.aliyuncs.com\&quot;,\&quot;IntranetEndpoint\&quot;:\&quot;oss-cn-hangzhou-internal.aliyuncs.com\&quot;,\&quot;Location\&quot;:\&quot;oss-cn-hangzhou\&quot;}</p>
          */
         @NameInMap("Configuration")
         public String configuration;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
-         * <p>The time when the resource was created.</p>
+         * <p>The timestamp when the resource was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1624961112000</p>
          */
         @NameInMap("ResourceCreationTime")
         public Long resourceCreationTime;
 
         /**
          * <p>Indicates whether the resource was deleted. Valid values:</p>
-         * <br>
-         * <p>*   1: The resource was not deleted.</p>
-         * <p>*   0: The resource was deleted.</p>
+         * <ul>
+         * <li>1: The resource was not deleted.</li>
+         * <li>0: The resource was deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ResourceDeleted")
         public Integer resourceDeleted;
 
         /**
          * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>new-bucket</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The resource name.</p>
+         * <p>The name of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>new-bucket</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;
 
         /**
-         * <p>The status of the resource. The value of this parameter varies with the resource type and may be empty. Examples:</p>
-         * <br>
-         * <p>*   If the value of the ResourceType parameter is ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that is in a specific state. In this case, the valid values of this parameter are Running and Stopped.</p>
-         * <p>*   If the value of the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is empty.</p>
+         * <p>The status of the resource. The value of this parameter varies based on the resource type and may be empty.</p>
+         * <ul>
+         * <li>If the ResourceType parameter is set to ACS::ECS::Instance, the resource is an ECS instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.</li>
+         * <li>If the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is left empty.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>offline</p>
          */
         @NameInMap("ResourceStatus")
         public String resourceStatus;
 
         /**
-         * <p>The resource type.</p>
+         * <p>The type of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::OSS::BucketACS::CDN::Domain</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The tags of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;\&quot;hc\&quot;\&quot;:[\&quot;\&quot;value2\&quot;\&quot;]}</p>
          */
         @NameInMap("Tags")
         public String tags;

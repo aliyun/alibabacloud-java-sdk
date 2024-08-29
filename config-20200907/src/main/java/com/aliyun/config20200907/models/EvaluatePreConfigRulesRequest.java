@@ -6,18 +6,22 @@ import com.aliyun.tea.*;
 public class EvaluatePreConfigRulesRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the managed rule. Valid values:</p>
-     * <br>
-     * <p>*   true: enables the managed rule.</p>
-     * <p>*   false: does not enable the managed rule. This is the default value.</p>
-     * <br>
-     * <p>>  After you create an evaluation rule, a managed rule that has the same settings as the evaluation rule is created. After you create a resource, the managed rule can be used to continuously check the compliance of the resource.</p>
+     * <ul>
+     * <li>true: enables the managed rule.</li>
+     * <li>false: does not enable the managed rule. This is the default value.</li>
+     * </ul>
+     * <blockquote>
+     * <p> After you create an evaluation rule, a managed rule that has the same settings as the evaluation rule is created. After you create a resource, the managed rule can be used to continuously check the compliance of the resource.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("EnableManagedRules")
     public Boolean enableManagedRules;
 
     /**
      * <p>The resources that you want to evaluate.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceEvaluateItems")
@@ -47,14 +51,19 @@ public class EvaluatePreConfigRulesRequest extends TeaModel {
     public static class EvaluatePreConfigRulesRequestResourceEvaluateItemsRules extends TeaModel {
         /**
          * <p>The identifier of the evaluation rule.</p>
-         * <br>
-         * <p>For more information about how to obtain the identifier of an evaluation rule, see [ListManagedRules](https://help.aliyun.com/document_detail/467810.html).</p>
+         * <p>For more information about how to obtain the identifier of an evaluation rule, see <a href="https://help.aliyun.com/document_detail/467810.html">ListManagedRules</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs-instance-deletion-protection-enabled</p>
          */
         @NameInMap("Identifier")
         public String identifier;
 
         /**
          * <p>The input parameters of the evaluation rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("InputParameters")
         public String inputParameters;
@@ -85,18 +94,32 @@ public class EvaluatePreConfigRulesRequest extends TeaModel {
     public static class EvaluatePreConfigRulesRequestResourceEvaluateItems extends TeaModel {
         /**
          * <p>The logical ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ResourceLogicId-test</p>
          */
         @NameInMap("ResourceLogicalId")
         public String resourceLogicalId;
 
         /**
          * <p>The properties of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;ImageId&quot;: &quot;ubuntu_18_04_64_20G_alibase_20190624.vhd&quot;,
+         *     &quot;SecurityGroupId&quot;: &quot;sg-bp15ed6xe1yxeycg****&quot;,
+         *     &quot;HostName&quot;: &quot;LocalHostName&quot;,
+         *     &quot;RegionId&quot;: &quot;cn-hangzhou&quot;
+         * }</p>
          */
         @NameInMap("ResourceProperties")
         public String resourceProperties;
 
         /**
          * <p>The type of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::ECS::Instance</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;

@@ -6,26 +6,30 @@ import com.aliyun.tea.*;
 public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove all tags from the resource. Valid values:</p>
-     * <br>
-     * <p>*   true: All tags are removed from the resource.</p>
-     * <p>*   false (default): The specified tags are removed from the resource.</p>
+     * <ul>
+     * <li>true: All tags are removed from the resource.</li>
+     * <li>false (default): The specified tags are removed from the resource.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("All")
     public Boolean all;
 
     /**
      * <p>The region ID of the tag.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource ID.</p>
-     * <br>
      * <p>You can remove tags from up to 50 resources at a time.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
@@ -33,14 +37,17 @@ public class UntagResourcesRequest extends TeaModel {
 
     /**
      * <p>The resource type. Valid values:</p>
-     * <br>
-     * <p>*   `ACS::Config::Rule`</p>
-     * <p>*   `ACS::Config::AggregateConfigRule`</p>
-     * <p>*   `ACS::Config::Aggregator`</p>
-     * <p>*   `ACS::Config::CompliancePack`</p>
-     * <p>*   `ACS::Config::AggregateCompliancePack`</p>
-     * <br>
+     * <ul>
+     * <li><code>ACS::Config::Rule</code></li>
+     * <li><code>ACS::Config::AggregateConfigRule</code></li>
+     * <li><code>ACS::Config::Aggregator</code></li>
+     * <li><code>ACS::Config::CompliancePack</code></li>
+     * <li><code>ACS::Config::AggregateCompliancePack</code></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACS::Config::Rule</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

@@ -5,41 +5,50 @@ import com.aliyun.tea.*;
 
 public class UpdateAggregatorRequest extends TeaModel {
     /**
-     * <p>The information about the member accounts in the account group.</p>
-     * <br>
-     * <p>>  When you modify the configurations of an account group, this parameter can be left empty. In this case, the member account list is not updated. If you want to update the member account list, you must set the `AccountId`, `AccountName` and `AccountType` parameters.</p>
+     * <p>The members in the account group.</p>
+     * <blockquote>
+     * <p> When you modify the configurations of an account group, this parameter can be left empty. In this case, the member list is not updated. If you want to update the member list, you must configure both the <code>AccountId</code> and <code>AccountType</code> parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>false</p>
      */
     @NameInMap("AggregatorAccounts")
     public java.util.List<UpdateAggregatorRequestAggregatorAccounts> aggregatorAccounts;
 
     /**
      * <p>The ID of the account group.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
-     * <br>
+     * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ca-dacf86d8314e00eb****</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
     /**
      * <p>The name of the account group.</p>
-     * <br>
-     * <p>For more information about how to obtain the name of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
+     * <p>For more information about how to obtain the name of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test_Group</p>
      */
     @NameInMap("AggregatorName")
     public String aggregatorName;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1594295238-f9361358-5843-4294-8d30-b5183fac****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The description of the account group.</p>
-     * <br>
-     * <p>For more information about how to obtain the description of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
+     * <p>For more information about how to obtain the description of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -91,29 +100,39 @@ public class UpdateAggregatorRequest extends TeaModel {
 
     public static class UpdateAggregatorRequestAggregatorAccounts extends TeaModel {
         /**
-         * <p>The member account ID, which indicates the Alibaba Cloud account ID of the member account.</p>
-         * <br>
-         * <p>For more information about how to obtain the ID of a member account, see [ListAccounts](https://help.aliyun.com/document_detail/160016.html).</p>
-         * <br>
-         * <p>>  If you want to update the member account list, you must set the `AccountId`, `AccountName` and `AccountType` parameters.</p>
+         * <p>The ID of the member.</p>
+         * <p>For more information about how to obtain the ID of a member, see <a href="https://help.aliyun.com/document_detail/160016.html">ListAccounts</a>.</p>
+         * <blockquote>
+         * <p> If you want to update the member list, you must configure both the <code>AccountId</code> and <code>AccountType</code> parameters.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>173808452267****</p>
          */
         @NameInMap("AccountId")
         public Long accountId;
 
         /**
-         * <p>The member account name, which indicates the name of the Alibaba Cloud account that corresponds to the member account.</p>
-         * <br>
-         * <p>For more information about how to obtain the name of a member account, see [ListAccounts](https://help.aliyun.com/document_detail/160016.html).</p>
-         * <br>
-         * <p>>  If you want to update the member account list, you must set the `AccountId`, `AccountName` and `AccountType` parameters.</p>
+         * <p>The display name of the member.</p>
+         * <p>For more information about how to obtain the name of a member, see <a href="https://help.aliyun.com/document_detail/160016.html">ListAccounts</a>.</p>
+         * <blockquote>
+         * <p> If you want to update the member list, you must configure both the <code>AccountId</code> and <code>AccountType</code> parameters.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Tony</p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
-         * <p>The affiliation of the member account. You can set this parameter to only ResourceDirectory.</p>
-         * <br>
-         * <p>>  If you want to update the member account list, you must set the `AccountId`, `AccountName` and `AccountType` parameters.</p>
+         * <p>The resource directory to which the member belongs. Valid value: ResourceDirectory. ResourceDirectory indicates that the member belongs to a resource directory.</p>
+         * <blockquote>
+         * <p> If you want to update the member list, you must configure both the <code>AccountId</code> and <code>AccountType</code> parameters.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ResourceDirectory</p>
          */
         @NameInMap("AccountType")
         public String accountType;

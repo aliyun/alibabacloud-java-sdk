@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class CopyConfigRulesResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the rules are replicated. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("CopyRulesResult")
     public Boolean copyRulesResult;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7BD81ECF-3194-5A6B-8719-9FC283167AD4</p>
      */
     @NameInMap("RequestId")
     public String requestId;

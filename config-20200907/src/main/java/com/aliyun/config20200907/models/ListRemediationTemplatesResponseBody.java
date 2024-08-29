@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListRemediationTemplatesResponseBody extends TeaModel {
     /**
      * <p>The page number. Pages start from page 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries per page. Valid values: 1 to 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
@@ -24,12 +30,18 @@ public class ListRemediationTemplatesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FC2C4750-7024-499C-A69F-763543D1CBE3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of remediation templates.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -82,30 +94,74 @@ public class ListRemediationTemplatesResponseBody extends TeaModel {
     public static class ListRemediationTemplatesResponseBodyRemediationTemplates extends TeaModel {
         /**
          * <p>The type of the remediation template. Valid value: OOS, which indicates Operation Orchestration Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OOS</p>
          */
         @NameInMap("RemediationType")
         public String remediationType;
 
         /**
          * <p>The definition of the remediation template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;Parameters&quot;: {
+         *         &quot;bucketName&quot;: {
+         *             &quot;Default&quot;: &quot;{resourceId}&quot;,
+         *             &quot;Description&quot;: {
+         *                 &quot;zh-cn&quot;: &quot;[Required]OSS Bucket Name.&quot;,
+         *                 &quot;en&quot;: &quot;[Required]OSS Bucket Name.&quot;
+         *             },
+         *             &quot;Type&quot;: &quot;String&quot;
+         *         },
+         *         &quot;regionId&quot;: {
+         *             &quot;AssociationProperty&quot;: &quot;RegionId&quot;,
+         *             &quot;Default&quot;: &quot;{regionId}&quot;,
+         *             &quot;Description&quot;: {
+         *                 &quot;zh-cn&quot;: &quot;[Required]The id of target region.&quot;,
+         *                 &quot;en&quot;: &quot;[Required]The id of target region.&quot;
+         *             },
+         *             &quot;Type&quot;: &quot;String&quot;
+         *         },
+         *         &quot;permissionName&quot;: {
+         *             &quot;AllowValues&quot;: &quot;[\&quot;public-read-write\&quot;,\&quot;public-read\&quot;,\&quot;private\&quot;]&quot;,
+         *             &quot;Default&quot;: &quot;private&quot;,
+         *             &quot;Description&quot;: {
+         *                 &quot;zh-cn&quot;: &quot;[Required]ACL Permission Name.&quot;,
+         *                 &quot;en&quot;: &quot;[Required]ACL Permission Name.&quot;
+         *             },
+         *             &quot;Type&quot;: &quot;String&quot;
+         *         }
+         *     }
+         * }</p>
          */
         @NameInMap("TemplateDefinition")
         public String templateDefinition;
 
         /**
          * <p>The description of the remediation template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Configure encryption rules for OSSBucket through the PutBucketEncryption interface. Be aware of the risks and exercise caution.</p>
          */
         @NameInMap("TemplateDescription")
         public String templateDescription;
 
         /**
          * <p>The ID of the remediation template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS-OSS-PutBucketAcl</p>
          */
         @NameInMap("TemplateIdentifier")
         public String templateIdentifier;
 
         /**
          * <p>The name of the remediation template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Set the ACL of an OSS bucket to private</p>
          */
         @NameInMap("TemplateName")
         public String templateName;

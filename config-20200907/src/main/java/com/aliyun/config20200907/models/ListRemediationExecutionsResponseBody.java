@@ -12,6 +12,9 @@ public class ListRemediationExecutionsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>13E67493-3165-529A-A961-BE9E4B11BA11</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,39 +43,58 @@ public class ListRemediationExecutionsResponseBody extends TeaModel {
     public static class ListRemediationExecutionsResponseBodyRemediationExecutionDataRemediationExecutions extends TeaModel {
         /**
          * <p>The time when the remediation record was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-25T11:48:15Z</p>
          */
         @NameInMap("ExecutionCreateDate")
         public String executionCreateDate;
 
         /**
          * <p>The invocation ID of the remediation record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exec-befded3781994ccf****</p>
          */
         @NameInMap("ExecutionInvocationId")
         public String executionInvocationId;
 
         /**
          * <p>The IDs of the resources to which the remediation belongs. Separate multiple resource IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-0jlk629z240l8****</p>
          */
         @NameInMap("ExecutionResourceIds")
         public String executionResourceIds;
 
         /**
          * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::RDS::DBInstance</p>
          */
         @NameInMap("ExecutionResourceType")
         public String executionResourceType;
 
         /**
          * <p>The status of the remediation record. Valid values:</p>
-         * <br>
-         * <p>*   Success</p>
-         * <p>*   Failed</p>
+         * <ul>
+         * <li>Success</li>
+         * <li>Failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("ExecutionStatus")
         public String executionStatus;
 
         /**
          * <p>The error message returned when the remediation fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invocation time out.</p>
          */
         @NameInMap("ExecutionStatusMessage")
         public String executionStatusMessage;
@@ -135,12 +157,18 @@ public class ListRemediationExecutionsResponseBody extends TeaModel {
     public static class ListRemediationExecutionsResponseBodyRemediationExecutionData extends TeaModel {
         /**
          * <p>The maximum number of entries to return for a single request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("MaxResults")
         public Long maxResults;
 
         /**
          * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cMbjqNaYs0Ps7zSNiu37****</p>
          */
         @NameInMap("NextToken")
         public String nextToken;

@@ -6,18 +6,22 @@ import com.aliyun.tea.*;
 public class EvaluatePreConfigRulesShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the managed rule. Valid values:</p>
-     * <br>
-     * <p>*   true: enables the managed rule.</p>
-     * <p>*   false: does not enable the managed rule. This is the default value.</p>
-     * <br>
-     * <p>>  After you create an evaluation rule, a managed rule that has the same settings as the evaluation rule is created. After you create a resource, the managed rule can be used to continuously check the compliance of the resource.</p>
+     * <ul>
+     * <li>true: enables the managed rule.</li>
+     * <li>false: does not enable the managed rule. This is the default value.</li>
+     * </ul>
+     * <blockquote>
+     * <p> After you create an evaluation rule, a managed rule that has the same settings as the evaluation rule is created. After you create a resource, the managed rule can be used to continuously check the compliance of the resource.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("EnableManagedRules")
     public Boolean enableManagedRules;
 
     /**
      * <p>The resources that you want to evaluate.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceEvaluateItems")

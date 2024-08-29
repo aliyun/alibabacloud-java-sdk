@@ -12,18 +12,27 @@ public class ListPreManagedRulesResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A2A9F1BE-0712-1B26-9899-D82F7DA8476C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -67,43 +76,58 @@ public class ListPreManagedRulesResponseBody extends TeaModel {
 
     public static class ListPreManagedRulesResponseBodyManagedRules extends TeaModel {
         /**
-         * <p>The required input parameters of the evaluation rule.</p>
+         * <p>The details of the required input parameters of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("CompulsoryInputParameterDetails")
         public java.util.Map<String, ?> compulsoryInputParameterDetails;
 
         /**
-         * <p>The name of the evaluation rule.</p>
+         * <p>The name of the rule.</p>
          */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
 
         /**
-         * <p>The description of the evaluation rule.</p>
+         * <p>The description of the rule.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The URL of the topic that describes how the managed rule remediates the incompliant configurations.</p>
+         * <p>The URL of the topic that describes how the evaluation rule remediates the incompliant configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.aliyundoc.com">https://example.aliyundoc.com</a></p>
          */
         @NameInMap("HelpUrls")
         public String helpUrls;
 
         /**
-         * <p>The identifier of the evaluation rule.</p>
+         * <p>The identifier of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs-instance-deletion-protection-enabled</p>
          */
         @NameInMap("Identifier")
         public String identifier;
 
         /**
-         * <p>The details of the optional input parameters of the evaluation rule.</p>
+         * <p>The details of the optional input parameters of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("OptionalInputParameterDetails")
         public java.util.Map<String, ?> optionalInputParameterDetails;
 
         /**
-         * <p>The type of the resource.</p>
+         * <p>The type of resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::ECS::Instance</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;

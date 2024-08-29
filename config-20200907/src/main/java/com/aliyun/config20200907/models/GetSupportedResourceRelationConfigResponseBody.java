@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetSupportedResourceRelationConfigResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>409D022F-394C-5AAB-A74A-2F1DC9F6375E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,17 +43,24 @@ public class GetSupportedResourceRelationConfigResponseBody extends TeaModel {
     public static class GetSupportedResourceRelationConfigResponseBodyResourceRelationConfigList extends TeaModel {
         /**
          * <p>The type of the relationship between the resource and the object. Valid values:</p>
-         * <br>
-         * <p>*   IsContained: The object is included as part of the resource.</p>
-         * <p>*   IsAttachedTo: The object is added to the resource.</p>
-         * <p>*   IsAssociatedIn: The object is associated with the resource.</p>
-         * <p>*   Contains: The actual value contains the expected value.</p>
+         * <ul>
+         * <li>IsContained: The object is included as part of the resource.</li>
+         * <li>IsAttachedTo: The object is added to the resource.</li>
+         * <li>IsAssociatedIn: The object is associated with the resource.</li>
+         * <li>Contains: The actual value contains the expected value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IsAttachedTo</p>
          */
         @NameInMap("RelationType")
         public String relationType;
 
         /**
          * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::ECS::Disk</p>
          */
         @NameInMap("TargetResourceType")
         public String targetResourceType;

@@ -31,10 +31,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables one or more rules in an account group.
-     *
-     * @description This topic provides an example on how to enable the `cr-5772ba41209e007b****` rule in the `ca-a4e5626622af0079****` account group.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>The rule is in the <code>INACTIVE</code> state.</p>
+     * <h3><a href="#"></a>Description</h3>
+     * <p>This topic provides an example on how to enable the <code>cr-5772ba41209e007b****</code> rule in the <code>ca-a4e5626622af0079****</code> account group.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables one or more rules in an account group. After a rule is enabled, the rule continues to automatically evaluate resources based on the trigger mechanism.</p>
+     * 
      * @param request ActiveAggregateConfigRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ActiveAggregateConfigRulesResponse
@@ -68,10 +73,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables one or more rules in an account group.
-     *
-     * @description This topic provides an example on how to enable the `cr-5772ba41209e007b****` rule in the `ca-a4e5626622af0079****` account group.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>The rule is in the <code>INACTIVE</code> state.</p>
+     * <h3><a href="#"></a>Description</h3>
+     * <p>This topic provides an example on how to enable the <code>cr-5772ba41209e007b****</code> rule in the <code>ca-a4e5626622af0079****</code> account group.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables one or more rules in an account group. After a rule is enabled, the rule continues to automatically evaluate resources based on the trigger mechanism.</p>
+     * 
      * @param request ActiveAggregateConfigRulesRequest
      * @return ActiveAggregateConfigRulesResponse
      */
@@ -81,8 +91,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables multiple rules at a time so that these rules enter the Active state.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>The rule is in the <code>INACTIVE</code> state.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables a rule in Cloud Config. After a rule is enabled, Cloud Config automatically evaluates the compliance of a resource based on the trigger mechanism of the rule.</p>
+     * 
      * @param request ActiveConfigRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ActiveConfigRulesResponse
@@ -112,8 +127,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables multiple rules at a time so that these rules enter the Active state.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>The rule is in the <code>INACTIVE</code> state.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables a rule in Cloud Config. After a rule is enabled, Cloud Config automatically evaluates the compliance of a resource based on the trigger mechanism of the rule.</p>
+     * 
      * @param request ActiveConfigRulesRequest
      * @return ActiveConfigRulesResponse
      */
@@ -123,10 +143,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds one or more rules in an account group to a compliance package.
-     *
-     * @description The sample request in this topic shows you how to add the `cr-6cc4626622af00e7****` rule in the `ca-75b4626622af00c3****` account group to the `cp-5bb1626622af00bd****` compliance package.
-     *
+     * <b>description</b> :
+     * <p>The sample request in this topic shows you how to add the <code>cr-6cc4626622af00e7****</code> rule in the <code>ca-75b4626622af00c3****</code> account group to the <code>cp-5bb1626622af00bd****</code> compliance package.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds one or more rules in an account group to a compliance package.</p>
+     * 
      * @param request AttachAggregateConfigRuleToCompliancePackRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AttachAggregateConfigRuleToCompliancePackResponse
@@ -164,10 +186,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds one or more rules in an account group to a compliance package.
-     *
-     * @description The sample request in this topic shows you how to add the `cr-6cc4626622af00e7****` rule in the `ca-75b4626622af00c3****` account group to the `cp-5bb1626622af00bd****` compliance package.
-     *
+     * <b>description</b> :
+     * <p>The sample request in this topic shows you how to add the <code>cr-6cc4626622af00e7****</code> rule in the <code>ca-75b4626622af00c3****</code> account group to the <code>cp-5bb1626622af00bd****</code> compliance package.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds one or more rules in an account group to a compliance package.</p>
+     * 
      * @param request AttachAggregateConfigRuleToCompliancePackRequest
      * @return AttachAggregateConfigRuleToCompliancePackResponse
      */
@@ -177,10 +201,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds one or more rules to a compliance package.
-     *
-     * @description This topic provides an example on how to add the `cr-6cc4626622af00e7****` rule to the `cp-5bb1626622af00bd****` compliance package.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to add the <code>cr-6cc4626622af00e7****</code> rule to the <code>cp-5bb1626622af00bd****</code> compliance package.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds one or more rules to a compliance package.</p>
+     * 
      * @param request AttachConfigRuleToCompliancePackRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AttachConfigRuleToCompliancePackResponse
@@ -214,10 +240,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds one or more rules to a compliance package.
-     *
-     * @description This topic provides an example on how to add the `cr-6cc4626622af00e7****` rule to the `cp-5bb1626622af00bd****` compliance package.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to add the <code>cr-6cc4626622af00e7****</code> rule to the <code>cp-5bb1626622af00bd****</code> compliance package.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds one or more rules to a compliance package.</p>
+     * 
      * @param request AttachConfigRuleToCompliancePackRequest
      * @return AttachConfigRuleToCompliancePackResponse
      */
@@ -227,8 +255,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Replicates compliance packages.
-     *
+     * <b>summary</b> : 
+     * <p>Replicates compliance packages.</p>
+     * 
      * @param request CopyCompliancePacksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CopyCompliancePacksResponse
@@ -266,8 +295,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Replicates compliance packages.
-     *
+     * <b>summary</b> : 
+     * <p>Replicates compliance packages.</p>
+     * 
      * @param request CopyCompliancePacksRequest
      * @return CopyCompliancePacksResponse
      */
@@ -277,8 +307,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Replicates rules.
-     *
+     * <b>summary</b> : 
+     * <p>Replicates rules.</p>
+     * 
      * @param request CopyConfigRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CopyConfigRulesResponse
@@ -316,8 +347,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Replicates rules.
-     *
+     * <b>summary</b> : 
+     * <p>Replicates rules.</p>
+     * 
      * @param request CopyConfigRulesRequest
      * @return CopyConfigRulesResponse
      */
@@ -327,8 +359,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a downloadable resource file for the current Alibaba Cloud account.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a downloadable resource file for the current Alibaba Cloud account.</p>
+     * 
      * @param request CreateAdvancedSearchFileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAdvancedSearchFileResponse
@@ -358,8 +391,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a downloadable resource file for the current Alibaba Cloud account.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a downloadable resource file for the current Alibaba Cloud account.</p>
+     * 
      * @param request CreateAdvancedSearchFileRequest
      * @return CreateAdvancedSearchFileResponse
      */
@@ -369,10 +403,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a downloadable resource file for an account group.
-     *
-     * @description This topic provides an example on how to create a downloadable resource file for an account group whose ID is `ca-edd3626622af00b3****`. The resource file includes all the ECS instances in the account group.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to create a downloadable resource file for an account group whose ID is <code>ca-edd3626622af00b3****</code>. The resource file includes all the ECS instances in the account group.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a downloadable resource file for an account group.</p>
+     * 
      * @param request CreateAggregateAdvancedSearchFileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAggregateAdvancedSearchFileResponse
@@ -406,10 +442,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a downloadable resource file for an account group.
-     *
-     * @description This topic provides an example on how to create a downloadable resource file for an account group whose ID is `ca-edd3626622af00b3****`. The resource file includes all the ECS instances in the account group.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to create a downloadable resource file for an account group whose ID is <code>ca-edd3626622af00b3****</code>. The resource file includes all the ECS instances in the account group.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a downloadable resource file for an account group.</p>
+     * 
      * @param request CreateAggregateAdvancedSearchFileRequest
      * @return CreateAggregateAdvancedSearchFileResponse
      */
@@ -419,11 +457,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a compliance package for an account group.
-     *
-     * @description You can use your management account to create up to five compliance packages for each account group.
-     * This topic provides an example on how to create a compliance package named ClassifiedProtectionPreCheck for the `ca-f632626622af0079****` account group. The compliance package contains the `eip-bandwidth-limit` managed rule.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to create a compliance package for the account group <code>ca-f632626622af0079****</code> by using the compliance package template <code>ClassifiedProtectionPreCheck</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a compliance package for an account group.</p>
+     * 
      * @param tmpReq CreateAggregateCompliancePackRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAggregateCompliancePackResponse
@@ -465,8 +504,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeRegionIdsScope)) {
+            body.put("ExcludeRegionIdsScope", request.excludeRegionIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeResourceGroupIdsScope)) {
+            body.put("ExcludeResourceGroupIdsScope", request.excludeResourceGroupIdsScope);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.excludeResourceIdsScope)) {
             body.put("ExcludeResourceIdsScope", request.excludeResourceIdsScope);
+        }
+
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeTagsScope)) {
+            bodyFlat.put("ExcludeTagsScope", request.excludeTagsScope);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionIdsScope)) {
@@ -475,6 +527,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupIdsScope)) {
             body.put("ResourceGroupIdsScope", request.resourceGroupIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceIdsScope)) {
+            body.put("ResourceIdsScope", request.resourceIdsScope);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.riskLevel)) {
@@ -489,10 +545,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TagValueScope", request.tagValueScope);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsScope)) {
+            bodyFlat.put("TagsScope", request.tagsScope);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.templateContent)) {
             body.put("TemplateContent", request.templateContent);
         }
 
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
@@ -511,11 +575,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a compliance package for an account group.
-     *
-     * @description You can use your management account to create up to five compliance packages for each account group.
-     * This topic provides an example on how to create a compliance package named ClassifiedProtectionPreCheck for the `ca-f632626622af0079****` account group. The compliance package contains the `eip-bandwidth-limit` managed rule.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to create a compliance package for the account group <code>ca-f632626622af0079****</code> by using the compliance package template <code>ClassifiedProtectionPreCheck</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a compliance package for an account group.</p>
+     * 
      * @param request CreateAggregateCompliancePackRequest
      * @return CreateAggregateCompliancePackResponse
      */
@@ -525,10 +590,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a delivery channel for an account group.
-     *
-     * @description In this example, a delivery channel is created for an account group. The ID of the account group is `ca-a4e5626622af0079****`. The type of the delivery channel is `OSS` and the Alibaba Cloud Resource Name (ARN) of the delivery destination is `acs:oss:cn-shanghai:100931896542****:new-bucket`. The result indicates that the delivery channel is created. The ID of the delivery channel is `cdc-8e45ff4e06a3a8****`.
-     *
+     * <b>description</b> :
+     * <p>In this example, a delivery channel is created for an account group. The ID of the account group is <code>ca-a4e5626622af0079****</code>. The type of the delivery channel is <code>OSS</code> and the Alibaba Cloud Resource Name (ARN) of the delivery destination is <code>acs:oss:cn-shanghai:100931896542****:new-bucket</code>. The result indicates that the delivery channel is created. The ID of the delivery channel is <code>cdc-8e45ff4e06a3a8****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a delivery channel for an account group.</p>
+     * 
      * @param request CreateAggregateConfigDeliveryChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAggregateConfigDeliveryChannelResponse
@@ -542,6 +609,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.compliantSnapshot)) {
+            query.put("CompliantSnapshot", request.compliantSnapshot);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.configurationItemChangeNotification)) {
@@ -602,10 +673,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a delivery channel for an account group.
-     *
-     * @description In this example, a delivery channel is created for an account group. The ID of the account group is `ca-a4e5626622af0079****`. The type of the delivery channel is `OSS` and the Alibaba Cloud Resource Name (ARN) of the delivery destination is `acs:oss:cn-shanghai:100931896542****:new-bucket`. The result indicates that the delivery channel is created. The ID of the delivery channel is `cdc-8e45ff4e06a3a8****`.
-     *
+     * <b>description</b> :
+     * <p>In this example, a delivery channel is created for an account group. The ID of the account group is <code>ca-a4e5626622af0079****</code>. The type of the delivery channel is <code>OSS</code> and the Alibaba Cloud Resource Name (ARN) of the delivery destination is <code>acs:oss:cn-shanghai:100931896542****:new-bucket</code>. The result indicates that the delivery channel is created. The ID of the delivery channel is <code>cdc-8e45ff4e06a3a8****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a delivery channel for an account group.</p>
+     * 
      * @param request CreateAggregateConfigDeliveryChannelRequest
      * @return CreateAggregateConfigDeliveryChannelResponse
      */
@@ -615,13 +688,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a rule for an account group.
-     *
-     * @description ### Limits
-     * You can create up to 200 rules for each management account.
-     * ### Usage notes
-     * This topic provides an example on how to create a rule based on the required-tags managed rule in the `ca-a4e5626622af0079****` account group. The returned result shows that the rule is created and its ID is `cr-4e3d626622af0080****`.
-     *
+     * <b>description</b> :
+     * <h3>Limits</h3>
+     * <p>You can create up to 200 rules for each management account.</p>
+     * <h3>Usage notes</h3>
+     * <p>This topic provides an example on how to create a rule based on the required-tags managed rule in the <code>ca-a4e5626622af0079****</code> account group. The returned result shows that the rule is created and its ID is <code>cr-4e3d626622af0080****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a rule for an account group.</p>
+     * 
      * @param tmpReq CreateAggregateConfigRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAggregateConfigRuleResponse
@@ -639,6 +714,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountIdsScope)) {
+            body.put("AccountIdsScope", request.accountIdsScope);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.aggregatorId)) {
             body.put("AggregatorId", request.aggregatorId);
         }
@@ -667,8 +746,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ExcludeFolderIdsScope", request.excludeFolderIdsScope);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeRegionIdsScope)) {
+            body.put("ExcludeRegionIdsScope", request.excludeRegionIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeResourceGroupIdsScope)) {
+            body.put("ExcludeResourceGroupIdsScope", request.excludeResourceGroupIdsScope);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.excludeResourceIdsScope)) {
             body.put("ExcludeResourceIdsScope", request.excludeResourceIdsScope);
+        }
+
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeTagsScope)) {
+            bodyFlat.put("ExcludeTagsScope", request.excludeTagsScope);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.folderIdsScope)) {
@@ -689,6 +781,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupIdsScope)) {
             body.put("ResourceGroupIdsScope", request.resourceGroupIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceIdsScope)) {
+            body.put("ResourceIdsScope", request.resourceIdsScope);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceTypesScopeShrink)) {
@@ -719,6 +815,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TagValueScope", request.tagValueScope);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsScope)) {
+            bodyFlat.put("TagsScope", request.tagsScope);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
@@ -737,13 +841,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a rule for an account group.
-     *
-     * @description ### Limits
-     * You can create up to 200 rules for each management account.
-     * ### Usage notes
-     * This topic provides an example on how to create a rule based on the required-tags managed rule in the `ca-a4e5626622af0079****` account group. The returned result shows that the rule is created and its ID is `cr-4e3d626622af0080****`.
-     *
+     * <b>description</b> :
+     * <h3>Limits</h3>
+     * <p>You can create up to 200 rules for each management account.</p>
+     * <h3>Usage notes</h3>
+     * <p>This topic provides an example on how to create a rule based on the required-tags managed rule in the <code>ca-a4e5626622af0079****</code> account group. The returned result shows that the rule is created and its ID is <code>cr-4e3d626622af0080****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a rule for an account group.</p>
+     * 
      * @param request CreateAggregateConfigRuleRequest
      * @return CreateAggregateConfigRuleResponse
      */
@@ -753,10 +859,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a remediation template for a rule in an account group.
-     *
-     * @description This topic provides an example on how to create a remediation template for the rule whose ID is `cr-6b7c626622af00b4****` in the account group whose ID is `ca-6b4a626622af0012****`. The returned result shows that a remediation template is created and the ID of the remediation template is `crr-909ba2d4716700eb****`.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to create a remediation template for the rule whose ID is <code>cr-6b7c626622af00b4****</code> in the account group whose ID is <code>ca-6b4a626622af0012****</code>. The returned result shows that a remediation template is created and the ID of the remediation template is <code>crr-909ba2d4716700eb****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a remediation template for a rule in an account group.</p>
+     * 
      * @param request CreateAggregateRemediationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAggregateRemediationResponse
@@ -814,10 +922,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a remediation template for a rule in an account group.
-     *
-     * @description This topic provides an example on how to create a remediation template for the rule whose ID is `cr-6b7c626622af00b4****` in the account group whose ID is `ca-6b4a626622af0012****`. The returned result shows that a remediation template is created and the ID of the remediation template is `crr-909ba2d4716700eb****`.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to create a remediation template for the rule whose ID is <code>cr-6b7c626622af00b4****</code> in the account group whose ID is <code>ca-6b4a626622af0012****</code>. The returned result shows that a remediation template is created and the ID of the remediation template is <code>crr-909ba2d4716700eb****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a remediation template for a rule in an account group.</p>
+     * 
      * @param request CreateAggregateRemediationRequest
      * @return CreateAggregateRemediationResponse
      */
@@ -827,16 +937,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an account group.
-     *
-     * @description Each management account can create a maximum of five account groups. Each account group can contain a maximum of 200 member accounts.
-     * Cloud Config supports the following types of account groups:
-     * *   Global account group: The global account group contains all the member accounts that are added to the resource directory. A management account can create only one global account group.
-     * *   Custom account group: If you create a custom account group, you must manually add all or specific member accounts from the resource directory to the custom account group.
-     * This topic provides an example on how to create an account group of the `CUSTOM` type. The custom account group is named `Test_Group`, and its description is `Test account group`. The custom account group contains the following two member accounts:
-     * *   Member account ID: `171322098523****`. Member account name: `Alice`.
-     * *   Member account ID: `100532098349****`. Member account name: `Tom`.
-     *
+     * <b>description</b> :
+     * <p>Each management account can create a maximum of five account groups. Each account group can contain a maximum of 200 member accounts.
+     * Cloud Config supports the following types of account groups:</p>
+     * <ul>
+     * <li>Global account group: The global account group contains all the member accounts that are added to the resource directory. A management account can create only one global account group.</li>
+     * <li>Custom account group: If you create a custom account group, you must manually add all or specific member accounts from the resource directory to the custom account group.
+     * This topic provides an example on how to create an account group of the <code>CUSTOM</code> type. The custom account group is named <code>Test_Group</code>, and its description is <code>Test account group</code>. The custom account group contains the following two member accounts:</li>
+     * <li>Member account ID: <code>171322098523****</code>. Member account name: <code>Alice</code>.</li>
+     * <li>Member account ID: <code>100532098349****</code>. Member account name: <code>Tom</code>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an account group.</p>
+     * 
      * @param tmpReq CreateAggregatorRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAggregatorResponse
@@ -892,16 +1006,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an account group.
-     *
-     * @description Each management account can create a maximum of five account groups. Each account group can contain a maximum of 200 member accounts.
-     * Cloud Config supports the following types of account groups:
-     * *   Global account group: The global account group contains all the member accounts that are added to the resource directory. A management account can create only one global account group.
-     * *   Custom account group: If you create a custom account group, you must manually add all or specific member accounts from the resource directory to the custom account group.
-     * This topic provides an example on how to create an account group of the `CUSTOM` type. The custom account group is named `Test_Group`, and its description is `Test account group`. The custom account group contains the following two member accounts:
-     * *   Member account ID: `171322098523****`. Member account name: `Alice`.
-     * *   Member account ID: `100532098349****`. Member account name: `Tom`.
-     *
+     * <b>description</b> :
+     * <p>Each management account can create a maximum of five account groups. Each account group can contain a maximum of 200 member accounts.
+     * Cloud Config supports the following types of account groups:</p>
+     * <ul>
+     * <li>Global account group: The global account group contains all the member accounts that are added to the resource directory. A management account can create only one global account group.</li>
+     * <li>Custom account group: If you create a custom account group, you must manually add all or specific member accounts from the resource directory to the custom account group.
+     * This topic provides an example on how to create an account group of the <code>CUSTOM</code> type. The custom account group is named <code>Test_Group</code>, and its description is <code>Test account group</code>. The custom account group contains the following two member accounts:</li>
+     * <li>Member account ID: <code>171322098523****</code>. Member account name: <code>Alice</code>.</li>
+     * <li>Member account ID: <code>100532098349****</code>. Member account name: <code>Tom</code>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an account group.</p>
+     * 
      * @param request CreateAggregatorRequest
      * @return CreateAggregatorResponse
      */
@@ -911,11 +1029,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a compliance package for the current account.
-     *
-     * @description Each ordinary account can create up to five compliance packages.
-     * This topic provides an example on how to create a compliance package named ClassifiedProtectionPreCheck. The compliance package contains a managed rule named `eip-bandwidth-limit`.
-     *
+     * <b>description</b> :
+     * <p>Each ordinary account can create up to five compliance packages.
+     * This topic provides an example on how to create a compliance package named ClassifiedProtectionPreCheck. The compliance package contains a managed rule named <code>eip-bandwidth-limit</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a compliance package for the current account.</p>
+     * 
      * @param tmpReq CreateCompliancePackRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateCompliancePackResponse
@@ -953,8 +1073,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeRegionIdsScope)) {
+            body.put("ExcludeRegionIdsScope", request.excludeRegionIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeResourceGroupIdsScope)) {
+            body.put("ExcludeResourceGroupIdsScope", request.excludeResourceGroupIdsScope);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.excludeResourceIdsScope)) {
             body.put("ExcludeResourceIdsScope", request.excludeResourceIdsScope);
+        }
+
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeTagsScope)) {
+            bodyFlat.put("ExcludeTagsScope", request.excludeTagsScope);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionIdsScope)) {
@@ -963,6 +1096,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupIdsScope)) {
             body.put("ResourceGroupIdsScope", request.resourceGroupIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceIdsScope)) {
+            body.put("ResourceIdsScope", request.resourceIdsScope);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.riskLevel)) {
@@ -977,10 +1114,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TagValueScope", request.tagValueScope);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsScope)) {
+            bodyFlat.put("TagsScope", request.tagsScope);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.templateContent)) {
             body.put("TemplateContent", request.templateContent);
         }
 
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
@@ -999,11 +1144,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a compliance package for the current account.
-     *
-     * @description Each ordinary account can create up to five compliance packages.
-     * This topic provides an example on how to create a compliance package named ClassifiedProtectionPreCheck. The compliance package contains a managed rule named `eip-bandwidth-limit`.
-     *
+     * <b>description</b> :
+     * <p>Each ordinary account can create up to five compliance packages.
+     * This topic provides an example on how to create a compliance package named ClassifiedProtectionPreCheck. The compliance package contains a managed rule named <code>eip-bandwidth-limit</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a compliance package for the current account.</p>
+     * 
      * @param request CreateCompliancePackRequest
      * @return CreateCompliancePackResponse
      */
@@ -1013,10 +1160,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a delivery channel.
-     *
-     * @description In this example, a delivery channel is created. The type of the delivery channel is `OSS` and the Alibaba Cloud Resource Name (ARN) of the delivery destination is `acs:oss:cn-shanghai:100931896542****:new-bucket`. The result indicates that the delivery channel is created, and the ID of the delivery channel is `cdc-8e45ff4e06a3a8****`.
-     *
+     * <b>description</b> :
+     * <p>In this example, a delivery channel is created. The type of the delivery channel is <code>OSS</code> and the Alibaba Cloud Resource Name (ARN) of the delivery destination is <code>acs:oss:cn-shanghai:100931896542****:new-bucket</code>. The result indicates that the delivery channel is created, and the ID of the delivery channel is <code>cdc-8e45ff4e06a3a8****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a delivery channel.</p>
+     * 
      * @param request CreateConfigDeliveryChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateConfigDeliveryChannelResponse
@@ -1026,6 +1175,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.compliantSnapshot)) {
+            query.put("CompliantSnapshot", request.compliantSnapshot);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.configurationItemChangeNotification)) {
@@ -1086,10 +1239,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a delivery channel.
-     *
-     * @description In this example, a delivery channel is created. The type of the delivery channel is `OSS` and the Alibaba Cloud Resource Name (ARN) of the delivery destination is `acs:oss:cn-shanghai:100931896542****:new-bucket`. The result indicates that the delivery channel is created, and the ID of the delivery channel is `cdc-8e45ff4e06a3a8****`.
-     *
+     * <b>description</b> :
+     * <p>In this example, a delivery channel is created. The type of the delivery channel is <code>OSS</code> and the Alibaba Cloud Resource Name (ARN) of the delivery destination is <code>acs:oss:cn-shanghai:100931896542****:new-bucket</code>. The result indicates that the delivery channel is created, and the ID of the delivery channel is <code>cdc-8e45ff4e06a3a8****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a delivery channel.</p>
+     * 
      * @param request CreateConfigDeliveryChannelRequest
      * @return CreateConfigDeliveryChannelResponse
      */
@@ -1099,11 +1254,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a rule for the current account.
-     *
-     * @description ## Limits
-     * You can use a common account to create up to 200 rules.
-     *
+     * <b>description</b> :
+     * <h2>Limits</h2>
+     * <p>You can use a common account to create up to 200 rules.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a rule for the current account.</p>
+     * 
      * @param tmpReq CreateConfigRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateConfigRuleResponse
@@ -1137,8 +1294,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeRegionIdsScope)) {
+            body.put("ExcludeRegionIdsScope", request.excludeRegionIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeResourceGroupIdsScope)) {
+            body.put("ExcludeResourceGroupIdsScope", request.excludeResourceGroupIdsScope);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.excludeResourceIdsScope)) {
             body.put("ExcludeResourceIdsScope", request.excludeResourceIdsScope);
+        }
+
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeTagsScope)) {
+            bodyFlat.put("ExcludeTagsScope", request.excludeTagsScope);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.inputParametersShrink)) {
@@ -1155,6 +1325,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupIdsScope)) {
             body.put("ResourceGroupIdsScope", request.resourceGroupIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceIdsScope)) {
+            body.put("ResourceIdsScope", request.resourceIdsScope);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceTypesScopeShrink)) {
@@ -1185,6 +1359,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TagValueScope", request.tagValueScope);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsScope)) {
+            bodyFlat.put("TagsScope", request.tagsScope);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
@@ -1203,11 +1385,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a rule for the current account.
-     *
-     * @description ## Limits
-     * You can use a common account to create up to 200 rules.
-     *
+     * <b>description</b> :
+     * <h2>Limits</h2>
+     * <p>You can use a common account to create up to 200 rules.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a rule for the current account.</p>
+     * 
      * @param request CreateConfigRuleRequest
      * @return CreateConfigRuleResponse
      */
@@ -1217,16 +1401,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>In this example, a delivery channel is created. The type of the delivery channel is <code>OSS</code>, the Alibaba Cloud Resource Name (ARN) of the delivery destination is <code>acs:oss:cn-shanghai:100931896542****:new-bucket</code>, and the ARN of the role that is assigned to the delivery channel is <code>acs:ram::100931896542****:role/aliyunserviceroleforconfig</code>. The returned result shows that the delivery channel is created, and the ID of the delivery channel is <code>cdc-8e45ff4e06a3a8****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a delivery channel.</p>
+     * 
      * @deprecated OpenAPI CreateDeliveryChannel is deprecated, please use Config::2020-09-07::CreateConfigDeliveryChannel,Config::2020-09-07::CreateAggregateConfigDeliveryChannel instead.
-     *
-     * @summary Creates a delivery channel.
-     *
-     * @description In this example, a delivery channel is created. The type of the delivery channel is `OSS`, the Alibaba Cloud Resource Name (ARN) of the delivery destination is `acs:oss:cn-shanghai:100931896542****:new-bucket`, and the ARN of the role that is assigned to the delivery channel is `acs:ram::100931896542****:role/aliyunserviceroleforconfig`. The returned result shows that the delivery channel is created, and the ID of the delivery channel is `cdc-8e45ff4e06a3a8****`.
-     *
+     * 
      * @param request CreateDeliveryChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDeliveryChannelResponse
      */
+    @Deprecated
     // Deprecated
     public CreateDeliveryChannelResponse createDeliveryChannelWithOptions(CreateDeliveryChannelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1293,15 +1480,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>In this example, a delivery channel is created. The type of the delivery channel is <code>OSS</code>, the Alibaba Cloud Resource Name (ARN) of the delivery destination is <code>acs:oss:cn-shanghai:100931896542****:new-bucket</code>, and the ARN of the role that is assigned to the delivery channel is <code>acs:ram::100931896542****:role/aliyunserviceroleforconfig</code>. The returned result shows that the delivery channel is created, and the ID of the delivery channel is <code>cdc-8e45ff4e06a3a8****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a delivery channel.</p>
+     * 
      * @deprecated OpenAPI CreateDeliveryChannel is deprecated, please use Config::2020-09-07::CreateConfigDeliveryChannel,Config::2020-09-07::CreateAggregateConfigDeliveryChannel instead.
-     *
-     * @summary Creates a delivery channel.
-     *
-     * @description In this example, a delivery channel is created. The type of the delivery channel is `OSS`, the Alibaba Cloud Resource Name (ARN) of the delivery destination is `acs:oss:cn-shanghai:100931896542****:new-bucket`, and the ARN of the role that is assigned to the delivery channel is `acs:ram::100931896542****:role/aliyunserviceroleforconfig`. The returned result shows that the delivery channel is created, and the ID of the delivery channel is `cdc-8e45ff4e06a3a8****`.
-     *
+     * 
      * @param request CreateDeliveryChannelRequest
      * @return CreateDeliveryChannelResponse
      */
+    @Deprecated
     // Deprecated
     public CreateDeliveryChannelResponse createDeliveryChannel(CreateDeliveryChannelRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1309,10 +1499,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a remediation template for a rule.
-     *
-     * @description This topic provides an example on how to create a remediation template for the rule `cr-8a973ac2e2be00a2****`. The returned result shows that a remediation template is created and the ID of the remediation template is `crr-909ba2d4716700eb****`.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to create a remediation template for the rule <code>cr-8a973ac2e2be00a2****</code>. The returned result shows that a remediation template is created and the ID of the remediation template is <code>crr-909ba2d4716700eb****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a remediation template for a rule.</p>
+     * 
      * @param request CreateRemediationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateRemediationResponse
@@ -1366,10 +1558,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a remediation template for a rule.
-     *
-     * @description This topic provides an example on how to create a remediation template for the rule `cr-8a973ac2e2be00a2****`. The returned result shows that a remediation template is created and the ID of the remediation template is `crr-909ba2d4716700eb****`.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to create a remediation template for the rule <code>cr-8a973ac2e2be00a2****</code>. The returned result shows that a remediation template is created and the ID of the remediation template is <code>crr-909ba2d4716700eb****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a remediation template for a rule.</p>
+     * 
      * @param request CreateRemediationRequest
      * @return CreateRemediationResponse
      */
@@ -1379,10 +1573,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Disables one or more rules in an account group.
-     *
-     * @description This topic provides an example on how to disable the `cr-5772ba41209e007b****` rule in the `ca-04b3fd170e340007****` account group.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>The status of the rule is <code>ACTIVE</code>.</p>
+     * <h3><a href="#"></a>Description</h3>
+     * <p>This topic provides an example on how to disable the <code>cr-5772ba41209e007b****</code> rule in the <code>ca-04b3fd170e340007****</code> account group.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables one or more rules in an account group. After a rule is disabled, the resource in the rule is no longer evaluated. The compliance evaluation results before the rule is disabled are still displayed.</p>
+     * 
      * @param request DeactiveAggregateConfigRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeactiveAggregateConfigRulesResponse
@@ -1416,10 +1615,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Disables one or more rules in an account group.
-     *
-     * @description This topic provides an example on how to disable the `cr-5772ba41209e007b****` rule in the `ca-04b3fd170e340007****` account group.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>The status of the rule is <code>ACTIVE</code>.</p>
+     * <h3><a href="#"></a>Description</h3>
+     * <p>This topic provides an example on how to disable the <code>cr-5772ba41209e007b****</code> rule in the <code>ca-04b3fd170e340007****</code> account group.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables one or more rules in an account group. After a rule is disabled, the resource in the rule is no longer evaluated. The compliance evaluation results before the rule is disabled are still displayed.</p>
+     * 
      * @param request DeactiveAggregateConfigRulesRequest
      * @return DeactiveAggregateConfigRulesResponse
      */
@@ -1429,10 +1633,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Disables one or more rules.
-     *
-     * @description In this example, the `cr-19a56457e0d90058****` rule is used.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>The status of the rule is <code>ACTIVE</code>.</p>
+     * <h3><a href="#"></a>Description</h3>
+     * <p>This topic provides an example on how to disable the <code>cr-19a56457e0d90058****</code> rule.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables a rule. After a rule is disabled, the resource in the rule is no longer evaluated. The compliance evaluation results before the rule is disabled are still displayed.</p>
+     * 
      * @param request DeactiveConfigRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeactiveConfigRulesResponse
@@ -1462,10 +1671,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Disables one or more rules.
-     *
-     * @description In this example, the `cr-19a56457e0d90058****` rule is used.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>The status of the rule is <code>ACTIVE</code>.</p>
+     * <h3><a href="#"></a>Description</h3>
+     * <p>This topic provides an example on how to disable the <code>cr-19a56457e0d90058****</code> rule.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables a rule. After a rule is disabled, the resource in the rule is no longer evaluated. The compliance evaluation results before the rule is disabled are still displayed.</p>
+     * 
      * @param request DeactiveConfigRulesRequest
      * @return DeactiveConfigRulesResponse
      */
@@ -1475,10 +1689,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes the compliance packages of an account group.
-     *
-     * @description This topic provides an example on how to delete the `cp-541e626622af0087****` compliance package from the `ca-04b3fd170e340007****` account group.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to delete the <code>cp-541e626622af0087****</code> compliance package from the <code>ca-04b3fd170e340007****</code> account group.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the compliance packages of an account group.</p>
+     * 
      * @param request DeleteAggregateCompliancePacksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAggregateCompliancePacksResponse
@@ -1520,10 +1736,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes the compliance packages of an account group.
-     *
-     * @description This topic provides an example on how to delete the `cp-541e626622af0087****` compliance package from the `ca-04b3fd170e340007****` account group.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to delete the <code>cp-541e626622af0087****</code> compliance package from the <code>ca-04b3fd170e340007****</code> account group.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the compliance packages of an account group.</p>
+     * 
      * @param request DeleteAggregateCompliancePacksRequest
      * @return DeleteAggregateCompliancePacksResponse
      */
@@ -1533,10 +1751,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a delivery channel from an account group.
-     *
-     * @description This topic provides an example on how to delete the `cdc-38c3013b46c9002c****` delivery channel from the `ca-23c6626622af0041****` account group. The returned result shows that the `cdc-38c3013b46c9002c****` delivery channel is deleted.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to delete the <code>cdc-38c3013b46c9002c****</code> delivery channel from the <code>ca-23c6626622af0041****</code> account group. The returned result shows that the <code>cdc-38c3013b46c9002c****</code> delivery channel is deleted.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a delivery channel from an account group.</p>
+     * 
      * @param request DeleteAggregateConfigDeliveryChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAggregateConfigDeliveryChannelResponse
@@ -1570,10 +1790,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a delivery channel from an account group.
-     *
-     * @description This topic provides an example on how to delete the `cdc-38c3013b46c9002c****` delivery channel from the `ca-23c6626622af0041****` account group. The returned result shows that the `cdc-38c3013b46c9002c****` delivery channel is deleted.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to delete the <code>cdc-38c3013b46c9002c****</code> delivery channel from the <code>ca-23c6626622af0041****</code> account group. The returned result shows that the <code>cdc-38c3013b46c9002c****</code> delivery channel is deleted.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a delivery channel from an account group.</p>
+     * 
      * @param request DeleteAggregateConfigDeliveryChannelRequest
      * @return DeleteAggregateConfigDeliveryChannelResponse
      */
@@ -1583,13 +1805,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes one or more rules from an account group.
-     *
-     * @description ### Background information
-     * You can delete a rule in the Cloud Config console. After you delete the rule, the configurations of the rule are deleted.
-     * ### Usage notes
-     * This topic provides an example on how to delete the `cr-4e3d626622af0080****` rule from the `ca-a4e5626622af0079****` account group.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to delete the <code>cr-4e3d626622af0080****</code> rule from the <code>ca-a4e5626622af0079****</code> account group.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes one or more rules from an account group. You can delete a rule in the Cloud Config console. After you delete the rule, the configurations of the rule are deleted.</p>
+     * 
      * @param request DeleteAggregateConfigRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAggregateConfigRulesResponse
@@ -1623,13 +1844,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes one or more rules from an account group.
-     *
-     * @description ### Background information
-     * You can delete a rule in the Cloud Config console. After you delete the rule, the configurations of the rule are deleted.
-     * ### Usage notes
-     * This topic provides an example on how to delete the `cr-4e3d626622af0080****` rule from the `ca-a4e5626622af0079****` account group.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to delete the <code>cr-4e3d626622af0080****</code> rule from the <code>ca-a4e5626622af0079****</code> account group.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes one or more rules from an account group. You can delete a rule in the Cloud Config console. After you delete the rule, the configurations of the rule are deleted.</p>
+     * 
      * @param request DeleteAggregateConfigRulesRequest
      * @return DeleteAggregateConfigRulesResponse
      */
@@ -1639,10 +1859,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes one or more remediation templates from a rule in an account group.
-     *
-     * @description This topic provides an example on how to delete the remediation template whose ID is `crr-909ba2d4716700eb****` from the account group whose ID is `ca-6b4a626622af0012****`. The returned result shows that the remediation template whose ID is `crr-909ba2d4716700eb****` is deleted.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to delete the remediation template whose ID is <code>crr-909ba2d4716700eb****</code> from the account group whose ID is <code>ca-6b4a626622af0012****</code>. The returned result shows that the remediation template whose ID is <code>crr-909ba2d4716700eb****</code> is deleted.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes one or more remediation templates from a rule in an account group.</p>
+     * 
      * @param request DeleteAggregateRemediationsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAggregateRemediationsResponse
@@ -1676,10 +1898,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes one or more remediation templates from a rule in an account group.
-     *
-     * @description This topic provides an example on how to delete the remediation template whose ID is `crr-909ba2d4716700eb****` from the account group whose ID is `ca-6b4a626622af0012****`. The returned result shows that the remediation template whose ID is `crr-909ba2d4716700eb****` is deleted.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to delete the remediation template whose ID is <code>crr-909ba2d4716700eb****</code> from the account group whose ID is <code>ca-6b4a626622af0012****</code>. The returned result shows that the remediation template whose ID is <code>crr-909ba2d4716700eb****</code> is deleted.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes one or more remediation templates from a rule in an account group.</p>
+     * 
      * @param request DeleteAggregateRemediationsRequest
      * @return DeleteAggregateRemediationsResponse
      */
@@ -1689,10 +1913,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an account group.
-     *
-     * @description This topic provides an example on how to delete the account group whose ID is `ca-9190626622af00a9****`.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Background information</h3>
+     * <p>After you delete an account group, the following changes occur to Cloud Config:</p>
+     * <ul>
+     * <li>The rules and compliance packages of the account group are deleted and cannot be recovered.</li>
+     * <li>All compliance results generated in the account group are automatically deleted and cannot be recovered.</li>
+     * <li>Service-linked roles for Cloud Config of member accounts in the account group are retained.</li>
+     * <li>If the account groups to which a member belongs are all deleted, the member account uses Cloud Config as an independent Alibaba Cloud account.</li>
+     * </ul>
+     * <h3><a href="#"></a>Description</h3>
+     * <p>This topic provides an example on how to delete the account group whose ID is <code>ca-9190626622af00a9****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>The management account or delegated administrator account of a resource directory can delete an account group.</p>
+     * 
      * @param request DeleteAggregatorsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAggregatorsResponse
@@ -1726,10 +1961,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an account group.
-     *
-     * @description This topic provides an example on how to delete the account group whose ID is `ca-9190626622af00a9****`.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Background information</h3>
+     * <p>After you delete an account group, the following changes occur to Cloud Config:</p>
+     * <ul>
+     * <li>The rules and compliance packages of the account group are deleted and cannot be recovered.</li>
+     * <li>All compliance results generated in the account group are automatically deleted and cannot be recovered.</li>
+     * <li>Service-linked roles for Cloud Config of member accounts in the account group are retained.</li>
+     * <li>If the account groups to which a member belongs are all deleted, the member account uses Cloud Config as an independent Alibaba Cloud account.</li>
+     * </ul>
+     * <h3><a href="#"></a>Description</h3>
+     * <p>This topic provides an example on how to delete the account group whose ID is <code>ca-9190626622af00a9****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>The management account or delegated administrator account of a resource directory can delete an account group.</p>
+     * 
      * @param request DeleteAggregatorsRequest
      * @return DeleteAggregatorsResponse
      */
@@ -1739,10 +1985,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes one or more compliance packages.
-     *
-     * @description This topic provides an example on how to delete the `cp-541e626622af0087****` compliance package.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to delete the <code>cp-541e626622af0087****</code> compliance package.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes one or more compliance packages.</p>
+     * 
      * @param request DeleteCompliancePacksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteCompliancePacksResponse
@@ -1780,10 +2028,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes one or more compliance packages.
-     *
-     * @description This topic provides an example on how to delete the `cp-541e626622af0087****` compliance package.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to delete the <code>cp-541e626622af0087****</code> compliance package.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes one or more compliance packages.</p>
+     * 
      * @param request DeleteCompliancePacksRequest
      * @return DeleteCompliancePacksResponse
      */
@@ -1793,10 +2043,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a delivery channel.
-     *
-     * @description This topic provides an example on how to delete the `cdc-38c3013b46c9002c****` delivery channel. The returned result shows that the `cdc-38c3013b46c9002c****` delivery channel is deleted.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to delete the <code>cdc-38c3013b46c9002c****</code> delivery channel. The returned result shows that the <code>cdc-38c3013b46c9002c****</code> delivery channel is deleted.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a delivery channel.</p>
+     * 
      * @param request DeleteConfigDeliveryChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteConfigDeliveryChannelResponse
@@ -1826,10 +2078,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a delivery channel.
-     *
-     * @description This topic provides an example on how to delete the `cdc-38c3013b46c9002c****` delivery channel. The returned result shows that the `cdc-38c3013b46c9002c****` delivery channel is deleted.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to delete the <code>cdc-38c3013b46c9002c****</code> delivery channel. The returned result shows that the <code>cdc-38c3013b46c9002c****</code> delivery channel is deleted.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a delivery channel.</p>
+     * 
      * @param request DeleteConfigDeliveryChannelRequest
      * @return DeleteConfigDeliveryChannelResponse
      */
@@ -1839,10 +2093,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes rules.
-     *
-     * @description In this example, the rule whose ID is cr-9908626622af0035\\*\\*\\*\\* is deleted.
-     *
+     * <b>description</b> :
+     * <p>In this example, the rule whose ID is cr-9908626622af0035\<em>\</em>\<em>\</em> is deleted.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes rules.</p>
+     * 
      * @param request DeleteConfigRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteConfigRulesResponse
@@ -1872,10 +2128,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes rules.
-     *
-     * @description In this example, the rule whose ID is cr-9908626622af0035\\*\\*\\*\\* is deleted.
-     *
+     * <b>description</b> :
+     * <p>In this example, the rule whose ID is cr-9908626622af0035\<em>\</em>\<em>\</em> is deleted.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes rules.</p>
+     * 
      * @param request DeleteConfigRulesRequest
      * @return DeleteConfigRulesResponse
      */
@@ -1885,10 +2143,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes one or more configured remediation templates that are associated with a rule.
-     *
-     * @description This topic provides an example on how to delete the remediation template `crr-909ba2d4716700eb****`. The returned result shows that the remediation template whose ID is `crr-909ba2d4716700eb****` is deleted.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to delete the remediation template <code>crr-909ba2d4716700eb****</code>. The returned result shows that the remediation template whose ID is <code>crr-909ba2d4716700eb****</code> is deleted.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes one or more configured remediation templates that are associated with a rule.</p>
+     * 
      * @param request DeleteRemediationsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteRemediationsResponse
@@ -1918,10 +2178,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes one or more configured remediation templates that are associated with a rule.
-     *
-     * @description This topic provides an example on how to delete the remediation template `crr-909ba2d4716700eb****`. The returned result shows that the remediation template whose ID is `crr-909ba2d4716700eb****` is deleted.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to delete the remediation template <code>crr-909ba2d4716700eb****</code>. The returned result shows that the remediation template whose ID is <code>crr-909ba2d4716700eb****</code> is deleted.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes one or more configured remediation templates that are associated with a rule.</p>
+     * 
      * @param request DeleteRemediationsRequest
      * @return DeleteRemediationsResponse
      */
@@ -1931,8 +2193,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary This topic provides an example on how to query the details of a remediation configuration whose ID is crr-f381cf0c1c2f004e\\*\\*\\*\\*.
-     *
+     * <b>summary</b> : 
+     * <p>This topic provides an example on how to query the details of a remediation configuration whose ID is crr-f381cf0c1c2f004e\<em>\</em>\<em>\</em>.</p>
+     * 
      * @param request DescribeRemediationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRemediationResponse
@@ -1958,8 +2221,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary This topic provides an example on how to query the details of a remediation configuration whose ID is crr-f381cf0c1c2f004e\\*\\*\\*\\*.
-     *
+     * <b>summary</b> : 
+     * <p>This topic provides an example on how to query the details of a remediation configuration whose ID is crr-f381cf0c1c2f004e\<em>\</em>\<em>\</em>.</p>
+     * 
      * @param request DescribeRemediationRequest
      * @return DescribeRemediationResponse
      */
@@ -1969,13 +2233,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes one or more rules in an account group from a compliance package.
-     *
-     * @description ### Prerequisites
-     * One or more rules are added to a compliance package.
-     * ### Usage notes
-     * The sample request in this topic shows you how to remove the `cr-6cc4626622af00e7****` rule in the `ca-75b4626622af00c3****` account group from the `cp-5bb1626622af00bd****` compliance package.
-     *
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>One or more rules are added to a compliance package.</p>
+     * <h3>Usage notes</h3>
+     * <p>The sample request in this topic shows you how to remove the <code>cr-6cc4626622af00e7****</code> rule in the <code>ca-75b4626622af00c3****</code> account group from the <code>cp-5bb1626622af00bd****</code> compliance package.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes one or more rules in an account group from a compliance package.</p>
+     * 
      * @param request DetachAggregateConfigRuleToCompliancePackRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DetachAggregateConfigRuleToCompliancePackResponse
@@ -2013,13 +2279,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes one or more rules in an account group from a compliance package.
-     *
-     * @description ### Prerequisites
-     * One or more rules are added to a compliance package.
-     * ### Usage notes
-     * The sample request in this topic shows you how to remove the `cr-6cc4626622af00e7****` rule in the `ca-75b4626622af00c3****` account group from the `cp-5bb1626622af00bd****` compliance package.
-     *
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>One or more rules are added to a compliance package.</p>
+     * <h3>Usage notes</h3>
+     * <p>The sample request in this topic shows you how to remove the <code>cr-6cc4626622af00e7****</code> rule in the <code>ca-75b4626622af00c3****</code> account group from the <code>cp-5bb1626622af00bd****</code> compliance package.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes one or more rules in an account group from a compliance package.</p>
+     * 
      * @param request DetachAggregateConfigRuleToCompliancePackRequest
      * @return DetachAggregateConfigRuleToCompliancePackResponse
      */
@@ -2029,13 +2297,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes one or more rules from a compliance package.
-     *
-     * @description ### Prerequisites
-     * One or more rules are added to a compliance package.
-     * ### Usage notes
-     * This topic provides an example on how to remove the `cr-6cc4626622af00e7****` rule from the `cp-5bb1626622af00bd****` compliance package.
-     *
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>One or more rules are added to a compliance package.</p>
+     * <h3>Usage notes</h3>
+     * <p>This topic provides an example on how to remove the <code>cr-6cc4626622af00e7****</code> rule from the <code>cp-5bb1626622af00bd****</code> compliance package.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes one or more rules from a compliance package.</p>
+     * 
      * @param request DetachConfigRuleToCompliancePackRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DetachConfigRuleToCompliancePackResponse
@@ -2069,13 +2339,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes one or more rules from a compliance package.
-     *
-     * @description ### Prerequisites
-     * One or more rules are added to a compliance package.
-     * ### Usage notes
-     * This topic provides an example on how to remove the `cr-6cc4626622af00e7****` rule from the `cp-5bb1626622af00bd****` compliance package.
-     *
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>One or more rules are added to a compliance package.</p>
+     * <h3>Usage notes</h3>
+     * <p>This topic provides an example on how to remove the <code>cr-6cc4626622af00e7****</code> rule from the <code>cp-5bb1626622af00bd****</code> compliance package.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes one or more rules from a compliance package.</p>
+     * 
      * @param request DetachConfigRuleToCompliancePackRequest
      * @return DetachConfigRuleToCompliancePackResponse
      */
@@ -2085,8 +2357,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Executes evaluation rules to evaluate resources.
-     *
+     * <b>summary</b> : 
+     * <p>Executes evaluation rules to evaluate resources.</p>
+     * 
      * @param tmpReq EvaluatePreConfigRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EvaluatePreConfigRulesResponse
@@ -2126,8 +2399,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Executes evaluation rules to evaluate resources.
-     *
+     * <b>summary</b> : 
+     * <p>Executes evaluation rules to evaluate resources.</p>
+     * 
      * @param request EvaluatePreConfigRulesRequest
      * @return EvaluatePreConfigRulesResponse
      */
@@ -2137,11 +2411,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Generates a compliance evaluation report based on a compliance package in an account group.
-     *
-     * @description > You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetAggregateConfigRulesReport operation. For more information, see [GetAggregateCompliancePackReport](https://help.aliyun.com/document_detail/262699.html).
-     * This topic provides an example on how to generate a compliance evaluation report based on the `cp-fdc8626622af00f9****` compliance package in the `ca-f632626622af0079****` account group.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetAggregateConfigRulesReport operation. For more information, see <a href="https://help.aliyun.com/document_detail/262699.html">GetAggregateCompliancePackReport</a>.
+     * This topic provides an example on how to generate a compliance evaluation report based on the <code>cp-fdc8626622af00f9****</code> compliance package in the <code>ca-f632626622af0079****</code> account group.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Generates a compliance evaluation report based on a compliance package in an account group.</p>
+     * 
      * @param request GenerateAggregateCompliancePackReportRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GenerateAggregateCompliancePackReportResponse
@@ -2179,11 +2457,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Generates a compliance evaluation report based on a compliance package in an account group.
-     *
-     * @description > You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetAggregateConfigRulesReport operation. For more information, see [GetAggregateCompliancePackReport](https://help.aliyun.com/document_detail/262699.html).
-     * This topic provides an example on how to generate a compliance evaluation report based on the `cp-fdc8626622af00f9****` compliance package in the `ca-f632626622af0079****` account group.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetAggregateConfigRulesReport operation. For more information, see <a href="https://help.aliyun.com/document_detail/262699.html">GetAggregateCompliancePackReport</a>.
+     * This topic provides an example on how to generate a compliance evaluation report based on the <code>cp-fdc8626622af00f9****</code> compliance package in the <code>ca-f632626622af0079****</code> account group.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Generates a compliance evaluation report based on a compliance package in an account group.</p>
+     * 
      * @param request GenerateAggregateCompliancePackReportRequest
      * @return GenerateAggregateCompliancePackReportResponse
      */
@@ -2193,11 +2475,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Generates a compliance evaluation report based on all rules in an account group.
-     *
-     * @description > You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetAggregateConfigRulesReport operation. For more information, see [GetAggregateConfigRulesReport](https://help.aliyun.com/document_detail/262706.html).
-     * The topic provides an example on how to generate a compliance evaluation report based on all rules in the `ca-f632626622af0079****` account group.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetAggregateConfigRulesReport operation. For more information, see <a href="https://help.aliyun.com/document_detail/262706.html">GetAggregateConfigRulesReport</a>.
+     * The topic provides an example on how to generate a compliance evaluation report based on all rules in the <code>ca-f632626622af0079****</code> account group.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Generates a compliance evaluation report for the rules in a specified account group.</p>
+     * 
      * @param request GenerateAggregateConfigRulesReportRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GenerateAggregateConfigRulesReportResponse
@@ -2235,11 +2521,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Generates a compliance evaluation report based on all rules in an account group.
-     *
-     * @description > You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetAggregateConfigRulesReport operation. For more information, see [GetAggregateConfigRulesReport](https://help.aliyun.com/document_detail/262706.html).
-     * The topic provides an example on how to generate a compliance evaluation report based on all rules in the `ca-f632626622af0079****` account group.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetAggregateConfigRulesReport operation. For more information, see <a href="https://help.aliyun.com/document_detail/262706.html">GetAggregateConfigRulesReport</a>.
+     * The topic provides an example on how to generate a compliance evaluation report based on all rules in the <code>ca-f632626622af0079****</code> account group.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Generates a compliance evaluation report for the rules in a specified account group.</p>
+     * 
      * @param request GenerateAggregateConfigRulesReportRequest
      * @return GenerateAggregateConfigRulesReportResponse
      */
@@ -2249,10 +2539,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Generates a downloadable inventory for global resources in an account group.
-     *
-     * @description This topic provides an example to show how to generate a downloadable inventory for global resources in the account group ca-a91d626622af0035\\*\\*\\*\\*.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example to show how to generate a downloadable inventory for global resources in the account group ca-a91d626622af0035\<em>\</em>\<em>\</em>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Generates a downloadable inventory for global resources in an account group.</p>
+     * 
      * @param request GenerateAggregateResourceInventoryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GenerateAggregateResourceInventoryResponse
@@ -2298,10 +2590,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Generates a downloadable inventory for global resources in an account group.
-     *
-     * @description This topic provides an example to show how to generate a downloadable inventory for global resources in the account group ca-a91d626622af0035\\*\\*\\*\\*.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example to show how to generate a downloadable inventory for global resources in the account group ca-a91d626622af0035\<em>\</em>\<em>\</em>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Generates a downloadable inventory for global resources in an account group.</p>
+     * 
      * @param request GenerateAggregateResourceInventoryRequest
      * @return GenerateAggregateResourceInventoryResponse
      */
@@ -2311,11 +2605,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Generates a compliance evaluation report based on a compliance package.
-     *
-     * @description > You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetCompliancePackReport operation. For more information, see [GetCompliancePackReport](https://help.aliyun.com/document_detail/263347.html).
-     * This topic provides an example on how to generate a compliance evaluation report based on the `cp-a8a8626622af0082****` compliance package.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetCompliancePackReport operation. For more information, see <a href="https://help.aliyun.com/document_detail/263347.html">GetCompliancePackReport</a>.
+     * This topic provides an example on how to generate a compliance evaluation report based on the <code>cp-a8a8626622af0082****</code> compliance package.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Generates a compliance evaluation report based on a compliance package.</p>
+     * 
      * @param request GenerateCompliancePackReportRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GenerateCompliancePackReportResponse
@@ -2349,11 +2647,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Generates a compliance evaluation report based on a compliance package.
-     *
-     * @description > You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetCompliancePackReport operation. For more information, see [GetCompliancePackReport](https://help.aliyun.com/document_detail/263347.html).
-     * This topic provides an example on how to generate a compliance evaluation report based on the `cp-a8a8626622af0082****` compliance package.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetCompliancePackReport operation. For more information, see <a href="https://help.aliyun.com/document_detail/263347.html">GetCompliancePackReport</a>.
+     * This topic provides an example on how to generate a compliance evaluation report based on the <code>cp-a8a8626622af0082****</code> compliance package.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Generates a compliance evaluation report based on a compliance package.</p>
+     * 
      * @param request GenerateCompliancePackReportRequest
      * @return GenerateCompliancePackReportResponse
      */
@@ -2363,11 +2665,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Generates a compliance evaluation report based on all existing rules.
-     *
-     * @description >  You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetConfigRulesReport operation. For more information, see [GetConfigRulesReport](https://help.aliyun.com/document_detail/263608.html).
-     * This topic provides an example of how to generate a compliance evaluation report based on all existing rules.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetConfigRulesReport operation. For more information, see <a href="https://help.aliyun.com/document_detail/263608.html">GetConfigRulesReport</a>.
+     * This topic provides an example of how to generate a compliance evaluation report based on all existing rules.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Generates a compliance evaluation report for a rule.</p>
+     * 
      * @param request GenerateConfigRulesReportRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GenerateConfigRulesReportResponse
@@ -2401,11 +2707,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Generates a compliance evaluation report based on all existing rules.
-     *
-     * @description >  You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetConfigRulesReport operation. For more information, see [GetConfigRulesReport](https://help.aliyun.com/document_detail/263608.html).
-     * This topic provides an example of how to generate a compliance evaluation report based on all existing rules.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetConfigRulesReport operation. For more information, see <a href="https://help.aliyun.com/document_detail/263608.html">GetConfigRulesReport</a>.
+     * This topic provides an example of how to generate a compliance evaluation report based on all existing rules.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Generates a compliance evaluation report for a rule.</p>
+     * 
      * @param request GenerateConfigRulesReportRequest
      * @return GenerateConfigRulesReportResponse
      */
@@ -2415,10 +2725,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Generates a resource inventory for global resources.
-     *
-     * @description This topic provides an example on how to generate a resource inventory for global resources of the current account.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to generate a resource inventory for global resources of the current account.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Generates a resource inventory for global resources.</p>
+     * 
      * @param request GenerateResourceInventoryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GenerateResourceInventoryResponse
@@ -2456,10 +2768,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Generates a resource inventory for global resources.
-     *
-     * @description This topic provides an example on how to generate a resource inventory for global resources of the current account.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to generate a resource inventory for global resources of the current account.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Generates a resource inventory for global resources.</p>
+     * 
      * @param request GenerateResourceInventoryRequest
      * @return GenerateResourceInventoryResponse
      */
@@ -2469,11 +2783,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the last resource advanced search file that is generated within the current account. You can call this operation to obtain the URL of the resource advanced search file.
-     *
-     * @description ### [](#)Prerequisites
-     * You must call the [CreateAdvancedSearchFile](https://help.aliyun.com/document_detail/2511967.html) operation to create a resource advanced search file. Then, you can call this operation to obtain the URL of the resource advanced search file.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>You must call the <a href="https://help.aliyun.com/document_detail/2511967.html">CreateAdvancedSearchFile</a> operation to create a resource advanced search file. Then, you can call this operation to obtain the URL of the resource advanced search file.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the last resource advanced search file that is generated within the current account. You can call this operation to obtain the URL of the resource advanced search file.</p>
+     * 
      * @param request GetAdvancedSearchFileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAdvancedSearchFileResponse
@@ -2495,11 +2811,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the last resource advanced search file that is generated within the current account. You can call this operation to obtain the URL of the resource advanced search file.
-     *
-     * @description ### [](#)Prerequisites
-     * You must call the [CreateAdvancedSearchFile](https://help.aliyun.com/document_detail/2511967.html) operation to create a resource advanced search file. Then, you can call this operation to obtain the URL of the resource advanced search file.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>You must call the <a href="https://help.aliyun.com/document_detail/2511967.html">CreateAdvancedSearchFile</a> operation to create a resource advanced search file. Then, you can call this operation to obtain the URL of the resource advanced search file.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the last resource advanced search file that is generated within the current account. You can call this operation to obtain the URL of the resource advanced search file.</p>
      * @return GetAdvancedSearchFileResponse
      */
     public GetAdvancedSearchFileResponse getAdvancedSearchFile() throws Exception {
@@ -2508,10 +2825,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the compliance evaluation results of member accounts for which a compliance package takes effect in an account group.
-     *
-     * @description This topic provides an example on how to query the compliance evaluation results of member accounts for which the `cp-541e626622af0087****` compliance package takes effect in the `ca-04b3fd170e340007****` account group. The returned result shows that two member accounts are monitored by the compliance package and they are both evaluated as compliant.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the compliance evaluation results of member accounts for which the <code>cp-541e626622af0087****</code> compliance package takes effect in the <code>ca-04b3fd170e340007****</code> account group. The returned result shows that two member accounts are monitored by the compliance package and they are both evaluated as compliant.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the compliance evaluation results of member accounts for which a compliance package takes effect in an account group.</p>
+     * 
      * @param request GetAggregateAccountComplianceByPackRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAggregateAccountComplianceByPackResponse
@@ -2537,10 +2856,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the compliance evaluation results of member accounts for which a compliance package takes effect in an account group.
-     *
-     * @description This topic provides an example on how to query the compliance evaluation results of member accounts for which the `cp-541e626622af0087****` compliance package takes effect in the `ca-04b3fd170e340007****` account group. The returned result shows that two member accounts are monitored by the compliance package and they are both evaluated as compliant.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the compliance evaluation results of member accounts for which the <code>cp-541e626622af0087****</code> compliance package takes effect in the <code>ca-04b3fd170e340007****</code> account group. The returned result shows that two member accounts are monitored by the compliance package and they are both evaluated as compliant.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the compliance evaluation results of member accounts for which a compliance package takes effect in an account group.</p>
+     * 
      * @param request GetAggregateAccountComplianceByPackRequest
      * @return GetAggregateAccountComplianceByPackResponse
      */
@@ -2550,8 +2871,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the most recently generated resource file of an account group.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the most recently generated resource file of an account group.</p>
+     * 
      * @param request GetAggregateAdvancedSearchFileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAggregateAdvancedSearchFileResponse
@@ -2581,8 +2903,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the most recently generated resource file of an account group.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the most recently generated resource file of an account group.</p>
+     * 
      * @param request GetAggregateAdvancedSearchFileRequest
      * @return GetAggregateAdvancedSearchFileResponse
      */
@@ -2592,10 +2915,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a compliance package in an account group.
-     *
-     * @description The topic provides an example on how to query the details of a compliance package whose ID is `cp-fdc8626622af00f9****` in an account group whose ID is `ca-f632626622af0079****`.
-     *
+     * <b>description</b> :
+     * <p>The topic provides an example on how to query the details of a compliance package whose ID is <code>cp-fdc8626622af00f9****</code> in an account group whose ID is <code>ca-f632626622af0079****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a compliance package in an account group.</p>
+     * 
      * @param request GetAggregateCompliancePackRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAggregateCompliancePackResponse
@@ -2621,10 +2946,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a compliance package in an account group.
-     *
-     * @description The topic provides an example on how to query the details of a compliance package whose ID is `cp-fdc8626622af00f9****` in an account group whose ID is `ca-f632626622af0079****`.
-     *
+     * <b>description</b> :
+     * <p>The topic provides an example on how to query the details of a compliance package whose ID is <code>cp-fdc8626622af00f9****</code> in an account group whose ID is <code>ca-f632626622af0079****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a compliance package in an account group.</p>
+     * 
      * @param request GetAggregateCompliancePackRequest
      * @return GetAggregateCompliancePackResponse
      */
@@ -2634,11 +2961,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the compliance evaluation report that is generated based on a compliance package of an account group.
-     *
-     * @description > Before you call this operation, you must call the GenerateAggregateCompliancePackReport operation to generate the latest compliance evaluation report based on a compliance package. For more information, see [GenerateAggregateCompliancePackReport](https://help.aliyun.com/document_detail/262687.html).
-     * This topic provides an example on how to query the compliance evaluation report that is generated based on the `cp-fdc8626622af00f9****` compliance package in the `ca-f632626622af0079****` account group.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Before you call this operation, you must call the GenerateAggregateCompliancePackReport operation to generate the latest compliance evaluation report based on a compliance package. For more information, see <a href="https://help.aliyun.com/document_detail/262687.html">GenerateAggregateCompliancePackReport</a>.
+     * This topic provides an example on how to query the compliance evaluation report that is generated based on the <code>cp-fdc8626622af00f9****</code> compliance package in the <code>ca-f632626622af0079****</code> account group.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the compliance evaluation report that is generated based on a compliance package of an account group.</p>
+     * 
      * @param request GetAggregateCompliancePackReportRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAggregateCompliancePackReportResponse
@@ -2664,11 +2995,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the compliance evaluation report that is generated based on a compliance package of an account group.
-     *
-     * @description > Before you call this operation, you must call the GenerateAggregateCompliancePackReport operation to generate the latest compliance evaluation report based on a compliance package. For more information, see [GenerateAggregateCompliancePackReport](https://help.aliyun.com/document_detail/262687.html).
-     * This topic provides an example on how to query the compliance evaluation report that is generated based on the `cp-fdc8626622af00f9****` compliance package in the `ca-f632626622af0079****` account group.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Before you call this operation, you must call the GenerateAggregateCompliancePackReport operation to generate the latest compliance evaluation report based on a compliance package. For more information, see <a href="https://help.aliyun.com/document_detail/262687.html">GenerateAggregateCompliancePackReport</a>.
+     * This topic provides an example on how to query the compliance evaluation report that is generated based on the <code>cp-fdc8626622af00f9****</code> compliance package in the <code>ca-f632626622af0079****</code> account group.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the compliance evaluation report that is generated based on a compliance package of an account group.</p>
+     * 
      * @param request GetAggregateCompliancePackReportRequest
      * @return GetAggregateCompliancePackReportResponse
      */
@@ -2678,10 +3013,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the compliance statistics of an account group.
-     *
-     * @description This topic provides an example on how to query the compliance statistics of resources and rules in the account group ca-a91d626622af0035\\*\\*\\*\\*.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the compliance statistics of resources and rules in the account group ca-a91d626622af0035\<em>\</em>\<em>\</em>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the compliance statistics of an account group.</p>
+     * 
      * @param request GetAggregateComplianceSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAggregateComplianceSummaryResponse
@@ -2711,10 +3048,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the compliance statistics of an account group.
-     *
-     * @description This topic provides an example on how to query the compliance statistics of resources and rules in the account group ca-a91d626622af0035\\*\\*\\*\\*.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the compliance statistics of resources and rules in the account group ca-a91d626622af0035\<em>\</em>\<em>\</em>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the compliance statistics of an account group.</p>
+     * 
      * @param request GetAggregateComplianceSummaryRequest
      * @return GetAggregateComplianceSummaryResponse
      */
@@ -2724,8 +3063,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a delivery channel in an account group.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a delivery channel in an account group.</p>
+     * 
      * @param request GetAggregateConfigDeliveryChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAggregateConfigDeliveryChannelResponse
@@ -2759,8 +3099,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a delivery channel in an account group.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a delivery channel in an account group.</p>
+     * 
      * @param request GetAggregateConfigDeliveryChannelRequest
      * @return GetAggregateConfigDeliveryChannelResponse
      */
@@ -2770,8 +3111,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description This example shows how to query the details of the `cr-7f7d626622af0041****` rule in the `ca-7f00626622af0041****` account group.
-     *
+     * <b>description</b> :
+     * <p>This example shows how to query the details of the <code>cr-7f7d626622af0041****</code> rule in the <code>ca-7f00626622af0041****</code> account group.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>获取账号组规则详情</p>
+     * 
      * @param request GetAggregateConfigRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAggregateConfigRuleResponse
@@ -2805,8 +3150,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description This example shows how to query the details of the `cr-7f7d626622af0041****` rule in the `ca-7f00626622af0041****` account group.
-     *
+     * <b>description</b> :
+     * <p>This example shows how to query the details of the <code>cr-7f7d626622af0041****</code> rule in the <code>ca-7f00626622af0041****</code> account group.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>获取账号组规则详情</p>
+     * 
      * @param request GetAggregateConfigRuleRequest
      * @return GetAggregateConfigRuleResponse
      */
@@ -2816,10 +3165,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries compliance evaluation results based on the rules in a compliance package in an account group.
-     *
-     * @description The sample request in this topic shows you how to query the compliance evaluation results based on rules in the `cp-541e626622af0087****` compliance package that is created for the `ca-04b3fd170e340007****` account group. The return result shows a total of `one` rule. `No resources` are evaluated as non-compliant based on the rule.
-     *
+     * <b>description</b> :
+     * <p>The sample request in this topic shows you how to query the compliance evaluation results based on rules in the <code>cp-541e626622af0087****</code> compliance package that is created for the <code>ca-04b3fd170e340007****</code> account group. The return result shows a total of <code>one</code> rule. <code>No resources</code> are evaluated as non-compliant based on the rule.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries compliance evaluation results based on the rules in a compliance package in an account group.</p>
+     * 
      * @param request GetAggregateConfigRuleComplianceByPackRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAggregateConfigRuleComplianceByPackResponse
@@ -2845,10 +3196,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries compliance evaluation results based on the rules in a compliance package in an account group.
-     *
-     * @description The sample request in this topic shows you how to query the compliance evaluation results based on rules in the `cp-541e626622af0087****` compliance package that is created for the `ca-04b3fd170e340007****` account group. The return result shows a total of `one` rule. `No resources` are evaluated as non-compliant based on the rule.
-     *
+     * <b>description</b> :
+     * <p>The sample request in this topic shows you how to query the compliance evaluation results based on rules in the <code>cp-541e626622af0087****</code> compliance package that is created for the <code>ca-04b3fd170e340007****</code> account group. The return result shows a total of <code>one</code> rule. <code>No resources</code> are evaluated as non-compliant based on the rule.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries compliance evaluation results based on the rules in a compliance package in an account group.</p>
+     * 
      * @param request GetAggregateConfigRuleComplianceByPackRequest
      * @return GetAggregateConfigRuleComplianceByPackResponse
      */
@@ -2858,17 +3211,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the summary of compliance evaluation results by rule risk level in an account group.
-     *
-     * @description This topic provides an example on how to query the summary of compliance evaluation results by rule risk level in the `ca-3a58626622af0005****` account group. The returned result shows four rules that are specified with the high risk level. One of the rules detects non-compliant resources, and the resources evaluated by the remaining three are compliant.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the summary of compliance evaluation results by rule risk level in the <code>ca-3a58626622af0005****</code> account group. The returned result shows four rules that are specified with the high risk level. One of the rules detects non-compliant resources, and the resources evaluated by the remaining three are compliant.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the summary of compliance evaluation results by rule risk level in an account group.</p>
+     * 
      * @param request GetAggregateConfigRuleSummaryByRiskLevelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAggregateConfigRuleSummaryByRiskLevelResponse
      */
     public GetAggregateConfigRuleSummaryByRiskLevelResponse getAggregateConfigRuleSummaryByRiskLevelWithOptions(GetAggregateConfigRuleSummaryByRiskLevelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aggregatorId)) {
+            query.put("AggregatorId", request.aggregatorId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -2877,7 +3236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("version", "2020-09-07"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
             new TeaPair("reqBodyType", "formData"),
@@ -2887,10 +3246,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the summary of compliance evaluation results by rule risk level in an account group.
-     *
-     * @description This topic provides an example on how to query the summary of compliance evaluation results by rule risk level in the `ca-3a58626622af0005****` account group. The returned result shows four rules that are specified with the high risk level. One of the rules detects non-compliant resources, and the resources evaluated by the remaining three are compliant.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the summary of compliance evaluation results by rule risk level in the <code>ca-3a58626622af0005****</code> account group. The returned result shows four rules that are specified with the high risk level. One of the rules detects non-compliant resources, and the resources evaluated by the remaining three are compliant.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the summary of compliance evaluation results by rule risk level in an account group.</p>
+     * 
      * @param request GetAggregateConfigRuleSummaryByRiskLevelRequest
      * @return GetAggregateConfigRuleSummaryByRiskLevelResponse
      */
@@ -2900,11 +3261,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the compliance evaluation report that is generated based on all rules in an account group.
-     *
-     * @description > Before you call this operation, you must call the GenerateAggregateConfigRulesReport operation to generate the latest compliance evaluation report based on all rules in an account group. For more information, see [GenerateAggregateConfigRulesReport](https://help.aliyun.com/document_detail/262701.html).
-     * This topic provides an example on how to query the compliance evaluation report that is generated based on all rules in the `ca-f632626622af0079****` account group.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Before you call this operation, you must call the GenerateAggregateConfigRulesReport operation to generate the latest compliance evaluation report based on all rules in an account group. For more information, see <a href="https://help.aliyun.com/document_detail/262701.html">GenerateAggregateConfigRulesReport</a>.
+     * This topic provides an example on how to query the compliance evaluation report that is generated based on all rules in the <code>ca-f632626622af0079****</code> account group.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Downloads the compliance evaluation report in the Excel format to your on-premises machine. This allows you to assign tasks and modify incompliant resource configurations.</p>
+     * 
      * @param request GetAggregateConfigRulesReportRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAggregateConfigRulesReportResponse
@@ -2938,11 +3303,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the compliance evaluation report that is generated based on all rules in an account group.
-     *
-     * @description > Before you call this operation, you must call the GenerateAggregateConfigRulesReport operation to generate the latest compliance evaluation report based on all rules in an account group. For more information, see [GenerateAggregateConfigRulesReport](https://help.aliyun.com/document_detail/262701.html).
-     * This topic provides an example on how to query the compliance evaluation report that is generated based on all rules in the `ca-f632626622af0079****` account group.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Before you call this operation, you must call the GenerateAggregateConfigRulesReport operation to generate the latest compliance evaluation report based on all rules in an account group. For more information, see <a href="https://help.aliyun.com/document_detail/262701.html">GenerateAggregateConfigRulesReport</a>.
+     * This topic provides an example on how to query the compliance evaluation report that is generated based on all rules in the <code>ca-f632626622af0079****</code> account group.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Downloads the compliance evaluation report in the Excel format to your on-premises machine. This allows you to assign tasks and modify incompliant resource configurations.</p>
+     * 
      * @param request GetAggregateConfigRulesReportRequest
      * @return GetAggregateConfigRulesReportResponse
      */
@@ -2952,10 +3321,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a resource in an account group.
-     *
-     * @description This topic provides an example on how to query the `new-bucket` resource in the `ca-5885626622af0008****` account group.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the details of an Elastic Compute Service (ECS) instance <code>i-bp12g4xbl4i0brkn****</code> that resides in the China (Hangzhou) region in the account group <code>ca-5885626622af0008****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a specific resource in an account group.</p>
+     * 
      * @param request GetAggregateDiscoveredResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAggregateDiscoveredResourceResponse
@@ -3009,10 +3380,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a resource in an account group.
-     *
-     * @description This topic provides an example on how to query the `new-bucket` resource in the `ca-5885626622af0008****` account group.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the details of an Elastic Compute Service (ECS) instance <code>i-bp12g4xbl4i0brkn****</code> that resides in the China (Hangzhou) region in the account group <code>ca-5885626622af0008****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a specific resource in an account group.</p>
+     * 
      * @param request GetAggregateDiscoveredResourceRequest
      * @return GetAggregateDiscoveredResourceResponse
      */
@@ -3022,10 +3395,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries compliance evaluation results based on the rules in a compliance package in an account group.
-     *
-     * @description This topic provides an example on how to query the compliance evaluation results based on the `cr-d369626622af008e****` rule in the `ca-a4e5626622af0079****` account group. The returned result shows that a total of 10 resources are evaluated by the rule and five of them are evaluated as compliant.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the compliance evaluation results based on the <code>cr-d369626622af008e****</code> rule in the <code>ca-a4e5626622af0079****</code> account group. The returned result shows that a total of 10 resources are evaluated by the rule and five of them are evaluated as compliant.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries compliance evaluation results based on the rules in a compliance package in an account group.</p>
+     * 
      * @param request GetAggregateResourceComplianceByConfigRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAggregateResourceComplianceByConfigRuleResponse
@@ -3071,10 +3446,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries compliance evaluation results based on the rules in a compliance package in an account group.
-     *
-     * @description This topic provides an example on how to query the compliance evaluation results based on the `cr-d369626622af008e****` rule in the `ca-a4e5626622af0079****` account group. The returned result shows that a total of 10 resources are evaluated by the rule and five of them are evaluated as compliant.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the compliance evaluation results based on the <code>cr-d369626622af008e****</code> rule in the <code>ca-a4e5626622af0079****</code> account group. The returned result shows that a total of 10 resources are evaluated by the rule and five of them are evaluated as compliant.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries compliance evaluation results based on the rules in a compliance package in an account group.</p>
+     * 
      * @param request GetAggregateResourceComplianceByConfigRuleRequest
      * @return GetAggregateResourceComplianceByConfigRuleResponse
      */
@@ -3084,10 +3461,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the compliance evaluation results of resources evaluated based on a compliance package of an account group.
-     *
-     * @description This topic provides an example on how to query the compliance evaluation results of resources monitored based on the `cp-fdc8626622af00f9****` compliance package in the `ca-f632626622af0079****`account group. The returned result shows that the total number of monitored resources is `10` and the number of non-compliant resources is `7`.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the compliance evaluation results of resources monitored based on the <code>cp-fdc8626622af00f9****</code> compliance package in the <code>ca-f632626622af0079****</code>account group. The returned result shows that the total number of monitored resources is <code>10</code> and the number of non-compliant resources is <code>7</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the compliance evaluation results of resources evaluated based on a compliance package of an account group.</p>
+     * 
      * @param request GetAggregateResourceComplianceByPackRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAggregateResourceComplianceByPackResponse
@@ -3113,10 +3492,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the compliance evaluation results of resources evaluated based on a compliance package of an account group.
-     *
-     * @description This topic provides an example on how to query the compliance evaluation results of resources monitored based on the `cp-fdc8626622af00f9****` compliance package in the `ca-f632626622af0079****`account group. The returned result shows that the total number of monitored resources is `10` and the number of non-compliant resources is `7`.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the compliance evaluation results of resources monitored based on the <code>cp-fdc8626622af00f9****</code> compliance package in the <code>ca-f632626622af0079****</code>account group. The returned result shows that the total number of monitored resources is <code>10</code> and the number of non-compliant resources is <code>7</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the compliance evaluation results of resources evaluated based on a compliance package of an account group.</p>
+     * 
      * @param request GetAggregateResourceComplianceByPackRequest
      * @return GetAggregateResourceComplianceByPackResponse
      */
@@ -3126,8 +3507,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the evaluation results grouped by resource type for an account group rule.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the evaluation results grouped by resource type for an account group rule.</p>
+     * 
      * @param request GetAggregateResourceComplianceGroupByRegionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAggregateResourceComplianceGroupByRegionResponse
@@ -3161,8 +3543,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the evaluation results grouped by resource type for an account group rule.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the evaluation results grouped by resource type for an account group rule.</p>
+     * 
      * @param request GetAggregateResourceComplianceGroupByRegionRequest
      * @return GetAggregateResourceComplianceGroupByRegionResponse
      */
@@ -3172,8 +3555,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the evaluation results grouped by resource type for an account group rule.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the evaluation results grouped by resource type for an account group rule.</p>
+     * 
      * @param request GetAggregateResourceComplianceGroupByResourceTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAggregateResourceComplianceGroupByResourceTypeResponse
@@ -3207,8 +3591,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the evaluation results grouped by resource type for an account group rule.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the evaluation results grouped by resource type for an account group rule.</p>
+     * 
      * @param request GetAggregateResourceComplianceGroupByResourceTypeRequest
      * @return GetAggregateResourceComplianceGroupByResourceTypeResponse
      */
@@ -3218,10 +3603,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the compliance timeline of a resource in an account group.
-     *
-     * @description The sample request in this topic shows you how to query the compliance timeline of the `new-bucket` resource that resides in the `cn-hangzhou` region within the `100931896542****` member account of the `ca-5885626622af0008****` account group. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows the following two timestamps on the compliance timeline: `1625200295276` and `1625200228510`. The first timestamp indicates 12:31:35 on July 2, 2021 (UTC+8), and the second timestamp indicates 12:30:28 on July 2, 2021 (UTC+8).
-     *
+     * <b>description</b> :
+     * <p>The sample request in this topic shows you how to query the compliance timeline of the <code>new-bucket</code> resource that resides in the <code>cn-hangzhou</code> region within the <code>100931896542****</code> member account of the <code>ca-5885626622af0008****</code> account group. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows the following two timestamps on the compliance timeline: <code>1625200295276</code> and <code>1625200228510</code>. The first timestamp indicates 12:31:35 on July 2, 2021 (UTC+8), and the second timestamp indicates 12:30:28 on July 2, 2021 (UTC+8).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the compliance timeline of a resource in an account group.</p>
+     * 
      * @param request GetAggregateResourceComplianceTimelineRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAggregateResourceComplianceTimelineResponse
@@ -3247,10 +3634,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the compliance timeline of a resource in an account group.
-     *
-     * @description The sample request in this topic shows you how to query the compliance timeline of the `new-bucket` resource that resides in the `cn-hangzhou` region within the `100931896542****` member account of the `ca-5885626622af0008****` account group. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows the following two timestamps on the compliance timeline: `1625200295276` and `1625200228510`. The first timestamp indicates 12:31:35 on July 2, 2021 (UTC+8), and the second timestamp indicates 12:30:28 on July 2, 2021 (UTC+8).
-     *
+     * <b>description</b> :
+     * <p>The sample request in this topic shows you how to query the compliance timeline of the <code>new-bucket</code> resource that resides in the <code>cn-hangzhou</code> region within the <code>100931896542****</code> member account of the <code>ca-5885626622af0008****</code> account group. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows the following two timestamps on the compliance timeline: <code>1625200295276</code> and <code>1625200228510</code>. The first timestamp indicates 12:31:35 on July 2, 2021 (UTC+8), and the second timestamp indicates 12:30:28 on July 2, 2021 (UTC+8).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the compliance timeline of a resource in an account group.</p>
+     * 
      * @param request GetAggregateResourceComplianceTimelineRequest
      * @return GetAggregateResourceComplianceTimelineResponse
      */
@@ -3260,10 +3649,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the configuration timeline of a resource in an account group.
-     *
-     * @description The sample request in this topic shows you how to query the configuration timeline of the `new-bucket` resource that resides in the `cn-hangzhou` region within the `100931896542****` member account of the `ca-5885626622af0008****` account group. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows that the timestamp when the resource configuration changes is `1624961112000`. The timestamp indicates 18:05:12 on June 29, 2021 (UTC+8).
-     *
+     * <b>description</b> :
+     * <p>The sample request in this topic shows you how to query the configuration timeline of the <code>new-bucket</code> resource that resides in the <code>cn-hangzhou</code> region within the <code>100931896542****</code> member account of the <code>ca-5885626622af0008****</code> account group. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows that the timestamp when the resource configuration changes is <code>1624961112000</code>. The timestamp indicates 18:05:12 on June 29, 2021 (UTC+8).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the configuration timeline of a resource in an account group.</p>
+     * 
      * @param request GetAggregateResourceConfigurationTimelineRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAggregateResourceConfigurationTimelineResponse
@@ -3289,10 +3680,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the configuration timeline of a resource in an account group.
-     *
-     * @description The sample request in this topic shows you how to query the configuration timeline of the `new-bucket` resource that resides in the `cn-hangzhou` region within the `100931896542****` member account of the `ca-5885626622af0008****` account group. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows that the timestamp when the resource configuration changes is `1624961112000`. The timestamp indicates 18:05:12 on June 29, 2021 (UTC+8).
-     *
+     * <b>description</b> :
+     * <p>The sample request in this topic shows you how to query the configuration timeline of the <code>new-bucket</code> resource that resides in the <code>cn-hangzhou</code> region within the <code>100931896542****</code> member account of the <code>ca-5885626622af0008****</code> account group. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows that the timestamp when the resource configuration changes is <code>1624961112000</code>. The timestamp indicates 18:05:12 on June 29, 2021 (UTC+8).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the configuration timeline of a resource in an account group.</p>
+     * 
      * @param request GetAggregateResourceConfigurationTimelineRequest
      * @return GetAggregateResourceConfigurationTimelineResponse
      */
@@ -3302,10 +3695,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the statistics on the resources in an account group by region.
-     *
-     * @description This topic provides an example on how to query the statistics on the resources in an account group named `ca-a260626622af0005****` by region. The returned result shows that a total of `10` resources exist in the `cn-hangzhou` region.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the statistics on the resources in an account group named <code>ca-a260626622af0005****</code> by region. The returned result shows that a total of <code>10</code> resources exist in the <code>cn-hangzhou</code> region.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the statistics on the resources in an account group by region.</p>
+     * 
      * @param request GetAggregateResourceCountsGroupByRegionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAggregateResourceCountsGroupByRegionResponse
@@ -3351,10 +3746,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the statistics on the resources in an account group by region.
-     *
-     * @description This topic provides an example on how to query the statistics on the resources in an account group named `ca-a260626622af0005****` by region. The returned result shows that a total of `10` resources exist in the `cn-hangzhou` region.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the statistics on the resources in an account group named <code>ca-a260626622af0005****</code> by region. The returned result shows that a total of <code>10</code> resources exist in the <code>cn-hangzhou</code> region.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the statistics on the resources in an account group by region.</p>
+     * 
      * @param request GetAggregateResourceCountsGroupByRegionRequest
      * @return GetAggregateResourceCountsGroupByRegionResponse
      */
@@ -3364,10 +3761,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the statistics on the resources in an account group by resource type.
-     *
-     * @description This topic provides an example on how to query the statistics on the resources in an account group whose ID is `ca-a260626622af0005****` by resource type. The returned result shows that the account group has a total of `seven` resources of the `ACS::RAM::Role` resource type.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the statistics on the resources in an account group whose ID is <code>ca-a260626622af0005****</code> by resource type. The returned result shows that the account group has a total of <code>seven</code> resources of the <code>ACS::RAM::Role</code> resource type.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the statistics on the resources in an account group by resource type.</p>
+     * 
      * @param request GetAggregateResourceCountsGroupByResourceTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAggregateResourceCountsGroupByResourceTypeResponse
@@ -3413,10 +3812,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the statistics on the resources in an account group by resource type.
-     *
-     * @description This topic provides an example on how to query the statistics on the resources in an account group whose ID is `ca-a260626622af0005****` by resource type. The returned result shows that the account group has a total of `seven` resources of the `ACS::RAM::Role` resource type.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the statistics on the resources in an account group whose ID is <code>ca-a260626622af0005****</code> by resource type. The returned result shows that the account group has a total of <code>seven</code> resources of the <code>ACS::RAM::Role</code> resource type.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the statistics on the resources in an account group by resource type.</p>
+     * 
      * @param request GetAggregateResourceCountsGroupByResourceTypeRequest
      * @return GetAggregateResourceCountsGroupByResourceTypeResponse
      */
@@ -3426,13 +3827,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the last resource inventory that is generated on the Global Resources page within the current account group.
-     *
-     * @description ### [](#)Prerequisites
-     * The [GenerateAggregateResourceInventory](https://help.aliyun.com/document_detail/2398353.html) operation is called to generate a resource inventory. Then, this operation is called to obtain the URL of the resource inventory.
-     * ### [](#)Description
-     * This topic provides an example on how to obtain the last resource inventory that is generated within the account group ca-a91d626622af0035\\*\\*\\*\\*.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>The <a href="https://help.aliyun.com/document_detail/2398353.html">GenerateAggregateResourceInventory</a> operation is called to generate a resource inventory. Then, this operation is called to obtain the URL of the resource inventory.</p>
+     * <h3><a href="#"></a>Description</h3>
+     * <p>This topic provides an example on how to obtain the last resource inventory that is generated within the account group ca-a91d626622af0035\<em>\</em>\<em>\</em>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the last resource inventory that is generated on the Global Resources page within the current account group.</p>
+     * 
      * @param request GetAggregateResourceInventoryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAggregateResourceInventoryResponse
@@ -3462,13 +3865,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the last resource inventory that is generated on the Global Resources page within the current account group.
-     *
-     * @description ### [](#)Prerequisites
-     * The [GenerateAggregateResourceInventory](https://help.aliyun.com/document_detail/2398353.html) operation is called to generate a resource inventory. Then, this operation is called to obtain the URL of the resource inventory.
-     * ### [](#)Description
-     * This topic provides an example on how to obtain the last resource inventory that is generated within the account group ca-a91d626622af0035\\*\\*\\*\\*.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>The <a href="https://help.aliyun.com/document_detail/2398353.html">GenerateAggregateResourceInventory</a> operation is called to generate a resource inventory. Then, this operation is called to obtain the URL of the resource inventory.</p>
+     * <h3><a href="#"></a>Description</h3>
+     * <p>This topic provides an example on how to obtain the last resource inventory that is generated within the account group ca-a91d626622af0035\<em>\</em>\<em>\</em>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the last resource inventory that is generated on the Global Resources page within the current account group.</p>
+     * 
      * @param request GetAggregateResourceInventoryRequest
      * @return GetAggregateResourceInventoryResponse
      */
@@ -3478,10 +3883,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of an account group.
-     *
-     * @description The sample request in this topic shows you how to query the details of the `ca-88ea626622af0055****` account group. The return result shows that the account group is named `Test_Group`, its description is `Test account group`, and it is of the `CUSTOM` type. The account group is in the `1` state, which indicates that it is created.
-     *
+     * <b>description</b> :
+     * <p>The sample request in this topic shows you how to query the details of the <code>ca-88ea626622af0055****</code> account group. The return result shows that the account group is named <code>Test_Group</code>, its description is <code>Test account group</code>, and it is of the <code>CUSTOM</code> type. The account group is in the <code>1</code> state, which indicates that it is created.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of an account group. You can query the name, creation time, member, and type of an account group.</p>
+     * 
      * @param request GetAggregatorRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAggregatorResponse
@@ -3511,10 +3918,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of an account group.
-     *
-     * @description The sample request in this topic shows you how to query the details of the `ca-88ea626622af0055****` account group. The return result shows that the account group is named `Test_Group`, its description is `Test account group`, and it is of the `CUSTOM` type. The account group is in the `1` state, which indicates that it is created.
-     *
+     * <b>description</b> :
+     * <p>The sample request in this topic shows you how to query the details of the <code>ca-88ea626622af0055****</code> account group. The return result shows that the account group is named <code>Test_Group</code>, its description is <code>Test account group</code>, and it is of the <code>CUSTOM</code> type. The account group is in the <code>1</code> state, which indicates that it is created.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of an account group. You can query the name, creation time, member, and type of an account group.</p>
+     * 
      * @param request GetAggregatorRequest
      * @return GetAggregatorResponse
      */
@@ -3524,10 +3933,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a compliance package.
-     *
-     * @description This topic provides an example on how to query the details of a compliance package whose ID is `cp-fdc8626622af00f9****`. The returned result shows that the name of the compliance package is `ClassifiedProtectionPreCheck`, the compliance package is in the `ACTIVE` state, and the risk level of the rules in the compliance package is `1`, which indicates high risk level.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the details of a compliance package whose ID is <code>cp-fdc8626622af00f9****</code>. The returned result shows that the name of the compliance package is <code>ClassifiedProtectionPreCheck</code>, the compliance package is in the <code>ACTIVE</code> state, and the risk level of the rules in the compliance package is <code>1</code>, which indicates high risk level.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a compliance package.</p>
+     * 
      * @param request GetCompliancePackRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetCompliancePackResponse
@@ -3553,10 +3964,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a compliance package.
-     *
-     * @description This topic provides an example on how to query the details of a compliance package whose ID is `cp-fdc8626622af00f9****`. The returned result shows that the name of the compliance package is `ClassifiedProtectionPreCheck`, the compliance package is in the `ACTIVE` state, and the risk level of the rules in the compliance package is `1`, which indicates high risk level.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the details of a compliance package whose ID is <code>cp-fdc8626622af00f9****</code>. The returned result shows that the name of the compliance package is <code>ClassifiedProtectionPreCheck</code>, the compliance package is in the <code>ACTIVE</code> state, and the risk level of the rules in the compliance package is <code>1</code>, which indicates high risk level.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a compliance package.</p>
+     * 
      * @param request GetCompliancePackRequest
      * @return GetCompliancePackResponse
      */
@@ -3566,11 +3979,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the compliance evaluation report that is generated based on a compliance package.
-     *
-     * @description > Before you call this operation, you must call the GenerateCompliancePackReport operation to generate the latest compliance evaluation report based on a compliance package. For more information, see [GenerateCompliancePackReport](https://help.aliyun.com/document_detail/263525.html).
-     * This topic provides an example on how to query the compliance evaluation report that is generated based on the `cp-fdc8626622af00f9****` compliance package.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Before you call this operation, you must call the GenerateCompliancePackReport operation to generate the latest compliance evaluation report based on a compliance package. For more information, see <a href="https://help.aliyun.com/document_detail/263525.html">GenerateCompliancePackReport</a>.
+     * This topic provides an example on how to query the compliance evaluation report that is generated based on the <code>cp-fdc8626622af00f9****</code> compliance package.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the compliance evaluation report that is generated based on a compliance package.</p>
+     * 
      * @param request GetCompliancePackReportRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetCompliancePackReportResponse
@@ -3596,11 +4013,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the compliance evaluation report that is generated based on a compliance package.
-     *
-     * @description > Before you call this operation, you must call the GenerateCompliancePackReport operation to generate the latest compliance evaluation report based on a compliance package. For more information, see [GenerateCompliancePackReport](https://help.aliyun.com/document_detail/263525.html).
-     * This topic provides an example on how to query the compliance evaluation report that is generated based on the `cp-fdc8626622af00f9****` compliance package.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Before you call this operation, you must call the GenerateCompliancePackReport operation to generate the latest compliance evaluation report based on a compliance package. For more information, see <a href="https://help.aliyun.com/document_detail/263525.html">GenerateCompliancePackReport</a>.
+     * This topic provides an example on how to query the compliance evaluation report that is generated based on the <code>cp-fdc8626622af00f9****</code> compliance package.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the compliance evaluation report that is generated based on a compliance package.</p>
+     * 
      * @param request GetCompliancePackReportRequest
      * @return GetCompliancePackReportResponse
      */
@@ -3610,10 +4031,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the summary of compliance statistics within the current account.
-     *
-     * @description This topic provides an example on how to query the compliance statistics of resources and rules in the current account group.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the compliance statistics of resources and rules in the current account group.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the summary of compliance statistics within the current account.</p>
+     * 
      * @param request GetComplianceSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetComplianceSummaryResponse
@@ -3635,10 +4058,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the summary of compliance statistics within the current account.
-     *
-     * @description This topic provides an example on how to query the compliance statistics of resources and rules in the current account group.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the compliance statistics of resources and rules in the current account group.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the summary of compliance statistics within the current account.</p>
      * @return GetComplianceSummaryResponse
      */
     public GetComplianceSummaryResponse getComplianceSummary() throws Exception {
@@ -3647,8 +4071,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a delivery channel.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a delivery channel.</p>
+     * 
      * @param request GetConfigDeliveryChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetConfigDeliveryChannelResponse
@@ -3678,8 +4103,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a delivery channel.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a delivery channel.</p>
+     * 
      * @param request GetConfigDeliveryChannelRequest
      * @return GetConfigDeliveryChannelResponse
      */
@@ -3689,10 +4115,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a rule.
-     *
-     * @description This topic provides an example on how to query the details of the `cr-7f7d626622af0041****` rule.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the details of the <code>cr-7f7d626622af0041****</code> rule.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a rule.</p>
+     * 
      * @param request GetConfigRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetConfigRuleResponse
@@ -3722,10 +4150,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a rule.
-     *
-     * @description This topic provides an example on how to query the details of the `cr-7f7d626622af0041****` rule.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the details of the <code>cr-7f7d626622af0041****</code> rule.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a rule.</p>
+     * 
      * @param request GetConfigRuleRequest
      * @return GetConfigRuleResponse
      */
@@ -3735,10 +4165,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries compliance evaluation results based on the rules in a compliance package.
-     *
-     * @description In this topic, the `cp-541e626622af0087****` compliance package is used as an example. The return result shows a total of one rule against which specific resources are evaluated as compliant.
-     *
+     * <b>description</b> :
+     * <p>In this topic, the <code>cp-541e626622af0087****</code> compliance package is used as an example. The return result shows a total of one rule against which specific resources are evaluated as compliant.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries compliance evaluation results based on the rules in a compliance package.</p>
+     * 
      * @param request GetConfigRuleComplianceByPackRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetConfigRuleComplianceByPackResponse
@@ -3764,10 +4196,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries compliance evaluation results based on the rules in a compliance package.
-     *
-     * @description In this topic, the `cp-541e626622af0087****` compliance package is used as an example. The return result shows a total of one rule against which specific resources are evaluated as compliant.
-     *
+     * <b>description</b> :
+     * <p>In this topic, the <code>cp-541e626622af0087****</code> compliance package is used as an example. The return result shows a total of one rule against which specific resources are evaluated as compliant.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries compliance evaluation results based on the rules in a compliance package.</p>
+     * 
      * @param request GetConfigRuleComplianceByPackRequest
      * @return GetConfigRuleComplianceByPackResponse
      */
@@ -3777,10 +4211,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the summary of compliance evaluation results by rule risk level.
-     *
-     * @description This topic provides an example of how to query the summary of compliance evaluation results by rule risk level. The return result shows four rules that are specified with the high risk level. One of them detects non-compliant resources, and the resources evaluated by the remaining three are all compliant.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example of how to query the summary of compliance evaluation results by rule risk level. The return result shows four rules that are specified with the high risk level. One of them detects non-compliant resources, and the resources evaluated by the remaining three are all compliant.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the compliance summary based on the risk level of a rule.</p>
+     * 
      * @param request GetConfigRuleSummaryByRiskLevelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetConfigRuleSummaryByRiskLevelResponse
@@ -3792,7 +4228,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("version", "2020-09-07"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
             new TeaPair("reqBodyType", "formData"),
@@ -3802,10 +4238,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the summary of compliance evaluation results by rule risk level.
-     *
-     * @description This topic provides an example of how to query the summary of compliance evaluation results by rule risk level. The return result shows four rules that are specified with the high risk level. One of them detects non-compliant resources, and the resources evaluated by the remaining three are all compliant.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example of how to query the summary of compliance evaluation results by rule risk level. The return result shows four rules that are specified with the high risk level. One of them detects non-compliant resources, and the resources evaluated by the remaining three are all compliant.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the compliance summary based on the risk level of a rule.</p>
      * @return GetConfigRuleSummaryByRiskLevelResponse
      */
     public GetConfigRuleSummaryByRiskLevelResponse getConfigRuleSummaryByRiskLevel() throws Exception {
@@ -3814,11 +4251,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the compliance evaluation report that is generated based on all existing rules.
-     *
-     * @description >  Before you call this operation, you must call the GenerateConfigRulesReport operation to generate the latest compliance evaluation report based on all existing rules. For more information, see [GenerateConfigRulesReport](https://help.aliyun.com/document_detail/263601.html).
-     * This topic provides an example of how to query the compliance evaluation report that is generated based on all existing rules.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> Before you call this operation, you must call the GenerateConfigRulesReport operation to generate the latest compliance evaluation report based on all existing rules. For more information, see <a href="https://help.aliyun.com/document_detail/263601.html">GenerateConfigRulesReport</a>.
+     * This topic provides an example of how to query the compliance evaluation report that is generated based on all existing rules.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Downloads the compliance evaluation report in the Excel format to your on-premises machine. This allows you to assign tasks and modify incompliant resource configurations.</p>
+     * 
      * @param request GetConfigRulesReportRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetConfigRulesReportResponse
@@ -3848,11 +4289,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the compliance evaluation report that is generated based on all existing rules.
-     *
-     * @description >  Before you call this operation, you must call the GenerateConfigRulesReport operation to generate the latest compliance evaluation report based on all existing rules. For more information, see [GenerateConfigRulesReport](https://help.aliyun.com/document_detail/263601.html).
-     * This topic provides an example of how to query the compliance evaluation report that is generated based on all existing rules.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> Before you call this operation, you must call the GenerateConfigRulesReport operation to generate the latest compliance evaluation report based on all existing rules. For more information, see <a href="https://help.aliyun.com/document_detail/263601.html">GenerateConfigRulesReport</a>.
+     * This topic provides an example of how to query the compliance evaluation report that is generated based on all existing rules.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Downloads the compliance evaluation report in the Excel format to your on-premises machine. This allows you to assign tasks and modify incompliant resource configurations.</p>
+     * 
      * @param request GetConfigRulesReportRequest
      * @return GetConfigRulesReportResponse
      */
@@ -3862,10 +4307,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the activation status and resource monitoring scope of Cloud Config for the current account.
-     *
-     * @description This topic provides an example on how to query the activation status and resource monitoring scope of Cloud Config for the current account.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the activation status and resource monitoring scope of Cloud Config for the current account.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the activation status and resource monitoring scope of Cloud Config for the current account.</p>
+     * 
      * @param request GetConfigurationRecorderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetConfigurationRecorderResponse
@@ -3887,10 +4334,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the activation status and resource monitoring scope of Cloud Config for the current account.
-     *
-     * @description This topic provides an example on how to query the activation status and resource monitoring scope of Cloud Config for the current account.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the activation status and resource monitoring scope of Cloud Config for the current account.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the activation status and resource monitoring scope of Cloud Config for the current account.</p>
      * @return GetConfigurationRecorderResponse
      */
     public GetConfigurationRecorderResponse getConfigurationRecorder() throws Exception {
@@ -3899,10 +4347,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a resource.
-     *
-     * @description The sample request in this topic shows you how to query the details of the `new-bucket` resource.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the details of the Elastic Compute Service (ECS) instance <code>i-bp12g4xbl4i0brkn****</code> that resides in the China (Hangzhou) region.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a specific resource.</p>
+     * 
      * @param request GetDiscoveredResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDiscoveredResourceResponse
@@ -3944,10 +4394,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a resource.
-     *
-     * @description The sample request in this topic shows you how to query the details of the `new-bucket` resource.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the details of the Elastic Compute Service (ECS) instance <code>i-bp12g4xbl4i0brkn****</code> that resides in the China (Hangzhou) region.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a specific resource.</p>
+     * 
      * @param request GetDiscoveredResourceRequest
      * @return GetDiscoveredResourceResponse
      */
@@ -3957,10 +4409,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the statistics on resources by region.
-     *
-     * @description This topic provides an example to demonstrate how to query the statistics on resources by region. The returned result shows that a total of 10 resources exist in the `cn-hangzhou` region.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example to demonstrate how to query the statistics on resources by region. The returned result shows that a total of 10 resources exist in the <code>cn-hangzhou</code> region.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the statistics on resources by region.</p>
+     * 
      * @param request GetDiscoveredResourceCountsGroupByRegionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDiscoveredResourceCountsGroupByRegionResponse
@@ -3990,10 +4444,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the statistics on resources by region.
-     *
-     * @description This topic provides an example to demonstrate how to query the statistics on resources by region. The returned result shows that a total of 10 resources exist in the `cn-hangzhou` region.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example to demonstrate how to query the statistics on resources by region. The returned result shows that a total of 10 resources exist in the <code>cn-hangzhou</code> region.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the statistics on resources by region.</p>
+     * 
      * @param request GetDiscoveredResourceCountsGroupByRegionRequest
      * @return GetDiscoveredResourceCountsGroupByRegionResponse
      */
@@ -4003,10 +4459,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the statistics on resources by resource type.
-     *
-     * @description This topic describes how to query the statistics on resources by resource type. The returned result shows that a total of 10 resources of the `ACS::ECS::Instance` resource type exist.
-     *
+     * <b>description</b> :
+     * <p>This topic describes how to query the statistics on resources by resource type. The returned result shows that a total of 10 resources of the <code>ACS::ECS::Instance</code> resource type exist.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the statistics on resources by resource type.</p>
+     * 
      * @param request GetDiscoveredResourceCountsGroupByResourceTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDiscoveredResourceCountsGroupByResourceTypeResponse
@@ -4036,10 +4494,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the statistics on resources by resource type.
-     *
-     * @description This topic describes how to query the statistics on resources by resource type. The returned result shows that a total of 10 resources of the `ACS::ECS::Instance` resource type exist.
-     *
+     * <b>description</b> :
+     * <p>This topic describes how to query the statistics on resources by resource type. The returned result shows that a total of 10 resources of the <code>ACS::ECS::Instance</code> resource type exist.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the statistics on resources by resource type.</p>
+     * 
      * @param request GetDiscoveredResourceCountsGroupByResourceTypeRequest
      * @return GetDiscoveredResourceCountsGroupByResourceTypeResponse
      */
@@ -4049,8 +4509,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the status of a cloud service that is integrated with Cloud Config.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the integration status of a specific cloud service.</p>
+     * 
      * @param request GetIntegratedServiceStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetIntegratedServiceStatusResponse
@@ -4080,8 +4541,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the status of a cloud service that is integrated with Cloud Config.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the integration status of a specific cloud service.</p>
+     * 
      * @param request GetIntegratedServiceStatusRequest
      * @return GetIntegratedServiceStatusResponse
      */
@@ -4091,10 +4553,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a managed rule.
-     *
-     * @description In this topic, the `cdn-domain-https-enabled` managed rule is used as an example.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the details of the managed rule <code>cdn-domain-https-enabled</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a specific managed rule.</p>
+     * 
      * @param request GetManagedRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetManagedRuleResponse
@@ -4124,10 +4588,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a managed rule.
-     *
-     * @description In this topic, the `cdn-domain-https-enabled` managed rule is used as an example.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the details of the managed rule <code>cdn-domain-https-enabled</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a specific managed rule.</p>
+     * 
      * @param request GetManagedRuleRequest
      * @return GetManagedRuleResponse
      */
@@ -4137,10 +4603,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of an automatic remediation template.
-     *
-     * @description This topic provides an example on how to query the details of the automatic remediation template ACS-ALB-BulkyEnableDeletionProtection.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the details of the automatic remediation template ACS-ALB-BulkyEnableDeletionProtection.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of an automatic remediation template.</p>
+     * 
      * @param request GetRemediationTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetRemediationTemplateResponse
@@ -4170,10 +4638,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of an automatic remediation template.
-     *
-     * @description This topic provides an example on how to query the details of the automatic remediation template ACS-ALB-BulkyEnableDeletionProtection.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the details of the automatic remediation template ACS-ALB-BulkyEnableDeletionProtection.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of an automatic remediation template.</p>
+     * 
      * @param request GetRemediationTemplateRequest
      * @return GetRemediationTemplateResponse
      */
@@ -4183,10 +4653,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the compliance evaluation result of a resource by using a rule.
-     *
-     * @description In this topic, the `cr-d369626622af008e****` rule is used as an example. The return result shows that a total of 10 resources are evaluated by the rule and `five` of them are evaluated as compliant.
-     *
+     * <b>description</b> :
+     * <p>In this topic, the <code>cr-d369626622af008e****</code> rule is used as an example. The return result shows that a total of 10 resources are evaluated by the rule and <code>five</code> of them are evaluated as compliant.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the compliance summary based on the compliance evaluation result of a rule.</p>
+     * 
      * @param request GetResourceComplianceByConfigRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetResourceComplianceByConfigRuleResponse
@@ -4212,10 +4684,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the compliance evaluation result of a resource by using a rule.
-     *
-     * @description In this topic, the `cr-d369626622af008e****` rule is used as an example. The return result shows that a total of 10 resources are evaluated by the rule and `five` of them are evaluated as compliant.
-     *
+     * <b>description</b> :
+     * <p>In this topic, the <code>cr-d369626622af008e****</code> rule is used as an example. The return result shows that a total of 10 resources are evaluated by the rule and <code>five</code> of them are evaluated as compliant.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the compliance summary based on the compliance evaluation result of a rule.</p>
+     * 
      * @param request GetResourceComplianceByConfigRuleRequest
      * @return GetResourceComplianceByConfigRuleResponse
      */
@@ -4225,10 +4699,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the compliance evaluation results of resources evaluated based on a compliance package.
-     *
-     * @description This topic provides an example on how to query the compliance evaluation results of resources monitored by using the `cp-541e626622af0087****` compliance package. The returned result shows a total of 10 resources and seven of them are evaluated as non-compliant.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the compliance evaluation results of resources monitored by using the <code>cp-541e626622af0087****</code> compliance package. The returned result shows a total of 10 resources and seven of them are evaluated as non-compliant.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the compliance evaluation results of resources evaluated based on a compliance package.</p>
+     * 
      * @param request GetResourceComplianceByPackRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetResourceComplianceByPackResponse
@@ -4254,10 +4730,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the compliance evaluation results of resources evaluated based on a compliance package.
-     *
-     * @description This topic provides an example on how to query the compliance evaluation results of resources monitored by using the `cp-541e626622af0087****` compliance package. The returned result shows a total of 10 resources and seven of them are evaluated as non-compliant.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the compliance evaluation results of resources monitored by using the <code>cp-541e626622af0087****</code> compliance package. The returned result shows a total of 10 resources and seven of them are evaluated as non-compliant.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the compliance evaluation results of resources evaluated based on a compliance package.</p>
+     * 
      * @param request GetResourceComplianceByPackRequest
      * @return GetResourceComplianceByPackResponse
      */
@@ -4267,8 +4745,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the evaluation results grouped by region for a rule.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the evaluation results grouped by region for a rule.</p>
+     * 
      * @param request GetResourceComplianceGroupByRegionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetResourceComplianceGroupByRegionResponse
@@ -4298,8 +4777,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the evaluation results grouped by region for a rule.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the evaluation results grouped by region for a rule.</p>
+     * 
      * @param request GetResourceComplianceGroupByRegionRequest
      * @return GetResourceComplianceGroupByRegionResponse
      */
@@ -4309,8 +4789,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the evaluation results grouped by resource type for a rule.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the evaluation results grouped by resource type for a rule.</p>
+     * 
      * @param request GetResourceComplianceGroupByResourceTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetResourceComplianceGroupByResourceTypeResponse
@@ -4340,8 +4821,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the evaluation results grouped by resource type for a rule.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the evaluation results grouped by resource type for a rule.</p>
+     * 
      * @param request GetResourceComplianceGroupByResourceTypeRequest
      * @return GetResourceComplianceGroupByResourceTypeResponse
      */
@@ -4351,11 +4833,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the compliance timeline of a resource. The compliance timeline of a resource indicates the compliance evaluation record of the resource. A compliance timeline includes points and the content on the compliance timeline.
-     *
-     * @description In Cloud Config, each resource has a compliance timeline. Cloud Config generates a compliance evaluation record for a resource each time the resource is evaluated based on a rule. The compliance evaluation records of a resource are displayed in a compliance timeline. You can configure Cloud Config to execute a rule to evaluate a resource on a regular basis or each time you change the resource configuration. You can also manually execute a rule to evaluate a resource.
-     * This topic provides an example on how to query the compliance timeline of the `new-bucket` resource that resides in the `cn-hangzhou` region. The resource is an Object Storage Service (OSS) bucket. The returned result shows the following two timestamps on the compliance timeline: `1625200295276` and `1625200228510`. The first timestamp indicates 12:31:35 on July 2, 2021 (UTC+8) and the second timestamp indicates 12:30:28 on July 2, 2021 (UTC+8).
-     *
+     * <b>description</b> :
+     * <p>In Cloud Config, each resource has a compliance timeline. Cloud Config generates a compliance evaluation record for a resource each time the resource is evaluated based on a rule. The compliance evaluation records of a resource are displayed in a compliance timeline. You can configure Cloud Config to execute a rule to evaluate a resource on a regular basis or each time you change the resource configuration. You can also manually execute a rule to evaluate a resource.
+     * This topic provides an example on how to query the compliance timeline of the <code>new-bucket</code> resource that resides in the <code>cn-hangzhou</code> region. The resource is an Object Storage Service (OSS) bucket. The returned result shows the following two timestamps on the compliance timeline: <code>1625200295276</code> and <code>1625200228510</code>. The first timestamp indicates 12:31:35 on July 2, 2021 (UTC+8) and the second timestamp indicates 12:30:28 on July 2, 2021 (UTC+8).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the compliance timeline of a resource. The compliance timeline of a resource indicates the compliance evaluation record of the resource. A compliance timeline includes points and the content on the compliance timeline.</p>
+     * 
      * @param request GetResourceComplianceTimelineRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetResourceComplianceTimelineResponse
@@ -4381,11 +4865,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the compliance timeline of a resource. The compliance timeline of a resource indicates the compliance evaluation record of the resource. A compliance timeline includes points and the content on the compliance timeline.
-     *
-     * @description In Cloud Config, each resource has a compliance timeline. Cloud Config generates a compliance evaluation record for a resource each time the resource is evaluated based on a rule. The compliance evaluation records of a resource are displayed in a compliance timeline. You can configure Cloud Config to execute a rule to evaluate a resource on a regular basis or each time you change the resource configuration. You can also manually execute a rule to evaluate a resource.
-     * This topic provides an example on how to query the compliance timeline of the `new-bucket` resource that resides in the `cn-hangzhou` region. The resource is an Object Storage Service (OSS) bucket. The returned result shows the following two timestamps on the compliance timeline: `1625200295276` and `1625200228510`. The first timestamp indicates 12:31:35 on July 2, 2021 (UTC+8) and the second timestamp indicates 12:30:28 on July 2, 2021 (UTC+8).
-     *
+     * <b>description</b> :
+     * <p>In Cloud Config, each resource has a compliance timeline. Cloud Config generates a compliance evaluation record for a resource each time the resource is evaluated based on a rule. The compliance evaluation records of a resource are displayed in a compliance timeline. You can configure Cloud Config to execute a rule to evaluate a resource on a regular basis or each time you change the resource configuration. You can also manually execute a rule to evaluate a resource.
+     * This topic provides an example on how to query the compliance timeline of the <code>new-bucket</code> resource that resides in the <code>cn-hangzhou</code> region. The resource is an Object Storage Service (OSS) bucket. The returned result shows the following two timestamps on the compliance timeline: <code>1625200295276</code> and <code>1625200228510</code>. The first timestamp indicates 12:31:35 on July 2, 2021 (UTC+8) and the second timestamp indicates 12:30:28 on July 2, 2021 (UTC+8).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the compliance timeline of a resource. The compliance timeline of a resource indicates the compliance evaluation record of the resource. A compliance timeline includes points and the content on the compliance timeline.</p>
+     * 
      * @param request GetResourceComplianceTimelineRequest
      * @return GetResourceComplianceTimelineResponse
      */
@@ -4395,10 +4881,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the configuration timeline of a resource.
-     *
-     * @description The sample request in this topic shows you how to query the configuration timeline of the `new-bucket` resource that resides in the `cn-hangzhou` region. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows that the timestamp when the resource configuration changes is `1624961112000`. The timestamp indicates 18:05:12 on June 29, 2021 (UTC+8).
-     *
+     * <b>description</b> :
+     * <p>The sample request in this topic shows you how to query the configuration timeline of the <code>new-bucket</code> resource that resides in the <code>cn-hangzhou</code> region. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows that the timestamp when the resource configuration changes is <code>1624961112000</code>. The timestamp indicates 18:05:12 on June 29, 2021 (UTC+8).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the configuration timeline of a resource.</p>
+     * 
      * @param request GetResourceConfigurationTimelineRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetResourceConfigurationTimelineResponse
@@ -4424,10 +4912,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the configuration timeline of a resource.
-     *
-     * @description The sample request in this topic shows you how to query the configuration timeline of the `new-bucket` resource that resides in the `cn-hangzhou` region. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows that the timestamp when the resource configuration changes is `1624961112000`. The timestamp indicates 18:05:12 on June 29, 2021 (UTC+8).
-     *
+     * <b>description</b> :
+     * <p>The sample request in this topic shows you how to query the configuration timeline of the <code>new-bucket</code> resource that resides in the <code>cn-hangzhou</code> region. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows that the timestamp when the resource configuration changes is <code>1624961112000</code>. The timestamp indicates 18:05:12 on June 29, 2021 (UTC+8).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the configuration timeline of a resource.</p>
+     * 
      * @param request GetResourceConfigurationTimelineRequest
      * @return GetResourceConfigurationTimelineResponse
      */
@@ -4437,13 +4927,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the last resource inventory that is generated within the current Alibaba Cloud account.
-     *
-     * @description ### [](#)Prerequisites
-     * You can call the [GenerateResourceInventory](https://help.aliyun.com/document_detail/2398354.html) operation to generate a resource inventory. Then, you can call the GetResourceInventory operation to obtain the URL of the resource inventory.
-     * ### [](#)Description
-     * This topic provides an example on how to obtain the last resource inventory that is generated within the current Alibaba Cloud account.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2398354.html">GenerateResourceInventory</a> operation to generate a resource inventory. Then, you can call the GetResourceInventory operation to obtain the URL of the resource inventory.</p>
+     * <h3><a href="#"></a>Description</h3>
+     * <p>This topic provides an example on how to obtain the last resource inventory that is generated within the current Alibaba Cloud account.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the last resource inventory that is generated within the current Alibaba Cloud account.</p>
+     * 
      * @param request GetResourceInventoryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetResourceInventoryResponse
@@ -4465,13 +4957,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the last resource inventory that is generated within the current Alibaba Cloud account.
-     *
-     * @description ### [](#)Prerequisites
-     * You can call the [GenerateResourceInventory](https://help.aliyun.com/document_detail/2398354.html) operation to generate a resource inventory. Then, you can call the GetResourceInventory operation to obtain the URL of the resource inventory.
-     * ### [](#)Description
-     * This topic provides an example on how to obtain the last resource inventory that is generated within the current Alibaba Cloud account.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2398354.html">GenerateResourceInventory</a> operation to generate a resource inventory. Then, you can call the GetResourceInventory operation to obtain the URL of the resource inventory.</p>
+     * <h3><a href="#"></a>Description</h3>
+     * <p>This topic provides an example on how to obtain the last resource inventory that is generated within the current Alibaba Cloud account.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the last resource inventory that is generated within the current Alibaba Cloud account.</p>
      * @return GetResourceInventoryResponse
      */
     public GetResourceInventoryResponse getResourceInventory() throws Exception {
@@ -4480,10 +4973,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the resource relationships supported by a resource type.
-     *
-     * @description This topic provides an example to show how to query the resource relationships that are supported by the ACS::ECS::Instance resource type.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example to show how to query the resource relationships that are supported by the ACS::ECS::Instance resource type.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the resource relationships supported by a resource type.</p>
+     * 
      * @param request GetSupportedResourceRelationConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetSupportedResourceRelationConfigResponse
@@ -4513,10 +5008,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the resource relationships supported by a resource type.
-     *
-     * @description This topic provides an example to show how to query the resource relationships that are supported by the ACS::ECS::Instance resource type.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example to show how to query the resource relationships that are supported by the ACS::ECS::Instance resource type.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the resource relationships supported by a resource type.</p>
+     * 
      * @param request GetSupportedResourceRelationConfigRequest
      * @return GetSupportedResourceRelationConfigResponse
      */
@@ -4526,11 +5023,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Ignores the compliance evaluation results of one or more non-compliant resources that are evaluated based on a rule in an account group.
-     *
-     * @description After you ignore a resource that is evaluated as incompliant by using a rule, the resource is still evaluated by using the rule, but the compliance result is Ignored.
-     * This example shows how to ignore the `lb-hp3a3b4ztyfm2plgm****` incompliant resource that is evaluated by using the `cr-7e72626622af0051***` rule in the `120886317861****` member account of the `ca-5b6c626622af008f****` account group. The ID of the region where the resource resides is `cn-beijing`, and the type of the resource is `ACS::SLB::LoadBalancer`.
-     *
+     * <b>description</b> :
+     * <p>After you ignore a resource that is evaluated as incompliant by using a rule, the resource is still evaluated by using the rule, but the compliance result is Ignored.
+     * This example shows how to ignore the <code>lb-hp3a3b4ztyfm2plgm****</code> incompliant resource that is evaluated by using the <code>cr-7e72626622af0051***</code> rule in the <code>120886317861****</code> member account of the <code>ca-5b6c626622af008f****</code> account group. The ID of the region where the resource resides is <code>cn-beijing</code>, and the type of the resource is <code>ACS::SLB::LoadBalancer</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Ignores the compliance evaluation results of one or more non-compliant resources that are evaluated based on a rule in an account group.</p>
+     * 
      * @param tmpReq IgnoreAggregateEvaluationResultsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return IgnoreAggregateEvaluationResultsResponse
@@ -4582,11 +5081,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Ignores the compliance evaluation results of one or more non-compliant resources that are evaluated based on a rule in an account group.
-     *
-     * @description After you ignore a resource that is evaluated as incompliant by using a rule, the resource is still evaluated by using the rule, but the compliance result is Ignored.
-     * This example shows how to ignore the `lb-hp3a3b4ztyfm2plgm****` incompliant resource that is evaluated by using the `cr-7e72626622af0051***` rule in the `120886317861****` member account of the `ca-5b6c626622af008f****` account group. The ID of the region where the resource resides is `cn-beijing`, and the type of the resource is `ACS::SLB::LoadBalancer`.
-     *
+     * <b>description</b> :
+     * <p>After you ignore a resource that is evaluated as incompliant by using a rule, the resource is still evaluated by using the rule, but the compliance result is Ignored.
+     * This example shows how to ignore the <code>lb-hp3a3b4ztyfm2plgm****</code> incompliant resource that is evaluated by using the <code>cr-7e72626622af0051***</code> rule in the <code>120886317861****</code> member account of the <code>ca-5b6c626622af008f****</code> account group. The ID of the region where the resource resides is <code>cn-beijing</code>, and the type of the resource is <code>ACS::SLB::LoadBalancer</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Ignores the compliance evaluation results of one or more non-compliant resources that are evaluated based on a rule in an account group.</p>
+     * 
      * @param request IgnoreAggregateEvaluationResultsRequest
      * @return IgnoreAggregateEvaluationResultsResponse
      */
@@ -4596,11 +5097,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Ignores one or more resources that are evaluated as non-compliant by using a rule.
-     *
-     * @description After you ignore a resource that is evaluated as incompliant by using a rule, the resource is still evaluated by using the rule, but the compliance result is Ignored.
-     * This example shows how to ignore the `lb-hp3a3b4ztyfm2plgm****` resource that is evaluated as incompliant by using the `cr-7e72626622af0051****` rule in the `100931896542****` account. The ID of the region in which the resource resides is `cn-beijing`, and the type of the resource is `ACS::SLB::LoadBalancer`.
-     *
+     * <b>description</b> :
+     * <p>After you ignore a resource that is evaluated as incompliant by using a rule, the resource is still evaluated by using the rule, but the compliance result is Ignored.
+     * This example shows how to ignore the <code>lb-hp3a3b4ztyfm2plgm****</code> resource that is evaluated as incompliant by using the <code>cr-7e72626622af0051****</code> rule in the <code>100931896542****</code> account. The ID of the region in which the resource resides is <code>cn-beijing</code>, and the type of the resource is <code>ACS::SLB::LoadBalancer</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Ignores one or more resources that are evaluated as non-compliant by using a rule.</p>
+     * 
      * @param tmpReq IgnoreEvaluationResultsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return IgnoreEvaluationResultsResponse
@@ -4648,11 +5151,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Ignores one or more resources that are evaluated as non-compliant by using a rule.
-     *
-     * @description After you ignore a resource that is evaluated as incompliant by using a rule, the resource is still evaluated by using the rule, but the compliance result is Ignored.
-     * This example shows how to ignore the `lb-hp3a3b4ztyfm2plgm****` resource that is evaluated as incompliant by using the `cr-7e72626622af0051****` rule in the `100931896542****` account. The ID of the region in which the resource resides is `cn-beijing`, and the type of the resource is `ACS::SLB::LoadBalancer`.
-     *
+     * <b>description</b> :
+     * <p>After you ignore a resource that is evaluated as incompliant by using a rule, the resource is still evaluated by using the rule, but the compliance result is Ignored.
+     * This example shows how to ignore the <code>lb-hp3a3b4ztyfm2plgm****</code> resource that is evaluated as incompliant by using the <code>cr-7e72626622af0051****</code> rule in the <code>100931896542****</code> account. The ID of the region in which the resource resides is <code>cn-beijing</code>, and the type of the resource is <code>ACS::SLB::LoadBalancer</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Ignores one or more resources that are evaluated as non-compliant by using a rule.</p>
+     * 
      * @param request IgnoreEvaluationResultsRequest
      * @return IgnoreEvaluationResultsResponse
      */
@@ -4662,10 +5167,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of compliance packages in an account group.
-     *
-     * @description In this topic, the `ca-f632626622af0079****` account group is used as an example. The return result shows one compliance package whose ID is `cp-fdc8626622af00f9****`.
-     *
+     * <b>description</b> :
+     * <p>In this topic, the <code>ca-f632626622af0079****</code> account group is used as an example. The return result shows one compliance package whose ID is <code>cp-fdc8626622af00f9****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of compliance packages in an account group.</p>
+     * 
      * @param request ListAggregateCompliancePacksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAggregateCompliancePacksResponse
@@ -4707,10 +5214,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of compliance packages in an account group.
-     *
-     * @description In this topic, the `ca-f632626622af0079****` account group is used as an example. The return result shows one compliance package whose ID is `cp-fdc8626622af00f9****`.
-     *
+     * <b>description</b> :
+     * <p>In this topic, the <code>ca-f632626622af0079****</code> account group is used as an example. The return result shows one compliance package whose ID is <code>cp-fdc8626622af00f9****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of compliance packages in an account group.</p>
+     * 
      * @param request ListAggregateCompliancePacksRequest
      * @return ListAggregateCompliancePacksResponse
      */
@@ -4720,8 +5229,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about all delivery channels in an account group.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about all delivery channels in an account group.</p>
+     * 
      * @param request ListAggregateConfigDeliveryChannelsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAggregateConfigDeliveryChannelsResponse
@@ -4755,8 +5265,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about all delivery channels in an account group.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about all delivery channels in an account group.</p>
+     * 
      * @param request ListAggregateConfigDeliveryChannelsRequest
      * @return ListAggregateConfigDeliveryChannelsResponse
      */
@@ -4766,10 +5277,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the compliance evaluation results of resources based on a rule in an account group.
-     *
-     * @description This topic provides an example on how to query the compliance evaluation results of resources based on the `cr-888f626622af00ae****` rule in the `ca-d1e3326622af00cb****` account group. The returned result indicates that the `Bucket-test` resource is evaluated as `NON_COMPLIANT` by using the rule. The resource is an Object Storage Service (OSS) bucket.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the compliance evaluation results of resources based on the <code>cr-888f626622af00ae****</code> rule in the <code>ca-d1e3326622af00cb****</code> account group. The returned result indicates that the <code>Bucket-test</code> resource is evaluated as <code>NON_COMPLIANT</code> by using the rule. The resource is an Object Storage Service (OSS) bucket.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the compliance evaluation results of resources based on a rule in an account group.</p>
+     * 
      * @param request ListAggregateConfigRuleEvaluationResultsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAggregateConfigRuleEvaluationResultsResponse
@@ -4839,10 +5352,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the compliance evaluation results of resources based on a rule in an account group.
-     *
-     * @description This topic provides an example on how to query the compliance evaluation results of resources based on the `cr-888f626622af00ae****` rule in the `ca-d1e3326622af00cb****` account group. The returned result indicates that the `Bucket-test` resource is evaluated as `NON_COMPLIANT` by using the rule. The resource is an Object Storage Service (OSS) bucket.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the compliance evaluation results of resources based on the <code>cr-888f626622af00ae****</code> rule in the <code>ca-d1e3326622af00cb****</code> account group. The returned result indicates that the <code>Bucket-test</code> resource is evaluated as <code>NON_COMPLIANT</code> by using the rule. The resource is an Object Storage Service (OSS) bucket.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the compliance evaluation results of resources based on a rule in an account group.</p>
+     * 
      * @param request ListAggregateConfigRuleEvaluationResultsRequest
      * @return ListAggregateConfigRuleEvaluationResultsResponse
      */
@@ -4852,10 +5367,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the statistics of compliance evaluation results of an account group.
-     *
-     * @description This topic provides an example on how to query the statistics of compliance evaluation results of an account group whose ID is ca-edd3626622af00b3\\*\\*\\*\\*.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the statistics of compliance evaluation results of an account group whose ID is ca-edd3626622af00b3\<em>\</em>\<em>\</em>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the statistics of compliance evaluation results of an account group.</p>
+     * 
      * @param request ListAggregateConfigRuleEvaluationStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAggregateConfigRuleEvaluationStatisticsResponse
@@ -4885,10 +5402,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the statistics of compliance evaluation results of an account group.
-     *
-     * @description This topic provides an example on how to query the statistics of compliance evaluation results of an account group whose ID is ca-edd3626622af00b3\\*\\*\\*\\*.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the statistics of compliance evaluation results of an account group whose ID is ca-edd3626622af00b3\<em>\</em>\<em>\</em>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the statistics of compliance evaluation results of an account group.</p>
+     * 
      * @param request ListAggregateConfigRuleEvaluationStatisticsRequest
      * @return ListAggregateConfigRuleEvaluationStatisticsResponse
      */
@@ -4898,10 +5417,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of rules in an account group.
-     *
-     * @description This topic provides an example on how to query the rules in an account group whose ID is `ca-f632626622af0079****`. The returned result shows a total of one rule and two evaluated resources. The resources are both evaluated as `COMPLIANT`.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the rules in an account group whose ID is <code>ca-f632626622af0079****</code>. The returned result shows a total of one rule and two evaluated resources. The resources are both evaluated as <code>COMPLIANT</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of rules in an account group.</p>
+     * 
      * @param request ListAggregateConfigRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAggregateConfigRulesResponse
@@ -4963,10 +5484,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of rules in an account group.
-     *
-     * @description This topic provides an example on how to query the rules in an account group whose ID is `ca-f632626622af0079****`. The returned result shows a total of one rule and two evaluated resources. The resources are both evaluated as `COMPLIANT`.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the rules in an account group whose ID is <code>ca-f632626622af0079****</code>. The returned result shows a total of one rule and two evaluated resources. The resources are both evaluated as <code>COMPLIANT</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of rules in an account group.</p>
+     * 
      * @param request ListAggregateConfigRulesRequest
      * @return ListAggregateConfigRulesResponse
      */
@@ -4976,10 +5499,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains a list of resources aggregated across regions within all member accounts of a specific account group.
-     *
-     * @description This topic provides an example on how to query the resources within the member account `100931896542****` of the account group `ca-c560626622af0005****`. The result indicates that eight resources are queried.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the resources within the member account <code>100931896542****</code> of the account group <code>ca-c560626622af0005****</code>. The result indicates that eight resources are queried.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains a list of resources aggregated across regions within all member accounts of a specific account group.</p>
+     * 
      * @param request ListAggregateDiscoveredResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAggregateDiscoveredResourcesResponse
@@ -4989,6 +5514,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.aggregatorId)) {
             query.put("AggregatorId", request.aggregatorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endUpdateTimestamp)) {
+            query.put("EndUpdateTimestamp", request.endUpdateTimestamp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeResourceTypes)) {
+            query.put("ExcludeResourceTypes", request.excludeResourceTypes);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
@@ -5023,6 +5556,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceTypes", request.resourceTypes);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.startUpdateTimestamp)) {
+            query.put("StartUpdateTimestamp", request.startUpdateTimestamp);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -5041,10 +5578,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains a list of resources aggregated across regions within all member accounts of a specific account group.
-     *
-     * @description This topic provides an example on how to query the resources within the member account `100931896542****` of the account group `ca-c560626622af0005****`. The result indicates that eight resources are queried.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the resources within the member account <code>100931896542****</code> of the account group <code>ca-c560626622af0005****</code>. The result indicates that eight resources are queried.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains a list of resources aggregated across regions within all member accounts of a specific account group.</p>
+     * 
      * @param request ListAggregateDiscoveredResourcesRequest
      * @return ListAggregateDiscoveredResourcesResponse
      */
@@ -5054,10 +5593,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the remediation records of a rule in an account group.
-     *
-     * @description This topic provides an example on how to query the remediation records of the `cr-d04a626622af00af****` rule in the `ca-edd3626622af00b3****` account group.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the remediation records of the <code>cr-d04a626622af00af****</code> rule in the <code>ca-edd3626622af00b3****</code> account group.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the remediation records of a rule in an account group.</p>
+     * 
      * @param request ListAggregateRemediationExecutionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAggregateRemediationExecutionsResponse
@@ -5107,10 +5648,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the remediation records of a rule in an account group.
-     *
-     * @description This topic provides an example on how to query the remediation records of the `cr-d04a626622af00af****` rule in the `ca-edd3626622af00b3****` account group.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the remediation records of the <code>cr-d04a626622af00af****</code> rule in the <code>ca-edd3626622af00b3****</code> account group.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the remediation records of a rule in an account group.</p>
+     * 
      * @param request ListAggregateRemediationExecutionsRequest
      * @return ListAggregateRemediationExecutionsResponse
      */
@@ -5120,10 +5663,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of remediation templates for a rule in an account group.
-     *
-     * @description This topic provides an example on how to query the remediation templates of the rule whose ID is `cr-6b7c626622af00b4****` in the account group whose ID is `ca-6b4a626622af0012****`.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the remediation templates of the rule whose ID is <code>cr-6b7c626622af00b4****</code> in the account group whose ID is <code>ca-6b4a626622af0012****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of remediation templates for a rule in an account group.</p>
+     * 
      * @param request ListAggregateRemediationsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAggregateRemediationsResponse
@@ -5157,10 +5702,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of remediation templates for a rule in an account group.
-     *
-     * @description This topic provides an example on how to query the remediation templates of the rule whose ID is `cr-6b7c626622af00b4****` in the account group whose ID is `ca-6b4a626622af0012****`.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the remediation templates of the rule whose ID is <code>cr-6b7c626622af00b4****</code> in the account group whose ID is <code>ca-6b4a626622af0012****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of remediation templates for a rule in an account group.</p>
+     * 
      * @param request ListAggregateRemediationsRequest
      * @return ListAggregateRemediationsResponse
      */
@@ -5170,10 +5717,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the compliance evaluation results of resources in an account group.
-     *
-     * @description This example shows how to query the compliance evaluation result of the `23642660635396****` resource in the `ca-7f00626622af0041****` account group. The resource is a RAM user. The returned result indicates that the resource is evaluated as `NON_COMPLIANT` by using the `cr-7f7d626622af0041****` rule.
-     *
+     * <b>description</b> :
+     * <p>This example shows how to query the compliance evaluation result of the <code>23642660635396****</code> resource in the <code>ca-7f00626622af0041****</code> account group. The resource is a RAM user. The returned result indicates that the resource is evaluated as <code>NON_COMPLIANT</code> by using the <code>cr-7f7d626622af0041****</code> rule.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the compliance evaluation results of resources in an account group.</p>
+     * 
      * @param request ListAggregateResourceEvaluationResultsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAggregateResourceEvaluationResultsResponse
@@ -5227,10 +5776,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the compliance evaluation results of resources in an account group.
-     *
-     * @description This example shows how to query the compliance evaluation result of the `23642660635396****` resource in the `ca-7f00626622af0041****` account group. The resource is a RAM user. The returned result indicates that the resource is evaluated as `NON_COMPLIANT` by using the `cr-7f7d626622af0041****` rule.
-     *
+     * <b>description</b> :
+     * <p>This example shows how to query the compliance evaluation result of the <code>23642660635396****</code> resource in the <code>ca-7f00626622af0041****</code> account group. The resource is a RAM user. The returned result indicates that the resource is evaluated as <code>NON_COMPLIANT</code> by using the <code>cr-7f7d626622af0041****</code> rule.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the compliance evaluation results of resources in an account group.</p>
+     * 
      * @param request ListAggregateResourceEvaluationResultsRequest
      * @return ListAggregateResourceEvaluationResultsResponse
      */
@@ -5240,10 +5791,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of the resources of a specific resource in an account group.
-     *
-     * @description This topic provides an example on how to query the disks that are associated with an Elastic Compute Service (ECS) instance in an account group.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the disks that are associated with an Elastic Compute Service (ECS) instance in an account group.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of the resources of a specific resource in an account group.</p>
+     * 
      * @param request ListAggregateResourceRelationsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAggregateResourceRelationsResponse
@@ -5309,10 +5862,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of the resources of a specific resource in an account group.
-     *
-     * @description This topic provides an example on how to query the disks that are associated with an Elastic Compute Service (ECS) instance in an account group.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the disks that are associated with an Elastic Compute Service (ECS) instance in an account group.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of the resources of a specific resource in an account group.</p>
+     * 
      * @param request ListAggregateResourceRelationsRequest
      * @return ListAggregateResourceRelationsResponse
      */
@@ -5322,14 +5877,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains resources in a specific account group based on the fields in the resource properties by using a SELECT statement.
-     *
-     * @description When you write a `SELECT` statement, you must obtain the fields and the data types of the fields from the property file of the resource type. For more information about property files, see [Alibaba Cloud Config Resource Schema](javascript:void\\(0\\))
-     * > 
-     * *   Each resource type supported by Cloud Config has a property file. Property files are named based on the related resource types. For example, the property file of the `ACS::ECS::Instance` resource type is named `ACS_ECS_Instance.properties.json`. Property files of different resource types are placed under the `config/properties/resource-types` path.
-     * *   For more information about the examples and limits on SQL query statements, see [Examples of SQL query statements](https://help.aliyun.com/document_detail/398718.html) and [Limits on SQL query statements](https://help.aliyun.com/document_detail/398750.html).
-     * This topic provides an example on how to obtain all resources whose tag key is `business` and whose tag value is `online` in the account group `ca-4b05626622af000c****` by using the advanced search feature.
-     *
+     * <b>description</b> :
+     * <p>When you write a <code>SELECT</code> statement, you must obtain the fields and the data types of the fields from the property file of the resource type. For more information about property files, see [Alibaba Cloud Config Resource Schema]</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>Each resource type supported by Cloud Config has a property file. Property files are named based on the related resource types. For example, the property file of the <code>ACS::ECS::Instance</code> resource type is named <code>ACS_ECS_Instance.properties.json</code>. Property files of different resource types are placed under the <code>config/properties/resource-types</code> path.</li>
+     * <li>For more information about the examples and limits on SQL query statements, see <a href="https://help.aliyun.com/document_detail/398718.html">Examples of SQL query statements</a> and <a href="https://help.aliyun.com/document_detail/398750.html">Limits on SQL query statements</a>.
+     * This topic provides an example on how to obtain all resources whose tag key is <code>business</code> and whose tag value is <code>online</code> in the account group <code>ca-4b05626622af000c****</code> by using the advanced search feature.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains resources in a specific account group based on the fields in the resource properties by using a SELECT statement.</p>
+     * 
      * @param request ListAggregateResourcesByAdvancedSearchRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAggregateResourcesByAdvancedSearchResponse
@@ -5363,14 +5923,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains resources in a specific account group based on the fields in the resource properties by using a SELECT statement.
-     *
-     * @description When you write a `SELECT` statement, you must obtain the fields and the data types of the fields from the property file of the resource type. For more information about property files, see [Alibaba Cloud Config Resource Schema](javascript:void\\(0\\))
-     * > 
-     * *   Each resource type supported by Cloud Config has a property file. Property files are named based on the related resource types. For example, the property file of the `ACS::ECS::Instance` resource type is named `ACS_ECS_Instance.properties.json`. Property files of different resource types are placed under the `config/properties/resource-types` path.
-     * *   For more information about the examples and limits on SQL query statements, see [Examples of SQL query statements](https://help.aliyun.com/document_detail/398718.html) and [Limits on SQL query statements](https://help.aliyun.com/document_detail/398750.html).
-     * This topic provides an example on how to obtain all resources whose tag key is `business` and whose tag value is `online` in the account group `ca-4b05626622af000c****` by using the advanced search feature.
-     *
+     * <b>description</b> :
+     * <p>When you write a <code>SELECT</code> statement, you must obtain the fields and the data types of the fields from the property file of the resource type. For more information about property files, see [Alibaba Cloud Config Resource Schema]</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>Each resource type supported by Cloud Config has a property file. Property files are named based on the related resource types. For example, the property file of the <code>ACS::ECS::Instance</code> resource type is named <code>ACS_ECS_Instance.properties.json</code>. Property files of different resource types are placed under the <code>config/properties/resource-types</code> path.</li>
+     * <li>For more information about the examples and limits on SQL query statements, see <a href="https://help.aliyun.com/document_detail/398718.html">Examples of SQL query statements</a> and <a href="https://help.aliyun.com/document_detail/398750.html">Limits on SQL query statements</a>.
+     * This topic provides an example on how to obtain all resources whose tag key is <code>business</code> and whose tag value is <code>online</code> in the account group <code>ca-4b05626622af000c****</code> by using the advanced search feature.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains resources in a specific account group based on the fields in the resource properties by using a SELECT statement.</p>
+     * 
      * @param request ListAggregateResourcesByAdvancedSearchRequest
      * @return ListAggregateResourcesByAdvancedSearchResponse
      */
@@ -5380,10 +5945,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of account groups that the current account manages or to which the current account belongs.
-     *
-     * @description The sample request in this topic shows you how to query account groups. A maximum of 10 entries can be returned for the request. As shown in the responses, the account group returned is named as `Test_Group`, its description is `Test account group`, and it is of the `CUSTOM` type, which indicates a custom account group. The account group contains two member accounts.
-     *
+     * <b>description</b> :
+     * <p>The sample request in this topic shows you how to query account groups. A maximum of 10 entries can be returned for the request. As shown in the responses, the account group returned is named as <code>Test_Group</code>, its description is <code>Test account group</code>, and it is of the <code>CUSTOM</code> type, which indicates a custom account group. The account group contains two member accounts.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of account groups that the current account manages or to which the current account belongs.</p>
+     * 
      * @param request ListAggregatorsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAggregatorsResponse
@@ -5417,10 +5984,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of account groups that the current account manages or to which the current account belongs.
-     *
-     * @description The sample request in this topic shows you how to query account groups. A maximum of 10 entries can be returned for the request. As shown in the responses, the account group returned is named as `Test_Group`, its description is `Test account group`, and it is of the `CUSTOM` type, which indicates a custom account group. The account group contains two member accounts.
-     *
+     * <b>description</b> :
+     * <p>The sample request in this topic shows you how to query account groups. A maximum of 10 entries can be returned for the request. As shown in the responses, the account group returned is named as <code>Test_Group</code>, its description is <code>Test account group</code>, and it is of the <code>CUSTOM</code> type, which indicates a custom account group. The account group contains two member accounts.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of account groups that the current account manages or to which the current account belongs.</p>
+     * 
      * @param request ListAggregatorsRequest
      * @return ListAggregatorsResponse
      */
@@ -5430,10 +5999,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of compliance package templates.
-     *
-     * @description This topic provides an example on how to query the details of a compliance package template whose ID is `ct-d254ff4e06a300cf****`. The returned result indicates that the template name is `BestPracticesForNetwork`, the template ID is `ct-d254ff4e06a300cf****`, and the ID of the managed rule of the template is `slb-servercertificate-expired-check`.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the details of a compliance package template whose ID is <code>ct-d254ff4e06a300cf****</code>. The returned result indicates that the template name is <code>BestPracticesForNetwork</code>, the template ID is <code>ct-d254ff4e06a300cf****</code>, and the ID of the managed rule of the template is <code>slb-servercertificate-expired-check</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all compliance package templates provided by Cloud Config and the details of the compliance package templates.</p>
+     * 
      * @param request ListCompliancePackTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListCompliancePackTemplatesResponse
@@ -5475,10 +6046,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of compliance package templates.
-     *
-     * @description This topic provides an example on how to query the details of a compliance package template whose ID is `ct-d254ff4e06a300cf****`. The returned result indicates that the template name is `BestPracticesForNetwork`, the template ID is `ct-d254ff4e06a300cf****`, and the ID of the managed rule of the template is `slb-servercertificate-expired-check`.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the details of a compliance package template whose ID is <code>ct-d254ff4e06a300cf****</code>. The returned result indicates that the template name is <code>BestPracticesForNetwork</code>, the template ID is <code>ct-d254ff4e06a300cf****</code>, and the ID of the managed rule of the template is <code>slb-servercertificate-expired-check</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all compliance package templates provided by Cloud Config and the details of the compliance package templates.</p>
+     * 
      * @param request ListCompliancePackTemplatesRequest
      * @return ListCompliancePackTemplatesResponse
      */
@@ -5488,10 +6061,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of compliance packages.
-     *
-     * @description This topic provides an example of how to query compliance packages. The return result shows the details of the `cp-fdc8626622af00f9****` compliance package.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example of how to query compliance packages. The return result shows the details of the <code>cp-fdc8626622af00f9****</code> compliance package.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of compliance packages.</p>
+     * 
      * @param request ListCompliancePacksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListCompliancePacksResponse
@@ -5529,10 +6104,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of compliance packages.
-     *
-     * @description This topic provides an example of how to query compliance packages. The return result shows the details of the `cp-fdc8626622af00f9****` compliance package.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example of how to query compliance packages. The return result shows the details of the <code>cp-fdc8626622af00f9****</code> compliance package.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of compliance packages.</p>
+     * 
      * @param request ListCompliancePacksRequest
      * @return ListCompliancePacksResponse
      */
@@ -5542,8 +6119,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of delivery channels.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of delivery channels.</p>
+     * 
      * @param request ListConfigDeliveryChannelsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListConfigDeliveryChannelsResponse
@@ -5573,8 +6151,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of delivery channels.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of delivery channels.</p>
+     * 
      * @param request ListConfigDeliveryChannelsRequest
      * @return ListConfigDeliveryChannelsResponse
      */
@@ -5584,10 +6163,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of compliance evaluation results of resources based on a rule.
-     *
-     * @description This topic provides an example on how to query the compliance evaluation result of resources based on a rule whose ID is `cr-cac56457e0d900d3****`. The returned result indicates that the `i-hp3e4kvhzqn2s11t****` resource is evaluated as `NON_COMPLIANT` by using the rule. The resource is an Elastic Compute Service (ECS) instance.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the compliance evaluation result of resources based on a rule whose ID is <code>cr-cac56457e0d900d3****</code>. The returned result indicates that the <code>i-hp3e4kvhzqn2s11t****</code> resource is evaluated as <code>NON_COMPLIANT</code> by using the rule. The resource is an Elastic Compute Service (ECS) instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the compliance evaluation results of resources based on a rule.</p>
+     * 
      * @param request ListConfigRuleEvaluationResultsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListConfigRuleEvaluationResultsResponse
@@ -5613,10 +6194,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of compliance evaluation results of resources based on a rule.
-     *
-     * @description This topic provides an example on how to query the compliance evaluation result of resources based on a rule whose ID is `cr-cac56457e0d900d3****`. The returned result indicates that the `i-hp3e4kvhzqn2s11t****` resource is evaluated as `NON_COMPLIANT` by using the rule. The resource is an Elastic Compute Service (ECS) instance.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the compliance evaluation result of resources based on a rule whose ID is <code>cr-cac56457e0d900d3****</code>. The returned result indicates that the <code>i-hp3e4kvhzqn2s11t****</code> resource is evaluated as <code>NON_COMPLIANT</code> by using the rule. The resource is an Elastic Compute Service (ECS) instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the compliance evaluation results of resources based on a rule.</p>
+     * 
      * @param request ListConfigRuleEvaluationResultsRequest
      * @return ListConfigRuleEvaluationResultsResponse
      */
@@ -5626,8 +6209,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the statistics of compliance evaluation results of the current Alibaba Cloud account.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the statistics of compliance evaluation results of the current Alibaba Cloud account.</p>
+     * 
      * @param request ListConfigRuleEvaluationStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListConfigRuleEvaluationStatisticsResponse
@@ -5649,8 +6233,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the statistics of compliance evaluation results of the current Alibaba Cloud account.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the statistics of compliance evaluation results of the current Alibaba Cloud account.</p>
      * @return ListConfigRuleEvaluationStatisticsResponse
      */
     public ListConfigRuleEvaluationStatisticsResponse listConfigRuleEvaluationStatistics() throws Exception {
@@ -5659,10 +6243,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the rules of the current account.
-     *
-     * @description This topic provides an example on how to query the rules of the current account. The response shows that the current account has a total of one rule and three evaluated resources. The resources are evaluated as compliant.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the rules of the current account. The response shows that the current account has a total of one rule and three evaluated resources. The resources are evaluated as compliant.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the rules of the current account.</p>
+     * 
      * @param request ListConfigRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListConfigRulesResponse
@@ -5720,10 +6306,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the rules of the current account.
-     *
-     * @description This topic provides an example on how to query the rules of the current account. The response shows that the current account has a total of one rule and three evaluated resources. The resources are evaluated as compliant.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the rules of the current account. The response shows that the current account has a total of one rule and three evaluated resources. The resources are evaluated as compliant.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the rules of the current account.</p>
+     * 
      * @param request ListConfigRulesRequest
      * @return ListConfigRulesResponse
      */
@@ -5733,10 +6321,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains a list of resources aggregated across regions within an Alibaba Cloud account.
-     *
-     * @description This topic provides an example on how to call the ListDiscoveredResources operation to query the resources in the current Alibaba Cloud account. The returned result indicates that a total of eight resources exist in the account.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the ListDiscoveredResources operation to query the resources in the current Alibaba Cloud account. The returned result indicates that a total of eight resources exist in the account.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains a list of resources aggregated across regions within an Alibaba Cloud account.</p>
+     * 
      * @param request ListDiscoveredResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDiscoveredResourcesResponse
@@ -5744,6 +6334,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListDiscoveredResourcesResponse listDiscoveredResourcesWithOptions(ListDiscoveredResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endUpdateTimestamp)) {
+            query.put("EndUpdateTimestamp", request.endUpdateTimestamp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeResourceTypes)) {
+            query.put("ExcludeResourceTypes", request.excludeResourceTypes);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("MaxResults", request.maxResults);
         }
@@ -5768,6 +6366,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceTypes", request.resourceTypes);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.startUpdateTimestamp)) {
+            query.put("StartUpdateTimestamp", request.startUpdateTimestamp);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -5786,10 +6388,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains a list of resources aggregated across regions within an Alibaba Cloud account.
-     *
-     * @description This topic provides an example on how to call the ListDiscoveredResources operation to query the resources in the current Alibaba Cloud account. The returned result indicates that a total of eight resources exist in the account.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the ListDiscoveredResources operation to query the resources in the current Alibaba Cloud account. The returned result indicates that a total of eight resources exist in the account.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains a list of resources aggregated across regions within an Alibaba Cloud account.</p>
+     * 
      * @param request ListDiscoveredResourcesRequest
      * @return ListDiscoveredResourcesResponse
      */
@@ -5799,10 +6403,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the cloud services that can be integrated by the current Alibaba Cloud account.
-     *
-     * @description This topic provides an example on how to query the cloud services that can be integrated by the current Alibaba Cloud account.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the cloud services that can be integrated by the current Alibaba Cloud account.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of cloud services that are integrated with Cloud Config and the status of each cloud service.</p>
+     * 
      * @param request ListIntegratedServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListIntegratedServiceResponse
@@ -5824,10 +6430,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the cloud services that can be integrated by the current Alibaba Cloud account.
-     *
-     * @description This topic provides an example on how to query the cloud services that can be integrated by the current Alibaba Cloud account.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the cloud services that can be integrated by the current Alibaba Cloud account.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of cloud services that are integrated with Cloud Config and the status of each cloud service.</p>
      * @return ListIntegratedServiceResponse
      */
     public ListIntegratedServiceResponse listIntegratedService() throws Exception {
@@ -5836,10 +6443,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries managed rules.
-     *
-     * @description This topic describes how to query the managed rules of Alibaba Cloud CDN by using the `CDN` keyword. The returned result shows that only one managed rule exists. You can view the rule details in the result.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Background information</h3>
+     * <p>For more information about how to define, execute, and integrate an evaluation rule, see <a href="https://help.aliyun.com/document_detail/470802.html">Definition and execution of evaluation rules</a>.</p>
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>This topic provides an example on how to query all managed rules whose keyword is <code>CDN</code>. The response shows that 21 managed rules exist.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of managed rules supported by Cloud Config.</p>
+     * 
      * @param request ListManagedRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListManagedRulesResponse
@@ -5885,10 +6497,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries managed rules.
-     *
-     * @description This topic describes how to query the managed rules of Alibaba Cloud CDN by using the `CDN` keyword. The returned result shows that only one managed rule exists. You can view the rule details in the result.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Background information</h3>
+     * <p>For more information about how to define, execute, and integrate an evaluation rule, see <a href="https://help.aliyun.com/document_detail/470802.html">Definition and execution of evaluation rules</a>.</p>
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>This topic provides an example on how to query all managed rules whose keyword is <code>CDN</code>. The response shows that 21 managed rules exist.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of managed rules supported by Cloud Config.</p>
+     * 
      * @param request ListManagedRulesRequest
      * @return ListManagedRulesResponse
      */
@@ -5898,8 +6515,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of evaluation rules.
-     *
+     * <b>description</b> :
+     * <p>For more information about how to define, execute, and integrate an evaluation rule, see <a href="https://help.aliyun.com/document_detail/470802.html">Definition and execution of evaluation rules</a>.
+     * After you create an evaluation rule, a managed rule that has the same settings as the evaluation rule is created. After you create a resource, the managed rule can be used to continuously check the compliance of the resource.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of evaluation rules supported by Cloud Config.</p>
+     * 
      * @param tmpReq ListPreManagedRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListPreManagedRulesResponse
@@ -5943,8 +6565,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of evaluation rules.
-     *
+     * <b>description</b> :
+     * <p>For more information about how to define, execute, and integrate an evaluation rule, see <a href="https://help.aliyun.com/document_detail/470802.html">Definition and execution of evaluation rules</a>.
+     * After you create an evaluation rule, a managed rule that has the same settings as the evaluation rule is created. After you create a resource, the managed rule can be used to continuously check the compliance of the resource.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of evaluation rules supported by Cloud Config.</p>
+     * 
      * @param request ListPreManagedRulesRequest
      * @return ListPreManagedRulesResponse
      */
@@ -5954,10 +6581,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the remediation records of a rule.
-     *
-     * @description This topic provides an example on how to query the remediation records of the rule cr-5392626622af0000\\*\\*\\*\\*.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the remediation records of the rule cr-5392626622af0000\<em>\</em>\<em>\</em>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the remediation records of a rule.</p>
+     * 
      * @param request ListRemediationExecutionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListRemediationExecutionsResponse
@@ -5999,10 +6628,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the remediation records of a rule.
-     *
-     * @description This topic provides an example on how to query the remediation records of the rule cr-5392626622af0000\\*\\*\\*\\*.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the remediation records of the rule cr-5392626622af0000\<em>\</em>\<em>\</em>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the remediation records of a rule.</p>
+     * 
      * @param request ListRemediationExecutionsRequest
      * @return ListRemediationExecutionsResponse
      */
@@ -6012,10 +6643,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of remediation templates for a managed rule.
-     *
-     * @description In this topic, the `oss-bucket-public-write-prohibited` managed rule is used as an example. The return result shows the details of the remediation template of the `OOS` type for the managed rule. OOS represents Operation Orchestration Service.
-     *
+     * <b>description</b> :
+     * <p>In this topic, the <code>oss-bucket-public-write-prohibited</code> managed rule is used as an example. The return result shows the details of the remediation template of the <code>OOS</code> type for the managed rule. OOS represents Operation Orchestration Service.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of remediation templates for a managed rule.</p>
+     * 
      * @param request ListRemediationTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListRemediationTemplatesResponse
@@ -6057,10 +6690,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of remediation templates for a managed rule.
-     *
-     * @description In this topic, the `oss-bucket-public-write-prohibited` managed rule is used as an example. The return result shows the details of the remediation template of the `OOS` type for the managed rule. OOS represents Operation Orchestration Service.
-     *
+     * <b>description</b> :
+     * <p>In this topic, the <code>oss-bucket-public-write-prohibited</code> managed rule is used as an example. The return result shows the details of the remediation template of the <code>OOS</code> type for the managed rule. OOS represents Operation Orchestration Service.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of remediation templates for a managed rule.</p>
+     * 
      * @param request ListRemediationTemplatesRequest
      * @return ListRemediationTemplatesResponse
      */
@@ -6070,10 +6705,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about the execution of remediation templates.
-     *
-     * @description This topic provides an example on how to query the remediation templates for the rule whose ID is `cr-6b7c626622af00b4****`.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the remediation templates for the rule whose ID is <code>cr-6b7c626622af00b4****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about the execution of remediation templates.</p>
+     * 
      * @param request ListRemediationsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListRemediationsResponse
@@ -6111,10 +6748,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about the execution of remediation templates.
-     *
-     * @description This topic provides an example on how to query the remediation templates for the rule whose ID is `cr-6b7c626622af00b4****`.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the remediation templates for the rule whose ID is <code>cr-6b7c626622af00b4****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about the execution of remediation templates.</p>
+     * 
      * @param request ListRemediationsRequest
      * @return ListRemediationsResponse
      */
@@ -6124,10 +6763,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the compliance evaluation result of a resource.
-     *
-     * @description In this example, the compliance evaluation result of the `23642660635396****` resource is queried and the resource is a RAM user. The returned result indicates that the resource is evaluated as `NON_COMPLIANT` by using the `cr-7f7d626622af0041****` rule.
-     *
+     * <b>description</b> :
+     * <p>In this example, the compliance evaluation result of the <code>23642660635396****</code> resource is queried and the resource is a RAM user. The returned result indicates that the resource is evaluated as <code>NON_COMPLIANT</code> by using the <code>cr-7f7d626622af0041****</code> rule.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the compliance evaluation results of resources.</p>
+     * 
      * @param request ListResourceEvaluationResultsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListResourceEvaluationResultsResponse
@@ -6177,10 +6818,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the compliance evaluation result of a resource.
-     *
-     * @description In this example, the compliance evaluation result of the `23642660635396****` resource is queried and the resource is a RAM user. The returned result indicates that the resource is evaluated as `NON_COMPLIANT` by using the `cr-7f7d626622af0041****` rule.
-     *
+     * <b>description</b> :
+     * <p>In this example, the compliance evaluation result of the <code>23642660635396****</code> resource is queried and the resource is a RAM user. The returned result indicates that the resource is evaluated as <code>NON_COMPLIANT</code> by using the <code>cr-7f7d626622af0041****</code> rule.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the compliance evaluation results of resources.</p>
+     * 
      * @param request ListResourceEvaluationResultsRequest
      * @return ListResourceEvaluationResultsResponse
      */
@@ -6190,10 +6833,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of resources that associate with a specific resource.
-     *
-     * @description This topic provides an example on how to query the disks that are associated with an Elastic Compute Service (ECS) instance within the current Alibaba Cloud account.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the disks that are associated with an Elastic Compute Service (ECS) instance within the current Alibaba Cloud account.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of resources that associate with a specific resource.</p>
+     * 
      * @param request ListResourceRelationsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListResourceRelationsResponse
@@ -6251,10 +6896,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of resources that associate with a specific resource.
-     *
-     * @description This topic provides an example on how to query the disks that are associated with an Elastic Compute Service (ECS) instance within the current Alibaba Cloud account.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the disks that are associated with an Elastic Compute Service (ECS) instance within the current Alibaba Cloud account.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of resources that associate with a specific resource.</p>
+     * 
      * @param request ListResourceRelationsRequest
      * @return ListResourceRelationsResponse
      */
@@ -6264,14 +6911,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains resources based on the fields in the resource properties by using a SELECT statement.
-     *
-     * @description When you write a `SELECT` statement, you must obtain the fields and the data types of the fields from the property file of the resource type. For more information about property files, see [Alibaba Cloud Config Resource Schema](javascript:void\\(0\\)).
-     * > 
-     * *   Each resource type supported by Cloud Config has a property file. Property files are named based on the related resource types. For example, the property file of the `ACS::ECS::Instance` resource type is named `ACS_ECS_Instance.properties.json`. Property files of different resource types are placed under the `config/properties/resource-types` path.
-     * *   For more information about the examples and limits on SQL query statements, see [Examples of SQL query statements](https://help.aliyun.com/document_detail/398718.html) and [Limits on SQL query statements](https://help.aliyun.com/document_detail/398750.html).
-     * This topic provides an example on how to obtain all resources whose tag key is `business` and whose tag value is `online` within the current account by using the advanced search feature.
-     *
+     * <b>description</b> :
+     * <p>When you write a <code>SELECT</code> statement, you must obtain the fields and the data types of the fields from the property file of the resource type. For more information about property files, see [Alibaba Cloud Config Resource Schema].</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>Each resource type supported by Cloud Config has a property file. Property files are named based on the related resource types. For example, the property file of the <code>ACS::ECS::Instance</code> resource type is named <code>ACS_ECS_Instance.properties.json</code>. Property files of different resource types are placed under the <code>config/properties/resource-types</code> path.</li>
+     * <li>For more information about the examples and limits on SQL query statements, see <a href="https://help.aliyun.com/document_detail/398718.html">Examples of SQL query statements</a> and <a href="https://help.aliyun.com/document_detail/398750.html">Limits on SQL query statements</a>.
+     * This topic provides an example on how to obtain all resources whose tag key is <code>business</code> and whose tag value is <code>online</code> within the current account by using the advanced search feature.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains resources based on the fields in the resource properties by using a SELECT statement.</p>
+     * 
      * @param request ListResourcesByAdvancedSearchRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListResourcesByAdvancedSearchResponse
@@ -6301,14 +6953,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains resources based on the fields in the resource properties by using a SELECT statement.
-     *
-     * @description When you write a `SELECT` statement, you must obtain the fields and the data types of the fields from the property file of the resource type. For more information about property files, see [Alibaba Cloud Config Resource Schema](javascript:void\\(0\\)).
-     * > 
-     * *   Each resource type supported by Cloud Config has a property file. Property files are named based on the related resource types. For example, the property file of the `ACS::ECS::Instance` resource type is named `ACS_ECS_Instance.properties.json`. Property files of different resource types are placed under the `config/properties/resource-types` path.
-     * *   For more information about the examples and limits on SQL query statements, see [Examples of SQL query statements](https://help.aliyun.com/document_detail/398718.html) and [Limits on SQL query statements](https://help.aliyun.com/document_detail/398750.html).
-     * This topic provides an example on how to obtain all resources whose tag key is `business` and whose tag value is `online` within the current account by using the advanced search feature.
-     *
+     * <b>description</b> :
+     * <p>When you write a <code>SELECT</code> statement, you must obtain the fields and the data types of the fields from the property file of the resource type. For more information about property files, see [Alibaba Cloud Config Resource Schema].</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>Each resource type supported by Cloud Config has a property file. Property files are named based on the related resource types. For example, the property file of the <code>ACS::ECS::Instance</code> resource type is named <code>ACS_ECS_Instance.properties.json</code>. Property files of different resource types are placed under the <code>config/properties/resource-types</code> path.</li>
+     * <li>For more information about the examples and limits on SQL query statements, see <a href="https://help.aliyun.com/document_detail/398718.html">Examples of SQL query statements</a> and <a href="https://help.aliyun.com/document_detail/398750.html">Limits on SQL query statements</a>.
+     * This topic provides an example on how to obtain all resources whose tag key is <code>business</code> and whose tag value is <code>online</code> within the current account by using the advanced search feature.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains resources based on the fields in the resource properties by using a SELECT statement.</p>
+     * 
      * @param request ListResourcesByAdvancedSearchRequest
      * @return ListResourcesByAdvancedSearchResponse
      */
@@ -6318,10 +6975,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the cloud services and resource types that are supported by Cloud Config.
-     *
-     * @description This topic provides an example on how to query the Alibaba Cloud services and resource types supported by a Cloud Config.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the Alibaba Cloud services and resource types supported by a Cloud Config.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the cloud services and resource types that are supported by Cloud Config.</p>
+     * 
      * @param request ListSupportedProductsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListSupportedProductsResponse
@@ -6355,10 +7014,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the cloud services and resource types that are supported by Cloud Config.
-     *
-     * @description This topic provides an example on how to query the Alibaba Cloud services and resource types supported by a Cloud Config.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the Alibaba Cloud services and resource types supported by a Cloud Config.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the cloud services and resource types that are supported by Cloud Config.</p>
+     * 
      * @param request ListSupportedProductsRequest
      * @return ListSupportedProductsResponse
      */
@@ -6368,8 +7029,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries tags that are added to specified resources.
-     *
+     * <b>summary</b> : 
+     * <p>Queries tags that are added to specified resources.</p>
+     * 
      * @param tmpReq ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTagResourcesResponse
@@ -6421,8 +7083,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries tags that are added to specified resources.
-     *
+     * <b>summary</b> : 
+     * <p>Queries tags that are added to specified resources.</p>
+     * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
@@ -6432,8 +7095,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Submits the evaluation results of a custom rule to Function Compute.
-     *
+     * <b>description</b> :
+     * <p>For more information about the definition, use scenarios, and execution of custom function rules, see <a href="https://help.aliyun.com/document_detail/127405.html">Definition and execution of custom function rules</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Submits the evaluation results of a rule from Function Compute.</p>
+     * 
      * @param request PutEvaluationsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PutEvaluationsResponse
@@ -6471,8 +7138,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Submits the evaluation results of a custom rule to Function Compute.
-     *
+     * <b>description</b> :
+     * <p>For more information about the definition, use scenarios, and execution of custom function rules, see <a href="https://help.aliyun.com/document_detail/127405.html">Definition and execution of custom function rules</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Submits the evaluation results of a rule from Function Compute.</p>
+     * 
      * @param request PutEvaluationsRequest
      * @return PutEvaluationsResponse
      */
@@ -6482,13 +7153,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Re-evaluates one or more incompliant resources that are evaluated based on a rule in an account group.
-     *
-     * @description ### Prerequisites
-     * One or more non-compliant resources that are evaluated based on a rule are ignored.
-     * ### Usage notes
-     * The sample request in this topic shows you how to re-evaluate the `lb-hp3a3b4ztyfm2plgm****` non-compliant resource that is evaluated by the `cr-7e72626622af0051***` rule in the `120886317861****` member account of the `ca-5b6c626622af008f****` account group. The ID of the region in which the resource resides is `cn-beijing`, and the type of the resource is `ACS::SLB::LoadBalancer`.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>One or more non-compliant resources that are evaluated by a rule are ignored. For more information, see <a href="https://help.aliyun.com/document_detail/607054.html">IgnoreAggregateEvaluationResults</a>.</p>
+     * <h3><a href="#"></a>Description</h3>
+     * <p>This topic provides an example on how to re-evaluate the non-compliant resource that is evaluated by the <code>cr-7e72626622af0051****</code> rule of the <code>120886317861****</code> member in the <code>ca-5b6c626622af008f****</code> group account. The ID of the region in which the resource resides is <code>cn-beijing</code>, the type of the resource is <code>ACS::SLB::LoadBalancer</code>, and the ID of the resource is <code>lb-hp3a3b4ztyfm2plgm****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Re-evaluates resources that are evaluated based on a rule after the evaluation results on some resources of an ignored rule in an account group are resumed.</p>
+     * 
      * @param tmpReq RevertAggregateEvaluationResultsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RevertAggregateEvaluationResultsResponse
@@ -6532,13 +7205,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Re-evaluates one or more incompliant resources that are evaluated based on a rule in an account group.
-     *
-     * @description ### Prerequisites
-     * One or more non-compliant resources that are evaluated based on a rule are ignored.
-     * ### Usage notes
-     * The sample request in this topic shows you how to re-evaluate the `lb-hp3a3b4ztyfm2plgm****` non-compliant resource that is evaluated by the `cr-7e72626622af0051***` rule in the `120886317861****` member account of the `ca-5b6c626622af008f****` account group. The ID of the region in which the resource resides is `cn-beijing`, and the type of the resource is `ACS::SLB::LoadBalancer`.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>One or more non-compliant resources that are evaluated by a rule are ignored. For more information, see <a href="https://help.aliyun.com/document_detail/607054.html">IgnoreAggregateEvaluationResults</a>.</p>
+     * <h3><a href="#"></a>Description</h3>
+     * <p>This topic provides an example on how to re-evaluate the non-compliant resource that is evaluated by the <code>cr-7e72626622af0051****</code> rule of the <code>120886317861****</code> member in the <code>ca-5b6c626622af008f****</code> group account. The ID of the region in which the resource resides is <code>cn-beijing</code>, the type of the resource is <code>ACS::SLB::LoadBalancer</code>, and the ID of the resource is <code>lb-hp3a3b4ztyfm2plgm****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Re-evaluates resources that are evaluated based on a rule after the evaluation results on some resources of an ignored rule in an account group are resumed.</p>
+     * 
      * @param request RevertAggregateEvaluationResultsRequest
      * @return RevertAggregateEvaluationResultsResponse
      */
@@ -6548,13 +7223,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Re-evaluates non-compliant resources that are evaluated based on a rule.
-     *
-     * @description ### Prerequisites
-     * One or more non-compliant resources that are evaluated by a rule are ignored.
-     * ### Usage notes
-     * The sample request in this topic shows you how to re-evaluate the `lb-hp3a3b4ztyfm2plgm****` non-compliant resource that is evaluated by the `cr-7e72626622af0051****` rule. The ID of the region in which the resource resides is `cn-beijing`, and the type of the resource is `ACS::SLB::LoadBalancer`.``
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>One or more non-compliant resources that are evaluated by a rule are ignored. For more information, see <a href="https://help.aliyun.com/document_detail/606990.html">IgnoreEvaluationResults</a>.</p>
+     * <h3><a href="#"></a>Description</h3>
+     * <p>This topic provides an example on how to re-evaluate the <code>lb-hp3a3b4ztyfm2plgm****</code> non-compliant resource that is evaluated by the <code>cr-7e72626622af0051****</code> rule. The ID of the region in which the resource resides is<code>cn-beijing</code>, the type of the resource is <code>ACS::SLB::LoadBalancer</code>, and the ID of the resource is <code>lb-hp3a3b4ztyfm2plgm****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Re-evaluates resources that are evaluated based on a rule after the evaluation results on some resources of an ignored rule are resumed.</p>
+     * 
      * @param tmpReq RevertEvaluationResultsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RevertEvaluationResultsResponse
@@ -6594,13 +7271,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Re-evaluates non-compliant resources that are evaluated based on a rule.
-     *
-     * @description ### Prerequisites
-     * One or more non-compliant resources that are evaluated by a rule are ignored.
-     * ### Usage notes
-     * The sample request in this topic shows you how to re-evaluate the `lb-hp3a3b4ztyfm2plgm****` non-compliant resource that is evaluated by the `cr-7e72626622af0051****` rule. The ID of the region in which the resource resides is `cn-beijing`, and the type of the resource is `ACS::SLB::LoadBalancer`.``
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>One or more non-compliant resources that are evaluated by a rule are ignored. For more information, see <a href="https://help.aliyun.com/document_detail/606990.html">IgnoreEvaluationResults</a>.</p>
+     * <h3><a href="#"></a>Description</h3>
+     * <p>This topic provides an example on how to re-evaluate the <code>lb-hp3a3b4ztyfm2plgm****</code> non-compliant resource that is evaluated by the <code>cr-7e72626622af0051****</code> rule. The ID of the region in which the resource resides is<code>cn-beijing</code>, the type of the resource is <code>ACS::SLB::LoadBalancer</code>, and the ID of the resource is <code>lb-hp3a3b4ztyfm2plgm****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Re-evaluates resources that are evaluated based on a rule after the evaluation results on some resources of an ignored rule are resumed.</p>
+     * 
      * @param request RevertEvaluationResultsRequest
      * @return RevertEvaluationResultsResponse
      */
@@ -6610,11 +7289,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Starts to evaluate the involved resources by using a rule in an account group.
-     *
-     * @description > After you call this operation, the compliance evaluation is performed only once. To query the compliance evaluation results returned by the rule, call the ListAggregateConfigRuleEvaluationResults operation. For more information, see [ListAggregateConfigRuleEvaluationResults](https://help.aliyun.com/document_detail/265979.html).
-     * The sample request in this topic shows how to use the `cr-c169626622af009f****` rule in the `ca-3a58626622af0005****` account group to evaluate resources.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>After you call this operation, the compliance evaluation is performed only once. To query the compliance evaluation results returned by the rule, call the ListAggregateConfigRuleEvaluationResults operation. For more information, see <a href="https://help.aliyun.com/document_detail/265979.html">ListAggregateConfigRuleEvaluationResults</a>.
+     * The sample request in this topic shows how to use the <code>cr-c169626622af009f****</code> rule in the <code>ca-3a58626622af0005****</code> account group to evaluate resources.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Re-evaluates the compliance of resources based on a rule or based on all rules in a compliance package in a specific account group.</p>
+     * 
      * @param request StartAggregateConfigRuleEvaluationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartAggregateConfigRuleEvaluationResponse
@@ -6656,11 +7339,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Starts to evaluate the involved resources by using a rule in an account group.
-     *
-     * @description > After you call this operation, the compliance evaluation is performed only once. To query the compliance evaluation results returned by the rule, call the ListAggregateConfigRuleEvaluationResults operation. For more information, see [ListAggregateConfigRuleEvaluationResults](https://help.aliyun.com/document_detail/265979.html).
-     * The sample request in this topic shows how to use the `cr-c169626622af009f****` rule in the `ca-3a58626622af0005****` account group to evaluate resources.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>After you call this operation, the compliance evaluation is performed only once. To query the compliance evaluation results returned by the rule, call the ListAggregateConfigRuleEvaluationResults operation. For more information, see <a href="https://help.aliyun.com/document_detail/265979.html">ListAggregateConfigRuleEvaluationResults</a>.
+     * The sample request in this topic shows how to use the <code>cr-c169626622af009f****</code> rule in the <code>ca-3a58626622af0005****</code> account group to evaluate resources.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Re-evaluates the compliance of resources based on a rule or based on all rules in a compliance package in a specific account group.</p>
+     * 
      * @param request StartAggregateConfigRuleEvaluationRequest
      * @return StartAggregateConfigRuleEvaluationResponse
      */
@@ -6670,10 +7357,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Performs a remediation operation by using a rule in an account group.
-     *
-     * @description This topic provides an example on how to manually perform a remediation operation by using the rule whose ID is `cr-6b7c626622af00b4****` in the account group whose ID is `ca-6b4a626622af0012****`. The return result shows that the manual execution is successful.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to manually perform a remediation operation by using the rule whose ID is <code>cr-6b7c626622af00b4****</code> in the account group whose ID is <code>ca-6b4a626622af0012****</code>. The return result shows that the manual execution is successful.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Performs a remediation operation by using a rule in an account group.</p>
+     * 
      * @param request StartAggregateRemediationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartAggregateRemediationResponse
@@ -6711,10 +7400,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Performs a remediation operation by using a rule in an account group.
-     *
-     * @description This topic provides an example on how to manually perform a remediation operation by using the rule whose ID is `cr-6b7c626622af00b4****` in the account group whose ID is `ca-6b4a626622af0012****`. The return result shows that the manual execution is successful.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to manually perform a remediation operation by using the rule whose ID is <code>cr-6b7c626622af00b4****</code> in the account group whose ID is <code>ca-6b4a626622af0012****</code>. The return result shows that the manual execution is successful.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Performs a remediation operation by using a rule in an account group.</p>
+     * 
      * @param request StartAggregateRemediationRequest
      * @return StartAggregateRemediationResponse
      */
@@ -6724,10 +7415,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Re-evaluates the compliance of resources based on a rule or compliance package.
-     *
-     * @description In this example, the cr-9920626622af0035\\*\\*\\*\\* rule is used to re-evaluate the compliance of resources.
-     *
+     * <b>description</b> :
+     * <p>In this example, the cr-9920626622af0035\<em>\</em>\<em>\</em> rule is used to re-evaluate the compliance of resources.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Re-evaluates the compliance of resources based on a rule or based on all rules in a compliance package.</p>
+     * 
      * @param request StartConfigRuleEvaluationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartConfigRuleEvaluationResponse
@@ -6765,10 +7458,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Re-evaluates the compliance of resources based on a rule or compliance package.
-     *
-     * @description In this example, the cr-9920626622af0035\\*\\*\\*\\* rule is used to re-evaluate the compliance of resources.
-     *
+     * <b>description</b> :
+     * <p>In this example, the cr-9920626622af0035\<em>\</em>\<em>\</em> rule is used to re-evaluate the compliance of resources.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Re-evaluates the compliance of resources based on a rule or based on all rules in a compliance package.</p>
+     * 
      * @param request StartConfigRuleEvaluationRequest
      * @return StartConfigRuleEvaluationResponse
      */
@@ -6778,10 +7473,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables Cloud Config to monitor the resources of your Alibaba Cloud account.
-     *
-     * @description This topic provides an example on how to enable Cloud Config to monitor the resources of your Alibaba Cloud account.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to enable Cloud Config to monitor the resources of your Alibaba Cloud account.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables Cloud Config to monitor the resources of your Alibaba Cloud account.</p>
+     * 
      * @param request StartConfigurationRecorderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartConfigurationRecorderResponse
@@ -6803,10 +7500,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables Cloud Config to monitor the resources of your Alibaba Cloud account.
-     *
-     * @description This topic provides an example on how to enable Cloud Config to monitor the resources of your Alibaba Cloud account.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to enable Cloud Config to monitor the resources of your Alibaba Cloud account.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables Cloud Config to monitor the resources of your Alibaba Cloud account.</p>
      * @return StartConfigurationRecorderResponse
      */
     public StartConfigurationRecorderResponse startConfigurationRecorder() throws Exception {
@@ -6815,10 +7513,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Performs a remediation operation by using a rule.
-     *
-     * @description This topic provides an example on how to perform a remediation operation by using the rule whose ID is `cr-8a973ac2e2be00a2****`. The returned result shows that the manual execution is successful.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to perform a remediation operation by using the rule whose ID is <code>cr-8a973ac2e2be00a2****</code>. The returned result shows that the manual execution is successful.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Performs a remediation operation by using a rule.</p>
+     * 
      * @param request StartRemediationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartRemediationResponse
@@ -6848,10 +7548,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Performs a remediation operation by using a rule.
-     *
-     * @description This topic provides an example on how to perform a remediation operation by using the rule whose ID is `cr-8a973ac2e2be00a2****`. The returned result shows that the manual execution is successful.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to perform a remediation operation by using the rule whose ID is <code>cr-8a973ac2e2be00a2****</code>. The returned result shows that the manual execution is successful.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Performs a remediation operation by using a rule.</p>
+     * 
      * @param request StartRemediationRequest
      * @return StartRemediationResponse
      */
@@ -6861,8 +7563,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deactivates Cloud Config.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> After you deactivate Cloud Config, the resource configurations, created rules, and compliance evaluation results that are stored in Cloud Config are automatically cleared and cannot be restored. Proceed with caution.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deactivates Cloud Config.</p>
+     * 
      * @param request StopConfigurationRecorderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StopConfigurationRecorderResponse
@@ -6884,8 +7592,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deactivates Cloud Config.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> After you deactivate Cloud Config, the resource configurations, created rules, and compliance evaluation results that are stored in Cloud Config are automatically cleared and cannot be restored. Proceed with caution.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deactivates Cloud Config.</p>
      * @return StopConfigurationRecorderResponse
      */
     public StopConfigurationRecorderResponse stopConfigurationRecorder() throws Exception {
@@ -6894,8 +7607,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds tags to resources.
-     *
+     * <b>summary</b> : 
+     * <p>Adds tags to resources.</p>
+     * 
      * @param tmpReq TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TagResourcesResponse
@@ -6943,8 +7657,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds tags to resources.
-     *
+     * <b>summary</b> : 
+     * <p>Adds tags to resources.</p>
+     * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
      */
@@ -6954,8 +7669,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes tags from specified resources.
-     *
+     * <b>summary</b> : 
+     * <p>Removes tags from specified resources.</p>
+     * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UntagResourcesResponse
@@ -7001,8 +7717,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes tags from specified resources.
-     *
+     * <b>summary</b> : 
+     * <p>Removes tags from specified resources.</p>
+     * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
      */
@@ -7012,10 +7729,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of a compliance package in an account group.
-     *
-     * @description This topic provides an example on how to change the value of a parameter for a managed rule whose ID is `eip-bandwidth-limit` to `20`. The managed rule is included in the `cp-fdc8626622af00f9****` compliance package in the `ca-f632626622af0079****` account group.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to change the value of the <code>eip-bandwidth-limit</code> parameter in the rule template of the compliance package <code>cp-fdc8626622af00f9****</code> in the account group <code>ca-f632626622af0079****</code> to <code>20</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of a compliance package in an account group.</p>
+     * 
      * @param tmpReq UpdateAggregateCompliancePackRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateAggregateCompliancePackResponse
@@ -7053,8 +7772,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeRegionIdsScope)) {
+            body.put("ExcludeRegionIdsScope", request.excludeRegionIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeResourceGroupIdsScope)) {
+            body.put("ExcludeResourceGroupIdsScope", request.excludeResourceGroupIdsScope);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.excludeResourceIdsScope)) {
             body.put("ExcludeResourceIdsScope", request.excludeResourceIdsScope);
+        }
+
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeTagsScope)) {
+            bodyFlat.put("ExcludeTagsScope", request.excludeTagsScope);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionIdsScope)) {
@@ -7063,6 +7795,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupIdsScope)) {
             body.put("ResourceGroupIdsScope", request.resourceGroupIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceIdsScope)) {
+            body.put("ResourceIdsScope", request.resourceIdsScope);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.riskLevel)) {
@@ -7077,6 +7813,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TagValueScope", request.tagValueScope);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsScope)) {
+            bodyFlat.put("TagsScope", request.tagsScope);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
@@ -7095,10 +7839,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of a compliance package in an account group.
-     *
-     * @description This topic provides an example on how to change the value of a parameter for a managed rule whose ID is `eip-bandwidth-limit` to `20`. The managed rule is included in the `cp-fdc8626622af00f9****` compliance package in the `ca-f632626622af0079****` account group.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to change the value of the <code>eip-bandwidth-limit</code> parameter in the rule template of the compliance package <code>cp-fdc8626622af00f9****</code> in the account group <code>ca-f632626622af0079****</code> to <code>20</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of a compliance package in an account group.</p>
+     * 
      * @param request UpdateAggregateCompliancePackRequest
      * @return UpdateAggregateCompliancePackResponse
      */
@@ -7108,10 +7854,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a delivery channel in an account group.
-     *
-     * @description This topic provides an example on how to disable a delivery channel in an account group. The ID of the account group is `ca-a4e5626622af0079****`, and the ID of the delivery channel is `cdc-8e45ff4e06a3a8****`. The Status parameter is set to `0`. After the delivery channel is disabled, Cloud Config retains the most recent delivery configuration and stops resource data delivery.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to disable a delivery channel in an account group. The ID of the account group is <code>ca-a4e5626622af0079****</code>, and the ID of the delivery channel is <code>cdc-8e45ff4e06a3a8****</code>. The Status parameter is set to <code>0</code>. After the delivery channel is disabled, Cloud Config retains the most recent delivery configuration and stops resource data delivery.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a delivery channel in an account group.</p>
+     * 
      * @param request UpdateAggregateConfigDeliveryChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateAggregateConfigDeliveryChannelResponse
@@ -7125,6 +7873,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.compliantSnapshot)) {
+            query.put("CompliantSnapshot", request.compliantSnapshot);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.configurationItemChangeNotification)) {
@@ -7189,10 +7941,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a delivery channel in an account group.
-     *
-     * @description This topic provides an example on how to disable a delivery channel in an account group. The ID of the account group is `ca-a4e5626622af0079****`, and the ID of the delivery channel is `cdc-8e45ff4e06a3a8****`. The Status parameter is set to `0`. After the delivery channel is disabled, Cloud Config retains the most recent delivery configuration and stops resource data delivery.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to disable a delivery channel in an account group. The ID of the account group is <code>ca-a4e5626622af0079****</code>, and the ID of the delivery channel is <code>cdc-8e45ff4e06a3a8****</code>. The Status parameter is set to <code>0</code>. After the delivery channel is disabled, Cloud Config retains the most recent delivery configuration and stops resource data delivery.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a delivery channel in an account group.</p>
+     * 
      * @param request UpdateAggregateConfigDeliveryChannelRequest
      * @return UpdateAggregateConfigDeliveryChannelResponse
      */
@@ -7202,10 +7956,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a rule in an account group.
-     *
-     * @description The sample request in this topic shows you how to change the risk level specified for the `cr-4e3d626622af0080****` managed rule to `3`, which indicates low risk level, in the `ca-a4e5626622af0079****` account group.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to change the risk level of the rule <code>cr-4e3d626622af0080****</code> in an account group <code>ca-a4e5626622af0079****</code> to <code>3</code>, which indicates low risk level.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the description, input parameters, and risk level of a rule in a specific account group.</p>
+     * 
      * @param tmpReq UpdateAggregateConfigRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateAggregateConfigRuleResponse
@@ -7223,6 +7979,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountIdsScope)) {
+            body.put("AccountIdsScope", request.accountIdsScope);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.aggregatorId)) {
             body.put("AggregatorId", request.aggregatorId);
         }
@@ -7255,8 +8015,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ExcludeFolderIdsScope", request.excludeFolderIdsScope);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeRegionIdsScope)) {
+            body.put("ExcludeRegionIdsScope", request.excludeRegionIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeResourceGroupIdsScope)) {
+            body.put("ExcludeResourceGroupIdsScope", request.excludeResourceGroupIdsScope);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.excludeResourceIdsScope)) {
             body.put("ExcludeResourceIdsScope", request.excludeResourceIdsScope);
+        }
+
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeTagsScope)) {
+            bodyFlat.put("ExcludeTagsScope", request.excludeTagsScope);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.folderIdsScope)) {
@@ -7279,6 +8052,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ResourceGroupIdsScope", request.resourceGroupIdsScope);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceIdsScope)) {
+            body.put("ResourceIdsScope", request.resourceIdsScope);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceTypesScopeShrink)) {
             body.put("ResourceTypesScope", request.resourceTypesScopeShrink);
         }
@@ -7299,6 +8076,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TagValueScope", request.tagValueScope);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsScope)) {
+            bodyFlat.put("TagsScope", request.tagsScope);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
@@ -7317,10 +8102,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a rule in an account group.
-     *
-     * @description The sample request in this topic shows you how to change the risk level specified for the `cr-4e3d626622af0080****` managed rule to `3`, which indicates low risk level, in the `ca-a4e5626622af0079****` account group.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to change the risk level of the rule <code>cr-4e3d626622af0080****</code> in an account group <code>ca-a4e5626622af0079****</code> to <code>3</code>, which indicates low risk level.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the description, input parameters, and risk level of a rule in a specific account group.</p>
+     * 
      * @param request UpdateAggregateConfigRuleRequest
      * @return UpdateAggregateConfigRuleResponse
      */
@@ -7330,10 +8117,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a remediation template for a rule in an account group.
-     *
-     * @description This topic describes how to change the execution mode of the `crr-909ba2d4716700eb****` remediation setting for a rule in the `ca-6b4a626622af0012****` account group to `AUTO_EXECUTION`, which specifies automatic remediation. This topic also provides a sample request.
-     *
+     * <b>description</b> :
+     * <p>This topic describes how to change the execution mode of the <code>crr-909ba2d4716700eb****</code> remediation setting for a rule in the <code>ca-6b4a626622af0012****</code> account group to <code>AUTO_EXECUTION</code>, which specifies automatic remediation. This topic also provides a sample request.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a remediation template for a rule in an account group.</p>
+     * 
      * @param request UpdateAggregateRemediationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateAggregateRemediationResponse
@@ -7387,10 +8176,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a remediation template for a rule in an account group.
-     *
-     * @description This topic describes how to change the execution mode of the `crr-909ba2d4716700eb****` remediation setting for a rule in the `ca-6b4a626622af0012****` account group to `AUTO_EXECUTION`, which specifies automatic remediation. This topic also provides a sample request.
-     *
+     * <b>description</b> :
+     * <p>This topic describes how to change the execution mode of the <code>crr-909ba2d4716700eb****</code> remediation setting for a rule in the <code>ca-6b4a626622af0012****</code> account group to <code>AUTO_EXECUTION</code>, which specifies automatic remediation. This topic also provides a sample request.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a remediation template for a rule in an account group.</p>
+     * 
      * @param request UpdateAggregateRemediationRequest
      * @return UpdateAggregateRemediationResponse
      */
@@ -7400,10 +8191,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modify an account group
-     *
-     * @description The sample request in this topic shows you how to add a member account to the account group whose ID is `ca-dacf86d8314e00eb****`. The member account ID is `173808452267****` and the member account name is `Tony`. The member account belongs to `ResourceDirectory`.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to add a member to the account group <code>ca-dacf86d8314e00eb****</code>. The member ID is <code>173808452267****</code>, the member name is <code>Tony</code>, and the member belongs to the resource directory <code>ResourceDirectory</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>The management account or delegated administrator account of a resource directory can be used to modify the name and description of an account group. The management account or delegated administrator account can also be used to add or remove members from the account group.</p>
+     * 
      * @param tmpReq UpdateAggregatorRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateAggregatorResponse
@@ -7455,10 +8248,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modify an account group
-     *
-     * @description The sample request in this topic shows you how to add a member account to the account group whose ID is `ca-dacf86d8314e00eb****`. The member account ID is `173808452267****` and the member account name is `Tony`. The member account belongs to `ResourceDirectory`.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to add a member to the account group <code>ca-dacf86d8314e00eb****</code>. The member ID is <code>173808452267****</code>, the member name is <code>Tony</code>, and the member belongs to the resource directory <code>ResourceDirectory</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>The management account or delegated administrator account of a resource directory can be used to modify the name and description of an account group. The management account or delegated administrator account can also be used to add or remove members from the account group.</p>
+     * 
      * @param request UpdateAggregatorRequest
      * @return UpdateAggregatorResponse
      */
@@ -7468,10 +8263,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of a compliance package within your account.
-     *
-     * @description This topic provides an example on how to change the value of a parameter for a managed rule whose ID is `eip-bandwidth-limit` to `20`. The managed rule is included in the `cp-a8a8626622af0082****` compliance package.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to change the value of the <code>eip-bandwidth-limit</code> parameter of a rule in the compliance package <code>cp-a8a8626622af0082****</code> to <code>20</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of a specific compliance package in the current account.</p>
+     * 
      * @param tmpReq UpdateCompliancePackRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateCompliancePackResponse
@@ -7505,8 +8302,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeRegionIdsScope)) {
+            body.put("ExcludeRegionIdsScope", request.excludeRegionIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeResourceGroupIdsScope)) {
+            body.put("ExcludeResourceGroupIdsScope", request.excludeResourceGroupIdsScope);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.excludeResourceIdsScope)) {
             body.put("ExcludeResourceIdsScope", request.excludeResourceIdsScope);
+        }
+
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeTagsScope)) {
+            bodyFlat.put("ExcludeTagsScope", request.excludeTagsScope);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionIdsScope)) {
@@ -7515,6 +8325,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupIdsScope)) {
             body.put("ResourceGroupIdsScope", request.resourceGroupIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceIdsScope)) {
+            body.put("ResourceIdsScope", request.resourceIdsScope);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.riskLevel)) {
@@ -7529,6 +8343,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TagValueScope", request.tagValueScope);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsScope)) {
+            bodyFlat.put("TagsScope", request.tagsScope);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
@@ -7547,10 +8369,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of a compliance package within your account.
-     *
-     * @description This topic provides an example on how to change the value of a parameter for a managed rule whose ID is `eip-bandwidth-limit` to `20`. The managed rule is included in the `cp-a8a8626622af0082****` compliance package.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to change the value of the <code>eip-bandwidth-limit</code> parameter of a rule in the compliance package <code>cp-a8a8626622af0082****</code> to <code>20</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of a specific compliance package in the current account.</p>
+     * 
      * @param request UpdateCompliancePackRequest
      * @return UpdateCompliancePackResponse
      */
@@ -7560,10 +8384,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a delivery channel.
-     *
-     * @description In this example, a delivery channel is disabled. The ID of the delivery channel is `cdc-8e45ff4e06a3a8****```. The Status parameter is set to 0. After the delivery channel is disabled, Cloud Config retains the most recent delivery configuration and stops the delivery of resource data.
-     *
+     * <b>description</b> :
+     * <p>In this example, a delivery channel is disabled. The ID of the delivery channel is `cdc-8e45ff4e06a3a8****```. The Status parameter is set to 0. After the delivery channel is disabled, Cloud Config retains the most recent delivery configuration and stops the delivery of resource data.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a delivery channel.</p>
+     * 
      * @param request UpdateConfigDeliveryChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateConfigDeliveryChannelResponse
@@ -7573,6 +8399,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.compliantSnapshot)) {
+            query.put("CompliantSnapshot", request.compliantSnapshot);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.configurationItemChangeNotification)) {
@@ -7637,10 +8467,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a delivery channel.
-     *
-     * @description In this example, a delivery channel is disabled. The ID of the delivery channel is `cdc-8e45ff4e06a3a8****```. The Status parameter is set to 0. After the delivery channel is disabled, Cloud Config retains the most recent delivery configuration and stops the delivery of resource data.
-     *
+     * <b>description</b> :
+     * <p>In this example, a delivery channel is disabled. The ID of the delivery channel is `cdc-8e45ff4e06a3a8****```. The Status parameter is set to 0. After the delivery channel is disabled, Cloud Config retains the most recent delivery configuration and stops the delivery of resource data.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a delivery channel.</p>
+     * 
      * @param request UpdateConfigDeliveryChannelRequest
      * @return UpdateConfigDeliveryChannelResponse
      */
@@ -7650,10 +8482,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the rules of an account.
-     *
-     * @description This topic provides an example on how to change the risk level of a managed rule whose ID is `cr-a260626622af0005****` to `3` (low risk level).
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to change the risk level of the rule <code>cr-a260626622af0005****</code> to <code>3</code>, which indicates low risk level.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the description, input parameters, and risk level of a rule.</p>
+     * 
      * @param tmpReq UpdateConfigRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateConfigRuleResponse
@@ -7691,8 +8525,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeRegionIdsScope)) {
+            body.put("ExcludeRegionIdsScope", request.excludeRegionIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeResourceGroupIdsScope)) {
+            body.put("ExcludeResourceGroupIdsScope", request.excludeResourceGroupIdsScope);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.excludeResourceIdsScope)) {
             body.put("ExcludeResourceIdsScope", request.excludeResourceIdsScope);
+        }
+
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeTagsScope)) {
+            bodyFlat.put("ExcludeTagsScope", request.excludeTagsScope);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.inputParametersShrink)) {
@@ -7709,6 +8556,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupIdsScope)) {
             body.put("ResourceGroupIdsScope", request.resourceGroupIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceIdsScope)) {
+            body.put("ResourceIdsScope", request.resourceIdsScope);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceTypesScopeShrink)) {
@@ -7731,6 +8582,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TagValueScope", request.tagValueScope);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsScope)) {
+            bodyFlat.put("TagsScope", request.tagsScope);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
@@ -7749,10 +8608,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the rules of an account.
-     *
-     * @description This topic provides an example on how to change the risk level of a managed rule whose ID is `cr-a260626622af0005****` to `3` (low risk level).
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to change the risk level of the rule <code>cr-a260626622af0005****</code> to <code>3</code>, which indicates low risk level.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the description, input parameters, and risk level of a rule.</p>
+     * 
      * @param request UpdateConfigRuleRequest
      * @return UpdateConfigRuleResponse
      */
@@ -7762,10 +8623,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the resource monitoring scope of the current account.
-     *
-     * @description This topic provides an example on how to change the resource monitoring scope of the current account to ACS::ECS::Instance.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to change the resource monitoring scope of the current account to ACS::ECS::Instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the resource monitoring scope of the current account.</p>
+     * 
      * @param request UpdateConfigurationRecorderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateConfigurationRecorderResponse
@@ -7795,10 +8658,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the resource monitoring scope of the current account.
-     *
-     * @description This topic provides an example on how to change the resource monitoring scope of the current account to ACS::ECS::Instance.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to change the resource monitoring scope of the current account to ACS::ECS::Instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the resource monitoring scope of the current account.</p>
+     * 
      * @param request UpdateConfigurationRecorderRequest
      * @return UpdateConfigurationRecorderResponse
      */
@@ -7808,16 +8673,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This topic provides an example on how to change the status of the delivery channel whose ID is <code>cdc-8e45ff4e06a3a8****</code> to 0, which indicates that the delivery channel is disabled. After the delivery channel is disabled, Cloud Config retains the last delivery configuration and stops resource data delivery.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a delivery channel.</p>
+     * 
      * @deprecated OpenAPI UpdateDeliveryChannel is deprecated, please use Config::2020-09-07::UpdateConfigDeliveryChannel,Config::2020-09-07::UpdateAggregateConfigDeliveryChannel instead.
-     *
-     * @summary Modifies a delivery channel.
-     *
-     * @description This topic provides an example on how to change the status of the delivery channel whose ID is `cdc-8e45ff4e06a3a8****` to 0, which indicates that the delivery channel is disabled. After the delivery channel is disabled, Cloud Config retains the last delivery configuration and stops resource data delivery.
-     *
+     * 
      * @param request UpdateDeliveryChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateDeliveryChannelResponse
      */
+    @Deprecated
     // Deprecated
     public UpdateDeliveryChannelResponse updateDeliveryChannelWithOptions(UpdateDeliveryChannelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -7888,15 +8756,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This topic provides an example on how to change the status of the delivery channel whose ID is <code>cdc-8e45ff4e06a3a8****</code> to 0, which indicates that the delivery channel is disabled. After the delivery channel is disabled, Cloud Config retains the last delivery configuration and stops resource data delivery.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a delivery channel.</p>
+     * 
      * @deprecated OpenAPI UpdateDeliveryChannel is deprecated, please use Config::2020-09-07::UpdateConfigDeliveryChannel,Config::2020-09-07::UpdateAggregateConfigDeliveryChannel instead.
-     *
-     * @summary Modifies a delivery channel.
-     *
-     * @description This topic provides an example on how to change the status of the delivery channel whose ID is `cdc-8e45ff4e06a3a8****` to 0, which indicates that the delivery channel is disabled. After the delivery channel is disabled, Cloud Config retains the last delivery configuration and stops resource data delivery.
-     *
+     * 
      * @param request UpdateDeliveryChannelRequest
      * @return UpdateDeliveryChannelResponse
      */
+    @Deprecated
     // Deprecated
     public UpdateDeliveryChannelResponse updateDeliveryChannel(UpdateDeliveryChannelRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -7904,8 +8775,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables the integration of a cloud service.
-     *
+     * <b>summary</b> : 
+     * <p>Enables or disables the integration of a cloud service.</p>
+     * 
      * @param request UpdateIntegratedServiceStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateIntegratedServiceStatusResponse
@@ -7943,8 +8815,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables the integration of a cloud service.
-     *
+     * <b>summary</b> : 
+     * <p>Enables or disables the integration of a cloud service.</p>
+     * 
      * @param request UpdateIntegratedServiceStatusRequest
      * @return UpdateIntegratedServiceStatusResponse
      */
@@ -7954,10 +8827,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a remediation template for a rule.
-     *
-     * @description This topic describes how to change the execution mode of the `crr-909ba2d4716700eb****` remediation setting to `AUTO_EXECUTION`, which specifies automatic remediation. This topic also provides a sample request.
-     *
+     * <b>description</b> :
+     * <p>This topic describes how to change the execution mode of the <code>crr-909ba2d4716700eb****</code> remediation setting to <code>AUTO_EXECUTION</code>, which specifies automatic remediation. This topic also provides a sample request.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a remediation template for a rule.</p>
+     * 
      * @param request UpdateRemediationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateRemediationResponse
@@ -8011,10 +8886,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a remediation template for a rule.
-     *
-     * @description This topic describes how to change the execution mode of the `crr-909ba2d4716700eb****` remediation setting to `AUTO_EXECUTION`, which specifies automatic remediation. This topic also provides a sample request.
-     *
+     * <b>description</b> :
+     * <p>This topic describes how to change the execution mode of the <code>crr-909ba2d4716700eb****</code> remediation setting to <code>AUTO_EXECUTION</code>, which specifies automatic remediation. This topic also provides a sample request.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a remediation template for a rule.</p>
+     * 
      * @param request UpdateRemediationRequest
      * @return UpdateRemediationResponse
      */

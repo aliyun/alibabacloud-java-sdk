@@ -6,8 +6,13 @@ import com.aliyun.tea.*;
 public class GetRemediationTemplateRequest extends TeaModel {
     /**
      * <p>The ID of the automatic remediation template.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of a remediation template, see [Compliance library](https://help.aliyun.com/document_detail/2337741.html).</p>
+     * <p>For more information about how to obtain the ID of a remediation template, see <a href="https://help.aliyun.com/document_detail/2337741.html">Compliance library</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACS-ALB-BulkyEnableDeletionProtection</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("TemplateIdentifier")
     public String templateIdentifier;

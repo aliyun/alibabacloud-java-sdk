@@ -6,28 +6,34 @@ import com.aliyun.tea.*;
 public class IgnoreAggregateEvaluationResultsShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
-     * <br>
+     * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ca-5b6c626622af008f****</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
     /**
      * <p>The ID of the rule.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](https://help.aliyun.com/document_detail/264148.html).</p>
-     * <br>
+     * <p>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cr-7e72626622af0051****</p>
      */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
     /**
      * <p>The date from which the system automatically re-evaluates the ignored incompliant resources.</p>
-     * <br>
-     * <p>>  If you leave this parameter empty, the system does not automatically re-evaluate the ignored incompliant resources. You must manually re-evaluate the ignored incompliant resources.</p>
+     * <blockquote>
+     * <p> If you leave this parameter empty, the system does not automatically re-evaluate the ignored incompliant resources. You must manually re-evaluate the ignored incompliant resources.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-06-01</p>
      */
     @NameInMap("IgnoreDate")
     public String ignoreDate;
@@ -40,7 +46,6 @@ public class IgnoreAggregateEvaluationResultsShrinkRequest extends TeaModel {
 
     /**
      * <p>The resources to be ignored.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Resources")

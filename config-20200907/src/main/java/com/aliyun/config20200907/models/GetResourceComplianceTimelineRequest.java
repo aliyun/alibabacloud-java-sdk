@@ -6,52 +6,68 @@ import com.aliyun.tea.*;
 public class GetResourceComplianceTimelineRequest extends TeaModel {
     /**
      * <p>The timestamp that specifies the end of the time range to query. The default value is the time when the GetResourceComplianceTimeline operation is called. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1625821156000</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>The maximum number of entries to return for a single request. Valid values: 1 to 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that is used to initiate the next request. If the response of the current request is truncated, this token is used to initiate another request and obtain the remaining entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IWBjqMYSy0is7zSMGu16****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the region where the resource resides.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
      * <p>The ID of the resource.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of a resource, see [ListDiscoveredResources](https://help.aliyun.com/document_detail/169620.html).</p>
-     * <br>
+     * <p>For more information about how to obtain the ID of a resource, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>new-bucket</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
      * <p>The type of the resource.</p>
-     * <br>
-     * <p>For more information about how to obtain the type of a resource, see [ListDiscoveredResources](https://help.aliyun.com/document_detail/169620.html).</p>
-     * <br>
+     * <p>For more information about how to obtain the type of a resource, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACS::OSS::Bucket</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The timestamp that specifies the beginning of the time range to query. By default, Cloud Config retrieves the compliance evaluations in the last 30 days for the specified resource. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1623211156000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

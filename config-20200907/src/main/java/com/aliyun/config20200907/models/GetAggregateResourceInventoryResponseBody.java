@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetAggregateResourceInventoryResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1A6D3604-EF1A-5798-A576-2A5FB855493C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -46,17 +49,23 @@ public class GetAggregateResourceInventoryResponseBody extends TeaModel {
 
         /**
          * <p>The time when the resource inventory was generated. The value is a timestamp.</p>
-         * <br>
          * <p>Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1687674774123</p>
          */
         @NameInMap("ResourceInventoryGenerateTime")
         public Long resourceInventoryGenerateTime;
 
         /**
          * <p>The generation status of the resource inventory. Valid values:</p>
-         * <br>
-         * <p>*   CREATING: The resource inventory is being generated.</p>
-         * <p>*   COMPLETE: The resource inventory is generated.</p>
+         * <ul>
+         * <li>CREATING: The resource inventory is being generated.</li>
+         * <li>COMPLETE: The resource inventory is generated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETE</p>
          */
         @NameInMap("Status")
         public String status;

@@ -12,6 +12,9 @@ public class GetConfigurationRecorderResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AE43696A-B3AF-5E55-9845-11393127E6D3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,11 +43,15 @@ public class GetConfigurationRecorderResponseBody extends TeaModel {
     public static class GetConfigurationRecorderResponseBodyConfigurationRecorder extends TeaModel {
         /**
          * <p>The status of the configuration recorder. Valid values:</p>
-         * <br>
-         * <p>*   REGISTRABLE: The configuration recorder has not been registered.</p>
-         * <p>*   BUILDING: The configuration recorder is being deployed.</p>
-         * <p>*   REGISTERED: The configuration recorder has been registered.</p>
-         * <p>*   REBUILDING: The configuration recorder is being redeployed.</p>
+         * <ul>
+         * <li>REGISTRABLE: The configuration recorder has not been registered.</li>
+         * <li>BUILDING: The configuration recorder is being deployed.</li>
+         * <li>REGISTERED: The configuration recorder has been registered.</li>
+         * <li>REBUILDING: The configuration recorder is being redeployed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>REGISTERED</p>
          */
         @NameInMap("ConfigurationRecorderStatus")
         public String configurationRecorderStatus;

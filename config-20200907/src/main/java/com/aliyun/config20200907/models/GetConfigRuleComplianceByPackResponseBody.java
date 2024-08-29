@@ -12,6 +12,9 @@ public class GetConfigRuleComplianceByPackResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6EC7AED1-172F-42AE-9C12-295BC2ADB751</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,23 +43,33 @@ public class GetConfigRuleComplianceByPackResponseBody extends TeaModel {
     public static class GetConfigRuleComplianceByPackResponseBodyConfigRuleComplianceResultConfigRuleCompliances extends TeaModel {
         /**
          * <p>The compliance evaluation result. Valid values:</p>
-         * <br>
-         * <p>*   COMPLIANT: The relevant resources are evaluated as compliant.</p>
-         * <p>*   NON_COMPLIANT: The relevant resources are evaluated as non-compliant.</p>
-         * <p>*   NOT_APPLICABLE: The rule does not apply to your resources.</p>
-         * <p>*   INSUFFICIENT_DATA: No resource data is available.</p>
+         * <ul>
+         * <li>COMPLIANT: The relevant resources are evaluated as compliant.</li>
+         * <li>NON_COMPLIANT: The relevant resources are evaluated as non-compliant.</li>
+         * <li>NOT_APPLICABLE: The rule does not apply to your resources.</li>
+         * <li>INSUFFICIENT_DATA: No resource data is available.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLIANT</p>
          */
         @NameInMap("ComplianceType")
         public String complianceType;
 
         /**
          * <p>The ID of the rule enabled in the compliance package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cr-fdc8626622af00f9****</p>
          */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
 
         /**
          * <p>The name of the rule enabled in the compliance package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-rule-name</p>
          */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
@@ -95,6 +108,9 @@ public class GetConfigRuleComplianceByPackResponseBody extends TeaModel {
     public static class GetConfigRuleComplianceByPackResponseBodyConfigRuleComplianceResult extends TeaModel {
         /**
          * <p>The ID of the compliance package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cp-541e626622af0087****</p>
          */
         @NameInMap("CompliancePackId")
         public String compliancePackId;
@@ -107,12 +123,18 @@ public class GetConfigRuleComplianceByPackResponseBody extends TeaModel {
 
         /**
          * <p>The number of rules against which specific resources are evaluated as non-compliant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("NonCompliantCount")
         public Integer nonCompliantCount;
 
         /**
          * <p>The total number of rules enabled in the compliance package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

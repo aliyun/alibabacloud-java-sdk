@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class UpdateConfigurationRecorderRequest extends TeaModel {
     /**
      * <p>The resource types. Separate multiple resource types with commas (,).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACS::ECS::Instance</p>
      */
     @NameInMap("ResourceTypes")
     public String resourceTypes;

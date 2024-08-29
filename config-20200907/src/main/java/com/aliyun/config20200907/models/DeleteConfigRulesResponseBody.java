@@ -12,6 +12,9 @@ public class DeleteConfigRulesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6721BBD3-F2A6-5349-9051-EE0111036D3F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,35 @@ public class DeleteConfigRulesResponseBody extends TeaModel {
     public static class DeleteConfigRulesResponseBodyOperateRuleResultOperateRuleItemList extends TeaModel {
         /**
          * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cr-9908626622af0035****</p>
          */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
 
         /**
          * <p>The error code.</p>
-         * <br>
-         * <p>*   If the rule is disabled, no error code is returned.</p>
-         * <p>*   If the rule fails to be disabled, an error code is returned. For more information about error codes, see [Error codes](https://api.alibabacloud.com/document/Config/2020-09-07/errorCode).</p>
+         * <ul>
+         * <li>If the rule is disabled, no error code is returned.</li>
+         * <li>If the rule fails to be disabled, an error code is returned. For more information about error codes, see <a href="https://api.alibabacloud.com/document/Config/2020-09-07/errorCode">Error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ConfigRuleCanNotDelete</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Success")
         public Boolean success;

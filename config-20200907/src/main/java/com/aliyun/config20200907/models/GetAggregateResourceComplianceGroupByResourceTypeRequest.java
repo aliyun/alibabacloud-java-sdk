@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class GetAggregateResourceComplianceGroupByResourceTypeRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ca-cdbd626622af0042****</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
     /**
      * <p>The ID of the rule. Separate multiple rule IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cr-2541626622af0000****</p>
      */
     @NameInMap("ConfigRuleIds")
     public String configRuleIds;

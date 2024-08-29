@@ -12,6 +12,9 @@ public class GetAggregatorResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>733DD93C-2277-4905-AE0C-0BA95C04B8BC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,30 +42,43 @@ public class GetAggregatorResponseBody extends TeaModel {
 
     public static class GetAggregatorResponseBodyAggregatorAggregatorAccounts extends TeaModel {
         /**
-         * <p>The ID of the member account.</p>
+         * <p>The ID of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>171322098523****</p>
          */
         @NameInMap("AccountId")
         public Long accountId;
 
         /**
-         * <p>The name of the member account.</p>
+         * <p>The display name of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
-         * <p>The type of the member account. Only ResourceDirectory is returned, which indicates that the account is a resource directory account.</p>
+         * <p>The resource directory to which the member belongs. Valid value: ResourceDirectory. ResourceDirectory indicates that the member belongs to a resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ResourceDirectory</p>
          */
         @NameInMap("AccountType")
         public String accountType;
 
         /**
-         * <p>The status of the configuration recorder for the member account. Valid values:</p>
-         * <br>
-         * <p>*   REGISTRABLE: The configuration recorder is not registered.</p>
-         * <p>*   BUILDING: The configuration recorder is being deployed.</p>
-         * <p>*   REGISTERED: The configuration recorder is registered.</p>
-         * <p>*   REBUILDING: The configuration recorder is being redeployed.</p>
+         * <p>The status of the configuration recorder for the member. Valid values:</p>
+         * <ul>
+         * <li>REGISTRABLE: The configuration recorder is not registered.</li>
+         * <li>BUILDING: The configuration recorder is being deployed.</li>
+         * <li>REGISTERED: The configuration recorder is registered.</li>
+         * <li>REBUILDING: The configuration recorder is being redeployed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>REGISTERED</p>
          */
         @NameInMap("RecorderStatus")
         public String recorderStatus;
@@ -109,67 +125,97 @@ public class GetAggregatorResponseBody extends TeaModel {
     public static class GetAggregatorResponseBodyAggregator extends TeaModel {
         /**
          * <p>The ID of the management account that is used to create the account group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100931896542****</p>
          */
         @NameInMap("AccountId")
         public Long accountId;
 
         /**
-         * <p>The number of member accounts in the account group.</p>
+         * <p>The number of members in the account group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("AggregatorAccountCount")
         public Long aggregatorAccountCount;
 
         /**
-         * <p>The information about the member accounts in the account group.</p>
+         * <p>The information about the members in the account group.</p>
          */
         @NameInMap("AggregatorAccounts")
         public java.util.List<GetAggregatorResponseBodyAggregatorAggregatorAccounts> aggregatorAccounts;
 
         /**
          * <p>The timestamp generated when the account group was created.</p>
+         * <p>Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1623034091000</p>
          */
         @NameInMap("AggregatorCreateTimestamp")
         public String aggregatorCreateTimestamp;
 
         /**
          * <p>The ID of the account group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca-88ea626622af0055****</p>
          */
         @NameInMap("AggregatorId")
         public String aggregatorId;
 
         /**
          * <p>The name of the account group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test-Group</p>
          */
         @NameInMap("AggregatorName")
         public String aggregatorName;
 
         /**
          * <p>The status of the account group. Valid values:</p>
-         * <br>
-         * <p>*   0: The account group is being created.</p>
-         * <p>*   1: The account group was created.</p>
+         * <ul>
+         * <li>0: The account group is being created.</li>
+         * <li>1: The account group was created.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AggregatorStatus")
         public Integer aggregatorStatus;
 
         /**
          * <p>The type of the account group. Valid values:</p>
-         * <br>
-         * <p>*   RD: a global account group.</p>
-         * <p>*   FOLDER: an account group for a folder.</p>
-         * <p>*   CUSTOM: a custom account group.</p>
+         * <ul>
+         * <li>RD: a global account group.</li>
+         * <li>FOLDER: an account group for a folder.</li>
+         * <li>CUSTOM: a custom account group.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CUSTOM</p>
          */
         @NameInMap("AggregatorType")
         public String aggregatorType;
 
         /**
          * <p>The description of the account group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The description of the test account group.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the attached folder of the account group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fd-brHdgv****</p>
          */
         @NameInMap("FolderId")
         public String folderId;

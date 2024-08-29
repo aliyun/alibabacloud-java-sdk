@@ -12,6 +12,9 @@ public class GetAggregateResourceComplianceGroupByResourceTypeResponseBody exten
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0CE6AEE1-B3D8-530A-9302-6606B20503BB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,17 +43,24 @@ public class GetAggregateResourceComplianceGroupByResourceTypeResponseBody exten
     public static class GetAggregateResourceComplianceGroupByResourceTypeResponseBodyComplianceResultComplianceResultListCompliances extends TeaModel {
         /**
          * <p>The evaluation result. Valid values:</p>
-         * <br>
-         * <p>*   COMPLIANT: The resource is evaluated as compliant.</p>
-         * <p>*   NON_COMPLIANT: The resource is evaluated as non-compliant.</p>
-         * <p>*   NOT_APPLICABLE: The rule does not apply to the resource.</p>
-         * <p>*   INSUFFICIENT_DATA: No data is available.</p>
+         * <ul>
+         * <li>COMPLIANT: The resource is evaluated as compliant.</li>
+         * <li>NON_COMPLIANT: The resource is evaluated as non-compliant.</li>
+         * <li>NOT_APPLICABLE: The rule does not apply to the resource.</li>
+         * <li>INSUFFICIENT_DATA: No data is available.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLIANT</p>
          */
         @NameInMap("ComplianceType")
         public String complianceType;
 
         /**
          * <p>The number of statistical results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public Long count;
@@ -87,6 +97,9 @@ public class GetAggregateResourceComplianceGroupByResourceTypeResponseBody exten
 
         /**
          * <p>The type of the evaluated resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::ECS::Instance</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;

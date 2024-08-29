@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class DeleteAggregatorsRequest extends TeaModel {
     /**
      * <p>The ID of the account group. Separate multiple IDs with commas (,).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ca-9190626622af00a9****</p>
      */
     @NameInMap("AggregatorIds")
     public String aggregatorIds;
 
     /**
      * <p>The client token that you want to use to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAdDWBF2****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;

@@ -6,40 +6,55 @@ import com.aliyun.tea.*;
 public class GetAggregateDiscoveredResourceRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of the account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
-     * <br>
+     * <p>For more information about how to obtain the ID of the account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ca-5885626622af0008****</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
+    /**
+     * <p>Specifies whether to query the compliance results of the resource. Valid values:</p>
+     * <ul>
+     * <li>0 (default): does not query the compliance results of the resource.</li>
+     * <li>1: queries the compliance results of the resource.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("ComplianceOption")
     public Integer complianceOption;
 
     /**
      * <p>The ID of the region in which the resource resides.</p>
-     * <br>
-     * <p>For more information about how to query the ID of a region in which the resource resides, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/411691.html).</p>
-     * <br>
+     * <p>For more information about how to query the ID of a region in which the resource resides, see <a href="https://help.aliyun.com/document_detail/411691.html">ListAggregateDiscoveredResources</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the resources in the account group belong.</p>
-     * <p>> You can use either the `ResourceAccountId` or `ResourceOwnerId` parameter. We recommend that you use the ResourceAccountId parameter.</p>
+     * <p>The ID of the Alibaba Cloud account to which the specified resource belongs in the account group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100931896542****</p>
      */
     @NameInMap("ResourceAccountId")
     public Long resourceAccountId;
 
     /**
      * <p>The resource ID.</p>
-     * <br>
-     * <p>For more information about how to query the ID of a resource, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/411691.html).</p>
-     * <br>
+     * <p>For more information about how to obtain the ID of a resource, see <a href="https://help.aliyun.com/document_detail/411691.html">ListAggregateDiscoveredResources</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>new-bucket</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -50,10 +65,11 @@ public class GetAggregateDiscoveredResourceRequest extends TeaModel {
 
     /**
      * <p>The type of the resource.</p>
-     * <br>
-     * <p>For more information about how to obtain the type of a resource, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/411691.html).</p>
-     * <br>
+     * <p>For more information about how to obtain the type of a resource, see <a href="https://help.aliyun.com/document_detail/411691.html">ListAggregateDiscoveredResources</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACS::OSS::Bucket</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

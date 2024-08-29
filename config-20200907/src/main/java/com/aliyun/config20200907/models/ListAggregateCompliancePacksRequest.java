@@ -6,35 +6,44 @@ import com.aliyun.tea.*;
 public class ListAggregateCompliancePacksRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
-     * <br>
+     * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ca-f632626622af0079****</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The status of the one or more compliance packages to be queried. Valid values:</p>
-     * <br>
-     * <p>*   ACTIVE: compliance packages that are available for use.</p>
-     * <p>*   CREATING: compliance packages that are being created.</p>
+     * <ul>
+     * <li>ACTIVE: compliance packages that are available for use.</li>
+     * <li>CREATING: compliance packages that are being created.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ACTIVE</p>
      */
     @NameInMap("Status")
     public String status;

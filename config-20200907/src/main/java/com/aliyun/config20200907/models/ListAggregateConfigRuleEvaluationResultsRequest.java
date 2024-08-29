@@ -6,68 +6,92 @@ import com.aliyun.tea.*;
 public class ListAggregateConfigRuleEvaluationResultsRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
-     * <br>
+     * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ca-b1e6626622af00cb****</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
     /**
      * <p>The ID of the compliance package.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of a compliance package, see [ListAggregateCompliancePacks](https://help.aliyun.com/document_detail/262059.html).</p>
+     * <p>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/262059.html">ListAggregateCompliancePacks</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cp-f1e3326622af00cb****</p>
      */
     @NameInMap("CompliancePackId")
     public String compliancePackId;
 
     /**
      * <p>The compliance evaluation result of the resource. Valid values:</p>
-     * <br>
-     * <p>*   COMPLIANT: The resource is evaluated as compliant.</p>
-     * <p>*   NON_COMPLIANT: The resource is evaluated as non-compliant.</p>
-     * <p>*   NOT_APPLICABLE: The rule does not apply to your resource.</p>
-     * <p>*   INSUFFICIENT_DATA: No data is available.</p>
-     * <p>*   IGNORED: The resource is ignored during compliance evaluation.</p>
+     * <ul>
+     * <li>COMPLIANT: The resource is evaluated as compliant.</li>
+     * <li>NON_COMPLIANT: The resource is evaluated as non-compliant.</li>
+     * <li>NOT_APPLICABLE: The rule does not apply to your resource.</li>
+     * <li>INSUFFICIENT_DATA: No data is available.</li>
+     * <li>IGNORED: The resource is ignored during compliance evaluation.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>NON_COMPLIANT</p>
      */
     @NameInMap("ComplianceType")
     public String complianceType;
 
     /**
      * <p>The rule ID.</p>
-     * <br>
-     * <p>For more information about how to query the ID of a rule, see [ListAggregateConfigRules](https://help.aliyun.com/document_detail/264148.html).</p>
+     * <p>For more information about how to query the ID of a rule, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cr-888f626622af00ae****</p>
      */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
     /**
      * <p>The maximum number of entries to return in a request. Valid values: 1 to 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IWBjqMYSy0is7zSMGu16****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the region whose resources you want to evaluate. Separate multiple region IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("Regions")
     public String regions;
 
     /**
      * <p>Member accountId to which the resource to be queried belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100931896542****</p>
      */
     @NameInMap("ResourceAccountId")
     public Long resourceAccountId;
 
     /**
      * <p>The ID of the resource group whose resources you want to evaluate. Separate multiple resource group IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aek2cqyzvuj****</p>
      */
     @NameInMap("ResourceGroupIds")
     public String resourceGroupIds;
@@ -78,6 +102,9 @@ public class ListAggregateConfigRuleEvaluationResultsRequest extends TeaModel {
 
     /**
      * <p>The type of the resources that you want to evaluate. Separate multiple resource types with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACS::ECS::Instance</p>
      */
     @NameInMap("ResourceTypes")
     public String resourceTypes;

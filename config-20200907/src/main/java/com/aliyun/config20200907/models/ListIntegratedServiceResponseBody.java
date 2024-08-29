@@ -12,6 +12,9 @@ public class ListIntegratedServiceResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>86DB52A5-0C25-505A-96D5-9BAE1EFA00B9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,34 +43,49 @@ public class ListIntegratedServiceResponseBody extends TeaModel {
     public static class ListIntegratedServiceResponseBodyData extends TeaModel {
         /**
          * <p>The types of the integrated events. Separate multiple event types with commas (,). Valid values:</p>
-         * <br>
-         * <p>*   ConfigurationItemChangeNotification: resource change event</p>
-         * <p>*   NonCompliantNotification: non-compliance event</p>
+         * <ul>
+         * <li>ConfigurationItemChangeNotification: resource change event</li>
+         * <li>NonCompliantNotification: non-compliance event</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NonCompliantNotification</p>
          */
         @NameInMap("IntegratedTypes")
         public String integratedTypes;
 
         /**
          * <p>The identifier of the cloud service. Valid values:</p>
-         * <br>
-         * <p>*   eventbridge: event bus</p>
-         * <p>*   cms: CloudMonitor</p>
-         * <p>*   bpstudio: Cloud Architect Design Tools (CADT)</p>
+         * <ul>
+         * <li>eventbridge: EventBridge</li>
+         * <li>cms: CloudMonitor</li>
+         * <li>bpstudio: Cloud Architect Design Tools</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cms</p>
          */
         @NameInMap("ServiceCode")
         public String serviceCode;
 
         /**
          * <p>The name of the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cms</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
          * <p>The integration status of the cloud service. Valid values:</p>
-         * <br>
-         * <p>*   1: The cloud service is integrated.</p>
-         * <p>*   0: The cloud service is not integrated.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Status")
         public Boolean status;

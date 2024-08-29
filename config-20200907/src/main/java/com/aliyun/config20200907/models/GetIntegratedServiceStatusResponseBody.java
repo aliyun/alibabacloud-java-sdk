@@ -6,24 +6,35 @@ import com.aliyun.tea.*;
 public class GetIntegratedServiceStatusResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the product has been integrated. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Data")
     public Boolean data;
 
     /**
      * <p>The types of the integrated events. Separate multiple event types with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   ConfigurationItemChangeNotification: resource change event</p>
-     * <p>*   NonCompliantNotification: non-compliance event</p>
+     * <ul>
+     * <li>ConfigurationItemChangeNotification: resource change event</li>
+     * <li>NonCompliantNotification: non-compliance event</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>NonCompliantNotification</p>
      */
     @NameInMap("IntegratedTypes")
     public String integratedTypes;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2E396C84-8D50-5F95-97FA-C0367181BA8A</p>
      */
     @NameInMap("RequestId")
     public String requestId;

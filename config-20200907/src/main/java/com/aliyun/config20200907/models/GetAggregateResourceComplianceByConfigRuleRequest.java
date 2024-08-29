@@ -6,39 +6,49 @@ import com.aliyun.tea.*;
 public class GetAggregateResourceComplianceByConfigRuleRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of the account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
-     * <br>
+     * <p>For more information about how to obtain the ID of the account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ca-a4e5626622af0079****</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
     /**
      * <p>The compliance evaluation result of the resources. Valid values:</p>
-     * <br>
-     * <p>*   COMPLIANT: The resource is evaluated as compliant.</p>
-     * <p>*   NON_COMPLIANT: The resource is evaluated as incompliant.</p>
-     * <p>*   NOT_APPLICABLE: The rule does not apply to your resources.</p>
-     * <p>*   INSUFFICIENT_DATA: No resource data is available.</p>
+     * <ul>
+     * <li>COMPLIANT: The resource is evaluated as compliant.</li>
+     * <li>NON_COMPLIANT: The resource is evaluated as incompliant.</li>
+     * <li>NOT_APPLICABLE: The rule does not apply to your resources.</li>
+     * <li>INSUFFICIENT_DATA: No resource data is available.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>COMPLIANT</p>
      */
     @NameInMap("ComplianceType")
     public String complianceType;
 
     /**
      * <p>The ID of the rule.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](https://help.aliyun.com/document_detail/264148.html).</p>
-     * <br>
+     * <p>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cr-d369626622af008e****</p>
      */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
     /**
      * <p>The ID of the Alibaba Cloud account to which the resources in the account group belong.</p>
-     * <br>
-     * <p>> You can use either the ResourceAccountId or ResourceOwnerId parameter. We recommend that you use the ResourceAccountId parameter.</p>
+     * <blockquote>
+     * <p>You can use either the ResourceAccountId or ResourceOwnerId parameter. We recommend that you use the ResourceAccountId parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>100931896542****</p>
      */
     @NameInMap("ResourceAccountId")
     public Long resourceAccountId;

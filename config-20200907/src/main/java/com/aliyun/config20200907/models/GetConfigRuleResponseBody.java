@@ -12,6 +12,9 @@ public class GetConfigRuleResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>811234F4-C3AB-4D15-B90B-F55016D1B5AA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,17 +43,24 @@ public class GetConfigRuleResponseBody extends TeaModel {
     public static class GetConfigRuleResponseBodyConfigRuleCompliance extends TeaModel {
         /**
          * <p>The statistics on the compliance evaluation results by compliance type. Valid values:</p>
-         * <br>
-         * <p>*   COMPLIANT: The resource was evaluated as compliant.</p>
-         * <p>*   NON_COMPLIANT: The resource was evaluated as incompliant.</p>
-         * <p>*   NOT_APPLICABLE: The rule did not apply to your resource.</p>
-         * <p>*   INSUFFICIENT_DATA: No resource data was available.</p>
+         * <ul>
+         * <li>COMPLIANT: The resource was evaluated as compliant.</li>
+         * <li>NON_COMPLIANT: The resource was evaluated as incompliant.</li>
+         * <li>NOT_APPLICABLE: The rule did not apply to your resource.</li>
+         * <li>INSUFFICIENT_DATA: No resource data was available.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NON_COMPLIANT</p>
          */
         @NameInMap("ComplianceType")
         public String complianceType;
 
         /**
          * <p>The number of evaluated resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Count")
         public Integer count;
@@ -81,51 +91,76 @@ public class GetConfigRuleResponseBody extends TeaModel {
     public static class GetConfigRuleResponseBodyConfigRuleConfigRuleEvaluationStatus extends TeaModel {
         /**
          * <p>The timestamp generated when the rule was first triggered. Unit: millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1624932221993</p>
          */
         @NameInMap("FirstActivatedTimestamp")
         public Long firstActivatedTimestamp;
 
         /**
          * <p>Indicates whether resource configurations were evaluated based on the rule. Valid values:</p>
-         * <br>
-         * <p>*   true: Resource configurations were evaluated based on the rule.</p>
-         * <p>*   false: Resource configurations were not evaluated based on the rule.</p>
+         * <ul>
+         * <li>true: Resource configurations were evaluated based on the rule.</li>
+         * <li>false: Resource configurations were not evaluated based on the rule.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("FirstEvaluationStarted")
         public Boolean firstEvaluationStarted;
 
         /**
          * <p>The error code returned for the previous failed compliance evaluation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TimeOut</p>
          */
         @NameInMap("LastErrorCode")
         public String lastErrorCode;
 
         /**
          * <p>The error message returned for the previous failed compliance evaluation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Time out</p>
          */
         @NameInMap("LastErrorMessage")
         public String lastErrorMessage;
 
         /**
          * <p>The timestamp generated when the previous failed compliance evaluation of the rule ended. Unit: millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1614687022000</p>
          */
         @NameInMap("LastFailedEvaluationTimestamp")
         public Long lastFailedEvaluationTimestamp;
 
         /**
          * <p>The timestamp generated when the previous failed compliance evaluation of the rule started. Unit: millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1614687022000</p>
          */
         @NameInMap("LastFailedInvocationTimestamp")
         public Long lastFailedInvocationTimestamp;
 
         /**
          * <p>The timestamp generated when the previous successful compliance evaluation of the rule ended. Unit: millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1624932227486</p>
          */
         @NameInMap("LastSuccessfulEvaluationTimestamp")
         public Long lastSuccessfulEvaluationTimestamp;
 
         /**
          * <p>The timestamp generated when the previous successful compliance evaluation of the rule started. Unit: millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1624932227476</p>
          */
         @NameInMap("LastSuccessfulInvocationTimestamp")
         public Long lastSuccessfulInvocationTimestamp;
@@ -204,6 +239,9 @@ public class GetConfigRuleResponseBody extends TeaModel {
     public static class GetConfigRuleResponseBodyConfigRuleCreateBy extends TeaModel {
         /**
          * <p>The compliance package ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cp-541e626622af008****</p>
          */
         @NameInMap("CompliancePackId")
         public String compliancePackId;
@@ -216,12 +254,18 @@ public class GetConfigRuleResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the account that was used to create the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100931896542****</p>
          */
         @NameInMap("CreatorId")
         public String creatorId;
 
         /**
          * <p>The name of the account that was used to create the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         @NameInMap("CreatorName")
         public String creatorName;
@@ -265,34 +309,77 @@ public class GetConfigRuleResponseBody extends TeaModel {
 
     }
 
+    public static class GetConfigRuleResponseBodyConfigRuleExcludeTagsScope extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static GetConfigRuleResponseBodyConfigRuleExcludeTagsScope build(java.util.Map<String, ?> map) throws Exception {
+            GetConfigRuleResponseBodyConfigRuleExcludeTagsScope self = new GetConfigRuleResponseBodyConfigRuleExcludeTagsScope();
+            return TeaModel.build(map, self);
+        }
+
+        public GetConfigRuleResponseBodyConfigRuleExcludeTagsScope setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public GetConfigRuleResponseBodyConfigRuleExcludeTagsScope setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class GetConfigRuleResponseBodyConfigRuleManagedRuleSourceDetails extends TeaModel {
         /**
          * <p>The event source.</p>
-         * <br>
-         * <p>>  Only aliyun.config is returned, which indicates that only events related to Cloud Config are supported.</p>
+         * <blockquote>
+         * <p> Only aliyun.config is returned, which indicates that only events related to Cloud Config are supported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun.config</p>
          */
         @NameInMap("EventSource")
         public String eventSource;
 
         /**
          * <p>The interval at which the rule is triggered. Valid values:</p>
-         * <br>
-         * <p>*   One_Hour</p>
-         * <p>*   Three_Hours</p>
-         * <p>*   Six_Hours</p>
-         * <p>*   Twelve_Hours</p>
-         * <p>*   TwentyFour_Hours</p>
-         * <br>
-         * <p>>  This parameter is returned if the rule is periodically triggered.</p>
+         * <ul>
+         * <li>One_Hour</li>
+         * <li>Three_Hours</li>
+         * <li>Six_Hours</li>
+         * <li>Twelve_Hours</li>
+         * <li>TwentyFour_Hours</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is returned if the rule is periodically triggered.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>One_Hour</p>
          */
         @NameInMap("MaximumExecutionFrequency")
         public String maximumExecutionFrequency;
 
         /**
          * <p>The trigger type of the rule. Valid values:</p>
-         * <br>
-         * <p>*   ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</p>
-         * <p>*   ScheduledNotification: The rule is periodically triggered.</p>
+         * <ul>
+         * <li>ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</li>
+         * <li>ScheduledNotification: The rule is periodically triggered.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ConfigurationItemChangeNotification</p>
          */
         @NameInMap("MessageType")
         public String messageType;
@@ -343,6 +430,9 @@ public class GetConfigRuleResponseBody extends TeaModel {
 
         /**
          * <p>The identifier of the managed rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ram-user-mfa-check</p>
          */
         @NameInMap("Identifier")
         public String identifier;
@@ -459,31 +549,44 @@ public class GetConfigRuleResponseBody extends TeaModel {
     public static class GetConfigRuleResponseBodyConfigRuleSourceSourceDetails extends TeaModel {
         /**
          * <p>The event source.</p>
-         * <br>
-         * <p>>  Only aliyun.config is returned, which indicates that only events related to Cloud Config are supported.</p>
+         * <blockquote>
+         * <p> Only aliyun.config is returned, which indicates that only events related to Cloud Config are supported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun.config</p>
          */
         @NameInMap("EventSource")
         public String eventSource;
 
         /**
          * <p>The interval at which the rule is triggered. Valid values:</p>
-         * <br>
-         * <p>*   One_Hour</p>
-         * <p>*   Three_Hours</p>
-         * <p>*   Six_Hours</p>
-         * <p>*   Twelve_Hours</p>
-         * <p>*   TwentyFour_Hours</p>
-         * <br>
-         * <p>>  This parameter is returned if the rule is periodically triggered.</p>
+         * <ul>
+         * <li>One_Hour</li>
+         * <li>Three_Hours</li>
+         * <li>Six_Hours</li>
+         * <li>Twelve_Hours</li>
+         * <li>TwentyFour_Hours</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is returned if the rule is periodically triggered.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>One_Hour</p>
          */
         @NameInMap("MaximumExecutionFrequency")
         public String maximumExecutionFrequency;
 
         /**
          * <p>The trigger type of the rule. Valid values:</p>
-         * <br>
-         * <p>*   ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</p>
-         * <p>*   ScheduledNotification: The rule is periodically triggered.</p>
+         * <ul>
+         * <li>ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</li>
+         * <li>ScheduledNotification: The rule is periodically triggered.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ConfigurationItemChangeNotification</p>
          */
         @NameInMap("MessageType")
         public String messageType;
@@ -522,18 +625,26 @@ public class GetConfigRuleResponseBody extends TeaModel {
     public static class GetConfigRuleResponseBodyConfigRuleSource extends TeaModel {
         /**
          * <p>The identifier of the rule.</p>
-         * <br>
-         * <p>*   If the rule is a managed rule, the value of this parameter is the identifier of the managed rule.</p>
-         * <p>*   If the rule is a custom rule, the value of this parameter is the Alibaba Cloud Resource Name (ARN) of a function.</p>
+         * <ul>
+         * <li>If the rule is a managed rule, the value of this parameter is the identifier of the managed rule.</li>
+         * <li>If the rule is a custom rule, the value of this parameter is the Alibaba Cloud Resource Name (ARN) of a function.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:fc:cn-hangzhou:100931896542****:services/ConfigService.LATEST/functions/specific-config</p>
          */
         @NameInMap("Identifier")
         public String identifier;
 
         /**
          * <p>The type of the rule. Valid values:</p>
-         * <br>
-         * <p>*   CUSTOM_FC: a custom rule.</p>
-         * <p>*   ALIYUN: a managed rule.</p>
+         * <ul>
+         * <li>CUSTOM_FC: a custom rule.</li>
+         * <li>ALIYUN: a managed rule.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN</p>
          */
         @NameInMap("Owner")
         public String owner;
@@ -575,9 +686,42 @@ public class GetConfigRuleResponseBody extends TeaModel {
 
     }
 
+    public static class GetConfigRuleResponseBodyConfigRuleTagsScope extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static GetConfigRuleResponseBodyConfigRuleTagsScope build(java.util.Map<String, ?> map) throws Exception {
+            GetConfigRuleResponseBodyConfigRuleTagsScope self = new GetConfigRuleResponseBodyConfigRuleTagsScope();
+            return TeaModel.build(map, self);
+        }
+
+        public GetConfigRuleResponseBodyConfigRuleTagsScope setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public GetConfigRuleResponseBodyConfigRuleTagsScope setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class GetConfigRuleResponseBodyConfigRule extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account to which the rule belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120886317861****</p>
          */
         @NameInMap("AccountId")
         public Long accountId;
@@ -590,6 +734,9 @@ public class GetConfigRuleResponseBody extends TeaModel {
 
         /**
          * <p>The ARN of the managed rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:config::100931896542****:rule/cr-7f7d626622af0041****</p>
          */
         @NameInMap("ConfigRuleArn")
         public String configRuleArn;
@@ -602,6 +749,9 @@ public class GetConfigRuleResponseBody extends TeaModel {
 
         /**
          * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cr-7f7d626622af0041****</p>
          */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
@@ -614,20 +764,28 @@ public class GetConfigRuleResponseBody extends TeaModel {
 
         /**
          * <p>The status of the rule. Valid values:</p>
-         * <br>
-         * <p>*   ACTIVE: The rule is enabled.</p>
-         * <p>*   DELETING: The rule is being deleted.</p>
-         * <p>*   EVALUATING: The rule is being used to evaluate resource configurations.</p>
-         * <p>*   INACTIVE: The rule is disabled.</p>
+         * <ul>
+         * <li>ACTIVE: The rule is enabled.</li>
+         * <li>DELETING: The rule is being deleted.</li>
+         * <li>EVALUATING: The rule is being used to evaluate resource configurations.</li>
+         * <li>INACTIVE: The rule is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
          */
         @NameInMap("ConfigRuleState")
         public String configRuleState;
 
         /**
          * <p>The trigger type of the rule. Valid values:</p>
-         * <br>
-         * <p>*   ConfigurationItemChangeNotification: The rule was triggered by configuration changes.</p>
-         * <p>*   ScheduledNotification: The rule was periodically triggered.</p>
+         * <ul>
+         * <li>ConfigurationItemChangeNotification: The rule was triggered by configuration changes.</li>
+         * <li>ScheduledNotification: The rule was periodically triggered.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ConfigurationItemChangeNotification</p>
          */
         @NameInMap("ConfigRuleTriggerTypes")
         public String configRuleTriggerTypes;
@@ -640,6 +798,9 @@ public class GetConfigRuleResponseBody extends TeaModel {
 
         /**
          * <p>The timestamp generated when the rule was created. Unit: millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1604684022000</p>
          */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
@@ -650,11 +811,23 @@ public class GetConfigRuleResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("ExcludeRegionIdsScope")
+        public String excludeRegionIdsScope;
+
+        @NameInMap("ExcludeResourceGroupIdsScope")
+        public String excludeResourceGroupIdsScope;
+
         /**
          * <p>The ID of the resource excluded from the compliance evaluations performed by the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23642660635687****</p>
          */
         @NameInMap("ExcludeResourceIdsScope")
         public String excludeResourceIdsScope;
+
+        @NameInMap("ExcludeTagsScope")
+        public java.util.List<GetConfigRuleResponseBodyConfigRuleExcludeTagsScope> excludeTagsScope;
 
         /**
          * <p>The input parameters of the rule.</p>
@@ -670,48 +843,72 @@ public class GetConfigRuleResponseBody extends TeaModel {
 
         /**
          * <p>The interval at which the rule is triggered. Valid values:</p>
-         * <br>
-         * <p>*   One_Hour</p>
-         * <p>*   Three_Hours</p>
-         * <p>*   Six_Hours</p>
-         * <p>*   Twelve_Hours</p>
-         * <p>*   TwentyFour_Hours</p>
-         * <br>
-         * <p>>  This parameter is returned if the rule is periodically triggered.</p>
+         * <ul>
+         * <li>One_Hour</li>
+         * <li>Three_Hours</li>
+         * <li>Six_Hours</li>
+         * <li>Twelve_Hours</li>
+         * <li>TwentyFour_Hours</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is returned if the rule is periodically triggered.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>One_Hour</p>
          */
         @NameInMap("MaximumExecutionFrequency")
         public String maximumExecutionFrequency;
 
         /**
          * <p>The timestamp generated when the rule was last updated. Unit: millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1614687022000</p>
          */
         @NameInMap("ModifiedTimestamp")
         public Long modifiedTimestamp;
 
         /**
          * <p>The ID of the region to which the rule applies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>global</p>
          */
         @NameInMap("RegionIdsScope")
         public String regionIdsScope;
 
         /**
          * <p>The ID of the resource group to which the rule applies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzdibsjjc****</p>
          */
         @NameInMap("ResourceGroupIdsScope")
         public String resourceGroupIdsScope;
 
+        @NameInMap("ResourceIdsScope")
+        public String resourceIdsScope;
+
         /**
          * <p>The type of the resource to be evaluated by the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::RAM::User</p>
          */
         @NameInMap("ResourceTypesScope")
         public String resourceTypesScope;
 
         /**
          * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
-         * <br>
-         * <p>*   1: high.</p>
-         * <p>*   2: medium.</p>
-         * <p>*   3: low.</p>
+         * <ul>
+         * <li>1: high.</li>
+         * <li>2: medium.</li>
+         * <li>3: low.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
@@ -730,27 +927,42 @@ public class GetConfigRuleResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the member account to which the rule does not apply, which means that the resources within the member account are not evaluated based on the rule.</p>
-         * <br>
-         * <p>> This parameter applies only to a managed rule.</p>
+         * <blockquote>
+         * <p>This parameter applies only to a managed rule.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>120886317861****</p>
          */
         @NameInMap("TagKeyLogicScope")
         public String tagKeyLogicScope;
 
         /**
          * <p>The tag key used to filter resources. The rule applies only to the resources with the specified tag key.</p>
-         * <br>
-         * <p>> The `TagKeyScope` and `TagValueScope` parameters are returned at the same time.</p>
+         * <blockquote>
+         * <p>The <code>TagKeyScope</code> and <code>TagValueScope</code> parameters are returned at the same time.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>RAM</p>
          */
         @NameInMap("TagKeyScope")
         public String tagKeyScope;
 
         /**
          * <p>The tag value used to filter resources. The rule applies only to the resources with the specified tag value.</p>
-         * <br>
-         * <p>> The `TagKeyScope` and `TagValueScope` parameters are returned at the same time.</p>
+         * <blockquote>
+         * <p>The <code>TagKeyScope</code> and <code>TagValueScope</code> parameters are returned at the same time.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>MFA</p>
          */
         @NameInMap("TagValueScope")
         public String tagValueScope;
+
+        @NameInMap("TagsScope")
+        public java.util.List<GetConfigRuleResponseBodyConfigRuleTagsScope> tagsScope;
 
         public static GetConfigRuleResponseBodyConfigRule build(java.util.Map<String, ?> map) throws Exception {
             GetConfigRuleResponseBodyConfigRule self = new GetConfigRuleResponseBodyConfigRule();
@@ -845,12 +1057,36 @@ public class GetConfigRuleResponseBody extends TeaModel {
             return this.description;
         }
 
+        public GetConfigRuleResponseBodyConfigRule setExcludeRegionIdsScope(String excludeRegionIdsScope) {
+            this.excludeRegionIdsScope = excludeRegionIdsScope;
+            return this;
+        }
+        public String getExcludeRegionIdsScope() {
+            return this.excludeRegionIdsScope;
+        }
+
+        public GetConfigRuleResponseBodyConfigRule setExcludeResourceGroupIdsScope(String excludeResourceGroupIdsScope) {
+            this.excludeResourceGroupIdsScope = excludeResourceGroupIdsScope;
+            return this;
+        }
+        public String getExcludeResourceGroupIdsScope() {
+            return this.excludeResourceGroupIdsScope;
+        }
+
         public GetConfigRuleResponseBodyConfigRule setExcludeResourceIdsScope(String excludeResourceIdsScope) {
             this.excludeResourceIdsScope = excludeResourceIdsScope;
             return this;
         }
         public String getExcludeResourceIdsScope() {
             return this.excludeResourceIdsScope;
+        }
+
+        public GetConfigRuleResponseBodyConfigRule setExcludeTagsScope(java.util.List<GetConfigRuleResponseBodyConfigRuleExcludeTagsScope> excludeTagsScope) {
+            this.excludeTagsScope = excludeTagsScope;
+            return this;
+        }
+        public java.util.List<GetConfigRuleResponseBodyConfigRuleExcludeTagsScope> getExcludeTagsScope() {
+            return this.excludeTagsScope;
         }
 
         public GetConfigRuleResponseBodyConfigRule setInputParameters(java.util.Map<String, ?> inputParameters) {
@@ -899,6 +1135,14 @@ public class GetConfigRuleResponseBody extends TeaModel {
         }
         public String getResourceGroupIdsScope() {
             return this.resourceGroupIdsScope;
+        }
+
+        public GetConfigRuleResponseBodyConfigRule setResourceIdsScope(String resourceIdsScope) {
+            this.resourceIdsScope = resourceIdsScope;
+            return this;
+        }
+        public String getResourceIdsScope() {
+            return this.resourceIdsScope;
         }
 
         public GetConfigRuleResponseBodyConfigRule setResourceTypesScope(String resourceTypesScope) {
@@ -955,6 +1199,14 @@ public class GetConfigRuleResponseBody extends TeaModel {
         }
         public String getTagValueScope() {
             return this.tagValueScope;
+        }
+
+        public GetConfigRuleResponseBodyConfigRule setTagsScope(java.util.List<GetConfigRuleResponseBodyConfigRuleTagsScope> tagsScope) {
+            this.tagsScope = tagsScope;
+            return this;
+        }
+        public java.util.List<GetConfigRuleResponseBodyConfigRuleTagsScope> getTagsScope() {
+            return this.tagsScope;
         }
 
     }
