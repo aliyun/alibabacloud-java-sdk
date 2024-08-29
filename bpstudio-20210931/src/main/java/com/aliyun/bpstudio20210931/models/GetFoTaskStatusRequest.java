@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetFoTaskStatusRequest extends TeaModel {
     /**
+     * <p>The disaster recovery switchover task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2615</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AppFailOverRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BE68D71ZY5YYIU9R</p>
      */
@@ -12,6 +14,8 @@ public class AppFailOverRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The destination zone to which you want to switch the disaster recovery application.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-g</p>
      */

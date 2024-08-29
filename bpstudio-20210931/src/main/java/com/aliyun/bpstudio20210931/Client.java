@@ -27,8 +27,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to switch a disaster recovery application back to the primary zone.</p>
+     * 
      * <b>summary</b> : 
-     * <p>容灾应用切回</p>
+     * <p>Switches a disaster recovery application back to the primary zone.</p>
      * 
      * @param request AppFailBackRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -59,8 +62,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to switch a disaster recovery application back to the primary zone.</p>
+     * 
      * <b>summary</b> : 
-     * <p>容灾应用切回</p>
+     * <p>Switches a disaster recovery application back to the primary zone.</p>
      * 
      * @param request AppFailBackRequest
      * @return AppFailBackResponse
@@ -71,8 +77,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to switch a disaster recovery application to another supported zone.</p>
+     * 
      * <b>summary</b> : 
-     * <p>容灾应用切换</p>
+     * <p>Switches a disaster recovery application to another supported zone.</p>
      * 
      * @param request AppFailOverRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -107,8 +116,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to switch a disaster recovery application to another supported zone.</p>
+     * 
      * <b>summary</b> : 
-     * <p>容灾应用切换</p>
+     * <p>Switches a disaster recovery application to another supported zone.</p>
      * 
      * @param request AppFailOverRequest
      * @return AppFailOverResponse
@@ -554,6 +566,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取需要重新配置的变量列表</p>
+     * 
+     * @param request GetApplicationVariables4FailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetApplicationVariables4FailResponse
+     */
+    public GetApplicationVariables4FailResponse getApplicationVariables4FailWithOptions(GetApplicationVariables4FailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetApplicationVariables4Fail"),
+            new TeaPair("version", "2021-09-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetApplicationVariables4FailResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取需要重新配置的变量列表</p>
+     * 
+     * @param request GetApplicationVariables4FailRequest
+     * @return GetApplicationVariables4FailResponse
+     */
+    public GetApplicationVariables4FailResponse getApplicationVariables4Fail(GetApplicationVariables4FailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getApplicationVariables4FailWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Asynchronously queries the result of an operation that is performed on a service instance.</p>
      * 
      * @param request GetExecuteOperationResultRequest
@@ -601,8 +657,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query the status of a disaster recovery switchover task by task ID.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取容灾切换任务状态</p>
+     * <p>Queries the status of a disaster recovery switchover task by task ID.</p>
      * 
      * @param request GetFoTaskStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -633,8 +692,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query the status of a disaster recovery switchover task by task ID.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取容灾切换任务状态</p>
+     * <p>Queries the status of a disaster recovery switchover task by task ID.</p>
      * 
      * @param request GetFoTaskStatusRequest
      * @return GetFoTaskStatusResponse
@@ -645,8 +707,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query the zones where the specified disaster recovery service can be switched.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取容灾服务可切换的可用区列表</p>
+     * <p>Queries the zones where the specified disaster recovery service can be switched.</p>
      * 
      * @param request GetPotentialFailZonesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -681,8 +746,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query the zones where the specified disaster recovery service can be switched.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取容灾服务可切换的可用区列表</p>
+     * <p>Queries the zones where the specified disaster recovery service can be switched.</p>
      * 
      * @param request GetPotentialFailZonesRequest
      * @return GetPotentialFailZonesResponse
@@ -807,8 +875,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to prepare for application switchover and initiate a switchover task.</p>
+     * 
      * <b>summary</b> : 
-     * <p>准备应用切换</p>
+     * <p>Prepares for application switchover and initiates a switchover task.</p>
      * 
      * @param request InitAppFailOverRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -839,8 +910,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to prepare for application switchover and initiate a switchover task.</p>
+     * 
      * <b>summary</b> : 
-     * <p>准备应用切换</p>
+     * <p>Prepares for application switchover and initiates a switchover task.</p>
      * 
      * @param request InitAppFailOverRequest
      * @return InitAppFailOverResponse
@@ -923,8 +997,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query all disaster recovery plans.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取已经创建的APP</p>
+     * <p>Queries disaster recovery plans.</p>
      * 
      * @param request ListFoCreatedAppsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -947,8 +1024,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query all disaster recovery plans.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取已经创建的APP</p>
+     * <p>Queries disaster recovery plans.</p>
      * @return ListFoCreatedAppsResponse
      */
     public ListFoCreatedAppsResponse listFoCreatedApps() throws Exception {
@@ -1091,6 +1171,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListTemplateResponse listTemplate(ListTemplateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>重新配置应用</p>
+     * 
+     * @param request ReConfigApplicationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ReConfigApplicationResponse
+     */
+    public ReConfigApplicationResponse reConfigApplicationWithOptions(ReConfigApplicationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.variables)) {
+            body.put("Variables", request.variables);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ReConfigApplication"),
+            new TeaPair("version", "2021-09-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ReConfigApplicationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>重新配置应用</p>
+     * 
+     * @param request ReConfigApplicationRequest
+     * @return ReConfigApplicationResponse
+     */
+    public ReConfigApplicationResponse reConfigApplication(ReConfigApplicationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.reConfigApplicationWithOptions(request, runtime);
     }
 
     /**

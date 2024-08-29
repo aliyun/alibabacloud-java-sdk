@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetPotentialFailZonesRequest extends TeaModel {
     /**
+     * <p>Specifies whether the value of this parameter is the ID of a disaster recovery set.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class GetPotentialFailZonesRequest extends TeaModel {
     public Boolean isPlanId;
 
     /**
+     * <p>If you set IsPlanId to false, specify the ID of a disaster recovery application. If you set IsPlanId to true, specify the ID of a disaster recovery set.</p>
+     * 
      * <strong>example:</strong>
      * <p>FS3ATPTOSC4SE1GG</p>
      */

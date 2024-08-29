@@ -77,7 +77,7 @@ public class CreateApplicationRequest extends TeaModel {
      * <p>{&quot;variable1&quot;:&quot;1&quot;}</p>
      */
     @NameInMap("Variables")
-    public java.util.Map<String, String> variables;
+    public java.util.Map<String, ?> variables;
 
     public static CreateApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateApplicationRequest self = new CreateApplicationRequest();
@@ -140,11 +140,11 @@ public class CreateApplicationRequest extends TeaModel {
         return this.templateId;
     }
 
-    public CreateApplicationRequest setVariables(java.util.Map<String, String> variables) {
+    public CreateApplicationRequest setVariables(java.util.Map<String, ?> variables) {
         this.variables = variables;
         return this;
     }
-    public java.util.Map<String, String> getVariables() {
+    public java.util.Map<String, ?> getVariables() {
         return this.variables;
     }
 

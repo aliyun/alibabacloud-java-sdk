@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetFoTaskStatusResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class GetFoTaskStatusResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The status of the switchover task.</p>
+     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */
@@ -19,6 +23,8 @@ public class GetFoTaskStatusResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The returned message. If the request was successful, a success message is returned. If the request failed, an error message is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>OKITHEVRQCN6ULQG</p>
      */
@@ -26,6 +32,8 @@ public class GetFoTaskStatusResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>923692F0-A15B-58B4-BAF4-2AFA4AF46240</p>
      */
