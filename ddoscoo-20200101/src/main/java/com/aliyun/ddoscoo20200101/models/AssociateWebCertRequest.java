@@ -10,12 +10,27 @@ public class AssociateWebCertRequest extends TeaModel {
     @NameInMap("CertId")
     public Integer certId;
 
+    /**
+     * <p>The globally unique ID of the certificate. The value is in the &quot;Certificate ID-cn-hangzhou&quot; format. For example, if the ID of the certificate is 123, the value of the CertIdentifier parameter is 123-cn-hangzhou.</p>
+     * <blockquote>
+     * <p> You can specify only one of this parameter and the CertId parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>9430680-cn-hangzhou</p>
+     */
     @NameInMap("CertIdentifier")
     public String certIdentifier;
 
     @NameInMap("CertName")
     public String certName;
 
+    /**
+     * <p>The region of the certificate. Valid values: <strong>cn-hangzhou</strong> and <strong>ap-southeast-1</strong>. Default value: <strong>cn-hangzhou</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("CertRegion")
     public String certRegion;
 

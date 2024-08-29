@@ -98,6 +98,9 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
         @NameInMap("IsAutoCreate")
         public Boolean isAutoCreate;
 
+        @NameInMap("PayloadRuleEnable")
+        public Long payloadRuleEnable;
+
         /**
          * <p>The forwarding protocol. Valid values:</p>
          * <ul>
@@ -110,6 +113,12 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
          */
         @NameInMap("Protocol")
         public String protocol;
+
+        @NameInMap("ProxyEnable")
+        public Long proxyEnable;
+
+        @NameInMap("ProxyStatus")
+        public String proxyStatus;
 
         /**
          * <p>The IP addresses of origin servers.</p>
@@ -163,12 +172,36 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
             return this.isAutoCreate;
         }
 
+        public DescribeNetworkRulesResponseBodyNetworkRules setPayloadRuleEnable(Long payloadRuleEnable) {
+            this.payloadRuleEnable = payloadRuleEnable;
+            return this;
+        }
+        public Long getPayloadRuleEnable() {
+            return this.payloadRuleEnable;
+        }
+
         public DescribeNetworkRulesResponseBodyNetworkRules setProtocol(String protocol) {
             this.protocol = protocol;
             return this;
         }
         public String getProtocol() {
             return this.protocol;
+        }
+
+        public DescribeNetworkRulesResponseBodyNetworkRules setProxyEnable(Long proxyEnable) {
+            this.proxyEnable = proxyEnable;
+            return this;
+        }
+        public Long getProxyEnable() {
+            return this.proxyEnable;
+        }
+
+        public DescribeNetworkRulesResponseBodyNetworkRules setProxyStatus(String proxyStatus) {
+            this.proxyStatus = proxyStatus;
+            return this;
+        }
+        public String getProxyStatus() {
+            return this.proxyStatus;
         }
 
         public DescribeNetworkRulesResponseBodyNetworkRules setRealServers(java.util.List<String> realServers) {

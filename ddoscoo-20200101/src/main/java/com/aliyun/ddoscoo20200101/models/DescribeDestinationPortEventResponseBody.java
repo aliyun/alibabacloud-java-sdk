@@ -4,10 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDestinationPortEventResponseBody extends TeaModel {
+    /**
+     * <p>The ports.</p>
+     */
     @NameInMap("PortList")
     public java.util.List<DescribeDestinationPortEventResponseBodyPortList> portList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9E7F6B2C-03F2-462F-9076-B782CF0DD502</p>
      */
@@ -37,6 +42,8 @@ public class DescribeDestinationPortEventResponseBody extends TeaModel {
 
     public static class DescribeDestinationPortEventResponseBodyPortList extends TeaModel {
         /**
+         * <p>The destination port.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -44,6 +51,8 @@ public class DescribeDestinationPortEventResponseBody extends TeaModel {
         public String dstPort;
 
         /**
+         * <p>The number of request packets received by the destination port.</p>
+         * 
          * <strong>example:</strong>
          * <p>8760950</p>
          */

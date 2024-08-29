@@ -84,6 +84,9 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         @NameInMap("Content")
         public String content;
 
+        @NameInMap("ContentList")
+        public String contentList;
+
         /**
          * <p>The match field.</p>
          * 
@@ -125,6 +128,14 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         }
         public String getContent() {
             return this.content;
+        }
+
+        public DescribeWebCCRulesV2ResponseBodyWebCCRulesRuleDetailCondition setContentList(String contentList) {
+            this.contentList = contentList;
+            return this;
+        }
+        public String getContentList() {
+            return this.contentList;
         }
 
         public DescribeWebCCRulesV2ResponseBodyWebCCRulesRuleDetailCondition setField(String field) {
