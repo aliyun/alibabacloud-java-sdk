@@ -2213,6 +2213,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取用户购买状态</p>
+     * 
      * @param request GetUserBuyStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetUserBuyStatusResponse
@@ -2242,6 +2245,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取用户购买状态</p>
+     * 
      * @param request GetUserBuyStatusRequest
      * @return GetUserBuyStatusResponse
      */
