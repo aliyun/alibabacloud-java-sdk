@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetPotentialFailZonesResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The zones where the current disaster recovery service can be switched.</p>
+     */
     @NameInMap("Data")
     public java.util.List<String> data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>The specified ResourceIds are not found in our records.</p>
      */
@@ -22,6 +29,8 @@ public class GetPotentialFailZonesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BFB7F5C8-FE7A-06CA-9F87-ABBF6B848F0C</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AppFailOverResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,16 +14,23 @@ public class AppFailOverResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The disaster recovery switchover task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7441</p>
      */
     @NameInMap("Data")
     public Integer data;
 
+    /**
+     * <p>The returned message. If the request was successful, a success message is returned. If the request failed, an error message is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9656C816-1E9A-58D2-86D5-710678D61AF1</p>
      */

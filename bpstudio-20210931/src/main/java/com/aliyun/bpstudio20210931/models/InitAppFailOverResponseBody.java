@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class InitAppFailOverResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class InitAppFailOverResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The switchover task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7250</p>
      */
@@ -19,6 +23,8 @@ public class InitAppFailOverResponseBody extends TeaModel {
     public Integer data;
 
     /**
+     * <p>The returned message. If the request was successful, a success message is returned. If the request failed, an error message is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>Unsupported Operation PrepareEvent-&gt;FailOverPrepareSuccess FoApp_DDLJK2WM8ETU9JAC</p>
      */
@@ -26,6 +32,8 @@ public class InitAppFailOverResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A07FFDF2-78FA-1B48-9E38-88E833A93187</p>
      */

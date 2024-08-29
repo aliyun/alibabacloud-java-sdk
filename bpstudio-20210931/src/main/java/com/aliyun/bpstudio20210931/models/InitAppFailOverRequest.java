@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class InitAppFailOverRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>002XWH7MXB8MJRU0</p>
      */

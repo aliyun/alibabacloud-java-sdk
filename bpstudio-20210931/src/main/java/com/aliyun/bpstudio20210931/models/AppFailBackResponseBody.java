@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AppFailBackResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class AppFailBackResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The disaster recovery switchback task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3309</p>
      */
@@ -19,6 +23,8 @@ public class AppFailBackResponseBody extends TeaModel {
     public Integer data;
 
     /**
+     * <p>The returned message. If the request was successful, a success message is returned. If the request failed, an error message is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>OKITHEVRQCN6ULQG</p>
      */
@@ -26,6 +32,8 @@ public class AppFailBackResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7036DDBE-0ABA-52D7-A39D-75E511970F07</p>
      */

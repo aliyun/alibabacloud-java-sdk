@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListFoCreatedAppsResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The information about disaster recovery plans.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListFoCreatedAppsResponseBodyData> data;
 
     /**
+     * <p>The returned message. If the request was successful, a success message is returned. If the request failed, an error message is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>Cannot find region according to your domain.</p>
      */
@@ -22,7 +29,7 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>40F63F07-3AB6-53B3-8825-0580C130E3EA</p>
@@ -68,10 +75,18 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
     }
 
     public static class ListFoCreatedAppsResponseBodyData extends TeaModel {
+        /**
+         * <p>应用ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JIX9NEZUALGS46UI</p>
+         */
         @NameInMap("ApplicationId")
         public String applicationId;
 
         /**
+         * <p>The URL of an error report.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://api.aliyun.com/troubleshoot?q=ServiceUnavailable&product=BPStudio&requestId=4CDA03A3-C652-1408-8ABD-7E652A7CBFB6">https://api.aliyun.com/troubleshoot?q=ServiceUnavailable&amp;product=BPStudio&amp;requestId=4CDA03A3-C652-1408-8ABD-7E652A7CBFB6</a></p>
          */
@@ -79,6 +94,8 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
         public String reportUrl;
 
         /**
+         * <p>The status of the disaster recovery plan.</p>
+         * 
          * <strong>example:</strong>
          * <p>Deployed_Success
          * Destroyed_Success</p>
@@ -86,6 +103,9 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The title.</p>
+         */
         @NameInMap("Title")
         public String title;
 
