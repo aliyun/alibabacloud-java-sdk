@@ -4,6 +4,10 @@ package com.aliyun.httpdns20160201.models;
 import com.aliyun.tea.*;
 
 public class GetResolveCountSummaryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3106FFF3-3612-542A-B2CD-3CF4CD48****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,31 @@ public class GetResolveCountSummaryResponseBody extends TeaModel {
     }
 
     public static class GetResolveCountSummaryResponseBodyResolveSummary extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("Http")
         public Long http;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("Http6")
         public Long http6;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("Https")
         public Long https;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("Https6")
         public Long https6;
 

@@ -7,6 +7,10 @@ public class GetAccountInfoResponseBody extends TeaModel {
     @NameInMap("AccountInfo")
     public GetAccountInfoResponseBodyAccountInfo accountInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50F9C40E-188D-4208-BE2C-74271337****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,29 +36,75 @@ public class GetAccountInfoResponseBody extends TeaModel {
     }
 
     public static class GetAccountInfoResponseBodyAccountInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1337****</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1500000</p>
+         */
         @NameInMap("MonthFreeCount")
         public Integer monthFreeCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("MonthHttpsResolveCount")
         public Integer monthHttpsResolveCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9927326</p>
+         */
         @NameInMap("MonthResolveCount")
         public Integer monthResolveCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("PackageCount")
+        public Integer packageCount;
+
+        /**
+         * <strong>example:</strong>
+         * <p>50F9C40E****</p>
+         */
         @NameInMap("SignSecret")
         public String signSecret;
 
+        /**
+         * <strong>example:</strong>
+         * <p>611523</p>
+         */
         @NameInMap("SignedCount")
         public Long signedCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1523</p>
+         */
         @NameInMap("UnsignedCount")
         public Long unsignedCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("UnsignedEnabled")
         public Boolean unsignedEnabled;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("UserStatus")
+        public Integer userStatus;
 
         public static GetAccountInfoResponseBodyAccountInfo build(java.util.Map<String, ?> map) throws Exception {
             GetAccountInfoResponseBodyAccountInfo self = new GetAccountInfoResponseBodyAccountInfo();
@@ -93,6 +143,14 @@ public class GetAccountInfoResponseBody extends TeaModel {
             return this.monthResolveCount;
         }
 
+        public GetAccountInfoResponseBodyAccountInfo setPackageCount(Integer packageCount) {
+            this.packageCount = packageCount;
+            return this;
+        }
+        public Integer getPackageCount() {
+            return this.packageCount;
+        }
+
         public GetAccountInfoResponseBodyAccountInfo setSignSecret(String signSecret) {
             this.signSecret = signSecret;
             return this;
@@ -123,6 +181,14 @@ public class GetAccountInfoResponseBody extends TeaModel {
         }
         public Boolean getUnsignedEnabled() {
             return this.unsignedEnabled;
+        }
+
+        public GetAccountInfoResponseBodyAccountInfo setUserStatus(Integer userStatus) {
+            this.userStatus = userStatus;
+            return this;
+        }
+        public Integer getUserStatus() {
+            return this.userStatus;
         }
 
     }

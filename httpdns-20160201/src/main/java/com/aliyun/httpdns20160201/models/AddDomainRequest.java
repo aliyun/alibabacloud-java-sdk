@@ -4,9 +4,19 @@ package com.aliyun.httpdns20160201.models;
 import com.aliyun.tea.*;
 
 public class AddDomainRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("AccountId")
     public String accountId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.example.com">www.example.com</a></p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 

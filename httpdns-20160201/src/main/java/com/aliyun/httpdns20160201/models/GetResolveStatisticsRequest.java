@@ -4,15 +4,37 @@ package com.aliyun.httpdns20160201.models;
 import com.aliyun.tea.*;
 
 public class GetResolveStatisticsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>month</p>
+     */
     @NameInMap("Granularity")
     public String granularity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>https</p>
+     */
     @NameInMap("ProtocolName")
     public String protocolName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TimeSpan")
     public Integer timeSpan;
 

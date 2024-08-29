@@ -4,12 +4,24 @@ package com.aliyun.httpdns20160201.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("AccountId")
     public String accountId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 

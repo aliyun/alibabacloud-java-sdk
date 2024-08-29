@@ -7,15 +7,31 @@ public class ListDomainsResponseBody extends TeaModel {
     @NameInMap("DomainInfos")
     public ListDomainsResponseBodyDomainInfos domainInfos;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50F9C40E-188D-4208-BE2C-7427E531****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>18</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,20 +81,43 @@ public class ListDomainsResponseBody extends TeaModel {
     }
 
     public static class ListDomainsResponseBodyDomainInfosDomainInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Resolved")
         public Long resolved;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("Resolved6")
         public Long resolved6;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("ResolvedHttps")
         public Long resolvedHttps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("ResolvedHttps6")
         public Long resolvedHttps6;
+
+        @NameInMap("TimeModified")
+        public Long timeModified;
 
         public static ListDomainsResponseBodyDomainInfosDomainInfo build(java.util.Map<String, ?> map) throws Exception {
             ListDomainsResponseBodyDomainInfosDomainInfo self = new ListDomainsResponseBodyDomainInfosDomainInfo();
@@ -123,6 +162,14 @@ public class ListDomainsResponseBody extends TeaModel {
         }
         public Long getResolvedHttps6() {
             return this.resolvedHttps6;
+        }
+
+        public ListDomainsResponseBodyDomainInfosDomainInfo setTimeModified(Long timeModified) {
+            this.timeModified = timeModified;
+            return this;
+        }
+        public Long getTimeModified() {
+            return this.timeModified;
         }
 
     }

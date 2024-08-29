@@ -4,9 +4,17 @@ package com.aliyun.httpdns20160201.models;
 import com.aliyun.tea.*;
 
 public class AddDomainResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://www.example.com">www.example.com</a></p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ADA27798-6911-4B06-AF34-53F62F62XXXX</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
