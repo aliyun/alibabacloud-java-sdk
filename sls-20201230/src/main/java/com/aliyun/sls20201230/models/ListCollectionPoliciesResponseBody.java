@@ -130,9 +130,17 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListCollectionPoliciesResponseBodyDataDataConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("dataProject")
         public String dataProject;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("dataRegion")
         public String dataRegion;
 
@@ -173,6 +181,10 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
         @NameInMap("resourceMode")
         public String resourceMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;tag1&quot;:&quot;value1&quot;,&quot;tag2&quot;:&quot;value2&quot;}</p>
+         */
         @NameInMap("resourceTags")
         public java.util.Map<String, ?> resourceTags;
 
@@ -216,6 +228,10 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListCollectionPoliciesResponseBodyDataResourceDirectory extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>all,custom</p>
+         */
         @NameInMap("accountGroupType")
         public String accountGroupType;
 
@@ -273,6 +289,10 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
         @NameInMap("enabled")
         public Boolean enabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("internalPolicy")
         public Boolean internalPolicy;
 
@@ -286,6 +306,10 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
         @NameInMap("policyName")
         public String policyName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>148***********50</p>
+         */
         @NameInMap("policyUid")
         public String policyUid;
 
@@ -395,9 +419,17 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListCollectionPoliciesResponseBodyStatisticsPolicySourceList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>policy_name1_from148</p>
+         */
         @NameInMap("policyName")
         public String policyName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>148***********50</p>
+         */
         @NameInMap("policyUid")
         public String policyUid;
 
@@ -428,6 +460,10 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
         @NameInMap("policySourceList")
         public java.util.List<ListCollectionPoliciesResponseBodyStatisticsPolicySourceList> policySourceList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss</p>
+         */
         @NameInMap("productCode")
         public String productCode;
 

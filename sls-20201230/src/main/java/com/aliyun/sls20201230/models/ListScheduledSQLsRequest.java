@@ -4,6 +4,12 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListScheduledSQLsRequest extends TeaModel {
+    /**
+     * <p>The name of the Logstore.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ali-test-logstore</p>
+     */
     @NameInMap("logstore")
     public String logstore;
 

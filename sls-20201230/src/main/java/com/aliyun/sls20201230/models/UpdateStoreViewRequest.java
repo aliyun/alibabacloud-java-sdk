@@ -5,6 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateStoreViewRequest extends TeaModel {
     /**
+     * <p>The type of the dataset.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><p>metricstore</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>logstore</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +31,7 @@ public class UpdateStoreViewRequest extends TeaModel {
     public String storeType;
 
     /**
+     * <p>The Logstores or Metricstores.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("stores")

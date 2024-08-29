@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetContextLogsRequest extends TeaModel {
     /**
-     * <p>The number of logs that you want to obtain and are generated before the generation time of the start log. Valid values: (0,100].</p>
+     * <p>The number of logs that you want to obtain and are generated before the generation time of the start log. Valid values: <code>(0,100]</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetContextLogsRequest extends TeaModel {
     public Long backLines;
 
     /**
-     * <p>The number of logs that you want to obtain and are generated after the generation time of the start log. Valid values: (0,100].</p>
+     * <p>The number of logs that you want to obtain and are generated after the generation time of the start log. Valid values: <code>(0,100]</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

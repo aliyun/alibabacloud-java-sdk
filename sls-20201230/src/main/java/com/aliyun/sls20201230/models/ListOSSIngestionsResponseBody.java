@@ -4,12 +4,27 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListOSSIngestionsResponseBody extends TeaModel {
+    /**
+     * <p>The number of OSS data import jobs that are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("count")
     public Integer count;
 
+    /**
+     * <p>The OSS data import jobs.</p>
+     */
     @NameInMap("results")
     public java.util.List<OSSIngestion> results;
 
+    /**
+     * <p>The total number of OSS data import jobs in the project.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
+     */
     @NameInMap("total")
     public Integer total;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetLogStoreMeteringModeResponseBody extends TeaModel {
     /**
+     * <p>The billing mode. Default value: ChargeByFunction. Valid values: ChargeByFunction and ChargeByDataIngest.</p>
+     * 
      * <strong>example:</strong>
      * <p>ChargeByFunction</p>
      */

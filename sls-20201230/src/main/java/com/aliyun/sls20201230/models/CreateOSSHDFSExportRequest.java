@@ -5,15 +5,20 @@ import com.aliyun.tea.*;
 
 public class CreateOSSHDFSExportRequest extends TeaModel {
     /**
+     * <p>The configuration details of the job.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")
     public OSSExportConfiguration configuration;
 
+    /**
+     * <p>The description of the job.</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>The display name of the job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +28,7 @@ public class CreateOSSHDFSExportRequest extends TeaModel {
     public String displayName;
 
     /**
+     * <p>The unique identifier of the OSS data shipping job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

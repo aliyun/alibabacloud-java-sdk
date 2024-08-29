@@ -4,6 +4,10 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListCollectionPoliciesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>your-central-project1</p>
+     */
     @NameInMap("centralProject")
     public String centralProject;
 
@@ -21,6 +25,10 @@ public class ListCollectionPoliciesRequest extends TeaModel {
     @NameInMap("instanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("offset")
     public Integer offset;
 
@@ -38,6 +46,10 @@ public class ListCollectionPoliciesRequest extends TeaModel {
     @NameInMap("productCode")
     public String productCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("size")
     public Integer size;
 

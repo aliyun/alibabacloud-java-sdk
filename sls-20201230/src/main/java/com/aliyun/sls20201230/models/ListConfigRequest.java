@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConfigRequest extends TeaModel {
     /**
-     * <p>The name of the Logtail configuration.</p>
+     * <p>The name of the Logtail configuration, which is used for fuzzy match.</p>
      * 
      * <strong>example:</strong>
      * <p>logtail-config-sample</p>
