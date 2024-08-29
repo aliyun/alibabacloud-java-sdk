@@ -28093,6 +28093,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationCidrBlock)) {
+            query.put("DestinationCidrBlock", request.destinationCidrBlock);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.newNextHopId)) {
             query.put("NewNextHopId", request.newNextHopId);
         }
@@ -28127,6 +28131,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.routeEntryName)) {
             query.put("RouteEntryName", request.routeEntryName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeTableId)) {
+            query.put("RouteTableId", request.routeTableId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
