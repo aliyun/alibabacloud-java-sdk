@@ -5,12 +5,33 @@ import com.aliyun.tea.*;
 
 public class GetStoreViewResponseBody extends TeaModel {
     /**
+     * <p>The type of the dataset.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><p>metricstore</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>logstore</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>logstore</p>
      */
     @NameInMap("storeType")
     public String storeType;
 
+    /**
+     * <p>The Logstores or Metricstores.</p>
+     */
     @NameInMap("stores")
     public java.util.List<StoreViewStore> stores;
 

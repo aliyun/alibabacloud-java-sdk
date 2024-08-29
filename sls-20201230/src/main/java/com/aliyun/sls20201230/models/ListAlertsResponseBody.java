@@ -4,12 +4,27 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListAlertsResponseBody extends TeaModel {
+    /**
+     * <p>The number of alert rules that are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("count")
     public Integer count;
 
+    /**
+     * <p>The alert rules.</p>
+     */
     @NameInMap("results")
     public java.util.List<Alert> results;
 
+    /**
+     * <p>The total number of alert rules in the project.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
+     */
     @NameInMap("total")
     public Integer total;
 

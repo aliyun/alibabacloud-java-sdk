@@ -67,6 +67,9 @@ public class Logstore extends TeaModel {
     @NameInMap("mode")
     public String mode;
 
+    @NameInMap("processorId")
+    public String processorId;
+
     @NameInMap("productType")
     public String productType;
 
@@ -182,6 +185,14 @@ public class Logstore extends TeaModel {
     }
     public String getMode() {
         return this.mode;
+    }
+
+    public Logstore setProcessorId(String processorId) {
+        this.processorId = processorId;
+        return this;
+    }
+    public String getProcessorId() {
+        return this.processorId;
     }
 
     public Logstore setProductType(String productType) {

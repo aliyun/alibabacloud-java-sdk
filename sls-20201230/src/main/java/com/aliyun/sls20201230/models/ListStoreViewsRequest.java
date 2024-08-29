@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListStoreViewsRequest extends TeaModel {
     /**
+     * <p>The dataset name that is used for fuzzy match.</p>
+     * 
      * <strong>example:</strong>
      * <p>my_storeview</p>
      */
@@ -12,6 +14,8 @@ public class ListStoreViewsRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The offset of the datasets to return. Default value: 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -19,6 +23,8 @@ public class ListStoreViewsRequest extends TeaModel {
     public Integer offset;
 
     /**
+     * <p>The number of datasets to return. Default value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -26,6 +32,24 @@ public class ListStoreViewsRequest extends TeaModel {
     public Integer size;
 
     /**
+     * <p>The type of the datasets to return. By default, datasets are not filtered by type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><p>metricstore</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>logstore</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>logstore</p>
      */

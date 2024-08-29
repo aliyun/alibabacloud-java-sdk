@@ -5,27 +5,43 @@ import com.aliyun.tea.*;
 
 public class CreateAlertRequest extends TeaModel {
     /**
+     * <p>The detailed configurations of the alert rule.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")
     public AlertConfiguration configuration;
 
+    /**
+     * <p>The description of the alert rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>An alert rule</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>The display name of the alert rule.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-alert</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
     /**
+     * <p>The name of the alert rule. Make sure that the name is unique in a project.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alert-123456</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
+     * <p>The scheduling configurations of the alert rule.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("schedule")

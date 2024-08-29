@@ -4,6 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class GetStoreViewIndexResponseBody extends TeaModel {
+    /**
+     * <p>The index configurations.</p>
+     */
     @NameInMap("indexes")
     public java.util.List<GetStoreViewIndexResponseBodyIndexes> indexes;
 
@@ -21,10 +24,15 @@ public class GetStoreViewIndexResponseBody extends TeaModel {
     }
 
     public static class GetStoreViewIndexResponseBodyIndexes extends TeaModel {
+        /**
+         * <p>The index configurations of the Logstore.</p>
+         */
         @NameInMap("index")
         public Index index;
 
         /**
+         * <p>The name of the Logstore.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-logstore</p>
          */
@@ -32,6 +40,8 @@ public class GetStoreViewIndexResponseBody extends TeaModel {
         public String logstore;
 
         /**
+         * <p>The name of the project to which the Logstore belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>example-project</p>
          */

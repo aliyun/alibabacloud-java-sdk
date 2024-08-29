@@ -15,7 +15,7 @@ public class CreateOssExternalStoreRequest extends TeaModel {
     public String externalStoreName;
 
     /**
-     * <p>The parameters that are configured for the external store.</p>
+     * <p>The parameters of the external store.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("parameter")
@@ -72,7 +72,7 @@ public class CreateOssExternalStoreRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The type of the field.</p>
+         * <p>The data type of the field.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -106,7 +106,7 @@ public class CreateOssExternalStoreRequest extends TeaModel {
 
     public static class CreateOssExternalStoreRequestParameter extends TeaModel {
         /**
-         * <p>The AccessKey ID of your account.</p>
+         * <p>The AccessKey ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class CreateOssExternalStoreRequest extends TeaModel {
         public String accessid;
 
         /**
-         * <p>The AccessKey secret of your account.</p>
+         * <p>The AccessKey secret.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,14 +136,14 @@ public class CreateOssExternalStoreRequest extends TeaModel {
         public String bucket;
 
         /**
-         * <p>The fields that are associated to the external store.</p>
+         * <p>The associated fields.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("columns")
         public java.util.List<CreateOssExternalStoreRequestParameterColumns> columns;
 
         /**
-         * <p>The Object Storage Service (OSS) endpoint.</p>
+         * <p>The OSS endpoint. For more information, see <a href="https://help.aliyun.com/document_detail/31837.html">Regions and endpoints</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,7 +153,7 @@ public class CreateOssExternalStoreRequest extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The names of the OSS objects that are associated to the external store.</p>
+         * <p>The associated OSS objects. Valid values of n: 1 to 100.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("objects")

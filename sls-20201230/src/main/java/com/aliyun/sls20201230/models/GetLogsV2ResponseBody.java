@@ -11,7 +11,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
     public java.util.List<java.util.Map<String, String>> data;
 
     /**
-     * <p>The metadata that is returned.</p>
+     * <p>The metadata of the returned data.</p>
      */
     @NameInMap("meta")
     public GetLogsV2ResponseBodyMeta meta;
@@ -38,15 +38,31 @@ public class GetLogsV2ResponseBody extends TeaModel {
     }
 
     public static class GetLogsV2ResponseBodyMetaPhraseQueryInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("beginOffset")
         public Long beginOffset;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("endOffset")
         public Long endOffset;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("endTime")
         public Long endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("scanAll")
         public Boolean scanAll;
 
@@ -111,9 +127,17 @@ public class GetLogsV2ResponseBody extends TeaModel {
         @NameInMap("count")
         public Integer count;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("cpuCores")
         public Integer cpuCores;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.002</p>
+         */
         @NameInMap("cpuSec")
         public Double cpuSec;
 
@@ -139,7 +163,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
         public java.util.List<java.util.List<LogContent>> highlights;
 
         /**
-         * <p>Indicates whether the returned result is accurate.</p>
+         * <p>Indicates whether the returned result is accurate to seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -153,9 +177,17 @@ public class GetLogsV2ResponseBody extends TeaModel {
         @NameInMap("keys")
         public java.util.List<String> keys;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("limited")
         public Integer limited;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("mode")
         public Integer mode;
 
@@ -193,6 +225,10 @@ public class GetLogsV2ResponseBody extends TeaModel {
         @NameInMap("progress")
         public String progress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1024</p>
+         */
         @NameInMap("scanBytes")
         public Long scanBytes;
 
