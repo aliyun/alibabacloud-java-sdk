@@ -6,25 +6,27 @@ import com.aliyun.tea.*;
 public class RevertAggregateEvaluationResultsShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
-     * <br>
+     * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ca-5b6c626622af008f****</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
     /**
      * <p>The ID of the rule in the account group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cr-7e72626622af0051****</p>
      */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
     /**
      * <p>The resources that you want to re-evaluate.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Resources")

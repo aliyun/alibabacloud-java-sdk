@@ -12,6 +12,9 @@ public class GetAggregateAccountComplianceByPackResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6EC7AED1-172F-42AE-9C12-295BC2ADB751</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,23 +43,33 @@ public class GetAggregateAccountComplianceByPackResponseBody extends TeaModel {
     public static class GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResultAccountCompliances extends TeaModel {
         /**
          * <p>The ID of the member account in the account group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100931896542****</p>
          */
         @NameInMap("AccountId")
         public Long accountId;
 
         /**
          * <p>The name of the member account in the account group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
          * <p>The compliance evaluation result. Valid values:</p>
-         * <br>
-         * <p>*   COMPLIANT: The resource was evaluated as compliant.</p>
-         * <p>*   NON_COMPLIANT: The resource was evaluated as incompliant.</p>
-         * <p>*   NOT_APPLICABLE: The rule did not apply to your resource.</p>
-         * <p>*   INSUFFICIENT_DATA: No resource data was available.</p>
+         * <ul>
+         * <li>COMPLIANT: The resource was evaluated as compliant.</li>
+         * <li>NON_COMPLIANT: The resource was evaluated as incompliant.</li>
+         * <li>NOT_APPLICABLE: The rule did not apply to your resource.</li>
+         * <li>INSUFFICIENT_DATA: No resource data was available.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLIANT</p>
          */
         @NameInMap("ComplianceType")
         public String complianceType;
@@ -101,18 +114,27 @@ public class GetAggregateAccountComplianceByPackResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the compliance package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cp-541e626622af0087****</p>
          */
         @NameInMap("CompliancePackId")
         public String compliancePackId;
 
         /**
          * <p>The number of non-compliant member accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("NonCompliantCount")
         public Integer nonCompliantCount;
 
         /**
          * <p>The total number of member accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

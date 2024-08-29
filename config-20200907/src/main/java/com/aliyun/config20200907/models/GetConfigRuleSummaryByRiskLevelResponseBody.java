@@ -12,6 +12,9 @@ public class GetConfigRuleSummaryByRiskLevelResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A3CED98C-DE65-46AC-B2D2-04A4A9AB5B36</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,22 +43,32 @@ public class GetConfigRuleSummaryByRiskLevelResponseBody extends TeaModel {
     public static class GetConfigRuleSummaryByRiskLevelResponseBodyConfigRuleSummaries extends TeaModel {
         /**
          * <p>The number of rules against which specific resources are evaluated as compliant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("CompliantCount")
         public Integer compliantCount;
 
         /**
          * <p>The number of rules against which specific resources are evaluated as non-compliant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NonCompliantCount")
         public Integer nonCompliantCount;
 
         /**
          * <p>The risk level of the resources that are not compliant with the rules. Valid values:</p>
-         * <br>
-         * <p>*   1: high risk level.</p>
-         * <p>*   2: medium risk level.</p>
-         * <p>*   3: low risk level.</p>
+         * <ul>
+         * <li>1: high risk level.</li>
+         * <li>2: medium risk level.</li>
+         * <li>3: low risk level.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RiskLevel")
         public Integer riskLevel;

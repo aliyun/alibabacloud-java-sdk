@@ -12,6 +12,9 @@ public class AttachAggregateConfigRuleToCompliancePackResponseBody extends TeaMo
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DE72B7B5-D0EA-15E6-A359-EDECBB9BDFA3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,35 @@ public class AttachAggregateConfigRuleToCompliancePackResponseBody extends TeaMo
     public static class AttachAggregateConfigRuleToCompliancePackResponseBodyOperateRuleResultOperateRuleItemList extends TeaModel {
         /**
          * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cr-a124626622af00e7****</p>
          */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
 
         /**
          * <p>The error code.</p>
-         * <br>
-         * <p>*   This parameter is empty if the rule is added to the compliance package.</p>
-         * <p>*   An error code is returned if the rule fails to be added to the compliance package. For more information about error codes, see [Error codes](https://error-center.alibabacloud.com/status/product/Config).</p>
+         * <ul>
+         * <li>This parameter is empty if the rule is added to the compliance package.</li>
+         * <li>An error code is returned if the rule fails to be added to the compliance package. For more information about error codes, see <a href="https://error-center.alibabacloud.com/status/product/Config">Error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ConfigRuleNotExists</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Success")
         public Boolean success;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetResourceComplianceGroupByResourceTypeRequest extends TeaModel {
     /**
      * <p>The rule IDs. Separate multiple rule IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cr-a5c6626622af0058****</p>
      */
     @NameInMap("ConfigRuleIds")
     public String configRuleIds;

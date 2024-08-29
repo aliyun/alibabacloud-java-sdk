@@ -12,6 +12,9 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25C89DDB-BB79-487D-88C3-4A561F21EFC4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,50 +43,75 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
     public static class ListAggregateResourceEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifierEvaluationResultQualifier extends TeaModel {
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:config::100931896542****:rule/cr-7f7d626622af0041****</p>
          */
         @NameInMap("ConfigRuleArn")
         public String configRuleArn;
 
         /**
          * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cr-7f7d626622af0041****</p>
          */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
 
         /**
          * <p>The name of the monitoring rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-rule-name</p>
          */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
 
         /**
          * <p>The date from which the system automatically re-evaluates the ignored incompliant resources.</p>
-         * <br>
-         * <p>>  If the value of this parameter is left empty, the system does not automatically re-evaluate the ignored incompliant resources. You must manually re-evaluate the ignored incompliant resources.</p>
+         * <blockquote>
+         * <p> If the value of this parameter is left empty, the system does not automatically re-evaluate the ignored incompliant resources. You must manually re-evaluate the ignored incompliant resources.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-06-01</p>
          */
         @NameInMap("IgnoreDate")
         public String ignoreDate;
 
         /**
          * <p>The ID of the region where the resource resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>global</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23642660635396****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The name of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rd_member</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;
 
         /**
          * <p>The type of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::RAM::User</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -168,6 +196,9 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
 
         /**
          * <p>The timestamp when the compliance evaluation was performed. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1624932227157</p>
          */
         @NameInMap("OrderingTimestamp")
         public Long orderingTimestamp;
@@ -198,24 +229,34 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
     public static class ListAggregateResourceEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList extends TeaModel {
         /**
          * <p>The annotation to the resource that is evaluated as incompliant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;configuration\&quot;:\&quot;false\&quot;,\&quot;desiredValue\&quot;:\&quot;True\&quot;,\&quot;operator\&quot;:\&quot;StringEquals\&quot;,\&quot;property\&quot;:\&quot;$.LoginProfile.MFABindRequired\&quot;}</p>
          */
         @NameInMap("Annotation")
         public String annotation;
 
         /**
          * <p>The compliance evaluation result of the resources. Valid values:</p>
-         * <br>
-         * <p>*   COMPLIANT: The resources are evaluated as compliant.</p>
-         * <p>*   NON_COMPLIANT: The resources are evaluated as incompliant.</p>
-         * <p>*   NOT_APPLICABLE: The rule does not apply to your resources.</p>
-         * <p>*   INSUFFICIENT_DATA: No resource data is available.</p>
-         * <p>*   IGNORED: The resource is ignored during compliance evaluation.</p>
+         * <ul>
+         * <li>COMPLIANT: The resources are evaluated as compliant.</li>
+         * <li>NON_COMPLIANT: The resources are evaluated as incompliant.</li>
+         * <li>NOT_APPLICABLE: The rule does not apply to your resources.</li>
+         * <li>INSUFFICIENT_DATA: No resource data is available.</li>
+         * <li>IGNORED: The resource is ignored during compliance evaluation.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NON_COMPLIANT</p>
          */
         @NameInMap("ComplianceType")
         public String complianceType;
 
         /**
          * <p>The timestamp when the rule was triggered. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1624932227157</p>
          */
         @NameInMap("ConfigRuleInvokedTimestamp")
         public Long configRuleInvokedTimestamp;
@@ -228,34 +269,49 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
 
         /**
          * <p>The trigger type of the managed rule. Valid values:</p>
-         * <br>
-         * <p>*   ConfigurationItemChangeNotification: The managed rule is triggered by configuration changes.</p>
-         * <p>*   ScheduledNotification: The managed rule is periodically triggered.</p>
+         * <ul>
+         * <li>ConfigurationItemChangeNotification: The managed rule is triggered by configuration changes.</li>
+         * <li>ScheduledNotification: The managed rule is periodically triggered.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ScheduledNotification</p>
          */
         @NameInMap("InvokingEventMessageType")
         public String invokingEventMessageType;
 
         /**
          * <p>Indicates whether the remediation template is enabled. Valid values:</p>
-         * <br>
-         * <p>- true: The remediation template is enabled.</p>
-         * <p>- false: The remediation template is disabled.</p>
+         * <ul>
+         * <li>true: The remediation template is enabled.</li>
+         * <li>false: The remediation template is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("RemediationEnabled")
         public Boolean remediationEnabled;
 
         /**
          * <p>The timestamp when the compliance evaluation result was recorded. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1624932227595</p>
          */
         @NameInMap("ResultRecordedTimestamp")
         public Long resultRecordedTimestamp;
 
         /**
          * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
-         * <br>
-         * <p>*   1: high risk level</p>
-         * <p>*   2: medium risk level</p>
-         * <p>*   3: low risk level</p>
+         * <ul>
+         * <li>1: high risk level</li>
+         * <li>2: medium risk level</li>
+         * <li>3: low risk level</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
@@ -340,12 +396,18 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
 
         /**
          * <p>The maximum number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
         /**
          * <p>The token that was used to initiate the next request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IWBjqMYSy0is7zSMGu16****</p>
          */
         @NameInMap("NextToken")
         public String nextToken;

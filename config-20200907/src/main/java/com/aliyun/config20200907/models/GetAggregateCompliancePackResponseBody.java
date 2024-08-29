@@ -12,6 +12,9 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6EC7AED1-172F-42AE-9C12-295BC2ADB751</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,21 +43,31 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
     public static class GetAggregateCompliancePackResponseBodyCompliancePackConfigRulesConfigRuleParameters extends TeaModel {
         /**
          * <p>The name of the input parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bandwidth</p>
          */
         @NameInMap("ParameterName")
         public String parameterName;
 
         /**
          * <p>The value of the input parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
 
         /**
-         * <p>Indicates whether the input parameters are required. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <p>Indicates whether the input parameter was required. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Required")
         public Boolean required;
@@ -93,18 +106,21 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
     public static class GetAggregateCompliancePackResponseBodyCompliancePackConfigRules extends TeaModel {
         /**
          * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cr-a260626622af0005****</p>
          */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
 
         /**
-         * <p>The rule name.</p>
+         * <p>The name of the rule.</p>
          */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
 
         /**
-         * <p>The input parameters of the rule.</p>
+         * <p>The details of the input parameter of the rule.</p>
          */
         @NameInMap("ConfigRuleParameters")
         public java.util.List<GetAggregateCompliancePackResponseBodyCompliancePackConfigRulesConfigRuleParameters> configRuleParameters;
@@ -116,23 +132,33 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The identifier of the managed rule.</p>
+         * <p>The ID of the rule template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-bandwidth-limit</p>
          */
         @NameInMap("ManagedRuleIdentifier")
         public String managedRuleIdentifier;
 
         /**
-         * <p>The types of the resources evaluated based on the rule. Multiple resource types are separated with commas (,).</p>
+         * <p>The type of the resource evaluated based on the rule. Multiple resource types are separated with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::EIP::EipAddress</p>
          */
         @NameInMap("ResourceTypesScope")
         public String resourceTypesScope;
 
         /**
          * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
-         * <br>
-         * <p>*   1: high.</p>
-         * <p>*   2: medium.</p>
-         * <p>*   3: low.</p>
+         * <ul>
+         * <li>1: high</li>
+         * <li>2: medium</li>
+         * <li>3: low</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
@@ -200,40 +226,146 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
 
     }
 
+    public static class GetAggregateCompliancePackResponseBodyCompliancePackScopeExcludeTagsScope extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static GetAggregateCompliancePackResponseBodyCompliancePackScopeExcludeTagsScope build(java.util.Map<String, ?> map) throws Exception {
+            GetAggregateCompliancePackResponseBodyCompliancePackScopeExcludeTagsScope self = new GetAggregateCompliancePackResponseBodyCompliancePackScopeExcludeTagsScope();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAggregateCompliancePackResponseBodyCompliancePackScopeExcludeTagsScope setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public GetAggregateCompliancePackResponseBodyCompliancePackScopeExcludeTagsScope setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
+    public static class GetAggregateCompliancePackResponseBodyCompliancePackScopeTagsScope extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static GetAggregateCompliancePackResponseBodyCompliancePackScopeTagsScope build(java.util.Map<String, ?> map) throws Exception {
+            GetAggregateCompliancePackResponseBodyCompliancePackScopeTagsScope self = new GetAggregateCompliancePackResponseBodyCompliancePackScopeTagsScope();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAggregateCompliancePackResponseBodyCompliancePackScopeTagsScope setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public GetAggregateCompliancePackResponseBodyCompliancePackScopeTagsScope setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class GetAggregateCompliancePackResponseBodyCompliancePackScope extends TeaModel {
+        @NameInMap("ExcludeRegionIdsScope")
+        public String excludeRegionIdsScope;
+
+        @NameInMap("ExcludeResourceGroupIdsScope")
+        public String excludeResourceGroupIdsScope;
+
         /**
          * <p>The ID of the resource that is not evaluated by using the compliance package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-8vbf3x310fn56ijfd****</p>
          */
         @NameInMap("ExcludeResourceIdsScope")
         public String excludeResourceIdsScope;
 
+        @NameInMap("ExcludeTagsScope")
+        public java.util.List<GetAggregateCompliancePackResponseBodyCompliancePackScopeExcludeTagsScope> excludeTagsScope;
+
         /**
          * <p>The ID of the region whose resources were evaluated by using the compliance package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionIdsScope")
         public String regionIdsScope;
 
         /**
          * <p>The ID of the resource group whose resources are evaluated by using the compliance package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzc7r7rhx****</p>
          */
         @NameInMap("ResourceGroupIdsScope")
         public String resourceGroupIdsScope;
 
+        @NameInMap("ResourceIdsScope")
+        public String resourceIdsScope;
+
         /**
          * <p>The tag key of the resource that is evaluated by using the compliance package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         @NameInMap("TagKeyScope")
         public String tagKeyScope;
 
         /**
          * <p>The tag value of the resource that is evaluated by using the compliance package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("TagValueScope")
         public String tagValueScope;
 
+        @NameInMap("TagsScope")
+        public java.util.List<GetAggregateCompliancePackResponseBodyCompliancePackScopeTagsScope> tagsScope;
+
         public static GetAggregateCompliancePackResponseBodyCompliancePackScope build(java.util.Map<String, ?> map) throws Exception {
             GetAggregateCompliancePackResponseBodyCompliancePackScope self = new GetAggregateCompliancePackResponseBodyCompliancePackScope();
             return TeaModel.build(map, self);
+        }
+
+        public GetAggregateCompliancePackResponseBodyCompliancePackScope setExcludeRegionIdsScope(String excludeRegionIdsScope) {
+            this.excludeRegionIdsScope = excludeRegionIdsScope;
+            return this;
+        }
+        public String getExcludeRegionIdsScope() {
+            return this.excludeRegionIdsScope;
+        }
+
+        public GetAggregateCompliancePackResponseBodyCompliancePackScope setExcludeResourceGroupIdsScope(String excludeResourceGroupIdsScope) {
+            this.excludeResourceGroupIdsScope = excludeResourceGroupIdsScope;
+            return this;
+        }
+        public String getExcludeResourceGroupIdsScope() {
+            return this.excludeResourceGroupIdsScope;
         }
 
         public GetAggregateCompliancePackResponseBodyCompliancePackScope setExcludeResourceIdsScope(String excludeResourceIdsScope) {
@@ -242,6 +374,14 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         }
         public String getExcludeResourceIdsScope() {
             return this.excludeResourceIdsScope;
+        }
+
+        public GetAggregateCompliancePackResponseBodyCompliancePackScope setExcludeTagsScope(java.util.List<GetAggregateCompliancePackResponseBodyCompliancePackScopeExcludeTagsScope> excludeTagsScope) {
+            this.excludeTagsScope = excludeTagsScope;
+            return this;
+        }
+        public java.util.List<GetAggregateCompliancePackResponseBodyCompliancePackScopeExcludeTagsScope> getExcludeTagsScope() {
+            return this.excludeTagsScope;
         }
 
         public GetAggregateCompliancePackResponseBodyCompliancePackScope setRegionIdsScope(String regionIdsScope) {
@@ -260,6 +400,14 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             return this.resourceGroupIdsScope;
         }
 
+        public GetAggregateCompliancePackResponseBodyCompliancePackScope setResourceIdsScope(String resourceIdsScope) {
+            this.resourceIdsScope = resourceIdsScope;
+            return this;
+        }
+        public String getResourceIdsScope() {
+            return this.resourceIdsScope;
+        }
+
         public GetAggregateCompliancePackResponseBodyCompliancePackScope setTagKeyScope(String tagKeyScope) {
             this.tagKeyScope = tagKeyScope;
             return this;
@@ -276,23 +424,40 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             return this.tagValueScope;
         }
 
+        public GetAggregateCompliancePackResponseBodyCompliancePackScope setTagsScope(java.util.List<GetAggregateCompliancePackResponseBodyCompliancePackScopeTagsScope> tagsScope) {
+            this.tagsScope = tagsScope;
+            return this;
+        }
+        public java.util.List<GetAggregateCompliancePackResponseBodyCompliancePackScopeTagsScope> getTagsScope() {
+            return this.tagsScope;
+        }
+
     }
 
     public static class GetAggregateCompliancePackResponseBodyCompliancePack extends TeaModel {
         /**
          * <p>The ID of the management account to which the compliance package belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100931896542****</p>
          */
         @NameInMap("AccountId")
         public Long accountId;
 
         /**
          * <p>The ID of the account group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca-f632626622af0079****</p>
          */
         @NameInMap("AggregatorId")
         public String aggregatorId;
 
         /**
          * <p>The ID of the compliance package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cp-fdc8626622af00f9****</p>
          */
         @NameInMap("CompliancePackId")
         public String compliancePackId;
@@ -305,6 +470,9 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the compliance package template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ct-5f26ff4e06a300c4****</p>
          */
         @NameInMap("CompliancePackTemplateId")
         public String compliancePackTemplateId;
@@ -317,6 +485,9 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
 
         /**
          * <p>The timestamp when the compliance package was created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1624243657000</p>
          */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
@@ -329,10 +500,14 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
 
         /**
          * <p>The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:</p>
-         * <br>
-         * <p>*   1: high</p>
-         * <p>*   2: medium</p>
-         * <p>*   3: low</p>
+         * <ul>
+         * <li>1: high</li>
+         * <li>2: medium</li>
+         * <li>3: low</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
@@ -345,9 +520,13 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
 
         /**
          * <p>The status of the compliance package. Valid values:</p>
-         * <br>
-         * <p>*   ACTIVE: The compliance package was normal.</p>
-         * <p>*   CREATING: The compliance package was being created.</p>
+         * <ul>
+         * <li>ACTIVE: The compliance package was normal.</li>
+         * <li>CREATING: The compliance package was being created.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
          */
         @NameInMap("Status")
         public String status;

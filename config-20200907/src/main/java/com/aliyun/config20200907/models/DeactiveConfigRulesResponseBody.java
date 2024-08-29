@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DeactiveConfigRulesResponseBody extends TeaModel {
     /**
-     * <p>The results of the operations to disable the specified rules.</p>
+     * <p>The results of the operations that are performed to disable the specified rules.</p>
      */
     @NameInMap("OperateRuleResult")
     public DeactiveConfigRulesResponseBodyOperateRuleResult operateRuleResult;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>54FA74D9-45D4-4CA5-9BE1-97F6EA19AF5B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,28 +42,36 @@ public class DeactiveConfigRulesResponseBody extends TeaModel {
 
     public static class DeactiveConfigRulesResponseBodyOperateRuleResultOperateRuleItemList extends TeaModel {
         /**
-         * <p>The ID of the rule.</p>
+         * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cr-19a56457e0d90058****</p>
          */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
 
         /**
          * <p>The error code.</p>
-         * <br>
-         * <p>*   If the rule is disabled, no error code is returned.</p>
-         * <br>
-         * <p><!----></p>
-         * <br>
-         * <p>*   If the rule fails to be disabled, an error code is returned. For more information about error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Config).</p>
+         * <ul>
+         * <li>If the rule is disabled, no error code is returned.</li>
+         * <li>If the rule fails to be disabled, an error code is returned. For more information about error codes, see <a href="https://error-center.alibabacloud.com/status/product/Config">Error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ConfigRuleCanNotDelete</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
-         * <p>Indicates whether the operation is successful. Valid values:</p>
-         * <br>
-         * <p>*   true: The operation is successful.</p>
-         * <p>*   false: The operation fails.</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Success")
         public Boolean success;
@@ -98,7 +109,7 @@ public class DeactiveConfigRulesResponseBody extends TeaModel {
 
     public static class DeactiveConfigRulesResponseBodyOperateRuleResult extends TeaModel {
         /**
-         * <p>The result of the operation to disable the rule.</p>
+         * <p>The operations that are performed to disable the rule.</p>
          */
         @NameInMap("OperateRuleItemList")
         public java.util.List<DeactiveConfigRulesResponseBodyOperateRuleResultOperateRuleItemList> operateRuleItemList;

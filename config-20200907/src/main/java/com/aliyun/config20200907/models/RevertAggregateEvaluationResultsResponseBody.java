@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RevertAggregateEvaluationResultsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BB11CBF2-0B0B-59F2-9E84-07B38267AD12</p>
      */
     @NameInMap("RequestId")
     public String requestId;

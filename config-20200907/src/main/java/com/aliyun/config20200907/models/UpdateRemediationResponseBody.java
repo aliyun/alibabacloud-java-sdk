@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class UpdateRemediationResponseBody extends TeaModel {
     /**
      * <p>The ID of the remediation setting.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>crr-7c2ba2d0236700a3****</p>
      */
     @NameInMap("RemediationId")
     public String remediationId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C7817373-78CB-4F9A-8AFA-E7A88E9D64A2</p>
      */
     @NameInMap("RequestId")
     public String requestId;

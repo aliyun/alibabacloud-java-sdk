@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateAggregateCompliancePackResponseBody extends TeaModel {
     /**
      * <p>The compliance package ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cp-fc56626622af00f9****</p>
      */
     @NameInMap("CompliancePackId")
     public String compliancePackId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CC0CE5EB-E51E-48EB-B4AB-9A9E131ECC0F</p>
      */
     @NameInMap("RequestId")
     public String requestId;

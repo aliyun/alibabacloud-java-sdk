@@ -6,20 +6,22 @@ import com.aliyun.tea.*;
 public class DeleteAggregateRemediationsRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of the account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
-     * <br>
+     * <p>For more information about how to obtain the ID of the account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ca-6b4a626622af0012****</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
     /**
      * <p>The ID of the remediation template. Separate multiple remediation template IDs with commas (,).</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of a remediation template, see [ListAggregateRemediations](https://help.aliyun.com/document_detail/270036.html).</p>
-     * <br>
+     * <p>For more information about how to obtain the ID of a remediation template, see <a href="https://help.aliyun.com/document_detail/270036.html">ListAggregateRemediations</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>crr-909ba2d4716700eb****</p>
      */
     @NameInMap("RemediationIds")
     public String remediationIds;

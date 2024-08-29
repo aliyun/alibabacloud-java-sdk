@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeleteAggregateConfigDeliveryChannelResponseBody extends TeaModel {
     /**
      * <p>The ID of the delivery channel.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cdc-38c3013b46c9002c****</p>
      */
     @NameInMap("DeliveryChannelId")
     public String deliveryChannelId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FCC2F05C-F672-5665-8102-0020DF66B9B9</p>
      */
     @NameInMap("RequestId")
     public String requestId;

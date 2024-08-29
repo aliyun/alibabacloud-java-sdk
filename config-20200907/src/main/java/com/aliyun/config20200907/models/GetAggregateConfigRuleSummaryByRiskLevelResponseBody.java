@@ -12,6 +12,9 @@ public class GetAggregateConfigRuleSummaryByRiskLevelResponseBody extends TeaMod
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A3CDD98C-DE65-46AC-B2D2-04A4A9AB5B73</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,22 +43,32 @@ public class GetAggregateConfigRuleSummaryByRiskLevelResponseBody extends TeaMod
     public static class GetAggregateConfigRuleSummaryByRiskLevelResponseBodyConfigRuleSummaries extends TeaModel {
         /**
          * <p>The number of rules against which specific resources are evaluated as compliant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("CompliantCount")
         public Integer compliantCount;
 
         /**
          * <p>The number of rules against which specific resources are evaluated as non-compliant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NonCompliantCount")
         public Integer nonCompliantCount;
 
         /**
          * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
-         * <br>
-         * <p>*   1: high</p>
-         * <p>*   2: medium</p>
-         * <p>*   3: low</p>
+         * <ul>
+         * <li>1: high</li>
+         * <li>2: medium</li>
+         * <li>3: low</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RiskLevel")
         public Integer riskLevel;

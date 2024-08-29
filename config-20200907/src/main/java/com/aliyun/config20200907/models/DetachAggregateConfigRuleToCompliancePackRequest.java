@@ -6,30 +6,33 @@ import com.aliyun.tea.*;
 public class DetachAggregateConfigRuleToCompliancePackRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
-     * <br>
+     * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ca-75b4626622af00c3****</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
     /**
      * <p>The ID of the compliance package.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of a compliance package, see [ListAggregateCompliancePacks](https://help.aliyun.com/document_detail/262059.html).</p>
-     * <br>
+     * <p>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/262059.html">ListAggregateCompliancePacks</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cp-5bb1626622af00bd****</p>
      */
     @NameInMap("CompliancePackId")
     public String compliancePackId;
 
     /**
      * <p>The rule IDs. Separate multiple rule IDs with commas (,).</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](https://help.aliyun.com/document_detail/264148.html).</p>
-     * <br>
+     * <p>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cr-a124626622af00e7****</p>
      */
     @NameInMap("ConfigRuleIds")
     public String configRuleIds;

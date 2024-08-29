@@ -6,25 +6,33 @@ import com.aliyun.tea.*;
 public class ListCompliancePacksRequest extends TeaModel {
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The status of the compliance package to be queried. Valid values:</p>
-     * <br>
-     * <p>*   ACTIVE: The compliance package is active.</p>
-     * <p>*   CREATING: The compliance package is being created.</p>
+     * <ul>
+     * <li>ACTIVE: The compliance package is active.</li>
+     * <li>CREATING: The compliance package is being created.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ACTIVE</p>
      */
     @NameInMap("Status")
     public String status;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListAggregateResourceRelationsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7A25F9DE-4C8B-5AD3-A241-FFF5A259E5A1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,49 +43,70 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
     public static class ListAggregateResourceRelationsResponseBodyResourceRelationsResourceRelationList extends TeaModel {
         /**
          * <p>The Alibaba Cloud account ID of the resource owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100931896542****</p>
          */
         @NameInMap("AccountId")
         public Long accountId;
 
         /**
          * <p>The type of the relationship between the resource and the object.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   IsContained: The object is included as part of the resource.</p>
-         * <p>*   IsAttachedTo: The object is added to the resource.</p>
-         * <p>*   IsAssociatedIn: The object is associated with the resource.</p>
-         * <p>*   Contains: The object contains the resource.</p>
+         * <ul>
+         * <li>IsContained: The object is included as part of the resource.</li>
+         * <li>IsAttachedTo: The object is added to the resource.</li>
+         * <li>IsAssociatedIn: The object is associated with the resource.</li>
+         * <li>Contains: The object contains the resource.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IsAttachedTo</p>
          */
         @NameInMap("RelationType")
         public String relationType;
 
         /**
          * <p>The resource ID of the current resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-j6cajg9yrfoh4sas****</p>
          */
         @NameInMap("SourceResourceId")
         public String sourceResourceId;
 
         /**
          * <p>The region ID of the current resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         @NameInMap("SourceResourceRegionId")
         public String sourceResourceRegionId;
 
         /**
          * <p>The type of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::ECS::Instance</p>
          */
         @NameInMap("SourceResourceType")
         public String sourceResourceType;
 
         /**
          * <p>The resource ID of the resource that is associated with the object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-j6c8k731qbrc7fxi****</p>
          */
         @NameInMap("TargetResourceId")
         public String targetResourceId;
 
         /**
          * <p>The type of the resource that is associated with the object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::ECS::Disk</p>
          */
         @NameInMap("TargetResourceType")
         public String targetResourceType;
@@ -153,12 +177,18 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
     public static class ListAggregateResourceRelationsResponseBodyResourceRelations extends TeaModel {
         /**
          * <p>The maximum number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
         /**
          * <p>The token that was used to initiate the next request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AcBjqMYSy0is7zSMGu16****</p>
          */
         @NameInMap("NextToken")
         public String nextToken;

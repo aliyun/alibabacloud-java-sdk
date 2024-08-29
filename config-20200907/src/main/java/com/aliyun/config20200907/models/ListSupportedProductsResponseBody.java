@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListSupportedProductsResponseBody extends TeaModel {
     /**
      * <p>The maximum number of entries to return for a single request. Valid values: 1 to 500.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("MaxResults")
     public String maxResults;
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D3AjqMNSy0ls7zBNCf3a****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -24,6 +30,9 @@ public class ListSupportedProductsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>610B0276-ABEE-57DF-9C13-C2324FADA9D7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,12 +77,18 @@ public class ListSupportedProductsResponseBody extends TeaModel {
     public static class ListSupportedProductsResponseBodyProductsResourceTypeList extends TeaModel {
         /**
          * <p>The identifier of the resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::ECS::Instance</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The English name of the resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ecs Instance</p>
          */
         @NameInMap("TypeNameEn")
         public String typeNameEn;
@@ -86,6 +101,9 @@ public class ListSupportedProductsResponseBody extends TeaModel {
 
         /**
          * <p>The URL of the resource type in the console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://ecs.console.aliyun.com/#/server/@%7BResourceId%7D/detail?regionId=@%7BRegionId%7D">https://ecs.console.aliyun.com/#/server/@{ResourceId}/detail?regionId=@{RegionId}</a></p>
          */
         @NameInMap("TypePageLink")
         public String typePageLink;
@@ -132,6 +150,9 @@ public class ListSupportedProductsResponseBody extends TeaModel {
     public static class ListSupportedProductsResponseBodyProducts extends TeaModel {
         /**
          * <p>The English name of the Alibaba Cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Elastic Compute Service</p>
          */
         @NameInMap("ProductNameEn")
         public String productNameEn;

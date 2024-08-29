@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class UpdateAggregateConfigRuleResponseBody extends TeaModel {
     /**
      * <p>The ID of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cr-4e3d626622af0080****</p>
      */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6EC7AED1-172F-42AE-9C12-295BC2ADB751</p>
      */
     @NameInMap("RequestId")
     public String requestId;

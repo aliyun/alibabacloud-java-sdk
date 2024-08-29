@@ -6,26 +6,40 @@ import com.aliyun.tea.*;
 public class ListRemediationTemplatesRequest extends TeaModel {
     /**
      * <p>The identifier of the managed rule.</p>
-     * <br>
-     * <p>You can call the [ListCompliancePackTemplates](https://help.aliyun.com/document_detail/261176.html) operation to obtain the managed rule identifier.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a> operation to obtain the managed rule identifier.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss-bucket-public-write-prohibited</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("ManagedRuleIdentifier")
     public String managedRuleIdentifier;
 
     /**
      * <p>The page number. Pages start from 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries per page. Valid values: 1 to 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The type of the remediation template. Valid value: OOS, which stands for Operation Orchestration Service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OOS</p>
      */
     @NameInMap("RemediationType")
     public String remediationType;

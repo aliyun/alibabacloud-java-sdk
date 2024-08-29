@@ -6,68 +6,92 @@ import com.aliyun.tea.*;
 public class ListConfigRulesRequest extends TeaModel {
     /**
      * <p>The compliance evaluation result of the rule. Valid values:</p>
-     * <br>
-     * <p>*   COMPLIANT: The resources are evaluated as compliant.</p>
-     * <p>*   NON_COMPLIANT: The resources are evaluated as non-compliant.</p>
-     * <p>*   NOT_APPLICABLE: The rule does not apply to the resources.</p>
-     * <p>*   INSUFFICIENT_DATA: No resource data is available.</p>
+     * <ul>
+     * <li>COMPLIANT: The resources are evaluated as compliant.</li>
+     * <li>NON_COMPLIANT: The resources are evaluated as non-compliant.</li>
+     * <li>NOT_APPLICABLE: The rule does not apply to the resources.</li>
+     * <li>INSUFFICIENT_DATA: No resource data is available.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>COMPLIANT</p>
      */
     @NameInMap("ComplianceType")
     public String complianceType;
 
     /**
      * <p>The name of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-rule-name</p>
      */
     @NameInMap("ConfigRuleName")
     public String configRuleName;
 
     /**
      * <p>The status of the rule. Valid values:</p>
-     * <br>
-     * <p>*   ACTIVE: The rule is enabled.</p>
-     * <p>*   DELETING: The rule is being deleted.</p>
-     * <p>*   EVALUATING: The rule is being used to evaluate resource configurations.</p>
-     * <p>*   INACTIVE: The rule is disabled.</p>
+     * <ul>
+     * <li>ACTIVE: The rule is enabled.</li>
+     * <li>DELETING: The rule is being deleted.</li>
+     * <li>EVALUATING: The rule is being used to evaluate resource configurations.</li>
+     * <li>INACTIVE: The rule is disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ACTIVE</p>
      */
     @NameInMap("ConfigRuleState")
     public String configRuleState;
 
     /**
      * <p>The query keyword.</p>
-     * <br>
      * <p>You can perform a fuzzy search by rule ID, rule name, rule description, or managed rule ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Page numbers start from 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Valid values: 1 to 100. A minimum of 1 entry can be returned per page. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The type of the resources to be evaluated based on the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACS::ECS::Instance</p>
      */
     @NameInMap("ResourceTypes")
     public String resourceTypes;
 
     /**
      * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
-     * <br>
-     * <p>*   1: high</p>
-     * <p>*   2: medium</p>
-     * <p>*   3: low</p>
+     * <ul>
+     * <li>1: high</li>
+     * <li>2: medium</li>
+     * <li>3: low</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("RiskLevel")
     public Integer riskLevel;

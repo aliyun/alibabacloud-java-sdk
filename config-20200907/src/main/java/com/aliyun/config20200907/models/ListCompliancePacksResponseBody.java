@@ -12,6 +12,9 @@ public class ListCompliancePacksResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6EC7AED1-172F-42AE-9C12-295BC2ADB751</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class ListCompliancePacksResponseBody extends TeaModel {
     public static class ListCompliancePacksResponseBodyCompliancePacksResultCompliancePacks extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account to which the compliance package belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120886317861****</p>
          */
         @NameInMap("AccountId")
         public Long accountId;
 
         /**
-         * <p>The ID of the compliance package.</p>
+         * <p>The compliance package ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cp-fdc8626622af00f9****</p>
          */
         @NameInMap("CompliancePackId")
         public String compliancePackId;
@@ -57,13 +66,19 @@ public class ListCompliancePacksResponseBody extends TeaModel {
         public String compliancePackName;
 
         /**
-         * <p>The ID of the compliance package template based on which the compliance package was created.</p>
+         * <p>The ID of the compliance package template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ct-5f26ff4e06a300c4****</p>
          */
         @NameInMap("CompliancePackTemplateId")
         public String compliancePackTemplateId;
 
         /**
          * <p>The timestamp when the compliance package was created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1621325046000</p>
          */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
@@ -75,20 +90,28 @@ public class ListCompliancePacksResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The risk level of the resources that are not compliant with the managed rules in the compliance package. Valid values:</p>
-         * <br>
-         * <p>*   1: high risk level.</p>
-         * <p>*   2: medium risk level.</p>
-         * <p>*   3: low risk level.</p>
+         * <p>The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:</p>
+         * <ul>
+         * <li>1: high</li>
+         * <li>2: medium</li>
+         * <li>3: low</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
 
         /**
          * <p>The status of the compliance package. Valid values:</p>
-         * <br>
-         * <p>*   ACTIVE: The compliance package is active.</p>
-         * <p>*   CREATING: The compliance package is being created.</p>
+         * <ul>
+         * <li>ACTIVE: The compliance package is normal.</li>
+         * <li>CREATING: The compliance package is being created.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
          */
         @NameInMap("Status")
         public String status;
@@ -166,25 +189,34 @@ public class ListCompliancePacksResponseBody extends TeaModel {
 
     public static class ListCompliancePacksResponseBodyCompliancePacksResult extends TeaModel {
         /**
-         * <p>The details of the compliance package.</p>
+         * <p>The compliance packages.</p>
          */
         @NameInMap("CompliancePacks")
         public java.util.List<ListCompliancePacksResponseBodyCompliancePacksResultCompliancePacks> compliancePacks;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of compliance packages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

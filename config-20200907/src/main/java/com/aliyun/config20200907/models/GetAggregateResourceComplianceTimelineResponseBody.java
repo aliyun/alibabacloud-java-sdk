@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8D53A78F-1EB8-4264-A554-72F07E34FAE6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,75 +43,141 @@ public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel
     public static class GetAggregateResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100931896542****</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
          * <p>The ID of the zone in which the resource resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-f</p>
          */
         @NameInMap("AvailabilityZone")
         public String availabilityZone;
 
         /**
          * <p>The timestamp when the compliance evaluation was recorded. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1625200295276</p>
          */
         @NameInMap("CaptureTime")
         public Long captureTime;
 
         /**
          * <p>The information about the rules that evaluated the resource and the compliance evaluation result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;AccessControlList&quot;: {
+         *         &quot;Grant&quot;: &quot;private&quot;
+         *     },
+         *     &quot;ServerSideEncryptionRule&quot;: {
+         *         &quot;SSEAlgorithm&quot;: &quot;None&quot;
+         *     },
+         *     &quot;Comment&quot;: &quot;&quot;,
+         *     &quot;Owner&quot;: {
+         *         &quot;DisplayName&quot;: &quot;126672004088****&quot;,
+         *         &quot;ID&quot;: &quot;126672004088****&quot;
+         *     },
+         *     &quot;ResourceGroupId&quot;: &quot;rg-acfmy4dfoau****&quot;,
+         *     &quot;StorageClass&quot;: &quot;Standard&quot;,
+         *     &quot;DataRedundancyType&quot;: &quot;LRS&quot;,
+         *     &quot;AllowEmptyReferer&quot;: &quot;true&quot;,
+         *     &quot;Name&quot;: &quot;test-private-oss****&quot;,
+         *     &quot;BucketPolicy&quot;: {
+         *         &quot;LogPrefix&quot;: &quot;&quot;,
+         *         &quot;LogBucket&quot;: &quot;&quot;
+         *     },
+         *     &quot;ExtranetEndpoint&quot;: &quot;oss-cn-hangzhou.aliyuncs.com&quot;,
+         *     &quot;IntranetEndpoint&quot;: &quot;oss-cn-hangzhou-internal.aliyuncs.com&quot;,
+         *     &quot;Location&quot;: &quot;oss-cn-hangzhou&quot;
+         * }</p>
          */
         @NameInMap("Configuration")
         public String configuration;
 
         /**
          * <p>The details of the resource change that triggered the compliance evaluation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;ResourceGroupId&quot;: [
+         *         &quot;rg-acfmy4dfoau****&quot;,
+         *         &quot;rg-a3dmy4lksta****&quot;
+         *     ]
+         * }</p>
          */
         @NameInMap("ConfigurationDiff")
         public String configurationDiff;
 
         /**
          * <p>The ID of the region in which the resource resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The timestamp when the resource was created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1624961112000</p>
          */
         @NameInMap("ResourceCreateTime")
         public Long resourceCreateTime;
 
         /**
          * <p>The ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-private-oss****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The name of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-private-oss****</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;
 
         /**
          * <p>The status of the resource. The parameter value varies based on the resource type and may be left empty. Examples:</p>
-         * <br>
-         * <p>*   If the ResourceType parameter is set to ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.</p>
-         * <p>*   If the ResourceType parameter is set to ACS::OSS::Bucket, the resource is an OSS bucket that does not have a specific state. In this case, this parameter is left empty.</p>
+         * <ul>
+         * <li>If the ResourceType parameter is set to ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.</li>
+         * <li>If the ResourceType parameter is set to ACS::OSS::Bucket, the resource is an OSS bucket that does not have a specific state. In this case, this parameter is left empty.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("ResourceStatus")
         public String resourceStatus;
 
         /**
          * <p>The type of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::OSS::Bucket</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The tags of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;\&quot;hc\&quot;\&quot;:[\&quot;\&quot;value2\&quot;\&quot;]}</p>
          */
         @NameInMap("Tags")
         public String tags;
@@ -219,21 +288,28 @@ public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel
     public static class GetAggregateResourceComplianceTimelineResponseBodyResourceComplianceTimeline extends TeaModel {
         /**
          * <p>The status of the resource. The parameter value varies based on the resource type and may be left empty. Examples:</p>
-         * <br>
-         * <p>*   If the value of the ResourceType parameter is ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.</p>
-         * <p>*   If the value of the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is empty.</p>
+         * <ul>
+         * <li>If the value of the ResourceType parameter is ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.</li>
+         * <li>If the value of the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is empty.</li>
+         * </ul>
          */
         @NameInMap("ComplianceList")
         public java.util.List<GetAggregateResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList> complianceList;
 
         /**
          * <p>The maximum number of entries returned for a single request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
         /**
          * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5OVS5J4I1/UKTkHV5oNs****</p>
          */
         @NameInMap("NextToken")
         public String nextToken;

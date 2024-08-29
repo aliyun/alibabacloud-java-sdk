@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetConfigRulesReportRequest extends TeaModel {
     /**
      * <p>The ID of the compliance evaluation report.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>crp-88176457e0d900c9****</p>
      */
     @NameInMap("ReportId")
     public String reportId;

@@ -12,6 +12,9 @@ public class GetResourceComplianceGroupByRegionResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FDF8006-34A0-5334-8C79-48F64EAB34F1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,17 +43,24 @@ public class GetResourceComplianceGroupByRegionResponseBody extends TeaModel {
     public static class GetResourceComplianceGroupByRegionResponseBodyComplianceResultComplianceResultListCompliances extends TeaModel {
         /**
          * <p>The evaluation result. Valid values:</p>
-         * <br>
-         * <p>*   COMPLIANT: The resources are evaluated as compliant.</p>
-         * <p>*   NON_COMPLIANT: The resources are evaluated as non-compliant.</p>
-         * <p>*   NOT_APPLICABLE: The rule does not apply to the resources.</p>
-         * <p>*   INSUFFICIENT_DATA: No resource data is available.</p>
+         * <ul>
+         * <li>COMPLIANT: The resources are evaluated as compliant.</li>
+         * <li>NON_COMPLIANT: The resources are evaluated as non-compliant.</li>
+         * <li>NOT_APPLICABLE: The rule does not apply to the resources.</li>
+         * <li>INSUFFICIENT_DATA: No resource data is available.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLIANT</p>
          */
         @NameInMap("ComplianceType")
         public String complianceType;
 
         /**
          * <p>The total number of evaluation results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public Long count;
@@ -87,6 +97,9 @@ public class GetResourceComplianceGroupByRegionResponseBody extends TeaModel {
 
         /**
          * <p>The region ID of the evaluated resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("RegionId")
         public String regionId;

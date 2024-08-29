@@ -12,6 +12,9 @@ public class ListAggregateConfigRuleEvaluationStatisticsResponseBody extends Tea
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9EFA436B-FC6F-513B-9DB8-C96E6CEBE5E0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,36 +43,54 @@ public class ListAggregateConfigRuleEvaluationStatisticsResponseBody extends Tea
     public static class ListAggregateConfigRuleEvaluationStatisticsResponseBodyEvaluationResults extends TeaModel {
         /**
          * <p>The ID of the account group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca-edd3626622af00b3****</p>
          */
         @NameInMap("AggregatorId")
         public String aggregatorId;
 
         /**
          * <p>The number of resources that are evaluated as non-compliant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         @NameInMap("NonCompliantResourceCnt")
         public Integer nonCompliantResourceCnt;
 
         /**
          * <p>The number of rules based on which resources are evaluated as non-compliant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("NonCompliantRuleCnt")
         public Integer nonCompliantRuleCnt;
 
         /**
          * <p>The date on which the statistics are obtained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-27</p>
          */
         @NameInMap("StatisticDate")
         public String statisticDate;
 
         /**
          * <p>The total number of resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>153</p>
          */
         @NameInMap("TotalResourceCnt")
         public Integer totalResourceCnt;
 
         /**
          * <p>The total number of rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("TotalRuleCnt")
         public Integer totalRuleCnt;

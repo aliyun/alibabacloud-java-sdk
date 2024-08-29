@@ -12,6 +12,9 @@ public class GetResourceComplianceByConfigRuleResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23306AB1-34E0-468F-BD7B-68D8AEAB753d</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,17 +43,24 @@ public class GetResourceComplianceByConfigRuleResponseBody extends TeaModel {
     public static class GetResourceComplianceByConfigRuleResponseBodyComplianceResultCompliances extends TeaModel {
         /**
          * <p>The compliance evaluation result. Valid values:</p>
-         * <br>
-         * <p>*   COMPLIANT: The relevant resources are evaluated as compliant.</p>
-         * <p>*   NON_COMPLIANT: The relevant resources are evaluated as non-compliant.</p>
-         * <p>*   NOT_APPLICABLE: The rule does not apply to your resources.</p>
-         * <p>*   INSUFFICIENT_DATA: No resource data is available.</p>
+         * <ul>
+         * <li>COMPLIANT: The relevant resources are evaluated as compliant.</li>
+         * <li>NON_COMPLIANT: The relevant resources are evaluated as non-compliant.</li>
+         * <li>NOT_APPLICABLE: The rule does not apply to your resources.</li>
+         * <li>INSUFFICIENT_DATA: No resource data is available.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLIANT</p>
          */
         @NameInMap("ComplianceType")
         public String complianceType;
 
         /**
-         * <p>The number of resources that have the compliance evaluation result. For example, if the value of the `ComplianceType` parameter is `COMPLIANT`, this parameter value indicates the number of compliant resources.</p>
+         * <p>The number of resources that have the compliance evaluation result. For example, if the value of the <code>ComplianceType</code> parameter is <code>COMPLIANT</code>, this parameter value indicates the number of compliant resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("Count")
         public Integer count;
@@ -87,6 +97,9 @@ public class GetResourceComplianceByConfigRuleResponseBody extends TeaModel {
 
         /**
          * <p>The total number of evaluated resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

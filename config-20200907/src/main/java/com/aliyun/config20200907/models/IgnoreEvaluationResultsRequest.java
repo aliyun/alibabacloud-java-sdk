@@ -6,31 +6,38 @@ import com.aliyun.tea.*;
 public class IgnoreEvaluationResultsRequest extends TeaModel {
     /**
      * <p>The ID of the rule.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of a rule, see [ListConfigRules](https://help.aliyun.com/document_detail/169607.html).</p>
-     * <br>
+     * <p>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cr-7e72626622af0051****</p>
      */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
     /**
      * <p>The date from which the system automatically re-evaluates the ignored incompliant resources.</p>
-     * <br>
-     * <p>>  If you leave this parameter empty, the system does not automatically re-evaluate the ignored incompliant resources. You must manually re-evaluate the ignored incompliant resources.</p>
+     * <blockquote>
+     * <p> If you leave this parameter empty, the system does not automatically re-evaluate the ignored incompliant resources. You must manually re-evaluate the ignored incompliant resources.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-06-01</p>
      */
     @NameInMap("IgnoreDate")
     public String ignoreDate;
 
     /**
      * <p>The reason why you want to ignore the resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test ignore.</p>
      */
     @NameInMap("Reason")
     public String reason;
 
     /**
      * <p>The resources to be ignored.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Resources")
@@ -76,38 +83,43 @@ public class IgnoreEvaluationResultsRequest extends TeaModel {
     public static class IgnoreEvaluationResultsRequestResources extends TeaModel {
         /**
          * <p>The ID of the region in which the resource resides.</p>
-         * <br>
-         * <p>For more information about how to obtain the ID of the region in which a resource resides, see [ListDiscoveredResources](https://help.aliyun.com/document_detail/169620.html).</p>
-         * <br>
+         * <p>For more information about how to obtain the ID of the region in which a resource resides, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the resources belong.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100931896542****</p>
          */
         @NameInMap("ResourceAccountId")
         public Long resourceAccountId;
 
         /**
          * <p>The ID of the resource.</p>
-         * <br>
-         * <p>For more information about how to obtain the ID of a resource, see [ListDiscoveredResources](https://help.aliyun.com/document_detail/169620.html).</p>
-         * <br>
+         * <p>For more information about how to obtain the ID of a resource, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-hp3a3b4ztyfm2plgm****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The type of the resource.</p>
-         * <br>
-         * <p>For more information about how to obtain the type of a resource, see [ListDiscoveredResources](https://help.aliyun.com/document_detail/169620.html).</p>
-         * <br>
+         * <p>For more information about how to obtain the type of a resource, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::SLB::LoadBalancer</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;

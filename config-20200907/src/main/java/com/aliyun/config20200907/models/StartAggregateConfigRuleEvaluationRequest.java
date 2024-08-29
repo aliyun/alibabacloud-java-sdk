@@ -6,37 +6,50 @@ import com.aliyun.tea.*;
 public class StartAggregateConfigRuleEvaluationRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
-     * <br>
+     * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ca-3a58626622af0005****</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
     /**
      * <p>The ID of the compliance package.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of a compliance package, see [ListAggregateCompliancePacks](https://help.aliyun.com/document_detail/262059.html).</p>
-     * <br>
-     * <p>> You must configure either the `CompliancePackId` or `ConfigRuleId` parameter.</p>
+     * <p>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/262059.html">ListAggregateCompliancePacks</a>.</p>
+     * <blockquote>
+     * <p>You must configure either the <code>CompliancePackId</code> or <code>ConfigRuleId</code> parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cp-ac16626622af0053****</p>
      */
     @NameInMap("CompliancePackId")
     public String compliancePackId;
 
     /**
      * <p>The rule ID.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](https://help.aliyun.com/document_detail/264148.html).</p>
+     * <p>For more information about how to query the ID of a rule, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</p>
+     * <blockquote>
+     * <p> You must configure either the <code>CompliancePackId</code> or <code>ConfigRuleId</code> parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cr-c169626622af009f****</p>
      */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
     /**
-     * <p>Specifies whether to re-evaluate the ignored incompliant resource. Valid values:</p>
-     * <br>
-     * <p>*   true: The ignored incompliant resource based on the rule are re-evaluated.</p>
-     * <p>*   false: The ignored incompliant resource based on the rule are not re-evaluated.</p>
+     * <p>Specifies whether to re-evaluate the ignored non-compliant resource. Valid values:</p>
+     * <ul>
+     * <li>true: re-evaluates the ignored non-compliant resource based on the rule.</li>
+     * <li>false (default): does not re-evaluate the ignored non-compliant resource based on the rule.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("RevertEvaluation")
     public Boolean revertEvaluation;

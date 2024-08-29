@@ -12,6 +12,9 @@ public class DeleteAggregateConfigRulesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6EC7AED1-172F-42AE-9C12-295BC2ADB751</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,35 @@ public class DeleteAggregateConfigRulesResponseBody extends TeaModel {
     public static class DeleteAggregateConfigRulesResponseBodyOperateRuleResultOperateRuleItemList extends TeaModel {
         /**
          * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cr-4e3d626622af0080****</p>
          */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
 
         /**
          * <p>The error code returned.</p>
-         * <br>
-         * <p>*   If the rule is deleted, no error code is returned.</p>
-         * <p>*   If the rule fails to be deleted, an error code is returned. For more information about error codes, see [Error codes](https://error-center.alibabacloud.com/status/product/Config).</p>
+         * <ul>
+         * <li>If the rule is deleted, no error code is returned.</li>
+         * <li>If the rule fails to be deleted, an error code is returned. For more information about error codes, see <a href="https://error-center.alibabacloud.com/status/product/Config">Error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ConfigRuleCanNotDelete</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
-         * <br>
-         * <p>*   true: The request was successful.</p>
-         * <p>*   false: The request failed.</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Success")
         public Boolean success;

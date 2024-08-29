@@ -6,58 +6,84 @@ import com.aliyun.tea.*;
 public class ListConfigRuleEvaluationResultsRequest extends TeaModel {
     /**
      * <p>The ID of the compliance package.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of a compliance package, see [ListCompliancePacks](https://help.aliyun.com/document_detail/263332.html).</p>
+     * <p>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/263332.html">ListCompliancePacks</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cp-f1e3326622af00cb****</p>
      */
     @NameInMap("CompliancePackId")
     public String compliancePackId;
 
     /**
      * <p>The compliance evaluation result of the resource. Valid values:</p>
-     * <br>
-     * <p>*   COMPLIANT: The resources are evaluated as compliant.</p>
-     * <p>*   NON_COMPLIANT: The resources are evaluated as non-compliant.</p>
-     * <p>*   NOT_APPLICABLE: The rule does not apply to the resources.</p>
-     * <p>*   INSUFFICIENT_DATA: No data is available.</p>
-     * <p>*   IGNORED: The resource is ignored during compliance evaluation.</p>
+     * <ul>
+     * <li>COMPLIANT: The resource is evaluated as compliant.</li>
+     * <li>NON_COMPLIANT: The resource is evaluated as non-compliant.</li>
+     * <li>NOT_APPLICABLE: The rule does not apply to the resources.</li>
+     * <li>INSUFFICIENT_DATA: No data is available.</li>
+     * <li>IGNORED: The resource is ignored during compliance evaluation.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>NON_COMPLIANT</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("ComplianceType")
     public String complianceType;
 
     /**
      * <p>The rule ID.</p>
-     * <br>
-     * <p>You can call the [ListConfigRules](https://help.aliyun.com/document_detail/169607.html) operation to obtain the rule ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a> operation to obtain the rule ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cr-cac56457e0d900d3****</p>
      */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
     /**
      * <p>The maximum number of entries to return for a single request. Valid values: 1 to 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IWBjqMYSy0is7zSMGu16****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the region where the resources that you want to evaluate reside. Separate multiple region IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("Regions")
     public String regions;
 
     /**
      * <p>The ID of the resource group to which the resources that you want to evaluate belong. Separate multiple resource group IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aek2indxn3g****</p>
      */
     @NameInMap("ResourceGroupIds")
     public String resourceGroupIds;
 
     /**
      * <p>The type of the resources that you want to evaluate. Separate multiple resource types with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACS::ECS::Instane</p>
      */
     @NameInMap("ResourceTypes")
     public String resourceTypes;

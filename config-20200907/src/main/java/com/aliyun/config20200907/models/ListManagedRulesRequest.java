@@ -5,39 +5,53 @@ import com.aliyun.tea.*;
 
 public class ListManagedRulesRequest extends TeaModel {
     /**
-     * <p>The keyword that you want to use to filter managed rules.</p>
+     * <p>The keyword of the managed rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CDN</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
      * <p>The page number.</p>
-     * <br>
-     * <p>Pages start from page 1. Default value: 1.</p>
+     * <p>Page start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The type of the resources to be evaluated based on the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACS::ECS::Instance</p>
      */
     @NameInMap("ResourceTypes")
     public String resourceTypes;
 
     /**
-     * <p>The risk level that you want to use to filter managed rules. Valid values:</p>
-     * <br>
-     * <p>*   1: high risk level</p>
-     * <p>*   2: medium risk level</p>
-     * <p>*   3: low risk level</p>
+     * <p>The risk level of the managed rule. Valid values:</p>
+     * <ul>
+     * <li>1: high</li>
+     * <li>2: medium</li>
+     * <li>3: low</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("RiskLevel")
     public Integer riskLevel;

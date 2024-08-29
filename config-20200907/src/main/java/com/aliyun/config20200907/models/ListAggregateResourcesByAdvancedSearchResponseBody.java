@@ -12,6 +12,9 @@ public class ListAggregateResourcesByAdvancedSearchResponseBody extends TeaModel
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B0DBF868-460F-5E7C-8F76-1ACE2FCCE153</p>
      */
     @NameInMap("RequestId")
     public String requestId;

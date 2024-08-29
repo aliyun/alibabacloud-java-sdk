@@ -6,51 +6,79 @@ import com.aliyun.tea.*;
 public class ListAggregateDiscoveredResourcesRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of the account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
-     * <br>
+     * <p>For more information about how to obtain the ID of the account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ca-c560626622af0005****</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
+    @NameInMap("EndUpdateTimestamp")
+    public Long endUpdateTimestamp;
+
+    @NameInMap("ExcludeResourceTypes")
+    public String excludeResourceTypes;
+
     /**
      * <p>The maximum number of entries to return for a single request. Valid values: 1 to 100.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The `token` that you want to use to initiate the current request. If the response of the previous request is truncated, you can use this token to initiate another request and obtain the remaining entries.</p>
+     * <p>The <code>token</code> that you want to use to initiate the current request. If the response of the previous request is truncated, you can use this token to initiate another request and obtain the remaining entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IWBjqMYSy0is7zSMGu16****</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>false</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the region in which the resource resides. Separate multiple region IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-huhehaote</p>
      */
     @NameInMap("Regions")
     public String regions;
 
     /**
      * <p>The ID of the Alibaba Cloud account to which the specified resource belongs in the account group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100931896542****</p>
      */
     @NameInMap("ResourceAccountId")
     public Long resourceAccountId;
 
     /**
      * <p>The status of the resource. Valid values:</p>
-     * <br>
-     * <p>*   0: The resource is deleted. If a resource is deleted from the desired cloud service, **Deleted** is displayed in the resource list in the Cloud Config console.</p>
-     * <p>*   1 (default): The resource is retained. If a resource is managed as expected, **Active** is displayed in the resource list in the Cloud Config console.</p>
+     * <ul>
+     * <li>0: The resource is deleted. If a resource is deleted from the desired cloud service, <strong>Deleted</strong> is displayed in the resource list in the Cloud Config console.</li>
+     * <li>1 (default): The resource is retained. If a resource is managed as expected, <strong>Active</strong> is displayed in the resource list in the Cloud Config console.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ResourceDeleted")
     public Integer resourceDeleted;
 
     /**
      * <p>The resource ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eni-hp31cqoba96jagtz****</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -61,9 +89,15 @@ public class ListAggregateDiscoveredResourcesRequest extends TeaModel {
 
     /**
      * <p>The type of the resource. Separate multiple resource types with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACS::ECS::NetworkInterface</p>
      */
     @NameInMap("ResourceTypes")
     public String resourceTypes;
+
+    @NameInMap("StartUpdateTimestamp")
+    public Long startUpdateTimestamp;
 
     public static ListAggregateDiscoveredResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAggregateDiscoveredResourcesRequest self = new ListAggregateDiscoveredResourcesRequest();
@@ -76,6 +110,22 @@ public class ListAggregateDiscoveredResourcesRequest extends TeaModel {
     }
     public String getAggregatorId() {
         return this.aggregatorId;
+    }
+
+    public ListAggregateDiscoveredResourcesRequest setEndUpdateTimestamp(Long endUpdateTimestamp) {
+        this.endUpdateTimestamp = endUpdateTimestamp;
+        return this;
+    }
+    public Long getEndUpdateTimestamp() {
+        return this.endUpdateTimestamp;
+    }
+
+    public ListAggregateDiscoveredResourcesRequest setExcludeResourceTypes(String excludeResourceTypes) {
+        this.excludeResourceTypes = excludeResourceTypes;
+        return this;
+    }
+    public String getExcludeResourceTypes() {
+        return this.excludeResourceTypes;
     }
 
     public ListAggregateDiscoveredResourcesRequest setMaxResults(Integer maxResults) {
@@ -140,6 +190,14 @@ public class ListAggregateDiscoveredResourcesRequest extends TeaModel {
     }
     public String getResourceTypes() {
         return this.resourceTypes;
+    }
+
+    public ListAggregateDiscoveredResourcesRequest setStartUpdateTimestamp(Long startUpdateTimestamp) {
+        this.startUpdateTimestamp = startUpdateTimestamp;
+        return this;
+    }
+    public Long getStartUpdateTimestamp() {
+        return this.startUpdateTimestamp;
     }
 
 }

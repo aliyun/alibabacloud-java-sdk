@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListConfigDeliveryChannelsRequest extends TeaModel {
     /**
      * <p>The ID of the delivery channel. Separate multiple IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cdc-d9106457e0d900b1****</p>
      */
     @NameInMap("DeliveryChannelIds")
     public String deliveryChannelIds;

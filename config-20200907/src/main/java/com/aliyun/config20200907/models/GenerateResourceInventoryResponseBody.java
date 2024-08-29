@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GenerateResourceInventoryResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E1225EEA-B5F8-538F-8E37-A943986B6290</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class ListSupportedProductsRequest extends TeaModel {
     /**
      * <p>The maximum number of entries to return for a single request.</p>
-     * <br>
      * <p>Valid values: 1 to 500. Default value: 200.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D3AjqMNSy0ls7zBNCf3a****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class EvaluatePreConfigRulesResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>129ECF1C-7897-1131-BD0F-4B588AC05400</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,28 +43,41 @@ public class EvaluatePreConfigRulesResponseBody extends TeaModel {
     public static class EvaluatePreConfigRulesResponseBodyResourceEvaluationsRules extends TeaModel {
         /**
          * <p>The reason why the resource was evaluated as incompliant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;configuration\&quot;:\&quot;false\&quot;,\&quot;desiredValue\&quot;:\&quot;True\&quot;,\&quot;operator\&quot;:\&quot;StringEquals\&quot;,\&quot;property\&quot;:\&quot;$.DeletionProtection\&quot;}</p>
          */
         @NameInMap("Annotation")
         public String annotation;
 
         /**
          * <p>The compliance type of the resource that was evaluated by using the evaluation rule. Valid values:</p>
-         * <br>
-         * <p>*   COMPLIANT: The resource was evaluated as compliant.</p>
-         * <p>*   NON_COMPLIANT: The resource was evaluated as incompliant.</p>
-         * <p>*   NOT_APPLICABLE: The evaluation rule does not apply to the resource.</p>
+         * <ul>
+         * <li>COMPLIANT: The resource was evaluated as compliant.</li>
+         * <li>NON_COMPLIANT: The resource was evaluated as incompliant.</li>
+         * <li>NOT_APPLICABLE: The evaluation rule does not apply to the resource.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NON_COMPLIANT</p>
          */
         @NameInMap("ComplianceType")
         public String complianceType;
 
         /**
          * <p>The URL of the topic that describes how the managed rule remediates the incompliant configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.aliyundoc.com">https://example.aliyundoc.com</a></p>
          */
         @NameInMap("HelpUrl")
         public String helpUrl;
 
         /**
          * <p>The identifier of the evaluation rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs-instance-deletion-protection-enabled</p>
          */
         @NameInMap("Identifier")
         public String identifier;
@@ -108,14 +124,21 @@ public class EvaluatePreConfigRulesResponseBody extends TeaModel {
     public static class EvaluatePreConfigRulesResponseBodyResourceEvaluations extends TeaModel {
         /**
          * <p>The logical ID of the resource.</p>
-         * <br>
-         * <p>>  If the ResourceLogicalId request parameter is left empty, the value of the ResourceLogicalId response parameter is generated based on the value of the `ResourceProperties` parameter.</p>
+         * <blockquote>
+         * <p> If the ResourceLogicalId request parameter is left empty, the value of the ResourceLogicalId response parameter is generated based on the value of the <code>ResourceProperties</code> parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ResourceLogicId-test</p>
          */
         @NameInMap("ResourceLogicalId")
         public String resourceLogicalId;
 
         /**
          * <p>The type of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::ECS::Instance</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;

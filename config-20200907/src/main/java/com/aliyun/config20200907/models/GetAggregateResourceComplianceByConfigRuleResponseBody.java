@@ -12,6 +12,9 @@ public class GetAggregateResourceComplianceByConfigRuleResponseBody extends TeaM
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23306AB1-34E0-468F-BD7B-68D8AEAB754C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,17 +43,24 @@ public class GetAggregateResourceComplianceByConfigRuleResponseBody extends TeaM
     public static class GetAggregateResourceComplianceByConfigRuleResponseBodyComplianceResultCompliances extends TeaModel {
         /**
          * <p>The compliance evaluation results of the resources. Valid values:</p>
-         * <br>
-         * <p>*   COMPLIANT: The resource was evaluated as compliant.</p>
-         * <p>*   NON_COMPLIANT: The resource was evaluated as incompliant.</p>
-         * <p>*   NOT_APPLICABLE: The rule did not apply to your resources.</p>
-         * <p>*   INSUFFICIENT_DATA: No resource data was available.</p>
+         * <ul>
+         * <li>COMPLIANT: The resource was evaluated as compliant.</li>
+         * <li>NON_COMPLIANT: The resource was evaluated as incompliant.</li>
+         * <li>NOT_APPLICABLE: The rule did not apply to your resources.</li>
+         * <li>INSUFFICIENT_DATA: No resource data was available.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLIANT</p>
          */
         @NameInMap("ComplianceType")
         public String complianceType;
 
         /**
-         * <p>The number of resources that have compliance evaluation results. For example, if the value of the `ComplianceType` parameter is `COMPLIANT`, this parameter value indicates the number of compliant resources.</p>
+         * <p>The number of resources that have compliance evaluation results. For example, if the value of the <code>ComplianceType</code> parameter is <code>COMPLIANT</code>, this parameter value indicates the number of compliant resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Count")
         public Integer count;
@@ -87,6 +97,9 @@ public class GetAggregateResourceComplianceByConfigRuleResponseBody extends TeaM
 
         /**
          * <p>The total number of evaluated resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

@@ -12,6 +12,9 @@ public class GetAggregateResourceCountsGroupByResourceTypeResponseBody extends T
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>99114B22-1EFF-47DF-B906-1CCE82FF9D60</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class GetAggregateResourceCountsGroupByResourceTypeResponseBody extends T
     public static class GetAggregateResourceCountsGroupByResourceTypeResponseBodyDiscoveredResourceCountsSummary extends TeaModel {
         /**
          * <p>This parameter is expired. The resource type by which statistics are collected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::RAM::Role</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The total number of resources in the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         @NameInMap("ResourceCount")
         public Long resourceCount;
 
         /**
          * <p>The resource type by which statistics are collected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::RAM::Role</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;

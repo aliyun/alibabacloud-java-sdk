@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateAggregateAdvancedSearchFileResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5F290373-2BE6-534B-8724-A33F1116958B</p>
      */
     @NameInMap("RequestId")
     public String requestId;

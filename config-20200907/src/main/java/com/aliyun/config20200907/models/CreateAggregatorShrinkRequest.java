@@ -6,56 +6,74 @@ import com.aliyun.tea.*;
 public class CreateAggregatorShrinkRequest extends TeaModel {
     /**
      * <p>The information about the member accounts in the account group. Example:</p>
-     * <br>
-     * <p>    [{</p>
-     * <p>    	"accountId": 171322098523****,</p>
-     * <p>    	"accountType":"ResourceDirectory",</p>
-     * <p>                    "accountName":"Alice"</p>
-     * <p>    }, {</p>
-     * <p>    	"accountId": 100532098349****,</p>
-     * <p>    	"accountType":"ResourceDirectory",</p>
-     * <p>                    "accountName":"Tom"</p>
-     * <p>    }]</p>
-     * <br>
-     * <p>>  If `AggregatorType` is set to `RD` or `FOLDER`, this parameter can be left empty, which indicates that all accounts in the resource directory are added to the global account group.</p>
+     * <pre><code>[{
+     *     &quot;accountId&quot;: 171322098523****,
+     *     &quot;accountType&quot;:&quot;ResourceDirectory&quot;,
+     *                 &quot;accountName&quot;:&quot;Alice&quot;
+     * }, {
+     *     &quot;accountId&quot;: 100532098349****,
+     *     &quot;accountType&quot;:&quot;ResourceDirectory&quot;,
+     *                 &quot;accountName&quot;:&quot;Tom&quot;
+     * }]
+     * </code></pre>
+     * <blockquote>
+     * <p> If <code>AggregatorType</code> is set to <code>RD</code> or <code>FOLDER</code>, this parameter can be left empty, which indicates that all accounts in the resource directory are added to the global account group.</p>
+     * </blockquote>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>false</p>
      */
     @NameInMap("AggregatorAccounts")
     public String aggregatorAccountsShrink;
 
     /**
      * <p>The name of the account group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test_Group</p>
      */
     @NameInMap("AggregatorName")
     public String aggregatorName;
 
     /**
      * <p>The type of the account group. Valid values:</p>
-     * <br>
-     * <p>*   RD: global account group.</p>
-     * <p>*   FOLDER: account group of the folder.</p>
-     * <p>*   CUSTOM (default): custom account group.</p>
+     * <ul>
+     * <li>RD: global account group.</li>
+     * <li>FOLDER: account group of the folder.</li>
+     * <li>CUSTOM (default): custom account group.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CUSTOM</p>
      */
     @NameInMap("AggregatorType")
     public String aggregatorType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <code>token</code> can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1594295238-f9361358-5843-4294-8d30-b5183fac****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The description of the account group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Aggregator description.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The ID of the folder to which the account group is attached. You must specify this parameter if `AggregatorType` is set to `FOLDER`.</p>
+     * <p>The ID of the folder to which the account group is attached. You must specify this parameter if <code>AggregatorType</code> is set to <code>FOLDER</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fd-brHdgv****</p>
      */
     @NameInMap("FolderId")
     public String folderId;

@@ -6,101 +6,160 @@ import com.aliyun.tea.*;
 public class CreateAggregateCompliancePackRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
-     * <br>
+     * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ca-f632626622af0079****</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
     /**
      * <p>The client token that you want to use to ensure the idempotency of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.``</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1594295238-f9361358-5843-4294-8d30-b5183fac****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The name of the compliance package.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-compliance-pack-name</p>
      */
     @NameInMap("CompliancePackName")
     public String compliancePackName;
 
     /**
      * <p>The ID of the compliance package template from which you want to create a compliance package.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of a compliance package template, see [ListCompliancePackTemplates](https://help.aliyun.com/document_detail/261176.html).</p>
+     * <p>For more information about how to obtain the ID of a compliance package template, see <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ct-5f26ff4e06a300c4****</p>
      */
     @NameInMap("CompliancePackTemplateId")
     public String compliancePackTemplateId;
 
     /**
-     * <p>The rules in the compliance package. You must specify one of ConfigRules and TemplateContent.</p>
+     * <p>The rules in the compliance package.</p>
+     * <blockquote>
+     * <p> You must configure this parameter or the <code>TemplateContent</code> parameter.</p>
+     * </blockquote>
      */
     @NameInMap("ConfigRules")
     public java.util.List<CreateAggregateCompliancePackRequestConfigRules> configRules;
 
     /**
      * <p>Specifies whether to enable the rule together with the compliance package. Valid values:</p>
-     * <br>
-     * <p>*   true: The system enables the rule together with the compliance package.</p>
-     * <p>*   false: The system does not enable the rule together with the compliance package.</p>
+     * <ul>
+     * <li>true: The system enables the rule together with the compliance package.</li>
+     * <li>false: The system does not enable the rule together with the compliance package.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DefaultEnable")
     public Boolean defaultEnable;
 
     /**
      * <p>The description of the compliance package.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test compliance pack descripaiton.</p>
      */
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("ExcludeRegionIdsScope")
+    public String excludeRegionIdsScope;
+
+    @NameInMap("ExcludeResourceGroupIdsScope")
+    public String excludeResourceGroupIdsScope;
+
     /**
      * <p>The ID of the resource that you do not want to evaluate by using the compliance package. Separate multiple resource IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eip-8vbf3x310fn56ijfd****</p>
      */
     @NameInMap("ExcludeResourceIdsScope")
     public String excludeResourceIdsScope;
 
+    @NameInMap("ExcludeTagsScope")
+    public java.util.List<CreateAggregateCompliancePackRequestExcludeTagsScope> excludeTagsScope;
+
     /**
      * <p>The ID of the region whose resources you want to evaluate by using the compliance package. Separate multiple region IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionIdsScope")
     public String regionIdsScope;
 
     /**
      * <p>The ID of the resource group whose resources you want to evaluate by using the compliance package. Separate multiple resource group IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekzc7r7rhx****</p>
      */
     @NameInMap("ResourceGroupIdsScope")
     public String resourceGroupIdsScope;
 
+    @NameInMap("ResourceIdsScope")
+    public String resourceIdsScope;
+
     /**
-     * <p>The risk level of the resources that are not compliant with the rules in the compliance package. Default value: 2. Valid values:</p>
-     * <br>
-     * <p>*   1: high.</p>
-     * <p>*   2: medium.</p>
-     * <p>*   3: low.</p>
+     * <p>The risk level of the compliance package. Valid values:</p>
+     * <ul>
+     * <li>1: high</li>
+     * <li>2 (default): medium</li>
+     * <li>3: low</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("RiskLevel")
     public Integer riskLevel;
 
     /**
      * <p>The tag key of the resource that you want to evaluate by using the compliance package.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS</p>
      */
     @NameInMap("TagKeyScope")
     public String tagKeyScope;
 
     /**
      * <p>The tag value of the resource that you want to evaluate by using the compliance package.</p>
-     * <br>
-     * <p>>  You must configure the TagValueScope parameter together with the TagKeyScope parameter.</p>
+     * <blockquote>
+     * <p> You must configure the TagValueScope parameter together with the TagKeyScope parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("TagValueScope")
     public String tagValueScope;
 
+    @NameInMap("TagsScope")
+    public java.util.List<CreateAggregateCompliancePackRequestTagsScope> tagsScope;
+
     /**
-     * <p>The information about the template that is used to create the compliance package. You can call the GetAggregateCompliancePack operation to view the details of an existing compliance package or write a compliance package template. For more information, see [Write a compliance package template in a configuration file](https://help.aliyun.com/document_detail/2659733.html). You must specify one of ConfigRules and TemplateContent.</p>
+     * <p>The information about the template that is used to create the compliance package. You can call the GetAggregateCompliancePack operation to view the details of an existing compliance package. You can also write a compliance package template. For more information, see <a href="https://help.aliyun.com/document_detail/2659733.html">Write a compliance package template in a configuration file</a>.</p>
+     * <blockquote>
+     * <p> You must configure this parameter or the <code>TemplateContent</code> parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{ &quot;configRuleTemplates&quot;: [ { &quot;configRuleName&quot;: &quot;condition-rule-example&quot;, &quot;scope&quot;: { &quot;complianceResourceTypes&quot;: [ &quot;ACS::ECS::Instance&quot; ] }, &quot;description&quot;: &quot;&quot;, &quot;source&quot;: { &quot;owner&quot;: &quot;CUSTOM_CONFIGURATION&quot;, &quot;identifier&quot;: &quot;acs-config-configuration&quot;, &quot;sourceDetails&quot;: [ { &quot;messageType&quot;: &quot;ScheduledNotification&quot;, &quot;maximumExecutionFrequency&quot;: &quot;Twelve_Hours&quot; }, { &quot;messageType&quot;: &quot;ConfigurationItemChangeNotification&quot; } ], &quot;conditions&quot;: &quot;{\\&quot;ComplianceConditions\\&quot;:\\&quot;{\\\\\&quot;operator\\\\\&quot;:\\\\\&quot;and\\\\\&quot;,\\\\\&quot;children\\\\\&quot;:[{\\\\\&quot;operator\\\\\&quot;:\\\\\&quot;GreaterOrEquals\\\\\&quot;,\\\\\&quot;featurePath\\\\\&quot;:\\\\\&quot;$.Cpu\\\\\&quot;,\\\\\&quot;featureSource\\\\\&quot;:\\\\\&quot;CONFIGURATION\\\\\&quot;,\\\\\&quot;desired\\\\\&quot;:\\\\\&quot;2\\\\\&quot;}]}\\&quot;}&quot; }, &quot;inputParameters&quot;: {} }, { &quot;configRuleName&quot;: &quot;oss-bucket-referer-limit&quot;, &quot;scope&quot;: { &quot;complianceResourceTypes&quot;: [ &quot;ACS::OSS::Bucket&quot; ] }, &quot;description&quot;: &quot;If the hotlink protection feature is enabled for the Object Storage Service (OSS) bucket and the Referer is added to a specific whitelist, the evaluation result is compliant.&quot;, &quot;source&quot;: { &quot;owner&quot;: &quot;ALIYUN&quot;, &quot;identifier&quot;: &quot;oss-bucket-referer-limit&quot;, &quot;sourceDetails&quot;: [ { &quot;messageType&quot;: &quot;ConfigurationItemChangeNotification&quot; } ] }, &quot;inputParameters&quot;: { &quot;allowEmptyReferer&quot;: &quot;true&quot;, &quot;allowReferers&quot;: &quot;<a href="http://www.aliyun.com">http://www.aliyun.com</a>&quot; } } ] }</p>
      */
     @NameInMap("TemplateContent")
     public String templateContent;
@@ -166,12 +225,36 @@ public class CreateAggregateCompliancePackRequest extends TeaModel {
         return this.description;
     }
 
+    public CreateAggregateCompliancePackRequest setExcludeRegionIdsScope(String excludeRegionIdsScope) {
+        this.excludeRegionIdsScope = excludeRegionIdsScope;
+        return this;
+    }
+    public String getExcludeRegionIdsScope() {
+        return this.excludeRegionIdsScope;
+    }
+
+    public CreateAggregateCompliancePackRequest setExcludeResourceGroupIdsScope(String excludeResourceGroupIdsScope) {
+        this.excludeResourceGroupIdsScope = excludeResourceGroupIdsScope;
+        return this;
+    }
+    public String getExcludeResourceGroupIdsScope() {
+        return this.excludeResourceGroupIdsScope;
+    }
+
     public CreateAggregateCompliancePackRequest setExcludeResourceIdsScope(String excludeResourceIdsScope) {
         this.excludeResourceIdsScope = excludeResourceIdsScope;
         return this;
     }
     public String getExcludeResourceIdsScope() {
         return this.excludeResourceIdsScope;
+    }
+
+    public CreateAggregateCompliancePackRequest setExcludeTagsScope(java.util.List<CreateAggregateCompliancePackRequestExcludeTagsScope> excludeTagsScope) {
+        this.excludeTagsScope = excludeTagsScope;
+        return this;
+    }
+    public java.util.List<CreateAggregateCompliancePackRequestExcludeTagsScope> getExcludeTagsScope() {
+        return this.excludeTagsScope;
     }
 
     public CreateAggregateCompliancePackRequest setRegionIdsScope(String regionIdsScope) {
@@ -188,6 +271,14 @@ public class CreateAggregateCompliancePackRequest extends TeaModel {
     }
     public String getResourceGroupIdsScope() {
         return this.resourceGroupIdsScope;
+    }
+
+    public CreateAggregateCompliancePackRequest setResourceIdsScope(String resourceIdsScope) {
+        this.resourceIdsScope = resourceIdsScope;
+        return this;
+    }
+    public String getResourceIdsScope() {
+        return this.resourceIdsScope;
     }
 
     public CreateAggregateCompliancePackRequest setRiskLevel(Integer riskLevel) {
@@ -214,6 +305,14 @@ public class CreateAggregateCompliancePackRequest extends TeaModel {
         return this.tagValueScope;
     }
 
+    public CreateAggregateCompliancePackRequest setTagsScope(java.util.List<CreateAggregateCompliancePackRequestTagsScope> tagsScope) {
+        this.tagsScope = tagsScope;
+        return this;
+    }
+    public java.util.List<CreateAggregateCompliancePackRequestTagsScope> getTagsScope() {
+        return this.tagsScope;
+    }
+
     public CreateAggregateCompliancePackRequest setTemplateContent(String templateContent) {
         this.templateContent = templateContent;
         return this;
@@ -225,16 +324,20 @@ public class CreateAggregateCompliancePackRequest extends TeaModel {
     public static class CreateAggregateCompliancePackRequestConfigRulesConfigRuleParameters extends TeaModel {
         /**
          * <p>The name of the input parameter.</p>
-         * <br>
-         * <p>You must specify both `ParameterName` and `ParameterValue` or neither of them. If the managed rule has an input parameter but no default value is specified, you must specify this parameter. You can call the [ListCompliancePackTemplates](https://help.aliyun.com/document_detail/261176.html) operation to obtain the names of input parameters of the managed rule.</p>
+         * <p>You must configure the <code>ParameterName</code> and <code>ParameterValue</code> parameters or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the name of an input parameter for a managed rule, see <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bandwidth</p>
          */
         @NameInMap("ParameterName")
         public String parameterName;
 
         /**
          * <p>The value of the input parameter.</p>
-         * <br>
-         * <p>You must specify both `ParameterName` and `ParameterValue` or neither of them. If the managed rule has an input parameter but no default value is specified, you must specify this parameter. You can call the [ListCompliancePackTemplates](https://help.aliyun.com/document_detail/261176.html) operation to obtain the values of input parameters of the managed rule.</p>
+         * <p>You must configure the <code>ParameterName</code> and <code>ParameterValue</code> parameters or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the value of an input parameter for a managed rule, see <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
@@ -264,15 +367,20 @@ public class CreateAggregateCompliancePackRequest extends TeaModel {
 
     public static class CreateAggregateCompliancePackRequestConfigRules extends TeaModel {
         /**
-         * <p>The rule ID. If you specify this parameter, Cloud Config adds the rule that has the specified ID to the compliance package.</p>
-         * <br>
-         * <p>You need to only specify `ManagedRuleIdentifier` or `ConfigRuleId`. If you specify both parameters, Cloud Config adds a rule based on the value of `ConfigRuleId`. You can call the [ListAggregateConfigRules](https://help.aliyun.com/document_detail/264148.html) operation to obtain the rule ID.</p>
+         * <p>The rule ID. If you configure this parameter, Cloud Config adds the rule that has the specified ID to the compliance package.</p>
+         * <p>You need to only configure the <code>ManagedRuleIdentifier</code> or <code>ConfigRuleId</code> parameter. If you configure both parameters, the value of the <code>ConfigRuleId</code> parameter takes precedence. For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cr-e918626622af000f****</p>
          */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
 
         /**
-         * <p>The name of the rule.</p>
+         * <p>The rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-bandwidth-limit</p>
          */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
@@ -284,25 +392,34 @@ public class CreateAggregateCompliancePackRequest extends TeaModel {
         public java.util.List<CreateAggregateCompliancePackRequestConfigRulesConfigRuleParameters> configRuleParameters;
 
         /**
-         * <p>The description of the rule.</p>
+         * <p>The rule description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test rule description.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The identifier of the managed rule. Cloud Config automatically creates a managed rule based on the specified identifier and adds the rule to the compliance package.</p>
-         * <br>
-         * <p>You need to only specify `ManagedRuleIdentifier` or `ConfigRuleId`. If you specify both parameters, Cloud Config adds a rule based on the value of `ConfigRuleId`. You can call the [ListCompliancePackTemplates](https://help.aliyun.com/document_detail/261176.html) operation to obtain the identifier of the managed rule.</p>
+         * <p>The identifier of the managed rule. Cloud Config automatically creates a rule based on the identifier of the managed rule and adds the rule to the current compliance package.</p>
+         * <p>You need to only configure the <code>ManagedRuleIdentifier</code> or <code>ConfigRuleId</code> parameter. If you configure both parameters, the value of the <code>ConfigRuleId</code> parameter takes precedence. For more information about how to obtain the identifier of a managed rule, see <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-bandwidth-limit</p>
          */
         @NameInMap("ManagedRuleIdentifier")
         public String managedRuleIdentifier;
 
         /**
          * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
-         * <br>
-         * <p>*   1: high.</p>
-         * <p>*   2: medium.</p>
-         * <p>*   3: low.</p>
+         * <ul>
+         * <li>1: high</li>
+         * <li>2: medium</li>
+         * <li>3: low</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
@@ -358,6 +475,66 @@ public class CreateAggregateCompliancePackRequest extends TeaModel {
         }
         public Integer getRiskLevel() {
             return this.riskLevel;
+        }
+
+    }
+
+    public static class CreateAggregateCompliancePackRequestExcludeTagsScope extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static CreateAggregateCompliancePackRequestExcludeTagsScope build(java.util.Map<String, ?> map) throws Exception {
+            CreateAggregateCompliancePackRequestExcludeTagsScope self = new CreateAggregateCompliancePackRequestExcludeTagsScope();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAggregateCompliancePackRequestExcludeTagsScope setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public CreateAggregateCompliancePackRequestExcludeTagsScope setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
+    public static class CreateAggregateCompliancePackRequestTagsScope extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static CreateAggregateCompliancePackRequestTagsScope build(java.util.Map<String, ?> map) throws Exception {
+            CreateAggregateCompliancePackRequestTagsScope self = new CreateAggregateCompliancePackRequestTagsScope();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAggregateCompliancePackRequestTagsScope setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public CreateAggregateCompliancePackRequestTagsScope setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }

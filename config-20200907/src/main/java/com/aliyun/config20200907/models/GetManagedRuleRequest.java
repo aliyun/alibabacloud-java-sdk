@@ -6,10 +6,11 @@ import com.aliyun.tea.*;
 public class GetManagedRuleRequest extends TeaModel {
     /**
      * <p>The identifier of the managed rule.</p>
-     * <br>
-     * <p>You can call the [ListManagedRules](https://help.aliyun.com/document_detail/421144.html) operation to obtain the managed rule identifier.</p>
-     * <br>
+     * <p>For more information about how to obtain the identifier of a managed rule, see <a href="https://help.aliyun.com/document_detail/421144.html">ListManagedRules</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cdn-domain-https-enabled</p>
      */
     @NameInMap("Identifier")
     public String identifier;

@@ -12,6 +12,9 @@ public class ListResourcesByAdvancedSearchResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D241DEBF-67A2-56AF-88CF-57BF78F0A850</p>
      */
     @NameInMap("RequestId")
     public String requestId;

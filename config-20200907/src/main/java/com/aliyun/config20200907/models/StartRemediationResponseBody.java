@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class StartRemediationResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request was successful.</p>
-     * <p>*   false: The request failed.</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Data")
     public Boolean data;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C7817373-78CB-4F9A-8AFA-E7A88E9D64A2</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,54 +6,69 @@ import com.aliyun.tea.*;
 public class GetAggregateResourceConfigurationTimelineRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
-     * <br>
+     * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ca-5885626622af0008****</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
     /**
      * <p>The end of the time range to query. The default value indicates the time when the GetAggregateResourceConfigurationTimeline operation is called. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1625821156000</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>The maximum number of entries to return for a single request. Valid values: 1 to 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The `token` that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.</p>
+     * <p>The <code>token</code> that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IWBjqMYSy0is7zSMGu16****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the region in which the resource resides.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of a region, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/265983.html).</p>
-     * <br>
+     * <p>For more information about how to obtain the ID of a region, see <a href="https://help.aliyun.com/document_detail/265983.html">ListAggregateDiscoveredResources</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
      * <p>The ID of the Alibaba Cloud account to which the resource in the account group belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100931896542****</p>
      */
     @NameInMap("ResourceAccountId")
     public Long resourceAccountId;
 
     /**
      * <p>The resource ID.</p>
-     * <br>
-     * <p>For more information about how to query the ID of a resource, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/265983.html).</p>
-     * <br>
+     * <p>For more information about how to query the ID of a resource, see <a href="https://help.aliyun.com/document_detail/265983.html">ListAggregateDiscoveredResources</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>new-bucket</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -64,16 +79,20 @@ public class GetAggregateResourceConfigurationTimelineRequest extends TeaModel {
 
     /**
      * <p>The type of the resource.</p>
-     * <br>
-     * <p>For more information about how to obtain the type of a resource, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/265983.html).</p>
-     * <br>
+     * <p>For more information about how to obtain the type of a resource, see <a href="https://help.aliyun.com/document_detail/265983.html">ListAggregateDiscoveredResources</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACS::OSS::Bucket</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The beginning of the time range to query. By default, Cloud Config retrieves the configuration changes in the last 30 days for the specified resource. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1623211156000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

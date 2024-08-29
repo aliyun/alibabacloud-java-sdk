@@ -12,6 +12,9 @@ public class GetAggregateComplianceSummaryResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>929B8360-BD57-54FF-96DB-AD1D9B476769</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class GetAggregateComplianceSummaryResponseBody extends TeaModel {
     public static class GetAggregateComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule extends TeaModel {
         /**
          * <p>The time when the compliance statistics were collected. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1589853822103</p>
          */
         @NameInMap("ComplianceSummaryTimestamp")
         public Long complianceSummaryTimestamp;
 
         /**
          * <p>The number of compliant rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("CompliantCount")
         public Integer compliantCount;
 
         /**
          * <p>The number of non-compliant rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("NonCompliantCount")
         public Integer nonCompliantCount;
 
         /**
          * <p>The total number of rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;
@@ -104,24 +119,36 @@ public class GetAggregateComplianceSummaryResponseBody extends TeaModel {
     public static class GetAggregateComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByResource extends TeaModel {
         /**
          * <p>The time when the compliance statistics were collected. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1589853822103</p>
          */
         @NameInMap("ComplianceSummaryTimestamp")
         public Long complianceSummaryTimestamp;
 
         /**
          * <p>The number of compliant resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("CompliantCount")
         public Integer compliantCount;
 
         /**
          * <p>The number of non-compliant resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         @NameInMap("NonCompliantCount")
         public Integer nonCompliantCount;
 
         /**
          * <p>The total number of resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

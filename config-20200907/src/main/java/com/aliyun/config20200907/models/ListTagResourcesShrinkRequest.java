@@ -6,21 +6,25 @@ import com.aliyun.tea.*;
 public class ListTagResourcesShrinkRequest extends TeaModel {
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJ****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The region ID of the tag.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource ID.</p>
-     * <br>
      * <p>You can add tags to up to 50 resources.</p>
      */
     @NameInMap("ResourceId")
@@ -28,21 +32,23 @@ public class ListTagResourcesShrinkRequest extends TeaModel {
 
     /**
      * <p>The resource type. Valid values:</p>
-     * <br>
-     * <p>*   `ACS::Config::Rule`</p>
-     * <p>*   `ACS::Config::AggregateConfigRule`</p>
-     * <p>*   `ACS::Config::Aggregator`</p>
-     * <p>*   `ACS::Config::CompliancePack`</p>
-     * <p>*   `ACS::Config::AggregateCompliancePack`</p>
-     * <br>
+     * <ul>
+     * <li><code>ACS::Config::Rule</code></li>
+     * <li><code>ACS::Config::AggregateConfigRule</code></li>
+     * <li><code>ACS::Config::Aggregator</code></li>
+     * <li><code>ACS::Config::CompliancePack</code></li>
+     * <li><code>ACS::Config::AggregateCompliancePack</code></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACS::Config:rule</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The tags of the resource.</p>
-     * <br>
      * <p>You can add up to 20 tags to a resource.</p>
      */
     @NameInMap("Tag")

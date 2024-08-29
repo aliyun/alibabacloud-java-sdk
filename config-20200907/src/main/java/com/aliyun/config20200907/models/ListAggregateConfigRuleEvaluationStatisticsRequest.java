@@ -6,10 +6,11 @@ import com.aliyun.tea.*;
 public class ListAggregateConfigRuleEvaluationStatisticsRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
-     * <br>
+     * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ca-edd3626622af00b3****</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;

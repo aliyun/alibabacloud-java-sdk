@@ -6,21 +6,26 @@ import com.aliyun.tea.*;
 public class GetResourceComplianceByConfigRuleRequest extends TeaModel {
     /**
      * <p>The compliance evaluation result of the resource. Valid values:</p>
-     * <br>
-     * <p>*   COMPLIANT: The resource is evaluated as compliant.</p>
-     * <p>*   NON_COMPLIANT: The resource is evaluated as non-compliant.</p>
-     * <p>*   NOT_APPLICABLE: The rule does not apply to the resource.</p>
-     * <p>*   INSUFFICIENT_DATA: No resource data is available.</p>
+     * <ul>
+     * <li>COMPLIANT: The resource is evaluated as compliant.</li>
+     * <li>NON_COMPLIANT: The resource is evaluated as non-compliant.</li>
+     * <li>NOT_APPLICABLE: The rule does not apply to the resources.</li>
+     * <li>INSUFFICIENT_DATA: No data is available.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>COMPLIANT</p>
      */
     @NameInMap("ComplianceType")
     public String complianceType;
 
     /**
      * <p>The ID of the rule.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of a rule, see [ListConfigRules](https://help.aliyun.com/document_detail/169607.html).</p>
-     * <br>
+     * <p>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cr-d369626622af008e****</p>
      */
     @NameInMap("ConfigRuleId")
     public String configRuleId;

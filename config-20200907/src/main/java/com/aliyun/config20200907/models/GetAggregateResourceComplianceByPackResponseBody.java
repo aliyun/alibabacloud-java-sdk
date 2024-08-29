@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetAggregateResourceComplianceByPackResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6EC7AED1-172F-42AE-9C12-295BC2ADB751</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class GetAggregateResourceComplianceByPackResponseBody extends TeaModel {
     public static class GetAggregateResourceComplianceByPackResponseBodyResourceComplianceResult extends TeaModel {
         /**
          * <p>The ID of the compliance package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cp-fdc8626622af00f9****</p>
          */
         @NameInMap("CompliancePackId")
         public String compliancePackId;
 
         /**
          * <p>The number of non-compliant resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         @NameInMap("NonCompliantCount")
         public Integer nonCompliantCount;
 
         /**
          * <p>The total number of resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
