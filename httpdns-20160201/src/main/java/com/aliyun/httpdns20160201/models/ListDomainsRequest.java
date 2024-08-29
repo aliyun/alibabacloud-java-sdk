@@ -4,11 +4,22 @@ package com.aliyun.httpdns20160201.models;
 import com.aliyun.tea.*;
 
 public class ListDomainsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("Search")
+    public String search;
 
     public static ListDomainsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDomainsRequest self = new ListDomainsRequest();
@@ -29,6 +40,14 @@ public class ListDomainsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListDomainsRequest setSearch(String search) {
+        this.search = search;
+        return this;
+    }
+    public String getSearch() {
+        return this.search;
     }
 
 }

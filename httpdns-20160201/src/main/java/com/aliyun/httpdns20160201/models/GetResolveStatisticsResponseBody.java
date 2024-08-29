@@ -7,6 +7,10 @@ public class GetResolveStatisticsResponseBody extends TeaModel {
     @NameInMap("DataPoints")
     public GetResolveStatisticsResponseBodyDataPoints dataPoints;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50F9C40E-188D-B00B-BE2C-7427E531****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class GetResolveStatisticsResponseBody extends TeaModel {
     }
 
     public static class GetResolveStatisticsResponseBodyDataPointsDataPoint extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>9703</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1488297600</p>
+         */
         @NameInMap("Time")
         public Integer time;
 

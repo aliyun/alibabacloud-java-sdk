@@ -4,9 +4,21 @@ package com.aliyun.httpdns20160201.models;
 import com.aliyun.tea.*;
 
 public class GetResolveCountSummaryRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>day</p>
+     */
     @NameInMap("Granularity")
     public String granularity;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
+     */
     @NameInMap("TimeSpan")
     public Integer timeSpan;
 

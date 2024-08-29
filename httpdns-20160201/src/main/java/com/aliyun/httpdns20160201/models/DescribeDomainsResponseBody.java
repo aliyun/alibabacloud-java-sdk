@@ -7,15 +7,31 @@ public class DescribeDomainsResponseBody extends TeaModel {
     @NameInMap("Domains")
     public DescribeDomainsResponseBodyDomains domains;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A6B3BB61-69CB-50E0-9DC0-0C1658D44A47</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,6 +81,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainsResponseBodyDomainsDomain extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 

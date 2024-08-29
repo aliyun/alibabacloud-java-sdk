@@ -4,9 +4,17 @@ package com.aliyun.httpdns20160201.models;
 import com.aliyun.tea.*;
 
 public class DeleteDomainResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://www.example.com">www.example.com</a></p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FA8C2599-362D-4113-8FB4-E88A40C2****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
