@@ -468,6 +468,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("Lifecycle")
         public String lifecycle;
 
+        @NameInMap("NodeLabel")
+        public String nodeLabel;
+
         /**
          * <p>The deployment result.</p>
          * 
@@ -541,6 +544,14 @@ public class GetApplicationResponseBody extends TeaModel {
         }
         public String getLifecycle() {
             return this.lifecycle;
+        }
+
+        public GetApplicationResponseBodyDataResourceList setNodeLabel(String nodeLabel) {
+            this.nodeLabel = nodeLabel;
+            return this;
+        }
+        public String getNodeLabel() {
+            return this.nodeLabel;
         }
 
         public GetApplicationResponseBodyDataResourceList setRemark(String remark) {
@@ -617,6 +628,9 @@ public class GetApplicationResponseBody extends TeaModel {
          */
         @NameInMap("CreateTime")
         public String createTime;
+
+        @NameInMap("DeployPercent")
+        public Double deployPercent;
 
         /**
          * <p>Application description</p>
@@ -720,6 +734,14 @@ public class GetApplicationResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public GetApplicationResponseBodyData setDeployPercent(Double deployPercent) {
+            this.deployPercent = deployPercent;
+            return this;
+        }
+        public Double getDeployPercent() {
+            return this.deployPercent;
         }
 
         public GetApplicationResponseBodyData setDescription(String description) {
