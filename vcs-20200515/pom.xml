@@ -45,17 +45,6 @@
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
-      <artifactId>tea-rpc</artifactId>
-      <version>0.1.2</version>
-      <exclusions>
-        <exclusion>
-          <groupId>com.aliyun</groupId>
-          <artifactId>tea</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>com.aliyun</groupId>
       <artifactId>endpoint-util</artifactId>
       <version>0.0.7</version>
     </dependency>
@@ -63,11 +52,6 @@
       <groupId>com.aliyun</groupId>
       <artifactId>tea</artifactId>
       <version>1.2.7</version>
-    </dependency>
-    <dependency>
-      <groupId>com.aliyun</groupId>
-      <artifactId>tea-rpc-util</artifactId>
-      <version>0.1.2</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

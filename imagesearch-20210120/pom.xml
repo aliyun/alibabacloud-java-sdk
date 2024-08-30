@@ -50,11 +50,6 @@
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
-      <artifactId>tea-rpc</artifactId>
-      <version>0.1.2</version>
-    </dependency>
-    <dependency>
-      <groupId>com.aliyun</groupId>
       <artifactId>openplatform20191219</artifactId>
       <version>3.1.0</version>
     </dependency>
