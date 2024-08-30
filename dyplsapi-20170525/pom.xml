@@ -60,11 +60,6 @@
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
-      <artifactId>tea-rpc</artifactId>
-      <version>0.1.2</version>
-    </dependency>
-    <dependency>
-      <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
       <version>0.2.1</version>
     </dependency>
