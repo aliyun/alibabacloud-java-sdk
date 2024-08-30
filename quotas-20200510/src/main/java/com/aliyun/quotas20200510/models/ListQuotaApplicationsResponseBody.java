@@ -268,6 +268,9 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
         @NameInMap("QuotaArn")
         public String quotaArn;
 
+        @NameInMap("QuotaCategory")
+        public String quotaCategory;
+
         /**
          * <p>The description of the quota.</p>
          * 
@@ -434,6 +437,14 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
         }
         public String getQuotaArn() {
             return this.quotaArn;
+        }
+
+        public ListQuotaApplicationsResponseBodyQuotaApplications setQuotaCategory(String quotaCategory) {
+            this.quotaCategory = quotaCategory;
+            return this;
+        }
+        public String getQuotaCategory() {
+            return this.quotaCategory;
         }
 
         public ListQuotaApplicationsResponseBodyQuotaApplications setQuotaDescription(String quotaDescription) {
