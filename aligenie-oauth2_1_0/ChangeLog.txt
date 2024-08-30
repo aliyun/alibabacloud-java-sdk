@@ -1,3 +1,8 @@
+2024-08-30 Version: 1.1.0
+- Support API ExecuteScene.
+- Support API GetSceneList.
+
+
 2024-08-27 Version: 1.0.0
 - Generated java oauth2_1.0 for AliGenie.
 
