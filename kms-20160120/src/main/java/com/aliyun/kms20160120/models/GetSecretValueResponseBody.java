@@ -161,7 +161,7 @@ public class GetSecretValueResponseBody extends TeaModel {
      * <p>The stage labels that mark the secret versions.</p>
      */
     @NameInMap("VersionStages")
-    public java.util.List<String> versionStages;
+    public GetSecretValueResponseBodyVersionStages versionStages;
 
     public static GetSecretValueResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetSecretValueResponseBody self = new GetSecretValueResponseBody();
@@ -264,12 +264,31 @@ public class GetSecretValueResponseBody extends TeaModel {
         return this.versionId;
     }
 
-    public GetSecretValueResponseBody setVersionStages(java.util.List<String> versionStages) {
+    public GetSecretValueResponseBody setVersionStages(GetSecretValueResponseBodyVersionStages versionStages) {
         this.versionStages = versionStages;
         return this;
     }
-    public java.util.List<String> getVersionStages() {
+    public GetSecretValueResponseBodyVersionStages getVersionStages() {
         return this.versionStages;
+    }
+
+    public static class GetSecretValueResponseBodyVersionStages extends TeaModel {
+        @NameInMap("VersionStage")
+        public java.util.List<String> versionStage;
+
+        public static GetSecretValueResponseBodyVersionStages build(java.util.Map<String, ?> map) throws Exception {
+            GetSecretValueResponseBodyVersionStages self = new GetSecretValueResponseBodyVersionStages();
+            return TeaModel.build(map, self);
+        }
+
+        public GetSecretValueResponseBodyVersionStages setVersionStage(java.util.List<String> versionStage) {
+            this.versionStage = versionStage;
+            return this;
+        }
+        public java.util.List<String> getVersionStage() {
+            return this.versionStage;
+        }
+
     }
 
 }
