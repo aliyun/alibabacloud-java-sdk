@@ -4,9 +4,22 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class GetResourceGroupRequestRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Running</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("PodStatus")
     public String podStatus;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rgf0zhfqn1d4ity2</p>
+     */
     @NameInMap("ResourceGroupID")
     public String resourceGroupID;
 

@@ -4,15 +4,31 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class CreateResourceGroupRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Ecs</p>
+     */
     @NameInMap("ComputingResourceProvider")
     public String computingResourceProvider;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test_api_report</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testResourceGroup</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Ecs</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
@@ -76,9 +92,17 @@ public class CreateResourceGroupRequest extends TeaModel {
     }
 
     public static class CreateResourceGroupRequestTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("Value")
         public String value;
 

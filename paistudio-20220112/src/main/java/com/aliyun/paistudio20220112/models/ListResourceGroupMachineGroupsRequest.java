@@ -4,36 +4,87 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ListResourceGroupMachineGroupsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1612285282502326</p>
+     */
     @NameInMap("CreatorID")
     public String creatorID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ecs.c6.large</p>
+     */
     @NameInMap("EcsSpec")
     public String ecsSpec;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DESC</p>
+     */
     @NameInMap("Order")
     public String order;
 
+    /**
+     * <strong>example:</strong>
+     * <p>236553689400333</p>
+     */
+    @NameInMap("OrderInstanceId")
+    public String orderInstanceId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PaymentDuration")
     public String paymentDuration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Month</p>
+     */
     @NameInMap("PaymentDurationUnit")
     public String paymentDurationUnit;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PREPAY</p>
+     */
     @NameInMap("PaymentType")
     public String paymentType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>GmtCreatedTime</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Ready</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -72,6 +123,14 @@ public class ListResourceGroupMachineGroupsRequest extends TeaModel {
     }
     public String getOrder() {
         return this.order;
+    }
+
+    public ListResourceGroupMachineGroupsRequest setOrderInstanceId(String orderInstanceId) {
+        this.orderInstanceId = orderInstanceId;
+        return this;
+    }
+    public String getOrderInstanceId() {
+        return this.orderInstanceId;
     }
 
     public ListResourceGroupMachineGroupsRequest setPageNumber(Integer pageNumber) {

@@ -4,6 +4,10 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class WorkspaceIdName extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ws123456</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

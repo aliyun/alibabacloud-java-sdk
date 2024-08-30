@@ -4,9 +4,19 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class CreateResourceGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>18D5A1C6-14B8-545E-8408-0A7DDB4C6B5E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>ResourceGroup ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rgf0zhfqn1d4ity2</p>
+     */
     @NameInMap("ResourceGroupID")
     public String resourceGroupID;
 

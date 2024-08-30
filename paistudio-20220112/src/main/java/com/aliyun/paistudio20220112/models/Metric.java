@@ -4,9 +4,17 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class Metric extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>rg17tmvwiokhzaxg</p>
+     */
     @NameInMap("Time")
     public Long time;
 
+    /**
+     * <strong>example:</strong>
+     * <p>23000</p>
+     */
     @NameInMap("Value")
     public String value;
 

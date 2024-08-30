@@ -7,9 +7,17 @@ public class NodeMetric extends TeaModel {
     @NameInMap("GPUType")
     public String GPUType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>23000</p>
+     */
     @NameInMap("Metrics")
     public java.util.List<Metric> metrics;
 
+    /**
+     * <strong>example:</strong>
+     * <p>-i121212node</p>
+     */
     @NameInMap("NodeID")
     public String nodeID;
 

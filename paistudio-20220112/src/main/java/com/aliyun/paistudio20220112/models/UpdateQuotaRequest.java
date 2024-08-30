@@ -4,6 +4,10 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class UpdateQuotaRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>this is a test quota</p>
+     */
     @NameInMap("Description")
     public String description;
 
@@ -12,6 +16,16 @@ public class UpdateQuotaRequest extends TeaModel {
 
     @NameInMap("QueueStrategy")
     public String queueStrategy;
+
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("QuotaConfig")
+    public QuotaConfig quotaConfig;
+
+    @NameInMap("QuotaName")
+    public String quotaName;
 
     public static UpdateQuotaRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateQuotaRequest self = new UpdateQuotaRequest();
@@ -40,6 +54,22 @@ public class UpdateQuotaRequest extends TeaModel {
     }
     public String getQueueStrategy() {
         return this.queueStrategy;
+    }
+
+    public UpdateQuotaRequest setQuotaConfig(QuotaConfig quotaConfig) {
+        this.quotaConfig = quotaConfig;
+        return this;
+    }
+    public QuotaConfig getQuotaConfig() {
+        return this.quotaConfig;
+    }
+
+    public UpdateQuotaRequest setQuotaName(String quotaName) {
+        this.quotaName = quotaName;
+        return this;
+    }
+    public String getQuotaName() {
+        return this.quotaName;
     }
 
 }

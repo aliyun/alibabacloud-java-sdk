@@ -4,9 +4,17 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ListTrainingJobsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,18 +51,38 @@ public class ListTrainingJobsResponseBody extends TeaModel {
     }
 
     public static class ListTrainingJobsResponseBodyTrainingJobsComputeResourceInstanceSpec extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("CPU")
         public String CPU;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("GPU")
         public String GPU;
 
+        /**
+         * <strong>example:</strong>
+         * <p>V100</p>
+         */
         @NameInMap("GPUType")
         public String GPUType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("Memory")
         public String memory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("SharedMemory")
         public String sharedMemory;
 
@@ -106,20 +134,39 @@ public class ListTrainingJobsResponseBody extends TeaModel {
     }
 
     public static class ListTrainingJobsResponseBodyTrainingJobsComputeResource extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("EcsCount")
         public Long ecsCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ecs.gn5-c8g1.2xlarge</p>
+         */
         @NameInMap("EcsSpec")
         public String ecsSpec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("InstanceCount")
         public Long instanceCount;
 
         @NameInMap("InstanceSpec")
         public ListTrainingJobsResponseBodyTrainingJobsComputeResourceInstanceSpec instanceSpec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>quotam670lixikcl</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
+
+        @NameInMap("ResourceName")
+        public String resourceName;
 
         public static ListTrainingJobsResponseBodyTrainingJobsComputeResource build(java.util.Map<String, ?> map) throws Exception {
             ListTrainingJobsResponseBodyTrainingJobsComputeResource self = new ListTrainingJobsResponseBodyTrainingJobsComputeResource();
@@ -166,12 +213,28 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             return this.resourceId;
         }
 
+        public ListTrainingJobsResponseBodyTrainingJobsComputeResource setResourceName(String resourceName) {
+            this.resourceName = resourceName;
+            return this;
+        }
+        public String getResourceName() {
+            return this.resourceName;
+        }
+
     }
 
     public static class ListTrainingJobsResponseBodyTrainingJobsExperimentConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>exp-ds9aefia90v</p>
+         */
         @NameInMap("ExperimentId")
         public String experimentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>large_language_model</p>
+         */
         @NameInMap("ExperimentName")
         public String experimentName;
 
@@ -199,9 +262,17 @@ public class ListTrainingJobsResponseBody extends TeaModel {
     }
 
     public static class ListTrainingJobsResponseBodyTrainingJobsHyperParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>learning_rate</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.001</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -229,12 +300,24 @@ public class ListTrainingJobsResponseBody extends TeaModel {
     }
 
     public static class ListTrainingJobsResponseBodyTrainingJobsInputChannels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>d-475megosidivjfgfq6</p>
+         */
         @NameInMap("DatasetId")
         public String datasetId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss://test-bucket.oss-cn-hangzhou-internal.aliyuncs.com/path/to/input/channel/</p>
+         */
         @NameInMap("InputUri")
         public String inputUri;
 
+        /**
+         * <strong>example:</strong>
+         * <p>model</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -270,9 +353,17 @@ public class ListTrainingJobsResponseBody extends TeaModel {
     }
 
     public static class ListTrainingJobsResponseBodyTrainingJobsLabels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CreatedBy</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>QuickStart</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -300,12 +391,24 @@ public class ListTrainingJobsResponseBody extends TeaModel {
     }
 
     public static class ListTrainingJobsResponseBodyTrainingJobsOutputChannels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>d-8o0hh35po15ejcdq2p</p>
+         */
         @NameInMap("DatasetId")
         public String datasetId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>model</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss://test-bucket.oss-cn-hangzhou-internal.aliyuncs.com/path/to/output/channel/</p>
+         */
         @NameInMap("OutputUri")
         public String outputUri;
 
@@ -341,6 +444,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
     }
 
     public static class ListTrainingJobsResponseBodyTrainingJobsScheduler extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MaxRunningTimeInSeconds")
         public Long maxRunningTimeInSeconds;
 
@@ -360,18 +467,38 @@ public class ListTrainingJobsResponseBody extends TeaModel {
     }
 
     public static class ListTrainingJobsResponseBodyTrainingJobsStatusTransitions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2024-07-10T11:49:47Z</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TrainingJobSucceed</p>
+         */
         @NameInMap("ReasonCode")
         public String reasonCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>KubeDL job runs successfully</p>
+         */
         @NameInMap("ReasonMessage")
         public String reasonMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-07-10T11:49:47Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Creating</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -423,18 +550,36 @@ public class ListTrainingJobsResponseBody extends TeaModel {
     }
 
     public static class ListTrainingJobsResponseBodyTrainingJobsUserVpc extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>eth1</p>
+         */
         @NameInMap("DefaultRoute")
         public String defaultRoute;
 
         @NameInMap("ExtendedCIDRs")
         public java.util.List<String> extendedCIDRs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sg-abcdef****</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vs-abcdef****</p>
+         */
         @NameInMap("SwitchId")
         public String switchId;
 
+        /**
+         * <p>VPC ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-abcdef****</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -486,24 +631,47 @@ public class ListTrainingJobsResponseBody extends TeaModel {
     }
 
     public static class ListTrainingJobsResponseBodyTrainingJobs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>llm_train</p>
+         */
         @NameInMap("AlgorithmName")
         public String algorithmName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pai</p>
+         */
         @NameInMap("AlgorithmProvider")
         public String algorithmProvider;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v0.0.1</p>
+         */
         @NameInMap("AlgorithmVersion")
         public String algorithmVersion;
 
         @NameInMap("ComputeResource")
         public ListTrainingJobsResponseBodyTrainingJobsComputeResource computeResource;
 
+        @NameInMap("Environments")
+        public java.util.Map<String, String> environments;
+
         @NameInMap("ExperimentConfig")
         public ListTrainingJobsResponseBodyTrainingJobsExperimentConfig experimentConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-07-10T11:49:47Z</p>
+         */
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-07-10T11:49:47Z</p>
+         */
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
@@ -513,6 +681,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         @NameInMap("InputChannels")
         public java.util.List<ListTrainingJobsResponseBodyTrainingJobsInputChannels> inputChannels;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsTempAlgo")
         public Boolean isTempAlgo;
 
@@ -522,18 +694,37 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         @NameInMap("OutputChannels")
         public java.util.List<ListTrainingJobsResponseBodyTrainingJobsOutputChannels> outputChannels;
 
+        @NameInMap("PythonRequirements")
+        public java.util.List<String> pythonRequirements;
+
+        /**
+         * <strong>example:</strong>
+         * <p>TrainingJobSucceed</p>
+         */
         @NameInMap("ReasonCode")
         public String reasonCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
         @NameInMap("ReasonMessage")
         public String reasonMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>acs:ram::{accountID}:role/{roleName}</p>
+         */
         @NameInMap("RoleArn")
         public String roleArn;
 
         @NameInMap("Scheduler")
         public ListTrainingJobsResponseBodyTrainingJobsScheduler scheduler;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -543,18 +734,34 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         @NameInMap("TrainingJobDescription")
         public String trainingJobDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>train1layo6js8ra</p>
+         */
         @NameInMap("TrainingJobId")
         public String trainingJobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>qwen2-7b</p>
+         */
         @NameInMap("TrainingJobName")
         public String trainingJobName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456789</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
         @NameInMap("UserVpc")
         public ListTrainingJobsResponseBodyTrainingJobsUserVpc userVpc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 
@@ -593,6 +800,14 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         }
         public ListTrainingJobsResponseBodyTrainingJobsComputeResource getComputeResource() {
             return this.computeResource;
+        }
+
+        public ListTrainingJobsResponseBodyTrainingJobs setEnvironments(java.util.Map<String, String> environments) {
+            this.environments = environments;
+            return this;
+        }
+        public java.util.Map<String, String> getEnvironments() {
+            return this.environments;
         }
 
         public ListTrainingJobsResponseBodyTrainingJobs setExperimentConfig(ListTrainingJobsResponseBodyTrainingJobsExperimentConfig experimentConfig) {
@@ -657,6 +872,14 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         }
         public java.util.List<ListTrainingJobsResponseBodyTrainingJobsOutputChannels> getOutputChannels() {
             return this.outputChannels;
+        }
+
+        public ListTrainingJobsResponseBodyTrainingJobs setPythonRequirements(java.util.List<String> pythonRequirements) {
+            this.pythonRequirements = pythonRequirements;
+            return this;
+        }
+        public java.util.List<String> getPythonRequirements() {
+            return this.pythonRequirements;
         }
 
         public ListTrainingJobsResponseBodyTrainingJobs setReasonCode(String reasonCode) {

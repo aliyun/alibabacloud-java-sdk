@@ -7,9 +7,17 @@ public class ListAlgorithmsResponseBody extends TeaModel {
     @NameInMap("Algorithms")
     public java.util.List<ListAlgorithmsResponseBodyAlgorithms> algorithms;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -46,27 +54,59 @@ public class ListAlgorithmsResponseBody extends TeaModel {
         @NameInMap("AlgorithmDescription")
         public String algorithmDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>algo-sidjc8134hv</p>
+         */
         @NameInMap("AlgorithmId")
         public String algorithmId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>llm_train</p>
+         */
         @NameInMap("AlgorithmName")
         public String algorithmName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pai</p>
+         */
         @NameInMap("AlgorithmProvider")
         public String algorithmProvider;
 
+        /**
+         * <strong>example:</strong>
+         * <p>LLM Train</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-07-21T03:35:24Z</p>
+         */
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-07-25T02:15:40Z</p>
+         */
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456789</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 

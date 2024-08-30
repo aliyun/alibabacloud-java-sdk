@@ -21,6 +21,10 @@ public class Features extends TeaModel {
     }
 
     public static class FeaturesQuota extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsEnabled")
         public Boolean isEnabled;
 

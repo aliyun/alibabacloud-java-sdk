@@ -7,6 +7,10 @@ public class ListQuotasResponseBody extends TeaModel {
     @NameInMap("Quotas")
     public java.util.List<Quota> quotas;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F082BD0D-21E1-5F9B-81A0-AB07485B03CD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

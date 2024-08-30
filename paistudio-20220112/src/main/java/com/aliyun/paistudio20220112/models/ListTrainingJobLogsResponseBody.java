@@ -7,9 +7,17 @@ public class ListTrainingJobLogsResponseBody extends TeaModel {
     @NameInMap("Logs")
     public java.util.List<String> logs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CBF05F13-B24C-5129-9048-4FA684DCD579</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>23</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 

@@ -4,12 +4,27 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ConditionExpression extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SupportedMachineTypes</p>
+     */
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>in</p>
+     */
     @NameInMap("Operator")
     public String operator;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Values")
     public java.util.List<String> values;
 

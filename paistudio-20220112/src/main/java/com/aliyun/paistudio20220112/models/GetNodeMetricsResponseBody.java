@@ -4,12 +4,20 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class GetNodeMetricsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>DiskWriteRate</p>
+     */
     @NameInMap("MetricType")
     public String metricType;
 
     @NameInMap("NodesMetrics")
     public java.util.List<NodeMetric> nodesMetrics;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rgf0zhfqn1d4ity2</p>
+     */
     @NameInMap("ResourceGroupID")
     public String resourceGroupID;
 

@@ -4,15 +4,31 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ResourceAmount extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("CPU")
     public String CPU;
 
+    /**
+     * <strong>example:</strong>
+     * <p>16</p>
+     */
     @NameInMap("GPU")
     public String GPU;
 
+    /**
+     * <strong>example:</strong>
+     * <p>GPU</p>
+     */
     @NameInMap("GPUType")
     public String GPUType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100Gi</p>
+     */
     @NameInMap("Memory")
     public String memory;
 

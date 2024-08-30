@@ -4,21 +4,45 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ListAlgorithmsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>algo-xsldfvu1334</p>
+     */
     @NameInMap("AlgorithmId")
     public String algorithmId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>llm_training</p>
+     */
     @NameInMap("AlgorithmName")
     public String algorithmName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pai</p>
+     */
     @NameInMap("AlgorithmProvider")
     public String algorithmProvider;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12345</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

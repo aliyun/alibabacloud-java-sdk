@@ -4,9 +4,17 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class NodeSpec extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Count")
     public Long count;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ecs.g6.4xlarge</p>
+     */
     @NameInMap("Type")
     public String type;
 

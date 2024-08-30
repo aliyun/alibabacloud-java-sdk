@@ -34,6 +34,9 @@ public class GetMachineGroupResponseBody extends TeaModel {
     @NameInMap("OrderID")
     public String orderID;
 
+    @NameInMap("OrderInstanceId")
+    public String orderInstanceId;
+
     @NameInMap("PAIResourceID")
     public String PAIResourceID;
 
@@ -138,6 +141,14 @@ public class GetMachineGroupResponseBody extends TeaModel {
     }
     public String getOrderID() {
         return this.orderID;
+    }
+
+    public GetMachineGroupResponseBody setOrderInstanceId(String orderInstanceId) {
+        this.orderInstanceId = orderInstanceId;
+        return this;
+    }
+    public String getOrderInstanceId() {
+        return this.orderInstanceId;
     }
 
     public GetMachineGroupResponseBody setPAIResourceID(String PAIResourceID) {

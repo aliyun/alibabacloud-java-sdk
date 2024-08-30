@@ -4,21 +4,41 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class NodeType extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>CPU</p>
+     */
     @NameInMap("AcceleratorType")
     public String acceleratorType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>16</p>
+     */
     @NameInMap("CPU")
     public String CPU;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("GPU")
     public String GPU;
 
     @NameInMap("GPUType")
     public String GPUType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>64Gi</p>
+     */
     @NameInMap("Memory")
     public String memory;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ecs.g6.4xlarge</p>
+     */
     @NameInMap("NodeType")
     public String nodeType;
 

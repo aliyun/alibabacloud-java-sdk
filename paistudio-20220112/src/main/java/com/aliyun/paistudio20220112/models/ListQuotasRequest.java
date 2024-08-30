@@ -4,41 +4,91 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ListQuotasRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>official=true,gpu=false</p>
+     */
     @NameInMap("Labels")
     public String labels;
 
     @NameInMap("LayoutMode")
     public String layoutMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>desc</p>
+     */
     @NameInMap("Order")
     public String order;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>quotajradxh43rgb</p>
+     */
     @NameInMap("ParentQuotaId")
     public String parentQuotaId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>quota1ci8g793pgm,quotajradxh43rgb</p>
+     */
     @NameInMap("QuotaIds")
     public String quotaIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>quotajradxh43rgb</p>
+     */
     @NameInMap("QuotaName")
     public String quotaName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ECS</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>status</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Creating</p>
+     */
     @NameInMap("Statuses")
     public String statuses;
 
+    @NameInMap("Verbose")
+    public Boolean verbose;
+
+    /**
+     * <strong>example:</strong>
+     * <p>21345,38727</p>
+     */
     @NameInMap("WorkspaceIds")
     public String workspaceIds;
+
+    @NameInMap("WorkspaceName")
+    public String workspaceName;
 
     public static ListQuotasRequest build(java.util.Map<String, ?> map) throws Exception {
         ListQuotasRequest self = new ListQuotasRequest();
@@ -133,12 +183,28 @@ public class ListQuotasRequest extends TeaModel {
         return this.statuses;
     }
 
+    public ListQuotasRequest setVerbose(Boolean verbose) {
+        this.verbose = verbose;
+        return this;
+    }
+    public Boolean getVerbose() {
+        return this.verbose;
+    }
+
     public ListQuotasRequest setWorkspaceIds(String workspaceIds) {
         this.workspaceIds = workspaceIds;
         return this;
     }
     public String getWorkspaceIds() {
         return this.workspaceIds;
+    }
+
+    public ListQuotasRequest setWorkspaceName(String workspaceName) {
+        this.workspaceName = workspaceName;
+        return this;
+    }
+    public String getWorkspaceName() {
+        return this.workspaceName;
     }
 
 }

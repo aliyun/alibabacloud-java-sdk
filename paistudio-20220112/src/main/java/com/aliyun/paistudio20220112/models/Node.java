@@ -34,6 +34,15 @@ public class Node extends TeaModel {
     @NameInMap("IsBound")
     public Boolean isBound;
 
+    @NameInMap("LimitCPU")
+    public String limitCPU;
+
+    @NameInMap("LimitGPU")
+    public String limitGPU;
+
+    @NameInMap("LimitMemory")
+    public String limitMemory;
+
     @NameInMap("MachineGroupId")
     public String machineGroupId;
 
@@ -52,17 +61,35 @@ public class Node extends TeaModel {
     @NameInMap("OrderStatus")
     public String orderStatus;
 
+    @NameInMap("PodNum")
+    public Long podNum;
+
     @NameInMap("ReasonCode")
     public String reasonCode;
 
     @NameInMap("ReasonMessage")
     public String reasonMessage;
 
+    @NameInMap("RequestCPU")
+    public String requestCPU;
+
+    @NameInMap("RequestGPU")
+    public String requestGPU;
+
+    @NameInMap("RequestMemory")
+    public String requestMemory;
+
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     @NameInMap("ResourceGroupName")
     public String resourceGroupName;
+
+    @NameInMap("Users")
+    public java.util.List<UserInfo> users;
+
+    @NameInMap("WorkloadNum")
+    public Long workloadNum;
 
     public static Node build(java.util.Map<String, ?> map) throws Exception {
         Node self = new Node();
@@ -149,6 +176,30 @@ public class Node extends TeaModel {
         return this.isBound;
     }
 
+    public Node setLimitCPU(String limitCPU) {
+        this.limitCPU = limitCPU;
+        return this;
+    }
+    public String getLimitCPU() {
+        return this.limitCPU;
+    }
+
+    public Node setLimitGPU(String limitGPU) {
+        this.limitGPU = limitGPU;
+        return this;
+    }
+    public String getLimitGPU() {
+        return this.limitGPU;
+    }
+
+    public Node setLimitMemory(String limitMemory) {
+        this.limitMemory = limitMemory;
+        return this;
+    }
+    public String getLimitMemory() {
+        return this.limitMemory;
+    }
+
     public Node setMachineGroupId(String machineGroupId) {
         this.machineGroupId = machineGroupId;
         return this;
@@ -197,6 +248,14 @@ public class Node extends TeaModel {
         return this.orderStatus;
     }
 
+    public Node setPodNum(Long podNum) {
+        this.podNum = podNum;
+        return this;
+    }
+    public Long getPodNum() {
+        return this.podNum;
+    }
+
     public Node setReasonCode(String reasonCode) {
         this.reasonCode = reasonCode;
         return this;
@@ -213,6 +272,30 @@ public class Node extends TeaModel {
         return this.reasonMessage;
     }
 
+    public Node setRequestCPU(String requestCPU) {
+        this.requestCPU = requestCPU;
+        return this;
+    }
+    public String getRequestCPU() {
+        return this.requestCPU;
+    }
+
+    public Node setRequestGPU(String requestGPU) {
+        this.requestGPU = requestGPU;
+        return this;
+    }
+    public String getRequestGPU() {
+        return this.requestGPU;
+    }
+
+    public Node setRequestMemory(String requestMemory) {
+        this.requestMemory = requestMemory;
+        return this;
+    }
+    public String getRequestMemory() {
+        return this.requestMemory;
+    }
+
     public Node setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
@@ -227,6 +310,22 @@ public class Node extends TeaModel {
     }
     public String getResourceGroupName() {
         return this.resourceGroupName;
+    }
+
+    public Node setUsers(java.util.List<UserInfo> users) {
+        this.users = users;
+        return this;
+    }
+    public java.util.List<UserInfo> getUsers() {
+        return this.users;
+    }
+
+    public Node setWorkloadNum(Long workloadNum) {
+        this.workloadNum = workloadNum;
+        return this;
+    }
+    public Long getWorkloadNum() {
+        return this.workloadNum;
     }
 
 }

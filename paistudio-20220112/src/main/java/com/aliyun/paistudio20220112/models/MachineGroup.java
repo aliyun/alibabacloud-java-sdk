@@ -7,6 +7,10 @@ public class MachineGroup extends TeaModel {
     @NameInMap("CreatorID")
     public String creatorID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>470.199.02</p>
+     */
     @NameInMap("DefaultDriver")
     public String defaultDriver;
 
@@ -28,8 +32,15 @@ public class MachineGroup extends TeaModel {
     @NameInMap("GmtStartedTime")
     public String gmtStartedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>mg1</p>
+     */
     @NameInMap("MachineGroupID")
     public String machineGroupID;
+
+    @NameInMap("OrderInstanceId")
+    public String orderInstanceId;
 
     @NameInMap("PaymentDuration")
     public String paymentDuration;
@@ -130,6 +141,14 @@ public class MachineGroup extends TeaModel {
     }
     public String getMachineGroupID() {
         return this.machineGroupID;
+    }
+
+    public MachineGroup setOrderInstanceId(String orderInstanceId) {
+        this.orderInstanceId = orderInstanceId;
+        return this;
+    }
+    public String getOrderInstanceId() {
+        return this.orderInstanceId;
     }
 
     public MachineGroup setPaymentDuration(String paymentDuration) {

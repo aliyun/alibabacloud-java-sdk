@@ -4,12 +4,24 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class UpdateResourceGroupRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>test_new_havpn_tf</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>prophet</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Unbind")
     public Boolean unbind;
 

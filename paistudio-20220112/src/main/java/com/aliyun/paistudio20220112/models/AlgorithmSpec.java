@@ -7,6 +7,9 @@ public class AlgorithmSpec extends TeaModel {
     @NameInMap("CodeDir")
     public Location codeDir;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Command")
     public java.util.List<String> command;
 
@@ -19,12 +22,18 @@ public class AlgorithmSpec extends TeaModel {
     @NameInMap("HyperParameters")
     public java.util.List<HyperParameterDefinition> hyperParameters;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Image")
     public String image;
 
     @NameInMap("InputChannels")
     public java.util.List<Channel> inputChannels;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("JobType")
     public String jobType;
 
@@ -165,9 +174,15 @@ public class AlgorithmSpec extends TeaModel {
     }
 
     public static class AlgorithmSpecComputeResourcePolicy extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Value")
         public String value;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -195,6 +210,9 @@ public class AlgorithmSpec extends TeaModel {
     }
 
     public static class AlgorithmSpecComputeResource extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Policy")
         public AlgorithmSpecComputeResourcePolicy policy;
 

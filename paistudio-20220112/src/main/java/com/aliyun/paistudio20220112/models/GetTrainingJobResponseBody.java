@@ -4,33 +4,64 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class GetTrainingJobResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>algo-xsldfvu1334</p>
+     */
     @NameInMap("AlgorithmId")
     public String algorithmId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>llm_training</p>
+     */
     @NameInMap("AlgorithmName")
     public String algorithmName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pai</p>
+     */
     @NameInMap("AlgorithmProvider")
     public String algorithmProvider;
 
     @NameInMap("AlgorithmSpec")
     public AlgorithmSpec algorithmSpec;
 
+    /**
+     * <strong>example:</strong>
+     * <p>v0.0.1</p>
+     */
     @NameInMap("AlgorithmVersion")
     public String algorithmVersion;
 
     @NameInMap("ComputeResource")
     public GetTrainingJobResponseBodyComputeResource computeResource;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7200</p>
+     */
     @NameInMap("Duration")
     public Long duration;
+
+    @NameInMap("Environments")
+    public java.util.Map<String, String> environments;
 
     @NameInMap("ExperimentConfig")
     public GetTrainingJobResponseBodyExperimentConfig experimentConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-07-10T11:49:47Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-07-10T11:49:47Z</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
@@ -43,6 +74,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
     @NameInMap("Instances")
     public java.util.List<GetTrainingJobResponseBodyInstances> instances;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsTempAlgo")
     public Boolean isTempAlgo;
 
@@ -61,15 +96,34 @@ public class GetTrainingJobResponseBody extends TeaModel {
     @NameInMap("OutputModel")
     public GetTrainingJobResponseBodyOutputModel outputModel;
 
+    @NameInMap("PythonRequirements")
+    public java.util.List<String> pythonRequirements;
+
+    /**
+     * <strong>example:</strong>
+     * <p>TrainingJobSucceed</p>
+     */
     @NameInMap("ReasonCode")
     public String reasonCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("ReasonMessage")
     public String reasonMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::{accountID}:role/{roleName}</p>
+     */
     @NameInMap("RoleArn")
     public String roleArn;
 
@@ -79,6 +133,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
     @NameInMap("Settings")
     public GetTrainingJobResponseBodySettings settings;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -88,21 +146,41 @@ public class GetTrainingJobResponseBody extends TeaModel {
     @NameInMap("TrainingJobDescription")
     public String trainingJobDescription;
 
+    /**
+     * <strong>example:</strong>
+     * <p>traini6hhxiq69eo</p>
+     */
     @NameInMap("TrainingJobId")
     public String trainingJobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>qwen_llm</p>
+     */
     @NameInMap("TrainingJobName")
     public String trainingJobName;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://pai.console.aliyun.com/?regionId=cn-hangzhou&workspaceId=1234#/training/jobs/train1ouyadsl8n4">https://pai.console.aliyun.com/?regionId=cn-hangzhou&amp;workspaceId=1234#/training/jobs/train1ouyadsl8n4</a></p>
+     */
     @NameInMap("TrainingJobUrl")
     public String trainingJobUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123456789</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
     @NameInMap("UserVpc")
     public GetTrainingJobResponseBodyUserVpc userVpc;
 
+    /**
+     * <strong>example:</strong>
+     * <p>86995</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -165,6 +243,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
     }
     public Long getDuration() {
         return this.duration;
+    }
+
+    public GetTrainingJobResponseBody setEnvironments(java.util.Map<String, String> environments) {
+        this.environments = environments;
+        return this;
+    }
+    public java.util.Map<String, String> getEnvironments() {
+        return this.environments;
     }
 
     public GetTrainingJobResponseBody setExperimentConfig(GetTrainingJobResponseBodyExperimentConfig experimentConfig) {
@@ -261,6 +347,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
     }
     public GetTrainingJobResponseBodyOutputModel getOutputModel() {
         return this.outputModel;
+    }
+
+    public GetTrainingJobResponseBody setPythonRequirements(java.util.List<String> pythonRequirements) {
+        this.pythonRequirements = pythonRequirements;
+        return this;
+    }
+    public java.util.List<String> getPythonRequirements() {
+        return this.pythonRequirements;
     }
 
     public GetTrainingJobResponseBody setReasonCode(String reasonCode) {
@@ -384,18 +478,38 @@ public class GetTrainingJobResponseBody extends TeaModel {
     }
 
     public static class GetTrainingJobResponseBodyComputeResourceInstanceSpec extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("CPU")
         public String CPU;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("GPU")
         public String GPU;
 
+        /**
+         * <strong>example:</strong>
+         * <p>V100</p>
+         */
         @NameInMap("GPUType")
         public String GPUType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("Memory")
         public String memory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("SharedMemory")
         public String sharedMemory;
 
@@ -446,21 +560,88 @@ public class GetTrainingJobResponseBody extends TeaModel {
 
     }
 
+    public static class GetTrainingJobResponseBodyComputeResourceSpotSpec extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.9</p>
+         */
+        @NameInMap("SpotDiscountLimit")
+        public Float spotDiscountLimit;
+
+        /**
+         * <strong>example:</strong>
+         * <p>SpotWithPriceLimit</p>
+         */
+        @NameInMap("SpotStrategy")
+        public String spotStrategy;
+
+        public static GetTrainingJobResponseBodyComputeResourceSpotSpec build(java.util.Map<String, ?> map) throws Exception {
+            GetTrainingJobResponseBodyComputeResourceSpotSpec self = new GetTrainingJobResponseBodyComputeResourceSpotSpec();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTrainingJobResponseBodyComputeResourceSpotSpec setSpotDiscountLimit(Float spotDiscountLimit) {
+            this.spotDiscountLimit = spotDiscountLimit;
+            return this;
+        }
+        public Float getSpotDiscountLimit() {
+            return this.spotDiscountLimit;
+        }
+
+        public GetTrainingJobResponseBodyComputeResourceSpotSpec setSpotStrategy(String spotStrategy) {
+            this.spotStrategy = spotStrategy;
+            return this;
+        }
+        public String getSpotStrategy() {
+            return this.spotStrategy;
+        }
+
+    }
+
     public static class GetTrainingJobResponseBodyComputeResource extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("EcsCount")
         public Long ecsCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ecs.gn5-c8g1.2xlarge</p>
+         */
         @NameInMap("EcsSpec")
         public String ecsSpec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("InstanceCount")
         public Long instanceCount;
 
         @NameInMap("InstanceSpec")
         public GetTrainingJobResponseBodyComputeResourceInstanceSpec instanceSpec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>quotam670lixikcl</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
+
+        @NameInMap("ResourceName")
+        public String resourceName;
+
+        @NameInMap("SpotSpec")
+        public GetTrainingJobResponseBodyComputeResourceSpotSpec spotSpec;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("UseSpotInstance")
+        public Boolean useSpotInstance;
 
         public static GetTrainingJobResponseBodyComputeResource build(java.util.Map<String, ?> map) throws Exception {
             GetTrainingJobResponseBodyComputeResource self = new GetTrainingJobResponseBodyComputeResource();
@@ -507,12 +688,44 @@ public class GetTrainingJobResponseBody extends TeaModel {
             return this.resourceId;
         }
 
+        public GetTrainingJobResponseBodyComputeResource setResourceName(String resourceName) {
+            this.resourceName = resourceName;
+            return this;
+        }
+        public String getResourceName() {
+            return this.resourceName;
+        }
+
+        public GetTrainingJobResponseBodyComputeResource setSpotSpec(GetTrainingJobResponseBodyComputeResourceSpotSpec spotSpec) {
+            this.spotSpec = spotSpec;
+            return this;
+        }
+        public GetTrainingJobResponseBodyComputeResourceSpotSpec getSpotSpec() {
+            return this.spotSpec;
+        }
+
+        public GetTrainingJobResponseBodyComputeResource setUseSpotInstance(Boolean useSpotInstance) {
+            this.useSpotInstance = useSpotInstance;
+            return this;
+        }
+        public Boolean getUseSpotInstance() {
+            return this.useSpotInstance;
+        }
+
     }
 
     public static class GetTrainingJobResponseBodyExperimentConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>exp-ds9aefia90v</p>
+         */
         @NameInMap("ExperimentId")
         public String experimentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>large_language_model_train</p>
+         */
         @NameInMap("ExperimentName")
         public String experimentName;
 
@@ -540,9 +753,17 @@ public class GetTrainingJobResponseBody extends TeaModel {
     }
 
     public static class GetTrainingJobResponseBodyHyperParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>learning_rate</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0001</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -570,14 +791,29 @@ public class GetTrainingJobResponseBody extends TeaModel {
     }
 
     public static class GetTrainingJobResponseBodyInputChannels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>d-475megosidivjfgfq6</p>
+         */
         @NameInMap("DatasetId")
         public String datasetId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss://test-bucket.oss-cn-hangzhou-internal.aliyuncs.com/path/to/input/model/</p>
+         */
         @NameInMap("InputUri")
         public String inputUri;
 
+        /**
+         * <strong>example:</strong>
+         * <p>model</p>
+         */
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Options")
+        public String options;
 
         public static GetTrainingJobResponseBodyInputChannels build(java.util.Map<String, ?> map) throws Exception {
             GetTrainingJobResponseBodyInputChannels self = new GetTrainingJobResponseBodyInputChannels();
@@ -608,15 +844,35 @@ public class GetTrainingJobResponseBody extends TeaModel {
             return this.name;
         }
 
+        public GetTrainingJobResponseBodyInputChannels setOptions(String options) {
+            this.options = options;
+            return this;
+        }
+        public String getOptions() {
+            return this.options;
+        }
+
     }
 
     public static class GetTrainingJobResponseBodyInstances extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>train1oug3yehan4-master-0</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>master</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -652,9 +908,17 @@ public class GetTrainingJobResponseBody extends TeaModel {
     }
 
     public static class GetTrainingJobResponseBodyLabels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CreatedBy</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>QuickStart</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -682,12 +946,24 @@ public class GetTrainingJobResponseBody extends TeaModel {
     }
 
     public static class GetTrainingJobResponseBodyLatestMetrics extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>loss</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-07-10T11:49:47Z</p>
+         */
         @NameInMap("Timestamp")
         public String timestamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.11</p>
+         */
         @NameInMap("Value")
         public Double value;
 
@@ -723,9 +999,17 @@ public class GetTrainingJobResponseBody extends TeaModel {
     }
 
     public static class GetTrainingJobResponseBodyLatestProgressOverallProgress extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2023-07-04T13:20:18Z</p>
+         */
         @NameInMap("Timestamp")
         public String timestamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.75</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -753,9 +1037,17 @@ public class GetTrainingJobResponseBody extends TeaModel {
     }
 
     public static class GetTrainingJobResponseBodyLatestProgressRemainingTime extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2023-07-04T13:20:18Z</p>
+         */
         @NameInMap("Timestamp")
         public String timestamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3600</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -813,12 +1105,24 @@ public class GetTrainingJobResponseBody extends TeaModel {
     }
 
     public static class GetTrainingJobResponseBodyOutputChannels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>d-8o0hh35po15ejcdq2p</p>
+         */
         @NameInMap("DatasetId")
         public String datasetId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>model</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss://test-bucket.oss-cn-hangzhou-internal.aliyuncs.com/path/to/output/model/</p>
+         */
         @NameInMap("OutputUri")
         public String outputUri;
 
@@ -854,9 +1158,17 @@ public class GetTrainingJobResponseBody extends TeaModel {
     }
 
     public static class GetTrainingJobResponseBodyOutputModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>model</p>
+         */
         @NameInMap("OutputChannelName")
         public String outputChannelName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss://test-bucket.oss-cn-hangzhou-internal.aliyuncs.com/path/to/model/output/</p>
+         */
         @NameInMap("Uri")
         public String uri;
 
@@ -884,6 +1196,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
     }
 
     public static class GetTrainingJobResponseBodyScheduler extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MaxRunningTimeInSeconds")
         public Long maxRunningTimeInSeconds;
 
@@ -903,15 +1219,31 @@ public class GetTrainingJobResponseBody extends TeaModel {
     }
 
     public static class GetTrainingJobResponseBodySettings extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ecs.c6.large</p>
+         */
         @NameInMap("AIMasterType")
         public String AIMasterType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableErrorMonitoringInAIMaster")
         public Boolean enableErrorMonitoringInAIMaster;
 
+        /**
+         * <strong>example:</strong>
+         * <p>--enable-log-hang-detection true</p>
+         */
         @NameInMap("ErrorMonitoringArgs")
         public String errorMonitoringArgs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
@@ -955,18 +1287,38 @@ public class GetTrainingJobResponseBody extends TeaModel {
     }
 
     public static class GetTrainingJobResponseBodyStatusTransitions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2024-07-10T11:49:47Z</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TrainingJobSucceed</p>
+         */
         @NameInMap("ReasonCode")
         public String reasonCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>KubeDL job runs successfully</p>
+         */
         @NameInMap("ReasonMessage")
         public String reasonMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-07-10T11:49:47Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Creating</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -1021,12 +1373,26 @@ public class GetTrainingJobResponseBody extends TeaModel {
         @NameInMap("ExtendedCIDRs")
         public java.util.List<String> extendedCIDRs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sg-abcdef****</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vs-abcdef****</p>
+         */
         @NameInMap("SwitchId")
         public String switchId;
 
+        /**
+         * <p>VPC ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-abcdef****</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
