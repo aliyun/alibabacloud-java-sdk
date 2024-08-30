@@ -21,9 +21,17 @@ public class UpdateTrainingJobLabelsRequest extends TeaModel {
     }
 
     public static class UpdateTrainingJobLabelsRequestLabels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>RootModelID</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>model-ad8cv770kl</p>
+         */
         @NameInMap("Value")
         public String value;
 

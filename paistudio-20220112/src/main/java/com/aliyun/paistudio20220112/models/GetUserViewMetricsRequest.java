@@ -4,24 +4,56 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class GetUserViewMetricsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>DESC</p>
+     */
     @NameInMap("Order")
     public String order;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>GmtModified</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1h</p>
+     */
     @NameInMap("TimeStep")
     public String timeStep;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>86995</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

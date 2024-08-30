@@ -4,45 +4,104 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ListTrainingJobsShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>llm_train</p>
+     */
     @NameInMap("AlgorithmName")
     public String algorithmName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pai</p>
+     */
     @NameInMap("AlgorithmProvider")
     public String algorithmProvider;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-12-27T02:10:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsTempAlgo")
     public Boolean isTempAlgo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;project&quot;: &quot;sd-s3&quot;}</p>
+     */
     @NameInMap("Labels")
     public String labelsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DESC</p>
+     */
     @NameInMap("Order")
     public String order;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>GmtModifiedTime</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-06-22T01:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>trains930928remn</p>
+     */
     @NameInMap("TrainingJobId")
     public String trainingJobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>large_language_model_training</p>
+     */
     @NameInMap("TrainingJobName")
     public String trainingJobName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12345</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

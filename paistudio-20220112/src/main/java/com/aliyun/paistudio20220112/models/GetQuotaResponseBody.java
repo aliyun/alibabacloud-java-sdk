@@ -4,33 +4,65 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class GetQuotaResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ByNodeSpec</p>
+     */
     @NameInMap("AllocateStrategy")
     public String allocateStrategy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>18846926616</p>
+     */
     @NameInMap("CreatorId")
     public String creatorId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>this is a test quota</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-06-22T00:00:00Z</p>
+     */
     @NameInMap("GmtCreatedTime")
     public String gmtCreatedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-06-22T00:00:00Z</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>operation1234</p>
+     */
     @NameInMap("LatestOperationId")
     public String latestOperationId;
 
     @NameInMap("Min")
     public ResourceSpec min;
 
+    /**
+     * <strong>example:</strong>
+     * <p>quota1ci8g793pgm</p>
+     */
     @NameInMap("ParentQuotaId")
     public String parentQuotaId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PaiStrategyIntelligent</p>
+     */
     @NameInMap("QueueStrategy")
     public String queueStrategy;
 
@@ -42,28 +74,55 @@ public class GetQuotaResponseBody extends TeaModel {
 
     /**
      * <p>Quota Id</p>
+     * 
+     * <strong>example:</strong>
+     * <p>quotajradxh43rgb</p>
      */
     @NameInMap("QuotaId")
     public String quotaId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test-quota</p>
+     */
     @NameInMap("QuotaName")
     public String quotaName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>“”</p>
+     */
     @NameInMap("ReasonCode")
     public String reasonCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>“”</p>
+     */
     @NameInMap("ReasonMessage")
     public String reasonMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>18D5A1C6-14B8-545E-8408-0A7DDB4C6B5E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ResourceGroupIds")
     public java.util.List<String> resourceGroupIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ECS</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Ready</p>
+     */
     @NameInMap("Status")
     public String status;
 

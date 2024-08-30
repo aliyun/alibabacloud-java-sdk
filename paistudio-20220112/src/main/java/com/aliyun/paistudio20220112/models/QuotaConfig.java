@@ -7,11 +7,22 @@ public class QuotaConfig extends TeaModel {
     @NameInMap("ACS")
     public ACS ACS;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ceeb37xxxx</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>470.199.02</p>
+     */
     @NameInMap("DefaultGPUDriver")
     public String defaultGPUDriver;
+
+    @NameInMap("EnablePreemptSubquotaWorkloads")
+    public Boolean enablePreemptSubquotaWorkloads;
 
     @NameInMap("ResourceSpecs")
     public java.util.List<WorkspaceSpecs> resourceSpecs;
@@ -19,6 +30,10 @@ public class QuotaConfig extends TeaModel {
     @NameInMap("SupportGPUDrivers")
     public java.util.List<String> supportGPUDrivers;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("SupportRDMA")
     public Boolean supportRDMA;
 
@@ -52,6 +67,14 @@ public class QuotaConfig extends TeaModel {
     }
     public String getDefaultGPUDriver() {
         return this.defaultGPUDriver;
+    }
+
+    public QuotaConfig setEnablePreemptSubquotaWorkloads(Boolean enablePreemptSubquotaWorkloads) {
+        this.enablePreemptSubquotaWorkloads = enablePreemptSubquotaWorkloads;
+        return this;
+    }
+    public Boolean getEnablePreemptSubquotaWorkloads() {
+        return this.enablePreemptSubquotaWorkloads;
     }
 
     public QuotaConfig setResourceSpecs(java.util.List<WorkspaceSpecs> resourceSpecs) {

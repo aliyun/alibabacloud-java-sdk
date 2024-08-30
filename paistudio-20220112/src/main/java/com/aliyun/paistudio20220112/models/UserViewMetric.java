@@ -58,6 +58,10 @@ public class UserViewMetric extends TeaModel {
     @NameInMap("RequestMemory")
     public Long requestMemory;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg17tmvwiokhzaxg</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

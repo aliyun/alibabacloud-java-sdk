@@ -4,12 +4,24 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class NodeTypeStatistic extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("CanBeBoundCount")
     public Integer canBeBoundCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ecs.g6.4xlarge</p>
+     */
     @NameInMap("NodeType")
     public String nodeType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

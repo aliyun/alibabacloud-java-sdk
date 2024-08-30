@@ -4,9 +4,17 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class CreateAlgorithmResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>algo-xsldfvu1334</p>
+     */
     @NameInMap("AlgorithmId")
     public String algorithmId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E7C42CC7-2E85-508A-84F4-923B605FD10F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

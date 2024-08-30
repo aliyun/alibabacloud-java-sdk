@@ -13,6 +13,9 @@ public class HyperParameterDefinition extends TeaModel {
     @NameInMap("DisplayName")
     public String displayName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -22,6 +25,9 @@ public class HyperParameterDefinition extends TeaModel {
     @NameInMap("Required")
     public Boolean required;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Type")
     public String type;
 

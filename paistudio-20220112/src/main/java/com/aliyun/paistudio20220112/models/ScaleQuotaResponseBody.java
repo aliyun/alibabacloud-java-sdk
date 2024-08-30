@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class ScaleQuotaResponseBody extends TeaModel {
     /**
      * <p>Quota Id</p>
+     * 
+     * <strong>example:</strong>
+     * <p>quotamtl37ge7gkvdz</p>
      */
     @NameInMap("QuotaId")
     public String quotaId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F2D0392B-D749-5C48-A98A-3FAE5C9444A6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

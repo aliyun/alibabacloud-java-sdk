@@ -13,18 +13,30 @@ public class ResourceGroup extends TeaModel {
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>RG1</p>
+     */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("NodeCount")
     public Integer nodeCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg17tmvwiokhzaxg</p>
+     */
     @NameInMap("ResourceGroupID")
     public String resourceGroupID;
 
     @NameInMap("UserVpc")
     public UserVpc userVpc;
 
+    /**
+     * <strong>example:</strong>
+     * <p>23000</p>
+     */
     @NameInMap("WorkspaceID")
     public String workspaceID;
 

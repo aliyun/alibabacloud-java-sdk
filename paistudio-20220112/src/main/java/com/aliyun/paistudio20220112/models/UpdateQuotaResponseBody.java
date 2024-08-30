@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class UpdateQuotaResponseBody extends TeaModel {
     /**
      * <p>Quota Id</p>
+     * 
+     * <strong>example:</strong>
+     * <p>quota-20210126170216-mtl37ge7gkvdz</p>
      */
     @NameInMap("QuotaId")
     public String quotaId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>96496E6E-00B4-5F55-80F6-1844FA9E92DC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

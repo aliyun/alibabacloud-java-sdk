@@ -31,6 +31,10 @@ public class NodeViewMetric extends TeaModel {
     @NameInMap("NetworkOutputRate")
     public String networkOutputRate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>-i121212node</p>
+     */
     @NameInMap("NodeID")
     public String nodeID;
 

@@ -4,18 +4,38 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class GetNodeMetricsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2024-07-10T10:17:06</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>V100</p>
+     */
     @NameInMap("GPUType")
     public String GPUType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-07-08T02:23:30.292Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1h</p>
+     */
     @NameInMap("TimeStep")
     public String timeStep;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Verbose")
     public Boolean verbose;
 

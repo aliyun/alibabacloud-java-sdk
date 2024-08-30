@@ -4,12 +4,28 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class MetricDefinition extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>train dataset oob score</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>train:oob_score</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>.<em>train:oob_score=([-+]?[0-9]</em>\.?[0-9]+(?:[eE][-+]?[0-9]+)?).*</p>
+     */
     @NameInMap("Regex")
     public String regex;
 

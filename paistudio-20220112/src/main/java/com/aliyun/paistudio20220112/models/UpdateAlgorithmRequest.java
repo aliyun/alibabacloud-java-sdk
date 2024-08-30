@@ -7,6 +7,10 @@ public class UpdateAlgorithmRequest extends TeaModel {
     @NameInMap("AlgorithmDescription")
     public String algorithmDescription;
 
+    /**
+     * <strong>example:</strong>
+     * <p>LLM Train</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 

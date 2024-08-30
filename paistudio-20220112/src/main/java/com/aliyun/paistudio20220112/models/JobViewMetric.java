@@ -43,6 +43,10 @@ public class JobViewMetric extends TeaModel {
     @NameInMap("RequestMemory")
     public Long requestMemory;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg17tmvwiokhzaxg</p>
+     */
     @NameInMap("ResourceGroupID")
     public String resourceGroupID;
 

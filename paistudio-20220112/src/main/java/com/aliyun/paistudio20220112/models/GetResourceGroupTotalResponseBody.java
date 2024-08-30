@@ -4,15 +4,27 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class GetResourceGroupTotalResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("totalCPU")
     public Integer totalCPU;
 
+    /**
+     * <strong>example:</strong>
+     * <p>24</p>
+     */
     @NameInMap("totalGPU")
     public Integer totalGPU;
 
     @NameInMap("totalGPUInfos")
     public java.util.List<GPUInfo> totalGPUInfos;
 
+    /**
+     * <strong>example:</strong>
+     * <p>300</p>
+     */
     @NameInMap("totalMemory")
     public Integer totalMemory;
 

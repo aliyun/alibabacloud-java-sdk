@@ -7,9 +7,17 @@ public class ListAlgorithmVersionsResponseBody extends TeaModel {
     @NameInMap("AlgorithmVersions")
     public java.util.List<ListAlgorithmVersionsResponseBodyAlgorithmVersions> algorithmVersions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>23</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,27 +51,59 @@ public class ListAlgorithmVersionsResponseBody extends TeaModel {
     }
 
     public static class ListAlgorithmVersionsResponseBodyAlgorithmVersions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>algo-sidjc8134hv</p>
+         */
         @NameInMap("AlgorithmId")
         public String algorithmId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>llm_train</p>
+         */
         @NameInMap("AlgorithmName")
         public String algorithmName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pai</p>
+         */
         @NameInMap("AlgorithmProvider")
         public String algorithmProvider;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v0.1.0</p>
+         */
         @NameInMap("AlgorithmVersion")
         public String algorithmVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-01-19T02:00:26Z</p>
+         */
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-01-22T02:00:59Z</p>
+         */
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456789</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456789</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

@@ -4,60 +4,136 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("Cpu")
     public String cpu;
 
+    /**
+     * <strong>example:</strong>
+     * <p>535</p>
+     */
     @NameInMap("DefaultDriver")
     public String defaultDriver;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("EcsCount")
     public Long ecsCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ecs.c6.large</p>
+     */
     @NameInMap("EcsSpec")
     public String ecsSpec;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-06-22T00:00:00Z</p>
+     */
     @NameInMap("GmtCreatedTime")
     public String gmtCreatedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-06-22T00:00:00Z</p>
+     */
     @NameInMap("GmtExpiredTime")
     public String gmtExpiredTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-06-22T00:00:00Z</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-06-22T00:00:00Z</p>
+     */
     @NameInMap("GmtStartedTime")
     public String gmtStartedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("Gpu")
     public String gpu;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A100</p>
+     */
     @NameInMap("GpuType")
     public String gpuType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>mgmioirqjgw6c5lg</p>
+     */
     @NameInMap("MachineGroupID")
     public String machineGroupID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>64</p>
+     */
     @NameInMap("Memory")
     public String memory;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testMachineGroup</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PaymentDuration")
     public String paymentDuration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Month</p>
+     */
     @NameInMap("PaymentDurationUnit")
     public String paymentDurationUnit;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PREPAY</p>
+     */
     @NameInMap("PaymentType")
     public String paymentType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>18D5A1C6-14B8-545E-8408-0A7DDB4C6B5E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rgf0zhfqn1d4ity2</p>
+     */
     @NameInMap("ResourceGroupID")
     public String resourceGroupID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Ready</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -241,9 +317,17 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     }
 
     public static class GetResourceGroupMachineGroupResponseBodyTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

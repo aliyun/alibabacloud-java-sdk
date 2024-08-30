@@ -7,6 +7,10 @@ public class ListTrainingJobMetricsResponseBody extends TeaModel {
     @NameInMap("Metrics")
     public java.util.List<ListTrainingJobMetricsResponseBodyMetrics> metrics;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,26 @@ public class ListTrainingJobMetricsResponseBody extends TeaModel {
     }
 
     public static class ListTrainingJobMetricsResponseBodyMetrics extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>accuracy</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-18T22:20:55Z</p>
+         */
         @NameInMap("Timestamp")
         public String timestamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.97</p>
+         */
         @NameInMap("Value")
         public Double value;
 

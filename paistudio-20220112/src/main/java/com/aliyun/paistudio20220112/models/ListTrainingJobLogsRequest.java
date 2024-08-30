@@ -4,21 +4,49 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ListTrainingJobLogsRequest extends TeaModel {
+    /**
+     * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-11-08T16:00:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>train129f212o89d-master-0</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-11-08T16:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>train129f212o89d-master-0</p>
+     */
     @NameInMap("WorkerId")
     public String workerId;
 

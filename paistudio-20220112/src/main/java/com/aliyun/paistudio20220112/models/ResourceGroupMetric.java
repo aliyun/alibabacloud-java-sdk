@@ -7,9 +7,17 @@ public class ResourceGroupMetric extends TeaModel {
     @NameInMap("GpuType")
     public String gpuType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>23000</p>
+     */
     @NameInMap("Metrics")
     public java.util.List<Metric> metrics;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg17tmvwiokhzaxg</p>
+     */
     @NameInMap("ResourceGroupID")
     public String resourceGroupID;
 

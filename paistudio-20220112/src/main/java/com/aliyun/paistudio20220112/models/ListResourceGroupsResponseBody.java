@@ -4,12 +4,26 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ListResourceGroupsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>9CFA2665-1FFE-5929-8468-C14C25890486</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>RG1</p>
+     */
     @NameInMap("ResourceGroups")
     public java.util.List<ResourceGroup> resourceGroups;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 

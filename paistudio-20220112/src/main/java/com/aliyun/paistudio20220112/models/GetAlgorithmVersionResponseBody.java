@@ -4,30 +4,62 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class GetAlgorithmVersionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>algo-xsldfvu1334</p>
+     */
     @NameInMap("AlgorithmId")
     public String algorithmId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>llm_training</p>
+     */
     @NameInMap("AlgorithmName")
     public String algorithmName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pai</p>
+     */
     @NameInMap("AlgorithmProvider")
     public String algorithmProvider;
 
     @NameInMap("AlgorithmSpec")
     public AlgorithmSpec algorithmSpec;
 
+    /**
+     * <strong>example:</strong>
+     * <p>v0.0.1</p>
+     */
     @NameInMap("AlgorithmVersion")
     public String algorithmVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-07-10T11:49:47Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-07-10T11:49:47Z</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123456789</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123456789</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

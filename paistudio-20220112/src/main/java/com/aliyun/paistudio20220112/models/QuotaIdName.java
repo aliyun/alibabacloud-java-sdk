@@ -4,9 +4,17 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class QuotaIdName extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>quota12345</p>
+     */
     @NameInMap("QuotaId")
     public String quotaId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dlc-quota</p>
+     */
     @NameInMap("QuotaName")
     public String quotaName;
 

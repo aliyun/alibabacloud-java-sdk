@@ -7,12 +7,20 @@ public class CreateAlgorithmRequest extends TeaModel {
     @NameInMap("AlgorithmDescription")
     public String algorithmDescription;
 
+    /**
+     * <strong>example:</strong>
+     * <p>llm_training</p>
+     */
     @NameInMap("AlgorithmName")
     public String algorithmName;
 
     @NameInMap("DisplayName")
     public String displayName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12345</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

@@ -4,9 +4,17 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class UpdateAlgorithmVersionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>algo-sidjc8134hv</p>
+     */
     @NameInMap("AlgorithmId")
     public String algorithmId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>v0.1.0</p>
+     */
     @NameInMap("AlgorithmVersion")
     public String algorithmVersion;
 

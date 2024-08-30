@@ -4,12 +4,20 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class GetUserViewMetricsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>rgf0zhfqn1d4ity2</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     @NameInMap("Summary")
     public UserViewMetric summary;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("Total")
     public Integer total;
 

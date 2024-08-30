@@ -4,30 +4,66 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ListResourceGroupsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Ecs</p>
+     */
     @NameInMap("ComputingResourceProvider")
     public String computingResourceProvider;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rgf0zhfqn1d4ity2</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>desc</p>
+     */
     @NameInMap("Order")
     public String order;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Lingjun</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ShowAll")
     public Boolean showAll;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DisplayName</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Creating</p>
+     */
     @NameInMap("Status")
     public String status;
 

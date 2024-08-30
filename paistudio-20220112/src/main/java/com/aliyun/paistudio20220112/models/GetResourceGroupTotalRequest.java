@@ -4,6 +4,10 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class GetResourceGroupTotalRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>rgf0zhfqn1d4ity2</p>
+     */
     @NameInMap("ResourceGroupID")
     public String resourceGroupID;
 

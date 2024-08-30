@@ -7,6 +7,10 @@ public class QuotaMetric extends TeaModel {
     @NameInMap("GPUType")
     public String GPUType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>23000</p>
+     */
     @NameInMap("Metrics")
     public java.util.List<Metric> metrics;
 

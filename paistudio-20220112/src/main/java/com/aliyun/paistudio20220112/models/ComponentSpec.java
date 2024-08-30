@@ -7,18 +7,27 @@ public class ComponentSpec extends TeaModel {
     @NameInMap("CodeDir")
     public Location codeDir;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Command")
     public String command;
 
     @NameInMap("HyperParameters")
     public java.util.List<HyperParameterDefinition> hyperParameters;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Image")
     public String image;
 
     @NameInMap("InputChannels")
     public java.util.List<Channel> inputChannels;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("JobType")
     public String jobType;
 
