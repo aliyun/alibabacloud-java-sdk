@@ -75,6 +75,9 @@ public class DescribeAppOtaVersionResponseBody extends TeaModel {
         @NameInMap("OsType")
         public String osType;
 
+        @NameInMap("OtaType")
+        public Integer otaType;
+
         @NameInMap("Project")
         public String project;
 
@@ -164,6 +167,14 @@ public class DescribeAppOtaVersionResponseBody extends TeaModel {
         }
         public String getOsType() {
             return this.osType;
+        }
+
+        public DescribeAppOtaVersionResponseBodyDataAppOtaInfoDTOList setOtaType(Integer otaType) {
+            this.otaType = otaType;
+            return this;
+        }
+        public Integer getOtaType() {
+            return this.otaType;
         }
 
         public DescribeAppOtaVersionResponseBodyDataAppOtaInfoDTOList setProject(String project) {

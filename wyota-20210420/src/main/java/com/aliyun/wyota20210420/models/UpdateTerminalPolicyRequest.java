@@ -4,6 +4,9 @@ package com.aliyun.wyota20210420.models;
 import com.aliyun.tea.*;
 
 public class UpdateTerminalPolicyRequest extends TeaModel {
+    @NameInMap("BackgroundModeTitle")
+    public String backgroundModeTitle;
+
     @NameInMap("DisplayLayout")
     public String displayLayout;
 
@@ -19,11 +22,17 @@ public class UpdateTerminalPolicyRequest extends TeaModel {
     @NameInMap("EnableAutoLogin")
     public Integer enableAutoLogin;
 
+    @NameInMap("EnableBackgroundMode")
+    public Integer enableBackgroundMode;
+
     @NameInMap("EnableBluetooth")
     public Integer enableBluetooth;
 
     @NameInMap("EnableModifyPassword")
     public Integer enableModifyPassword;
+
+    @NameInMap("EnableScheduledReboot")
+    public Integer enableScheduledReboot;
 
     @NameInMap("EnableScheduledShutdown")
     public Integer enableScheduledShutdown;
@@ -55,6 +64,9 @@ public class UpdateTerminalPolicyRequest extends TeaModel {
     @NameInMap("PowerOnBehavior")
     public Integer powerOnBehavior;
 
+    @NameInMap("ScheduledReboot")
+    public String scheduledReboot;
+
     @NameInMap("ScheduledShutdown")
     public String scheduledShutdown;
 
@@ -67,6 +79,14 @@ public class UpdateTerminalPolicyRequest extends TeaModel {
     public static UpdateTerminalPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateTerminalPolicyRequest self = new UpdateTerminalPolicyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateTerminalPolicyRequest setBackgroundModeTitle(String backgroundModeTitle) {
+        this.backgroundModeTitle = backgroundModeTitle;
+        return this;
+    }
+    public String getBackgroundModeTitle() {
+        return this.backgroundModeTitle;
     }
 
     public UpdateTerminalPolicyRequest setDisplayLayout(String displayLayout) {
@@ -109,6 +129,14 @@ public class UpdateTerminalPolicyRequest extends TeaModel {
         return this.enableAutoLogin;
     }
 
+    public UpdateTerminalPolicyRequest setEnableBackgroundMode(Integer enableBackgroundMode) {
+        this.enableBackgroundMode = enableBackgroundMode;
+        return this;
+    }
+    public Integer getEnableBackgroundMode() {
+        return this.enableBackgroundMode;
+    }
+
     public UpdateTerminalPolicyRequest setEnableBluetooth(Integer enableBluetooth) {
         this.enableBluetooth = enableBluetooth;
         return this;
@@ -123,6 +151,14 @@ public class UpdateTerminalPolicyRequest extends TeaModel {
     }
     public Integer getEnableModifyPassword() {
         return this.enableModifyPassword;
+    }
+
+    public UpdateTerminalPolicyRequest setEnableScheduledReboot(Integer enableScheduledReboot) {
+        this.enableScheduledReboot = enableScheduledReboot;
+        return this;
+    }
+    public Integer getEnableScheduledReboot() {
+        return this.enableScheduledReboot;
     }
 
     public UpdateTerminalPolicyRequest setEnableScheduledShutdown(Integer enableScheduledShutdown) {
@@ -203,6 +239,14 @@ public class UpdateTerminalPolicyRequest extends TeaModel {
     }
     public Integer getPowerOnBehavior() {
         return this.powerOnBehavior;
+    }
+
+    public UpdateTerminalPolicyRequest setScheduledReboot(String scheduledReboot) {
+        this.scheduledReboot = scheduledReboot;
+        return this;
+    }
+    public String getScheduledReboot() {
+        return this.scheduledReboot;
     }
 
     public UpdateTerminalPolicyRequest setScheduledShutdown(String scheduledShutdown) {
