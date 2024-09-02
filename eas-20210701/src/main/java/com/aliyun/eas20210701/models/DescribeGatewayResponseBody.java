@@ -32,7 +32,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The private gateway alias.</p>
+     * <p>The alias of the private gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>mygateway1</p>
@@ -41,7 +41,14 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public String gatewayName;
 
     /**
-     * <p>The instance type used for the private gateway.</p>
+     * <p>The instance type used by the private gateway.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>8c16g</li>
+     * <li>4c8g</li>
+     * <li>2c4g</li>
+     * <li>16c32g</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>ecs.c6.4xlarge</p>
@@ -67,6 +74,20 @@ public class DescribeGatewayResponseBody extends TeaModel {
     @NameInMap("InternetEnabled")
     public Boolean internetEnabled;
 
+    /**
+     * <p>Indicates whether Internet access is enabled.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Creating: Internet access is being enabled.</li>
+     * <li>Failed: Internet access failed to be enabled or deleted.</li>
+     * <li>Running: Internet access is running.</li>
+     * <li>Deleted: Internet access is deleted.</li>
+     * <li>Deleting: Internet access is being deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("InternetStatus")
     public String internetStatus;
 
@@ -79,9 +100,21 @@ public class DescribeGatewayResponseBody extends TeaModel {
     @NameInMap("IntranetDomain")
     public String intranetDomain;
 
+    /**
+     * <p>Indicates whether it is the default private gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsDefault")
     public Boolean isDefault;
 
+    /**
+     * <p>The number of nodes in the private gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("Replicas")
     public Integer replicas;
 
@@ -95,7 +128,17 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The state of the private gateway.</p>
+     * <p>The status of the private gateway.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Creating</li>
+     * <li>Stopped</li>
+     * <li>Failed</li>
+     * <li>Running</li>
+     * <li>Deleted</li>
+     * <li>Deleting</li>
+     * <li>Waiting</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>PrivateGatewayRunning</p>

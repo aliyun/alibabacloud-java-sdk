@@ -61,27 +61,19 @@ public class ListAclPolicyResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class ListAclPolicyResponseBodyInternetAclPolicyList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>default</p>
-         */
+    public static class ListAclPolicyResponseBodyInternetAclPolicyListAclPolicyList extends TeaModel {
         @NameInMap("Comment")
         public String comment;
 
-        /**
-         * <strong>example:</strong>
-         * <p>10.23.XX.XX/32</p>
-         */
         @NameInMap("Entry")
         public String entry;
 
-        public static ListAclPolicyResponseBodyInternetAclPolicyList build(java.util.Map<String, ?> map) throws Exception {
-            ListAclPolicyResponseBodyInternetAclPolicyList self = new ListAclPolicyResponseBodyInternetAclPolicyList();
+        public static ListAclPolicyResponseBodyInternetAclPolicyListAclPolicyList build(java.util.Map<String, ?> map) throws Exception {
+            ListAclPolicyResponseBodyInternetAclPolicyListAclPolicyList self = new ListAclPolicyResponseBodyInternetAclPolicyListAclPolicyList();
             return TeaModel.build(map, self);
         }
 
-        public ListAclPolicyResponseBodyInternetAclPolicyList setComment(String comment) {
+        public ListAclPolicyResponseBodyInternetAclPolicyListAclPolicyList setComment(String comment) {
             this.comment = comment;
             return this;
         }
@@ -89,7 +81,7 @@ public class ListAclPolicyResponseBody extends TeaModel {
             return this.comment;
         }
 
-        public ListAclPolicyResponseBodyInternetAclPolicyList setEntry(String entry) {
+        public ListAclPolicyResponseBodyInternetAclPolicyListAclPolicyList setEntry(String entry) {
             this.entry = entry;
             return this;
         }
@@ -99,27 +91,38 @@ public class ListAclPolicyResponseBody extends TeaModel {
 
     }
 
-    public static class ListAclPolicyResponseBodyIntranetVpcAclPolicyListIntranetAclPolicyList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>Test Entry</p>
-         */
-        @NameInMap("Comment")
-        public String comment;
+    public static class ListAclPolicyResponseBodyInternetAclPolicyList extends TeaModel {
+        @NameInMap("AclPolicyList")
+        public java.util.List<ListAclPolicyResponseBodyInternetAclPolicyListAclPolicyList> aclPolicyList;
 
-        /**
-         * <strong>example:</strong>
-         * <p>192.168.XX.XX/24</p>
-         */
-        @NameInMap("Entry")
-        public String entry;
-
-        public static ListAclPolicyResponseBodyIntranetVpcAclPolicyListIntranetAclPolicyList build(java.util.Map<String, ?> map) throws Exception {
-            ListAclPolicyResponseBodyIntranetVpcAclPolicyListIntranetAclPolicyList self = new ListAclPolicyResponseBodyIntranetVpcAclPolicyListIntranetAclPolicyList();
+        public static ListAclPolicyResponseBodyInternetAclPolicyList build(java.util.Map<String, ?> map) throws Exception {
+            ListAclPolicyResponseBodyInternetAclPolicyList self = new ListAclPolicyResponseBodyInternetAclPolicyList();
             return TeaModel.build(map, self);
         }
 
-        public ListAclPolicyResponseBodyIntranetVpcAclPolicyListIntranetAclPolicyList setComment(String comment) {
+        public ListAclPolicyResponseBodyInternetAclPolicyList setAclPolicyList(java.util.List<ListAclPolicyResponseBodyInternetAclPolicyListAclPolicyList> aclPolicyList) {
+            this.aclPolicyList = aclPolicyList;
+            return this;
+        }
+        public java.util.List<ListAclPolicyResponseBodyInternetAclPolicyListAclPolicyList> getAclPolicyList() {
+            return this.aclPolicyList;
+        }
+
+    }
+
+    public static class ListAclPolicyResponseBodyIntranetVpcAclPolicyListAclPolicyList extends TeaModel {
+        @NameInMap("Comment")
+        public String comment;
+
+        @NameInMap("Entry")
+        public String entry;
+
+        public static ListAclPolicyResponseBodyIntranetVpcAclPolicyListAclPolicyList build(java.util.Map<String, ?> map) throws Exception {
+            ListAclPolicyResponseBodyIntranetVpcAclPolicyListAclPolicyList self = new ListAclPolicyResponseBodyIntranetVpcAclPolicyListAclPolicyList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAclPolicyResponseBodyIntranetVpcAclPolicyListAclPolicyList setComment(String comment) {
             this.comment = comment;
             return this;
         }
@@ -127,7 +130,7 @@ public class ListAclPolicyResponseBody extends TeaModel {
             return this.comment;
         }
 
-        public ListAclPolicyResponseBodyIntranetVpcAclPolicyListIntranetAclPolicyList setEntry(String entry) {
+        public ListAclPolicyResponseBodyIntranetVpcAclPolicyListAclPolicyList setEntry(String entry) {
             this.entry = entry;
             return this;
         }
@@ -138,8 +141,8 @@ public class ListAclPolicyResponseBody extends TeaModel {
     }
 
     public static class ListAclPolicyResponseBodyIntranetVpcAclPolicyList extends TeaModel {
-        @NameInMap("IntranetAclPolicyList")
-        public java.util.List<ListAclPolicyResponseBodyIntranetVpcAclPolicyListIntranetAclPolicyList> intranetAclPolicyList;
+        @NameInMap("AclPolicyList")
+        public java.util.List<ListAclPolicyResponseBodyIntranetVpcAclPolicyListAclPolicyList> aclPolicyList;
 
         /**
          * <strong>example:</strong>
@@ -153,12 +156,12 @@ public class ListAclPolicyResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListAclPolicyResponseBodyIntranetVpcAclPolicyList setIntranetAclPolicyList(java.util.List<ListAclPolicyResponseBodyIntranetVpcAclPolicyListIntranetAclPolicyList> intranetAclPolicyList) {
-            this.intranetAclPolicyList = intranetAclPolicyList;
+        public ListAclPolicyResponseBodyIntranetVpcAclPolicyList setAclPolicyList(java.util.List<ListAclPolicyResponseBodyIntranetVpcAclPolicyListAclPolicyList> aclPolicyList) {
+            this.aclPolicyList = aclPolicyList;
             return this;
         }
-        public java.util.List<ListAclPolicyResponseBodyIntranetVpcAclPolicyListIntranetAclPolicyList> getIntranetAclPolicyList() {
-            return this.intranetAclPolicyList;
+        public java.util.List<ListAclPolicyResponseBodyIntranetVpcAclPolicyListAclPolicyList> getAclPolicyList() {
+            return this.aclPolicyList;
         }
 
         public ListAclPolicyResponseBodyIntranetVpcAclPolicyList setVpcId(String vpcId) {
