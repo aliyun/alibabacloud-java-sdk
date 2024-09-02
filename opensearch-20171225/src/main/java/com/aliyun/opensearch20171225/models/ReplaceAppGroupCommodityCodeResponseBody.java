@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AC5F78BA-66B9-545B-9CF1-8F542E682E1F</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>The returned result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("result")
     public ReplaceAppGroupCommodityCodeResponseBodyResult result;
@@ -40,18 +46,29 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
     public static class ReplaceAppGroupCommodityCodeResponseBodyResultQuota extends TeaModel {
         /**
          * <p>The number of computing resources configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("computeResource")
         public Integer computeResource;
 
         /**
          * <p>The storage capacity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("docSize")
         public Integer docSize;
 
         /**
          * <p>The specifications configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("spec")
         public String spec;
@@ -90,124 +107,195 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
     public static class ReplaceAppGroupCommodityCodeResponseBodyResult extends TeaModel {
         /**
          * <p>The billing method. Valid values:</p>
-         * <br>
-         * <p>*   POSTPAY: pay-as-you-go.</p>
-         * <p>*   PREPAY: subscription.</p>
+         * <ul>
+         * <li>POSTPAY: pay-as-you-go.</li>
+         * <li>PREPAY: subscription.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>POSTPAY</p>
          */
         @NameInMap("chargeType")
         public String chargeType;
 
         /**
          * <p>The billing type. Valid values:</p>
-         * <br>
-         * <p>*   1: computing resources.</p>
-         * <p>*   2: queries per second (QPS).</p>
+         * <ul>
+         * <li>1: computing resources.</li>
+         * <li>2: queries per second (QPS).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("chargingWay")
         public Integer chargingWay;
 
         /**
          * <p>The code of the commodity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>opensearch</p>
          */
         @NameInMap("commodityCode")
         public String commodityCode;
 
         /**
          * <p>The timestamp when the application was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1588054131</p>
          */
         @NameInMap("created")
         public Integer created;
 
         /**
          * <p>The ID of the current online version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100302903</p>
          */
         @NameInMap("currentVersion")
         public String currentVersion;
 
         /**
          * <p>The description of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
          * <p>The expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("expireOn")
         public String expireOn;
 
         /**
          * <p>The ID of the rough sort expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("firstRankAlgoDeploymentId")
         public Integer firstRankAlgoDeploymentId;
 
         /**
          * <p>The approval state of the quotas. Valid values:</p>
-         * <br>
-         * <p>*   0: The approval status is normal.</p>
-         * <p>*   1: The quotas are being approved.</p>
+         * <ul>
+         * <li>0: The approval status is normal.</li>
+         * <li>1: The quotas are being approved.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("hasPendingQuotaReviewTask")
         public Integer hasPendingQuotaReviewTask;
 
         /**
          * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("id")
         public String id;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("instanceId")
         public String instanceId;
 
         /**
          * <p>The lock state. Valid values:</p>
-         * <br>
-         * <p>*   Unlock: The instance is unlocked.</p>
-         * <p>*   LockByExpiration: The instance is automatically locked after it expires.</p>
-         * <p>*   ManualLock: The instance is manually locked.</p>
+         * <ul>
+         * <li>Unlock: The instance is unlocked.</li>
+         * <li>LockByExpiration: The instance is automatically locked after it expires.</li>
+         * <li>ManualLock: The instance is manually locked.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Unlock</p>
          */
         @NameInMap("lockMode")
         public String lockMode;
 
         /**
          * <p>Indicates whether the instance is automatically locked after it expires. Valid values:</p>
-         * <br>
-         * <p>*   0: The instance is not automatically locked after it expires.</p>
-         * <p>*   1: The instance is automatically locked after it expires.</p>
+         * <ul>
+         * <li>0: The instance is not automatically locked after it expires.</li>
+         * <li>1: The instance is automatically locked after it expires.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("lockedByExpiration")
         public Integer lockedByExpiration;
 
         /**
          * <p>The name of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The ID of the fine sort expression that is being created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("pendingSecondRankAlgoDeploymentId")
         public Integer pendingSecondRankAlgoDeploymentId;
 
         /**
          * <p>The ID of the order that is in progress.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("processingOrderId")
         public String processingOrderId;
 
         /**
          * <p>Indicates whether the order is produced.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("produced")
         public Integer produced;
 
         /**
          * <p>The name of the A/B test group.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("projectId")
         public String projectId;
@@ -220,30 +308,47 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the fine sort expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("secondRankAlgoDeploymentId")
         public Integer secondRankAlgoDeploymentId;
 
         /**
          * <p>The status of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         @NameInMap("status")
         public String status;
 
         /**
          * <p>The timestamp when the current online version was published.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1590486386</p>
          */
         @NameInMap("switchedTime")
         public Integer switchedTime;
 
         /**
          * <p>The type of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("type")
         public String type;
 
         /**
          * <p>The timestamp when the application was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1581065904</p>
          */
         @NameInMap("updated")
         public Integer updated;

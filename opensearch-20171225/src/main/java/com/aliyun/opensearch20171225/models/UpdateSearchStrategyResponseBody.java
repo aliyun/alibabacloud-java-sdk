@@ -4,6 +4,12 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class UpdateSearchStrategyResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ABCDEFGH</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

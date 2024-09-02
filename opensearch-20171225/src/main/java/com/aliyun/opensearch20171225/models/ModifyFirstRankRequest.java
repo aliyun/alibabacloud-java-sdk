@@ -4,10 +4,16 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ModifyFirstRankRequest extends TeaModel {
+    /**
+     * <p>The request body.</p>
+     */
     @NameInMap("body")
     public FirstRank body;
 
     /**
+     * <p>Specifies whether the request is a dry run.</p>
+     * 
+     * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("dryRun")

@@ -6,48 +6,72 @@ import com.aliyun.tea.*;
 public class ListFunctionInstancesResponseBody extends TeaModel {
     /**
      * <p>The error code. If no error occurs, the parameter is left empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Instance.NotExist</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpCode")
     public Long httpCode;
 
     /**
      * <p>The time consumed for the request, in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("Latency")
     public Long latency;
 
     /**
      * <p>The error message. If no error occurs, the parameter is left empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance not exist.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A4D487A9-A456-5AA5-A9C6-B7BF2889CF74</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The information about the instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("Result")
     public java.util.List<ListFunctionInstancesResponseBodyResult> result;
 
     /**
      * <p>The status of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;OK&quot;</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -124,18 +148,27 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
     public static class ListFunctionInstancesResponseBodyResultBelongs extends TeaModel {
         /**
          * <p>The category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;general&quot;</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>The industry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;ecommerce&quot;</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
          * <p>The abbreviation of the language that applies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;zh&quot;</p>
          */
         @NameInMap("Language")
         public String language;
@@ -174,12 +207,18 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
     public static class ListFunctionInstancesResponseBodyResultCreateParameters extends TeaModel {
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;param1&quot;</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;value1&quot;</p>
          */
         @NameInMap("Value")
         public String value;
@@ -210,12 +249,18 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
     public static class ListFunctionInstancesResponseBodyResultUsageParameters extends TeaModel {
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>use_param1</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value1</p>
          */
         @NameInMap("Value")
         public String value;
@@ -246,78 +291,116 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
     public static class ListFunctionInstancesResponseBodyResult extends TeaModel {
         /**
          * <p>The information about the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("Belongs")
         public ListFunctionInstancesResponseBodyResultBelongs belongs;
 
         /**
          * <p>The parameters of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         @NameInMap("CreateParameters")
         public java.util.List<ListFunctionInstancesResponseBodyResultCreateParameters> createParameters;
 
         /**
          * <p>The time when the instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The cron expression used to schedule training, in the format of (Minutes Hours DayofMonth Month DayofWeek). If the value is empty, it indicates that no periodic training is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 3 ? \* 0,1,3,5 (at 3 a.m. on Sunday, Monday, Wednesday, and Friday)</p>
          */
         @NameInMap("Cron")
         public String cron;
 
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot; &quot;</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The extended information, which is a JSON string. It includes model evaluation information and error information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;{\&quot;dataReport\&quot;:{},\&quot;errors\&quot;:{}}&quot;</p>
          */
         @NameInMap("ExtendInfo")
         public String extendInfo;
 
         /**
          * <p>The name of the feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;ctr&quot;</p>
          */
         @NameInMap("FunctionName")
         public String functionName;
 
         /**
          * <p>The type of the feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;PAAS&quot;</p>
          */
         @NameInMap("FunctionType")
         public String functionType;
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;ctr_test&quot;</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The type of the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;tf_checkpoint&quot;</p>
          */
         @NameInMap("ModelType")
         public String modelType;
 
         /**
          * <p>How the instance is created. Valid values:</p>
-         * <br>
-         * <p>*   user: The instance is created by user.</p>
-         * <p>*   builtin: The instance is created by system.</p>
+         * <ul>
+         * <li>user: The instance is created by user.</li>
+         * <li>builtin: The instance is created by system.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;user&quot;</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
          * <p>The state of the instance. Valid values:</p>
-         * <br>
-         * <p>1.  unavailable: No model is available. Models must be trained before you can use them.</p>
-         * <p>2.  available: Models can be used.</p>
+         * <ol>
+         * <li>unavailable: No model is available. Models must be trained before you can use them.</li>
+         * <li>available: Models can be used.</li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>available</p>
          */
         @NameInMap("Status")
         public String status;
@@ -330,6 +413,9 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("VersionId")
         public Long versionId;

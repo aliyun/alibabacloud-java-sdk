@@ -7,6 +7,10 @@ public class ABTestScene extends TeaModel {
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0 停止实验 1 开通实验</p>
+     */
     @NameInMap("status")
     public Integer status;
 

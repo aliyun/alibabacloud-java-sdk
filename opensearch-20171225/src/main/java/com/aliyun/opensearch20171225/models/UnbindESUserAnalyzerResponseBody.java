@@ -4,9 +4,21 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class UnbindESUserAnalyzerResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0A6EB64B-B4C8-CF02-810F-E660812972FF</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The custom analyzer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
+     */
     @NameInMap("result")
     public java.util.Map<String, ?> result;
 

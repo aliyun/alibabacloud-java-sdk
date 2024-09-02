@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RemoveInterventionDictionaryResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>06BBD41A-5F72-34E4-2DAF-E43B0526051D</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,37 +43,53 @@ public class RemoveInterventionDictionaryResponseBody extends TeaModel {
     public static class RemoveInterventionDictionaryResponseBodyResult extends TeaModel {
         /**
          * <p>The custom analyzer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("analyzer")
         public String analyzer;
 
         /**
          * <p>The time when the intervention dictionary was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1539158313</p>
          */
         @NameInMap("created")
         public String created;
 
         /**
          * <p>The name of the intervention dictionary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tongyici</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The type of the intervention dictionary. Valid values:</p>
-         * <br>
-         * <p>*   stopword: an intervention dictionary for stop word filtering</p>
-         * <p>*   synonym: an intervention dictionary for synonym configuration</p>
-         * <p>*   correction: an intervention dictionary for spelling correction</p>
-         * <p>*   category_prediction: an intervention dictionary for category prediction</p>
-         * <p>*   ner: an intervention dictionary for named entity recognition (NER)</p>
-         * <p>*   term_weighting: an intervention dictionary for term weight analysis</p>
+         * <ul>
+         * <li>stopword: an intervention dictionary for stop word filtering</li>
+         * <li>synonym: an intervention dictionary for synonym configuration</li>
+         * <li>correction: an intervention dictionary for spelling correction</li>
+         * <li>category_prediction: an intervention dictionary for category prediction</li>
+         * <li>ner: an intervention dictionary for named entity recognition (NER)</li>
+         * <li>term_weighting: an intervention dictionary for term weight analysis</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>synonym</p>
          */
         @NameInMap("type")
         public String type;
 
         /**
          * <p>The time when the intervention dictionary was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1539158313</p>
          */
         @NameInMap("updated")
         public String updated;

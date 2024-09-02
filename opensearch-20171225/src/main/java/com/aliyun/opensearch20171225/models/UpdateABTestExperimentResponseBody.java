@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateABTestExperimentResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D77D0DAF-790D-F5F5-A9C0-133738165014</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,47 +43,67 @@ public class UpdateABTestExperimentResponseBody extends TeaModel {
     public static class UpdateABTestExperimentResponseBodyResult extends TeaModel {
         /**
          * <p>The time when the test was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1588842080</p>
          */
         @NameInMap("created")
         public Integer created;
 
         /**
-         * <p>The ID of the test.</p>
+         * <p>The test ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12888</p>
          */
         @NameInMap("id")
         public String id;
 
         /**
-         * <p>The name of the test.</p>
+         * <p>The alias of the test.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The status of the test. Valid values:</p>
-         * <br>
-         * <p>*   true: in effect</p>
-         * <p>*   false: not in effect</p>
+         * <p>Indicates whether the test is in effect. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("online")
         public Boolean online;
 
         /**
-         * <p>The parameters of the test.</p>
+         * <p>The test parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("params")
         public java.util.Map<String, ?> params;
 
         /**
-         * <p>The percentage of traffic that is routed to the test.</p>
-         * <br>
-         * <p>Value values: 0 to 100.</p>
+         * <p>The percentage of traffic that is routed to the test. Valid values: [0,100]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("traffic")
         public Integer traffic;
 
         /**
          * <p>The time when the test was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1588842080</p>
          */
         @NameInMap("updated")
         public Integer updated;

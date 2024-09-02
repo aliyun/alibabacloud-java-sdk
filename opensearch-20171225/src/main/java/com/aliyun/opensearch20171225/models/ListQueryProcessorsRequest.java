@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListQueryProcessorsRequest extends TeaModel {
     /**
+     * <p>The scope of query analysis rules to be queried. Default value: 0. Valid values:</p>
+     * <ul>
+     * <li>0: queries all query analysis rules.</li>
+     * <li>1: queries the default query analysis rules.</li>
+     * <li>2: queries the query analysis rules that are not the default rules.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("isActive")

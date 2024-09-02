@@ -5,21 +5,22 @@ import com.aliyun.tea.*;
 
 public class ListScheduledTasksResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0A6EB64B-B4C8-CF02-810F-E660812972FF</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <p>The details of the scheduled tasks.</p>
-     * <br>
-     * <p>For more information, see [ScheduledTask](~~173610~~).</p>
-     */
     @NameInMap("result")
     public java.util.List<java.util.Map<String, ?>> result;
 
     /**
-     * <p>The total number of the returned scheduled tasks.</p>
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("totalCount")
     public Long totalCount;

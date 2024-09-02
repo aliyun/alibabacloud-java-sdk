@@ -12,6 +12,9 @@ public class RenewAppGroupRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>74db41d8cd3c784209093aa76afbe89e</p>
      */
     @NameInMap("clientToken")
     public String clientToken;

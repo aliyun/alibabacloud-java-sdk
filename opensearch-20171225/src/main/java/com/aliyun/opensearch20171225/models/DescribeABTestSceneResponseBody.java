@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeABTestSceneResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D77D0DAF-790D-F5F5-A9C0-133738165014</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,33 +43,49 @@ public class DescribeABTestSceneResponseBody extends TeaModel {
     public static class DescribeABTestSceneResponseBodyResult extends TeaModel {
         /**
          * <p>The time when the test scenario was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1596527691</p>
          */
         @NameInMap("created")
         public Integer created;
 
         /**
          * <p>The ID of the test scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20614</p>
          */
         @NameInMap("id")
         public String id;
 
         /**
          * <p>The name of the test scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The status of the test scenario. Valid values:</p>
-         * <br>
-         * <p>*   0: The test is stopped.</p>
-         * <p>*   1: The test is started.</p>
+         * <ul>
+         * <li>0: The test is stopped.</li>
+         * <li>1: The test is started.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("status")
         public Integer status;
 
         /**
          * <p>The time when the test was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1596527691</p>
          */
         @NameInMap("updated")
         public Integer updated;

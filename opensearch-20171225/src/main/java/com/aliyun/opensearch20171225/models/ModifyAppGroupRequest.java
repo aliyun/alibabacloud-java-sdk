@@ -6,36 +6,52 @@ import com.aliyun.tea.*;
 public class ModifyAppGroupRequest extends TeaModel {
     /**
      * <p>The online version of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1223232</p>
      */
     @NameInMap("currentVersion")
     public String currentVersion;
 
     /**
      * <p>The description of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;test&quot;</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
      * <p>The type of the industry. Valid values:</p>
-     * <br>
-     * <p>*   general: general.</p>
-     * <p>*   ecommerce: e-commerce.</p>
-     * <p>*   education: education.</p>
-     * <p>*   esports: electronic sports.</p>
-     * <p>*   community: content community.</p>
+     * <ul>
+     * <li>general: general.</li>
+     * <li>ecommerce: e-commerce.</li>
+     * <li>education: education.</li>
+     * <li>esports: electronic sports.</li>
+     * <li>community: content community.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;ecommerce&quot;</p>
      */
     @NameInMap("domain")
     public String domain;
 
     /**
      * <p>The ID of the resource group to which the instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-****</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>Specifies whether to verify the application before modification. Valid values: true and false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("dryRun")
     public Boolean dryRun;

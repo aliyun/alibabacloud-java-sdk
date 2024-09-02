@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class ModifyScheduledTaskResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D77D0DAF-790D-F5F5-A9C0-133738165014</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>The details of the scheduled task.</p>
+     * <p>The information about the scheduled task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Array</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ?> result;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListProceedingsRequest extends TeaModel {
     /**
      * <p>Specifies whether the filtering is complete.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("filterFinished")
     public Boolean filterFinished;

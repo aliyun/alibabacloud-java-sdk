@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeScheduledTaskResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>922DC0D9-31B5-45F9-47B7-37DC678D61A8</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>The details of the scheduled task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ?> result;

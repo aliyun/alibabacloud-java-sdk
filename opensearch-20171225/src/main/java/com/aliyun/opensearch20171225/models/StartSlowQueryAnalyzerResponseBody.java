@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class StartSlowQueryAnalyzerResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D77D0DAF-790D-F5F5-A9C0-133738165014</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>N/A</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ?> result;

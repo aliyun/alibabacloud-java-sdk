@@ -4,11 +4,19 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class GenerateMergedTableRequest extends TeaModel {
+    /**
+     * <p>The request body parameters.</p>
+     */
     @NameInMap("body")
     public Schema body;
 
     /**
-     * <p>\-</p>
+     * <p>The specifications of the OpenSearch instance. This parameter is used to check whether the OpenSearch instance meets the special limits on an exclusive instance.</p>
+     * <p>Default value: opensearch.share.common.</p>
+     * <p>For more information, see the description of the spec field in the Quota topic.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;opensearch.share.common&quot;</p>
      */
     @NameInMap("spec")
     public String spec;

@@ -5,26 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateInterventionDictionaryResponseBody extends TeaModel {
     /**
-     * <p>The type of the intervention dictionary. Valid values:</p>
-     * <br>
-     * <p>*   stopword: an intervention dictionary for stop word filtering</p>
-     * <p>*   synonym: an intervention dictionary for synonym configuration</p>
-     * <p>*   correction: an intervention dictionary for spelling correction</p>
-     * <p>*   category_prediction: an intervention dictionary for category prediction</p>
-     * <p>*   ner: an intervention dictionary for named entity recognition (NER)</p>
-     * <p>*   term_weighting: an intervention dictionary for term weight analysis</p>
-     * <p>*   suggest_allowlist: a drop-down suggestion whitelist</p>
-     * <p>*   suggest_denylist: a drop-down suggestion blacklist</p>
-     * <p>*   hot_allowlist: a top search whitelist</p>
-     * <p>*   hot_denylist: a top search blacklist</p>
-     * <p>*   hint_allowlist: a shading whitelist</p>
-     * <p>*   hint_denylist: a shading blacklist</p>
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80326EFE-485F-46E7-B291-5A1DD08D2198</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("result")
     public CreateInterventionDictionaryResponseBodyResult result;
@@ -52,25 +42,54 @@ public class CreateInterventionDictionaryResponseBody extends TeaModel {
 
     public static class CreateInterventionDictionaryResponseBodyResult extends TeaModel {
         /**
-         * <p>Creates an intervention dictionary.</p>
+         * <p>The custom analyzer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dianshang</p>
          */
         @NameInMap("analyzer")
         public String analyzer;
 
         /**
-         * <p>The name of the intervention dictionary.</p>
+         * <p>The time when the test scenario was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1591086323</p>
          */
         @NameInMap("created")
         public String created;
 
+        /**
+         * <p>The name of the test group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testb</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The type of the intervention dictionary. Valid values:</p>
+         * <ul>
+         * <li>stopword: an intervention dictionary for stop word filtering</li>
+         * <li>synonym: an intervention dictionary for synonym configuration</li>
+         * <li>correction: an intervention dictionary for spelling correction</li>
+         * <li>category_prediction: an intervention dictionary for category prediction</li>
+         * <li>ner: an intervention dictionary for named entity recognition (NER)</li>
+         * <li>term_weighting: an intervention dictionary for term weight analysis</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ner</p>
+         */
         @NameInMap("type")
         public String type;
 
         /**
-         * <p>CreateInterventionDictionary</p>
+         * <p>The time when the intervention dictionary was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1591086323</p>
          */
         @NameInMap("updated")
         public String updated;

@@ -6,10 +6,19 @@ import com.aliyun.tea.*;
 public class DeleteABTestExperimentResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ABCDEFGH</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The result that was returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("result")
     public java.util.Map<String, ?> result;
 

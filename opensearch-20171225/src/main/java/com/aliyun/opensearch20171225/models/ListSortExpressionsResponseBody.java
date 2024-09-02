@@ -5,15 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListSortExpressionsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D77D0DAF-790D-F5F5-A9C0-133738165014</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>The information about the rough sort or fine sort expressions that were returned.</p>
-     * <br>
-     * <p>For more information, see [FirstRank](~~170007~~) and [SecondRank](~~170008~~).</p>
+     * <p>The information about the rough sort or fine sort expressions that are returned.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/170007.html">FirstRank</a> and <a href="https://help.aliyun.com/document_detail/170008.html">SecondRank</a>.</p>
      */
     @NameInMap("result")
     public java.util.List<ListSortExpressionsResponseBodyResult> result;
@@ -42,30 +44,45 @@ public class ListSortExpressionsResponseBody extends TeaModel {
     public static class ListSortExpressionsResponseBodyResult extends TeaModel {
         /**
          * <p>Indicates whether the expression is the default one.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("active")
         public Boolean active;
 
         /**
-         * <p>The time when the expression was created.</p>
+         * <p>The timestamp when the sort expression was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1655793690</p>
          */
         @NameInMap("created")
         public Integer created;
 
         /**
-         * <p>The description of the expression.</p>
+         * <p>The description of the sort expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The name of the expression.</p>
+         * <p>The name of the sort expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The time when the expression was last updated.</p>
+         * <p>The timestamp when the sort expression was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1655793690</p>
          */
         @NameInMap("updated")
         public Integer updated;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateQueryProcessorResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0A6EB64B-B4C8-CF02-810F-E660812972FF</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,22 +43,32 @@ public class CreateQueryProcessorResponseBody extends TeaModel {
     public static class CreateQueryProcessorResponseBodyResult extends TeaModel {
         /**
          * <p>Indicates whether the query analysis rule is the default one.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("active")
         public Boolean active;
 
         /**
          * <p>The time when the query analysis rule was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1587398402</p>
          */
         @NameInMap("created")
         public Integer created;
 
         /**
          * <p>The type of the industry to which the query analysis rule was applied. Valid values:</p>
-         * <br>
-         * <p>*   GENERAL: general.</p>
-         * <p>*   ECOMMERCE: e-commerce.</p>
-         * <p>*   IT_CONTENT: IT content.</p>
+         * <ul>
+         * <li>GENERAL: general.</li>
+         * <li>ECOMMERCE: e-commerce.</li>
+         * <li>IT_CONTENT: IT content.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GENERAL</p>
          */
         @NameInMap("domain")
         public String domain;
@@ -68,20 +81,25 @@ public class CreateQueryProcessorResponseBody extends TeaModel {
 
         /**
          * <p>The name of the query analysis rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>query_filter</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The features that are used in the query analysis rule.</p>
-         * <br>
-         * <p>For more information, see [QueryProcessor](~~170014~~).</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/170014.html">QueryProcessor</a>.</p>
          */
         @NameInMap("processors")
         public java.util.List<java.util.Map<String, ?>> processors;
 
         /**
          * <p>The time when the query analysis rule was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1587398402</p>
          */
         @NameInMap("updated")
         public Integer updated;

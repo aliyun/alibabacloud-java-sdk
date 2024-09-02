@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class ListFirstRanksResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0A6EB64B-B4C8-CF02-810F-E660812972FF</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>The information about each rough sort expression.</p>
-     * <br>
-     * <p>For more information, see [FirstRank](~~170007~~).</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/170007.html">FirstRank</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("result")
     public java.util.List<ListFirstRanksResponseBodyResult> result;
@@ -42,24 +47,30 @@ public class ListFirstRanksResponseBody extends TeaModel {
     public static class ListFirstRanksResponseBodyResultMeta extends TeaModel {
         /**
          * <p>The parameters that are used by a function in the expression.</p>
-         * <br>
-         * <p>For more information, see [Rough sort functions](~~180765~~).</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/180765.html">Rough sort functions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("arg")
         public String arg;
 
         /**
          * <p>The attribute, feature function, or field to be searched for.</p>
-         * <br>
-         * <p>For more information about supported feature functions, see [Rough sort functions](~~180765~~).</p>
+         * <p>For more information about supported feature functions, see <a href="https://help.aliyun.com/document_detail/180765.html">Rough sort functions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>static_bm25()</p>
          */
         @NameInMap("attribute")
         public String attribute;
 
         /**
          * <p>The weight.</p>
-         * <br>
-         * <p>Valid values: \[-100000,100000] (excluding 0).</p>
+         * <p>Valid values: [-100000,100000] (excluding 0).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("weight")
         public Integer weight;
@@ -98,31 +109,55 @@ public class ListFirstRanksResponseBody extends TeaModel {
     public static class ListFirstRanksResponseBodyResult extends TeaModel {
         /**
          * <p>Indicates whether the expression is the default one.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("active")
         public Boolean active;
 
+        /**
+         * <p>The time when the cluster was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("created")
         public Integer created;
 
         /**
          * <p>The description of the expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
          * <p>The content of the expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         @NameInMap("meta")
         public java.util.List<ListFirstRanksResponseBodyResultMeta> meta;
 
         /**
          * <p>The name of the expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The time when the cluster was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("updated")
         public Integer updated;
 

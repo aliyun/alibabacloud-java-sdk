@@ -4,10 +4,16 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class CreateSecondRankRequest extends TeaModel {
+    /**
+     * <p>The request body. For more information, see <a href="https://help.aliyun.com/document_detail/170008.html">SecondRank</a>.</p>
+     */
     @NameInMap("body")
     public SecondRank body;
 
     /**
+     * <p>Specifies whether to perform a dry run.</p>
+     * 
+     * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("dryRun")

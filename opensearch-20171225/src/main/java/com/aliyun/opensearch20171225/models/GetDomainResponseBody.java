@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class GetDomainResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ABCDEFGH</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>The return results.</p>
+     * <p>The returned result.</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("result")
     public java.util.Map<String, ?> result;

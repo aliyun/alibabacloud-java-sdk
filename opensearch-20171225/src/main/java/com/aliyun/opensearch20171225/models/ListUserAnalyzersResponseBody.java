@@ -6,20 +6,25 @@ import com.aliyun.tea.*;
 public class ListUserAnalyzersResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0A6EB64B-B4C8-CF02-810F-E660812972FF</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>The custom analyzer.</p>
-     * <br>
-     * <p>For more information, see [UserAnalyzer](~~178934~~).</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/178934.html">UserAnalyzer</a>.</p>
      */
     @NameInMap("result")
     public java.util.List<ListUserAnalyzersResponseBodyResult> result;
 
     /**
      * <p>The total number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("totalCount")
     public Integer totalCount;
@@ -56,44 +61,66 @@ public class ListUserAnalyzersResponseBody extends TeaModel {
     public static class ListUserAnalyzersResponseBodyResultDicts extends TeaModel {
         /**
          * <p>Indicates whether the application is available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("available")
         public Boolean available;
 
         /**
          * <p>The timestamp when the application was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1588054131</p>
          */
         @NameInMap("created")
         public Integer created;
 
         /**
          * <p>The number of intervention entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         @NameInMap("entriesCount")
         public Integer entriesCount;
 
         /**
          * <p>The maximum number of intervention entries that can be created in the dictionary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("entriesLimit")
         public Integer entriesLimit;
 
         /**
          * <p>The ID of the dictionary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("id")
         public String id;
 
         /**
          * <p>The type. Valid value:</p>
-         * <br>
-         * <p>*   segment</p>
+         * <ul>
+         * <li>segment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>segment</p>
          */
         @NameInMap("type")
         public String type;
 
         /**
          * <p>The timestamp when the application was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1588054131</p>
          */
         @NameInMap("updated")
         public Integer updated;
@@ -164,57 +191,75 @@ public class ListUserAnalyzersResponseBody extends TeaModel {
     public static class ListUserAnalyzersResponseBodyResult extends TeaModel {
         /**
          * <p>Indicates whether the application is available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("available")
         public Boolean available;
 
         /**
          * <p>The basic analyzer. Valid values:</p>
-         * <br>
-         * <p>*   chn_standard: [a common analyzer in Chinese](~~179424~~)</p>
-         * <p>*   chn_scene_name: an analyzer for person names in Chinese</p>
-         * <p>*   chn_ecommerce: [an analyzer for E-commerce in Chinese](~~179424~~)</p>
-         * <p>*   chn_it_content: [an analyzer for IT content in Chinese](~~179424~~)</p>
-         * <p>*   en_min: a small-granularity analyzer in English</p>
-         * <p>*   th_standard: a common analyzer in Thai</p>
-         * <p>*   th_ecommerce: an analyzer for E-commerce in Thai</p>
-         * <p>*   vn_standard: a common analyzer in Vietnamese</p>
-         * <p>*   chn_community_it: an analyzer for IT community content in Chinese</p>
-         * <p>*   chn_ecommerce_general: a common analyzer for the E-commerce industry in Chinese</p>
-         * <p>*   chn_esports_general: a common analyzer for the gaming industry in Chinese</p>
-         * <p>*   chn_edu_question: an analyzer for question search of the education industry in Chinese</p>
+         * <ul>
+         * <li>chn_standard: <a href="https://help.aliyun.com/document_detail/179424.html">a common analyzer in Chinese</a></li>
+         * <li>chn_scene_name: an analyzer for person names in Chinese</li>
+         * <li>chn_ecommerce: <a href="https://help.aliyun.com/document_detail/179424.html">an analyzer for E-commerce in Chinese</a></li>
+         * <li>chn_it_content: <a href="https://help.aliyun.com/document_detail/179424.html">an analyzer for IT content in Chinese</a></li>
+         * <li>en_min: a small-granularity analyzer in English</li>
+         * <li>th_standard: a common analyzer in Thai</li>
+         * <li>th_ecommerce: an analyzer for E-commerce in Thai</li>
+         * <li>vn_standard: a common analyzer in Vietnamese</li>
+         * <li>chn_community_it: an analyzer for IT community content in Chinese</li>
+         * <li>chn_ecommerce_general: a common analyzer for the E-commerce industry in Chinese</li>
+         * <li>chn_esports_general: a common analyzer for the gaming industry in Chinese</li>
+         * <li>chn_edu_question: an analyzer for question search of the education industry in Chinese</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>chn_standard</p>
          */
         @NameInMap("business")
         public String business;
 
         /**
          * <p>The timestamp when the application was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1588054131</p>
          */
         @NameInMap("created")
         public Integer created;
 
         /**
          * <p>The dictionaries that are used by the custom analyzer.</p>
-         * <br>
-         * <p>For more information, see [UserDict](~~178933~~).</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/178933.html">UserDict</a>.</p>
          */
         @NameInMap("dicts")
         public java.util.List<ListUserAnalyzersResponseBodyResultDicts> dicts;
 
         /**
          * <p>The ID of the custom analyzer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("id")
         public String id;
 
         /**
          * <p>The name of the custom analyzer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kevin_test2</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The timestamp when the application was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1588054131</p>
          */
         @NameInMap("updated")
         public Integer updated;

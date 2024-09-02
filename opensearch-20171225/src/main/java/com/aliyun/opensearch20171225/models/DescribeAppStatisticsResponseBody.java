@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeAppStatisticsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>76FC45F1-4167-D3CD-6737-4F97BA503FA0</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>The statistics.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ?> result;

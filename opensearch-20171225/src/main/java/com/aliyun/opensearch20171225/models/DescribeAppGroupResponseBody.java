@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeAppGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0A6EB64B-B4C8-CF02-810F-E660812972FF</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -39,27 +42,37 @@ public class DescribeAppGroupResponseBody extends TeaModel {
 
     public static class DescribeAppGroupResponseBodyResultQuota extends TeaModel {
         /**
-         * <p>The computing resources. Unit: logical computing units (LCUs).</p>
+         * <p>The computing resources. Unit: logical computing unit (LCU).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("computeResource")
         public Integer computeResource;
 
         /**
          * <p>The storage capacity. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("docSize")
         public Integer docSize;
 
         /**
-         * <p>The specifications of the application. Valid values:</p>
-         * <br>
-         * <p>*   opensearch.share.junior: basic</p>
-         * <p>*   opensearch.share.common: shared general-purpose</p>
-         * <p>*   opensearch.share.compute: shared computing</p>
-         * <p>*   opensearch.share.storage: shared storage</p>
-         * <p>*   opensearch.private.common: exclusive general-purpose</p>
-         * <p>*   opensearch.private.compute: exclusive computing</p>
-         * <p>*   opensearch.private.storage: exclusive storage</p>
+         * <p>The specifications. Valid values:</p>
+         * <ul>
+         * <li>opensearch.share.junior: basic.</li>
+         * <li>opensearch.share.common: shared general-purpose.</li>
+         * <li>opensearch.share.compute: shared computing.</li>
+         * <li>opensearch.share.storage: shared storage.</li>
+         * <li>opensearch.private.common: exclusive general-purpose.</li>
+         * <li>opensearch.private.compute: exclusive computing.</li>
+         * <li>opensearch.private.storage: exclusive storage.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>opensearch.share.common</p>
          */
         @NameInMap("spec")
         public String spec;
@@ -96,9 +109,21 @@ public class DescribeAppGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeAppGroupResponseBodyResultTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <p>The tag value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bar</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -127,128 +152,206 @@ public class DescribeAppGroupResponseBody extends TeaModel {
 
     public static class DescribeAppGroupResponseBodyResult extends TeaModel {
         /**
-         * <p>The billing method of the application. Valid values:</p>
-         * <br>
-         * <p>*   POSTPAY: pay-as-you-go</p>
-         * <p>*   PREPAY: subscription</p>
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>POSTPAY: pay-as-you-go.</li>
+         * <li>PREPAY: subscription.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>POSTPAY</p>
          */
         @NameInMap("chargeType")
         public String chargeType;
 
         /**
-         * <p>The billing model. Valid values:</p>
-         * <br>
-         * <p>*   1: computing resources</p>
-         * <p>*   2: queries per second (QPS)</p>
+         * <p>The billable item. Valid values:</p>
+         * <ul>
+         * <li>1: computing resources.</li>
+         * <li>2: queries per second (QPS).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("chargingWay")
         public Integer chargingWay;
 
         /**
-         * <p>The code of the commodity.</p>
+         * <p>The commodity code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>opensearch</p>
          */
         @NameInMap("commodityCode")
         public String commodityCode;
 
         /**
          * <p>The timestamp when the application was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1575442875</p>
          */
         @NameInMap("created")
         public Integer created;
 
         /**
          * <p>The ID of the current online version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110116134</p>
          */
         @NameInMap("currentVersion")
         public String currentVersion;
 
         /**
          * <p>The description of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The industry of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecommerce</p>
+         */
         @NameInMap("domain")
         public String domain;
 
+        @NameInMap("engineType")
+        public String engineType;
+
         /**
          * <p>The expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("expireOn")
         public String expireOn;
 
         /**
          * <p>The ID of the created rough sort expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("firstRankAlgoDeploymentId")
         public Integer firstRankAlgoDeploymentId;
 
         /**
-         * <p>The approval status of the quotas. Valid values:</p>
-         * <br>
-         * <p>*   0: The quotas are approved.</p>
-         * <p>*   1: The quotas are being approved.</p>
+         * <p>The approval state of the quotas. Valid values:</p>
+         * <ul>
+         * <li>0: The application is in service.</li>
+         * <li>1: The quotas are being reviewed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("hasPendingQuotaReviewTask")
         public Integer hasPendingQuotaReviewTask;
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110116134</p>
          */
         @NameInMap("id")
         public String id;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("instanceId")
         public String instanceId;
 
         /**
-         * <p>The lock mode of the instance. Valid values:</p>
-         * <br>
-         * <p>*   Unlock: The instance is not locked.</p>
-         * <p>*   LockByExpiration: The instance is automatically locked after it expires.</p>
-         * <p>*   ManualLock: The instance is manually locked.</p>
+         * <p>The lock state. Valid values:</p>
+         * <ul>
+         * <li>Unlock: The instance is unlocked.</li>
+         * <li>LockByExpiration: The instance is automatically locked after it expires.</li>
+         * <li>ManualLock: The instance is manually locked.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Unlock</p>
          */
         @NameInMap("lockMode")
         public String lockMode;
 
         /**
          * <p>Indicates whether the instance is automatically locked after it expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("lockedByExpiration")
         public Integer lockedByExpiration;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>os_function_test_v1</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The ID of the fine sort expression that is being created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("pendingSecondRankAlgoDeploymentId")
         public Integer pendingSecondRankAlgoDeploymentId;
 
         /**
-         * <p>The ID of the order that is not complete for the instance. For example, an order is one that is initiated to create the instance or change the quotas or billing method.</p>
+         * <p>The ID of the order that is not complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("processingOrderId")
         public String processingOrderId;
 
         /**
-         * <p>Indicates whether the order is complete. Valid values:</p>
-         * <br>
-         * <p>*   0: The order is in progress.</p>
-         * <p>*   1: The order is complete.</p>
+         * <p>Indicates whether the application is created. Valid values:</p>
+         * <ul>
+         * <li>0: The application is being created.</li>
+         * <li>1: The application is created.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("produced")
         public Integer produced;
 
         /**
          * <p>The name of the A/B test group.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("projectId")
         public String projectId;
@@ -259,48 +362,74 @@ public class DescribeAppGroupResponseBody extends TeaModel {
         @NameInMap("quota")
         public DescribeAppGroupResponseBodyResultQuota quota;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmoiyerh6nzly</p>
+         */
         @NameInMap("resourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The ID of the created fine sort expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("secondRankAlgoDeploymentId")
         public Integer secondRankAlgoDeploymentId;
 
         /**
-         * <p>The status of the application. Valid values:</p>
-         * <br>
-         * <p>*   producing</p>
-         * <p>*   review_pending</p>
-         * <p>*   config_pending</p>
-         * <p>*   normal</p>
-         * <p>*   frozen</p>
+         * <p>The state of the application. Valid values:</p>
+         * <ul>
+         * <li>producing: The application is being created.</li>
+         * <li>review_pending: The application is being reviewed.</li>
+         * <li>config_pending: The application is to be configured.</li>
+         * <li>normal: The application is in service.</li>
+         * <li>frozen: The application is frozen.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         @NameInMap("status")
         public String status;
 
         /**
          * <p>The timestamp when the current online version was published.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("switchedTime")
         public Integer switchedTime;
 
+        /**
+         * <p>The application tags.</p>
+         */
         @NameInMap("tags")
         public java.util.List<DescribeAppGroupResponseBodyResultTags> tags;
 
         /**
          * <p>The type of the application. Valid values:</p>
-         * <br>
-         * <p>*   standard: a standard application.</p>
-         * <p>*   advance: an advanced application which is of an old application type. New applications cannot be of this type.</p>
-         * <p>*   enhanced: an advanced application which is of a new application type.</p>
+         * <ul>
+         * <li>standard: a High-performance Search Edition application.</li>
+         * <li></li>
+         * <li>enhanced: an Industry Algorithm Edition application.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enhanced</p>
          */
         @NameInMap("type")
         public String type;
 
         /**
          * <p>The timestamp when the application was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1578916076</p>
          */
         @NameInMap("updated")
         public Integer updated;
@@ -364,6 +493,14 @@ public class DescribeAppGroupResponseBody extends TeaModel {
         }
         public String getDomain() {
             return this.domain;
+        }
+
+        public DescribeAppGroupResponseBodyResult setEngineType(String engineType) {
+            this.engineType = engineType;
+            return this;
+        }
+        public String getEngineType() {
+            return this.engineType;
         }
 
         public DescribeAppGroupResponseBodyResult setExpireOn(String expireOn) {

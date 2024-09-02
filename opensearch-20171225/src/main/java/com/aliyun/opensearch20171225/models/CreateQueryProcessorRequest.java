@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateQueryProcessorRequest extends TeaModel {
     /**
      * <p>The request body.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("body")
     public Object body;
 
     /**
      * <p>Specifies whether to perform a dry run.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("dryRun")
     public Boolean dryRun;

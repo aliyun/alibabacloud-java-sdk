@@ -6,11 +6,17 @@ import com.aliyun.tea.*;
 public class ListStatisticReportRequest extends TeaModel {
     /**
      * <p>pv,uv</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pv,uv</p>
      */
     @NameInMap("columns")
     public String columns;
 
     /**
+     * <p>1582646399</p>
+     * 
+     * <strong>example:</strong>
      * <p>1582646399</p>
      */
     @NameInMap("endTime")
@@ -18,11 +24,17 @@ public class ListStatisticReportRequest extends TeaModel {
 
     /**
      * <p>1</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
     /**
+     * <p>10</p>
+     * 
+     * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("pageSize")
@@ -30,11 +42,17 @@ public class ListStatisticReportRequest extends TeaModel {
 
     /**
      * <p>bizType:test,sceneTag:myTag</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bizType:test,sceneTag:myTag</p>
      */
     @NameInMap("query")
     public String query;
 
     /**
+     * <p>1582214400</p>
+     * 
+     * <strong>example:</strong>
      * <p>1582214400</p>
      */
     @NameInMap("startTime")

@@ -12,6 +12,9 @@ public class CreateFirstRankRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to perform a dry run.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("dryRun")
     public Boolean dryRun;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ModifyAppGroupResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D77D0DAF-790D-F5F5-A9C0-133738165014</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("result")
     public ModifyAppGroupResponseBodyResult result;
@@ -40,26 +46,36 @@ public class ModifyAppGroupResponseBody extends TeaModel {
     public static class ModifyAppGroupResponseBodyResultQuota extends TeaModel {
         /**
          * <p>The computing resources. Unit: logical computing unit (LCU).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("computeResource")
         public Integer computeResource;
 
         /**
          * <p>The storage capacity. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("docSize")
         public Integer docSize;
 
         /**
          * <p>The specifications. Valid values:</p>
-         * <br>
-         * <p>*   opensearch.share.junior: basic.</p>
-         * <p>*   opensearch.share.common: shared general-purpose.</p>
-         * <p>*   opensearch.share.compute: shared computing.</p>
-         * <p>*   opensearch.share.storage: shared storage.</p>
-         * <p>*   opensearch.private.common: exclusive general-purpose.</p>
-         * <p>*   opensearch.private.compute: exclusive computing.</p>
-         * <p>*   opensearch.private.storage: exclusive storage.</p>
+         * <ul>
+         * <li>opensearch.share.junior: basic.</li>
+         * <li>opensearch.share.common: shared general-purpose.</li>
+         * <li>opensearch.share.compute: shared computing.</li>
+         * <li>opensearch.share.storage: shared storage.</li>
+         * <li>opensearch.private.common: exclusive general-purpose.</li>
+         * <li>opensearch.private.compute: exclusive computing.</li>
+         * <li>opensearch.private.storage: exclusive storage.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>opensearch.share.common</p>
          */
         @NameInMap("spec")
         public String spec;
@@ -98,183 +114,224 @@ public class ModifyAppGroupResponseBody extends TeaModel {
     public static class ModifyAppGroupResponseBodyResult extends TeaModel {
         /**
          * <p>The billing method. Valid values:</p>
-         * <br>
-         * <p>*   POSTPAY: pay-as-you-go.</p>
-         * <p>*   PREPAY: subscription.</p>
+         * <ul>
+         * <li>POSTPAY: pay-as-you-go.</li>
+         * <li>PREPAY: subscription.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>POSTPAY</p>
          */
         @NameInMap("chargeType")
         public String chargeType;
 
         /**
          * <p>The billable item. Valid values:</p>
-         * <br>
-         * <p>*   1: computing resources.</p>
-         * <p>*   2: QPS.</p>
+         * <ul>
+         * <li>1: computing resources.</li>
+         * <li>2: QPS.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("chargingWay")
         public Integer chargingWay;
 
         /**
          * <p>The code of the commodity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>opensearch</p>
          */
         @NameInMap("commodityCode")
         public String commodityCode;
 
         /**
          * <p>The timestamp when the application was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1590139524</p>
          */
         @NameInMap("created")
         public Integer created;
 
         /**
          * <p>The ID of the current online version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100302903</p>
          */
         @NameInMap("currentVersion")
         public String currentVersion;
 
         /**
          * <p>The description of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
          * <p>The type of the industry. Valid values:</p>
-         * <br>
-         * <p>*   GENERAL: general.</p>
-         * <p>*   ECOMMERCE: e-commerce.</p>
-         * <p>*   IT_CONTENT: IT content.</p>
+         * <ul>
+         * <li>GENERAL: general.</li>
+         * <li>ECOMMERCE: e-commerce.</li>
+         * <li>IT_CONTENT: IT content.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GENERAL</p>
          */
         @NameInMap("domain")
         public String domain;
 
+        @NameInMap("engineType")
+        public String engineType;
+
         /**
          * <p>The time when the application expired.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("expireOn")
         public String expireOn;
 
         /**
-         * <p>The ID of the rough sort expression.</p>
-         */
-        @NameInMap("firstRankAlgoDeploymentId")
-        public Integer firstRankAlgoDeploymentId;
-
-        /**
          * <p>The approval status of the quotas. Valid values:</p>
-         * <br>
-         * <p>*   0: normal.</p>
-         * <p>*   1: being approved.</p>
+         * <ul>
+         * <li>0: normal.</li>
+         * <li>1: being approved.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("hasPendingQuotaReviewTask")
         public Integer hasPendingQuotaReviewTask;
 
         /**
          * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100302881</p>
          */
         @NameInMap("id")
         public String id;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10030288</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
 
         /**
          * <p>The lock status. Valid values:</p>
-         * <br>
-         * <p>*   Unlock: The instance is unlocked.</p>
-         * <p>*   LockByExpiration: The instance is automatically locked after it expires.</p>
-         * <p>*   ManualLock: The instance is manually locked.</p>
+         * <ul>
+         * <li>Unlock: The instance is unlocked.</li>
+         * <li>LockByExpiration: The instance is automatically locked after it expires.</li>
+         * <li>ManualLock: The instance is manually locked.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Unlock</p>
          */
         @NameInMap("lockMode")
         public String lockMode;
 
         /**
-         * <p>Indicates whether the instance expires and is automatically locked. Valid values:</p>
-         * <br>
-         * <p>*   0: no.</p>
-         * <p>*   1: yes.</p>
-         */
-        @NameInMap("lockedByExpiration")
-        public Integer lockedByExpiration;
-
-        /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsh_test_1</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The ID of the fine sort expression that is being created.</p>
-         */
-        @NameInMap("pendingSecondRankAlgoDeploymentId")
-        public Integer pendingSecondRankAlgoDeploymentId;
-
-        /**
-         * <p>The ID of the order that is not complete for the instance.</p>
-         */
-        @NameInMap("processingOrderId")
-        public String processingOrderId;
-
-        /**
          * <p>Indicates whether the order is complete. Valid values:</p>
-         * <br>
-         * <p>*   0: The order is in progress.</p>
-         * <p>*   1: The order is complete.</p>
+         * <ul>
+         * <li>0: The order is in progress.</li>
+         * <li>1: The order is complete.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("produced")
         public Integer produced;
 
         /**
          * <p>The name of the A/B test group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("projectId")
         public String projectId;
 
         /**
          * <p>The information about the quotas of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("quota")
         public ModifyAppGroupResponseBodyResultQuota quota;
 
-        /**
-         * <p>The ID of the fine sort expression.</p>
-         */
-        @NameInMap("secondRankAlgoDeploymentId")
-        public Integer secondRankAlgoDeploymentId;
+        @NameInMap("resourceGroupId")
+        public String resourceGroupId;
 
         /**
          * <p>The state of the application. Valid values:</p>
-         * <br>
-         * <p>*   producing: being produced.</p>
-         * <p>*   review_pending: being approved.</p>
-         * <p>*   config_pending: to be configured.</p>
-         * <p>*   normal: normal.</p>
-         * <p>*   frozen: frozen.</p>
+         * <ul>
+         * <li>producing: being produced.</li>
+         * <li>review_pending: being approved.</li>
+         * <li>config_pending: to be configured.</li>
+         * <li>normal: normal.</li>
+         * <li>frozen: frozen.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         @NameInMap("status")
         public String status;
 
         /**
          * <p>The timestamp when the current online version was published.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1590486386</p>
          */
         @NameInMap("switchedTime")
         public Integer switchedTime;
 
         /**
          * <p>The type of the application. Valid values:</p>
-         * <br>
-         * <p>*   standard: a standard edition application.</p>
-         * <p>*   advance: an advanced edition application of an old version. New versions are not supported for this edition.</p>
-         * <p>*   enhanced: an advanced edition application of a new version.</p>
+         * <ul>
+         * <li>standard: a standard edition application.</li>
+         * <li>advance: an advanced edition application of an old version. New versions are not supported for this edition.</li>
+         * <li>enhanced: an advanced edition application of a new version.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enhanced</p>
          */
         @NameInMap("type")
         public String type;
 
         /**
          * <p>The timestamp when the application was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1590978265</p>
          */
         @NameInMap("updated")
         public Integer updated;
@@ -340,20 +397,20 @@ public class ModifyAppGroupResponseBody extends TeaModel {
             return this.domain;
         }
 
+        public ModifyAppGroupResponseBodyResult setEngineType(String engineType) {
+            this.engineType = engineType;
+            return this;
+        }
+        public String getEngineType() {
+            return this.engineType;
+        }
+
         public ModifyAppGroupResponseBodyResult setExpireOn(String expireOn) {
             this.expireOn = expireOn;
             return this;
         }
         public String getExpireOn() {
             return this.expireOn;
-        }
-
-        public ModifyAppGroupResponseBodyResult setFirstRankAlgoDeploymentId(Integer firstRankAlgoDeploymentId) {
-            this.firstRankAlgoDeploymentId = firstRankAlgoDeploymentId;
-            return this;
-        }
-        public Integer getFirstRankAlgoDeploymentId() {
-            return this.firstRankAlgoDeploymentId;
         }
 
         public ModifyAppGroupResponseBodyResult setHasPendingQuotaReviewTask(Integer hasPendingQuotaReviewTask) {
@@ -388,36 +445,12 @@ public class ModifyAppGroupResponseBody extends TeaModel {
             return this.lockMode;
         }
 
-        public ModifyAppGroupResponseBodyResult setLockedByExpiration(Integer lockedByExpiration) {
-            this.lockedByExpiration = lockedByExpiration;
-            return this;
-        }
-        public Integer getLockedByExpiration() {
-            return this.lockedByExpiration;
-        }
-
         public ModifyAppGroupResponseBodyResult setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
-        }
-
-        public ModifyAppGroupResponseBodyResult setPendingSecondRankAlgoDeploymentId(Integer pendingSecondRankAlgoDeploymentId) {
-            this.pendingSecondRankAlgoDeploymentId = pendingSecondRankAlgoDeploymentId;
-            return this;
-        }
-        public Integer getPendingSecondRankAlgoDeploymentId() {
-            return this.pendingSecondRankAlgoDeploymentId;
-        }
-
-        public ModifyAppGroupResponseBodyResult setProcessingOrderId(String processingOrderId) {
-            this.processingOrderId = processingOrderId;
-            return this;
-        }
-        public String getProcessingOrderId() {
-            return this.processingOrderId;
         }
 
         public ModifyAppGroupResponseBodyResult setProduced(Integer produced) {
@@ -444,12 +477,12 @@ public class ModifyAppGroupResponseBody extends TeaModel {
             return this.quota;
         }
 
-        public ModifyAppGroupResponseBodyResult setSecondRankAlgoDeploymentId(Integer secondRankAlgoDeploymentId) {
-            this.secondRankAlgoDeploymentId = secondRankAlgoDeploymentId;
+        public ModifyAppGroupResponseBodyResult setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
-        public Integer getSecondRankAlgoDeploymentId() {
-            return this.secondRankAlgoDeploymentId;
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ModifyAppGroupResponseBodyResult setStatus(String status) {

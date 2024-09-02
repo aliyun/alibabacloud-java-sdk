@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeQueryProcessorResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0A6EB64B-B4C8-CF02-810F-E660812972FF</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,22 +43,32 @@ public class DescribeQueryProcessorResponseBody extends TeaModel {
     public static class DescribeQueryProcessorResponseBodyResult extends TeaModel {
         /**
          * <p>Indicates whether the query analysis rule is the default one.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("active")
         public Boolean active;
 
         /**
          * <p>The time when the query analysis rule was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1587398402</p>
          */
         @NameInMap("created")
         public Integer created;
 
         /**
          * <p>The type of the industry. Valid values:</p>
-         * <br>
-         * <p>*   GENERAL</p>
-         * <p>*   ECOMMERCE</p>
-         * <p>*   IT_CONTENT</p>
+         * <ul>
+         * <li>GENERAL</li>
+         * <li>ECOMMERCE</li>
+         * <li>IT_CONTENT</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GENERAL</p>
          */
         @NameInMap("domain")
         public String domain;
@@ -68,6 +81,9 @@ public class DescribeQueryProcessorResponseBody extends TeaModel {
 
         /**
          * <p>The name of the query analysis rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("name")
         public String name;
@@ -80,6 +96,9 @@ public class DescribeQueryProcessorResponseBody extends TeaModel {
 
         /**
          * <p>The time when the query analysis rule was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1587398402</p>
          */
         @NameInMap("updated")
         public Integer updated;

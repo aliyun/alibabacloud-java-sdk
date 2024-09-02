@@ -4,6 +4,14 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class UnbindESUserAnalyzerRequest extends TeaModel {
+    /**
+     * <p>The request parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *   &quot;name&quot;: &quot;kevintest-analyzer&quot;
+     * }</p>
+     */
     @NameInMap("body")
     public Object body;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RemoveFirstRankResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E676FAB6-A0AC-64D9-F9D7-D0D33C930CFF</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,24 +43,30 @@ public class RemoveFirstRankResponseBody extends TeaModel {
     public static class RemoveFirstRankResponseBodyResultMeta extends TeaModel {
         /**
          * <p>The parameters that are used by a function in the expression.</p>
-         * <br>
          * <p>For more information, see Rough sort functions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("arg")
         public String arg;
 
         /**
          * <p>The attribute, feature function, or field to be searched for.</p>
-         * <br>
          * <p>For more information about supported feature functions, see Rough sort functions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>static_bm25()</p>
          */
         @NameInMap("attribute")
         public String attribute;
 
         /**
          * <p>The weight.</p>
-         * <br>
-         * <p>Valid values: \[-100000,100000] (excluding 0).</p>
+         * <p>Valid values: [-100000,100000] (excluding 0).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("weight")
         public Float weight;
@@ -96,12 +105,18 @@ public class RemoveFirstRankResponseBody extends TeaModel {
     public static class RemoveFirstRankResponseBodyResult extends TeaModel {
         /**
          * <p>Indicates whether the expression is the default one.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("active")
         public Boolean active;
 
         /**
          * <p>The description of the expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("description")
         public String description;
@@ -114,6 +129,9 @@ public class RemoveFirstRankResponseBody extends TeaModel {
 
         /**
          * <p>The name of the expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("name")
         public String name;

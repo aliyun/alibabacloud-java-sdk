@@ -4,9 +4,21 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ValidateDataSourcesResponseBody extends TeaModel {
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8FA2B338-AFDC-46B4-A132-B5487820C2BF</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The result returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
+     */
     @NameInMap("result")
     public java.util.List<ValidateDataSourcesResponseBodyResult> result;
 
@@ -32,12 +44,30 @@ public class ValidateDataSourcesResponseBody extends TeaModel {
     }
 
     public static class ValidateDataSourcesResponseBodyResultDataSource extends TeaModel {
+        /**
+         * <p>The parameters of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("parameters")
         public java.util.Map<String, ?> parameters;
 
+        /**
+         * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_activity_decision</p>
+         */
         @NameInMap("tableName")
         public String tableName;
 
+        /**
+         * <p>The type of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -73,12 +103,30 @@ public class ValidateDataSourcesResponseBody extends TeaModel {
     }
 
     public static class ValidateDataSourcesResponseBodyResult extends TeaModel {
+        /**
+         * <p>The code returned for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCEED</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>The data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("dataSource")
         public ValidateDataSourcesResponseBodyResultDataSource dataSource;
 
+        /**
+         * <p>The status of the execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
+         */
         @NameInMap("message")
         public String message;
 

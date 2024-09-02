@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class GetFunctionTaskResponseBody extends TeaModel {
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Task.NotExist</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpCode")
     public Long httpCode;
 
     /**
      * <p>The time consumed for the request, in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("Latency")
     public Long latency;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>operation success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A4D487A9-A456-5AA5-A9C6-B7BF2889CF74</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -42,6 +57,9 @@ public class GetFunctionTaskResponseBody extends TeaModel {
 
     /**
      * <p>The status of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Status")
     public String status;
@@ -110,52 +128,77 @@ public class GetFunctionTaskResponseBody extends TeaModel {
     public static class GetFunctionTaskResponseBodyResult extends TeaModel {
         /**
          * <p>The timestamp that indicates the end time of the task. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1647213406267</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
          * <p>The extended information, which is a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;recall\&quot;:91,\&quot;errors\&quot;:[]}</p>
          */
         @NameInMap("ExtendInfo")
         public String extendInfo;
 
         /**
          * <p>The name of the feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ctr</p>
          */
         @NameInMap("FunctionName")
         public String functionName;
 
         /**
          * <p>The number of iterations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Generation")
         public String generation;
 
         /**
          * <p>The progress. 90 indicates 90%.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         @NameInMap("Progress")
         public Long progress;
 
         /**
          * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trigger__2021-03-05T12:18:41</p>
          */
         @NameInMap("RunId")
         public String runId;
 
         /**
          * <p>The timestamp that indicates the start time of the task. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1647212220000</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
         /**
          * <p>The status of the task. Valid values:</p>
-         * <br>
-         * <p>*   success</p>
-         * <p>*   failed</p>
-         * <p>*   running</p>
+         * <ul>
+         * <li>success</li>
+         * <li>failed</li>
+         * <li>running</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;

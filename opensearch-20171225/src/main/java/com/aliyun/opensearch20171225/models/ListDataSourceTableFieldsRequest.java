@@ -6,20 +6,27 @@ import com.aliyun.tea.*;
 public class ListDataSourceTableFieldsRequest extends TeaModel {
     /**
      * <p>The parameters of the data source. The value of the params parameter is a JSON string. The value must be URL-encoded.</p>
-     * <br>
-     * <p>Different types of data sources use different parameters. For more information, see the following sections of the "DataSource" topic:</p>
-     * <br>
-     * <p>*   [rds](~~170005~~)</p>
-     * <p>*   [polardb](~~170005~~)</p>
-     * <p>*   [odps](~~170005~~)</p>
-     * <p>*   [mysql](~~173627~~)</p>
-     * <p>*   [drds](~~173627~~)</p>
+     * <p>Different types of data sources use different parameters. For more information, see the following sections of the &quot;DataSource&quot; topic:</p>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/170005.html">rds</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/170005.html">polardb</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/170005.html">odps</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/173627.html">mysql</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/173627.html">drds</a></li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("params")
     public String params;
 
     /**
-     * <p>Whether to return the original field type of the data source</p>
+     * <p>Specifies whether to return the original field types of the data source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("rawType")
     public Boolean rawType;

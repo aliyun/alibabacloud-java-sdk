@@ -5,19 +5,28 @@ import com.aliyun.tea.*;
 
 public class ListInterventionDictionaryEntriesRequest extends TeaModel {
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries returned per page. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("pageSize")
     public Integer pageSize;
 
     /**
-     * <p>Test</p>
+     * <p>The intervention entry.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("word")
     public String word;

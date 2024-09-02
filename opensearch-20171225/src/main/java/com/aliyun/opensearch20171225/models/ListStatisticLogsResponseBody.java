@@ -5,21 +5,31 @@ import com.aliyun.tea.*;
 
 public class ListStatisticLogsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F76ACE3D-E510-EE2C-B7B1-39B3136A61EE</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>The return result. For more information, see:</p>
-     * <br>
-     * <p>*   [Parameters of hotwords rankings](~~421248~~)</p>
+     * <p>The returned result. For more information, see</p>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/421248.html">Parameters of hotwords rankings</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("result")
     public java.util.List<java.util.Map<String, ?>> result;
 
     /**
-     * <p>The total number of the queried logs.</p>
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("totalCount")
     public Long totalCount;

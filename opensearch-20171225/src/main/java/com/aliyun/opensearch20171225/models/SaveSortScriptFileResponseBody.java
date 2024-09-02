@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class SaveSortScriptFileResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ABCDEFGH</p>
      */
     @NameInMap("requestId")
     public String requestId;

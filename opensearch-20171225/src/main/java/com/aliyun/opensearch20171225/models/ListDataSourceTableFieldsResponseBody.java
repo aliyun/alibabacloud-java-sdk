@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListDataSourceTableFieldsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0A6EB64B-B4C8-CF02-810F-E660812972FF</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>The returned result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ?> result;

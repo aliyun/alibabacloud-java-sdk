@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateFunctionDefaultInstanceRequest extends TeaModel {
     /**
      * <p>The name of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;pop_test&quot;</p>
      */
     @NameInMap("instanceName")
     public String instanceName;

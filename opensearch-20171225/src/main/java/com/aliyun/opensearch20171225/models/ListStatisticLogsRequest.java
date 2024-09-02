@@ -5,51 +5,74 @@ import com.aliyun.tea.*;
 
 public class ListStatisticLogsRequest extends TeaModel {
     /**
-     * <p>The fields to query. Example: columns=wordsTopPv.</p>
-     * <br>
-     * <p>For more information, see [Metrics in statistical reports](https://www.alibabacloud.com/help/en/opensearch/latest/statistical-report).</p>
+     * <p>The fields to query. Format: columns=wordsTopPv.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/187665.html">Metrics in statistical reports</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wordsTopPv</p>
      */
     @NameInMap("columns")
     public String columns;
 
     /**
-     * <p>The content of the query clause.</p>
+     * <p>Specifies whether to use the distinct clause.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("distinct")
     public Boolean distinct;
 
     /**
-     * <p>The number of the page to return. Default value: 1.</p>
+     * <p>The page number. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("pageSize")
     public Integer pageSize;
 
     /**
      * <p>The content of the query clause.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;default:\&quot;OpenSearch\&quot;&quot;</p>
      */
     @NameInMap("query")
     public String query;
 
     /**
      * <p>The content of the sort clause.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;-id&quot;</p>
      */
     @NameInMap("sortBy")
     public String sortBy;
 
     /**
      * <p>The beginning of the time range to query. The default value is the timestamp of 00:00:00 on the current day.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1582214400</p>
      */
     @NameInMap("startTime")
     public Integer startTime;
 
     /**
      * <p>The end of the time range to query. The default value is the timestamp of 24:00:00 on the current day.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1682222400</p>
      */
     @NameInMap("stopTime")
     public Integer stopTime;

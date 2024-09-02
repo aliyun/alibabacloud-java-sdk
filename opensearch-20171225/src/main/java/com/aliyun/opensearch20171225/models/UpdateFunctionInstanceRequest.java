@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class UpdateFunctionInstanceRequest extends TeaModel {
     /**
      * <p>The parameters that are used to create the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{             &quot;name&quot;: &quot;title_field&quot;,             &quot;value&quot;: &quot;title&quot;         }</p>
      */
     @NameInMap("createParameters")
     public java.util.List<UpdateFunctionInstanceRequestCreateParameters> createParameters;
 
     /**
      * <p>The cron expression used to schedule periodic training, in the format of (Minutes Hours DayofMonth Month DayofWeek). The default value is empty, which indicates that no periodic training is performed. DayofWeek 0 indicates Sunday.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;0 3 ? * 0,1,3,5&quot;</p>
      */
     @NameInMap("cron")
     public String cron;
 
     /**
      * <p>The description of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test instance</p>
      */
     @NameInMap("description")
     public String description;
@@ -68,12 +77,18 @@ public class UpdateFunctionInstanceRequest extends TeaModel {
     public static class UpdateFunctionInstanceRequestCreateParameters extends TeaModel {
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>title_field</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>title</p>
          */
         @NameInMap("value")
         public String value;
@@ -104,12 +119,18 @@ public class UpdateFunctionInstanceRequest extends TeaModel {
     public static class UpdateFunctionInstanceRequestUsageParameters extends TeaModel {
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>allow_dict_id</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("value")
         public String value;

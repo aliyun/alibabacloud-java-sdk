@@ -12,6 +12,9 @@ public class PushUserAnalyzerEntriesRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to perform a dry run. This parameter is only used to check whether the data source is valid. Valid values: true and false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("dryRun")
     public Boolean dryRun;
@@ -40,31 +43,42 @@ public class PushUserAnalyzerEntriesRequest extends TeaModel {
     public static class PushUserAnalyzerEntriesRequestEntries extends TeaModel {
         /**
          * <p>The operation to be performed on the entries.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   add</p>
-         * <p>*   delete</p>
+         * <ul>
+         * <li>add</li>
+         * <li>delete</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;add&quot;</p>
          */
         @NameInMap("cmd")
         public String cmd;
 
         /**
          * <p>The key to be used to query entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;testvalue&quot;</p>
          */
         @NameInMap("key")
         public String key;
 
         /**
          * <p>Specifies whether to further analyze the terms that are generated after the search query is analyzed.</p>
-         * <br>
          * <p>Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("splitEnabled")
         public Boolean splitEnabled;
 
         /**
          * <p>The analysis result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;test value&quot;</p>
          */
         @NameInMap("value")
         public String value;
