@@ -6,36 +6,54 @@ import com.aliyun.tea.*;
 public class UpdateFunctionDefaultInstanceResponseBody extends TeaModel {
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DefaultInstance.SetFail</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpCode")
     public Long httpCode;
 
     /**
      * <p>The time consumed for the request, in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("Latency")
     public Long latency;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A4D487A9-A456-5AA5-A9C6-B7BF2889CF74</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The status of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Status")
     public String status;

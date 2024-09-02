@@ -6,11 +6,17 @@ import com.aliyun.tea.*;
 public class ListDataCollectionsRequest extends TeaModel {
     /**
      * <p>1</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
     /**
+     * <p>10</p>
+     * 
+     * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("pageSize")

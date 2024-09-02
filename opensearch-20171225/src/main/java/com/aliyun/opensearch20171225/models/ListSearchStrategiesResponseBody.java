@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListSearchStrategiesResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9C6351F5-2E2E-5249-888B-88A74E1B8A65</p>
      */
     @NameInMap("requestId")
     public String requestId;

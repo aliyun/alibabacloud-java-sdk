@@ -6,14 +6,16 @@ import com.aliyun.tea.*;
 public class ListABTestGroupsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D77D0DAF-790D-F5F5-A9C0-133738165014</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>The test groups.</p>
-     * <br>
-     * <p>For more information, see [ABTestGroup](~~178935~~).</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/178935.html">ABTestGroup</a>.</p>
      */
     @NameInMap("result")
     public java.util.List<ListABTestGroupsResponseBodyResult> result;
@@ -42,33 +44,49 @@ public class ListABTestGroupsResponseBody extends TeaModel {
     public static class ListABTestGroupsResponseBodyResult extends TeaModel {
         /**
          * <p>The time when the test group was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1588839490</p>
          */
         @NameInMap("created")
         public Integer created;
 
         /**
          * <p>The ID of the test group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13466</p>
          */
         @NameInMap("id")
         public String id;
 
         /**
          * <p>The name of the test group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Group_2020-5-7_15:23:3</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The status of the test group. Valid values:</p>
-         * <br>
-         * <p>*   0: not in effect</p>
-         * <p>*   1: in effect</p>
+         * <ul>
+         * <li>0: not in effect</li>
+         * <li>1: in effect</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("status")
         public Integer status;
 
         /**
          * <p>The time when the test group was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1588839490</p>
          */
         @NameInMap("updated")
         public Integer updated;

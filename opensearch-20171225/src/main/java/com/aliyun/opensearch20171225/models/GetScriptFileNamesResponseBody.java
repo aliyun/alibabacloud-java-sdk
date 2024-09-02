@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetScriptFileNamesResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ABCDEFGH</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,22 +43,37 @@ public class GetScriptFileNamesResponseBody extends TeaModel {
     public static class GetScriptFileNamesResponseBodyResult extends TeaModel {
         /**
          * <p>The time when the script file was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-04-02 20:21:14</p>
          */
         @NameInMap("createTime")
         public String createTime;
 
         /**
          * <p>The name of the script file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_cava_script.cava</p>
          */
         @NameInMap("fileName")
         public String fileName;
 
         /**
          * <p>The time when the script file was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-04-02 21:21:14</p>
          */
         @NameInMap("modifyTime")
         public String modifyTime;
 
+        /**
+         * <p>The path name of the script file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>src</p>
+         */
         @NameInMap("pathName")
         public String pathName;
 

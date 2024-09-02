@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListUserAnalyzerEntriesResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>516A02B7-2167-8D92-12D0-B639A2A0F3C5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The entries of the custom analyzer. For more information, see UserAnalyzerEntry.</p>
+     * <p>The entries of the custom analyzer. For more information, see <a href="https://www.alibabacloud.com/help/en/open-search/industry-algorithm-edition/useranalyzerentry">UserAnalyzerEntry</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ?> result;

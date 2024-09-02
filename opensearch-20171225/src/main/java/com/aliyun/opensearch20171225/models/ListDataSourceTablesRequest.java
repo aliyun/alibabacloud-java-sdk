@@ -6,6 +6,12 @@ import com.aliyun.tea.*;
 public class ListDataSourceTablesRequest extends TeaModel {
     /**
      * <p>N/A</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("params")
     public String params;

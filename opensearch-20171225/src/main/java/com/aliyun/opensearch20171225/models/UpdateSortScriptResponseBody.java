@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateSortScriptResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9F165784-5507-5342-ABF3-545293F9808A</p>
      */
     @NameInMap("requestId")
     public String requestId;

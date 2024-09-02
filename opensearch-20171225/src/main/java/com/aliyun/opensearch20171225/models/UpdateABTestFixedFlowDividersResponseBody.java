@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class UpdateABTestFixedFlowDividersResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D77D0DAF-790D-F5F5-A9C0-133738165014</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>The whitelists after the update.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("result")
     public java.util.List<String> result;

@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class UpdateSummariesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7A389E09-7964-5A2B-FE9D-F6CFA7162852</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("result")
     public Boolean result;

@@ -5,15 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListABTestExperimentsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D77D0DAF-790D-F5F5-A9C0-133738165014</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>The details of the tests.</p>
-     * <br>
-     * <p>For more information, see [ABTestExperiment](~~173617~~).</p>
+     * <p>The experiment details.\
+     * For more information, see <a href="https://help.aliyun.com/document_detail/173617.html">ABTestExperiment</a>.</p>
      */
     @NameInMap("result")
     public java.util.List<ListABTestExperimentsResponseBodyResult> result;
@@ -41,48 +43,69 @@ public class ListABTestExperimentsResponseBody extends TeaModel {
 
     public static class ListABTestExperimentsResponseBodyResult extends TeaModel {
         /**
-         * <p>The time when the test was created.</p>
+         * <p>The time when the experiment was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1588842080</p>
          */
         @NameInMap("created")
         public Integer created;
 
         /**
-         * <p>The ID of the test group.</p>
+         * <p>The experiment ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12888</p>
          */
         @NameInMap("id")
         public String id;
 
         /**
-         * <p>The name of the test group.</p>
+         * <p>The group alias.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The status of the test. Valid values:</p>
-         * <br>
-         * <p>*   true: in effect</p>
-         * <p>*   false: not in effect</p>
+         * <p>Indicates whether the experiment is in effect. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("online")
         public Boolean online;
 
         /**
-         * <p>The parameters of the test.</p>
+         * <p>The experiment parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("params")
         public java.util.Map<String, ?> params;
 
         /**
-         * <p>The percentage of traffic that is routed to the test.</p>
-         * <br>
-         * <p>Valid values: \[0,100].</p>
+         * <p>The percentage of traffic that is routed to the experiment.</p>
+         * <p>Valid values: [0,100]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("traffic")
         public Integer traffic;
 
         /**
-         * <p>The time when the test was last modified.</p>
+         * <p>The time when the experiment was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1588842080</p>
          */
         @NameInMap("updated")
         public Integer updated;

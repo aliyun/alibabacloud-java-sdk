@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateFirstRankResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0A6EB64B-B4C8-CF02-810F-E660812972FF</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class CreateFirstRankResponseBody extends TeaModel {
     public static class CreateFirstRankResponseBodyResultMeta extends TeaModel {
         /**
          * <p>The parameters that are used by a function in the expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("arg")
         public String arg;
 
         /**
          * <p>The attribute, feature functions, or field to be searched for.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>static_bm25()</p>
          */
         @NameInMap("attribute")
         public String attribute;
 
         /**
-         * <p>The weight. Valid values: \[-100000,100000]. The value cannot be 0.</p>
+         * <p>The weight. Valid values: [-100000,100000]. The value cannot be 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("weight")
         public Float weight;
@@ -90,6 +102,9 @@ public class CreateFirstRankResponseBody extends TeaModel {
     public static class CreateFirstRankResponseBodyResult extends TeaModel {
         /**
          * <p>Indicates whether the expression is the default one.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("active")
         public Boolean active;
@@ -102,6 +117,9 @@ public class CreateFirstRankResponseBody extends TeaModel {
 
         /**
          * <p>The name of the expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("name")
         public String name;

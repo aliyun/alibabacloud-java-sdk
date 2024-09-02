@@ -4,10 +4,16 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class UpdateSummariesRequest extends TeaModel {
+    /**
+     * <p>The request body.</p>
+     */
     @NameInMap("body")
     public java.util.List<UpdateSummariesRequestBody> body;
 
     /**
+     * <p>Specifies whether the request is a dry run.</p>
+     * 
+     * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("dryRun")
@@ -35,18 +41,48 @@ public class UpdateSummariesRequest extends TeaModel {
     }
 
     public static class UpdateSummariesRequestBody extends TeaModel {
+        /**
+         * <p>The HTML tag that is used to highlight terms in red.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;em&quot;</p>
+         */
         @NameInMap("element")
         public String element;
 
+        /**
+         * <p>The connector that is used to connect segments.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;...&quot;</p>
+         */
         @NameInMap("ellipsis")
         public String ellipsis;
 
+        /**
+         * <p>The field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;title&quot;</p>
+         */
         @NameInMap("field")
         public String field;
 
+        /**
+         * <p>The length of a segment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("len")
         public Integer len;
 
+        /**
+         * <p>The number of segments.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("snippet")
         public Integer snippet;
 

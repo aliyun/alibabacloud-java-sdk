@@ -4,9 +4,18 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class UpdateFunctionResourceRequest extends TeaModel {
+    /**
+     * <p>The resource data. The data structure varies with the resource type.</p>
+     */
     @NameInMap("Data")
     public UpdateFunctionResourceRequestData data;
 
+    /**
+     * <p>The description of the resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>updated description</p>
+     */
     @NameInMap("Description")
     public String description;
 
@@ -32,9 +41,21 @@ public class UpdateFunctionResourceRequest extends TeaModel {
     }
 
     public static class UpdateFunctionResourceRequestDataGeneratorsInputFeatures extends TeaModel {
+        /**
+         * <p>The name of the feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system_item_id</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The type of the feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>item</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -62,6 +83,9 @@ public class UpdateFunctionResourceRequest extends TeaModel {
     }
 
     public static class UpdateFunctionResourceRequestDataGeneratorsInput extends TeaModel {
+        /**
+         * <p>The input features.</p>
+         */
         @NameInMap("Features")
         public java.util.List<UpdateFunctionResourceRequestDataGeneratorsInputFeatures> features;
 
@@ -81,12 +105,27 @@ public class UpdateFunctionResourceRequest extends TeaModel {
     }
 
     public static class UpdateFunctionResourceRequestDataGenerators extends TeaModel {
+        /**
+         * <p>The type of the feature generator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>combo</p>
+         */
         @NameInMap("Generator")
         public String generator;
 
+        /**
+         * <p>The input.</p>
+         */
         @NameInMap("Input")
         public UpdateFunctionResourceRequestDataGeneratorsInput input;
 
+        /**
+         * <p>The name of the output feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>feature1</p>
+         */
         @NameInMap("Output")
         public String output;
 
@@ -122,9 +161,18 @@ public class UpdateFunctionResourceRequest extends TeaModel {
     }
 
     public static class UpdateFunctionResourceRequestData extends TeaModel {
+        /**
+         * <p>The content of the file that corresponds to a resource of the raw_file type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The feature generators that correspond to resources of the feature_generator type.</p>
+         */
         @NameInMap("Generators")
         public java.util.List<UpdateFunctionResourceRequestDataGenerators> generators;
 

@@ -5,54 +5,79 @@ import com.aliyun.tea.*;
 
 public class CreateFunctionInstanceRequest extends TeaModel {
     /**
-     * <p>The parameters that are used to create the instance.</p>
+     * <p>The parameters used to create the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[   { &quot;name&quot;: &quot;param1&quot;, &quot;value&quot;: &quot;val1&quot;   } ]</p>
      */
     @NameInMap("createParameters")
     public java.util.List<CreateFunctionInstanceRequestCreateParameters> createParameters;
 
     /**
-     * <p>The cron expression used to schedule periodic training, in the format of (Minutes Hours DayofMonth Month DayofWeek). The default value is empty, which indicates that no periodic training is performed. DayofWeek 0 indicates Sunday.</p>
+     * <p>The CRON expression used to schedule periodic training, in the format of Minutes Hours DayofMonth Month DayofWeek. The default value is empty, which specifies that no periodic training is performed. A value of 0 for DayofWeek specifies Sunday.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0 0 ? * 0,1,2,3,4,5,6</p>
      */
     @NameInMap("cron")
     public String cron;
 
     /**
      * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test instance</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The type of the feature. Valid values:</p>
-     * <br>
-     * <p>*   PAAS: This is the default value. Training is required before you can use the feature.</p>
+     * <p>The feature type.</p>
+     * <ul>
+     * <li>Default value: PAAS. Training is required before you can use the feature.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PAAS</p>
      */
     @NameInMap("functionType")
     public String functionType;
 
     /**
-     * <p>The name of the instance. The name must be 1 to 30 characters in length and can contain letters, digits, and underscores (\_). The name is case-sensitive and must start with a letter.</p>
+     * <p>The instance name. The name must be 1 to 30 characters in length and can contain letters, digits, and underscores (_). The name is case-sensitive and must start with a letter.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ctr_test</p>
      */
     @NameInMap("instanceName")
     public String instanceName;
 
     /**
-     * <p>The type of the model. The following features correspond to different model types:</p>
-     * <br>
-     * <p>*   click-through rate (CTR) model: tf_checkpoint</p>
-     * <p>*   Popularity model: pop</p>
-     * <p>*   Category model: offline_inference</p>
-     * <p>*   Hotword model: offline_inference</p>
-     * <p>*   Shading model: offline_inference</p>
-     * <p>*   Drop-down suggestion model: offline_inference</p>
-     * <p>*   Word segmentation model: text</p>
-     * <p>*   Term weight model: tf_checkpoint</p>
+     * <p>The model type. The value varies based on the model.</p>
+     * <ul>
+     * <li>Click-through rate (CTR) model: tf_checkpoint</li>
+     * <li>Popularity model: pop</li>
+     * <li>Category model: offline_inference</li>
+     * <li>Hotword model: offline_inference</li>
+     * <li>Hint model: offline_inference</li>
+     * <li>Hotword model for real-time top searches: near_realtime</li>
+     * <li>Personalized hint model: near_realtime</li>
+     * <li>Drop-down suggestion model: offline_inference</li>
+     * <li>Tokenization model: text</li>
+     * <li>Term weight model: tf_checkpoint</li>
+     * <li>Synonym model: offline_inference</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tf_checkpoint</p>
      */
     @NameInMap("modelType")
     public String modelType;
 
     /**
-     * <p>The parameters that are used to use the instance.</p>
+     * <p>The parameters used to use the instance.</p>
      */
     @NameInMap("usageParameters")
     public java.util.List<CreateFunctionInstanceRequestUsageParameters> usageParameters;
@@ -120,13 +145,19 @@ public class CreateFunctionInstanceRequest extends TeaModel {
 
     public static class CreateFunctionInstanceRequestCreateParameters extends TeaModel {
         /**
-         * <p>The name of the parameter.</p>
+         * <p>The parameter name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>title_field</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The value of the parameter.</p>
+         * <p>The parameter value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>title</p>
          */
         @NameInMap("value")
         public String value;
@@ -156,13 +187,19 @@ public class CreateFunctionInstanceRequest extends TeaModel {
 
     public static class CreateFunctionInstanceRequestUsageParameters extends TeaModel {
         /**
-         * <p>The name of the parameter.</p>
+         * <p>The parameter name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>allow_dict_id</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The value of the parameter.</p>
+         * <p>The parameter value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("value")
         public String value;

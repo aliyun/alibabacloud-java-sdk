@@ -6,42 +6,63 @@ import com.aliyun.tea.*;
 public class GetFunctionVersionResponseBody extends TeaModel {
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Version.NotExist</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpCode")
     public Long httpCode;
 
     /**
      * <p>The maximum duration for which a task can be executed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("Latency")
     public Long latency;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>version not exist.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1638157479281</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The result body.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("Result")
     public GetFunctionVersionResponseBodyResult result;
 
     /**
      * <p>The status of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Status")
     public String status;
@@ -110,12 +131,18 @@ public class GetFunctionVersionResponseBody extends TeaModel {
     public static class GetFunctionVersionResponseBodyResultVersionConfigCreateParameters extends TeaModel {
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>params1</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>Indicates whether the parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Required")
         public String required;
@@ -146,18 +173,27 @@ public class GetFunctionVersionResponseBody extends TeaModel {
     public static class GetFunctionVersionResponseBodyResultVersionConfigDepends extends TeaModel {
         /**
          * <p>The condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("Condition")
         public String condition;
 
         /**
          * <p>The dependency.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("Dependency")
         public String dependency;
 
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("Description")
         public String description;
@@ -196,12 +232,18 @@ public class GetFunctionVersionResponseBody extends TeaModel {
     public static class GetFunctionVersionResponseBodyResultVersionConfigUsageParameters extends TeaModel {
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>Indicates whether the parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("Required")
         public String required;
@@ -232,6 +274,9 @@ public class GetFunctionVersionResponseBody extends TeaModel {
     public static class GetFunctionVersionResponseBodyResultVersionConfig extends TeaModel {
         /**
          * <p>The parameters that are used to create the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[                 {                     &quot;name&quot;: &quot;params1&quot;,                     &quot;required&quot;: &quot;true&quot;,                     &quot;formItemProps&quot;: &quot;{\&quot;required\&quot;: true, \&quot;pattern?\&quot;: \&quot;/^[a-zA-Z][a-zA-Z0-9_]{0,29}$/\&quot;}&quot;,                     &quot;componentProps&quot;: &quot;{\&quot;component\&quot;: \&quot;Input\&quot;, \&quot;attributes\&quot;: {\&quot;defaultValue\&quot;: \&quot;value1\&quot;}}&quot;                 }             ]</p>
          */
         @NameInMap("CreateParameters")
         public java.util.List<GetFunctionVersionResponseBodyResultVersionConfigCreateParameters> createParameters;
@@ -244,6 +289,9 @@ public class GetFunctionVersionResponseBody extends TeaModel {
 
         /**
          * <p>The parameters that are used during online use of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         @NameInMap("UsageParameters")
         public java.util.List<GetFunctionVersionResponseBodyResultVersionConfigUsageParameters> usageParameters;
@@ -282,21 +330,31 @@ public class GetFunctionVersionResponseBody extends TeaModel {
     public static class GetFunctionVersionResponseBodyResult extends TeaModel {
         /**
          * <p>The name of the feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ctr</p>
          */
         @NameInMap("FunctionName")
         public String functionName;
 
         /**
          * <p>The type of the feature. Valid values:</p>
-         * <br>
-         * <p>*   PAAS</p>
-         * <p>*   SAAS</p>
+         * <ul>
+         * <li>PAAS</li>
+         * <li>SAAS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PAAS</p>
          */
         @NameInMap("FunctionType")
         public String functionType;
 
         /**
          * <p>The type of the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tf_checkpoint</p>
          */
         @NameInMap("ModelType")
         public String modelType;
@@ -309,12 +367,18 @@ public class GetFunctionVersionResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
          */
         @NameInMap("VersionId")
         public Long versionId;
 
         /**
          * <p>The name of the version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("VersionName")
         public String versionName;

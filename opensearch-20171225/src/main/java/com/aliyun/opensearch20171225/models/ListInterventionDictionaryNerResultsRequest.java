@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListInterventionDictionaryNerResultsRequest extends TeaModel {
     /**
-     * <p>Soymilk</p>
+     * <p>Query keywords.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;hello world&quot;</p>
      */
     @NameInMap("query")
     public String query;

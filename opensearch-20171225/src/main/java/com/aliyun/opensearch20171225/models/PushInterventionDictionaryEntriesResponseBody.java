@@ -4,9 +4,18 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class PushInterventionDictionaryEntriesResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D77D0DAF-790D-F5F5-A9C0-133738165014</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The returned results.</p>
+     */
     @NameInMap("result")
     public java.util.List<String> result;
 

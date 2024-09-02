@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class ListQueryProcessorAnalyzerResultsRequest extends TeaModel {
     /**
      * <p>The text to be tested.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;abcde&quot;</p>
      */
     @NameInMap("text")
     public String text;

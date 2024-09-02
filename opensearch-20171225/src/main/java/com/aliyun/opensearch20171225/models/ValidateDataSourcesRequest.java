@@ -4,6 +4,9 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ValidateDataSourcesRequest extends TeaModel {
+    /**
+     * <p>The request parameter. For more information, see <a href="https://help.aliyun.com/document_detail/170005.html">DataSource</a>.</p>
+     */
     @NameInMap("body")
     public DataSource body;
 

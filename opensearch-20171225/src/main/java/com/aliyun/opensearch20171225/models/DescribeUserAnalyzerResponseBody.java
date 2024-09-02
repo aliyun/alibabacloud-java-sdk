@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeUserAnalyzerResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FFAEF396-10EF-53C7-1F51-518853880729</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>The details of the custom analyzer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ?> result;

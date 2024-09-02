@@ -4,9 +4,18 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class GenerateMergedTableResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ABCDEFGH</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("result")
     public GenerateMergedTableResponseBodyResult result;
 
@@ -32,12 +41,36 @@ public class GenerateMergedTableResponseBody extends TeaModel {
     }
 
     public static class GenerateMergedTableResponseBodyResult extends TeaModel {
+        /**
+         * <p>The tables on which the JOIN operation is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("fromTable")
         public java.util.Map<String, ?> fromTable;
 
+        /**
+         * <p>The wide table that is generated after the JOIN operation is performed on multiple tables.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("mergeTable")
         public java.util.Map<String, ?> mergeTable;
 
+        /**
+         * <p>The primary key.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("primaryKey")
         public String primaryKey;
 

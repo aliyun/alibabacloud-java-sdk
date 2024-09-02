@@ -6,10 +6,14 @@ import com.aliyun.tea.*;
 public class GetFunctionInstanceRequest extends TeaModel {
     /**
      * <p>Specifies the richness of returned information. Valid values:</p>
-     * <br>
-     * <p>*   simple: displays only the basic information.</p>
-     * <p>*   normal: displays information such as createParameters and cron. This is the default value.</p>
-     * <p>*   detail: returns the details of the training task.</p>
+     * <ul>
+     * <li>simple: displays only the basic information.</li>
+     * <li>normal: displays information such as createParameters and cron. This is the default value.</li>
+     * <li>detail: returns the details of the training task.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>detail</p>
      */
     @NameInMap("output")
     public String output;

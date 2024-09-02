@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateABTestGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>\&quot;\&quot;1111\&quot;\&quot;</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,33 +43,49 @@ public class UpdateABTestGroupResponseBody extends TeaModel {
     public static class UpdateABTestGroupResponseBodyResult extends TeaModel {
         /**
          * <p>The time when the test group was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1588839490</p>
          */
         @NameInMap("created")
         public Integer created;
 
         /**
          * <p>The ID of the test group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13466</p>
          */
         @NameInMap("id")
         public String id;
 
         /**
-         * <p>The name of the test group.</p>
+         * <p>The alias of the test group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Group_2020-5-7_15:23:3</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The status of the test group. Valid values:</p>
-         * <br>
-         * <p>*   0: not in effect</p>
-         * <p>*   1: in effect</p>
+         * <ul>
+         * <li>0: not in effect</li>
+         * <li>1: in effect</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("status")
         public Integer status;
 
         /**
-         * <p>The time when the test group was last modified.</p>
+         * <p>The time when the test group was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1588839490</p>
          */
         @NameInMap("updated")
         public Integer updated;

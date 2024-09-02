@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class PushUserAnalyzerEntriesResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D77D0DAF-790D-F5F5-A9C0-133738165014</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The result returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ?> result;

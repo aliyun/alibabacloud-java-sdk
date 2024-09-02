@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetSortScriptResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ABCDEFGH</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>The details of the script</p>
+     * <p>The details of the script.</p>
      */
     @NameInMap("result")
     public GetSortScriptResponseBodyResult result;
@@ -40,33 +43,54 @@ public class GetSortScriptResponseBody extends TeaModel {
     public static class GetSortScriptResponseBodyResult extends TeaModel {
         /**
          * <p>The time when the script was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-04-02 20:21:14</p>
          */
         @NameInMap("createTime")
         public String createTime;
 
         /**
          * <p>The time when the script was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-04-02 21:21:14</p>
          */
         @NameInMap("modifyTime")
         public String modifyTime;
 
         /**
          * <p>The sort phase to which the script applies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>second_rank</p>
          */
         @NameInMap("scope")
         public String scope;
 
+        /**
+         * <p>The name of the script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rank_cava_20230606_v7</p>
+         */
         @NameInMap("scriptName")
         public String scriptName;
 
         /**
-         * <p>The status of the script. For more information, see the Script status table.</p>
+         * <p>The status of the script. For more information, see the description of the status response parameter in the ListSortScripts topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>released</p>
          */
         @NameInMap("status")
         public String status;
 
         /**
          * <p>The type of the script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cava_script</p>
          */
         @NameInMap("type")
         public String type;

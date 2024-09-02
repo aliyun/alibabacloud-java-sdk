@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RemoveSearchStrategyResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F5099063-6B86-F398-D843-905F9EFB683A</p>
      */
     @NameInMap("requestId")
     public String requestId;

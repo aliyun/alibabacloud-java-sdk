@@ -6,34 +6,50 @@ import com.aliyun.tea.*;
 public class ListFunctionTasksRequest extends TeaModel {
     /**
      * <p>The end time is less than the specified time. Specify the time in the UNIX timestamp format. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1582646399</p>
      */
     @NameInMap("endTime")
     public Long endTime;
 
     /**
      * <p>The number of the page to return. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("pageSize")
     public Integer pageSize;
 
     /**
      * <p>The start time is greater than the specified time. Specify the time in the UNIX timestamp format. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1582214400</p>
      */
     @NameInMap("startTime")
     public Long startTime;
 
     /**
      * <p>The status of the task. Valid values:</p>
-     * <br>
-     * <p>*   success</p>
-     * <p>*   failed</p>
-     * <p>*   running</p>
+     * <ul>
+     * <li>success</li>
+     * <li>failed</li>
+     * <li>running</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("status")
     public String status;

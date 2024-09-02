@@ -7,9 +7,6 @@ public class AppGroup extends TeaModel {
     @NameInMap("chargeType")
     public String chargeType;
 
-    @NameInMap("chargingWay")
-    public String chargingWay;
-
     @NameInMap("description")
     public String description;
 
@@ -19,8 +16,14 @@ public class AppGroup extends TeaModel {
     @NameInMap("name")
     public String name;
 
+    @NameInMap("order")
+    public AppGroupOrder order;
+
     @NameInMap("quota")
     public Quota quota;
+
+    @NameInMap("resourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("type")
     public String type;
@@ -36,14 +39,6 @@ public class AppGroup extends TeaModel {
     }
     public String getChargeType() {
         return this.chargeType;
-    }
-
-    public AppGroup setChargingWay(String chargingWay) {
-        this.chargingWay = chargingWay;
-        return this;
-    }
-    public String getChargingWay() {
-        return this.chargingWay;
     }
 
     public AppGroup setDescription(String description) {
@@ -70,6 +65,14 @@ public class AppGroup extends TeaModel {
         return this.name;
     }
 
+    public AppGroup setOrder(AppGroupOrder order) {
+        this.order = order;
+        return this;
+    }
+    public AppGroupOrder getOrder() {
+        return this.order;
+    }
+
     public AppGroup setQuota(Quota quota) {
         this.quota = quota;
         return this;
@@ -78,12 +81,73 @@ public class AppGroup extends TeaModel {
         return this.quota;
     }
 
+    public AppGroup setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public AppGroup setType(String type) {
         this.type = type;
         return this;
     }
     public String getType() {
         return this.type;
+    }
+
+    public static class AppGroupOrder extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("autoRenew")
+        public Boolean autoRenew;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("duration")
+        public Long duration;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Month</p>
+         */
+        @NameInMap("pricingCycle")
+        public String pricingCycle;
+
+        public static AppGroupOrder build(java.util.Map<String, ?> map) throws Exception {
+            AppGroupOrder self = new AppGroupOrder();
+            return TeaModel.build(map, self);
+        }
+
+        public AppGroupOrder setAutoRenew(Boolean autoRenew) {
+            this.autoRenew = autoRenew;
+            return this;
+        }
+        public Boolean getAutoRenew() {
+            return this.autoRenew;
+        }
+
+        public AppGroupOrder setDuration(Long duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Long getDuration() {
+            return this.duration;
+        }
+
+        public AppGroupOrder setPricingCycle(String pricingCycle) {
+            this.pricingCycle = pricingCycle;
+            return this;
+        }
+        public String getPricingCycle() {
+            return this.pricingCycle;
+        }
+
     }
 
 }

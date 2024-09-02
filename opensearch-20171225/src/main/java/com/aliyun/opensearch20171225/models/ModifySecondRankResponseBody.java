@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class ModifySecondRankResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C5E2F73C-8241-81F8-3A62-65478C5A3111</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>The information about the fine sort expression.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("result")
     public ModifySecondRankResponseBodyResult result;
@@ -40,57 +46,90 @@ public class ModifySecondRankResponseBody extends TeaModel {
     public static class ModifySecondRankResponseBodyResult extends TeaModel {
         /**
          * <p>Indicates whether the expression is the default one.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("active")
         public Boolean active;
 
+        /**
+         * <p>The time when the expression was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("created")
         public Integer created;
 
         /**
          * <p>The description of the expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;11&quot;</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The ID of the expression. This parameter appears only in the response.</p>
+         * <p>The expression ID. This parameter is displayed only in the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>890473</p>
          */
         @NameInMap("id")
         public String id;
 
         /**
-         * <p>Indicates whether the expression is the default one. This parameter appears only in the response. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <p>Indicates whether the expression is the default one. This parameter is displayed only in the response. Valid values:</p>
+         * <ul>
+         * <li>true: the expression is the default one.</li>
+         * <li>false: the expression is not the default one.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("isDefault")
         public String isDefault;
 
         /**
-         * <p>Indicates whether the expression is a system expression. This parameter appears only in the response. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <p>Indicates whether the expression is a system expression. This parameter is displayed only in the response. Valid values:</p>
+         * <ul>
+         * <li>true: The expression is a system expression.</li>
+         * <li>false:The expression is not a system expression</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("isSys")
         public String isSys;
 
         /**
-         * <p>The content of the fine sort expression.</p>
-         * <br>
-         * <p>You can define an expression that consists of fields, feature functions, and mathematical functions to implement complex sort logic.</p>
+         * <p>The content of the fine sort expression. You can define an expression that consists of fields, feature functions, and mathematical functions to implement complex sort logic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cate_id &gt; 0 and cate_id &lt; 1000</p>
          */
         @NameInMap("meta")
         public String meta;
 
         /**
-         * <p>The name of the expression.</p>
+         * <p>The expression name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsh_second_1</p>
          */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The time when the expression was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("updated")
         public Integer updated;
 

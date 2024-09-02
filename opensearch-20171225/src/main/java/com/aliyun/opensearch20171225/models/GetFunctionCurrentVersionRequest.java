@@ -6,36 +6,51 @@ import com.aliyun.tea.*;
 public class GetFunctionCurrentVersionRequest extends TeaModel {
     /**
      * <p>The category. By default, this parameter is left empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>general</p>
      */
     @NameInMap("category")
     public String category;
 
     /**
      * <p>The industry. By default, this parameter is left empty, which indicates General-purpose Edition.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecommerce</p>
      */
     @NameInMap("domain")
     public String domain;
 
     /**
      * <p>The type of the feature. Valid values:</p>
-     * <br>
-     * <p>*   PAAS. This is the default value.</p>
-     * <p>*   SAAS.</p>
+     * <ul>
+     * <li>PAAS. This is the default value.</li>
+     * <li>SAAS.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PAAS</p>
      */
     @NameInMap("functionType")
     public String functionType;
 
     /**
      * <p>The type of the model. The following features correspond to different model types:</p>
-     * <br>
-     * <p>*   CTR model: tf_checkpoint</p>
-     * <p>*   Popularity model: pop</p>
-     * <p>*   Category model: offline_inference</p>
-     * <p>*   Hotword model: offline_inference</p>
-     * <p>*   Shading model: offline_inference</p>
-     * <p>*   Drop-down suggestion model: offline_inference</p>
-     * <p>*   Word segmentation model: text</p>
-     * <p>*   Word weight model: tf_checkpoint</p>
+     * <ul>
+     * <li>CTR model: tf_checkpoint</li>
+     * <li>Popularity model: pop</li>
+     * <li>Category model: offline_inference</li>
+     * <li>Hotword model: offline_inference</li>
+     * <li>Shading model: offline_inference</li>
+     * <li>Drop-down suggestion model: offline_inference</li>
+     * <li>Word segmentation model: text</li>
+     * <li>Word weight model: tf_checkpoint</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tf_checkpoint</p>
      */
     @NameInMap("modelType")
     public String modelType;

@@ -6,54 +6,81 @@ import com.aliyun.tea.*;
 public class GetFunctionDefaultInstanceResponseBody extends TeaModel {
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DefaultInstance.NotExist</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The name of the feature.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cdn_waf</p>
      */
     @NameInMap("FunctionName")
     public String functionName;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpCode")
     public Long httpCode;
 
     /**
      * <p>The name of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sh-bp1oi31w1jn4ctdyv</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
      * <p>The default running time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("Latency")
     public Long latency;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default instance not set.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>062BA91F-A568-5779-8A5B-9E62C9BB3DC1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The result of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;Pagination\&quot;: {\&quot;TotalCount\&quot;: 0, \&quot;PageNumber\&quot;: 1, \&quot;PageSize\&quot;: 10}, \&quot;AntConsortiums\&quot;: []}</p>
      */
     @NameInMap("Result")
     public GetFunctionDefaultInstanceResponseBodyResult result;
 
     /**
      * <p>The status of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Status")
     public String status;
@@ -138,6 +165,9 @@ public class GetFunctionDefaultInstanceResponseBody extends TeaModel {
     public static class GetFunctionDefaultInstanceResponseBodyResult extends TeaModel {
         /**
          * <p>The default instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>model1</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class UpdateABTestSceneResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D77D0DAF-790D-F5F5-A9C0-133738165014</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>The details of the test scenario. For more information, see [ABTestScene](~~173618~~).</p>
+     * <p>The details of the test scenario. For more information, see <a href="https://help.aliyun.com/document_detail/173618.html">ABTestScene</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("result")
     public UpdateABTestSceneResponseBodyResult result;
@@ -40,45 +46,67 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
     public static class UpdateABTestSceneResponseBodyResult extends TeaModel {
         /**
          * <p>The time when the test scenario was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1596527691</p>
          */
         @NameInMap("created")
         public Integer created;
 
         /**
          * <p>The ID of the test scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20614</p>
          */
         @NameInMap("id")
         public String id;
 
         /**
          * <p>The name of the test scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kevintest22</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The status of the test. Valid values:</p>
-         * <br>
-         * <p>*   true: The test is started.</p>
-         * <p>*   false: The test is stopped.</p>
+         * <ul>
+         * <li>true: The test is started.</li>
+         * <li>false: The test is stopped.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("online")
         public Boolean online;
 
         /**
          * <p>The parameters of the A/B test.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("params")
         public java.util.Map<String, ?> params;
 
         /**
          * <p>The percentage of traffic that is allocated to the A/B test. Valid values: 0 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
          */
         @NameInMap("traffic")
         public Integer traffic;
 
         /**
          * <p>The time when the test scenario was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1596527691</p>
          */
         @NameInMap("updated")
         public Integer updated;

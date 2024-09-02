@@ -5,15 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListQueryProcessorNersResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0A6EB64B-B4C8-CF02-810F-E660812972FF</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>The priority settings of entity types.</p>
-     * <br>
-     * <p>For more information, see [Priority settings of entity types](~~173616~~).</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/173616.html">Priority settings of entity types</a>.</p>
      */
     @NameInMap("result")
     public java.util.List<ListQueryProcessorNersResponseBodyResult> result;
@@ -42,30 +44,41 @@ public class ListQueryProcessorNersResponseBody extends TeaModel {
     public static class ListQueryProcessorNersResponseBodyResult extends TeaModel {
         /**
          * <p>The name of the entity type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>brand</p>
          */
         @NameInMap("label")
         public String label;
 
         /**
-         * <p>The priority of an entity type among entity types that have the same priority level.</p>
-         * <br>
-         * <p>A smaller value indicates a higher priority. Default value: 0.</p>
+         * <p>The priority of an entity type among entity types that have the same priority level. A smaller value indicates a higher priority. Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("order")
         public Integer order;
 
         /**
-         * <p>The priority level of the entity type.</p>
-         * <br>
-         * <p>*   HIGH</p>
-         * <p>*   MIDDLE</p>
-         * <p>*   LOW</p>
+         * <p>The priority level of the entity type. Valid values:</p>
+         * <ul>
+         * <li>HIGH</li>
+         * <li>MIDDLE</li>
+         * <li>LOW</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HIGH</p>
          */
         @NameInMap("priority")
         public String priority;
 
         /**
          * <p>The internal name of the entity type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>brand</p>
          */
         @NameInMap("tag")
         public String tag;

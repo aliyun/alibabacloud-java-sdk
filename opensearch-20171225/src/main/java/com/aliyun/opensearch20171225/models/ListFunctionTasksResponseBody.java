@@ -6,48 +6,72 @@ import com.aliyun.tea.*;
 public class ListFunctionTasksResponseBody extends TeaModel {
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpCode")
     public Long httpCode;
 
     /**
      * <p>The time consumed for the request, in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("Latency")
     public Long latency;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fail</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1638157479281</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The returned result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[         {             &quot;functionName&quot;: &quot;ctr&quot;,             &quot;progress&quot;: 100,             &quot;status&quot;: &quot;success&quot;,             &quot;startTime&quot;: 100010,             &quot;endTime&quot;: 200020,             &quot;extendInfo&quot;: &quot;{\&quot;recall\&quot;:91,\&quot;errors\&quot;:[]}&quot;,             &quot;runId&quot;: &quot;trigger__2021-03-05T12:18:41&quot;         }     ]</p>
      */
     @NameInMap("Result")
     public java.util.List<ListFunctionTasksResponseBodyResult> result;
 
     /**
      * <p>The status of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The total number of records that meet the requirements.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -124,52 +148,77 @@ public class ListFunctionTasksResponseBody extends TeaModel {
     public static class ListFunctionTasksResponseBodyResult extends TeaModel {
         /**
          * <p>The timestamp that indicates the end time. Unit: milliseconds. 0 indicates that the task has not ended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100010</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
          * <p>The value is a JSON string. It includes model evaluation information and training error information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;recall\&quot;:91,\&quot;errors\&quot;:[]}</p>
          */
         @NameInMap("ExtendInfo")
         public String extendInfo;
 
         /**
          * <p>The name of the feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ctr</p>
          */
         @NameInMap("FunctionName")
         public String functionName;
 
         /**
          * <p>The number of iterations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Generation")
         public String generation;
 
         /**
          * <p>The progress. 90 indicates 90%.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         @NameInMap("Progress")
         public Long progress;
 
         /**
          * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trigger__2021-03-05T12:18:41</p>
          */
         @NameInMap("RunId")
         public String runId;
 
         /**
          * <p>The timestamp that indicates the start time. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100010</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
         /**
          * <p>The status of the task. Valid values:</p>
-         * <br>
-         * <p>*   success</p>
-         * <p>*   failed</p>
-         * <p>*   running</p>
+         * <ul>
+         * <li>success</li>
+         * <li>failed</li>
+         * <li>running</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;

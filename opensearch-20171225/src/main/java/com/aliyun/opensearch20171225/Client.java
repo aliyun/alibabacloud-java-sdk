@@ -26,6 +26,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Binds a custom analyzer to an Elasticsearch instance.</p>
+     * 
+     * @param request BindESUserAnalyzerRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BindESUserAnalyzerResponse
+     */
     public BindESUserAnalyzerResponse bindESUserAnalyzerWithOptions(String appGroupIdentity, String esInstanceId, BindESUserAnalyzerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -46,12 +55,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BindESUserAnalyzerResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Binds a custom analyzer to an Elasticsearch instance.</p>
+     * 
+     * @param request BindESUserAnalyzerRequest
+     * @return BindESUserAnalyzerResponse
+     */
     public BindESUserAnalyzerResponse bindESUserAnalyzer(String appGroupIdentity, String esInstanceId, BindESUserAnalyzerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.bindESUserAnalyzerWithOptions(appGroupIdentity, esInstanceId, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Binds an Elasticsearch instance.</p>
+     * 
+     * @param request BindEsInstanceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BindEsInstanceResponse
+     */
     public BindEsInstanceResponse bindEsInstanceWithOptions(String appGroupIdentity, BindEsInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -77,12 +102,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BindEsInstanceResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Binds an Elasticsearch instance.</p>
+     * 
+     * @param request BindEsInstanceRequest
+     * @return BindEsInstanceResponse
+     */
     public BindEsInstanceResponse bindEsInstance(String appGroupIdentity, BindEsInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.bindEsInstanceWithOptions(appGroupIdentity, request, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CompileSortScriptResponse
+     */
     public CompileSortScriptResponse compileSortScriptWithOptions(String appGroupIdentity, String scriptName, String appVersionId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -101,12 +138,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CompileSortScriptResponse());
     }
 
+    /**
+     * @return CompileSortScriptResponse
+     */
     public CompileSortScriptResponse compileSortScript(String appGroupIdentity, String scriptName, String appVersionId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.compileSortScriptWithOptions(appGroupIdentity, scriptName, appVersionId, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an experiment.</p>
+     * 
+     * @param request CreateABTestExperimentRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateABTestExperimentResponse
+     */
     public CreateABTestExperimentResponse createABTestExperimentWithOptions(String appGroupIdentity, String sceneId, String groupId, CreateABTestExperimentRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -133,12 +182,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateABTestExperimentResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an experiment.</p>
+     * 
+     * @param request CreateABTestExperimentRequest
+     * @return CreateABTestExperimentResponse
+     */
     public CreateABTestExperimentResponse createABTestExperiment(String appGroupIdentity, String sceneId, String groupId, CreateABTestExperimentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createABTestExperimentWithOptions(appGroupIdentity, sceneId, groupId, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a test group.</p>
+     * 
+     * @param request CreateABTestGroupRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateABTestGroupResponse
+     */
     public CreateABTestGroupResponse createABTestGroupWithOptions(String appGroupIdentity, String sceneId, CreateABTestGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -165,12 +230,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateABTestGroupResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a test group.</p>
+     * 
+     * @param request CreateABTestGroupRequest
+     * @return CreateABTestGroupResponse
+     */
     public CreateABTestGroupResponse createABTestGroup(String appGroupIdentity, String sceneId, CreateABTestGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createABTestGroupWithOptions(appGroupIdentity, sceneId, request, headers, runtime);
     }
 
+    /**
+     * @param request CreateABTestSceneRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateABTestSceneResponse
+     */
     public CreateABTestSceneResponse createABTestSceneWithOptions(String appGroupIdentity, CreateABTestSceneRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -197,6 +275,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateABTestSceneResponse());
     }
 
+    /**
+     * @param request CreateABTestSceneRequest
+     * @return CreateABTestSceneResponse
+     */
     public CreateABTestSceneResponse createABTestScene(String appGroupIdentity, CreateABTestSceneRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -204,15 +286,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   When you create a standard application, a new version of the application is created if the specified application name already exists.
-      * *   When you create a version of an existing application, you must specify the autoSwitch and realtimeShared parameters.
-      * *   When you create a version of an existing application, the value of the quota parameter is the same as that of the quota parameter in the previous version of the application.
-      * *   When you create a version of an existing application, the modification of the value of the quota parameter does not take effect.
-      *
-      * @param request CreateAppRequest
-      * @param headers map
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateAppResponse
+     * <b>description</b> :
+     * <p>  When you create a standard application, a new version of the application is created if the specified application name already exists.</p>
+     * <ul>
+     * <li>When you create a version of an existing application, you must specify the autoSwitch and realtimeShared parameters.</li>
+     * <li>When you create a version of an existing application, the value of the quota parameter is the same as that of the quota parameter in the previous version of the application.</li>
+     * <li>When you create a version of an existing application, the modification of the value of the quota parameter does not take effect.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a version for an OpenSearch application.</p>
+     * 
+     * @param request CreateAppRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAppResponse
      */
     public CreateAppResponse createAppWithOptions(String appGroupIdentity, CreateAppRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -221,10 +309,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("dryRun", request.dryRun);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoSwitch)) {
+            body.put("autoSwitch", request.autoSwitch);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cluster)) {
+            body.put("cluster", request.cluster);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSources)) {
+            body.put("dataSources", request.dataSources);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
+            body.put("domain", request.domain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fetchFields)) {
+            body.put("fetchFields", request.fetchFields);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.firstRanks)) {
+            body.put("firstRanks", request.firstRanks);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkType)) {
+            body.put("networkType", request.networkType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryProcessors)) {
+            body.put("queryProcessors", request.queryProcessors);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schema)) {
+            body.put("schema", request.schema);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schemas)) {
+            body.put("schemas", request.schemas);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.secondRanks)) {
+            body.put("secondRanks", request.secondRanks);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.summaries)) {
+            body.put("summaries", request.summaries);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateApp"),
@@ -241,13 +382,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   When you create a standard application, a new version of the application is created if the specified application name already exists.
-      * *   When you create a version of an existing application, you must specify the autoSwitch and realtimeShared parameters.
-      * *   When you create a version of an existing application, the value of the quota parameter is the same as that of the quota parameter in the previous version of the application.
-      * *   When you create a version of an existing application, the modification of the value of the quota parameter does not take effect.
-      *
-      * @param request CreateAppRequest
-      * @return CreateAppResponse
+     * <b>description</b> :
+     * <p>  When you create a standard application, a new version of the application is created if the specified application name already exists.</p>
+     * <ul>
+     * <li>When you create a version of an existing application, you must specify the autoSwitch and realtimeShared parameters.</li>
+     * <li>When you create a version of an existing application, the value of the quota parameter is the same as that of the quota parameter in the previous version of the application.</li>
+     * <li>When you create a version of an existing application, the modification of the value of the quota parameter does not take effect.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a version for an OpenSearch application.</p>
+     * 
+     * @param request CreateAppRequest
+     * @return CreateAppResponse
      */
     public CreateAppResponse createApp(String appGroupIdentity, CreateAppRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -255,11 +402,41 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createAppWithOptions(appGroupIdentity, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Create an OpenSearch application.</p>
+     * 
+     * @param request CreateAppGroupRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAppGroupResponse
+     */
     public CreateAppGroupResponse createAppGroupWithOptions(CreateAppGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
+            body.put("chargeType", request.chargeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quota)) {
+            body.put("quota", request.quota);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            body.put("resourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("type", request.type);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateAppGroup"),
@@ -275,12 +452,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAppGroupResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Create an OpenSearch application.</p>
+     * 
+     * @param request CreateAppGroupRequest
+     * @return CreateAppGroupResponse
+     */
     public CreateAppGroupResponse createAppGroup(CreateAppGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createAppGroupWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @param request CreateAppGroupCredentialsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAppGroupCredentialsResponse
+     */
+    public CreateAppGroupCredentialsResponse createAppGroupCredentialsWithOptions(String appGroupIdentity, CreateAppGroupCredentialsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("dryRun", request.dryRun);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAppGroupCredentials"),
+            new TeaPair("version", "2017-12-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v4/openapi/app-groups/" + com.aliyun.openapiutil.Client.getEncodeParam(appGroupIdentity) + "/credentials"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAppGroupCredentialsResponse());
+    }
+
+    /**
+     * @param request CreateAppGroupCredentialsRequest
+     * @return CreateAppGroupCredentialsResponse
+     */
+    public CreateAppGroupCredentialsResponse createAppGroupCredentials(String appGroupIdentity, CreateAppGroupCredentialsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createAppGroupCredentialsWithOptions(appGroupIdentity, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a rough sort expression for a version of an OpenSearch application. If you set dryRun to true, this operation checks the specified rough sort expression. By default, the value of dryRun is false if you do not set this parameter.</p>
+     * 
+     * @param request CreateFirstRankRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateFirstRankResponse
+     */
     public CreateFirstRankResponse createFirstRankWithOptions(String appGroupIdentity, String appId, CreateFirstRankRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -307,6 +547,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFirstRankResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a rough sort expression for a version of an OpenSearch application. If you set dryRun to true, this operation checks the specified rough sort expression. By default, the value of dryRun is false if you do not set this parameter.</p>
+     * 
+     * @param request CreateFirstRankRequest
+     * @return CreateFirstRankResponse
+     */
     public CreateFirstRankResponse createFirstRank(String appGroupIdentity, String appId, CreateFirstRankRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -314,12 +561,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call the [GetFunctionCurrentVersion](~~421377~~) operation to query the latest version of the current feature. The response of the operation includes the createParameters parameter that is used to create an algorithm instance, the usageParameters parameter, and the requirements for setting these parameters.
-      *
-      * @param request CreateFunctionInstanceRequest
-      * @param headers map
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateFunctionInstanceResponse
+     * <b>description</b> :
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/421377.html">GetFunctionCurrentVersion</a> operation to query the latest version of a feature. The response of the operation includes the createParameters parameter that is used to create an algorithm instance, the usageParameters parameter, and the requirements for setting these parameters.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an algorithm instance of a feature.</p>
+     * 
+     * @param request CreateFunctionInstanceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateFunctionInstanceResponse
      */
     public CreateFunctionInstanceResponse createFunctionInstanceWithOptions(String appGroupIdentity, String functionName, CreateFunctionInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -371,10 +622,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call the [GetFunctionCurrentVersion](~~421377~~) operation to query the latest version of the current feature. The response of the operation includes the createParameters parameter that is used to create an algorithm instance, the usageParameters parameter, and the requirements for setting these parameters.
-      *
-      * @param request CreateFunctionInstanceRequest
-      * @return CreateFunctionInstanceResponse
+     * <b>description</b> :
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/421377.html">GetFunctionCurrentVersion</a> operation to query the latest version of a feature. The response of the operation includes the createParameters parameter that is used to create an algorithm instance, the usageParameters parameter, and the requirements for setting these parameters.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an algorithm instance of a feature.</p>
+     * 
+     * @param request CreateFunctionInstanceRequest
+     * @return CreateFunctionInstanceResponse
      */
     public CreateFunctionInstanceResponse createFunctionInstance(String appGroupIdentity, String functionName, CreateFunctionInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -382,6 +637,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createFunctionInstanceWithOptions(appGroupIdentity, functionName, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an algorithm resource for a specific feature.</p>
+     * 
+     * @param request CreateFunctionResourceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateFunctionResourceResponse
+     */
     public CreateFunctionResourceResponse createFunctionResourceWithOptions(String appGroupIdentity, String functionName, CreateFunctionResourceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -419,12 +683,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFunctionResourceResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an algorithm resource for a specific feature.</p>
+     * 
+     * @param request CreateFunctionResourceRequest
+     * @return CreateFunctionResourceResponse
+     */
     public CreateFunctionResourceResponse createFunctionResource(String appGroupIdentity, String functionName, CreateFunctionResourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createFunctionResourceWithOptions(appGroupIdentity, functionName, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Starts a training task for an algorithm instance.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateFunctionTaskResponse
+     */
     public CreateFunctionTaskResponse createFunctionTaskWithOptions(String appGroupIdentity, String functionName, String instanceName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -443,12 +722,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFunctionTaskResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Starts a training task for an algorithm instance.</p>
+     * @return CreateFunctionTaskResponse
+     */
     public CreateFunctionTaskResponse createFunctionTask(String appGroupIdentity, String functionName, String instanceName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createFunctionTaskWithOptions(appGroupIdentity, functionName, instanceName, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Create an intervention dictionary.</p>
+     * 
+     * @param request CreateInterventionDictionaryRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateInterventionDictionaryResponse
+     */
     public CreateInterventionDictionaryResponse createInterventionDictionaryWithOptions(CreateInterventionDictionaryRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -488,12 +781,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateInterventionDictionaryResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Create an intervention dictionary.</p>
+     * 
+     * @param request CreateInterventionDictionaryRequest
+     * @return CreateInterventionDictionaryResponse
+     */
     public CreateInterventionDictionaryResponse createInterventionDictionary(CreateInterventionDictionaryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createInterventionDictionaryWithOptions(request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a query analysis rule. If you set dryRun to true, this operation checks the specified query analysis rule. By default, the value of dryRun is false if you do not set this parameter.</p>
+     * 
+     * @param request CreateQueryProcessorRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateQueryProcessorResponse
+     */
     public CreateQueryProcessorResponse createQueryProcessorWithOptions(String appGroupIdentity, String appId, CreateQueryProcessorRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -520,12 +829,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateQueryProcessorResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a query analysis rule. If you set dryRun to true, this operation checks the specified query analysis rule. By default, the value of dryRun is false if you do not set this parameter.</p>
+     * 
+     * @param request CreateQueryProcessorRequest
+     * @return CreateQueryProcessorResponse
+     */
     public CreateQueryProcessorResponse createQueryProcessor(String appGroupIdentity, String appId, CreateQueryProcessorRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createQueryProcessorWithOptions(appGroupIdentity, appId, request, headers, runtime);
     }
 
+    /**
+     * @param request CreateScheduledTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateScheduledTaskResponse
+     */
     public CreateScheduledTaskResponse createScheduledTaskWithOptions(String appGroupIdentity, CreateScheduledTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -546,12 +868,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateScheduledTaskResponse());
     }
 
+    /**
+     * @param request CreateScheduledTaskRequest
+     * @return CreateScheduledTaskResponse
+     */
     public CreateScheduledTaskResponse createScheduledTask(String appGroupIdentity, CreateScheduledTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createScheduledTaskWithOptions(appGroupIdentity, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a query policy.</p>
+     * 
+     * @param request CreateSearchStrategyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSearchStrategyResponse
+     */
     public CreateSearchStrategyResponse createSearchStrategyWithOptions(String appGroupIdentity, String appId, CreateSearchStrategyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -572,12 +907,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSearchStrategyResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a query policy.</p>
+     * 
+     * @param request CreateSearchStrategyRequest
+     * @return CreateSearchStrategyResponse
+     */
     public CreateSearchStrategyResponse createSearchStrategy(String appGroupIdentity, String appId, CreateSearchStrategyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createSearchStrategyWithOptions(appGroupIdentity, appId, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a fine sort expression for a version of an OpenSearch application. If you set dryRun to true, this operation checks the specified fine sort expression. The default value of dryRun is false if you do not set this parameter.</p>
+     * 
+     * @param request CreateSecondRankRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSecondRankResponse
+     */
     public CreateSecondRankResponse createSecondRankWithOptions(String appGroupIdentity, String appId, CreateSecondRankRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -604,12 +955,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSecondRankResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a fine sort expression for a version of an OpenSearch application. If you set dryRun to true, this operation checks the specified fine sort expression. The default value of dryRun is false if you do not set this parameter.</p>
+     * 
+     * @param request CreateSecondRankRequest
+     * @return CreateSecondRankResponse
+     */
     public CreateSecondRankResponse createSecondRank(String appGroupIdentity, String appId, CreateSecondRankRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createSecondRankWithOptions(appGroupIdentity, appId, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a sort script.</p>
+     * 
+     * @param request CreateSortScriptRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSortScriptResponse
+     */
     public CreateSortScriptResponse createSortScriptWithOptions(String appGroupIdentity, String appVersionId, CreateSortScriptRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -643,6 +1010,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSortScriptResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a sort script.</p>
+     * 
+     * @param request CreateSortScriptRequest
+     * @return CreateSortScriptResponse
+     */
     public CreateSortScriptResponse createSortScript(String appGroupIdentity, String appVersionId, CreateSortScriptRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -650,13 +1024,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Debugging
-      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=OpenSearch\\&api=CreateUserAnalyzer\\&type=ROA\\&version=2017-12-25)
-      *
-      * @param request CreateUserAnalyzerRequest
-      * @param headers map
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateUserAnalyzerResponse
+     * @param request CreateUserAnalyzerRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateUserAnalyzerResponse
      */
     public CreateUserAnalyzerResponse createUserAnalyzerWithOptions(CreateUserAnalyzerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -706,11 +1077,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Debugging
-      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=OpenSearch\\&api=CreateUserAnalyzer\\&type=ROA\\&version=2017-12-25)
-      *
-      * @param request CreateUserAnalyzerRequest
-      * @return CreateUserAnalyzerResponse
+     * @param request CreateUserAnalyzerRequest
+     * @return CreateUserAnalyzerResponse
      */
     public CreateUserAnalyzerResponse createUserAnalyzer(CreateUserAnalyzerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -718,6 +1086,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createUserAnalyzerWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteABTestExperimentResponse
+     */
     public DeleteABTestExperimentResponse deleteABTestExperimentWithOptions(String appGroupIdentity, String sceneId, String groupId, String experimentId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -736,12 +1109,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteABTestExperimentResponse());
     }
 
+    /**
+     * @return DeleteABTestExperimentResponse
+     */
     public DeleteABTestExperimentResponse deleteABTestExperiment(String appGroupIdentity, String sceneId, String groupId, String experimentId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteABTestExperimentWithOptions(appGroupIdentity, sceneId, groupId, experimentId, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteABTestGroupResponse
+     */
     public DeleteABTestGroupResponse deleteABTestGroupWithOptions(String appGroupIdentity, String sceneId, String groupId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -760,12 +1141,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteABTestGroupResponse());
     }
 
+    /**
+     * @return DeleteABTestGroupResponse
+     */
     public DeleteABTestGroupResponse deleteABTestGroup(String appGroupIdentity, String sceneId, String groupId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteABTestGroupWithOptions(appGroupIdentity, sceneId, groupId, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an A/B test scenario.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteABTestSceneResponse
+     */
     public DeleteABTestSceneResponse deleteABTestSceneWithOptions(String appGroupIdentity, String sceneId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -784,12 +1176,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteABTestSceneResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an A/B test scenario.</p>
+     * @return DeleteABTestSceneResponse
+     */
     public DeleteABTestSceneResponse deleteABTestScene(String appGroupIdentity, String sceneId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteABTestSceneWithOptions(appGroupIdentity, sceneId, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an algorithm instance. Before you delete an instance, make sure that it is not in use to prevent service interruptions.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteFunctionInstanceResponse
+     */
     public DeleteFunctionInstanceResponse deleteFunctionInstanceWithOptions(String appGroupIdentity, String functionName, String instanceName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -808,12 +1213,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFunctionInstanceResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an algorithm instance. Before you delete an instance, make sure that it is not in use to prevent service interruptions.</p>
+     * @return DeleteFunctionInstanceResponse
+     */
     public DeleteFunctionInstanceResponse deleteFunctionInstance(String appGroupIdentity, String functionName, String instanceName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteFunctionInstanceWithOptions(appGroupIdentity, functionName, instanceName, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an algorithm resource.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteFunctionResourceResponse
+     */
     public DeleteFunctionResourceResponse deleteFunctionResourceWithOptions(String appGroupIdentity, String functionName, String resourceName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -832,12 +1250,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFunctionResourceResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an algorithm resource.</p>
+     * @return DeleteFunctionResourceResponse
+     */
     public DeleteFunctionResourceResponse deleteFunctionResource(String appGroupIdentity, String functionName, String resourceName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteFunctionResourceWithOptions(appGroupIdentity, functionName, resourceName, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a training task. The training task in progress cannot be deleted.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteFunctionTaskResponse
+     */
     public DeleteFunctionTaskResponse deleteFunctionTaskWithOptions(String appGroupIdentity, String functionName, String instanceName, String generation, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -856,12 +1287,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFunctionTaskResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a training task. The training task in progress cannot be deleted.</p>
+     * @return DeleteFunctionTaskResponse
+     */
     public DeleteFunctionTaskResponse deleteFunctionTask(String appGroupIdentity, String functionName, String instanceName, String generation) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteFunctionTaskWithOptions(appGroupIdentity, functionName, instanceName, generation, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteSortScriptResponse
+     */
     public DeleteSortScriptResponse deleteSortScriptWithOptions(String appGroupIdentity, String scriptName, String appVersionId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -880,12 +1321,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSortScriptResponse());
     }
 
+    /**
+     * @return DeleteSortScriptResponse
+     */
     public DeleteSortScriptResponse deleteSortScript(String appGroupIdentity, String scriptName, String appVersionId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteSortScriptWithOptions(appGroupIdentity, scriptName, appVersionId, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteSortScriptFileResponse
+     */
     public DeleteSortScriptFileResponse deleteSortScriptFileWithOptions(String appGroupIdentity, String appVersionId, String scriptName, String fileName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -904,12 +1353,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSortScriptFileResponse());
     }
 
+    /**
+     * @return DeleteSortScriptFileResponse
+     */
     public DeleteSortScriptFileResponse deleteSortScriptFile(String appGroupIdentity, String appVersionId, String scriptName, String fileName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteSortScriptFileWithOptions(appGroupIdentity, appVersionId, scriptName, fileName, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeABTestExperimentResponse
+     */
     public DescribeABTestExperimentResponse describeABTestExperimentWithOptions(String appGroupIdentity, String sceneId, String groupId, String experimentId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -928,12 +1385,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeABTestExperimentResponse());
     }
 
+    /**
+     * @return DescribeABTestExperimentResponse
+     */
     public DescribeABTestExperimentResponse describeABTestExperiment(String appGroupIdentity, String sceneId, String groupId, String experimentId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeABTestExperimentWithOptions(appGroupIdentity, sceneId, groupId, experimentId, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeABTestGroupResponse
+     */
     public DescribeABTestGroupResponse describeABTestGroupWithOptions(String appGroupIdentity, String sceneId, String groupId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -952,12 +1417,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeABTestGroupResponse());
     }
 
+    /**
+     * @return DescribeABTestGroupResponse
+     */
     public DescribeABTestGroupResponse describeABTestGroup(String appGroupIdentity, String sceneId, String groupId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeABTestGroupWithOptions(appGroupIdentity, sceneId, groupId, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about an A/B test scenario.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeABTestSceneResponse
+     */
     public DescribeABTestSceneResponse describeABTestSceneWithOptions(String appGroupIdentity, String sceneId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -976,12 +1452,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeABTestSceneResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about an A/B test scenario.</p>
+     * @return DescribeABTestSceneResponse
+     */
     public DescribeABTestSceneResponse describeABTestScene(String appGroupIdentity, String sceneId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeABTestSceneWithOptions(appGroupIdentity, sceneId, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAppResponse
+     */
     public DescribeAppResponse describeAppWithOptions(String appGroupIdentity, String appId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1000,12 +1486,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAppResponse());
     }
 
+    /**
+     * @return DescribeAppResponse
+     */
     public DescribeAppResponse describeApp(String appGroupIdentity, String appId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeAppWithOptions(appGroupIdentity, appId, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of an OpenSearch application.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAppGroupResponse
+     */
     public DescribeAppGroupResponse describeAppGroupWithOptions(String appGroupIdentity, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1024,12 +1521,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAppGroupResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of an OpenSearch application.</p>
+     * @return DescribeAppGroupResponse
+     */
     public DescribeAppGroupResponse describeAppGroup(String appGroupIdentity) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeAppGroupWithOptions(appGroupIdentity, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAppStatisticsResponse
+     */
     public DescribeAppStatisticsResponse describeAppStatisticsWithOptions(String appGroupIdentity, String appId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1048,12 +1555,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAppStatisticsResponse());
     }
 
+    /**
+     * @return DescribeAppStatisticsResponse
+     */
     public DescribeAppStatisticsResponse describeAppStatistics(String appGroupIdentity, String appId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeAppStatisticsWithOptions(appGroupIdentity, appId, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAppsResponse
+     */
     public DescribeAppsResponse describeAppsWithOptions(String appGroupIdentity, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1072,12 +1587,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAppsResponse());
     }
 
+    /**
+     * @return DescribeAppsResponse
+     */
     public DescribeAppsResponse describeApps(String appGroupIdentity) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeAppsWithOptions(appGroupIdentity, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a data collection task of an application.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDataCollctionResponse
+     */
     public DescribeDataCollctionResponse describeDataCollctionWithOptions(String appGroupIdentity, String dataCollectionIdentity, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1096,12 +1622,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDataCollctionResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a data collection task of an application.</p>
+     * @return DescribeDataCollctionResponse
+     */
     public DescribeDataCollctionResponse describeDataCollction(String appGroupIdentity, String dataCollectionIdentity) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeDataCollctionWithOptions(appGroupIdentity, dataCollectionIdentity, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeFirstRankResponse
+     */
     public DescribeFirstRankResponse describeFirstRankWithOptions(String appGroupIdentity, String appId, String name, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1120,12 +1656,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeFirstRankResponse());
     }
 
+    /**
+     * @return DescribeFirstRankResponse
+     */
     public DescribeFirstRankResponse describeFirstRank(String appGroupIdentity, String appId, String name) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeFirstRankWithOptions(appGroupIdentity, appId, name, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeInterventionDictionaryResponse
+     */
     public DescribeInterventionDictionaryResponse describeInterventionDictionaryWithOptions(String name, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1144,12 +1688,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInterventionDictionaryResponse());
     }
 
+    /**
+     * @return DescribeInterventionDictionaryResponse
+     */
     public DescribeInterventionDictionaryResponse describeInterventionDictionary(String name) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeInterventionDictionaryWithOptions(name, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeQueryProcessorResponse
+     */
     public DescribeQueryProcessorResponse describeQueryProcessorWithOptions(String appGroupIdentity, String appId, String name, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1168,12 +1720,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeQueryProcessorResponse());
     }
 
+    /**
+     * @return DescribeQueryProcessorResponse
+     */
     public DescribeQueryProcessorResponse describeQueryProcessor(String appGroupIdentity, String appId, String name) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeQueryProcessorWithOptions(appGroupIdentity, appId, name, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the endpoints of all regions that support OpenSearch.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRegionsResponse
+     */
     public DescribeRegionsResponse describeRegionsWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1192,12 +1755,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRegionsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the endpoints of all regions that support OpenSearch.</p>
+     * @return DescribeRegionsResponse
+     */
     public DescribeRegionsResponse describeRegions() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeRegionsWithOptions(headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeScheduledTaskResponse
+     */
     public DescribeScheduledTaskResponse describeScheduledTaskWithOptions(String appGroupIdentity, String taskId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1216,12 +1789,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScheduledTaskResponse());
     }
 
+    /**
+     * @return DescribeScheduledTaskResponse
+     */
     public DescribeScheduledTaskResponse describeScheduledTask(String appGroupIdentity, String taskId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeScheduledTaskWithOptions(appGroupIdentity, taskId, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSecondRankResponse
+     */
     public DescribeSecondRankResponse describeSecondRankWithOptions(String appGroupIdentity, String appId, String name, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1240,12 +1821,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSecondRankResponse());
     }
 
+    /**
+     * @return DescribeSecondRankResponse
+     */
     public DescribeSecondRankResponse describeSecondRank(String appGroupIdentity, String appId, String name) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeSecondRankWithOptions(appGroupIdentity, appId, name, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSlowQueryStatusResponse
+     */
     public DescribeSlowQueryStatusResponse describeSlowQueryStatusWithOptions(String appGroupIdentity, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1264,12 +1853,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSlowQueryStatusResponse());
     }
 
+    /**
+     * @return DescribeSlowQueryStatusResponse
+     */
     public DescribeSlowQueryStatusResponse describeSlowQueryStatus(String appGroupIdentity) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeSlowQueryStatusWithOptions(appGroupIdentity, headers, runtime);
     }
 
+    /**
+     * @param request DescribeUserAnalyzerRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeUserAnalyzerResponse
+     */
     public DescribeUserAnalyzerResponse describeUserAnalyzerWithOptions(String name, DescribeUserAnalyzerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1295,12 +1893,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeUserAnalyzerResponse());
     }
 
+    /**
+     * @param request DescribeUserAnalyzerRequest
+     * @return DescribeUserAnalyzerResponse
+     */
     public DescribeUserAnalyzerResponse describeUserAnalyzer(String name, DescribeUserAnalyzerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeUserAnalyzerWithOptions(name, request, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableSlowQueryResponse
+     */
     public DisableSlowQueryResponse disableSlowQueryWithOptions(String appGroupIdentity, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1319,12 +1926,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DisableSlowQueryResponse());
     }
 
+    /**
+     * @return DisableSlowQueryResponse
+     */
     public DisableSlowQueryResponse disableSlowQuery(String appGroupIdentity) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.disableSlowQueryWithOptions(appGroupIdentity, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableSlowQueryResponse
+     */
     public EnableSlowQueryResponse enableSlowQueryWithOptions(String appGroupIdentity, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1343,12 +1958,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new EnableSlowQueryResponse());
     }
 
+    /**
+     * @return EnableSlowQueryResponse
+     */
     public EnableSlowQueryResponse enableSlowQuery(String appGroupIdentity) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.enableSlowQueryWithOptions(appGroupIdentity, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a wide table that is generated after a JOIN operation is performed on multiple tables.</p>
+     * 
+     * @param request GenerateMergedTableRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GenerateMergedTableResponse
+     */
     public GenerateMergedTableResponse generateMergedTableWithOptions(GenerateMergedTableRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1375,12 +2002,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateMergedTableResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a wide table that is generated after a JOIN operation is performed on multiple tables.</p>
+     * 
+     * @param request GenerateMergedTableRequest
+     * @return GenerateMergedTableResponse
+     */
     public GenerateMergedTableResponse generateMergedTable(GenerateMergedTableRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.generateMergedTableWithOptions(request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the type of an industry.</p>
+     * 
+     * @param request GetDomainRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDomainResponse
+     */
     public GetDomainResponse getDomainWithOptions(String domainName, GetDomainRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1406,12 +2049,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetDomainResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the type of an industry.</p>
+     * 
+     * @param request GetDomainRequest
+     * @return GetDomainResponse
+     */
     public GetDomainResponse getDomain(String domainName, GetDomainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getDomainWithOptions(domainName, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the version information about the current feature when you create an instance.</p>
+     * 
+     * @param request GetFunctionCurrentVersionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetFunctionCurrentVersionResponse
+     */
     public GetFunctionCurrentVersionResponse getFunctionCurrentVersionWithOptions(String functionName, GetFunctionCurrentVersionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1449,12 +2108,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetFunctionCurrentVersionResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the version information about the current feature when you create an instance.</p>
+     * 
+     * @param request GetFunctionCurrentVersionRequest
+     * @return GetFunctionCurrentVersionResponse
+     */
     public GetFunctionCurrentVersionResponse getFunctionCurrentVersion(String functionName, GetFunctionCurrentVersionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getFunctionCurrentVersionWithOptions(functionName, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the algorithm instance that an application uses by default.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetFunctionDefaultInstanceResponse
+     */
     public GetFunctionDefaultInstanceResponse getFunctionDefaultInstanceWithOptions(String appGroupIdentity, String functionName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1473,12 +2147,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetFunctionDefaultInstanceResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the algorithm instance that an application uses by default.</p>
+     * @return GetFunctionDefaultInstanceResponse
+     */
     public GetFunctionDefaultInstanceResponse getFunctionDefaultInstance(String appGroupIdentity, String functionName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getFunctionDefaultInstanceWithOptions(appGroupIdentity, functionName, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of an algorithm instance by instance name.</p>
+     * 
+     * @param request GetFunctionInstanceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetFunctionInstanceResponse
+     */
     public GetFunctionInstanceResponse getFunctionInstanceWithOptions(String appGroupIdentity, String functionName, String instanceName, GetFunctionInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1504,12 +2192,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetFunctionInstanceResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of an algorithm instance by instance name.</p>
+     * 
+     * @param request GetFunctionInstanceRequest
+     * @return GetFunctionInstanceResponse
+     */
     public GetFunctionInstanceResponse getFunctionInstance(String appGroupIdentity, String functionName, String instanceName, GetFunctionInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getFunctionInstanceWithOptions(appGroupIdentity, functionName, instanceName, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries an algorithm resource.</p>
+     * 
+     * @param request GetFunctionResourceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetFunctionResourceResponse
+     */
     public GetFunctionResourceResponse getFunctionResourceWithOptions(String appGroupIdentity, String functionName, String resourceName, GetFunctionResourceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1535,12 +2239,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetFunctionResourceResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries an algorithm resource.</p>
+     * 
+     * @param request GetFunctionResourceRequest
+     * @return GetFunctionResourceResponse
+     */
     public GetFunctionResourceResponse getFunctionResource(String appGroupIdentity, String functionName, String resourceName, GetFunctionResourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getFunctionResourceWithOptions(appGroupIdentity, functionName, resourceName, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a training task.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetFunctionTaskResponse
+     */
     public GetFunctionTaskResponse getFunctionTaskWithOptions(String appGroupIdentity, String functionName, String instanceName, String generation, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1559,12 +2278,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetFunctionTaskResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a training task.</p>
+     * @return GetFunctionTaskResponse
+     */
     public GetFunctionTaskResponse getFunctionTask(String appGroupIdentity, String functionName, String instanceName, String generation) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getFunctionTaskWithOptions(appGroupIdentity, functionName, instanceName, generation, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries version information by version ID.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetFunctionVersionResponse
+     */
     public GetFunctionVersionResponse getFunctionVersionWithOptions(String functionName, String versionId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1583,12 +2315,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetFunctionVersionResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries version information by version ID.</p>
+     * @return GetFunctionVersionResponse
+     */
     public GetFunctionVersionResponse getFunctionVersion(String functionName, String versionId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getFunctionVersionWithOptions(functionName, versionId, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetScriptFileNamesResponse
+     */
     public GetScriptFileNamesResponse getScriptFileNamesWithOptions(String appGroupIdentity, String appVersionId, String scriptName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1607,12 +2349,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetScriptFileNamesResponse());
     }
 
+    /**
+     * @return GetScriptFileNamesResponse
+     */
     public GetScriptFileNamesResponse getScriptFileNames(String appGroupIdentity, String appVersionId, String scriptName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getScriptFileNamesWithOptions(appGroupIdentity, appVersionId, scriptName, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a query policy.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSearchStrategyResponse
+     */
     public GetSearchStrategyResponse getSearchStrategyWithOptions(String appGroupIdentity, String appId, String strategyName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1631,12 +2384,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetSearchStrategyResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a query policy.</p>
+     * @return GetSearchStrategyResponse
+     */
     public GetSearchStrategyResponse getSearchStrategy(String appGroupIdentity, String appId, String strategyName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getSearchStrategyWithOptions(appGroupIdentity, appId, strategyName, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a sort script.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSortScriptResponse
+     */
     public GetSortScriptResponse getSortScriptWithOptions(String appGroupIdentity, String scriptName, String appVersionId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1655,12 +2421,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetSortScriptResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a sort script.</p>
+     * @return GetSortScriptResponse
+     */
     public GetSortScriptResponse getSortScript(String appGroupIdentity, String scriptName, String appVersionId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getSortScriptWithOptions(appGroupIdentity, scriptName, appVersionId, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the content of a sort script.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSortScriptFileResponse
+     */
     public GetSortScriptFileResponse getSortScriptFileWithOptions(String appGroupIdentity, String scriptName, String appVersionId, String fileName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1679,12 +2458,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetSortScriptFileResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the content of a sort script.</p>
+     * @return GetSortScriptFileResponse
+     */
     public GetSortScriptFileResponse getSortScriptFile(String appGroupIdentity, String scriptName, String appVersionId, String fileName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getSortScriptFileWithOptions(appGroupIdentity, scriptName, appVersionId, fileName, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of experiments.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListABTestExperimentsResponse
+     */
     public ListABTestExperimentsResponse listABTestExperimentsWithOptions(String appGroupIdentity, String sceneId, String groupId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1703,12 +2495,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListABTestExperimentsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of experiments.</p>
+     * @return ListABTestExperimentsResponse
+     */
     public ListABTestExperimentsResponse listABTestExperiments(String appGroupIdentity, String sceneId, String groupId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listABTestExperimentsWithOptions(appGroupIdentity, sceneId, groupId, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListABTestFixedFlowDividersResponse
+     */
     public ListABTestFixedFlowDividersResponse listABTestFixedFlowDividersWithOptions(String appGroupIdentity, String sceneId, String groupId, String experimentId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1727,12 +2529,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListABTestFixedFlowDividersResponse());
     }
 
+    /**
+     * @return ListABTestFixedFlowDividersResponse
+     */
     public ListABTestFixedFlowDividersResponse listABTestFixedFlowDividers(String appGroupIdentity, String sceneId, String groupId, String experimentId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listABTestFixedFlowDividersWithOptions(appGroupIdentity, sceneId, groupId, experimentId, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListABTestGroupsResponse
+     */
     public ListABTestGroupsResponse listABTestGroupsWithOptions(String appGroupIdentity, String sceneId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1751,12 +2561,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListABTestGroupsResponse());
     }
 
+    /**
+     * @return ListABTestGroupsResponse
+     */
     public ListABTestGroupsResponse listABTestGroups(String appGroupIdentity, String sceneId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listABTestGroupsWithOptions(appGroupIdentity, sceneId, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListABTestScenesResponse
+     */
     public ListABTestScenesResponse listABTestScenesWithOptions(String appGroupIdentity, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1775,6 +2593,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListABTestScenesResponse());
     }
 
+    /**
+     * @return ListABTestScenesResponse
+     */
     public ListABTestScenesResponse listABTestScenes(String appGroupIdentity) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1782,14 +2603,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   This operation allows you to query applications by application name, instance ID, and application type.
-      * *   This operation can sort the applications based on their creation time.
-      * *   This operation supports the parameters for paging.
-      *
-      * @param tmpReq ListAppGroupsRequest
-      * @param headers map
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListAppGroupsResponse
+     * <b>description</b> :
+     * <p>  This operation allows you to query applications by application name, instance ID, and application type.</p>
+     * <ul>
+     * <li>This operation allows you to sort the applications based on their creation time.</li>
+     * <li>This operation supports the parameters for paging.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of OpenSearch applications.</p>
+     * 
+     * @param tmpReq ListAppGroupsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAppGroupsResponse
      */
     public ListAppGroupsResponse listAppGroupsWithOptions(ListAppGroupsRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -1851,12 +2678,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   This operation allows you to query applications by application name, instance ID, and application type.
-      * *   This operation can sort the applications based on their creation time.
-      * *   This operation supports the parameters for paging.
-      *
-      * @param request ListAppGroupsRequest
-      * @return ListAppGroupsResponse
+     * <b>description</b> :
+     * <p>  This operation allows you to query applications by application name, instance ID, and application type.</p>
+     * <ul>
+     * <li>This operation allows you to sort the applications based on their creation time.</li>
+     * <li>This operation supports the parameters for paging.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of OpenSearch applications.</p>
+     * 
+     * @param request ListAppGroupsRequest
+     * @return ListAppGroupsResponse
      */
     public ListAppGroupsResponse listAppGroups(ListAppGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1864,6 +2697,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listAppGroupsWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @param request ListDataCollectionsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDataCollectionsResponse
+     */
     public ListDataCollectionsResponse listDataCollectionsWithOptions(String appGroupIdentity, ListDataCollectionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1893,12 +2732,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataCollectionsResponse());
     }
 
+    /**
+     * @param request ListDataCollectionsRequest
+     * @return ListDataCollectionsResponse
+     */
     public ListDataCollectionsResponse listDataCollections(String appGroupIdentity, ListDataCollectionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listDataCollectionsWithOptions(appGroupIdentity, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries all fields in a table of a data source. This operation is for internal use only.</p>
+     * 
+     * @param request ListDataSourceTableFieldsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDataSourceTableFieldsResponse
+     */
     public ListDataSourceTableFieldsResponse listDataSourceTableFieldsWithOptions(String dataSourceType, ListDataSourceTableFieldsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1928,12 +2780,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataSourceTableFieldsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries all fields in a table of a data source. This operation is for internal use only.</p>
+     * 
+     * @param request ListDataSourceTableFieldsRequest
+     * @return ListDataSourceTableFieldsResponse
+     */
     public ListDataSourceTableFieldsResponse listDataSourceTableFields(String dataSourceType, ListDataSourceTableFieldsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listDataSourceTableFieldsWithOptions(dataSourceType, request, headers, runtime);
     }
 
+    /**
+     * @param request ListDataSourceTablesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDataSourceTablesResponse
+     */
     public ListDataSourceTablesResponse listDataSourceTablesWithOptions(String dataSourceType, ListDataSourceTablesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1959,12 +2824,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataSourceTablesResponse());
     }
 
+    /**
+     * @param request ListDataSourceTablesRequest
+     * @return ListDataSourceTablesResponse
+     */
     public ListDataSourceTablesResponse listDataSourceTables(String dataSourceType, ListDataSourceTablesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listDataSourceTablesWithOptions(dataSourceType, request, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListFirstRanksResponse
+     */
     public ListFirstRanksResponse listFirstRanksWithOptions(String appGroupIdentity, String appId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1983,12 +2857,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListFirstRanksResponse());
     }
 
+    /**
+     * @return ListFirstRanksResponse
+     */
     public ListFirstRanksResponse listFirstRanks(String appGroupIdentity, String appId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listFirstRanksWithOptions(appGroupIdentity, appId, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries all algorithm instances of a user, which meet specified conditions.</p>
+     * 
+     * @param request ListFunctionInstancesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListFunctionInstancesResponse
+     */
     public ListFunctionInstancesResponse listFunctionInstancesWithOptions(String appGroupIdentity, String functionName, ListFunctionInstancesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2034,12 +2920,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListFunctionInstancesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries all algorithm instances of a user, which meet specified conditions.</p>
+     * 
+     * @param request ListFunctionInstancesRequest
+     * @return ListFunctionInstancesResponse
+     */
     public ListFunctionInstancesResponse listFunctionInstances(String appGroupIdentity, String functionName, ListFunctionInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listFunctionInstancesWithOptions(appGroupIdentity, functionName, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries algorithm resources.</p>
+     * 
+     * @param request ListFunctionResourcesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListFunctionResourcesResponse
+     */
     public ListFunctionResourcesResponse listFunctionResourcesWithOptions(String appGroupIdentity, String functionName, ListFunctionResourcesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2077,12 +2979,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListFunctionResourcesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries algorithm resources.</p>
+     * 
+     * @param request ListFunctionResourcesRequest
+     * @return ListFunctionResourcesResponse
+     */
     public ListFunctionResourcesResponse listFunctionResources(String appGroupIdentity, String functionName, ListFunctionResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listFunctionResourcesWithOptions(appGroupIdentity, functionName, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the training tasks. The returned results are sorted by start time in descending order.</p>
+     * 
+     * @param request ListFunctionTasksRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListFunctionTasksResponse
+     */
     public ListFunctionTasksResponse listFunctionTasksWithOptions(String appGroupIdentity, String functionName, String instanceName, ListFunctionTasksRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2124,12 +3042,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListFunctionTasksResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the training tasks. The returned results are sorted by start time in descending order.</p>
+     * 
+     * @param request ListFunctionTasksRequest
+     * @return ListFunctionTasksResponse
+     */
     public ListFunctionTasksResponse listFunctionTasks(String appGroupIdentity, String functionName, String instanceName, ListFunctionTasksRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listFunctionTasksWithOptions(appGroupIdentity, functionName, instanceName, request, headers, runtime);
     }
 
+    /**
+     * @param request ListInterventionDictionariesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListInterventionDictionariesResponse
+     */
     public ListInterventionDictionariesResponse listInterventionDictionariesWithOptions(ListInterventionDictionariesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2163,12 +3094,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListInterventionDictionariesResponse());
     }
 
+    /**
+     * @param request ListInterventionDictionariesRequest
+     * @return ListInterventionDictionariesResponse
+     */
     public ListInterventionDictionariesResponse listInterventionDictionaries(ListInterventionDictionariesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listInterventionDictionariesWithOptions(request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the intervention entries in an intervention dictionary.</p>
+     * 
+     * @param request ListInterventionDictionaryEntriesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListInterventionDictionaryEntriesResponse
+     */
     public ListInterventionDictionaryEntriesResponse listInterventionDictionaryEntriesWithOptions(String name, ListInterventionDictionaryEntriesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2202,12 +3146,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListInterventionDictionaryEntriesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the intervention entries in an intervention dictionary.</p>
+     * 
+     * @param request ListInterventionDictionaryEntriesRequest
+     * @return ListInterventionDictionaryEntriesResponse
+     */
     public ListInterventionDictionaryEntriesResponse listInterventionDictionaryEntries(String name, ListInterventionDictionaryEntriesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listInterventionDictionaryEntriesWithOptions(name, request, headers, runtime);
     }
 
+    /**
+     * @param request ListInterventionDictionaryNerResultsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListInterventionDictionaryNerResultsResponse
+     */
     public ListInterventionDictionaryNerResultsResponse listInterventionDictionaryNerResultsWithOptions(String name, ListInterventionDictionaryNerResultsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2233,12 +3190,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListInterventionDictionaryNerResultsResponse());
     }
 
+    /**
+     * @param request ListInterventionDictionaryNerResultsRequest
+     * @return ListInterventionDictionaryNerResultsResponse
+     */
     public ListInterventionDictionaryNerResultsResponse listInterventionDictionaryNerResults(String name, ListInterventionDictionaryNerResultsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listInterventionDictionaryNerResultsWithOptions(name, request, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListInterventionDictionaryRelatedEntitiesResponse
+     */
     public ListInterventionDictionaryRelatedEntitiesResponse listInterventionDictionaryRelatedEntitiesWithOptions(String name, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -2257,12 +3223,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListInterventionDictionaryRelatedEntitiesResponse());
     }
 
+    /**
+     * @return ListInterventionDictionaryRelatedEntitiesResponse
+     */
     public ListInterventionDictionaryRelatedEntitiesResponse listInterventionDictionaryRelatedEntities(String name) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listInterventionDictionaryRelatedEntitiesWithOptions(name, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>查看当前的处理流</p>
+     * 
+     * @param request ListProceedingsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListProceedingsResponse
+     */
     public ListProceedingsResponse listProceedingsWithOptions(String appGroupIdentity, ListProceedingsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2288,12 +3266,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListProceedingsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>查看当前的处理流</p>
+     * 
+     * @param request ListProceedingsRequest
+     * @return ListProceedingsResponse
+     */
     public ListProceedingsResponse listProceedings(String appGroupIdentity, ListProceedingsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listProceedingsWithOptions(appGroupIdentity, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the results of a query analysis test. This API operation is available only to existing applications of OpenSearch Open Source Compatible Edition.</p>
+     * 
+     * @param request ListQueryProcessorAnalyzerResultsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListQueryProcessorAnalyzerResultsResponse
+     */
     public ListQueryProcessorAnalyzerResultsResponse listQueryProcessorAnalyzerResultsWithOptions(String appGroupIdentity, String appId, String name, ListQueryProcessorAnalyzerResultsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2319,12 +3313,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListQueryProcessorAnalyzerResultsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the results of a query analysis test. This API operation is available only to existing applications of OpenSearch Open Source Compatible Edition.</p>
+     * 
+     * @param request ListQueryProcessorAnalyzerResultsRequest
+     * @return ListQueryProcessorAnalyzerResultsResponse
+     */
     public ListQueryProcessorAnalyzerResultsResponse listQueryProcessorAnalyzerResults(String appGroupIdentity, String appId, String name, ListQueryProcessorAnalyzerResultsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listQueryProcessorAnalyzerResultsWithOptions(appGroupIdentity, appId, name, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the recommended priority settings of entity types for named entity recognition (NER).</p>
+     * 
+     * @param request ListQueryProcessorNersRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListQueryProcessorNersResponse
+     */
     public ListQueryProcessorNersResponse listQueryProcessorNersWithOptions(ListQueryProcessorNersRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2350,12 +3360,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListQueryProcessorNersResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the recommended priority settings of entity types for named entity recognition (NER).</p>
+     * 
+     * @param request ListQueryProcessorNersRequest
+     * @return ListQueryProcessorNersResponse
+     */
     public ListQueryProcessorNersResponse listQueryProcessorNers(ListQueryProcessorNersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listQueryProcessorNersWithOptions(request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of query analysis rules that are configured for a version of an OpenSearch application.</p>
+     * 
+     * @param request ListQueryProcessorsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListQueryProcessorsResponse
+     */
     public ListQueryProcessorsResponse listQueryProcessorsWithOptions(String appGroupIdentity, String appId, ListQueryProcessorsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2381,12 +3407,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListQueryProcessorsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of query analysis rules that are configured for a version of an OpenSearch application.</p>
+     * 
+     * @param request ListQueryProcessorsRequest
+     * @return ListQueryProcessorsResponse
+     */
     public ListQueryProcessorsResponse listQueryProcessors(String appGroupIdentity, String appId, ListQueryProcessorsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listQueryProcessorsWithOptions(appGroupIdentity, appId, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries tickets that are submitted to apply for quotas for an OpenSearch application.</p>
+     * 
+     * @param request ListQuotaReviewTasksRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListQuotaReviewTasksResponse
+     */
     public ListQuotaReviewTasksResponse listQuotaReviewTasksWithOptions(String appGroupIdentity, ListQuotaReviewTasksRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2416,12 +3458,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListQuotaReviewTasksResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries tickets that are submitted to apply for quotas for an OpenSearch application.</p>
+     * 
+     * @param request ListQuotaReviewTasksRequest
+     * @return ListQuotaReviewTasksResponse
+     */
     public ListQuotaReviewTasksResponse listQuotaReviewTasks(String appGroupIdentity, ListQuotaReviewTasksRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listQuotaReviewTasksWithOptions(appGroupIdentity, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of scheduled tasks of an OpenSearch application.</p>
+     * 
+     * @param request ListScheduledTasksRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListScheduledTasksResponse
+     */
     public ListScheduledTasksResponse listScheduledTasksWithOptions(String appGroupIdentity, ListScheduledTasksRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2455,12 +3513,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListScheduledTasksResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of scheduled tasks of an OpenSearch application.</p>
+     * 
+     * @param request ListScheduledTasksRequest
+     * @return ListScheduledTasksResponse
+     */
     public ListScheduledTasksResponse listScheduledTasks(String appGroupIdentity, ListScheduledTasksRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listScheduledTasksWithOptions(appGroupIdentity, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of query policies.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSearchStrategiesResponse
+     */
     public ListSearchStrategiesResponse listSearchStrategiesWithOptions(String appGroupIdentity, String appId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -2479,12 +3552,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListSearchStrategiesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of query policies.</p>
+     * @return ListSearchStrategiesResponse
+     */
     public ListSearchStrategiesResponse listSearchStrategies(String appGroupIdentity, String appId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listSearchStrategiesWithOptions(appGroupIdentity, appId, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSecondRanksResponse
+     */
     public ListSecondRanksResponse listSecondRanksWithOptions(String appGroupIdentity, String appId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -2503,12 +3586,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListSecondRanksResponse());
     }
 
+    /**
+     * @return ListSecondRanksResponse
+     */
     public ListSecondRanksResponse listSecondRanks(String appGroupIdentity, String appId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listSecondRanksWithOptions(appGroupIdentity, appId, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the suggestions that are provided by Optimization Master for slow queries.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSlowQueryCategoriesResponse
+     */
     public ListSlowQueryCategoriesResponse listSlowQueryCategoriesWithOptions(String appGroupIdentity, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -2527,12 +3621,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListSlowQueryCategoriesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the suggestions that are provided by Optimization Master for slow queries.</p>
+     * @return ListSlowQueryCategoriesResponse
+     */
     public ListSlowQueryCategoriesResponse listSlowQueryCategories(String appGroupIdentity) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listSlowQueryCategoriesWithOptions(appGroupIdentity, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSlowQueryQueriesResponse
+     */
     public ListSlowQueryQueriesResponse listSlowQueryQueriesWithOptions(String appGroupIdentity, String categoryIndex, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -2551,12 +3655,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListSlowQueryQueriesResponse());
     }
 
+    /**
+     * @return ListSlowQueryQueriesResponse
+     */
     public ListSlowQueryQueriesResponse listSlowQueryQueries(String appGroupIdentity, String categoryIndex) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listSlowQueryQueriesWithOptions(appGroupIdentity, categoryIndex, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of sort expressions that are configured for a version of an OpenSearch application.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSortExpressionsResponse
+     */
     public ListSortExpressionsResponse listSortExpressionsWithOptions(String appGroupIdentity, String appId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -2575,12 +3690,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListSortExpressionsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of sort expressions that are configured for a version of an OpenSearch application.</p>
+     * @return ListSortExpressionsResponse
+     */
     public ListSortExpressionsResponse listSortExpressions(String appGroupIdentity, String appId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listSortExpressionsWithOptions(appGroupIdentity, appId, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries all sort scripts of an application version.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSortScriptsResponse
+     */
     public ListSortScriptsResponse listSortScriptsWithOptions(String appGroupIdentity, String appVersionId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -2599,12 +3727,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListSortScriptsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries all sort scripts of an application version.</p>
+     * @return ListSortScriptsResponse
+     */
     public ListSortScriptsResponse listSortScripts(String appGroupIdentity, String appVersionId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listSortScriptsWithOptions(appGroupIdentity, appVersionId, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries log statistics, such as application error logs, hotword rankings, and slow query logs.</p>
+     * 
+     * @param request ListStatisticLogsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListStatisticLogsResponse
+     */
     public ListStatisticLogsResponse listStatisticLogsWithOptions(String appGroupIdentity, String moduleName, ListStatisticLogsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2658,12 +3800,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListStatisticLogsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries log statistics, such as application error logs, hotword rankings, and slow query logs.</p>
+     * 
+     * @param request ListStatisticLogsRequest
+     * @return ListStatisticLogsResponse
+     */
     public ListStatisticLogsResponse listStatisticLogs(String appGroupIdentity, String moduleName, ListStatisticLogsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listStatisticLogsWithOptions(appGroupIdentity, moduleName, request, headers, runtime);
     }
 
+    /**
+     * @param request ListStatisticReportRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListStatisticReportResponse
+     */
     public ListStatisticReportResponse listStatisticReportWithOptions(String appGroupIdentity, String moduleName, ListStatisticReportRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2709,12 +3864,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListStatisticReportResponse());
     }
 
+    /**
+     * @param request ListStatisticReportRequest
+     * @return ListStatisticReportResponse
+     */
     public ListStatisticReportResponse listStatisticReport(String appGroupIdentity, String moduleName, ListStatisticReportRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listStatisticReportWithOptions(appGroupIdentity, moduleName, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries tagged resources.</p>
+     * 
+     * @param tmpReq ListTagResourcesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTagResourcesResponse
+     */
     public ListTagResourcesResponse listTagResourcesWithOptions(ListTagResourcesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ListTagResourcesShrinkRequest request = new ListTagResourcesShrinkRequest();
@@ -2762,12 +3930,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagResourcesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries tagged resources.</p>
+     * 
+     * @param request ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
     public ListTagResourcesResponse listTagResources(ListTagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listTagResourcesWithOptions(request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the entries of a custom analyzer.</p>
+     * 
+     * @param request ListUserAnalyzerEntriesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListUserAnalyzerEntriesResponse
+     */
     public ListUserAnalyzerEntriesResponse listUserAnalyzerEntriesWithOptions(String name, ListUserAnalyzerEntriesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2801,12 +3985,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListUserAnalyzerEntriesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the entries of a custom analyzer.</p>
+     * 
+     * @param request ListUserAnalyzerEntriesRequest
+     * @return ListUserAnalyzerEntriesResponse
+     */
     public ListUserAnalyzerEntriesResponse listUserAnalyzerEntries(String name, ListUserAnalyzerEntriesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listUserAnalyzerEntriesWithOptions(name, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the custom analyzers that belong to the current account.</p>
+     * 
+     * @param request ListUserAnalyzersRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListUserAnalyzersResponse
+     */
     public ListUserAnalyzersResponse listUserAnalyzersWithOptions(ListUserAnalyzersRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2836,12 +4036,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListUserAnalyzersResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the custom analyzers that belong to the current account.</p>
+     * 
+     * @param request ListUserAnalyzersRequest
+     * @return ListUserAnalyzersResponse
+     */
     public ListUserAnalyzersResponse listUserAnalyzers(ListUserAnalyzersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listUserAnalyzersWithOptions(request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the properties of an OpenSearch application or sets the online version of an OpenSearch application.</p>
+     * 
+     * @param request ModifyAppGroupRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyAppGroupResponse
+     */
     public ModifyAppGroupResponse modifyAppGroupWithOptions(String appGroupIdentity, ModifyAppGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2885,12 +4101,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyAppGroupResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the properties of an OpenSearch application or sets the online version of an OpenSearch application.</p>
+     * 
+     * @param request ModifyAppGroupRequest
+     * @return ModifyAppGroupResponse
+     */
     public ModifyAppGroupResponse modifyAppGroup(String appGroupIdentity, ModifyAppGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.modifyAppGroupWithOptions(appGroupIdentity, request, headers, runtime);
     }
 
+    /**
+     * @param request ModifyAppGroupQuotaRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyAppGroupQuotaResponse
+     */
     public ModifyAppGroupQuotaResponse modifyAppGroupQuotaWithOptions(String appGroupIdentity, ModifyAppGroupQuotaRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2917,12 +4146,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyAppGroupQuotaResponse());
     }
 
+    /**
+     * @param request ModifyAppGroupQuotaRequest
+     * @return ModifyAppGroupQuotaResponse
+     */
     public ModifyAppGroupQuotaResponse modifyAppGroupQuota(String appGroupIdentity, ModifyAppGroupQuotaRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.modifyAppGroupQuotaWithOptions(appGroupIdentity, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies a rough sort expression for an OpenSearch application. If you set dryRun to true, this operation checks the rough sort expression after the expression is modified. If you do not specify this parameter, false is used by default.</p>
+     * 
+     * @param request ModifyFirstRankRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyFirstRankResponse
+     */
     public ModifyFirstRankResponse modifyFirstRankWithOptions(String appGroupIdentity, String appId, String name, ModifyFirstRankRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2949,12 +4191,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyFirstRankResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies a rough sort expression for an OpenSearch application. If you set dryRun to true, this operation checks the rough sort expression after the expression is modified. If you do not specify this parameter, false is used by default.</p>
+     * 
+     * @param request ModifyFirstRankRequest
+     * @return ModifyFirstRankResponse
+     */
     public ModifyFirstRankResponse modifyFirstRank(String appGroupIdentity, String appId, String name, ModifyFirstRankRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.modifyFirstRankWithOptions(appGroupIdentity, appId, name, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies a query analysis rule for a specific application version. If you set dryRun to true, this operation checks the specified query analysis rule. By default, the value of dryRun is false if you do not specify this parameter.</p>
+     * 
+     * @param request ModifyQueryProcessorRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyQueryProcessorResponse
+     */
     public ModifyQueryProcessorResponse modifyQueryProcessorWithOptions(String appGroupIdentity, String appId, String name, ModifyQueryProcessorRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2981,12 +4239,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyQueryProcessorResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies a query analysis rule for a specific application version. If you set dryRun to true, this operation checks the specified query analysis rule. By default, the value of dryRun is false if you do not specify this parameter.</p>
+     * 
+     * @param request ModifyQueryProcessorRequest
+     * @return ModifyQueryProcessorResponse
+     */
     public ModifyQueryProcessorResponse modifyQueryProcessor(String appGroupIdentity, String appId, String name, ModifyQueryProcessorRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.modifyQueryProcessorWithOptions(appGroupIdentity, appId, name, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies a scheduled task.</p>
+     * 
+     * @param request ModifyScheduledTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyScheduledTaskResponse
+     */
     public ModifyScheduledTaskResponse modifyScheduledTaskWithOptions(String appGroupIdentity, String taskId, ModifyScheduledTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3007,12 +4281,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyScheduledTaskResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies a scheduled task.</p>
+     * 
+     * @param request ModifyScheduledTaskRequest
+     * @return ModifyScheduledTaskResponse
+     */
     public ModifyScheduledTaskResponse modifyScheduledTask(String appGroupIdentity, String taskId, ModifyScheduledTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.modifyScheduledTaskWithOptions(appGroupIdentity, taskId, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies a fine sort expression that is configured for a specific OpenSearch application version. If you set dryRun to true, the specified fine sort expression is checked after the expression is modified. By default, the value of dryRun is false if you do not specify this parameter.</p>
+     * 
+     * @param request ModifySecondRankRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifySecondRankResponse
+     */
     public ModifySecondRankResponse modifySecondRankWithOptions(String appGroupIdentity, String appId, String name, ModifySecondRankRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3039,12 +4329,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifySecondRankResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies a fine sort expression that is configured for a specific OpenSearch application version. If you set dryRun to true, the specified fine sort expression is checked after the expression is modified. By default, the value of dryRun is false if you do not specify this parameter.</p>
+     * 
+     * @param request ModifySecondRankRequest
+     * @return ModifySecondRankResponse
+     */
     public ModifySecondRankResponse modifySecondRank(String appGroupIdentity, String appId, String name, ModifySecondRankRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.modifySecondRankWithOptions(appGroupIdentity, appId, name, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Accepts the changes in intervention entries.</p>
+     * 
+     * @param request PushInterventionDictionaryEntriesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PushInterventionDictionaryEntriesResponse
+     */
     public PushInterventionDictionaryEntriesResponse pushInterventionDictionaryEntriesWithOptions(String name, PushInterventionDictionaryEntriesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3071,12 +4377,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PushInterventionDictionaryEntriesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Accepts the changes in intervention entries.</p>
+     * 
+     * @param request PushInterventionDictionaryEntriesRequest
+     * @return PushInterventionDictionaryEntriesResponse
+     */
     public PushInterventionDictionaryEntriesResponse pushInterventionDictionaryEntries(String name, PushInterventionDictionaryEntriesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.pushInterventionDictionaryEntriesWithOptions(name, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Accepts the changes in the entries of a custom analyzer.</p>
+     * 
+     * @param request PushUserAnalyzerEntriesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PushUserAnalyzerEntriesResponse
+     */
     public PushUserAnalyzerEntriesResponse pushUserAnalyzerEntriesWithOptions(String name, PushUserAnalyzerEntriesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3108,36 +4430,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PushUserAnalyzerEntriesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Accepts the changes in the entries of a custom analyzer.</p>
+     * 
+     * @param request PushUserAnalyzerEntriesRequest
+     * @return PushUserAnalyzerEntriesResponse
+     */
     public PushUserAnalyzerEntriesResponse pushUserAnalyzerEntries(String name, PushUserAnalyzerEntriesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.pushUserAnalyzerEntriesWithOptions(name, request, headers, runtime);
     }
 
-    public RankPreviewQueryResponse rankPreviewQueryWithOptions(String appGroupIdentity, String modelName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "RankPreviewQuery"),
-            new TeaPair("version", "2017-12-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/v4/openapi/app-groups/" + com.aliyun.openapiutil.Client.getEncodeParam(appGroupIdentity) + "/algorithm/models/" + com.aliyun.openapiutil.Client.getEncodeParam(modelName) + "/actions/query-rank"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new RankPreviewQueryResponse());
-    }
-
-    public RankPreviewQueryResponse rankPreviewQuery(String appGroupIdentity, String modelName) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.rankPreviewQueryWithOptions(appGroupIdentity, modelName, headers, runtime);
-    }
-
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ReleaseSortScriptResponse
+     */
     public ReleaseSortScriptResponse releaseSortScriptWithOptions(String appGroupIdentity, String scriptName, String appVersionId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -3156,12 +4466,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ReleaseSortScriptResponse());
     }
 
+    /**
+     * @return ReleaseSortScriptResponse
+     */
     public ReleaseSortScriptResponse releaseSortScript(String appGroupIdentity, String scriptName, String appVersionId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.releaseSortScriptWithOptions(appGroupIdentity, scriptName, appVersionId, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a version of an OpenSearch application.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveAppResponse
+     */
     public RemoveAppResponse removeAppWithOptions(String appGroupIdentity, String appId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -3180,12 +4501,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveAppResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a version of an OpenSearch application.</p>
+     * @return RemoveAppResponse
+     */
     public RemoveAppResponse removeApp(String appGroupIdentity, String appId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.removeAppWithOptions(appGroupIdentity, appId, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveAppGroupResponse
+     */
     public RemoveAppGroupResponse removeAppGroupWithOptions(String appGroupIdentity, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -3204,12 +4535,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveAppGroupResponse());
     }
 
+    /**
+     * @return RemoveAppGroupResponse
+     */
     public RemoveAppGroupResponse removeAppGroup(String appGroupIdentity) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.removeAppGroupWithOptions(appGroupIdentity, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Disables data collection.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveDataCollectionResponse
+     */
     public RemoveDataCollectionResponse removeDataCollectionWithOptions(String appGroupIdentity, String dataCollectionIdentity, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -3228,12 +4570,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveDataCollectionResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Disables data collection.</p>
+     * @return RemoveDataCollectionResponse
+     */
     public RemoveDataCollectionResponse removeDataCollection(String appGroupIdentity, String dataCollectionIdentity) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.removeDataCollectionWithOptions(appGroupIdentity, dataCollectionIdentity, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveFirstRankResponse
+     */
     public RemoveFirstRankResponse removeFirstRankWithOptions(String appGroupIdentity, String appId, String name, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -3252,12 +4604,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveFirstRankResponse());
     }
 
+    /**
+     * @return RemoveFirstRankResponse
+     */
     public RemoveFirstRankResponse removeFirstRank(String appGroupIdentity, String appId, String name) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.removeFirstRankWithOptions(appGroupIdentity, appId, name, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveInterventionDictionaryResponse
+     */
     public RemoveInterventionDictionaryResponse removeInterventionDictionaryWithOptions(String name, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -3276,12 +4636,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveInterventionDictionaryResponse());
     }
 
+    /**
+     * @return RemoveInterventionDictionaryResponse
+     */
     public RemoveInterventionDictionaryResponse removeInterventionDictionary(String name) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.removeInterventionDictionaryWithOptions(name, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveQueryProcessorResponse
+     */
     public RemoveQueryProcessorResponse removeQueryProcessorWithOptions(String appGroupIdentity, String appId, String name, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -3300,12 +4668,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveQueryProcessorResponse());
     }
 
+    /**
+     * @return RemoveQueryProcessorResponse
+     */
     public RemoveQueryProcessorResponse removeQueryProcessor(String appGroupIdentity, String appId, String name) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.removeQueryProcessorWithOptions(appGroupIdentity, appId, name, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveScheduledTaskResponse
+     */
     public RemoveScheduledTaskResponse removeScheduledTaskWithOptions(String appGroupIdentity, String taskId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -3324,12 +4700,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveScheduledTaskResponse());
     }
 
+    /**
+     * @return RemoveScheduledTaskResponse
+     */
     public RemoveScheduledTaskResponse removeScheduledTask(String appGroupIdentity, String taskId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.removeScheduledTaskWithOptions(appGroupIdentity, taskId, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a query policy.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveSearchStrategyResponse
+     */
     public RemoveSearchStrategyResponse removeSearchStrategyWithOptions(String appGroupIdentity, String appId, String strategyName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -3348,12 +4735,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveSearchStrategyResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a query policy.</p>
+     * @return RemoveSearchStrategyResponse
+     */
     public RemoveSearchStrategyResponse removeSearchStrategy(String appGroupIdentity, String appId, String strategyName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.removeSearchStrategyWithOptions(appGroupIdentity, appId, strategyName, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveSecondRankResponse
+     */
     public RemoveSecondRankResponse removeSecondRankWithOptions(String appGroupIdentity, String appId, String name, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -3372,12 +4769,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveSecondRankResponse());
     }
 
+    /**
+     * @return RemoveSecondRankResponse
+     */
     public RemoveSecondRankResponse removeSecondRank(String appGroupIdentity, String appId, String name) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.removeSecondRankWithOptions(appGroupIdentity, appId, name, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveUserAnalyzerResponse
+     */
     public RemoveUserAnalyzerResponse removeUserAnalyzerWithOptions(String name, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -3396,12 +4801,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveUserAnalyzerResponse());
     }
 
+    /**
+     * @return RemoveUserAnalyzerResponse
+     */
     public RemoveUserAnalyzerResponse removeUserAnalyzer(String name) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.removeUserAnalyzerWithOptions(name, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Renews an application. This operation is not available now. You must renew an application in the OpenSearch console.</p>
+     * 
+     * @param request RenewAppGroupRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RenewAppGroupResponse
+     */
     public RenewAppGroupResponse renewAppGroupWithOptions(String appGroupIdentity, RenewAppGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3428,12 +4845,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RenewAppGroupResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Renews an application. This operation is not available now. You must renew an application in the OpenSearch console.</p>
+     * 
+     * @param request RenewAppGroupRequest
+     * @return RenewAppGroupResponse
+     */
     public RenewAppGroupResponse renewAppGroup(String appGroupIdentity, RenewAppGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.renewAppGroupWithOptions(appGroupIdentity, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Converts a service-based application to an instance-based application.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ReplaceAppGroupCommodityCodeResponse
+     */
     public ReplaceAppGroupCommodityCodeResponse replaceAppGroupCommodityCodeWithOptions(String appGroupIdentity, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -3452,12 +4884,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ReplaceAppGroupCommodityCodeResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Converts a service-based application to an instance-based application.</p>
+     * @return ReplaceAppGroupCommodityCodeResponse
+     */
     public ReplaceAppGroupCommodityCodeResponse replaceAppGroupCommodityCode(String appGroupIdentity) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.replaceAppGroupCommodityCodeWithOptions(appGroupIdentity, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Uploads a sort script.</p>
+     * 
+     * @param request SaveSortScriptFileRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SaveSortScriptFileResponse
+     */
     public SaveSortScriptFileResponse saveSortScriptFileWithOptions(String appGroupIdentity, String scriptName, String appVersionId, String fileName, SaveSortScriptFileRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -3487,12 +4933,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SaveSortScriptFileResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Uploads a sort script.</p>
+     * 
+     * @param request SaveSortScriptFileRequest
+     * @return SaveSortScriptFileResponse
+     */
     public SaveSortScriptFileResponse saveSortScriptFile(String appGroupIdentity, String scriptName, String appVersionId, String fileName, SaveSortScriptFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.saveSortScriptFileWithOptions(appGroupIdentity, scriptName, appVersionId, fileName, request, headers, runtime);
     }
 
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartSlowQueryAnalyzerResponse
+     */
     public StartSlowQueryAnalyzerResponse startSlowQueryAnalyzerWithOptions(String appGroupIdentity, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -3511,12 +4969,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartSlowQueryAnalyzerResponse());
     }
 
+    /**
+     * @return StartSlowQueryAnalyzerResponse
+     */
     public StartSlowQueryAnalyzerResponse startSlowQueryAnalyzer(String appGroupIdentity) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.startSlowQueryAnalyzerWithOptions(appGroupIdentity, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Adds tags to resources.</p>
+     * 
+     * @param request TagResourcesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TagResourcesResponse
+     */
     public TagResourcesResponse tagResourcesWithOptions(TagResourcesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -3550,6 +5020,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourcesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Adds tags to resources.</p>
+     * 
+     * @param request TagResourcesRequest
+     * @return TagResourcesResponse
+     */
     public TagResourcesResponse tagResources(TagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -3557,12 +5034,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the request.
-      *
-      * @param request UnbindESUserAnalyzerRequest
-      * @param headers map
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UnbindESUserAnalyzerResponse
+     * <b>description</b> :
+     * <p>You can call this operation to unbind a custom analyzer from an Elasticsearch instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Unbinds a custom analyzer from an Elasticsearch instance.</p>
+     * 
+     * @param request UnbindESUserAnalyzerRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UnbindESUserAnalyzerResponse
      */
     public UnbindESUserAnalyzerResponse unbindESUserAnalyzerWithOptions(String appGroupIdentity, String esInstanceId, UnbindESUserAnalyzerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3585,10 +5066,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the request.
-      *
-      * @param request UnbindESUserAnalyzerRequest
-      * @return UnbindESUserAnalyzerResponse
+     * <b>description</b> :
+     * <p>You can call this operation to unbind a custom analyzer from an Elasticsearch instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Unbinds a custom analyzer from an Elasticsearch instance.</p>
+     * 
+     * @param request UnbindESUserAnalyzerRequest
+     * @return UnbindESUserAnalyzerResponse
      */
     public UnbindESUserAnalyzerResponse unbindESUserAnalyzer(String appGroupIdentity, String esInstanceId, UnbindESUserAnalyzerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -3596,6 +5081,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.unbindESUserAnalyzerWithOptions(appGroupIdentity, esInstanceId, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Unbinds an Elasticsearch instance from an OpenSearch application.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UnbindEsInstanceResponse
+     */
     public UnbindEsInstanceResponse unbindEsInstanceWithOptions(String appGroupIdentity, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -3614,12 +5107,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UnbindEsInstanceResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Unbinds an Elasticsearch instance from an OpenSearch application.</p>
+     * @return UnbindEsInstanceResponse
+     */
     public UnbindEsInstanceResponse unbindEsInstance(String appGroupIdentity) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.unbindEsInstanceWithOptions(appGroupIdentity, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Remove tags from resources.</p>
+     * 
+     * @param tmpReq UntagResourcesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UntagResourcesResponse
+     */
     public UntagResourcesResponse untagResourcesWithOptions(UntagResourcesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UntagResourcesShrinkRequest request = new UntagResourcesShrinkRequest();
@@ -3667,12 +5174,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourcesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Remove tags from resources.</p>
+     * 
+     * @param request UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
     public UntagResourcesResponse untagResources(UntagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.untagResourcesWithOptions(request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the parameters of an A/B test.</p>
+     * 
+     * @param request UpdateABTestExperimentRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateABTestExperimentResponse
+     */
     public UpdateABTestExperimentResponse updateABTestExperimentWithOptions(String appGroupIdentity, String sceneId, String groupId, String experimentId, UpdateABTestExperimentRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3699,12 +5222,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateABTestExperimentResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the parameters of an A/B test.</p>
+     * 
+     * @param request UpdateABTestExperimentRequest
+     * @return UpdateABTestExperimentResponse
+     */
     public UpdateABTestExperimentResponse updateABTestExperiment(String appGroupIdentity, String sceneId, String groupId, String experimentId, UpdateABTestExperimentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateABTestExperimentWithOptions(appGroupIdentity, sceneId, groupId, experimentId, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies whitelists.</p>
+     * 
+     * @param request UpdateABTestFixedFlowDividersRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateABTestFixedFlowDividersResponse
+     */
     public UpdateABTestFixedFlowDividersResponse updateABTestFixedFlowDividersWithOptions(String appGroupIdentity, String sceneId, String groupId, String experimentId, UpdateABTestFixedFlowDividersRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3725,12 +5264,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateABTestFixedFlowDividersResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies whitelists.</p>
+     * 
+     * @param request UpdateABTestFixedFlowDividersRequest
+     * @return UpdateABTestFixedFlowDividersResponse
+     */
     public UpdateABTestFixedFlowDividersResponse updateABTestFixedFlowDividers(String appGroupIdentity, String sceneId, String groupId, String experimentId, UpdateABTestFixedFlowDividersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateABTestFixedFlowDividersWithOptions(appGroupIdentity, sceneId, groupId, experimentId, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies a test group.</p>
+     * 
+     * @param request UpdateABTestGroupRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateABTestGroupResponse
+     */
     public UpdateABTestGroupResponse updateABTestGroupWithOptions(String appGroupIdentity, String sceneId, String groupId, UpdateABTestGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3757,12 +5312,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateABTestGroupResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies a test group.</p>
+     * 
+     * @param request UpdateABTestGroupRequest
+     * @return UpdateABTestGroupResponse
+     */
     public UpdateABTestGroupResponse updateABTestGroup(String appGroupIdentity, String sceneId, String groupId, UpdateABTestGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateABTestGroupWithOptions(appGroupIdentity, sceneId, groupId, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies an A/B test scenario.</p>
+     * 
+     * @param request UpdateABTestSceneRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateABTestSceneResponse
+     */
     public UpdateABTestSceneResponse updateABTestSceneWithOptions(String appGroupIdentity, String sceneId, UpdateABTestSceneRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3789,12 +5360,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateABTestSceneResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies an A/B test scenario.</p>
+     * 
+     * @param request UpdateABTestSceneRequest
+     * @return UpdateABTestSceneResponse
+     */
     public UpdateABTestSceneResponse updateABTestScene(String appGroupIdentity, String sceneId, UpdateABTestSceneRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateABTestSceneWithOptions(appGroupIdentity, sceneId, request, headers, runtime);
     }
 
+    /**
+     * @param request UpdateFetchFieldsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateFetchFieldsResponse
+     */
     public UpdateFetchFieldsResponse updateFetchFieldsWithOptions(String appGroupIdentity, String appId, UpdateFetchFieldsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3821,12 +5405,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateFetchFieldsResponse());
     }
 
+    /**
+     * @param request UpdateFetchFieldsRequest
+     * @return UpdateFetchFieldsResponse
+     */
     public UpdateFetchFieldsResponse updateFetchFields(String appGroupIdentity, String appId, UpdateFetchFieldsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateFetchFieldsWithOptions(appGroupIdentity, appId, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Sets the default algorithm instance used by the specified application. The new algorithm instance automatically overwrites the most recently set default instance. If no instance is set, the default instance is canceled.</p>
+     * 
+     * @param request UpdateFunctionDefaultInstanceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateFunctionDefaultInstanceResponse
+     */
     public UpdateFunctionDefaultInstanceResponse updateFunctionDefaultInstanceWithOptions(String appGroupIdentity, String functionName, UpdateFunctionDefaultInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -3852,12 +5449,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateFunctionDefaultInstanceResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Sets the default algorithm instance used by the specified application. The new algorithm instance automatically overwrites the most recently set default instance. If no instance is set, the default instance is canceled.</p>
+     * 
+     * @param request UpdateFunctionDefaultInstanceRequest
+     * @return UpdateFunctionDefaultInstanceResponse
+     */
     public UpdateFunctionDefaultInstanceResponse updateFunctionDefaultInstance(String appGroupIdentity, String functionName, UpdateFunctionDefaultInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateFunctionDefaultInstanceWithOptions(appGroupIdentity, functionName, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates an algorithm instance.</p>
+     * 
+     * @param request UpdateFunctionInstanceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateFunctionInstanceResponse
+     */
     public UpdateFunctionInstanceResponse updateFunctionInstanceWithOptions(String appGroupIdentity, String functionName, String instanceName, UpdateFunctionInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -3895,12 +5508,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateFunctionInstanceResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates an algorithm instance.</p>
+     * 
+     * @param request UpdateFunctionInstanceRequest
+     * @return UpdateFunctionInstanceResponse
+     */
     public UpdateFunctionInstanceResponse updateFunctionInstance(String appGroupIdentity, String functionName, String instanceName, UpdateFunctionInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateFunctionInstanceWithOptions(appGroupIdentity, functionName, instanceName, request, headers, runtime);
     }
 
+    /**
+     * <b>description</b> :
+     * <p>You can call this operation to update the information about resources by resource name. You can modify only the values of data and description.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates an algorithm resource.</p>
+     * 
+     * @param request UpdateFunctionResourceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateFunctionResourceResponse
+     */
     public UpdateFunctionResourceResponse updateFunctionResourceWithOptions(String appGroupIdentity, String functionName, String resourceName, UpdateFunctionResourceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -3930,12 +5562,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateFunctionResourceResponse());
     }
 
+    /**
+     * <b>description</b> :
+     * <p>You can call this operation to update the information about resources by resource name. You can modify only the values of data and description.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates an algorithm resource.</p>
+     * 
+     * @param request UpdateFunctionResourceRequest
+     * @return UpdateFunctionResourceResponse
+     */
     public UpdateFunctionResourceResponse updateFunctionResource(String appGroupIdentity, String functionName, String resourceName, UpdateFunctionResourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateFunctionResourceWithOptions(appGroupIdentity, functionName, resourceName, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies a query policy.</p>
+     * 
+     * @param request UpdateSearchStrategyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateSearchStrategyResponse
+     */
     public UpdateSearchStrategyResponse updateSearchStrategyWithOptions(String appGroupIdentity, String appId, String strategyName, UpdateSearchStrategyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3956,6 +5607,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSearchStrategyResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies a query policy.</p>
+     * 
+     * @param request UpdateSearchStrategyRequest
+     * @return UpdateSearchStrategyResponse
+     */
     public UpdateSearchStrategyResponse updateSearchStrategy(String appGroupIdentity, String appId, String strategyName, UpdateSearchStrategyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -3963,11 +5621,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to modify the description of a sort script.
-      *
-      * @param headers map
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpdateSortScriptResponse
+     * <b>description</b> :
+     * <p>You can call this operation to modify the description of a sort script.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the description of a sort script.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateSortScriptResponse
      */
     public UpdateSortScriptResponse updateSortScriptWithOptions(String appGroupIdentity, String appVersionId, String scriptName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3988,9 +5650,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to modify the description of a sort script.
-      *
-      * @return UpdateSortScriptResponse
+     * <b>description</b> :
+     * <p>You can call this operation to modify the description of a sort script.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the description of a sort script.</p>
+     * @return UpdateSortScriptResponse
      */
     public UpdateSortScriptResponse updateSortScript(String appGroupIdentity, String appVersionId, String scriptName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -3998,6 +5663,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateSortScriptWithOptions(appGroupIdentity, appVersionId, scriptName, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates summaries. A dry run is supported.</p>
+     * 
+     * @param request UpdateSummariesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateSummariesResponse
+     */
     public UpdateSummariesResponse updateSummariesWithOptions(String appGroupIdentity, String appId, UpdateSummariesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4024,12 +5698,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSummariesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates summaries. A dry run is supported.</p>
+     * 
+     * @param request UpdateSummariesRequest
+     * @return UpdateSummariesResponse
+     */
     public UpdateSummariesResponse updateSummaries(String appGroupIdentity, String appId, UpdateSummariesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateSummariesWithOptions(appGroupIdentity, appId, request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Verifies data sources.</p>
+     * 
+     * @param request ValidateDataSourcesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ValidateDataSourcesResponse
+     */
     public ValidateDataSourcesResponse validateDataSourcesWithOptions(ValidateDataSourcesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -4050,6 +5740,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ValidateDataSourcesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Verifies data sources.</p>
+     * 
+     * @param request ValidateDataSourcesRequest
+     * @return ValidateDataSourcesResponse
+     */
     public ValidateDataSourcesResponse validateDataSources(ValidateDataSourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();

@@ -6,42 +6,63 @@ import com.aliyun.tea.*;
 public class GetFunctionInstanceResponseBody extends TeaModel {
     /**
      * <p>The error code. If no error occurs, this parameter is left empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Instance.NotExist</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpCode")
     public Long httpCode;
 
     /**
      * <p>The time consumed for the request, in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("Latency")
     public Long latency;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance not exist.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>68ED4E1B-92B8-5821-A886-9C90686139EB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The details of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("Result")
     public GetFunctionInstanceResponseBodyResult result;
 
     /**
      * <p>The status of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Status")
     public String status;
@@ -110,18 +131,27 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
     public static class GetFunctionInstanceResponseBodyResultBelongs extends TeaModel {
         /**
          * <p>The category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>general</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>The industry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecommerce</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
          * <p>The abbreviation of the language that applies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         @NameInMap("Language")
         public String language;
@@ -160,12 +190,18 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
     public static class GetFunctionInstanceResponseBodyResultCreateParameters extends TeaModel {
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>param1</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value1</p>
          */
         @NameInMap("Value")
         public String value;
@@ -196,18 +232,25 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
     public static class GetFunctionInstanceResponseBodyResultTask extends TeaModel {
         /**
          * <p>The status of the task. Valid values:</p>
-         * <br>
-         * <p>*   success: succeeded</p>
-         * <p>*   failed: failed</p>
-         * <p>*   untrained: to be trained</p>
-         * <p>*   pending: being scheduled</p>
-         * <p>*   running: being trained</p>
+         * <ul>
+         * <li>success: succeeded</li>
+         * <li>failed: failed</li>
+         * <li>untrained: to be trained</li>
+         * <li>pending: being scheduled</li>
+         * <li>running: being trained</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("DagStatus")
         public String dagStatus;
 
         /**
          * <p>The time consumed for the most recent run, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("LastRunTime")
         public Long lastRunTime;
@@ -238,12 +281,18 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
     public static class GetFunctionInstanceResponseBodyResultUsageParameters extends TeaModel {
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>use_param1</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value1</p>
          */
         @NameInMap("Value")
         public String value;
@@ -286,66 +335,98 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The time when the task was created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The cron expression used to schedule training, in the format of (Minutes Hours DayofMonth Month DayofWeek). If the value is empty, it indicates that no periodic training is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 3 ? \* 0,1,3,5 (at 3 a.m. on Sunday, Monday, Wednesday, and Friday)</p>
          */
         @NameInMap("Cron")
         public String cron;
 
         /**
          * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance descriptions</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The extended information, which is a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;dataReport\&quot;:{},\&quot;errors\&quot;:{}}</p>
          */
         @NameInMap("ExtendInfo")
         public String extendInfo;
 
         /**
          * <p>The name of the feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ctr</p>
          */
         @NameInMap("FunctionName")
         public String functionName;
 
         /**
          * <p>The type of the feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PAAS</p>
          */
         @NameInMap("FunctionType")
         public String functionType;
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ctr_test</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The type of the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tf_checkpoint</p>
          */
         @NameInMap("ModelType")
         public String modelType;
 
         /**
          * <p>How the instance is created. Valid values:</p>
-         * <br>
-         * <p>*   user: The instance is created by user.</p>
-         * <p>*   builtin: The instance is created by the system.</p>
+         * <ul>
+         * <li>user: The instance is created by user.</li>
+         * <li>builtin: The instance is created by the system.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
          * <p>The status of the instance. Valid values:</p>
-         * <br>
-         * <p>1.  unavailable: No model is available. Models must be trained before you can use them.</p>
-         * <p>2.  available: Models can be used.</p>
+         * <ol>
+         * <li>unavailable: No model is available. Models must be trained before you can use them.</li>
+         * <li>available: Models can be used.</li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>available</p>
          */
         @NameInMap("Status")
         public String status;
@@ -364,6 +445,9 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
          */
         @NameInMap("VersionId")
         public Long versionId;

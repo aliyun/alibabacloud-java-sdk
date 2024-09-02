@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeSlowQueryStatusResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5C1C1C45-C64A-AD30-565F-140871D57E5E</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,25 +43,36 @@ public class DescribeSlowQueryStatusResponseBody extends TeaModel {
     public static class DescribeSlowQueryStatusResponseBodyResult extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100298370</p>
          */
         @NameInMap("appGroupId")
         public String appGroupId;
 
         /**
          * <p>The network type of the slow query optimization service. Valid values:</p>
-         * <br>
-         * <p>*   outer: the Internet</p>
-         * <p>*   internal: the internal network</p>
+         * <ul>
+         * <li>outer: the Internet</li>
+         * <li>internal: the internal network</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>internal</p>
          */
         @NameInMap("region")
         public String region;
 
         /**
          * <p>The status of the slow query optimization service. Valid values:</p>
-         * <br>
-         * <p>*   enabled</p>
-         * <p>*   disabled</p>
-         * <p>*   n/a</p>
+         * <ul>
+         * <li>enabled</li>
+         * <li>disabled</li>
+         * <li>n/a</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>disabled</p>
          */
         @NameInMap("status")
         public String status;

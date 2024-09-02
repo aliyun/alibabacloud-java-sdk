@@ -5,18 +5,33 @@ import com.aliyun.tea.*;
 
 public class ListScheduledTasksRequest extends TeaModel {
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("pageSize")
     public Integer pageSize;
 
     /**
+     * <p>The scheduled task type. Valid values:</p>
+     * <ul>
+     * <li>wipe: data cleaning.</li>
+     * <li>fork: reindexing.</li>
+     * <li>check-status: application status check.</li>
+     * <li>index: reindexing.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
      * <p>wipe</p>
      */
     @NameInMap("type")

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeABTestExperimentResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D77D0DAF-790D-F5F5-A9C0-133738165014</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
     public static class DescribeABTestExperimentResponseBodyResultParams extends TeaModel {
         /**
          * <p>The name of the rough sort policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("first_formula_name")
         public String firstFormulaName;
@@ -62,27 +68,40 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
     public static class DescribeABTestExperimentResponseBodyResult extends TeaModel {
         /**
          * <p>The time when the test was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1588842080</p>
          */
         @NameInMap("created")
         public Integer created;
 
         /**
          * <p>The ID of the test.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12888</p>
          */
         @NameInMap("id")
         public String id;
 
         /**
          * <p>The name of the test.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The status of the test. Valid values:</p>
-         * <br>
-         * <p>*   true: in effect</p>
-         * <p>*   false: not in effect</p>
+         * <ul>
+         * <li>true: in effect</li>
+         * <li>false: not in effect</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("online")
         public Boolean online;
@@ -95,12 +114,18 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
 
         /**
          * <p>The percentage of traffic that is routed to the test.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("traffic")
         public Integer traffic;
 
         /**
          * <p>The time when the test was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1588842080</p>
          */
         @NameInMap("updated")
         public Integer updated;

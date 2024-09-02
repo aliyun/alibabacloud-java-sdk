@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeDataCollctionResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>72FAD77B-83F9-F393-BA8E-5834E2427BF8</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -39,75 +42,102 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
 
     public static class DescribeDataCollctionResponseBodyResult extends TeaModel {
         /**
-         * <p>The time when the data collection task was created.</p>
+         * <p>The time when the task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1581065837</p>
          */
         @NameInMap("created")
         public Integer created;
 
         /**
-         * <p>The type of the data that is collected by the task. Valid values:</p>
-         * <br>
-         * <p>*   behavior: behavioral data</p>
-         * <p>*   item_info: project data</p>
-         * <p>*   industry_specific: industry-specific data</p>
+         * <p>The type of data collected. Valid values:</p>
+         * <ul>
+         * <li>behavior: behavioral data.</li>
+         * <li>item_info: project information.</li>
+         * <li>industry_specific: industry-specific data.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BEHAVIOR</p>
          */
         @NameInMap("dataCollectionType")
         public String dataCollectionType;
 
         /**
          * <p>The ID of the data collection task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>286</p>
          */
         @NameInMap("id")
         public String id;
 
         /**
-         * <p>The industry to which the data collection task applies. Valid values:</p>
-         * <br>
-         * <p>*   general</p>
-         * <p>*   ecommerce</p>
+         * <p>The industry name. Valid values:</p>
+         * <ul>
+         * <li>general</li>
+         * <li>ecommerce</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GENERAL</p>
          */
         @NameInMap("industryName")
         public String industryName;
 
         /**
          * <p>The name of the data collection task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>os_function_test_v1</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The status of the data collection task. Valid values:</p>
-         * <br>
-         * <p>*   0: disabled</p>
-         * <p>*   1: being enabled</p>
-         * <p>*   2: enabled</p>
-         * <p>*   3: failed to be enabled</p>
+         * <p>The status of the data collection feature. Valid values:</p>
+         * <ul>
+         * <li>0: The feature is disabled.</li>
+         * <li>1: The feature is being enabled.</li>
+         * <li>2: The feature is enabled.</li>
+         * <li>3: The feature failed to be enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("status")
         public Integer status;
 
         /**
-         * <p>The ID of the sundial.</p>
+         * <p>The sundial ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1755</p>
          */
         @NameInMap("sundialId")
         public String sundialId;
 
         /**
-         * <p>The type of the data source. Valid values:</p>
-         * <br>
-         * <p>*   server</p>
-         * <br>
-         * <p>*   web</p>
-         * <br>
-         * <p>*   app</p>
-         * <br>
-         * <p>    Note: Only server is supported.</p>
+         * <p>The type of the source from which data was collected. Valid values:</p>
+         * <ul>
+         * <li>server</li>
+         * <li>web</li>
+         * <li>app Note: Only server is supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>server</p>
          */
         @NameInMap("type")
         public String type;
 
         /**
          * <p>The time when the data collection task was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1581065904</p>
          */
         @NameInMap("updated")
         public Integer updated;

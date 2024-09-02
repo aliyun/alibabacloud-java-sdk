@@ -5,21 +5,28 @@ import com.aliyun.tea.*;
 
 public class ListQuotaReviewTasksResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;3351A21F-705B-508C-9450-DA65A681547F&quot;</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>The information about the ticket for application quota approval.</p>
-     * <br>
-     * <p>For more information, see [QuotaReviewTask](~~173609~~).</p>
+     * <p>The information about the tickets. For more information, see <a href="https://help.aliyun.com/document_detail/173609.html">QuotaReviewTask</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("result")
     public java.util.List<ListQuotaReviewTasksResponseBodyResult> result;
 
     /**
-     * <p>The total number of the returned tickets.</p>
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>500</p>
      */
     @NameInMap("totalCount")
     public Integer totalCount;
@@ -55,97 +62,145 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
 
     public static class ListQuotaReviewTasksResponseBodyResult extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120123456</p>
          */
         @NameInMap("appGroupId")
         public Integer appGroupId;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;td_test_os&quot;</p>
          */
         @NameInMap("appGroupName")
         public String appGroupName;
 
         /**
-         * <p>The type of the application.</p>
+         * <p>The application type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;standard&quot;</p>
          */
         @NameInMap("appGroupType")
         public String appGroupType;
 
         /**
          * <p>Indicates whether the ticket is approved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("approved")
         public Boolean approved;
 
         /**
-         * <p>Indicates whether the model is available.</p>
+         * <p>Indicates whether the application is available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("available")
         public Boolean available;
 
         /**
          * <p>The time when the ticket was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;2020-04-08T08:29:45+0000&quot;</p>
          */
         @NameInMap("gmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The time when the ticket was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;2020-04-08T08:36:36+0000&quot;</p>
          */
         @NameInMap("gmtModified")
         public String gmtModified;
 
         /**
-         * <p>The ID of the ticket.</p>
+         * <p>The ticket ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>142</p>
          */
         @NameInMap("id")
         public Integer id;
 
         /**
-         * <p>The remarks of the ticket.</p>
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("memo")
         public String memo;
 
         /**
          * <p>The computing resource quota that is applied for.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000</p>
          */
         @NameInMap("newComputeResource")
         public Integer newComputeResource;
 
         /**
          * <p>The storage capacity quota that is applied for.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1100</p>
          */
         @NameInMap("newSocSize")
         public Integer newSocSize;
 
         /**
          * <p>The application specifications that are applied for.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;opensearch.private.common&quot;</p>
          */
         @NameInMap("newSpec")
         public String newSpec;
 
         /**
          * <p>The original quota of computing resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         @NameInMap("oldComputeResource")
         public Integer oldComputeResource;
 
         /**
          * <p>The original quota of storage capacity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>900</p>
          */
         @NameInMap("oldDocSize")
         public Integer oldDocSize;
 
         /**
-         * <p>The original application specifications.</p>
+         * <p>The original specifications of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;opensearch.private.common&quot;</p>
          */
         @NameInMap("oldSpec")
         public String oldSpec;
 
         /**
          * <p>Indicates whether the ticket is pending.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("pending")
         public Boolean pending;

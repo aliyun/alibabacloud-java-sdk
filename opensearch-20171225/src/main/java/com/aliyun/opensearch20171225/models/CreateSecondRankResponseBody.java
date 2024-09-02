@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateSecondRankResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ABCDEFGH</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The information about the fine sort expression.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ?> result;

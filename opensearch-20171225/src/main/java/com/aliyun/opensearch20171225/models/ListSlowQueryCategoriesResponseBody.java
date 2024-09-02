@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListSlowQueryCategoriesResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4406F40B-A0A2-9D5D-531F-3B6936567584</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,24 +43,34 @@ public class ListSlowQueryCategoriesResponseBody extends TeaModel {
     public static class ListSlowQueryCategoriesResponseBodyResult extends TeaModel {
         /**
          * <p>The status of the analysis. Valid values:</p>
-         * <br>
-         * <p>*   PENDING: preparing</p>
-         * <p>*   SUCCESS: succeeded</p>
-         * <p>*   RUNNING: running</p>
-         * <p>*   FAILED: failed</p>
-         * <p>*   N/A: unknown</p>
+         * <ul>
+         * <li>PENDING: preparing</li>
+         * <li>SUCCESS: succeeded</li>
+         * <li>RUNNING: running</li>
+         * <li>FAILED: failed</li>
+         * <li>N/A: unknown</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;PENDING&quot;</p>
          */
         @NameInMap("analyzeStatus")
         public String analyzeStatus;
 
         /**
          * <p>The timestamp that indicates the end of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1589990340</p>
          */
         @NameInMap("end")
         public Integer end;
 
         /**
          * <p>The timestamp that indicates the beginning of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1589986800</p>
          */
         @NameInMap("start")
         public Integer start;

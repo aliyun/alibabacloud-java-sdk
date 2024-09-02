@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListSlowQueryQueriesResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EB250CA0-ACFD-C5DE-17CD-01445BFE8AE5</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class ListSlowQueryQueriesResponseBody extends TeaModel {
     public static class ListSlowQueryQueriesResponseBodyResult extends TeaModel {
         /**
          * <p>The content of the optimization suggestion for the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>no data</p>
          */
         @NameInMap("appQuery")
         public String appQuery;
 
         /**
          * <p>The end of the time range that was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1589990340</p>
          */
         @NameInMap("end")
         public Integer end;
 
         /**
          * <p>The ID of the optimization suggestion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("index")
         public Integer index;
 
         /**
          * <p>The beginning of the time range that was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1589986800</p>
          */
         @NameInMap("start")
         public Integer start;

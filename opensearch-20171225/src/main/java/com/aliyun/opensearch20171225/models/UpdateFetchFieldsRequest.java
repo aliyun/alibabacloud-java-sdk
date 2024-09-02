@@ -4,10 +4,16 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class UpdateFetchFieldsRequest extends TeaModel {
+    /**
+     * <p>The request body.</p>
+     */
     @NameInMap("body")
     public java.util.List<String> body;
 
     /**
+     * <p>true</p>
+     * 
+     * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("dryRun")

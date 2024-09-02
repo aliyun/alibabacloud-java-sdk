@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetDomainRequest extends TeaModel {
     /**
+     * <p>The name or ID of the application.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
      * <p>my_app_group_name</p>
      */
     @NameInMap("appGroupIdentity")

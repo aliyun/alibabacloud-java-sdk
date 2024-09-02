@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3B7E42BD-1D63-2F6B-C8E0-41BACEA76EEB</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>The result that was returned.</p>
+     * <p>The results returned.</p>
      */
     @NameInMap("result")
     public java.util.List<DescribeRegionsResponseBodyResult> result;
@@ -39,25 +42,37 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     public static class DescribeRegionsResponseBodyResult extends TeaModel {
         /**
-         * <p>The URL of the OpenSearch console.</p>
+         * <p>The console URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://opensearch-cn-hangzhou.console.aliyun.com">https://opensearch-cn-hangzhou.console.aliyun.com</a></p>
          */
         @NameInMap("consoleUrl")
         public String consoleUrl;
 
         /**
-         * <p>The endpoint of the region.</p>
+         * <p>The endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>opensearch.cn-hangzhou.aliyuncs.com</p>
          */
         @NameInMap("endpoint")
         public String endpoint;
 
         /**
-         * <p>The name of the region.</p>
+         * <p>The region name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China (Hangzhou)</p>
          */
         @NameInMap("localName")
         public String localName;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("regionId")
         public String regionId;

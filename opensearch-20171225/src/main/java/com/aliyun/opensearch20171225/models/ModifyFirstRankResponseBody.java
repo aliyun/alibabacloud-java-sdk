@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyFirstRankResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0A6EB64B-B4C8-CF02-810F-E660812972FF</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,22 +43,27 @@ public class ModifyFirstRankResponseBody extends TeaModel {
     public static class ModifyFirstRankResponseBodyResultMeta extends TeaModel {
         /**
          * <p>The parameters that are used by a function in the expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“1 ”</p>
          */
         @NameInMap("arg")
         public String arg;
 
         /**
          * <p>The attribute, feature function, or field to be searched for.</p>
-         * <br>
-         * <p>For more information about supported feature functions, see Rough sort functions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>static_bm25()</p>
          */
         @NameInMap("attribute")
         public String attribute;
 
         /**
-         * <p>The weight.</p>
-         * <br>
-         * <p>Valid values: \[-100000,100000] (excluding 0).</p>
+         * <p>The weight. Valid values: -100000 to 100000. The value cannot be 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("weight")
         public Float weight;
@@ -94,24 +102,33 @@ public class ModifyFirstRankResponseBody extends TeaModel {
     public static class ModifyFirstRankResponseBodyResult extends TeaModel {
         /**
          * <p>Indicates whether the expression is the default one.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("active")
         public Boolean active;
 
         /**
-         * <p>The description of the expression.</p>
+         * <p>The description of the rough sort expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The content of the expression.</p>
+         * <p>The information about the expression.</p>
          */
         @NameInMap("meta")
         public java.util.List<ModifyFirstRankResponseBodyResultMeta> meta;
 
         /**
          * <p>The name of the expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("name")
         public String name;

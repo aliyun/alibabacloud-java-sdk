@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetSortScriptFileResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ABCDEFGH</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class GetSortScriptFileResponseBody extends TeaModel {
     public static class GetSortScriptFileResponseBodyResult extends TeaModel {
         /**
          * <p>The script content that is encoded in the Base64 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>YWJjZGVmZw==</p>
          */
         @NameInMap("content")
         public String content;
 
         /**
          * <p>The time when the script was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-04-02 20:21:14</p>
          */
         @NameInMap("createTime")
         public String createTime;
 
         /**
-         * <p>The last time when the script was last modified.</p>
+         * <p>The time when the script was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-04-02 21:21:14</p>
          */
         @NameInMap("modifyTime")
         public String modifyTime;
 
         /**
-         * <p>The version of the script.</p>
+         * <p>The version of the script content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         @NameInMap("version")
         public Long version;

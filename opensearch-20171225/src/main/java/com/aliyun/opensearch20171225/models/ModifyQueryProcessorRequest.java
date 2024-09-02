@@ -4,10 +4,32 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ModifyQueryProcessorRequest extends TeaModel {
+    /**
+     * <p>The request parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;domain&quot;: &quot;GENERAL&quot;,
+     *     &quot;category&quot;: &quot;&quot;,
+     *     &quot;processors&quot;: [
+     *         {
+     *             &quot;name&quot;: &quot;synonym&quot;,
+     *             &quot;useSystemDictionary&quot;: true
+     *         },
+     *         {
+     *             &quot;name&quot;: &quot;stop_word&quot;,
+     *             &quot;useSystemDictionary&quot;: true
+     *         }
+     *     ]
+     * }</p>
+     */
     @NameInMap("body")
     public Object body;
 
     /**
+     * <p>Specifies whether the request is a dry run.</p>
+     * 
+     * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("dryRun")

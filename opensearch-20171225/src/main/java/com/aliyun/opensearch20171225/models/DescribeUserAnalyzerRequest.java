@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeUserAnalyzerRequest extends TeaModel {
     /**
+     * <p>The Associated information,output properties based on hierarchy.</p>
+     * <ul>
+     * <li><strong>all</strong>: Outputs associated app information</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
      * <p>all</p>
      */
     @NameInMap("with")

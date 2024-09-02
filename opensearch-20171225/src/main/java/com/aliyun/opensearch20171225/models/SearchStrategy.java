@@ -101,6 +101,10 @@ public class SearchStrategy extends TeaModel {
         @NameInMap("mergeProportion")
         public Integer mergeProportion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>keyword: 关键字查询 vector: 向量查询</p>
+         */
         @NameInMap("queryType")
         public String queryType;
 

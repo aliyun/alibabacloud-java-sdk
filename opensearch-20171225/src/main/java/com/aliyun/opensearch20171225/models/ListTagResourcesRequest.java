@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The token that is used to retrieve the next page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
@@ -18,6 +21,10 @@ public class ListTagResourcesRequest extends TeaModel {
 
     /**
      * <p>The resource type.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BIGDATA</p>
      */
     @NameInMap("resourceType")
     public String resourceType;
@@ -68,12 +75,18 @@ public class ListTagResourcesRequest extends TeaModel {
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bm</p>
          */
         @NameInMap("key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Uefi</p>
          */
         @NameInMap("value")
         public String value;

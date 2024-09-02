@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListQueryProcessorNersRequest extends TeaModel {
     /**
+     * <p>The type of the industry.</p>
+     * <ul>
+     * <li>ECOMMERCE</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
      * <p>ECOMMERCE</p>
      */
     @NameInMap("domain")

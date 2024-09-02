@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListTagResourcesShrinkRequest extends TeaModel {
     /**
      * <p>The token that is used to retrieve the next page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
@@ -18,6 +21,10 @@ public class ListTagResourcesShrinkRequest extends TeaModel {
 
     /**
      * <p>The resource type.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BIGDATA</p>
      */
     @NameInMap("resourceType")
     public String resourceType;

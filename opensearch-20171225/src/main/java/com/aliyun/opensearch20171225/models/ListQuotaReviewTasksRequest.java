@@ -5,12 +5,18 @@ import com.aliyun.tea.*;
 
 public class ListQuotaReviewTasksRequest extends TeaModel {
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("pageSize")

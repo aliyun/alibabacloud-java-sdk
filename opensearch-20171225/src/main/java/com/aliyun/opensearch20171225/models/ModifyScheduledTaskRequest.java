@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyScheduledTaskRequest extends TeaModel {
     /**
-     * <p>请求参数。</p>
+     * <p>The request parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request parameters.</p>
      */
     @NameInMap("body")
     public Object body;

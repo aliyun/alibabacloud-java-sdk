@@ -6,12 +6,15 @@ import com.aliyun.tea.*;
 public class RemoveAppResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>33477D76-C380-2D84-A4AD-043F52876CB1</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>N/A</p>
+     * <p>The return result.</p>
      */
     @NameInMap("result")
     public java.util.List<Integer> result;

@@ -4,6 +4,14 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class BindEsInstanceRequest extends TeaModel {
+    /**
+     * <p>The body of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *   &quot;esInstanceId&quot;: &quot;es-cn-abcde&quot;
+     * }</p>
+     */
     @NameInMap("body")
     public java.util.Map<String, ?> body;
 

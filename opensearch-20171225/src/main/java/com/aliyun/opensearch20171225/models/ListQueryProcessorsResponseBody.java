@@ -5,15 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListQueryProcessorsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0A6EB64B-B4C8-CF02-810F-E660812972FF</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>The information about each query analysis rule.</p>
-     * <br>
-     * <p>For more information, see [QueryProcessor](~~170014~~).</p>
+     * <p>The information about the query analysis rule.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/170014.html">QueryProcessor</a>.</p>
      */
     @NameInMap("result")
     public java.util.List<ListQueryProcessorsResponseBodyResult> result;
@@ -41,49 +43,63 @@ public class ListQueryProcessorsResponseBody extends TeaModel {
 
     public static class ListQueryProcessorsResponseBodyResult extends TeaModel {
         /**
-         * <p>Indicates whether the query analysis rule is the default one.</p>
+         * <p>Indicates whether the query analysis rule is a default rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("active")
         public Boolean active;
 
         /**
          * <p>The time when the query analysis rule was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1587398402</p>
          */
         @NameInMap("created")
         public Integer created;
 
         /**
-         * <p>The type of the industry. Valid values:</p>
-         * <br>
-         * <p>*   GENERAL</p>
-         * <p>*   ECOMMERCE</p>
-         * <p>*   IT_CONTENT</p>
+         * <p>The type of the industry to which the query analysis rule is applied. Valid values:</p>
+         * <ul>
+         * <li>GENERAL</li>
+         * <li>ECOMMERCE</li>
+         * <li>IT_CONTENT</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GENERAL</p>
          */
         @NameInMap("domain")
         public String domain;
 
         /**
-         * <p>The indexes to which the query analysis rule applies.</p>
+         * <p>The indexes to which the query analysis rule is applied.</p>
          */
         @NameInMap("indexes")
         public java.util.List<String> indexes;
 
         /**
          * <p>The name of the query analysis rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ner</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The features that are used in the query analysis rule.</p>
-         * <br>
-         * <p>For more information, see the ["Processor"](~~170014~~) section of the QueryProcessor topic.</p>
          */
         @NameInMap("processors")
         public java.util.List<java.util.Map<String, ?>> processors;
 
         /**
-         * <p>The time when the query analysis rule was last updated.</p>
+         * <p>The time when the query analysis rule was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1587398402</p>
          */
         @NameInMap("updated")
         public Integer updated;

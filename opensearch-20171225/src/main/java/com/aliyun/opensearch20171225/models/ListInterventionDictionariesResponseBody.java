@@ -6,20 +6,25 @@ import com.aliyun.tea.*;
 public class ListInterventionDictionariesResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0A6EB64B-B4C8-CF02-810F-E660812972FF</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>The information about each intervention dictionary.</p>
-     * <br>
-     * <p>For more information, see [InterventionDictionary](~~173608~~).</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/173608.html">InterventionDictionary</a>.</p>
      */
     @NameInMap("result")
     public java.util.List<ListInterventionDictionariesResponseBodyResult> result;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("totalCount")
     public Integer totalCount;
@@ -56,43 +61,62 @@ public class ListInterventionDictionariesResponseBody extends TeaModel {
     public static class ListInterventionDictionariesResponseBodyResult extends TeaModel {
         /**
          * <p>The custom analyzer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("analyzer")
         public String analyzer;
 
         /**
          * <p>The time when the intervention dictionary was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1539158325</p>
          */
         @NameInMap("created")
         public Integer created;
 
         /**
          * <p>The ID of the intervention dictionary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("id")
         public Integer id;
 
         /**
          * <p>The name of the intervention dictionary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tongyici</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The type of the intervention dictionary. Valid values:</p>
-         * <br>
-         * <p>*   stopword: an intervention dictionary for stop word filtering</p>
-         * <p>*   synonym: an intervention dictionary for synonym configuration</p>
-         * <p>*   correction: an intervention dictionary for spelling correction</p>
-         * <p>*   category_prediction: an intervention dictionary for category prediction</p>
-         * <p>*   ner: an intervention dictionary for named entity recognition (NER)</p>
-         * <p>*   term_weighting: an intervention dictionary for term weight analysis</p>
+         * <ul>
+         * <li>stopword: an intervention dictionary for stop word filtering</li>
+         * <li>synonym: an intervention dictionary for synonym configuration</li>
+         * <li>correction: an intervention dictionary for spelling correction</li>
+         * <li>category_prediction: an intervention dictionary for category prediction</li>
+         * <li>ner: an intervention dictionary for named entity recognition (NER)</li>
+         * <li>term_weighting: an intervention dictionary for term weight analysis</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>synonym</p>
          */
         @NameInMap("type")
         public String type;
 
         /**
          * <p>The time when the intervention dictionary was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1539158313</p>
          */
         @NameInMap("updated")
         public Integer updated;
