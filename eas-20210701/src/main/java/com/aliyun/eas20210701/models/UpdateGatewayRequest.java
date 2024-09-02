@@ -47,6 +47,12 @@ public class UpdateGatewayRequest extends TeaModel {
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <p>Indicates whether it is the default private gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsDefault")
     public Boolean isDefault;
 
@@ -59,6 +65,12 @@ public class UpdateGatewayRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The number of nodes in the private gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("Replicas")
     public Integer replicas;
 

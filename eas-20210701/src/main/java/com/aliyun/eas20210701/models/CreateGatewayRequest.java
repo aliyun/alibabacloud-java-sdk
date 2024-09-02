@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateGatewayRequest extends TeaModel {
     /**
-     * <p>The name of the resource group.</p>
+     * <p>The resource group ID. To obtain a resource group ID, see the ResourceId field in the response of the <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>eas-r-4gt8twzwllfo******</p>
@@ -17,19 +17,8 @@ public class CreateGatewayRequest extends TeaModel {
      * <p>Specifies whether to enable Internet access. Default value: false.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>false</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,7 +28,12 @@ public class CreateGatewayRequest extends TeaModel {
     public Boolean enableInternet;
 
     /**
-     * <p>Specifies whether to enable internal network access. Default value: true.</p>
+     * <p>Specifies whether to enable private access. Default value: true.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -48,7 +42,13 @@ public class CreateGatewayRequest extends TeaModel {
     public Boolean enableIntranet;
 
     /**
-     * <p>The instance type used for the private gateway.</p>
+     * <p>The instance type used by the private gateway. Valid values:</p>
+     * <ul>
+     * <li>2c4g</li>
+     * <li>4c8g</li>
+     * <li>8c16g</li>
+     * <li>16c32g</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,7 +58,7 @@ public class CreateGatewayRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The private gateway alias.</p>
+     * <p>The alias of the private gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>mygateway1</p>
@@ -66,6 +66,12 @@ public class CreateGatewayRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The number of nodes in the private gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("Replicas")
     public Integer replicas;
 
