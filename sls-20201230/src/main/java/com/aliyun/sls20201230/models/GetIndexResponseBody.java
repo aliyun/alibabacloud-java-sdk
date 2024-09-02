@@ -17,7 +17,7 @@ public class GetIndexResponseBody extends TeaModel {
      * <p>The configurations of field indexes. A field index is in the key-value format in which the key specifies the name of the field and the value specifies the index configuration of the field.</p>
      */
     @NameInMap("keys")
-    public java.util.Map<String, KeysValue> keys;
+    public java.util.Map<String, IndexKey> keys;
 
     /**
      * <p>The time when the index configurations were last updated. The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
@@ -75,6 +75,7 @@ public class GetIndexResponseBody extends TeaModel {
 
     /**
      * <p>The lifecycle of the index file. Valid values: 7, 30, and 90. Unit: day.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -95,11 +96,11 @@ public class GetIndexResponseBody extends TeaModel {
         return this.indexMode;
     }
 
-    public GetIndexResponseBody setKeys(java.util.Map<String, KeysValue> keys) {
+    public GetIndexResponseBody setKeys(java.util.Map<String, IndexKey> keys) {
         this.keys = keys;
         return this;
     }
-    public java.util.Map<String, KeysValue> getKeys() {
+    public java.util.Map<String, IndexKey> getKeys() {
         return this.keys;
     }
 
@@ -208,6 +209,7 @@ public class GetIndexResponseBody extends TeaModel {
 
         /**
          * <p>The delimiters.</p>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("token")
         public java.util.List<String> token;

@@ -858,39 +858,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.keys)) {
-            body.put("keys", request.keys);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.line)) {
-            body.put("line", request.line);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.logReduce)) {
-            body.put("log_reduce", request.logReduce);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.logReduceBlackList)) {
-            body.put("log_reduce_black_list", request.logReduceBlackList);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.logReduceWhiteList)) {
-            body.put("log_reduce_white_list", request.logReduceWhiteList);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.maxTextLen)) {
-            body.put("max_text_len", request.maxTextLen);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ttl)) {
-            body.put("ttl", request.ttl);
-        }
-
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateIndex"),
@@ -7577,62 +7548,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>queryMLServiceResults</p>
-     * 
-     * @deprecated OpenAPI QueryMLServiceResults is deprecated
-     * 
-     * @param request QueryMLServiceResultsRequest
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return QueryMLServiceResultsResponse
-     */
-    @Deprecated
-    // Deprecated
-    public QueryMLServiceResultsResponse queryMLServiceResultsWithOptions(String serviceName, QueryMLServiceResultsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.allowBuiltin)) {
-            query.put("allowBuiltin", request.allowBuiltin);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "QueryMLServiceResults"),
-            new TeaPair("version", "2020-12-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/ml/service/" + serviceName + "/analysis"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new QueryMLServiceResultsResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>queryMLServiceResults</p>
-     * 
-     * @deprecated OpenAPI QueryMLServiceResults is deprecated
-     * 
-     * @param request QueryMLServiceResultsRequest
-     * @return QueryMLServiceResultsResponse
-     */
-    @Deprecated
-    // Deprecated
-    public QueryMLServiceResultsResponse queryMLServiceResults(String serviceName, QueryMLServiceResultsRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.queryMLServiceResultsWithOptions(serviceName, request, headers, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>刷新token</p>
      * 
      * @param request RefreshTokenRequest
@@ -8754,39 +8669,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.keys)) {
-            body.put("keys", request.keys);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.line)) {
-            body.put("line", request.line);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.logReduce)) {
-            body.put("log_reduce", request.logReduce);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.logReduceBlackList)) {
-            body.put("log_reduce_black_list", request.logReduceBlackList);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.logReduceWhiteList)) {
-            body.put("log_reduce_white_list", request.logReduceWhiteList);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.maxTextLen)) {
-            body.put("max_text_len", request.maxTextLen);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ttl)) {
-            body.put("ttl", request.ttl);
-        }
-
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpdateIndex"),
