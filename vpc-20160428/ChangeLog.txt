@@ -1,3 +1,6 @@
+2024-09-02 Version: 7.12.0
+- Generated java 2016-04-28 for Vpc.
+
 2024-08-29 Version: 7.11.2
 - Update API ModifyRouteEntry: add param DestinationCidrBlock.
 - Update API ModifyRouteEntry: add param RouteTableId.
