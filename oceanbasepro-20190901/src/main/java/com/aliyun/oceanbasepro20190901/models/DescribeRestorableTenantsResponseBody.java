@@ -286,7 +286,7 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
          * <p>Oracle</p>
          */
         @NameInMap("TenantMode")
-        public Long tenantMode;
+        public String tenantMode;
 
         /**
          * <strong>example:</strong>
@@ -429,11 +429,11 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
             return this.tenantId;
         }
 
-        public DescribeRestorableTenantsResponseBodyTenants setTenantMode(Long tenantMode) {
+        public DescribeRestorableTenantsResponseBodyTenants setTenantMode(String tenantMode) {
             this.tenantMode = tenantMode;
             return this;
         }
-        public Long getTenantMode() {
+        public String getTenantMode() {
             return this.tenantMode;
         }
 
