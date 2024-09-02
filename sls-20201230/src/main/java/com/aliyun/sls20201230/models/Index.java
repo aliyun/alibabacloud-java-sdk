@@ -5,14 +5,7 @@ import com.aliyun.tea.*;
 
 public class Index extends TeaModel {
     @NameInMap("keys")
-    public java.util.Map<String, IndexKeysValue> keys;
-
-    /**
-     * <strong>example:</strong>
-     * <p>1622186280</p>
-     */
-    @NameInMap("lastModifyTime")
-    public Long lastModifyTime;
+    public java.util.Map<String, IndexKey> keys;
 
     @NameInMap("line")
     public IndexLine line;
@@ -37,34 +30,17 @@ public class Index extends TeaModel {
     @NameInMap("max_text_len")
     public Integer maxTextLen;
 
-    /**
-     * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>30</p>
-     */
-    @NameInMap("ttl")
-    public Integer ttl;
-
     public static Index build(java.util.Map<String, ?> map) throws Exception {
         Index self = new Index();
         return TeaModel.build(map, self);
     }
 
-    public Index setKeys(java.util.Map<String, IndexKeysValue> keys) {
+    public Index setKeys(java.util.Map<String, IndexKey> keys) {
         this.keys = keys;
         return this;
     }
-    public java.util.Map<String, IndexKeysValue> getKeys() {
+    public java.util.Map<String, IndexKey> getKeys() {
         return this.keys;
-    }
-
-    public Index setLastModifyTime(Long lastModifyTime) {
-        this.lastModifyTime = lastModifyTime;
-        return this;
-    }
-    public Long getLastModifyTime() {
-        return this.lastModifyTime;
     }
 
     public Index setLine(IndexLine line) {
@@ -105,14 +81,6 @@ public class Index extends TeaModel {
     }
     public Integer getMaxTextLen() {
         return this.maxTextLen;
-    }
-
-    public Index setTtl(Integer ttl) {
-        this.ttl = ttl;
-        return this;
-    }
-    public Integer getTtl() {
-        return this.ttl;
     }
 
     public static class IndexLine extends TeaModel {
