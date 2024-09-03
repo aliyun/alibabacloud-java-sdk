@@ -1096,6 +1096,25 @@ public class GetFileResponseBody extends TeaModel {
 
     }
 
+    public static class GetFileResponseBodyDataResourceDownloadLink extends TeaModel {
+        @NameInMap("downloadLink")
+        public String downloadLink;
+
+        public static GetFileResponseBodyDataResourceDownloadLink build(java.util.Map<String, ?> map) throws Exception {
+            GetFileResponseBodyDataResourceDownloadLink self = new GetFileResponseBodyDataResourceDownloadLink();
+            return TeaModel.build(map, self);
+        }
+
+        public GetFileResponseBodyDataResourceDownloadLink setDownloadLink(String downloadLink) {
+            this.downloadLink = downloadLink;
+            return this;
+        }
+        public String getDownloadLink() {
+            return this.downloadLink;
+        }
+
+    }
+
     public static class GetFileResponseBodyData extends TeaModel {
         /**
          * <p>The basic information about the file.</p>
@@ -1108,6 +1127,9 @@ public class GetFileResponseBody extends TeaModel {
          */
         @NameInMap("NodeConfiguration")
         public GetFileResponseBodyDataNodeConfiguration nodeConfiguration;
+
+        @NameInMap("ResourceDownloadLink")
+        public GetFileResponseBodyDataResourceDownloadLink resourceDownloadLink;
 
         public static GetFileResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetFileResponseBodyData self = new GetFileResponseBodyData();
@@ -1128,6 +1150,14 @@ public class GetFileResponseBody extends TeaModel {
         }
         public GetFileResponseBodyDataNodeConfiguration getNodeConfiguration() {
             return this.nodeConfiguration;
+        }
+
+        public GetFileResponseBodyData setResourceDownloadLink(GetFileResponseBodyDataResourceDownloadLink resourceDownloadLink) {
+            this.resourceDownloadLink = resourceDownloadLink;
+            return this;
+        }
+        public GetFileResponseBodyDataResourceDownloadLink getResourceDownloadLink() {
+            return this.resourceDownloadLink;
         }
 
     }
