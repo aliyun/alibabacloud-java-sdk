@@ -7,7 +7,7 @@ public class UpdateDataSourceRequest extends TeaModel {
     /**
      * <p>The details about the data source. You are not allowed to change the type of the data source. For example, you are not allowed to change the data source type from MaxCompute to MySQL. Examples of details of some common data sources:</p>
      * <ul>
-     * <li><p>MaxCompute</p>
+     * <li><p>odps</p>
      * <pre><code>{
      *   &quot;accessId&quot;: &quot;xssssss&quot;,
      *   &quot;accessKey&quot;: &quot;xsaxsaxsa&quot;,
@@ -18,7 +18,7 @@ public class UpdateDataSourceRequest extends TeaModel {
      * }
      * </code></pre>
      * </li>
-     * <li><p>MySQL</p>
+     * <li><p>mysql</p>
      * <pre><code>{
      *   &quot;database&quot;: &quot;xsaxsa&quot;,
      *   &quot;instanceName&quot;: &quot;rm-xsaxsa&quot;,
@@ -30,7 +30,7 @@ public class UpdateDataSourceRequest extends TeaModel {
      * }
      * </code></pre>
      * </li>
-     * <li><p>RDS</p>
+     * <li><p>rds</p>
      * <pre><code>{
      *   &quot;configType&quot;: 1,
      *   &quot;tag&quot;: &quot;rds&quot;,
@@ -42,7 +42,7 @@ public class UpdateDataSourceRequest extends TeaModel {
      * }
      * </code></pre>
      * </li>
-     * <li><p>OSS</p>
+     * <li><p>oss</p>
      * <pre><code>{
      *   &quot;accessId&quot;: &quot;sssssxx&quot;,
      *   &quot;accessKey&quot;: &quot;xsaxaxsaxs&quot;,
@@ -52,7 +52,7 @@ public class UpdateDataSourceRequest extends TeaModel {
      * }
      * </code></pre>
      * </li>
-     * <li><p>SQL Server</p>
+     * <li><p>sqlserver</p>
      * <pre><code>{
      *   &quot;jdbcUrl&quot;: &quot;jdbc:sqlserver://xsaxsa-xsaxsa.database.xxx.cn:123;DatabaseName=xsxs-xsxs&quot;,
      *   &quot;password&quot;: &quot;sdasda$fs&quot;,
@@ -61,7 +61,7 @@ public class UpdateDataSourceRequest extends TeaModel {
      * }
      * </code></pre>
      * </li>
-     * <li><p>PolarDB</p>
+     * <li><p>polardb</p>
      * <pre><code>{
      *   &quot;clusterId&quot;: &quot;pc-sdadsadsa&quot;,
      *   &quot;database&quot;: &quot;dsadsadsa&quot;,
@@ -73,7 +73,7 @@ public class UpdateDataSourceRequest extends TeaModel {
      * }
      * </code></pre>
      * </li>
-     * <li><p>Oracle</p>
+     * <li><p>oracle</p>
      * <pre><code>{
      *   &quot;jdbcUrl&quot;: &quot;jdbc:oracle:saaa:@xxxxx:1521:PROD&quot;,
      *   &quot;password&quot;: &quot;sxasaxsa&quot;,
@@ -82,7 +82,7 @@ public class UpdateDataSourceRequest extends TeaModel {
      * }
      * </code></pre>
      * </li>
-     * <li><p>MongoDB</p>
+     * <li><p>mongodb</p>
      * <pre><code>{
      *   &quot;address&quot;: &quot;[\\&quot;xsaxxsa.mongodb.rds.aliyuncs.com:3717\\&quot;]&quot;,
      *   &quot;database&quot;: &quot;admin&quot;,
@@ -92,7 +92,7 @@ public class UpdateDataSourceRequest extends TeaModel {
      * }
      * </code></pre>
      * </li>
-     * <li><p>EMR</p>
+     * <li><p>emr</p>
      * <pre><code>{
      *   &quot;accessId&quot;: &quot;xsaxsa&quot;,
      *   &quot;emrClusterId&quot;: &quot;C-dsads&quot;,
@@ -108,7 +108,7 @@ public class UpdateDataSourceRequest extends TeaModel {
      * }
      * </code></pre>
      * </li>
-     * <li><p>PostgreSQL</p>
+     * <li><p>postgresql</p>
      * <pre><code>{
      *   &quot;jdbcUrl&quot;: &quot;jdbc:postgresql://xxxx:1921/ssss&quot;,
      *   &quot;password&quot;: &quot;sdadsads&quot;,
@@ -117,7 +117,7 @@ public class UpdateDataSourceRequest extends TeaModel {
      * }
      * </code></pre>
      * </li>
-     * <li><p>AnalyticDB for MySQL</p>
+     * <li><p>analyticdb_for_mysql</p>
      * <pre><code>{
      *   &quot;instanceId&quot;: &quot;am-sadsada&quot;,
      *   &quot;database&quot;: &quot;xsxsx&quot;,
@@ -127,7 +127,7 @@ public class UpdateDataSourceRequest extends TeaModel {
      * }
      * </code></pre>
      * </li>
-     * <li><p>HybridDB for PostgreSQL</p>
+     * <li><p>hybriddb_for_postgresql</p>
      * <pre><code>{
      *   &quot;connectionString&quot;: &quot;gp-xsaxsaxa-master.gpdbmaster.rds.aliyuncs.com&quot;,
      *   &quot;database&quot;: &quot;xsaxsaxas&quot;,
@@ -139,7 +139,7 @@ public class UpdateDataSourceRequest extends TeaModel {
      * }
      * </code></pre>
      * </li>
-     * <li><p>Hologres</p>
+     * <li><p>holo</p>
      * <pre><code>{
      *   &quot;accessId&quot;: &quot;xsaxsaxs&quot;,
      *   &quot;accessKey&quot;: &quot;xsaxsaxsa&quot;,
@@ -149,7 +149,7 @@ public class UpdateDataSourceRequest extends TeaModel {
      * }
      * </code></pre>
      * </li>
-     * <li><p>Kafka</p>
+     * <li><p>kafka</p>
      * <pre><code>{
      *   &quot;instanceId&quot;: &quot;xsax-cn-xsaxsa&quot;,
      *   &quot;regionId&quot;: &quot;cn-shanghai&quot;,

@@ -750,6 +750,9 @@ public class GetFileResponseBody extends TeaModel {
     }
 
     public static class GetFileResponseBodyDataNodeConfiguration extends TeaModel {
+        @NameInMap("ApplyScheduleImmediately")
+        public String applyScheduleImmediately;
+
         /**
          * <p>The interval between automatic reruns after an error occurs. Unit: milliseconds.</p>
          * <p>This parameter corresponds to the Rerun Interval parameter that is displayed after the Auto Rerun upon Error check box is selected in the Schedule section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
@@ -937,6 +940,14 @@ public class GetFileResponseBody extends TeaModel {
         public static GetFileResponseBodyDataNodeConfiguration build(java.util.Map<String, ?> map) throws Exception {
             GetFileResponseBodyDataNodeConfiguration self = new GetFileResponseBodyDataNodeConfiguration();
             return TeaModel.build(map, self);
+        }
+
+        public GetFileResponseBodyDataNodeConfiguration setApplyScheduleImmediately(String applyScheduleImmediately) {
+            this.applyScheduleImmediately = applyScheduleImmediately;
+            return this;
+        }
+        public String getApplyScheduleImmediately() {
+            return this.applyScheduleImmediately;
         }
 
         public GetFileResponseBodyDataNodeConfiguration setAutoRerunIntervalMillis(Integer autoRerunIntervalMillis) {

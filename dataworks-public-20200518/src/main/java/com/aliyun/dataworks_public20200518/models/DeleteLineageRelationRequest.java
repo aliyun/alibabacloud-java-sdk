@@ -23,6 +23,9 @@ public class DeleteLineageRelationRequest extends TeaModel {
     @NameInMap("RelationshipGuid")
     public String relationshipGuid;
 
+    @NameInMap("RelationshipType")
+    public String relationshipType;
+
     /**
      * <p>The unique identifier of the source entity.</p>
      * <p>This parameter is required.</p>
@@ -52,6 +55,14 @@ public class DeleteLineageRelationRequest extends TeaModel {
     }
     public String getRelationshipGuid() {
         return this.relationshipGuid;
+    }
+
+    public DeleteLineageRelationRequest setRelationshipType(String relationshipType) {
+        this.relationshipType = relationshipType;
+        return this;
+    }
+    public String getRelationshipType() {
+        return this.relationshipType;
     }
 
     public DeleteLineageRelationRequest setSrcEntityQualifiedName(String srcEntityQualifiedName) {
