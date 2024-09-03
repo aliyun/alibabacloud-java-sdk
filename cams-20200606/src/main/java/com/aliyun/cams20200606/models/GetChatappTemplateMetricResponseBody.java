@@ -112,16 +112,11 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
 
         /**
          * <p>The button type.</p>
-         * <blockquote>
-         * <p> Valid values:</p>
-         * </blockquote>
+         * <p>Valid values:</p>
          * <ul>
-         * <li><p>url_button</p>
-         * </li>
-         * <li><p>quick_relpy_button</p>
-         * </li>
-         * <li><p>phone_number_button</p>
-         * </li>
+         * <li>phone_number_button</li>
+         * <li>url_button</li>
+         * <li>quick_relpy_button</li>
          * </ul>
          * 
          * <strong>example:</strong>

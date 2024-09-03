@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFlowShrinkRequest extends TeaModel {
     /**
-     * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+     * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
      * 
      * <strong>example:</strong>
      * <p>99948484</p>
@@ -14,7 +14,7 @@ public class ListFlowShrinkRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The name of the Flow.</p>
+     * <p>The name of the Flow that you want to query. If FlowName is left empty, the information about all Flows is queried.</p>
      * 
      * <strong>example:</strong>
      * <p>flow_001</p>

@@ -11,6 +11,9 @@ public class CreatePhoneMessageQrdlResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public CreatePhoneMessageQrdlResponseBodyData data;
 
@@ -22,7 +25,7 @@ public class CreatePhoneMessageQrdlResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request。</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
@@ -83,6 +86,8 @@ public class CreatePhoneMessageQrdlResponseBody extends TeaModel {
         public String generateQrImage;
 
         /**
+         * <p>The phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>8613800</p>
          */

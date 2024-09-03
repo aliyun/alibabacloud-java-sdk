@@ -21,7 +21,7 @@ public class UpdateFlowJSONAssetRequest extends TeaModel {
     public String filePath;
 
     /**
-     * <p>Flow ID。</p>
+     * <p>The Flow ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetPreValidatePhoneIdResponseBody extends TeaModel {
     /**
-     * <p>The response code. The value OK indicates the request was successful.</p>
+     * <p>The response code.</p>
+     * <ul>
+     * <li>The value OK indicates that the request was successful.</li>
+     * <li>For more information about other response codes, see <a href="https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes">Error codes</a>.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>OK</p>

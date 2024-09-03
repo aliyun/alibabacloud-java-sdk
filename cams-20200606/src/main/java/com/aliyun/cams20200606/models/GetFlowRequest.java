@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetFlowRequest extends TeaModel {
     /**
-     * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+     * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
      * 
      * <strong>example:</strong>
      * <p>99384883</p>

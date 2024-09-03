@@ -11,6 +11,9 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListPhoneMessageQrdlResponseBodyData> data;
 
@@ -18,7 +21,7 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request。</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
@@ -65,6 +68,8 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
 
     public static class ListPhoneMessageQrdlResponseBodyData extends TeaModel {
         /**
+         * <p>The URL of the deep link.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://wa.msg/">https://wa.msg/</a></p>
          */
@@ -72,6 +77,8 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
         public String deepLinkUrl;
 
         /**
+         * <p>The format of the generated image.</p>
+         * 
          * <strong>example:</strong>
          * <p>PNG</p>
          */
@@ -79,6 +86,8 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
         public String generateQrImage;
 
         /**
+         * <p>The phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>8613800</p>
          */
@@ -86,6 +95,8 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
         public String phoneNumber;
 
         /**
+         * <p>The message content.</p>
+         * 
          * <strong>example:</strong>
          * <p>Hello</p>
          */
@@ -93,6 +104,8 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
         public String prefilledMessage;
 
         /**
+         * <p>The URL of the QR code.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://img.png">https://img.png</a></p>
          */
@@ -100,6 +113,8 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
         public String qrImageUrl;
 
         /**
+         * <p>The mode of the quick-response (QR) code.</p>
+         * 
          * <strong>example:</strong>
          * <p>IUIED999</p>
          */

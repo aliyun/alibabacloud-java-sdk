@@ -12,6 +12,7 @@ public class ListPhoneMessageQrdlRequest extends TeaModel {
     public String custSpaceId;
 
     /**
+     * <p>The phone number. Add the country code before the phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

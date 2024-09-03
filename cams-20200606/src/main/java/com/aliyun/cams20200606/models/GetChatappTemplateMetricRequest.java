@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetChatappTemplateMetricRequest extends TeaModel {
     /**
-     * <p>The space ID of the user within the ISV account.</p>
+     * <p>The space ID of the RAM user within the ISV account.</p>
      * 
      * <strong>example:</strong>
      * <p>293483938849493</p>
@@ -24,12 +24,11 @@ public class GetChatappTemplateMetricRequest extends TeaModel {
     public Long end;
 
     /**
-     * <p>The metric granularity.</p>
-     * <blockquote>
-     * <p> Valid values:</p>
-     * </blockquote>
+     * <p>The granularity of the metric.</p>
+     * <p>Valid values:</p>
      * <ul>
      * <li>DAILY</li>
+     * <li>HALF_HOUR</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,7 +38,7 @@ public class GetChatappTemplateMetricRequest extends TeaModel {
     public String granularity;
 
     /**
-     * <p>The verification code used to verify whether the RAM user is authorized by the independent software vendor (ISV) account.</p>
+     * <p>The independent software vendor (ISV) verification code, which is used to verify whether the RAM user is authorized by the ISV account.</p>
      * 
      * <strong>example:</strong>
      * <p>skdi3kksloslikdkkdk</p>
@@ -77,7 +76,12 @@ public class GetChatappTemplateMetricRequest extends TeaModel {
     public String templateCode;
 
     /**
-     * <p>The template type. Valid values: WHATSAPP and VIBER. If you do not specify this parameter, WHATSAPP is used by default.</p>
+     * <p>The template type. If you do not specify this parameter, the default value WHATSAPP is used.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>VIBER</li>
+     * <li>WHATSAPP</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>WHATSAPP</p>

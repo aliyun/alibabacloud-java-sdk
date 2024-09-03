@@ -11,6 +11,9 @@ public class GetFlowJSONAssestResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetFlowJSONAssestResponseBodyData data;
 
@@ -18,7 +21,7 @@ public class GetFlowJSONAssestResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request。</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
@@ -65,6 +68,8 @@ public class GetFlowJSONAssestResponseBody extends TeaModel {
 
     public static class GetFlowJSONAssestResponseBodyData extends TeaModel {
         /**
+         * <p>The file path.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://url.com/json.json">https://url.com/json.json</a></p>
          */
@@ -72,7 +77,7 @@ public class GetFlowJSONAssestResponseBody extends TeaModel {
         public String filePath;
 
         /**
-         * <p>flow ID。</p>
+         * <p>The Flow ID.</p>
          * 
          * <strong>example:</strong>
          * <p>flow_id_arms</p>
