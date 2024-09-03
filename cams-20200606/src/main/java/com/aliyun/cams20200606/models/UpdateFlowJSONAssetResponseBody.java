@@ -11,6 +11,9 @@ public class UpdateFlowJSONAssetResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public UpdateFlowJSONAssetResponseBodyData data;
 
@@ -18,7 +21,7 @@ public class UpdateFlowJSONAssetResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request。</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
@@ -65,7 +68,7 @@ public class UpdateFlowJSONAssetResponseBody extends TeaModel {
 
     public static class UpdateFlowJSONAssetResponseBodyData extends TeaModel {
         /**
-         * <p>Flow ID。</p>
+         * <p>The Flow ID.</p>
          * 
          * <strong>example:</strong>
          * <p>84848847****</p>

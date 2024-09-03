@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetChatappPhoneNumberMetricRequest extends TeaModel {
     /**
-     * <p>The space ID of the user within the ISV account.</p>
+     * <p>The space ID of the RAM user within the ISV account.</p>
      * 
      * <strong>example:</strong>
      * <p>293483938849493</p>
@@ -24,7 +24,12 @@ public class GetChatappPhoneNumberMetricRequest extends TeaModel {
     public Long end;
 
     /**
-     * <p>The metric granularity.</p>
+     * <p>The granularity of the metric.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>DAILY</li>
+     * <li>HALF_HOUR</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>DAILY</p>
@@ -33,7 +38,7 @@ public class GetChatappPhoneNumberMetricRequest extends TeaModel {
     public String granularity;
 
     /**
-     * <p>The verification code used to verify whether the RAM user is authorized by the independent software vendor (ISV) account.</p>
+     * <p>The independent software vendor (ISV) verification code, which is used to verify whether the RAM user is authorized by the ISV account.</p>
      * 
      * <strong>example:</strong>
      * <p>skdi3kksloslikdkkdk</p>

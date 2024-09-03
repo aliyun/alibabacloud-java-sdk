@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetPermissionByCodeResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * <ul>
+     * <li>The value OK indicates that the request was successful.</li>
+     * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -19,7 +25,7 @@ public class GetPermissionByCodeResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request。</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>

@@ -12,6 +12,7 @@ public class GetPhoneEncryptionPublicKeyRequest extends TeaModel {
     public String custSpaceId;
 
     /**
+     * <p>The phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -111,15 +111,11 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
         public Long end;
 
         /**
-         * <p>The metric granularity.</p>
-         * <blockquote>
-         * <p> Valid values:</p>
-         * </blockquote>
+         * <p>The granularity of the metric.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li><p>DAILY</p>
-         * </li>
-         * <li><p>HALF_HOUR</p>
-         * </li>
+         * <li>DAILY</li>
+         * <li>HALF_HOUR</li>
          * </ul>
          * 
          * <strong>example:</strong>

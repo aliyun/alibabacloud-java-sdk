@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyFlowRequest extends TeaModel {
     /**
-     * <p>The categories of the Flow.</p>
+     * <p>The information about the categories of the Flow.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Categories")

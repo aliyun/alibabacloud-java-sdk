@@ -29,6 +29,7 @@ public class UpdatePhoneEncryptionPublicKeyRequest extends TeaModel {
     public String encryptionPublicKey;
 
     /**
+     * <p>The phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

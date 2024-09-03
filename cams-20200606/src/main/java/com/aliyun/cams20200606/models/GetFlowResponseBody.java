@@ -79,7 +79,7 @@ public class GetFlowResponseBody extends TeaModel {
         public java.util.List<String> categories;
 
         /**
-         * <p>The API version.</p>
+         * <p>The version number of the API.</p>
          * 
          * <strong>example:</strong>
          * <p>3.0</p>
@@ -97,7 +97,7 @@ public class GetFlowResponseBody extends TeaModel {
         public String flowId;
 
         /**
-         * <p>The name of the Flow.</p>
+         * <p>The Flow name.</p>
          * 
          * <strong>example:</strong>
          * <p>dnjn</p>

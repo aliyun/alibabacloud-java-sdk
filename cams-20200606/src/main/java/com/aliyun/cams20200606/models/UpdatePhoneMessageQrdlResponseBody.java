@@ -18,7 +18,7 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request。</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1612C226-E271-4CFE-9F18-4066D******</p>

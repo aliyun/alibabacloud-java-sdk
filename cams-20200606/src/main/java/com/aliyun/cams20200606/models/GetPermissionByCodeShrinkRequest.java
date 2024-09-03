@@ -14,12 +14,17 @@ public class GetPermissionByCodeShrinkRequest extends TeaModel {
     public String code;
 
     /**
+     * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
+     * 
      * <strong>example:</strong>
      * <p>393847477</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    /**
+     * <p>The permissions.</p>
+     */
     @NameInMap("Permissions")
     public String permissionsShrink;
 

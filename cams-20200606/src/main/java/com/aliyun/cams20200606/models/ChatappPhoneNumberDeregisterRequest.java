@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChatappPhoneNumberDeregisterRequest extends TeaModel {
     /**
-     * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+     * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ChatappPhoneNumberDeregisterRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The phone number.</p>
+     * <p>The phone number that you want to deregister.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

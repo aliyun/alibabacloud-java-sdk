@@ -137,6 +137,20 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         public java.util.Map<String, ?> authInternationalRateEligibility;
 
         /**
+         * <strong>example:</strong>
+         * <p>19293988***</p>
+         */
+        @NameInMap("BusinessId")
+        public String businessId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Alibaba</p>
+         */
+        @NameInMap("BusinessName")
+        public String businessName;
+
+        /**
          * <p>The currency.</p>
          * 
          * <strong>example:</strong>
@@ -198,6 +212,22 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         }
         public java.util.Map<String, ?> getAuthInternationalRateEligibility() {
             return this.authInternationalRateEligibility;
+        }
+
+        public QueryChatappBindWabaResponseBodyData setBusinessId(String businessId) {
+            this.businessId = businessId;
+            return this;
+        }
+        public String getBusinessId() {
+            return this.businessId;
+        }
+
+        public QueryChatappBindWabaResponseBodyData setBusinessName(String businessName) {
+            this.businessName = businessName;
+            return this;
+        }
+        public String getBusinessName() {
+            return this.businessName;
         }
 
         public QueryChatappBindWabaResponseBodyData setCurrency(String currency) {

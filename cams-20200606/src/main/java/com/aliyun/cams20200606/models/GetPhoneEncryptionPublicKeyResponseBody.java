@@ -11,6 +11,9 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetPhoneEncryptionPublicKeyResponseBodyData data;
 
@@ -18,7 +21,7 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request。</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
@@ -65,6 +68,8 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
 
     public static class GetPhoneEncryptionPublicKeyResponseBodyData extends TeaModel {
         /**
+         * <p>The public key.</p>
+         * 
          * <strong>example:</strong>
          * <p>-----BEGIN PUBLIC KEY-----
          * AAA
@@ -80,6 +85,12 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
         public String encryptionPublicKey;
 
         /**
+         * <p>The validity state of the public key. Valid values:</p>
+         * <ul>
+         * <li>MISMATCH: The public key is invalid.</li>
+         * <li>VALID: The public key is valid.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>VALID</p>
          */
@@ -87,6 +98,8 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
         public String encryptionPublicKeyStatus;
 
         /**
+         * <p>The phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>86138000**</p>
          */

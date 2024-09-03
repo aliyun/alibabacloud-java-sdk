@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetFlowJSONAssestRequest extends TeaModel {
     /**
+     * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+     * 
      * <strong>example:</strong>
      * <p>83883873</p>
      */
@@ -12,7 +14,7 @@ public class GetFlowJSONAssestRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>Flow ID。</p>
+     * <p>The Flow ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

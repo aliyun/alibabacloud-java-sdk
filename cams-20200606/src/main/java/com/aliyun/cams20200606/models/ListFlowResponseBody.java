@@ -88,7 +88,7 @@ public class ListFlowResponseBody extends TeaModel {
         public String flowId;
 
         /**
-         * <p>The name of the Flow.</p>
+         * <p>The Flow name.</p>
          * 
          * <strong>example:</strong>
          * <p>flow-02020</p>
