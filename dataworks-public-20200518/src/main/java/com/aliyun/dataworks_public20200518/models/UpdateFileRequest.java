@@ -15,6 +15,9 @@ public class UpdateFileRequest extends TeaModel {
     @NameInMap("AdvancedSettings")
     public String advancedSettings;
 
+    @NameInMap("ApplyScheduleImmediately")
+    public Boolean applyScheduleImmediately;
+
     /**
      * <p>Specifies whether the automatic parsing feature is enabled for the file. Valid values:</p>
      * <ul>
@@ -344,6 +347,14 @@ public class UpdateFileRequest extends TeaModel {
     }
     public String getAdvancedSettings() {
         return this.advancedSettings;
+    }
+
+    public UpdateFileRequest setApplyScheduleImmediately(Boolean applyScheduleImmediately) {
+        this.applyScheduleImmediately = applyScheduleImmediately;
+        return this;
+    }
+    public Boolean getApplyScheduleImmediately() {
+        return this.applyScheduleImmediately;
     }
 
     public UpdateFileRequest setAutoParsing(Boolean autoParsing) {

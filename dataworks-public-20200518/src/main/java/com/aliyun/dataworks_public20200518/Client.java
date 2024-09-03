@@ -1775,6 +1775,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("AdvancedSettings", request.advancedSettings);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.applyScheduleImmediately)) {
+            body.put("ApplyScheduleImmediately", request.applyScheduleImmediately);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.autoParsing)) {
             body.put("AutoParsing", request.autoParsing);
         }
@@ -4086,6 +4090,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.relationshipGuid)) {
             query.put("RelationshipGuid", request.relationshipGuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.relationshipType)) {
+            query.put("RelationshipType", request.relationshipType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.srcEntityQualifiedName)) {
@@ -13892,6 +13900,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>分页获取租户下面的数据源类型粒度的表名称</p>
+     * 
+     * @param request ListTablesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTablesResponse
+     */
+    public ListTablesResponse listTablesWithOptions(ListTablesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceType)) {
+            query.put("DataSourceType", request.dataSourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTables"),
+            new TeaPair("version", "2020-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTablesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页获取租户下面的数据源类型粒度的表名称</p>
+     * 
+     * @param request ListTablesRequest
+     * @return ListTablesResponse
+     */
+    public ListTablesResponse listTables(ListTablesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listTablesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries events.</p>
      * 
      * @param request ListTopicsRequest
@@ -17210,6 +17270,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.advancedSettings)) {
             body.put("AdvancedSettings", request.advancedSettings);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.applyScheduleImmediately)) {
+            body.put("ApplyScheduleImmediately", request.applyScheduleImmediately);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.autoParsing)) {
