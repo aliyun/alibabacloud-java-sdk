@@ -5,8 +5,13 @@ import com.aliyun.tea.*;
 
 public class AddVideoDnaGroupResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
+
+    @NameInMap("statusCode")
+    public Integer statusCode;
+
+    @NameInMap("body")
+    public AddVideoDnaGroupResponseBody body;
 
     public static AddVideoDnaGroupResponse build(java.util.Map<String, ?> map) throws Exception {
         AddVideoDnaGroupResponse self = new AddVideoDnaGroupResponse();
@@ -19,6 +24,22 @@ public class AddVideoDnaGroupResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public AddVideoDnaGroupResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    public AddVideoDnaGroupResponse setBody(AddVideoDnaGroupResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public AddVideoDnaGroupResponseBody getBody() {
+        return this.body;
     }
 
 }

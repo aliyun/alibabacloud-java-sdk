@@ -5,8 +5,13 @@ import com.aliyun.tea.*;
 
 public class VideoAsyncScanResultsResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
+
+    @NameInMap("statusCode")
+    public Integer statusCode;
+
+    @NameInMap("body")
+    public VideoAsyncScanResultsResponseBody body;
 
     public static VideoAsyncScanResultsResponse build(java.util.Map<String, ?> map) throws Exception {
         VideoAsyncScanResultsResponse self = new VideoAsyncScanResultsResponse();
@@ -19,6 +24,22 @@ public class VideoAsyncScanResultsResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public VideoAsyncScanResultsResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    public VideoAsyncScanResultsResponse setBody(VideoAsyncScanResultsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public VideoAsyncScanResultsResponseBody getBody() {
+        return this.body;
     }
 
 }

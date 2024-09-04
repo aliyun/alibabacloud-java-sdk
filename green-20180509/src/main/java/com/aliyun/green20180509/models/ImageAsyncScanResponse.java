@@ -5,8 +5,13 @@ import com.aliyun.tea.*;
 
 public class ImageAsyncScanResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
+
+    @NameInMap("statusCode")
+    public Integer statusCode;
+
+    @NameInMap("body")
+    public ImageAsyncScanResponseBody body;
 
     public static ImageAsyncScanResponse build(java.util.Map<String, ?> map) throws Exception {
         ImageAsyncScanResponse self = new ImageAsyncScanResponse();
@@ -19,6 +24,22 @@ public class ImageAsyncScanResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public ImageAsyncScanResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    public ImageAsyncScanResponse setBody(ImageAsyncScanResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ImageAsyncScanResponseBody getBody() {
+        return this.body;
     }
 
 }

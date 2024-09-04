@@ -4,23 +4,15 @@ package com.aliyun.green20180509.models;
 import com.aliyun.tea.*;
 
 public class AddGroupsRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ClientInfo")
     public String clientInfo;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static AddGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         AddGroupsRequest self = new AddGroupsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddGroupsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public AddGroupsRequest setClientInfo(String clientInfo) {
@@ -29,6 +21,14 @@ public class AddGroupsRequest extends TeaModel {
     }
     public String getClientInfo() {
         return this.clientInfo;
+    }
+
+    public AddGroupsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

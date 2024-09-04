@@ -5,8 +5,13 @@ import com.aliyun.tea.*;
 
 public class AddFacesResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
+
+    @NameInMap("statusCode")
+    public Integer statusCode;
+
+    @NameInMap("body")
+    public AddFacesResponseBody body;
 
     public static AddFacesResponse build(java.util.Map<String, ?> map) throws Exception {
         AddFacesResponse self = new AddFacesResponse();
@@ -19,6 +24,22 @@ public class AddFacesResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public AddFacesResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    public AddFacesResponse setBody(AddFacesResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public AddFacesResponseBody getBody() {
+        return this.body;
     }
 
 }
