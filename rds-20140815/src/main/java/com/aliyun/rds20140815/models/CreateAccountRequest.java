@@ -73,7 +73,7 @@ public class CreateAccountRequest extends TeaModel {
      * <li><strong>Super</strong>: privileged account.</li>
      * <li><strong>Sysadmin</strong>: system admin account. The account type is available only for ApsaraDB RDS for SQL Server instances.</li>
      * </ul>
-     * <p>Before you create a system admin account, check whether the RDS instance meets all prerequisites. For more information, see <a href="https://help.aliyun.com/document_detail/170736.html">Create a system admin account</a>.</p>
+     * <p>Before you create a system admin account, check whether the instance meets all prerequisites. For more information, see <a href="https://help.aliyun.com/document_detail/170736.html">Create a system admin account</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>Normal</p>

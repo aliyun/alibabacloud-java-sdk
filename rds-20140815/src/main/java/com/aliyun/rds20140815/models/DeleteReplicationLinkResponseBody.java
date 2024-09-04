@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteReplicationLinkResponseBody extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>pgm-bp1trqb4p1xd****</p>
      */
@@ -12,6 +14,8 @@ public class DeleteReplicationLinkResponseBody extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>847BA085-B377-4BFA-8267-F82345ECE1D2</p>
      */
@@ -19,6 +23,8 @@ public class DeleteReplicationLinkResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>3472****</p>
      */
@@ -26,6 +32,8 @@ public class DeleteReplicationLinkResponseBody extends TeaModel {
     public Long taskId;
 
     /**
+     * <p>The name of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>test01</p>
      */

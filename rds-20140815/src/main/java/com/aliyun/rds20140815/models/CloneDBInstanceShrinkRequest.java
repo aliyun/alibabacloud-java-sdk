@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CloneDBInstanceShrinkRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the automatic payment feature. Valid values:</p>
+     * <p>Specifies whether to enable the automatic payment feature for the new instance. Valid values:</p>
      * <ol>
      * <li><strong>true</strong>: enables the feature. You must make sure that your account balance is sufficient.</li>
      * <li><strong>false</strong>: disables the feature. An unpaid order is generated.</li>
@@ -133,16 +133,17 @@ public class CloneDBInstanceShrinkRequest extends TeaModel {
     public Integer DBInstanceStorage;
 
     /**
-     * <p>The storage type of the instance. Valid values:</p>
+     * <p>The storage type of the new instance. Valid values:</p>
      * <ul>
-     * <li><strong>local_ssd</strong>: local SSDs</li>
-     * <li><strong>cloud_ssd</strong>: standard SSDs</li>
-     * <li><strong>cloud_essd</strong>: enhanced SSDs (ESSDs) of performance level 1 (PL1)</li>
-     * <li><strong>cloud_essd2</strong>: ESSDs of PL2</li>
-     * <li><strong>cloud_essd3</strong>: ESSD of PL3</li>
+     * <li><strong>general_essd</strong> (recommend): general Enterprise SSD (ESSD)</li>
+     * <li><strong>local_ssd</strong>: local SSD</li>
+     * <li><strong>cloud_ssd</strong>: standard SSD</li>
+     * <li><strong>cloud_essd</strong>: performance level 1 (PL1) ESSD</li>
+     * <li><strong>cloud_essd2</strong>: PL2 ESSD</li>
+     * <li><strong>cloud_essd3</strong>: PL3 ESSD</li>
      * </ul>
      * <blockquote>
-     * <p>Serverless instances support only ESSDs of PL 1. For a serverless instance, you must set this parameter to <strong>cloud_essd</strong>.</p>
+     * <p> Serverless instances support only PL1 ESSDs and general ESSDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -170,7 +171,7 @@ public class CloneDBInstanceShrinkRequest extends TeaModel {
     public String dedicatedHostGroupId;
 
     /**
-     * <p>Specifies whether to enable the release protection feature for the instance. Valid values:</p>
+     * <p>Specifies whether to enable the release protection feature for the new instance. Valid values:</p>
      * <ul>
      * <li><strong>true</strong></li>
      * <li><strong>false</strong> (default)</li>

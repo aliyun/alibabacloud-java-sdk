@@ -4670,8 +4670,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <ul>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建复制链路</p>
+     * <p>Creates a disaster recovery instance for an ApsaraDB RDS instance and configures a data synchronization link.</p>
      * 
      * @param request CreateReplicationLinkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4742,8 +4748,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <ul>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建复制链路</p>
+     * <p>Creates a disaster recovery instance for an ApsaraDB RDS instance and configures a data synchronization link.</p>
      * 
      * @param request CreateReplicationLinkRequest
      * @return CreateReplicationLinkResponse
@@ -6562,8 +6574,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <ul>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除复制链路</p>
+     * <p>Deletes the data synchronization link of a disaster recovery RDS instance and promotes the disaster recovery instance to the primary instance.</p>
      * 
      * @param request DeleteReplicationLinkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6602,8 +6620,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <ul>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除复制链路</p>
+     * <p>Deletes the data synchronization link of a disaster recovery RDS instance and promotes the disaster recovery instance to the primary instance.</p>
      * 
      * @param request DeleteReplicationLinkRequest
      * @return DeleteReplicationLinkResponse
@@ -16006,7 +16030,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of the regions that are available for ApsaraDB RDS.</p>
+     * <p>Queries the details of all regions and zones for ApsaraDB RDS. The regions that are no longer supported are also queried. Exercise caution when you call this operation.</p>
      * 
      * @param request DescribeRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16051,7 +16075,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of the regions that are available for ApsaraDB RDS.</p>
+     * <p>Queries the details of all regions and zones for ApsaraDB RDS. The regions that are no longer supported are also queried. Exercise caution when you call this operation.</p>
      * 
      * @param request DescribeRegionsRequest
      * @return DescribeRegionsResponse
@@ -16180,8 +16204,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <ul>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询复制链路操作日志</p>
+     * <p>Queries the details of the task that is used to create a disaster recovery instance for an ApsaraDB RDS instance.</p>
      * 
      * @param request DescribeReplicationLinkLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16232,8 +16262,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <ul>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询复制链路操作日志</p>
+     * <p>Queries the details of the task that is used to create a disaster recovery instance for an ApsaraDB RDS instance.</p>
      * 
      * @param request DescribeReplicationLinkLogsRequest
      * @return DescribeReplicationLinkLogsResponse
@@ -25171,7 +25207,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>任务中心修改任务信息</p>
+     * <p>Modifies the task information in the task center.</p>
      * 
      * @param request ModifyTaskInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -25231,7 +25267,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>任务中心修改任务信息</p>
+     * <p>Modifies the task information in the task center.</p>
      * 
      * @param request ModifyTaskInfoRequest
      * @return ModifyTaskInfoResponse
@@ -25934,7 +25970,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Restores an ApsaraDB RDS for SQL Server instance.</p>
+     * <p>Restores backup data of an ApsaraDB RDS for SQL Server instance to an existing instance or a new instance.</p>
      * 
      * @param request RecoveryDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -26035,7 +26071,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Restores an ApsaraDB RDS for SQL Server instance.</p>
+     * <p>Restores backup data of an ApsaraDB RDS for SQL Server instance to an existing instance or a new instance.</p>
      * 
      * @param request RecoveryDBInstanceRequest
      * @return RecoveryDBInstanceResponse

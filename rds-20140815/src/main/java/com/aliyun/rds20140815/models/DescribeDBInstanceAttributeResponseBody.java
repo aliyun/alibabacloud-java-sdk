@@ -307,6 +307,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtra extends TeaModel {
+        @NameInMap("AccountSecurityPolicy")
+        public String accountSecurityPolicy;
+
         /**
          * <p>The instance IDs.</p>
          */
@@ -325,6 +328,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public static DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtra build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtra self = new DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtra();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtra setAccountSecurityPolicy(String accountSecurityPolicy) {
+            this.accountSecurityPolicy = accountSecurityPolicy;
+            return this;
+        }
+        public String getAccountSecurityPolicy() {
+            return this.accountSecurityPolicy;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtra setDBInstanceIds(DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtraDBInstanceIds DBInstanceIds) {
@@ -864,6 +875,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         @NameInMap("DeletionProtection")
         public Boolean deletionProtection;
+
+        @NameInMap("DisasterRecoveryInfo")
+        public String disasterRecoveryInfo;
+
+        @NameInMap("DisasterRecoveryInstances")
+        public String disasterRecoveryInstances;
 
         /**
          * <p>The database engine of the instance. Valid values:</p>
@@ -1571,6 +1588,22 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public Boolean getDeletionProtection() {
             return this.deletionProtection;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setDisasterRecoveryInfo(String disasterRecoveryInfo) {
+            this.disasterRecoveryInfo = disasterRecoveryInfo;
+            return this;
+        }
+        public String getDisasterRecoveryInfo() {
+            return this.disasterRecoveryInfo;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setDisasterRecoveryInstances(String disasterRecoveryInstances) {
+            this.disasterRecoveryInstances = disasterRecoveryInstances;
+            return this;
+        }
+        public String getDisasterRecoveryInstances() {
+            return this.disasterRecoveryInstances;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setEngine(String engine) {

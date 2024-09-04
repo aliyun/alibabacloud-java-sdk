@@ -216,11 +216,13 @@ public class ModifyBackupPolicyRequest extends TeaModel {
      * <li><strong>False</strong> or <strong>0</strong>: disables the log backup feature.</li>
      * </ul>
      * <blockquote>
-     * <ul>
-     * <li>You must specify this parameter when you set the <strong>BackupPolicyMode</strong> parameter to <strong>LogBackupPolicy</strong>.</li>
-     * <li>This parameter takes effect only when you set the <strong>BackupPolicyMode</strong> parameter to <strong>LogBackupPolicy</strong>.</li>
-     * </ul>
      * </blockquote>
+     * <ul>
+     * <li><p>You must specify this parameter when you set the <strong>BackupPolicyMode</strong> parameter to <strong>LogBackupPolicy</strong>.</p>
+     * </li>
+     * <li><p>This parameter takes effect only when you set the <strong>BackupPolicyMode</strong> parameter to <strong>LogBackupPolicy</strong>.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -314,11 +316,13 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     /**
      * <p>The number of binary log files that you want to retain on the instance. Default value: <strong>60</strong>. Valid values: <strong>6</strong> to <strong>100</strong>.</p>
      * <blockquote>
-     * <ul>
-     * <li>This parameter takes effect only when you set the <strong>BackupPolicyMode</strong> parameter to <strong>LogBackupPolicy</strong>.</li>
-     * <li>If the instance runs MySQL, you can set this parameter to \<em>\</em>-1\<em>\</em>. The value \<em>\</em>-1\<em>\</em> specifies that an unlimited number of binary log files can be retained on the instance.</li>
-     * </ul>
      * </blockquote>
+     * <ul>
+     * <li><p>This parameter takes effect only when you set the <strong>BackupPolicyMode</strong> parameter to <strong>LogBackupPolicy</strong>.</p>
+     * </li>
+     * <li><p>If the instance runs MySQL, you can set this parameter to \<em>\</em>-1\<em>\</em>. The value \<em>\</em>-1\<em>\</em> specifies that an unlimited number of binary log files can be retained on the instance.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>60</p>
