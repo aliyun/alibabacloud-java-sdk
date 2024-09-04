@@ -5,28 +5,46 @@ import com.aliyun.tea.*;
 
 public class GetAccountInfoRequest extends TeaModel {
     /**
-     * <p>Pagination, current page.</p>
+     * <p>Message</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>Pagination, record number on each page, maximum 20.</p>
+     * <p>Success</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>Account UID of Distribution Customer. This parameter and the UserType parameter must have one filled. If this parameter is empty, then check all Distribution Customer accounts of the selected UserType.</p>
+     * <p>10 (Value &lt;= 20)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1215848086704806</p>
      */
     @NameInMap("Uid")
     public Long uid;
 
     /**
-     * <p>Distribution Customer\"s Account Type:</p>
-     * <p>- 1 End User</p>
-     * <p>- 2 Enterprise</p>
-     * <p>- 3 T2 Partner</p>
+     * <p>Result Code - Error Code. Value Range:</p>
+     * <ul>
+     * <li>200 OK</li>
+     * <li>1109 System Error</li>
+     * <li>3029: Invalid UID</li>
+     * <li>3062: UID and UserType are both empty.</li>
+     * <li>3063: UserType value out of range.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UserType")
     public String userType;

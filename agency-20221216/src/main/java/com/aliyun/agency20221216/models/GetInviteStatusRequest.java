@@ -5,8 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetInviteStatusRequest extends TeaModel {
     /**
-     * <p>inviteId list</br></p>
-     * <p>`Sub-levels <= 5`</p>
+     * <p>inviteId list</br>
+     * <code>Sub-levels &lt;= 5</code></p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InviteStatusList")
     public java.util.List<GetInviteStatusRequestInviteStatusList> inviteStatusList;
@@ -27,6 +28,9 @@ public class GetInviteStatusRequest extends TeaModel {
     public static class GetInviteStatusRequestInviteStatusList extends TeaModel {
         /**
          * <p>Invitation ID, From interface InviteSubAccount</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("InviteId")
         public Long inviteId;

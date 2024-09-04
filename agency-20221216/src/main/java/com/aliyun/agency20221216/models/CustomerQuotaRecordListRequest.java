@@ -6,48 +6,75 @@ import com.aliyun.tea.*;
 public class CustomerQuotaRecordListRequest extends TeaModel {
     /**
      * <p>End Date Format: yyyy-MM-dd</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-09-24</p>
      */
     @NameInMap("EndDate")
     public String endDate;
 
     /**
      * <p>Customer UID</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5113766248601929</p>
      */
     @NameInMap("EndUserPk")
     public Long endUserPk;
 
     /**
-     * <p>Multilingual Parameters, the default language is English.</br></p>
-     * <p>en: English</br></p>
-     * <p>zh: Chinese</br></p>
-     * <p>ja: Japanese </br></p>
+     * <p>Multilingual Parameters, the default language is English.</br>
+     * en: English</br>
+     * zh: Chinese</br>
+     * ja: Japanese </br></p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Language")
     public String language;
 
     /**
-     * <p>Operation Type Enum</br></p>
-     * <p>all All types</br></p>
-     * <p>quota_create Create quota</br></p>
-     * <p>quota_amount_adjust Adjust the amount of quota</br></p>
+     * <p>Operation Type Enum</br>
+     * all All types</br>
+     * quota_create Create quota</br>
+     * quota_amount_adjust Adjust the amount of quota</br></p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>all</p>
      */
     @NameInMap("OperationType")
     public String operationType;
 
     /**
      * <p>Pagination, current page number, starting from 1.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>Pagination, record number on each page. Maximum 100.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>Start Date Format: yyyy-MM-dd</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-01-02</p>
      */
     @NameInMap("StartDate")
     public String startDate;

@@ -5,21 +5,30 @@ import com.aliyun.tea.*;
 
 public class InviteSubAccountResponseBody extends TeaModel {
     /**
-     * <p>Error Code: </br></p>
-     * <p>• 200 OK</br></p>
-     * <p>• 1109 System Error</br></p>
+     * <p>Error Code: </br>
+     * • 200 OK</br>
+     * • 1109 System Error</br></p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>Message</br></p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Request ID, Alibaba Cloud will track errors with this ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -32,6 +41,9 @@ public class InviteSubAccountResponseBody extends TeaModel {
 
     /**
      * <p>Candidate Values: True/False, this value states if the current API calling action is successful. It does not guarantee the success of subsequent business operations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -84,18 +96,27 @@ public class InviteSubAccountResponseBody extends TeaModel {
     public static class InviteSubAccountResponseBodyResultsResultResult extends TeaModel {
         /**
          * <p>Valid days of registration URL, count on daily basis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         @NameInMap("Days")
         public Integer days;
 
         /**
          * <p>Invitation ID, The invitation status tracking code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("InviteId")
         public Long inviteId;
 
         /**
          * <p>URL for Partner Customer Registration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://agency-intl.console.aliyun.com/customer/register?intl=true&fxinfo=-4uT%2FMWHnnUdvr5GXVd1AYK8luTnGgH3M7Y3lSCd5M1fxRwAkViTWtDJDpckh0HL">http://agency-intl.console.aliyun.com/customer/register?intl=true&amp;fxinfo=-4uT%2FMWHnnUdvr5GXVd1AYK8luTnGgH3M7Y3lSCd5M1fxRwAkViTWtDJDpckh0HL</a></p>
          */
         @NameInMap("RegUrl")
         public String regUrl;
@@ -134,12 +155,18 @@ public class InviteSubAccountResponseBody extends TeaModel {
     public static class InviteSubAccountResponseBodyResultsResult extends TeaModel {
         /**
          * <p>Error Code, 200 OK</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>Message, Notes of Code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Message")
         public String message;
@@ -152,6 +179,9 @@ public class InviteSubAccountResponseBody extends TeaModel {
 
         /**
          * <p>Always true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Success")
         public Boolean success;

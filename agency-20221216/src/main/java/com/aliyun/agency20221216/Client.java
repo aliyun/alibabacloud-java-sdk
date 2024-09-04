@@ -85,14 +85,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Make sure that you are a distributor of the Alibaba Cloud international ecosystem.
-      * You can call this operation to cancel the subscription to only one type of bill at a time.
-      * After the subscription to a type of bill is canceled, bills of this type are no longer pushed to the specified Object Storage Service (OSS) bucket.
-      * **This topic is published only on the international site (alibabacloud.com).
-      *
-      * @param request CancelSubscriptionBillRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CancelSubscriptionBillResponse
+     * <b>description</b> :
+     * <p>Make sure that you are a distributor of the Alibaba Cloud international ecosystem.
+     * You can call this operation to cancel the subscription to only one type of bill at a time.
+     * After the subscription to a type of bill is canceled, bills of this type are no longer pushed to the specified Object Storage Service (OSS) bucket.
+     * **This topic is published only on the international site (alibabacloud.com).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Cancels the subscription to multi-level bills as an Alibaba Cloud eco-partner.</p>
+     * 
+     * @param request CancelSubscriptionBillRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelSubscriptionBillResponse
      */
     public CancelSubscriptionBillResponse cancelSubscriptionBillWithOptions(CancelSubscriptionBillRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -119,19 +123,133 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Make sure that you are a distributor of the Alibaba Cloud international ecosystem.
-      * You can call this operation to cancel the subscription to only one type of bill at a time.
-      * After the subscription to a type of bill is canceled, bills of this type are no longer pushed to the specified Object Storage Service (OSS) bucket.
-      * **This topic is published only on the international site (alibabacloud.com).
-      *
-      * @param request CancelSubscriptionBillRequest
-      * @return CancelSubscriptionBillResponse
+     * <b>description</b> :
+     * <p>Make sure that you are a distributor of the Alibaba Cloud international ecosystem.
+     * You can call this operation to cancel the subscription to only one type of bill at a time.
+     * After the subscription to a type of bill is canceled, bills of this type are no longer pushed to the specified Object Storage Service (OSS) bucket.
+     * **This topic is published only on the international site (alibabacloud.com).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Cancels the subscription to multi-level bills as an Alibaba Cloud eco-partner.</p>
+     * 
+     * @param request CancelSubscriptionBillRequest
+     * @return CancelSubscriptionBillResponse
      */
     public CancelSubscriptionBillResponse cancelSubscriptionBill(CancelSubscriptionBillRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.cancelSubscriptionBillWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>创建优惠券模板</p>
+     * 
+     * @param tmpReq CreateCouponTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCouponTemplateResponse
+     */
+    public CreateCouponTemplateResponse createCouponTemplateWithOptions(CreateCouponTemplateRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateCouponTemplateShrinkRequest request = new CreateCouponTemplateShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.productType)) {
+            request.productTypeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.productType, "ProductType", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.applicableProducts)) {
+            query.put("ApplicableProducts", request.applicableProducts);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.costBearer)) {
+            query.put("CostBearer", request.costBearer);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.couponDescription)) {
+            query.put("CouponDescription", request.couponDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expireddate)) {
+            query.put("Expireddate", request.expireddate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limitPerPerson)) {
+            query.put("LimitPerPerson", request.limitPerPerson);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productTypeShrink)) {
+            query.put("ProductType", request.productTypeShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.purchaseType)) {
+            query.put("PurchaseType", request.purchaseType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reasonForApplication)) {
+            query.put("ReasonForApplication", request.reasonForApplication);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateName)) {
+            query.put("TemplateName", request.templateName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vailddate)) {
+            query.put("Vailddate", request.vailddate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vaildperioddays)) {
+            query.put("Vaildperioddays", request.vaildperioddays);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validUntil)) {
+            query.put("ValidUntil", request.validUntil);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.value)) {
+            query.put("Value", request.value);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCouponTemplate"),
+            new TeaPair("version", "2022-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCouponTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建优惠券模板</p>
+     * 
+     * @param request CreateCouponTemplateRequest
+     * @return CreateCouponTemplateResponse
+     */
+    public CreateCouponTemplateResponse createCouponTemplate(CreateCouponTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createCouponTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>This function is designed for create a customer who is to be invited.</p>
+     * 
+     * @param request CreateCustomerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCustomerResponse
+     */
     public CreateCustomerResponse createCustomerWithOptions(CreateCustomerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -172,11 +290,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCustomerResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>This function is designed for create a customer who is to be invited.</p>
+     * 
+     * @param request CreateCustomerRequest
+     * @return CreateCustomerResponse
+     */
     public CreateCustomerResponse createCustomer(CreateCustomerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createCustomerWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Query quota adjustment list of Distribution Customer from International Site. Not available on Domestic Site.</p>
+     * 
+     * @param request CustomerQuotaRecordListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CustomerQuotaRecordListResponse
+     */
     public CustomerQuotaRecordListResponse customerQuotaRecordListWithOptions(CustomerQuotaRecordListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -197,18 +330,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CustomerQuotaRecordListResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Query quota adjustment list of Distribution Customer from International Site. Not available on Domestic Site.</p>
+     * 
+     * @param request CustomerQuotaRecordListRequest
+     * @return CustomerQuotaRecordListResponse
+     */
     public CustomerQuotaRecordListResponse customerQuotaRecordList(CustomerQuotaRecordListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.customerQuotaRecordListWithOptions(request, runtime);
     }
 
     /**
-      * Note that sometimes you may find that the customer\\"s Used Credit is negative. This indicates that there is no need to restore the Used Credit, and its ready for customer\\"s usage. This phenomenon occurs because a refund is generated while the customer\\"s credit is full, thereby triggered additional increasing on the customer\\"s credit.
-      * For example, if the customer\\"s maximum Available Credit is 1000 with no usage, and a refund of 300 occurs, the Used Credit will become -300.
-      *
-      * @param request DeductOutstandingBalanceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeductOutstandingBalanceResponse
+     * <b>description</b> :
+     * <p>Note that sometimes you may find that the customer\&quot;s Used Credit is negative. This indicates that there is no need to restore the Used Credit, and its ready for customer\&quot;s usage. This phenomenon occurs because a refund is generated while the customer\&quot;s credit is full, thereby triggered additional increasing on the customer\&quot;s credit.
+     * For example, if the customer\&quot;s maximum Available Credit is 1000 with no usage, and a refund of 300 occurs, the Used Credit will become -300.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>This API is used to offset the Deducted Credit of a Distribution Customer. For example, if the current Deducted Credit is 500 and the Available Credit is 1000, by offsetting 300, the Deducted Credit will then become 200, and the Available Credit becomes 1300.</p>
+     * 
+     * @param request DeductOutstandingBalanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeductOutstandingBalanceResponse
      */
     public DeductOutstandingBalanceResponse deductOutstandingBalanceWithOptions(DeductOutstandingBalanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -239,11 +383,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Note that sometimes you may find that the customer\\"s Used Credit is negative. This indicates that there is no need to restore the Used Credit, and its ready for customer\\"s usage. This phenomenon occurs because a refund is generated while the customer\\"s credit is full, thereby triggered additional increasing on the customer\\"s credit.
-      * For example, if the customer\\"s maximum Available Credit is 1000 with no usage, and a refund of 300 occurs, the Used Credit will become -300.
-      *
-      * @param request DeductOutstandingBalanceRequest
-      * @return DeductOutstandingBalanceResponse
+     * <b>description</b> :
+     * <p>Note that sometimes you may find that the customer\&quot;s Used Credit is negative. This indicates that there is no need to restore the Used Credit, and its ready for customer\&quot;s usage. This phenomenon occurs because a refund is generated while the customer\&quot;s credit is full, thereby triggered additional increasing on the customer\&quot;s credit.
+     * For example, if the customer\&quot;s maximum Available Credit is 1000 with no usage, and a refund of 300 occurs, the Used Credit will become -300.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>This API is used to offset the Deducted Credit of a Distribution Customer. For example, if the current Deducted Credit is 500 and the Available Credit is 1000, by offsetting 300, the Deducted Credit will then become 200, and the Available Credit becomes 1300.</p>
+     * 
+     * @param request DeductOutstandingBalanceRequest
+     * @return DeductOutstandingBalanceResponse
      */
     public DeductOutstandingBalanceResponse deductOutstandingBalance(DeductOutstandingBalanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -251,12 +399,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
-      * **This content is only published on the international site. **
-      *
-      * @param request EditEndUserStatusRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return EditEndUserStatusResponse
+     * <b>description</b> :
+     * <p>The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
+     * **This content is only published on the international site. **</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Set the after-shutdown instance status for post-pay End Users as a Reseller.</p>
+     * 
+     * @param request EditEndUserStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EditEndUserStatusResponse
      */
     public EditEndUserStatusResponse editEndUserStatusWithOptions(EditEndUserStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -279,11 +431,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
-      * **This content is only published on the international site. **
-      *
-      * @param request EditEndUserStatusRequest
-      * @return EditEndUserStatusResponse
+     * <b>description</b> :
+     * <p>The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
+     * **This content is only published on the international site. **</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Set the after-shutdown instance status for post-pay End Users as a Reseller.</p>
+     * 
+     * @param request EditEndUserStatusRequest
+     * @return EditEndUserStatusResponse
      */
     public EditEndUserStatusResponse editEndUserStatus(EditEndUserStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -291,12 +447,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
-      * **This content is only published on the international site. **
-      *
-      * @param request EditNewBuyStatusRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return EditNewBuyStatusResponse
+     * <b>description</b> :
+     * <p>The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
+     * **This content is only published on the international site. **</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Set the New Buy status for Sub-Customer as a Partner.</p>
+     * 
+     * @param request EditNewBuyStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EditNewBuyStatusResponse
      */
     public EditNewBuyStatusResponse editNewBuyStatusWithOptions(EditNewBuyStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -327,11 +487,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
-      * **This content is only published on the international site. **
-      *
-      * @param request EditNewBuyStatusRequest
-      * @return EditNewBuyStatusResponse
+     * <b>description</b> :
+     * <p>The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
+     * **This content is only published on the international site. **</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Set the New Buy status for Sub-Customer as a Partner.</p>
+     * 
+     * @param request EditNewBuyStatusRequest
+     * @return EditNewBuyStatusResponse
      */
     public EditNewBuyStatusResponse editNewBuyStatus(EditNewBuyStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -339,12 +503,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
-      * **This content is only published on the international site. **
-      *
-      * @param request EditZeroCreditShutdownRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return EditZeroCreditShutdownResponse
+     * <b>description</b> :
+     * <p>The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
+     * **This content is only published on the international site. **</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modify the End User\&quot;s Shutdown Policy as a Reseller.</p>
+     * 
+     * @param request EditZeroCreditShutdownRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EditZeroCreditShutdownResponse
      */
     public EditZeroCreditShutdownResponse editZeroCreditShutdownWithOptions(EditZeroCreditShutdownRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -375,11 +543,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
-      * **This content is only published on the international site. **
-      *
-      * @param request EditZeroCreditShutdownRequest
-      * @return EditZeroCreditShutdownResponse
+     * <b>description</b> :
+     * <p>The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
+     * **This content is only published on the international site. **</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modify the End User\&quot;s Shutdown Policy as a Reseller.</p>
+     * 
+     * @param request EditZeroCreditShutdownRequest
+     * @return EditZeroCreditShutdownResponse
      */
     public EditZeroCreditShutdownResponse editZeroCreditShutdown(EditZeroCreditShutdownRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -387,11 +559,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Caller must be a Partner from International Site, either Distribution or Reseller will do.
-      *
-      * @param request ExportCustomerQuotaRecordRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ExportCustomerQuotaRecordResponse
+     * <b>description</b> :
+     * <p>Caller must be a Partner from International Site, either Distribution or Reseller will do.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Export quota amount adjustment history as a Distribution Customer from International Site. Only available on International Site.</p>
+     * 
+     * @param request ExportCustomerQuotaRecordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExportCustomerQuotaRecordResponse
      */
     public ExportCustomerQuotaRecordResponse exportCustomerQuotaRecordWithOptions(ExportCustomerQuotaRecordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -434,16 +610,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Caller must be a Partner from International Site, either Distribution or Reseller will do.
-      *
-      * @param request ExportCustomerQuotaRecordRequest
-      * @return ExportCustomerQuotaRecordResponse
+     * <b>description</b> :
+     * <p>Caller must be a Partner from International Site, either Distribution or Reseller will do.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Export quota amount adjustment history as a Distribution Customer from International Site. Only available on International Site.</p>
+     * 
+     * @param request ExportCustomerQuotaRecordRequest
+     * @return ExportCustomerQuotaRecordResponse
      */
     public ExportCustomerQuotaRecordResponse exportCustomerQuotaRecord(ExportCustomerQuotaRecordRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.exportCustomerQuotaRecordWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Return Distribution Customer\&quot;s account information.</p>
+     * 
+     * @param request GetAccountInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAccountInfoResponse
+     */
     public GetAccountInfoResponse getAccountInfoWithOptions(GetAccountInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -464,11 +652,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAccountInfoResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Return Distribution Customer\&quot;s account information.</p>
+     * 
+     * @param request GetAccountInfoRequest
+     * @return GetAccountInfoResponse
+     */
     public GetAccountInfoResponse getAccountInfo(GetAccountInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAccountInfoWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>国际渠道分销优惠券可抵扣产品</p>
+     * 
+     * @param request GetCoupondeductProductCodeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCoupondeductProductCodeResponse
+     */
+    public GetCoupondeductProductCodeResponse getCoupondeductProductCodeWithOptions(GetCoupondeductProductCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCoupondeductProductCode"),
+            new TeaPair("version", "2022-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCoupondeductProductCodeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>国际渠道分销优惠券可抵扣产品</p>
+     * 
+     * @param request GetCoupondeductProductCodeRequest
+     * @return GetCoupondeductProductCodeResponse
+     */
+    public GetCoupondeductProductCodeResponse getCoupondeductProductCode(GetCoupondeductProductCodeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCoupondeductProductCodeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query Credit Control information of Distribution Customers. The PopCreditInfoJson in the Return Parameter will be empty if the Distribution Customer is an Agency. This function is only available for Resellers and Distributors.</p>
+     * 
+     * @param request GetCreditInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCreditInfoResponse
+     */
     public GetCreditInfoResponse getCreditInfoWithOptions(GetCreditInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -489,11 +732,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetCreditInfoResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Query Credit Control information of Distribution Customers. The PopCreditInfoJson in the Return Parameter will be empty if the Distribution Customer is an Agency. This function is only available for Resellers and Distributors.</p>
+     * 
+     * @param request GetCreditInfoRequest
+     * @return GetCreditInfoResponse
+     */
     public GetCreditInfoResponse getCreditInfo(GetCreditInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getCreditInfoWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>客户订单查询</p>
+     * 
+     * @param request GetCustomerOrdersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCustomerOrdersResponse
+     */
+    public GetCustomerOrdersResponse getCustomerOrdersWithOptions(GetCustomerOrdersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCustomerOrders"),
+            new TeaPair("version", "2022-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCustomerOrdersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>客户订单查询</p>
+     * 
+     * @param request GetCustomerOrdersRequest
+     * @return GetCustomerOrdersResponse
+     */
+    public GetCustomerOrdersResponse getCustomerOrders(GetCustomerOrdersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCustomerOrdersWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Issue Distributor\&quot;s daily Bill. This function is only available for Resellers and Distributors.</p>
+     * 
+     * @param request GetDailyBillRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDailyBillResponse
+     */
     public GetDailyBillResponse getDailyBillWithOptions(GetDailyBillRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -526,11 +824,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetDailyBillResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Issue Distributor\&quot;s daily Bill. This function is only available for Resellers and Distributors.</p>
+     * 
+     * @param request GetDailyBillRequest
+     * @return GetDailyBillResponse
+     */
     public GetDailyBillResponse getDailyBill(GetDailyBillRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getDailyBillWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Query invitation status of customer who have been created and invited.</p>
+     * 
+     * @param request GetInviteStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetInviteStatusResponse
+     */
     public GetInviteStatusResponse getInviteStatusWithOptions(GetInviteStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -555,11 +868,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetInviteStatusResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Query invitation status of customer who have been created and invited.</p>
+     * 
+     * @param request GetInviteStatusRequest
+     * @return GetInviteStatusResponse
+     */
     public GetInviteStatusResponse getInviteStatus(GetInviteStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getInviteStatusWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Issue Distributor\&quot;s Monthly Bill. This function is only available for Resellers and Distributors.</p>
+     * 
+     * @param request GetMonthlyBillRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMonthlyBillResponse
+     */
     public GetMonthlyBillResponse getMonthlyBillWithOptions(GetMonthlyBillRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -592,11 +920,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetMonthlyBillResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Issue Distributor\&quot;s Monthly Bill. This function is only available for Resellers and Distributors.</p>
+     * 
+     * @param request GetMonthlyBillRequest
+     * @return GetMonthlyBillResponse
+     */
     public GetMonthlyBillResponse getMonthlyBill(GetMonthlyBillRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getMonthlyBillWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Query all the Unassociated Customer.</p>
+     * 
+     * @param request GetUnassociatedCustomerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetUnassociatedCustomerResponse
+     */
     public GetUnassociatedCustomerResponse getUnassociatedCustomerWithOptions(GetUnassociatedCustomerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -617,17 +960,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetUnassociatedCustomerResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Query all the Unassociated Customer.</p>
+     * 
+     * @param request GetUnassociatedCustomerRequest
+     * @return GetUnassociatedCustomerResponse
+     */
     public GetUnassociatedCustomerResponse getUnassociatedCustomer(GetUnassociatedCustomerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getUnassociatedCustomerWithOptions(request, runtime);
     }
 
     /**
-      * The current API request rate for the Cloud Product has not been disclosed.
-      *
-      * @param request InviteSubAccountRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return InviteSubAccountResponse
+     * <b>description</b> :
+     * <p>The current API request rate for the Cloud Product has not been disclosed.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Initiate the Partner registration invitation.</p>
+     * 
+     * @param request InviteSubAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return InviteSubAccountResponse
      */
     public InviteSubAccountResponse inviteSubAccountWithOptions(InviteSubAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -654,10 +1008,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The current API request rate for the Cloud Product has not been disclosed.
-      *
-      * @param request InviteSubAccountRequest
-      * @return InviteSubAccountResponse
+     * <b>description</b> :
+     * <p>The current API request rate for the Cloud Product has not been disclosed.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Initiate the Partner registration invitation.</p>
+     * 
+     * @param request InviteSubAccountRequest
+     * @return InviteSubAccountResponse
      */
     public InviteSubAccountResponse inviteSubAccount(InviteSubAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -665,11 +1023,67 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The current API request rate for cloud products has not been disclosed.
-      *
-      * @param request ListCountriesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListCountriesResponse
+     * <b>summary</b> : 
+     * <p>发放优惠券</p>
+     * 
+     * @param request IssueCouponForCustomerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return IssueCouponForCustomerResponse
+     */
+    public IssueCouponForCustomerResponse issueCouponForCustomerWithOptions(IssueCouponForCustomerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.couponTemplateId)) {
+            query.put("CouponTemplateId", request.couponTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uidlist)) {
+            query.put("Uidlist", request.uidlist);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "IssueCouponForCustomer"),
+            new TeaPair("version", "2022-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new IssueCouponForCustomerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>发放优惠券</p>
+     * 
+     * @param request IssueCouponForCustomerRequest
+     * @return IssueCouponForCustomerResponse
+     */
+    public IssueCouponForCustomerResponse issueCouponForCustomer(IssueCouponForCustomerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.issueCouponForCustomerWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The current API request rate for cloud products has not been disclosed.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>This function is available for all Distributors. It displays the corresponding region code information based on the operable countries as agreed in the Distributor\&quot;s contract.</p>
+     * 
+     * @param request ListCountriesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCountriesResponse
      */
     public ListCountriesResponse listCountriesWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
@@ -688,15 +1102,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The current API request rate for cloud products has not been disclosed.
-      *
-      * @return ListCountriesResponse
+     * <b>description</b> :
+     * <p>The current API request rate for cloud products has not been disclosed.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>This function is available for all Distributors. It displays the corresponding region code information based on the operable countries as agreed in the Distributor\&quot;s contract.</p>
+     * @return ListCountriesResponse
      */
     public ListCountriesResponse listCountries() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listCountriesWithOptions(runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>优惠券使用量列表查询</p>
+     * 
+     * @param request ListCouponUsageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCouponUsageResponse
+     */
     public ListCouponUsageResponse listCouponUsageWithOptions(ListCouponUsageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -741,17 +1166,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListCouponUsageResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>优惠券使用量列表查询</p>
+     * 
+     * @param request ListCouponUsageRequest
+     * @return ListCouponUsageResponse
+     */
     public ListCouponUsageResponse listCouponUsage(ListCouponUsageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listCouponUsageWithOptions(request, runtime);
     }
 
     /**
-      * Caller must be a Partner from International Site, either Distribution or Reseller will do.
-      *
-      * @param request QuotaListExportPagedRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return QuotaListExportPagedResponse
+     * <b>description</b> :
+     * <p>Caller must be a Partner from International Site, either Distribution or Reseller will do.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Check the result of export quota list as a Distribution Customer from International Site. Only available on International Site.</p>
+     * 
+     * @param request QuotaListExportPagedRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QuotaListExportPagedResponse
      */
     public QuotaListExportPagedResponse quotaListExportPagedWithOptions(QuotaListExportPagedRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -774,16 +1210,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Caller must be a Partner from International Site, either Distribution or Reseller will do.
-      *
-      * @param request QuotaListExportPagedRequest
-      * @return QuotaListExportPagedResponse
+     * <b>description</b> :
+     * <p>Caller must be a Partner from International Site, either Distribution or Reseller will do.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Check the result of export quota list as a Distribution Customer from International Site. Only available on International Site.</p>
+     * 
+     * @param request QuotaListExportPagedRequest
+     * @return QuotaListExportPagedResponse
      */
     public QuotaListExportPagedResponse quotaListExportPaged(QuotaListExportPagedRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.quotaListExportPagedWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Resend invitation email.</p>
+     * 
+     * @param request ResendEmailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ResendEmailResponse
+     */
     public ResendEmailResponse resendEmailWithOptions(ResendEmailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -808,11 +1256,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ResendEmailResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Resend invitation email.</p>
+     * 
+     * @param request ResendEmailRequest
+     * @return ResendEmailResponse
+     */
     public ResendEmailResponse resendEmail(ResendEmailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.resendEmailWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>This function is designed for Sub Account information maintenance, including Nickname and Remark.</p>
+     * 
+     * @param request SetAccountInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetAccountInfoResponse
+     */
     public SetAccountInfoResponse setAccountInfoWithOptions(SetAccountInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -849,11 +1312,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SetAccountInfoResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>This function is designed for Sub Account information maintenance, including Nickname and Remark.</p>
+     * 
+     * @param request SetAccountInfoRequest
+     * @return SetAccountInfoResponse
+     */
     public SetAccountInfoResponse setAccountInfo(SetAccountInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setAccountInfoWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Set Credit Line for Distribution Customers. This function is only available for Resellers and Distributors.</p>
+     * 
+     * @param request SetCreditLineRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetCreditLineResponse
+     */
     public SetCreditLineResponse setCreditLineWithOptions(SetCreditLineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -882,11 +1360,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SetCreditLineResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Set Credit Line for Distribution Customers. This function is only available for Resellers and Distributors.</p>
+     * 
+     * @param request SetCreditLineRequest
+     * @return SetCreditLineResponse
+     */
     public SetCreditLineResponse setCreditLine(SetCreditLineRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setCreditLineWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>You can use this API to set the threshold for the use of credit control. When the customer credit control reaches below the threshold, it will pass through the notification email distributor. This feature is for Reseller and Distributor only.</p>
+     * 
+     * @param request SetWarningThresholdRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetWarningThresholdResponse
+     */
     public SetWarningThresholdResponse setWarningThresholdWithOptions(SetWarningThresholdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -915,42 +1408,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SetWarningThresholdResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>You can use this API to set the threshold for the use of credit control. When the customer credit control reaches below the threshold, it will pass through the notification email distributor. This feature is for Reseller and Distributor only.</p>
+     * 
+     * @param request SetWarningThresholdRequest
+     * @return SetWarningThresholdResponse
+     */
     public SetWarningThresholdResponse setWarningThreshold(SetWarningThresholdRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setWarningThresholdWithOptions(request, runtime);
     }
 
     /**
-      * *   Make sure that you are a distributor of the Alibaba Cloud international ecosystem.
-      * *   You can call this operation to subscribe to only one type of bill at a time.
-      * *   After the subscription to a type of bill is generated, the bill for the previous day is pushed on a daily basis from the next day. On the fifth day of each month, the full-data bill for the previous month is pushed.
-      * *   A daily bill may be delayed. The delayed bill is pushed the next day after it is generated. The delayed bill may contain the bill data that is delayed until the previous day. We recommend that you query the full-data bill for the previous month at the beginning of each month.
-      * *   Your account must be granted the [AliyunConsumeDump2OSSRole](https://ram.console.aliyun.com/?spm=api-workbench.API%20Document.0.0.68c71e0fhmTSJp#/role/authorize?request=%7B%22Requests%22:%20%7B%22request1%22:%20%7B%22RoleName%22:%20%22AliyunConsumeDump2OSSRole%22,%20%22TemplateId%22:%20%22Dump2OSSRole%22%7D%7D,%20%22ReturnUrl%22:%20%22https:%2F%2Fusercenter2.aliyun.com%22,%20%22Service%22:%20%22Consume%22%7D) permission.
-      * *   The following file name formats are supported for bills:
-      * ```
-      * BillingItemDetailForBillingPeriod
-      *   
-      * File name format of a daily bill: UID_PartnerBillingItemDetail_YYYYMMDD_SquenceNo_fileNo. Example: 169**_BillingItemDetail_20190310_0001_01. 
-      *   
-      * File name format of a monthly full-data bill: UID_PartnerBillingItemDetail_YYYYMM_SquenceNo_fileNo. Example: 169**_BillingItemDetail_201903_0001_01. 
-      * InstanceDetailForBillingPeriod
-      *  
-      *  File name format of a daily bill: UID_PartnerInstanceDetail_YYYYMMDD_SquenceNo_fileNo. Example: 169**_InstanceDetail_20190310_0001_01. 
-      *   
-      * File name format of a monthly full-data bill: UID_PartnerInstanceDetail_YYYYMM_SquenceNo_fileNo. Example: 169**_InstanceDetail_201903_1999-0001_01. 
-      * BillingItemDetailMonthly
-      *   
-      * File name format of a daily bill: UID_PartnerBillingItemDetailMonthly_YYYYMM_SquenceNo_fileNo. Example: 169**_BillingItemDetailMonthly_201903_0001_01. This bill contains the bill data that is generated from the beginning of the current month to the fifth day of the next month. 
-      * InstanceDetailMonthly
-      *   
-      * File name format of a daily bill: UID_PartnerInstanceDetailMonthly_YYYYMM_SquenceNo_fileNo. Example: 169**_InstanceDetailMonthly_201903_0001_01. This bill contains the bill data that is generated from the beginning of the current month to the fifth day of the next month. 
-      * The fileNo field exists only when the number of bill rows reaches the maximum rows in a single bill file and the bill is split into multiple files.
-      * ```
-      * **This topic is published only on the international site (alibabacloud.com).
-      *
-      * @param request SubscriptionBillRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return SubscriptionBillResponse
+     * <b>description</b> :
+     * <p>  Make sure that you are a distributor of the Alibaba Cloud international ecosystem.</p>
+     * <ul>
+     * <li>You can call this operation to subscribe to only one type of bill at a time.</li>
+     * <li>After the subscription to a type of bill is generated, the bill for the previous day is pushed on a daily basis from the next day. On the fifth day of each month, the full-data bill for the previous month is pushed.</li>
+     * <li>A daily bill may be delayed. The delayed bill is pushed the next day after it is generated. The delayed bill may contain the bill data that is delayed until the previous day. We recommend that you query the full-data bill for the previous month at the beginning of each month.</li>
+     * <li>Your account must be granted the <a href="https://ram.console.aliyun.com/?spm=api-workbench.API%20Document.0.0.68c71e0fhmTSJp#/role/authorize?request=%7B%22Requests%22:%20%7B%22request1%22:%20%7B%22RoleName%22:%20%22AliyunConsumeDump2OSSRole%22,%20%22TemplateId%22:%20%22Dump2OSSRole%22%7D%7D,%20%22ReturnUrl%22:%20%22https:%2F%2Fusercenter2.aliyun.com%22,%20%22Service%22:%20%22Consume%22%7D">AliyunConsumeDump2OSSRole</a> permission.</li>
+     * <li>The following file name formats are supported for bills:</li>
+     * </ul>
+     * <pre><code>BillingItemDetailForBillingPeriod
+     *   
+     * File name format of a daily bill: UID_PartnerBillingItemDetail_YYYYMMDD_SquenceNo_fileNo. Example: 169**_BillingItemDetail_20190310_0001_01. 
+     *   
+     * File name format of a monthly full-data bill: UID_PartnerBillingItemDetail_YYYYMM_SquenceNo_fileNo. Example: 169**_BillingItemDetail_201903_0001_01. 
+     * InstanceDetailForBillingPeriod
+     *  
+     *  File name format of a daily bill: UID_PartnerInstanceDetail_YYYYMMDD_SquenceNo_fileNo. Example: 169**_InstanceDetail_20190310_0001_01. 
+     *   
+     * File name format of a monthly full-data bill: UID_PartnerInstanceDetail_YYYYMM_SquenceNo_fileNo. Example: 169**_InstanceDetail_201903_1999-0001_01. 
+     * BillingItemDetailMonthly
+     *   
+     * File name format of a daily bill: UID_PartnerBillingItemDetailMonthly_YYYYMM_SquenceNo_fileNo. Example: 169**_BillingItemDetailMonthly_201903_0001_01. This bill contains the bill data that is generated from the beginning of the current month to the fifth day of the next month. 
+     * InstanceDetailMonthly
+     *   
+     * File name format of a daily bill: UID_PartnerInstanceDetailMonthly_YYYYMM_SquenceNo_fileNo. Example: 169**_InstanceDetailMonthly_201903_0001_01. This bill contains the bill data that is generated from the beginning of the current month to the fifth day of the next month. 
+     * The fileNo field exists only when the number of bill rows reaches the maximum rows in a single bill file and the bill is split into multiple files.
+     * </code></pre>
+     * <p>**This topic is published only on the international site (alibabacloud.com).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Generates the subscription to multi-level bills as an Alibaba Cloud eco-partner.</p>
+     * 
+     * @param request SubscriptionBillRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubscriptionBillResponse
      */
     public SubscriptionBillResponse subscriptionBillWithOptions(SubscriptionBillRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -997,35 +1502,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   Make sure that you are a distributor of the Alibaba Cloud international ecosystem.
-      * *   You can call this operation to subscribe to only one type of bill at a time.
-      * *   After the subscription to a type of bill is generated, the bill for the previous day is pushed on a daily basis from the next day. On the fifth day of each month, the full-data bill for the previous month is pushed.
-      * *   A daily bill may be delayed. The delayed bill is pushed the next day after it is generated. The delayed bill may contain the bill data that is delayed until the previous day. We recommend that you query the full-data bill for the previous month at the beginning of each month.
-      * *   Your account must be granted the [AliyunConsumeDump2OSSRole](https://ram.console.aliyun.com/?spm=api-workbench.API%20Document.0.0.68c71e0fhmTSJp#/role/authorize?request=%7B%22Requests%22:%20%7B%22request1%22:%20%7B%22RoleName%22:%20%22AliyunConsumeDump2OSSRole%22,%20%22TemplateId%22:%20%22Dump2OSSRole%22%7D%7D,%20%22ReturnUrl%22:%20%22https:%2F%2Fusercenter2.aliyun.com%22,%20%22Service%22:%20%22Consume%22%7D) permission.
-      * *   The following file name formats are supported for bills:
-      * ```
-      * BillingItemDetailForBillingPeriod
-      *   
-      * File name format of a daily bill: UID_PartnerBillingItemDetail_YYYYMMDD_SquenceNo_fileNo. Example: 169**_BillingItemDetail_20190310_0001_01. 
-      *   
-      * File name format of a monthly full-data bill: UID_PartnerBillingItemDetail_YYYYMM_SquenceNo_fileNo. Example: 169**_BillingItemDetail_201903_0001_01. 
-      * InstanceDetailForBillingPeriod
-      *  
-      *  File name format of a daily bill: UID_PartnerInstanceDetail_YYYYMMDD_SquenceNo_fileNo. Example: 169**_InstanceDetail_20190310_0001_01. 
-      *   
-      * File name format of a monthly full-data bill: UID_PartnerInstanceDetail_YYYYMM_SquenceNo_fileNo. Example: 169**_InstanceDetail_201903_1999-0001_01. 
-      * BillingItemDetailMonthly
-      *   
-      * File name format of a daily bill: UID_PartnerBillingItemDetailMonthly_YYYYMM_SquenceNo_fileNo. Example: 169**_BillingItemDetailMonthly_201903_0001_01. This bill contains the bill data that is generated from the beginning of the current month to the fifth day of the next month. 
-      * InstanceDetailMonthly
-      *   
-      * File name format of a daily bill: UID_PartnerInstanceDetailMonthly_YYYYMM_SquenceNo_fileNo. Example: 169**_InstanceDetailMonthly_201903_0001_01. This bill contains the bill data that is generated from the beginning of the current month to the fifth day of the next month. 
-      * The fileNo field exists only when the number of bill rows reaches the maximum rows in a single bill file and the bill is split into multiple files.
-      * ```
-      * **This topic is published only on the international site (alibabacloud.com).
-      *
-      * @param request SubscriptionBillRequest
-      * @return SubscriptionBillResponse
+     * <b>description</b> :
+     * <p>  Make sure that you are a distributor of the Alibaba Cloud international ecosystem.</p>
+     * <ul>
+     * <li>You can call this operation to subscribe to only one type of bill at a time.</li>
+     * <li>After the subscription to a type of bill is generated, the bill for the previous day is pushed on a daily basis from the next day. On the fifth day of each month, the full-data bill for the previous month is pushed.</li>
+     * <li>A daily bill may be delayed. The delayed bill is pushed the next day after it is generated. The delayed bill may contain the bill data that is delayed until the previous day. We recommend that you query the full-data bill for the previous month at the beginning of each month.</li>
+     * <li>Your account must be granted the <a href="https://ram.console.aliyun.com/?spm=api-workbench.API%20Document.0.0.68c71e0fhmTSJp#/role/authorize?request=%7B%22Requests%22:%20%7B%22request1%22:%20%7B%22RoleName%22:%20%22AliyunConsumeDump2OSSRole%22,%20%22TemplateId%22:%20%22Dump2OSSRole%22%7D%7D,%20%22ReturnUrl%22:%20%22https:%2F%2Fusercenter2.aliyun.com%22,%20%22Service%22:%20%22Consume%22%7D">AliyunConsumeDump2OSSRole</a> permission.</li>
+     * <li>The following file name formats are supported for bills:</li>
+     * </ul>
+     * <pre><code>BillingItemDetailForBillingPeriod
+     *   
+     * File name format of a daily bill: UID_PartnerBillingItemDetail_YYYYMMDD_SquenceNo_fileNo. Example: 169**_BillingItemDetail_20190310_0001_01. 
+     *   
+     * File name format of a monthly full-data bill: UID_PartnerBillingItemDetail_YYYYMM_SquenceNo_fileNo. Example: 169**_BillingItemDetail_201903_0001_01. 
+     * InstanceDetailForBillingPeriod
+     *  
+     *  File name format of a daily bill: UID_PartnerInstanceDetail_YYYYMMDD_SquenceNo_fileNo. Example: 169**_InstanceDetail_20190310_0001_01. 
+     *   
+     * File name format of a monthly full-data bill: UID_PartnerInstanceDetail_YYYYMM_SquenceNo_fileNo. Example: 169**_InstanceDetail_201903_1999-0001_01. 
+     * BillingItemDetailMonthly
+     *   
+     * File name format of a daily bill: UID_PartnerBillingItemDetailMonthly_YYYYMM_SquenceNo_fileNo. Example: 169**_BillingItemDetailMonthly_201903_0001_01. This bill contains the bill data that is generated from the beginning of the current month to the fifth day of the next month. 
+     * InstanceDetailMonthly
+     *   
+     * File name format of a daily bill: UID_PartnerInstanceDetailMonthly_YYYYMM_SquenceNo_fileNo. Example: 169**_InstanceDetailMonthly_201903_0001_01. This bill contains the bill data that is generated from the beginning of the current month to the fifth day of the next month. 
+     * The fileNo field exists only when the number of bill rows reaches the maximum rows in a single bill file and the bill is split into multiple files.
+     * </code></pre>
+     * <p>**This topic is published only on the international site (alibabacloud.com).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Generates the subscription to multi-level bills as an Alibaba Cloud eco-partner.</p>
+     * 
+     * @param request SubscriptionBillRequest
+     * @return SubscriptionBillResponse
      */
     public SubscriptionBillResponse subscriptionBill(SubscriptionBillRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();

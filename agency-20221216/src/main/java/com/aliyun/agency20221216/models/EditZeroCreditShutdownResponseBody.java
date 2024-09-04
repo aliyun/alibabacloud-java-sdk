@@ -6,17 +6,26 @@ import com.aliyun.tea.*;
 public class EditZeroCreditShutdownResponseBody extends TeaModel {
     /**
      * <p>Success or not</br></p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>Request ID</br></p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
+     * <p>Message</br></p>
+     * 
+     * <strong>example:</strong>
      * <p>Message</br></p>
      */
     @NameInMap("Message")
@@ -24,12 +33,18 @@ public class EditZeroCreditShutdownResponseBody extends TeaModel {
 
     /**
      * <p>NO_STOP</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
      */
     @NameInMap("Msg")
     public String msg;
 
     /**
      * <p>success</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>
      */
     @NameInMap("RequestId")
     public String requestId;

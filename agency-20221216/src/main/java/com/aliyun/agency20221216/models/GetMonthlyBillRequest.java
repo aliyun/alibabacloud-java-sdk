@@ -5,31 +5,44 @@ import com.aliyun.tea.*;
 
 public class GetMonthlyBillRequest extends TeaModel {
     /**
-     * <p>Bill Owner type. Value Range:</br></p>
-     * <p>1: Master account</br></p>
-     * <p>2: Sub account</br></p>
+     * <p>Bill Owner type. Value Range:</br>
+     * 1: Master account</br>
+     * 2: Sub account</br></p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("BillOwner")
     public String billOwner;
 
     /**
      * <p>Value Range:</p>
-     * <br>
-     * <p>- MonthlyInvoice</p>
-     * <p>- MonthRefundInvoice</p>
-     * <p>- MonthlySummary</p>
-     * <p>- MonthlyInstanceAddAdjustBill </p>
-     * <p>- MonthlyInstanceRefundBill</p>
-     * <p>- MonthlyAddAdjustInvoce</p>
-     * <p>- MonthlyRefundAdjustInvoce </p>
-     * <p>- MonthlyInstanceConsumeV2 </p>
-     * <p>- MarginReportV2</p>
+     * <ul>
+     * <li>MonthlyInvoice</li>
+     * <li>MonthRefundInvoice</li>
+     * <li>MonthlySummary</li>
+     * <li>MonthlyInstanceAddAdjustBill </li>
+     * <li>MonthlyInstanceRefundBill</li>
+     * <li>MonthlyAddAdjustInvoce</li>
+     * <li>MonthlyRefundAdjustInvoce </li>
+     * <li>MonthlyInstanceConsumeV2 </li>
+     * <li>MarginReportV2</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MonthlyInvoice</p>
      */
     @NameInMap("BillType")
     public String billType;
 
     /**
      * <p>Billing Month, Format is YYYY-MM</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-11</p>
      */
     @NameInMap("Month")
     public String month;

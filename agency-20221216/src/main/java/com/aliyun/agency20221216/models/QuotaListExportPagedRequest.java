@@ -6,21 +6,32 @@ import com.aliyun.tea.*;
 public class QuotaListExportPagedRequest extends TeaModel {
     /**
      * <p>Pagination, current page number, starting from 1.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>Multilingual Parameters, the default language is English.</br></p>
-     * <p>en: English</br></p>
-     * <p>zh: Chinese</br></p>
-     * <p>ja: Japanese </br></p>
+     * <p>Multilingual Parameters, the default language is English.</br>
+     * en: English</br>
+     * zh: Chinese</br>
+     * ja: Japanese </br></p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Language")
     public String language;
 
     /**
      * <p>Pagination, record number on each page, maximum 100.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

@@ -6,36 +6,55 @@ import com.aliyun.tea.*;
 public class ExportCustomerQuotaRecordRequest extends TeaModel {
     /**
      * <p>End Date Format:  yyyy-MM-dd</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-12-24</p>
      */
     @NameInMap("EndDate")
     public String endDate;
 
     /**
      * <p>Customer UID</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5113766248601929</p>
      */
     @NameInMap("EndUserPk")
     public Long endUserPk;
 
     /**
-     * <p>Multilingual Parameters, the default language is English.</br></p>
-     * <p>en: English</br></p>
-     * <p>zh: Chinese</br></p>
-     * <p>ja: Japanese </br></p>
+     * <p>Multilingual Parameters, the default language is English.</br>
+     * en: English</br>
+     * zh: Chinese</br>
+     * ja: Japanese </br></p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Language")
     public String language;
 
     /**
-     * <p>Operation Type Enum</br></p>
-     * <p>all All types</br></p>
-     * <p>quota_create Create quota</br></p>
-     * <p>quota_amount_adjust Adjust the amount of quota</br></p>
+     * <p>Operation Type Enum</br>
+     * all All types</br>
+     * quota_create Create quota</br>
+     * quota_amount_adjust Adjust the amount of quota</br></p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>all</p>
      */
     @NameInMap("OperationType")
     public String operationType;
 
     /**
      * <p>Start Date Format:  yyyy-MM-dd</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-11-10</p>
      */
     @NameInMap("StartDate")
     public String startDate;

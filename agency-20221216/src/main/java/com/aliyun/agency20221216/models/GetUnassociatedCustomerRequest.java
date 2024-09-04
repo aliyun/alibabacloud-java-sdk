@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class GetUnassociatedCustomerRequest extends TeaModel {
     /**
      * <p>Pagination, current page.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>Pagination, record number on each page.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

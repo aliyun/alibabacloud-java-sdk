@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ExportCustomerQuotaRecordResponseBody extends TeaModel {
     /**
      * <p>Code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,12 +21,18 @@ public class ExportCustomerQuotaRecordResponseBody extends TeaModel {
 
     /**
      * <p>Description</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
      */
     @NameInMap("Msg")
     public String msg;
 
     /**
      * <p>ID of the Request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>210bc4b416874189683843905d9f9a</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,12 +77,18 @@ public class ExportCustomerQuotaRecordResponseBody extends TeaModel {
     public static class ExportCustomerQuotaRecordResponseBodyData extends TeaModel {
         /**
          * <p>Estimated duration, in minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Cost")
         public Integer cost;
 
         /**
          * <p>ID of Export task</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1231</p>
          */
         @NameInMap("Id")
         public Long id;

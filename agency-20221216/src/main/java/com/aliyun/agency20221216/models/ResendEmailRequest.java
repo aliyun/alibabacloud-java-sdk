@@ -5,8 +5,12 @@ import com.aliyun.tea.*;
 
 public class ResendEmailRequest extends TeaModel {
     /**
-     * <p>Invitation ID, from interface InviteSubAccount </br></p>
-     * <p>Note: This field type is Long, which may result in precision loss in serialization/deserialization process. Please ensure the value does not exceed 9007199254740991.</p>
+     * <p>Invitation ID, from interface InviteSubAccount </br>
+     * Note: This field type is Long, which may result in precision loss in serialization/deserialization process. Please ensure the value does not exceed 9007199254740991.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>176</p>
      */
     @NameInMap("InviteId")
     public Long inviteId;

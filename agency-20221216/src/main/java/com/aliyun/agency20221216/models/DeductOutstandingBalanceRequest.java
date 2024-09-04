@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class DeductOutstandingBalanceRequest extends TeaModel {
     /**
      * <p>The Deducted Credit to be offset.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
      */
     @NameInMap("DeductAmount")
     public String deductAmount;
 
     /**
      * <p>Account UID of Distribution Customer.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1133166938931507</p>
      */
     @NameInMap("Uid")
     public Long uid;

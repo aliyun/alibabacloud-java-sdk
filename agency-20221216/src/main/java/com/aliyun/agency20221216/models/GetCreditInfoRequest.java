@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class GetCreditInfoRequest extends TeaModel {
     /**
      * <p>Sub Account UID</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1792155717328010</p>
      */
     @NameInMap("Uid")
     public Long uid;
