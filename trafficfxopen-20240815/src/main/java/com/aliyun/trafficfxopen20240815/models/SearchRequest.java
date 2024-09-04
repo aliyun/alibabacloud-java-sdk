@@ -52,8 +52,6 @@ public class SearchRequest extends TeaModel {
     public String terminal;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>“121343”</p>
      */
