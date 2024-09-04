@@ -161,6 +161,9 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
         @NameInMap("Requires")
         public String requires;
 
+        @NameInMap("Uid")
+        public String uid;
+
         public static DescribePostgresExtensionsResponseBodyInstalledExtensions build(java.util.Map<String, ?> map) throws Exception {
             DescribePostgresExtensionsResponseBodyInstalledExtensions self = new DescribePostgresExtensionsResponseBodyInstalledExtensions();
             return TeaModel.build(map, self);
@@ -228,6 +231,14 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
         }
         public String getRequires() {
             return this.requires;
+        }
+
+        public DescribePostgresExtensionsResponseBodyInstalledExtensions setUid(String uid) {
+            this.uid = uid;
+            return this;
+        }
+        public String getUid() {
+            return this.uid;
         }
 
     }
@@ -305,6 +316,9 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
         @NameInMap("Requires")
         public String requires;
 
+        @NameInMap("Uid")
+        public String uid;
+
         public static DescribePostgresExtensionsResponseBodyUninstalledExtensions build(java.util.Map<String, ?> map) throws Exception {
             DescribePostgresExtensionsResponseBodyUninstalledExtensions self = new DescribePostgresExtensionsResponseBodyUninstalledExtensions();
             return TeaModel.build(map, self);
@@ -372,6 +386,14 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
         }
         public String getRequires() {
             return this.requires;
+        }
+
+        public DescribePostgresExtensionsResponseBodyUninstalledExtensions setUid(String uid) {
+            this.uid = uid;
+            return this;
+        }
+        public String getUid() {
+            return this.uid;
         }
 
     }

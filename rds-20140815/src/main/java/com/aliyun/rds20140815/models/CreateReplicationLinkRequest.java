@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateReplicationLinkRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,11 @@ public class CreateReplicationLinkRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: performs a dry run but does not create the instance. The system checks items such as the request parameters, request format, service limits, and available resources.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, the instance is created.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +29,8 @@ public class CreateReplicationLinkRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
+     * <p>The account of the database that is used for data synchronization.</p>
+     * 
      * <strong>example:</strong>
      * <p>testdbuser</p>
      */
@@ -30,6 +38,8 @@ public class CreateReplicationLinkRequest extends TeaModel {
     public String replicatorAccount;
 
     /**
+     * <p>The password of the account.</p>
+     * 
      * <strong>example:</strong>
      * <p>testpassword</p>
      */
@@ -37,6 +47,8 @@ public class CreateReplicationLinkRequest extends TeaModel {
     public String replicatorPassword;
 
     /**
+     * <p>The endpoint of the source instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>pgm-****.pg.rds.aliyuncs.com</p>
      */
@@ -44,6 +56,12 @@ public class CreateReplicationLinkRequest extends TeaModel {
     public String sourceAddress;
 
     /**
+     * <p>The type of the source instance. Valid values:</p>
+     * <ul>
+     * <li><strong>other</strong>: other instances</li>
+     * <li><strong>aliyunRDS</strong>: an ApsaraDB RDS instance</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>aliyunRDS</p>
      */
@@ -51,6 +69,11 @@ public class CreateReplicationLinkRequest extends TeaModel {
     public String sourceCategory;
 
     /**
+     * <p>The name of the source instance.</p>
+     * <blockquote>
+     * <p> You must specify this parameter if <strong>SourceCategory</strong> is set to <strong>aliyunRDS</strong>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>testInstance</p>
      */
@@ -58,6 +81,11 @@ public class CreateReplicationLinkRequest extends TeaModel {
     public String sourceInstanceName;
 
     /**
+     * <p>The ID of the region where the source instance is located.</p>
+     * <blockquote>
+     * <p> You must specify this parameter if <strong>SourceCategory</strong> is set to <strong>aliyunRDS</strong>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -65,6 +93,8 @@ public class CreateReplicationLinkRequest extends TeaModel {
     public String sourceInstanceRegionId;
 
     /**
+     * <p>The port number of the source instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>5432</p>
      */
@@ -72,6 +102,8 @@ public class CreateReplicationLinkRequest extends TeaModel {
     public Long sourcePort;
 
     /**
+     * <p>The task ID of the successful dry run.</p>
+     * 
      * <strong>example:</strong>
      * <p>439946016</p>
      */
@@ -79,6 +111,8 @@ public class CreateReplicationLinkRequest extends TeaModel {
     public Long taskId;
 
     /**
+     * <p>The name of the task. You can specify a custom task name. If you do not specify this parameter, ApsaraDB RDS automatically generates a task name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test01</p>
      */

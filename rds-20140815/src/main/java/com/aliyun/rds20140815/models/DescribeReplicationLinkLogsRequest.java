@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeReplicationLinkLogsRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeReplicationLinkLogsRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +24,8 @@ public class DescribeReplicationLinkLogsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -28,6 +33,8 @@ public class DescribeReplicationLinkLogsRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The ID of the task. You can call the <strong>CreateReplicationLink</strong> operation to create the task ID of the disaster recovery instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>8413252</p>
      */
@@ -35,6 +42,8 @@ public class DescribeReplicationLinkLogsRequest extends TeaModel {
     public Long taskId;
 
     /**
+     * <p>The name of the task. You can call the <strong>CreateReplicationLink</strong> operation to create a disaster recovery instance. You can specify a task name in the request parameters of the call.</p>
+     * 
      * <strong>example:</strong>
      * <p>test01</p>
      */
@@ -42,6 +51,16 @@ public class DescribeReplicationLinkLogsRequest extends TeaModel {
     public String taskName;
 
     /**
+     * <p>The type of the task. Valid values:</p>
+     * <ul>
+     * <li><strong>create</strong>: creates a synchronization link.</li>
+     * <li><strong>create-dryrun</strong>: performs a precheck before a synchronization link is created.</li>
+     * </ul>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>create: creates a replication link.</li>
+     * <li>create-dryrun: performs a precheck before a replication link is created.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

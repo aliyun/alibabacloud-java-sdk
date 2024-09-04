@@ -343,6 +343,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("SupportVolumeShadowCopy")
     public Integer supportVolumeShadowCopy;
 
+    @NameInMap("SupportsHighFrequencyBackup")
+    public Long supportsHighFrequencyBackup;
+
     public static DescribeBackupPolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupPolicyResponseBody self = new DescribeBackupPolicyResponseBody();
         return TeaModel.build(map, self);
@@ -570,6 +573,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     }
     public Integer getSupportVolumeShadowCopy() {
         return this.supportVolumeShadowCopy;
+    }
+
+    public DescribeBackupPolicyResponseBody setSupportsHighFrequencyBackup(Long supportsHighFrequencyBackup) {
+        this.supportsHighFrequencyBackup = supportsHighFrequencyBackup;
+        return this;
+    }
+    public Long getSupportsHighFrequencyBackup() {
+        return this.supportsHighFrequencyBackup;
     }
 
 }

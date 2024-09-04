@@ -64,17 +64,17 @@ public class DescribeHistoryTasksStatRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The task status. Valid values:</p>
+     * <p>The status of the task. Valid values:</p>
      * <ul>
-     * <li>Scheduled</li>
-     * <li>Running</li>
-     * <li>Succeed</li>
-     * <li>Failed</li>
-     * <li>Cancelling</li>
-     * <li>Canceled</li>
-     * <li>Waiting</li>
+     * <li><strong>Scheduled</strong></li>
+     * <li><strong>Running</strong></li>
+     * <li><strong>Succeed</strong></li>
+     * <li><strong>Failed</strong></li>
+     * <li><strong>Cancelling</strong></li>
+     * <li><strong>Canceled</strong></li>
+     * <li><strong>Waiting</strong></li>
      * </ul>
-     * <p>Separate multiple states with commas (,). This parameter is empty by default, which indicates that tasks in all states are queried.</p>
+     * <p>Separate multiple statuses with commas (,). By default, this parameter is left empty. This indicates that tasks in all statuses are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>Scheduled</p>

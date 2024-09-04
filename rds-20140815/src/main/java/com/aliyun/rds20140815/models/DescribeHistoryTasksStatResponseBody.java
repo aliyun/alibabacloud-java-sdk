@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHistoryTasksStatResponseBody extends TeaModel {
     /**
-     * <p>The information about the task.</p>
+     * <p>The queried tasks.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeHistoryTasksStatResponseBodyItems> items;
@@ -42,15 +42,15 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
 
     public static class DescribeHistoryTasksStatResponseBodyItems extends TeaModel {
         /**
-         * <p>The task status. Valid values:</p>
+         * <p>The status of the task. Valid values:</p>
          * <ul>
-         * <li>Scheduled</li>
-         * <li>Running</li>
-         * <li>Succeed</li>
-         * <li>Failed</li>
-         * <li>Cancelling</li>
-         * <li>Canceled</li>
-         * <li>Waiting</li>
+         * <li><strong>Scheduled</strong></li>
+         * <li><strong>Running</strong></li>
+         * <li><strong>Succeed</strong></li>
+         * <li><strong>Failed</strong></li>
+         * <li><strong>Cancelling</strong></li>
+         * <li><strong>Canceled</strong></li>
+         * <li><strong>Waiting</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>

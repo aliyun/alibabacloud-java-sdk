@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateReplicationLinkResponseBody extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>pgm-****.pg.rds.aliyuncs.com</p>
      */
@@ -12,6 +14,8 @@ public class CreateReplicationLinkResponseBody extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9F8C06AD-3F37-57A0-ABBF-ABD7824F55CE</p>
      */
@@ -19,6 +23,8 @@ public class CreateReplicationLinkResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>564532302</p>
      */
@@ -26,6 +32,8 @@ public class CreateReplicationLinkResponseBody extends TeaModel {
     public Long taskId;
 
     /**
+     * <p>The name of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>test01</p>
      */

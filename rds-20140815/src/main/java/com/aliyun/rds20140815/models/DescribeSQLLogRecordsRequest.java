@@ -88,10 +88,10 @@ public class DescribeSQLLogRecordsRequest extends TeaModel {
      * <ul>
      * <li>When you call this operation and set the <strong>Form</strong> parameter to <strong>File</strong> to generate an audit file, you cannot filter log entries by keyword.</li>
      * <li>You can specify up to 10 keywords. The keywords are evaluated by using the <strong>AND</strong> operator. Separate multiple keywords with spaces.</li>
-     * <li>If a field name in the specified SQL statement is enclosed in backquotes (\<code>) and you want to use the field name as a keyword, you must enter the backquotes (\\</code>) as part of the field name. For example, if the field name is \<code>id\\</code>, enter \<code>id\\</code> instead of id.</li>
+     * <li>If a field name in the specified SQL statement is enclosed in grave accents (\<code>) and you want to use the field name as a keyword, you must enter the grave accents (\\</code>) as part of the field name. For example, if the field name is \<code>id\\</code>, enter \<code>id\\</code> instead of id.</li>
      * </ul>
      * <blockquote>
-     * <p> After you enter a keyword, the system matches the keyword based on the <strong>Database</strong>, <strong>User</strong>, and <strong>QueryKeywords</strong> parameters. The parameters are evaluated by using the <strong>OR</strong> operator.</p>
+     * <p> After you enter a keyword, the system matches the keyword based on the <strong>Database</strong>, <strong>User</strong>, and <strong>QueryKeywords</strong> parameters. The parameters are evaluated by using the <strong>AND</strong> operator.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
