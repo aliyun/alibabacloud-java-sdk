@@ -4,21 +4,41 @@ package com.aliyun.umeng_push20220225.models;
 import com.aliyun.tea.*;
 
 public class QueryMsgStatResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public QueryMsgStatResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>86C4236B-D6C2-1E31-8370-2FAEC5CFE012</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,27 +96,59 @@ public class QueryMsgStatResponseBody extends TeaModel {
     }
 
     public static class QueryMsgStatResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Accept")
         public Long accept;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Arrive")
         public Long arrive;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ClosePush")
         public Long closePush;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Dismiss")
         public Long dismiss;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ufe29y2167046828041801</p>
+         */
         @NameInMap("MsgId")
         public String msgId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Open")
         public Long open;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Sent")
         public Long sent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Status")
         public Integer status;
 

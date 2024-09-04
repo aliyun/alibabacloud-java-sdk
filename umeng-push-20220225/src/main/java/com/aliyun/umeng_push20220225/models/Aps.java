@@ -7,6 +7,10 @@ public class Aps extends TeaModel {
     @NameInMap("alert")
     public Alert alert;
 
+    /**
+     * <strong>example:</strong>
+     * <p>+1(自增)，-1(自减)，4(设置数字)</p>
+     */
     @NameInMap("badge")
     public String badge;
 

@@ -4,21 +4,41 @@ package com.aliyun.umeng_push20220225.models;
 import com.aliyun.tea.*;
 
 public class SendByFilterResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public SendByFilterResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>86C4236B-D6C2-1E31-8370-2FAEC5CFE012</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,6 +96,10 @@ public class SendByFilterResponseBody extends TeaModel {
     }
 
     public static class SendByFilterResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>usouag1167056659161101</p>
+         */
         @NameInMap("MsgId")
         public String msgId;
 

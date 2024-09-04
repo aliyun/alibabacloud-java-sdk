@@ -16,6 +16,12 @@ public class SendByAliasFileIdRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PF835431668603208261</p>
+     */
     @NameInMap("FileId")
     public String fileId;
 
@@ -25,12 +31,20 @@ public class SendByAliasFileIdRequest extends TeaModel {
     @NameInMap("Policy")
     public Policy policy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ProductionMode")
     public Boolean productionMode;
 
     @NameInMap("ReceiptType")
     public Integer receiptType;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://msg.umeng.com/upush/receipt">https://msg.umeng.com/upush/receipt</a></p>
+     */
     @NameInMap("ReceiptUrl")
     public String receiptUrl;
 

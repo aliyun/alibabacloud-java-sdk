@@ -13,6 +13,10 @@ public class SendByFilterRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;where&quot;:{&quot;and&quot;:[{&quot;or&quot;:[{&quot;app_version&quot;:&quot;&gt;=1.0&quot;}]}]}</p>
+     */
     @NameInMap("Filter")
     public String filter;
 
@@ -22,12 +26,20 @@ public class SendByFilterRequest extends TeaModel {
     @NameInMap("Policy")
     public Policy policy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ProductionMode")
     public Boolean productionMode;
 
     @NameInMap("ReceiptType")
     public Integer receiptType;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://msg.umeng.com/upush/receipt">https://msg.umeng.com/upush/receipt</a></p>
+     */
     @NameInMap("ReceiptUrl")
     public String receiptUrl;
 
