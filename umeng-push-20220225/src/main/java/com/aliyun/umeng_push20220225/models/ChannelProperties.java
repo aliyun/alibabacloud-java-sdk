@@ -22,6 +22,13 @@ public class ChannelProperties extends TeaModel {
     @NameInMap("oppoChannelId")
     public String oppoChannelId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;true&quot;,默认&quot;false&quot;</p>
+     */
+    @NameInMap("vivoAddBadge")
+    public String vivoAddBadge;
+
     @NameInMap("vivoCategory")
     public String vivoCategory;
 
@@ -79,6 +86,14 @@ public class ChannelProperties extends TeaModel {
     }
     public String getOppoChannelId() {
         return this.oppoChannelId;
+    }
+
+    public ChannelProperties setVivoAddBadge(String vivoAddBadge) {
+        this.vivoAddBadge = vivoAddBadge;
+        return this;
+    }
+    public String getVivoAddBadge() {
+        return this.vivoAddBadge;
     }
 
     public ChannelProperties setVivoCategory(String vivoCategory) {

@@ -4,15 +4,27 @@ package com.aliyun.umeng_push20220225.models;
 import com.aliyun.tea.*;
 
 public class Policy extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>yyyy-MM-dd HH:mm:ss</p>
+     */
     @NameInMap("expireTime")
     public String expireTime;
 
     @NameInMap("outerBizNo")
     public String outerBizNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5000</p>
+     */
     @NameInMap("speed")
     public Integer speed;
 
+    /**
+     * <strong>example:</strong>
+     * <p>yyyy-MM-dd HH:mm:ss</p>
+     */
     @NameInMap("startTime")
     public String startTime;
 

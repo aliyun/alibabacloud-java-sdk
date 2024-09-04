@@ -4,21 +4,41 @@ package com.aliyun.umeng_push20220225.models;
 import com.aliyun.tea.*;
 
 public class SendByDeviceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public SendByDeviceResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>内部错误</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>74808AA4-A044-102F-8F5F-AFE4D97A0F26</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,6 +96,10 @@ public class SendByDeviceResponseBody extends TeaModel {
     }
 
     public static class SendByDeviceResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ula4wbu166876119986400</p>
+         */
         @NameInMap("MsgId")
         public String msgId;
 

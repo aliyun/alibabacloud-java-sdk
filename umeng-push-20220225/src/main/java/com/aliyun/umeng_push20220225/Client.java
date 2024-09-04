@@ -26,6 +26,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>根据消息ID取消发送</p>
+     * 
+     * @param request CancelByMsgIdRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelByMsgIdResponse
+     */
     public CancelByMsgIdResponse cancelByMsgIdWithOptions(CancelByMsgIdRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -51,12 +60,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CancelByMsgIdResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>根据消息ID取消发送</p>
+     * 
+     * @param request CancelByMsgIdRequest
+     * @return CancelByMsgIdResponse
+     */
     public CancelByMsgIdResponse cancelByMsgId(CancelByMsgIdRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.cancelByMsgIdWithOptions(request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>消息状态查询</p>
+     * 
+     * @param request QueryMsgStatRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryMsgStatResponse
+     */
     public QueryMsgStatResponse queryMsgStatWithOptions(QueryMsgStatRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -82,12 +107,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryMsgStatResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>消息状态查询</p>
+     * 
+     * @param request QueryMsgStatRequest
+     * @return QueryMsgStatResponse
+     */
     public QueryMsgStatResponse queryMsgStat(QueryMsgStatRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.queryMsgStatWithOptions(request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>指定别名发送</p>
+     * 
+     * @param tmpReq SendByAliasRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SendByAliasResponse
+     */
     public SendByAliasResponse sendByAliasWithOptions(SendByAliasRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SendByAliasShrinkRequest request = new SendByAliasShrinkRequest();
@@ -171,12 +212,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SendByAliasResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>指定别名发送</p>
+     * 
+     * @param request SendByAliasRequest
+     * @return SendByAliasResponse
+     */
     public SendByAliasResponse sendByAlias(SendByAliasRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.sendByAliasWithOptions(request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>指定别名文件发送</p>
+     * 
+     * @param tmpReq SendByAliasFileIdRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SendByAliasFileIdResponse
+     */
     public SendByAliasFileIdResponse sendByAliasFileIdWithOptions(SendByAliasFileIdRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SendByAliasFileIdShrinkRequest request = new SendByAliasFileIdShrinkRequest();
@@ -260,12 +317,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SendByAliasFileIdResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>指定别名文件发送</p>
+     * 
+     * @param request SendByAliasFileIdRequest
+     * @return SendByAliasFileIdResponse
+     */
     public SendByAliasFileIdResponse sendByAliasFileId(SendByAliasFileIdRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.sendByAliasFileIdWithOptions(request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>广播</p>
+     * 
+     * @param tmpReq SendByAppRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SendByAppResponse
+     */
     public SendByAppResponse sendByAppWithOptions(SendByAppRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SendByAppShrinkRequest request = new SendByAppShrinkRequest();
@@ -341,12 +414,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SendByAppResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>广播</p>
+     * 
+     * @param request SendByAppRequest
+     * @return SendByAppResponse
+     */
     public SendByAppResponse sendByApp(SendByAppRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.sendByAppWithOptions(request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>指定设备发送</p>
+     * 
+     * @param tmpReq SendByDeviceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SendByDeviceResponse
+     */
     public SendByDeviceResponse sendByDeviceWithOptions(SendByDeviceRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SendByDeviceShrinkRequest request = new SendByDeviceShrinkRequest();
@@ -426,12 +515,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SendByDeviceResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>指定设备发送</p>
+     * 
+     * @param request SendByDeviceRequest
+     * @return SendByDeviceResponse
+     */
     public SendByDeviceResponse sendByDevice(SendByDeviceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.sendByDeviceWithOptions(request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>指定设备文件发送</p>
+     * 
+     * @param tmpReq SendByDeviceFileIdRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SendByDeviceFileIdResponse
+     */
     public SendByDeviceFileIdResponse sendByDeviceFileIdWithOptions(SendByDeviceFileIdRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SendByDeviceFileIdShrinkRequest request = new SendByDeviceFileIdShrinkRequest();
@@ -511,12 +616,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SendByDeviceFileIdResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>指定设备文件发送</p>
+     * 
+     * @param request SendByDeviceFileIdRequest
+     * @return SendByDeviceFileIdResponse
+     */
     public SendByDeviceFileIdResponse sendByDeviceFileId(SendByDeviceFileIdRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.sendByDeviceFileIdWithOptions(request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>根据筛选条件发送</p>
+     * 
+     * @param tmpReq SendByFilterRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SendByFilterResponse
+     */
     public SendByFilterResponse sendByFilterWithOptions(SendByFilterRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SendByFilterShrinkRequest request = new SendByFilterShrinkRequest();
@@ -596,12 +717,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SendByFilterResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>根据筛选条件发送</p>
+     * 
+     * @param request SendByFilterRequest
+     * @return SendByFilterResponse
+     */
     public SendByFilterResponse sendByFilter(SendByFilterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.sendByFilterWithOptions(request, headers, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>上传设备列表创建设备文件</p>
+     * 
+     * @param request UploadDeviceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UploadDeviceResponse
+     */
     public UploadDeviceResponse uploadDeviceWithOptions(UploadDeviceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -627,6 +764,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UploadDeviceResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>上传设备列表创建设备文件</p>
+     * 
+     * @param request UploadDeviceRequest
+     * @return UploadDeviceResponse
+     */
     public UploadDeviceResponse uploadDevice(UploadDeviceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();

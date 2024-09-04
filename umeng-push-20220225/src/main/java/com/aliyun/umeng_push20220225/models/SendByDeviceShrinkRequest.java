@@ -13,6 +13,12 @@ public class SendByDeviceShrinkRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ArdNyIzFCH2K3szXA8arpu0Y7ywOdA67mCSumtpnMnmf</p>
+     */
     @NameInMap("DeviceTokens")
     public String deviceTokens;
 
@@ -22,12 +28,20 @@ public class SendByDeviceShrinkRequest extends TeaModel {
     @NameInMap("Policy")
     public String policyShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ProductionMode")
     public Boolean productionMode;
 
     @NameInMap("ReceiptType")
     public Integer receiptType;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://msg.umeng.com/upush/receipt">https://msg.umeng.com/upush/receipt</a></p>
+     */
     @NameInMap("ReceiptUrl")
     public String receiptUrl;
 

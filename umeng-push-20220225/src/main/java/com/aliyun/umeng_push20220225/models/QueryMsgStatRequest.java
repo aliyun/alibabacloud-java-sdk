@@ -4,6 +4,10 @@ package com.aliyun.umeng_push20220225.models;
 import com.aliyun.tea.*;
 
 public class QueryMsgStatRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ufe29y2167046828041801</p>
+     */
     @NameInMap("MsgId")
     public String msgId;
 

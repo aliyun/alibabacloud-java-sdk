@@ -4,6 +4,10 @@ package com.aliyun.umeng_push20220225.models;
 import com.aliyun.tea.*;
 
 public class CancelByMsgIdRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ucj0242167047014687101</p>
+     */
     @NameInMap("MsgId")
     public String msgId;
 
