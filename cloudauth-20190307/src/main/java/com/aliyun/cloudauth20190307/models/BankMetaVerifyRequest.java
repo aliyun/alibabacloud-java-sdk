@@ -18,6 +18,9 @@ public class BankMetaVerifyRequest extends TeaModel {
     @NameInMap("IdentifyNum")
     public String identifyNum;
 
+    @NameInMap("IdentityType")
+    public String identityType;
+
     /**
      * <strong>example:</strong>
      * <p>138******11</p>
@@ -68,6 +71,14 @@ public class BankMetaVerifyRequest extends TeaModel {
     }
     public String getIdentifyNum() {
         return this.identifyNum;
+    }
+
+    public BankMetaVerifyRequest setIdentityType(String identityType) {
+        this.identityType = identityType;
+        return this;
+    }
+    public String getIdentityType() {
+        return this.identityType;
     }
 
     public BankMetaVerifyRequest setMobile(String mobile) {
