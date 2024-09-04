@@ -11,7 +11,7 @@ public class DeleteAlertContactResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public java.util.List<DeleteAlertContactResponseBody> body;
+    public DeleteAlertContactResponseBody body;
 
     public static DeleteAlertContactResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteAlertContactResponse self = new DeleteAlertContactResponse();
@@ -34,15 +34,15 @@ public class DeleteAlertContactResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DeleteAlertContactResponse setBody(java.util.List<DeleteAlertContactResponseBody> body) {
+    public DeleteAlertContactResponse setBody(DeleteAlertContactResponseBody body) {
         this.body = body;
         return this;
     }
-    public java.util.List<DeleteAlertContactResponseBody> getBody() {
+    public DeleteAlertContactResponseBody getBody() {
         return this.body;
     }
 
-    public static class DeleteAlertContactResponseBody extends TeaModel {
+    public static class DeleteAlertContactResponseBodyResult extends TeaModel {
         @NameInMap("status")
         public Boolean status;
 
@@ -52,12 +52,12 @@ public class DeleteAlertContactResponse extends TeaModel {
         @NameInMap("contact_id")
         public String contactId;
 
-        public static DeleteAlertContactResponseBody build(java.util.Map<String, ?> map) throws Exception {
-            DeleteAlertContactResponseBody self = new DeleteAlertContactResponseBody();
+        public static DeleteAlertContactResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
+            DeleteAlertContactResponseBodyResult self = new DeleteAlertContactResponseBodyResult();
             return TeaModel.build(map, self);
         }
 
-        public DeleteAlertContactResponseBody setStatus(Boolean status) {
+        public DeleteAlertContactResponseBodyResult setStatus(Boolean status) {
             this.status = status;
             return this;
         }
@@ -65,7 +65,7 @@ public class DeleteAlertContactResponse extends TeaModel {
             return this.status;
         }
 
-        public DeleteAlertContactResponseBody setMsg(String msg) {
+        public DeleteAlertContactResponseBodyResult setMsg(String msg) {
             this.msg = msg;
             return this;
         }
@@ -73,12 +73,31 @@ public class DeleteAlertContactResponse extends TeaModel {
             return this.msg;
         }
 
-        public DeleteAlertContactResponseBody setContactId(String contactId) {
+        public DeleteAlertContactResponseBodyResult setContactId(String contactId) {
             this.contactId = contactId;
             return this;
         }
         public String getContactId() {
             return this.contactId;
+        }
+
+    }
+
+    public static class DeleteAlertContactResponseBody extends TeaModel {
+        @NameInMap("result")
+        public java.util.List<DeleteAlertContactResponseBodyResult> result;
+
+        public static DeleteAlertContactResponseBody build(java.util.Map<String, ?> map) throws Exception {
+            DeleteAlertContactResponseBody self = new DeleteAlertContactResponseBody();
+            return TeaModel.build(map, self);
+        }
+
+        public DeleteAlertContactResponseBody setResult(java.util.List<DeleteAlertContactResponseBodyResult> result) {
+            this.result = result;
+            return this;
+        }
+        public java.util.List<DeleteAlertContactResponseBodyResult> getResult() {
+            return this.result;
         }
 
     }

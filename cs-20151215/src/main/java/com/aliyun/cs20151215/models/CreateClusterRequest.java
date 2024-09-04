@@ -366,6 +366,9 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("kubernetes_version")
     public String kubernetesVersion;
 
+    @NameInMap("load_balancer_id")
+    public String loadBalancerId;
+
     /**
      * <p>The specification of the Server Load Balancer (SLB) instance. Valid values:</p>
      * <ul>
@@ -1286,6 +1289,14 @@ public class CreateClusterRequest extends TeaModel {
     }
     public String getKubernetesVersion() {
         return this.kubernetesVersion;
+    }
+
+    public CreateClusterRequest setLoadBalancerId(String loadBalancerId) {
+        this.loadBalancerId = loadBalancerId;
+        return this;
+    }
+    public String getLoadBalancerId() {
+        return this.loadBalancerId;
     }
 
     public CreateClusterRequest setLoadBalancerSpec(String loadBalancerSpec) {
