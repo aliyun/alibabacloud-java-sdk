@@ -4,6 +4,10 @@ package com.aliyun.agency20221216.models;
 import com.aliyun.tea.*;
 
 public class ListCouponUsageResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -16,6 +20,10 @@ public class ListCouponUsageResponseBody extends TeaModel {
     @NameInMap("PageInfo")
     public ListCouponUsageResponseBodyPageInfo pageInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,30 +73,62 @@ public class ListCouponUsageResponseBody extends TeaModel {
     }
 
     public static class ListCouponUsageResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:oqevfbveuadcrduzmf@ttirv.net">oqevfbveuadcrduzmf@ttirv.net</a></p>
+         */
         @NameInMap("Account")
         public String account;
 
         @NameInMap("Amount")
         public Double amount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.01</p>
+         */
         @NameInMap("Balance")
         public Double balance;
 
+        /**
+         * <strong>example:</strong>
+         * <p>59226280</p>
+         */
         @NameInMap("CouponId")
         public String couponId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>503802</p>
+         */
         @NameInMap("CouponTemplateId")
         public Long couponTemplateId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-04-06 00:00:00 ~ 2023-04-07 00:00:00</p>
+         */
         @NameInMap("EffDate")
         public String effDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-04-06 19:32:10</p>
+         */
         @NameInMap("PublishDate")
         public String publishDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AVAILABLE</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1647668856741998</p>
+         */
         @NameInMap("Uid")
         public Long uid;
 
@@ -172,12 +212,24 @@ public class ListCouponUsageResponseBody extends TeaModel {
     }
 
     public static class ListCouponUsageResponseBodyPageInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Page")
         public Integer page;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

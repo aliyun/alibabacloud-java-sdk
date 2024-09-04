@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class SetCreditLineRequest extends TeaModel {
     /**
      * <p>New Credit Line</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("CreditLine")
     public String creditLine;
 
     /**
      * <p>The UID of Sub Account.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1263644979775567</p>
      */
     @NameInMap("Uid")
     public Long uid;

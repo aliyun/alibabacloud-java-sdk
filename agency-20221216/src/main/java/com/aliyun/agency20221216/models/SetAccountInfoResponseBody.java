@@ -5,29 +5,25 @@ import com.aliyun.tea.*;
 
 public class SetAccountInfoResponseBody extends TeaModel {
     /**
-     * <p>Result Code:</p>
-     * <p>*   200 OK</p>
-     * <p>*   1109 System error</p>
-     * <p>*   3030 Sub Account Nickname exceeds maximum length,  maximum length 150 bytes.</p>
-     * <p>*   3031 Remark exceeds maximum length,  maximum length 3000 bytes.</p>
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>Message information</p>
-     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Request ID, Alibaba Cloud will track errors with this.</p>
+     * <strong>example:</strong>
+     * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.</p>
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

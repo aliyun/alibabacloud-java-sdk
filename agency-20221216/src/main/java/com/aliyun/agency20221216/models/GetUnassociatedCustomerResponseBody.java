@@ -6,8 +6,13 @@ import com.aliyun.tea.*;
 public class GetUnassociatedCustomerResponseBody extends TeaModel {
     /**
      * <p>Error Code, Candidate Value：</p>
-     * <p>* 200: OK</p>
-     * <p>* 1109: System error</p>
+     * <ul>
+     * <li>200: OK</li>
+     * <li>1109: System error</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -20,6 +25,9 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
 
     /**
      * <p>Message information</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
@@ -32,12 +40,18 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
 
     /**
      * <p>Request ID, Alibaba Cloud will track errors with this.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23309219-4A34-589D-A3E0-9B2A3BFFD24F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -98,34 +112,51 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
     public static class GetUnassociatedCustomerResponseBodyInviteInfoListInviteInfo extends TeaModel {
         /**
          * <p>The name of Customer who are to be invited.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>My Client</p>
          */
         @NameInMap("AccountNickname")
         public String accountNickname;
 
         /**
          * <p>The Email of Customer who are to be invited.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:12345@qq.com">12345@qq.com</a></p>
          */
         @NameInMap("Email")
         public String email;
 
         /**
          * <p>The time of email been sent out.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-10</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>Invitation ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>190</p>
          */
         @NameInMap("InviteId")
         public Long inviteId;
 
         /**
          * <p>Invitation Status:</p>
-         * <p>* 0 No visit on registration URL</p>
-         * <p>* 1 Successful Registration</p>
-         * <p>* 2 Unsuccessful Registration</p>
-         * <p>* 3 Registration URL have been visited, but no submitted sheet/ticket.</p>
+         * <ul>
+         * <li>0 No visit on registration URL</li>
+         * <li>1 Successful Registration</li>
+         * <li>2 Unsuccessful Registration</li>
+         * <li>3 Registration URL have been visited, but no submitted sheet/ticket.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
@@ -199,18 +230,27 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
     public static class GetUnassociatedCustomerResponseBodyPageInfo extends TeaModel {
         /**
          * <p>Pagination, current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Page")
         public Integer page;
 
         /**
          * <p>Pagination, record number on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>Pagination, page volume in total.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("Total")
         public Integer total;

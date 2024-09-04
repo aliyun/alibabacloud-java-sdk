@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QuotaListExportPagedResponseBody extends TeaModel {
     /**
      * <p>Status code of returning result, 200 means success.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,30 +21,45 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
 
     /**
      * <p>Description of returning result</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
      */
     @NameInMap("Msg")
     public String msg;
 
     /**
      * <p>Current page number</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>Record number on each page</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>ID of the Request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>210e876f16704666020714468dab35</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Total volume</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -110,39 +128,57 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
     public static class QuotaListExportPagedResponseBodyData extends TeaModel {
         /**
          * <p>Create Time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-12-21 21:31:57 UTC+8</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>File Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5113766248601929_quota_2023-06-22_2023-12-21_all_2023122121310057</p>
          */
         @NameInMap("FileName")
         public String fileName;
 
         /**
          * <p>Notification Message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>Display of Task Status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>Task Status Enum</br></p>
-         * <p>2: Exporting</br></p>
-         * <p>3: Export Success</br></p>
-         * <p>-1: Export Fail</br></p>
+         * <p>Task Status Enum</br>
+         * 2: Exporting</br>
+         * 3: Export Success</br>
+         * -1: Export Fail</br></p>
+         * 
+         * <strong>example:</strong>
+         * <p>Export Success</p>
          */
         @NameInMap("StatusCode")
         public String statusCode;
 
         /**
          * <p>The link to download exported file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>//aliyun-eco-market-servic-singapore.oss-ap-southeast-1.aliyuncs.com/5113766248601929_quota_2023-06-22_2023-12-21_all_2023122121310057</p>
          */
         @NameInMap("Url")
         public String url;

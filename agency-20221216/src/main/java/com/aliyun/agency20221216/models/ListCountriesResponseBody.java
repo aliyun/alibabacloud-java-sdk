@@ -6,8 +6,13 @@ import com.aliyun.tea.*;
 public class ListCountriesResponseBody extends TeaModel {
     /**
      * <p>Error Code</p>
-     * <p>* 200: OK</p>
-     * <p>* 1109: System error</p>
+     * <ul>
+     * <li>200: OK</li>
+     * <li>1109: System error</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -20,18 +25,27 @@ public class ListCountriesResponseBody extends TeaModel {
 
     /**
      * <p>Message information</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Request ID, Alibaba Cloud will track errors with this.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A747A00F-E096-5244-88B3-3E474BAE3AE4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

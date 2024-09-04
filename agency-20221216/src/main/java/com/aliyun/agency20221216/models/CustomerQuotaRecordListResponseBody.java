@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CustomerQuotaRecordListResponseBody extends TeaModel {
     /**
      * <p>Status code of returning result, 200 means success.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,30 +21,45 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
 
     /**
      * <p>Description of returning data</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
      */
     @NameInMap("Msg")
     public String msg;
 
     /**
      * <p>Current page number</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>Record number on each page</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>ID of request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2103a0ae16849855284594613d874e</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Total volume</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -110,51 +128,75 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
     public static class CustomerQuotaRecordListResponseBodyData extends TeaModel {
         /**
          * <p>The way to submit the quota adjustment operation. API/ACPN</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACPN</p>
          */
         @NameInMap("OperationSubmitType")
         public String operationSubmitType;
 
         /**
          * <p>The time of submit the quota adjustment operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-12-15 10:34:36 UTC+8</p>
          */
         @NameInMap("OperationTime")
         public String operationTime;
 
         /**
-         * <p>Operation Type Enum</br></p>
-         * <p>all All types</br></p>
-         * <p>quota_create Create quota</br></p>
-         * <p>quota_amount_adjust Adjust the amount of quota</br></p>
+         * <p>Operation Type Enum</br>
+         * all All types</br>
+         * quota_create Create quota</br>
+         * quota_amount_adjust Adjust the amount of quota</br></p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota_amount_adjust</p>
          */
         @NameInMap("OperationTypeCode")
         public String operationTypeCode;
 
         /**
          * <p>The description of submitted quota adjustment operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Quota Adjustment</p>
          */
         @NameInMap("OperationTypeDesc")
         public String operationTypeDesc;
 
         /**
-         * <p>The UID of operator(Partner\"s UID).</p>
+         * <p>The UID of operator(Partner\&quot;s UID).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5113766248601929</p>
          */
         @NameInMap("OperationUid")
         public String operationUid;
 
         /**
          * <p>Updated quota amount</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121.00</p>
          */
         @NameInMap("UpdateAfterAmount")
         public String updateAfterAmount;
 
         /**
          * <p>The difference amount between updated quota and original quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-100.00</p>
          */
         @NameInMap("UpdateAmount")
         public String updateAmount;
 
         /**
          * <p>Original quota amount</p>
+         * 
+         * <strong>example:</strong>
+         * <p>221.00</p>
          */
         @NameInMap("UpdateBeforeAmount")
         public String updateBeforeAmount;

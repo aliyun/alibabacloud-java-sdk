@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class SetWarningThresholdRequest extends TeaModel {
     /**
      * <p>The UID of the partner‘s customer.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1792155717328010</p>
      */
     @NameInMap("Uid")
     public Long uid;
 
     /**
      * <p>Percentage, 1 to 100. When the available credit limit is lower than the credit limit percentage, an email is sent to the main account.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("WarningValue")
     public String warningValue;

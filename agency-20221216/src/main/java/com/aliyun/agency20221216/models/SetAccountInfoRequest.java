@@ -5,24 +5,44 @@ import com.aliyun.tea.*;
 
 public class SetAccountInfoRequest extends TeaModel {
     /**
-     * <p>Sub Account Nickname. </p>
-     * <p>* Use the official name of Company, if Sub Account is an enterprise.</p>
-     * <p>* Use the official name of Partner, if Sub Account is a T2 reseller.</p>
+     * <p>Result Code:</p>
+     * <ul>
+     * <li>200 OK</li>
+     * <li>1109 System error</li>
+     * <li>3030 Sub Account Nickname exceeds maximum length,  maximum length 150 bytes.</li>
+     * <li>3031 Remark exceeds maximum length,  maximum length 3000 bytes.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Message information</p>
      */
     @NameInMap("AccountNickname")
     public String accountNickname;
 
+    /**
+     * <p>Customer manager（limited 50 character）</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
+     */
     @NameInMap("CustomerBd")
     public String customerBd;
 
     /**
-     * <p>Description of Sub Account.</p>
+     * <p>success</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
-     * <p>The UID of Sub Account.</p>
+     * <p>Request ID, Alibaba Cloud will track errors with this.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1133166938931507</p>
      */
     @NameInMap("Uid")
     public Long uid;

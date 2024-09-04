@@ -4,21 +4,45 @@ package com.aliyun.agency20221216.models;
 import com.aliyun.tea.*;
 
 public class ListCouponUsageRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:oqevfbveuadcrduzmf@ttirv.net">oqevfbveuadcrduzmf@ttirv.net</a></p>
+     */
     @NameInMap("Account")
     public String account;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5075915</p>
+     */
     @NameInMap("CouponTemplateId")
     public Long couponTemplateId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Page")
     public Integer page;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AVAILABLE</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1133166938931507</p>
+     */
     @NameInMap("Uid")
     public Long uid;
 
