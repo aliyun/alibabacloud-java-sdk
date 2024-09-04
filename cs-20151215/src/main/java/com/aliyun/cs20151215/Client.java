@@ -894,6 +894,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("kubernetes_version", request.kubernetesVersion);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.loadBalancerId)) {
+            body.put("load_balancer_id", request.loadBalancerId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.loadBalancerSpec)) {
             body.put("load_balancer_spec", request.loadBalancerSpec);
         }
