@@ -28,6 +28,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>转换联登链接</p>
+     * 
+     * @param request ConvertUrlRequest
+     * @param headers ConvertUrlHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ConvertUrlResponse
+     */
+    public ConvertUrlResponse convertUrlWithOptions(ConvertUrlRequest request, ConvertUrlHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.countryCallingCode)) {
+            body.put("countryCallingCode", request.countryCallingCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jumpUrl)) {
+            body.put("jumpUrl", request.jumpUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phone)) {
+            body.put("phone", request.phone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scene)) {
+            body.put("scene", request.scene);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            body.put("source", request.source);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.thirdId)) {
+            body.put("thirdId", request.thirdId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uid)) {
+            body.put("uid", request.uid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.xenv)) {
+            body.put("xenv", request.xenv);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAirticketAccessToken)) {
+            realHeaders.put("xAcsAirticketAccessToken", com.aliyun.teautil.Common.toJSONString(headers.xAcsAirticketAccessToken));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAirticketLanguage)) {
+            realHeaders.put("xAcsAirticketLanguage", com.aliyun.teautil.Common.toJSONString(headers.xAcsAirticketLanguage));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ConvertUrl"),
+            new TeaPair("version", "2024-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/distribution/trade/convertUrl"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ConvertUrlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>转换联登链接</p>
+     * 
+     * @param request ConvertUrlRequest
+     * @return ConvertUrlResponse
+     */
+    public ConvertUrlResponse convertUrl(ConvertUrlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ConvertUrlHeaders headers = new ConvertUrlHeaders();
+        return this.convertUrlWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建token</p>
      * 
      * @param request GetTokenRequest
