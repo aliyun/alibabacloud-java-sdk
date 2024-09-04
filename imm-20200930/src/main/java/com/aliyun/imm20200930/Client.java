@@ -751,7 +751,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建绑定</p>
+     * <p>创建一个绑定任务，将 IMM 的数据集和 OSS Bucket 进行绑定，自动对其文件进行索引。</p>
      * 
      * @param request CreateBindingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -791,7 +791,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建绑定</p>
+     * <p>创建一个绑定任务，将 IMM 的数据集和 OSS Bucket 进行绑定，自动对其文件进行索引。</p>
      * 
      * @param request CreateBindingRequest
      * @return CreateBindingResponse
@@ -4277,7 +4277,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取绑定</p>
+     * <p>获取一个绑定任务的运行详情。</p>
      * 
      * @param request GetBindingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4317,7 +4317,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取绑定</p>
+     * <p>获取一个绑定任务的运行详情。</p>
      * 
      * @param request GetBindingRequest
      * @return GetBindingResponse
@@ -6243,6 +6243,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.mediaTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.mediaTypes, "MediaTypes", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.smartClusterIds)) {
+            request.smartClusterIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.smartClusterIds, "SmartClusterIds", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.withFields)) {
             request.withFieldsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.withFields, "WithFields", "json");
         }
@@ -6270,6 +6274,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.query)) {
             query.put("Query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.smartClusterIdsShrink)) {
+            query.put("SmartClusterIds", request.smartClusterIdsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.withFieldsShrink)) {

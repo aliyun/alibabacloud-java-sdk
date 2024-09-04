@@ -45,6 +45,9 @@ public class SemanticQueryRequest extends TeaModel {
     @NameInMap("Query")
     public String query;
 
+    @NameInMap("SmartClusterIds")
+    public java.util.List<String> smartClusterIds;
+
     @NameInMap("WithFields")
     public java.util.List<String> withFields;
 
@@ -99,6 +102,14 @@ public class SemanticQueryRequest extends TeaModel {
     }
     public String getQuery() {
         return this.query;
+    }
+
+    public SemanticQueryRequest setSmartClusterIds(java.util.List<String> smartClusterIds) {
+        this.smartClusterIds = smartClusterIds;
+        return this;
+    }
+    public java.util.List<String> getSmartClusterIds() {
+        return this.smartClusterIds;
     }
 
     public SemanticQueryRequest setWithFields(java.util.List<String> withFields) {

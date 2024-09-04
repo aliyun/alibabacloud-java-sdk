@@ -45,6 +45,9 @@ public class SemanticQueryShrinkRequest extends TeaModel {
     @NameInMap("Query")
     public String query;
 
+    @NameInMap("SmartClusterIds")
+    public String smartClusterIdsShrink;
+
     @NameInMap("WithFields")
     public String withFieldsShrink;
 
@@ -99,6 +102,14 @@ public class SemanticQueryShrinkRequest extends TeaModel {
     }
     public String getQuery() {
         return this.query;
+    }
+
+    public SemanticQueryShrinkRequest setSmartClusterIdsShrink(String smartClusterIdsShrink) {
+        this.smartClusterIdsShrink = smartClusterIdsShrink;
+        return this;
+    }
+    public String getSmartClusterIdsShrink() {
+        return this.smartClusterIdsShrink;
     }
 
     public SemanticQueryShrinkRequest setWithFieldsShrink(String withFieldsShrink) {
