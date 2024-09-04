@@ -115,6 +115,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IdentifyNum", request.identifyNum);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.identityType)) {
+            query.put("IdentityType", request.identityType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.mobile)) {
             query.put("Mobile", request.mobile);
         }
