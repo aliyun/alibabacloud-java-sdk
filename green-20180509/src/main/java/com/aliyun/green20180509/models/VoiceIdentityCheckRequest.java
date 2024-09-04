@@ -4,23 +4,15 @@ package com.aliyun.green20180509.models;
 import com.aliyun.tea.*;
 
 public class VoiceIdentityCheckRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ClientInfo")
     public String clientInfo;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static VoiceIdentityCheckRequest build(java.util.Map<String, ?> map) throws Exception {
         VoiceIdentityCheckRequest self = new VoiceIdentityCheckRequest();
         return TeaModel.build(map, self);
-    }
-
-    public VoiceIdentityCheckRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public VoiceIdentityCheckRequest setClientInfo(String clientInfo) {
@@ -29,6 +21,14 @@ public class VoiceIdentityCheckRequest extends TeaModel {
     }
     public String getClientInfo() {
         return this.clientInfo;
+    }
+
+    public VoiceIdentityCheckRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

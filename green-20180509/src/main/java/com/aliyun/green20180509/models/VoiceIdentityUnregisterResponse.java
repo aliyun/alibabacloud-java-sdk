@@ -5,8 +5,13 @@ import com.aliyun.tea.*;
 
 public class VoiceIdentityUnregisterResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
+
+    @NameInMap("statusCode")
+    public Integer statusCode;
+
+    @NameInMap("body")
+    public VoiceIdentityUnregisterResponseBody body;
 
     public static VoiceIdentityUnregisterResponse build(java.util.Map<String, ?> map) throws Exception {
         VoiceIdentityUnregisterResponse self = new VoiceIdentityUnregisterResponse();
@@ -19,6 +24,22 @@ public class VoiceIdentityUnregisterResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public VoiceIdentityUnregisterResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    public VoiceIdentityUnregisterResponse setBody(VoiceIdentityUnregisterResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public VoiceIdentityUnregisterResponseBody getBody() {
+        return this.body;
     }
 
 }

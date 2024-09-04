@@ -5,8 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetSimilarityLibraryResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
+
+    @NameInMap("statusCode")
+    public Integer statusCode;
+
+    @NameInMap("body")
+    public GetSimilarityLibraryResponseBody body;
 
     public static GetSimilarityLibraryResponse build(java.util.Map<String, ?> map) throws Exception {
         GetSimilarityLibraryResponse self = new GetSimilarityLibraryResponse();
@@ -19,6 +24,22 @@ public class GetSimilarityLibraryResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public GetSimilarityLibraryResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    public GetSimilarityLibraryResponse setBody(GetSimilarityLibraryResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public GetSimilarityLibraryResponseBody getBody() {
+        return this.body;
     }
 
 }

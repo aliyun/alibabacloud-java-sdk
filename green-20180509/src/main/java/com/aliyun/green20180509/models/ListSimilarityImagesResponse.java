@@ -5,8 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListSimilarityImagesResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
+
+    @NameInMap("statusCode")
+    public Integer statusCode;
+
+    @NameInMap("body")
+    public ListSimilarityImagesResponseBody body;
 
     public static ListSimilarityImagesResponse build(java.util.Map<String, ?> map) throws Exception {
         ListSimilarityImagesResponse self = new ListSimilarityImagesResponse();
@@ -19,6 +24,22 @@ public class ListSimilarityImagesResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public ListSimilarityImagesResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    public ListSimilarityImagesResponse setBody(ListSimilarityImagesResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ListSimilarityImagesResponseBody getBody() {
+        return this.body;
     }
 
 }

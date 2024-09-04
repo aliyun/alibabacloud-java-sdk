@@ -4,23 +4,15 @@ package com.aliyun.green20180509.models;
 import com.aliyun.tea.*;
 
 public class DeletePersonRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ClientInfo")
     public String clientInfo;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static DeletePersonRequest build(java.util.Map<String, ?> map) throws Exception {
         DeletePersonRequest self = new DeletePersonRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeletePersonRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DeletePersonRequest setClientInfo(String clientInfo) {
@@ -29,6 +21,14 @@ public class DeletePersonRequest extends TeaModel {
     }
     public String getClientInfo() {
         return this.clientInfo;
+    }
+
+    public DeletePersonRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

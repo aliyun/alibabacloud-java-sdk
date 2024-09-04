@@ -5,8 +5,13 @@ import com.aliyun.tea.*;
 
 public class VoiceIdentityRegisterResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
+
+    @NameInMap("statusCode")
+    public Integer statusCode;
+
+    @NameInMap("body")
+    public VoiceIdentityRegisterResponseBody body;
 
     public static VoiceIdentityRegisterResponse build(java.util.Map<String, ?> map) throws Exception {
         VoiceIdentityRegisterResponse self = new VoiceIdentityRegisterResponse();
@@ -19,6 +24,22 @@ public class VoiceIdentityRegisterResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public VoiceIdentityRegisterResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    public VoiceIdentityRegisterResponse setBody(VoiceIdentityRegisterResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public VoiceIdentityRegisterResponseBody getBody() {
+        return this.body;
     }
 
 }

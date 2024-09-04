@@ -5,8 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteGroupsResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
+
+    @NameInMap("statusCode")
+    public Integer statusCode;
+
+    @NameInMap("body")
+    public DeleteGroupsResponseBody body;
 
     public static DeleteGroupsResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteGroupsResponse self = new DeleteGroupsResponse();
@@ -19,6 +24,22 @@ public class DeleteGroupsResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public DeleteGroupsResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    public DeleteGroupsResponse setBody(DeleteGroupsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteGroupsResponseBody getBody() {
+        return this.body;
     }
 
 }
