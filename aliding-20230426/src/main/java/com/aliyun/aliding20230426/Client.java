@@ -1861,6 +1861,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.attendeesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.attendees, "Attendees", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.cardInstances)) {
+            request.cardInstancesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.cardInstances, "CardInstances", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.end)) {
             request.endShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.end, "End", "json");
         }
@@ -1900,6 +1904,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.attendeesShrink)) {
             body.put("Attendees", request.attendeesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cardInstancesShrink)) {
+            body.put("CardInstances", request.cardInstancesShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
@@ -8256,6 +8264,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取表格文档内容jobId</p>
+     * 
+     * @param tmpReq GetSheetContentJobIdRequest
+     * @param tmpHeader GetSheetContentJobIdHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSheetContentJobIdResponse
+     */
+    public GetSheetContentJobIdResponse getSheetContentJobIdWithOptions(GetSheetContentJobIdRequest tmpReq, GetSheetContentJobIdHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetSheetContentJobIdShrinkRequest request = new GetSheetContentJobIdShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        GetSheetContentJobIdShrinkHeaders headers = new GetSheetContentJobIdShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantContext)) {
+            request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dentryUuid)) {
+            body.put("DentryUuid", request.dentryUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.exportType)) {
+            body.put("ExportType", request.exportType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
+            body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSheetContentJobId"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dingtalk/v2/documents/getSheetContentJobId"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSheetContentJobIdResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取表格文档内容jobId</p>
+     * 
+     * @param request GetSheetContentJobIdRequest
+     * @return GetSheetContentJobIdResponse
+     */
+    public GetSheetContentJobIdResponse getSheetContentJobId(GetSheetContentJobIdRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetSheetContentJobIdHeaders headers = new GetSheetContentJobIdHeaders();
+        return this.getSheetContentJobIdWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询知识库下的目录结构</p>
      * 
      * @param tmpReq GetSpaceDirectoriesRequest
@@ -8640,6 +8724,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         GetUserHeaders headers = new GetUserHeaders();
         return this.getUserWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>根据unionId获取用户userId</p>
+     * 
+     * @param tmpReq GetUserIdRequest
+     * @param tmpHeader GetUserIdHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetUserIdResponse
+     */
+    public GetUserIdResponse getUserIdWithOptions(GetUserIdRequest tmpReq, GetUserIdHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetUserIdShrinkRequest request = new GetUserIdShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        GetUserIdShrinkHeaders headers = new GetUserIdShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantContext)) {
+            request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
+            body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.unionId)) {
+            body.put("UnionId", request.unionId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUserId"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dingtalk/v1/im/getUserId"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserIdResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>根据unionId获取用户userId</p>
+     * 
+     * @param request GetUserIdRequest
+     * @return GetUserIdResponse
+     */
+    public GetUserIdResponse getUserId(GetUserIdRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetUserIdHeaders headers = new GetUserIdHeaders();
+        return this.getUserIdWithOptions(request, headers, runtime);
     }
 
     /**
@@ -10431,6 +10587,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.attendeesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.attendees, "Attendees", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.cardInstances)) {
+            request.cardInstancesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.cardInstances, "CardInstances", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.end)) {
             request.endShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.end, "End", "json");
         }
@@ -10462,6 +10622,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.calendarId)) {
             body.put("CalendarId", request.calendarId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cardInstancesShrink)) {
+            body.put("CardInstances", request.cardInstancesShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {

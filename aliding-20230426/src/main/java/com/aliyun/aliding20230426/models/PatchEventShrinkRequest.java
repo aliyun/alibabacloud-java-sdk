@@ -16,6 +16,9 @@ public class PatchEventShrinkRequest extends TeaModel {
     @NameInMap("CalendarId")
     public String calendarId;
 
+    @NameInMap("CardInstances")
+    public String cardInstancesShrink;
+
     @NameInMap("Description")
     public String description;
 
@@ -75,6 +78,14 @@ public class PatchEventShrinkRequest extends TeaModel {
     }
     public String getCalendarId() {
         return this.calendarId;
+    }
+
+    public PatchEventShrinkRequest setCardInstancesShrink(String cardInstancesShrink) {
+        this.cardInstancesShrink = cardInstancesShrink;
+        return this;
+    }
+    public String getCardInstancesShrink() {
+        return this.cardInstancesShrink;
     }
 
     public PatchEventShrinkRequest setDescription(String description) {

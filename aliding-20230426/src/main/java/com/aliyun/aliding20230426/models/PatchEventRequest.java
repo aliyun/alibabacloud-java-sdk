@@ -16,6 +16,9 @@ public class PatchEventRequest extends TeaModel {
     @NameInMap("CalendarId")
     public String calendarId;
 
+    @NameInMap("CardInstances")
+    public java.util.List<PatchEventRequestCardInstances> cardInstances;
+
     @NameInMap("Description")
     public String description;
 
@@ -75,6 +78,14 @@ public class PatchEventRequest extends TeaModel {
     }
     public String getCalendarId() {
         return this.calendarId;
+    }
+
+    public PatchEventRequest setCardInstances(java.util.List<PatchEventRequestCardInstances> cardInstances) {
+        this.cardInstances = cardInstances;
+        return this;
+    }
+    public java.util.List<PatchEventRequestCardInstances> getCardInstances() {
+        return this.cardInstances;
     }
 
     public PatchEventRequest setDescription(String description) {
@@ -191,6 +202,36 @@ public class PatchEventRequest extends TeaModel {
         }
         public Boolean getIsOptional() {
             return this.isOptional;
+        }
+
+    }
+
+    public static class PatchEventRequestCardInstances extends TeaModel {
+        @NameInMap("OutTrackId")
+        public String outTrackId;
+
+        @NameInMap("Scenario")
+        public String scenario;
+
+        public static PatchEventRequestCardInstances build(java.util.Map<String, ?> map) throws Exception {
+            PatchEventRequestCardInstances self = new PatchEventRequestCardInstances();
+            return TeaModel.build(map, self);
+        }
+
+        public PatchEventRequestCardInstances setOutTrackId(String outTrackId) {
+            this.outTrackId = outTrackId;
+            return this;
+        }
+        public String getOutTrackId() {
+            return this.outTrackId;
+        }
+
+        public PatchEventRequestCardInstances setScenario(String scenario) {
+            this.scenario = scenario;
+            return this;
+        }
+        public String getScenario() {
+            return this.scenario;
         }
 
     }

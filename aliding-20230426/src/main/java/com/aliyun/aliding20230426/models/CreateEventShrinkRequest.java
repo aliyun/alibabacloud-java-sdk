@@ -7,6 +7,9 @@ public class CreateEventShrinkRequest extends TeaModel {
     @NameInMap("Attendees")
     public String attendeesShrink;
 
+    @NameInMap("CardInstances")
+    public String cardInstancesShrink;
+
     @NameInMap("Description")
     public String description;
 
@@ -77,6 +80,14 @@ public class CreateEventShrinkRequest extends TeaModel {
     }
     public String getAttendeesShrink() {
         return this.attendeesShrink;
+    }
+
+    public CreateEventShrinkRequest setCardInstancesShrink(String cardInstancesShrink) {
+        this.cardInstancesShrink = cardInstancesShrink;
+        return this;
+    }
+    public String getCardInstancesShrink() {
+        return this.cardInstancesShrink;
     }
 
     public CreateEventShrinkRequest setDescription(String description) {
