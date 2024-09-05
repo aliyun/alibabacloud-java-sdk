@@ -430,6 +430,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("resourceGroupId", request.resourceGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            body.put("tags", request.tags);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
             body.put("type", request.type);
         }

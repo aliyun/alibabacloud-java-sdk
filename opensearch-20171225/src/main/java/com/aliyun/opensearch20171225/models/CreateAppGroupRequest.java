@@ -16,6 +16,9 @@ public class CreateAppGroupRequest extends TeaModel {
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("tags")
+    public java.util.List<CreateAppGroupRequestTags> tags;
+
     @NameInMap("type")
     public String type;
 
@@ -54,6 +57,14 @@ public class CreateAppGroupRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public CreateAppGroupRequest setTags(java.util.List<CreateAppGroupRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateAppGroupRequestTags> getTags() {
+        return this.tags;
     }
 
     public CreateAppGroupRequest setType(String type) {
@@ -101,6 +112,36 @@ public class CreateAppGroupRequest extends TeaModel {
         }
         public String getSpec() {
             return this.spec;
+        }
+
+    }
+
+    public static class CreateAppGroupRequestTags extends TeaModel {
+        @NameInMap("key")
+        public String key;
+
+        @NameInMap("value")
+        public String value;
+
+        public static CreateAppGroupRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateAppGroupRequestTags self = new CreateAppGroupRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAppGroupRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateAppGroupRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
