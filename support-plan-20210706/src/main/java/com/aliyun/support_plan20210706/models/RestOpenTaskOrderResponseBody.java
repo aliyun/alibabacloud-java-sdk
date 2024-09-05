@@ -4,23 +4,38 @@ package com.aliyun.support_plan20210706.models;
 import com.aliyun.tea.*;
 
 public class RestOpenTaskOrderResponseBody extends TeaModel {
-    // code
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
-    // data
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("Data")
     public String data;
 
-    // msg
+    /**
+     * <strong>example:</strong>
+     * <p>请求成功</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // requestId
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // success
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

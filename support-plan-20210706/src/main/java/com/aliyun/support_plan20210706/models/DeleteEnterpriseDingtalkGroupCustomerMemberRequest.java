@@ -4,9 +4,18 @@ package com.aliyun.support_plan20210706.models;
 import com.aliyun.tea.*;
 
 public class DeleteEnterpriseDingtalkGroupCustomerMemberRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Mobiles")
     public java.util.List<String> mobiles;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
+     */
     @NameInMap("OpenGroupId")
     public String openGroupId;
 

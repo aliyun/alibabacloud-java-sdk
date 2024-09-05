@@ -4,43 +4,73 @@ package com.aliyun.support_plan20210706.models;
 import com.aliyun.tea.*;
 
 public class CreateTaskOrderByEventReportShrinkRequest extends TeaModel {
-    // 告警所属业务
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("Business")
     public String business;
 
-    // 提交人姓名
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>小二</p>
+     */
     @NameInMap("CreateRealName")
     public String createRealName;
 
-    // 提交人userId
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1830426056957812</p>
+     */
     @NameInMap("CreateUserId")
     public String createUserId;
 
-    // 告警描述
     @NameInMap("EventBody")
     public String eventBodyShrink;
 
-    // 扩展信息
     @NameInMap("Extinfo")
     public String extinfoShrink;
 
-    // 当eventLevel为warn时，必传
+    /**
+     * <strong>example:</strong>
+     * <p>紧急性原因描述</p>
+     */
     @NameInMap("ImportantDesc")
     public String importantDesc;
 
-    // 建单入群人员
+    /**
+     * <strong>example:</strong>
+     * <p>123,456</p>
+     */
     @NameInMap("JoinChildGroupUserIds")
     public String joinChildGroupUserIds;
 
-    // 监控集如：视频业务的质量监控
+    /**
+     * <strong>example:</strong>
+     * <p>监控集如：视频业务的质量监控 123</p>
+     */
     @NameInMap("MonitorCongregation")
     public String monitorCongregation;
 
-    // 告警关联主群id
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cid+lUpHxTIXt7DYqJDcpVxlA==</p>
+     */
     @NameInMap("OpenGroupId")
     public String openGroupId;
 
-    // 问题分类
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3270</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 

@@ -4,7 +4,12 @@ package com.aliyun.support_plan20210706.models;
 import com.aliyun.tea.*;
 
 public class ListEnterpriseDingtalkGroupCustomerMembersRequest extends TeaModel {
-    // 企业服务群ID
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("OpenGroupId")
     public String openGroupId;
 

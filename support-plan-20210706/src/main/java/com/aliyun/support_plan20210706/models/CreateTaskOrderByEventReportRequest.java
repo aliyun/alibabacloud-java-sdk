@@ -4,43 +4,73 @@ package com.aliyun.support_plan20210706.models;
 import com.aliyun.tea.*;
 
 public class CreateTaskOrderByEventReportRequest extends TeaModel {
-    // 告警所属业务
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("Business")
     public String business;
 
-    // 提交人姓名
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>小二</p>
+     */
     @NameInMap("CreateRealName")
     public String createRealName;
 
-    // 提交人userId
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1830426056957812</p>
+     */
     @NameInMap("CreateUserId")
     public String createUserId;
 
-    // 告警描述
     @NameInMap("EventBody")
     public CreateTaskOrderByEventReportRequestEventBody eventBody;
 
-    // 扩展信息
     @NameInMap("Extinfo")
     public java.util.List<CreateTaskOrderByEventReportRequestExtinfo> extinfo;
 
-    // 当eventLevel为warn时，必传
+    /**
+     * <strong>example:</strong>
+     * <p>紧急性原因描述</p>
+     */
     @NameInMap("ImportantDesc")
     public String importantDesc;
 
-    // 建单入群人员
+    /**
+     * <strong>example:</strong>
+     * <p>123,456</p>
+     */
     @NameInMap("JoinChildGroupUserIds")
     public String joinChildGroupUserIds;
 
-    // 监控集如：视频业务的质量监控
+    /**
+     * <strong>example:</strong>
+     * <p>监控集如：视频业务的质量监控 123</p>
+     */
     @NameInMap("MonitorCongregation")
     public String monitorCongregation;
 
-    // 告警关联主群id
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cid+lUpHxTIXt7DYqJDcpVxlA==</p>
+     */
     @NameInMap("OpenGroupId")
     public String openGroupId;
 
-    // 问题分类
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3270</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 
@@ -130,7 +160,10 @@ public class CreateTaskOrderByEventReportRequest extends TeaModel {
     }
 
     public static class CreateTaskOrderByEventReportRequestEventBodyEventLocation extends TeaModel {
-        // domian域名
+        /**
+         * <strong>example:</strong>
+         * <p>flv13.bn.netease.com</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
@@ -150,23 +183,36 @@ public class CreateTaskOrderByEventReportRequest extends TeaModel {
     }
 
     public static class CreateTaskOrderByEventReportRequestEventBody extends TeaModel {
-        // 当前告警描述信息
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>告警内容</p>
+         */
         @NameInMap("EventDesc")
         public String eventDesc;
 
-        // 事件id
+        /**
+         * <strong>example:</strong>
+         * <p>j9uwe-34328987</p>
+         */
         @NameInMap("EventId")
         public String eventId;
 
-        // 事件级别
+        /**
+         * <strong>example:</strong>
+         * <p>info,warn,alarm,critical</p>
+         */
         @NameInMap("EventLevel")
         public String eventLevel;
 
-        // 事件源标识，自定义和TAM在云企配置的Location指标一致
         @NameInMap("EventLocation")
         public CreateTaskOrderByEventReportRequestEventBodyEventLocation eventLocation;
 
-        // 事件上报时间
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("EventTime")
         public String eventTime;
 
@@ -218,11 +264,17 @@ public class CreateTaskOrderByEventReportRequest extends TeaModel {
     }
 
     public static class CreateTaskOrderByEventReportRequestExtinfo extends TeaModel {
-        // 扩展信息名称
+        /**
+         * <strong>example:</strong>
+         * <p>扩展信息名称</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // 扩展信息value值
+        /**
+         * <strong>example:</strong>
+         * <p>扩展信息value值</p>
+         */
         @NameInMap("Value")
         public String value;
 
