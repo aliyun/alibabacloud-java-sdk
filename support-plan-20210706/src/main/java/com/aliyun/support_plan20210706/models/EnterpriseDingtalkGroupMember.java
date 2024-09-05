@@ -4,15 +4,30 @@ package com.aliyun.support_plan20210706.models;
 import com.aliyun.tea.*;
 
 public class EnterpriseDingtalkGroupMember extends TeaModel {
-    // 是否企业钉群管理员
+    /**
+     * <p>代表资源名称的资源属性字段</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsAdmin")
     public Boolean isAdmin;
 
-    // 成员手机号
+    /**
+     * <p>代表资源组的资源属性字段</p>
+     * 
+     * <strong>example:</strong>
+     * <p>130xxxxxxxx</p>
+     */
     @NameInMap("Mobile")
     public String mobile;
 
-    // 成员姓名
+    /**
+     * <p>代表创建时间的资源属性字段</p>
+     * 
+     * <strong>example:</strong>
+     * <p>张三</p>
+     */
     @NameInMap("Name")
     public String name;
 

@@ -4,27 +4,51 @@ package com.aliyun.support_plan20210706.models;
 import com.aliyun.tea.*;
 
 public class ReplyMessageApiRequest extends TeaModel {
-    // 消息内容
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>消息内容</p>
+     */
     @NameInMap("MsgContent")
     public String msgContent;
 
-    // 消息类型
+    /**
+     * <strong>example:</strong>
+     * <p>text</p>
+     */
     @NameInMap("MsgType")
     public String msgType;
 
-    // 群Id
+    /**
+     * <strong>example:</strong>
+     * <p>cid+lUpHxTIXt7DYqJDcpVxlA==</p>
+     */
     @NameInMap("OpenGroupId")
     public String openGroupId;
 
-    // 任务单Id
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E2012312421</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
-    // 消息发送人Id
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
-    // 消息发送人
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>用户名</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

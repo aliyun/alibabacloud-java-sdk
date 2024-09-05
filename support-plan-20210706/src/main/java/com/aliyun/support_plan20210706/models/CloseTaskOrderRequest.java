@@ -4,11 +4,19 @@ package com.aliyun.support_plan20210706.models;
 import com.aliyun.tea.*;
 
 public class CloseTaskOrderRequest extends TeaModel {
-    // 任务单id
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E211129AE190Y3</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
-    // 操作人姓名
+    /**
+     * <strong>example:</strong>
+     * <p>操作人姓名</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

@@ -4,35 +4,69 @@ package com.aliyun.support_plan20210706.models;
 import com.aliyun.tea.*;
 
 public class CreateTaskOrderRequest extends TeaModel {
-    // 建单人姓名：快手客户
+    /**
+     * <strong>example:</strong>
+     * <p>建单人姓名：快手客户</p>
+     */
     @NameInMap("CustomerRealName")
     public String customerRealName;
 
-    // 建单人：固定值
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("CustomerUserId")
     public String customerUserId;
 
-    // 重要性描述
+    /**
+     * <strong>example:</strong>
+     * <p>重要性描述</p>
+     */
     @NameInMap("ImportantDescription")
     public String importantDescription;
 
-    // 是否紧急
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>如:normal或者hurry</p>
+     */
     @NameInMap("IsImportant")
     public String isImportant;
 
-    // 主群关联Id
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cid+lUpHxTIXt7DYqJDcpVxlA==</p>
+     */
     @NameInMap("OpenGroupId")
     public String openGroupId;
 
-    // productType
+    /**
+     * <p>productType</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3270</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 
-    // 问题分类名称
+    /**
+     * <strong>example:</strong>
+     * <p>lc-云享咨询</p>
+     */
     @NameInMap("ProductTypeName")
     public String productTypeName;
 
-    // 任务单标题
+    /**
+     * <p>taskTitle</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>任务单标题：必填</p>
+     */
     @NameInMap("TaskTitle")
     public String taskTitle;
 

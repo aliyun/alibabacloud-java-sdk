@@ -4,7 +4,12 @@ package com.aliyun.support_plan20210706.models;
 import com.aliyun.tea.*;
 
 public class ListProductByGroupRequest extends TeaModel {
-    // 主群关联Id
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cidXcezGVQJjiWy2PzXylGwvg==</p>
+     */
     @NameInMap("OpenGroupId")
     public String openGroupId;
 

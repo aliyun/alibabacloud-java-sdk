@@ -4,23 +4,40 @@ package com.aliyun.support_plan20210706.models;
 import com.aliyun.tea.*;
 
 public class RestOpenTaskOrderRequest extends TeaModel {
-    // 主群关联Id
+    /**
+     * <strong>example:</strong>
+     * <p>cidXcezGVQJjiWy2PzXylGwvg==</p>
+     */
     @NameInMap("OpenGroupId")
     public String openGroupId;
 
-    // 任务单ID
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E21111796147LE</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
-    // 重开说明
+    /**
+     * <strong>example:</strong>
+     * <p>重开补充说明</p>
+     */
     @NameInMap("ResetContent")
     public String resetContent;
 
-    // 重开类型
+    /**
+     * <strong>example:</strong>
+     * <p>枚举值：6:解决方案无效；7:当前问题仍有疑问需要咨询；8:问题重复出现</p>
+     */
     @NameInMap("ResetType")
     public String resetType;
 
-    // 操作人姓名
+    /**
+     * <strong>example:</strong>
+     * <p>操作人姓名</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

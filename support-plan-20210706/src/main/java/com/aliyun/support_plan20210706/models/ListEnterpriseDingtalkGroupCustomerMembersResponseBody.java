@@ -4,23 +4,34 @@ package com.aliyun.support_plan20210706.models;
 import com.aliyun.tea.*;
 
 public class ListEnterpriseDingtalkGroupCustomerMembersResponseBody extends TeaModel {
-    // 接口请求结果返回码
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
-    // 企业服务群成员列表
     @NameInMap("Data")
     public java.util.List<EnterpriseDingtalkGroupMember> data;
 
-    // 错误信息, 当success=false的时候, 可以取到message
+    /**
+     * <strong>example:</strong>
+     * <p>Invalid data</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // 接口请求的唯一ID, 每次调用requestID唯一
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // 调用接口返回是否成功, true代表调用正常
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
