@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class StartTimingSyntheticTaskRequest extends TeaModel {
     /**
+     * <p>The region ID. Default value: cn-hangzhou.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The task IDs.</p>
+     */
     @NameInMap("TaskIds")
     public java.util.List<String> taskIds;
 

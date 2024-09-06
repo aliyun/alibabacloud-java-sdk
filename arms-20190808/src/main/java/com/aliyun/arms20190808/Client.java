@@ -350,10 +350,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates a Prometheus instance for Remote Write.</p>
      * 
+     * @deprecated OpenAPI AddPrometheusInstance is deprecated, please use ARMS::2019-08-08::CreatePrometheusInstance instead.
+     * 
      * @param request AddPrometheusInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddPrometheusInstanceResponse
      */
+    @Deprecated
+    // Deprecated
     public AddPrometheusInstanceResponse addPrometheusInstanceWithOptions(AddPrometheusInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -390,9 +394,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates a Prometheus instance for Remote Write.</p>
      * 
+     * @deprecated OpenAPI AddPrometheusInstance is deprecated, please use ARMS::2019-08-08::CreatePrometheusInstance instead.
+     * 
      * @param request AddPrometheusInstanceRequest
      * @return AddPrometheusInstanceResponse
      */
+    @Deprecated
+    // Deprecated
     public AddPrometheusInstanceResponse addPrometheusInstance(AddPrometheusInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addPrometheusInstanceWithOptions(request, runtime);
@@ -1274,7 +1282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <hr>
+     * <p>The current API operation is no longer maintained. Call the CreateOrUpdateContactGroup operation of the new Alert Management module to create or modify alert contact groups.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an alert contact group.</p>
@@ -1317,7 +1325,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <hr>
+     * <p>The current API operation is no longer maintained. Call the CreateOrUpdateContactGroup operation of the new Alert Management module to create or modify alert contact groups.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an alert contact group.</p>
@@ -2510,7 +2518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建Prometheus告警规则</p>
+     * <p>Creates an alert rule.</p>
      * 
      * @param request CreatePrometheusAlertRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2586,7 +2594,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建Prometheus告警规则</p>
+     * <p>Creates an alert rule.</p>
      * 
      * @param request CreatePrometheusAlertRuleRequest
      * @return CreatePrometheusAlertRuleResponse
@@ -2851,6 +2859,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PackageName", request.packageName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.realRegionId)) {
+            query.put("RealRegionId", request.realRegionId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -2902,7 +2914,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation returns a file upload URL. You can use the file upload URL to upload files. For more information, see <a href="https://help.aliyun.com/zh/oss/user-guide/upload-a-file-using-a-file-url">Use a URL to upload files</a>.</p>
+     * <p>This operation returns a file upload URL. You can use the file upload URL to upload files. For more information, see <a href="https://help.aliyun.com/document_detail/2579659.html">Use a URL to upload files</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a file upload URL to upload SourceMap files, symbol table files, or dSYM files.</p>
@@ -2965,7 +2977,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation returns a file upload URL. You can use the file upload URL to upload files. For more information, see <a href="https://help.aliyun.com/zh/oss/user-guide/upload-a-file-using-a-file-url">Use a URL to upload files</a>.</p>
+     * <p>This operation returns a file upload URL. You can use the file upload URL to upload files. For more information, see <a href="https://help.aliyun.com/document_detail/2579659.html">Use a URL to upload files</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a file upload URL to upload SourceMap files, symbol table files, or dSYM files.</p>
@@ -4739,6 +4751,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AppId", request.appId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.realRegionId)) {
+            query.put("RealRegionId", request.realRegionId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -4988,7 +5004,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除云拨测任务</p>
+     * <p>Deletes scheduled synthetic monitoring tasks.</p>
      * 
      * @param request DeleteSyntheticTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5024,7 +5040,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除云拨测任务</p>
+     * <p>Deletes scheduled synthetic monitoring tasks.</p>
      * 
      * @param request DeleteSyntheticTaskRequest
      * @return DeleteSyntheticTaskResponse
@@ -5762,7 +5778,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details about an alert rule of Prometheus Service.</p>
+     * <p>Queries the details about an alert rule for a Prometheus instance.</p>
      * 
      * @param request DescribePrometheusAlertRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5798,7 +5814,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details about an alert rule of Prometheus Service.</p>
+     * <p>Queries the details about an alert rule for a Prometheus instance.</p>
      * 
      * @param request DescribePrometheusAlertRuleRequest
      * @return DescribePrometheusAlertRuleResponse
@@ -6030,6 +6046,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAgentDownloadUrlResponse getAgentDownloadUrl(GetAgentDownloadUrlRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAgentDownloadUrlWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取探针下载地址</p>
+     * 
+     * @param request GetAgentDownloadUrlV2Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAgentDownloadUrlV2Response
+     */
+    public GetAgentDownloadUrlV2Response getAgentDownloadUrlV2WithOptions(GetAgentDownloadUrlV2Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentType)) {
+            query.put("AgentType", request.agentType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.archType)) {
+            query.put("ArchType", request.archType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.osType)) {
+            query.put("OsType", request.osType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAgentDownloadUrlV2"),
+            new TeaPair("version", "2019-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgentDownloadUrlV2Response());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取探针下载地址</p>
+     * 
+     * @param request GetAgentDownloadUrlV2Request
+     * @return GetAgentDownloadUrlV2Response
+     */
+    public GetAgentDownloadUrlV2Response getAgentDownloadUrlV2(GetAgentDownloadUrlV2Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAgentDownloadUrlV2WithOptions(request, runtime);
     }
 
     /**
@@ -6328,10 +6396,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Obtains all the URLs of a cluster, including remote read and write URLs, Pushgateway URLs, and Grafana URLs.</p>
      * 
+     * @deprecated OpenAPI GetClusterAllUrl is deprecated, please use ARMS::2019-08-08::GetPrometheusInstance instead.
+     * 
      * @param request GetClusterAllUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetClusterAllUrlResponse
      */
+    @Deprecated
+    // Deprecated
     public GetClusterAllUrlResponse getClusterAllUrlWithOptions(GetClusterAllUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6364,9 +6436,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Obtains all the URLs of a cluster, including remote read and write URLs, Pushgateway URLs, and Grafana URLs.</p>
      * 
+     * @deprecated OpenAPI GetClusterAllUrl is deprecated, please use ARMS::2019-08-08::GetPrometheusInstance instead.
+     * 
      * @param request GetClusterAllUrlRequest
      * @return GetClusterAllUrlResponse
      */
+    @Deprecated
+    // Deprecated
     public GetClusterAllUrlResponse getClusterAllUrl(GetClusterAllUrlRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getClusterAllUrlWithOptions(request, runtime);
@@ -7832,7 +7908,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取单个拨测任务的详情</p>
+     * <p>Queries the details of a scheduled synthetic monitoring task.</p>
      * 
      * @param request GetSyntheticTaskDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7868,7 +7944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取单个拨测任务的详情</p>
+     * <p>Queries the details of a scheduled synthetic monitoring task.</p>
      * 
      * @param request GetSyntheticTaskDetailRequest
      * @return GetSyntheticTaskDetailResponse
@@ -7880,7 +7956,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取拨测任务列表</p>
+     * <p>Queries a list of scheduled synthetic monitoring tasks.</p>
      * 
      * @param request GetSyntheticTaskListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7944,7 +8020,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取拨测任务列表</p>
+     * <p>Queries a list of scheduled synthetic monitoring tasks.</p>
      * 
      * @param request GetSyntheticTaskListRequest
      * @return GetSyntheticTaskListResponse
@@ -8158,7 +8234,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all custom settings of an application monitored by Application Monitoring, such as trace sampling settings and agent switches.</p>
+     * <p>Queries all custom settings of an application monitored by Application Monitoring, such as trace sampling settings and agent switches. This operation is applicable only to applications that are monitored by Application Monitoring. It is not applicable to applications that are monitored by Managed Service for OpenTelemetry.</p>
      * 
      * @param request GetTraceAppConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8190,7 +8266,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all custom settings of an application monitored by Application Monitoring, such as trace sampling settings and agent switches.</p>
+     * <p>Queries all custom settings of an application monitored by Application Monitoring, such as trace sampling settings and agent switches. This operation is applicable only to applications that are monitored by Application Monitoring. It is not applicable to applications that are monitored by Managed Service for OpenTelemetry.</p>
      * 
      * @param request GetTraceAppConfigRequest
      * @return GetTraceAppConfigResponse
@@ -9231,6 +9307,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The current API operation is no longer maintained. To query the notification policy information, call the ListNotificationPolicies operation instead.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries notification policies.</p>
+     * 
      * @param request ListDispatchRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDispatchRuleResponse
@@ -9268,6 +9350,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The current API operation is no longer maintained. To query the notification policy information, call the ListNotificationPolicies operation instead.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries notification policies.</p>
+     * 
      * @param request ListDispatchRuleRequest
      * @return ListDispatchRuleResponse
      */
@@ -9972,7 +10060,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The value of the annotation.</p>
+     * <p>Queries the alert rules created for a Prometheus instance.</p>
      * 
      * @param request ListPrometheusAlertRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10028,7 +10116,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The value of the annotation.</p>
+     * <p>Queries the alert rules created for a Prometheus instance.</p>
      * 
      * @param request ListPrometheusAlertRulesRequest
      * @return ListPrometheusAlertRulesResponse
@@ -12696,7 +12784,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动或者禁用云拨测的任务</p>
+     * <p>Starts or stops a scheduled synthetic monitoring task.</p>
      * 
      * @param request SwitchSyntheticTaskStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12732,7 +12820,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动或者禁用云拨测的任务</p>
+     * <p>Starts or stops a scheduled synthetic monitoring task.</p>
      * 
      * @param request SwitchSyntheticTaskStatusRequest
      * @return SwitchSyntheticTaskStatusResponse
@@ -13975,8 +14063,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ArchiveDuration", request.archiveDuration);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.authFreeReadPolicy)) {
+            query.put("AuthFreeReadPolicy", request.authFreeReadPolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authFreeWritePolicy)) {
+            query.put("AuthFreeWritePolicy", request.authFreeWritePolicy);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
             query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableAuthFreeRead)) {
+            query.put("EnableAuthFreeRead", request.enableAuthFreeRead);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableAuthFreeWrite)) {
+            query.put("EnableAuthFreeWrite", request.enableAuthFreeWrite);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableAuthToken)) {
+            query.put("EnableAuthToken", request.enableAuthToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -14238,6 +14346,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pid)) {
             query.put("Pid", request.pid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.realRegionId)) {
+            query.put("RealRegionId", request.realRegionId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {

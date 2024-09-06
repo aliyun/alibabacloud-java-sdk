@@ -24,7 +24,7 @@ public class CreateAlertContactGroupRequest extends TeaModel {
     public String contactIds;
 
     /**
-     * <p>The ID of the region. Default value: <code>cn-hangzhou</code>.</p>
+     * <p>The region ID. Default value: <code>cn-hangzhou</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

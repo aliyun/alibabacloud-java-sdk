@@ -50,6 +50,9 @@ public class CreateRumAppShrinkRequest extends TeaModel {
     @NameInMap("PackageName")
     public String packageName;
 
+    @NameInMap("RealRegionId")
+    public String realRegionId;
+
     /**
      * <p>The region ID.</p>
      * <p>This parameter is required.</p>
@@ -137,6 +140,14 @@ public class CreateRumAppShrinkRequest extends TeaModel {
     }
     public String getPackageName() {
         return this.packageName;
+    }
+
+    public CreateRumAppShrinkRequest setRealRegionId(String realRegionId) {
+        this.realRegionId = realRegionId;
+        return this;
+    }
+    public String getRealRegionId() {
+        return this.realRegionId;
     }
 
     public CreateRumAppShrinkRequest setRegionId(String regionId) {

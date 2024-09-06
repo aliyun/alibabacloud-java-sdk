@@ -4,6 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateTimingSyntheticTaskRequest extends TeaModel {
+    /**
+     * <p>The list of assertions.</p>
+     */
     @NameInMap("AvailableAssertions")
     public java.util.List<CreateTimingSyntheticTaskRequestAvailableAssertions> availableAssertions;
 
@@ -13,10 +16,14 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
     @NameInMap("CommonSetting")
     public CreateTimingSyntheticTaskRequestCommonSetting commonSetting;
 
+    /**
+     * <p>The general settings.</p>
+     */
     @NameInMap("CustomPeriod")
     public CreateTimingSyntheticTaskRequestCustomPeriod customPeriod;
 
     /**
+     * <p>The detection frequency. Valid values: 1m, 5m, 10m, 15m, 20m, 30m, 1h, 2h, 3h, 4h, 6h, 8h, 12h, and 24h.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +33,11 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
     public String frequency;
 
     /**
+     * <p>The detection point type. Valid values:</p>
+     * <ul>
+     * <li>1: PC</li>
+     * <li>2: mobile device</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +54,7 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
     public CreateTimingSyntheticTaskRequestMonitorConf monitorConf;
 
     /**
+     * <p>The list of detection points.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Monitors")
@@ -68,12 +81,17 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The parameter is optional.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tag list.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateTimingSyntheticTaskRequestTags> tags;
 
@@ -191,6 +209,7 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
 
     public static class CreateTimingSyntheticTaskRequestAvailableAssertions extends TeaModel {
         /**
+         * <p>The expected value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,6 +219,7 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public String expect;
 
         /**
+         * <p>The condition. gt: greater than. gte: greater than or equal to. lt: less than. lte: less than or equal to. eq: equal to. neq: not equal to. ctn: contain. nctn: does not contain. exist: exist. n_exist: does not exist. belong: belong to. n_belong: does not belong to. reg_match: regular expression.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,6 +229,8 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public String operator;
 
         /**
+         * <p>The check target. If you set the type parameter to HttpResCode, HttpResBody, or HttpResponseTime, you do not need to set the target parameter. If you set the type parameter to HttpResHead, you must specify the key in the header. If you set the type parameter to HttpResBodyJson, use jsonPath.</p>
+         * 
          * <strong>example:</strong>
          * <p>key</p>
          */
@@ -216,6 +238,7 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public String target;
 
         /**
+         * <p>The assertion type. Valid values: HttpResCode, HttpResHead, HttpResBody, HttpResBodyJson, HttpResponseTime, IcmpPackLoss (packet loss rate), IcmpPackMaxLatency (maximum packet latency), IcmpPackAvgLatency (average packet latency), TraceRouteHops (number of hops), DnsARecord (A record), DnsCName (CNAME), websiteTTFB (time to first packet), websiteTTLB (time to last packet), websiteFST (first paint time), websiteFFST (first meaningful paint), websiteOnload (full loaded time). For more information, see the following description.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -265,7 +288,7 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
 
     public static class CreateTimingSyntheticTaskRequestCommonSettingCustomHostHosts extends TeaModel {
         /**
-         * <p>The domain name</p>
+         * <p>The domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -373,12 +396,27 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
     }
 
     public static class CreateTimingSyntheticTaskRequestCommonSettingCustomPrometheusSetting extends TeaModel {
+        /**
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("PrometheusClusterId")
         public String prometheusClusterId;
 
+        /**
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("PrometheusClusterRegion")
         public String prometheusClusterRegion;
 
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("PrometheusLabels")
         public java.util.Map<String, String> prometheusLabels;
 
@@ -496,6 +534,9 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         @NameInMap("CustomHost")
         public CreateTimingSyntheticTaskRequestCommonSettingCustomHost customHost;
 
+        /**
+         * <p>The reserved parameters.</p>
+         */
         @NameInMap("CustomPrometheusSetting")
         public CreateTimingSyntheticTaskRequestCommonSettingCustomPrometheusSetting customPrometheusSetting;
 
@@ -637,6 +678,7 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
 
     public static class CreateTimingSyntheticTaskRequestCustomPeriod extends TeaModel {
         /**
+         * <p>The custom host settings.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -646,6 +688,7 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Integer endHour;
 
         /**
+         * <p>The list of hosts.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -751,6 +794,12 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public String method;
 
         /**
+         * <p>The ALPN protocol version. You can configure this parameter when you perform an HTTPS synthetic test on a WAP mobile client. Valid values:</p>
+         * <p>0: default</p>
+         * <p>1: http/1.1</p>
+         * <p>2: h2</p>
+         * <p>3: disables the ALPN protocol</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1191,7 +1240,7 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         /**
          * <p>The IP version of the DNS server.</p>
          * <ul>
-         * <li>0 (default value): IPv4.</li>
+         * <li>0 (default): IPv4.</li>
          * <li>1: IPv6.</li>
          * <li>2: A version is automatically selected.</li>
          * </ul>
@@ -1214,7 +1263,7 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         /**
          * <p>The DNS query method. Valid values:</p>
          * <ul>
-         * <li>0 (default value): recursive</li>
+         * <li>0 (default): recursive</li>
          * <li>1: iterative</li>
          * </ul>
          * 
@@ -1604,7 +1653,7 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
          * <p>The address type of the resource. Valid values:</p>
          * <ul>
          * <li>1: resource URL</li>
-         * <li>0 (default value): page URL</li>
+         * <li>0 (default): page URL</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1716,7 +1765,7 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         /**
          * <p>Specifies whether to automatically scroll up and down the screen to load a page.</p>
          * <ul>
-         * <li>0 (default value): no</li>
+         * <li>0 (default): no</li>
          * <li>1: yes</li>
          * </ul>
          * 
@@ -1729,7 +1778,7 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         /**
          * <p>Specifies whether to create a custom header.</p>
          * <ul>
-         * <li>0 (default value): No custom header is created.</li>
+         * <li>0 (default): No custom header is created.</li>
          * <li>1: A custom header is created for the first packet.</li>
          * <li>2: A custom header is created for all packets.</li>
          * </ul>
@@ -1760,7 +1809,7 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
          * <p>Specifies whether to disable caching.</p>
          * <ul>
          * <li>0: no</li>
-         * <li>1 (default value): yes</li>
+         * <li>1 (default): yes</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2164,6 +2213,7 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
 
     public static class CreateTimingSyntheticTaskRequestMonitors extends TeaModel {
         /**
+         * <p>The city code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -2173,6 +2223,13 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public String cityCode;
 
         /**
+         * <p>The client type of the detection point. Valid values:</p>
+         * <ul>
+         * <li>1: data center</li>
+         * <li>2: Internet</li>
+         * <li>3: mobile device</li>
+         * <li>4: ECS instance</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -2182,6 +2239,7 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Integer clientType;
 
         /**
+         * <p>The carrier code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -2223,6 +2281,8 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
 
     public static class CreateTimingSyntheticTaskRequestTags extends TeaModel {
         /**
+         * <p>The key of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>Key</p>
          */
@@ -2230,6 +2290,8 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */

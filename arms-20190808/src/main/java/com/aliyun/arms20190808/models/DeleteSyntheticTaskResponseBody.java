@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSyntheticTaskResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1A9C645C-C83F-4C9D-8CCB-29BEC9E1****</p>
@@ -14,6 +14,12 @@ public class DeleteSyntheticTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the specified tasks are deleted.</p>
+     * <ul>
+     * <li><code>true</code>: The tasks are deleted.</li>
+     * <li><code>false</code>: The tasks fail to be deleted.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

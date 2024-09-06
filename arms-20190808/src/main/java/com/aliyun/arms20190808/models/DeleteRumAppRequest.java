@@ -23,6 +23,9 @@ public class DeleteRumAppRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("RealRegionId")
+    public String realRegionId;
+
     /**
      * <p>The ID of the region.</p>
      * <p>This parameter is required.</p>
@@ -52,6 +55,14 @@ public class DeleteRumAppRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public DeleteRumAppRequest setRealRegionId(String realRegionId) {
+        this.realRegionId = realRegionId;
+        return this;
+    }
+    public String getRealRegionId() {
+        return this.realRegionId;
     }
 
     public DeleteRumAppRequest setRegionId(String regionId) {

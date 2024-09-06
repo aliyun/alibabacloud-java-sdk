@@ -4,6 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListAlertsResponseBody extends TeaModel {
+    @NameInMap("Message")
+    public String message;
+
     /**
      * <p>The information about the array object.</p>
      */
@@ -22,6 +25,14 @@ public class ListAlertsResponseBody extends TeaModel {
     public static ListAlertsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAlertsResponseBody self = new ListAlertsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListAlertsResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public ListAlertsResponseBody setPageBean(ListAlertsResponseBodyPageBean pageBean) {

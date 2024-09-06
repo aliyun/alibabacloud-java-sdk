@@ -32,6 +32,14 @@ public class CreateGrafanaWorkspaceShrinkRequest extends TeaModel {
     public String grafanaVersion;
 
     /**
+     * <p>The edition.</p>
+     * <p><strong>Valid values:</strong></p>
+     * <ul>
+     * <li>standard: <code>Beta Edition or Standard Edition</code></li>
+     * <li>personal_edition: Developer Edition</li>
+     * <li>experts_edition: Pro Edition</li>
+     * <li>advanced_edition: Advanced Edition</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSyntheticTaskDetailResponseBody extends TeaModel {
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4D6C358A-A58B-4F4B-94CE-F5AAF023****</p>
@@ -14,7 +14,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>任务详情。</p>
+     * <p>The details of the task.</p>
      */
     @NameInMap("TaskDetail")
     public GetSyntheticTaskDetailResponseBodyTaskDetail taskDetail;
@@ -42,6 +42,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
 
     public static class GetSyntheticTaskDetailResponseBodyTaskDetailCommonParamAlertList extends TeaModel {
         /**
+         * <p>The low-risk alert.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -49,6 +51,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String generalAlert;
 
         /**
+         * <p>Indicates whether the condition is essential.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -56,6 +60,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String isCritical;
 
         /**
+         * <p>The alert name.</p>
+         * 
          * <strong>example:</strong>
          * <p>alert-test</p>
          */
@@ -63,6 +69,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The Critical-level alert.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -70,6 +78,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String seriousAlert;
 
         /**
+         * <p>Greater than or less than.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -125,16 +135,23 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
 
     public static class GetSyntheticTaskDetailResponseBodyTaskDetailCommonParam extends TeaModel {
         /**
+         * <p>The identifier of the alert.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("AlarmFlag")
         public Long alarmFlag;
 
+        /**
+         * <p>The list of alerts.</p>
+         */
         @NameInMap("AlertList")
         public java.util.List<GetSyntheticTaskDetailResponseBodyTaskDetailCommonParamAlertList> alertList;
 
         /**
+         * <p>The ID of the alert identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -142,6 +159,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String alertNotifierId;
 
         /**
+         * <p>The ID of the alert policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -149,6 +168,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String alertPolicyId;
 
         /**
+         * <p>The monitoring samples.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -156,6 +177,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String monitorSamples;
 
         /**
+         * <p>The start time of the execution.</p>
+         * 
          * <strong>example:</strong>
          * <p>1664427128</p>
          */
@@ -219,6 +242,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
 
     public static class GetSyntheticTaskDetailResponseBodyTaskDetailDownload extends TeaModel {
         /**
+         * <p>The timeout period of the file download task.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -226,6 +251,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long connectionTimeout;
 
         /**
+         * <p>The items to be ignored in a certificate error. Multiple values are concatenated with vertical bars (|).</p>
+         * 
          * <strong>example:</strong>
          * <p>char</p>
          */
@@ -233,6 +260,12 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String downloadCustomHeaderContent;
 
         /**
+         * <p>The custom host. Valid values:</p>
+         * <ul>
+         * <li>1: round robin</li>
+         * <li>0: random</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -240,6 +273,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long downloadCustomHost;
 
         /**
+         * <p>The custom IP address of the host. Multiple IP addresses are separated with commas (,).</p>
+         * 
          * <strong>example:</strong>
          * <p>168.23.45.1</p>
          */
@@ -247,6 +282,12 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String downloadCustomHostIp;
 
         /**
+         * <p>The kernel type. Valid values:</p>
+         * <ul>
+         * <li>1: curl</li>
+         * <li>0: WinInet</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -254,6 +295,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long downloadKernel;
 
         /**
+         * <p>Indicates whether redirection is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -261,6 +304,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long downloadRedirect;
 
         /**
+         * <p>The file size. Unit: KB.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -268,6 +313,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long downloadTransmissionSize;
 
         /**
+         * <p>The monitoring duration.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -275,6 +322,13 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long monitorTimeout;
 
         /**
+         * <p>The QUIC protocol type. Valid values:</p>
+         * <ul>
+         * <li>1: HTTP/1</li>
+         * <li>2: HTTP/2</li>
+         * <li>3: http3</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -282,6 +336,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String quickProtocol;
 
         /**
+         * <p>The keyword that is used in verification.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -289,6 +345,14 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String validateKeywords;
 
         /**
+         * <p>The method that is used to verify the response content. Valid values:</p>
+         * <ul>
+         * <li>0: no verification.</li>
+         * <li>1: exact match with the verification string.</li>
+         * <li>2: partial match with the verification string.</li>
+         * <li>3: MD5 verification.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -296,6 +360,11 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long verifyWay;
 
         /**
+         * <p>The whitelisted objects that are used to avoid DNS hijacking. Format: <code>&lt;domain name&gt;:&lt;objects&gt;</code>.</p>
+         * <blockquote>
+         * <p> WAP networks do not support hijacking.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>[{\&quot;src\&quot;:\&quot;211.154.166.174\&quot;}]</p>
          */
@@ -407,23 +476,23 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
 
     public static class GetSyntheticTaskDetailResponseBodyTaskDetailExtendInterval extends TeaModel {
         /**
-         * <p>拨测执行周期。</p>
+         * <p>The day on which synthetic monitoring is performed. Valid values:</p>
          * <ul>
-         * <li>-1：每天</li>
-         * <li>0：周日</li>
-         * <li>1：周一</li>
-         * <li>2：周二</li>
-         * <li>3：周三</li>
-         * <li>4：周四</li>
-         * <li>5：周五</li>
-         * <li>6：周六</li>
+         * <li>\-1: every day</li>
+         * <li>0: Sunday</li>
+         * <li>1: Monday</li>
+         * <li>2: Tuesday</li>
+         * <li>3: Wednesday</li>
+         * <li>4: Thursday</li>
+         * <li>5: Friday</li>
+         * <li>6: Saturday</li>
          * </ul>
          */
         @NameInMap("Days")
         public java.util.List<Long> days;
 
         /**
-         * <p>当天结束分钟数。</p>
+         * <p>The minute at which synthetic monitoring ends.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -432,7 +501,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long endMinute;
 
         /**
-         * <p>周期结束时间 ，格式为yyyy-MM-dd HH。</p>
+         * <p>The time when synthetic monitoring ends. Format: <code>yyyy-MM-dd HH</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-05-03 11:40</p>
@@ -441,7 +510,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>当天结束小时数。</p>
+         * <p>The hour at which synthetic monitoring ends.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -450,7 +519,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long endhour;
 
         /**
-         * <p>当天开始拨测时间的小时数。</p>
+         * <p>The hour at which synthetic monitoring starts.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>
@@ -459,7 +528,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long startHour;
 
         /**
-         * <p>当天开始拨测时间的分钟数。</p>
+         * <p>The minute at which synthetic monitoring starts.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -468,7 +537,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long startMinute;
 
         /**
-         * <p>周期开始时间，格式yyyy-MM-dd HH 。</p>
+         * <p>The time when synthetic monitoring starts. Format: yyyy-MM-dd HH.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-02-26 11:40</p>
@@ -541,7 +610,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
 
     public static class GetSyntheticTaskDetailResponseBodyTaskDetailMonitorList extends TeaModel {
         /**
-         * <p>城市编码。</p>
+         * <p>The city code.</p>
          * 
          * <strong>example:</strong>
          * <p>110100</p>
@@ -550,12 +619,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long cityCode;
 
         /**
-         * <p>监测类型：</p>
-         * <ul>
-         * <li>IDC</li>
-         * <li>LastMilie</li>
-         * <li>Mobile</li>
-         * </ul>
+         * <p>The type of the detection point.</p>
          * 
          * <strong>example:</strong>
          * <p>IDC</p>
@@ -564,7 +628,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long monitorType;
 
         /**
-         * <p>运营商ID。</p>
+         * <p>The ID of the network service.</p>
          * 
          * <strong>example:</strong>
          * <p>12001</p>
@@ -573,7 +637,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long netServiceId;
 
         /**
-         * <p>下发次数。</p>
+         * <p>The number of times that the system sends detection requests.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -622,6 +686,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
 
     public static class GetSyntheticTaskDetailResponseBodyTaskDetailNav extends TeaModel {
         /**
+         * <p>The DNS whitelist.</p>
+         * 
          * <strong>example:</strong>
          * <p>119.119.53.156</p>
          */
@@ -629,6 +695,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String dnsHijackWhitelist;
 
         /**
+         * <p>The element blacklist.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -636,6 +704,15 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String elementBlacklist;
 
         /**
+         * <p>Indicates whether ActiveX is executed. Valid values:</p>
+         * <ul>
+         * <li>3: yes</li>
+         * <li>0: no</li>
+         * </ul>
+         * <blockquote>
+         * <p> Only IE elements support this parameter.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -643,6 +720,12 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long executeActiveX;
 
         /**
+         * <p>Indicates whether the applet is executed. Valid values:</p>
+         * <ul>
+         * <li>0: no</li>
+         * <li>1: yes</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -650,6 +733,15 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long executeApplet;
 
         /**
+         * <p>Indicates whether scripts are executed. Valid values:</p>
+         * <ul>
+         * <li>1: yes</li>
+         * <li>0: no</li>
+         * </ul>
+         * <blockquote>
+         * <p> Only IE elements support this parameter.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -657,6 +749,12 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long executeScript;
 
         /**
+         * <p>Indicates whether invalid IP addresses are excluded. Valid values:</p>
+         * <ul>
+         * <li>1: no</li>
+         * <li>0: yes</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -664,6 +762,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long filterInvalidIP;
 
         /**
+         * <p>The element that is used in DNS hijacking.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -671,6 +771,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long flowHijackJumpTimes;
 
         /**
+         * <p>The tag that is used in DNS hijacking.</p>
+         * 
          * <strong>example:</strong>
          * <p>target</p>
          */
@@ -678,6 +780,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String flowHijackLogo;
 
         /**
+         * <p>The monitoring timeout period.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -685,6 +789,12 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long monitorTimeout;
 
         /**
+         * <p>Indicates whether the screen is automatically scrolled up and down to load a page. Valid values:</p>
+         * <ul>
+         * <li>1: yes</li>
+         * <li>0: no</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -692,6 +802,13 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long navAutomaticScrolling;
 
         /**
+         * <p>Indicates whether a custom header is created. Valid values:</p>
+         * <ul>
+         * <li>0: no</li>
+         * <li>1: A custom header is created for the first packet.</li>
+         * <li>2: A custom header is created for all packets.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -699,6 +816,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String navCustomHeader;
 
         /**
+         * <p>The format of the custom header. Multiple fields are separated with vertical bars (|).</p>
+         * 
          * <strong>example:</strong>
          * <p>content</p>
          */
@@ -706,6 +825,12 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String navCustomHeaderContent;
 
         /**
+         * <p>The custom host mode. Valid values:</p>
+         * <ul>
+         * <li>1: round robin</li>
+         * <li>0: random</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -713,6 +838,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long navCustomHost;
 
         /**
+         * <p>The custom IP address of the host. Multiple IP addresses are separated with commas (,).</p>
+         * 
          * <strong>example:</strong>
          * <p>119.119.53.156/32</p>
          */
@@ -720,6 +847,12 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String navCustomHostIp;
 
         /**
+         * <p>Indicates whether caching is disabled. Valid values:</p>
+         * <ul>
+         * <li>1: Caching is disabled.</li>
+         * <li>0: Caching is enabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -727,6 +860,12 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long navDisableCache;
 
         /**
+         * <p>Indicates whether compression is disabled. Valid values:</p>
+         * <ul>
+         * <li>0: Compression is enabled.</li>
+         * <li>1: Compression is disabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -734,6 +873,12 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long navDisableCompression;
 
         /**
+         * <p>Indicates whether certificate errors are ignored during certificate verification in the SSL handshake. Valid values:</p>
+         * <ul>
+         * <li>1: yes</li>
+         * <li>0: no</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -741,6 +886,12 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long navIgnoreCertificateError;
 
         /**
+         * <p>Indicates whether redirection is enabled. Valid values:</p>
+         * <ul>
+         * <li>0: no</li>
+         * <li>1: yes</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -748,6 +899,12 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long navRedirect;
 
         /**
+         * <p>Indicates whether the elements on the page are returned.</p>
+         * <ul>
+         * <li>1: no. The basic document data is returned.</li>
+         * <li>2: yes. All document data is returned.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -755,6 +912,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long navReturnElement;
 
         /**
+         * <p>The page tampering.</p>
+         * 
          * <strong>example:</strong>
          * <p>content</p>
          */
@@ -762,6 +921,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String pageTampering;
 
         /**
+         * <p>The process ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ssh</p>
          */
@@ -769,6 +930,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String processName;
 
         /**
+         * <p>The domain name of the QUIC request element.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>
          */
@@ -776,6 +939,17 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String quicDomain;
 
         /**
+         * <p>The QUIC version. Default value: 0. Valid values:</p>
+         * <ul>
+         * <li>35</li>
+         * <li>39</li>
+         * <li>43</li>
+         * <li>44</li>
+         * </ul>
+         * <blockquote>
+         * <p> Only Chrome elements support this parameter.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -783,6 +957,13 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long quicVersion;
 
         /**
+         * <p>Indicates whether request headers are returned. Valid values:</p>
+         * <ul>
+         * <li>0: no</li>
+         * <li>1: The headers of base documents are returned.</li>
+         * <li>2: All headers are returned.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -790,6 +971,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long requestHeader;
 
         /**
+         * <p>The time threshold that is used to define a slow element. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -797,6 +980,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long slowElementThreshold;
 
         /**
+         * <p>The blacklist for string verification.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -804,6 +989,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String verifyStringBlacklist;
 
         /**
+         * <p>The whitelist for string verification.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -811,6 +998,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String verifyStringWhitelist;
 
         /**
+         * <p>The timeout period of waiting for the monitoring to complete.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -1050,6 +1239,12 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
 
     public static class GetSyntheticTaskDetailResponseBodyTaskDetailNet extends TeaModel {
         /**
+         * <p>Indicates whether the data is displayed in the DIG format. Valid values:</p>
+         * <ul>
+         * <li>0: no</li>
+         * <li>1: yes</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1057,6 +1252,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long netDigSwitch;
 
         /**
+         * <p>The NS server.</p>
+         * 
          * <strong>example:</strong>
          * <p>189.12.32.124</p>
          */
@@ -1064,6 +1261,12 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String netDnsNs;
 
         /**
+         * <p>The DNS query method. Valid values:</p>
+         * <ul>
+         * <li>1: recursive</li>
+         * <li>2: iterative</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1071,6 +1274,13 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String netDnsQueryMethod;
 
         /**
+         * <p>The type of the DNS server. Valid values:</p>
+         * <ul>
+         * <li>0: ipv4</li>
+         * <li>1: ipv6</li>
+         * <li>2: A version is automatically selected.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1078,6 +1288,12 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long netDnsServer;
 
         /**
+         * <p>Indicates whether DNS test is enabled. Valid values:</p>
+         * <ul>
+         * <li>0: no</li>
+         * <li>1: yes</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1085,6 +1301,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long netDnsSwitch;
 
         /**
+         * <p>The timeout period of DNS requests.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -1092,6 +1310,12 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String netDnsTimeout;
 
         /**
+         * <p>The protocol type. Valid values:</p>
+         * <ul>
+         * <li>0 : ICMP</li>
+         * <li>1 : TCP</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1099,6 +1323,12 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long netIcmpActive;
 
         /**
+         * <p>Indicates whether packets are split. Valid values:</p>
+         * <ul>
+         * <li>0: no</li>
+         * <li>1: yes</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1106,6 +1336,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long netIcmpDataCut;
 
         /**
+         * <p>The interval at which the synthetic monitoring task is executed.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -1113,6 +1345,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long netIcmpInterval;
 
         /**
+         * <p>The number of packets.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -1120,6 +1354,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long netIcmpNum;
 
         /**
+         * <p>The packet size.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -1127,6 +1363,12 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long netIcmpSize;
 
         /**
+         * <p>Indicates whether ICMP test is enabled. Valid values:</p>
+         * <ul>
+         * <li>0: no.</li>
+         * <li>1: yes. If you set this parameter to 1, you must also set the Icmp parameter.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1134,6 +1376,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long netIcmpSwitch;
 
         /**
+         * <p>The monitoring timeout period.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -1141,6 +1385,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long netIcmpTimeout;
 
         /**
+         * <p>The maximum number of active detection points.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -1148,6 +1394,12 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long netTraceRouteNum;
 
         /**
+         * <p>Indicates whether Tracert test is enabled. Valid values:</p>
+         * <ul>
+         * <li>0: no</li>
+         * <li>1: yes. If you set this parameter to 1, you must also set the Tracert parameter.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1155,6 +1407,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long netTraceRouteSwitch;
 
         /**
+         * <p>The monitoring timeout period. Valid values: 0 to 300. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -1162,6 +1416,11 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long netTraceRouteTimeout;
 
         /**
+         * <p>The whitelisted objects that are used to avoid DNS hijacking. Format: <code>&lt;domain name&gt;:&lt;objects&gt;</code>.</p>
+         * <blockquote>
+         * <p> WAP networks do not support hijacking.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>119.119.53.156/32</p>
          */
@@ -1313,6 +1572,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
 
     public static class GetSyntheticTaskDetailResponseBodyTaskDetailProtocolRequestContentBodyFormdata extends TeaModel {
         /**
+         * <p>The key of the <strong>form-data</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>appId</p>
          */
@@ -1320,6 +1581,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the form-data.</p>
+         * 
          * <strong>example:</strong>
          * <p>3425</p>
          */
@@ -1351,6 +1614,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
 
     public static class GetSyntheticTaskDetailResponseBodyTaskDetailProtocolRequestContentBodyUrlencoded extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>appId</p>
          */
@@ -1358,6 +1623,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>11080</p>
          */
@@ -1388,10 +1655,22 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
     }
 
     public static class GetSyntheticTaskDetailResponseBodyTaskDetailProtocolRequestContentBody extends TeaModel {
+        /**
+         * <p>The data content. This parameter is returned when Mode is set to form-data.</p>
+         */
         @NameInMap("Formdata")
         public GetSyntheticTaskDetailResponseBodyTaskDetailProtocolRequestContentBodyFormdata formdata;
 
         /**
+         * <p>The language used when Mode is set to raw. Valid values:</p>
+         * <ul>
+         * <li>json</li>
+         * <li>xml</li>
+         * <li>javascript</li>
+         * <li>html</li>
+         * <li>text</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>xml</p>
          */
@@ -1399,6 +1678,13 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String language;
 
         /**
+         * <p>The type of the content. Valid values:</p>
+         * <ul>
+         * <li>form-data</li>
+         * <li>x-www-form-urlencoded</li>
+         * <li>raw</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>form-data</p>
          */
@@ -1406,12 +1692,17 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String mode;
 
         /**
+         * <p>The data content. This parameter is returned when <strong>Mode</strong> is set to <strong>raw</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>content</p>
          */
         @NameInMap("Raw")
         public String raw;
 
+        /**
+         * <p>The URL of the body content.</p>
+         */
         @NameInMap("Urlencoded")
         public GetSyntheticTaskDetailResponseBodyTaskDetailProtocolRequestContentBodyUrlencoded urlencoded;
 
@@ -1464,6 +1755,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
 
     public static class GetSyntheticTaskDetailResponseBodyTaskDetailProtocolRequestContentHeader extends TeaModel {
         /**
+         * <p>The key of the header in the request parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>regionId</p>
          */
@@ -1471,6 +1764,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the header in the request parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -1501,13 +1796,25 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
     }
 
     public static class GetSyntheticTaskDetailResponseBodyTaskDetailProtocolRequestContent extends TeaModel {
+        /**
+         * <p>The content of the request body.</p>
+         */
         @NameInMap("Body")
         public GetSyntheticTaskDetailResponseBodyTaskDetailProtocolRequestContentBody body;
 
+        /**
+         * <p>The request header.</p>
+         */
         @NameInMap("Header")
         public java.util.List<GetSyntheticTaskDetailResponseBodyTaskDetailProtocolRequestContentHeader> header;
 
         /**
+         * <p>The request method. Valid values:</p>
+         * <ul>
+         * <li>POST</li>
+         * <li>GET</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>POST</p>
          */
@@ -1547,6 +1854,14 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
 
     public static class GetSyntheticTaskDetailResponseBodyTaskDetailProtocol extends TeaModel {
         /**
+         * <p>The encoding format. Valid values:</p>
+         * <ul>
+         * <li>0: UTF-8</li>
+         * <li>1: GBK</li>
+         * <li>2: GB2312</li>
+         * <li>3: Unicode</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1554,6 +1869,12 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long characterEncoding;
 
         /**
+         * <p>The custom host. Valid values:</p>
+         * <ul>
+         * <li>1: round robin</li>
+         * <li>0: random</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1561,6 +1882,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long customHost;
 
         /**
+         * <p>The custom IP address of the host. Multiple IP addresses are separated with commas (,).</p>
+         * 
          * <strong>example:</strong>
          * <p>119.119.53.156</p>
          */
@@ -1568,6 +1891,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String customHostIp;
 
         /**
+         * <p>The timeout period.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -1575,6 +1900,8 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long protocolConnectionTimeout;
 
         /**
+         * <p>The timeout period of API performance monitoring. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -1582,16 +1909,23 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long protocolMonitorTimeout;
 
         /**
+         * <p>The size of the received data. This parameter is returned when <strong>VerifyWay</strong> is set to 2.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
         @NameInMap("ReceivedDataSize")
         public Long receivedDataSize;
 
+        /**
+         * <p>The request content, including the header and body.</p>
+         */
         @NameInMap("RequestContent")
         public GetSyntheticTaskDetailResponseBodyTaskDetailProtocolRequestContent requestContent;
 
         /**
+         * <p>The verification string.</p>
+         * 
          * <strong>example:</strong>
          * <p>list</p>
          */
@@ -1599,6 +1933,14 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String verifyContent;
 
         /**
+         * <p>The method that is used to verify the response content. Valid values:</p>
+         * <ul>
+         * <li>0: no verification.</li>
+         * <li>1: exact match with the verification string.</li>
+         * <li>2: partial match with the verification string.</li>
+         * <li>3: MD5 verification.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1685,23 +2027,26 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
     }
 
     public static class GetSyntheticTaskDetailResponseBodyTaskDetail extends TeaModel {
+        /**
+         * <p>The list of common parameters.</p>
+         */
         @NameInMap("CommonParam")
         public GetSyntheticTaskDetailResponseBodyTaskDetailCommonParam commonParam;
 
         /**
-         * <p>文件下载任务。</p>
+         * <p>The file download task.</p>
          */
         @NameInMap("Download")
         public GetSyntheticTaskDetailResponseBodyTaskDetailDownload download;
 
         /**
-         * <p>自定义扩展频率。</p>
+         * <p>The frequency.</p>
          */
         @NameInMap("ExtendInterval")
         public GetSyntheticTaskDetailResponseBodyTaskDetailExtendInterval extendInterval;
 
         /**
-         * <p>拨测频率，单位为分钟。可选频率如下：</p>
+         * <p>The interval at which synthetic monitoring is performed. Unit: minutes. Valid values:</p>
          * <ul>
          * <li>1</li>
          * <li>5</li>
@@ -1726,9 +2071,11 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long intervalTime;
 
         /**
-         * <p>监测周期类型：</p>
-         * <p>0：每天
-         * 1：自定义扩展频率</p>
+         * <p>The interval type. Valid values:</p>
+         * <ul>
+         * <li>0: daily</li>
+         * <li>1: custom frequency</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1737,10 +2084,12 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long intervalType;
 
         /**
-         * <p>IP类型：</p>
-         * <p>0：自动
-         * 1：IPv4
-         * 2：IPv6</p>
+         * <p>The IP version. Valid values:</p>
+         * <ul>
+         * <li>0: A version is automatically selected.</li>
+         * <li>1: IPv4.</li>
+         * <li>2: IPv6.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1749,29 +2098,40 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long ipType;
 
         /**
-         * <p>拨测任务的检测点列表。</p>
+         * <p>The detection points.</p>
          */
         @NameInMap("MonitorList")
         public java.util.List<GetSyntheticTaskDetailResponseBodyTaskDetailMonitorList> monitorList;
 
         /**
+         * <p>The detection points.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
         @NameInMap("MonitorListString")
         public String monitorListString;
 
+        /**
+         * <p>The browser test task.</p>
+         */
         @NameInMap("Nav")
         public GetSyntheticTaskDetailResponseBodyTaskDetailNav nav;
 
+        /**
+         * <p>The network synthetic monitoring task.</p>
+         */
         @NameInMap("Net")
         public GetSyntheticTaskDetailResponseBodyTaskDetailNet net;
 
+        /**
+         * <p>The synthetic monitoring task of the API performance type.</p>
+         */
         @NameInMap("Protocol")
         public GetSyntheticTaskDetailResponseBodyTaskDetailProtocol protocol;
 
         /**
-         * <p>云拨测任务ID。</p>
+         * <p>The ID of the synthetic monitoring task.</p>
          * 
          * <strong>example:</strong>
          * <p>19584</p>
@@ -1780,7 +2140,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long taskId;
 
         /**
-         * <p>任务名称。</p>
+         * <p>The name of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>net-test</p>
@@ -1789,12 +2149,14 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public String taskName;
 
         /**
-         * <p>任务类型：</p>
-         * <p>3：网页性能-IE
-         * 34：网页性能-Chrome
-         * 0：网络质量
-         * 40：文件下载
-         * 7：API性能</p>
+         * <p>The type of the task. Valid values:</p>
+         * <ol>
+         * <li>3: web page performance - IE</li>
+         * <li>34: web page performance - Chrome</li>
+         * <li>0: network quality</li>
+         * <li>40: file download</li>
+         * <li>7: API performance</li>
+         * </ol>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1803,7 +2165,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public Long taskType;
 
         /**
-         * <p>拨测地址。</p>
+         * <p>The URL for synthetic monitoring.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>

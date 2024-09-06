@@ -5,12 +5,21 @@ import com.aliyun.tea.*;
 
 public class SwitchSyntheticTaskStatusRequest extends TeaModel {
     /**
+     * <p>Specifies whether to start or stop the task. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: stops the task</li>
+     * <li><strong>1</strong>: starts the task</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("SwitchStatus")
     public Long switchStatus;
 
+    /**
+     * <p>The task IDs. You can specify up to 30 task IDs at a time.</p>
+     */
     @NameInMap("TaskIds")
     public java.util.List<Long> taskIds;
 

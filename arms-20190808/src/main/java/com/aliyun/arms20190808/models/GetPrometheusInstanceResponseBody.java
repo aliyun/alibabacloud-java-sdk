@@ -136,6 +136,24 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public Integer archiveDuration;
 
         /**
+         * <p>Read the whitelist policy for password-free addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
+        @NameInMap("AuthFreeReadPolicy")
+        public String authFreeReadPolicy;
+
+        /**
+         * <p>Write exempt password address whitelist policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
+        @NameInMap("AuthFreeWritePolicy")
+        public String authFreeWritePolicy;
+
+        /**
          * <p>The authorization token.</p>
          * 
          * <strong>example:</strong>
@@ -186,6 +204,24 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
          */
         @NameInMap("DbInstanceStatus")
         public String dbInstanceStatus;
+
+        /**
+         * <p>Whether to enable password-free reading.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("EnableAuthFreeRead")
+        public Boolean enableAuthFreeRead;
+
+        /**
+         * <p>Whether to enable write access without password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("EnableAuthFreeWrite")
+        public Boolean enableAuthFreeWrite;
 
         /**
          * <p>Indicates whether access token authentication is enabled.</p>
@@ -353,6 +389,9 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @NameInMap("SubClustersJson")
         public String subClustersJson;
 
+        /**
+         * <p>Supported authentication types.</p>
+         */
         @NameInMap("SupportAuthTypes")
         public java.util.List<String> supportAuthTypes;
 
@@ -410,6 +449,22 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             return this.archiveDuration;
         }
 
+        public GetPrometheusInstanceResponseBodyData setAuthFreeReadPolicy(String authFreeReadPolicy) {
+            this.authFreeReadPolicy = authFreeReadPolicy;
+            return this;
+        }
+        public String getAuthFreeReadPolicy() {
+            return this.authFreeReadPolicy;
+        }
+
+        public GetPrometheusInstanceResponseBodyData setAuthFreeWritePolicy(String authFreeWritePolicy) {
+            this.authFreeWritePolicy = authFreeWritePolicy;
+            return this;
+        }
+        public String getAuthFreeWritePolicy() {
+            return this.authFreeWritePolicy;
+        }
+
         public GetPrometheusInstanceResponseBodyData setAuthToken(String authToken) {
             this.authToken = authToken;
             return this;
@@ -448,6 +503,22 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         }
         public String getDbInstanceStatus() {
             return this.dbInstanceStatus;
+        }
+
+        public GetPrometheusInstanceResponseBodyData setEnableAuthFreeRead(Boolean enableAuthFreeRead) {
+            this.enableAuthFreeRead = enableAuthFreeRead;
+            return this;
+        }
+        public Boolean getEnableAuthFreeRead() {
+            return this.enableAuthFreeRead;
+        }
+
+        public GetPrometheusInstanceResponseBodyData setEnableAuthFreeWrite(Boolean enableAuthFreeWrite) {
+            this.enableAuthFreeWrite = enableAuthFreeWrite;
+            return this;
+        }
+        public Boolean getEnableAuthFreeWrite() {
+            return this.enableAuthFreeWrite;
         }
 
         public GetPrometheusInstanceResponseBodyData setEnableAuthToken(String enableAuthToken) {

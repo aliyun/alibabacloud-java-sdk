@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSyntheticTaskRequest extends TeaModel {
     /**
+     * <p>The region ID. Default value: cn-hangzhou.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteSyntheticTaskRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The task IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TaskIds")

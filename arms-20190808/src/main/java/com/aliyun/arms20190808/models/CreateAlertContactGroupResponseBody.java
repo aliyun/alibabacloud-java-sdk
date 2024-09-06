@@ -14,7 +14,7 @@ public class CreateAlertContactGroupResponseBody extends TeaModel {
     public String contactGroupId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>70675725-8F11-4817-8106-CFE0AD71****</p>

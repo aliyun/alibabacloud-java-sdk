@@ -4,6 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListActivatedAlertsResponseBody extends TeaModel {
+    @NameInMap("Message")
+    public String message;
+
     /**
      * <p>The struct returned.</p>
      */
@@ -22,6 +25,14 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
     public static ListActivatedAlertsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListActivatedAlertsResponseBody self = new ListActivatedAlertsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListActivatedAlertsResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public ListActivatedAlertsResponseBody setPage(ListActivatedAlertsResponseBodyPage page) {

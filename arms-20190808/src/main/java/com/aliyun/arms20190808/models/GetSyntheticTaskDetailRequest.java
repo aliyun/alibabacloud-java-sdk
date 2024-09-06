@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSyntheticTaskDetailRequest extends TeaModel {
     /**
-     * <p>地域ID。默认为cn-hangzhou。</p>
+     * <p>The region ID. Default value: cn-hangzhou.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -14,7 +14,7 @@ public class GetSyntheticTaskDetailRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>云拨测任务ID。</p>
+     * <p>The ID of the synthetic monitoring task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
