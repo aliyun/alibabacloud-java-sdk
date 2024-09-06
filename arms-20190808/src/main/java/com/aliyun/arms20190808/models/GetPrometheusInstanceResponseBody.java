@@ -232,6 +232,9 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @NameInMap("EnableAuthToken")
         public String enableAuthToken;
 
+        @NameInMap("ExtraInfo")
+        public java.util.Map<String, String> extraInfo;
+
         /**
          * <p>The ID of the Grafana workspace.</p>
          * 
@@ -527,6 +530,14 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         }
         public String getEnableAuthToken() {
             return this.enableAuthToken;
+        }
+
+        public GetPrometheusInstanceResponseBodyData setExtraInfo(java.util.Map<String, String> extraInfo) {
+            this.extraInfo = extraInfo;
+            return this;
+        }
+        public java.util.Map<String, String> getExtraInfo() {
+            return this.extraInfo;
         }
 
         public GetPrometheusInstanceResponseBodyData setGrafanaInstanceId(String grafanaInstanceId) {
