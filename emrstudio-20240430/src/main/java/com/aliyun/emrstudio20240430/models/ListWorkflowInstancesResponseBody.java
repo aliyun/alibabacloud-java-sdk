@@ -7,12 +7,24 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
     @NameInMap("data")
     public java.util.List<ListWorkflowInstancesResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123abc***</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("totalSize")
     public Integer totalSize;
 
@@ -54,27 +66,59 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
     }
 
     public static class ListWorkflowInstancesResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2024-01-01 00:00:00</p>
+         */
         @NameInMap("endTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>workflow_instance_name</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-01-01 00:00:00</p>
+         */
         @NameInMap("scheduleTime")
         public String scheduleTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-01-01 00:00:00</p>
+         */
         @NameInMap("startTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>w-3q9jo749ne5****</p>
+         */
         @NameInMap("workflowId")
         public String workflowId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>wi-3q9jo749ne5****</p>
+         */
         @NameInMap("workflowInstanceId")
         public String workflowInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("workflowVersion")
         public Integer workflowVersion;
 

@@ -4,56 +4,138 @@ package com.aliyun.emrstudio20240430.models;
 import com.aliyun.tea.*;
 
 public class DescribeTaskInstanceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("DryRun")
     public String dryRun;
 
+    /**
+     * <strong>example:</strong>
+     * <p>c-b933c5aac7f7***</p>
+     */
     @NameInMap("EmrClusterId")
     public String emrClusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-03-27 00:00:00</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>application_123_***</p>
+     */
     @NameInMap("ExternalAppId")
     public String externalAppId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>wg-123abc***</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("RetryTimes")
     public Integer retryTimes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-03-27 00:00:00</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-03-27 00:00:00</p>
+     */
     @NameInMap("SubmitTime")
     public String submitTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>t-3q9jo749ne5****</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ti-3q9jo749ne5****</p>
+     */
     @NameInMap("TaskInstanceId")
     public String taskInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("TaskInstanceName")
     public String taskInstanceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;yarnUser&quot;: &quot;&quot;,
+     *     &quot;conditionResult&quot;: &quot;null&quot;,
+     *     &quot;rawScript&quot;: &quot;sleep 300&quot;,
+     *     &quot;submitOnYarnFlag&quot;: false,
+     *     &quot;emrClusterId&quot;: &quot;&quot;,
+     *     &quot;yarnPriority&quot;: &quot;&quot;,
+     *     &quot;dependence&quot;: &quot;null&quot;,
+     *     &quot;yarnMemory&quot;: &quot;&quot;,
+     *     &quot;localParams&quot;: [],
+     *     &quot;switchResult&quot;: &quot;null&quot;,
+     *     &quot;resourceList&quot;: [],
+     *     &quot;yarnQueue&quot;: &quot;&quot;,
+     *     &quot;yarnVCores&quot;: &quot;&quot;,
+     *     &quot;associateManualTaskFlag&quot;: false
+     * }</p>
+     */
     @NameInMap("TaskParams")
     public String taskParams;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SHELL</p>
+     */
     @NameInMap("TaskType")
     public String taskType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TaskVersion")
     public String taskVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>wi-3q9jo749ne5****</p>
+     */
     @NameInMap("WorkflowInstanceId")
     public String workflowInstanceId;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
     @NameInMap("requestId")
     public String requestId;

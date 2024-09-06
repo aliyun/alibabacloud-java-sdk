@@ -27,8 +27,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建工作流
-     *
+     * <b>summary</b> : 
+     * <p>创建工作流</p>
+     * 
      * @param request CreateWorkflowRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -113,9 +114,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("workspaceId", request.workspaceId);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskDefinitionJsonValue)) {
+            body.put("taskDefinitionJsonValue", request.taskDefinitionJsonValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskRelationJsonValue)) {
+            body.put("taskRelationJsonValue", request.taskRelationJsonValue);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateWorkflow"),
@@ -132,8 +143,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建工作流
-     *
+     * <b>summary</b> : 
+     * <p>创建工作流</p>
+     * 
      * @param request CreateWorkflowRequest
      * @return CreateWorkflowResponse
      */
@@ -144,8 +156,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除工作流
-     *
+     * <b>summary</b> : 
+     * <p>删除工作流</p>
+     * 
      * @param request DeleteWorkflowRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -177,8 +190,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除工作流
-     *
+     * <b>summary</b> : 
+     * <p>删除工作流</p>
+     * 
      * @param request DeleteWorkflowRequest
      * @return DeleteWorkflowResponse
      */
@@ -189,8 +203,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取手动任务定义
-     *
+     * <b>summary</b> : 
+     * <p>获取手动任务定义</p>
+     * 
      * @param request DescribeManualTaskRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -222,8 +237,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取手动任务定义
-     *
+     * <b>summary</b> : 
+     * <p>获取手动任务定义</p>
+     * 
      * @param request DescribeManualTaskRequest
      * @return DescribeManualTaskResponse
      */
@@ -234,8 +250,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取手动任务实例
-     *
+     * <b>summary</b> : 
+     * <p>获取手动任务实例</p>
+     * 
      * @param request DescribeManualTaskInstanceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -267,8 +284,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取手动任务实例
-     *
+     * <b>summary</b> : 
+     * <p>获取手动任务实例</p>
+     * 
      * @param request DescribeManualTaskInstanceRequest
      * @return DescribeManualTaskInstanceResponse
      */
@@ -279,8 +297,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取项目详情
-     *
+     * <b>summary</b> : 
+     * <p>获取项目详情</p>
+     * 
      * @param request DescribeProjectRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -312,8 +331,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取项目详情
-     *
+     * <b>summary</b> : 
+     * <p>获取项目详情</p>
+     * 
      * @param request DescribeProjectRequest
      * @return DescribeProjectResponse
      */
@@ -324,8 +344,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询任务定义
-     *
+     * <b>summary</b> : 
+     * <p>查询任务定义</p>
+     * 
      * @param request DescribeTaskRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -357,8 +378,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询任务定义
-     *
+     * <b>summary</b> : 
+     * <p>查询任务定义</p>
+     * 
      * @param request DescribeTaskRequest
      * @return DescribeTaskResponse
      */
@@ -369,8 +391,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取任务实例
-     *
+     * <b>summary</b> : 
+     * <p>获取任务实例</p>
+     * 
      * @param request DescribeTaskInstanceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -402,8 +425,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取任务实例
-     *
+     * <b>summary</b> : 
+     * <p>获取任务实例</p>
+     * 
      * @param request DescribeTaskInstanceRequest
      * @return DescribeTaskInstanceResponse
      */
@@ -414,8 +438,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取工作流详情
-     *
+     * <b>summary</b> : 
+     * <p>获取工作流详情</p>
+     * 
      * @param request DescribeWorkflowRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -447,8 +472,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取工作流详情
-     *
+     * <b>summary</b> : 
+     * <p>获取工作流详情</p>
+     * 
      * @param request DescribeWorkflowRequest
      * @return DescribeWorkflowResponse
      */
@@ -459,8 +485,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取工作流实例详情
-     *
+     * <b>summary</b> : 
+     * <p>获取工作流实例详情</p>
+     * 
      * @param request DescribeWorkflowInstanceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -492,8 +519,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取工作流实例详情
-     *
+     * <b>summary</b> : 
+     * <p>获取工作流实例详情</p>
+     * 
      * @param request DescribeWorkflowInstanceRequest
      * @return DescribeWorkflowInstanceResponse
      */
@@ -504,8 +532,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取手动任务实例列表
-     *
+     * <b>summary</b> : 
+     * <p>获取手动任务实例列表</p>
+     * 
      * @param request ListManualTaskInstancesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -561,8 +590,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取手动任务实例列表
-     *
+     * <b>summary</b> : 
+     * <p>获取手动任务实例列表</p>
+     * 
      * @param request ListManualTaskInstancesRequest
      * @return ListManualTaskInstancesResponse
      */
@@ -573,8 +603,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询手动任务定义列表
-     *
+     * <b>summary</b> : 
+     * <p>查询手动任务定义列表</p>
+     * 
      * @param request ListManualTasksRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -622,8 +653,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询手动任务定义列表
-     *
+     * <b>summary</b> : 
+     * <p>查询手动任务定义列表</p>
+     * 
      * @param request ListManualTasksRequest
      * @return ListManualTasksResponse
      */
@@ -634,8 +666,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取项目详情
-     *
+     * <b>summary</b> : 
+     * <p>获取项目详情</p>
+     * 
      * @param request ListProjectsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -679,8 +712,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取项目详情
-     *
+     * <b>summary</b> : 
+     * <p>获取项目详情</p>
+     * 
      * @param request ListProjectsRequest
      * @return ListProjectsResponse
      */
@@ -691,8 +725,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取任务实例列表
-     *
+     * <b>summary</b> : 
+     * <p>获取任务实例列表</p>
+     * 
      * @param request ListTaskInstancesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -752,8 +787,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取任务实例列表
-     *
+     * <b>summary</b> : 
+     * <p>获取任务实例列表</p>
+     * 
      * @param request ListTaskInstancesRequest
      * @return ListTaskInstancesResponse
      */
@@ -764,8 +800,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询任务定义列表
-     *
+     * <b>summary</b> : 
+     * <p>查询任务定义列表</p>
+     * 
      * @param request ListTasksRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -817,8 +854,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询任务定义列表
-     *
+     * <b>summary</b> : 
+     * <p>查询任务定义列表</p>
+     * 
      * @param request ListTasksRequest
      * @return ListTasksResponse
      */
@@ -829,8 +867,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取工作流实例列表
-     *
+     * <b>summary</b> : 
+     * <p>获取工作流实例列表</p>
+     * 
      * @param request ListWorkflowInstancesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -886,8 +925,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取工作流实例列表
-     *
+     * <b>summary</b> : 
+     * <p>获取工作流实例列表</p>
+     * 
      * @param request ListWorkflowInstancesRequest
      * @return ListWorkflowInstancesResponse
      */
@@ -898,8 +938,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取工作流列表
-     *
+     * <b>summary</b> : 
+     * <p>获取工作流列表</p>
+     * 
      * @param request ListWorkflowsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -943,8 +984,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取工作流列表
-     *
+     * <b>summary</b> : 
+     * <p>获取工作流列表</p>
+     * 
      * @param request ListWorkflowsRequest
      * @return ListWorkflowsResponse
      */
@@ -955,8 +997,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 运行工作流
-     *
+     * <b>summary</b> : 
+     * <p>运行工作流</p>
+     * 
      * @param request RunWorkflowRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1040,8 +1083,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 运行工作流
-     *
+     * <b>summary</b> : 
+     * <p>运行工作流</p>
+     * 
      * @param request RunWorkflowRequest
      * @return RunWorkflowResponse
      */
@@ -1052,8 +1096,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新工作流
-     *
+     * <b>summary</b> : 
+     * <p>更新工作流</p>
+     * 
      * @param request UpdateWorkflowRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1138,9 +1183,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("workspaceId", request.workspaceId);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskDefinitionJsonValue)) {
+            body.put("taskDefinitionJsonValue", request.taskDefinitionJsonValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskRelationJsonValue)) {
+            body.put("taskRelationJsonValue", request.taskRelationJsonValue);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpdateWorkflow"),
@@ -1157,8 +1212,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新工作流
-     *
+     * <b>summary</b> : 
+     * <p>更新工作流</p>
+     * 
      * @param request UpdateWorkflowRequest
      * @return UpdateWorkflowResponse
      */

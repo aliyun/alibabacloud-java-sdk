@@ -6,19 +6,33 @@ import com.aliyun.tea.*;
 public class DescribeProjectResponseBody extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>this is a project description</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_project_name</p>
      */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>p-3q9jo749ne5****</p>
+     */
     @NameInMap("projectId")
     public String projectId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B897B94B-6754-5D09-AB8C-2E8186CCADC0</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

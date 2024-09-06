@@ -4,17 +4,32 @@ package com.aliyun.emrstudio20240430.models;
 import com.aliyun.tea.*;
 
 public class ListProjectsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("maxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123abc***</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("searchVal")
     public String searchVal;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("workspaceId")
     public String workspaceId;

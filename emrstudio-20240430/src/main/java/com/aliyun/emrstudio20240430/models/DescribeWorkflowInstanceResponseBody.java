@@ -4,60 +4,136 @@ package com.aliyun.emrstudio20240430.models;
 import com.aliyun.tea.*;
 
 public class DescribeWorkflowInstanceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ag-n72kong0832****</p>
+     */
     @NameInMap("alertGroupId")
     public String alertGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NONE</p>
+     */
     @NameInMap("alertStrategy")
     public String alertStrategy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>c-047fa6bbe732****</p>
+     */
     @NameInMap("emrClusterId")
     public String emrClusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-03-27 00:00:00</p>
+     */
     @NameInMap("endTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>END</p>
+     */
     @NameInMap("failureStrategy")
     public String failureStrategy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("isComplementData")
     public Boolean isComplementData;
 
+    /**
+     * <strong>example:</strong>
+     * <p>workflow_instance_name</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>wg-susqimrr649x****</p>
+     */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-03-27 00:00:00</p>
+     */
     @NameInMap("restartTime")
     public String restartTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("runTimes")
     public Integer runTimes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-03-27 00:00:00</p>
+     */
     @NameInMap("scheduleTime")
     public String scheduleTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-03-27 00:00:00</p>
+     */
     @NameInMap("startTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("timeout")
     public Integer timeout;
 
+    /**
+     * <strong>example:</strong>
+     * <p>w-3q9jo749ne5****</p>
+     */
     @NameInMap("workflowId")
     public String workflowId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>wi-3q9jo749ne5****</p>
+     */
     @NameInMap("workflowInstanceId")
     public String workflowInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MEDIUM</p>
+     */
     @NameInMap("workflowInstancePriority")
     public String workflowInstancePriority;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("workflowVersion")
     public Integer workflowVersion;
 

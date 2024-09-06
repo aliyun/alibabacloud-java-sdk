@@ -9,10 +9,17 @@ public class CreateWorkflowResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9E3A7161-EB7B-172B-8D18-FFB06BA38***</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -46,6 +53,10 @@ public class CreateWorkflowResponseBody extends TeaModel {
     }
 
     public static class CreateWorkflowResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>w-acfmv4opbs****</p>
+         */
         @NameInMap("workflowId")
         public String workflowId;
 

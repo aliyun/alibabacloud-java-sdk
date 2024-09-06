@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteWorkflowRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("workspaceId")
     public String workspaceId;
