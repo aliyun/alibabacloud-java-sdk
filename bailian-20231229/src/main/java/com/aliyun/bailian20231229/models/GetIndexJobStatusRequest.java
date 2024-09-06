@@ -22,6 +22,12 @@ public class GetIndexJobStatusRequest extends TeaModel {
     @NameInMap("JobId")
     public String jobId;
 
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("pageSize")
+    public Integer pageSize;
+
     public static GetIndexJobStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         GetIndexJobStatusRequest self = new GetIndexJobStatusRequest();
         return TeaModel.build(map, self);
@@ -41,6 +47,22 @@ public class GetIndexJobStatusRequest extends TeaModel {
     }
     public String getJobId() {
         return this.jobId;
+    }
+
+    public GetIndexJobStatusRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public GetIndexJobStatusRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
 }
