@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDispatchRuleRequest extends TeaModel {
     /**
+     * <p>The name of the notification policy. Fuzzy match is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>Prod</p>
      */
@@ -12,6 +14,7 @@ public class ListDispatchRuleRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,14 @@ public class ListDispatchRuleRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <ul>
+     * <li>The type of notification policies to be queried. Valid values: <code>false</code> (default): notification policies created in Application Real-Time Monitoring Service (ARMS).</li>
+     * <li><code>true</code>: notification policies created in an external system.</li>
+     * </ul>
+     * <blockquote>
+     * <p> You cannot use the ARMS console to modify the dispatch rules of a notification policy that is created in an external system.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

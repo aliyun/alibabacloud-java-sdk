@@ -92,6 +92,9 @@ public class UpdatePrometheusAlertRuleRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<UpdatePrometheusAlertRuleRequestTags> tags;
 
@@ -208,9 +211,21 @@ public class UpdatePrometheusAlertRuleRequest extends TeaModel {
     }
 
     public static class UpdatePrometheusAlertRuleRequestTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("Value")
         public String value;
 

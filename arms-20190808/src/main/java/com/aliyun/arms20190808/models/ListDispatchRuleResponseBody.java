@@ -4,10 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListDispatchRuleResponseBody extends TeaModel {
+    /**
+     * <p>The returned struct.</p>
+     */
     @NameInMap("DispatchRules")
     public java.util.List<ListDispatchRuleResponseBodyDispatchRules> dispatchRules;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>34ED024E-9E31-434A-9E4E-D9D15C3****</p>
      */
@@ -37,6 +42,8 @@ public class ListDispatchRuleResponseBody extends TeaModel {
 
     public static class ListDispatchRuleResponseBodyDispatchRules extends TeaModel {
         /**
+         * <p>The name of the notification policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>Prod</p>
          */
@@ -44,6 +51,8 @@ public class ListDispatchRuleResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The ID of the notification policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>10282</p>
          */
@@ -51,6 +60,12 @@ public class ListDispatchRuleResponseBody extends TeaModel {
         public Long ruleId;
 
         /**
+         * <p>Indicates whether the notification policy is enabled. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

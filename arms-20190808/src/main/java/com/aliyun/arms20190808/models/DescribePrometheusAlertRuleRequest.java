@@ -14,6 +14,12 @@ public class DescribePrometheusAlertRuleRequest extends TeaModel {
     @NameInMap("AlertId")
     public Long alertId;
 
+    /**
+     * <p>The ID of the Prometheus instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 

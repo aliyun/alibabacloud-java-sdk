@@ -53,6 +53,9 @@ public class UpdateRumAppRequest extends TeaModel {
     @NameInMap("Pid")
     public String pid;
 
+    @NameInMap("RealRegionId")
+    public String realRegionId;
+
     /**
      * <p>The region ID.</p>
      * <p>This parameter is required.</p>
@@ -141,6 +144,14 @@ public class UpdateRumAppRequest extends TeaModel {
     }
     public String getPid() {
         return this.pid;
+    }
+
+    public UpdateRumAppRequest setRealRegionId(String realRegionId) {
+        this.realRegionId = realRegionId;
+        return this;
+    }
+    public String getRealRegionId() {
+        return this.realRegionId;
     }
 
     public UpdateRumAppRequest setRegionId(String regionId) {

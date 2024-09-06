@@ -4,10 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetSyntheticTaskListResponseBody extends TeaModel {
+    /**
+     * <p>The query results.</p>
+     */
     @NameInMap("PageInfo")
     public GetSyntheticTaskListResponseBodyPageInfo pageInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A5EC8221-08F2-4C95-9AF1-49FD998C****</p>
      */
@@ -37,6 +42,8 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
 
     public static class GetSyntheticTaskListResponseBodyPageInfoList extends TeaModel {
         /**
+         * <p>The time when the task was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1634005438000</p>
          */
@@ -44,6 +51,8 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The number of detection points.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -51,6 +60,8 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
         public Long monitorNumber;
 
         /**
+         * <p>The ID of the synthetic monitoring task.</p>
+         * 
          * <strong>example:</strong>
          * <p>2118709</p>
          */
@@ -58,6 +69,8 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The task name.</p>
+         * 
          * <strong>example:</strong>
          * <p>net-test</p>
          */
@@ -65,6 +78,13 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
         public String taskName;
 
         /**
+         * <p>The status of the task. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The task is stopped.</li>
+         * <li><strong>1</strong>: The task is started.</li>
+         * <li><strong>9</strong>: The task is ended.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -72,16 +92,30 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
         public String taskStatus;
 
         /**
+         * <p>The type of the task. Valid values:</p>
+         * <ol>
+         * <li>3: web page performance - IE</li>
+         * <li>34: web page performance - Chrome</li>
+         * <li>0: network quality</li>
+         * <li>40: file download</li>
+         * <li>7: API performance</li>
+         * </ol>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("TaskType")
         public Long taskType;
 
+        /**
+         * <p>The name of the task type.</p>
+         */
         @NameInMap("TaskTypeName")
         public String taskTypeName;
 
         /**
+         * <p>The URL for synthetic monitoring.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>
          */
@@ -89,6 +123,8 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
         public String url;
 
         /**
+         * <p>The availability. Only the data of the last day is counted. If no data is available for the last day, an empty value is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.80</p>
          */
@@ -176,6 +212,8 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
 
     public static class GetSyntheticTaskListResponseBodyPageInfo extends TeaModel {
         /**
+         * <p>Indicates whether the current page is followed by a page.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -183,6 +221,8 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
         public String hasNextPage;
 
         /**
+         * <p>Indicates whether a previous page exists.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -190,6 +230,8 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
         public Boolean hasPreviousPage;
 
         /**
+         * <p>Indicates whether the page is the first page.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -197,16 +239,23 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
         public Boolean isFirstPage;
 
         /**
+         * <p>Indicates whether the page is the last page.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("IsLastPage")
         public Boolean isLastPage;
 
+        /**
+         * <p>The task information.</p>
+         */
         @NameInMap("List")
         public java.util.List<GetSyntheticTaskListResponseBodyPageInfoList> list;
 
         /**
+         * <p>The first page on the navigation bar.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -214,6 +263,8 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
         public String navigateFirstPage;
 
         /**
+         * <p>The last page on the navigation bar.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -221,6 +272,8 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
         public String navigateLastPage;
 
         /**
+         * <p>All navigation page numbers.</p>
+         * 
          * <strong>example:</strong>
          * <p>1,2,3</p>
          */
@@ -228,6 +281,8 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
         public String navigatePageNums;
 
         /**
+         * <p>The next page.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -235,6 +290,8 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
         public String nextPage;
 
         /**
+         * <p>The total number of pages returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -242,6 +299,8 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
         public String pages;
 
         /**
+         * <p>The previous page.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -249,6 +308,8 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
         public String prepage;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -256,6 +317,8 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
         public Long size;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>15</p>
          */

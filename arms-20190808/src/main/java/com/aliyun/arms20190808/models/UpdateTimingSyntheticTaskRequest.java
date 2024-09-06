@@ -359,12 +359,21 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
     }
 
     public static class UpdateTimingSyntheticTaskRequestCommonSettingCustomPrometheusSetting extends TeaModel {
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("PrometheusClusterId")
         public String prometheusClusterId;
 
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("PrometheusClusterRegion")
         public String prometheusClusterRegion;
 
+        /**
+         * <p>The reserved parameters.</p>
+         */
         @NameInMap("PrometheusLabels")
         public java.util.Map<String, String> prometheusLabels;
 
@@ -482,6 +491,9 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         @NameInMap("CustomHost")
         public UpdateTimingSyntheticTaskRequestCommonSettingCustomHost customHost;
 
+        /**
+         * <p>The reserved parameters.</p>
+         */
         @NameInMap("CustomPrometheusSetting")
         public UpdateTimingSyntheticTaskRequestCommonSettingCustomPrometheusSetting customPrometheusSetting;
 
@@ -517,8 +529,8 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         /**
          * <p>Specifies whether to evenly distribute monitoring samples. Valid values:</p>
          * <ul>
-         * <li>0: no.</li>
-         * <li>1: yes.</li>
+         * <li>0: no</li>
+         * <li>1: yes</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -665,7 +677,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
 
     public static class UpdateTimingSyntheticTaskRequestMonitorConfApiHTTPRequestBody extends TeaModel {
         /**
-         * <p>The content of the request body. Format: JSON string. The parameter is required if the type parameter is set to text/plain, application/json, application/xml, or text/html.</p>
+         * <p>The content of the request body. Format: JSON string. The parameter is required if the Type parameter is set to text/plain, application/json, application/xml, or text/html. Format: JSON string.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -710,7 +722,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
 
     public static class UpdateTimingSyntheticTaskRequestMonitorConfApiHTTP extends TeaModel {
         /**
-         * <p>Specifies whether to verify the certificate. Default value: No.</p>
+         * <p>Specifies whether to verify the certificate. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -728,7 +740,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Long connectTimeout;
 
         /**
-         * <p>The request method.</p>
+         * <p>The request method. Valid values:</p>
          * <ul>
          * <li>POST</li>
          * <li>GET</li>
@@ -741,6 +753,12 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public String method;
 
         /**
+         * <p>The ALPN protocol version. You can configure this parameter when you perform an HTTPS synthetic test on a WAP mobile client. Valid values:</p>
+         * <p>0: default</p>
+         * <p>1-http/1.1</p>
+         * <p>2-h2</p>
+         * <p>3: disables the ALPN protocol</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -878,7 +896,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer downloadKernel;
 
         /**
-         * <p>Specifies whether to ignore CA certificate authentication errors. Valid values: 0: No. 1: Yes. Default value: 1.</p>
+         * <p>Specifies whether to ignore CA certificate authentication errors. Valid values: 0: no. 1: yes. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -887,7 +905,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer ignoreCertificateAuthError;
 
         /**
-         * <p>Specifies whether to ignore certificate revocation errors. Valid values: 0: No. 1: Yes. Default value: 1.</p>
+         * <p>Specifies whether to ignore certificate revocation errors. Valid values: 0: no. 1: yes. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -896,7 +914,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer ignoreCertificateCanceledError;
 
         /**
-         * <p>Specifies whether to ignore certificate invalidity. Valid values: 0: No. 1: Yes. Default value: 1.</p>
+         * <p>Specifies whether to ignore certificate invalidity. Valid values: 0: no. 1: yes. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -905,7 +923,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer ignoreCertificateOutOfDateError;
 
         /**
-         * <p>Specifies whether to ignore certificate status errors. 0: No. 1: Yes. Default value: 1.</p>
+         * <p>Specifies whether to ignore certificate status errors. 0: no. 1: yes. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -914,7 +932,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer ignoreCertificateStatusError;
 
         /**
-         * <p>Specifies whether to ignore certificate incredibility. Valid values: 0: No. 1: Yes. Default value: 1.</p>
+         * <p>Specifies whether to ignore certificate incredibility. Valid values: 0: no. 1: yes. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -923,7 +941,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer ignoreCertificateUntrustworthyError;
 
         /**
-         * <p>Specifies whether to ignore certificate usage errors. Valid values: 0: No. 1: Yes. Default value: 1.</p>
+         * <p>Specifies whether to ignore certificate usage errors. Valid values: 0: no. 1: yes. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -932,7 +950,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer ignoreCertificateUsingError;
 
         /**
-         * <p>Specifies whether to ignore host invalidity. Valid values: 0: No. 1: Yes. Default value: 1.</p>
+         * <p>Specifies whether to ignore host invalidity. Valid values: 0: no. 1: yes. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -954,7 +972,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
          * <ul>
          * <li>1: HTTP/1</li>
          * <li>2: HTTP/2</li>
-         * <li>3: HTTP/3</li>
+         * <li>3: http3</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -964,7 +982,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer quickProtocol;
 
         /**
-         * <p>Specifies whether to support redirection. Valid values: 0: No. 1: Yes. Default value: 1.</p>
+         * <p>Specifies whether to support redirection. Valid values: 0: no. 1: yes. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1175,7 +1193,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
 
     public static class UpdateTimingSyntheticTaskRequestMonitorConfNetDNS extends TeaModel {
         /**
-         * <p>Specifies whether to use the dig command to display the data. Valid values: 0: No. 1: Yes.</p>
+         * <p>Specifies whether to use the dig command to display the data. Valid values: 0: no. 1: yes.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1220,7 +1238,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public String targetUrl;
 
         /**
-         * <p>The timeout period for the DNS synthetic test. Unit: milliseconds. The minimum value is 1000 and the maximum value is 45000. Default value: 5000.</p>
+         * <p>The timeout period for the DNS synthetic test. Unit: milliseconds. Minimum value: 1000. Maximum value: 45000. Default value: 5000.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -1594,8 +1612,8 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         /**
          * <p>The address type of the resource. Valid values:</p>
          * <ul>
-         * <li>1: resource URL</li>
-         * <li>0: page URL Default value: 0.</li>
+         * <li>1: resource URL.</li>
+         * <li>0: page URL. Default value: 0.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1705,7 +1723,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
 
     public static class UpdateTimingSyntheticTaskRequestMonitorConfWebsite extends TeaModel {
         /**
-         * <p>Specifies whether to automatically scroll up and down the screen to load a page. Valid values: 0: No. 1: Yes. Default value: 0.</p>
+         * <p>Specifies whether to automatically scroll up and down the screen to load a page. Valid values: 0: no. 1: yes. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1714,7 +1732,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer automaticScrolling;
 
         /**
-         * <p>Specifies whether to create a custom header. Valid values: 0: No. 1: The first packet is modified. 2: All packets are modified. Default value: 0.</p>
+         * <p>Specifies whether to create a custom header. Valid values: 0: no. 1: The first packet is modified. 2: All packets are modified. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1739,7 +1757,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public String DNSHijackWhitelist;
 
         /**
-         * <p>Specifies whether to disable the cache. Valid values: 0: No. 1: Yes. Default value: 1.</p>
+         * <p>Specifies whether to disable the cache. Valid values: 0: no. 1: yes. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1748,7 +1766,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer disableCache;
 
         /**
-         * <p>Specifies whether to accept compressed files based on the HTTP Accept-Encoding request header. Valid values: 0: No. 1: Yes. Default value: 0.</p>
+         * <p>Specifies whether to accept compressed files based on the HTTP Accept-Encoding request header. Valid values: 0: no. 1: yes. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1768,8 +1786,8 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         /**
          * <p>Specifies whether to exclude invalid IP addresses. Valid values:</p>
          * <ul>
-         * <li>1: No</li>
-         * <li>0: Yes</li>
+         * <li>1: no</li>
+         * <li>0: yes</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1797,7 +1815,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public String flowHijackLogo;
 
         /**
-         * <p>Specifies whether to ignore SSL certificate errors during browsing. Valid values: 0: No. 1: Yes. Default value: 1.</p>
+         * <p>Specifies whether to ignore SSL certificate errors during browsing. Valid values: 0: no. 1: yes. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1824,7 +1842,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public String pageTamper;
 
         /**
-         * <p>Specifies whether to continue browsing after redirection. Valid values: 0: No. 1:Yes. Default value: 1.</p>
+         * <p>Specifies whether to continue browsing after redirection. Valid values: 0: no. 1: yes. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -2062,7 +2080,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public UpdateTimingSyntheticTaskRequestMonitorConfNetICMP netICMP;
 
         /**
-         * <p>The parameters of the TCP synthetic test. This parameter is required if the TaskType parameter is set to 2.</p>
+         * <p>The parameters of the TCP synthetic test.</p>
          */
         @NameInMap("NetTCP")
         public UpdateTimingSyntheticTaskRequestMonitorConfNetTCP netTCP;

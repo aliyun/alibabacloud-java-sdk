@@ -4,6 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateTimingSyntheticTaskShrinkRequest extends TeaModel {
+    /**
+     * <p>The list of assertions.</p>
+     */
     @NameInMap("AvailableAssertions")
     public String availableAssertionsShrink;
 
@@ -13,10 +16,14 @@ public class CreateTimingSyntheticTaskShrinkRequest extends TeaModel {
     @NameInMap("CommonSetting")
     public String commonSettingShrink;
 
+    /**
+     * <p>The general settings.</p>
+     */
     @NameInMap("CustomPeriod")
     public String customPeriodShrink;
 
     /**
+     * <p>The detection frequency. Valid values: 1m, 5m, 10m, 15m, 20m, 30m, 1h, 2h, 3h, 4h, 6h, 8h, 12h, and 24h.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +33,11 @@ public class CreateTimingSyntheticTaskShrinkRequest extends TeaModel {
     public String frequency;
 
     /**
+     * <p>The detection point type. Valid values:</p>
+     * <ul>
+     * <li>1: PC</li>
+     * <li>2: mobile device</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +54,7 @@ public class CreateTimingSyntheticTaskShrinkRequest extends TeaModel {
     public String monitorConfShrink;
 
     /**
+     * <p>The list of detection points.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Monitors")
@@ -68,12 +81,17 @@ public class CreateTimingSyntheticTaskShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The parameter is optional.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tag list.</p>
+     */
     @NameInMap("Tags")
     public String tagsShrink;
 

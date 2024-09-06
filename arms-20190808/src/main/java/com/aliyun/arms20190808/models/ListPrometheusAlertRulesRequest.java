@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPrometheusAlertRulesRequest extends TeaModel {
     /**
+     * <p>The ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListPrometheusAlertRulesRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The tag match conditions that are described in a JSON string. For more information about this parameter, see the <strong>Additional description of the MatchExpressions parameter</strong> section.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;key&quot;:&quot;severity&quot;,&quot;value&quot;:&quot;critical&quot;,&quot;operator&quot;:&quot;re&quot;}]</p>
      */
@@ -21,6 +24,8 @@ public class ListPrometheusAlertRulesRequest extends TeaModel {
     public String matchExpressions;
 
     /**
+     * <p>The name of the alert rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>Prometheus_Alert</p>
      */
@@ -28,6 +33,7 @@ public class ListPrometheusAlertRulesRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,15 +43,30 @@ public class ListPrometheusAlertRulesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Specifies whether the alert rule is enabled. Valid values:</p>
+     * <ul>
+     * <li>1: enables the alert rule.</li>
+     * <li>0: disables the alert rule.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("Status")
     public Integer status;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<ListPrometheusAlertRulesRequestTags> tags;
 
+    /**
+     * <p>The type of the alert rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Custom</p>
+     */
     @NameInMap("Type")
     public String type;
 
@@ -111,9 +132,21 @@ public class ListPrometheusAlertRulesRequest extends TeaModel {
     }
 
     public static class ListPrometheusAlertRulesRequestTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>owner</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangsan</p>
+         */
         @NameInMap("Value")
         public String value;
 

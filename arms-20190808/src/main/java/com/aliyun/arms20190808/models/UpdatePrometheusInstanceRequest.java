@@ -14,6 +14,20 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public Integer archiveDuration;
 
     /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("AuthFreeReadPolicy")
+    public String authFreeReadPolicy;
+
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("AuthFreeWritePolicy")
+    public String authFreeWritePolicy;
+
+    /**
      * <p>The ID of the Prometheus instance.</p>
      * <p>This parameter is required.</p>
      * 
@@ -22,6 +36,27 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
      */
     @NameInMap("ClusterId")
     public String clusterId;
+
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("EnableAuthFreeRead")
+    public Boolean enableAuthFreeRead;
+
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("EnableAuthFreeWrite")
+    public Boolean enableAuthFreeWrite;
+
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("EnableAuthToken")
+    public Boolean enableAuthToken;
 
     /**
      * <p>The region ID.</p>
@@ -64,12 +99,52 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
         return this.archiveDuration;
     }
 
+    public UpdatePrometheusInstanceRequest setAuthFreeReadPolicy(String authFreeReadPolicy) {
+        this.authFreeReadPolicy = authFreeReadPolicy;
+        return this;
+    }
+    public String getAuthFreeReadPolicy() {
+        return this.authFreeReadPolicy;
+    }
+
+    public UpdatePrometheusInstanceRequest setAuthFreeWritePolicy(String authFreeWritePolicy) {
+        this.authFreeWritePolicy = authFreeWritePolicy;
+        return this;
+    }
+    public String getAuthFreeWritePolicy() {
+        return this.authFreeWritePolicy;
+    }
+
     public UpdatePrometheusInstanceRequest setClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public UpdatePrometheusInstanceRequest setEnableAuthFreeRead(Boolean enableAuthFreeRead) {
+        this.enableAuthFreeRead = enableAuthFreeRead;
+        return this;
+    }
+    public Boolean getEnableAuthFreeRead() {
+        return this.enableAuthFreeRead;
+    }
+
+    public UpdatePrometheusInstanceRequest setEnableAuthFreeWrite(Boolean enableAuthFreeWrite) {
+        this.enableAuthFreeWrite = enableAuthFreeWrite;
+        return this;
+    }
+    public Boolean getEnableAuthFreeWrite() {
+        return this.enableAuthFreeWrite;
+    }
+
+    public UpdatePrometheusInstanceRequest setEnableAuthToken(Boolean enableAuthToken) {
+        this.enableAuthToken = enableAuthToken;
+        return this;
+    }
+    public Boolean getEnableAuthToken() {
+        return this.enableAuthToken;
     }
 
     public UpdatePrometheusInstanceRequest setRegionId(String regionId) {
