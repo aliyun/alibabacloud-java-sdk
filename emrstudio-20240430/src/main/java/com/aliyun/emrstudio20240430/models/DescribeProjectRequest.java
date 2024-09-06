@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeProjectRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("workspaceId")
     public String workspaceId;

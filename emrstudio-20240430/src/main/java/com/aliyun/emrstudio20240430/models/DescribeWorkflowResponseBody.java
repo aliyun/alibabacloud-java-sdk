@@ -4,6 +4,10 @@ package com.aliyun.emrstudio20240430.models;
 import com.aliyun.tea.*;
 
 public class DescribeWorkflowResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>611AD6E6-BFE3-5897-AA12-569F79DBAF9B</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -65,36 +69,80 @@ public class DescribeWorkflowResponseBody extends TeaModel {
     }
 
     public static class DescribeWorkflowResponseBodySchedule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ag-n72kong0832****</p>
+         */
         @NameInMap("alertGroupId")
         public String alertGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NONE</p>
+         */
         @NameInMap("alertStrategy")
         public String alertStrategy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0 0 * * * ? *</p>
+         */
         @NameInMap("cronExpr")
         public String cronExpr;
 
+        /**
+         * <strong>example:</strong>
+         * <p>C-15F7AB9B53F1****</p>
+         */
         @NameInMap("emrClusterId")
         public String emrClusterId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>END</p>
+         */
         @NameInMap("failureStrategy")
         public String failureStrategy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>wg-susqimrr649x****</p>
+         */
         @NameInMap("resourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-01-01 00:00:00</p>
+         */
         @NameInMap("scheduleEndTime")
         public String scheduleEndTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-01-01 00:00:00</p>
+         */
         @NameInMap("scheduleStartTime")
         public String scheduleStartTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OFFLINE</p>
+         */
         @NameInMap("scheduleState")
         public String scheduleState;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
+         */
         @NameInMap("timeZone")
         public String timeZone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MEDIUM</p>
+         */
         @NameInMap("workflowInstancePriority")
         public String workflowInstancePriority;
 
@@ -194,9 +242,17 @@ public class DescribeWorkflowResponseBody extends TeaModel {
     }
 
     public static class DescribeWorkflowResponseBodyTaskRelations extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>t-n72kong0832****</p>
+         */
         @NameInMap("postTaskId")
         public String postTaskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>t-n72kong0832****</p>
+         */
         @NameInMap("preTaskId")
         public String preTaskId;
 
@@ -224,15 +280,31 @@ public class DescribeWorkflowResponseBody extends TeaModel {
     }
 
     public static class DescribeWorkflowResponseBodyTasks extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>task description</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>task_name</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>t-n72kong0832****</p>
+         */
         @NameInMap("taskId")
         public String taskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("version")
         public Integer version;
 
@@ -276,30 +348,66 @@ public class DescribeWorkflowResponseBody extends TeaModel {
     }
 
     public static class DescribeWorkflowResponseBodyWorkflow extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2024-01-01 00:00:00</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PARALLEL</p>
+         */
         @NameInMap("executionType")
         public String executionType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>wd-n72kong0832****</p>
+         */
         @NameInMap("parentDirectoryId")
         public String parentDirectoryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("timeout")
         public Integer timeout;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-01-01 00:00:00</p>
+         */
         @NameInMap("updateTime")
         public String updateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>w-n72kong0832****</p>
+         */
         @NameInMap("workflowId")
         public String workflowId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[{&quot;prop&quot;:&quot;key1&quot;,&quot;value&quot;:&quot;value1&quot;}]</p>
+         */
         @NameInMap("workflowParams")
         public String workflowParams;
 

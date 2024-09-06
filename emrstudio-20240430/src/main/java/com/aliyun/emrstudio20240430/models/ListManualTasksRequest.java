@@ -4,20 +4,39 @@ package com.aliyun.emrstudio20240430.models;
 import com.aliyun.tea.*;
 
 public class ListManualTasksRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("maxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123abc***</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("searchVal")
     public String searchVal;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SHELL</p>
+     */
     @NameInMap("taskType")
     public String taskType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123***</p>
      */
     @NameInMap("workspaceId")
     public String workspaceId;

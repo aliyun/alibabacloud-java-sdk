@@ -4,23 +4,46 @@ package com.aliyun.emrstudio20240430.models;
 import com.aliyun.tea.*;
 
 public class ListTasksRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("maxResults")
     public String maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123abc***</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("searchVal")
     public String searchVal;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SHELL</p>
+     */
     @NameInMap("taskType")
     public String taskType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>w-n72kong0832****</p>
+     */
     @NameInMap("workflowId")
     public String workflowId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123***</p>
      */
     @NameInMap("workspaceId")
     public String workspaceId;

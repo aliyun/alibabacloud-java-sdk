@@ -7,12 +7,24 @@ public class ListProjectsResponseBody extends TeaModel {
     @NameInMap("data")
     public java.util.List<ListProjectsResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123abc***</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("totalSize")
     public Integer totalSize;
 
@@ -54,12 +66,24 @@ public class ListProjectsResponseBody extends TeaModel {
     }
 
     public static class ListProjectsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>project_name</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>p-3q9jo749ne5****</p>
+         */
         @NameInMap("projectId")
         public String projectId;
 

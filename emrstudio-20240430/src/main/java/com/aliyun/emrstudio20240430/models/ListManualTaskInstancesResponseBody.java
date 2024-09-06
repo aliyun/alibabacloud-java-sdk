@@ -7,15 +7,26 @@ public class ListManualTaskInstancesResponseBody extends TeaModel {
     @NameInMap("data")
     public java.util.List<ListManualTaskInstancesResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123abc***</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("totalSize")
     public Integer totalSize;
 
@@ -57,36 +68,95 @@ public class ListManualTaskInstancesResponseBody extends TeaModel {
     }
 
     public static class ListManualTaskInstancesResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>c-b933c5aac7f7***</p>
+         */
         @NameInMap("EmrClusterId")
         public String emrClusterId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-03-27 00:00:00</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>application_123_***</p>
+         */
         @NameInMap("ExternalAppId")
         public String externalAppId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mti-3q9jo749ne5****</p>
+         */
         @NameInMap("ManualTaskInstanceId")
         public String manualTaskInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("ManualTaskInstanceName")
         public String manualTaskInstanceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>wg-3q9jo749ne5****</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-03-27 00:00:00</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-03-27 00:00:00</p>
+         */
         @NameInMap("SubmitTime")
         public String submitTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;yarnUser&quot;: &quot;&quot;,
+         *     &quot;conditionResult&quot;: &quot;null&quot;,
+         *     &quot;rawScript&quot;: &quot;sleep 300&quot;,
+         *     &quot;submitOnYarnFlag&quot;: false,
+         *     &quot;emrClusterId&quot;: &quot;&quot;,
+         *     &quot;yarnPriority&quot;: &quot;&quot;,
+         *     &quot;dependence&quot;: &quot;null&quot;,
+         *     &quot;yarnMemory&quot;: &quot;&quot;,
+         *     &quot;localParams&quot;: [],
+         *     &quot;switchResult&quot;: &quot;null&quot;,
+         *     &quot;resourceList&quot;: [],
+         *     &quot;yarnQueue&quot;: &quot;&quot;,
+         *     &quot;yarnVCores&quot;: &quot;&quot;,
+         *     &quot;associateManualTaskFlag&quot;: false
+         * }</p>
+         */
         @NameInMap("TaskParams")
         public String taskParams;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SHELL</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 

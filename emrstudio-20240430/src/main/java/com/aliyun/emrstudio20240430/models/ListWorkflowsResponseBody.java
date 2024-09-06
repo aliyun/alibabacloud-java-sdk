@@ -7,12 +7,24 @@ public class ListWorkflowsResponseBody extends TeaModel {
     @NameInMap("data")
     public java.util.List<ListWorkflowsResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123abc****</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("totalSize")
     public Integer totalSize;
 
@@ -54,21 +66,45 @@ public class ListWorkflowsResponseBody extends TeaModel {
     }
 
     public static class ListWorkflowsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2024-01-01 00:00:00</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>workflow description</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>workflow_name</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>wd-3q9jo749ne5****</p>
+         */
         @NameInMap("parentDirectoryId")
         public String parentDirectoryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-01-01 00:00:00</p>
+         */
         @NameInMap("updateTime")
         public String updateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>w-3q9jo749ne5****</p>
+         */
         @NameInMap("workflowId")
         public String workflowId;
 
