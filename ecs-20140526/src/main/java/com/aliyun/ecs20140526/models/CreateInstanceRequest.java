@@ -514,7 +514,15 @@ public class CreateInstanceRequest extends TeaModel {
     public Integer spotDuration;
 
     /**
-     * <p>The interruption mode of the preemptible instance. The value can only be Terminate, which specifies that the instance is released.</p>
+     * <p>The interruption mode of the preemptible instance. Valid values:</p>
+     * <ul>
+     * <li><p>Terminate: The instance is released.</p>
+     * </li>
+     * <li><p>Stop: The instance is stopped in economical mode.</p>
+     * <p>For information about the economical mode, see <a href="https://help.aliyun.com/document_detail/63353.html">Economical mode</a>.</p>
+     * </li>
+     * </ul>
+     * <p>Default value: Terminate.</p>
      * 
      * <strong>example:</strong>
      * <p>Terminate</p>
@@ -564,7 +572,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Integer storageSetPartitionNumber;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags to add to the instance.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateInstanceRequestTag> tag;
@@ -1410,7 +1418,7 @@ public class CreateInstanceRequest extends TeaModel {
         /**
          * <p>The category of data disk N. Valid values:</p>
          * <ul>
-         * <li><p>cloud_efficiency: ultra disk.</p>
+         * <li><p>cloud_efficiency: utra disk.</p>
          * </li>
          * <li><p>cloud_ssd: standard SSD.</p>
          * </li>
@@ -1463,7 +1471,7 @@ public class CreateInstanceRequest extends TeaModel {
         /**
          * <p>The mount point of data disk N.</p>
          * <blockquote>
-         * <p> This parameter is applicable to scenarios in which a full image is used to create instances. A full image is an image that contains an operating system, application software, and business data. For these scenarios, you can set the parameter to the mount point of data disk N contained in the full image and modify <code>DataDisk.N.Size</code> and <code>DataDisk.N.Category</code> to change the category and size of data disk N created based on the image.</p>
+         * <p> This parameter is applicable to scenarios in which a full image is used to create instances. A full image is an image that contains an operating system, application software, and business data. For these scenarios, you can set this parameter to the mount point of data disk N contained in the full image and modify the <code>DataDisk.N.Size</code> and <code>DataDisk.N.Category</code> parameters to change the category and size of data disk N created based on the image.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1534,23 +1542,23 @@ public class CreateInstanceRequest extends TeaModel {
         /**
          * <p>The size of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values:</p>
          * <ul>
-         * <li><p>Valid values when DataDisk.N.Category is set to cloud_efficiency: 20 to 32768.</p>
+         * <li><p>Valid values if you set DataDisk.N.Category to cloud_efficiency: 20 to 32768.</p>
          * </li>
-         * <li><p>Valid values when DataDisk.N.Category is set to cloud_ssd: 20 to 32768.</p>
+         * <li><p>Valid values if you set DataDisk.N.Category to cloud_ssd: 20 to 32768.</p>
          * </li>
-         * <li><p>Valid values when DataDisk.N.Category is set to cloud_essd: vary based on the <code>DataDisk.N.PerformanceLevel</code> value.</p>
+         * <li><p>Valid values if you set DataDisk.N.Category to cloud_essd: vary based on the <code>DataDisk.N.PerformanceLevel</code> value.</p>
          * <ul>
-         * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL0: 1 to 32768.</li>
-         * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.</li>
-         * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.</li>
-         * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.</li>
+         * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL0: 1 to 65536.</li>
+         * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 65536.</li>
+         * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL2: 461 to 65536.</li>
+         * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL3: 1261 to 65536.</li>
          * </ul>
          * </li>
-         * <li><p>Valid values when DataDisk.N.Category is set to cloud: 5 to 2000.</p>
+         * <li><p>Valid values if you set DataDisk.N.Category to cloud: 5 to 2000.</p>
          * </li>
          * </ul>
          * <blockquote>
-         * <p> The value of this parameter must be greater than or equal to the size of the snapshot specified by <code>DataDisk.N.SnapshotId</code>.</p>
+         * <p> The value of this parameter must be greater than or equal to the size of the snapshot specified by <code>SnapshotId</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1563,7 +1571,7 @@ public class CreateInstanceRequest extends TeaModel {
          * <p>The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16.</p>
          * <ul>
          * <li>If <code>DataDisk.N.SnapshotId</code> is specified, <code>DataDisk.N.Size</code> is ignored. The data disk is created based on the size of the specified snapshot.</li>
-         * <li>Use snapshots created after July 15, 2013. Otherwise, an error is returned and your request is rejected.</li>
+         * <li>Use snapshots created on or after July 15, 2013. Otherwise, an error is returned and your request is rejected.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1573,7 +1581,7 @@ public class CreateInstanceRequest extends TeaModel {
         public String snapshotId;
 
         /**
-         * <p>The ID of the dedicated block storage cluster to which data disk N belongs. If you want to use a disk in a dedicated block storage cluster as data disk N when you create the instance, you must specify this parameter.</p>
+         * <p>The ID of the dedicated block storage cluster to which data disk N belongs. If you want to use a disk in a dedicated block storage cluster as data disk N when you create the instance, specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>dbsc-j5e1sf2vaf5he8m2****</p>
@@ -1686,7 +1694,7 @@ public class CreateInstanceRequest extends TeaModel {
 
     public static class CreateInstanceRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the instance, disks, and primary elastic network interface (ENI). Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The key of tag N to add to the instance, disks, and primary ENI. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -1695,7 +1703,7 @@ public class CreateInstanceRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N to add to the instance, disks, and primary ENI. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The value of tag N to add to the instance, disks, and primary ENI. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

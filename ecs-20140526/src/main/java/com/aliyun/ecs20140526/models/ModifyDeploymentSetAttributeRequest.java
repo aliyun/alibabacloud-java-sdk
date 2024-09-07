@@ -15,7 +15,7 @@ public class ModifyDeploymentSetAttributeRequest extends TeaModel {
     public String deploymentSetId;
 
     /**
-     * <p>The new name of the deployment set. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The new name of the deployment set. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>DeploymentSetTestName</p>
@@ -32,17 +32,9 @@ public class ModifyDeploymentSetAttributeRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <strong>example:</strong>
-     * <p><a href="mailto:ECSforCloud@Alibaba.com">ECSforCloud@Alibaba.com</a></p>
-     */
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    /**
-     * <strong>example:</strong>
-     * <p>155780923770</p>
-     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -56,17 +48,9 @@ public class ModifyDeploymentSetAttributeRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>ECSforCloud</p>
-     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    /**
-     * <strong>example:</strong>
-     * <p>155780923770</p>
-     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 

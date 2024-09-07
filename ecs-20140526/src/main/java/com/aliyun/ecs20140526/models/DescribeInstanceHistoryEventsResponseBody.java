@@ -380,7 +380,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         public String hostType;
 
         /**
-         * <p>The inactive disks that have been released and whose data must be cleared.</p>
+         * <p>The inactive disks that were released and whose data must be cleared.</p>
          */
         @NameInMap("InactiveDisks")
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeInactiveDisks inactiveDisks;
@@ -642,7 +642,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         public String notBefore;
 
         /**
-         * <p>The reason why the system event was scheduled.</p>
+         * <p>The reason why the system event occurred.</p>
          * 
          * <strong>example:</strong>
          * <p>System maintenance is scheduled due to ***.</p>
@@ -650,6 +650,12 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         @NameInMap("Reason")
         public String reason;
 
+        /**
+         * <p>The reason code category for the system event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPCMigrationEcs</p>
+         */
         @NameInMap("ReasonCode")
         public String reasonCode;
 

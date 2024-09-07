@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody extends TeaModel {
     /**
-     * <p>The instance families that support deployment sets.</p>
+     * <p>The instance families that support the deployment strategy.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.i2g,ecs.i1,ecs.i2ne,ecs.i2gne</p>

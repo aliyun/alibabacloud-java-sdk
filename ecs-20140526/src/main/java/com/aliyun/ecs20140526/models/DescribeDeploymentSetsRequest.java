@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDeploymentSetsRequest extends TeaModel {
     /**
-     * <p>The IDs of deployment sets. The value can be a JSON array that consists of up to 100 deployment set IDs in the format of <code>[&quot;ds-xxxxxxxxx&quot;, &quot;ds-yyyyyyyyy&quot;, … &quot;ds-zzzzzzzzz&quot;]</code>. Separate multiple deployment set IDs with commas (,).</p>
+     * <p>The IDs of deployment sets. The value can be a JSON array that consists of deployment set IDs in the format of <code>[&quot;ds-xxxxxxxxx&quot;, &quot;ds-yyyyyyyyy&quot;, ... &quot;ds-zzzzzzzzz&quot;]</code>. You can specify up to 100 deployment set IDs in each request. Separate the deployment set IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;ds-bp67acfmxazb4ph****&quot;, &quot;ds-bp67acfmxazb4pi****&quot;, … &quot;ds-bp67acfmxazb4pj****&quot;]</p>
@@ -14,7 +14,7 @@ public class DescribeDeploymentSetsRequest extends TeaModel {
     public String deploymentSetIds;
 
     /**
-     * <p>The name of the deployment set. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The name of the deployment set. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, letters, colons (:), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>testDeploymentSetName</p>
@@ -24,7 +24,7 @@ public class DescribeDeploymentSetsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>The parameter is deprecated.</p>
+     * <p> This parameter is deprecated.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class DescribeDeploymentSetsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>The parameter is deprecated.</p>
+     * <p> This parameter is deprecated.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class DescribeDeploymentSetsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>The parameter is deprecated.</p>
+     * <p> This parameter is deprecated.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -62,7 +62,7 @@ public class DescribeDeploymentSetsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * <p>Pages start from page 1.</p>
      * <p>Default value: 1.</p>
      * 
@@ -73,8 +73,8 @@ public class DescribeDeploymentSetsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
-     * <p>Maximum value: 50.</p>
+     * <p>The number of entries per page.</p>
+     * <p>Valid values: 1 to 50.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -102,8 +102,8 @@ public class DescribeDeploymentSetsRequest extends TeaModel {
     /**
      * <p>The deployment strategy. Valid values:</p>
      * <ul>
-     * <li>Availability: high availability strategy.</li>
-     * <li>AvailabilityGroup: high availability group strategy.</li>
+     * <li>Availability: high availability strategy</li>
+     * <li>AvailabilityGroup: high availability group strategy</li>
      * </ul>
      * 
      * <strong>example:</strong>

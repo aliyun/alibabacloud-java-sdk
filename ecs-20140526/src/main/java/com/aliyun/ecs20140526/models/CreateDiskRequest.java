@@ -219,13 +219,13 @@ public class CreateDiskRequest extends TeaModel {
      * </li>
      * <li><p>Valid values when DiskCategory is set to cloud_essd: vary based on the <code>PerformanceLevel</code> value.</p>
      * <ul>
-     * <li>Valid values when PerformanceLevel is set to PL0: 1 to 32768.</li>
-     * <li>Valid values when PerformanceLevel is set to PL1: 20 to 32768.</li>
-     * <li>Valid values when PerformanceLevel is set to PL2: 461 to 32768.</li>
-     * <li>Valid values when PerformanceLevel is set to PL3: 1261 to 32768.</li>
+     * <li>Valid values when PerformanceLevel is set to PL0: 1 to 65536.</li>
+     * <li>Valid values when PerformanceLevel is set to PL1: 20 to 65536.</li>
+     * <li>Valid values when PerformanceLevel is set to PL2: 461 to 65536.</li>
+     * <li>Valid values when PerformanceLevel is set to PL3: 1261 to 65536.</li>
      * </ul>
      * </li>
-     * <li><p>Valid values when DiskCategory is set to cloud_auto: 1 to 32768.</p>
+     * <li><p>Valid values when DiskCategory is set to cloud_auto: 1 to 65536.</p>
      * </li>
      * <li><p>Valid values when DiskCategory is set to cloud_essd_entry: 10 to 32768.</p>
      * </li>
@@ -236,7 +236,7 @@ public class CreateDiskRequest extends TeaModel {
      * </ul>
      * <p>If <code>SnapshotId</code> is specified, the following limits apply to <code>SnapshotId</code> and <code>Size</code>:</p>
      * <ul>
-     * <li>If the size of the snapshot specified by <code>SnapshotId</code> is larger than the value of <code>Size</code>, the size of the created disk is equal to the specified snapshot size.</li>
+     * <li>If the size of the snapshot specified by <code>SnapshotId</code> is larger than the value of <code>Size</code>, the size of the created disk is equal to the size of the snapshot.</li>
      * <li>If the size of the snapshot specified by <code>SnapshotId</code> is smaller than the value of <code>Size</code>, the size of the created disk is equal to the value of <code>Size</code>.</li>
      * </ul>
      * 

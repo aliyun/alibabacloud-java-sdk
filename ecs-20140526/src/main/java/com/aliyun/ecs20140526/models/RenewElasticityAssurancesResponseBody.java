@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class RenewElasticityAssurancesResponseBody extends TeaModel {
     /**
+     * <p>The ID of the renewal order.</p>
+     * 
      * <strong>example:</strong>
      * <p>182372800****</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <p>The IDs of the elasticity assurances.</p>
+     */
     @NameInMap("PrivatePoolOptionsIdSet")
     public RenewElasticityAssurancesResponseBodyPrivatePoolOptionsIdSet privatePoolOptionsIdSet;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
