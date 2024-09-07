@@ -27,6 +27,9 @@ public class MakeCallRequest extends TeaModel {
     @NameInMap("DeviceId")
     public String deviceId;
 
+    @NameInMap("FlashSmsVariables")
+    public String flashSmsVariables;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -94,6 +97,14 @@ public class MakeCallRequest extends TeaModel {
     }
     public String getDeviceId() {
         return this.deviceId;
+    }
+
+    public MakeCallRequest setFlashSmsVariables(String flashSmsVariables) {
+        this.flashSmsVariables = flashSmsVariables;
+        return this;
+    }
+    public String getFlashSmsVariables() {
+        return this.flashSmsVariables;
     }
 
     public MakeCallRequest setInstanceId(String instanceId) {

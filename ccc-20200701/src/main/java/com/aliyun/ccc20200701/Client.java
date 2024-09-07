@@ -5884,6 +5884,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.releaseInitiatorList)) {
+            query.put("ReleaseInitiatorList", request.releaseInitiatorList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.releaseReasonList)) {
+            query.put("ReleaseReasonList", request.releaseReasonList);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.satisfactionDescriptionList)) {
             query.put("SatisfactionDescriptionList", request.satisfactionDescriptionList);
         }
@@ -8962,6 +8970,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.deviceId)) {
             query.put("DeviceId", request.deviceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flashSmsVariables)) {
+            query.put("FlashSmsVariables", request.flashSmsVariables);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
