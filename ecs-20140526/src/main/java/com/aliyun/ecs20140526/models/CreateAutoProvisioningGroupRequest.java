@@ -591,7 +591,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
 
     public static class CreateAutoProvisioningGroupRequestLaunchConfigurationArn extends TeaModel {
         /**
-         * <p>This parameter is not publicly available.</p>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>123456789012****</p>
@@ -600,7 +602,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public Long assumeRoleFor;
 
         /**
-         * <p>This parameter is not publicly available.</p>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>34458433936495****:alice</p>
@@ -609,7 +613,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public String roleType;
 
         /**
-         * <p>This parameter is not publicly available.</p>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::123456789012****:role/adminrole</p>
@@ -649,16 +655,29 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     }
 
     public static class CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk extends TeaModel {
+        /**
+         * <p>Specifies whether to enable the performance burst feature for data disk N. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is available only if you set LaunchConfiguration.DataDisk.N.Category to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("BurstingEnabled")
         public Boolean burstingEnabled;
 
         /**
          * <p>The category of data disk N. Valid values of N: 1 to 16. Valid values:</p>
          * <ul>
-         * <li>cloud_efficiency: ultra disk</li>
-         * <li>cloud_ssd: standard SSD</li>
-         * <li>cloud_essd: ESSD</li>
-         * <li>cloud: basic disk</li>
+         * <li>cloud_efficiency: ultra disk.</li>
+         * <li>cloud_ssd: standard SSD.</li>
+         * <li>cloud_essd: ESSD.</li>
+         * <li>cloud: basic disk.</li>
          * </ul>
          * <p>For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.</p>
          * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
@@ -704,7 +723,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
 
         /**
          * <p>The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</p>
-         * <p>By default, this parameter is left empty.</p>
+         * <p>This parameter is left empty by default.</p>
          * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          * 
          * <strong>example:</strong>
@@ -713,6 +732,14 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         @NameInMap("DiskName")
         public String diskName;
 
+        /**
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("EncryptAlgorithm")
         public String encryptAlgorithm;
 
@@ -741,14 +768,14 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public String kmsKeyId;
 
         /**
-         * <p>The performance level of the ESSD to use as data disk N. The value of N in this parameter must be the same as the value of N in <code>LaunchConfiguration.DataDisk.N.Category</code>. Valid values:</p>
+         * <p>The performance level of the Enterprise SSD (ESSD) to use as data disk N. The value of N in this parameter must be the same as the value of N in <code>LaunchConfiguration.DataDisk.N.Category</code>. Valid values:</p>
          * <ul>
          * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
          * <li>PL1 (default): A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
          * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
          * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
          * </ul>
-         * <p>For information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+         * <p>For more information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
          * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          * 
          * <strong>example:</strong>
@@ -757,6 +784,16 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
+        /**
+         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk to use as data disk N. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
+         * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
+         * <blockquote>
+         * <p> This parameter is available only if you set LaunchConfiguration.DataDisk.N.Category to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>40000</p>
+         */
         @NameInMap("ProvisionedIops")
         public Long provisionedIops;
 
@@ -791,7 +828,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
 
         /**
          * <p>The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16.</p>
-         * <p>After this parameter is specified, <code>LaunchConfiguration.DataDisk.N.Size</code> is ignored. The size of data disk N is the same as that of the snapshot specified by this parameter. Use snapshots created on or after July 15, 2013. Otherwise, an error is returned and your request is rejected.</p>
+         * <p>If you specify this parameter, <code>LaunchConfiguration.DataDisk.N.Size</code> is ignored. The size of data disk N is the same as that of the snapshot specified by this parameter. Use snapshots created after July 15, 2013. Otherwise, an error is returned and your request is rejected.</p>
          * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          * 
          * <strong>example:</strong>
@@ -912,17 +949,33 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     }
 
     public static class CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk extends TeaModel {
+        /**
+         * <p>Specifies whether to enable the performance burst feature for the system disk. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is available only if you set <code>LaunchConfiguration.SystemDisk.Category</code> to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("BurstingEnabled")
         public Boolean burstingEnabled;
 
         /**
-         * <p>The algorithm to use to encrypt system disk N. Valid values:</p>
+         * <p>The algorithm to use to encrypt the system disk. Valid values:</p>
          * <ul>
          * <li>aes-256</li>
          * <li>sm4-128</li>
          * </ul>
          * <p>Default value: aes-256.</p>
          * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>aes-256</p>
@@ -931,7 +984,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public String encryptAlgorithm;
 
         /**
-         * <p>Specifies whether to encrypt system disk N. Valid values:</p>
+         * <p>Specifies whether to encrypt the system disk. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -946,7 +999,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public String encrypted;
 
         /**
-         * <p>The ID of the KMS key to use for system disk N.</p>
+         * <p>The ID of the KMS key to use for the system disk.</p>
          * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          * 
          * <strong>example:</strong>
@@ -955,6 +1008,16 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         @NameInMap("KMSKeyId")
         public String KMSKeyId;
 
+        /**
+         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk to use as the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
+         * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
+         * <blockquote>
+         * <p> This parameter is available only if you set LaunchConfiguration.SystemDisk.Category to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>40000</p>
+         */
         @NameInMap("ProvisionedIops")
         public Long provisionedIops;
 
@@ -1049,7 +1112,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
 
     public static class CreateAutoProvisioningGroupRequestLaunchConfiguration extends TeaModel {
         /**
-         * <p>This parameter is unavailable for public use.</p>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
          */
         @NameInMap("Arn")
         public java.util.List<CreateAutoProvisioningGroupRequestLaunchConfigurationArn> arn;
@@ -1945,7 +2010,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public static class CreateAutoProvisioningGroupRequestTag extends TeaModel {
         /**
          * <p>The key of tag N to add to the auto provisioning group.</p>
-         * <p>Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
+         * <p>Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>

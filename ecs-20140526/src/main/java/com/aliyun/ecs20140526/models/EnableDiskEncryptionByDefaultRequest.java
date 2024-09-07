@@ -3,17 +3,7 @@ package com.aliyun.ecs20140526.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteDeploymentSetRequest extends TeaModel {
-    /**
-     * <p>The ID of the deployment set that you want to delete.</p>
-     * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ds-bp1g5ahlkal88d7x****</p>
-     */
-    @NameInMap("DeploymentSetId")
-    public String deploymentSetId;
-
+public class EnableDiskEncryptionByDefaultRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -21,7 +11,6 @@ public class DeleteDeploymentSetRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the deployment set. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,20 +25,12 @@ public class DeleteDeploymentSetRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    public static DeleteDeploymentSetRequest build(java.util.Map<String, ?> map) throws Exception {
-        DeleteDeploymentSetRequest self = new DeleteDeploymentSetRequest();
+    public static EnableDiskEncryptionByDefaultRequest build(java.util.Map<String, ?> map) throws Exception {
+        EnableDiskEncryptionByDefaultRequest self = new EnableDiskEncryptionByDefaultRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteDeploymentSetRequest setDeploymentSetId(String deploymentSetId) {
-        this.deploymentSetId = deploymentSetId;
-        return this;
-    }
-    public String getDeploymentSetId() {
-        return this.deploymentSetId;
-    }
-
-    public DeleteDeploymentSetRequest setOwnerAccount(String ownerAccount) {
+    public EnableDiskEncryptionByDefaultRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -57,7 +38,7 @@ public class DeleteDeploymentSetRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DeleteDeploymentSetRequest setOwnerId(Long ownerId) {
+    public EnableDiskEncryptionByDefaultRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -65,7 +46,7 @@ public class DeleteDeploymentSetRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DeleteDeploymentSetRequest setRegionId(String regionId) {
+    public EnableDiskEncryptionByDefaultRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -73,7 +54,7 @@ public class DeleteDeploymentSetRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DeleteDeploymentSetRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public EnableDiskEncryptionByDefaultRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -81,7 +62,7 @@ public class DeleteDeploymentSetRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public DeleteDeploymentSetRequest setResourceOwnerId(Long resourceOwnerId) {
+    public EnableDiskEncryptionByDefaultRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }

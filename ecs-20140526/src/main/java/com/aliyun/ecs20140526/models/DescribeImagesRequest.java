@@ -110,7 +110,7 @@ public class DescribeImagesRequest extends TeaModel {
     public String imageOwnerAlias;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the image belongs. This parameter takes effect only when you query shared images or community images.</p>
+     * <p>The ID of the Alibaba Cloud account to which the image belongs. This parameter takes effect only if you query shared images or community images.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890</p>
@@ -256,7 +256,7 @@ public class DescribeImagesRequest extends TeaModel {
      * <li>Waiting: The image is waiting to be processed.</li>
      * <li>Available: The image is available.</li>
      * <li>UnAvailable: The image is unavailable.</li>
-     * <li>CreateFailed: The image fails to be created.</li>
+     * <li>CreateFailed: The image failed to be created.</li>
      * <li>Deprecated: The image is deprecated.</li>
      * </ul>
      * <p>Default value: Available. You can specify multiple values for this parameter. Separate the values with commas (,).</p>

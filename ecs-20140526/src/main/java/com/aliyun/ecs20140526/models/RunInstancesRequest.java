@@ -2488,10 +2488,10 @@ public class RunInstancesRequest extends TeaModel {
 
     public static class RunInstancesRequestNetworkInterface extends TeaModel {
         /**
-         * <p>Specifies whether to retain ENI N when the associated instance is released. Valid values:</p>
+         * <p>Specifies whether to release ENI N when the associated instance is released. Valid values:</p>
          * <ul>
-         * <li>true: releases the ENI when the associated instance is released.</li>
-         * <li>false: retains the ENI when the associated instance is released.</li>
+         * <li>true</li>
+         * <li>false</li>
          * </ul>
          * <p>Default value: true.</p>
          * <blockquote>
@@ -2506,11 +2506,11 @@ public class RunInstancesRequest extends TeaModel {
 
         /**
          * <p>The description of ENI N.</p>
-         * <p>Take note of the following items:</p>
+         * <p>When you specify this parameter, take note of the following items:</p>
          * <ul>
-         * <li>Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.</li>
+         * <li>The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</li>
          * <li>The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</li>
-         * <li>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you do not need to specify this parameter.</li>
+         * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Primary</code>, you do not need to specify this parameter.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2520,11 +2520,11 @@ public class RunInstancesRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The type of ENI N. Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.</p>
+         * <p>The type of ENI N. The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Primary: the primary ENI.</li>
-         * <li>Secondary: the secondary ENI.</li>
+         * <li>Primary: primary ENI.</li>
+         * <li>Secondary: secondary ENI.</li>
          * </ul>
          * <p>Default value: Secondary.</p>
          * 
@@ -2535,11 +2535,11 @@ public class RunInstancesRequest extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>IPv6 address N to assign to the primary ENI. You can assign up to 10 IPv6 addresses to the primary ENI. Valid values of the second N: 1 to 10.</p>
+         * <p>The IPv6 addresses to assign to the primary ENI. You can assign up to 10 IPv6 addresses to the primary ENI. Valid values of the second N: 1 to 10.</p>
          * <p>Example: <code>Ipv6Address.1=2001:db8:1234:1a00::***</code>.</p>
-         * <p>Take note of the following items:</p>
+         * <p>When you specify this parameter, take note of the following items:</p>
          * <ul>
-         * <li>This parameter is valid only when <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>. If <code>NetworkInterface.N.InstanceType</code> is set to <code>Secondary</code> or left empty, you cannot specify this parameter.</li>
+         * <li>This parameter is valid only when <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>. If you set <code>NetworkInterface.N.InstanceType</code> to <code>Secondary</code> or leave NetworkInterface.N.InstanceType empty, you cannot specify this parameter.</li>
          * <li>If you specify this parameter, you must set <code>Amount</code> to 1 and cannot specify <code>Ipv6AddressCount</code>, <code>Ipv6Address.N</code>, or <code>NetworkInterface.N.Ipv6AddressCount</code>.</li>
          * </ul>
          */
@@ -2548,10 +2548,10 @@ public class RunInstancesRequest extends TeaModel {
 
         /**
          * <p>The number of IPv6 addresses to randomly generate for the primary ENI. Valid values: 1 to 10.</p>
-         * <p>Take note of the following items:</p>
+         * <p>When you specify this parameter, take note of the following items:</p>
          * <ul>
-         * <li>This parameter is valid only when <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>. If <code>NetworkInterface.N.InstanceType</code> is set to <code>Secondary</code> or left empty, you cannot specify this parameter.</li>
-         * <li>If this parameter is specified, you cannot specify <code>Ipv6AddressCount</code>, <code>Ipv6Address.N</code>, or <code>NetworkInterface.N.Ipv6Address.N</code>.</li>
+         * <li>This parameter is valid only when <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>. If you set <code>NetworkInterface.N.InstanceType</code> to <code>Secondary</code> or leave NetworkInterface.N.InstanceType empty, you cannot specify this parameter.</li>
+         * <li>If you specify this parameter, you cannot specify <code>Ipv6AddressCount</code>, <code>Ipv6Address.N</code>, or <code>NetworkInterface.N.Ipv6Address.N</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2562,11 +2562,11 @@ public class RunInstancesRequest extends TeaModel {
 
         /**
          * <p>The index of the network card for ENI N.</p>
-         * <p>Take note of the following items:</p>
+         * <p>When you specify this parameter, take note of the following items:</p>
          * <ul>
          * <li>You can specify network card indexes only for instances of specific instance types.</li>
-         * <li>When NetworkInterface.N.InstanceType is set to Primary, you can set NetworkInterface.N.NetworkCardIndex only to 0 for instance types that support network cards.</li>
-         * <li>When NetworkInterface.N.InstanceType is set to Secondary or left empty, you can specify NetworkInterface.N.NetworkCardIndex based on instance types if the instance types support network cards. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</li>
+         * <li>If you set NetworkInterface.N.InstanceType to Primary, you can set NetworkInterface.N.NetworkCardIndex only to 0 for instance types that support network cards.</li>
+         * <li>If you set NetworkInterface.N.InstanceType to Secondary or do not specify the parameter, you can specify NetworkInterface.N.NetworkCardIndex based on instance types if the instance types support network cards. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2589,10 +2589,10 @@ public class RunInstancesRequest extends TeaModel {
 
         /**
          * <p>The name of ENI N. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
-         * <p>Take note of the following items:</p>
+         * <p>When you specify this parameter, take note of the following items:</p>
          * <ul>
-         * <li>Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.</li>
-         * <li>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you do not need to specify this parameter.</li>
+         * <li>The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</li>
+         * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Primary</code>, you do not need to specify this parameter.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2620,26 +2620,23 @@ public class RunInstancesRequest extends TeaModel {
 
         /**
          * <p>The primary IP address to assign to ENI N.</p>
-         * <p>Take note of the following items:</p>
+         * <p>When you specify this parameter, take note of the following items:</p>
          * <ul>
-         * <li><p>Valid values of N: 1 and 2.</p>
+         * <li><p>The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</p>
          * <ul>
-         * <li>If the value of N is 1, you can configure a primary or secondary ENI. If this parameter is specified, <code>Amount</code> is set to a numeric value greater than 1, and NetworkInterface.N.InstanceType is set to Primary, the specified number of instances are created and consecutive primary IP addresses starting from the specified IP address are assigned to the instances. In this case, you cannot attach secondary ENIs to the instances.</li>
-         * <li>If the value of N is 2, you can configure a primary ENI and a secondary ENI. If this parameter is specified, <code>Amount</code> is set to a numeric value greater than 1, and NetworkInterface.N.InstanceType is set to Primary, you cannot set <code>NetworkInterface.2.InstanceType</code> to Secondary to attach a secondary ENI.</li>
+         * <li>If the value of N is 1, you can configure a primary or secondary ENI. If you specify this parameter, set <code>Amount</code> to a numeric value greater than 1, and set NetworkInterface.N.InstanceType to Primary, the specified number of instances are created and consecutive primary IP addresses starting from the specified IP address are assigned to the instances. In this case, you cannot attach secondary ENIs to the instances.</li>
+         * <li>If you specify this parameter, set <code>Amount</code> to a numeric value greater than 1, and set NetworkInterface.N.InstanceType to Primary, you cannot set <code>NetworkInterface.2.InstanceType</code> to Secondary to attach a secondary ENI.</li>
          * </ul>
          * </li>
-         * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, this parameter is equivalent to <code>PrivateIpAddress</code>. You cannot specify both this parameter and <code>PrivateIpAddress</code> in the same request.</p>
+         * <li><p>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Primary</code>, this parameter is equivalent to <code>PrivateIpAddress</code>. You cannot specify both this parameter and <code>PrivateIpAddress</code> in the same request.</p>
          * </li>
-         * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Secondary</code> or left empty, the specified primary IP address is assigned to the secondary ENI. The default value is an IP address that is randomly selected from within the CIDR block of the vSwitch to which to connect the secondary ENI.</p>
+         * <li><p>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Secondary</code> or leave NetworkInterface.N.InstanceType empty, the specified primary IP address is assigned to the secondary ENI. The default value is an IP address that is randomly selected from within the CIDR block of the vSwitch to which to connect the secondary ENI.</p>
          * </li>
          * </ul>
          * <blockquote>
          * </blockquote>
          * <ul>
-         * <li><p>You can attach only a single secondary ENI when you create an ECS instance. After the instance is created, you can call the <a href="https://help.aliyun.com/document_detail/58504.html">CreateNetworkInterface</a> and <a href="https://help.aliyun.com/document_detail/58515.html">AttachNetworkInterface</a> operations to attach more secondary ENIs.</p>
-         * </li>
-         * <li><p>The first IP address and last three IP addresses of each vSwitch CIDR block are reserved. You cannot specify the IP addresses. For example, if a vSwitch CIDR block is 192.168.1.0/24, the following IP addresses are reserved: 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.</p>
-         * </li>
+         * <li>The first IP address and last three IP addresses of each vSwitch CIDR block are reserved. You cannot specify the IP addresses. For example, if a vSwitch CIDR block is 192.168.1.0/24, the following IP addresses are reserved: 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2650,12 +2647,12 @@ public class RunInstancesRequest extends TeaModel {
 
         /**
          * <p>The number of queues supported by ENI N.</p>
-         * <p>Take note of the following items:</p>
+         * <p>When you specify this parameter, take note of the following items:</p>
          * <ul>
-         * <li>Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.</li>
+         * <li>The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</li>
          * <li>The value of this parameter cannot exceed the maximum number of queues allowed per ENI.</li>
          * <li>The total number of queues for all ENIs on the instance cannot exceed the queue quota for the instance type. To query the maximum number of queues per ENI and the queue quota for an instance type, you can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation and check the <code>MaximumQueueNumberPerEni</code> and <code>TotalEniQueueQuantity</code> values in the response.</li>
-         * <li>If this parameter is set and <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you cannot specify <code>NetworkInterfaceQueueNumber</code>.</li>
+         * <li>If you specify this parameter and set <code>NetworkInterface.N.InstanceType</code> to <code>Primary</code>, you cannot specify <code>NetworkInterfaceQueueNumber</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2675,7 +2672,7 @@ public class RunInstancesRequest extends TeaModel {
 
         /**
          * <p>The receive (Rx) queue depth of ENI N.</p>
-         * <p>Take note of the following items:</p>
+         * <p>When you specify this parameter, take note of the following items:</p>
          * <ul>
          * <li>The Rx queue depth of an ENI must be the same as the transmit (Tx) queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</li>
          * <li>A larger Rx queue depth yields higher inbound throughput but consumes more memory.</li>
@@ -2689,11 +2686,11 @@ public class RunInstancesRequest extends TeaModel {
 
         /**
          * <p>The ID of the security group to which to assign ENI N.</p>
-         * <p>Take note of the following items:</p>
+         * <p>When you specify this parameter, take note of the following items:</p>
          * <ul>
-         * <li>Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.</li>
-         * <li>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you must specify this parameter. In this case, this parameter is equivalent to <code>SecurityGroupId</code>. You cannot specify <code>SecurityGroupId</code>, <code>SecurityGroupIds.N</code>, or <code>NetworkInterface.N.SecurityGroupIds.N</code>.</li>
-         * <li>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Secondary</code> or left empty, you do not need to specify this parameter. The default value is the ID of the security group to which to assign the instance.</li>
+         * <li>The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</li>
+         * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Primary</code>, you must specify this parameter. In this case, this parameter is equivalent to <code>SecurityGroupId</code> and you cannot specify <code>SecurityGroupId</code>, <code>SecurityGroupIds.N</code>, or <code>NetworkInterface.N.SecurityGroupIds.N</code>.</li>
+         * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Secondary</code> or leave NetworkInterface.N.InstanceType empty, you do not need to specify this parameter. The default value is the ID of the security group to which to assign the instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2703,15 +2700,15 @@ public class RunInstancesRequest extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The ID of security group N to which to assign ENI N.</p>
+         * <p>The IDs of security groups to which to assign ENI N.</p>
          * <ul>
-         * <li>Valid values of the first N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.</li>
-         * <li>The second N indicates that one or more security group IDs can be specified. The valid values of N vary based on the maximum number of security groups to which an instance can belong. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits&quot; topic.</li>
+         * <li>The value of the first N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</li>
+         * <li>The second N indicates that one or more security group IDs can be specified. The valid values of the second N vary based on the maximum number of security groups to which an instance can belong. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits&quot; topic.</li>
          * </ul>
-         * <p>Take note of the following items:</p>
+         * <p>When you specify this parameter, take note of the following items:</p>
          * <ul>
-         * <li>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you must specify this parameter or <code>NetworkInterface.N.SecurityGroupId</code>. In this case, this parameter is equivalent to <code>SecurityGroupIds.N</code>. You cannot specify <code>SecurityGroupId</code>, <code>SecurityGroupIds.N</code>, or <code>NetworkInterface.N.SecurityGroupId</code>.</li>
-         * <li>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Secondary</code> or left empty, you do not need to specify this parameter. The default value is the ID of the security group to which to assign the instance.</li>
+         * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Primary</code>, you must specify this parameter or <code>NetworkInterface.N.SecurityGroupId</code>. In this case, this parameter is equivalent to <code>SecurityGroupIds.N</code>, and you cannot specify <code>SecurityGroupId</code>, <code>SecurityGroupIds.N</code>, or <code>NetworkInterface.N.SecurityGroupId</code>.</li>
+         * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Secondary</code> or leave NetworkInterface.N.InstanceType empty, you do not need to specify this parameter. The default value is the ID of the security group to which to assign the instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2722,7 +2719,7 @@ public class RunInstancesRequest extends TeaModel {
 
         /**
          * <p>The Tx queue depth of ENI N.</p>
-         * <p>Take note of the following items:</p>
+         * <p>When you specify this parameter, take note of the following items:</p>
          * <ul>
          * <li>The Tx queue depth of an ENI must be the same as the Rx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</li>
          * <li>A larger Tx queue depth yields higher outbound throughput but consumes more memory.</li>
@@ -2736,11 +2733,11 @@ public class RunInstancesRequest extends TeaModel {
 
         /**
          * <p>The ID of the vSwitch to which to connect ENI N.</p>
-         * <p>Take note of the following items:</p>
+         * <p>When you specify this parameter, take note of the following items:</p>
          * <ul>
-         * <li>Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.</li>
-         * <li>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you must specify this parameter. In this case, this parameter is equivalent to <code>VSwitchId</code>. You cannot specify both NetworkInterface.N.VSwitchId and <code>VSwitchId</code> in the same request.</li>
-         * <li>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Secondary</code> or left empty, you do not need to specify this parameter. The default value is the VSwitchId value.</li>
+         * <li>The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</li>
+         * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Primary</code>, you must specify this parameter. In this case, this parameter is equivalent to <code>VSwitchId</code>. You cannot specify both NetworkInterface.N.VSwitchId and <code>VSwitchId</code> in the same request.</li>
+         * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Secondary</code> or leave NetworkInterface.N.InstanceType empty, you do not need to specify this parameter. The default value is the VSwitchId value.</li>
          * </ul>
          * 
          * <strong>example:</strong>

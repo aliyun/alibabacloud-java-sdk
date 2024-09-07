@@ -11,13 +11,13 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public ModifyInstanceSpecRequestTemporary temporary;
 
     /**
-     * <p>Specifies whether cross-cluster instance type upgrades are supported.</p>
+     * <p>Specifies whether cross-cluster instance type upgrades are supported. Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>
      * </ul>
      * <p>Default value: false.</p>
-     * <p>When <code>AllowMigrateAcrossZone</code> is set to true and you upgrade the instance based on the returned information, take note of the following items:</p>
+     * <p>When you set <code>AllowMigrateAcrossZone</code> to true and upgrade the instance based on the returned information, take note of the following items:</p>
      * <p>Instance that resides in the classic network:</p>
      * <ul>
      * <li>For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (<code>cloud</code>) are identified as xvd\* such as <strong>xvda</strong> and <strong>xvdb</strong>, and ultra disks (<code>cloud_efficiency</code>) and standard SSDs (<code>cloud_ssd</code>) are identified as vd\* such as <strong>vda</strong> and <strong>vdb</strong>.</li>
@@ -121,6 +121,11 @@ public class ModifyInstanceSpecRequest extends TeaModel {
      * <blockquote>
      * <p> This parameter is not publicly available.</p>
      * </blockquote>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Online</li>
+     * <li>Offline</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>null</p>

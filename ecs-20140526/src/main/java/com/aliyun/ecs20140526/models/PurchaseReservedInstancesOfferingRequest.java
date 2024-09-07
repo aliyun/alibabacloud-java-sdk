@@ -5,8 +5,11 @@ import com.aliyun.tea.*;
 
 public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable auto-renewal for the reserved instance. Default value: false. Valid values:</p>
-     * <p>true: enables auto-renewal for the reserved instance. false: does not enable auto-renewal for the reserved instance.</p>
+     * <p>Specifies whether to enable auto-renewal for the reserved instance. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false (default)</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -170,6 +173,8 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     public String scope;
 
     /**
+     * <p>The time when the reserved instance takes effect. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601 standard</a> in the <code>yyyy-MM-ddTHHZ</code> format. The time must be in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-07-04T15Z</p>
      */

@@ -271,9 +271,13 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The device name of the data disk.</p>
+         * <p>The mount point of the data disk. The mount points are named based on the number of data disks:</p>
+         * <ul>
+         * <li>1st to 25th data disks: /dev/xvd<code>[b-z]</code>.</li>
+         * <li>From the 26th data disk on: /dev/xvd<code>[aa-zz]</code>. For example, the 26th data disk is named /dev/xvdaa, the 27th data disk is named /dev/xvdab, and so on.</li>
+         * </ul>
          * <blockquote>
-         * <p> This parameter will be removed in the future. To ensure future compatibility, we recommend that you do not use this parameter.</p>
+         * <p> This parameter is applicable to scenarios in which a full image is used to create instances. A full image is an image that contains an operating system, application software, and business data. For these scenarios, you can set the parameter to the mount point of data disk N contained in the full image and modify <code>DataDisk.N.Size</code> and <code>DataDisk.N.Category</code> to change the category and size of data disk N created based on the image.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -11,7 +11,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
     public DescribeDeploymentSetsResponseBodyDeploymentSets deploymentSets;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +29,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the deployment set.</p>
+     * <p>The ID of the region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -38,7 +38,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -47,7 +47,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of deployment sets returned.</p>
+     * <p>The total number of queried deployment sets.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -119,7 +119,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         public Integer availableAmount;
 
         /**
-         * <p>The number of ECS instances that belong to the zone in the deployment set.</p>
+         * <p>The number of ECS instances that reside in the zone in the deployment set.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -207,7 +207,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
 
     public static class DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSet extends TeaModel {
         /**
-         * <p>Details of the capacities of the deployment set. This parameter is valid only when the deployment set contains Elastic Compute Service (ECS) instances. The value contains the capacities of the deployment set in different zones.</p>
+         * <p>Details of the capacities of the deployment set. This parameter is valid only when the deployment set contains ECS instances. The value contains information about the capacities of the deployment set in different zones.</p>
          */
         @NameInMap("Capacities")
         public DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSetCapacities capacities;
@@ -249,7 +249,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         public String deploymentSetName;
 
         /**
-         * <p>The deployment strategy. The value of this response parameter is that of the <code>Strategy</code> request parameter.</p>
+         * <p>The deployment strategy. The return value of this parameter is the value of the <code>Strategy</code> request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>Availability</p>
@@ -297,7 +297,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         public Integer instanceAmount;
 
         /**
-         * <p>The IDs of the instances in the deployment set.</p>
+         * <p>The IDs of the Elastic Compute Service (ECS) instances in the deployment set.</p>
          */
         @NameInMap("InstanceIds")
         public DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSetInstanceIds instanceIds;

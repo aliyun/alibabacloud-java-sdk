@@ -3867,7 +3867,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The name of the deployment set. The name must be 2 to 128 characters in length, It must start with a letter and cannot start with \<code>http://\\</code> or \<code>https://\\</code>. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>Creates a deployment set in a region.</p>
      * 
      * @param request CreateDeploymentSetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3947,7 +3947,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The name of the deployment set. The name must be 2 to 128 characters in length, It must start with a letter and cannot start with \<code>http://\\</code> or \<code>https://\\</code>. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>Creates a deployment set in a region.</p>
      * 
      * @param request CreateDeploymentSetRequest
      * @return CreateDeploymentSetResponse
@@ -4091,7 +4091,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a pay-as-you-go or subscription data disk.</p>
+     * <p>Creates a pay-as-you-go or subscription data disk. When you call this operation, you can specify parameters, such as ZoneId, SnapshotId, Size, and DiskCategory, in the request.</p>
      * 
      * @param request CreateDiskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4239,7 +4239,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a pay-as-you-go or subscription data disk.</p>
+     * <p>Creates a pay-as-you-go or subscription data disk. When you call this operation, you can specify parameters, such as ZoneId, SnapshotId, Size, and DiskCategory, in the request.</p>
      * 
      * @param request CreateDiskRequest
      * @return CreateDiskResponse
@@ -5111,7 +5111,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a subscription or pay-as-you-go Elastic Compute Service (ECS) instance.</p>
+     * <p>Creates a subscription or pay-as-you-go Elastic Compute Service (ECS) instance. When you call this operation, you can specify parameters, such as ImageId, InstanceType, SecurityGroupId, and InternetChargeType, in the request.</p>
      * 
      * @param request CreateInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5445,7 +5445,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a subscription or pay-as-you-go Elastic Compute Service (ECS) instance.</p>
+     * <p>Creates a subscription or pay-as-you-go Elastic Compute Service (ECS) instance. When you call this operation, you can specify parameters, such as ImageId, InstanceType, SecurityGroupId, and InternetChargeType, in the request.</p>
      * 
      * @param request CreateInstanceRequest
      * @return CreateInstanceResponse
@@ -8376,8 +8376,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you delete a deployment set, make sure that no instances exist in the deployment set. If instances exist in the deployment set, move the instances to a different deployment set or release the instances before you delete the deployment set. For more information, see <a href="https://help.aliyun.com/document_detail/108407.html">Change the deployment set of an instance</a> and <a href="https://help.aliyun.com/document_detail/25442.html">Release an ECS instance</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes a deployment set in a region. Make sure that no instances exist in the deployment set that you want to delete. If instances exist in the deployment set, move the instances to a different deployment set or release the instances before you delete the deployment set.</p>
+     * <p>Deletes a deployment set in a region. When you call this operation, specify parameters such as RegionId and DeploymentSetId in the request.</p>
      * 
      * @param request DeleteDeploymentSetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8428,8 +8431,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you delete a deployment set, make sure that no instances exist in the deployment set. If instances exist in the deployment set, move the instances to a different deployment set or release the instances before you delete the deployment set. For more information, see <a href="https://help.aliyun.com/document_detail/108407.html">Change the deployment set of an instance</a> and <a href="https://help.aliyun.com/document_detail/25442.html">Release an ECS instance</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes a deployment set in a region. Make sure that no instances exist in the deployment set that you want to delete. If instances exist in the deployment set, move the instances to a different deployment set or release the instances before you delete the deployment set.</p>
+     * <p>Deletes a deployment set in a region. When you call this operation, specify parameters such as RegionId and DeploymentSetId in the request.</p>
      * 
      * @param request DeleteDeploymentSetRequest
      * @return DeleteDeploymentSetResponse
@@ -12625,7 +12631,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>For information about instance families, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the instance families that support deployment sets.</p>
+     * <p>Queries the instance families that support different deployment strategies. When you call this operation, specify parameters, such as RegionId and Strategy, in the request.</p>
      * 
      * @param request DescribeDeploymentSetSupportedInstanceTypeFamilyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12681,7 +12687,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>For information about instance families, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the instance families that support deployment sets.</p>
+     * <p>Queries the instance families that support different deployment strategies. When you call this operation, specify parameters, such as RegionId and Strategy, in the request.</p>
      * 
      * @param request DescribeDeploymentSetSupportedInstanceTypeFamilyRequest
      * @return DescribeDeploymentSetSupportedInstanceTypeFamilyResponse
@@ -12693,7 +12699,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the attributes of one or more deployment sets.</p>
+     * <p>Queries the details of one or more deployment sets. When you call this operation, you can specify parameters, such as DeploymentSetIds, Strategy, and DeploymentSetName, in the request.</p>
      * 
      * @param request DescribeDeploymentSetsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12773,7 +12779,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the attributes of one or more deployment sets.</p>
+     * <p>Queries the details of one or more deployment sets. When you call this operation, you can specify parameters, such as DeploymentSetIds, Strategy, and DeploymentSetName, in the request.</p>
      * 
      * @param request DescribeDeploymentSetsRequest
      * @return DescribeDeploymentSetsResponse
@@ -13024,20 +13030,116 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询云盘默认加密加密密钥</p>
+     * 
+     * @param request DescribeDiskDefaultKMSKeyIdRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDiskDefaultKMSKeyIdResponse
+     */
+    public DescribeDiskDefaultKMSKeyIdResponse describeDiskDefaultKMSKeyIdWithOptions(DescribeDiskDefaultKMSKeyIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDiskDefaultKMSKeyId"),
+            new TeaPair("version", "2014-05-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDiskDefaultKMSKeyIdResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询云盘默认加密加密密钥</p>
+     * 
+     * @param request DescribeDiskDefaultKMSKeyIdRequest
+     * @return DescribeDiskDefaultKMSKeyIdResponse
+     */
+    public DescribeDiskDefaultKMSKeyIdResponse describeDiskDefaultKMSKeyId(DescribeDiskDefaultKMSKeyIdRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDiskDefaultKMSKeyIdWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>检查云盘默认加密开启状态</p>
+     * 
+     * @param request DescribeDiskEncryptionByDefaultStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDiskEncryptionByDefaultStatusResponse
+     */
+    public DescribeDiskEncryptionByDefaultStatusResponse describeDiskEncryptionByDefaultStatusWithOptions(DescribeDiskEncryptionByDefaultStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDiskEncryptionByDefaultStatus"),
+            new TeaPair("version", "2014-05-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDiskEncryptionByDefaultStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>检查云盘默认加密开启状态</p>
+     * 
+     * @param request DescribeDiskEncryptionByDefaultStatusRequest
+     * @return DescribeDiskEncryptionByDefaultStatusResponse
+     */
+    public DescribeDiskEncryptionByDefaultStatusResponse describeDiskEncryptionByDefaultStatus(DescribeDiskEncryptionByDefaultStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDiskEncryptionByDefaultStatusWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h2><a href="#"></a>Usage notes</h2>
      * <p>You can query the following monitoring data of a disk: the read IOPS, write IOPS, read bandwidth (byte/s), write bandwidth (byte/s), read latency (microseconds), and write latency (microseconds).
      * Take note of the following items:</p>
      * <ul>
-     * <li>You can query the monitoring data only of the disks that are in the In Use (<code>In_use</code>) state. For more information, see <a href="https://help.aliyun.com/document_detail/25689.html">Disk states</a>.
+     * <li>Monitoring data of only disks that are in the In Use (<code>In_use</code>) state can be queried. For more information, see <a href="https://help.aliyun.com/document_detail/25689.html">Disk states</a>.
      * **
-     * <strong>Note</strong> Some information may be missing from the monitoring data of a disk because the disk is not in the In Use (<code>In_use</code>) state and the system cannot obtain the relevant information.</li>
+     * <strong>Note</strong> Some information may be missing from the monitoring data of a disk because the disk is not in the In Use <code>(In_use)</code> state and the system cannot obtain the relevant information.</li>
      * <li>Up to 400 monitoring data entries can be returned at a time. Make sure that the <code>TotalCount</code> value does not exceed 400. The value is calculated by using the following formula: <code>TotalCount = (EndTime - StartTime)/Period</code>. If the TotalCount value is greater than 400, the <code>InvalidParameter.TooManyDataQueried</code> error is returned.</li>
      * <li>You can query the monitoring data in the last 30 days. If the value of <code>StartTime</code> is more than 30 days earlier than the current time, an error is returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the monitoring data of a disk in a specific period of time.</p>
+     * <p>Queries the monitoring data of a disk in a specific period of time. When you call this operation, you can specify parameters, such as DiskId, StartTime, and EndTime, in the request.</p>
      * 
      * @param request DescribeDiskMonitorDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13101,15 +13203,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can query the following monitoring data of a disk: the read IOPS, write IOPS, read bandwidth (byte/s), write bandwidth (byte/s), read latency (microseconds), and write latency (microseconds).
      * Take note of the following items:</p>
      * <ul>
-     * <li>You can query the monitoring data only of the disks that are in the In Use (<code>In_use</code>) state. For more information, see <a href="https://help.aliyun.com/document_detail/25689.html">Disk states</a>.
+     * <li>Monitoring data of only disks that are in the In Use (<code>In_use</code>) state can be queried. For more information, see <a href="https://help.aliyun.com/document_detail/25689.html">Disk states</a>.
      * **
-     * <strong>Note</strong> Some information may be missing from the monitoring data of a disk because the disk is not in the In Use (<code>In_use</code>) state and the system cannot obtain the relevant information.</li>
+     * <strong>Note</strong> Some information may be missing from the monitoring data of a disk because the disk is not in the In Use <code>(In_use)</code> state and the system cannot obtain the relevant information.</li>
      * <li>Up to 400 monitoring data entries can be returned at a time. Make sure that the <code>TotalCount</code> value does not exceed 400. The value is calculated by using the following formula: <code>TotalCount = (EndTime - StartTime)/Period</code>. If the TotalCount value is greater than 400, the <code>InvalidParameter.TooManyDataQueried</code> error is returned.</li>
      * <li>You can query the monitoring data in the last 30 days. If the value of <code>StartTime</code> is more than 30 days earlier than the current time, an error is returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the monitoring data of a disk in a specific period of time.</p>
+     * <p>Queries the monitoring data of a disk in a specific period of time. When you call this operation, you can specify parameters, such as DiskId, StartTime, and EndTime, in the request.</p>
      * 
      * @param request DescribeDiskMonitorDataRequest
      * @return DescribeDiskMonitorDataResponse
@@ -14656,7 +14758,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries available images.</p>
+     * <p>Queries available images. When you call this operation, you can specify parameters, such as ImageId, ImageFamily, and InstanceType, in the request.</p>
      * 
      * @param request DescribeImagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14801,7 +14903,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries available images.</p>
+     * <p>Queries available images. When you call this operation, you can specify parameters, such as ImageId, ImageFamily, and InstanceType, in the request.</p>
      * 
      * @param request DescribeImagesRequest
      * @return DescribeImagesResponse
@@ -15047,7 +15149,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the system events of Elastic Compute Service (ECS) instances. By default, non-active system events are queried.</p>
+     * <p>Queries the system events of Elastic Compute Service (ECS) instances. When you call this operation, you can specify parameters, such as InstanceId and EventType, in the request. By default, non-active system events are queried.</p>
      * 
      * @param request DescribeInstanceHistoryEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15165,7 +15267,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the system events of Elastic Compute Service (ECS) instances. By default, non-active system events are queried.</p>
+     * <p>Queries the system events of Elastic Compute Service (ECS) instances. When you call this operation, you can specify parameters, such as InstanceId and EventType, in the request. By default, non-active system events are queried.</p>
      * 
      * @param request DescribeInstanceHistoryEventsRequest
      * @return DescribeInstanceHistoryEventsResponse
@@ -15531,7 +15633,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the status information of multiple Elastic Compute Service (ECS) instances.</p>
+     * <p>Queries the status information of Elastic Compute Service (ECS) instances. When you call this operation, you can specify parameters, such as RegionId, ZoneId, and InstanceId, in the request.</p>
      * 
      * @param request DescribeInstanceStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15605,7 +15707,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the status information of multiple Elastic Compute Service (ECS) instances.</p>
+     * <p>Queries the status information of Elastic Compute Service (ECS) instances. When you call this operation, you can specify parameters, such as RegionId, ZoneId, and InstanceId, in the request.</p>
      * 
      * @param request DescribeInstanceStatusRequest
      * @return DescribeInstanceStatusResponse
@@ -22100,6 +22202,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>关闭云盘默认加密</p>
+     * 
+     * @param request DisableDiskEncryptionByDefaultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableDiskEncryptionByDefaultResponse
+     */
+    public DisableDiskEncryptionByDefaultResponse disableDiskEncryptionByDefaultWithOptions(DisableDiskEncryptionByDefaultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisableDiskEncryptionByDefault"),
+            new TeaPair("version", "2014-05-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableDiskEncryptionByDefaultResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>关闭云盘默认加密</p>
+     * 
+     * @param request DisableDiskEncryptionByDefaultRequest
+     * @return DisableDiskEncryptionByDefaultResponse
+     */
+    public DisableDiskEncryptionByDefaultResponse disableDiskEncryptionByDefault(DisableDiskEncryptionByDefaultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.disableDiskEncryptionByDefaultWithOptions(request, runtime);
+    }
+
+    /**
      * @deprecated OpenAPI EipFillParams is deprecated
      * 
      * @param request EipFillParamsRequest
@@ -22310,6 +22460,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>启用云盘默认加密</p>
+     * 
+     * @param request EnableDiskEncryptionByDefaultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableDiskEncryptionByDefaultResponse
+     */
+    public EnableDiskEncryptionByDefaultResponse enableDiskEncryptionByDefaultWithOptions(EnableDiskEncryptionByDefaultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableDiskEncryptionByDefault"),
+            new TeaPair("version", "2014-05-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableDiskEncryptionByDefaultResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启用云盘默认加密</p>
+     * 
+     * @param request EnableDiskEncryptionByDefaultRequest
+     * @return EnableDiskEncryptionByDefaultResponse
+     */
+    public EnableDiskEncryptionByDefaultResponse enableDiskEncryptionByDefault(EnableDiskEncryptionByDefaultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enableDiskEncryptionByDefaultWithOptions(request, runtime);
+    }
+
+    /**
      * @deprecated OpenAPI EnablePhysicalConnection is deprecated
      * 
      * @param request EnablePhysicalConnectionRequest
@@ -22389,7 +22599,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Before you export images, take note of the following items:</p>
      * <ul>
      * <li>Make sure that you are familiar with the prerequisites and considerations. For more information, see <a href="https://help.aliyun.com/document_detail/58181.html">Export a custom image</a>.</li>
-     * <li>The <code>ImageFormat</code> parameter is available only for the following regions: India (Mumbai) Closing Down, Japan (Tokyo), Australia (Sydney), Indonesia (Jakarta), Germany (Frankfurt), UAE (Dubai), US (Virginia), UK (London), Singapore, Malaysia (Kuala Lumpur), and US (Silicon Valley). Alibaba Cloud services will be discontinued in the India (Mumbai) region. By default, custom images are exported in the RAW format in regions where the ImageFormat parameter is unsupported.</li>
+     * <li>The <code>ImageFormat</code> parameter is available only for the following regions: Japan (Tokyo), Australia (Sydney), Indonesia (Jakarta), Germany (Frankfurt), UAE (Dubai), US (Virginia), UK (London), Singapore, Malaysia (Kuala Lumpur), and US (Silicon Valley). Alibaba Cloud services will be discontinued in the India (Mumbai) region. By default, custom images are exported in the RAW format in regions where the ImageFormat parameter is unsupported.</li>
      * <li>Use Resource Access Management (RAM) to authorize Elastic Compute Service (ECS) to write data to OSS. To complete the authorization, perform the following operations:<ul>
      * <li>Create a role named <code>AliyunECSImageExportDefaultRole</code> and attach the following policy to the role:
      *    {
@@ -22501,7 +22711,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Before you export images, take note of the following items:</p>
      * <ul>
      * <li>Make sure that you are familiar with the prerequisites and considerations. For more information, see <a href="https://help.aliyun.com/document_detail/58181.html">Export a custom image</a>.</li>
-     * <li>The <code>ImageFormat</code> parameter is available only for the following regions: India (Mumbai) Closing Down, Japan (Tokyo), Australia (Sydney), Indonesia (Jakarta), Germany (Frankfurt), UAE (Dubai), US (Virginia), UK (London), Singapore, Malaysia (Kuala Lumpur), and US (Silicon Valley). Alibaba Cloud services will be discontinued in the India (Mumbai) region. By default, custom images are exported in the RAW format in regions where the ImageFormat parameter is unsupported.</li>
+     * <li>The <code>ImageFormat</code> parameter is available only for the following regions: Japan (Tokyo), Australia (Sydney), Indonesia (Jakarta), Germany (Frankfurt), UAE (Dubai), US (Virginia), UK (London), Singapore, Malaysia (Kuala Lumpur), and US (Silicon Valley). Alibaba Cloud services will be discontinued in the India (Mumbai) region. By default, custom images are exported in the RAW format in regions where the ImageFormat parameter is unsupported.</li>
      * <li>Use Resource Access Management (RAM) to authorize Elastic Compute Service (ECS) to write data to OSS. To complete the authorization, perform the following operations:<ul>
      * <li>Create a role named <code>AliyunECSImageExportDefaultRole</code> and attach the following policy to the role:
      *    {
@@ -23571,15 +23781,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>Before you add an instance to a security group, the instance must be in the <strong>Stopped</strong> (Stopped) or <strong>Running</strong> (Running) state.</li>
      * <li>An instance can be added to up to five security groups by default.</li>
-     * <li>To add an instance to more security groups, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>. An instance can be added to up to 16 security groups.</li>
+     * <li>You can <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a> to change the maximum number of security groups to which an instance can be added to 4 or 10.</li>
      * <li>A basic security group can contain up to 2,000 instances. An advanced security group can contain up to 65,536 instances.</li>
      * <li>The security group and the instance must reside in the same region.</li>
-     * <li>The security group and the instance must be of the same network type. If the network type is virtual private cloud (VPC), the security group and the instance must reside in the same VPC.</li>
-     * <li>An instance and an ENI cannot be added to a security group at the same time. You cannot specify <code>InstanceId</code> and <code>NetworkInterfaceId</code> at the same time in a request.</li>
+     * <li>The security group and the instance must be of the same network type. If the network type is Virtual Private Cloud (VPC), the security group and the instance must reside in the same VPC.</li>
+     * <li>An instance and an ENI cannot be added to a security group at the same time. You cannot specify <code>InstanceId</code> and <code>NetworkInterfaceId</code> at the same time in a request.
+     * For more information, see <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds an Elastic Compute Service (ECS) instance or an elastic network interface (ENI) to a security group.</p>
+     * <p>Adds an Elastic Compute Service (ECS) instance or an elastic network interface (ENI) to a security group. When you call this operation, you can specify parameters, such as SecurityGroupId, InstanceId, and NetworkInterfaceId, in the request.</p>
      * 
      * @param request JoinSecurityGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23647,15 +23858,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>Before you add an instance to a security group, the instance must be in the <strong>Stopped</strong> (Stopped) or <strong>Running</strong> (Running) state.</li>
      * <li>An instance can be added to up to five security groups by default.</li>
-     * <li>To add an instance to more security groups, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>. An instance can be added to up to 16 security groups.</li>
+     * <li>You can <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a> to change the maximum number of security groups to which an instance can be added to 4 or 10.</li>
      * <li>A basic security group can contain up to 2,000 instances. An advanced security group can contain up to 65,536 instances.</li>
      * <li>The security group and the instance must reside in the same region.</li>
-     * <li>The security group and the instance must be of the same network type. If the network type is virtual private cloud (VPC), the security group and the instance must reside in the same VPC.</li>
-     * <li>An instance and an ENI cannot be added to a security group at the same time. You cannot specify <code>InstanceId</code> and <code>NetworkInterfaceId</code> at the same time in a request.</li>
+     * <li>The security group and the instance must be of the same network type. If the network type is Virtual Private Cloud (VPC), the security group and the instance must reside in the same VPC.</li>
+     * <li>An instance and an ENI cannot be added to a security group at the same time. You cannot specify <code>InstanceId</code> and <code>NetworkInterfaceId</code> at the same time in a request.
+     * For more information, see <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds an Elastic Compute Service (ECS) instance or an elastic network interface (ENI) to a security group.</p>
+     * <p>Adds an Elastic Compute Service (ECS) instance or an elastic network interface (ENI) to a security group. When you call this operation, you can specify parameters, such as SecurityGroupId, InstanceId, and NetworkInterfaceId, in the request.</p>
      * 
      * @param request JoinSecurityGroupRequest
      * @return JoinSecurityGroupResponse
@@ -23680,7 +23892,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Removes an Elastic Compute Service (ECS) instance or an elastic network interface (ENI) from a security group.</p>
+     * <p>Removes an Elastic Compute Service (ECS) instance or an elastic network interface (ENI) from a security group. To remove an ECS instance from a security group, specify SecurityGroupId and InstanceId in the request. To remove an ENI from a security group, specify SecurityGroupId and NetworkInterfaceId in the request.</p>
      * 
      * @param request LeaveSecurityGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23753,7 +23965,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Removes an Elastic Compute Service (ECS) instance or an elastic network interface (ENI) from a security group.</p>
+     * <p>Removes an Elastic Compute Service (ECS) instance or an elastic network interface (ENI) from a security group. To remove an ECS instance from a security group, specify SecurityGroupId and InstanceId in the request. To remove an ENI from a security group, specify SecurityGroupId and NetworkInterfaceId in the request.</p>
      * 
      * @param request LeaveSecurityGroupRequest
      * @return LeaveSecurityGroupResponse
@@ -25200,6 +25412,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the name and description of a deployment set. When you call this operation, you can specify parameters, such as DeploymentSetId and DeploymentSetName, in the request.</p>
+     * 
      * @param request ModifyDeploymentSetAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDeploymentSetAttributeResponse
@@ -25257,6 +25472,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the name and description of a deployment set. When you call this operation, you can specify parameters, such as DeploymentSetId and DeploymentSetName, in the request.</p>
+     * 
      * @param request ModifyDeploymentSetAttributeRequest
      * @return ModifyDeploymentSetAttributeResponse
      */
@@ -25535,6 +25753,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyDiskChargeTypeResponse modifyDiskChargeType(ModifyDiskChargeTypeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDiskChargeTypeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改云盘默认加密加密密钥</p>
+     * 
+     * @param request ModifyDiskDefaultKMSKeyIdRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyDiskDefaultKMSKeyIdResponse
+     */
+    public ModifyDiskDefaultKMSKeyIdResponse modifyDiskDefaultKMSKeyIdWithOptions(ModifyDiskDefaultKMSKeyIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.KMSKeyId)) {
+            query.put("KMSKeyId", request.KMSKeyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyDiskDefaultKMSKeyId"),
+            new TeaPair("version", "2014-05-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDiskDefaultKMSKeyIdResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改云盘默认加密加密密钥</p>
+     * 
+     * @param request ModifyDiskDefaultKMSKeyIdRequest
+     * @return ModifyDiskDefaultKMSKeyIdResponse
+     */
+    public ModifyDiskDefaultKMSKeyIdResponse modifyDiskDefaultKMSKeyId(ModifyDiskDefaultKMSKeyIdRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyDiskDefaultKMSKeyIdWithOptions(request, runtime);
     }
 
     /**
@@ -30156,7 +30426,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Purchases a reserved instance. Reserved instances can be automatically matched to pay-as-you-go instances to offset the fees of the pay-as-you-go instances.</p>
+     * <p>Purchases a reserved instance. When you call this operation, you can specify parameters, such as InstanceType and Scope, in the request. Reserved instances can be applied to automatically offset fees for pay-as-you-go Elastic Compute Service (ECS) instances.</p>
      * 
      * @param request PurchaseReservedInstancesOfferingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30275,7 +30545,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Purchases a reserved instance. Reserved instances can be automatically matched to pay-as-you-go instances to offset the fees of the pay-as-you-go instances.</p>
+     * <p>Purchases a reserved instance. When you call this operation, you can specify parameters, such as InstanceType and Scope, in the request. Reserved instances can be applied to automatically offset fees for pay-as-you-go Elastic Compute Service (ECS) instances.</p>
      * 
      * @param request PurchaseReservedInstancesOfferingRequest
      * @return PurchaseReservedInstancesOfferingResponse
@@ -31581,7 +31851,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>续费</p>
+     * <p>Renews one or more elasticity assurances that you purchased. When you call this operation, you can specify parameters, such as PrivatePoolOptionsId and Period, in the request.</p>
      * 
      * @param request RenewElasticityAssurancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31649,7 +31919,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>续费</p>
+     * <p>Renews one or more elasticity assurances that you purchased. When you call this operation, you can specify parameters, such as PrivatePoolOptionsId and Period, in the request.</p>
      * 
      * @param request RenewElasticityAssurancesRequest
      * @return RenewElasticityAssurancesResponse
@@ -32181,6 +32451,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ResetDiskResponse resetDisk(ResetDiskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.resetDiskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>重置云盘默认加密加密密钥为服务密钥</p>
+     * 
+     * @param request ResetDiskDefaultKMSKeyIdRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ResetDiskDefaultKMSKeyIdResponse
+     */
+    public ResetDiskDefaultKMSKeyIdResponse resetDiskDefaultKMSKeyIdWithOptions(ResetDiskDefaultKMSKeyIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ResetDiskDefaultKMSKeyId"),
+            new TeaPair("version", "2014-05-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ResetDiskDefaultKMSKeyIdResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>重置云盘默认加密加密密钥为服务密钥</p>
+     * 
+     * @param request ResetDiskDefaultKMSKeyIdRequest
+     * @return ResetDiskDefaultKMSKeyIdResponse
+     */
+    public ResetDiskDefaultKMSKeyIdResponse resetDiskDefaultKMSKeyId(ResetDiskDefaultKMSKeyIdRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.resetDiskDefaultKMSKeyIdWithOptions(request, runtime);
     }
 
     /**
