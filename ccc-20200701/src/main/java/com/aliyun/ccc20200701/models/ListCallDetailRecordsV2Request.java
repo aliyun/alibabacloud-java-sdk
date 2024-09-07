@@ -129,6 +129,12 @@ public class ListCallDetailRecordsV2Request extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ReleaseInitiatorList")
+    public String releaseInitiatorList;
+
+    @NameInMap("ReleaseReasonList")
+    public String releaseReasonList;
+
     @NameInMap("SatisfactionDescriptionList")
     public String satisfactionDescriptionList;
 
@@ -312,6 +318,22 @@ public class ListCallDetailRecordsV2Request extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListCallDetailRecordsV2Request setReleaseInitiatorList(String releaseInitiatorList) {
+        this.releaseInitiatorList = releaseInitiatorList;
+        return this;
+    }
+    public String getReleaseInitiatorList() {
+        return this.releaseInitiatorList;
+    }
+
+    public ListCallDetailRecordsV2Request setReleaseReasonList(String releaseReasonList) {
+        this.releaseReasonList = releaseReasonList;
+        return this;
+    }
+    public String getReleaseReasonList() {
+        return this.releaseReasonList;
     }
 
     public ListCallDetailRecordsV2Request setSatisfactionDescriptionList(String satisfactionDescriptionList) {
