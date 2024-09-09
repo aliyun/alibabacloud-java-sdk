@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListRegionsResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>MissingPageNumber</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public java.util.List<ListRegionsResponseBodyData> data;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ConsumerGroupId</p>
      */
@@ -22,6 +29,8 @@ public class ListRegionsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>instanceId</p>
      */
@@ -29,6 +38,8 @@ public class ListRegionsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +47,8 @@ public class ListRegionsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter instanceId is mandatory for this action .</p>
      */
@@ -43,6 +56,8 @@ public class ListRegionsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0B962390-D84B-5D44-8C11-79DF40299D41</p>
      */
@@ -50,6 +65,8 @@ public class ListRegionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -127,6 +144,8 @@ public class ListRegionsResponseBody extends TeaModel {
 
     public static class ListRegionsResponseBodyDataTags extends TeaModel {
         /**
+         * <p>The tag code.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -134,6 +153,8 @@ public class ListRegionsResponseBody extends TeaModel {
         public String tagCode;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -165,6 +186,8 @@ public class ListRegionsResponseBody extends TeaModel {
 
     public static class ListRegionsResponseBodyData extends TeaModel {
         /**
+         * <p>The time when the ApsaraMQ for RocketMQ instance was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-08-01 20:05:50</p>
          */
@@ -172,16 +195,26 @@ public class ListRegionsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
         @NameInMap("regionId")
         public String regionId;
 
+        /**
+         * <p>The region name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hangzhou</p>
+         */
         @NameInMap("regionName")
         public String regionName;
 
         /**
+         * <p>Indicates whether ApsaraMQ for RocketMQ V4 is activated.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -189,16 +222,23 @@ public class ListRegionsResponseBody extends TeaModel {
         public Boolean supportRocketmqV4;
 
         /**
+         * <p>Indicates whether ApsaraMQ for RocketMQ V5 is activated.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("supportRocketmqV5")
         public Boolean supportRocketmqV5;
 
+        /**
+         * <p>The region tags.</p>
+         */
         @NameInMap("tags")
         public java.util.List<ListRegionsResponseBodyDataTags> tags;
 
         /**
+         * <p>The time when the ApsaraMQ for RocketMQ instance was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-08-01 20:05:50</p>
          */

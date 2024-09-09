@@ -679,9 +679,21 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyDataNetworkInfoVpcInfoVSwitches extends TeaModel {
+        /**
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-uf6gwtbn6etadpvz7****</p>
+         */
         @NameInMap("vSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("zoneId")
         public String zoneId;
 
@@ -728,6 +740,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @Deprecated
         public String vSwitchId;
 
+        /**
+         * <p>The vSwitches.</p>
+         */
         @NameInMap("vSwitches")
         public java.util.List<GetInstanceResponseBodyDataNetworkInfoVpcInfoVSwitches> vSwitches;
 

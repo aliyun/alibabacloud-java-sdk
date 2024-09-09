@@ -100,6 +100,9 @@ public class UpdateInstanceRequest extends TeaModel {
          * <li>true</li>
          * <li>false</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("defaultVpcAuthFree")
         public Boolean defaultVpcAuthFree;

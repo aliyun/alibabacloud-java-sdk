@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
     /**
-     * <p>The returned error code.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>MissingInstanceId</p>
@@ -20,7 +20,7 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
     public java.util.List<ListConsumerGroupSubscriptionsResponseBodyData> data;
 
     /**
-     * <p>The returned dynamic error code.</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>InstanceId</p>
@@ -29,7 +29,7 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The returned dynamic error message.</p>
+     * <p>The dynamic error message.</p>
      * 
      * <strong>example:</strong>
      * <p>InstanceId</p>
@@ -38,7 +38,7 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The returned HTTP status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -47,7 +47,7 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The returned error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Parameter instanceId is mandatory for this action .</p>
@@ -65,7 +65,7 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -143,11 +143,21 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
     }
 
     public static class ListConsumerGroupSubscriptionsResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether message consumption is consistent. Valid values:</p>
+         * <ul>
+         * <li>false: Unconsumed messages exist in the consumer group.</li>
+         * <li>true: No unconsumed message exists in the consumer group.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("consistency")
         public Boolean consistency;
 
         /**
-         * <p>The consumer group ID.</p>
+         * <p>The ID of the consumer group.</p>
          * 
          * <strong>example:</strong>
          * <p>CID-TEST</p>
@@ -167,7 +177,11 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
         public String filterExpression;
 
         /**
-         * <p>The type of the filter expression. Valid values: SQL, TAG, and UNSPECIFIED.</p>
+         * <p>The type of the filter expression. Valid values:</p>
+         * <ul>
+         * <li>SQL: filters messages by using SQL expressions.</li>
+         * <li>TAG: filters messages by using tags.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>SQL</p>
@@ -176,7 +190,11 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
         public String filterExpressionType;
 
         /**
-         * <p>The consumption mode. Valid values: BROADCASTING and CLUSTERING.</p>
+         * <p>The consumption mode of the consumer group. Valid values:</p>
+         * <ul>
+         * <li>BROADCASTING: broadcasting consumption</li>
+         * <li>CLUSTERING: clustering consumption</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>BROADCASTING</p>
@@ -185,7 +203,11 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
         public String messageModel;
 
         /**
-         * <p>The subscription status. Valid values: ONLINE and OFFLINE.</p>
+         * <p>The subscription status. Valid values:</p>
+         * <ul>
+         * <li>ONLINE: The consumer group is online. If the consumer group contains multiple consumers, this value is returned as long as one of the consumers is online.</li>
+         * <li>OFFLINE: The consumer group is offline. If the consumer group contains multiple consumers, this value is returned only if all consumers are offline.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ONLINE</p>
