@@ -288,6 +288,105 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>写实人像创作</p>
+     * 
+     * @param request CreateRealisticPortraitRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRealisticPortraitResponse
+     */
+    public CreateRealisticPortraitResponse createRealisticPortraitWithOptions(CreateRealisticPortraitRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ages)) {
+            body.put("ages", request.ages);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloth)) {
+            body.put("cloth", request.cloth);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.color)) {
+            body.put("color", request.color);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.custom)) {
+            body.put("custom", request.custom);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.face)) {
+            body.put("face", request.face);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.figure)) {
+            body.put("figure", request.figure);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gender)) {
+            body.put("gender", request.gender);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hairColor)) {
+            body.put("hairColor", request.hairColor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hairstyle)) {
+            body.put("hairstyle", request.hairstyle);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.height)) {
+            body.put("height", request.height);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageUrl)) {
+            body.put("imageUrl", request.imageUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.numbers)) {
+            body.put("numbers", request.numbers);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ratio)) {
+            body.put("ratio", request.ratio);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.width)) {
+            body.put("width", request.width);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateRealisticPortrait"),
+            new TeaPair("version", "2024-03-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/yic/yic-console/openService/v1/images/portrait/realistic"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRealisticPortraitResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>写实人像创作</p>
+     * 
+     * @param request CreateRealisticPortraitRequest
+     * @return CreateRealisticPortraitResponse
+     */
+    public CreateRealisticPortraitResponse createRealisticPortrait(CreateRealisticPortraitRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createRealisticPortraitWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建文案生成任务</p>
      * 
      * @param request CreateTextTaskRequest
@@ -969,6 +1068,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>流式输出文案</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryTextStreamResponse
+     */
+    public QueryTextStreamResponse queryTextStreamWithOptions(String textId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryTextStream"),
+            new TeaPair("version", "2024-03-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/yic/yic-console/openService/v1/stream/queryTextStream/" + com.aliyun.openapiutil.Client.getEncodeParam(textId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryTextStreamResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>流式输出文案</p>
+     * @return QueryTextStreamResponse
+     */
+    public QueryTextStreamResponse queryTextStream(String textId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.queryTextStreamWithOptions(textId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询图片任务</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SelectImageTaskResponse
+     */
+    public SelectImageTaskResponse selectImageTaskWithOptions(String taskId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SelectImageTask"),
+            new TeaPair("version", "2024-03-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/yic/yic-console/openService/v1/images/portrait/select/" + com.aliyun.openapiutil.Client.getEncodeParam(taskId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SelectImageTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询图片任务</p>
+     * @return SelectImageTaskResponse
+     */
+    public SelectImageTaskResponse selectImageTask(String taskId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.selectImageTaskWithOptions(taskId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询离线数字人剩余资源</p>
      * 
      * @param request SelectResourceRequest
@@ -1283,5 +1456,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.submitProjectTaskWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>人像风格变化</p>
+     * 
+     * @param request TransferPortraitStyleRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TransferPortraitStyleResponse
+     */
+    public TransferPortraitStyleResponse transferPortraitStyleWithOptions(TransferPortraitStyleRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.height)) {
+            body.put("height", request.height);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageUrl)) {
+            body.put("imageUrl", request.imageUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.numbers)) {
+            body.put("numbers", request.numbers);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.redrawAmplitude)) {
+            body.put("redrawAmplitude", request.redrawAmplitude);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.style)) {
+            body.put("style", request.style);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.width)) {
+            body.put("width", request.width);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TransferPortraitStyle"),
+            new TeaPair("version", "2024-03-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/yic/yic-console/openService/v1/images/portrait/transferPortraitStyle"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TransferPortraitStyleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>人像风格变化</p>
+     * 
+     * @param request TransferPortraitStyleRequest
+     * @return TransferPortraitStyleResponse
+     */
+    public TransferPortraitStyleResponse transferPortraitStyle(TransferPortraitStyleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.transferPortraitStyleWithOptions(request, headers, runtime);
     }
 }

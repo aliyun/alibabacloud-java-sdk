@@ -7,6 +7,9 @@ public class VoiceModelResponse extends TeaModel {
     @NameInMap("resourceTypeDesc")
     public String resourceTypeDesc;
 
+    @NameInMap("ttsVersion")
+    public Integer ttsVersion;
+
     @NameInMap("useScene")
     public String useScene;
 
@@ -45,6 +48,14 @@ public class VoiceModelResponse extends TeaModel {
     }
     public String getResourceTypeDesc() {
         return this.resourceTypeDesc;
+    }
+
+    public VoiceModelResponse setTtsVersion(Integer ttsVersion) {
+        this.ttsVersion = ttsVersion;
+        return this;
+    }
+    public Integer getTtsVersion() {
+        return this.ttsVersion;
     }
 
     public VoiceModelResponse setUseScene(String useScene) {
