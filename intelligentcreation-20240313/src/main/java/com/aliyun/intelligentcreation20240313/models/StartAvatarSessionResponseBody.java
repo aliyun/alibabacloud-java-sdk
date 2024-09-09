@@ -21,6 +21,12 @@ public class StartAvatarSessionResponseBody extends TeaModel {
     @NameInMap("sessionId")
     public String sessionId;
 
+    @NameInMap("token")
+    public String token;
+
+    @NameInMap("webSocketUrl")
+    public String webSocketUrl;
+
     public static StartAvatarSessionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         StartAvatarSessionResponseBody self = new StartAvatarSessionResponseBody();
         return TeaModel.build(map, self);
@@ -48,6 +54,22 @@ public class StartAvatarSessionResponseBody extends TeaModel {
     }
     public String getSessionId() {
         return this.sessionId;
+    }
+
+    public StartAvatarSessionResponseBody setToken(String token) {
+        this.token = token;
+        return this;
+    }
+    public String getToken() {
+        return this.token;
+    }
+
+    public StartAvatarSessionResponseBody setWebSocketUrl(String webSocketUrl) {
+        this.webSocketUrl = webSocketUrl;
+        return this;
+    }
+    public String getWebSocketUrl() {
+        return this.webSocketUrl;
     }
 
 }

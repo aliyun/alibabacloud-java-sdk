@@ -86,6 +86,9 @@ public class SubmitProjectTaskRequest extends TeaModel {
         @NameInMap("url")
         public String url;
 
+        @NameInMap("volume")
+        public Integer volume;
+
         public static SubmitProjectTaskRequestFramesLayersMaterial build(java.util.Map<String, ?> map) throws Exception {
             SubmitProjectTaskRequestFramesLayersMaterial self = new SubmitProjectTaskRequestFramesLayersMaterial();
             return TeaModel.build(map, self);
@@ -113,6 +116,14 @@ public class SubmitProjectTaskRequest extends TeaModel {
         }
         public String getUrl() {
             return this.url;
+        }
+
+        public SubmitProjectTaskRequestFramesLayersMaterial setVolume(Integer volume) {
+            this.volume = volume;
+            return this;
+        }
+        public Integer getVolume() {
+            return this.volume;
         }
 
     }

@@ -58,6 +58,13 @@ public class TextTaskCreateCmd extends TeaModel {
     public java.util.List<Long> relatedRagIds;
 
     /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("streamApi")
+    public Boolean streamApi;
+
+    /**
      * <p>This parameter is required.</p>
      */
     @NameInMap("style")
@@ -157,6 +164,14 @@ public class TextTaskCreateCmd extends TeaModel {
     }
     public java.util.List<Long> getRelatedRagIds() {
         return this.relatedRagIds;
+    }
+
+    public TextTaskCreateCmd setStreamApi(Boolean streamApi) {
+        this.streamApi = streamApi;
+        return this;
+    }
+    public Boolean getStreamApi() {
+        return this.streamApi;
     }
 
     public TextTaskCreateCmd setStyle(String style) {
