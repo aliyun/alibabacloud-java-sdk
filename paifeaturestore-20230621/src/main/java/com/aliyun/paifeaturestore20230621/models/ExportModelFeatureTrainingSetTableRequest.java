@@ -13,6 +13,9 @@ public class ExportModelFeatureTrainingSetTableRequest extends TeaModel {
     @NameInMap("RealTimeIterateInterval")
     public Long realTimeIterateInterval;
 
+    @NameInMap("RealTimePartitionCountValue")
+    public Long realTimePartitionCountValue;
+
     @NameInMap("TrainingSetConfig")
     public ExportModelFeatureTrainingSetTableRequestTrainingSetConfig trainingSetConfig;
 
@@ -43,6 +46,14 @@ public class ExportModelFeatureTrainingSetTableRequest extends TeaModel {
     }
     public Long getRealTimeIterateInterval() {
         return this.realTimeIterateInterval;
+    }
+
+    public ExportModelFeatureTrainingSetTableRequest setRealTimePartitionCountValue(Long realTimePartitionCountValue) {
+        this.realTimePartitionCountValue = realTimePartitionCountValue;
+        return this;
+    }
+    public Long getRealTimePartitionCountValue() {
+        return this.realTimePartitionCountValue;
     }
 
     public ExportModelFeatureTrainingSetTableRequest setTrainingSetConfig(ExportModelFeatureTrainingSetTableRequestTrainingSetConfig trainingSetConfig) {

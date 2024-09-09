@@ -28,53 +28,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>切换生效的热点数据的版本。</p>
-     * 
-     * @param request ChangeProjectFeatureEntityHotIdVersionRequest
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return ChangeProjectFeatureEntityHotIdVersionResponse
-     */
-    public ChangeProjectFeatureEntityHotIdVersionResponse changeProjectFeatureEntityHotIdVersionWithOptions(String InstanceId, String ProjectId, String FeatureEntityName, ChangeProjectFeatureEntityHotIdVersionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
-            body.put("Version", request.version);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ChangeProjectFeatureEntityHotIdVersion"),
-            new TeaPair("version", "2023-06-21"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v1/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceId) + "/projects/" + com.aliyun.openapiutil.Client.getEncodeParam(ProjectId) + "/featureentities/" + com.aliyun.openapiutil.Client.getEncodeParam(FeatureEntityName) + "/action/changehotidversion"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeProjectFeatureEntityHotIdVersionResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>切换生效的热点数据的版本。</p>
-     * 
-     * @param request ChangeProjectFeatureEntityHotIdVersionRequest
-     * @return ChangeProjectFeatureEntityHotIdVersionResponse
-     */
-    public ChangeProjectFeatureEntityHotIdVersionResponse changeProjectFeatureEntityHotIdVersion(String InstanceId, String ProjectId, String FeatureEntityName, ChangeProjectFeatureEntityHotIdVersionRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.changeProjectFeatureEntityHotIdVersionWithOptions(InstanceId, ProjectId, FeatureEntityName, request, headers, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>检测资源连接状态。</p>
      * 
      * @param request CheckInstanceDatasourceRequest
@@ -461,6 +414,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.features)) {
             body.put("Features", request.features);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.labelPriorityLevel)) {
+            body.put("LabelPriorityLevel", request.labelPriorityLevel);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.labelTableId)) {
@@ -954,6 +911,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("RealTimeIterateInterval", request.realTimeIterateInterval);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.realTimePartitionCountValue)) {
+            body.put("RealTimePartitionCountValue", request.realTimePartitionCountValue);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.trainingSetConfig)) {
             body.put("TrainingSetConfig", request.trainingSetConfig);
         }
@@ -1394,117 +1355,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getProjectFeatureEntityWithOptions(InstanceId, ProjectId, FeatureEntityName, headers, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>获取项目下，指定特征实体指定的热点数据。</p>
-     * 
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return GetProjectFeatureEntityHotIdsResponse
-     */
-    public GetProjectFeatureEntityHotIdsResponse getProjectFeatureEntityHotIdsWithOptions(String InstanceId, String ProjectId, String NextSeqNumber, String FeatureEntityName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetProjectFeatureEntityHotIds"),
-            new TeaPair("version", "2023-06-21"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v1/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceId) + "/projects/" + com.aliyun.openapiutil.Client.getEncodeParam(ProjectId) + "/featureentities/" + com.aliyun.openapiutil.Client.getEncodeParam(FeatureEntityName) + "/hotids/" + com.aliyun.openapiutil.Client.getEncodeParam(NextSeqNumber) + ""),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetProjectFeatureEntityHotIdsResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>获取项目下，指定特征实体指定的热点数据。</p>
-     * @return GetProjectFeatureEntityHotIdsResponse
-     */
-    public GetProjectFeatureEntityHotIdsResponse getProjectFeatureEntityHotIds(String InstanceId, String ProjectId, String NextSeqNumber, String FeatureEntityName) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getProjectFeatureEntityHotIdsWithOptions(InstanceId, ProjectId, NextSeqNumber, FeatureEntityName, headers, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>获取项目下特征视图详细信息。</p>
-     * 
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return GetProjectFeatureViewResponse
-     */
-    public GetProjectFeatureViewResponse getProjectFeatureViewWithOptions(String InstanceId, String ProjectId, String FeatureViewName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetProjectFeatureView"),
-            new TeaPair("version", "2023-06-21"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v1/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceId) + "/projects/" + com.aliyun.openapiutil.Client.getEncodeParam(ProjectId) + "/featureviews/" + com.aliyun.openapiutil.Client.getEncodeParam(FeatureViewName) + ""),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetProjectFeatureViewResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>获取项目下特征视图详细信息。</p>
-     * @return GetProjectFeatureViewResponse
-     */
-    public GetProjectFeatureViewResponse getProjectFeatureView(String InstanceId, String ProjectId, String FeatureViewName) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getProjectFeatureViewWithOptions(InstanceId, ProjectId, FeatureViewName, headers, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>获取项目下指定模型特征的详细信息。</p>
-     * 
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return GetProjectModelFeatureResponse
-     */
-    public GetProjectModelFeatureResponse getProjectModelFeatureWithOptions(String InstanceId, String ProjectId, String ModelFeatureName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetProjectModelFeature"),
-            new TeaPair("version", "2023-06-21"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v1/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceId) + "/projects/" + com.aliyun.openapiutil.Client.getEncodeParam(ProjectId) + "/modelfeatures/" + com.aliyun.openapiutil.Client.getEncodeParam(ModelFeatureName) + ""),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetProjectModelFeatureResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>获取项目下指定模型特征的详细信息。</p>
-     * @return GetProjectModelFeatureResponse
-     */
-    public GetProjectModelFeatureResponse getProjectModelFeature(String InstanceId, String ProjectId, String ModelFeatureName) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getProjectModelFeatureWithOptions(InstanceId, ProjectId, ModelFeatureName, headers, runtime);
     }
 
     /**
@@ -2274,80 +2124,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取项目下特征视图的所有创建人。</p>
-     * 
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return ListProjectFeatureViewOwnersResponse
-     */
-    public ListProjectFeatureViewOwnersResponse listProjectFeatureViewOwnersWithOptions(String InstanceId, String ProjectId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListProjectFeatureViewOwners"),
-            new TeaPair("version", "2023-06-21"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v1/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceId) + "/projects/" + com.aliyun.openapiutil.Client.getEncodeParam(ProjectId) + "/featureviewowners"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProjectFeatureViewOwnersResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>获取项目下特征视图的所有创建人。</p>
-     * @return ListProjectFeatureViewOwnersResponse
-     */
-    public ListProjectFeatureViewOwnersResponse listProjectFeatureViewOwners(String InstanceId, String ProjectId) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listProjectFeatureViewOwnersWithOptions(InstanceId, ProjectId, headers, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>获取项目下特征视图的所有标签。</p>
-     * 
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return ListProjectFeatureViewTagsResponse
-     */
-    public ListProjectFeatureViewTagsResponse listProjectFeatureViewTagsWithOptions(String InstanceId, String ProjectId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListProjectFeatureViewTags"),
-            new TeaPair("version", "2023-06-21"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v1/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceId) + "/projects/" + com.aliyun.openapiutil.Client.getEncodeParam(ProjectId) + "/featureviewtags"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProjectFeatureViewTagsResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>获取项目下特征视图的所有标签。</p>
-     * @return ListProjectFeatureViewTagsResponse
-     */
-    public ListProjectFeatureViewTagsResponse listProjectFeatureViewTags(String InstanceId, String ProjectId) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listProjectFeatureViewTagsWithOptions(InstanceId, ProjectId, headers, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>获取项目下的所有特征视图、特征信息。</p>
      * 
      * @param headers map
@@ -3034,56 +2810,5 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.writeFeatureViewTableWithOptions(InstanceId, FeatureViewId, request, headers, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>向指定项目下的特征实体写入热点数据。</p>
-     * 
-     * @param request WriteProjectFeatureEntityHotIdsRequest
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return WriteProjectFeatureEntityHotIdsResponse
-     */
-    public WriteProjectFeatureEntityHotIdsResponse writeProjectFeatureEntityHotIdsWithOptions(String InstanceId, String ProjectId, String FeatureEntityName, WriteProjectFeatureEntityHotIdsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.hotIds)) {
-            body.put("HotIds", request.hotIds);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
-            body.put("Version", request.version);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "WriteProjectFeatureEntityHotIds"),
-            new TeaPair("version", "2023-06-21"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v1/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceId) + "/projects/" + com.aliyun.openapiutil.Client.getEncodeParam(ProjectId) + "/featureentities/" + com.aliyun.openapiutil.Client.getEncodeParam(FeatureEntityName) + "/action/writehotids"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new WriteProjectFeatureEntityHotIdsResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>向指定项目下的特征实体写入热点数据。</p>
-     * 
-     * @param request WriteProjectFeatureEntityHotIdsRequest
-     * @return WriteProjectFeatureEntityHotIdsResponse
-     */
-    public WriteProjectFeatureEntityHotIdsResponse writeProjectFeatureEntityHotIds(String InstanceId, String ProjectId, String FeatureEntityName, WriteProjectFeatureEntityHotIdsRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.writeProjectFeatureEntityHotIdsWithOptions(InstanceId, ProjectId, FeatureEntityName, request, headers, runtime);
     }
 }

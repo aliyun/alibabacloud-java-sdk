@@ -11,6 +11,13 @@ public class CreateModelFeatureRequest extends TeaModel {
     public java.util.List<CreateModelFeatureRequestFeatures> features;
 
     /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
+    @NameInMap("LabelPriorityLevel")
+    public Long labelPriorityLevel;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +58,14 @@ public class CreateModelFeatureRequest extends TeaModel {
     }
     public java.util.List<CreateModelFeatureRequestFeatures> getFeatures() {
         return this.features;
+    }
+
+    public CreateModelFeatureRequest setLabelPriorityLevel(Long labelPriorityLevel) {
+        this.labelPriorityLevel = labelPriorityLevel;
+        return this;
+    }
+    public Long getLabelPriorityLevel() {
+        return this.labelPriorityLevel;
     }
 
     public CreateModelFeatureRequest setLabelTableId(String labelTableId) {
