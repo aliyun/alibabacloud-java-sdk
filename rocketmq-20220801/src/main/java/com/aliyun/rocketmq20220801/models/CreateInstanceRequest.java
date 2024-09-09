@@ -405,6 +405,12 @@ public class CreateInstanceRequest extends TeaModel {
     }
 
     public static class CreateInstanceRequestNetworkInfoVpcInfoVSwitches extends TeaModel {
+        /**
+         * <p>The ID of the vSwitch with which the instance is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-uf6gwtbn6etadpv*******</p>
+         */
         @NameInMap("vSwitchId")
         public String vSwitchId;
 
@@ -446,6 +452,9 @@ public class CreateInstanceRequest extends TeaModel {
         @Deprecated
         public String vSwitchId;
 
+        /**
+         * <p>The vSwitches.</p>
+         */
         @NameInMap("vSwitches")
         public java.util.List<CreateInstanceRequestNetworkInfoVpcInfoVSwitches> vSwitches;
 

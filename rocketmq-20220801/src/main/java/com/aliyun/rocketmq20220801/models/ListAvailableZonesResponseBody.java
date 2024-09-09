@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListAvailableZonesResponseBody extends TeaModel {
     /**
+     * <p>The error code returned if the call failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>Topic.NotFound</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The result data that is returned.</p>
+     */
     @NameInMap("data")
     public java.util.List<ListAvailableZonesResponseBodyData> data;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InstanceId</p>
      */
@@ -22,6 +29,8 @@ public class ListAvailableZonesResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>InstanceId</p>
      */
@@ -29,6 +38,8 @@ public class ListAvailableZonesResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +47,8 @@ public class ListAvailableZonesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter instanceId is mandatory for this action .</p>
      */
@@ -43,6 +56,8 @@ public class ListAvailableZonesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>AF9A8B10-C426-530F-A0DD-96320B39****</p>
      */
@@ -50,6 +65,8 @@ public class ListAvailableZonesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -127,6 +144,8 @@ public class ListAvailableZonesResponseBody extends TeaModel {
 
     public static class ListAvailableZonesResponseBodyData extends TeaModel {
         /**
+         * <p>The time when the zone was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-08-01 20:05:50</p>
          */
@@ -134,6 +153,8 @@ public class ListAvailableZonesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The time when the zone was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-08-01 20:05:50</p>
          */
@@ -141,6 +162,8 @@ public class ListAvailableZonesResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>The ID of the current zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-qingdao-b</p>
          */
@@ -148,6 +171,8 @@ public class ListAvailableZonesResponseBody extends TeaModel {
         public String zoneId;
 
         /**
+         * <p>The name of the current zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>ha-cn-t9b30w902vm_qrs</p>
          */

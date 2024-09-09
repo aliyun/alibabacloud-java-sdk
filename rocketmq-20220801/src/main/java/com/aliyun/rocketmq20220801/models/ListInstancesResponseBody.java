@@ -144,7 +144,12 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyDataListProductInfo extends TeaModel {
         /**
-         * <p>Whether to enable tracking capability. Non-serverless instances are enabled by default, and serverless instances are optional for users.</p>
+         * <p>Indicates whether the message trace feature is enabled. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>This parameter is not in use. By default, the message trace feature is enabled for ApsaraMQ for RocketMQ instances, regardless of whether this parameter is configured.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -220,7 +225,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String commodityCode;
 
         /**
-         * <p>The time when the instance was created.</p>
+         * <p>The time when the version of the instance was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-01 00:00:00</p>
@@ -279,7 +284,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String paymentType;
 
         /**
-         * <p>The product information of instance.</p>
+         * <p>The product information.</p>
          */
         @NameInMap("productInfo")
         public ListInstancesResponseBodyDataListProductInfo productInfo;
@@ -345,7 +350,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String serviceCode;
 
         /**
-         * <p>The time when the instance was started.</p>
+         * <p>The time when the instance was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-01 00:00:00</p>
@@ -594,7 +599,7 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyData extends TeaModel {
         /**
-         * <p>The paginated data.</p>
+         * <p>The pagination information.</p>
          */
         @NameInMap("list")
         public java.util.List<ListInstancesResponseBodyDataList> list;

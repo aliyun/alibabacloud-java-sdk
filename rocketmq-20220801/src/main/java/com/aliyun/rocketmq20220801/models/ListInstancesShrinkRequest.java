@@ -14,9 +14,9 @@ public class ListInstancesShrinkRequest extends TeaModel {
     public String filter;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * <p>Valid values: 1 to 100000000.</p>
-     * <p>If the value that you specify for this parameter is less than 1, the system uses 1 as the value. If the value that you specify for this parameter is greater than 100000000, the system uses 100000000 as the value.</p>
+     * <p>If you set this parameter to a value smaller than 1, the system uses 1 as the value. If you set this parameter to a value greater than 100000000, the system uses 100000000 as the value.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -25,9 +25,9 @@ public class ListInstancesShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on each page.</p>
-     * <p>Valid values: 10 to 200.</p>
-     * <p>If the value that you specify for this parameter is less than 10, the system uses 10 as the value. If the value that you specify for this parameter is greater than 200, the system uses 200 as the value.</p>
+     * <p>The number of entries per page.</p>
+     * <p>Value values: 10 to 200.</p>
+     * <p>If you set this parameter to a value smaller than 10, the system uses 10 as the value. If you set this parameter to a value greater than 200, the system uses 200 as the value.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -44,6 +44,15 @@ public class ListInstancesShrinkRequest extends TeaModel {
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The primary edition of the instance.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>standard: Standard Edition</li>
+     * <li>ultimate: Enterprise Platinum Edition</li>
+     * <li>professional: Professional Edition</li>
+     * </ul>
+     */
     @NameInMap("seriesCodes")
     public String seriesCodesShrink;
 

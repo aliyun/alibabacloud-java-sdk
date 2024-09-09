@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListTopicSubscriptionsResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>MissingInstanceId</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public java.util.List<ListTopicSubscriptionsResponseBodyData> data;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Topic</p>
      */
@@ -22,6 +29,8 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>instanceId</p>
      */
@@ -29,6 +38,8 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +47,8 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>The instance cannot be found.</p>
      */
@@ -43,6 +56,8 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>92A9BE4E-B794-50C8-979C-0456E4D32943</p>
      */
@@ -50,6 +65,8 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -126,10 +143,22 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
     }
 
     public static class ListTopicSubscriptionsResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether message consumption is consistent. Valid values:</p>
+         * <ul>
+         * <li>false: Unconsumed messages exist in the consumer group.</li>
+         * <li>true: No unconsumed message exists in the consumer group.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("consistency")
         public String consistency;
 
         /**
+         * <p>The consumer group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>CID-TEST</p>
          */
@@ -137,6 +166,8 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
         public String consumerGroupId;
 
         /**
+         * <p>The filter expression.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -146,6 +177,8 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
         public String filterExpression;
 
         /**
+         * <p>The type of the filter expression. Valid values: SQL, TAG, and UNSPECIFIED. The value SQL indicates that messages are filtered by using SQL expressions. The value TAG indicates that messages are filtered by using tags. The value UNSPECIFIED indicates that no filter expression type is specified.</p>
+         * 
          * <strong>example:</strong>
          * <p>SQL</p>
          */
@@ -153,6 +186,8 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
         public String filterExpressionType;
 
         /**
+         * <p>The consumption mode. Valid values: BROADCASTING and CLUSTERING.</p>
+         * 
          * <strong>example:</strong>
          * <p>BROADCASTING</p>
          */
@@ -160,6 +195,8 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
         public String messageModel;
 
         /**
+         * <p>The subscription status. Valid values: ONLINE and OFFLINE.</p>
+         * 
          * <strong>example:</strong>
          * <p>ONLINE</p>
          */
@@ -167,6 +204,8 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
         public String subscriptionStatus;
 
         /**
+         * <p>The topic name.</p>
+         * 
          * <strong>example:</strong>
          * <p>topic_test</p>
          */

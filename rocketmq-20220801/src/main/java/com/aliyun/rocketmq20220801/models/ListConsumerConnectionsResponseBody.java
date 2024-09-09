@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListConsumerConnectionsResponseBody extends TeaModel {
     /**
+     * <p>The returned error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>MissingPageNumber</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public ListConsumerConnectionsResponseBodyData data;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InstanceId</p>
      */
@@ -22,6 +29,8 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>instanceId</p>
      */
@@ -29,6 +38,8 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +47,8 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>The instance cannot be found.</p>
      */
@@ -43,6 +56,8 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>A3620115-6F1F-5CFB-AA3F-BBD4853B2EC4</p>
      */
@@ -50,6 +65,8 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -127,6 +144,8 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
 
     public static class ListConsumerConnectionsResponseBodyDataConnections extends TeaModel {
         /**
+         * <p>The ID of the client.</p>
+         * 
          * <strong>example:</strong>
          * <p>172.17.135.197@17392#1936705963#551717232#9873695589062458</p>
          */
@@ -134,6 +153,8 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
         public String clientId;
 
         /**
+         * <p>Host IP/Public IP</p>
+         * 
          * <strong>example:</strong>
          * <p>xx.xx.xx.xx</p>
          */
@@ -141,6 +162,8 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
         public String egressIp;
 
         /**
+         * <p>The <code>hostname</code> of the cloud-native box.</p>
+         * 
          * <strong>example:</strong>
          * <p>vos</p>
          */
@@ -148,6 +171,8 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
         public String hostname;
 
         /**
+         * <p>The language of the client.</p>
+         * 
          * <strong>example:</strong>
          * <p>java</p>
          */
@@ -155,6 +180,12 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
         public String language;
 
         /**
+         * <p>Consumption Mode</p>
+         * <ul>
+         * <li>BROADCASTING</li>
+         * <li>CLUSTERING</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>BROADCASTING</p>
          */
@@ -162,6 +193,8 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
         public String messageModel;
 
         /**
+         * <p>The version of the client.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.0</p>
          */
@@ -224,10 +257,15 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
     }
 
     public static class ListConsumerConnectionsResponseBodyData extends TeaModel {
+        /**
+         * <p>The client connection list</p>
+         */
         @NameInMap("connections")
         public java.util.List<ListConsumerConnectionsResponseBodyDataConnections> connections;
 
         /**
+         * <p>The consumer group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>CID-TEST</p>
          */
@@ -235,6 +273,8 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
         public String consumerGroupId;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rmq-cn-7e22ody****</p>
          */
@@ -242,6 +282,8 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The ID of the region in which the instance resides.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
