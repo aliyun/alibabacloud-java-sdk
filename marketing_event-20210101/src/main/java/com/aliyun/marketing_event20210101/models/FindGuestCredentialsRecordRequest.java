@@ -18,6 +18,12 @@ public class FindGuestCredentialsRecordRequest extends TeaModel {
     @NameInMap("DateTimeString")
     public String dateTimeString;
 
+    @NameInMap("EndDateTime")
+    public String endDateTime;
+
+    @NameInMap("StartDateTime")
+    public String startDateTime;
+
     public static FindGuestCredentialsRecordRequest build(java.util.Map<String, ?> map) throws Exception {
         FindGuestCredentialsRecordRequest self = new FindGuestCredentialsRecordRequest();
         return TeaModel.build(map, self);
@@ -37,6 +43,22 @@ public class FindGuestCredentialsRecordRequest extends TeaModel {
     }
     public String getDateTimeString() {
         return this.dateTimeString;
+    }
+
+    public FindGuestCredentialsRecordRequest setEndDateTime(String endDateTime) {
+        this.endDateTime = endDateTime;
+        return this;
+    }
+    public String getEndDateTime() {
+        return this.endDateTime;
+    }
+
+    public FindGuestCredentialsRecordRequest setStartDateTime(String startDateTime) {
+        this.startDateTime = startDateTime;
+        return this;
+    }
+    public String getStartDateTime() {
+        return this.startDateTime;
     }
 
 }

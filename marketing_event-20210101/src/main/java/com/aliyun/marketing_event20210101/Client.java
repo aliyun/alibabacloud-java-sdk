@@ -45,6 +45,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DateTimeString", request.dateTimeString);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.endDateTime)) {
+            query.put("EndDateTime", request.endDateTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDateTime)) {
+            query.put("StartDateTime", request.startDateTime);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -91,6 +99,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.dateTimeString)) {
             query.put("DateTimeString", request.dateTimeString);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDateTime)) {
+            query.put("EndDateTime", request.endDateTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDateTime)) {
+            query.put("StartDateTime", request.startDateTime);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
