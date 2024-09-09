@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>marketing_event20210101</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
   <name>marketing_event20210101</name>
   <description>Alibaba Cloud marketing_event (20210101) SDK for Java
