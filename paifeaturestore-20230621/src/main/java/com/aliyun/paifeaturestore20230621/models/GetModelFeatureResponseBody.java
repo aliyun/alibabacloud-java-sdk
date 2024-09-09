@@ -30,6 +30,13 @@ public class GetModelFeatureResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>0</p>
+     */
+    @NameInMap("LabelPriorityLevel")
+    public Long labelPriorityLevel;
+
+    /**
+     * <strong>example:</strong>
      * <p>3</p>
      */
     @NameInMap("LabelTableId")
@@ -129,6 +136,14 @@ public class GetModelFeatureResponseBody extends TeaModel {
     }
     public String getGmtModifiedTime() {
         return this.gmtModifiedTime;
+    }
+
+    public GetModelFeatureResponseBody setLabelPriorityLevel(Long labelPriorityLevel) {
+        this.labelPriorityLevel = labelPriorityLevel;
+        return this;
+    }
+    public Long getLabelPriorityLevel() {
+        return this.labelPriorityLevel;
     }
 
     public GetModelFeatureResponseBody setLabelTableId(String labelTableId) {
