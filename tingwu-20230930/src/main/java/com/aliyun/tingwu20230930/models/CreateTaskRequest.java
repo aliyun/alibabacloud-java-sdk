@@ -93,6 +93,9 @@ public class CreateTaskRequest extends TeaModel {
         @NameInMap("Format")
         public String format;
 
+        @NameInMap("LanguageHints")
+        public java.util.List<String> languageHints;
+
         @NameInMap("MultipleStreamsEnabled")
         public Boolean multipleStreamsEnabled;
 
@@ -147,6 +150,14 @@ public class CreateTaskRequest extends TeaModel {
         }
         public String getFormat() {
             return this.format;
+        }
+
+        public CreateTaskRequestInput setLanguageHints(java.util.List<String> languageHints) {
+            this.languageHints = languageHints;
+            return this;
+        }
+        public java.util.List<String> getLanguageHints() {
+            return this.languageHints;
         }
 
         public CreateTaskRequestInput setMultipleStreamsEnabled(Boolean multipleStreamsEnabled) {
