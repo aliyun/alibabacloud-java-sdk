@@ -83,6 +83,9 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("IoOptimized")
     public String ioOptimized;
 
+    @NameInMap("KeyPairName")
+    public String keyPairName;
+
     @NameInMap("Memory")
     public Integer memory;
 
@@ -326,6 +329,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     }
     public String getIoOptimized() {
         return this.ioOptimized;
+    }
+
+    public DescribeRCInstanceAttributeResponseBody setKeyPairName(String keyPairName) {
+        this.keyPairName = keyPairName;
+        return this;
+    }
+    public String getKeyPairName() {
+        return this.keyPairName;
     }
 
     public DescribeRCInstanceAttributeResponseBody setMemory(Integer memory) {

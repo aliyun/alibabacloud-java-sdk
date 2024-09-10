@@ -1623,8 +1623,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CopyDatabaseResponse copyDatabaseWithOptions(CopyDatabaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dstDBName)) {
+            query.put("DstDBName", request.dstDBName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reserveAccount)) {
+            query.put("ReserveAccount", request.reserveAccount);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
@@ -1637,6 +1649,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcDBName)) {
+            query.put("SrcDBName", request.srcDBName);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1801,6 +1817,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.accountType)) {
             query.put("AccountType", request.accountType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.checkPolicy)) {
+            query.put("CheckPolicy", request.checkPolicy);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
@@ -12963,7 +12983,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>事件中心事件列表</p>
+     * <p>Queries historical events in the event center.</p>
      * 
      * @param request DescribeHistoryEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13055,7 +13075,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>事件中心事件列表</p>
+     * <p>Queries historical events in the event center.</p>
      * 
      * @param request DescribeHistoryEventsRequest
      * @return DescribeHistoryEventsResponse
@@ -13067,7 +13087,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries event statistics in the event center.</p>
+     * <p>Queries the statistics of historical events in the event center.</p>
      * 
      * @param request DescribeHistoryEventsStatRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13115,7 +13135,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries event statistics in the event center.</p>
+     * <p>Queries the statistics of historical events in the event center.</p>
      * 
      * @param request DescribeHistoryEventsStatRequest
      * @return DescribeHistoryEventsStatResponse
@@ -13269,7 +13289,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>任务中心任务统计</p>
+     * <p>Collects tasks in the task center.</p>
      * 
      * @param request DescribeHistoryTasksStatRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13353,7 +13373,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>任务中心任务统计</p>
+     * <p>Collects tasks in the task center.</p>
      * 
      * @param request DescribeHistoryTasksStatRequest
      * @return DescribeHistoryTasksStatResponse
@@ -17311,21 +17331,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
-     * <li>MySQL<blockquote>
-     * <p>This operation is not supported for RDS instances that run MySQL 5.7 on RDS Basic Edition.</p>
-     * </blockquote>
-     * </li>
-     * <li>SQL Server<blockquote>
-     * <p>This operation is supported only for RDS instances that run SQL Server 2008 R2.</p>
-     * </blockquote>
-     * </li>
+     * <li>MySQL
+     * **
+     * <strong>Note</strong> This operation is not supported for RDS instances that run MySQL 5.7 on RDS Basic Edition.</li>
+     * <li>SQL Server
+     * **
+     * <strong>Note</strong> This operation is supported only for RDS instances that run SQL Server 2008 R2.</li>
      * <li>MariaDB</li>
      * </ul>
-     * <h3><a href="#"></a>Precautions</h3>
+     * <h3><a href="#"></a>Prerequisites</h3>
      * <ul>
      * <li>Slow query logs are not collected in real time and may show a latency of 6 to 8 hours.</li>
      * <li>If the return result is empty, check whether the StartTime and EndTime parameters are in UTC. If yes, no slow logs are generated within the specified time range.</li>
-     * <li>Starting from December 13, 2023, the optimized template algorithm is used for slow queries. As a result, different <strong>SQLHash</strong> values are generated for the same SQLText before and after optimization. For more information, see <a href="~~2637024~~">[Notice] Optimization of the template algorithm for slow queries</a>.</li>
+     * <li>Starting from September 01, 2024, the template algorithm for slow queries is optimized. When you call the operation, you must change the value of the <strong>SQLHASH</strong> parameter. For more information, see <a href="~~2845725~~">[Notice] Optimization of the template algorithm for slow queries</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -17403,21 +17421,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
-     * <li>MySQL<blockquote>
-     * <p>This operation is not supported for RDS instances that run MySQL 5.7 on RDS Basic Edition.</p>
-     * </blockquote>
-     * </li>
-     * <li>SQL Server<blockquote>
-     * <p>This operation is supported only for RDS instances that run SQL Server 2008 R2.</p>
-     * </blockquote>
-     * </li>
+     * <li>MySQL
+     * **
+     * <strong>Note</strong> This operation is not supported for RDS instances that run MySQL 5.7 on RDS Basic Edition.</li>
+     * <li>SQL Server
+     * **
+     * <strong>Note</strong> This operation is supported only for RDS instances that run SQL Server 2008 R2.</li>
      * <li>MariaDB</li>
      * </ul>
-     * <h3><a href="#"></a>Precautions</h3>
+     * <h3><a href="#"></a>Prerequisites</h3>
      * <ul>
      * <li>Slow query logs are not collected in real time and may show a latency of 6 to 8 hours.</li>
      * <li>If the return result is empty, check whether the StartTime and EndTime parameters are in UTC. If yes, no slow logs are generated within the specified time range.</li>
-     * <li>Starting from December 13, 2023, the optimized template algorithm is used for slow queries. As a result, different <strong>SQLHash</strong> values are generated for the same SQLText before and after optimization. For more information, see <a href="~~2637024~~">[Notice] Optimization of the template algorithm for slow queries</a>.</li>
+     * <li>Starting from September 01, 2024, the template algorithm for slow queries is optimized. When you call the operation, you must change the value of the <strong>SQLHASH</strong> parameter. For more information, see <a href="~~2845725~~">[Notice] Optimization of the template algorithm for slow queries</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -17884,7 +17900,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of VSwitch that are available in a virtual private cloud (VPC).</p>
+     * <p>Queries the details of vSwitch that are available in a virtual private cloud (VPC).</p>
      * 
      * @param request DescribeVSwitchesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17969,7 +17985,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of VSwitch that are available in a virtual private cloud (VPC).</p>
+     * <p>Queries the details of vSwitch that are available in a virtual private cloud (VPC).</p>
      * 
      * @param request DescribeVSwitchesRequest
      * @return DescribeVSwitchesResponse
@@ -19734,6 +19750,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改账号检查策略</p>
+     * 
+     * @param request ModifyAccountCheckPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyAccountCheckPolicyResponse
+     */
+    public ModifyAccountCheckPolicyResponse modifyAccountCheckPolicyWithOptions(ModifyAccountCheckPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountName)) {
+            query.put("AccountName", request.accountName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.checkPolicy)) {
+            query.put("CheckPolicy", request.checkPolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyAccountCheckPolicy"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyAccountCheckPolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改账号检查策略</p>
+     * 
+     * @param request ModifyAccountCheckPolicyRequest
+     * @return ModifyAccountCheckPolicyResponse
+     */
+    public ModifyAccountCheckPolicyResponse modifyAccountCheckPolicy(ModifyAccountCheckPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyAccountCheckPolicyWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
@@ -19885,6 +19977,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyAccountMaskingPrivilegeResponse modifyAccountMaskingPrivilege(ModifyAccountMaskingPrivilegeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyAccountMaskingPrivilegeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改密码策略</p>
+     * 
+     * @param request ModifyAccountSecurityPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyAccountSecurityPolicyResponse
+     */
+    public ModifyAccountSecurityPolicyResponse modifyAccountSecurityPolicyWithOptions(ModifyAccountSecurityPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupPolicy)) {
+            query.put("GroupPolicy", request.groupPolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyAccountSecurityPolicy"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyAccountSecurityPolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改密码策略</p>
+     * 
+     * @param request ModifyAccountSecurityPolicyRequest
+     * @return ModifyAccountSecurityPolicyResponse
+     */
+    public ModifyAccountSecurityPolicyResponse modifyAccountSecurityPolicy(ModifyAccountSecurityPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyAccountSecurityPolicyWithOptions(request, runtime);
     }
 
     /**
@@ -22213,6 +22377,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allowMajorVersionUpgrade)) {
+            query.put("AllowMajorVersionUpgrade", request.allowMajorVersionUpgrade);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.autoUseCoupon)) {
             query.put("AutoUseCoupon", request.autoUseCoupon);
         }
@@ -22309,8 +22477,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("UsedTime", request.usedTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
+            query.put("VSwitchId", request.vSwitchId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
             query.put("ZoneId", request.zoneId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneIdSlave1)) {
+            query.put("ZoneIdSlave1", request.zoneIdSlave1);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -23473,7 +23649,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>事件中心修改事件信息</p>
+     * <p>Modifies information about the events in the event center.</p>
      * 
      * @param request ModifyEventInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23521,7 +23697,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>事件中心修改事件信息</p>
+     * <p>Modifies information about the events in the event center.</p>
      * 
      * @param request ModifyEventInfoRequest
      * @return ModifyEventInfoResponse
@@ -25207,7 +25383,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the task information in the task center.</p>
+     * <p>Modifies information about the historical tasks in the task center.</p>
      * 
      * @param request ModifyTaskInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -25267,7 +25443,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the task information in the task center.</p>
+     * <p>Modifies information about the historical tasks in the task center.</p>
      * 
      * @param request ModifyTaskInfoRequest
      * @return ModifyTaskInfoResponse
@@ -26980,16 +27156,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> Before restoration, you can call the <a href="https://help.aliyun.com/document_detail/121721.html">CheckCreateDdrDBInstance</a> operation to check whether a cross-region backup set can be used for cross-region restoration.</p>
+     * <p> Before restoration, you can call the CheckCreateDdrDBInstance operation to check whether a cross-region backup set can be used for cross-region restoration.</p>
      * </blockquote>
-     * <h3><a href="#"></a>Supported database engine</h3>
+     * <h3><a href="#"></a>Supported database engines</h3>
      * <p>MySQL</p>
      * <h3><a href="#"></a>References</h3>
      * <blockquote>
-     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/120824.html">Back up an ApsaraDB RDS for MySQL instance across regions</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/120824.html">Use the cross-region backup feature for an ApsaraDB RDS for MySQL instance</a></li>
      * <li><a href="https://help.aliyun.com/document_detail/120875.html">Restore the data of an ApsaraDB RDS for MySQL instance across regions</a></li>
      * </ul>
      * 
@@ -27075,16 +27251,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> Before restoration, you can call the <a href="https://help.aliyun.com/document_detail/121721.html">CheckCreateDdrDBInstance</a> operation to check whether a cross-region backup set can be used for cross-region restoration.</p>
+     * <p> Before restoration, you can call the CheckCreateDdrDBInstance operation to check whether a cross-region backup set can be used for cross-region restoration.</p>
      * </blockquote>
-     * <h3><a href="#"></a>Supported database engine</h3>
+     * <h3><a href="#"></a>Supported database engines</h3>
      * <p>MySQL</p>
      * <h3><a href="#"></a>References</h3>
      * <blockquote>
-     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/120824.html">Back up an ApsaraDB RDS for MySQL instance across regions</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/120824.html">Use the cross-region backup feature for an ApsaraDB RDS for MySQL instance</a></li>
      * <li><a href="https://help.aliyun.com/document_detail/120875.html">Restore the data of an ApsaraDB RDS for MySQL instance across regions</a></li>
      * </ul>
      * 
@@ -27442,6 +27618,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {

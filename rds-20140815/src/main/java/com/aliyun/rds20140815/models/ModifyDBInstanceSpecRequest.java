@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceSpecRequest extends TeaModel {
+    @NameInMap("AllowMajorVersionUpgrade")
+    public Boolean allowMajorVersionUpgrade;
+
     /**
      * <p>Specifies whether to use vouchers to offset fees. Valid values:</p>
      * <ul>
@@ -282,6 +285,9 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
     @NameInMap("UsedTime")
     public Long usedTime;
 
+    @NameInMap("VSwitchId")
+    public String vSwitchId;
+
     /**
      * <p>The RDS edition of the instance. Valid values:</p>
      * <ul>
@@ -300,9 +306,20 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
     @NameInMap("ZoneId")
     public String zoneId;
 
+    @NameInMap("ZoneIdSlave1")
+    public String zoneIdSlave1;
+
     public static ModifyDBInstanceSpecRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceSpecRequest self = new ModifyDBInstanceSpecRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDBInstanceSpecRequest setAllowMajorVersionUpgrade(Boolean allowMajorVersionUpgrade) {
+        this.allowMajorVersionUpgrade = allowMajorVersionUpgrade;
+        return this;
+    }
+    public Boolean getAllowMajorVersionUpgrade() {
+        return this.allowMajorVersionUpgrade;
     }
 
     public ModifyDBInstanceSpecRequest setAutoUseCoupon(Boolean autoUseCoupon) {
@@ -497,12 +514,28 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
         return this.usedTime;
     }
 
+    public ModifyDBInstanceSpecRequest setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
+        return this;
+    }
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
     public ModifyDBInstanceSpecRequest setZoneId(String zoneId) {
         this.zoneId = zoneId;
         return this;
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public ModifyDBInstanceSpecRequest setZoneIdSlave1(String zoneIdSlave1) {
+        this.zoneIdSlave1 = zoneIdSlave1;
+        return this;
+    }
+    public String getZoneIdSlave1() {
+        return this.zoneIdSlave1;
     }
 
     public static class ModifyDBInstanceSpecRequestServerlessConfiguration extends TeaModel {

@@ -81,6 +81,9 @@ public class CreateAccountRequest extends TeaModel {
     @NameInMap("AccountType")
     public String accountType;
 
+    @NameInMap("CheckPolicy")
+    public Boolean checkPolicy;
+
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
@@ -138,6 +141,14 @@ public class CreateAccountRequest extends TeaModel {
     }
     public String getAccountType() {
         return this.accountType;
+    }
+
+    public CreateAccountRequest setCheckPolicy(Boolean checkPolicy) {
+        this.checkPolicy = checkPolicy;
+        return this;
+    }
+    public Boolean getCheckPolicy() {
+        return this.checkPolicy;
     }
 
     public CreateAccountRequest setDBInstanceId(String DBInstanceId) {

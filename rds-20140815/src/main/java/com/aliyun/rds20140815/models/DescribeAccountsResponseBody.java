@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountsResponseBody extends TeaModel {
     /**
-     * <p>The details about the account.</p>
+     * <p>The details of the account.</p>
      */
     @NameInMap("Accounts")
     public DescribeAccountsResponseBodyAccounts accounts;
@@ -265,6 +265,9 @@ public class DescribeAccountsResponseBody extends TeaModel {
         @NameInMap("BypassRLS")
         public String bypassRLS;
 
+        @NameInMap("CheckPolicy")
+        public Boolean checkPolicy;
+
         /**
          * <p>Indicates whether the account has the permissions to create databases. Valid values:</p>
          * <ul>
@@ -311,6 +314,9 @@ public class DescribeAccountsResponseBody extends TeaModel {
          */
         @NameInMap("DatabasePrivileges")
         public DescribeAccountsResponseBodyAccountsDBInstanceAccountDatabasePrivileges databasePrivileges;
+
+        @NameInMap("PasswordExpireTime")
+        public String passwordExpireTime;
 
         /**
          * <p>Indicates whether the number of databases that are managed by the account exceeds the upper limit. Valid values:</p>
@@ -403,6 +409,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
             return this.bypassRLS;
         }
 
+        public DescribeAccountsResponseBodyAccountsDBInstanceAccount setCheckPolicy(Boolean checkPolicy) {
+            this.checkPolicy = checkPolicy;
+            return this;
+        }
+        public Boolean getCheckPolicy() {
+            return this.checkPolicy;
+        }
+
         public DescribeAccountsResponseBodyAccountsDBInstanceAccount setCreateDB(String createDB) {
             this.createDB = createDB;
             return this;
@@ -433,6 +447,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
         public DescribeAccountsResponseBodyAccountsDBInstanceAccountDatabasePrivileges getDatabasePrivileges() {
             return this.databasePrivileges;
+        }
+
+        public DescribeAccountsResponseBodyAccountsDBInstanceAccount setPasswordExpireTime(String passwordExpireTime) {
+            this.passwordExpireTime = passwordExpireTime;
+            return this;
+        }
+        public String getPasswordExpireTime() {
+            return this.passwordExpireTime;
         }
 
         public DescribeAccountsResponseBodyAccountsDBInstanceAccount setPrivExceeded(String privExceeded) {
