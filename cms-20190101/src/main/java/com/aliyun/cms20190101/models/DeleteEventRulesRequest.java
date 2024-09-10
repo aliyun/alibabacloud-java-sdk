@@ -4,6 +4,12 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteEventRulesRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rule1</p>
+     */
     @NameInMap("RuleNames")
     public java.util.List<String> ruleNames;
 

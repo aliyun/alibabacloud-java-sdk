@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class DeleteGroupMonitoringAgentProcessRequest extends TeaModel {
     /**
      * <p>The ID of the application group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The ID of the process monitoring task.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>48F83746-C817-478C-9B06-7158F56B****</p>
      */
     @NameInMap("Id")
     public String id;

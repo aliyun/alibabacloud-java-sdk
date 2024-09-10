@@ -6,34 +6,47 @@ import com.aliyun.tea.*;
 public class DescribeHostAvailabilityListRequest extends TeaModel {
     /**
      * <p>The ID of the application group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
 
     /**
      * <p>The ID of the availability monitoring task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The IDs of the availability monitoring tasks. Separate multiple IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456,345678</p>
      */
     @NameInMap("Ids")
     public String ids;
 
     /**
-     * <p>The number of the page to return.</p>
-     * <br>
+     * <p>The page number.</p>
      * <p>Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>Default value: 10.</p>
+     * <p>The number of entries per page.</p>
+     * <p>Minimum value: 1. Default value: 10</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -43,6 +56,9 @@ public class DescribeHostAvailabilityListRequest extends TeaModel {
 
     /**
      * <p>The name of the availability monitoring task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs_instance</p>
      */
     @NameInMap("TaskName")
     public String taskName;

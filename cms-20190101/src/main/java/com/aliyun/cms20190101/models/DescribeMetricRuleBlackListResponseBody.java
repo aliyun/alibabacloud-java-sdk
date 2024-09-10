@@ -5,43 +5,54 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
     /**
-     * <p>The categories of the Alibaba Cloud service. For example, ApsaraDB for Redis includes the following categories: ApsaraDB for Redis (standard architecture), ApsaraDB for Redis (cluster architecture), and ApsaraDB for Redis (read/write splitting architecture). In this case, the valid values of this parameter for ApsaraDB for Redis include `kvstore_standard`, `kvstore_sharding`, and `kvstore_splitrw`.</p>
+     * <p>The categories of the Alibaba Cloud service. For example, ApsaraDB for Redis includes the following categories: ApsaraDB for Redis (standard architecture), ApsaraDB for Redis (cluster architecture), and ApsaraDB for Redis (read/write splitting architecture). In this case, the valid values of this parameter for ApsaraDB for Redis include <code>kvstore_standard</code>, <code>kvstore_sharding</code>, and <code>kvstore_splitrw</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The timestamp when the blacklist policy started to take effect.</p>
-     * <br>
-     * <p>Unit: milliseconds.</p>
+     * <p>The queried blacklist policies.</p>
      */
     @NameInMap("DescribeMetricRuleBlackList")
     public java.util.List<DescribeMetricRuleBlackListResponseBodyDescribeMetricRuleBlackList> describeMetricRuleBlackList;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The Request is not authorization.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The namespace of the cloud service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D63E76CB-29AA-5B9F-88CE-400A6F28D428</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The namespace of the cloud service.</p>
-     * <br>
-     * <p>For more information about the namespaces of different cloud services, see [Appendix 1: Metrics](~~163515~~).</p>
+     * <p>For more information about the namespaces of different cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The timestamp when the blacklist policy was created.</p>
-     * <br>
      * <p>Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -101,13 +112,19 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
 
     public static class DescribeMetricRuleBlackListResponseBodyDescribeMetricRuleBlackListMetrics extends TeaModel {
         /**
-         * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+         * <p>The metric name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>disk_utilization</p>
          */
         @NameInMap("MetricName")
         public String metricName;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The extended dimension of the instance. For example, <code>{&quot;device&quot;:&quot;C:&quot;}</code> specifies that the blacklist policy is applied to all C disks of the specified Elastic Compute Service (ECS) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;device&quot;:&quot;C:&quot;}]</p>
          */
         @NameInMap("Resource")
         public String resource;
@@ -137,93 +154,130 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
 
     public static class DescribeMetricRuleBlackListResponseBodyDescribeMetricRuleBlackList extends TeaModel {
         /**
-         * <p>The name of the blacklist policy.</p>
+         * <p>The category of the cloud service. For example, ApsaraDB for Redis includes the following categories: ApsaraDB for Redis (standard architecture), ApsaraDB for Redis (cluster architecture), and ApsaraDB for Redis (read/write splitting architecture). In this case, the valid values of this parameter for ApsaraDB for Redis include <code>kvstore_standard</code>, <code>kvstore_sharding</code>, and <code>kvstore_splitrw</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
-         * <p>The metrics of the instance.</p>
+         * <p>The timestamp when the blacklist policy was created.</p>
+         * <p>Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1665714561000</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The extended dimension of the instance. For example, `{"device":"C:"}` specifies that the blacklist policy is applied to all C disks of the specified Elastic Compute Service (ECS) instance.</p>
+         * <p>The time range within which the blacklist policy is effective.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00-23:59</p>
          */
         @NameInMap("EffectiveTime")
         public String effectiveTime;
 
         /**
-         * <p>The number of entries to return on each page.</p>
-         * <br>
-         * <p>Default value: 10.</p>
+         * <p>The timestamp when the blacklist policy started to take effect.</p>
+         * <p>Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1640608200000</p>
          */
         @NameInMap("EnableEndTime")
         public Long enableEndTime;
 
         /**
-         * <p>The ID of the application group. The value of this parameter is a JSON array.</p>
-         * <br>
-         * <p>>  This parameter is returned only if the `ScopeType` parameter is set to `GROUP`.</p>
+         * <p>The timestamp when the blacklist policy expired.</p>
+         * <p>Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1640237400000</p>
          */
         @NameInMap("EnableStartTime")
         public Long enableStartTime;
 
         /**
-         * <p>The timestamp when the blacklist policy was modified.</p>
-         * <br>
-         * <p>Unit: milliseconds.</p>
+         * <p>The ID of the blacklist policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93514c96-ceb8-47d8-8ee3-93b6d98b****</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The IDs of the instances that belong to the specified cloud service.</p>
+         */
         @NameInMap("Instances")
         public java.util.List<String> instances;
 
         /**
-         * <p>The total number of blacklist policies.</p>
+         * <p>The status of the blacklist policy. Valid values:</p>
+         * <ul>
+         * <li>true: The blacklist policy is enabled.</li>
+         * <li>false: The blacklist policy is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsEnable")
         public Boolean isEnable;
 
         /**
-         * <p>The method that is used to sort query results by time. Valid values:</p>
-         * <br>
-         * <p>*   DESC (default): descending order</p>
-         * <p>*   ASC: ascending order</p>
+         * <p>The metrics of the instance.</p>
          */
         @NameInMap("Metrics")
         public java.util.List<DescribeMetricRuleBlackListResponseBodyDescribeMetricRuleBlackListMetrics> metrics;
 
         /**
-         * <p>The status of the blacklist policy. Valid values:</p>
-         * <br>
-         * <p>*   true: The blacklist policy is enabled.</p>
-         * <p>*   false: The blacklist policy is disabled.</p>
+         * <p>The name of the blacklist policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Blacklist-01</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The number of the page to return.</p>
-         * <br>
-         * <p>Default value: 1.</p>
+         * <p>The namespace of the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs_ecs_dashboard</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
-         * <p>The IDs of instances that belong to the specified cloud service.</p>
+         * <p>The effective scope of the blacklist policy. Valid values:</p>
+         * <ul>
+         * <li>USER: The blacklist policy takes effect only within the current Alibaba Cloud account.</li>
+         * <li>GROUP: The blacklist policy takes effect only within the specified application group.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>USER</p>
          */
         @NameInMap("ScopeType")
         public String scopeType;
 
+        /**
+         * <p>The IDs of the application groups.</p>
+         */
         @NameInMap("ScopeValue")
         public java.util.List<String> scopeValue;
 
         /**
-         * <p>The ID of the blacklist policy.</p>
+         * <p>The timestamp when the blacklist policy was modified.</p>
+         * <p>Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1665718373000</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

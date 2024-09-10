@@ -6,26 +6,39 @@ import com.aliyun.tea.*;
 public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
     /**
      * <p>The HTTP status codes.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the request was successful.</p>
+     * <blockquote>
+     * <p> The status code 200 indicates that the request was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The Request is not authorization.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The page number. Default value: 1</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
      * <p>The number of entries per page. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
@@ -38,18 +51,27 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7985D471-3FA8-4EE9-8F4B-45C19DF3D36F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values: Valid values: true and false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>28</p>
      */
     @NameInMap("Total")
     public String total;
@@ -125,29 +147,39 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
 
     public static class DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfigTargetListTarget extends TeaModel {
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the resource. Format: acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message. Example: acs:mns:cn-hangzhou:120886317861\*\*\*\*:/queues/test123/message. Fields:</p>
-         * <br>
-         * <p>{Service name abbreviation}: the abbreviation of the service name. Valid value: mns. {userId}: the ID of the Alibaba Cloud account. {regionId}: the region ID of the message queue or topic. {Resource type}: the type of the resource that triggers the alert. Valid values: - **queues** - **topics** - {Resource name}: the resource name. - If the resource type is set to **queues**, the resource name is the name of the message queue. - If the resource type is set to **topics**, the resource name is the name of the topic.</p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the resource. Format: acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message. Example: acs:mns:cn-hangzhou:120886317861\<em>\</em>\<em>\</em>:/queues/test123/message. Fields:</p>
+         * <p>{Service name abbreviation}: the abbreviation of the service name. Valid value: mns. {userId}: the ID of the Alibaba Cloud account. {regionId}: the region ID of the message queue or topic. {Resource type}: the type of the resource that triggers the alert. Valid values: - <strong>queues</strong> - <strong>topics</strong> - {Resource name}: the resource name. - If the resource type is set to <strong>queues</strong>, the resource name is the name of the message queue. - If the resource type is set to <strong>topics</strong>, the resource name is the name of the topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:mns:cn-hangzhou:120886317861****:/queues/test/message</p>
          */
         @NameInMap("Arn")
         public String arn;
 
         /**
          * <p>The ID of the resource for which alerts are triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The parameters of the alert callback. The parameters are in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;customField1&quot;:&quot;value1&quot;,&quot;customField2&quot;:&quot;$.name&quot;}</p>
          */
         @NameInMap("JsonParmas")
         public String jsonParmas;
 
         /**
          * <p>The level of the alert. Valid values:</p>
-         * <br>
          * <p>INFO WARN CRITICAL</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CRITICAL</p>
          */
         @NameInMap("Level")
         public String level;
@@ -213,54 +245,75 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
     public static class DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfig extends TeaModel {
         /**
          * <p>The comparison operator that is used to compare the metric value with the threshold. Valid values:</p>
-         * <br>
-         * <p>*   GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
-         * <p>*   GreaterThanThreshold: greater than the threshold</p>
-         * <p>*   LessThanOrEqualToThreshold: less than or equal to the threshold</p>
-         * <p>*   LessThanThreshold: less than the threshold</p>
-         * <p>*   NotEqualToThreshold: not equal to the threshold</p>
-         * <p>*   GreaterThanYesterday: greater than the metric value at the same time yesterday.</p>
-         * <p>*   LessThanYesterday: less than the metric value at the same time yesterday</p>
-         * <p>*   GreaterThanLastWeek: greater than the metric value at the same time last week</p>
-         * <p>*   LessThanLastWeek: less than the metric value at the same time last week</p>
-         * <p>*   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
-         * <p>*   LessThanLastPeriod: less than the metric value in the last monitoring cycle</p>
+         * <ul>
+         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
+         * <li>GreaterThanThreshold: greater than the threshold</li>
+         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
+         * <li>LessThanThreshold: less than the threshold</li>
+         * <li>NotEqualToThreshold: not equal to the threshold</li>
+         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday.</li>
+         * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
+         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
+         * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
+         * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
+         * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GreaterThanOrEqualToThreshold</p>
          */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
         /**
          * <p>The time period during which the alert rule is effective.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00-23:59</p>
          */
         @NameInMap("EffectiveInterval")
         public String effectiveInterval;
 
         /**
          * <p>The level of the alert. Valid values:</p>
-         * <br>
-         * <p>*   critical</p>
-         * <p>*   warn</p>
-         * <p>*   Info</p>
+         * <ul>
+         * <li>critical</li>
+         * <li>warn</li>
+         * <li>Info</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>warn</p>
          */
         @NameInMap("EscalationsLevel")
         public String escalationsLevel;
 
         /**
          * <p>The time period during which the alert rule is ineffective.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00-23:59</p>
          */
         @NameInMap("NoEffectiveInterval")
         public String noEffectiveInterval;
 
         /**
          * <p>The mute period during which new alert notifications are not sent even if the trigger conditions are met. Unit: seconds. Minimum value: 3600, which is equivalent to one hour. Default value: 86400, which is equivalent to one day.</p>
-         * <br>
-         * <p>>  Only one alert notification is sent during each mute period even if the metric value exceeds the alert threshold several times.</p>
+         * <blockquote>
+         * <p> Only one alert notification is sent during each mute period even if the metric value exceeds the alert threshold several times.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
          */
         @NameInMap("SilenceTime")
         public String silenceTime;
 
         /**
          * <p>The method used to calculate metric values that trigger alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Average</p>
          */
         @NameInMap("Statistics")
         public String statistics;
@@ -273,20 +326,30 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
 
         /**
          * <p>The alert threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("Threshold")
         public String threshold;
 
         /**
          * <p>The number of times for which the threshold can be consecutively exceeded.</p>
-         * <br>
-         * <p>>  A metric triggers an alert only after the metric value reaches the threshold consecutively for the specified times.</p>
+         * <blockquote>
+         * <p> A metric triggers an alert only after the metric value reaches the threshold consecutively for the specified times.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Times")
         public String times;
 
         /**
          * <p>The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>
          */
         @NameInMap("Webhook")
         public String webhook;
@@ -400,29 +463,41 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
     public static class DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpressMatchExpress extends TeaModel {
         /**
          * <p>The matching condition. Valid values:</p>
-         * <br>
-         * <p>*   all (default): matches all</p>
-         * <p>*   startWith: starts with a prefix</p>
-         * <p>*   endWith: ends with a suffix</p>
-         * <p>*   contains: contains</p>
-         * <p>*   notContains: excludes</p>
-         * <p>*   equals: equals</p>
-         * <br>
-         * <p>>  The matched instances are monitored by the process monitoring task.</p>
+         * <ul>
+         * <li>all (default): matches all</li>
+         * <li>startWith: starts with a prefix</li>
+         * <li>endWith: ends with a suffix</li>
+         * <li>contains: contains</li>
+         * <li>notContains: excludes</li>
+         * <li>equals: equals</li>
+         * </ul>
+         * <blockquote>
+         * <p> The matched instances are monitored by the process monitoring task.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         @NameInMap("Function")
         public String function;
 
         /**
          * <p>The criteria based on which the instances are matched.</p>
-         * <br>
-         * <p>>  Set the value to `name`. The value name indicates that the instances are matched based on the instance name.</p>
+         * <blockquote>
+         * <p> Set the value to <code>name</code>. The value name indicates that the instances are matched based on the instance name.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The keyword used to match the instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>portalHost</p>
          */
         @NameInMap("Value")
         public String value;
@@ -486,36 +561,50 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The ID of the process monitoring task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3F6150F9-45C7-43F9-9578-A58B2E72****</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The matching conditions.</p>
-         * <br>
-         * <p>>  Only the instances that meet the conditional expressions are monitored by the process monitoring task.</p>
+         * <blockquote>
+         * <p> Only the instances that meet the conditional expressions are monitored by the process monitoring task.</p>
+         * </blockquote>
          */
         @NameInMap("MatchExpress")
         public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpress matchExpress;
 
         /**
          * <p>The logical operator used between conditional expressions that are used to match instances. Valid values:</p>
-         * <br>
-         * <p>*   all</p>
-         * <p>*   and</p>
-         * <p>*   or</p>
+         * <ul>
+         * <li>all</li>
+         * <li>and</li>
+         * <li>or</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>and</p>
          */
         @NameInMap("MatchExpressFilterRelation")
         public String matchExpressFilterRelation;
 
         /**
          * <p>The process name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sshd</p>
          */
         @NameInMap("ProcessName")
         public String processName;

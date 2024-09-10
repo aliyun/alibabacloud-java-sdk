@@ -6,29 +6,43 @@ import com.aliyun.tea.*;
 public class EnableMetricRulesResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
-     * <br>
-     * <p>> The status code 200 indicates that the request was successful.</p>
+     * <blockquote>
+     * <p>The status code 200 indicates that the request was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FF38D33A-67C1-40EB-AB65-FAEE51EDB644</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

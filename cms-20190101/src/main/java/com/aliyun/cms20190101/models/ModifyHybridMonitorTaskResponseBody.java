@@ -6,29 +6,43 @@ import com.aliyun.tea.*;
 public class ModifyHybridMonitorTaskResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
-     * <br>
-     * <p>> The status code 200 indicates that the request was successful.</p>
+     * <blockquote>
+     * <p>The status code 200 indicates that the request was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid.SLSConfig</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11145B76-566A-5D80-A8A3-FAD98D310079</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;

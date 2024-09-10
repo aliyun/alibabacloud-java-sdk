@@ -6,14 +6,21 @@ import com.aliyun.tea.*;
 public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the request was successful.</p>
+     * <blockquote>
+     * <p> The status code 200 indicates that the request was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified resource is not found.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -26,15 +33,22 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9E0347B0-EBC3-4769-A78D-D96F21C6BB52</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request was successful.</p>
-     * <p>*   false: The request failed.</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -86,15 +100,22 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
 
     public static class DescribeMonitorGroupCategoriesResponseBodyMonitorGroupCategoriesMonitorGroupCategoryCategoryItem extends TeaModel {
         /**
-         * <p>The abbreviation of the Alibaba Cloud service name.</p>
-         * <br>
-         * <p>To obtain the abbreviation of an Alibaba Cloud service name, call the [DescribeProjectMeta](~~114916~~) operation. The `metricCategory` tag in the `Labels` response parameter indicates the abbreviation of the Alibaba Cloud service name.</p>
+         * <p>The abbreviation of the cloud service name.</p>
+         * <blockquote>
+         * <p> For more information about how to obtain the abbreviation of a cloud service name, see <code>metricCategory</code> in the response parameter <code>Labels</code> of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>The number of resources that belong to the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public Integer count;
@@ -144,6 +165,9 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
     public static class DescribeMonitorGroupCategoriesResponseBodyMonitorGroupCategories extends TeaModel {
         /**
          * <p>The ID of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         @NameInMap("GroupId")
         public Long groupId;

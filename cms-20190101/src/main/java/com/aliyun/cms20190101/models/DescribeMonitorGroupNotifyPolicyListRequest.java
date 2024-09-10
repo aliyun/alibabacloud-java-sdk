@@ -6,26 +6,38 @@ import com.aliyun.tea.*;
 public class DescribeMonitorGroupNotifyPolicyListRequest extends TeaModel {
     /**
      * <p>The ID of the application group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6780****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The page number. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The policy type.</p>
-     * <br>
      * <p>Valid value: PauseNotify.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PauseNotify</p>
      */
     @NameInMap("PolicyType")
     public String policyType;

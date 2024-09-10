@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeLogMonitorListRequest extends TeaModel {
     /**
      * <p>The ID of the application group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Default value: 10</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -27,6 +36,9 @@ public class DescribeLogMonitorListRequest extends TeaModel {
 
     /**
      * <p>The keyword that is used to search for log monitoring metrics. Fuzzy match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("SearchValue")
     public String searchValue;

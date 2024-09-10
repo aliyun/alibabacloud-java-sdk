@@ -16,6 +16,9 @@ public class Subscription extends TeaModel {
     @NameInMap("Enabled")
     public Boolean enabled;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 

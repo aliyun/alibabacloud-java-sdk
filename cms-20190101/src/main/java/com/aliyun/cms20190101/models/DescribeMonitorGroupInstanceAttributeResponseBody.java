@@ -5,33 +5,49 @@ import com.aliyun.tea.*;
 
 public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <p>The responses code.</p>
+     * <blockquote>
+     * <p> The status code 200 indicates that the request was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The error message.</p>
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified resource is not found.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The total number of returned pages.</p>
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9FB8EA79-7279-4482-8D6D-3D28EEDD871A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -43,16 +59,23 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
     public DescribeMonitorGroupInstanceAttributeResponseBodyResources resources;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The call was successful.</p>
-     * <p>*   false: The call failed.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -127,9 +150,21 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
     }
 
     public static class DescribeMonitorGroupInstanceAttributeResponseBodyResourcesResourceRegion extends TeaModel {
+        /**
+         * <p>The zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-f</p>
+         */
         @NameInMap("AvailabilityZone")
         public String availabilityZone;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
@@ -159,12 +194,18 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
     public static class DescribeMonitorGroupInstanceAttributeResponseBodyResourcesResourceTagsTag extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceNetworkType</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("Value")
         public String value;
@@ -213,13 +254,19 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
 
     public static class DescribeMonitorGroupInstanceAttributeResponseBodyResourcesResourceVpc extends TeaModel {
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2zew7etgiceg21****</p>
          */
         @NameInMap("VpcInstanceId")
         public String vpcInstanceId;
 
         /**
-         * <p>The ID of the vSwitch to which the instance belongs.</p>
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-2ze36seq79n992****</p>
          */
         @NameInMap("VswitchInstanceId")
         public String vswitchInstanceId;
@@ -250,51 +297,72 @@ public class DescribeMonitorGroupInstanceAttributeResponseBody extends TeaModel 
     public static class DescribeMonitorGroupInstanceAttributeResponseBodyResourcesResource extends TeaModel {
         /**
          * <p>The name of the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
-         * <p>The description of the resource.</p>
+         * <p>The resource description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc_test</p>
          */
         @NameInMap("Desc")
         public String desc;
 
         /**
          * <p>The dimensions of the resource that is associated with the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;instanceId&quot;:&quot;i-m5e0k0bexac8tykr****&quot;}</p>
          */
         @NameInMap("Dimension")
         public String dimension;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-m5e0k0bexac8tykr****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hostName</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The network type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
+        /**
+         * <p>The region.</p>
+         */
         @NameInMap("Region")
         public DescribeMonitorGroupInstanceAttributeResponseBodyResourcesResourceRegion region;
 
         /**
-         * <p>The tags of the resource.</p>
+         * <p>The tag of the resource.</p>
          */
         @NameInMap("Tags")
         public DescribeMonitorGroupInstanceAttributeResponseBodyResourcesResourceTags tags;
 
         /**
-         * <p>The information about the virtual private cloud (VPC).</p>
+         * <p>The VPC description.</p>
          */
         @NameInMap("Vpc")
         public DescribeMonitorGroupInstanceAttributeResponseBodyResourcesResourceVpc vpc;

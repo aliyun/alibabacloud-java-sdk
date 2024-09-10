@@ -6,10 +6,13 @@ import com.aliyun.tea.*;
 public class DeleteHybridMonitorTaskRequest extends TeaModel {
     /**
      * <p>The name of the namespace.</p>
-     * <br>
      * <p>The name can contain uppercase letters, lowercase letters, digits, and hyphens (-).</p>
-     * <br>
-     * <p>> This parameter is required only if you call this operation to delete metric import tasks for Alibaba Cloud services. In this case, the `TaskType` parameter is set to `aliyun_fc`.</p>
+     * <blockquote>
+     * <p>This parameter is required only if you call this operation to delete metric import tasks for Alibaba Cloud services. In this case, the <code>TaskType</code> parameter is set to <code>aliyun_fc</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>aliyun</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -19,18 +22,25 @@ public class DeleteHybridMonitorTaskRequest extends TeaModel {
 
     /**
      * <p>The ID of the member account.</p>
-     * <br>
-     * <p>> This parameter is required only if you use a management account to call this operation to query metric import tasks that belong to a member in a resource directory. In this case, the `TaskType` parameter is set to `aliyun_fc`.</p>
+     * <blockquote>
+     * <p>This parameter is required only if you use a management account to call this operation to query metric import tasks that belong to a member in a resource directory. In this case, the <code>TaskType</code> parameter is set to <code>aliyun_fc</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>120886317861****</p>
      */
     @NameInMap("TargetUserId")
     public String targetUserId;
 
     /**
      * <p>The ID of the metric import task.</p>
-     * <br>
-     * <p>For information about how to obtain the ID of a metric import task, see [DescribeHybridMonitorTaskList](~~428624~~).</p>
-     * <br>
-     * <p>> This parameter is required only if you call this operation to delete metrics for the logs that are imported from Log Service. In this case, the `TaskType` parameter is set to `aliyun_sls`.</p>
+     * <p>For information about how to obtain the ID of a metric import task, see <a href="https://help.aliyun.com/document_detail/428624.html">DescribeHybridMonitorTaskList</a>.</p>
+     * <blockquote>
+     * <p>This parameter is required only if you call this operation to delete metrics for the logs that are imported from Log Service. In this case, the <code>TaskType</code> parameter is set to <code>aliyun_sls</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>36****</p>
      */
     @NameInMap("TaskId")
     public String taskId;

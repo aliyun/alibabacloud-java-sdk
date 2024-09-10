@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class DisableSiteMonitorsResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates a success.</p>
+     * <blockquote>
+     * <p> The status code 200 indicates a success.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -20,21 +24,31 @@ public class DisableSiteMonitorsResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3fcd12e7-d387-42ee-b77e-661c775bb17f</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the operation was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: successful.</p>
-     * <p>*   false: failed.</p>
+     * <ul>
+     * <li>true: successful.</li>
+     * <li>false: failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -87,6 +101,9 @@ public class DisableSiteMonitorsResponseBody extends TeaModel {
     public static class DisableSiteMonitorsResponseBodyData extends TeaModel {
         /**
          * <p>The number of detection points.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("count")
         public Integer count;

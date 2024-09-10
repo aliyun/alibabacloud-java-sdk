@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
     /**
-     * <p>The returned message.</p>
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -17,40 +20,59 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
     public java.util.List<DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespace> describeHybridMonitorNamespace;
 
     /**
-     * <p>The error message.</p>
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Specified parameter PageSize is not valid.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1EC450A4-3221-5148-B77E-2827576CFE48</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The call was successful.</p>
-     * <p>*   false: The call failed.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -132,9 +154,11 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         public java.util.List<String> list;
 
         /**
-         * <p>The interval at which metrics are collected.</p>
-         * <br>
+         * <p>The collection period of the metric.</p>
          * <p>Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("Period")
         public Long period;
@@ -164,13 +188,16 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
 
     public static class DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespaceAliyunProductMetricListNamespaceList extends TeaModel {
         /**
-         * <p>The list of metrics for the Alibaba Cloud service.</p>
+         * <p>The metrics for the Alibaba Cloud service.</p>
          */
         @NameInMap("MetricList")
         public java.util.List<DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespaceAliyunProductMetricListNamespaceListMetricList> metricList;
 
         /**
          * <p>The namespace for the Alibaba Cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs_ecs_dashboard</p>
          */
         @NameInMap("Namespace")
         public String namespace;
@@ -200,17 +227,31 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
 
     public static class DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespaceAliyunProductMetricList extends TeaModel {
         /**
-         * <p>The list of namespaces.</p>
+         * <p>The namespaces.</p>
          */
         @NameInMap("NamespaceList")
         public java.util.List<DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespaceAliyunProductMetricListNamespaceList> namespaceList;
 
         /**
          * <p>The account that is used to create the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120886317861****</p>
          */
         @NameInMap("UserId")
         public Long userId;
 
+        /**
+         * <p>The configuration file of the Alibaba Cloud service that you want to monitor by using Hybrid Cloud Monitoring.</p>
+         * <ul>
+         * <li>namespace: the namespace of the Alibaba Cloud service.</li>
+         * <li>metric_list: the metrics of the Alibaba Cloud service.</li>
+         * <li>dimension: the resources of the Alibaba Cloud service that you want to monitor by using Hybrid Cloud Monitoring. If you do not specify a dimension, all resources of the Alibaba Cloud service are monitored.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>products:- namespace: acs_ecs_dashboard metric_info: - metric_list: - cpu_total dimension: \&quot;\&quot;</p>
+         */
         @NameInMap("YAMLConfig")
         public String YAMLConfig;
 
@@ -246,21 +287,43 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
     }
 
     public static class DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespaceDetail extends TeaModel {
+        /**
+         * <p>The region where the metric data is stored.</p>
+         * <blockquote>
+         * <p> This parameter is returned if you select <code>m_prom_user</code> for <code>NamespaceType</code> when you create a namespace.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("NamespaceRegion")
         public String namespaceRegion;
 
+        /**
+         * <p>The project where the metric data is located.</p>
+         * <blockquote>
+         * <p> This parameter is returned if you select <code>m_prom_user</code> for <code>NamespaceType</code> when you create a namespace.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cms-hybrid-120886317861****-cn-hangzhou-a83d</p>
+         */
         @NameInMap("SLSProject")
         public String SLSProject;
 
         /**
          * <p>The data retention period. Valid values:</p>
-         * <br>
-         * <p>*   cms.s1.large: Data is stored for 15 days.</p>
-         * <p>*   cms.s1.xlarge: Data is stored for 32 days.</p>
-         * <p>*   cms.s1.2xlarge: Data is stored for 63 days.</p>
-         * <p>*   cms.s1.3xlarge: Data is stored for 93 days.</p>
-         * <p>*   cms.s1.6xlarge: Data is stored for 185 days.</p>
-         * <p>*   cms.s1.12xlarge: Data is stored for 376 days.</p>
+         * <ul>
+         * <li>cms.s1.large (Retention Period 15 Days)</li>
+         * <li>cms.s1.xlarge (Retention Period 32 Days)</li>
+         * <li>cms.s1.2xlarge (Retention Period 63 Days)</li>
+         * <li>cms.s1.3xlarge (Retention Period 93 Days)</li>
+         * <li>cms.s1.6xlarge (Retention Period 185 Days)</li>
+         * <li>cms.s1.12xlarge (Retention Period 367 Days)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cms.s1.3xlarge</p>
          */
         @NameInMap("Spec")
         public String spec;
@@ -305,14 +368,19 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
 
         /**
          * <p>The timestamp that was generated when the namespace was created.</p>
-         * <br>
          * <p>Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1652682744000</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun-test</p>
          */
         @NameInMap("Description")
         public String description;
@@ -325,36 +393,62 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3****</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>Indicates whether the namespace is deleted. Valid values:</p>
-         * <br>
-         * <p>*   0: The namespace is not deleted.</p>
-         * <p>*   1: The namespace is deleted.</p>
+         * <ul>
+         * <li>0: The namespace is not deleted.</li>
+         * <li>1: The namespace is deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("IsDelete")
         public Integer isDelete;
 
         /**
          * <p>The timestamp that was generated when the namespace was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1652682744000</p>
          */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
         /**
          * <p>The name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun-test</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The storage scheme of metric data. Valid values:</p>
+         * <ul>
+         * <li>m_prom_user: The metric data is stored in Simple Log Service.</li>
+         * <li>m_prom_pool: The metric data is stored in the storage space provided by CloudMonitor.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>m_prom_user</p>
+         */
         @NameInMap("NamespaceType")
         public String namespaceType;
 
         /**
          * <p>The number of metric import tasks for third-party services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("NotAliyunTaskNumber")
         public Long notAliyunTaskNumber;

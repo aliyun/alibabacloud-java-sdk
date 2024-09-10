@@ -7,6 +7,13 @@ public class BatchCreateInstantSiteMonitorRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The site monitoring tasks.</p>
+     * <blockquote>
+     * <p> You must create at least one site monitoring task. You must specify all of the <code>Address</code>, <code>TaskName</code>, and <code>TaskType</code> parameters in each request.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TaskList")
     public java.util.List<BatchCreateInstantSiteMonitorRequestTaskList> taskList;
 
@@ -34,44 +41,58 @@ public class BatchCreateInstantSiteMonitorRequest extends TeaModel {
     public static class BatchCreateInstantSiteMonitorRequestTaskList extends TeaModel {
         /**
          * <p>The URL or IP address that is monitored by the task.</p>
-         * <br>
-         * <p>>  You must create at least one site monitoring task. You must specify all of the `Address`, `TaskName`, and `TaskType` parameters in each request.</p>
+         * <blockquote>
+         * <p> You must create at least one site monitoring task. You must specify all of the <code>Address</code>, <code>TaskName</code>, and <code>TaskType</code> parameters in each request.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
          */
         @NameInMap("Address")
         public String address;
 
         /**
          * <p>The detection points. If you leave this parameter empty, the system randomly selects three detection points.</p>
-         * <br>
-         * <p>The value is a `JSON array`. Example: `{"city":"546","isp":"465"},{"city":"572","isp":"465"},{"city":"738","isp":"465"}`. The values of the city field indicate Beijing, Hangzhou, and Qingdao.</p>
-         * <br>
-         * <p>For information about how to obtain detection points, see [DescribeSiteMonitorISPCityList](~~115045~~).</p>
+         * <p>The value is a <code>JSON array</code>. Example: <code>{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}</code>. The values of the city field indicate Beijing, Hangzhou, and Qingdao.</p>
+         * <p>For information about how to obtain detection points, see <a href="https://help.aliyun.com/document_detail/115045.html">DescribeSiteMonitorISPCityList</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</p>
          */
         @NameInMap("IspCities")
         public String ispCities;
 
         /**
          * <p>The extended options of the protocol that is used by the site monitoring task. The options vary based on the protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;time_out&quot;:5000}</p>
          */
         @NameInMap("OptionsJson")
         public String optionsJson;
 
         /**
          * <p>The name of the site monitoring task.</p>
-         * <br>
-         * <p>The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (\_).</p>
-         * <br>
-         * <p>>  You must create at least one site monitoring task. You must specify all of the `Address`, `TaskName`, and `TaskType` parameters in each request.</p>
+         * <p>The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (_).</p>
+         * <blockquote>
+         * <p> You must create at least one site monitoring task. You must specify all of the <code>Address</code>, <code>TaskName</code>, and <code>TaskType</code> parameters in each request.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>HangZhou_ECS1</p>
          */
         @NameInMap("TaskName")
         public String taskName;
 
         /**
          * <p>The type of the site monitoring task.</p>
-         * <br>
          * <p>Valid values: HTTP, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.</p>
-         * <br>
-         * <p>>  You must create at least one site monitoring task. You must specify all of the `Address`, `TaskName`, and `TaskType` parameters in each request.</p>
+         * <blockquote>
+         * <p> You must create at least one site monitoring task. You must specify all of the <code>Address</code>, <code>TaskName</code>, and <code>TaskType</code> parameters in each request.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         @NameInMap("TaskType")
         public String taskType;

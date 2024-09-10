@@ -5,30 +5,44 @@ import com.aliyun.tea.*;
 
 public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call is successful.</p>
+     * <p>The response code.</p>
+     * <blockquote>
+     * <p> The status code 200 indicates that the request was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The error message.</p>
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>end timestamp must not be before start time.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C240412F-3F5F-50E2-ACEC-DE808EF9C4BE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The call is successful.</p>
-     * <p>*   false: The call fails.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -87,12 +101,18 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
     public static class DescribeHybridMonitorDataListResponseBodyTimeSeriesLabels extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceId</p>
          */
         @NameInMap("K")
         public String k;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-rj99xc6cptkk64ml****</p>
          */
         @NameInMap("V")
         public String v;
@@ -123,14 +143,19 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
     public static class DescribeHybridMonitorDataListResponseBodyTimeSeriesValues extends TeaModel {
         /**
          * <p>The timestamp that indicates the time when the metric value is collected.</p>
-         * <br>
          * <p>Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1653804865</p>
          */
         @NameInMap("Ts")
         public String ts;
 
         /**
          * <p>The metric value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.13</p>
          */
         @NameInMap("V")
         public String v;
@@ -166,7 +191,10 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
         public java.util.List<DescribeHybridMonitorDataListResponseBodyTimeSeriesLabels> labels;
 
         /**
-         * <p>The name of the metric.</p>
+         * <p>The metric name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunEcs_cpu_total</p>
          */
         @NameInMap("MetricName")
         public String metricName;

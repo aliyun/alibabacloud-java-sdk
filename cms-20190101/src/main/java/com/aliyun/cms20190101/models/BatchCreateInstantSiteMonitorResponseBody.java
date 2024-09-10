@@ -6,35 +6,52 @@ import com.aliyun.tea.*;
 public class BatchCreateInstantSiteMonitorResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <blockquote>
+     * <p> The status code 200 indicates that the request was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The information about the site monitoring task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;taskName&quot;: &quot;HangZhou_ECS1&quot;, &quot;taskId&quot;: &quot;679fbe4f-b80b-4706-91b2-5427b43e****&quot;}]</p>
      */
     @NameInMap("Data")
     public java.util.List<BatchCreateInstantSiteMonitorResponseBodyData> data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7AE72720-2C96-5446-9F2B-308C7CEDFF1A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The call was successful.</p>
-     * <p>*   false: The call failed.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -87,12 +104,18 @@ public class BatchCreateInstantSiteMonitorResponseBody extends TeaModel {
     public static class BatchCreateInstantSiteMonitorResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the site monitoring task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>679fbe4f-b80b-4706-91b2-5427b43e****</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
          * <p>The name of the site monitoring task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HangZhou_ECS1</p>
          */
         @NameInMap("TaskName")
         public String taskName;

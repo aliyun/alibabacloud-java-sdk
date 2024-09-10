@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeProductResourceTagKeyListRequest extends TeaModel {
     /**
      * <p>The pagination cursor.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dbc2826f237e****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

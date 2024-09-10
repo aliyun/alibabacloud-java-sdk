@@ -6,20 +6,30 @@ import com.aliyun.tea.*;
 public class DescribeEventRuleAttributeResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the request was successful.</p>
+     * <blockquote>
+     * <p> The status code 200 indicates that the request was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The alert does not exist.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9AA3F210-C03D-4C86-8DB6-21C84FF692A1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -32,9 +42,13 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -124,16 +138,20 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
 
     public static class DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObj extends TeaModel {
         /**
-         * <p>事件匹配的关键字列表。</p>
+         * <p>The keywords that are used to match events.</p>
          */
         @NameInMap("Keywords")
         public DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObjKeywords keywords;
 
         /**
-         * <p>多个关键字的条件。取值：</p>
-         * <br>
-         * <p>- OR： 多个关键字之间或的关系。</p>
-         * <p>- NOT：不包含关键字。表示匹配非关键字列表中的所有事件。</p>
+         * <p>The relationship between multiple keywords in a condition. Valid values:</p>
+         * <ul>
+         * <li>OR: The relationship between keywords is OR.</li>
+         * <li>NOT: The keyword is excluded. The value NOT indicates that all events that do not contain the keywords are matched.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OR</p>
          */
         @NameInMap("Relation")
         public String relation;
@@ -226,7 +244,7 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
         public DescribeEventRuleAttributeResponseBodyResultEventPatternEventTypeList eventTypeList;
 
         /**
-         * <p>过滤关键词。</p>
+         * <p>The keyword for filtering.</p>
          */
         @NameInMap("KeywordFilterObj")
         public DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObj keywordFilterObj;
@@ -239,12 +257,18 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The name of the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudMonitor</p>
          */
         @NameInMap("Product")
         public String product;
 
         /**
-         * <p>按照SQL过滤日志。如果符合条件，则触发报警。</p>
+         * <p>Indicates that logs are filtered based on the specified SQL statement. If the specified conditions are met, an alert is triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ycccluster1 and (i-23ij0o82612 or Executed1) or Asimulated not 222</p>
          */
         @NameInMap("SQLFilter")
         public String SQLFilter;
@@ -318,6 +342,9 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
     public static class DescribeEventRuleAttributeResponseBodyResult extends TeaModel {
         /**
          * <p>The description of the event-triggered alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default group event rule.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -330,30 +357,44 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The event type. Valid values:</p>
-         * <br>
-         * <p>*   SYSTEM: system event</p>
-         * <p>*   CUSTOM: custom event</p>
+         * <ul>
+         * <li>SYSTEM: system event</li>
+         * <li>CUSTOM: custom event</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
          */
         @NameInMap("EventType")
         public String eventType;
 
         /**
          * <p>The ID of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3607****</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the event-triggered alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_DefaultEventRule_7378****</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The status of the event-triggered alert rule. Valid values:</p>
-         * <br>
-         * <p>*   ENABLED</p>
-         * <p>*   DISABLED</p>
+         * <ul>
+         * <li>ENABLED</li>
+         * <li>DISABLED</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ENABLED</p>
          */
         @NameInMap("State")
         public String state;

@@ -7,6 +7,12 @@ public class DisableMetricRulesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>detect_87****_HTTP_HttpLatency</p>
+     */
     @NameInMap("RuleId")
     public java.util.List<String> ruleId;
 

@@ -6,8 +6,9 @@ import com.aliyun.tea.*;
 public class CreateHybridMonitorTaskRequest extends TeaModel {
     /**
      * <p>The tags of the metric.</p>
-     * <br>
-     * <p>>  This parameter is required only if the `TaskType` parameter is set to `aliyun_sls`.</p>
+     * <blockquote>
+     * <p> This parameter is required only if the <code>TaskType</code> parameter is set to <code>aliyun_sls</code>.</p>
+     * </blockquote>
      */
     @NameInMap("AttachLabels")
     public java.util.List<CreateHybridMonitorTaskRequestAttachLabels> attachLabels;
@@ -17,22 +18,31 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
 
     /**
      * <p>The collection period of the metric. Valid values:</p>
-     * <br>
-     * <p>*   15</p>
-     * <p>*   60 (default)</p>
-     * <br>
+     * <ul>
+     * <li>15</li>
+     * <li>60 (default)</li>
+     * </ul>
      * <p>Unit: seconds.</p>
-     * <br>
-     * <p>>  This parameter is required only if the `TaskType` parameter is set to `aliyun_sls`.</p>
+     * <blockquote>
+     * <p> This parameter is required only if the <code>TaskType</code> parameter is set to <code>aliyun_sls</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("CollectInterval")
     public String collectInterval;
 
     /**
      * <p>The type of the collection target.</p>
-     * <br>
-     * <p>*   If the `TaskType` parameter is set to `aliyun_fc`, enter `aliyun_fc`.</p>
-     * <p>*   If the `TaskType` parameter is set to `aliyun_sls`, enter the name of the Logstore group.</p>
+     * <ul>
+     * <li>If the <code>TaskType</code> parameter is set to <code>aliyun_fc</code>, enter <code>aliyun_fc</code>.</li>
+     * <li>If the <code>TaskType</code> parameter is set to <code>aliyun_sls</code>, enter the name of the Logstore group.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aliyun_fc</p>
      */
     @NameInMap("CollectTargetType")
     public String collectTargetType;
@@ -45,18 +55,24 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
 
     /**
      * <p>The ID of the application group.</p>
-     * <br>
-     * <p>For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).</p>
-     * <br>
-     * <p>>  This parameter is required only if the `TaskType` parameter is set to `aliyun_sls`.</p>
+     * <p>For information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
+     * <blockquote>
+     * <p> This parameter is required only if the <code>TaskType</code> parameter is set to <code>aliyun_sls</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>3607****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The name of the namespace.</p>
-     * <br>
-     * <p>For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).</p>
+     * <p>For information about how to obtain the name of a namespace, see <a href="https://help.aliyun.com/document_detail/428880.html">DescribeHybridMonitorNamespaceList</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aliyun</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -66,75 +82,96 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
 
     /**
      * <p>The configurations of the logs that are imported from Simple Log Service.</p>
-     * <br>
-     * <p>>  This parameter is required only if the `TaskType` parameter is set to `aliyun_sls`.</p>
+     * <blockquote>
+     * <p> This parameter is required only if the <code>TaskType</code> parameter is set to <code>aliyun_sls</code>.</p>
+     * </blockquote>
      */
     @NameInMap("SLSProcessConfig")
     public CreateHybridMonitorTaskRequestSLSProcessConfig SLSProcessConfig;
 
     /**
      * <p>The ID of the member account.</p>
-     * <br>
      * <p>If you call this operation by using the management account of a resource directory, you can connect the Alibaba Cloud services that are activated for all members in the resource directory to Hybrid Cloud Monitoring. You can use the resource directory to monitor Alibaba Cloud services across enterprise accounts.</p>
-     * <br>
-     * <p>>  This parameter is required only if the `TaskType` parameter is set to `aliyun_fc`.</p>
+     * <blockquote>
+     * <p> This parameter is required only if the <code>TaskType</code> parameter is set to <code>aliyun_fc</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>120886317861****</p>
      */
     @NameInMap("TargetUserId")
     public String targetUserId;
 
     /**
      * <p>The IDs of the member accounts. Separate multiple member account IDs with commas (,).</p>
-     * <br>
-     * <p>>  This parameter is required only if you call this operation by using the management account.</p>
+     * <blockquote>
+     * <p> This parameter is required only if you call this operation by using the management account.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>120886317861****</p>
      */
     @NameInMap("TargetUserIdList")
     public String targetUserIdList;
 
     /**
      * <p>The name of the metric import task.</p>
-     * <br>
-     * <p>*   If the `TaskType` parameter is set to `aliyun_fc`, enter the name of the metric import task.</p>
-     * <p>*   If the `TaskType` parameter is set to `aliyun_sls`, enter the name of the metric for logs imported from Simple Log Service.</p>
+     * <ul>
+     * <li>If the <code>TaskType</code> parameter is set to <code>aliyun_fc</code>, enter the name of the metric import task.</li>
+     * <li>If the <code>TaskType</code> parameter is set to <code>aliyun_sls</code>, enter the name of the metric for logs imported from Simple Log Service.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>aliyun_task</p>
      */
     @NameInMap("TaskName")
     public String taskName;
 
     /**
      * <p>The type of the metric import task. Valid values:</p>
-     * <br>
-     * <p>*   aliyun_fc: metric import tasks for Alibaba Cloud services.</p>
-     * <p>*   aliyun_sls: metrics for logs imported from Simple Log Service.</p>
+     * <ul>
+     * <li>aliyun_fc: metric import tasks for Alibaba Cloud services.</li>
+     * <li>aliyun_sls: metrics for logs imported from Simple Log Service.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aliyun_fc</p>
      */
     @NameInMap("TaskType")
     public String taskType;
 
     /**
      * <p>The configuration file of the Alibaba Cloud service that you want to monitor by using Hybrid Cloud Monitoring.</p>
-     * <br>
-     * <p>*   namespace: the namespace of the Alibaba Cloud service. For information about how to query the namespace of an Alibaba Cloud service, see [DescribeMetricMetaList](~~98846~~).</p>
-     * <p>*   metric_list: the metrics of the Alibaba Cloud service. For information about how to query the metrics of an Alibaba Cloud service, see [DescribeMetricMetaList](~~98846~~).</p>
-     * <br>
+     * <ul>
+     * <li>namespace: the namespace of the Alibaba Cloud service. For information about how to query the namespace of an Alibaba Cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a>.</li>
+     * <li>metric_list: the metrics of the Alibaba Cloud service. For information about how to query the metrics of an Alibaba Cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a>.</li>
+     * </ul>
      * <p>The following code shows a sample configuration file:</p>
-     * <br>
-     * <p>    products:</p>
-     * <p>    - namespace: acs_ecs_dashboard</p>
-     * <p>      metric_info:</p>
-     * <p>      - metric_list:</p>
-     * <p>        - cpu_total</p>
-     * <p>        - cpu_idle</p>
-     * <p>        - diskusage_utilization</p>
-     * <p>        - CPUUtilization</p>
-     * <p>        - DiskReadBPS</p>
-     * <p>        - InternetOut</p>
-     * <p>        - IntranetOut</p>
-     * <p>        - cpu_system</p>
-     * <p>    - namespace: acs_rds_dashboard</p>
-     * <p>      metric_info:</p>
-     * <p>      - metric_list:</p>
-     * <p>        - MySQL_QPS</p>
-     * <p>        - MySQL_TPS</p>
-     * <br>
-     * <p>>  This parameter is required only if the `TaskType` parameter is set to `aliyun_fc`.</p>
+     * <pre><code>products:
+     * - namespace: acs_ecs_dashboard
+     *   metric_info:
+     *   - metric_list:
+     *     - cpu_total
+     *     - cpu_idle
+     *     - diskusage_utilization
+     *     - CPUUtilization
+     *     - DiskReadBPS
+     *     - InternetOut
+     *     - IntranetOut
+     *     - cpu_system
+     * - namespace: acs_rds_dashboard
+     *   metric_info:
+     *   - metric_list:
+     *     - MySQL_QPS
+     *     - MySQL_TPS
+     * </code></pre>
+     * <blockquote>
+     * <p> This parameter is required only if the <code>TaskType</code> parameter is set to <code>aliyun_fc</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>products:- namespace: acs_ecs_dashboard  metric_info:  - metric_list:    - cpu_total</p>
      */
     @NameInMap("YARMConfig")
     public String YARMConfig;
@@ -259,12 +296,18 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
     public static class CreateHybridMonitorTaskRequestAttachLabels extends TeaModel {
         /**
          * <p>The tag key of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_service</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The tag value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testValue</p>
          */
         @NameInMap("Value")
         public String value;
@@ -295,12 +338,18 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
     public static class CreateHybridMonitorTaskRequestSLSProcessConfigExpress extends TeaModel {
         /**
          * <p>The alias of the extended field that specifies the result of basic operations performed on aggregation results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SuccRate</p>
          */
         @NameInMap("Alias")
         public String alias;
 
         /**
          * <p>The extended field that specifies the result of basic operations performed on aggregation results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success_count</p>
          */
         @NameInMap("Express")
         public String express;
@@ -331,27 +380,37 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
     public static class CreateHybridMonitorTaskRequestSLSProcessConfigFilterFilters extends TeaModel {
         /**
          * <p>The method that is used to filter logs imported from Simple Log Service. Valid values:</p>
-         * <br>
-         * <p>*   `contain`: contains</p>
-         * <p>*   `notContain`: does not contain</p>
-         * <p>*   `>`: greater than</p>
-         * <p>*   `<`: less than</p>
-         * <p>*   `=`: equal to</p>
-         * <p>*   `! =`: not equal to</p>
-         * <p>*   `>=`: greater than or equal to</p>
-         * <p>*   `<=`: less than or equal to</p>
+         * <ul>
+         * <li><code>contain</code>: contains</li>
+         * <li><code>notContain</code>: does not contain</li>
+         * <li><code>&gt;</code>: greater than</li>
+         * <li><code>&lt;</code>: less than</li>
+         * <li><code>=</code>: equal to</li>
+         * <li><code>! =</code>: not equal to</li>
+         * <li><code>&gt;=</code>: greater than or equal to</li>
+         * <li><code>&lt;=</code>: less than or equal to</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>=</p>
          */
         @NameInMap("Operator")
         public String operator;
 
         /**
          * <p>The name of the key that is used to filter logs imported from Simple Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code</p>
          */
         @NameInMap("SLSKeyName")
         public String SLSKeyName;
 
         /**
          * <p>The value of the key that is used to filter logs imported from Simple Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("Value")
         public String value;
@@ -396,9 +455,13 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
 
         /**
          * <p>The relationship between multiple filter conditions. Valid values:</p>
-         * <br>
-         * <p>*   and (default): Logs are processed only if all filter conditions are met.</p>
-         * <p>*   or: Logs are processed if one of the filter conditions is met.</p>
+         * <ul>
+         * <li>and (default): Logs are processed only if all filter conditions are met.</li>
+         * <li>or: Logs are processed if one of the filter conditions is met.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>and</p>
          */
         @NameInMap("Relation")
         public String relation;
@@ -429,12 +492,18 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
     public static class CreateHybridMonitorTaskRequestSLSProcessConfigGroupBy extends TeaModel {
         /**
          * <p>The alias of the aggregation result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ApiResult</p>
          */
         @NameInMap("Alias")
         public String alias;
 
         /**
          * <p>The name of the key that is used to aggregate logs imported from Simple Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code</p>
          */
         @NameInMap("SLSKeyName")
         public String SLSKeyName;
@@ -465,47 +534,65 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
     public static class CreateHybridMonitorTaskRequestSLSProcessConfigStatistics extends TeaModel {
         /**
          * <p>The alias of the aggregation result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>level_count</p>
          */
         @NameInMap("Alias")
         public String alias;
 
         /**
          * <p>The function that is used to aggregate the log data of a statistical period. Valid values:</p>
-         * <br>
-         * <p>*   count: counts the number.</p>
-         * <p>*   sum: calculates the total value.</p>
-         * <p>*   avg: calculates the average value.</p>
-         * <p>*   max: calculates the maximum value.</p>
-         * <p>*   min: calculates the minimum value.</p>
-         * <p>*   value: collects samples within the statistical period.</p>
-         * <p>*   countps: calculates the number of values of the specified field divided by the total number of seconds within a statistical period.</p>
-         * <p>*   sumps: calculates the sum of the values of the specified field divided by the total number of seconds within a statistical period.</p>
-         * <p>*   distinct: calculates the number of unique values of the specified field within a statistical period.</p>
-         * <p>*   distribution: calculates the number of logs that meet a specified condition within the statistical period.</p>
-         * <p>*   percentile: sorts the values of the specified field in ascending order, and then returns the value that is at the specified percentile within the statistical period. Example: P50.</p>
+         * <ul>
+         * <li>count: counts the number.</li>
+         * <li>sum: calculates the total value.</li>
+         * <li>avg: calculates the average value.</li>
+         * <li>max: calculates the maximum value.</li>
+         * <li>min: calculates the minimum value.</li>
+         * <li>value: collects samples within the statistical period.</li>
+         * <li>countps: calculates the number of values of the specified field divided by the total number of seconds within a statistical period.</li>
+         * <li>sumps: calculates the sum of the values of the specified field divided by the total number of seconds within a statistical period.</li>
+         * <li>distinct: calculates the number of unique values of the specified field within a statistical period.</li>
+         * <li>distribution: calculates the number of logs that meet a specified condition within the statistical period.</li>
+         * <li>percentile: sorts the values of the specified field in ascending order, and then returns the value that is at the specified percentile within the statistical period. Example: P50.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>count</p>
          */
         @NameInMap("Function")
         public String function;
 
         /**
          * <p>The value of the function that is used to aggregate logs imported from Simple Log Service.</p>
-         * <br>
-         * <p>*   If the `Function` parameter is set to `distribution`, this parameter specifies the lower limit of the statistical interval. For example, if you want to calculate the number of HTTP requests whose status code is 2XX, set this parameter to 200.</p>
-         * <p>*   If the `Function` parameter is set to `percentile`, this parameter specifies the percentile at which the expected value is. For example, 0.5 specifies P50.</p>
+         * <ul>
+         * <li>If the <code>Function</code> parameter is set to <code>distribution</code>, this parameter specifies the lower limit of the statistical interval. For example, if you want to calculate the number of HTTP requests whose status code is 2XX, set this parameter to 200.</li>
+         * <li>If the <code>Function</code> parameter is set to <code>percentile</code>, this parameter specifies the percentile at which the expected value is. For example, 0.5 specifies P50.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("Parameter1")
         public String parameter1;
 
         /**
          * <p>The value of the function that is used to aggregate logs imported from Simple Log Service.</p>
-         * <br>
-         * <p>>  This parameter is required only if the `Function` parameter is set to `distribution`. This parameter specifies the upper limit of the statistical interval. For example, if you want to calculate the number of HTTP requests whose status code is 2XX, set this parameter to 299.</p>
+         * <blockquote>
+         * <p> This parameter is required only if the <code>Function</code> parameter is set to <code>distribution</code>. This parameter specifies the upper limit of the statistical interval. For example, if you want to calculate the number of HTTP requests whose status code is 2XX, set this parameter to 299.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>299</p>
          */
         @NameInMap("Parameter2")
         public String parameter2;
 
         /**
          * <p>The name of the key that is used to aggregate logs imported from Simple Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("SLSKeyName")
         public String SLSKeyName;

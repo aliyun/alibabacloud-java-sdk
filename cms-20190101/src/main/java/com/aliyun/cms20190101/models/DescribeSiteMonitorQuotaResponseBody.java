@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <blockquote>
+     * <p> The status code 200 indicates that the call was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -26,15 +30,22 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>26860260-76C6-404E-AB7A-EB98D36A6885</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The call was successful.</p>
-     * <p>*   false: The call failed.</p>
+     * <ul>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -87,42 +98,62 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
     public static class DescribeSiteMonitorQuotaResponseBodyData extends TeaModel {
         /**
          * <p>Indicates whether the second-level monitoring is enabled. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("SecondMonitor")
         public Boolean secondMonitor;
 
         /**
          * <p>The quota of detection points that are provided by Alibaba Cloud. Five detection points are provided for free.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("SiteMonitorIdcQuota")
         public Integer siteMonitorIdcQuota;
 
         /**
          * <p>The quota of detection points that are not provided by Alibaba Cloud. Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("SiteMonitorOperatorQuotaQuota")
         public Integer siteMonitorOperatorQuotaQuota;
 
         /**
          * <p>The used quota of site monitoring tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("SiteMonitorQuotaTaskUsed")
         public Integer siteMonitorQuotaTaskUsed;
 
         /**
          * <p>The quota of site monitoring tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("SiteMonitorTaskQuota")
         public Integer siteMonitorTaskQuota;
 
         /**
          * <p>The version of site monitoring. Valid values:</p>
-         * <br>
-         * <p>*   V1</p>
-         * <p>*   V2</p>
+         * <ul>
+         * <li>V1</li>
+         * <li>V2</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>V1</p>
          */
         @NameInMap("SiteMonitorVersion")
         public String siteMonitorVersion;

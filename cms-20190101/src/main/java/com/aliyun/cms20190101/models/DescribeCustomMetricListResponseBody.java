@@ -6,26 +6,39 @@ import com.aliyun.tea.*;
 public class DescribeCustomMetricListResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The value 200 indicates that the call is successful.</p>
+     * <blockquote>
+     * <p> The value 200 indicates that the call is successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AF425E4-1DEA-54F2-910A-8117C9686140</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The reported custom metrics that are found in the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;all\&quot;:0,\&quot;size\&quot;:10,\&quot;param\&quot;:{\&quot;metric\&quot;:\&quot;{\\\&quot;metricName\\\&quot;:\\\&quot;cpu_total\\\&quot;,\\\&quot;groupId\\\&quot;:7378****,\\\&quot;project\\\&quot;:\\\&quot;acs_customMetric_120886317861****\\\&quot;,\\\&quot;dimension\\\&quot;:\\\&quot;sampleName1=value1&amp;sampleName2=value2\\\&quot;,\\\&quot;status\\\&quot;:1}\&quot;,\&quot;service\&quot;:\&quot;metric-center.aliyun-inc.com\&quot;},\&quot;page\&quot;:1,\&quot;list\&quot;:[]}</p>
      */
     @NameInMap("Result")
     public String result;

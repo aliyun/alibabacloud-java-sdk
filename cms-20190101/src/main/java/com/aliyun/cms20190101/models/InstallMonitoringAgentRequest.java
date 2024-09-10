@@ -6,25 +6,38 @@ import com.aliyun.tea.*;
 public class InstallMonitoringAgentRequest extends TeaModel {
     /**
      * <p>Specifies whether to install the CloudMonitor agent. Valid values:</p>
-     * <br>
-     * <p>*   true (default value): yes</p>
-     * <p>*   false: no</p>
+     * <ul>
+     * <li>true (default value): yes</li>
+     * <li>false: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Force")
     public Boolean force;
 
     /**
      * <p>Specifies whether to install the CloudMonitor agent on all ECS instances that belong to the current Alibaba Cloud account. Valid values:</p>
-     * <br>
-     * <p>*   `onlyInstallNotHasAgent`: installs the latest version of the CloudMonitor agent only on ECS instances on which the agent is not installed.</p>
-     * <p>*   `onlyUpgradeAgent`: upgrades the CloudMonitor agent to the latest version only for ECS instances on which an earlier version of the agent is installed.</p>
-     * <p>*   `installAndUpgrade`: installs the latest version of the CloudMonitor agent on ECS instances on which the agent is not installed, and upgrades the CloudMonitor agent to the latest version for ECS instances on which an earlier version of the agent is installed.</p>
-     * <br>
-     * <p>>  If you set the InstallCommand parameter, the `InstanceIds` parameter does not take effect.</p>
+     * <ul>
+     * <li><code>onlyInstallNotHasAgent</code>: installs the latest version of the CloudMonitor agent only on ECS instances on which the agent is not installed.</li>
+     * <li><code>onlyUpgradeAgent</code>: upgrades the CloudMonitor agent to the latest version only for ECS instances on which an earlier version of the agent is installed.</li>
+     * <li><code>installAndUpgrade</code>: installs the latest version of the CloudMonitor agent on ECS instances on which the agent is not installed, and upgrades the CloudMonitor agent to the latest version for ECS instances on which an earlier version of the agent is installed.</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you set the InstallCommand parameter, the <code>InstanceIds</code> parameter does not take effect.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>onlyInstallNotHasAgent</p>
      */
     @NameInMap("InstallCommand")
     public String installCommand;
 
+    /**
+     * <strong>example:</strong>
+     * <p>i-m5e0k0bexac8tykr****</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 

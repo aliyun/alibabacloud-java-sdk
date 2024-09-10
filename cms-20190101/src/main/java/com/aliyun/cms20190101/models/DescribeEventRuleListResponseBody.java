@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class DescribeEventRuleListResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the request was successful.</p>
+     * <blockquote>
+     * <p> The status code 200 indicates that the request was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -20,27 +24,40 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>User not authorized to operate on the specified resource.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D0E6D82B-16B5-422A-8136-EE5BDC01E415</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -145,9 +162,13 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
 
         /**
          * <p>The relationship between multiple keywords in a condition. Valid values:</p>
-         * <br>
-         * <p>*   OR: The relationship between keywords is OR.</p>
-         * <p>*   NOT: The keyword is excluded. The value NOT indicates that all events that do not contain the keywords are matched.</p>
+         * <ul>
+         * <li>OR: The relationship between keywords is OR.</li>
+         * <li>NOT: The keyword is excluded. The value NOT indicates that all events that do not contain the keywords are matched.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OR</p>
          */
         @NameInMap("Relation")
         public String relation;
@@ -216,6 +237,9 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
     public static class DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPattern extends TeaModel {
         /**
          * <p>The custom filter conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS123</p>
          */
         @NameInMap("CustomFilters")
         public String customFilters;
@@ -246,12 +270,18 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
 
         /**
          * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudMonitor</p>
          */
         @NameInMap("Product")
         public String product;
 
         /**
          * <p>Indicates that logs are filtered based on the specified SQL statement. If the specified conditions are met, an alert is triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ycccluster1 and (i-23ij0o82612 or Executed1) or Asimulated not 222</p>
          */
         @NameInMap("SQLFilter")
         public String SQLFilter;
@@ -341,6 +371,9 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
     public static class DescribeEventRuleListResponseBodyEventRulesEventRule extends TeaModel {
         /**
          * <p>The description of the event-triggered alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default group event rule.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -353,36 +386,53 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
 
         /**
          * <p>The type of the event-triggered alert rule. Valid values:</p>
-         * <br>
-         * <p>*   SYSTEM: system event-triggered alert rule</p>
-         * <p>*   CUSTOM: custom event-triggered alert rule</p>
+         * <ul>
+         * <li>SYSTEM: system event-triggered alert rule</li>
+         * <li>CUSTOM: custom event-triggered alert rule</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
          */
         @NameInMap("EventType")
         public String eventType;
 
         /**
          * <p>The ID of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7378****</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the event-triggered alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_DefaultEventRule_7378****</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The mute period during which new alert notifications are not sent even if the trigger conditions are met.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
          */
         @NameInMap("SilenceTime")
         public Long silenceTime;
 
         /**
          * <p>The status of the event-triggered alert rule. Valid values:</p>
-         * <br>
-         * <p>*   ENABLED</p>
-         * <p>*   DISABLED</p>
+         * <ul>
+         * <li>ENABLED</li>
+         * <li>DISABLED</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ENABLED</p>
          */
         @NameInMap("State")
         public String state;

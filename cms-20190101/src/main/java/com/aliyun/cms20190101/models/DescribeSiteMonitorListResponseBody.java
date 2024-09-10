@@ -6,32 +6,48 @@ import com.aliyun.tea.*;
 public class DescribeSiteMonitorListResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the request was successful.</p>
+     * <blockquote>
+     * <p> The status code 200 indicates that the request was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A80DB41C-AF6C-50E1-ADB5-66DCBA3D266B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -44,15 +60,22 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -129,43 +152,58 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
     public static class DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJsonAssertionsAssertions extends TeaModel {
         /**
          * <p>The comparison operator of the assertion. Valid values:</p>
-         * <br>
-         * <p>*   contains: contains</p>
-         * <p>*   doesNotContain: does not contain</p>
-         * <p>*   matches: matches regular expressions</p>
-         * <p>*   doesNotMatch: does not match regular expressions</p>
-         * <p>*   is: equal to a numeric value or matches a character</p>
-         * <p>*   isNot: not equal to</p>
-         * <p>*   lessThan: less than</p>
-         * <p>*   moreThan: greater than</p>
+         * <ul>
+         * <li>contains: contains</li>
+         * <li>doesNotContain: does not contain</li>
+         * <li>matches: matches regular expressions</li>
+         * <li>doesNotMatch: does not match regular expressions</li>
+         * <li>is: equal to a numeric value or matches a character</li>
+         * <li>isNot: not equal to</li>
+         * <li>lessThan: less than</li>
+         * <li>moreThan: greater than</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>lessThan</p>
          */
         @NameInMap("operator")
         public String operator;
 
         /**
          * <p>The parsing path of the assertion.</p>
-         * <br>
-         * <p>*   If the assertion type is `body_json`, the path is `json path`.</p>
-         * <p>*   If the assertion type is `body_xml`, the path is `xml path`.</p>
+         * <ul>
+         * <li>If the assertion type is <code>body_json</code>, the path is <code>json path</code>.</li>
+         * <li>If the assertion type is <code>body_xml</code>, the path is <code>xml path</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>json path</p>
          */
         @NameInMap("property")
         public String property;
 
         /**
          * <p>The numeric value or character used for matching.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("target")
         public String target;
 
         /**
          * <p>The assertion type. Valid values:</p>
-         * <br>
-         * <p>*   response_time: checks whether the response time meets expectations.</p>
-         * <p>*   status_code: checks whether the HTTP status code meets expectations.</p>
-         * <p>*   header: checks whether the fields in the response header meet expectations.</p>
-         * <p>*   body_text: checks whether the content in the response body meets expectations by using text matching.</p>
-         * <p>*   body_json: checks whether the content in the response body meets expectations by using JSON parsing (JSONPath).</p>
-         * <p>*   body_xml: checks whether the content in the response body meets expectations by using XML parsing (XPath).</p>
+         * <ul>
+         * <li>response_time: checks whether the response time meets expectations.</li>
+         * <li>status_code: checks whether the HTTP status code meets expectations.</li>
+         * <li>header: checks whether the fields in the response header meet expectations.</li>
+         * <li>body_text: checks whether the content in the response body meets expectations by using text matching.</li>
+         * <li>body_json: checks whether the content in the response body meets expectations by using JSON parsing (JSONPath).</li>
+         * <li>body_xml: checks whether the content in the response body meets expectations by using XML parsing (XPath).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>response_time</p>
          */
         @NameInMap("type")
         public String type;
@@ -231,8 +269,12 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
     public static class DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson extends TeaModel {
         /**
          * <p>The acceptable status code.</p>
-         * <br>
-         * <p>>  We recommend that you configure assertions.</p>
+         * <blockquote>
+         * <p> We recommend that you configure assertions.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         @NameInMap("acceptable_response_code")
         public String acceptableResponseCode;
@@ -245,226 +287,327 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
 
         /**
          * <p>The number of retries after a DNS failure occurred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("attempts")
         public Long attempts;
 
         /**
          * <p>Indicates whether the security authentication feature is enabled. Valid values:</p>
-         * <br>
-         * <p>*   0: The feature is enabled.</p>
-         * <p>*   1: The feature is disabled.</p>
+         * <ul>
+         * <li>0: The feature is enabled.</li>
+         * <li>1: The feature is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("authentication")
         public Integer authentication;
 
         /**
          * <p>Indicates whether the certificate is verified. Valid values:</p>
-         * <br>
-         * <p>*   false (default): The certificate is not verified.</p>
-         * <p>*   true: The certificate is verified.</p>
+         * <ul>
+         * <li>false (default): The certificate is not verified.</li>
+         * <li>true: The certificate is verified.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("cert_verify")
         public Boolean certVerify;
 
         /**
          * <p>The cookie of the HTTP request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lang=en</p>
          */
         @NameInMap("cookie")
         public String cookie;
 
         /**
          * <p>Indicates whether MTR is automatically used to diagnose network issues if a task fails. Valid values:</p>
-         * <br>
-         * <p>*   false (default): MTR is not automatically used to diagnose network issues if a task fails.</p>
-         * <p>*   true: MTR is automatically used to diagnose network issues if a task fails.</p>
+         * <ul>
+         * <li>false (default): MTR is not automatically used to diagnose network issues if a task fails.</li>
+         * <li>true: MTR is automatically used to diagnose network issues if a task fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("diagnosis_mtr")
         public Boolean diagnosisMtr;
 
         /**
          * <p>Indicates whether ping requests are automatically sent to detect network latency if a detection task fails. Valid values:</p>
-         * <br>
-         * <p>*   false (default): Ping requests are not automatically sent to detect network latency if a detection task fails.</p>
-         * <p>*   true: Ping requests are automatically sent to detect network latency if a detection task fails.</p>
+         * <ul>
+         * <li>false (default): Ping requests are not automatically sent to detect network latency if a detection task fails.</li>
+         * <li>true: Ping requests are automatically sent to detect network latency if a detection task fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("diagnosis_ping")
         public Boolean diagnosisPing;
 
         /**
          * <p>The relationship between the list of expected aliases or IP addresses and the list of DNS results. Valid values:</p>
-         * <br>
-         * <p>*   IN_DNS: The list of expected values is a subset of the list of DNS results.</p>
-         * <p>*   DNS_IN: The list of DNS results is a subset of the list of expected values.</p>
-         * <p>*   EQUAL: The list of DNS results is the same as the list of expected values.</p>
-         * <p>*   ANY: The list of DNS results intersects with the list of expected values.</p>
+         * <ul>
+         * <li>IN_DNS: The list of expected values is a subset of the list of DNS results.</li>
+         * <li>DNS_IN: The list of DNS results is a subset of the list of expected values.</li>
+         * <li>EQUAL: The list of DNS results is the same as the list of expected values.</li>
+         * <li>ANY: The list of DNS results intersects with the list of expected values.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IN_DNS</p>
          */
         @NameInMap("dns_match_rule")
         public String dnsMatchRule;
 
         /**
          * <p>The domain name or IP address of the DNS server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("dns_server")
         public String dnsServer;
 
         /**
          * <p>The type of the DNS record. This parameter is returned only if the TaskType parameter is set to DNS. Valid values:</p>
-         * <br>
-         * <p>*   A (default): a record that specifies an IP address related to the specified host name or domain name.</p>
-         * <p>*   CNAME: a record that maps multiple domain names to a domain name.</p>
-         * <p>*   NS: a record that specifies a DNS server used to parse domain names.</p>
-         * <p>*   MX: a record that links domain names to the address of a mail server.</p>
-         * <p>*   TXT: a record that stores the text information of host name or domain names. The text must be 1 to 512 bytes in length. The TXT record serves as a Sender Policy Framework (SPF) record to fight against spam.</p>
-         * <p>*   AAAA: a record that maps a domain name to the relevant IPv6 address.</p>
+         * <ul>
+         * <li>A (default): a record that specifies an IP address related to the specified host name or domain name.</li>
+         * <li>CNAME: a record that maps multiple domain names to a domain name.</li>
+         * <li>NS: a record that specifies a DNS server used to parse domain names.</li>
+         * <li>MX: a record that links domain names to the address of a mail server.</li>
+         * <li>TXT: a record that stores the text information of host name or domain names. The text must be 1 to 512 bytes in length. The TXT record serves as a Sender Policy Framework (SPF) record to fight against spam.</li>
+         * <li>AAAA: a record that maps a domain name to the relevant IPv6 address.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>A</p>
          */
         @NameInMap("dns_type")
         public String dnsType;
 
         /**
          * <p>Indicates whether the DNS server of the carrier is used.</p>
-         * <br>
-         * <p>*   true (default): The DNS server of the carrier is used.</p>
-         * <p>*   false: The DNS server of the carrier is not used. The default DNS server or the specified DNS server is used.</p>
+         * <ul>
+         * <li>true (default): The DNS server of the carrier is used.</li>
+         * <li>false: The DNS server of the carrier is not used. The default DNS server or the specified DNS server is used.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("enable_operator_dns")
         public Boolean enableOperatorDns;
 
         /**
          * <p>The packet loss rate.</p>
-         * <br>
-         * <p>>  This parameter is returned only if the TaskType parameter is set to PING.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the TaskType parameter is set to PING.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         @NameInMap("failure_rate")
         public Float failureRate;
 
         /**
-         * <p>The header of the HTTP request. An HTTP header is a key-value pair in which the key and the value are separated by a colon (:). The format is `key1:value1`. Each HTTP header occupies a line.</p>
+         * <p>The header of the HTTP request. An HTTP header is a key-value pair in which the key and the value are separated by a colon (:). The format is <code>key1:value1</code>. Each HTTP header occupies a line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testKey:testValue</p>
          */
         @NameInMap("header")
         public String header;
 
         /**
          * <p>The HTTP request method. Valid values:</p>
-         * <br>
-         * <p>*   get</p>
-         * <p>*   post</p>
-         * <p>*   head</p>
+         * <ul>
+         * <li>get</li>
+         * <li>post</li>
+         * <li>head</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>get</p>
          */
         @NameInMap("http_method")
         public String httpMethod;
 
         /**
          * <p>Indicates whether the password is decoded by using the Base64 algorithm. Valid values:</p>
-         * <br>
-         * <p>*   true: The password is decoded by using the Base64 algorithm.</p>
-         * <p>*   false (default): The password is not decoded by using the Base64 algorithm.</p>
+         * <ul>
+         * <li>true: The password is decoded by using the Base64 algorithm.</li>
+         * <li>false (default): The password is not decoded by using the Base64 algorithm.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("isBase64Encode")
         public String isBase64Encode;
 
         /**
          * <p>Indicates whether the alert rule is included. Valid values:</p>
-         * <br>
-         * <p>*   0: The alert rule is included.</p>
-         * <p>*   1: The alert rule is not included.</p>
+         * <ul>
+         * <li>0: The alert rule is included.</li>
+         * <li>1: The alert rule is not included.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("match_rule")
         public Integer matchRule;
 
         /**
          * <p>The password of the SMTP, POP3, or FTP protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123****</p>
          */
         @NameInMap("password")
         public String password;
 
         /**
          * <p>The number of hops for the PING protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("ping_num")
         public Integer pingNum;
 
         /**
          * <p>The port number of the TCP, UDP, SMTP, or POP3 protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("port")
         public Integer port;
 
         /**
          * <p>The protocol type of DNS detection. Valid values:</p>
-         * <br>
-         * <p>*   udp (default)</p>
-         * <p>*   tcp</p>
-         * <p>*   tcp-tls</p>
+         * <ul>
+         * <li>udp (default)</li>
+         * <li>tcp</li>
+         * <li>tcp-tls</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>udp</p>
          */
         @NameInMap("protocol")
         public String protocol;
 
         /**
          * <p>Indicates whether the PROXY protocol is enabled. Valid values:</p>
-         * <br>
-         * <p>*   false (default): The PROXY protocol is disabled.</p>
-         * <p>*   true: The PROXY protocol is enabled.</p>
+         * <ul>
+         * <li>false (default): The PROXY protocol is disabled.</li>
+         * <li>true: The PROXY protocol is enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("proxy_protocol")
         public Boolean proxyProtocol;
 
         /**
          * <p>The content of the HTTP request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cf0f85</p>
          */
         @NameInMap("request_content")
         public String requestContent;
 
         /**
          * <p>The format of the HTTP request. Valid values:</p>
-         * <br>
-         * <p>*   hex: hexadecimal</p>
-         * <p>*   txt: text</p>
+         * <ul>
+         * <li>hex: hexadecimal</li>
+         * <li>txt: text</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>hex</p>
          */
         @NameInMap("request_format")
         public String requestFormat;
 
         /**
          * <p>The response to the HTTP request.</p>
-         * <br>
-         * <p>*   Hexadecimal format: If the request content is a byte string and cannot be represented in printable characters, you can convert the byte string to printable characters in the hexadecimal format. If you convert the byte string to printable characters in the hexadecimal format, one byte is converted to two hexadecimal characters. For example, (byte)1 is converted to `01` and (byte)27 is converted to `1B`. If the request content is a binary array in the Java format, for example, `{(byte)1, (byte)27}`, you can convert the binary array to `011b` or `011B`. Hexadecimal characters are not case-sensitive in site monitoring tasks. You can enter `011B` in the request content and set the request_format parameter to hex.</p>
-         * <p>*   Text format: Common text refers to strings that consist of printable characters.</p>
+         * <ul>
+         * <li>Hexadecimal format: If the request content is a byte string and cannot be represented in printable characters, you can convert the byte string to printable characters in the hexadecimal format. If you convert the byte string to printable characters in the hexadecimal format, one byte is converted to two hexadecimal characters. For example, (byte)1 is converted to <code>01</code> and (byte)27 is converted to <code>1B</code>. If the request content is a binary array in the Java format, for example, <code>{(byte)1, (byte)27}</code>, you can convert the binary array to <code>011b</code> or <code>011B</code>. Hexadecimal characters are not case-sensitive in site monitoring tasks. You can enter <code>011B</code> in the request content and set the request_format parameter to hex.</li>
+         * <li>Text format: Common text refers to strings that consist of printable characters.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cf0f85</p>
          */
         @NameInMap("response_content")
         public String responseContent;
 
         /**
          * <p>The format of the HTTP response. Valid values:</p>
-         * <br>
-         * <p>*   hex: hexadecimal</p>
-         * <p>*   txt: text</p>
+         * <ul>
+         * <li>hex: hexadecimal</li>
+         * <li>txt: text</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>hex</p>
          */
         @NameInMap("response_format")
         public String responseFormat;
 
         /**
          * <p>The number of times a failed detection request is retried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("retry_delay")
         public Integer retryDelay;
 
         /**
          * <p>The timeout period. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3000</p>
          */
         @NameInMap("time_out")
         public Long timeOut;
 
         /**
          * <p>Indicates whether redirects are followed if the status code 301 or 302 is returned. Valid values:</p>
-         * <br>
-         * <p>*   true: Redirects are not followed.</p>
-         * <p>*   false (default): Redirects are followed.</p>
+         * <ul>
+         * <li>true: Redirects are not followed.</li>
+         * <li>false (default): Redirects are followed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("unfollow_redirect")
         public Boolean unfollowRedirect;
 
         /**
          * <p>The username of the FTP, SMTP, or POP3 protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testUser</p>
          */
         @NameInMap("username")
         public String username;
@@ -719,39 +862,55 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
     public static class DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitor extends TeaModel {
         /**
          * <p>The URL or IP address that is monitored by the site monitoring task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://aliyun.com">https://aliyun.com</a></p>
          */
         @NameInMap("Address")
         public String address;
 
         /**
          * <p>The detection point type. Valid values:</p>
-         * <br>
-         * <p>*   PC</p>
-         * <p>*   MOBILE</p>
+         * <ul>
+         * <li>PC</li>
+         * <li>MOBILE</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PC</p>
          */
         @NameInMap("AgentGroup")
         public String agentGroup;
 
         /**
          * <p>The time when the site monitoring task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-01 11:05:18</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The interval at which detection requests are sent. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Interval")
         public String interval;
 
         /**
-         * <p>The extended options of the site monitoring task. The options vary based on the specified protocol. For more information, see [CreateSiteMonitor](~~115048~~).</p>
+         * <p>The extended options of the site monitoring task. The options vary based on the specified protocol. For more information, see <a href="https://help.aliyun.com/document_detail/115048.html">CreateSiteMonitor</a>.</p>
          */
         @NameInMap("OptionsJson")
         public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson optionsJson;
 
         /**
          * <p>The ID of the site monitoring task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f5783760-1b39-4b6b-80e8-453d962a****</p>
          */
         @NameInMap("TaskId")
         public String taskId;
@@ -764,21 +923,31 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
 
         /**
          * <p>The task status. Valid values:</p>
-         * <br>
-         * <p>*   1: The task is enabled.</p>
-         * <p>*   2: The task is disabled.</p>
+         * <ul>
+         * <li>1: The task is enabled.</li>
+         * <li>2: The task is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TaskState")
         public String taskState;
 
         /**
          * <p>The protocol that is used by the site monitoring task. Valid values: HTTP, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TCP</p>
          */
         @NameInMap("TaskType")
         public String taskType;
 
         /**
          * <p>The time when the site monitoring task was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-03-08 17:14:31</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

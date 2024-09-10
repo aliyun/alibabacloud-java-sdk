@@ -6,29 +6,43 @@ import com.aliyun.tea.*;
 public class EnableHostAvailabilityResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
-     * <br>
-     * <p>>  The HTTP status code 200 indicates a success.</p>
+     * <blockquote>
+     * <p> The HTTP status code 200 indicates a success.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>User not authorized to operate on the specified resource.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACBDBB40-DFB6-4F4C-8957-51FFB233969C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the operation was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: successful.</p>
-     * <p>*   false: failed.</p>
+     * <ul>
+     * <li>true: successful.</li>
+     * <li>false: failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

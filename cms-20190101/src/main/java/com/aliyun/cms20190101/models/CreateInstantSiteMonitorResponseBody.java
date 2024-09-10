@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class CreateInstantSiteMonitorResponseBody extends TeaModel {
     /**
      * <p>The error code.</p>
-     * <br>
-     * <p>> The status code 200 indicates that the call was successful.</p>
+     * <blockquote>
+     * <p>The status code 200 indicates that the call was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -20,21 +24,31 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>68192f5d-0d45-4b98-9724-892813f86c71</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The call was successful.</p>
-     * <p>*   false: The call failed.</p>
+     * <ul>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -87,12 +101,18 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
     public static class CreateInstantSiteMonitorResponseBodyCreateResultList extends TeaModel {
         /**
          * <p>The ID of the instant test task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2c8dbdf9-a3ab-46a1-85a4-f094965e****</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
          * <p>The name of the instant test task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task1</p>
          */
         @NameInMap("TaskName")
         public String taskName;

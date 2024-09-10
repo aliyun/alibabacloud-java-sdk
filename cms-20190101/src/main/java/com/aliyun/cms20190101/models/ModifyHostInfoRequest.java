@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class ModifyHostInfoRequest extends TeaModel {
     /**
      * <p>The name of the host.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>portalHost</p>
      */
     @NameInMap("HostName")
     public String hostName;
 
     /**
      * <p>The ID of the instance. Only hosts not on Alibaba Cloud are supported.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>host-R_NSWNV****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

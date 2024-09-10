@@ -6,42 +6,57 @@ import com.aliyun.tea.*;
 public class DescribeCustomMetricListRequest extends TeaModel {
     /**
      * <p>The dimensions that specify the resources for which you want to query custom metrics.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{sampleName1=value1&amp;sampleName2=value2}</p>
      */
     @NameInMap("Dimension")
     public String dimension;
 
     /**
      * <p>The ID of the application group.</p>
-     * <br>
-     * <p>For more information, see [DescribeMonitorGroups](~~115032~~).</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7378****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The MD5 value of the HTTP request body. The MD5 value is a 128-bit hash value used to verify the uniqueness of the reported custom metrics.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>97c25982d9745a231276bff27469****</p>
      */
     @NameInMap("Md5")
     public String md5;
 
     /**
      * <p>The name of the custom metric.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cpu_total</p>
      */
     @NameInMap("MetricName")
     public String metricName;
 
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Pages start from page 1. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public String pageSize;

@@ -9,22 +9,31 @@ public class PutResourceMetricRuleRequest extends TeaModel {
 
     /**
      * <p>The trigger conditions for multiple metrics.</p>
-     * <br>
-     * <p>>  The trigger conditions for a single metric and multiple metrics are mutually exclusive. You cannot specify trigger conditions for a single metric and multiple metrics at the same time.</p>
+     * <blockquote>
+     * <p> The trigger conditions for a single metric and multiple metrics are mutually exclusive. You cannot specify trigger conditions for a single metric and multiple metrics at the same time.</p>
+     * </blockquote>
      */
     @NameInMap("CompositeExpression")
     public PutResourceMetricRuleRequestCompositeExpression compositeExpression;
 
     /**
-     * <p>The alert contact group. The alert notifications are sent to the contacts that belong to the alert contact group.</p>
-     * <br>
-     * <p>>  An alert contact group can contain one or more alert contacts. For information about how to create alert contacts and alert contact groups, see [PutContact](~~114923~~) and [PutContactGroup](~~114929~~).</p>
+     * <p>The alert contact groups. Alert notifications are sent to the alert contacts in the alert contact group.</p>
+     * <blockquote>
+     * <p> An alert contact group can contain one or more alert contacts. For information about how to create alert contacts and alert contact groups, see <a href="https://help.aliyun.com/document_detail/114923.html">PutContact</a> and <a href="https://help.aliyun.com/document_detail/114929.html">PutContactGroup</a>.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS_Group</p>
      */
     @NameInMap("ContactGroups")
     public String contactGroups;
 
     /**
-     * <p>The time period during which the alert rule is effective.</p>
+     * <p>The period of time during which the alert rule is effective.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>00:00-23:59</p>
      */
     @NameInMap("EffectiveInterval")
     public String effectiveInterval;
@@ -36,105 +45,151 @@ public class PutResourceMetricRuleRequest extends TeaModel {
     public String emailSubject;
 
     /**
-     * <p>The interval at which the alert is triggered. Unit: seconds.</p>
-     * <br>
-     * <p>>  For information about how to query the statistical period of a metric, see [Appendix 1: Metrics](~~163515~~).</p>
+     * <p>The interval at which alerts are triggered based on the alert rule. Unit: seconds.</p>
+     * <blockquote>
+     * <p> For more information about how to query the statistical periods of metrics, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("Interval")
     public String interval;
 
     /**
-     * <p>The tags.</p>
+     * <p>If the metric meets the specified condition in the alert rule and CloudMonitor sends an alert notification, the tag is also written to the metric and displayed in the alert notification.</p>
+     * <blockquote>
+     * <p> This parameter is equivalent to the Label parameter of Prometheus alerts.</p>
+     * </blockquote>
      */
     @NameInMap("Labels")
     public java.util.List<PutResourceMetricRuleRequestLabels> labels;
 
     /**
-     * <p>The name of the metric. For information about how to query the name of a metric, see [Appendix 1: Metrics](~~163515~~).</p>
-     * <br>
-     * <p>>  If you create a Prometheus alert rule for Hybrid Cloud Monitoring, you must set this parameter to the name of the namespace. For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).</p>
+     * <p>The metric name. For more information about how to query metric names, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * <blockquote>
+     * <p> If you create a Prometheus alert rule for Hybrid Cloud Monitoring, you must set this parameter to the name of the namespace. For more information about how to query the names of namespaces, see <a href="https://help.aliyun.com/document_detail/428880.html">DescribeHybridMonitorNamespaceList</a>.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cpu_total</p>
      */
     @NameInMap("MetricName")
     public String metricName;
 
     /**
-     * <p>The namespace of the cloud service. For information about how to query the namespace of a cloud service, see [Appendix 1: Metrics](~~163515~~).</p>
-     * <br>
-     * <p>>  If you create a Prometheus alert rule for Hybrid Cloud Monitoring, you must set this parameter to `acs_prometheus`.</p>
+     * <p>The namespace of the cloud service. For more information about how to query the namespaces of cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * <blockquote>
+     * <p> If you create a Prometheus alert rule for Hybrid Cloud Monitoring, you must set this parameter to <code>acs_prometheus</code>.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs_ecs_dashboard</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
-     * <p>The processing method of alerts when no monitoring data is found. Valid values:</p>
-     * <br>
-     * <p>*   KEEP_LAST_STATE (default value): No operation is performed.</p>
-     * <p>*   INSUFFICIENT_DATA: An alert whose content is "Insufficient data" is triggered.</p>
-     * <p>*   OK: The status is considered normal.</p>
+     * <p>The method that is used to handle alerts when no monitoring data is found. Valid value:</p>
+     * <ul>
+     * <li>KEEP_LAST_STATE (default): No operation is performed.</li>
+     * <li>INSUFFICIENT_DATA: An alert whose content is &quot;Insufficient data&quot; is triggered.</li>
+     * <li>OK: The status is considered normal.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>KEEP_LAST_STATE</p>
      */
     @NameInMap("NoDataPolicy")
     public String noDataPolicy;
 
     /**
-     * <p>The time period during which the alert rule is ineffective.</p>
+     * <p>The period of time during which the alert rule is ineffective.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>00:00-06:00</p>
      */
     @NameInMap("NoEffectiveInterval")
     public String noEffectiveInterval;
 
     /**
      * <p>The statistical period of the metric. Unit: seconds. The default value is the interval at which the monitoring data of the metric is collected.</p>
-     * <br>
-     * <p>>  For information about how to query the statistical period of a metric, see [Appendix 1: Metrics](~~163515~~).</p>
+     * <blockquote>
+     * <p> For more information about how to query the statistical periods of metrics, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("Period")
     public String period;
 
     /**
-     * <p>The Prometheus alert rule.</p>
-     * <br>
-     * <p>>  This parameter is required only when you create a Prometheus alert rule for Hybrid Cloud Monitoring.</p>
+     * <p>Prometheus alerts.</p>
+     * <blockquote>
+     * <p> This parameter is required only if you create a Prometheus alert rule for Hybrid Cloud Monitoring.</p>
+     * </blockquote>
      */
     @NameInMap("Prometheus")
     public PutResourceMetricRuleRequestPrometheus prometheus;
 
     /**
-     * <p>The information about the resource. Examples: `[{"instanceId":"i-uf6j91r34rnwawoo****"}]` and `[{"userId":"100931896542****"}]`.</p>
-     * <br>
-     * <p>For information about the supported dimensions that are used to query resources, see [Appendix 1: Metrics](~~163515~~).</p>
+     * <p>The resource information. Examples: <code>[{&quot;instanceId&quot;:&quot;i-uf6j91r34rnwawoo****&quot;}]</code> and <code>[{&quot;userId&quot;:&quot;100931896542****&quot;}]</code>.</p>
+     * <p>For more information about the supported dimensions that are used to query resources, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;instanceId&quot;:&quot;i-uf6j91r34rnwawoo****&quot;}]</p>
      */
     @NameInMap("Resources")
     public String resources;
 
     /**
      * <p>The ID of the alert rule.</p>
-     * <br>
-     * <p>You can specify a new ID or the ID of an existing alert rule. For information about how to query the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).</p>
-     * <br>
-     * <p>>  If you specify a new ID, a threshold-triggered alert rule is created.</p>
+     * <p>You can specify a new ID or the ID of an existing alert rule. For more information about how to query the IDs of alert rules, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+     * <blockquote>
+     * <p> If you specify a new ID, a threshold-triggered alert rule is created.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a151cd6023eacee2f0978e03863cc1697c89508****</p>
      */
     @NameInMap("RuleId")
     public String ruleId;
 
     /**
      * <p>The name of the alert rule.</p>
-     * <br>
-     * <p>You can specify a new name or the name of an existing alert rule. For information about how to query the name of an alert rule, see [DescribeMetricRuleList](~~114941~~).</p>
-     * <br>
-     * <p>>  If you specify a new name, a threshold-triggered alert rule is created.</p>
+     * <p>You can specify a new name or the name of an existing alert rule. For more information about how to query the names of alert rules, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+     * <blockquote>
+     * <p> If you specify a new name, a threshold-triggered alert rule is created.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test123</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
 
     /**
-     * <p>The mute period during which new alerts are not sent even if the trigger conditions are met. Unit: seconds. Default value: 86400.</p>
-     * <br>
-     * <p>>  If an alert is not cleared within the mute period, a new alert notification is sent when the mute period ends.</p>
+     * <p>The mute period during which new alert notifications are not sent even if the trigger conditions are met. Unit: seconds. Default value: 86400.</p>
+     * <blockquote>
+     * <p> If an alert is not cleared after the mute period ends, CloudMonitor resends an alert notification.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>86400</p>
      */
     @NameInMap("SilenceTime")
     public Integer silenceTime;
 
     /**
      * <p>The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://alert.aliyun.com.com:8080/callback">https://alert.aliyun.com.com:8080/callback</a></p>
      */
     @NameInMap("Webhook")
     public String webhook;
@@ -290,50 +345,63 @@ public class PutResourceMetricRuleRequest extends TeaModel {
 
     public static class PutResourceMetricRuleRequestEscalationsCritical extends TeaModel {
         /**
-         * <p>The operator that is used to compare the metric value with the threshold. Valid values:</p>
-         * <br>
-         * <p>*   GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
-         * <p>*   GreaterThanThreshold: greater than the threshold</p>
-         * <p>*   LessThanOrEqualToThreshold: less than or equal to the threshold</p>
-         * <p>*   LessThanThreshold: less than the threshold</p>
-         * <p>*   NotEqualToThreshold: not equal to the threshold</p>
-         * <p>*   GreaterThanYesterday: greater than the metric value at the same time yesterday</p>
-         * <p>*   LessThanYesterday: less than the metric value at the same time yesterday</p>
-         * <p>*   GreaterThanLastWeek: greater than the metric value at the same time last week</p>
-         * <p>*   LessThanLastWeek: less than the metric value at the same time last week</p>
-         * <p>*   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
-         * <p>*   LessThanLastPeriod: less than the metric value in the last monitoring cycle</p>
-         * <br>
-         * <p>>  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.</p>
+         * <p>The operator that is used to compare the metric value with the threshold for Critical-level alerts. Valid value:</p>
+         * <ul>
+         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
+         * <li>GreaterThanThreshold: greater than the threshold</li>
+         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
+         * <li>LessThanThreshold: less than the threshold</li>
+         * <li>NotEqualToThreshold: not equal to the threshold</li>
+         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
+         * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
+         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
+         * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
+         * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
+         * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
+         * </ul>
+         * <blockquote>
+         * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>GreaterThanOrEqualToThreshold</p>
          */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
         /**
-         * <p>The statistical methods for Critical-level alerts. Valid values:</p>
-         * <br>
-         * <p>*   Maximum: the maximum value</p>
-         * <p>*   Minimum: the minimum value</p>
-         * <p>*   Average: the average value</p>
-         * <p>*   Availability: the availability rate</p>
-         * <br>
-         * <p>>  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.</p>
+         * <p>The statistical methods for Critical-level alerts.</p>
+         * <p>The value of this parameter is determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <blockquote>
+         * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Average</p>
          */
         @NameInMap("Statistics")
         public String statistics;
 
         /**
          * <p>The threshold for Critical-level alerts.</p>
-         * <br>
-         * <p>>  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.</p>
+         * <blockquote>
+         * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         @NameInMap("Threshold")
         public String threshold;
 
         /**
-         * <p>The consecutive number of times for which the metric value meets the trigger condition before a Critical-level alert is triggered.</p>
-         * <br>
-         * <p>>  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.</p>
+         * <p>The consecutive number of times for which the metric value meets the alert condition before a Critical-level alert is triggered.</p>
+         * <blockquote>
+         * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Times")
         public Integer times;
@@ -379,50 +447,63 @@ public class PutResourceMetricRuleRequest extends TeaModel {
 
     public static class PutResourceMetricRuleRequestEscalationsInfo extends TeaModel {
         /**
-         * <p>The operator that is used to compare the metric value with the threshold. Valid values:</p>
-         * <br>
-         * <p>*   GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
-         * <p>*   GreaterThanThreshold: greater than the threshold</p>
-         * <p>*   LessThanOrEqualToThreshold: less than or equal to the threshold</p>
-         * <p>*   LessThanThreshold: less than the threshold</p>
-         * <p>*   NotEqualToThreshold: not equal to the threshold</p>
-         * <p>*   GreaterThanYesterday: greater than the metric value at the same time yesterday</p>
-         * <p>*   LessThanYesterday: less than the metric value at the same time yesterday</p>
-         * <p>*   GreaterThanLastWeek: greater than the metric value at the same time last week</p>
-         * <p>*   LessThanLastWeek: less than the metric value at the same time last week</p>
-         * <p>*   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
-         * <p>*   LessThanLastPeriod: less than the metric value in the last monitoring cycle</p>
-         * <br>
-         * <p>>  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.</p>
+         * <p>The operator that is used to compare the metric value with the threshold for Info-level alerts. Valid value:</p>
+         * <ul>
+         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
+         * <li>GreaterThanThreshold: greater than the threshold</li>
+         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
+         * <li>LessThanThreshold: less than the threshold</li>
+         * <li>NotEqualToThreshold: not equal to the threshold</li>
+         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
+         * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
+         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
+         * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
+         * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
+         * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
+         * </ul>
+         * <blockquote>
+         * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>GreaterThanOrEqualToThreshold</p>
          */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
         /**
-         * <p>The statistical methods for Info-level alerts. Valid values:</p>
-         * <br>
-         * <p>*   Maximum: the maximum value</p>
-         * <p>*   Minimum: the minimum value</p>
-         * <p>*   Average: the average value</p>
-         * <p>*   Availability: the availability rate</p>
-         * <br>
-         * <p>>  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.</p>
+         * <p>The statistical methods for Info-level alerts.</p>
+         * <p>The value of this parameter is determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <blockquote>
+         * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Average</p>
          */
         @NameInMap("Statistics")
         public String statistics;
 
         /**
          * <p>The threshold for Info-level alerts.</p>
-         * <br>
-         * <p>>  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.</p>
+         * <blockquote>
+         * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         @NameInMap("Threshold")
         public String threshold;
 
         /**
-         * <p>The consecutive number of times for which the metric value meets the trigger condition before an Info-level alert is triggered.</p>
-         * <br>
-         * <p>>  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.</p>
+         * <p>The consecutive number of times for which the metric value meets the alert condition before an Info-level alert is triggered.</p>
+         * <blockquote>
+         * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Times")
         public Integer times;
@@ -468,50 +549,63 @@ public class PutResourceMetricRuleRequest extends TeaModel {
 
     public static class PutResourceMetricRuleRequestEscalationsWarn extends TeaModel {
         /**
-         * <p>The operator that is used to compare the metric value with the threshold. Valid values:</p>
-         * <br>
-         * <p>*   GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
-         * <p>*   GreaterThanThreshold: greater than the threshold</p>
-         * <p>*   LessThanOrEqualToThreshold: less than or equal to the threshold</p>
-         * <p>*   LessThanThreshold: less than the threshold</p>
-         * <p>*   NotEqualToThreshold: not equal to the threshold</p>
-         * <p>*   GreaterThanYesterday: greater than the metric value at the same time yesterday</p>
-         * <p>*   LessThanYesterday: less than the metric value at the same time yesterday</p>
-         * <p>*   GreaterThanLastWeek: greater than the metric value at the same time last week</p>
-         * <p>*   LessThanLastWeek: less than the metric value at the same time last week</p>
-         * <p>*   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
-         * <p>*   LessThanLastPeriod: less than the metric value in the last monitoring cycle</p>
-         * <br>
-         * <p>>  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.</p>
+         * <p>The operator that is used to compare the metric value with the threshold for Warn-level alerts. Valid value:</p>
+         * <ul>
+         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
+         * <li>GreaterThanThreshold: greater than the threshold</li>
+         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
+         * <li>LessThanThreshold: less than the threshold</li>
+         * <li>NotEqualToThreshold: not equal to the threshold</li>
+         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
+         * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
+         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
+         * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
+         * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
+         * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
+         * </ul>
+         * <blockquote>
+         * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>GreaterThanOrEqualToThreshold</p>
          */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
         /**
-         * <p>The statistical methods for Warn-level alerts. Valid values:</p>
-         * <br>
-         * <p>*   Maximum: the maximum value</p>
-         * <p>*   Minimum: the minimum value</p>
-         * <p>*   Average: the average value</p>
-         * <p>*   Availability: the availability rate</p>
-         * <br>
-         * <p>>  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.</p>
+         * <p>The statistical methods for Warn-level alerts.</p>
+         * <p>The value of this parameter is determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <blockquote>
+         * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Average</p>
          */
         @NameInMap("Statistics")
         public String statistics;
 
         /**
          * <p>The threshold for Warn-level alerts.</p>
-         * <br>
-         * <p>>  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.</p>
+         * <blockquote>
+         * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         @NameInMap("Threshold")
         public String threshold;
 
         /**
-         * <p>The consecutive number of times for which the metric value meets the trigger condition before a Warn-level alert is triggered.</p>
-         * <br>
-         * <p>>  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.</p>
+         * <p>The consecutive number of times for which the metric value meets the alert condition before a Warn-level alert is triggered.</p>
+         * <blockquote>
+         * <p> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Times")
         public Integer times;
@@ -598,52 +692,69 @@ public class PutResourceMetricRuleRequest extends TeaModel {
 
     public static class PutResourceMetricRuleRequestCompositeExpressionExpressionList extends TeaModel {
         /**
-         * <p>The operator that is used to compare the metric value with the threshold. Valid values:</p>
-         * <br>
-         * <p>*   GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
-         * <p>*   GreaterThanThreshold: greater than the threshold</p>
-         * <p>*   LessThanOrEqualToThreshold: less than or equal to the threshold</p>
-         * <p>*   LessThanThreshold: less than the threshold</p>
-         * <p>*   NotEqualToThreshold: not equal to the threshold</p>
-         * <p>*   GreaterThanYesterday: greater than the metric value at the same time yesterday</p>
-         * <p>*   LessThanYesterday: less than the metric value at the same time yesterday</p>
-         * <p>*   GreaterThanLastWeek: greater than the metric value at the same time last week</p>
-         * <p>*   LessThanLastWeek: less than the metric value at the same time last week</p>
-         * <p>*   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
-         * <p>*   LessThanLastPeriod: less than the metric value in the last monitoring cycle</p>
+         * <p>The operator that is used to compare the metric value with the threshold. Valid value:</p>
+         * <ul>
+         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
+         * <li>GreaterThanThreshold: greater than the threshold</li>
+         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
+         * <li>LessThanThreshold: less than the threshold</li>
+         * <li>NotEqualToThreshold: not equal to the threshold</li>
+         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
+         * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
+         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
+         * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
+         * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
+         * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GreaterThanOrEqualToThreshold</p>
          */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
         /**
          * <p>The metric that is used to monitor the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu_total</p>
          */
         @NameInMap("MetricName")
         public String metricName;
 
         /**
          * <p>The aggregation period of the metric.</p>
-         * <br>
          * <p>Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("Period")
         public Long period;
 
         /**
-         * <p>The statistical method of the metric. Valid values:</p>
-         * <br>
-         * <p>*   $Maximum: the maximum value</p>
-         * <p>*   $Minimum: the minimum value</p>
-         * <p>*   $Average: the average value</p>
-         * <p>*   $Availability: the availability rate (usually used for site monitoring)</p>
-         * <br>
-         * <p>>  `$` is the prefix of the metric. For information about the Alibaba Cloud services that are supported by CloudMonitor, see [Appendix 1: Metrics](~~163515~~).</p>
+         * <p>The statistical method of the metric. Valid value:</p>
+         * <ul>
+         * <li>$Maximum: the maximum value</li>
+         * <li>$Minimum: the minimum value</li>
+         * <li>$Average: the average value</li>
+         * <li>$Availability: the availability rate (usually used for site monitoring)</li>
+         * </ul>
+         * <blockquote>
+         * <p> <code>$</code> is the prefix of the metric. For information about the Alibaba Cloud services that are supported by CloudMonitor, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>$Maximum</p>
          */
         @NameInMap("Statistics")
         public String statistics;
 
         /**
          * <p>The alert threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         @NameInMap("Threshold")
         public String threshold;
@@ -703,36 +814,51 @@ public class PutResourceMetricRuleRequest extends TeaModel {
         public java.util.List<PutResourceMetricRuleRequestCompositeExpressionExpressionList> expressionList;
 
         /**
-         * <p>The relationship between the trigger conditions for multiple metrics. Valid values:</p>
-         * <br>
-         * <p>*   `&&`: An alert is triggered only if all metrics meet the trigger conditions. An alert is triggered only if the results of all expressions specified in the ExpressionList parameter are `true`.</p>
-         * <p>*   `||`: If one of the metrics meets the trigger conditions, an alert is triggered.</p>
+         * <p>The relationship between the trigger conditions for multiple metrics. Valid value:</p>
+         * <ul>
+         * <li><code>&amp;&amp;</code>: An alert is triggered only if all metrics meet the trigger conditions. An alert is triggered only if the results of all expressions specified in the ExpressionList parameter are <code>true</code>.</li>
+         * <li><code>||</code>: An alert is triggered if one of the metrics meets the trigger conditions.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>||</p>
          */
         @NameInMap("ExpressionListJoin")
         public String expressionListJoin;
 
         /**
          * <p>The trigger conditions that are created by using expressions. You can use expressions to create trigger conditions in the following scenarios:</p>
-         * <br>
-         * <p>*   Set an alert blacklist for specific resources. For example, if you specify ` $instanceId != \"i-io8kfvcpp7x5****\"  ``&&``  $Average > 50 `, no alert is generated even when the `average metric value` of the `i-io8kfvcpp7x5****` instance exceeds 50.</p>
-         * <p>*   Set a special alert threshold for a specified instance in the rule. For example, if you specify `$Average > ($instanceId == \"i-io8kfvcpp7x5****\"? 80: 50)`, an alert is triggered when the `average metric value` of the `i-io8kfvcpp7x5****` instance exceeds 80 or the `average metric value` of other instances exceeds 50.</p>
-         * <p>*   Limits the number of instances whose metric values exceed the threshold. For example, if you specify `count($Average > 20) > 3`, an alert is triggered only when the number of instances whose `average metric value` exceeds 20 exceeds three.</p>
+         * <ul>
+         * <li>Set an alert blacklist for specific resources. For example, if you specify <code>$instanceId != \\&quot;i-io8kfvcpp7x5****\\&quot; ``&amp;&amp;`` $Average &gt; 50</code>, no alert is triggered when the <code>average metric value</code> of the <code>i-io8kfvcpp7x5****</code> instance exceeds 50.</li>
+         * <li>Set a special alert threshold for a specified instance in the rule. For example, if you specify <code>$Average &gt; ($instanceId == \\&quot;i-io8kfvcpp7x5****\\&quot;? 80: 50)</code>, an alert is triggered when the <code>average metric value</code> of the <code>i-io8kfvcpp7x5****</code> instance exceeds 80 or the <code>average metric value</code> of other instances exceeds 50.</li>
+         * <li>Limit the number of instances whose metric values exceed the threshold. For example, if you specify <code>count($Average &gt; 20) &gt; 3</code>, an alert is triggered only when the <code>average metric value</code> of more than three instances exceeds 20.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>$Average &gt; ($instanceId == \&quot;i-io8kfvcpp7x5****\&quot;? 80: 50)</p>
          */
         @NameInMap("ExpressionRaw")
         public String expressionRaw;
 
         /**
-         * <p>The level of the alert. Valid values:</p>
-         * <br>
-         * <p>*   Critical</p>
-         * <p>*   Warn</p>
-         * <p>*   Info</p>
+         * <p>The alert level. Valid values:</p>
+         * <ul>
+         * <li>Critical</li>
+         * <li>Warn</li>
+         * <li>Info</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Critical</p>
          */
         @NameInMap("Level")
         public String level;
 
         /**
          * <p>The number of consecutive triggers. If the number of times that the metric values meet the trigger conditions reaches the value of this parameter, CloudMonitor sends alert notifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Times")
         public Integer times;
@@ -786,15 +912,22 @@ public class PutResourceMetricRuleRequest extends TeaModel {
 
     public static class PutResourceMetricRuleRequestLabels extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tagKey1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
-         * <br>
-         * <p>>  You can use a template parameter to specify a tag value. CloudMonitor replaces the value of the template parameter with an actual tag value.</p>
+         * <p>The tag value.</p>
+         * <blockquote>
+         * <p> You can use a template parameter to specify a tag value. CloudMonitor replaces the value of the template parameter with an actual tag value.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         @NameInMap("Value")
         public String value;
@@ -825,12 +958,18 @@ public class PutResourceMetricRuleRequest extends TeaModel {
     public static class PutResourceMetricRuleRequestPrometheusAnnotations extends TeaModel {
         /**
          * <p>The key of the annotation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>summary</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the annotation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{{ $labels.instance }} CPU usage above 10% {current value: {{ humanizePercentage $value }} }</p>
          */
         @NameInMap("Value")
         public String value;
@@ -861,32 +1000,44 @@ public class PutResourceMetricRuleRequest extends TeaModel {
     public static class PutResourceMetricRuleRequestPrometheus extends TeaModel {
         /**
          * <p>The annotations of the Prometheus alert rule. When a Prometheus alert is triggered, the system renders the annotated keys and values to help you understand the metrics and alert rule.</p>
-         * <br>
-         * <p>>  This parameter is equivalent to the annotations parameter of open source Prometheus.</p>
+         * <blockquote>
+         * <p> This parameter is equivalent to the annotations parameter of open source Prometheus.</p>
+         * </blockquote>
          */
         @NameInMap("Annotations")
         public java.util.List<PutResourceMetricRuleRequestPrometheusAnnotations> annotations;
 
         /**
-         * <p>The level of the alert. Valid values:</p>
-         * <br>
-         * <p>*   Critical</p>
-         * <p>*   Warn</p>
-         * <p>*   Info</p>
+         * <p>The alert level. Valid values:</p>
+         * <ul>
+         * <li>Critical</li>
+         * <li>Warn</li>
+         * <li>Info</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Critical</p>
          */
         @NameInMap("Level")
         public String level;
 
         /**
-         * <p>The PromQL query statement.</p>
-         * <br>
-         * <p>>  The data obtained by using the PromQL query statement is the monitoring data. You must include the alert threshold in this statement.</p>
+         * <p>PromQL statements are supported.</p>
+         * <blockquote>
+         * <p> The data obtained by using the PromQL query statement is the monitoring data. You must include the alert threshold in this statement.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cpuUsage{instanceId=&quot;xxxx&quot;}[1m]&gt;90</p>
          */
         @NameInMap("PromQL")
         public String promQL;
 
         /**
          * <p>The number of consecutive triggers. If the number of times that the metric values meet the trigger conditions reaches the value of this parameter, CloudMonitor sends alert notifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Times")
         public Integer times;

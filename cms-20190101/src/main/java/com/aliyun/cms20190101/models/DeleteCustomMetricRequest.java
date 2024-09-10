@@ -6,20 +6,32 @@ import com.aliyun.tea.*;
 public class DeleteCustomMetricRequest extends TeaModel {
     /**
      * <p>The ID of the application group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3607****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The MD5 value of the HTTP request body. The MD5 value is a 128-bit hash value used to verify the uniqueness of the reported monitoring data.</p>
-     * <br>
-     * <p>>  `Md5` is returned when you query the reported monitoring data of a metric.</p>
+     * <blockquote>
+     * <p> <code>Md5</code> is returned when you query the reported monitoring data of a metric.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>38796C8CFFEB8F89BB2A626C7BD7****</p>
      */
     @NameInMap("Md5")
     public String md5;
 
     /**
      * <p>The name of the metric.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AdvanceCredit</p>
      */
     @NameInMap("MetricName")
     public String metricName;
@@ -29,8 +41,12 @@ public class DeleteCustomMetricRequest extends TeaModel {
 
     /**
      * <p>The ID of the request for reporting monitoring data.</p>
-     * <br>
-     * <p>>  `UUID` is returned when you query the reported monitoring data of a metric. We recommend that you specify the `Md5` parameter.</p>
+     * <blockquote>
+     * <p> <code>UUID</code> is returned when you query the reported monitoring data of a metric. We recommend that you specify the <code>Md5</code> parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>5497633c-66c5-4eae-abaa-89db5adb****</p>
      */
     @NameInMap("UUID")
     public String UUID;

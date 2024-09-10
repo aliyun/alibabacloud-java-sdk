@@ -33,6 +33,10 @@ public class PutEventRuleTargetsRequest extends TeaModel {
 
     /**
      * <p>The name of the alert rule.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testEventRule</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
@@ -127,14 +131,19 @@ public class PutEventRuleTargetsRequest extends TeaModel {
 
         /**
          * <p>The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The alert level and the corresponding notification methods. Valid values of N: 1 to 5. Valid values:</p>
-         * <br>
          * <p>4: Alert notifications are sent by using DingTalk chatbots and emails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Level")
         public String level;
@@ -173,24 +182,36 @@ public class PutEventRuleTargetsRequest extends TeaModel {
     public static class PutEventRuleTargetsRequestFcParameters extends TeaModel {
         /**
          * <p>The name of the function. Valid values of N: 1 to 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fc-test</p>
          */
         @NameInMap("FunctionName")
         public String functionName;
 
         /**
          * <p>The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The region where Function Compute is deployed. Valid values of N: 1 to 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The name of the Function Compute service. Valid values of N: 1 to 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fc-test</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
@@ -237,24 +258,36 @@ public class PutEventRuleTargetsRequest extends TeaModel {
     public static class PutEventRuleTargetsRequestMnsParameters extends TeaModel {
         /**
          * <p>The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The name of the MNS queue. Valid values of N: 1 to 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>queue1</p>
          */
         @NameInMap("Queue")
         public String queue;
 
         /**
          * <p>The region where Message Service (MNS) is deployed. Valid values of N: 1 to 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The MNS topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>topic_sample</p>
          */
         @NameInMap("Topic")
         public String topic;
@@ -301,54 +334,76 @@ public class PutEventRuleTargetsRequest extends TeaModel {
     public static class PutEventRuleTargetsRequestOpenApiParameters extends TeaModel {
         /**
          * <p>The API name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PutLogs</p>
          */
         @NameInMap("Action")
         public String action;
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the resource. Valid values of N: 1 to 5. Format: `arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}`. Fields:</p>
-         * <br>
-         * <p>*   Service: the code of a cloud service</p>
-         * <p>*   Region: the region ID</p>
-         * <p>*   Account: the ID of an Alibaba Cloud account</p>
-         * <p>*   ResourceType: the resource type</p>
-         * <p>*   ResourceId: the resource ID</p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the resource. Valid values of N: 1 to 5. Format: <code>arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}</code>. Fields:</p>
+         * <ul>
+         * <li>Service: the code of a cloud service</li>
+         * <li>Region: the region ID</li>
+         * <li>Account: the ID of an Alibaba Cloud account</li>
+         * <li>ResourceType: the resource type</li>
+         * <li>ResourceId: the resource ID</li>
+         * </ul>
          */
         @NameInMap("Arn")
         public String arn;
 
         /**
          * <p>The ID of the recipient that receives alert notifications sent by an API callback.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The parameters of the alert callback. Specify the parameters in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;customField1&quot;:&quot;value1&quot;,&quot;customField2&quot;:&quot;$.name&quot;}</p>
          */
         @NameInMap("JsonParams")
         public String jsonParams;
 
         /**
          * <p>The ID of the cloud service to which the API operation belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>log</p>
          */
         @NameInMap("Product")
         public String product;
 
         /**
          * <p>The region where the resource resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The name of the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyRole</p>
          */
         @NameInMap("Role")
         public String role;
 
         /**
          * <p>The version of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-01</p>
          */
         @NameInMap("Version")
         public String version;
@@ -427,24 +482,36 @@ public class PutEventRuleTargetsRequest extends TeaModel {
     public static class PutEventRuleTargetsRequestSlsParameters extends TeaModel {
         /**
          * <p>The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The name of the Simple Log Service Logstore. Valid values of N: 1 to 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testlogstore</p>
          */
         @NameInMap("LogStore")
         public String logStore;
 
         /**
          * <p>The name of the Simple Log Service project. Valid values of N: 1 to 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testproject</p>
          */
         @NameInMap("Project")
         public String project;
 
         /**
          * <p>The region where Simple Log Service is deployed. Valid values of N: 1 to 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
@@ -491,30 +558,42 @@ public class PutEventRuleTargetsRequest extends TeaModel {
     public static class PutEventRuleTargetsRequestWebhookParameters extends TeaModel {
         /**
          * <p>The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The HTTP request method. Valid values of N: 1 to 5.</p>
-         * <br>
          * <p>Valid values: GET and POST.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GET</p>
          */
         @NameInMap("Method")
         public String method;
 
         /**
          * <p>The name of the protocol. Valid values of N: 1 to 5. Valid values:</p>
-         * <br>
-         * <p>*   http</p>
-         * <p>*   telnet</p>
-         * <p>*   ping</p>
+         * <ul>
+         * <li>http</li>
+         * <li>telnet</li>
+         * <li>ping</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>http</p>
          */
         @NameInMap("Protocol")
         public String protocol;
 
         /**
          * <p>The callback URL. Valid values of N: 1 to 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>
          */
         @NameInMap("Url")
         public String url;

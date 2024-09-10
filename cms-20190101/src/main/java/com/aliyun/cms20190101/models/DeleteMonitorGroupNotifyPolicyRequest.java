@@ -6,14 +6,20 @@ import com.aliyun.tea.*;
 public class DeleteMonitorGroupNotifyPolicyRequest extends TeaModel {
     /**
      * <p>The ID of the application group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6780****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The policy type.</p>
-     * <br>
      * <p>Valid value: PauseNotify.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PauseNotify</p>
      */
     @NameInMap("PolicyType")
     public String policyType;

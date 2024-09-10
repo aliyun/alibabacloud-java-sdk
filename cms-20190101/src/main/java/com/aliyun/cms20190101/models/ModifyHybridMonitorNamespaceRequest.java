@@ -12,10 +12,12 @@ public class ModifyHybridMonitorNamespaceRequest extends TeaModel {
 
     /**
      * <p>The name of the namespace.</p>
-     * <br>
      * <p>The name can contain letters, digits, and hyphens (-).</p>
-     * <br>
-     * <p>For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).</p>
+     * <p>For information about how to obtain the name of a namespace, see <a href="https://help.aliyun.com/document_detail/428880.html">DescribeHybridMonitorNamespaceList</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aliyun</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -25,15 +27,18 @@ public class ModifyHybridMonitorNamespaceRequest extends TeaModel {
 
     /**
      * <p>The data retention period. Valid values:</p>
-     * <br>
-     * <p>*   cms.s1.large: Data is stored for 15 days.</p>
-     * <p>*   cms.s1.xlarge: Data is stored for 32 days.</p>
-     * <p>*   cms.s1.2xlarge: Data is stored for 63 days.</p>
-     * <p>*   cms.s1.3xlarge: Data is stored for 93 days.</p>
-     * <p>*   cms.s1.6xlarge: Data is stored for 185 days.</p>
-     * <p>*   cms.s1.12xlarge: Data is stored for 376 days.</p>
-     * <br>
-     * <p>For information about the pricing for different retention periods, see the **Pricing** section in [Billing of the dashboard feature](~~223532~~).</p>
+     * <ul>
+     * <li>cms.s1.large: Data is stored for 15 days.</li>
+     * <li>cms.s1.xlarge: Data is stored for 32 days.</li>
+     * <li>cms.s1.2xlarge: Data is stored for 63 days.</li>
+     * <li>cms.s1.3xlarge: Data is stored for 93 days.</li>
+     * <li>cms.s1.6xlarge: Data is stored for 185 days.</li>
+     * <li>cms.s1.12xlarge: Data is stored for 376 days.</li>
+     * </ul>
+     * <p>For information about the pricing for different retention periods, see the <strong>Pricing</strong> section in <a href="https://help.aliyun.com/document_detail/223532.html">Billing of the dashboard feature</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cms.s1.2xlarge</p>
      */
     @NameInMap("Spec")
     public String spec;

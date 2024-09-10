@@ -4,27 +4,43 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class ModifyGroupMonitoringAgentProcessRequest extends TeaModel {
+    /**
+     * <p>The alert rule configurations.</p>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AlertConfig")
     public java.util.List<ModifyGroupMonitoringAgentProcessRequestAlertConfig> alertConfig;
 
     /**
      * <p>The ID of the application group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6780****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The ID of the process monitoring task.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>92E3065F-0980-4E31-9AA0-BA6****</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
      * <p>The logical operator used between conditional expressions that are used to match instances. Valid values:</p>
-     * <br>
-     * <p>*   all</p>
-     * <p>*   and</p>
-     * <p>*   or</p>
+     * <ul>
+     * <li>all</li>
+     * <li>and</li>
+     * <li>or</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>and</p>
      */
     @NameInMap("MatchExpressFilterRelation")
     public String matchExpressFilterRelation;
@@ -80,39 +96,59 @@ public class ModifyGroupMonitoringAgentProcessRequest extends TeaModel {
     public static class ModifyGroupMonitoringAgentProcessRequestAlertConfigTargetList extends TeaModel {
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the resource.</p>
-         * <br>
-         * <p>For information about how to obtain the ARN of a resource, see [DescribeMetricRuleTargets](~~121592~~).</p>
-         * <br>
-         * <p>Format: `acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message`. Example: `acs:mns:cn-hangzhou:120886317861****:/queues/test123/message`. Fields:</p>
-         * <br>
-         * <p>*   {Service name abbreviation}: the abbreviation of the service name. Valid value: mns.</p>
-         * <p>*   {userId}: the ID of the Alibaba Cloud account.</p>
-         * <p>*   {regionId}: the region ID of the message queue or topic.</p>
-         * <p>*   {Resource type}`: the type of the resource for which alerts are triggered. Valid values: - **queues** - **topics** {Resource name}: the name of the resource. - If the resource type is set to **queues**, the resource name is the name of the message queue. - If the resource type is set to **topics**, the resource name is the name of the topic.`</p>
+         * <p>For information about how to obtain the ARN of a resource, see <a href="https://help.aliyun.com/document_detail/121592.html">DescribeMetricRuleTargets</a>.</p>
+         * <p>Format: <code>acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message</code>. Example: <code>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</code>. Fields:</p>
+         * <ul>
+         * <li>{Service name abbreviation}: the abbreviation of the service name. Valid value: mns.</li>
+         * <li>{userId}: the ID of the Alibaba Cloud account.</li>
+         * <li>{regionId}: the region ID of the message queue or topic.</li>
+         * <li>{Resource type}: the type of the resource for which alerts are triggered. Valid values: <ul>
+         * <li><strong>queues</strong> </li>
+         * <li><strong>topics</strong></li>
+         * </ul>
+         * </li>
+         * <li>{Resourcename}: the name of the resource. <ul>
+         * <li>If the resource type is set to <strong>queues</strong>, the resource name is the name of the message queue. </li>
+         * <li>If the resource type is set to <strong>topics</strong>, the resource name is the name of the topic.`</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:mns:cn-hangzhou:120886317861****:/queues/test/message</p>
          */
         @NameInMap("Arn")
         public String arn;
 
         /**
          * <p>The ID of the resource for which alerts are triggered.</p>
-         * <br>
-         * <p>For information about how to obtain the ID of a resource for which alerts are triggered, see [DescribeMetricRuleTargets](~~121592~~).</p>
+         * <p>For information about how to obtain the ID of a resource for which alerts are triggered, see <a href="https://help.aliyun.com/document_detail/121592.html">DescribeMetricRuleTargets</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The parameters of the alert callback. The parameters are in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;customField1&quot;:&quot;value1&quot;,&quot;customField2&quot;:&quot;$.name&quot;}</p>
          */
         @NameInMap("JsonParams")
         public String jsonParams;
 
         /**
          * <p>The level of the alert. Valid values:</p>
-         * <br>
-         * <p>*   INFO: information</p>
-         * <p>*   WARN: warning</p>
-         * <p>*   CRITICAL: critical</p>
+         * <ul>
+         * <li>INFO: information</li>
+         * <li>WARN: warning</li>
+         * <li>CRITICAL: critical</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;INFO&quot;, &quot;WARN&quot;, &quot;CRITICAL&quot;]</p>
          */
         @NameInMap("Level")
         public String level;
@@ -159,81 +195,119 @@ public class ModifyGroupMonitoringAgentProcessRequest extends TeaModel {
     public static class ModifyGroupMonitoringAgentProcessRequestAlertConfig extends TeaModel {
         /**
          * <p>The comparison operator that is used to compare the metric value with the threshold. Valid values of N: 1 to 200. Valid values:</p>
-         * <br>
-         * <p>*   GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
-         * <p>*   GreaterThanThreshold: greater than the threshold</p>
-         * <p>*   LessThanOrEqualToThreshold: less than or equal to the threshold</p>
-         * <p>*   LessThanThreshold: less than the threshold.</p>
-         * <p>*   NotEqualToThreshold: not equal to the threshold</p>
-         * <p>*   GreaterThanYesterday: greater than the metric value at the same time yesterday.</p>
-         * <p>*   LessThanYesterday: less than the metric value at the same time yesterday</p>
-         * <p>*   GreaterThanLastWeek: greater than the metric value at the same time last week</p>
-         * <p>*   LessThanLastWeek: less than the metric value at the same time last week</p>
-         * <p>*   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
-         * <p>*   LessThanLastPeriod: less than the metric value in the last monitoring cycle</p>
+         * <ul>
+         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
+         * <li>GreaterThanThreshold: greater than the threshold</li>
+         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
+         * <li>LessThanThreshold: less than the threshold.</li>
+         * <li>NotEqualToThreshold: not equal to the threshold</li>
+         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday.</li>
+         * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
+         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
+         * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
+         * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
+         * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GreaterThanOrEqualToThreshold</p>
          */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
         /**
          * <p>The time period during which the alert rule is effective. Valid values of N: 1 to 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00-22:59</p>
          */
         @NameInMap("EffectiveInterval")
         public String effectiveInterval;
 
         /**
          * <p>The level of the alert. Valid values of N: 1 to 200. Valid values:</p>
-         * <br>
-         * <p>*   critical (default value): critical</p>
-         * <p>*   warn: warning</p>
-         * <p>*   info: information</p>
+         * <ul>
+         * <li>critical (default value): critical</li>
+         * <li>warn: warning</li>
+         * <li>info: information</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>warn</p>
          */
         @NameInMap("EscalationsLevel")
         public String escalationsLevel;
 
         /**
          * <p>The time period during which the alert rule is ineffective. Valid values of N: 1 to 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23:00-23:59</p>
          */
         @NameInMap("NoEffectiveInterval")
         public String noEffectiveInterval;
 
         /**
          * <p>The mute period during which new alerts are not sent even if the trigger conditions are met. Valid values of N: 1 to 200.</p>
-         * <br>
          * <p>Unit: seconds. Minimum value: 3600, which is equivalent to one hour. Default value: 86400, which is equivalent to one day.</p>
-         * <br>
-         * <p>>  Only one alert notification is sent during a mute period even if the metric value exceeds the alert threshold during consecutive checks.</p>
+         * <blockquote>
+         * <p> Only one alert notification is sent during a mute period even if the metric value exceeds the alert threshold during consecutive checks.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
          */
         @NameInMap("SilenceTime")
         public String silenceTime;
 
         /**
          * <p>The statistical aggregation method that is used to calculate the metric values. Valid values of N: 1 to 200.</p>
-         * <br>
-         * <p>>  Set the value to Average.</p>
+         * <blockquote>
+         * <p> Set the value to Average.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Average</p>
          */
         @NameInMap("Statistics")
         public String statistics;
 
+        /**
+         * <p>The alert trigger.</p>
+         */
         @NameInMap("TargetList")
         public java.util.List<ModifyGroupMonitoringAgentProcessRequestAlertConfigTargetList> targetList;
 
         /**
          * <p>The alert threshold. Valid values of N: 1 to 200.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("Threshold")
         public String threshold;
 
         /**
          * <p>The number of times for which the threshold can be consecutively exceeded. Valid values of N: 1 to 200. Default value: 3.</p>
-         * <br>
-         * <p>>  A metric triggers an alert only after the metric value reaches the threshold consecutively for the specified times.</p>
+         * <blockquote>
+         * <p> A metric triggers an alert only after the metric value reaches the threshold consecutively for the specified times.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Times")
         public String times;
 
         /**
          * <p>The callback URL to which a POST request is sent when an alert is triggered based on the alert rule. Valid values of N: 1 to 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>
          */
         @NameInMap("Webhook")
         public String webhook;

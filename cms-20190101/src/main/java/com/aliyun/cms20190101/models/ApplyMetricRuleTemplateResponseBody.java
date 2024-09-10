@@ -5,21 +5,31 @@ import com.aliyun.tea.*;
 
 public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
-     * <br>
-     * <p>>  The HTTP status code 200 indicates that the call succeeds.</p>
+     * <p>The responses code.</p>
+     * <blockquote>
+     * <p> The status code 200 indicates that the request was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified resource is not found.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3F897F3C-020A-4993-95B4-63ABB84F83E6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -31,10 +41,14 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
     public ApplyMetricRuleTemplateResponseBodyResource resource;
 
     /**
-     * <p>Indicates whether the call succeeds. Valid values:</p>
-     * <br>
-     * <p>*   true: The call succeeds.</p>
-     * <p>*   false: The call fails.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -86,36 +100,53 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
 
     public static class ApplyMetricRuleTemplateResponseBodyResourceAlertResults extends TeaModel {
         /**
-         * <p>The response code.</p>
-         * <br>
-         * <p>>  The HTTP status code 200 indicates that the call succeeds.</p>
+         * <p>The responses code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
-         * <p>The returned information.</p>
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alert rule is creating, please wait a few minutes.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The ID of the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>applyTemplate8ab74c6b-9f27-47ab-8841-de01dc08****</p>
          */
         @NameInMap("RuleId")
         public String ruleId;
 
         /**
          * <p>The name of the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test123</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
-         * <p>Indicates whether the call succeeds. Valid values:</p>
-         * <br>
-         * <p>*   true: The call succeeds.</p>
-         * <p>*   false: The call fails.</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Success")
         public Boolean success;
@@ -175,7 +206,10 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
         public java.util.List<ApplyMetricRuleTemplateResponseBodyResourceAlertResults> alertResults;
 
         /**
-         * <p>The ID of the application group to which the alert template is applied.</p>
+         * <p>The ID of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         @NameInMap("GroupId")
         public Long groupId;

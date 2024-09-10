@@ -5,47 +5,61 @@ import com.aliyun.tea.*;
 
 public class DescribeMonitorGroupInstanceAttributeRequest extends TeaModel {
     /**
-     * <p>The abbreviation of the Alibaba Cloud service name.</p>
-     * <br>
-     * <p>To obtain the abbreviation of an Alibaba Cloud service name, call the [DescribeProjectMeta](~~114916~~) operation. The `metricCategory` tag in the `Labels` response parameter indicates the abbreviation of the Alibaba Cloud service name.</p>
+     * <p>The abbreviation of the cloud service name.</p>
+     * <p>For more information about how to obtain the abbreviation of a cloud service name, see <code>metricCategory</code> in the response parameter <code>Labels</code> of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
      */
     @NameInMap("Category")
     public String category;
 
     /**
      * <p>The ID of the application group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
 
     /**
-     * <p>The ID of the resource. Separate multiple resource IDs with commas (,). You can query the details about a maximum of 20 resources in each request.</p>
+     * <p>The resource ID. Separate multiple resource IDs with commas (,). You can query the details about a maximum of 20 resources at a time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-m5e0k0bexac8tykr****</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
     /**
      * <p>The keyword that is used to search for resources.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>portal</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
-     * <p>The number of the page to return.</p>
-     * <br>
+     * <p>The page number.</p>
      * <p>Valid values: 1 to 1000000000.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
-     * <br>
+     * <p>The number of entries per page.</p>
      * <p>Valid values: 1 to 1000000000.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -55,9 +69,13 @@ public class DescribeMonitorGroupInstanceAttributeRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to return the total number of resources in the specified application group. Valid values:</p>
-     * <br>
-     * <p>*   true (default value)</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true (default)</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Total")
     public Boolean total;

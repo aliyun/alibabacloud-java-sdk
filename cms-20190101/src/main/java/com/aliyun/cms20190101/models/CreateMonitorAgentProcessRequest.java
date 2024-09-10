@@ -6,18 +6,29 @@ import com.aliyun.tea.*;
 public class CreateMonitorAgentProcessRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-2ze2d6j5uhg20x47****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the process.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AliYunDun</p>
      */
     @NameInMap("ProcessName")
     public String processName;
 
     /**
      * <p>The user who launches the process.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>admin</p>
      */
     @NameInMap("ProcessUser")
     public String processUser;

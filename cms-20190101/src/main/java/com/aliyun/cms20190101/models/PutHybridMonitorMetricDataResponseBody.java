@@ -6,15 +6,18 @@ import com.aliyun.tea.*;
 public class PutHybridMonitorMetricDataResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the request was successful.</p>
+     * <blockquote>
+     * <p> The status code 200 indicates that the request was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The details of invalid parameters.</p>
-     * <br>
      * <p>If a request parameter is invalid, the details of the invalid parameter are returned.</p>
      */
     @NameInMap("ErrorDetail")
@@ -22,6 +25,9 @@ public class PutHybridMonitorMetricDataResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5DB1CBCA-D14A-55FA-814F-B4DBD9735F68</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -58,12 +64,18 @@ public class PutHybridMonitorMetricDataResponseBody extends TeaModel {
     public static class PutHybridMonitorMetricDataResponseBodyErrorDetail extends TeaModel {
         /**
          * <p>The error message of the invalid parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>label name :123 not match [a-zA-Z_][a-zA-Z0-9_]*</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The position of the error message in the array.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Index")
         public Long index;

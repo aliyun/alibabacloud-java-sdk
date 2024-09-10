@@ -12,35 +12,52 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
 
     /**
      * <p>The status code.</p>
-     * <br>
-     * <p>> The status code 200 indicates that the request was successful.</p>
+     * <blockquote>
+     * <p>The status code 200 indicates that the request was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The Request is not authorization.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C3C69FBE-2262-541F-A409-C52F380BAE63</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Total")
     public String total;
@@ -196,14 +213,18 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
     public static class DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistory extends TeaModel {
         /**
          * <p>The timestamp when the alert was triggered. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1640586600000</p>
          */
         @NameInMap("AlertTime")
         public Long alertTime;
 
         /**
          * <p>The TradeManager IDs of the alert contacts.</p>
-         * <br>
-         * <p>> This parameter is valid only on the China site (aliyun.com).</p>
+         * <blockquote>
+         * <p>This parameter is valid only on the China site (aliyun.com).</p>
+         * </blockquote>
          */
         @NameInMap("ContactALIIMs")
         public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactALIIMs contactALIIMs;
@@ -222,8 +243,9 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
 
         /**
          * <p>The mobile numbers of the alert contacts.</p>
-         * <br>
-         * <p>> This parameter is valid only on the China site (aliyun.com).</p>
+         * <blockquote>
+         * <p>This parameter is valid only on the China site (aliyun.com).</p>
+         * </blockquote>
          */
         @NameInMap("ContactSmses")
         public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactSmses contactSmses;
@@ -236,100 +258,148 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
 
         /**
          * <p>The resources that are monitored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;instanceId\&quot;:\&quot;i-bp1cqhiw1za2****\&quot;}</p>
          */
         @NameInMap("Dimensions")
         public String dimensions;
 
         /**
          * <p>The consecutive number of times for which the metric value meets the alert condition before an alert is triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("EvaluationCount")
         public Integer evaluationCount;
 
         /**
          * <p>The expression that is used to trigger alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>$Average&gt;=10</p>
          */
         @NameInMap("Expression")
         public String expression;
 
         /**
          * <p>The ID of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7671****</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1cqhiw1za2****</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The duration of the alert. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>360133</p>
          */
         @NameInMap("LastTime")
         public Long lastTime;
 
         /**
          * <p>The severity level and notification methods of the alert. Valid values:</p>
-         * <br>
-         * <p>*   P4: Alert notifications are sent by using emails and DingTalk chatbots.</p>
-         * <p>*   OK: No alert is generated.</p>
+         * <ul>
+         * <li>P4: Alert notifications are sent by using emails and DingTalk chatbots.</li>
+         * <li>OK: No alert is generated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>P4</p>
          */
         @NameInMap("Level")
         public String level;
 
         /**
          * <p>The metric name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu_total</p>
          */
         @NameInMap("MetricName")
         public String metricName;
 
         /**
          * <p>The namespace of the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs_ecs_dashboard</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The ID of the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>applyTemplate61dc81b5-d357-4cf6-a9b7-9f83c1d5****</p>
          */
         @NameInMap("RuleId")
         public String ruleId;
 
         /**
          * <p>The name of the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS_Rule</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
          * <p>The alert status. Valid values:</p>
-         * <br>
-         * <p>*   ALARM: Alerts are triggered.</p>
-         * <p>*   OK: No alerts are triggered.</p>
+         * <ul>
+         * <li>ALARM: Alerts are triggered.</li>
+         * <li>OK: No alerts are triggered.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ALARM</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
          * <p>Indicates whether alerts are muted. Valid values:</p>
-         * <br>
-         * <p>*   2 (default): Alerts are muted and are not triggered within the mute period, even if the condition specified in the alert rule is met.</p>
-         * <p>*   0: Alerts are triggered or cleared.</p>
-         * <p>*   1: The alert rule is ineffective.</p>
+         * <ul>
+         * <li>2 (default): Alerts are muted and are not triggered within the mute period, even if the condition specified in the alert rule is met.</li>
+         * <li>0: Alerts are triggered or cleared.</li>
+         * <li>1: The alert rule is ineffective.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The threshold of the metric value to trigger or clear an alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.58</p>
          */
         @NameInMap("Value")
         public String value;
 
         /**
          * <p>The callback URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
          */
         @NameInMap("Webhooks")
         public String webhooks;

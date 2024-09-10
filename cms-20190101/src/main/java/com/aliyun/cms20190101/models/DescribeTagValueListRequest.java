@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class DescribeTagValueListRequest extends TeaModel {
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Valid values: 1 to 100. Pages start from page 1. Default value: 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -25,8 +29,11 @@ public class DescribeTagValueListRequest extends TeaModel {
 
     /**
      * <p>The key of the tag whose values you want to query.</p>
-     * <br>
-     * <p>For more information about how to obtain a tag key, see [DescribeTagKeyList](~~145558~~).</p>
+     * <p>For more information about how to obtain a tag key, see <a href="https://help.aliyun.com/document_detail/145558.html">DescribeTagKeyList</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tagKey1</p>
      */
     @NameInMap("TagKey")
     public String tagKey;

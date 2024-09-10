@@ -6,18 +6,28 @@ import com.aliyun.tea.*;
 public class ModifyMonitorGroupRequest extends TeaModel {
     /**
      * <p>The alert groups that can receive alert notifications for the application group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alarm_ecs_group</p>
      */
     @NameInMap("ContactGroups")
     public String contactGroups;
 
     /**
      * <p>The ID of the application group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The name of the application group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs_group</p>
      */
     @NameInMap("GroupName")
     public String groupName;

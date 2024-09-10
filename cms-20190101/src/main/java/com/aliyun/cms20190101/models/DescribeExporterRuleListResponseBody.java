@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class DescribeExporterRuleListResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
-     * <br>
-     * <p>> The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+     * <blockquote>
+     * <p>The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -20,33 +24,49 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>susscess</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6BA047CA-8BC6-40BC-BC8F-FBECF35F1993</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`</p>
-     * <p>*   `false`</p>
+     * <ul>
+     * <li><code>true</code></li>
+     * <li><code>false</code></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -134,18 +154,27 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
     public static class DescribeExporterRuleListResponseBodyDatapointsDatapoint extends TeaModel {
         /**
          * <p>The time when the rule was created. The value is a UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1584024616228</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The description of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Export monitoring data</p>
          */
         @NameInMap("Describe")
         public String describe;
 
         /**
          * <p>The associated dimensions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;instanceId&quot;:&quot;xxxxx&quot;}</p>
          */
         @NameInMap("Dimension")
         public String dimension;
@@ -155,37 +184,55 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the rule is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
          * <p>The name of the metric.</p>
-         * <br>
-         * <p>> For more information, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~28619~~).</p>
+         * <blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/28619.html">Appendix 1: Metrics</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu_total</p>
          */
         @NameInMap("MetricName")
         public String metricName;
 
         /**
          * <p>The namespace of the service.</p>
-         * <br>
-         * <p>> For more information, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~28619~~).</p>
+         * <blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/28619.html">Appendix 1: Metrics</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>acs_ecs_dashboard</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The name of the data export rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myRuleName</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
-         * <p>The time window of the exported data.\</p>
-         * <p>Multiple windows are separated with commas (,).</p>
-         * <br>
-         * <p>> Data in a time window of less than 60 seconds cannot be exported.</p>
+         * <p>The time window of the exported data.\
+         * Multiple windows are separated with commas (,).</p>
+         * <blockquote>
+         * <p>Data in a time window of less than 60 seconds cannot be exported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>60,300</p>
          */
         @NameInMap("TargetWindows")
         public String targetWindows;

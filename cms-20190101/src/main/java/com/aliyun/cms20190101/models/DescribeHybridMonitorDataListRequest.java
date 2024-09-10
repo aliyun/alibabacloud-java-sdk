@@ -5,33 +5,46 @@ import com.aliyun.tea.*;
 
 public class DescribeHybridMonitorDataListRequest extends TeaModel {
     /**
-     * <p>The timestamp that specifies the end of the time range to query.</p>
-     * <br>
+     * <p>The end of the time range to query.</p>
      * <p>Unit: seconds.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1653805225</p>
      */
     @NameInMap("End")
     public Long end;
 
     /**
      * <p>The name of the namespace.</p>
-     * <br>
-     * <p>For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).</p>
+     * <p>For more information about how to query the names of namespaces, see <a href="https://help.aliyun.com/document_detail/428880.html">DescribeHybridMonitorNamespaceList</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default-aliyun</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
-     * <p>The interval at which monitoring data is collected.</p>
-     * <br>
+     * <p>The statistical period of the monitoring data.</p>
      * <p>Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("Period")
     public String period;
 
     /**
-     * <p>The name of the metric.</p>
-     * <br>
-     * <p>>  PromQL statements are supported.</p>
+     * <p>The metric name.</p>
+     * <blockquote>
+     * <p> PromQL statements are supported.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AliyunEcs_cpu_total</p>
      */
     @NameInMap("PromSQL")
     public String promSQL;
@@ -40,9 +53,12 @@ public class DescribeHybridMonitorDataListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The timestamp that specifies the beginning of the time range to query.</p>
-     * <br>
+     * <p>The start of the time range to query.</p>
      * <p>Unit: seconds.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1653804865</p>
      */
     @NameInMap("Start")
     public Long start;

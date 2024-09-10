@@ -6,38 +6,56 @@ import com.aliyun.tea.*;
 public class PutLogMonitorResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call is successful.</p>
+     * <blockquote>
+     * <p> The status code 200 indicates that the request was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The ID of the log monitoring metric.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16****</p>
      */
     @NameInMap("LogId")
     public String logId;
 
     /**
      * <p>The returned message.</p>
-     * <br>
-     * <p>*   If the call is successful, the value `successful` is returned.</p>
-     * <p>*   If the call fails, an error message is returned. Example: `alias of aggreate must be set value.`</p>
+     * <ul>
+     * <li>If the request was successful, <code>successful</code> is returned.</li>
+     * <li>If the request failed, an error message is returned. Example: <code>alias of aggreate must be set value.</code></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>91561287-0802-5F9C-9BDE-404C50D41B06</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The call is successful.</p>
-     * <p>*   false: The call fails.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

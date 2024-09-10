@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class DeleteMonitorGroupDynamicRuleRequest extends TeaModel {
     /**
      * <p>The service to which the rule applies. Valid values: ecs, rds, and slb.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
      */
     @NameInMap("Category")
     public String category;
 
     /**
      * <p>The ID of the application group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("GroupId")
     public Long groupId;

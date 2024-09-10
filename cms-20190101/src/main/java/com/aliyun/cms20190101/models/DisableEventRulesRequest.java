@@ -7,6 +7,12 @@ public class DisableEventRulesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ruleName1</p>
+     */
     @NameInMap("RuleNames")
     public java.util.List<String> ruleNames;
 

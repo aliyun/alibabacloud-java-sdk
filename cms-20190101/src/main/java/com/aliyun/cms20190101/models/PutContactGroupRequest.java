@@ -6,28 +6,43 @@ import com.aliyun.tea.*;
 public class PutContactGroupRequest extends TeaModel {
     /**
      * <p>The name of the alert contact group.</p>
-     * <br>
-     * <p>For information about how to obtain the name of an alert contact group, see [DescribeContactGroupList](~~114922~~).</p>
+     * <p>For information about how to obtain the name of an alert contact group, see <a href="https://help.aliyun.com/document_detail/114922.html">DescribeContactGroupList</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS_Group</p>
      */
     @NameInMap("ContactGroupName")
     public String contactGroupName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Alice</p>
+     */
     @NameInMap("ContactNames")
     public java.util.List<String> contactNames;
 
     /**
      * <p>The description of the alert contact group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS_Alert_Group</p>
      */
     @NameInMap("Describe")
     public String describe;
 
     /**
      * <p>Specifies whether to enable the weekly report subscription feature. Valid values:</p>
-     * <br>
-     * <p>*   true: The weekly report subscription feature is enabled.</p>
-     * <p>*   false: The weekly report subscription feature is disabled.</p>
-     * <br>
-     * <p>>  You can enable the weekly report subscription only for an Alibaba Cloud account that has at least five Elastic Compute Service (ECS) instances.</p>
+     * <ul>
+     * <li>true: The weekly report subscription feature is enabled.</li>
+     * <li>false: The weekly report subscription feature is disabled.</li>
+     * </ul>
+     * <blockquote>
+     * <p> You can enable the weekly report subscription only for an Alibaba Cloud account that has at least five Elastic Compute Service (ECS) instances.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EnableSubscribed")
     public Boolean enableSubscribed;

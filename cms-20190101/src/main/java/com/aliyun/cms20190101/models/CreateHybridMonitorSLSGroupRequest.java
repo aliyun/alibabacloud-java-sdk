@@ -9,8 +9,8 @@ public class CreateHybridMonitorSLSGroupRequest extends TeaModel {
 
     /**
      * <p>The configurations of the Logstore group.</p>
-     * <br>
      * <p>Valid values of N: 1 to 25.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SLSGroupConfig")
     public java.util.List<CreateHybridMonitorSLSGroupRequestSLSGroupConfig> SLSGroupConfig;
@@ -23,8 +23,11 @@ public class CreateHybridMonitorSLSGroupRequest extends TeaModel {
 
     /**
      * <p>The name of the Logstore group.</p>
-     * <br>
-     * <p>The name must be 2 to 32 characters in length and can contain uppercase letters, lowercase letters, digits, and underscores (\_). The name must start with a letter.</p>
+     * <p>The name must be 2 to 32 characters in length and can contain uppercase letters, lowercase letters, digits, and underscores (_). The name must start with a letter.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Logstore_test</p>
      */
     @NameInMap("SLSGroupName")
     public String SLSGroupName;
@@ -69,36 +72,47 @@ public class CreateHybridMonitorSLSGroupRequest extends TeaModel {
     public static class CreateHybridMonitorSLSGroupRequestSLSGroupConfig extends TeaModel {
         /**
          * <p>The Logstore.</p>
-         * <br>
          * <p>Valid values of N: 1 to 25.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Logstore-ECS</p>
          */
         @NameInMap("SLSLogstore")
         public String SLSLogstore;
 
         /**
          * <p>The Simple Log Service project.</p>
-         * <br>
          * <p>Valid values of N: 1 to 25.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun-project</p>
          */
         @NameInMap("SLSProject")
         public String SLSProject;
 
         /**
          * <p>The region ID.</p>
-         * <br>
          * <p>Valid values of N: 1 to 25.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("SLSRegion")
         public String SLSRegion;
 
         /**
          * <p>The member ID.</p>
-         * <br>
          * <p>Valid values of N: 1 to 25.</p>
-         * <br>
          * <p>If you call this operation by using the management account of a resource directory, you can connect the Alibaba Cloud services that are activated for all members in the resource directory to Hybrid Cloud Monitoring. You can use the resource directory to monitor Alibaba Cloud services across enterprise accounts.</p>
-         * <br>
-         * <p>> If a member uses CloudMonitor for the first time, you must make sure that the service-linked role AliyunServiceRoleForCloudMonitor is attached to the member. For more information, see [Manage the service-linked role for CloudMonitor](~~170423~~).</p>
+         * <blockquote>
+         * <p>If a member uses CloudMonitor for the first time, you must make sure that the service-linked role AliyunServiceRoleForCloudMonitor is attached to the member. For more information, see <a href="https://help.aliyun.com/document_detail/170423.html">Manage the service-linked role for CloudMonitor</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>120886317861****</p>
          */
         @NameInMap("SLSUserId")
         public String SLSUserId;

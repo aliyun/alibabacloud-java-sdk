@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutCustomMetricRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MetricList")
     public java.util.List<PutCustomMetricRequestMetricList> metricList;
 
@@ -34,64 +37,94 @@ public class PutCustomMetricRequest extends TeaModel {
     public static class PutCustomMetricRequestMetricList extends TeaModel {
         /**
          * <p>The dimensions that specify the resources whose monitoring data you want to query. Valid values of N: 1 to 21.</p>
-         * <br>
-         * <p>Set the value to a collection of key-value pairs. Format:`{"Key":"Value"}`.</p>
-         * <br>
+         * <p>Set the value to a collection of key-value pairs. Format:<code>{&quot;Key&quot;:&quot;Value&quot;}</code>.</p>
          * <p>The key or value must be 1 to 64 bytes in length. Excessive characters are truncated.</p>
-         * <br>
-         * <p>The key or value can contain letters, digits, periods (.), hyphens (-), underscores (\_), forward slashes (/), and backslashes (\\).</p>
-         * <br>
-         * <p>>  Dimensions must be formatted as a JSON string in a specified order.</p>
+         * <p>The key or value can contain letters, digits, periods (.), hyphens (-), underscores (_), forward slashes (/), and backslashes (\\).</p>
+         * <blockquote>
+         * <p> Dimensions must be formatted as a JSON string in a specified order.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;sampleName1&quot;:&quot;value1&quot;,&quot;sampleName2&quot;:&quot;value2&quot;}</p>
          */
         @NameInMap("Dimensions")
         public String dimensions;
 
         /**
          * <p>The ID of the application group. Valid values of N: 1 to 21.</p>
-         * <br>
-         * <p>>  If the metric does not belong to any application group, enter 0.</p>
+         * <blockquote>
+         * <p> If the metric does not belong to any application group, enter 0.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
-         * <p>The name of the metric. Valid values of N: 1 to 21. For more information, see [Appendix 1: Metrics](~~163515~~).</p>
+         * <p>The name of the metric. Valid values of N: 1 to 21. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu_total</p>
          */
         @NameInMap("MetricName")
         public String metricName;
 
         /**
          * <p>The aggregation period. Valid values of N: 1 to 21. Unit: seconds. Valid values: 60 and 300.</p>
-         * <br>
-         * <p>>  If the MetricList.N.Type parameter is set to 1, the MetricList.N.Period parameter is required.</p>
+         * <blockquote>
+         * <p> If the MetricList.N.Type parameter is set to 1, the MetricList.N.Period parameter is required.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("Period")
         public String period;
 
         /**
          * <p>The timestamp when the metric data is generated. Valid values of N: 1 to 21. The timestamp can be in one of the following formats:</p>
-         * <br>
-         * <p>*   The UTC timestamp that is in the YYYY-MM-DDThh:mm:ssZ format. Example: 20171012T132456.888+0800.</p>
-         * <p>*   The UNIX timestamp of the LONG type. Example: 1508136760000.</p>
+         * <ul>
+         * <li>The UTC timestamp that is in the YYYY-MM-DDThh:mm:ssZ format. Example: 20171012T132456.888+0800.</li>
+         * <li>The UNIX timestamp of the LONG type. Example: 1508136760000.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1508136760000</p>
          */
         @NameInMap("Time")
         public String time;
 
         /**
          * <p>The type of the reported data. Valid values of N: 1 to 21. Valid values:</p>
-         * <br>
-         * <p>*   0: reports raw data</p>
-         * <p>*   1: reports aggregate data</p>
-         * <br>
-         * <p>>  We recommend that you report aggregate data in both the aggregation periods of 60s and 300s. Otherwise, you cannot query monitoring data in a time span that is more than seven days.</p>
+         * <ul>
+         * <li>0: reports raw data</li>
+         * <li>1: reports aggregate data</li>
+         * </ul>
+         * <blockquote>
+         * <p> We recommend that you report aggregate data in both the aggregation periods of 60s and 300s. Otherwise, you cannot query monitoring data in a time span that is more than seven days.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The collection of metric values. Valid values of N: 1 to 21.</p>
-         * <br>
-         * <p>>  If the MetricList.N.Type parameter is set to 0, the keys in this parameter must be set to the specified value. CloudMonitor aggregates raw data in each aggregation period to generate multiple statistical values, such as the maximum value, the count, and the total value.</p>
+         * <blockquote>
+         * <p> If the MetricList.N.Type parameter is set to 0, the keys in this parameter must be set to the specified value. CloudMonitor aggregates raw data in each aggregation period to generate multiple statistical values, such as the maximum value, the count, and the total value.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;value&quot;:10.5}</p>
          */
         @NameInMap("Values")
         public String values;

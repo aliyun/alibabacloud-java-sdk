@@ -12,29 +12,43 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code.</p>
-     * <br>
-     * <p>> The status code 200 indicates that the request was successful.</p>
+     * <blockquote>
+     * <p>The status code 200 indicates that the request was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified resource is not found.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1C4A3709-BF52-42EE-87B5-7435F0929585</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -87,12 +101,18 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
     public static class DescribeAlertLogCountResponseBodyAlertLogCountLogs extends TeaModel {
         /**
          * <p>The name of the dimension field based on which alert logs are aggregated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>product</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The value of the dimension field based on which alert logs are aggregated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         @NameInMap("Value")
         public String value;
@@ -123,6 +143,9 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
     public static class DescribeAlertLogCountResponseBodyAlertLogCount extends TeaModel {
         /**
          * <p>The number of alert logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public Integer count;

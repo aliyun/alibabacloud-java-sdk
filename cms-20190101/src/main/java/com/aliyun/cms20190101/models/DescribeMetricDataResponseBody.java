@@ -6,41 +6,56 @@ import com.aliyun.tea.*;
 public class DescribeMetricDataResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <blockquote>
+     * <p> The status code 200 indicates that the request was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The monitoring data. The value includes the following fields:</p>
-     * <br>
-     * <p>*   `timestamp`: the timestamp when the alert was triggered.</p>
-     * <p>*   `userId`: the ID of the user for which the alert was triggered.</p>
-     * <p>*   `instanceId`: the ID of the instance for which the alert was triggered.</p>
-     * <p>*   `Minimum`, `Average`, and `Maximum`: the aggregation methods.</p>
+     * <ul>
+     * <li><code>timestamp</code>: the time when the alert was triggered.</li>
+     * <li><code>userId</code>: the ID of the user for which the alert was triggered.</li>
+     * <li><code>instanceId</code>: the ID of the instance for which the alert was triggered.</li>
+     * <li><code>Minimum</code>, <code>Average</code>, and <code>Maximum</code>: the aggregation methods.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[{\&quot;timestamp\&quot;:1618368900000,\&quot;Average\&quot;:95.8291666666667,\&quot;Minimum\&quot;:65.48,\&quot;Maximum\&quot;:100.0},{\&quot;timestamp\&quot;:1618368960000,\&quot;Average\&quot;:95.8683333333333,\&quot;Minimum\&quot;:67.84,\&quot;Maximum\&quot;:100.0}]</p>
      */
     @NameInMap("Datapoints")
     public String datapoints;
 
     /**
-     * <p>The error message.</p>
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified resource is not found.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The statistical period of the monitoring data.</p>
-     * <br>
      * <p>Valid values: 15, 60, 900, and 3600.</p>
-     * <br>
      * <p>Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("Period")
     public String period;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6A5F022D-AC7C-460E-94AE-B9E75083D027</p>
      */
     @NameInMap("RequestId")
     public String requestId;

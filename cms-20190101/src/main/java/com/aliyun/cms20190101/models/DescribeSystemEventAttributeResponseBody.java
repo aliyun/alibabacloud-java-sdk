@@ -6,26 +6,39 @@ import com.aliyun.tea.*;
 public class DescribeSystemEventAttributeResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call is successful.</p>
+     * <blockquote>
+     * <p> The status code 200 indicates that the call is successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The message that is returned. If the call is successful, `success` is returned. If the call fails, an error message is returned.</p>
+     * <p>The message that is returned. If the call is successful, <code>success</code> is returned. If the call fails, an error message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60912C8D-B340-4253-ADE7-61ACDFD25CFC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call is successful. Valid values: True: The call is successful. false: The call fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -84,69 +97,105 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
     public static class DescribeSystemEventAttributeResponseBodySystemEventsSystemEvent extends TeaModel {
         /**
          * <p>The details of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;product&quot;:&quot;CloudMonitor&quot;,&quot;content&quot;:&quot;{\&quot;ipGroup\&quot;:\&quot;112.126.XX.XX,10.163.XX.XX\&quot;,\&quot;tianjimonVersion\&quot;:\&quot;1.2.22\&quot;}&quot;,&quot;groupId&quot;:&quot;176,177,178,179,180,692,120812,1663836,96,2028302&quot;,&quot;time&quot;:&quot;1552209568000&quot;,&quot;resourceId&quot;:&quot;acs:ecs:cn-beijing:173651113438****:instance/i-25k35****&quot;,&quot;level&quot;:&quot;CRITICAL&quot;,&quot;status&quot;:&quot;stopped&quot;,&quot;instanceName&quot;:&quot;cmssiteprobebj-6&quot;,&quot;name&quot;:&quot;Agent_Status_Stopped&quot;,&quot;regionId&quot;:&quot;cn-beijing&quot;}]</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>The ID of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b936efc9-f621-4e8a-a6eb-076be40e****</p>
+         */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceId1</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>The severity level of the alert. Valid values:</p>
-         * <br>
-         * <p>*   CRITICAL</p>
-         * <p>*   WARN</p>
-         * <p>*   INFO</p>
+         * <p>The level of the event. Valid values:</p>
+         * <ul>
+         * <li>CRITICAL</li>
+         * <li>WARN</li>
+         * <li>INFO</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>WARN</p>
          */
         @NameInMap("Level")
         public String level;
 
         /**
          * <p>The event name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Agent_Status_Stopped</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The abbreviation of the service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudMonitor</p>
          */
         @NameInMap("Product")
         public String product;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx-1</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The status of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The time when the event occurred. The value is a timestamp.</p>
-         * <br>
          * <p>Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1552199984000</p>
          */
         @NameInMap("Time")
         public Long time;

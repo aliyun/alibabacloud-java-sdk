@@ -6,8 +6,11 @@ import com.aliyun.tea.*;
 public class CreateGroupMetricRulesRequest extends TeaModel {
     /**
      * <p>The ID of the application group.</p>
-     * <br>
-     * <p>For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).</p>
+     * <p>For information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
@@ -313,16 +316,20 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
     public static class CreateGroupMetricRulesRequestGroupMetricRulesLabels extends TeaModel {
         /**
          * <p>The tag key of the alert rule. The specified tag is contained in alert notifications.</p>
-         * <br>
          * <p>Valid values of N: 1 to 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value of the alert rule. The specified tag is contained in alert notifications.</p>
-         * <br>
          * <p>Valid values of N: 1 to 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value1</p>
          */
         @NameInMap("Value")
         public String value;
@@ -356,156 +363,168 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
 
         /**
          * <p>The name of the cloud service. Valid values of N: 1 to 200. Valid value:</p>
-         * <br>
-         * <p>*   PolarDB: PolarDB</p>
-         * <p>*   NewBGPDDoS: Anti-DDoS Pro</p>
-         * <p>*   IoTDevice: IoT Platform</p>
-         * <p>*   DRDS: Distributed Relational Database Service (DRDS)</p>
-         * <p>*   VS: Video Surveillance System</p>
-         * <p>*   AMQP: Alibaba Cloud Message Queue for AMQP</p>
-         * <p>*   ADS: AnalyticDB</p>
-         * <p>*   APIGateway: API Gateway</p>
-         * <p>*   InternetSharedBandwidth: EIP Bandwidth Plan</p>
-         * <p>*   CDN: Alibaba Cloud Content Delivery Network (CDN)</p>
-         * <p>*   CEN: Cloud Enterprise Network (CEN)</p>
-         * <p>*   DCDN: Dynamic Route for CDN (DCDN)</p>
-         * <p>*   DDoS: Anti-DDoS</p>
-         * <p>*   ECS: Elastic Compute Service (ECS)</p>
-         * <p>*   DirectMail: Direct Mail</p>
-         * <p>*   Elasticsearch: Elasticsearch</p>
-         * <p>*   EMR: E-MapReduce (EMR)</p>
-         * <p>*   ESS: Auto Scaling</p>
-         * <p>*   FunctionCompute: Function Compute</p>
-         * <p>*   RealtimeCompute: Realtime Compute for Apache Flink</p>
-         * <p>*   GlobalAcceleration: Global Accelerator (GA)</p>
-         * <p>*   Hbase: ApsaraDB for HBase</p>
-         * <p>*   TSDB: Time Series Database (TSDB)</p>
-         * <p>*   IPv6trans: IPv6 Translation Service</p>
-         * <p>*   Kafka: Message Queue for Apache Kafka</p>
-         * <p>*   Kubernetes: Container Service for Kubernetes (ACK)</p>
-         * <p>*   KVstore: ApsaraDB for Redis</p>
-         * <p>*   MNS: Message Service (MNS)</p>
-         * <p>*   MongoDB: ApsaraDB for MongoDB</p>
-         * <p>*   MQ: Message Queue</p>
-         * <p>*   NAT: NAT Gateway</p>
-         * <p>*   OpenAd: Open Ad</p>
-         * <p>*   OpenSearch: Open Search</p>
-         * <p>*   OSS: Object Storage Service (OSS)</p>
-         * <p>*   PCDN: P2P CDN</p>
-         * <p>*   petadata: HybridDB for MySQL</p>
-         * <p>*   RDS: ApsaraDB RDS</p>
-         * <p>*   SCDN: Secure CDN</p>
-         * <p>*   SLB: Server Load Balancer (SLB)</p>
-         * <p>*   SLS: Log Service</p>
-         * <p>*   VideoLive: ApsaraVideo Live</p>
-         * <p>*   VOD: ApsaraVideo VOD</p>
-         * <p>*   EIP: Elastic IP Address (EIP)</p>
-         * <p>*   VPN: VPN Gateway</p>
-         * <p>*   AIRec: Artificial Intelligence Recommendation</p>
-         * <p>*   GPDB: AnalyticDB for PostgreSQL</p>
-         * <p>*   DBS: Database Backup (DBS)</p>
-         * <p>*   SAG: Smart Access Gateway (SAG)</p>
-         * <p>*   Memcache: ApsaraDB for Memcache</p>
-         * <p>*   IOT_EDGE: Link IoT Edge</p>
-         * <p>*   OCS: ApsaraDB for Memcache (previous version)</p>
-         * <p>*   VPC: Express Connect</p>
-         * <p>*   EHPC: Elastic High Performance Computing (E-HPC)</p>
-         * <p>*   MPS: ApsaraVideo Media Processing</p>
-         * <p>*   ENS: Edge Node Service (ENS)</p>
-         * <p>*   MaxCompute_Prepay: MaxCompute</p>
-         * <p>*   IoT_Kubernetes: Edge Application Hosting</p>
-         * <p>*   CMS: CloudMonitor</p>
-         * <p>*   batchcomputenew: Batch Compute</p>
-         * <p>*   HBaseUE: ApsaraDB for HBase Performance-enhanced Edition</p>
-         * <p>*   UIS: Ultimate Internet Service (UIS)</p>
-         * <p>*   nls: Intelligent Speech Interaction</p>
-         * <p>*   ots: Tablestore</p>
-         * <p>*   NAS: Apsara File Storage NAS</p>
-         * <p>*   ECI: Elastic Container Instance (ECI)</p>
-         * <p>*   OpenAPI: OpenAPI Explorer</p>
-         * <p>*   pvtzpost: Alibaba Cloud DNS PrivateZone</p>
-         * <p>*   blinkonk8s: Flink on Kubernetes</p>
-         * <p>*   FunctionFlow: Serverless Workflow (SWF)</p>
-         * <p>*   SMC: Server Migration Center (SMC)</p>
-         * <p>*   ddosbgp: Anti-DDoS Origin</p>
-         * <p>*   baas: Blockchain as a Service</p>
-         * <p>*   privatelink: PrivateLink</p>
-         * <p>*   cds: ApsaraDB for Cassandra</p>
-         * <p>*   DDH: Dedicated Host</p>
-         * <p>*   RocketMQ: Message Queue for Apache RocketMQ</p>
-         * <p>*   ECC: Express Cloud Connect</p>
-         * <p>*   hbaseserverless: ApsaraDB for HBase Serverless Edition</p>
-         * <p>*   mns_tmp: Message Service</p>
-         * <p>*   hdr: Hybrid Disaster Recovery (HDR)</p>
-         * <p>*   hbr: Hybrid Backup Recovery (HBR)</p>
-         * <p>*   ADB: AnalyticDB for MySQL V3.0</p>
-         * <p>*   tag: Tag Service</p>
-         * <p>*   GDB: Graph Database</p>
-         * <p>*   WAF: Web Application Firewall (WAF)</p>
-         * <p>*   hcs_sgw: Cloud Storage Gateway (CSG)</p>
-         * <p>*   ipv6gateway: IPv6 Gateway</p>
-         * <p>*   RDS_SAR: ApsaraDB Exclusive Host Group</p>
-         * <p>*   learn: Machine Learning Platform for AI</p>
-         * <p>*   ROS: Resource Orchestration Service (ROS)</p>
-         * <p>*   OOS: Operation Orchestration Service (OOS)</p>
-         * <p>*   bds: Data Synchronization for HBase</p>
-         * <p>*   cfw: Cloud Firewall</p>
-         * <p>*   ddosDip: Anti-DDoS Premium</p>
-         * <p>*   datahub: DataHub</p>
-         * <p>*   hologres: Hologres</p>
-         * <p>*   ExpressConnect: Express Connect</p>
-         * <p>*   dbfs: Database File System (DBFS)</p>
-         * <p>*   clickhouse: ApsaraDB for ClickHouse</p>
-         * <p>*   k8s: Container Service for Kubernetes (ACK)</p>
-         * <p>*   DTS: Data Transmission Service (DTS)</p>
-         * <p>*   AnycastEIP: Anycast Elastic IP Address</p>
-         * <p>*   Lindorm: ApsaraDB for Lindorm</p>
-         * <p>*   config: Cloud Config</p>
-         * <p>*   spark: Databricks DataInsight (DDI)</p>
-         * <p>*   serverless: Serverless App Engine (SAE)</p>
-         * <p>*   alb: Application Load Balancer (ALB)</p>
-         * <p>*   oceanbase: ApsaraDB for OceanBase</p>
-         * <p>*   KMS: Key Management Service (KMS)</p>
-         * <p>*   lvwang: Content Moderation</p>
-         * <p>*   LinkVisual: LinkVisual</p>
-         * <p>*   tair: ApsaraDB for Redis Enhanced Edition (Tair)</p>
-         * <p>*   dlf: Data Lake Formation (DLF)</p>
-         * <p>*   networkmonitor: Site Monitoring</p>
-         * <p>*   pnc: Physical Network Change</p>
-         * <p>*   AIS: Alibaba Cloud Infrastructure</p>
-         * <p>*   cloudgame: Cloud Gaming Platform</p>
-         * <p>*   RTC: Real-Time Communication</p>
-         * <p>*   cloudbox: CloudBox</p>
-         * <p>*   actiontrail: ActionTrail</p>
-         * <p>*   cc: Cloud Connector</p>
-         * <p>*   disk: Elastic Block Storage (EBS)</p>
-         * <p>*   easygene: Genomics Computing Platform</p>
-         * <p>*   cloudphone: Elastic Cloud Phone</p>
-         * <p>*   BMS: Bare Metal Management Service</p>
-         * <p>*   swas: Simple Application Server</p>
-         * <p>*   AvailabilityMonitoring: Availability Monitoring of CloudMonitor</p>
+         * <ul>
+         * <li>PolarDB: PolarDB</li>
+         * <li>NewBGPDDoS: Anti-DDoS Pro</li>
+         * <li>IoTDevice: IoT Platform</li>
+         * <li>DRDS: Distributed Relational Database Service (DRDS)</li>
+         * <li>VS: Video Surveillance System</li>
+         * <li>AMQP: Alibaba Cloud Message Queue for AMQP</li>
+         * <li>ADS: AnalyticDB</li>
+         * <li>APIGateway: API Gateway</li>
+         * <li>InternetSharedBandwidth: EIP Bandwidth Plan</li>
+         * <li>CDN: Alibaba Cloud Content Delivery Network (CDN)</li>
+         * <li>CEN: Cloud Enterprise Network (CEN)</li>
+         * <li>DCDN: Dynamic Route for CDN (DCDN)</li>
+         * <li>DDoS: Anti-DDoS</li>
+         * <li>ECS: Elastic Compute Service (ECS)</li>
+         * <li>DirectMail: Direct Mail</li>
+         * <li>Elasticsearch: Elasticsearch</li>
+         * <li>EMR: E-MapReduce (EMR)</li>
+         * <li>ESS: Auto Scaling</li>
+         * <li>FunctionCompute: Function Compute</li>
+         * <li>RealtimeCompute: Realtime Compute for Apache Flink</li>
+         * <li>GlobalAcceleration: Global Accelerator (GA)</li>
+         * <li>Hbase: ApsaraDB for HBase</li>
+         * <li>TSDB: Time Series Database (TSDB)</li>
+         * <li>IPv6trans: IPv6 Translation Service</li>
+         * <li>Kafka: Message Queue for Apache Kafka</li>
+         * <li>Kubernetes: Container Service for Kubernetes (ACK)</li>
+         * <li>KVstore: ApsaraDB for Redis</li>
+         * <li>MNS: Message Service (MNS)</li>
+         * <li>MongoDB: ApsaraDB for MongoDB</li>
+         * <li>MQ: Message Queue</li>
+         * <li>NAT: NAT Gateway</li>
+         * <li>OpenAd: Open Ad</li>
+         * <li>OpenSearch: Open Search</li>
+         * <li>OSS: Object Storage Service (OSS)</li>
+         * <li>PCDN: P2P CDN</li>
+         * <li>petadata: HybridDB for MySQL</li>
+         * <li>RDS: ApsaraDB RDS</li>
+         * <li>SCDN: Secure CDN</li>
+         * <li>SLB: Server Load Balancer (SLB)</li>
+         * <li>SLS: Log Service</li>
+         * <li>VideoLive: ApsaraVideo Live</li>
+         * <li>VOD: ApsaraVideo VOD</li>
+         * <li>EIP: Elastic IP Address (EIP)</li>
+         * <li>VPN: VPN Gateway</li>
+         * <li>AIRec: Artificial Intelligence Recommendation</li>
+         * <li>GPDB: AnalyticDB for PostgreSQL</li>
+         * <li>DBS: Database Backup (DBS)</li>
+         * <li>SAG: Smart Access Gateway (SAG)</li>
+         * <li>Memcache: ApsaraDB for Memcache</li>
+         * <li>IOT_EDGE: Link IoT Edge</li>
+         * <li>OCS: ApsaraDB for Memcache (previous version)</li>
+         * <li>VPC: Express Connect</li>
+         * <li>EHPC: Elastic High Performance Computing (E-HPC)</li>
+         * <li>MPS: ApsaraVideo Media Processing</li>
+         * <li>ENS: Edge Node Service (ENS)</li>
+         * <li>MaxCompute_Prepay: MaxCompute</li>
+         * <li>IoT_Kubernetes: Edge Application Hosting</li>
+         * <li>CMS: CloudMonitor</li>
+         * <li>batchcomputenew: Batch Compute</li>
+         * <li>HBaseUE: ApsaraDB for HBase Performance-enhanced Edition</li>
+         * <li>UIS: Ultimate Internet Service (UIS)</li>
+         * <li>nls: Intelligent Speech Interaction</li>
+         * <li>ots: Tablestore</li>
+         * <li>NAS: Apsara File Storage NAS</li>
+         * <li>ECI: Elastic Container Instance (ECI)</li>
+         * <li>OpenAPI: OpenAPI Explorer</li>
+         * <li>pvtzpost: Alibaba Cloud DNS PrivateZone</li>
+         * <li>blinkonk8s: Flink on Kubernetes</li>
+         * <li>FunctionFlow: Serverless Workflow (SWF)</li>
+         * <li>SMC: Server Migration Center (SMC)</li>
+         * <li>ddosbgp: Anti-DDoS Origin</li>
+         * <li>baas: Blockchain as a Service</li>
+         * <li>privatelink: PrivateLink</li>
+         * <li>cds: ApsaraDB for Cassandra</li>
+         * <li>DDH: Dedicated Host</li>
+         * <li>RocketMQ: Message Queue for Apache RocketMQ</li>
+         * <li>ECC: Express Cloud Connect</li>
+         * <li>hbaseserverless: ApsaraDB for HBase Serverless Edition</li>
+         * <li>mns_tmp: Message Service</li>
+         * <li>hdr: Hybrid Disaster Recovery (HDR)</li>
+         * <li>hbr: Hybrid Backup Recovery (HBR)</li>
+         * <li>ADB: AnalyticDB for MySQL V3.0</li>
+         * <li>tag: Tag Service</li>
+         * <li>GDB: Graph Database</li>
+         * <li>WAF: Web Application Firewall (WAF)</li>
+         * <li>hcs_sgw: Cloud Storage Gateway (CSG)</li>
+         * <li>ipv6gateway: IPv6 Gateway</li>
+         * <li>RDS_SAR: ApsaraDB Exclusive Host Group</li>
+         * <li>learn: Machine Learning Platform for AI</li>
+         * <li>ROS: Resource Orchestration Service (ROS)</li>
+         * <li>OOS: Operation Orchestration Service (OOS)</li>
+         * <li>bds: Data Synchronization for HBase</li>
+         * <li>cfw: Cloud Firewall</li>
+         * <li>ddosDip: Anti-DDoS Premium</li>
+         * <li>datahub: DataHub</li>
+         * <li>hologres: Hologres</li>
+         * <li>ExpressConnect: Express Connect</li>
+         * <li>dbfs: Database File System (DBFS)</li>
+         * <li>clickhouse: ApsaraDB for ClickHouse</li>
+         * <li>k8s: Container Service for Kubernetes (ACK)</li>
+         * <li>DTS: Data Transmission Service (DTS)</li>
+         * <li>AnycastEIP: Anycast Elastic IP Address</li>
+         * <li>Lindorm: ApsaraDB for Lindorm</li>
+         * <li>config: Cloud Config</li>
+         * <li>spark: Databricks DataInsight (DDI)</li>
+         * <li>serverless: Serverless App Engine (SAE)</li>
+         * <li>alb: Application Load Balancer (ALB)</li>
+         * <li>oceanbase: ApsaraDB for OceanBase</li>
+         * <li>KMS: Key Management Service (KMS)</li>
+         * <li>lvwang: Content Moderation</li>
+         * <li>LinkVisual: LinkVisual</li>
+         * <li>tair: ApsaraDB for Redis Enhanced Edition (Tair)</li>
+         * <li>dlf: Data Lake Formation (DLF)</li>
+         * <li>networkmonitor: Site Monitoring</li>
+         * <li>pnc: Physical Network Change</li>
+         * <li>AIS: Alibaba Cloud Infrastructure</li>
+         * <li>cloudgame: Cloud Gaming Platform</li>
+         * <li>RTC: Real-Time Communication</li>
+         * <li>cloudbox: CloudBox</li>
+         * <li>actiontrail: ActionTrail</li>
+         * <li>cc: Cloud Connector</li>
+         * <li>disk: Elastic Block Storage (EBS)</li>
+         * <li>easygene: Genomics Computing Platform</li>
+         * <li>cloudphone: Elastic Cloud Phone</li>
+         * <li>BMS: Bare Metal Management Service</li>
+         * <li>swas: Simple Application Server</li>
+         * <li>AvailabilityMonitoring: Availability Monitoring of CloudMonitor</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>The alert contact groups. Valid values of N: 1 to 200.</p>
-         * <br>
-         * <p>For information about how to obtain alert contact groups, see [DescribeContactGroupList](~~114922~~).</p>
+         * <p>For information about how to obtain alert contact groups, see <a href="https://help.aliyun.com/document_detail/114922.html">DescribeContactGroupList</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS_Group</p>
          */
         @NameInMap("ContactGroups")
         public String contactGroups;
 
         /**
          * <p>The dimension of the alert rule. Valid values of N: 1 to 200.</p>
-         * <br>
-         * <p>Set the value to a set of key-value pairs, for example, `userId:120886317861****` or `instanceId:i-m5e1qg6uo38rztr4****`.</p>
+         * <p>Set the value to a set of key-value pairs, for example, <code>userId:120886317861****</code> or <code>instanceId:i-m5e1qg6uo38rztr4****</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;instanceId&quot;:&quot;i-m5e1qg6uo38rztr4****&quot;}]</p>
          */
         @NameInMap("Dimensions")
         public String dimensions;
 
         /**
          * <p>The time period during which the alert rule is effective. Valid values of N: 1 to 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05:31-23:59</p>
          */
         @NameInMap("EffectiveInterval")
         public String effectiveInterval;
@@ -518,10 +537,13 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
 
         /**
          * <p>The interval at which CloudMonitor checks whether the alert rule is triggered. Valid values of N: 1 to 200.</p>
-         * <br>
          * <p>Unit: seconds. The default value is the lowest frequency at which the metric is polled.</p>
-         * <br>
-         * <p>>  We recommend that you set the interval to the data aggregation period. If the interval is shorter than the data aggregation period, alerts cannot be triggered due to insufficient data.</p>
+         * <blockquote>
+         * <p> We recommend that you set the interval to the data aggregation period. If the interval is shorter than the data aggregation period, alerts cannot be triggered due to insufficient data.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("Interval")
         public String interval;
@@ -531,32 +553,45 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
 
         /**
          * <p>The name of the metric. Valid values of N: 1 to 200.</p>
-         * <br>
-         * <p>For information about how to obtain the name of a metric, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~163515~~).</p>
+         * <p>For information about how to obtain the name of a metric, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu_total</p>
          */
         @NameInMap("MetricName")
         public String metricName;
 
         /**
          * <p>The namespace of the cloud service. Valid values of N: 1 to 200.</p>
-         * <br>
-         * <p>For information about how to obtain the namespace of a cloud service, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~163515~~).</p>
+         * <p>For information about how to obtain the namespace of a cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs_ecs_dashboard</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The method that is used to handle alerts when no monitoring data is found. Valid values of N: 1 to 200. Valid value:</p>
-         * <br>
-         * <p>*   KEEP_LAST_STATE (default value): No operation is performed.</p>
-         * <p>*   INSUFFICIENT_DATA: An alert whose content is "Insufficient data" is triggered.</p>
-         * <p>*   OK: The alert rule has no active alerts.</p>
+         * <ul>
+         * <li>KEEP_LAST_STATE (default value): No operation is performed.</li>
+         * <li>INSUFFICIENT_DATA: An alert whose content is &quot;Insufficient data&quot; is triggered.</li>
+         * <li>OK: The alert rule has no active alerts.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>KEEP_LAST_STATE</p>
          */
         @NameInMap("NoDataPolicy")
         public String noDataPolicy;
 
         /**
          * <p>The time period during which the alert rule is ineffective. Valid values of N: 1 to 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00-05:30</p>
          */
         @NameInMap("NoEffectiveInterval")
         public String noEffectiveInterval;
@@ -566,36 +601,50 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
 
         /**
          * <p>The aggregation period of the metric data. Valid values of N: 1 to 200.</p>
-         * <br>
-         * <p>Set the `Period` parameter to an integral multiple of 60. Unit: seconds. Default value: 300.</p>
+         * <p>Set the <code>Period</code> parameter to an integral multiple of 60. Unit: seconds. Default value: 300.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("Period")
         public String period;
 
         /**
          * <p>The ID of the alert rule. Valid values of N: 1 to 200.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>456789</p>
          */
         @NameInMap("RuleId")
         public String ruleId;
 
         /**
          * <p>The name of the alert rule. Valid values of N: 1 to 200.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS_Rule1</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
          * <p>The mute period during which new alerts are not sent even if the trigger conditions are met. Valid values of N: 1 to 200.</p>
-         * <br>
          * <p>Unit: seconds. Default value: 86400. Minimum value: 3600.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
          */
         @NameInMap("SilenceTime")
         public Integer silenceTime;
 
         /**
          * <p>The callback URL. Valid values of N: 1 to 200.</p>
-         * <br>
          * <p>The callback URL must be accessible over the Internet. CloudMonitor pushes an alert notification to the specified callback URL by sending an HTTP POST request. Only the HTTP protocol is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
          */
         @NameInMap("Webhook")
         public String webhook;

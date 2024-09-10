@@ -6,22 +6,34 @@ import com.aliyun.tea.*;
 public class DeleteMonitoringAgentProcessRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-KpVny6l****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The process ID.</p>
-     * <br>
-     * <p>> You must configure either `ProcessId` or `ProcessName`.</p>
+     * <blockquote>
+     * <p>You must configure either <code>ProcessId</code> or <code>ProcessName</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123****</p>
      */
     @NameInMap("ProcessId")
     public String processId;
 
     /**
      * <p>The process name.</p>
-     * <br>
-     * <p>> You must configure either `ProcessId` or `ProcessName`.</p>
+     * <blockquote>
+     * <p>You must configure either <code>ProcessId</code> or <code>ProcessName</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>http</p>
      */
     @NameInMap("ProcessName")
     public String processName;

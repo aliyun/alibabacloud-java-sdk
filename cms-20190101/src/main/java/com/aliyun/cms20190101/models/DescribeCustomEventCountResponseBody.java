@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class DescribeCustomEventCountResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <blockquote>
+     * <p> The status code 200 indicates that the call was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -20,18 +24,27 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
 
     /**
      * <p>The returned message. If the call was successful, the value success is returned. If the call failed, an error message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60912C8D-B340-4253-ADE7-61ACDFD25CFC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -84,20 +97,28 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
     public static class DescribeCustomEventCountResponseBodyCustomEventCountsCustomEventCount extends TeaModel {
         /**
          * <p>The name of the custom event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BABEL_BUY</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The number of times that the custom event occurred in the specified time period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Num")
         public Integer num;
 
         /**
          * <p>The time when the custom event occurred.</p>
-         * <br>
          * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1552267615000</p>
          */
         @NameInMap("Time")
         public Long time;

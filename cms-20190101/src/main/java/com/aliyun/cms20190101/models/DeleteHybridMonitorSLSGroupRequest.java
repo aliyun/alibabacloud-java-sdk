@@ -9,8 +9,11 @@ public class DeleteHybridMonitorSLSGroupRequest extends TeaModel {
 
     /**
      * <p>The name of the Logstore group.</p>
-     * <br>
-     * <p>For information about how to obtain the name of a Logstore group, see [DescribeHybridMonitorSLSGroup](~~429526~~).</p>
+     * <p>For information about how to obtain the name of a Logstore group, see <a href="https://help.aliyun.com/document_detail/429526.html">DescribeHybridMonitorSLSGroup</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Logstore_test</p>
      */
     @NameInMap("SLSGroupName")
     public String SLSGroupName;

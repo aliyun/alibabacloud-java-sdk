@@ -6,20 +6,30 @@ import com.aliyun.tea.*;
 public class CreateGroupMonitoringAgentProcessResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
-     * <br>
-     * <p>> The status code 200 indicates that the call is successful.</p>
+     * <blockquote>
+     * <p>The status code 200 indicates that the call is successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The Request is not authorization.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3F6150F9-45C7-43F9-9578-A58B2E726C90</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -32,9 +42,13 @@ public class CreateGroupMonitoringAgentProcessResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the call is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The call is successful.</p>
-     * <p>*   false: The call fails.</p>
+     * <ul>
+     * <li>true: The call is successful.</li>
+     * <li>false: The call fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -87,6 +101,9 @@ public class CreateGroupMonitoringAgentProcessResponseBody extends TeaModel {
     public static class CreateGroupMonitoringAgentProcessResponseBodyResource extends TeaModel {
         /**
          * <p>The ID of the group process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7F2B0024-4F21-48B9-A764-211CEC48****</p>
          */
         @NameInMap("GroupProcessId")
         public String groupProcessId;

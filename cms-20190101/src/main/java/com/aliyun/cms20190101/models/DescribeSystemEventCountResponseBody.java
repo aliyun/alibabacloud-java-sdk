@@ -5,27 +5,45 @@ import com.aliyun.tea.*;
 
 public class DescribeSystemEventCountResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <p>The HTTP status codes.</p>
+     * <blockquote>
+     * <p> The status code 200 indicates that the request was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned message.</p>
+     * <p>If the request was successful, a success message is returned. If the request failed, an error message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C7A7B776-0ACE-5A93-9B07-DE8008D9CCDF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The call was successful.</p>
-     * <p>*   false: The call failed.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -90,64 +108,95 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17285****</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS-test</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The level of the system event. Valid values:</p>
-         * <br>
-         * <p>*   Critical</p>
-         * <p>*   Warn</p>
-         * <p>*   Info</p>
+         * <ul>
+         * <li>Critical</li>
+         * <li>Warn</li>
+         * <li>Info</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Info</p>
          */
         @NameInMap("Level")
         public String level;
 
         /**
          * <p>The name of the system event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance:StateChange</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The number of times that the system event occurred.</p>
+         * <p>The number of times that the system event has occurred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Num")
         public Long num;
 
         /**
          * <p>The name of the cloud service in which the system event occurred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         @NameInMap("Product")
         public String product;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-rj99xc6cptkk64ml****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The status of the system event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The timestamp when the system event occurred. Unit: milliseconds.</p>
+         * <p>The time when the system event occurred. The value is a timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1635993751000</p>
          */
         @NameInMap("Time")
         public Long time;

@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
-     * <br>
-     * <p>> The status code 200 indicates that the request was successful.</p>
+     * <blockquote>
+     * <p>The status code 200 indicates that the request was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -20,39 +24,55 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NotFound.SLSGroup</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>66683237-7126-50F8-BBF8-D67ACC919A17</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      */
     @NameInMap("Success")
     public String success;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Total")
     public Long total;
@@ -129,26 +149,37 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
     public static class DescribeHybridMonitorSLSGroupResponseBodyListSLSGroupConfig extends TeaModel {
         /**
          * <p>The Logstore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Logstore-aliyun-all</p>
          */
         @NameInMap("SLSLogstore")
         public String SLSLogstore;
 
         /**
          * <p>The Simple Log Service project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun-project</p>
          */
         @NameInMap("SLSProject")
         public String SLSProject;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("SLSRegion")
         public String SLSRegion;
 
         /**
          * <p>The member ID.</p>
-         * <br>
-         * <p>**Description** This parameter is returned when you call the operation by using an administrative account.</p>
+         * <p><strong>Description</strong> This parameter is returned when you call the operation by using an administrative account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120886317861****</p>
          */
         @NameInMap("SLSUserId")
         public String SLSUserId;
@@ -195,8 +226,10 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
     public static class DescribeHybridMonitorSLSGroupResponseBodyList extends TeaModel {
         /**
          * <p>The time when the Logstore group was created.</p>
-         * <br>
          * <p>Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1652845630000</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -215,14 +248,19 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
 
         /**
          * <p>The name of the Logstore group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Logstore_test</p>
          */
         @NameInMap("SLSGroupName")
         public String SLSGroupName;
 
         /**
          * <p>The time when the Logstore group was modified.</p>
-         * <br>
          * <p>Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1652845630000</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

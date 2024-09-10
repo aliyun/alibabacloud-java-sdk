@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricRuleTemplateAttributeRequest extends TeaModel {
     /**
-     * <p>The name of the alert template. You must specify at least one of the `Name` and `TemplateId` parameters.</p>
-     * <br>
-     * <p>For information about how to obtain the name of an alert template, see [DescribeMetricRuleTemplateList](~~114982~~).</p>
+     * <p>The name of the alert template. You must specify at least one of the <code>Name</code> and <code>TemplateId</code> parameters.</p>
+     * <p>For information about how to obtain the name of an alert template, see <a href="https://help.aliyun.com/document_detail/114982.html">DescribeMetricRuleTemplateList</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS_Template1</p>
      */
     @NameInMap("Name")
     public String name;
@@ -16,9 +18,11 @@ public class DescribeMetricRuleTemplateAttributeRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the alert template. You must specify at least one of the `Name` and `TemplateId` parameters.</p>
-     * <br>
-     * <p>For information about how to obtain the ID of an alert template, see [DescribeMetricRuleTemplateList](~~114982~~).</p>
+     * <p>The ID of the alert template. You must specify at least one of the <code>Name</code> and <code>TemplateId</code> parameters.</p>
+     * <p>For information about how to obtain the ID of an alert template, see <a href="https://help.aliyun.com/document_detail/114982.html">DescribeMetricRuleTemplateList</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>70****</p>
      */
     @NameInMap("TemplateId")
     public String templateId;

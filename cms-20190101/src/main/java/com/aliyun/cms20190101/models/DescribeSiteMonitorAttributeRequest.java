@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class DescribeSiteMonitorAttributeRequest extends TeaModel {
     /**
      * <p>Specifies whether to return the information of the alert rules that are configured for the site monitoring task. Valid values:</p>
-     * <br>
-     * <p>*   true: The system returns the information of the alert rules that are configured for the site monitoring task.</p>
-     * <p>*   false (default): The system does not return the information of the alert rules that are configured for the site monitoring task.</p>
+     * <ul>
+     * <li>true: The system returns the information of the alert rules that are configured for the site monitoring task.</li>
+     * <li>false (default): The system does not return the information of the alert rules that are configured for the site monitoring task.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IncludeAlert")
     public Boolean includeAlert;
@@ -18,6 +22,10 @@ public class DescribeSiteMonitorAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the site monitoring task.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc641dff-c19d-45f3-ad0a-818a0c4f****</p>
      */
     @NameInMap("TaskId")
     public String taskId;

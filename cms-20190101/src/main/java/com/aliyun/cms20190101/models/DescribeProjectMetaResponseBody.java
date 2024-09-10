@@ -6,32 +6,48 @@ import com.aliyun.tea.*;
 public class DescribeProjectMetaResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
-     * <br>
-     * <p>> The status code 200 indicates that the request was successful.</p>
+     * <blockquote>
+     * <p>The status code 200 indicates that the request was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The Request is not authorization.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4C2061B2-3B1B-43BF-A4A4-C53426F479C0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -44,12 +60,18 @@ public class DescribeProjectMetaResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request was successful. Valid values: true: The request was successful. false: The request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("Total")
     public String total;
@@ -126,25 +148,34 @@ public class DescribeProjectMetaResponseBody extends TeaModel {
     public static class DescribeProjectMetaResponseBodyResourcesResource extends TeaModel {
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CDN</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The tags. Tags are used to filter services.</p>
-         * <br>
-         * <p>Tags are returned in the following format: `[{"name":"Tag key","value":"Tag value"}, {"name":"Tag key","value":"Tag value"}]`. The following tags are commonly used:</p>
-         * <br>
-         * <p>*   alertUnit: the unit of the metric value in alerts. If the unit is small, the original metric value may be too large. In this case, you can use the `alertUnit` tag to specify an appropriate unit. This tag is used in CloudMonitor.</p>
-         * <p>*   minAlertPeriod: the minimum time interval to report a new alert. The interval is usually set to 1 minute.</p>
-         * <p>*   metricCategory: the service specification. Example: kvstore_sharding. An Alibaba Cloud service may have different specifications that are defined in the same namespace. You can use this parameter to distinguish between service specifications.</p>
-         * <p>*   is_alarm: specifies whether an alert rule can be set. We recommend that you do not use the special tags in the CloudMonitor console.</p>
+         * <p>Tags are returned in the following format: <code>[{&quot;name&quot;:&quot;Tag key&quot;,&quot;value&quot;:&quot;Tag value&quot;}, {&quot;name&quot;:&quot;Tag key&quot;,&quot;value&quot;:&quot;Tag value&quot;}]</code>. The following tags are commonly used:</p>
+         * <ul>
+         * <li>alertUnit: the unit of the metric value in alerts. If the unit is small, the original metric value may be too large. In this case, you can use the <code>alertUnit</code> tag to specify an appropriate unit. This tag is used in CloudMonitor.</li>
+         * <li>minAlertPeriod: the minimum time interval to report a new alert. The interval at which monitoring data is reported. The value is usually 1 minute.</li>
+         * <li>metricCategory: the service specification. Example: kvstore_sharding. Some Alibaba Cloud services have multiple specifications that are defined in the same namespace. This parameter is used to identify the specifications.</li>
+         * <li>is_alarm: indicates whether an alert rule can be configured. We recommend that you do not use the special tags in the CloudMonitor console.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;groupFlag&quot;:true}]</p>
          */
         @NameInMap("Labels")
         public String labels;
 
         /**
-         * <p>The namespace of the cloud service. Format: `acs_Service name abbreviation`. For more information about namespaces, see [Appendix 1: Metrics](~~163515~~).</p>
+         * <p>The namespace of the cloud service. Format: <code>acs_Service name abbreviation</code>. For more information about namespaces, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs_cdn</p>
          */
         @NameInMap("Namespace")
         public String namespace;

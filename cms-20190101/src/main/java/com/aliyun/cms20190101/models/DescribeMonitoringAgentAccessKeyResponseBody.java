@@ -6,41 +6,61 @@ import com.aliyun.tea.*;
 public class DescribeMonitoringAgentAccessKeyResponseBody extends TeaModel {
     /**
      * <p>The AccessKey ID that is required to install the agent.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E7A27f9****</p>
      */
     @NameInMap("AccessKey")
     public String accessKey;
 
     /**
      * <p>The status code.</p>
-     * <br>
-     * <p>> The status code 200 indicates that the request was successful.</p>
+     * <blockquote>
+     * <p>The status code 200 indicates that the request was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified resource is not found.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C0F655E9-D793-51E6-BD78-CABBCCFC1047</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The AccessKey secret that is required to install the agent.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sBjNOUhLylrxMX-Xv1****</p>
      */
     @NameInMap("SecretKey")
     public String secretKey;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

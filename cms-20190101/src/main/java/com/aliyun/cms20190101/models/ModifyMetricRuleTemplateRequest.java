@@ -12,14 +12,19 @@ public class ModifyMetricRuleTemplateRequest extends TeaModel {
 
     /**
      * <p>The description of the alert template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS_template1</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The name of the alert template.</p>
-     * <br>
-     * <p>For information about how to obtain the name of an alert template, see [DescribeMetricRuleTemplateList](~~114982~~).</p>
+     * <p>For information about how to obtain the name of an alert template, see <a href="https://help.aliyun.com/document_detail/114982.html">DescribeMetricRuleTemplateList</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test123</p>
      */
     @NameInMap("Name")
     public String name;
@@ -29,16 +34,22 @@ public class ModifyMetricRuleTemplateRequest extends TeaModel {
 
     /**
      * <p>The version of the alert template. The version changes with the number of times that the alert template is modified.</p>
-     * <br>
-     * <p>For information about how to obtain the version of an alert template, see [DescribeMetricRuleTemplateList](~~114982~~).</p>
+     * <p>For information about how to obtain the version of an alert template, see <a href="https://help.aliyun.com/document_detail/114982.html">DescribeMetricRuleTemplateList</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("RestVersion")
     public Long restVersion;
 
     /**
      * <p>The ID of the alert template.</p>
-     * <br>
-     * <p>For information about how to obtain the ID of an alert template, see [DescribeMetricRuleTemplateList](~~114982~~).</p>
+     * <p>For information about how to obtain the ID of an alert template, see <a href="https://help.aliyun.com/document_detail/114982.html">DescribeMetricRuleTemplateList</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("TemplateId")
     public Long templateId;
@@ -332,70 +343,81 @@ public class ModifyMetricRuleTemplateRequest extends TeaModel {
 
         /**
          * <p>The abbreviation of the cloud service name.</p>
-         * <br>
          * <p>Valid values of N: 1 to 200.</p>
-         * <br>
-         * <p>For more information about how to obtain the abbreviation of a cloud service name, see `metricCategory` in the response parameter `Labels` of the [DescribeProjectMeta](~~114916~~) operation.</p>
+         * <p>For more information about how to obtain the abbreviation of a cloud service name, see <code>metricCategory</code> in the response parameter <code>Labels</code> of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>The metric name.</p>
-         * <br>
          * <p>Valid values of N: 1 to 200.</p>
-         * <br>
-         * <p>For information about how to obtain metrics, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~163515~~).</p>
+         * <p>For information about how to obtain metrics, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu_total</p>
          */
         @NameInMap("MetricName")
         public String metricName;
 
         /**
          * <p>The namespace of the cloud service.</p>
-         * <br>
          * <p>Valid values of N: 1 to 200.</p>
-         * <br>
-         * <p>For information about how to obtain the namespace of a cloud service, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~163515~~).</p>
+         * <p>For information about how to obtain the namespace of a cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs_ecs_dashboard</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The statistical period of the monitoring data.</p>
-         * <br>
          * <p>Valid values of N: 1 to 200.</p>
-         * <br>
-         * <p>> If the value is set to 300 seconds, the monitoring data is collected every 300 seconds. If the monitoring data is reported every 1 minute, the alert system calculates the average, maximum, and minimum values of the monitoring data of 5 minutes and checks whether the aggregated values exceed the threshold. To prevent unexpected alerts, we recommend that you set this parameter together with other parameters.</p>
+         * <blockquote>
+         * <p>If the value is set to 300 seconds, the monitoring data is collected every 300 seconds. If the monitoring data is reported every 1 minute, the alert system calculates the average, maximum, and minimum values of the monitoring data of 5 minutes and checks whether the aggregated values exceed the threshold. To prevent unexpected alerts, we recommend that you set this parameter together with other parameters.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("Period")
         public Integer period;
 
         /**
          * <p>The name of the alert rule.</p>
-         * <br>
          * <p>Valid values of N: 1 to 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule1</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
          * <p>The dimension of the alert. It is an extended field.</p>
-         * <br>
          * <p>Valid values of N: 1 to 200.</p>
-         * <br>
-         * <p>For example, an alert template is applied to an application group, this parameter is set to `{"disk":"/"}`, and the MetricName parameter is set to `DiskUtilization`. In this case, the generated alert rule is applied to the root disk partition (`"/"`) of all instances in the application group to which the alert template is applied.</p>
-         * <br>
-         * <p>> For more information about the values of extended fields, see [DescribeMetricRuleTemplateAttribute](~~114979~~).</p>
+         * <p>For example, an alert template is applied to an application group, this parameter is set to <code>{&quot;disk&quot;:&quot;/&quot;}</code>, and the MetricName parameter is set to <code>DiskUtilization</code>. In this case, the generated alert rule is applied to the root disk partition (<code>&quot;/&quot;</code>) of all instances in the application group to which the alert template is applied.</p>
+         * <blockquote>
+         * <p>For more information about the values of extended fields, see <a href="https://help.aliyun.com/document_detail/114979.html">DescribeMetricRuleTemplateAttribute</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;disk&quot;:&quot;/&quot;}</p>
          */
         @NameInMap("Selector")
         public String selector;
 
         /**
          * <p>The callback URL.</p>
-         * <br>
          * <p>Valid values of N: 1 to 200.</p>
-         * <br>
          * <p>The callback URL must be accessible over the Internet. CloudMonitor pushes an alert notification to the specified callback URL by sending an HTTP POST request. Only the HTTP protocol is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://apiwebhook.hipac.cn/api/v1/alarm/aly/eregfeeferrtbnmkdszp">https://apiwebhook.hipac.cn/api/v1/alarm/aly/eregfeeferrtbnmkdszp</a></p>
          */
         @NameInMap("Webhook")
         public String webhook;

@@ -6,23 +6,35 @@ import com.aliyun.tea.*;
 public class CreateMetricRuleResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to overwrite the existing data. Valid values:</p>
-     * <br>
-     * <p>*   true: The resources submitted this time will overwrite the previous associated resources.</p>
-     * <p>*   false: The resources submitted this time will not overwrite the previous associated resources. The associated resources after submission include the previous associated resources and the resources submitted this time.</p>
+     * <ul>
+     * <li>true: The resources submitted this time will overwrite the previous associated resources.</li>
+     * <li>false: The resources submitted this time will not overwrite the previous associated resources. The associated resources after submission include the previous associated resources and the resources submitted this time.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Overwrite")
     public String overwrite;
 
     /**
      * <p>The resources to be associated with the alert rule. The value is a JSON array.</p>
-     * <br>
-     * <p>>  You can add up to 100 resources each time. An alert rule can be associated with up to 3,000 resources.</p>
+     * <blockquote>
+     * <p> You can add up to 100 resources each time. An alert rule can be associated with up to 3,000 resources.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;instanceId&quot;:&quot;i-a2d5q7pm3f9yr29e****&quot;}]</p>
      */
     @NameInMap("Resources")
     public String resources;
 
     /**
      * <p>The ID of the alert rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-2ze3w55tr2rcpejpcfap_59c96b85-0339-4f35-ba66-ae4e34d3****</p>
      */
     @NameInMap("RuleId")
     public String ruleId;

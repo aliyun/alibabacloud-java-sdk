@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <blockquote>
+     * <p> The status code 200 indicates that the call was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -20,21 +24,31 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The returned message. If the call was successful, the value success is returned. If the call failed, an error message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C6718537-E673-4A58-8EE1-24B8B38C7AAE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The call was successful.</p>
-     * <p>*   false: The call failed.</p>
+     * <ul>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -87,39 +101,55 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
     public static class DescribeLogMonitorAttributeResponseBodyLogMonitorAggregates extends TeaModel {
         /**
          * <p>The alias of the aggregate function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HostName</p>
          */
         @NameInMap("Alias")
         public String alias;
 
         /**
          * <p>The name of the field in logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hostName</p>
          */
         @NameInMap("FieldName")
         public String fieldName;
 
         /**
          * <p>The function that is used to aggregate the monitoring data of logs within an aggregation period. Valid values:</p>
-         * <br>
-         * <p>*   count: counts the number.</p>
-         * <p>*   sum: calculates the total value.</p>
-         * <p>*   avg: calculates the average value.</p>
-         * <p>*   max: selects the maximum value.</p>
-         * <p>*   min: selects the minimum value.</p>
-         * <p>*   countps: calculates the counted number of the specified field divided by the total number of seconds of the aggregation period.</p>
-         * <p>*   sumps: calculates the total value of the specified field divided by the total number of seconds of the aggregation period.</p>
-         * <p>*   distinct: counts the number of logs where the specified field appears within the aggregation period.</p>
+         * <ul>
+         * <li>count: counts the number.</li>
+         * <li>sum: calculates the total value.</li>
+         * <li>avg: calculates the average value.</li>
+         * <li>max: selects the maximum value.</li>
+         * <li>min: selects the minimum value.</li>
+         * <li>countps: calculates the counted number of the specified field divided by the total number of seconds of the aggregation period.</li>
+         * <li>sumps: calculates the total value of the specified field divided by the total number of seconds of the aggregation period.</li>
+         * <li>distinct: counts the number of logs where the specified field appears within the aggregation period.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>count</p>
          */
         @NameInMap("Function")
         public String function;
 
         /**
          * <p>The maximum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Max")
         public String max;
 
         /**
          * <p>The minimum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Min")
         public String min;
@@ -174,25 +204,35 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
     public static class DescribeLogMonitorAttributeResponseBodyLogMonitorValueFilter extends TeaModel {
         /**
          * <p>The name of the log field used for matching in the filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hostName</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The method that is used to match the field value. Valid values:</p>
-         * <br>
-         * <p>*   `contain`</p>
-         * <p>*   `notContain`</p>
-         * <p>*   `>`: greater than</p>
-         * <p>*   `<`: less than</p>
-         * <p>*   `>=`: greater than or equal to</p>
-         * <p>*   `<=`: less than or equal to</p>
+         * <ul>
+         * <li><code>contain</code></li>
+         * <li><code>notContain</code></li>
+         * <li><code>&gt;</code>: greater than</li>
+         * <li><code>&lt;</code>: less than</li>
+         * <li><code>&gt;=</code>: greater than or equal to</li>
+         * <li><code>&lt;=</code>: less than or equal to</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>contain</p>
          */
         @NameInMap("Operator")
         public String operator;
 
         /**
          * <p>The field value to be matched in the filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>portal</p>
          */
         @NameInMap("Value")
         public String value;
@@ -237,14 +277,19 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The time when the log monitoring metric was created.</p>
-         * <br>
          * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1547431398000</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
          * <p>The ID of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("GroupId")
         public Long groupId;
@@ -257,38 +302,55 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The ID returned by Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("LogId")
         public Long logId;
 
         /**
          * <p>The extended field. The extended field allows you to perform basic operations on the aggregation results.</p>
-         * <br>
          * <p>Assume that you have calculated TotalNumber and 5XXNumber by aggregating the data. TotalNumber indicates the total number of HTTP requests, and 5XXNumber indicates the number of HTTP requests whose status code is greater than 499. You can calculate the server error rate by adding the following formula to the extended field: 5XXNumber/TotalNumber\*100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;extend&quot;:{&quot;errorPercent&quot;:&quot;5XXNumber/TotalNumber*100&quot;}}</p>
          */
         @NameInMap("MetricExpress")
         public String metricExpress;
 
         /**
-         * <p>The name of the log monitoring metric. For more information, see [Appendix 1: Metrics](~~163515~~).</p>
+         * <p>The name of the log monitoring metric. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu_total</p>
          */
         @NameInMap("MetricName")
         public String metricName;
 
         /**
          * <p>The name of the Log Service Logstore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-logstore</p>
          */
         @NameInMap("SlsLogstore")
         public String slsLogstore;
 
         /**
          * <p>The name of the Log Service project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         @NameInMap("SlsProject")
         public String slsProject;
 
         /**
          * <p>The ID of the region where the Log Service Logstore resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("SlsRegionId")
         public String slsRegionId;
@@ -301,7 +363,6 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The condition that is used to filter logs. The ValueFilter and ValueFilterRelation parameters are used in pair. The filter condition is equivalent to the WHERE clause in SQL statements.</p>
-         * <br>
          * <p>If no filter condition is specified, all logs are processed. Assume that logs contain the Level field, which may be set to Error. If you need to calculate the number of times that logs of the Error level appear every minute, you can set the filter condition to Level=Error and count the number of logs that meet this condition.</p>
          */
         @NameInMap("ValueFilter")
@@ -309,9 +370,13 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The logical operator that is used between log filter conditions. The ValueFilter and ValueFilterRelation parameters are used in pair. Valid values:</p>
-         * <br>
-         * <p>*   and</p>
-         * <p>*   or</p>
+         * <ul>
+         * <li>and</li>
+         * <li>or</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>and</p>
          */
         @NameInMap("ValueFilterRelation")
         public String valueFilterRelation;

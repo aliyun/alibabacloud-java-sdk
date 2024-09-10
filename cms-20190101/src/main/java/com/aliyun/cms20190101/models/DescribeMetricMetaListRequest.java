@@ -6,41 +6,55 @@ import com.aliyun.tea.*;
 public class DescribeMetricMetaListRequest extends TeaModel {
     /**
      * <p>The tags for filtering metrics. Specify a JSON string.</p>
-     * <br>
-     * <p>Format:`[{"name":"tag name","value":"tag value"},{"name":"tag name","value":"tag value"}]`. The following tags are available:</p>
-     * <br>
-     * <p>*   metricCategory: the category of the metric.</p>
-     * <p>*   alertEnable: specifies whether to report alerts for the metric.</p>
-     * <p>*   alertUnit: the suggested unit of the metric value in alerts.</p>
-     * <p>*   unitFactor: the factor for metric unit conversion.</p>
-     * <p>*   minAlertPeriod: the minimum time interval to report a new alert.</p>
-     * <p>*   productCategory: the category of the service.</p>
+     * <p>Format: <code>[{&quot;name&quot;:&quot;tag key&quot;,&quot;value&quot;:&quot;tag value&quot;},{&quot;name&quot;:&quot;tag key&quot;,&quot;value&quot;:&quot;tag value&quot;}] </code>. The following tags are available:</p>
+     * <ul>
+     * <li>metricCategory: the category of the metric.</li>
+     * <li>alertEnable: specifies whether to report alerts for the metric.</li>
+     * <li>alertUnit: the unit of the metric in the alerts.</li>
+     * <li>unitFactor: the factor for metric unit conversion.</li>
+     * <li>minAlertPeriod: the minimum interval at which the alert is reported.</li>
+     * <li>productCategory: the category of the service.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;name&quot;:&quot;productCategory&quot;,&quot;value&quot;:&quot;kvstore_old&quot;}]</p>
      */
     @NameInMap("Labels")
     public String labels;
 
     /**
-     * <p>The name of the metric. For more information, see [Appendix 1: Metrics](~~163515~~).</p>
+     * <p>The metric name. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CPUUtilization</p>
      */
     @NameInMap("MetricName")
     public String metricName;
 
     /**
-     * <p>The namespace of the service.</p>
-     * <br>
-     * <p>For more information, see [Appendix 1: Metrics](~~163515~~).</p>
+     * <p>The namespace of the cloud service.</p>
+     * <p>For more information about the namespaces of cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs_kvstore</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
-     * <p>The page to return. Default value: 1</p>
+     * <p>The page number. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 30.</p>
+     * <p>The number of entries per page. Default value: 30.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

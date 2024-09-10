@@ -6,29 +6,43 @@ import com.aliyun.tea.*;
 public class DeleteMetricRulesResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates a success.</p>
+     * <blockquote>
+     * <p> The status code 200 indicates a success.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified resource is not found.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E5599964-8D0D-40DC-8E90-27A619384B81</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the operation was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: successful.</p>
-     * <p>*   false: failed.</p>
+     * <ul>
+     * <li>true: successful.</li>
+     * <li>false: failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

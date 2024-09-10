@@ -6,20 +6,30 @@ import com.aliyun.tea.*;
 public class DescribeSiteMonitorListRequest extends TeaModel {
     /**
      * <p>The keyword to be matched.</p>
-     * <br>
-     * <p>>  You can search for tasks by name or address. Fuzzy search is supported.</p>
+     * <blockquote>
+     * <p> You can search for tasks by name or address. Fuzzy search is supported.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>site</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
      * <p>The page number. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Page")
     public Integer page;
 
     /**
      * <p>The number of entries per page. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -29,21 +39,31 @@ public class DescribeSiteMonitorListRequest extends TeaModel {
 
     /**
      * <p>The ID of the site monitoring task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a1ecd34a-8157-44d9-b060-14950837****</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
      * <p>The task status. Valid values:</p>
-     * <br>
-     * <p>*   1: The task is enabled.</p>
-     * <p>*   2: The task is disabled.</p>
+     * <ul>
+     * <li>1: The task is enabled.</li>
+     * <li>2: The task is disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TaskState")
     public String taskState;
 
     /**
      * <p>The protocol that is used by the site monitoring task. Valid values: HTTP, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HTTP</p>
      */
     @NameInMap("TaskType")
     public String taskType;

@@ -6,12 +6,17 @@ import com.aliyun.tea.*;
 public class CreateMonitorGroupInstancesRequest extends TeaModel {
     /**
      * <p>The ID of the application group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3607****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The instances that you want to add to the application group.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Instances")
     public java.util.List<CreateMonitorGroupInstancesRequestInstances> instances;
@@ -51,26 +56,41 @@ public class CreateMonitorGroupInstancesRequest extends TeaModel {
     public static class CreateMonitorGroupInstancesRequestInstances extends TeaModel {
         /**
          * <p>The abbreviation of the Alibaba Cloud service name.</p>
-         * <br>
-         * <p>To obtain the abbreviation of an Alibaba Cloud service name, call the [DescribeProjectMeta](~~114916~~) operation. The `metricCategory` tag in the `Labels` response parameter indicates the abbreviation of the Alibaba Cloud service name.</p>
+         * <p>To obtain the abbreviation of an Alibaba Cloud service name, call the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation. The <code>metricCategory</code> tag in the <code>Labels</code> response parameter indicates the abbreviation of the Alibaba Cloud service name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-2ze26xj5wwy12****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The instance name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-instance-ecs</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;

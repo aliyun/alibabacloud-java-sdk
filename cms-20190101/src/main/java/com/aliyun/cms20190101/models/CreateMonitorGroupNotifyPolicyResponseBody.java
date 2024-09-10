@@ -6,35 +6,52 @@ import com.aliyun.tea.*;
 public class CreateMonitorGroupNotifyPolicyResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The HTTP status code 200 indicates that the call succeeds.</p>
+     * <blockquote>
+     * <p> The HTTP status code 200 indicates that the call succeeds.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The Request is not authorization.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>13356BCA-3EC3-4748-A771-2064DA69AEF1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of entries that are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Result")
     public Integer result;
 
     /**
      * <p>Indicates whether the call succeeds. Valid values:</p>
-     * <br>
-     * <p>*   true: The call succeeds.</p>
-     * <p>*   false: The call fails.</p>
+     * <ul>
+     * <li>true: The call succeeds.</li>
+     * <li>false: The call fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;

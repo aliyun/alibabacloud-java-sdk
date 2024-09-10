@@ -16,6 +16,9 @@ public class PushingTarget extends TeaModel {
     @NameInMap("HttpRequestTarget")
     public PushingTargetHttpRequestTarget httpRequestTarget;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 

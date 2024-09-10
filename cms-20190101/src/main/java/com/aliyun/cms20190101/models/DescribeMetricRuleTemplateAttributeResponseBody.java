@@ -6,20 +6,30 @@ import com.aliyun.tea.*;
 public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the request was successful.</p>
+     * <blockquote>
+     * <p> The status code 200 indicates that the request was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified resource is not found.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8F3A82AD-DA92-52B0-8EC6-C059D1C3839F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -32,9 +42,13 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -87,38 +101,50 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
     public static class DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsCritical extends TeaModel {
         /**
          * <p>The comparison operator that is used to compare the metric value with the threshold for Critical-level alerts. Valid values:</p>
-         * <br>
-         * <p>*   GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
-         * <p>*   GreaterThanThreshold: greater than the threshold</p>
-         * <p>*   LessThanOrEqualToThreshold: less than or equal to the threshold</p>
-         * <p>*   LessThanThreshold: less than the threshold</p>
-         * <p>*   NotEqualToThreshold: not equal to the threshold</p>
-         * <p>*   GreaterThanYesterday: greater than the metric value at the same time yesterday</p>
-         * <p>*   LessThanYesterday: less than the metric value at the same time yesterday</p>
-         * <p>*   GreaterThanLastWeek: greater than the metric value at the same time last week</p>
-         * <p>*   LessThanLastWeek: less than the metric value at the same time last week</p>
-         * <p>*   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
-         * <p>*   LessThanLastPeriod: less than the metric value in the last monitoring cycle</p>
+         * <ul>
+         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
+         * <li>GreaterThanThreshold: greater than the threshold</li>
+         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
+         * <li>LessThanThreshold: less than the threshold</li>
+         * <li>NotEqualToThreshold: not equal to the threshold</li>
+         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
+         * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
+         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
+         * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
+         * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
+         * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GreaterThanOrEqualToThreshold</p>
          */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
         /**
          * <p>The statistical method for Critical-level alerts.</p>
-         * <br>
-         * <p>The value of the `Statistics` parameter varies with the cloud service. For more information, see [Appendix 1: Metrics](~~163515~~).</p>
+         * <p>The value of the <code>Statistics</code> parameter varies with the cloud service. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Average</p>
          */
         @NameInMap("Statistics")
         public String statistics;
 
         /**
          * <p>The threshold for Critical-level alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         @NameInMap("Threshold")
         public String threshold;
 
         /**
          * <p>The consecutive number of times for which the metric value meets the alert condition before a Critical-level alert is triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("Times")
         public Integer times;
@@ -165,38 +191,50 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
     public static class DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsInfo extends TeaModel {
         /**
          * <p>The comparison operator that is used to compare the metric value with the threshold for Info-level alerts. Valid values:</p>
-         * <br>
-         * <p>*   GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
-         * <p>*   GreaterThanThreshold: greater than the threshold</p>
-         * <p>*   LessThanOrEqualToThreshold: less than or equal to the threshold</p>
-         * <p>*   LessThanThreshold: less than the threshold</p>
-         * <p>*   NotEqualToThreshold: not equal to the threshold</p>
-         * <p>*   GreaterThanYesterday: greater than the metric value at the same time yesterday</p>
-         * <p>*   LessThanYesterday: less than the metric value at the same time yesterday</p>
-         * <p>*   GreaterThanLastWeek: greater than the metric value at the same time last week</p>
-         * <p>*   LessThanLastWeek: less than the metric value at the same time last week</p>
-         * <p>*   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
-         * <p>*   LessThanLastPeriod: less than the metric value in the last monitoring cycle</p>
+         * <ul>
+         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
+         * <li>GreaterThanThreshold: greater than the threshold</li>
+         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
+         * <li>LessThanThreshold: less than the threshold</li>
+         * <li>NotEqualToThreshold: not equal to the threshold</li>
+         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
+         * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
+         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
+         * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
+         * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
+         * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GreaterThanOrEqualToThreshold</p>
          */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
         /**
          * <p>The statistical method for Info-level alerts.</p>
-         * <br>
-         * <p>The value of the `Statistics` parameter varies with the cloud service. For more information, see [Appendix 1: Metrics](~~163515~~).</p>
+         * <p>The value of the <code>Statistics</code> parameter varies with the cloud service. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Average</p>
          */
         @NameInMap("Statistics")
         public String statistics;
 
         /**
          * <p>The threshold for Info-level alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         @NameInMap("Threshold")
         public String threshold;
 
         /**
          * <p>The consecutive number of times for which the metric value meets the alert condition before an Info-level alert is triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Times")
         public Integer times;
@@ -243,38 +281,50 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
     public static class DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsWarn extends TeaModel {
         /**
          * <p>The comparison operator that is used to compare the metric value with the threshold for Warn-level alerts. Valid values:</p>
-         * <br>
-         * <p>*   GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
-         * <p>*   GreaterThanThreshold: greater than the threshold</p>
-         * <p>*   LessThanOrEqualToThreshold: less than or equal to the threshold</p>
-         * <p>*   LessThanThreshold: less than the threshold</p>
-         * <p>*   NotEqualToThreshold: not equal to the threshold</p>
-         * <p>*   GreaterThanYesterday: greater than the metric value at the same time yesterday</p>
-         * <p>*   LessThanYesterday: less than the metric value at the same time yesterday</p>
-         * <p>*   GreaterThanLastWeek: greater than the metric value at the same time last week</p>
-         * <p>*   LessThanLastWeek: less than the metric value at the same time last week</p>
-         * <p>*   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
-         * <p>*   LessThanLastPeriod: less than the metric value in the last monitoring cycle</p>
+         * <ul>
+         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
+         * <li>GreaterThanThreshold: greater than the threshold</li>
+         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
+         * <li>LessThanThreshold: less than the threshold</li>
+         * <li>NotEqualToThreshold: not equal to the threshold</li>
+         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
+         * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
+         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
+         * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
+         * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
+         * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GreaterThanOrEqualToThreshold</p>
          */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
         /**
          * <p>The statistical method for Warn-level alerts.</p>
-         * <br>
-         * <p>The value of the `Statistics` parameter varies with the cloud service. For more information, see [Appendix 1: Metrics](~~163515~~).</p>
+         * <p>The value of the <code>Statistics</code> parameter varies with the cloud service. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Average</p>
          */
         @NameInMap("Statistics")
         public String statistics;
 
         /**
          * <p>The threshold for Warn-level alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         @NameInMap("Threshold")
         public String threshold;
 
         /**
          * <p>The consecutive number of times for which the metric value meets the alert condition before a Warn-level alert is triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Times")
         public Integer times;
@@ -371,12 +421,18 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
     public static class DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateLabelsLabels extends TeaModel {
         /**
          * <p>The tag key of the alert template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>label1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value of the alert template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value1</p>
          */
         @NameInMap("Value")
         public String value;
@@ -426,6 +482,9 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
     public static class DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplate extends TeaModel {
         /**
          * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("Category")
         public String category;
@@ -444,40 +503,59 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The metric name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu_total</p>
          */
         @NameInMap("MetricName")
         public String metricName;
 
         /**
          * <p>The namespace of the Alibaba Cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs_ecs_dashboard</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The method that is used to handle alerts when no monitoring data is found. Valid values:</p>
-         * <br>
-         * <p>*   KEEP_LAST_STATE (default): No operation is performed.</p>
-         * <p>*   INSUFFICIENT_DATA: An alert whose content is "Insufficient data" is triggered.</p>
-         * <p>*   OK: The status is considered normal.</p>
+         * <ul>
+         * <li>KEEP_LAST_STATE (default): No operation is performed.</li>
+         * <li>INSUFFICIENT_DATA: An alert whose content is &quot;Insufficient data&quot; is triggered.</li>
+         * <li>OK: The status is considered normal.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>KEEP_LAST_STATE</p>
          */
         @NameInMap("NoDataPolicy")
         public String noDataPolicy;
 
         /**
          * <p>The name of the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS_Rule</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
          * <p>The dimension of the alert. It is an extended field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;disk&quot;:&quot;/&quot;}</p>
          */
         @NameInMap("Selector")
         public String selector;
 
         /**
          * <p>The callback URL to which a request is sent when an alert is triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
          */
         @NameInMap("Webhook")
         public String webhook;
@@ -595,18 +673,27 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The name of the alert template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS_Template1</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The version of the alert template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RestVersion")
         public String restVersion;
 
         /**
          * <p>The ID of the alert template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70****</p>
          */
         @NameInMap("TemplateId")
         public String templateId;

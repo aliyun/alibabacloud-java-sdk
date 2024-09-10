@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class DescribeContactGroupListResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <blockquote>
+     * <p> The status code 200 indicates that the call was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -26,27 +30,40 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The Request is not authorization.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>916EE694-03C2-47B6-85EE-5054E3C168D3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The call was successful.</p>
-     * <p>*   false: The call failed.</p>
+     * <ul>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of the returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -140,6 +157,9 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
 
         /**
          * <p>The time when the alert group was created. This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1507070598000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
@@ -152,32 +172,47 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the alert group subscribes to weekly reports. Valid values:</p>
-         * <br>
-         * <p>*   true: The alert group subscribes to weekly reports.</p>
-         * <p>*   false: The alert group does not subscribe to weekly reports.</p>
+         * <ul>
+         * <li>true: The alert group subscribes to weekly reports.</li>
+         * <li>false: The alert group does not subscribe to weekly reports.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EnableSubscribed")
         public Boolean enableSubscribed;
 
         /**
          * <p>Indicates whether the alert group can subscribe to weekly reports. Valid values:</p>
-         * <br>
-         * <p>*   true: The alert group can subscribe to weekly reports.</p>
-         * <p>*   false: The alert group cannot subscribe to weekly reports.</p>
-         * <br>
-         * <p>>  The weekly report subscription feature is only available for Alibaba Cloud accounts with more than five Elastic Compute Service (ECS) instances.</p>
+         * <ul>
+         * <li>true: The alert group can subscribe to weekly reports.</li>
+         * <li>false: The alert group cannot subscribe to weekly reports.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The weekly report subscription feature is only available for Alibaba Cloud accounts with more than five Elastic Compute Service (ECS) instances.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EnabledWeeklyReport")
         public Boolean enabledWeeklyReport;
 
         /**
          * <p>The name of the alert group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Contact1</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The time when the alert group was modified. This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1589447759000</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
