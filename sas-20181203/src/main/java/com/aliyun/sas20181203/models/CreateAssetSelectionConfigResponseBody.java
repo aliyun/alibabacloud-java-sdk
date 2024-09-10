@@ -12,6 +12,9 @@ public class CreateAssetSelectionConfigResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A3D7C47D-3F11-57BB-90E8-E5C20C619F37</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,25 +43,36 @@ public class CreateAssetSelectionConfigResponseBody extends TeaModel {
     public static class CreateAssetSelectionConfigResponseBodyData extends TeaModel {
         /**
          * <p>The business type that is selected for the asset. Valid values:</p>
-         * <br>
-         * <p>*   **VIRUS_SCAN_CYCLE_CONFIG**: virus detection configuration</p>
-         * <p>*   **VIRUS_SCAN_ONCE_TASK**: one-time scan for virus detection</p>
+         * <ul>
+         * <li><strong>VIRUS_SCAN_CYCLE_CONFIG</strong>: virus detection configuration</li>
+         * <li><strong>VIRUS_SCAN_ONCE_TASK</strong>: one-time scan for virus detection</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VIRUS_SCAN_CYCLE_CONFIG</p>
          */
         @NameInMap("BusinessType")
         public String businessType;
 
         /**
          * <p>The ID of the current asset selection. It can be used to query and modify the asset that is selected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>53e93435-d694-4c03-9ce7-da12bee1****</p>
          */
         @NameInMap("SelectionKey")
         public Long selectionKey;
 
         /**
          * <p>The dimension based on which the asset is selected. Valid values:</p>
-         * <br>
-         * <p>*   **group**: The asset is selected by server.</p>
-         * <p>*   **group**: The asset is selected by group.</p>
-         * <p>*   **vpc**: The asset is selected by VPC.</p>
+         * <ul>
+         * <li><strong>group</strong>: The asset is selected by server.</li>
+         * <li><strong>group</strong>: The asset is selected by group.</li>
+         * <li><strong>vpc</strong>: The asset is selected by VPC.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>group</p>
          */
         @NameInMap("TargetType")
         public String targetType;

@@ -18,6 +18,9 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>76068BE2-F9C4-4EDD-967B-F503B8CCDD3D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +57,36 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
     public static class DescribePropertyUserItemResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>114</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -118,12 +133,18 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
     public static class DescribePropertyUserItemResponseBodyPropertyItems extends TeaModel {
         /**
          * <p>The number of servers that belong to the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>384</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The name of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adm</p>
          */
         @NameInMap("User")
         public String user;

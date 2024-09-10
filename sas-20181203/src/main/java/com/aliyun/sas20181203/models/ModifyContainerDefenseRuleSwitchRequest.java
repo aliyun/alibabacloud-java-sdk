@@ -12,9 +12,13 @@ public class ModifyContainerDefenseRuleSwitchRequest extends TeaModel {
 
     /**
      * <p>The status of the rule. Valid values:</p>
-     * <br>
-     * <p>*   **1**: enabled</p>
-     * <p>*   **0**: disabled</p>
+     * <ul>
+     * <li><strong>1</strong>: enabled</li>
+     * <li><strong>0</strong>: disabled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("RuleSwitch")
     public Integer ruleSwitch;

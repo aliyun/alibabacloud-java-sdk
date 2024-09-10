@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyClusterCnnfStatusUserConfirmResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4FFBEDBD-FA63-5213-9103-306519EE4857</p>
      */
     @NameInMap("RequestId")
     public String requestId;

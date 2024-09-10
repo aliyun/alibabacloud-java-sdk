@@ -6,13 +6,15 @@ import com.aliyun.tea.*;
 public class CreateOssBucketScanTaskRequest extends TeaModel {
     /**
      * <p>Whether to match all prefixes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AllKeyPrefix")
     public Boolean allKeyPrefix;
 
     /**
      * <p>The names of the buckets.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("BucketNameList")
@@ -20,15 +22,24 @@ public class CreateOssBucketScanTaskRequest extends TeaModel {
 
     /**
      * <p>The maximum number of files for decompression. The minimum value is 1, and the maximum value is 1000. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("DecompressMaxFileCount")
     public Integer decompressMaxFileCount;
 
     /**
      * <p>The maximum level of decompression when dealing with nested compressed files with multiple levels. The minimum value is 1, and the maximum value is 5. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("DecompressMaxLayer")
     public Integer decompressMaxLayer;
+
+    @NameInMap("DecryptionList")
+    public java.util.List<String> decryptionList;
 
     /**
      * <p>The suffixes of the objects that you do not want to check.</p>
@@ -48,13 +59,19 @@ public class CreateOssBucketScanTaskRequest extends TeaModel {
     @NameInMap("KeySuffixList")
     public java.util.List<String> keySuffixList;
 
+    @NameInMap("LastModifiedStartTime")
+    public Long lastModifiedStartTime;
+
     /**
      * <p>The check mode. Valid values:</p>
-     * <br>
-     * <p>*   **1**: checks all objects in the bucket.</p>
-     * <p>*   **2**: checks only new objects in the bucket.</p>
-     * <br>
+     * <ul>
+     * <li><strong>1</strong>: checks all objects in the bucket.</li>
+     * <li><strong>2</strong>: checks only new objects in the bucket.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ScanMode")
     public Integer scanMode;
@@ -96,6 +113,14 @@ public class CreateOssBucketScanTaskRequest extends TeaModel {
         return this.decompressMaxLayer;
     }
 
+    public CreateOssBucketScanTaskRequest setDecryptionList(java.util.List<String> decryptionList) {
+        this.decryptionList = decryptionList;
+        return this;
+    }
+    public java.util.List<String> getDecryptionList() {
+        return this.decryptionList;
+    }
+
     public CreateOssBucketScanTaskRequest setExcludeKeySuffixList(java.util.List<String> excludeKeySuffixList) {
         this.excludeKeySuffixList = excludeKeySuffixList;
         return this;
@@ -118,6 +143,14 @@ public class CreateOssBucketScanTaskRequest extends TeaModel {
     }
     public java.util.List<String> getKeySuffixList() {
         return this.keySuffixList;
+    }
+
+    public CreateOssBucketScanTaskRequest setLastModifiedStartTime(Long lastModifiedStartTime) {
+        this.lastModifiedStartTime = lastModifiedStartTime;
+        return this;
+    }
+    public Long getLastModifiedStartTime() {
+        return this.lastModifiedStartTime;
     }
 
     public CreateOssBucketScanTaskRequest setScanMode(Integer scanMode) {

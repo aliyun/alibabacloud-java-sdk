@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetInterceptionTargetDetailResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D65AADFC-1D20-5A6A-8F6A-9FA53C0DC1F8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
     public static class GetInterceptionTargetDetailResponseBodyRuleTarget extends TeaModel {
         /**
          * <p>The name of the application to which the network object belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>netperf-client</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>The ID of the container cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca6e6594def8d4be8b2795fd12c32****</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The name of the container cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas-test-cnnf</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
@@ -64,6 +76,9 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
 
         /**
          * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>secondary</p>
          */
         @NameInMap("Namespace")
         public String namespace;
@@ -76,20 +91,30 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the network object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400723</p>
          */
         @NameInMap("TargetId")
         public Long targetId;
 
         /**
          * <p>The name of the network object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>destination-test-obj-Na3cF</p>
          */
         @NameInMap("TargetName")
         public String targetName;
 
         /**
          * <p>The type of the network object. Valid values:</p>
-         * <br>
-         * <p>*   **IMAGE**: image</p>
+         * <ul>
+         * <li><strong>IMAGE</strong>: image</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IMAGE</p>
          */
         @NameInMap("TargetType")
         public String targetType;

@@ -12,6 +12,9 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4E5BFDCF-B9DD-430D-9DA4-151BCB581C9D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +57,36 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
     public static class DescribeAntiBruteForceRulesResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -118,59 +133,88 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
     public static class DescribeAntiBruteForceRulesResponseBodyRules extends TeaModel {
         /**
          * <p>The timestamp when the rule was created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1669800181000</p>
          */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
         /**
          * <p>Indicates whether the defense rule is the default rule. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The defense rule is the default rule.</p>
-         * <p>*   **false**: The defense rule is not the default rule.</p>
-         * <br>
-         * <p>> The default rule takes effect on all servers that are not protected by defense rules against brute-force attacks.</p>
+         * <ul>
+         * <li><strong>true</strong>: The defense rule is the default rule.</li>
+         * <li><strong>false</strong>: The defense rule is not the default rule.</li>
+         * </ul>
+         * <blockquote>
+         * <p>The default rule takes effect on all servers that are not protected by defense rules against brute-force attacks.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DefaultRule")
         public Boolean defaultRule;
 
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("EnableSmartRule")
         public Boolean enableSmartRule;
 
         /**
          * <p>The threshold of logon failures that is specified in the defense rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         @NameInMap("FailCount")
         public Integer failCount;
 
         /**
          * <p>The period of time during which logons from an account are not allowed. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>360</p>
          */
         @NameInMap("ForbiddenTime")
         public Integer forbiddenTime;
 
         /**
          * <p>The ID of the defense rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1629</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The number of servers to which the defense rule is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("MachineCount")
         public Integer machineCount;
 
         /**
          * <p>The name of the defense rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AntiBruteForceRule01</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The period of time during which logon failures from an account are measured. Unit: minutes. If **Span** is set to 10, the defense rule takes effect when the logon failures measured within 10 minutes reaches the specified threshold. The IP address of attackers cannot be used to log on to the server in the specified period of time.</p>
+         * <p>The period of time during which logon failures from an account are measured. Unit: minutes. If <strong>Span</strong> is set to 10, the defense rule takes effect when the logon failures measured within 10 minutes reaches the specified threshold. The IP address of attackers cannot be used to log on to the server in the specified period of time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Span")
         public Integer span;

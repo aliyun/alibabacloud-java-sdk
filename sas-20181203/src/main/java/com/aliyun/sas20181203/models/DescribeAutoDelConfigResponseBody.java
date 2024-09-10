@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeAutoDelConfigResponseBody extends TeaModel {
     /**
      * <p>The number of days during which a detected vulnerability is retained before the vulnerability is automatically deleted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("Days")
     public Integer days;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C56F66FD-C4EE-4813-ABDC-4FF94B6C384E</p>
      */
     @NameInMap("RequestId")
     public String requestId;

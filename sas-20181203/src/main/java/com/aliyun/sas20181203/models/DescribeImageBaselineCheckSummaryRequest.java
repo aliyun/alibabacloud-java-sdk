@@ -6,54 +6,79 @@ import com.aliyun.tea.*;
 public class DescribeImageBaselineCheckSummaryRequest extends TeaModel {
     /**
      * <p>The ID of the specified container cluster.</p>
-     * <br>
-     * <p>> You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the ID of the container cluster.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the ID of the container cluster.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>c60b77fe62093480db6164a3c2fa5****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The search condition for the image baseline.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Unauthorized access</p>
      */
     @NameInMap("Criteria")
     public String criteria;
 
     /**
      * <p>The type of the search condition. Valid values:</p>
-     * <br>
-     * <p>*   **BaselineNameAlias**: baseline name</p>
-     * <p>*   **BaselineClassAlias**: baseline category</p>
+     * <ul>
+     * <li><strong>BaselineNameAlias</strong>: baseline name</li>
+     * <li><strong>BaselineClassAlias</strong>: baseline category</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>BaselineNameAlias</p>
      */
     @NameInMap("CriteriaType")
     public String criteriaType;
 
     /**
-     * <p>The number of the page to return. Pages start from page **1**. Default value: **1**.</p>
+     * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **20**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The severity of the image baseline that you want to query. Separate multiple severities with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **high**</p>
-     * <p>*   **medium**</p>
-     * <p>*   **low**</p>
+     * <ul>
+     * <li><strong>high</strong></li>
+     * <li><strong>medium</strong></li>
+     * <li><strong>low</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>high</p>
      */
     @NameInMap("RiskLevel")
     public String riskLevel;

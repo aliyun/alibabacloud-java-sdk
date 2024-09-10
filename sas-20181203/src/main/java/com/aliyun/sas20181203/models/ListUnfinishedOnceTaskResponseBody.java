@@ -12,6 +12,9 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F5CF78A7-30AA-59DB-847F-13EE3AE7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,90 +43,135 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
     public static class ListUnfinishedOnceTaskResponseBodyOnceTasksTaskImageInfo extends TeaModel {
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ack-jenkins-****</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a765ba1435e7f9446065370e9a41****</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACK-test-****</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
 
         /**
          * <p>The image digest.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default_digest</p>
          */
         @NameInMap("Digest")
         public String digest;
 
         /**
          * <p>The container image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><em><strong>s.com/sas_test/baseli</strong></em></p>
          */
         @NameInMap("Image")
         public String image;
 
         /**
          * <p>The instance ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-0xi5mxvtmfw9****</p>
          */
         @NameInMap("NodeInstanceId")
         public String nodeInstanceId;
 
         /**
          * <p>The IP address of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.18.XXX.XXX</p>
          */
         @NameInMap("NodeIp")
         public String nodeIp;
 
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pztest****</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
          * <p>The pod of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>expoit-law-****</p>
          */
         @NameInMap("Pod")
         public String pod;
 
         /**
          * <p>The region ID of the server image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crr-r88w2vryp8m****</p>
          */
         @NameInMap("RepoId")
         public String repoId;
 
         /**
          * <p>The name of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testyyy</p>
          */
         @NameInMap("RepoName")
         public String repoName;
 
         /**
          * <p>The namespace to which the image repository belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bitn***</p>
          */
         @NameInMap("RepoNamespace")
         public String repoNamespace;
 
         /**
          * <p>The region ID of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RepoRegionId")
         public String repoRegionId;
 
         /**
          * <p>The image tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1.20-002-a2*****</p>
          */
         @NameInMap("Tag")
         public String tag;
@@ -258,83 +306,122 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
     public static class ListUnfinishedOnceTaskResponseBodyOnceTasks extends TeaModel {
         /**
          * <p>The time when the task ends.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1670307567000</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
          * <p>Indicates whether the task is complete. Valid values:</p>
-         * <br>
-         * <p>*   **0**: no</p>
-         * <p>*   **1**: yes</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Finish")
         public Integer finish;
 
         /**
          * <p>The number of assets on which the task is complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67</p>
          */
         @NameInMap("FinishCount")
         public Integer finishCount;
 
         /**
          * <p>The progress percentage of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75</p>
          */
         @NameInMap("Progress")
         public Long progress;
 
         /**
          * <p>The execution duration of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1670307567000</p>
          */
         @NameInMap("RealRunTime")
         public Long realRunTime;
 
         /**
          * <p>The execution result of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TASK_NOT_SUPPORT_REGION</p>
          */
         @NameInMap("ResultInfo")
         public String resultInfo;
 
         /**
          * <p>The time when the task is started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1640102400000</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
         /**
          * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The status of the task. Valid values:</p>
-         * <br>
-         * <p>*   **INIT**: The task is not started.</p>
-         * <p>*   **START**: The task is started.</p>
-         * <p>*   **SUCCESS**: The task is complete.</p>
-         * <p>*   **TIMEOUT**: The task timed out.</p>
+         * <ul>
+         * <li><strong>INIT</strong>: The task is not started.</li>
+         * <li><strong>START</strong>: The task is started.</li>
+         * <li><strong>SUCCESS</strong>: The task is complete.</li>
+         * <li><strong>TIMEOUT</strong>: The task timed out.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         @NameInMap("StatusText")
         public String statusText;
 
         /**
          * <p>The objective of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>238cf050a7270dd6940602e70f1e5a11eeaf4e02035f445b7f613ff5e064****</p>
          */
         @NameInMap("Target")
         public String target;
 
         /**
          * <p>The type of the assets that are scanned. Valid values:</p>
-         * <br>
-         * <p>*   **IMAGE_REPO**: image repository</p>
-         * <p>*   **IMAGE**: image</p>
+         * <ul>
+         * <li><strong>IMAGE_REPO</strong>: image repository</li>
+         * <li><strong>IMAGE</strong>: image</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IMAGE</p>
          */
         @NameInMap("TargetType")
         public String targetType;
 
         /**
          * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9fb50f2af8bb67c9fdb684194c83****</p>
          */
         @NameInMap("TaskId")
         public String taskId;
@@ -347,18 +434,27 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
 
         /**
          * <p>The name of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IMAGE_SCAN</p>
          */
         @NameInMap("TaskName")
         public String taskName;
 
         /**
          * <p>The type of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IMAGE_SCAN</p>
          */
         @NameInMap("TaskType")
         public String taskType;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

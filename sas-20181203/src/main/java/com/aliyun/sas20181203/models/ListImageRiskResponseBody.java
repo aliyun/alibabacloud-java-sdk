@@ -18,6 +18,9 @@ public class ListImageRiskResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>050ACC7A-D4FD-55C6-B861-BA9569C1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -60,9 +63,13 @@ public class ListImageRiskResponseBody extends TeaModel {
 
         /**
          * <p>The type of the domain name in the endpoint. Valid values:</p>
-         * <br>
-         * <p>*   **internet**: Internet</p>
-         * <p>*   **intranet**: internal network</p>
+         * <ul>
+         * <li><strong>internet</strong>: Internet</li>
+         * <li><strong>intranet</strong>: internal network</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>internet</p>
          */
         @NameInMap("Type")
         public String type;
@@ -93,6 +100,9 @@ public class ListImageRiskResponseBody extends TeaModel {
     public static class ListImageRiskResponseBodyImageRiskList extends TeaModel {
         /**
          * <p>The digest value of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3f8efc2184cf1d24936b49c27286a284714b77be34c80c9ee38ca6bf322445****</p>
          */
         @NameInMap("Digest")
         public String digest;
@@ -105,110 +115,166 @@ public class ListImageRiskResponseBody extends TeaModel {
 
         /**
          * <p>The endpoint of Container Registry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://172.20.XXX.XXX/test">https://172.20.XXX.XXX/test</a></p>
          */
         @NameInMap("Endpoints")
         public String endpoints;
 
         /**
          * <p>The image of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>.aliyuncs.com/sas_test/baseline:exploit</p>
          */
         @NameInMap("Image")
         public String image;
 
         /**
          * <p>The registration status of the image repository. Valid values:</p>
-         * <br>
-         * <p>*   **IN_SAS**: The image repository is registered with Security Center.</p>
-         * <p>*   **NOT_IN_SAS**: The image repository is not registered with Security Center.</p>
+         * <ul>
+         * <li><strong>IN_SAS</strong>: The image repository is registered with Security Center.</li>
+         * <li><strong>NOT_IN_SAS</strong>: The image repository is not registered with Security Center.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IN_SAS</p>
          */
         @NameInMap("ImageAccessType")
         public String imageAccessType;
 
         /**
          * <p>The ID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f922bfeb6960436fe3f0e7b62fc6b9a0b47980986669c367c22433269404****</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
          * <p>The public endpoint of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>registry-registry.cn-shenzhen-finance-1.cr.aliyuncs.com/xxxx/docker-</strong></strong></p>
          */
         @NameInMap("InternetURLs")
         public String internetURLs;
 
         /**
          * <p>The region of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The type of the image repository. Valid values:</p>
-         * <br>
-         * <p>*   **acr**</p>
-         * <p>*   **harbor**</p>
-         * <p>*   **quay**</p>
-         * <p>*   **CI/CD**: Jenkins</p>
+         * <ul>
+         * <li><strong>acr</strong></li>
+         * <li><strong>harbor</strong></li>
+         * <li><strong>quay</strong></li>
+         * <li><strong>CI/CD</strong>: Jenkins</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>harbor</p>
          */
         @NameInMap("RegistryType")
         public String registryType;
 
         /**
          * <p>The ID of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crr-bk2l746eyxca1****</p>
          */
         @NameInMap("RepoId")
         public String repoId;
 
         /**
          * <p>The name of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scan_test</p>
          */
         @NameInMap("RepoName")
         public String repoName;
 
         /**
          * <p>The name of the namespace to which the repository belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vultar***</p>
          */
         @NameInMap("RepoNamespace")
         public String repoNamespace;
 
         /**
          * <p>The type of the repository. Valid values:</p>
-         * <br>
-         * <p>*   `PUBLIC`</p>
-         * <p>*   `PRIVATE`</p>
+         * <ul>
+         * <li><code>PUBLIC</code></li>
+         * <li><code>PRIVATE</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         @NameInMap("RepoType")
         public String repoType;
 
         /**
          * <p>The statistics on a security event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;baselineNum&quot;: 0,
+         *     &quot;newSuspicious&quot;: 0,
+         *     &quot;vul&quot;: 0
+         * }</p>
          */
         @NameInMap("Statistics")
         public String statistics;
 
         /**
          * <p>The tag that is added to the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1.0</p>
          */
         @NameInMap("Tag")
         public String tag;
 
         /**
          * <p>Indicates whether the image version is immutable. If the image version is immutable, only the image of the latest version in the image repository can be overwritten. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The image version is mutable.</p>
-         * <p>*   **1**: The image version is immutable.</p>
+         * <ul>
+         * <li><strong>0</strong>: The image version is mutable.</li>
+         * <li><strong>1</strong>: The image version is immutable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("TagImmutable")
         public Integer tagImmutable;
 
         /**
          * <p>The UUID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>624778f3-5bf2-423c-ac0c-47a62c05****</p>
          */
         @NameInMap("Uuid")
         public String uuid;
 
         /**
          * <p>The endpoint of the image repository in the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>-registry-registry-vpc.cn-shenzhen-finance-1.cr.aliyuncs.com/xxxx/docker-</strong></strong></p>
          */
         @NameInMap("VpcURLs")
         public String vpcURLs;
@@ -367,24 +433,36 @@ public class ListImageRiskResponseBody extends TeaModel {
     public static class ListImageRiskResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyLogMetaStatusResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>861445A7-B6D6-5825-B015-CD46ED90613A</p>
      */
     @NameInMap("RequestId")
     public String requestId;

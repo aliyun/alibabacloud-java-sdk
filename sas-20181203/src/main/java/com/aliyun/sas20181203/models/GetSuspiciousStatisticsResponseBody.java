@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class GetSuspiciousStatisticsResponseBody extends TeaModel {
     /**
      * <p>The number of alerts whose Emergency level is Reminder.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("RemindCount")
     public Integer remindCount;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>84092B42-1A59-4F34-8DF8-1D93520990A5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of alerts whose Emergency level is Urgent.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("SeriousCount")
     public Integer seriousCount;
 
     /**
      * <p>The number of alerts whose Emergency level is Suspicious.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8</p>
      */
     @NameInMap("SuspiciousCount")
     public Integer suspiciousCount;
 
     /**
      * <p>The total number of alerts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;

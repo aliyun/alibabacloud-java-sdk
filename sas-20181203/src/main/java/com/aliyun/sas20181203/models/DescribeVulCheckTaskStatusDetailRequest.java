@@ -18,6 +18,9 @@ public class DescribeVulCheckTaskStatusDetailRequest extends TeaModel {
 
     /**
      * <p>The UUID of the server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5d55af3c-35f3-4d4d-8ccc-8c5443b0****</p>
      */
     @NameInMap("Uuid")
     public String uuid;

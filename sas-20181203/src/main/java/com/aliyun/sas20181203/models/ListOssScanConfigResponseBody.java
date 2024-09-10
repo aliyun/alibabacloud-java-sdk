@@ -18,6 +18,9 @@ public class ListOssScanConfigResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E10BAF1C-A6C5-51E2-866C-76D5922E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,12 +57,18 @@ public class ListOssScanConfigResponseBody extends TeaModel {
     public static class ListOssScanConfigResponseBodyData extends TeaModel {
         /**
          * <p>Indicates whether the prefixes of all objects are matched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AllKeyPrefix")
         public Boolean allKeyPrefix;
 
         /**
          * <p>The number of buckets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("BucketCount")
         public Integer bucketCount;
@@ -72,33 +81,52 @@ public class ListOssScanConfigResponseBody extends TeaModel {
 
         /**
          * <p>The maximum number of files for decompression. The minimum value is 1, and the maximum value is 1000. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("DecompressMaxFileCount")
         public Integer decompressMaxFileCount;
 
         /**
          * <p>The maximum level of decompression when dealing with nested compressed files with multiple levels. The minimum value is 1, and the maximum value is 5. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DecompressMaxLayer")
         public Integer decompressMaxLayer;
 
+        @NameInMap("DecryptionList")
+        public java.util.List<String> decryptionList;
+
         /**
          * <p>Indicates whether the policy is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **1**: yes</p>
-         * <p>*   **0**: no</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Enable")
         public Integer enable;
 
         /**
          * <p>The time when the scan ends. The time is in the HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06:00:00</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The configuration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>443496</p>
          */
         @NameInMap("Id")
         public Long id;
@@ -115,14 +143,23 @@ public class ListOssScanConfigResponseBody extends TeaModel {
         @NameInMap("KeySuffixList")
         public java.util.List<String> keySuffixList;
 
+        @NameInMap("LastModifiedStartTime")
+        public Long lastModifiedStartTime;
+
         /**
          * <p>The timestamp when the configuration was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1698388233883</p>
          */
         @NameInMap("LastUpdateTime")
         public Long lastUpdateTime;
 
         /**
          * <p>The configuration name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test****</p>
          */
         @NameInMap("Name")
         public String name;
@@ -135,6 +172,9 @@ public class ListOssScanConfigResponseBody extends TeaModel {
 
         /**
          * <p>The time when the scan starts. The time is in the HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00:00</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -184,6 +224,14 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             return this.decompressMaxLayer;
         }
 
+        public ListOssScanConfigResponseBodyData setDecryptionList(java.util.List<String> decryptionList) {
+            this.decryptionList = decryptionList;
+            return this;
+        }
+        public java.util.List<String> getDecryptionList() {
+            return this.decryptionList;
+        }
+
         public ListOssScanConfigResponseBodyData setEnable(Integer enable) {
             this.enable = enable;
             return this;
@@ -224,6 +272,14 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             return this.keySuffixList;
         }
 
+        public ListOssScanConfigResponseBodyData setLastModifiedStartTime(Long lastModifiedStartTime) {
+            this.lastModifiedStartTime = lastModifiedStartTime;
+            return this;
+        }
+        public Long getLastModifiedStartTime() {
+            return this.lastModifiedStartTime;
+        }
+
         public ListOssScanConfigResponseBodyData setLastUpdateTime(Long lastUpdateTime) {
             this.lastUpdateTime = lastUpdateTime;
             return this;
@@ -261,18 +317,27 @@ public class ListOssScanConfigResponseBody extends TeaModel {
     public static class ListOssScanConfigResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

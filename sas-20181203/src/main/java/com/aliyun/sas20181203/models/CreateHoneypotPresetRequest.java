@@ -6,47 +6,61 @@ import com.aliyun.tea.*;
 public class CreateHoneypotPresetRequest extends TeaModel {
     /**
      * <p>The name of the honeypot image.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>webmin</p>
      */
     @NameInMap("HoneypotImageName")
     public String honeypotImageName;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The custom configurations of the honeypot template. The value is a JSON string that contains the following fields:</p>
-     * <br>
-     * <p>*   **portrait_option**: Social Source Tracing</p>
-     * <p>*   **burp**: Burp-specific Defense</p>
-     * <p>*   **trojan_git**: Git-specific Defense</p>
-     * <br>
+     * <ul>
+     * <li><strong>portrait_option</strong>: Social Source Tracing</li>
+     * <li><strong>burp</strong>: Burp-specific Defense</li>
+     * <li><strong>trojan_git</strong>: Git-specific Defense</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;burp&quot;:&quot;close&quot;,&quot;trojan_git&quot;:&quot;close&quot;,&quot;portrait_option&quot;:&quot;true&quot;}</p>
      */
     @NameInMap("Meta")
     public String meta;
 
     /**
      * <p>The ID of the management node to which you want to deploy honeypots.</p>
-     * <br>
-     * <p>> You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to query the IDs of management nodes.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to query the IDs of management nodes.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9373fe59-74d5-4505-bb24-c85352fb****</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
 
     /**
      * <p>The custom name of the honeypot template.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WebMin-online</p>
      */
     @NameInMap("PresetName")
     public String presetName;

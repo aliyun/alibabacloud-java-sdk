@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class GetHoneypotEventTrendResponseBody extends TeaModel {
     /**
-     * <p>The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The number of entries returned on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("Count")
     public Integer count;
@@ -24,27 +30,40 @@ public class GetHoneypotEventTrendResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21637690-9B21-5EEC-94DB-2A732480****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -113,18 +132,27 @@ public class GetHoneypotEventTrendResponseBody extends TeaModel {
     public static class GetHoneypotEventTrendResponseBodyData extends TeaModel {
         /**
          * <p>The number of attacks that occurred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The name of the attack.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ATTACK_EVENT</p>
          */
         @NameInMap("KeyName")
         public String keyName;
 
         /**
          * <p>The timestamp when the attack event occurred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1686968163644</p>
          */
         @NameInMap("TimeStamp")
         public Long timeStamp;

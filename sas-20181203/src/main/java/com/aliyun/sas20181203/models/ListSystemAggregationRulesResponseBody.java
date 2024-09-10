@@ -18,6 +18,9 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6800B790-B10A-5C2F-BEB3-F1D5CE61****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,18 +57,27 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
     public static class ListSystemAggregationRulesResponseBodyAggregationList extends TeaModel {
         /**
          * <p>The ID of the aggregation type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public Integer id;
 
         /**
          * <p>The name of the aggregation type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Remote control\<em>\</em>\<em>\</em></p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The number of rules that are of the aggregation type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RuleCount")
         public Integer ruleCount;
@@ -104,18 +116,27 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
     public static class ListSystemAggregationRulesResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

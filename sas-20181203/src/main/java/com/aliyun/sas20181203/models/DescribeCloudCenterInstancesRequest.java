@@ -6,78 +6,117 @@ import com.aliyun.tea.*;
 public class DescribeCloudCenterInstancesRequest extends TeaModel {
     /**
      * <p>The search conditions. The value of this parameter is in the JSON format and is case-sensitive.</p>
-     * <br>
-     * <p>>  You can search for an asset by using the search conditions, such as the instance ID, instance name, VPC ID, region, or public IP address. You can call the [DescribeCriteria](https://help.aliyun.com/document_detail/149773.html) operation to query the supported search conditions.</p>
+     * <blockquote>
+     * <p> You can search for an asset by using the search conditions, such as the instance ID, instance name, VPC ID, region, or public IP address. You can call the <a href="https://help.aliyun.com/document_detail/149773.html">DescribeCriteria</a> operation to query the supported search conditions.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;name&quot;:&quot;riskStatus&quot;,&quot;value&quot;:&quot;YES&quot;},{&quot;name&quot;:&quot;internetIp&quot;,&quot;value&quot;:&quot;1.2.XX.XX&quot;}]</p>
      */
     @NameInMap("Criteria")
     public String criteria;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    @NameInMap("Flags")
+    public String flags;
+
     /**
      * <p>The importance of the asset. Valid values:</p>
-     * <br>
-     * <p>*   **2**: an important asset</p>
-     * <p>*   **1**: a common asset</p>
-     * <p>*   **0**: a test asset</p>
+     * <ul>
+     * <li><strong>2</strong>: an important asset</li>
+     * <li><strong>1</strong>: a common asset</li>
+     * <li><strong>0</strong>: a test asset</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Importance")
     public Integer importance;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The logical relationship among multiple search conditions. Valid values:</p>
-     * <br>
-     * <p>*   **OR**: The logical relationship among search conditions is **OR**.</p>
-     * <p>*   **AND**: The logical relationship among search conditions is **AND**.</p>
+     * <ul>
+     * <li><strong>OR</strong>: The logical relationship among search conditions is <strong>OR</strong>.</li>
+     * <li><strong>AND</strong>: The logical relationship among search conditions is <strong>AND</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OR</p>
      */
     @NameInMap("LogicalExp")
     public String logicalExp;
 
     /**
      * <p>The type of the assets that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   **ecs**: servers</p>
-     * <p>*   **cloud_product**: Alibaba Cloud service</p>
+     * <ul>
+     * <li><strong>ecs</strong>: servers</li>
+     * <li><strong>cloud_product</strong>: Alibaba Cloud service</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
      */
     @NameInMap("MachineTypes")
     public String machineTypes;
 
     /**
      * <p>The value of NextToken that is returned when the NextToken method is used. You do not need to specify this parameter for the first request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E17B501887A2D3AA5E8360A6EFA3B***</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>Specifies whether to internationalize the name of the default group. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The system returns the Chinese name of the default group for the GroupTrace response parameter.</p>
-     * <p>*   **false**: The system returns default for the GroupTrace response parameter.</p>
+     * <ul>
+     * <li><strong>true</strong>: The system returns the Chinese name of the default group for the GroupTrace response parameter.</li>
+     * <li><strong>false</strong>: The system returns default for the GroupTrace response parameter.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("NoGroupTrace")
     public Boolean noGroupTrace;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **20**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the region in which the asset resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     @Deprecated
@@ -85,17 +124,25 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
 
     /**
      * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
-     * <br>
-     * <p>>  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1232428423234****</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
     /**
      * <p>Specifies whether to use the NextToken method to retrieve a new page of results. If you set UseNextToken to true, the value of TotalCount is not returned. Valid values:</p>
-     * <br>
-     * <p>- **true**: The NextToken method is used.</p>
-     * <p>- **false**: The NextToken method is not used.</p>
+     * <ul>
+     * <li><strong>true</strong>: The NextToken method is used.</li>
+     * <li><strong>false</strong>: The NextToken method is not used.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("UseNextToken")
     public Boolean useNextToken;
@@ -119,6 +166,14 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public DescribeCloudCenterInstancesRequest setFlags(String flags) {
+        this.flags = flags;
+        return this;
+    }
+    public String getFlags() {
+        return this.flags;
     }
 
     public DescribeCloudCenterInstancesRequest setImportance(Integer importance) {

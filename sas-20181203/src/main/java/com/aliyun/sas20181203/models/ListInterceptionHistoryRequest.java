@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class ListInterceptionHistoryRequest extends TeaModel {
     /**
      * <p>The ID of the container cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c7c190a82d9a048be9038d352840f****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The end of the time range to query. The value is a UNIX timestamp.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1635575219000</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>The name of the alert.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Abnormal access</p>
      */
     @NameInMap("HistoryName")
     public String historyName;
@@ -35,22 +47,32 @@ public class ListInterceptionHistoryRequest extends TeaModel {
     public java.util.List<Integer> interceptionTypes;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The start of the time range to query. The value is a UNIX timestamp.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1651290987000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

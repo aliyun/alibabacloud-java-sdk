@@ -18,6 +18,9 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A3C1240F-9DAC-5EE8-ADF5-2F930A95****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +57,36 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
     public static class ListUuidsByWebPathResponseBodyList extends TeaModel {
         /**
          * <p>The public IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.210.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.25.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>The name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test****</p>
          */
         @NameInMap("MachineName")
         public String machineName;
 
         /**
          * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49e25e0f-bb51-4a5a-a1b3-13a4ddaa****</p>
          */
         @NameInMap("Uuid")
         public String uuid;
@@ -118,24 +133,36 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
     public static class ListUuidsByWebPathResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

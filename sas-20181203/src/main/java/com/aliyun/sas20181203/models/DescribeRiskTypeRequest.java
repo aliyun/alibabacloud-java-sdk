@@ -5,25 +5,36 @@ import com.aliyun.tea.*;
 
 public class DescribeRiskTypeRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The data source. Valid values:</p>
-     * <br>
-     * <p>*   **default**: host baseline</p>
-     * <p>*   **agentless**: agentless baseline</p>
+     * <ul>
+     * <li><strong>default</strong>: host baseline</li>
+     * <li><strong>agentless</strong>: agentless baseline</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>agentless</p>
      */
     @NameInMap("Source")
     public String source;
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.X.X</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

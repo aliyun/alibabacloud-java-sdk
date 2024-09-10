@@ -6,47 +6,70 @@ import com.aliyun.tea.*;
 public class DescribeVpcHoneyPotListRequest extends TeaModel {
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>Specifies whether the cloud honeypot feature is enabled for the VPCs. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("HoneyPotExistence")
     public Boolean honeyPotExistence;
 
     /**
      * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
-     * <br>
-     * <p>> We recommend that you do not leave this parameter empty.</p>
+     * <blockquote>
+     * <p>We recommend that you do not leave this parameter empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the VPC on which the honeypot is deployed.</p>
-     * <br>
-     * <p>> You can call the [DescribeVpcList](~~DescribeVpcList~~) operation to query the IDs of VPCs.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeVpcList~~">DescribeVpcList</a> operation to query the IDs of VPCs.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-d7o009q63fqy21r8u****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
      * <p>The name of the VPC.</p>
-     * <br>
-     * <p>> You can call the [DescribeVpcList](~~DescribeVpcList~~) operation to query the names of VPCs.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeVpcList~~">DescribeVpcList</a> operation to query the names of VPCs.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>abcnet</p>
      */
     @NameInMap("VpcName")
     public String vpcName;
 
     /**
      * <p>The region ID of the VPC.</p>
-     * <br>
-     * <p>> You can call the [DescribeVpcList](~~DescribeVpcList~~) operation to query the region IDs of VPCs.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeVpcList~~">DescribeVpcList</a> operation to query the region IDs of VPCs.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ap-southeast-2</p>
      */
     @NameInMap("VpcRegionId")
     public String vpcRegionId;

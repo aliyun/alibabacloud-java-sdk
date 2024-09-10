@@ -7,6 +7,10 @@ public class DescribeAssetSummaryResponseBody extends TeaModel {
     @NameInMap("AssetsSummary")
     public DescribeAssetSummaryResponseBodyAssetsSummary assetsSummary;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FA7F1F4-488D-52CA-9BFC-3E47793B49D1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class DescribeAssetSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeAssetSummaryResponseBodyAssetsSummary extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2064</p>
+         */
         @NameInMap("TotalAssetAllRegion")
         public Integer totalAssetAllRegion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3200</p>
+         */
         @NameInMap("TotalCoreAllRegion")
         public Integer totalCoreAllRegion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1022</p>
+         */
         @NameInMap("TotalCoreNum")
         public Integer totalCoreNum;
 

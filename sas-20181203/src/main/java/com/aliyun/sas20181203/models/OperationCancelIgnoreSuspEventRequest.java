@@ -6,13 +6,15 @@ import com.aliyun.tea.*;
 public class OperationCancelIgnoreSuspEventRequest extends TeaModel {
     /**
      * <p>The remarks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>remark text</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
      * <p>The IDs of alert events.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SecurityEventIds")

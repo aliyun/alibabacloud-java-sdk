@@ -12,6 +12,9 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>64329F40-5C94-51D3-A400-37AA7BAC****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,79 +43,117 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
     public static class ListClusterCnnfStatusDetailResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c8ca91e0907d94efaba7fb0827eb9****</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>Indicates whether the container firewall plug-in is installed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Installed")
         public Boolean installed;
 
         /**
          * <p>The ID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp180bogui4fc0z4****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The public IP address of the associated instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address of the associated instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.42.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>The cause why the plug-in is invalid. Valid values:</p>
-         * <br>
-         * <p>*   **PLUGIN_OFFLINE**: The plug-in is offline.</p>
-         * <p>*   **PLUGIN_NOT_INSTALLED**: The plug-in is not installed.</p>
-         * <p>*   **PLUGIN_INVALID_VERSION**: The version of the plug-in is invalid.</p>
+         * <ul>
+         * <li><strong>PLUGIN_OFFLINE</strong>: The plug-in is offline.</li>
+         * <li><strong>PLUGIN_NOT_INSTALLED</strong>: The plug-in is not installed.</li>
+         * <li><strong>PLUGIN_INVALID_VERSION</strong>: The version of the plug-in is invalid.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PLUGIN_OFFLINE</p>
          */
         @NameInMap("InvalidType")
         public String invalidType;
 
         /**
          * <p>The name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>security</p>
          */
         @NameInMap("MachineName")
         public String machineName;
 
         /**
-         * <p>The machine type of the instance. The value is fixed as **ecs**.</p>
+         * <p>The machine type of the instance. The value is fixed as <strong>ecs</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("MachineType")
         public Integer machineType;
 
         /**
-         * <p>The name of the plug-in. The value is fixed as **alinet**.</p>
+         * <p>The name of the plug-in. The value is fixed as <strong>alinet</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alinet</p>
          */
         @NameInMap("PluginName")
         public String pluginName;
 
         /**
          * <p>The version of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.3</p>
          */
         @NameInMap("PluginVersion")
         public String pluginVersion;
 
         /**
          * <p>The online status of the plug-in. Valid values:</p>
-         * <br>
-         * <p>*   **false**: The plug-in is offline.</p>
-         * <p>*   **true**: The plug-in is online.</p>
+         * <ul>
+         * <li><strong>false</strong>: The plug-in is offline.</li>
+         * <li><strong>true</strong>: The plug-in is online.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The UUID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6690a46c-0edb-4663-a641-3629d1a9****</p>
          */
         @NameInMap("Uuid")
         public String uuid;

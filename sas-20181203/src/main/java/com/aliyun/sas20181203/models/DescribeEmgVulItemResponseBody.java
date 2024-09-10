@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeEmgVulItemResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page. Pages start from page **1**. Default value: **1**.</p>
+     * <p>The page number of the returned page. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -17,19 +20,28 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
     public java.util.List<DescribeEmgVulItemResponseBodyGroupedVulItems> groupedVulItems;
 
     /**
-     * <p>The number of entries returned per page. Default value: **10**.</p>
+     * <p>The number of entries returned per page. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BC1868ED-A0E1-4D1C-BF7E-10DC0C34B3C3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of the urgent vulnerabilities returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,74 +94,109 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
     public static class DescribeEmgVulItemResponseBodyGroupedVulItems extends TeaModel {
         /**
          * <p>The name of the urgent vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Changjietong T + SetupAccount/Upload.aspx file Upload vulnerability (CNVD-2022-60632)</p>
          */
         @NameInMap("AliasName")
         public String aliasName;
 
         /**
          * <p>The check method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CheckType")
         public Integer checkType;
 
         /**
          * <p>The timestamp when the urgent vulnerability was last detected. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1619286031000</p>
          */
         @NameInMap("GmtLastCheck")
         public Long gmtLastCheck;
 
         /**
          * <p>The timestamp when the vulnerability was disclosed. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1618887687000</p>
          */
         @NameInMap("GmtPublish")
         public Long gmtPublish;
 
         /**
          * <p>The name of the detection rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scan:AVD-2021-179344</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The number of unhandled urgent vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PendingCount")
         public Integer pendingCount;
 
         /**
          * <p>The progress of the urgent vulnerability detection task. Valid values: 0 to 100.</p>
-         * <br>
-         * <p>>  This parameter takes effect only when an urgent vulnerability is being detected.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only when an urgent vulnerability is being detected.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("Progress")
         public Integer progress;
 
         /**
          * <p>Indicates whether the application protection feature is supported. Valid values:</p>
-         * <br>
-         * <p>*   **0**: no</p>
-         * <p>*   **1**: yes</p>
-         * <br>
-         * <p>>  If this parameter is not returned, the application protection is not supported.</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
+         * <blockquote>
+         * <p> If this parameter is not returned, the application protection is not supported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RaspDefend")
         public Integer raspDefend;
 
         /**
          * <p>The detection status of the urgent vulnerability. Valid values:</p>
-         * <br>
-         * <p>*   **10**: The urgent vulnerability is not detected.</p>
-         * <p>*   **20**: The urgent vulnerability is being detected.</p>
-         * <p>*   **30**: The urgent vulnerability detection is complete.</p>
+         * <ul>
+         * <li><strong>10</strong>: The urgent vulnerability is not detected.</li>
+         * <li><strong>20</strong>: The urgent vulnerability is being detected.</li>
+         * <li><strong>30</strong>: The urgent vulnerability detection is complete.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The method that is used to detect the urgent vulnerability. Valid values:</p>
-         * <br>
-         * <p>*   **python**: The Version method is used. Security Center checks the software versions of your server to check whether disclosed vulnerabilities exist on your server.</p>
-         * <p>*   **scan**: The Network Scan method is used. Security Center analyzes the access traffic to your server over the Internet to check whether vulnerabilities exist on your server.</p>
+         * <ul>
+         * <li><strong>python</strong>: The Version method is used. Security Center checks the software versions of your server to check whether disclosed vulnerabilities exist on your server.</li>
+         * <li><strong>scan</strong>: The Network Scan method is used. Security Center analyzes the access traffic to your server over the Internet to check whether vulnerabilities exist on your server.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>scan</p>
          */
         @NameInMap("Type")
         public String type;

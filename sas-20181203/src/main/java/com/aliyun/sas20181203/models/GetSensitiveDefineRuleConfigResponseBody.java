@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,21 +21,31 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7E0618A9-D5EF-4220-9471-C42B5E92****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,21 +98,31 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
     public static class GetSensitiveDefineRuleConfigResponseBodyDataRuleTreeRuleList extends TeaModel {
         /**
          * <p>The keyword of the check rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>huaweicloud_ak</p>
          */
         @NameInMap("RuleKey")
         public String ruleKey;
 
         /**
          * <p>The name of the check rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>huaweicloud_ak</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
          * <p>Indicates whether the check rule is selected. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Selected")
         public Boolean selected;
@@ -138,12 +161,18 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
     public static class GetSensitiveDefineRuleConfigResponseBodyDataRuleTree extends TeaModel {
         /**
          * <p>The category keyword of the check rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>password</p>
          */
         @NameInMap("ClassKey")
         public String classKey;
 
         /**
          * <p>The category name of the check rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>password</p>
          */
         @NameInMap("ClassName")
         public String className;
@@ -188,12 +217,18 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
     public static class GetSensitiveDefineRuleConfigResponseBodyData extends TeaModel {
         /**
          * <p>The custom configuration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44616</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The total number of check rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("RuleCount")
         public Integer ruleCount;
@@ -206,6 +241,9 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
 
         /**
          * <p>The number of selected check rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99</p>
          */
         @NameInMap("SelectedCount")
         public Integer selectedCount;

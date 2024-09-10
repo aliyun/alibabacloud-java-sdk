@@ -18,6 +18,9 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A3E61730-85E2-4789-8017-B9B1B70F0568</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,9 +33,13 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -105,6 +112,9 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
 
         /**
          * <p>The total number of attacks on the current day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1096</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -155,6 +165,9 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
 
         /**
          * <p>The number of baseline risk items that have the high-risk level on the current day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("HighCount")
         public Integer highCount;
@@ -173,6 +186,9 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
 
         /**
          * <p>The number of baseline risk items that have the low-risk level on the current day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("LowCount")
         public Integer lowCount;
@@ -185,6 +201,9 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
 
         /**
          * <p>The number of baseline risk items that have the medium-risk level on the current day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21</p>
          */
         @NameInMap("MediumCount")
         public Integer mediumCount;
@@ -203,6 +222,9 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
 
         /**
          * <p>The total number of baseline risk items on the current day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -322,7 +344,10 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         public java.util.List<String> levelsOn;
 
         /**
-         * <p>The number of **remind** alerts on the current day.</p>
+         * <p>The number of <strong>remind</strong> alerts on the current day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RemindCount")
         public Integer remindCount;
@@ -334,7 +359,10 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         public java.util.List<String> remindList;
 
         /**
-         * <p>The number of **serious** alerts on the current day.</p>
+         * <p>The number of <strong>serious</strong> alerts on the current day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>404</p>
          */
         @NameInMap("SeriousCount")
         public Integer seriousCount;
@@ -346,7 +374,10 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         public java.util.List<String> seriousList;
 
         /**
-         * <p>The number of **suspicious** alerts on the current day.</p>
+         * <p>The number of <strong>suspicious</strong> alerts on the current day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>148</p>
          */
         @NameInMap("SuspiciousCount")
         public Integer suspiciousCount;
@@ -365,6 +396,9 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
 
         /**
          * <p>The total number of unhandled alerts on the current day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>552</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -472,7 +506,10 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
 
     public static class DescribeSecurityStatInfoResponseBodyVulnerability extends TeaModel {
         /**
-         * <p>The number of **high-risk** unfixed vulnerabilities on the current day.</p>
+         * <p>The number of <strong>high-risk</strong> unfixed vulnerabilities on the current day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>109</p>
          */
         @NameInMap("AsapCount")
         public Integer asapCount;
@@ -490,7 +527,10 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         public java.util.List<String> dateArray;
 
         /**
-         * <p>The number of **medium-risk** unfixed vulnerabilities on the current day.</p>
+         * <p>The number of <strong>medium-risk</strong> unfixed vulnerabilities on the current day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>275</p>
          */
         @NameInMap("LaterCount")
         public Integer laterCount;
@@ -508,7 +548,10 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         public java.util.List<String> levelsOn;
 
         /**
-         * <p>The number of **low-risk** unfixed vulnerabilities on the current day.</p>
+         * <p>The number of <strong>low-risk</strong> unfixed vulnerabilities on the current day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("NntfCount")
         public Integer nntfCount;
@@ -527,6 +570,9 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
 
         /**
          * <p>The total number of unfixed vulnerabilities on the current day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>384</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

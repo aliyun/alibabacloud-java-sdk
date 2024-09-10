@@ -6,31 +6,40 @@ import com.aliyun.tea.*;
 public class CreateFileDetectUploadUrlRequest extends TeaModel {
     /**
      * <p>The hash values of files.</p>
-     * <br>
-     * <p>> You must specify at least one of the **HashKeyList** and **HashKeyContextList** parameters.</p>
+     * <blockquote>
+     * <p>You must specify at least one of the <strong>HashKeyList</strong> and <strong>HashKeyContextList</strong> parameters.</p>
+     * </blockquote>
      */
     @NameInMap("HashKeyContextList")
     public java.util.List<CreateFileDetectUploadUrlRequestHashKeyContextList> hashKeyContextList;
 
     /**
      * <p>The identifiers of files. Only MD5 hash values are supported.</p>
-     * <br>
-     * <p>> You must specify at least one of the **HashKeyList** and **HashKeyContextList** parameters.</p>
+     * <blockquote>
+     * <p>You must specify at least one of the <strong>HashKeyList</strong> and <strong>HashKeyContextList</strong> parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>CreateFileDetectUploadUrl</p>
      */
     @NameInMap("HashKeyList")
     public java.util.List<String> hashKeyList;
 
     /**
      * <p>The type of the file. Valid values:</p>
-     * <br>
-     * <p>*   **0**: unknown file</p>
-     * <p>*   **1**: binary file</p>
-     * <p>*   **2**: webshell file</p>
-     * <p>*   **4**: script file</p>
-     * <br>
-     * <p>> If you do not know the type of the file, set this parameter to **0**.</p>
-     * <br>
+     * <ul>
+     * <li><strong>0</strong>: unknown file</li>
+     * <li><strong>1</strong>: binary file</li>
+     * <li><strong>2</strong>: webshell file</li>
+     * <li><strong>4</strong>: script file</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you do not know the type of the file, set this parameter to <strong>0</strong>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Type")
     public Integer type;
@@ -67,12 +76,18 @@ public class CreateFileDetectUploadUrlRequest extends TeaModel {
     public static class CreateFileDetectUploadUrlRequestHashKeyContextList extends TeaModel {
         /**
          * <p>The size of the file. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2698557</p>
          */
         @NameInMap("FileSize")
         public Integer fileSize;
 
         /**
          * <p>The hash value of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30319dd5cee8f894766e479cac170da0</p>
          */
         @NameInMap("HashKey")
         public String hashKey;

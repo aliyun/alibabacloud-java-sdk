@@ -6,21 +6,28 @@ import com.aliyun.tea.*;
 public class DescribeVulConfigRequest extends TeaModel {
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>113.110.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;
 
     /**
      * <p>The type of configuration. By default, all types of configurations are queried. Valid values:</p>
-     * <br>
-     * <p>*   **cve**: Linux software vulnerability.</p>
-     * <p>*   **sys**: Windows system vulnerability.</p>
-     * <p>*   **cms**: Web-CMS vulnerability.</p>
-     * <p>*   **app**: application vulnerability that is detected by using web scanner.</p>
-     * <p>*   **emg**: urgent vulnerability.</p>
-     * <p>*   **scanMode**: displays easily exploitable vulnerability.</p>
-     * <p>*   **imageVulClean**: vulnerability retention duration.</p>
-     * <p>*   **yum**: preferentially uses YUM or APT sources of Alibaba Cloud to fix vulnerabilities.</p>
+     * <ul>
+     * <li><strong>cve</strong>: Linux software vulnerability.</li>
+     * <li><strong>sys</strong>: Windows system vulnerability.</li>
+     * <li><strong>cms</strong>: Web-CMS vulnerability.</li>
+     * <li><strong>app</strong>: application vulnerability that is detected by using web scanner.</li>
+     * <li><strong>emg</strong>: urgent vulnerability.</li>
+     * <li><strong>scanMode</strong>: displays easily exploitable vulnerability.</li>
+     * <li><strong>imageVulClean</strong>: vulnerability retention duration.</li>
+     * <li><strong>yum</strong>: preferentially uses YUM or APT sources of Alibaba Cloud to fix vulnerabilities.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cve</p>
      */
     @NameInMap("Type")
     public String type;

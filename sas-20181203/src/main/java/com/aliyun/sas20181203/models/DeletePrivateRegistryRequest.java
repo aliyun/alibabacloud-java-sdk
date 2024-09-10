@@ -6,10 +6,13 @@ import com.aliyun.tea.*;
 public class DeletePrivateRegistryRequest extends TeaModel {
     /**
      * <p>The ID of the image repository.</p>
-     * <br>
-     * <p>> You can call the [PageImageRegistry](~~PageImageRegistry~~) operation to query the IDs of image repositories.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="~~PageImageRegistry~~">PageImageRegistry</a> operation to query the IDs of image repositories.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22233</p>
      */
     @NameInMap("RegistryId")
     public Long registryId;

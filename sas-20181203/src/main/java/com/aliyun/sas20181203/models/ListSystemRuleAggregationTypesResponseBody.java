@@ -12,6 +12,9 @@ public class ListSystemRuleAggregationTypesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1427F3BE-8A7E-57F9-BD4E-590B00D2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class ListSystemRuleAggregationTypesResponseBody extends TeaModel {
     public static class ListSystemRuleAggregationTypesResponseBodyAggregationTypeList extends TeaModel {
         /**
          * <p>The ID of the aggregation type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public Integer id;
 
         /**
          * <p>The name of the aggregation type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Remote control\<em>\</em>\<em>\</em></p>
          */
         @NameInMap("Name")
         public String name;

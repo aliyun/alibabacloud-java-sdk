@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeSuspEventQuaraFilesRequest extends TeaModel {
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public String currentPage;
 
     /**
-     * <p>The ID of the request source. Set the value to **sas**.</p>
+     * <p>The ID of the request source. Set the value to <strong>sas</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sas</p>
      */
     @NameInMap("From")
     public String from;
 
     /**
      * <p>The ID of the asset group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10541428</p>
      */
     @NameInMap("GroupId")
     @Deprecated
@@ -25,37 +34,53 @@ public class DescribeSuspEventQuaraFilesRequest extends TeaModel {
 
     /**
      * <p>The ID of the server group to which the server belongs. The quarantined file is located on the server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11472451</p>
      */
     @NameInMap("GroupingId")
     public Long groupingId;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The unique ID of the quarantined file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a31337789f64d39b2219733ec99f9af7</p>
      */
     @NameInMap("QuaraTag")
     public String quaraTag;
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>59.82.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;
 
     /**
      * <p>The status of the quarantined file that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   **quaraFailed**: The file fails to be quarantined.</p>
-     * <p>*   **quaraDone**: The file is quarantined.</p>
-     * <p>*   **quaraing**: The file is being quarantined.</p>
-     * <p>*   **rollbackFailed**: The system fails to cancel quarantining the file.</p>
-     * <p>*   **rollbackDone**: The system cancelled quarantining the file.</p>
-     * <p>*   **rollbacking**: The system is cancelling quarantining the file.</p>
+     * <ul>
+     * <li><strong>quaraFailed</strong>: The file fails to be quarantined.</li>
+     * <li><strong>quaraDone</strong>: The file is quarantined.</li>
+     * <li><strong>quaraing</strong>: The file is being quarantined.</li>
+     * <li><strong>rollbackFailed</strong>: The system fails to cancel quarantining the file.</li>
+     * <li><strong>rollbackDone</strong>: The system cancelled quarantining the file.</li>
+     * <li><strong>rollbacking</strong>: The system is cancelling quarantining the file.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>quaraDone</p>
      */
     @NameInMap("Status")
     public String status;

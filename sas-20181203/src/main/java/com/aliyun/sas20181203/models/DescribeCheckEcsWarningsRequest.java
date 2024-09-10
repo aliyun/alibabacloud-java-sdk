@@ -4,6 +4,10 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeCheckEcsWarningsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1.2.3.4</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 

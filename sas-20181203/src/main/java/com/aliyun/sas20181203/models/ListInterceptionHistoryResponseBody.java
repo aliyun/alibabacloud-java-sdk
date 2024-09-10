@@ -18,6 +18,9 @@ public class ListInterceptionHistoryResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D81DD78E-E006-5C65-A171-C8CB0904****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,189 +57,277 @@ public class ListInterceptionHistoryResponseBody extends TeaModel {
     public static class ListInterceptionHistoryResponseBodyInterceptionHistoryList extends TeaModel {
         /**
          * <p>The ID of the container cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c556c8133b5ad4378b7fc533ddbda****</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>opa-terway-nonet****</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
 
         /**
          * <p>The name of the destination application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas-web****</p>
          */
         @NameInMap("DstAppName")
         public String dstAppName;
 
         /**
          * <p>The destination namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service****</p>
          */
         @NameInMap("DstNamespace")
         public String dstNamespace;
 
         /**
          * <p>The destination port range configured for the defense rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33</p>
          */
         @NameInMap("DstPort")
         public Long dstPort;
 
         /**
          * <p>The name of the destination network object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas-web****</p>
          */
         @NameInMap("DstRuleTargetName")
         public String dstRuleTargetName;
 
         /**
          * <p>The timestamp when the alert was first generated on the current day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1639718858000</p>
          */
         @NameInMap("FirstTime")
         public Long firstTime;
 
         /**
          * <p>The ID of the alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1126</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name of the alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Abnormal access</p>
          */
         @NameInMap("InterceptionName")
         public Long interceptionName;
 
         /**
          * <p>The handling type. Valid values:</p>
-         * <br>
-         * <p>*   **0**: monitor</p>
-         * <p>*   **1**: intercept</p>
-         * <p>*   **2**: generate alert</p>
-         * <p>*   **3**: allow</p>
+         * <ul>
+         * <li><strong>0</strong>: monitor</li>
+         * <li><strong>1</strong>: intercept</li>
+         * <li><strong>2</strong>: generate alert</li>
+         * <li><strong>3</strong>: allow</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("InterceptionType")
         public Integer interceptionType;
 
         /**
          * <p>The timestamp when the alert was last generated on the current day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1639731078000</p>
          */
         @NameInMap("LastTime")
         public Long lastTime;
 
         /**
          * <p>The name of the destination application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas-service****</p>
          */
         @NameInMap("RealDstAppName")
         public String realDstAppName;
 
         /**
          * <p>The name of the destination image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas-servi****</p>
          */
         @NameInMap("RealDstImageName")
         public String realDstImageName;
 
         /**
          * <p>The destination namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service****</p>
          */
         @NameInMap("RealDstNamespace")
         public String realDstNamespace;
 
         /**
          * <p>The destination pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas-web-84cc7dd9****</p>
          */
         @NameInMap("RealDstPodName")
         public String realDstPodName;
 
         /**
          * <p>The handling type of actual hits. Valid values:</p>
-         * <br>
-         * <p>*   **0**: monitor</p>
-         * <p>*   **1**: intercept</p>
-         * <p>*   **2**: generate alert</p>
-         * <p>*   **3**: allow</p>
+         * <ul>
+         * <li><strong>0</strong>: monitor</li>
+         * <li><strong>1</strong>: intercept</li>
+         * <li><strong>2</strong>: generate alert</li>
+         * <li><strong>3</strong>: allow</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RealInterceptionType")
         public Integer realInterceptionType;
 
         /**
          * <p>The name of the source application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas-service****</p>
          */
         @NameInMap("RealSrcAppName")
         public String realSrcAppName;
 
         /**
          * <p>The name of the source image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas-servi****</p>
          */
         @NameInMap("RealSrcImageName")
         public String realSrcImageName;
 
         /**
          * <p>The source namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service****</p>
          */
         @NameInMap("RealSrcNamespace")
         public String realSrcNamespace;
 
         /**
          * <p>The source pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas-service-757b9d****</p>
          */
         @NameInMap("RealSrcPodName")
         public String realSrcPodName;
 
         /**
          * <p>The risk level. Valid values:</p>
-         * <br>
-         * <p>*   **-1**: unknown</p>
-         * <p>*   **0**: none</p>
-         * <p>*   **1**: low</p>
-         * <p>*   **2**: medium</p>
-         * <p>*   **3**: high</p>
+         * <ul>
+         * <li><strong>-1</strong>: unknown</li>
+         * <li><strong>0</strong>: none</li>
+         * <li><strong>1</strong>: low</li>
+         * <li><strong>2</strong>: medium</li>
+         * <li><strong>3</strong>: high</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RiskLevel")
         public Long riskLevel;
 
         /**
          * <p>The ID of the defense rule based on which the alert was generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>136</p>
          */
         @NameInMap("RuleId")
         public Long ruleId;
 
         /**
          * <p>The name of the defense rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all****</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
          * <p>The name of the source application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas-web****</p>
          */
         @NameInMap("SrcAppName")
         public String srcAppName;
 
         /**
          * <p>The source namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service****</p>
          */
         @NameInMap("SrcNamespace")
         public String srcNamespace;
 
         /**
          * <p>The name of the source network object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas-web****</p>
          */
         @NameInMap("SrcRuleTargetName")
         public String srcRuleTargetName;
 
         /**
          * <p>The handling status. Valid values:</p>
-         * <br>
-         * <p>*   **0**: unhandled</p>
-         * <p>*   **1**: handled</p>
-         * <p>*   **2**: manually handled</p>
-         * <p>*   **3**: ignored</p>
+         * <ul>
+         * <li><strong>0</strong>: unhandled</li>
+         * <li><strong>1</strong>: handled</li>
+         * <li><strong>2</strong>: manually handled</li>
+         * <li><strong>3</strong>: ignored</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Long status;
 
         /**
          * <p>The number of attempts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34</p>
          */
         @NameInMap("TryCount")
         public Integer tryCount;
@@ -475,24 +566,36 @@ public class ListInterceptionHistoryResponseBody extends TeaModel {
     public static class ListInterceptionHistoryResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

@@ -6,10 +6,13 @@ import com.aliyun.tea.*;
 public class QueryIncidentTracingJudgeRequest extends TeaModel {
     /**
      * <p>The ID of the event that you want to query.</p>
-     * <br>
-     * <p>>  You can call the [DescribeCloudSiemEvents](https://help.aliyun.com/document_detail/2621307.html) operation to query the event ID.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2621307.html">DescribeCloudSiemEvents</a> operation to query the event ID.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d1d7a612-0dc2-413a-aa8e-9c7c88d8d12a</p>
      */
     @NameInMap("IncidentId")
     public String incidentId;

@@ -6,18 +6,25 @@ import com.aliyun.tea.*;
 public class DescribeExposedInstanceDetailRequest extends TeaModel {
     /**
      * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
-     * <br>
-     * <p>>  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to query the account ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to query the account ID.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1232428423234****</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
     /**
      * <p>The UUID of the server that is exposed on the Internet.</p>
-     * <br>
-     * <p>>  You can call the [DescribeExposedInstanceList](https://help.aliyun.com/document_detail/198153.html) operation to query the UUIDs of servers.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/198153.html">DescribeExposedInstanceList</a> operation to query the UUIDs of servers.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fc82b966-4d70-4e01-bf4f-aa4076a5****</p>
      */
     @NameInMap("Uuid")
     public String uuid;

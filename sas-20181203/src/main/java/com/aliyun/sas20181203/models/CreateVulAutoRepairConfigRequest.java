@@ -6,21 +6,25 @@ import com.aliyun.tea.*;
 public class CreateVulAutoRepairConfigRequest extends TeaModel {
     /**
      * <p>The reason why the vulnerability can be automatically fixed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestAutoRepair</p>
      */
     @NameInMap("Reason")
     public String reason;
 
     /**
-     * <p>The type of the vulnerability. Valid values: -**cve**: Linux software vulnerability -**sys**: Windows system vulnerability</p>
-     * <br>
+     * <p>The type of the vulnerability. Valid values: -<strong>cve</strong>: Linux software vulnerability -<strong>sys</strong>: Windows system vulnerability</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cve</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>The vulnerabilities that can be automatically fixed.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("VulAutoRepairConfigList")
@@ -58,16 +62,20 @@ public class CreateVulAutoRepairConfigRequest extends TeaModel {
     public static class CreateVulAutoRepairConfigRequestVulAutoRepairConfigList extends TeaModel {
         /**
          * <p>The alias of the vulnerability.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CVE-2018-25032:zlib 1.2.11 memory corruption</p>
          */
         @NameInMap("AliasName")
         public String aliasName;
 
         /**
          * <p>The name of the vulnerability.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>anolisos:8.4:ANSA-2022:0001</p>
          */
         @NameInMap("Name")
         public String name;

@@ -18,6 +18,9 @@ public class DescribePropertyCronItemResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>291B49F9-1685-4005-9D34-606B6F78****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +57,36 @@ public class DescribePropertyCronItemResponseBody extends TeaModel {
     public static class DescribePropertyCronItemResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -118,12 +133,18 @@ public class DescribePropertyCronItemResponseBody extends TeaModel {
     public static class DescribePropertyCronItemResponseBodyPropertyItems extends TeaModel {
         /**
          * <p>The number of servers on which the scheduled task is run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The path to the scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/data</p>
          */
         @NameInMap("Source")
         public String source;

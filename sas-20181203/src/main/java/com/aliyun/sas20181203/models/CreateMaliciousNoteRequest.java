@@ -6,18 +6,23 @@ import com.aliyun.tea.*;
 public class CreateMaliciousNoteRequest extends TeaModel {
     /**
      * <p>The ID of the alert event to which you want to add remarks.</p>
-     * <br>
-     * <p>>  You can call the [ListAgentlessMaliciousFiles](~~ListAgentlessMaliciousFiles~~) operation to obtain the ID of the alert event from the NoteId parameter.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="~~ListAgentlessMaliciousFiles~~">ListAgentlessMaliciousFiles</a> operation to obtain the ID of the alert event from the NoteId parameter.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80****</p>
      */
     @NameInMap("EventId")
     public Long eventId;
 
     /**
      * <p>The remarks that you want to add.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ignore</p>
      */
     @NameInMap("Note")
     public String note;

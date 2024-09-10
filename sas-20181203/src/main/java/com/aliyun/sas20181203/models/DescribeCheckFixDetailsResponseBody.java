@@ -12,12 +12,18 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
 
     /**
      * <p>The number of risk items that can be fixed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("Count")
     public Integer count;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0DBF1E27-98D8-5EC2-9CF3-4A2E26F6****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,57 +60,85 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
     public static class DescribeCheckFixDetailsResponseBodyCheckFixDetailsRulesParamList extends TeaModel {
         /**
          * <p>The options that can be selected for the rule parameter if the value of the ParamType parameter is 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0,1,2,3</p>
          */
         @NameInMap("EnumValue")
         public String enumValue;
 
         /**
          * <p>The maximum value of the rule parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
          */
         @NameInMap("MaxValue")
         public Integer maxValue;
 
         /**
          * <p>The minimum value of the rule parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("MinValue")
         public Integer minValue;
 
         /**
          * <p>The default value of the rule parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("ParamDefaultValue")
         public String paramDefaultValue;
 
         /**
          * <p>The description of the rule parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The setting value is 0 means no definition, 1 means success, 2 means failure, 3 means success and failure</p>
          */
         @NameInMap("ParamDesc")
         public String paramDesc;
 
         /**
          * <p>The name of the rule parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>range_val</p>
          */
         @NameInMap("ParamName")
         public String paramName;
 
         /**
          * <p>The type of the rule parameter. Valid values:</p>
-         * <br>
-         * <p>*   **1**: input</p>
-         * <p>*   **2**: selection</p>
+         * <ul>
+         * <li><strong>1</strong>: input</li>
+         * <li><strong>2</strong>: selection</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ParamType")
         public Integer paramType;
 
         /**
          * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pwd_reuse.system_auth</p>
          */
         @NameInMap("RuleId")
         public String ruleId;
 
         /**
          * <p>The specified value of the rule parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18</p>
          */
         @NameInMap("Value")
         public String value;
@@ -191,21 +225,31 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
     public static class DescribeCheckFixDetailsResponseBodyCheckFixDetailsRules extends TeaModel {
         /**
          * <p>The ID of the risk item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58</p>
          */
         @NameInMap("CheckId")
         public Long checkId;
 
         /**
          * <p>The default value of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DefaultValue")
         public Integer defaultValue;
 
         /**
          * <p>Indicates whether the rule is optional. Valid values:</p>
-         * <br>
-         * <p>*   **1**: yes</p>
-         * <p>*   **0**: no</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Optional")
         public Integer optional;
@@ -218,24 +262,36 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
 
         /**
          * <p>The description of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(/etc/system-auth)Force users not to reuse the number of recently used passwords between 5 and 24</p>
          */
         @NameInMap("RuleDesc")
         public String ruleDesc;
 
         /**
          * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pwd_reuse.system_auth</p>
          */
         @NameInMap("RuleId")
         public String ruleId;
 
         /**
          * <p>The specified value of the rule parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("Value")
         public Integer value;
 
         /**
          * <p>The name of the variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>open</p>
          */
         @NameInMap("VarName")
         public String varName;
@@ -314,18 +370,27 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
     public static class DescribeCheckFixDetailsResponseBodyCheckFixDetails extends TeaModel {
         /**
          * <p>The detailed description of the risk item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Force users not to reuse recently used passwords to reduce the risk of password guessing attacks</p>
          */
         @NameInMap("CheckDesc")
         public String checkDesc;
 
         /**
          * <p>The ID of the risk item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58</p>
          */
         @NameInMap("CheckId")
         public Long checkId;
 
         /**
          * <p>The description of the risk item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ensure password reuse is limited</p>
          */
         @NameInMap("CheckItem")
         public String checkItem;

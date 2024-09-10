@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetFileProtectRuleRequest extends TeaModel {
     /**
      * <p>The ID of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>245</p>
      */
     @NameInMap("Id")
     public Long id;

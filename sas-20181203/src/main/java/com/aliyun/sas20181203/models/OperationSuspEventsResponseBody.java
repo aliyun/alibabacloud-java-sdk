@@ -6,24 +6,35 @@ import com.aliyun.tea.*;
 public class OperationSuspEventsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether you have access permissions. Valid values:</p>
-     * <br>
-     * <p>*   **pass**: yes</p>
-     * <p>*   **no_permission**: no</p>
+     * <ul>
+     * <li><strong>pass</strong>: yes</li>
+     * <li><strong>no_permission</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>pass</p>
      */
     @NameInMap("AccessCode")
     public String accessCode;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether exceptions are handled. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class ListClientUserDefineRulesRequest extends TeaModel {
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The name of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Rule\<em>\</em>\<em>\</em></p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

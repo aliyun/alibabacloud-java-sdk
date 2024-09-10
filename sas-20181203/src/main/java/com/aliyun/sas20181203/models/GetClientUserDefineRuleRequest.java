@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class GetClientUserDefineRuleRequest extends TeaModel {
     /**
      * <p>The ID of the custom defense rule.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200****</p>
      */
     @NameInMap("Id")
     public Long id;

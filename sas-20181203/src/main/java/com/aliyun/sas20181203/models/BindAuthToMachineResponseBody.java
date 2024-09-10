@@ -6,41 +6,60 @@ import com.aliyun.tea.*;
 public class BindAuthToMachineResponseBody extends TeaModel {
     /**
      * <p>The number of bound servers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("BindCount")
     public Integer bindCount;
 
     /**
      * <p>The shortage in the quota for cores of servers that can be protected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("InsufficientCoreCount")
     public Integer insufficientCoreCount;
 
     /**
      * <p>The shortage in the quota for servers that can be protected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("InsufficientEcsCount")
     public Integer insufficientEcsCount;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23AD0BD2-8771-5647-819E-6BA51E212F80</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The status code that indicates the result. Valid values:</p>
-     * <br>
-     * <p>*   **0**: The servers are bound to or unbound from Security Center.</p>
-     * <p>*   **1**: The values that you specified for the parameters are invalid.</p>
-     * <p>*   **2**: The quota for servers that can be protected is insufficient.</p>
-     * <p>*   **3**: The quota for cores of servers that can be protected is insufficient.</p>
+     * <ul>
+     * <li><strong>0</strong>: The servers are bound to or unbound from Security Center.</li>
+     * <li><strong>1</strong>: The values that you specified for the parameters are invalid.</li>
+     * <li><strong>2</strong>: The quota for servers that can be protected is insufficient.</li>
+     * <li><strong>3</strong>: The quota for cores of servers that can be protected is insufficient.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("ResultCode")
     public Integer resultCode;
 
     /**
      * <p>The number of unbound servers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UnBindCount")
     public Integer unBindCount;

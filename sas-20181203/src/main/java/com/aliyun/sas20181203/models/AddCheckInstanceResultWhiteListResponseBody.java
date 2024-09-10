@@ -12,9 +12,15 @@ public class AddCheckInstanceResultWhiteListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ADE57832-9666-511C-9A80-B87DE2E8****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("RuleId")
+    public String ruleId;
 
     public static AddCheckInstanceResultWhiteListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddCheckInstanceResultWhiteListResponseBody self = new AddCheckInstanceResultWhiteListResponseBody();
@@ -35,6 +41,14 @@ public class AddCheckInstanceResultWhiteListResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public AddCheckInstanceResultWhiteListResponseBody setRuleId(String ruleId) {
+        this.ruleId = ruleId;
+        return this;
+    }
+    public String getRuleId() {
+        return this.ruleId;
     }
 
 }

@@ -6,210 +6,291 @@ import com.aliyun.tea.*;
 public class DescribeCanFixVulListRequest extends TeaModel {
     /**
      * <p>The alias of the vulnerability that is specified in Common Vulnerabilities and Exposures (CVE).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RHSA-2017:0184-Important: mysql security update</p>
      */
     @NameInMap("AliasName")
     public String aliasName;
 
     /**
      * <p>The cluster ID.</p>
-     * <br>
-     * <p>>  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>c80f79959fd724a888e1187779b13****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The name of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sas-test-cnnf</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
      * <p>The container ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>48a6d9a92435a13ad573372c3f3c63b7e04d106458141df9f92155709d5a****</p>
      */
     @NameInMap("ContainerId")
     public String containerId;
 
     /**
      * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>Specifies whether the vulnerability is handled. Valid values:</p>
-     * <br>
-     * <p>**y**: The vulnerability is handled. **n**: The vulnerability is not handled.</p>
+     * <p><strong>y</strong>: The vulnerability is handled. <strong>n</strong>: The vulnerability is not handled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>n</p>
      */
     @NameInMap("Dealed")
     public String dealed;
 
     /**
      * <p>The unique identifier of the image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8f0fbdb41d3d1ade4ffdf21558443f4c03342010563bb8c43ccc09594d50****</p>
      */
     @NameInMap("Digest")
     public String digest;
 
     /**
      * <p>The name of the image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>registry.cn-wulanchabu.aliyuncs.com/sas_test/huxin-test-001:nuxeo6-****</p>
      */
     @NameInMap("Image")
     public String image;
 
     /**
      * <p>The ID of the container image.</p>
-     * <br>
-     * <p>>  You can call the [ListRepository](https://help.aliyun.com/document_detail/451339.html) operation of Container Registry and obtain the ID of the container image from **InstanceId** in the response.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/451339.html">ListRepository</a> operation of Container Registry and obtain the ID of the container image from <strong>InstanceId</strong> in the response.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-rv4nvbv8iju4****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the vulnerability.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>scan:AVD-2022-953356</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The namespace of the cluster.</p>
-     * <br>
-     * <p>>  You can call the [GetOpaClusterNamespaceList](~~GetOpaClusterNamespaceList~~) operation to query the namespaces of clusters.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~GetOpaClusterNamespaceList~~">GetOpaClusterNamespaceList</a> operation to query the namespaces of clusters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The priority to fix the vulnerability. Separate multiple priorities with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **asap**: high</p>
-     * <p>*   **later**: medium</p>
-     * <p>*   **nntf**: low</p>
+     * <ul>
+     * <li><strong>asap</strong>: high</li>
+     * <li><strong>later</strong>: medium</li>
+     * <li><strong>nntf</strong>: low</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>asap,later,nntf</p>
      */
     @NameInMap("Necessity")
     public String necessity;
 
     /**
      * <p>The number of entries per page. Default value: 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The name of the container group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22222-7xsqq</p>
      */
     @NameInMap("Pod")
     public String pod;
 
     /**
      * <p>The region ID of the image repository. Valid values:</p>
-     * <br>
-     * <p>*   **cn-beijing**: China (Beijing)</p>
-     * <p>*   **cn-zhangjiakou**: China (Zhangjiakou)</p>
-     * <p>*   **cn-hangzhou**: China (Hangzhou)</p>
-     * <p>*   **cn-shanghai**: China (Shanghai)</p>
-     * <p>*   **cn-shenzhen**: China (Shenzhen)</p>
-     * <p>*   **cn-hongkong**: China (Hong Kong)</p>
-     * <p>*   **ap-southeast-1**: Singapore</p>
-     * <p>*   **ap-southeast-5**: Indonesia (Jakarta)</p>
-     * <p>*   **us-east-1**: US (Virginia)</p>
-     * <p>*   **us-west-1**: US (Silicon Valley)</p>
-     * <p>*   **eu-central-1**: Germany (Frankfurt)</p>
-     * <p>*   **eu-west-1**: UK (London)</p>
-     * <p>*   **ap-south-1**: India (Mumbai)</p>
+     * <ul>
+     * <li><strong>cn-beijing</strong>: China (Beijing)</li>
+     * <li><strong>cn-zhangjiakou</strong>: China (Zhangjiakou)</li>
+     * <li><strong>cn-hangzhou</strong>: China (Hangzhou)</li>
+     * <li><strong>cn-shanghai</strong>: China (Shanghai)</li>
+     * <li><strong>cn-shenzhen</strong>: China (Shenzhen)</li>
+     * <li><strong>cn-hongkong</strong>: China (Hong Kong)</li>
+     * <li><strong>ap-southeast-1</strong>: Singapore</li>
+     * <li><strong>ap-southeast-5</strong>: Indonesia (Jakarta)</li>
+     * <li><strong>us-east-1</strong>: US (Virginia)</li>
+     * <li><strong>us-west-1</strong>: US (Silicon Valley)</li>
+     * <li><strong>eu-central-1</strong>: Germany (Frankfurt)</li>
+     * <li><strong>eu-west-1</strong>: UK (London)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the image repository.</p>
-     * <br>
-     * <p>>  You can call the [ListRepository](https://help.aliyun.com/document_detail/145293.html) operation of Container Registry and obtain the ID of the image repository from **RepoId** in the response.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/145293.html">ListRepository</a> operation of Container Registry and obtain the ID of the image repository from <strong>RepoId</strong> in the response.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>crr-avo7qp02simz2njo</p>
      */
     @NameInMap("RepoId")
     public String repoId;
 
     /**
      * <p>The ID of the container image.</p>
-     * <br>
-     * <p>>  You can call the [ListRepository](https://help.aliyun.com/document_detail/451339.html) operation of Container Registry and obtain the ID of the container image from **InstanceId** in the response.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/451339.html">ListRepository</a> operation of Container Registry and obtain the ID of the container image from <strong>InstanceId</strong> in the response.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-rv4nvbv8iju4****</p>
      */
     @NameInMap("RepoInstanceId")
     public String repoInstanceId;
 
     /**
      * <p>The name of the image repository.</p>
-     * <br>
-     * <p>>  Fuzzy match is supported.</p>
+     * <blockquote>
+     * <p> Fuzzy match is supported.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>digital-account</p>
      */
     @NameInMap("RepoName")
     public String repoName;
 
     /**
      * <p>The namespace to which the image repository belongs.</p>
-     * <br>
-     * <p>>  Fuzzy match is supported.</p>
+     * <blockquote>
+     * <p> Fuzzy match is supported.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ns-digital-dev</p>
      */
     @NameInMap("RepoNamespace")
     public String repoNamespace;
 
     /**
      * <p>The region ID of the image repository. Valid values:</p>
-     * <br>
-     * <p>*   **cn-beijing**: China (Beijing)</p>
-     * <p>*   **cn-zhangjiakou**: China (Zhangjiakou)</p>
-     * <p>*   **cn-hangzhou**: China (Hangzhou)</p>
-     * <p>*   **cn-shanghai**: China (Shanghai)</p>
-     * <p>*   **cn-shenzhen**: China (Shenzhen)</p>
-     * <p>*   **cn-hongkong**: China (Hong Kong)</p>
-     * <p>*   **ap-southeast-1**: Singapore</p>
-     * <p>*   **ap-southeast-5**: Indonesia (Jakarta)</p>
-     * <p>*   **us-east-1**: US (Virginia)</p>
-     * <p>*   **us-west-1**: US (Silicon Valley)</p>
-     * <p>*   **eu-central-1**: Germany (Frankfurt)</p>
-     * <p>*   **eu-west-1**: UK (London)</p>
-     * <p>*   **ap-south-1**: India (Mumbai)</p>
+     * <ul>
+     * <li><strong>cn-beijing</strong>: China (Beijing)</li>
+     * <li><strong>cn-zhangjiakou</strong>: China (Zhangjiakou)</li>
+     * <li><strong>cn-hangzhou</strong>: China (Hangzhou)</li>
+     * <li><strong>cn-shanghai</strong>: China (Shanghai)</li>
+     * <li><strong>cn-shenzhen</strong>: China (Shenzhen)</li>
+     * <li><strong>cn-hongkong</strong>: China (Hong Kong)</li>
+     * <li><strong>ap-southeast-1</strong>: Singapore</li>
+     * <li><strong>ap-southeast-5</strong>: Indonesia (Jakarta)</li>
+     * <li><strong>us-east-1</strong>: US (Virginia)</li>
+     * <li><strong>us-west-1</strong>: US (Silicon Valley)</li>
+     * <li><strong>eu-central-1</strong>: Germany (Frankfurt)</li>
+     * <li><strong>eu-west-1</strong>: UK (London)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RepoRegionId")
     public String repoRegionId;
 
     /**
      * <p>The type of the asset that you want to scan. Valid values:</p>
-     * <br>
-     * <p>*   **image**</p>
-     * <p>*   **container**</p>
+     * <ul>
+     * <li><strong>image</strong></li>
+     * <li><strong>container</strong></li>
+     * </ul>
      */
     @NameInMap("ScanRange")
     public java.util.List<String> scanRange;
 
     /**
      * <p>The status of the vulnerability. Valid values:</p>
-     * <br>
-     * <p>*   **1**: The vulnerability is unfixed.</p>
-     * <p>*   **4**: The vulnerability is being fixed.</p>
-     * <p>*   **7**:The vulnerability is fixed.</p>
+     * <ul>
+     * <li><strong>1</strong>: The vulnerability is unfixed.</li>
+     * <li><strong>4</strong>: The vulnerability is being fixed.</li>
+     * <li><strong>7</strong>:The vulnerability is fixed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("StatusList")
     public String statusList;
 
     /**
      * <p>The tag to add to the image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.1.0</p>
      */
     @NameInMap("Tag")
     public String tag;
 
     /**
      * <p>The type of the vulnerability. Valid values:</p>
-     * <br>
-     * <p>*   **cve**: system vulnerability</p>
-     * <p>*   **sca**: application vulnerability</p>
-     * <br>
+     * <ul>
+     * <li><strong>cve</strong>: system vulnerability</li>
+     * <li><strong>sca</strong>: application vulnerability</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cve</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>The UUID of the image. Separate multiple UUIDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d15df12472809c1c3b158606c0f1****</p>
      */
     @NameInMap("Uuids")
     public String uuids;

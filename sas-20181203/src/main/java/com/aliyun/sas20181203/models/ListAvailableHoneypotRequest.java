@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListAvailableHoneypotRequest extends TeaModel {
     /**
      * <p>The ID of the management node to which the honeypot is deployed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4341018b-8e01-43f6-b1d2-af29a2a4****</p>
      */
     @NameInMap("NodeId")
     public String nodeId;

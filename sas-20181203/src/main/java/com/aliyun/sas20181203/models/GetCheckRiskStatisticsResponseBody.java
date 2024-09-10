@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetCheckRiskStatisticsResponseBody extends TeaModel {
     /**
      * <p>The number of risk scenarios.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("Count")
     public Integer count;
@@ -18,6 +21,9 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2C455672-2490-5211-84EC-420C7818****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,42 +60,63 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
     public static class GetCheckRiskStatisticsResponseBodyDataSubStatistics extends TeaModel {
         /**
          * <p>The name of the baseline type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>weak_password</p>
          */
         @NameInMap("Alias")
         public String alias;
 
         /**
          * <p>The number of high-risk items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("HighWarningCount")
         public Integer highWarningCount;
 
         /**
          * <p>The number of low-risk items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("LowWarningCount")
         public Integer lowWarningCount;
 
         /**
          * <p>The number of medium-risk items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("MediumWarningCount")
         public Integer mediumWarningCount;
 
         /**
          * <p>The number of passed check items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("PassCount")
         public Integer passCount;
 
         /**
          * <p>The total number of check items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
         /**
          * <p>The baseline type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>weak_password</p>
          */
         @NameInMap("TypeName")
         public String typeName;
@@ -160,30 +187,45 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
     public static class GetCheckRiskStatisticsResponseBodyData extends TeaModel {
         /**
          * <p>The number of high-risk items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43</p>
          */
         @NameInMap("HighWarningCount")
         public Integer highWarningCount;
 
         /**
          * <p>The number of low-risk items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("LowWarningCount")
         public Integer lowWarningCount;
 
         /**
          * <p>The number of medium-risk items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>29</p>
          */
         @NameInMap("MediumWarningCount")
         public Integer mediumWarningCount;
 
         /**
          * <p>The number of passed check items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>143</p>
          */
         @NameInMap("PassCount")
         public Integer passCount;
 
         /**
          * <p>The name of the risk scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SECURITY</p>
          */
         @NameInMap("SceneName")
         public String sceneName;
@@ -196,6 +238,9 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
 
         /**
          * <p>The total number of check items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>219</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

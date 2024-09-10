@@ -5,46 +5,67 @@ import com.aliyun.tea.*;
 
 public class DescribeUniBackupDatabaseRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The type of the database. Valid values:</p>
-     * <br>
-     * <p>*   **MYSQL**</p>
-     * <p>*   **MSSQL**</p>
-     * <p>*   **Oracle**</p>
+     * <ul>
+     * <li><strong>MYSQL</strong></li>
+     * <li><strong>MSSQL</strong></li>
+     * <li><strong>Oracle</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>MYSQL</p>
      */
     @NameInMap("DatabaseType")
     public String databaseType;
 
     /**
      * <p>The name of the Elastic Compute Service (ECS) instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
      * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
-     * <br>
-     * <p>>  We recommend that you do not leave this parameter empty.</p>
+     * <blockquote>
+     * <p> We recommend that you do not leave this parameter empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The condition that is used to query the database. Valid values:</p>
-     * <br>
-     * <p>*   **create**: newly created</p>
-     * <p>*   **restore**: restored</p>
+     * <ul>
+     * <li><strong>create</strong>: newly created</li>
+     * <li><strong>restore</strong>: restored</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>create</p>
      */
     @NameInMap("QueryType")
     public String queryType;
 
     /**
      * <p>The region ID of the server that hosts the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hongkong</p>
      */
     @NameInMap("UniRegionId")
     public String uniRegionId;

@@ -6,14 +6,21 @@ import com.aliyun.tea.*;
 public class FindContainerNetworkConnectRequest extends TeaModel {
     /**
      * <p>The type of the information that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   **EDGE**: connection information</p>
+     * <ul>
+     * <li><strong>EDGE</strong>: connection information</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>EDGE</p>
      */
     @NameInMap("CriteriaType")
     public String criteriaType;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Long currentPage;
@@ -26,14 +33,21 @@ public class FindContainerNetworkConnectRequest extends TeaModel {
 
     /**
      * <p>The end time of the network connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1649260799999</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
-     * <br>
-     * <p>> We recommend that you do not leave this parameter empty.</p>
+     * <blockquote>
+     * <p>We recommend that you do not leave this parameter empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
@@ -46,6 +60,9 @@ public class FindContainerNetworkConnectRequest extends TeaModel {
 
     /**
      * <p>The start time of the network connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1666886400000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
@@ -114,20 +131,30 @@ public class FindContainerNetworkConnectRequest extends TeaModel {
     public static class FindContainerNetworkConnectRequestDstNode extends TeaModel {
         /**
          * <p>The name of the container application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nginx-ingress-controller</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>The ID of the container cluster.</p>
-         * <br>
-         * <p>> You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>f5x833820xx</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The namespace of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Namespace")
         public String namespace;
@@ -140,14 +167,21 @@ public class FindContainerNetworkConnectRequest extends TeaModel {
 
         /**
          * <p>The type of the node. Valid values:</p>
-         * <br>
-         * <p>*   **app**: application, which indicates that the node type is application.</p>
+         * <ul>
+         * <li><strong>app</strong>: application, which indicates that the node type is application.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>app</p>
          */
         @NameInMap("NodeType")
         public String nodeType;
 
         /**
          * <p>The name of the pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc-deployment-yacs-31144-39265-1384966-7f8c8cd578-h6mhb</p>
          */
         @NameInMap("PodName")
         public String podName;
@@ -210,20 +244,30 @@ public class FindContainerNetworkConnectRequest extends TeaModel {
     public static class FindContainerNetworkConnectRequestSrcNode extends TeaModel {
         /**
          * <p>The name of the container application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms-prometheus-ack-arms-prometheus</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>The ID of the container cluster.</p>
-         * <br>
-         * <p>> You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>c56xxx1775dea0</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The namespace of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Namespace")
         public String namespace;
@@ -236,14 +280,21 @@ public class FindContainerNetworkConnectRequest extends TeaModel {
 
         /**
          * <p>The type of the node. Valid values:</p>
-         * <br>
-         * <p>*   **app**: application, which indicates that the node type is application.</p>
+         * <ul>
+         * <li><strong>app</strong>: application, which indicates that the node type is application.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>app</p>
          */
         @NameInMap("NodeType")
         public String nodeType;
 
         /**
          * <p>The name of the pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc-deployment-yacs-31144-39265-1384966-7f8c8cd578-h6mhb</p>
          */
         @NameInMap("PodName")
         public String podName;

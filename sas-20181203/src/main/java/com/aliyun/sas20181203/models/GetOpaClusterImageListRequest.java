@@ -6,26 +6,39 @@ import com.aliyun.tea.*;
 public class GetOpaClusterImageListRequest extends TeaModel {
     /**
      * <p>The ID of the cluster to which the container belongs.</p>
-     * <br>
-     * <p>>  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>c4af4fdf38a98496a9b63c2be5dae****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The name of the image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testImage</p>
      */
     @NameInMap("ImageName")
     public String imageName;
 
     /**
-     * <p>The number of entries per page. Default value: **20**.</p>
+     * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

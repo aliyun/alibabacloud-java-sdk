@@ -7,6 +7,10 @@ public class GetBackupStorageCountResponseBody extends TeaModel {
     @NameInMap("BackupStorageCount")
     public GetBackupStorageCountResponseBodyBackupStorageCount backupStorageCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>33C2CCFF-4BF8-5F88-9B5C-22F932F80E5A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +36,38 @@ public class GetBackupStorageCountResponseBody extends TeaModel {
     }
 
     public static class GetBackupStorageCountResponseBodyBackupStorageCount extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2276332666880</p>
+         */
         @NameInMap("BuyStorageByte")
         public Long buyStorageByte;
 
+        /**
+         * <strong>example:</strong>
+         * <p>817262417803</p>
+         */
         @NameInMap("EcsUsageStorageByte")
         public Long ecsUsageStorageByte;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Overflow")
         public Integer overflow;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7453049350</p>
+         */
         @NameInMap("UniUsageStorageByte")
         public Long uniUsageStorageByte;
 
+        /**
+         * <strong>example:</strong>
+         * <p>839621565853</p>
+         */
         @NameInMap("UsageStorageByte")
         public Long usageStorageByte;
 

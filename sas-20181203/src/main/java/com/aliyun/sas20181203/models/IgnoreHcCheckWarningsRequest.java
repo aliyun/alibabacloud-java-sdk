@@ -6,55 +6,81 @@ import com.aliyun.tea.*;
 public class IgnoreHcCheckWarningsRequest extends TeaModel {
     /**
      * <p>The ID of the check item.</p>
-     * <br>
-     * <p>>  You can call the [DescribeCheckWarnings](https://help.aliyun.com/document_detail/116182.html) operation to query the IDs of check items.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/116182.html">DescribeCheckWarnings</a> operation to query the IDs of check items.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>21313</p>
      */
     @NameInMap("CheckIds")
     public String checkIds;
 
     /**
      * <p>The ID of the alert that is triggered by the check item. Separate multiple IDs with commas (,).</p>
-     * <br>
-     * <p>>  You can call the [DescribeCheckWarnings](https://help.aliyun.com/document_detail/116182.html) operation to query the IDs of alerts that are triggered by check items.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/116182.html">DescribeCheckWarnings</a> operation to query the IDs of alerts that are triggered by check items.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>98146905,98146907</p>
      */
     @NameInMap("CheckWarningIds")
     public String checkWarningIds;
 
     /**
      * <p>The reason for the current operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ignore</p>
      */
     @NameInMap("Reason")
     public String reason;
 
     /**
      * <p>The ID of the risk item that you want to ignore or cancel ignoring.</p>
-     * <br>
-     * <p>>  You can call the [DescribeCheckWarningSummary](https://help.aliyun.com/document_detail/116179.html) operation to query the IDs of risk items.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/116179.html">DescribeCheckWarningSummary</a> operation to query the IDs of risk items.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>51</p>
      */
     @NameInMap("RiskId")
     public String riskId;
 
     /**
      * <p>The data source. If this parameter is left empty, the server baseline results are queried by default. Valid values:</p>
-     * <p>* **default**: server</p>
-     * <p>* **agentless**</p>
+     * <ul>
+     * <li><strong>default</strong>: server</li>
+     * <li><strong>agentless</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>agentless</p>
      */
     @NameInMap("Source")
     public String source;
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;
 
     /**
      * <p>The type of the operation that you want to perform. Valid values:</p>
-     * <br>
-     * <p>*   **1**: ignores a risk item</p>
-     * <p>*   **2**: cancels ignoring a risk item</p>
-     * <br>
+     * <ul>
+     * <li><strong>1</strong>: ignores a risk item</li>
+     * <li><strong>2</strong>: cancels ignoring a risk item</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Type")
     public Long type;

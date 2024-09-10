@@ -5,39 +5,53 @@ import com.aliyun.tea.*;
 
 public class DescribeImageFixTaskRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: **1**</p>
-     * <br>
+     * <p>The number of the page to return. Default value: <strong>1</strong></p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The timestamp when the task ends. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1635575219000</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **20**</p>
-     * <br>
+     * <p>The number of entries to return on each page. Default value: <strong>20</strong></p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The timestamp when the task starts. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1634725571000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
 
     /**
      * <p>The status of the task. Valid values:</p>
-     * <br>
-     * <p>*   **1**: The task is running.</p>
-     * <p>*   **2**: The task is successful.</p>
-     * <p>*   **3**: The task failed.</p>
+     * <ul>
+     * <li><strong>1</strong>: The task is running.</li>
+     * <li><strong>2</strong>: The task is successful.</li>
+     * <li><strong>3</strong>: The task failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Status")
     public String status;

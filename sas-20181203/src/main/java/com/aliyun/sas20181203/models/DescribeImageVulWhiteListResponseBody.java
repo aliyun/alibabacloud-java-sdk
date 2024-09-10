@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeImageVulWhiteListResponseBody extends TeaModel {
     /**
-     * <p>The status code returned. A value of **200** indicates that the request was successful. Other values indicate that the request failed. You can identify the cause of the failure based on the value of this parameter.</p>
+     * <p>The status code returned. A value of <strong>200</strong> indicates that the request was successful. Other values indicate that the request failed. You can identify the cause of the failure based on the value of this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
@@ -24,6 +30,9 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
@@ -36,21 +45,31 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>911025D0-3D1E-5213-A18A-37EA0C92****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The amount of time that was consumed to process the request. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TimeCost")
     public Long timeCost;
@@ -127,42 +146,62 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
     public static class DescribeImageVulWhiteListResponseBodyImageVulWhitelist extends TeaModel {
         /**
          * <p>The alias of the vulnerability that is specified in Common Vulnerabilities and Exposures (CVE).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CVE-2019-19906:in_sasl_add_string</p>
          */
         @NameInMap("AliasName")
         public String aliasName;
 
         /**
          * <p>The primary key ID of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34032043</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scan:AVD-2022-953356</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The reason the vulnerability is added to the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>already config in another way</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
          * <p>The object on which the query is performed. The value of this parameter is in the JSON format and contains the following fields:</p>
-         * <br>
-         * <p>*   **type**: the object type. The value is fixed to repo.</p>
-         * <p>*   **target**: the object content. The value is in the Namespace/Image repository format.</p>
+         * <ul>
+         * <li><strong>type</strong>: the object type. The value is fixed to repo.</li>
+         * <li><strong>target</strong>: the object content. The value is in the Namespace/Image repository format.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;type\&quot;:\&quot;repo\&quot;,\&quot;target\&quot;:[\&quot;sas_test/script_0209\&quot;,\&quot;sas_test/script\&quot;]}</p>
          */
         @NameInMap("Target")
         public String target;
 
         /**
          * <p>The type of the vulnerability. Valid values:</p>
-         * <br>
-         * <p>*   **cve**: system vulnerability</p>
-         * <p>*   **sca**: application vulnerability</p>
+         * <ul>
+         * <li><strong>cve</strong>: system vulnerability</li>
+         * <li><strong>sca</strong>: application vulnerability</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>sca</p>
          */
         @NameInMap("Type")
         public String type;
@@ -225,24 +264,36 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
     public static class DescribeImageVulWhiteListResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

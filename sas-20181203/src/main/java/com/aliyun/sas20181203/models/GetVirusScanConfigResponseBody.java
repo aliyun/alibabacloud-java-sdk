@@ -12,6 +12,9 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>028CF634-5268-5660-9575-48C9ED6BDEFC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,31 +43,46 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
     public static class GetVirusScanConfigResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the task configuration.</p>
-         * <br>
-         * <p>> You can call the [DescribeCycleTaskList](~~DescribeCycleTaskList~~) operation to query the IDs of task configurations.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeCycleTaskList~~">DescribeCycleTaskList</a> operation to query the IDs of task configurations.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>97a1fed216908e417407344e1505xxxx</p>
          */
         @NameInMap("ConfigId")
         public String configId;
 
         /**
          * <p>Indicates whether the periodic scan feature is enabled. Valid value:</p>
-         * <br>
-         * <p>*   **1**: The feature is enabled</p>
-         * <p>*   **0**: The feature is disabled.</p>
+         * <ul>
+         * <li><strong>1</strong>: The feature is enabled</li>
+         * <li><strong>0</strong>: The feature is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Enable")
         public Integer enable;
 
         /**
          * <p>The interval at which virus scan tasks are run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         @NameInMap("IntervalPeriod")
         public Integer intervalPeriod;
 
         /**
          * <p>The unit of the interval at which virus scan tasks are run.</p>
-         * <br>
-         * <p>*   The value is fixed as **day**.</p>
+         * <ul>
+         * <li>The value is fixed as <strong>day</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>day</p>
          */
         @NameInMap("PeriodUnit")
         public String periodUnit;
@@ -77,37 +95,55 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
 
         /**
          * <p>The type of the virus scan task. Valid values:</p>
-         * <br>
-         * <p>*   **system**: automatic scan.</p>
-         * <p>*   **user**: custom scan.</p>
+         * <ul>
+         * <li><strong>system</strong>: automatic scan.</li>
+         * <li><strong>user</strong>: custom scan.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         @NameInMap("ScanType")
         public String scanType;
 
         /**
          * <p>The key that stores the asset information.</p>
-         * <br>
-         * <p>> You can call the [GetAssetSelectionConfig](~~GetAssetSelectionConfig~~) operation to obtain the key value.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~GetAssetSelectionConfig~~">GetAssetSelectionConfig</a> operation to obtain the key value.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>345ddbea-a57f-437e-832f-fb7a1202xxxx</p>
          */
         @NameInMap("SelectionKey")
         public String selectionKey;
 
         /**
          * <p>The end time of the virus scan task. The time is a time frame.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("TargetEndTime")
         public Integer targetEndTime;
 
         /**
          * <p>The start time of the virus scan task. The time is a time frame.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("TargetStartTime")
         public Integer targetStartTime;
 
         /**
          * <p>The type of the task. Valid value:</p>
-         * <br>
-         * <p>*   **VIRUS_VUL_SCHEDULE_SCAN**: a virus scan task.</p>
+         * <ul>
+         * <li><strong>VIRUS_VUL_SCHEDULE_SCAN</strong>: a virus scan task.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VIRUS_VUL_SCHEDULE_SCAN</p>
          */
         @NameInMap("TaskType")
         public String taskType;

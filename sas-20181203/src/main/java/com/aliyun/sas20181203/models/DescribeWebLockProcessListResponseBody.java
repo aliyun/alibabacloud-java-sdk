@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeWebLockProcessListResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -18,18 +21,27 @@ public class DescribeWebLockProcessListResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>028CF634-5268-5660-9575-48C9ED6BF880</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of processes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,51 +94,76 @@ public class DescribeWebLockProcessListResponseBody extends TeaModel {
     public static class DescribeWebLockProcessListResponseBodyList extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33</p>
          */
         @NameInMap("Count")
         public String count;
 
         /**
          * <p>The name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_ecs</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The public IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.210.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.25.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>The name of the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cron</p>
          */
         @NameInMap("ProcessName")
         public String processName;
 
         /**
          * <p>The path to the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/sbin/cron</p>
          */
         @NameInMap("ProcessPath")
         public String processPath;
 
         /**
          * <p>Indicates whether the process is added to the process whitelist. Valid values:</p>
-         * <br>
-         * <p>*   **1**: The process is added to the process whitelist.</p>
-         * <p>*   **0**: The process is not added to the process whitelist.</p>
+         * <ul>
+         * <li><strong>1</strong>: The process is added to the process whitelist.</li>
+         * <li><strong>0</strong>: The process is not added to the process whitelist.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49e25e0f-bb51-4a5a-a1b3-13a4ddaa****</p>
          */
         @NameInMap("Uuid")
         public String uuid;

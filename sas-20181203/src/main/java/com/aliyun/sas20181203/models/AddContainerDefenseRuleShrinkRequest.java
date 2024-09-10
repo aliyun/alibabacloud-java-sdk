@@ -6,46 +6,68 @@ import com.aliyun.tea.*;
 public class AddContainerDefenseRuleShrinkRequest extends TeaModel {
     /**
      * <p>The description of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-proc-defense</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The action that is performed when the rule is hit. Valid values:</p>
-     * <br>
-     * <p>*   **1**: alert</p>
-     * <p>*   **2**: block</p>
+     * <ul>
+     * <li><strong>1</strong>: alert</li>
+     * <li><strong>2</strong>: block</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("RuleAction")
     public Integer ruleAction;
 
     /**
      * <p>The ID of the rule. You do not need to manually specify the ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>500018</p>
      */
     @NameInMap("RuleId")
     public Long ruleId;
 
     /**
      * <p>The name of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>auto-test-rule-lt9umq</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
 
     /**
      * <p>The switch of the rule. Valid values:</p>
-     * <br>
-     * <p>*   **0**: off</p>
-     * <p>*   **1**: on</p>
+     * <ul>
+     * <li><strong>0</strong>: off</li>
+     * <li><strong>1</strong>: on</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("RuleSwitch")
     public Integer ruleSwitch;
 
     /**
      * <p>The rule type. Valid values:</p>
-     * <br>
-     * <p>*   2: user-defined rules</p>
-     * <br>
-     * <p>> Only the value 2 is supported.</p>
+     * <ul>
+     * <li>2: user-defined rules</li>
+     * </ul>
+     * <blockquote>
+     * <p>Only the value 2 is supported.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("RuleType")
     public Integer ruleType;
@@ -134,17 +156,25 @@ public class AddContainerDefenseRuleShrinkRequest extends TeaModel {
     public static class AddContainerDefenseRuleShrinkRequestScope extends TeaModel {
         /**
          * <p>Specifies whether to include all namespaces. Valid values:</p>
-         * <br>
-         * <p>*   **0**: You can use the Namespaces parameter to specify the namespaces to include.</p>
-         * <p>*   **1**: All namespaces are included.</p>
+         * <ul>
+         * <li><strong>0</strong>: You can use the Namespaces parameter to specify the namespaces to include.</li>
+         * <li><strong>1</strong>: All namespaces are included.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AllNamespace")
         public Integer allNamespace;
 
         /**
          * <p>The ID of the cluster.</p>
-         * <br>
-         * <p>>  You can call the [DescribeGroupedContainerInstances](https://help.aliyun.com/document_detail/182997.html) operation to query the IDs of clusters.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>8e2***75b</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;

@@ -6,27 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeClusterInfoListRequest extends TeaModel {
     /**
      * <p>The operation value. The value specifies the ID of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c23551de6149343e8a54e69fbefe6****</p>
      */
     @NameInMap("Target")
     public String target;
 
     /**
      * <p>The dimension based on which you want to configure the feature. Valid values:</p>
-     * <br>
-     * <p>*   **Cluster**: the ID of the cluster</p>
-     * <br>
+     * <ul>
+     * <li><strong>Cluster</strong>: the ID of the cluster</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Cluster</p>
      */
     @NameInMap("TargetType")
     public String targetType;
 
     /**
      * <p>The type of the feature. Valid values:</p>
-     * <br>
-     * <p>*   **containerNetwork**: container network</p>
-     * <p>*   **interceptionSwitch**: cluster microsegmentation</p>
-     * <br>
+     * <ul>
+     * <li><strong>containerNetwork</strong>: container network</li>
+     * <li><strong>interceptionSwitch</strong>: cluster microsegmentation</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>containerNetwork</p>
      */
     @NameInMap("Type")
     public String type;

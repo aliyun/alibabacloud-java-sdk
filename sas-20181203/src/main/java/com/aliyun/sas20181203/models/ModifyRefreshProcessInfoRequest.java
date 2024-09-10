@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class ModifyRefreshProcessInfoRequest extends TeaModel {
     /**
      * <p>The UUID of the server.</p>
-     * <br>
-     * <p>> You can call the [DescribeCloudCenterInstances](https://help.aliyun.com/document_detail/141932.html) operation to query the UUIDs of servers.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>0f3b8f76-90e5-4455-a5aa-23ce30b5****</p>
      */
     @NameInMap("Uuid")
     public String uuid;

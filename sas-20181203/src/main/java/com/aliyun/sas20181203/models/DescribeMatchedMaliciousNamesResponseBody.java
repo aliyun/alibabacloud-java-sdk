@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeMatchedMaliciousNamesResponseBody extends TeaModel {
     /**
      * <p>The number of entries on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Count")
     public Integer count;
@@ -18,6 +21,9 @@ public class DescribeMatchedMaliciousNamesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C7CD1BE6-97A2-5524-A529-B55C63E55D59</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,12 +60,18 @@ public class DescribeMatchedMaliciousNamesResponseBody extends TeaModel {
     public static class DescribeMatchedMaliciousNamesResponseBodyData extends TeaModel {
         /**
          * <p>The display name of the malicious image sample type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>displayname</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The key of the malicious image sample type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         @NameInMap("Key")
         public String key;

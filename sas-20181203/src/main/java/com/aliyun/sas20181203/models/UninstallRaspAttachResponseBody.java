@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UninstallRaspAttachResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ADE57832-9666-511C-9A80-B87DE2E8****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

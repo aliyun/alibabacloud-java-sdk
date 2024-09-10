@@ -4,18 +4,34 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeModuleConfigResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("ModuleConfigList")
     public java.util.List<DescribeModuleConfigResponseBodyModuleConfigList> moduleConfigList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,21 +81,45 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeModuleConfigResponseBodyModuleConfigListItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>173</p>
+         */
         @NameInMap("GroupId")
         public Integer groupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>i-uf6435dn4t59b9av****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>inStanceName****</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>31.13.XX.XX</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a47e3713-ed22-4015-93a3-d88ebe6****</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 
@@ -139,12 +179,20 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeModuleConfigResponseBodyModuleConfigList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>timescan</p>
+         */
         @NameInMap("ConfigName")
         public String configName;
 
         @NameInMap("Items")
         public java.util.List<DescribeModuleConfigResponseBodyModuleConfigListItems> items;
 
+        /**
+         * <strong>example:</strong>
+         * <p>alihids</p>
+         */
         @NameInMap("ModuleName")
         public String moduleName;
 

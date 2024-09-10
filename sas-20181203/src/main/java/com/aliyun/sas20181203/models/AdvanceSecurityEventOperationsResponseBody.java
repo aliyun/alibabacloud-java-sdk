@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A4EB8B1C-1DEC-5E18-BCD0-XXXXXXXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,42 +43,56 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
     public static class AdvanceSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkField extends TeaModel {
         /**
          * <p>The alias of the field that is used in the whitelist rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>file path</p>
          */
         @NameInMap("FiledAliasName")
         public String filedAliasName;
 
         /**
          * <p>The field that is used in the whitelist rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>filePath</p>
          */
         @NameInMap("FiledName")
         public String filedName;
 
         /**
          * <p>The operation that is used in the whitelist rule. Valid values:</p>
-         * <br>
-         * <p>*   **contains**: contains</p>
-         * <p>*   **notContains**: does not contain</p>
-         * <p>*   **regex**: regular expression</p>
-         * <p>*   **strEqual**: equals</p>
-         * <p>*   **strNotEqual**: does not equal</p>
+         * <ul>
+         * <li><strong>contains</strong>: contains</li>
+         * <li><strong>notContains</strong>: does not contain</li>
+         * <li><strong>regex</strong>: regular expression</li>
+         * <li><strong>strEqual</strong>: equals</li>
+         * <li><strong>strNotEqual</strong>: does not equal</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>contains</p>
          */
         @NameInMap("MarkMisType")
         public String markMisType;
 
         /**
          * <p>The value of the field that is used in the whitelist rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-25 10:11:04</p>
          */
         @NameInMap("MarkMisValue")
         public String markMisValue;
 
         /**
          * <p>The operation that is used and can be modified in the whitelist rule. Valid values:</p>
-         * <br>
-         * <p>*   **contains**: contains</p>
-         * <p>*   **notContains**: does not contain</p>
-         * <p>*   **regex**: regular expression</p>
-         * <p>*   **strEqual**: equals</p>
-         * <p>*   **strNotEqual**: does not equal</p>
+         * <ul>
+         * <li><strong>contains</strong>: contains</li>
+         * <li><strong>notContains</strong>: does not contain</li>
+         * <li><strong>regex</strong>: regular expression</li>
+         * <li><strong>strEqual</strong>: equals</li>
+         * <li><strong>strNotEqual</strong>: does not equal</li>
+         * </ul>
          */
         @NameInMap("SupportedMisType")
         public java.util.List<String> supportedMisType;
@@ -130,30 +147,40 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
     public static class AdvanceSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkFieldsSource extends TeaModel {
         /**
          * <p>The alias of the field that can be used in the whitelist rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>file path</p>
          */
         @NameInMap("FiledAliasName")
         public String filedAliasName;
 
         /**
          * <p>The field that can be used in the whitelist rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>filePath</p>
          */
         @NameInMap("FiledName")
         public String filedName;
 
         /**
          * <p>The value of the field that can be used in the whitelist rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>contains</p>
          */
         @NameInMap("MarkMisValue")
         public String markMisValue;
 
         /**
          * <p>The operation that is supported in the whitelist rule. Valid values:</p>
-         * <br>
-         * <p>*   **contains**: contains</p>
-         * <p>*   **notContains**: does not contain</p>
-         * <p>*   **regex**: regular expression</p>
-         * <p>*   **strEqual**: equals</p>
-         * <p>*   **strNotEqual**: does not equal</p>
+         * <ul>
+         * <li><strong>contains</strong>: contains</li>
+         * <li><strong>notContains</strong>: does not contain</li>
+         * <li><strong>regex</strong>: regular expression</li>
+         * <li><strong>strEqual</strong>: equals</li>
+         * <li><strong>strNotEqual</strong>: does not equal</li>
+         * </ul>
          */
         @NameInMap("SupportedMisType")
         public java.util.List<String> supportedMisType;
@@ -199,7 +226,7 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
 
     public static class AdvanceSecurityEventOperationsResponseBodySecurityEventOperationsResponse extends TeaModel {
         /**
-         * <p>The object on which the operation is performed. This parameter is required when you set the OperationCode parameter to **advance_mark_mis_info**.</p>
+         * <p>The object on which the operation is performed. This parameter is required when you set the OperationCode parameter to <strong>advance_mark_mis_info</strong>.</p>
          */
         @NameInMap("MarkField")
         public java.util.List<AdvanceSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkField> markField;
@@ -212,32 +239,43 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
 
         /**
          * <p>The operation performed to handle the alert. Valid values:</p>
-         * <br>
-         * <p>*   **block_ip**: blocks the alert.</p>
-         * <p>*   **advance_mark_mis_info**: adds the alert to the whitelist.</p>
-         * <p>*   **ignore**: ignores the alert.</p>
-         * <p>*   **manual_handled**: marks the alert as manually handled.</p>
-         * <p>*   **kill_process**: terminates the malicious process.</p>
-         * <p>*   **cleanup**: performs in-depth virus detection and removal.</p>
-         * <p>*   **kill_and_quara**: performs virus detection and removal.</p>
-         * <p>*   **disable_malicious_defense**: turns off malicious defense behavior.</p>
-         * <p>*   **client_problem_check**: performs troubleshooting.</p>
-         * <p>*   **quara**: performs quarantine operations.</p>
+         * <ul>
+         * <li><strong>block_ip</strong>: blocks the alert.</li>
+         * <li><strong>advance_mark_mis_info</strong>: adds the alert to the whitelist.</li>
+         * <li><strong>ignore</strong>: ignores the alert.</li>
+         * <li><strong>manual_handled</strong>: marks the alert as manually handled.</li>
+         * <li><strong>kill_process</strong>: terminates the malicious process.</li>
+         * <li><strong>cleanup</strong>: performs in-depth virus detection and removal.</li>
+         * <li><strong>kill_and_quara</strong>: performs virus detection and removal.</li>
+         * <li><strong>disable_malicious_defense</strong>: turns off malicious defense behavior.</li>
+         * <li><strong>client_problem_check</strong>: performs troubleshooting.</li>
+         * <li><strong>quara</strong>: performs quarantine operations.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>advance_mark_mis_info</p>
          */
         @NameInMap("OperationCode")
         public String operationCode;
 
         /**
          * <p>The configuration of the operation performed to handle the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;subOperation\&quot;:\&quot;killByMd5andPath\&quot;}</p>
          */
         @NameInMap("OperationParams")
         public String operationParams;
 
         /**
          * <p>Indicates whether the operation can be performed.</p>
-         * <br>
-         * <p>*   **true**: The operation can be performed.</p>
-         * <p>*   **false**: The operation cannot be performed.</p>
+         * <ul>
+         * <li><strong>true</strong>: The operation can be performed.</li>
+         * <li><strong>false</strong>: The operation cannot be performed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("UserCanOperate")
         public Boolean userCanOperate;

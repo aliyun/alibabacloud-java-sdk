@@ -6,24 +6,30 @@ import com.aliyun.tea.*;
 public class ListAssetSelectionTargetRequest extends TeaModel {
     /**
      * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The globally unique identifier (GUID) of the asset.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8ccf9b01-2c64-4cba-8122-10115f29****</p>
      */
     @NameInMap("SelectionKey")
     public String selectionKey;

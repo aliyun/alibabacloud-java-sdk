@@ -5,40 +5,51 @@ import com.aliyun.tea.*;
 
 public class DescribeRestoreJobsRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
-     * <br>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The unique identifier of the server on which the restoration task is run. For example, you can use the IP address or the name of the server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.1.XX.XX</p>
      */
     @NameInMap("MachineRemark")
     public String machineRemark;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**.</p>
-     * <br>
+     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The status of the restoration task. Valid values:</p>
-     * <br>
-     * <p>*   **RUNNING**: The task is running.</p>
-     * <p>*   **COMPLETE**: The task is complete.</p>
-     * <p>*   **FAILED**: The task fails.</p>
-     * <p>*   **CANCELING**: The task is being canceled.</p>
-     * <p>*   **CANCELED**: The task is canceled.</p>
-     * <p>*   **PARTIAL_COMPLETE**: The task is partially successful.</p>
-     * <p>*   **CREATED**: The task is created but is not run.</p>
-     * <p>*   **EXPIRED**: The task is not updated.</p>
-     * <p>*   **QUEUED**: The task is waiting to be run.</p>
-     * <p>*   **CLIENT_DELETED**: The task fails because the anti-ransomware agent is uninstalled.</p>
+     * <ul>
+     * <li><strong>RUNNING</strong>: The task is running.</li>
+     * <li><strong>COMPLETE</strong>: The task is complete.</li>
+     * <li><strong>FAILED</strong>: The task fails.</li>
+     * <li><strong>CANCELING</strong>: The task is being canceled.</li>
+     * <li><strong>CANCELED</strong>: The task is canceled.</li>
+     * <li><strong>PARTIAL_COMPLETE</strong>: The task is partially successful.</li>
+     * <li><strong>CREATED</strong>: The task is created but is not run.</li>
+     * <li><strong>EXPIRED</strong>: The task is not updated.</li>
+     * <li><strong>QUEUED</strong>: The task is waiting to be run.</li>
+     * <li><strong>CLIENT_DELETED</strong>: The task fails because the anti-ransomware agent is uninstalled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>RUNNING</p>
      */
     @NameInMap("Status")
     public String status;

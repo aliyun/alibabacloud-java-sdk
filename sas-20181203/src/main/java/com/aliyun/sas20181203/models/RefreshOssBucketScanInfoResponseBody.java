@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RefreshOssBucketScanInfoResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CE290C1F-4B7D-5024-9D2F-E26D7B08****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -12,6 +12,9 @@ public class AddSasContainerWebDefenseRuleRequest extends TeaModel {
 
     /**
      * <p>The name of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-2020</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
@@ -40,71 +43,97 @@ public class AddSasContainerWebDefenseRuleRequest extends TeaModel {
     public static class AddSasContainerWebDefenseRuleRequestPathConfDTOList extends TeaModel {
         /**
          * <p>The backup path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/tmp/test</p>
          */
         @NameInMap("BackupPath")
         public String backupPath;
 
         /**
          * <p>The prevention mode. Valid values:</p>
-         * <br>
-         * <p>*   **block**</p>
-         * <p>*   **audit**</p>
+         * <ul>
+         * <li><strong>block</strong></li>
+         * <li><strong>audit</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>audit</p>
          */
         @NameInMap("DefenseMode")
         public String defenseMode;
 
         /**
          * <p>The path that you want to protect.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/test/</p>
          */
         @NameInMap("DefensePath")
         public String defensePath;
 
         /**
          * <p>The file that you want to exclude.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/test/aa</p>
          */
         @NameInMap("ExcludeFile")
         public String excludeFile;
 
         /**
          * <p>The path to the file that you want to exclude.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/test/tt</p>
          */
         @NameInMap("ExcludeFilePath")
         public String excludeFilePath;
 
         /**
          * <p>The type of the file that you want to exclude.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jsp</p>
          */
         @NameInMap("ExcludeFileType")
         public String excludeFileType;
 
         /**
          * <p>The protecion mode. Valid values:</p>
-         * <br>
-         * <p>*   **0**: basic mode (whitelist)</p>
-         * <p>*   **1**: complex mode (blacklist)</p>
-         * <br>
+         * <ul>
+         * <li><strong>0</strong>: basic mode (whitelist)</li>
+         * <li><strong>1</strong>: complex mode (blacklist)</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("GuardType")
         public Integer guardType;
 
         /**
          * <p>The file that you want to include.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/test/t1</p>
          */
         @NameInMap("IncludeFile")
         public String includeFile;
 
         /**
          * <p>The type of the file that you want to include.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>*.jsp</p>
          */
         @NameInMap("IncludeFileType")
         public String includeFileType;
 
         /**
          * <p>The processes that you want to add to the whitelist.</p>
-         * <br>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ProcessPathList")

@@ -6,16 +6,24 @@ import com.aliyun.tea.*;
 public class DeleteUniBackupPolicyRequest extends TeaModel {
     /**
      * <p>The ID of the anti-ransomware policy.</p>
-     * <br>
-     * <p>>  You can call the [DescribeUniBackupPolicies](~~DescribeUniBackupPolicies~~) operation to query the IDs of anti-ransomware policies. You must specify at least one of the PolicyId parameter and the **PolicyIds** parameter.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeUniBackupPolicies~~">DescribeUniBackupPolicies</a> operation to query the IDs of anti-ransomware policies. You must specify at least one of the PolicyId parameter and the <strong>PolicyIds</strong> parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("PolicyId")
     public Long policyId;
 
     /**
      * <p>The IDs of anti-ransomware policies.</p>
-     * <br>
-     * <p>>  You can call the [DescribeUniBackupPolicies](~~DescribeUniBackupPolicies~~) operation to query the IDs of anti-ransomware policies. You must specify at least one of the **PolicyId** parameter and the PolicyIds parameter.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeUniBackupPolicies~~">DescribeUniBackupPolicies</a> operation to query the IDs of anti-ransomware policies. You must specify at least one of the <strong>PolicyId</strong> parameter and the PolicyIds parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123,124</p>
      */
     @NameInMap("PolicyIds")
     public String policyIds;

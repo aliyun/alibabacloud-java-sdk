@@ -6,10 +6,13 @@ import com.aliyun.tea.*;
 public class DeleteSuspEventNodeRequest extends TeaModel {
     /**
      * <p>The ID of the description.</p>
-     * <br>
-     * <p>> You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to obtain the ID of the description by using the EventNotes field.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to obtain the ID of the description by using the EventNotes field.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("NoteId")
     public Long noteId;

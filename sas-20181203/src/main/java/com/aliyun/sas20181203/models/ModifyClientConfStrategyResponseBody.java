@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyClientConfStrategyResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9089D0AB-835F-5663-AB5E-4FF646BB****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

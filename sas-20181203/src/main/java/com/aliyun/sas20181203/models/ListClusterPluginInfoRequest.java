@@ -6,23 +6,29 @@ import com.aliyun.tea.*;
 public class ListClusterPluginInfoRequest extends TeaModel {
     /**
      * <p>The IDs of the clusters.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterIds")
     public java.util.List<String> clusterIds;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The name of the plug-in.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alihips</p>
      */
     @NameInMap("PluginName")
     public String pluginName;

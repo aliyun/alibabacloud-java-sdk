@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetModuleConfigResponseBody extends TeaModel {
     /**
      * <p>The response code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
@@ -24,12 +27,18 @@ public class GetModuleConfigResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>291B49F9-1685-4005-9D34-606B6F78****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,36 +91,54 @@ public class GetModuleConfigResponseBody extends TeaModel {
     public static class GetModuleConfigResponseBodyModuleConfigListItems extends TeaModel {
         /**
          * <p>The ID of the server group to which the server belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5562414</p>
          */
         @NameInMap("GroupId")
         public Integer groupId;
 
         /**
          * <p>The instance ID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-uf6435dn4t59b9av****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The instance name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>inStanceName****</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.2.X.X</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The region in which the server resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a47e3713-ed22-4015-93a3-d88ebe6****</p>
          */
         @NameInMap("Uuid")
         public String uuid;
@@ -174,6 +201,9 @@ public class GetModuleConfigResponseBody extends TeaModel {
     public static class GetModuleConfigResponseBodyModuleConfigList extends TeaModel {
         /**
          * <p>The name of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>timescan</p>
          */
         @NameInMap("ConfigName")
         public String configName;
@@ -186,6 +216,9 @@ public class GetModuleConfigResponseBody extends TeaModel {
 
         /**
          * <p>The name of the module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alihids</p>
          */
         @NameInMap("ModuleName")
         public String moduleName;
@@ -224,24 +257,36 @@ public class GetModuleConfigResponseBody extends TeaModel {
     public static class GetModuleConfigResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

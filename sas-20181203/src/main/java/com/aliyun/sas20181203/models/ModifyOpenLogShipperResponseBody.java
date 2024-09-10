@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyOpenLogShipperResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25EC270F-5783-4416-AD7C-1EDF063A039C</p>
      */
     @NameInMap("RequestId")
     public String requestId;

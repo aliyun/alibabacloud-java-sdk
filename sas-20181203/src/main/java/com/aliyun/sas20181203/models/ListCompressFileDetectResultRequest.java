@@ -6,19 +6,33 @@ import com.aliyun.tea.*;
 public class ListCompressFileDetectResultRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0a212417e65c26ff133cfff28f6c****</p>
+     */
     @NameInMap("HashKey")
     public String hashKey;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>27.9.XX.XX</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 

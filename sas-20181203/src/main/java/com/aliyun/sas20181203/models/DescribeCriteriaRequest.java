@@ -6,23 +6,34 @@ import com.aliyun.tea.*;
 public class DescribeCriteriaRequest extends TeaModel {
     /**
      * <p>The type of the asset. Valid values:</p>
-     * <br>
-     * <p>*   Set the value to **ecs**, which specifies to query all Elastic Compute Service (ECS) instances.</p>
+     * <ul>
+     * <li>Set the value to <strong>ecs</strong>, which specifies to query all Elastic Compute Service (ECS) instances.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
      */
     @NameInMap("MachineTypes")
     public String machineTypes;
 
     /**
-     * <p>Specifies whether the keyword that you specify for fuzzy search can be automatically matched. Default value: **false**. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <p>Specifies whether the keyword that you specify for fuzzy search can be automatically matched. Default value: <strong>false</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("SupportAutoTag")
     public Boolean supportAutoTag;
 
     /**
      * <p>The keyword that you specify for fuzzy search when you query the asset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>47.96</p>
      */
     @NameInMap("Value")
     public String value;

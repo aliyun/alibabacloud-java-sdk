@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class SubmitCheckRequest extends TeaModel {
     /**
      * <p>The check items that are scanned. Valid values:</p>
-     * <br>
-     * <p>*   **FULL**: All check items are scanned.</p>
-     * <p>*   **FULL**: Only the check items that are configured are scanned.</p>
+     * <ul>
+     * <li><strong>FULL</strong>: All check items are scanned.</li>
+     * <li><strong>FULL</strong>: Only the check items that are configured are scanned.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>POLICY</p>
      */
     @NameInMap("ScanRange")
     public String scanRange;

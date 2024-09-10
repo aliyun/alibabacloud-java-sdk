@@ -6,21 +6,27 @@ import com.aliyun.tea.*;
 public class ModifyVpcHoneyPotRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable or disable the honeypot. Valid values:</p>
-     * <br>
-     * <p>*   **disable**</p>
-     * <p>*   **enable**</p>
-     * <br>
+     * <ul>
+     * <li><strong>disable</strong></li>
+     * <li><strong>enable</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>disable</p>
      */
     @NameInMap("HoneyPotAction")
     public String honeyPotAction;
 
     /**
      * <p>The ID of the virtual private cloud (VPC) on which the honeypot is deployed.</p>
-     * <br>
-     * <p>>  You can call the [DescribeVpcHoneyPotList](~~DescribeVpcHoneyPotList~~) operation to query the IDs of VPCs.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeVpcHoneyPotList~~">DescribeVpcHoneyPotList</a> operation to query the IDs of VPCs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-d7o009q63fqy21r8u****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

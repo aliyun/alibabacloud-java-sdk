@@ -11,41 +11,60 @@ public class ListContainerDefenseRuleRequest extends TeaModel {
     public java.util.List<ListContainerDefenseRuleRequestConditions> conditions;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>Specifies whether to query system rules.</p>
-     * <br>
-     * <p>>  This parameter is deprecated.</p>
+     * <blockquote>
+     * <p> This parameter is deprecated.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("IsDefaultRule")
     public Integer isDefaultRule;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese.</p>
-     * <p>*   **en**: English.</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
-     * <br>
-     * <p>>  We recommend that you do not leave this parameter empty.</p>
+     * <blockquote>
+     * <p> We recommend that you do not leave this parameter empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The rule type. Valid values:</p>
-     * <br>
-     * <p>*   1: system rule</p>
-     * <p>*   2: user-defined rule</p>
+     * <ul>
+     * <li>1: system rule</li>
+     * <li>2: user-defined rule</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("RuleType")
     public Integer ruleType;
@@ -106,14 +125,21 @@ public class ListContainerDefenseRuleRequest extends TeaModel {
     public static class ListContainerDefenseRuleRequestConditions extends TeaModel {
         /**
          * <p>The condition type. Valid values:</p>
-         * <br>
-         * <p>*   **ruleName**: the rule name</p>
+         * <ul>
+         * <li><strong>ruleName</strong>: the rule name</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ruleName</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The rule content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>auto-test-rule-**</p>
          */
         @NameInMap("Value")
         public String value;

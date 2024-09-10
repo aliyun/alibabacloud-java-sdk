@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListInterceptionTargetPageRequest extends TeaModel {
     /**
      * <p>The name of the application to which the network object belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>frontend</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -24,14 +30,21 @@ public class ListInterceptionTargetPageRequest extends TeaModel {
 
     /**
      * <p>The namespace to which the network object belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
-     * <br>
-     * <p>> We recommend that you do not leave this parameter empty.</p>
+     * <blockquote>
+     * <p>We recommend that you do not leave this parameter empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -44,14 +57,21 @@ public class ListInterceptionTargetPageRequest extends TeaModel {
 
     /**
      * <p>The name of the network object.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>source-test-obj-0****</p>
      */
     @NameInMap("TargetName")
     public String targetName;
 
     /**
      * <p>The type of the network object. Valid values:</p>
-     * <br>
-     * <p>*   IMAGE</p>
+     * <ul>
+     * <li>IMAGE</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>IMAGE</p>
      */
     @NameInMap("TargetType")
     public String targetType;

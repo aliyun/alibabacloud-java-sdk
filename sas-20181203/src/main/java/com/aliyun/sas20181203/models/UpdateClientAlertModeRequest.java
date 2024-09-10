@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class UpdateClientAlertModeRequest extends TeaModel {
     /**
      * <p>The protection mode. Valid values:</p>
-     * <br>
-     * <p>*   **strict**: The strict mode. False positives may be generated. We recommend that you enable this mode during major events.</p>
-     * <p>*   **balance**: The balanced mode. More risks can be detected with less false positives in this mode.</p>
+     * <ul>
+     * <li><strong>strict</strong>: The strict mode. False positives may be generated. We recommend that you enable this mode during major events.</li>
+     * <li><strong>balance</strong>: The balanced mode. More risks can be detected with less false positives in this mode.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>balance</p>
      */
     @NameInMap("Mode")
     public String mode;

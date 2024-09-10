@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class InstallCloudMonitorResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the request fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IllegalParam</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>400</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>There was an error with your request.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F92AFB96-FACC-57E7-928E-678D04B94CAE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Success")
     public Boolean success;

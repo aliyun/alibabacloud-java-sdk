@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateOssScanConfigResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FFA14F61-4E2F-54C7-9276-81C60BAC****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

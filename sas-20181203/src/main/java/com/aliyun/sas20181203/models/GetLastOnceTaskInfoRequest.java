@@ -6,30 +6,39 @@ import com.aliyun.tea.*;
 public class GetLastOnceTaskInfoRequest extends TeaModel {
     /**
      * <p>The source of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>console_batch</p>
      */
     @NameInMap("Source")
     public String source;
 
     /**
      * <p>The name of the task. Valid values:</p>
-     * <br>
-     * <p>*   **CLIENT_PROBLEM_CHECK**: client diagnosis task</p>
-     * <p>*   **CLIENT_DEV_OPS**: O\\&M task of Cloud Assistant</p>
-     * <p>*   **ASSETS_COLLECTION**: asset collection task</p>
-     * <br>
+     * <ul>
+     * <li><strong>CLIENT_PROBLEM_CHECK</strong>: client diagnosis task</li>
+     * <li><strong>CLIENT_DEV_OPS</strong>: O\&amp;M task of Cloud Assistant</li>
+     * <li><strong>ASSETS_COLLECTION</strong>: asset collection task</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ASSETS_COLLECTION</p>
      */
     @NameInMap("TaskName")
     public String taskName;
 
     /**
      * <p>The type of the task. Valid values:</p>
-     * <br>
-     * <p>*   **CLIENT_PROBLEM_CHECK**: client diagnosis task</p>
-     * <p>*   **CLIENT_DEV_OPS**: O\\&M task of Cloud Assistant</p>
-     * <p>*   **ASSETS_COLLECTION**: asset collection task</p>
-     * <br>
+     * <ul>
+     * <li><strong>CLIENT_PROBLEM_CHECK</strong>: client diagnosis task</li>
+     * <li><strong>CLIENT_DEV_OPS</strong>: O\&amp;M task of Cloud Assistant</li>
+     * <li><strong>ASSETS_COLLECTION</strong>: asset collection task</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ASSETS_COLLECTION</p>
      */
     @NameInMap("TaskType")
     public String taskType;

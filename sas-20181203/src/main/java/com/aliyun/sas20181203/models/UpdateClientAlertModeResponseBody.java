@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class UpdateClientAlertModeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Data")
     public Boolean data;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>259E3E77-CA6D-5407-84A5-3A1C98D12F14</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class InstallPmAgentResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D49B5134-9511-5736-B447-BEE0AC66****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

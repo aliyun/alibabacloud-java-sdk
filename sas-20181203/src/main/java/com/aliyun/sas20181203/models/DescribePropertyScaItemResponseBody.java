@@ -18,6 +18,9 @@ public class DescribePropertyScaItemResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3F4236AB-7070-538D-85EB-98EBFE6C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +57,36 @@ public class DescribePropertyScaItemResponseBody extends TeaModel {
     public static class DescribePropertyScaItemResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -118,32 +133,45 @@ public class DescribePropertyScaItemResponseBody extends TeaModel {
     public static class DescribePropertyScaItemResponseBodyPropertyItems extends TeaModel {
         /**
          * <p>The type of the middleware, database, or web service. Valid values:</p>
-         * <br>
-         * <p>*   **system_service**: system service</p>
-         * <p>*   **software_library**: software library</p>
-         * <p>*   **docker_component**: container component</p>
-         * <p>*   **database**: database</p>
-         * <p>*   **web_container**: web container</p>
-         * <p>*   **jar**: JAR package</p>
-         * <p>*   **web_framework**: web framework</p>
+         * <ul>
+         * <li><strong>system_service</strong>: system service</li>
+         * <li><strong>software_library</strong>: software library</li>
+         * <li><strong>docker_component</strong>: container component</li>
+         * <li><strong>database</strong>: database</li>
+         * <li><strong>web_container</strong>: web container</li>
+         * <li><strong>jar</strong>: JAR package</li>
+         * <li><strong>web_framework</strong>: web framework</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>docker_component</p>
          */
         @NameInMap("BizType")
         public String bizType;
 
         /**
          * <p>The number of servers on which the middleware is run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The name of the middleware.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kubelet</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The display name of the middleware type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Docker Component</p>
          */
         @NameInMap("TypeDisplay")
         public String typeDisplay;

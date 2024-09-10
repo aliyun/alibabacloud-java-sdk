@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class InstallUniBackupAgentResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>53ACA55D-0325-5056-A72D-D0EC0B9C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

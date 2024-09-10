@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class HandleSimilarSecurityEventsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A3653911-33A6-5268-8B91-7690471F7AA1</p>
      */
     @NameInMap("RequestId")
     public String requestId;

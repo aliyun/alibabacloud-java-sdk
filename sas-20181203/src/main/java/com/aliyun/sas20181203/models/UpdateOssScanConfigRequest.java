@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateOssScanConfigRequest extends TeaModel {
     /**
      * <p>Whether to match all file prefixes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AllKeyPrefix")
     public Boolean allKeyPrefix;
@@ -18,33 +21,52 @@ public class UpdateOssScanConfigRequest extends TeaModel {
 
     /**
      * <p>The maximum number of files for decompression. The minimum value is 1, and the maximum value is 1000. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("DecompressMaxFileCount")
     public Integer decompressMaxFileCount;
 
     /**
      * <p>The maximum level of decompression when dealing with nested compressed files with multiple levels. The minimum value is 1, and the maximum value is 5. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("DecompressMaxLayer")
     public Integer decompressMaxLayer;
 
+    @NameInMap("DecryptionList")
+    public java.util.List<String> decryptionList;
+
     /**
      * <p>Specifies whether to enable the bucket check policy. Valid values:</p>
-     * <br>
-     * <p>*   **1**: enables the bucket check policy.</p>
-     * <p>*   **0**: disables the bucket check policy.</p>
+     * <ul>
+     * <li><strong>1</strong>: enables the bucket check policy.</li>
+     * <li><strong>0</strong>: disables the bucket check policy.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Enable")
     public Integer enable;
 
     /**
      * <p>The end time of the check. Specify the time in the HH:mm:ss format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>00:00:01</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The ID of the policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>65778</p>
      */
     @NameInMap("Id")
     public String id;
@@ -61,8 +83,14 @@ public class UpdateOssScanConfigRequest extends TeaModel {
     @NameInMap("KeySuffixList")
     public java.util.List<String> keySuffixList;
 
+    @NameInMap("LastModifiedStartTime")
+    public Long lastModifiedStartTime;
+
     /**
      * <p>The name of the policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nacos****</p>
      */
     @NameInMap("Name")
     public String name;
@@ -75,6 +103,9 @@ public class UpdateOssScanConfigRequest extends TeaModel {
 
     /**
      * <p>The start time of the check. Specify the time in the HH:mm:ss format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>00:00:00</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -116,6 +147,14 @@ public class UpdateOssScanConfigRequest extends TeaModel {
         return this.decompressMaxLayer;
     }
 
+    public UpdateOssScanConfigRequest setDecryptionList(java.util.List<String> decryptionList) {
+        this.decryptionList = decryptionList;
+        return this;
+    }
+    public java.util.List<String> getDecryptionList() {
+        return this.decryptionList;
+    }
+
     public UpdateOssScanConfigRequest setEnable(Integer enable) {
         this.enable = enable;
         return this;
@@ -154,6 +193,14 @@ public class UpdateOssScanConfigRequest extends TeaModel {
     }
     public java.util.List<String> getKeySuffixList() {
         return this.keySuffixList;
+    }
+
+    public UpdateOssScanConfigRequest setLastModifiedStartTime(Long lastModifiedStartTime) {
+        this.lastModifiedStartTime = lastModifiedStartTime;
+        return this;
+    }
+    public Long getLastModifiedStartTime() {
+        return this.lastModifiedStartTime;
     }
 
     public UpdateOssScanConfigRequest setName(String name) {

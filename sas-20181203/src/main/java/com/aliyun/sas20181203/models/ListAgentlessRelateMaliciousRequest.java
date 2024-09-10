@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class ListAgentlessRelateMaliciousRequest extends TeaModel {
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The ID of the event.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80****</p>
      */
     @NameInMap("EventId")
     public Long eventId;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public String pageSize;

@@ -6,18 +6,21 @@ import com.aliyun.tea.*;
 public class DescribePropertyScheduleConfigRequest extends TeaModel {
     /**
      * <p>The type of the asset fingerprints. Valid values:</p>
-     * <br>
-     * <p>*   **scheduler_port_period**: listening port</p>
-     * <p>*   **scheduler_process_period**: running process</p>
-     * <p>*   **scheduler_account_period**: account</p>
-     * <p>*   **scheduler_software_period**: software</p>
-     * <p>*   **scheduler_cron_period**: scheduled task</p>
-     * <p>*   **scheduler_sca_period**: middleware</p>
-     * <p>*   **scheduler_autorun_period**: startup item</p>
-     * <p>*   **scheduler_lkm_period**: kernel module</p>
-     * <p>*   **scheduler_sca_proxy_period**: website</p>
-     * <br>
+     * <ul>
+     * <li><strong>scheduler_port_period</strong>: listening port</li>
+     * <li><strong>scheduler_process_period</strong>: running process</li>
+     * <li><strong>scheduler_account_period</strong>: account</li>
+     * <li><strong>scheduler_software_period</strong>: software</li>
+     * <li><strong>scheduler_cron_period</strong>: scheduled task</li>
+     * <li><strong>scheduler_sca_period</strong>: middleware</li>
+     * <li><strong>scheduler_autorun_period</strong>: startup item</li>
+     * <li><strong>scheduler_lkm_period</strong>: kernel module</li>
+     * <li><strong>scheduler_sca_proxy_period</strong>: website</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>scheduler_autorun_period</p>
      */
     @NameInMap("Type")
     public String type;

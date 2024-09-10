@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class OperateSwitchStatusResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8AE9D3DA-406B-51FA-AA1C-89440C1459BF</p>
      */
     @NameInMap("RequestId")
     public String requestId;

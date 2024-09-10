@@ -9,6 +9,9 @@ public class DescribeBruteForceSummaryRequest extends TeaModel {
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>203.119.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

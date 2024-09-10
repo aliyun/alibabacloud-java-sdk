@@ -6,62 +6,79 @@ import com.aliyun.tea.*;
 public class ModifyInterceptionTargetRequest extends TeaModel {
     /**
      * <p>The name of the application.</p>
-     * <br>
-     * <p>> You can call the [DescribeContainerTags](~~DescribeContainerTags~~) operation to obtain the value of this parameter.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain the value of this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>yasintt-daemonst</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
      * <p>An array that consists of images.</p>
-     * <br>
-     * <p>> You can call the [DescribeContainerTags](~~DescribeContainerTags~~) operation to obtain the value of this parameter.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain the value of this parameter.</p>
+     * </blockquote>
      */
     @NameInMap("ImageList")
     public java.util.List<String> imageList;
 
     /**
      * <p>The namespace.</p>
-     * <br>
-     * <p>> You can call the [DescribeContainerTags](~~DescribeContainerTags~~) operation to obtain the value of this parameter.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain the value of this parameter.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo4</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>An array that consists of tags.</p>
-     * <br>
-     * <p>> You can call the [DescribeContainerTags](~~DescribeContainerTags~~) operation to obtain the value of this parameter.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain the value of this parameter.</p>
+     * </blockquote>
      */
     @NameInMap("TagList")
     public java.util.List<String> tagList;
 
     /**
      * <p>The ID of the network object.</p>
-     * <br>
-     * <p>> You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to obtain the value of this parameter.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to obtain the value of this parameter.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>400913</p>
      */
     @NameInMap("TargetId")
     public Long targetId;
 
     /**
      * <p>The name.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test001</p>
      */
     @NameInMap("TargetName")
     public String targetName;
 
     /**
      * <p>The object type. Valid values:</p>
-     * <br>
-     * <p>*   **IMAGE**</p>
-     * <br>
+     * <ul>
+     * <li><strong>IMAGE</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IMAGE</p>
      */
     @NameInMap("TargetType")
     public String targetType;

@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeFixUsedCountResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CB1CE824-7F80-546D-8AF8-4A5209F9B698</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of vulnerabilities that are fixed by the vulnerability fixing feature.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("UsedCount")
     public Integer usedCount;
 
     /**
      * <p>The number of vulnerabilities that are fixed by the vulnerability fixing feature in China.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("UsedCountCn")
     public Integer usedCountCn;
 
     /**
      * <p>The number of vulnerabilities that are fixed by the vulnerability fixing feature outside China.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("UsedCountSg")
     public Integer usedCountSg;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyInterceptionRuleResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6961B151-B43C-533B-8B2E-1D3151D7F5B2</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeWebLockProcessBlockStatisticsResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -18,18 +21,27 @@ public class DescribeWebLockProcessBlockStatisticsResponseBody extends TeaModel 
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BE120DAB-F4E7-4C53-ADC3-A97578ABF384</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of processes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,12 +94,18 @@ public class DescribeWebLockProcessBlockStatisticsResponseBody extends TeaModel 
     public static class DescribeWebLockProcessBlockStatisticsResponseBodyList extends TeaModel {
         /**
          * <p>The number of processes that are returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cron</p>
          */
         @NameInMap("Process")
         public String process;

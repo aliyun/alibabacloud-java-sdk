@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class ModifyAccessKeyLeakDealRequest extends TeaModel {
     /**
      * <p>The ID of the AccessKey pair leak.</p>
-     * <br>
-     * <p>> You can call the [DescribeAccesskeyLeakList](~~DescribeAccesskeyLeakList~~) operation to query the ID. You must specify at least one of the Id and **IdList** parameters.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeAccesskeyLeakList~~">DescribeAccesskeyLeakList</a> operation to query the ID. You must specify at least one of the Id and <strong>IdList</strong> parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("Id")
     public Long id;
@@ -20,18 +24,24 @@ public class ModifyAccessKeyLeakDealRequest extends TeaModel {
 
     /**
      * <p>The remarks that are added.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>disabled.</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
      * <p>The method to handle the AccessKey pair leak. Valid values:</p>
-     * <br>
-     * <p>*   **manual**: manually handle</p>
-     * <p>*   **disable**: disable</p>
-     * <p>*   **add-whitelist**: add to the whitelist</p>
-     * <br>
+     * <ul>
+     * <li><strong>manual</strong>: manually handle</li>
+     * <li><strong>disable</strong>: disable</li>
+     * <li><strong>add-whitelist</strong>: add to the whitelist</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>disable</p>
      */
     @NameInMap("Type")
     public String type;

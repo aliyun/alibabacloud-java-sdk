@@ -18,6 +18,9 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D81DD78E-E006-5C65-A171-C8CB09XXXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,64 +57,94 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
     public static class DescribeCustomBlockInstancesResponseBodyInstanceList extends TeaModel {
         /**
          * <p>The status of the host network extension. Valid values:</p>
-         * <br>
-         * <p>*   **true**: online</p>
-         * <p>*   **false**: offline</p>
+         * <ul>
+         * <li><strong>true</strong>: online</li>
+         * <li><strong>false</strong>: offline</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AliNetOnline")
         public Boolean aliNetOnline;
 
         /**
          * <p>The blocking type. Valid values:</p>
-         * <br>
-         * <p>*   **group**: security group</p>
-         * <p>*   **alinet**: host network extension</p>
+         * <ul>
+         * <li><strong>group</strong>: security group</li>
+         * <li><strong>alinet</strong>: host network extension</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>group</p>
          */
         @NameInMap("BlockType")
         public String blockType;
 
         /**
          * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliNetNotOnline</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
          * <p>The name of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myInstance</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The public IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>116.62.121.1xx</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.xx</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>Indicates whether the rule is enabled for the server.</p>
-         * <br>
-         * <p>*   **2**: enabling failed</p>
-         * <p>*   **1**: enabled</p>
-         * <p>*   **0**: disabled</p>
+         * <ul>
+         * <li><strong>2</strong>: enabling failed</li>
+         * <li><strong>1</strong>: enabled</li>
+         * <li><strong>0</strong>: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The information that is returned after brute-force attacks are blocked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;aliUid&quot;:*******,&quot;groupId&quot;:&quot;sg-xxxx&quot;,&quot;groupName&quot;:&quot;Sas_Malicious_Ip_Security_Group&quot;,&quot;groupType&quot;:&quot;normal&quot;,&quot;instanceId&quot;:&quot;i-xxxx&quot;,&quot;regionId&quot;:&quot;cn-shenzhen&quot;,&quot;vpcId&quot;:&quot;vpc-xxxxxxxx&quot;}</p>
          */
         @NameInMap("SuccessInfo")
         public String successInfo;
 
         /**
          * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f2d6e901-1004-4ca8-9dae-53ec04a9****</p>
          */
         @NameInMap("Uuid")
         public String uuid;
@@ -198,24 +231,36 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
     public static class DescribeCustomBlockInstancesResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries per page. Default value: **20**.</p>
+         * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of servers to which the defense rule is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

@@ -6,28 +6,38 @@ import com.aliyun.tea.*;
 public class ListVirusScanMachineRequest extends TeaModel {
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The information about the server that you want to query. The value can be the name or the IP address of the server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.1****</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
      * <p>The UUID of the server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7cc91747-2845-40d4-bb69-c077597f****</p>
      */
     @NameInMap("Uuid")
     public String uuid;

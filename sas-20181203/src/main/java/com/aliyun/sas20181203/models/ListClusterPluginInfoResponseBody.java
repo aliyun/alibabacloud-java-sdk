@@ -12,6 +12,9 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0B48AB3C-84FC-424D-A01D-B9270EF46038</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,83 +43,123 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
     public static class ListClusterPluginInfoResponseBodyDataNodePluginInfoList extends TeaModel {
         /**
          * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kenerl not support</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
          * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kenerl not support</p>
          */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
         /**
          * <p>Indicates whether the plug-in is installed. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Installed")
         public Boolean installed;
 
         /**
          * <p>The public IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.100.XXX.XX</p>
          */
         @NameInMap("MachineInternetIp")
         public String machineInternetIp;
 
         /**
          * <p>The private IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.XXX.XXX.XX</p>
          */
         @NameInMap("MachineIntranetIp")
         public String machineIntranetIp;
 
         /**
          * <p>The name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>npznas05</p>
          */
         @NameInMap("MachineName")
         public String machineName;
 
         /**
          * <p>The type of the instance. Valid values include:</p>
-         * <br>
-         * <p>*   **ecs**: Elastic Compute Service (ECS) instance</p>
-         * <p>*   **slb**: Server Load Balancer (SLB) instance</p>
+         * <ul>
+         * <li><strong>ecs</strong>: Elastic Compute Service (ECS) instance</li>
+         * <li><strong>slb</strong>: Server Load Balancer (SLB) instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         @NameInMap("MachineType")
         public Long machineType;
 
         /**
          * <p>Indicates whether the Security Center agent is online. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
-         * <br>
-         * <p>>  If the Security Center agent of the server is offline, Security Center does not protect the server.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> If the Security Center agent of the server is offline, Security Center does not protect the server.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Online")
         public Boolean online;
 
         /**
          * <p>The name of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alihips</p>
          */
         @NameInMap("PluginName")
         public String pluginName;
 
         /**
          * <p>The version of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.3.1</p>
          */
         @NameInMap("PluginVersion")
         public String pluginVersion;
 
         /**
          * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bc563d2b-2a3d-411b-8bbe-d75b8d3c****</p>
          */
         @NameInMap("Uuid")
         public String uuid;
 
         /**
          * <p>The instance ID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tpp-cn-2r42njq4y001</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
@@ -227,22 +270,32 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
     public static class ListClusterPluginInfoResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c8ca91e0907d94efaba7fb0827eb9****</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lmftest</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
 
         /**
          * <p>The status of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   1: normal</p>
-         * <p>*   2: abnormal</p>
-         * <p>*   3: offline</p>
+         * <ul>
+         * <li>1: normal</li>
+         * <li>2: abnormal</li>
+         * <li>3: offline</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ABNORMAL</p>
          */
         @NameInMap("ClusterStatus")
         public String clusterStatus;

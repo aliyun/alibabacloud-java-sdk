@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeClusterVulStatisticsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0B48AB3C-84FC-424D-A01D-B9270EF46038</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class DescribeClusterVulStatisticsResponseBody extends TeaModel {
     public static class DescribeClusterVulStatisticsResponseBodyVulStat extends TeaModel {
         /**
          * <p>The number of high-risk vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13</p>
          */
         @NameInMap("AsapCount")
         public String asapCount;
 
         /**
          * <p>The number of medium-risk vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21</p>
          */
         @NameInMap("LaterCount")
         public String laterCount;
 
         /**
          * <p>The number of low-risk vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("NntfCount")
         public String nntfCount;

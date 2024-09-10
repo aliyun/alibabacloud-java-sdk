@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeEventOnStageResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24A20733-10A0-4AF6-BE6B-E332241XXXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,10 +43,11 @@ public class DescribeEventOnStageResponseBody extends TeaModel {
     public static class DescribeEventOnStageResponseBodySecurityEventStageResponse extends TeaModel {
         /**
          * <p>The platform that is supported by the feature of container threat detection. Valid values:</p>
-         * <br>
-         * <p>*   **container**</p>
-         * <p>*   **linux**</p>
-         * <p>*   **windows**</p>
+         * <ul>
+         * <li><strong>container</strong></li>
+         * <li><strong>linux</strong></li>
+         * <li><strong>windows</strong></li>
+         * </ul>
          */
         @NameInMap("SecurityEventOnStag")
         public java.util.Map<String, ?> securityEventOnStag;

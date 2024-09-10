@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGroupedInstancesResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the information about the assets.</p>
+     * <p>The information about the assets.</p>
      */
     @NameInMap("Instances")
     public java.util.List<DescribeGroupedInstancesResponseBodyInstances> instances;
@@ -18,6 +18,9 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>52A3AEE6-114A-499D-8990-4BA9B27FE0AA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,61 +57,98 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
     public static class DescribeGroupedInstancesResponseBodyInstances extends TeaModel {
         /**
          * <p>The number of assets on which high-risk vulnerabilities are detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         @NameInMap("AsapVulInstanceCount")
         public Long asapVulInstanceCount;
 
         /**
          * <p>The number of assets that are protected by the specified edition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>205</p>
          */
         @NameInMap("AuthVersionCheckCount")
         public Integer authVersionCheckCount;
 
         /**
          * <p>The name of the server group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testA</p>
          */
         @NameInMap("FieldAliasName")
         public String fieldAliasName;
 
         /**
          * <p>The type of the server group. Valid values:</p>
-         * <br>
-         * <p>*   **0**: the default group</p>
-         * <p>*   **1**: other group</p>
+         * <ul>
+         * <li><strong>0</strong>: the default group</li>
+         * <li><strong>1</strong>: other group</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("GroupFlag")
         public Integer groupFlag;
 
+        /**
+         * <p>The number of cores of assets in the specified asset type.</p>
+         * <blockquote>
+         * <p> If the <strong>MachineTypes</strong> request parameter is not specified, the value of the InstanceCoreCount parameter indicates the total number of cores of assets within your account.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>610</p>
+         */
         @NameInMap("InstanceCoreCount")
         public Long instanceCoreCount;
 
         /**
          * <p>The total number of assets that belong to the specified type.</p>
-         * <br>
-         * <p>>  If the **MachineTypes** request parameter is not specified, the value of the InstanceCount parameter is the total number of your assets.</p>
+         * <blockquote>
+         * <p> If the <strong>MachineTypes</strong> request parameter is not specified, the value of the InstanceCount parameter is the total number of your assets.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>205</p>
          */
         @NameInMap("InstanceCount")
         public String instanceCount;
 
         /**
          * <p>The operating system type of the asset. Valid values:</p>
-         * <br>
-         * <p>* **windows**</p>
-         * <p>* **linux**</p>
-         * <br>
-         * <p>> This parameter is returned only when Lang is set to zh.</p>
+         * <ul>
+         * <li><strong>windows</strong></li>
+         * <li><strong>linux</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is returned only when Lang is set to zh.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>windows</p>
          */
         @NameInMap("Os")
         public String os;
 
         /**
          * <p>The number of assets that are at risk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172</p>
          */
         @NameInMap("RiskInstanceCount")
         public String riskInstanceCount;
 
         /**
          * <p>The number of assets that are not protected by Security Center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         @NameInMap("UnProtectedInstanceCount")
         public String unProtectedInstanceCount;
@@ -195,24 +235,36 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
     public static class DescribeGroupedInstancesResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page. Default value: **20**.</p>
+         * <p>The number of entries returned per page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

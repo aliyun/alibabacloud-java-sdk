@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetOpaClusterBaseLineListResponseBody extends TeaModel {
     /**
-     * <p>The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,21 +21,31 @@ public class GetOpaClusterBaseLineListResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C2F2A020-1CAB-5F52-8CAF-B2ACDDFAC247</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,24 +98,36 @@ public class GetOpaClusterBaseLineListResponseBody extends TeaModel {
     public static class GetOpaClusterBaseLineListResponseBodyData extends TeaModel {
         /**
          * <p>The alias of the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Make sure there are no duplicate usernames or UIDs</p>
          */
         @NameInMap("Alias")
         public String alias;
 
         /**
          * <p>The key of the baseline type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>identification</p>
          */
         @NameInMap("ClassKey")
         public String classKey;
 
         /**
          * <p>The key of the name for the baseline check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>duplicate_uid</p>
          */
         @NameInMap("ItemKey")
         public String itemKey;
 
         /**
          * <p>The key of the name for the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>identification</p>
          */
         @NameInMap("NameKey")
         public String nameKey;

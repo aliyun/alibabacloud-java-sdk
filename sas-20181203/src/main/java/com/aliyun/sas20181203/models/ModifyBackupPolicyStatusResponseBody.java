@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyBackupPolicyStatusResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E342452B-4401-5F74-9A1B-D24479851173</p>
      */
     @NameInMap("RequestId")
     public String requestId;

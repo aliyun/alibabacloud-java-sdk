@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,21 +21,31 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ADE57832-9666-511C-9A80-B87DE2E8****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,15 +98,22 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
     public static class DescribeImageEventOperationConditionResponseBodyDataOperationsConditions extends TeaModel {
         /**
          * <p>The keyword of the condition. Valid values:</p>
-         * <br>
-         * <p>*   **MD5**</p>
-         * <p>*   **PATH**</p>
+         * <ul>
+         * <li><strong>MD5</strong></li>
+         * <li><strong>PATH</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MD5</p>
          */
         @NameInMap("ConditionKey")
         public String conditionKey;
 
         /**
          * <p>The name of the condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MD5</p>
          */
         @NameInMap("ConditionName")
         public String conditionName;
@@ -144,14 +164,21 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
 
         /**
          * <p>The operation code.</p>
-         * <br>
-         * <p>*   Only **whitelist** may be returned, which indicates that the alert event is added to the whitelist.</p>
+         * <ul>
+         * <li>Only <strong>whitelist</strong> may be returned, which indicates that the alert event is added to the whitelist.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>whitelist</p>
          */
         @NameInMap("OperationCode")
         public String operationCode;
 
         /**
          * <p>The name of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>whitelist</p>
          */
         @NameInMap("OperationName")
         public String operationName;
@@ -190,8 +217,12 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
     public static class DescribeImageEventOperationConditionResponseBodyData extends TeaModel {
         /**
          * <p>The alert type.</p>
-         * <br>
-         * <p>*   Only **sensitiveFile** may be returned.</p>
+         * <ul>
+         * <li>Only <strong>sensitiveFile</strong> may be returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>sensitiveFile</p>
          */
         @NameInMap("EventType")
         public String eventType;

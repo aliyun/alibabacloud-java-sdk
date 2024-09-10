@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteInstallCodeResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D65AADFC-1D20-5A6A-8F6A-9FA53C0DC1F8</p>
      */
     @NameInMap("RequestId")
     public String requestId;

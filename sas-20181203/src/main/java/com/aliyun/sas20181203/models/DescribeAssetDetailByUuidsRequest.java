@@ -5,25 +5,36 @@ import com.aliyun.tea.*;
 
 public class DescribeAssetDetailByUuidsRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>资源目录成员账号主账号ID。</p>
-     * <p>>调用[DescribeMonitorAccounts](~~DescribeMonitorAccounts~~)接口可以获取该参数。</p>
+     * <blockquote>
+     * <p>调用<a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a>接口可以获取该参数。</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>127608589417****</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
     /**
      * <p>The UUIDs of the ECS instances. Separate multiple UUIDs with commas (,).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0687b17f-2a36-4e5****,0687b17f-2a36-4e****</p>
      */
     @NameInMap("Uuids")
     public String uuids;

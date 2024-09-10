@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyNoticeConfigResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5989D067-621F-51E2-A636-D94D1388****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class DeleteInterceptionTargetResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D81DD78E-E006-5C65-A171-C8CB09XXXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the network objects are removed. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The network objects are removed.</p>
-     * <p>*   **false**: The network objects fail to be removed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The network objects are removed.</li>
+     * <li><strong>false</strong>: The network objects fail to be removed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Result")
     public Boolean result;

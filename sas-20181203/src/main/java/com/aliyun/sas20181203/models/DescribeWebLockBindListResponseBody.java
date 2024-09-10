@@ -12,24 +12,36 @@ public class DescribeWebLockBindListResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The number of entries returned per page. Default value: 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D9354C1A-D709-4873-9AAE-41513327B247</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of servers that have web tamper proofing enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11409</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,93 +94,136 @@ public class DescribeWebLockBindListResponseBody extends TeaModel {
     public static class DescribeWebLockBindListResponseBodyBindList extends TeaModel {
         /**
          * <p>The number of alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("AuditCount")
         public String auditCount;
 
         /**
          * <p>The number of blocked tampering events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("BlockCount")
         public String blockCount;
 
         /**
          * <p>The number of protected directories.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("DirCount")
         public String dirCount;
 
         /**
          * <p>The name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The public IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54.169.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>The operating system that the server runs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Linux</p>
          */
         @NameInMap("Os")
         public String os;
 
         /**
          * <p>The percentage of the starting progress of web tamper proofing. Valid values: 0 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99</p>
          */
         @NameInMap("Percent")
         public Integer percent;
 
         /**
          * <p>The error code for web tamper proofing. Valid values:</p>
-         * <br>
-         * <p>*   **2001**: The Security Center agent is offline.</p>
-         * <p>*   **9999**: The connection timed out.</p>
+         * <ul>
+         * <li><strong>2001</strong>: The Security Center agent is offline.</li>
+         * <li><strong>9999</strong>: The connection timed out.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2001</p>
          */
         @NameInMap("ServiceCode")
         public String serviceCode;
 
         /**
          * <p>The exception details of web tamper proofing. Valid values:</p>
-         * <br>
-         * <p>*   **client offline**: The Security Center agent is offline.</p>
-         * <p>*   **timeout**: The connection timed out.</p>
+         * <ul>
+         * <li><strong>client offline</strong>: The Security Center agent is offline.</li>
+         * <li><strong>timeout</strong>: The connection timed out.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>client offline</p>
          */
         @NameInMap("ServiceDetail")
         public String serviceDetail;
 
         /**
          * <p>The status of web tamper proofing on the server. Valid values:</p>
-         * <br>
-         * <p>*   **stop**: Web tamper proofing is disabled.</p>
-         * <p>*   **initializing**: Web tamper proofing is being enabled.</p>
-         * <p>*   **exception**: Web tamper proofing is not running as expected.</p>
-         * <p>*   **running**: Web tamper proofing is running.</p>
-         * <p>*   **closing**: Web tamper proofing is being disabled.</p>
+         * <ul>
+         * <li><strong>stop</strong>: Web tamper proofing is disabled.</li>
+         * <li><strong>initializing</strong>: Web tamper proofing is being enabled.</li>
+         * <li><strong>exception</strong>: Web tamper proofing is not running as expected.</li>
+         * <li><strong>running</strong>: Web tamper proofing is running.</li>
+         * <li><strong>closing</strong>: Web tamper proofing is being disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>stop</p>
          */
         @NameInMap("ServiceStatus")
         public String serviceStatus;
 
         /**
          * <p>The protection status of the server. Valid values:</p>
-         * <br>
-         * <p>*   **on**: The server is protected.</p>
-         * <p>*   **off**: The server is not protected.</p>
+         * <ul>
+         * <li><strong>on</strong>: The server is protected.</li>
+         * <li><strong>off</strong>: The server is not protected.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>inet-12345****</p>
          */
         @NameInMap("Uuid")
         public String uuid;

@@ -12,6 +12,9 @@ public class DescribeRiskListCheckResultResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3BFB4989-A108-46A4-954E-FF7EF02D1078</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeRiskListCheckResultResponseBody extends TeaModel {
     public static class DescribeRiskListCheckResultResponseBodyList extends TeaModel {
         /**
          * <p>The instance ID of the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1e8t4q15sr3****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The total number of risk items detected in the current cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("riskCount")
         public Long riskCount;

@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ValidateHcWarningsResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>722C4F88-7867-4E7B-8ADE-7451053</p>
      */
     @NameInMap("RequestId")
     public String requestId;

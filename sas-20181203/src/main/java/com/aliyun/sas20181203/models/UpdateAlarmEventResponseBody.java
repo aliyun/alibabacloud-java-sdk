@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateAlarmEventResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AC1E0E53-DEF3-5D96-B170-19130EA****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

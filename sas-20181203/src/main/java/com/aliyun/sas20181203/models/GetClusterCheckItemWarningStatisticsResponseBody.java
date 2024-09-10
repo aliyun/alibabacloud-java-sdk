@@ -12,6 +12,9 @@ public class GetClusterCheckItemWarningStatisticsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C2B285A3-3493-5C5F-A224-4CCE4BFC****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class GetClusterCheckItemWarningStatisticsResponseBody extends TeaModel {
     public static class GetClusterCheckItemWarningStatisticsResponseBodyData extends TeaModel {
         /**
          * <p>The number of high-risk items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("HighWarningCount")
         public Integer highWarningCount;
 
         /**
          * <p>The number of low-risk items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("LowWarningCount")
         public Integer lowWarningCount;
 
         /**
          * <p>The number of medium-risk items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("MediumWarningCount")
         public Integer mediumWarningCount;

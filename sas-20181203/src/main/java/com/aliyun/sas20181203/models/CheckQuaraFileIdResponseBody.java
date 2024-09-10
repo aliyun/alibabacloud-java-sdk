@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class CheckQuaraFileIdResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the ID of the quarantined file is valid. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The ID of the quarantined file is valid.</p>
-     * <p>*   **false**: The ID of the quarantined file is invalid.</p>
+     * <ul>
+     * <li><strong>true</strong>: The ID of the quarantined file is valid.</li>
+     * <li><strong>false</strong>: The ID of the quarantined file is invalid.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Data")
     public Boolean data;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>
      */
     @NameInMap("RequestId")
     public String requestId;

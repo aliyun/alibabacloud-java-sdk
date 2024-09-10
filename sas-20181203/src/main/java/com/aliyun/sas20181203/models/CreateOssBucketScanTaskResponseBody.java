@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateOssBucketScanTaskResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BBD75EC2-2F4F-5A7B-AA53-18724DC8****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

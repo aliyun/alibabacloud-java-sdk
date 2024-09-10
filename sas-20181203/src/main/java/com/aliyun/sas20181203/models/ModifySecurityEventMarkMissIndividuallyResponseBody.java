@@ -6,42 +6,62 @@ import com.aliyun.tea.*;
 public class ModifySecurityEventMarkMissIndividuallyResponseBody extends TeaModel {
     /**
      * <p>The status code of the alert event.</p>
-     * <br>
-     * <p>*   **200**: indicates that the alert event is successfully handled.</p>
-     * <p>*   Other codes: indicates that the alert event fails to be handled.</p>
+     * <ul>
+     * <li><strong>200</strong>: indicates that the alert event is successfully handled.</li>
+     * <li>Other codes: indicates that the alert event fails to be handled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A37B852F-E346-5FF2-82BD-D1F1DXXXXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The time that was consumed to process the request. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TimeCost")
     public Long timeCost;

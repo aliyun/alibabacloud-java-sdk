@@ -6,20 +6,25 @@ import com.aliyun.tea.*;
 public class DescribeClientConfStrategyRequest extends TeaModel {
     /**
      * <p>The tag that is added to the server.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>machineResource</p>
      */
     @NameInMap("Tag")
     public String tag;
 
     /**
      * <p>The value of the tag. Valid values:</p>
-     * <br>
-     * <p>*   major</p>
-     * <p>*   advanced</p>
-     * <p>*   basic</p>
-     * <br>
+     * <ul>
+     * <li>major</li>
+     * <li>advanced</li>
+     * <li>basic</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>major</p>
      */
     @NameInMap("TagValue")
     public String tagValue;

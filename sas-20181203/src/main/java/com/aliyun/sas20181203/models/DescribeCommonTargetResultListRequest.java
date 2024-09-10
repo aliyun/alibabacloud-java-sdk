@@ -6,19 +6,28 @@ import com.aliyun.tea.*;
 public class DescribeCommonTargetResultListRequest extends TeaModel {
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>113.57.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;
 
     /**
      * <p>The type of the configuration item. Valid values:</p>
-     * <br>
-     * <p>*   **webshell_timescan**: webshell detection and removal</p>
-     * <p>*   **aliscriptengine**: in-depth detection engine</p>
-     * <p>*   **alidetect**: installation scope of local file detection</p>
-     * <p>*   **alidetect-scan-enable**: detection scope of local file detection</p>
-     * <br>
+     * <ul>
+     * <li><strong>webshell_timescan</strong>: webshell detection and removal</li>
+     * <li><strong>aliscriptengine</strong>: in-depth detection engine</li>
+     * <li><strong>alidetect</strong>: installation scope of local file detection</li>
+     * <li><strong>alidetect-scan-enable</strong>: detection scope of local file detection</li>
+     * </ul>
+     * <blockquote>
+     * <p> You can call the <a href="~~ListClientUserDefineRules~~">ListClientUserDefineRules</a> and <a href="~~ListSystemClientRules~~">ListSystemClientRules</a> operations to obtain more types of custom and system configuration items.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>webshell_timescan</p>
      */
     @NameInMap("Type")
     public String type;

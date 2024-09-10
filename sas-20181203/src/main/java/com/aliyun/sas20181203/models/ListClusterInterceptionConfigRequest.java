@@ -6,37 +6,54 @@ import com.aliyun.tea.*;
 public class ListClusterInterceptionConfigRequest extends TeaModel {
     /**
      * <p>The status of the container firewall feature. Valid values:</p>
-     * <br>
-     * <p>*   **-1**: unknown</p>
-     * <p>*   **0**: abnormal</p>
-     * <p>*   **1**: normal</p>
-     * <p>*   **2**: normal to be confirmed</p>
+     * <ul>
+     * <li><strong>-1</strong>: unknown</li>
+     * <li><strong>0</strong>: abnormal</li>
+     * <li><strong>1</strong>: normal</li>
+     * <li><strong>2</strong>: normal to be confirmed</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ClusterCNNFStatus")
     public Integer clusterCNNFStatus;
 
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
-     * <p>> You can call the [DescribeContainerInstances](~~DescribeContainerInstances~~) operation to query the IDs of clusters.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeContainerInstances~~">DescribeContainerInstances</a> operation to query the IDs of clusters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>c22143730ab6e40b09ec7c1c51d4d****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The name of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sas</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
      * <p>The number of the page to return. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The number of entries to return on each page. Default value: 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

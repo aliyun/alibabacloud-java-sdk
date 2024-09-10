@@ -5,44 +5,61 @@ import com.aliyun.tea.*;
 
 public class ModifyLogMetaStatusRequest extends TeaModel {
     /**
-     * <p>The ID of the request source. Set the value to **sas**.</p>
+     * <p>The ID of the request source. Set the value to <strong>sas</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sas</p>
      */
     @NameInMap("From")
     public String from;
 
     /**
      * <p>The name of the dedicated Logstore in which logs are stored.</p>
-     * <br>
-     * <p>>  You can call the [DescribeLogMeta](~~DescribeLogMeta~~) operation to query the names of Logstores.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeLogMeta~~">DescribeLogMeta</a> operation to query the names of Logstores.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aegis-log-login</p>
      */
     @NameInMap("LogStore")
     public String logStore;
 
     /**
      * <p>The name of the project.</p>
-     * <br>
-     * <p>>  You can call the [DescribeLogMeta](~~DescribeLogMeta~~) operation to query the names of projects.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeLogMeta~~">DescribeLogMeta</a> operation to query the names of projects.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>aegis-log</p>
      */
     @NameInMap("Project")
     public String project;
 
     /**
      * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
-     * <br>
-     * <p>>  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1232428423234****</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
     /**
      * <p>The status of the log analysis feature. Valid values:</p>
-     * <br>
-     * <p>*   **enabled**</p>
-     * <p>*   **disabled**</p>
-     * <br>
+     * <ul>
+     * <li><strong>enabled</strong></li>
+     * <li><strong>disabled</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>disabled</p>
      */
     @NameInMap("Status")
     public String status;

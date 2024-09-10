@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CreateInterceptionTargetRequest extends TeaModel {
     /**
      * <p>The name of the application to which the network object belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>frontend</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
      * <p>The cluster ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc20a1024011c44b6a8710d6f8b****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The cluster name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sas-test-cnnf</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
@@ -30,8 +39,10 @@ public class CreateInterceptionTargetRequest extends TeaModel {
 
     /**
      * <p>The namespace to which the network object belongs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -44,18 +55,23 @@ public class CreateInterceptionTargetRequest extends TeaModel {
 
     /**
      * <p>The name of the object to be blocked.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("TargetName")
     public String targetName;
 
     /**
      * <p>The object type. Valid value:</p>
-     * <br>
-     * <p>*   **IMAGE**</p>
-     * <br>
+     * <ul>
+     * <li><strong>IMAGE</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IMAGE</p>
      */
     @NameInMap("TargetType")
     public String targetType;

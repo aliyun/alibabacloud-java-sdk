@@ -5,42 +5,59 @@ import com.aliyun.tea.*;
 
 public class ModifyContainerPluginRuleRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The action mode of the rule. Valid values:</p>
-     * <br>
-     * <p>*   **1**: alerts</p>
-     * <p>*   **2**: block</p>
+     * <ul>
+     * <li><strong>1</strong>: alerts</li>
+     * <li><strong>2</strong>: block</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Mode")
     public Integer mode;
 
     /**
      * <p>The ID of the rule.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100012</p>
      */
     @NameInMap("RuleId")
     public Integer ruleId;
 
     /**
      * <p>The name of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
 
     /**
      * <p>The type of the rule. Valid values:</p>
-     * <br>
-     * <p>*   **0**: user-defined rule</p>
-     * <p>*   **1**: built-in rule</p>
+     * <ul>
+     * <li><strong>0</strong>: user-defined rule</li>
+     * <li><strong>1</strong>: built-in rule</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("RuleType")
     public Integer ruleType;

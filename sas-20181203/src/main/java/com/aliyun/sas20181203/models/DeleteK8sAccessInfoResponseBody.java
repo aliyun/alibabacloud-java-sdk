@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class DeleteK8sAccessInfoResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid value:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Data")
     public Boolean data;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C5338DE5-5D80-51A1-B330-98300AFB80E9</p>
      */
     @NameInMap("RequestId")
     public String requestId;

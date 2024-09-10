@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class GetAppNetworkRequest extends TeaModel {
     /**
      * <p>The ID of the cluster to which the container belongs.</p>
-     * <br>
-     * <p>> You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cf77xxx</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The end timestamp of the query. Unit: milliseconds.</p>
-     * <br>
-     * <p>> The days between the start timestamp and the end timestamp cannot exceed **seven** days.</p>
+     * <blockquote>
+     * <p>The days between the start timestamp and the end timestamp cannot exceed <strong>seven</strong> days.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1650470399999</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>The start timestamp of the query. Unit: milliseconds.</p>
-     * <br>
-     * <p>> The days between the start timestamp and the end timestamp cannot exceed **seven** days.</p>
+     * <blockquote>
+     * <p>The days between the start timestamp and the end timestamp cannot exceed <strong>seven</strong> days.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1649260800000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

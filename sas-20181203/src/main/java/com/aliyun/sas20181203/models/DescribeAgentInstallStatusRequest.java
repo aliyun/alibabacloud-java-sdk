@@ -6,25 +6,35 @@ import com.aliyun.tea.*;
 public class DescribeAgentInstallStatusRequest extends TeaModel {
     /**
      * <p>The language of the content within the request and response. Valid value:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>59.46.XXX.XXX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;
 
     /**
      * <p>The UUIDs of servers. Separate multiple UUIDs with commas (,).</p>
-     * <br>
-     * <p>> You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>inet-eae014a7-16c4-4d4e-9f03-5208f4dc****,inet-eae047da-1e5a-41ce-828d-47606e9b****</p>
      */
     @NameInMap("Uuids")
     public String uuids;

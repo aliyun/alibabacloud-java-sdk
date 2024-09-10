@@ -6,64 +6,83 @@ import com.aliyun.tea.*;
 public class CreateHoneypotRequest extends TeaModel {
     /**
      * <p>The ID of the honeypot image.</p>
-     * <br>
-     * <p>> You can call the [ListAvailableHoneypot](~~ListAvailableHoneypot~~) operation to query the IDs of images from the **HoneypotImageId** response parameter.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="~~ListAvailableHoneypot~~">ListAvailableHoneypot</a> operation to query the IDs of images from the <strong>HoneypotImageId</strong> response parameter.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sha256:ebc4c102ac407d53733c2373e8888a733ddce86f163ccbe7492ae1cbf26****</p>
      */
     @NameInMap("HoneypotImageId")
     public String honeypotImageId;
 
     /**
      * <p>The name of the honeypot image.</p>
-     * <br>
-     * <p>> You can call the [ListAvailableHoneypot](~~ListAvailableHoneypot~~) operation to query the names of images from the **HoneypotImageName** response parameter.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="~~ListAvailableHoneypot~~">ListAvailableHoneypot</a> operation to query the names of images from the <strong>HoneypotImageName</strong> response parameter.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HoneyPotImageName</p>
      */
     @NameInMap("HoneypotImageName")
     public String honeypotImageName;
 
     /**
      * <p>The custom name of the honeypot.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ruoyi</p>
      */
     @NameInMap("HoneypotName")
     public String honeypotName;
 
     /**
      * <p>The custom configuration of the honeypot in the JSON format. The value contains the following fields:</p>
-     * <br>
-     * <p>*   **trojan_git**: Git-specific Defense. Valid values:</p>
-     * <br>
-     * <p>    *   **zip**: Git Source Code Package</p>
-     * <p>    *   **web**: Git Directory Leak</p>
-     * <p>    *   **close**: Disabled</p>
-     * <br>
-     * <p>*   **trojan_git_addr**: Git Trojan Address.</p>
-     * <br>
-     * <p>*   **trojan_git.zip**: Git Trojan.</p>
-     * <br>
-     * <p>*   **burp**: Burp-specific Defense. Valid values:</p>
-     * <br>
-     * <p>    *   **open**: Enable</p>
-     * <p>    *   **close**: Disable</p>
-     * <br>
-     * <p>*   **portrait_option**: Source Tracing Configuration. Valid values:</p>
-     * <br>
-     * <p>    *   **false**: Disable</p>
-     * <p>    *   **true**: Enable</p>
+     * <ul>
+     * <li><p><strong>trojan_git</strong>: Git-specific Defense. Valid values:</p>
+     * <ul>
+     * <li><strong>zip</strong>: Git Source Code Package</li>
+     * <li><strong>web</strong>: Git Directory Leak</li>
+     * <li><strong>close</strong>: Disabled</li>
+     * </ul>
+     * </li>
+     * <li><p><strong>trojan_git_addr</strong>: Git Trojan Address.</p>
+     * </li>
+     * <li><p><strong>trojan_git.zip</strong>: Git Trojan.</p>
+     * </li>
+     * <li><p><strong>burp</strong>: Burp-specific Defense. Valid values:</p>
+     * <ul>
+     * <li><strong>open</strong>: Enable</li>
+     * <li><strong>close</strong>: Disable</li>
+     * </ul>
+     * </li>
+     * <li><p><strong>portrait_option</strong>: Source Tracing Configuration. Valid values:</p>
+     * <ul>
+     * <li><strong>false</strong>: Disable</li>
+     * <li><strong>true</strong>: Enable</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;trojan_git\&quot;:\&quot;close\&quot;,\&quot;burp\&quot;:\&quot;close\&quot;,\&quot;portrait_option\&quot;:\&quot;false\&quot;}</p>
      */
     @NameInMap("Meta")
     public String meta;
 
     /**
      * <p>The ID of the management node.</p>
-     * <br>
-     * <p>> You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to query the IDs of management nodes.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to query the IDs of management nodes.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a882e590-b87b-45a6-87b9-d0a3e5a0****</p>
      */
     @NameInMap("NodeId")
     public String nodeId;

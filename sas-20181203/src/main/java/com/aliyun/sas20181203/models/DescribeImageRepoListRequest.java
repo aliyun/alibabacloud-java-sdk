@@ -5,75 +5,107 @@ import com.aliyun.tea.*;
 
 public class DescribeImageRepoListRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The name of the field that is used for the query. Valid values:</p>
-     * <br>
-     * <p>*   **repoName**: the name of the image repository</p>
-     * <p>*   **repoNamespace**: the namespace to which the image repository belongs</p>
-     * <br>
-     * <p>>  This parameter takes effect only when the **OperateType** parameter is set to **other**.</p>
+     * <ul>
+     * <li><strong>repoName</strong>: the name of the image repository</li>
+     * <li><strong>repoNamespace</strong>: the namespace to which the image repository belongs</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter takes effect only when the <strong>OperateType</strong> parameter is set to <strong>other</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>repoName</p>
      */
     @NameInMap("FieldName")
     public String fieldName;
 
     /**
      * <p>The value of the field that is used for the query.</p>
-     * <br>
-     * <p>>  This parameter takes effect only when the **OperateType** parameter is set to **other**.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only when the <strong>OperateType</strong> parameter is set to <strong>other</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>zeus</p>
      */
     @NameInMap("FieldValue")
     public String fieldValue;
 
     /**
      * <p>The type of the operation. Valid values:</p>
-     * <br>
-     * <p>*   **count**: counts statistics</p>
-     * <p>*   **other**: others</p>
+     * <ul>
+     * <li><strong>count</strong>: counts statistics</li>
+     * <li><strong>other</strong>: others</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>count</p>
      */
     @NameInMap("OperateType")
     public String operateType;
 
     /**
      * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
-     * <br>
-     * <p>>  We recommend that you do not leave this parameter empty.</p>
+     * <blockquote>
+     * <p> We recommend that you do not leave this parameter empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The name of the image repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>script7</p>
      */
     @NameInMap("RepoName")
     public String repoName;
 
     /**
      * <p>The namespace to which the image repository belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>libssh2</p>
      */
     @NameInMap("RepoNamespace")
     public String repoNamespace;
 
     /**
      * <p>The condition by which the feature is applied. Valid values:</p>
-     * <br>
-     * <p>*   **image_repo**: the ID of the image repository</p>
-     * <br>
+     * <ul>
+     * <li><strong>image_repo</strong>: the ID of the image repository</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>image_repo</p>
      */
     @NameInMap("TargetType")
     public String targetType;
 
     /**
      * <p>The type of the feature. Valid values:</p>
-     * <br>
-     * <p>*   **image_repo**: image repository protection</p>
-     * <br>
+     * <ul>
+     * <li><strong>image_repo</strong>: image repository protection</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>image_repo</p>
      */
     @NameInMap("Type")
     public String type;

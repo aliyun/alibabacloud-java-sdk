@@ -6,20 +6,30 @@ import com.aliyun.tea.*;
 public class UpdateJenkinsImageRegistryPersistenceDayRequest extends TeaModel {
     /**
      * <p>The retention period. Unit: days.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PersistenceDay")
     public Integer persistenceDay;
 
     /**
      * <p>The ID of the image repository.</p>
-     * <br>
-     * <p>> You can call the [PageImageRegistry](~~PageImageRegistry~~) operation to query the IDs of image repositories.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~PageImageRegistry~~">PageImageRegistry</a> operation to query the IDs of image repositories.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>25363</p>
      */
     @NameInMap("RegistryId")
     public Long registryId;
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>106.11.XXX.XXX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

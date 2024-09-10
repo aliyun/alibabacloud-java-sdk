@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class GetHoneypotEventTrendRequest extends TeaModel {
     /**
      * <p>End time, timestamp format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1687831329169</p>
      */
     @NameInMap("EndTimeStamp")
     public Long endTimeStamp;
 
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
@@ -27,14 +34,19 @@ public class GetHoneypotEventTrendRequest extends TeaModel {
 
     /**
      * <p>The source IP address of the attack.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.91.254.***</p>
      */
     @NameInMap("SrcIp")
     public String srcIp;
 
     /**
      * <p>Start time, timestamp format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1683516557757</p>
      */
     @NameInMap("StartTimeStamp")
     public Long startTimeStamp;

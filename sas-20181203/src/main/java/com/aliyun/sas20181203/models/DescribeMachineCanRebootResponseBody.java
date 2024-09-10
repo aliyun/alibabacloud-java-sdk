@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class DescribeMachineCanRebootResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the server can be restarted. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("CanReboot")
     public Boolean canReboot;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>79CFF74D-E967-5407-8A78-EE03B925FDAA</p>
      */
     @NameInMap("RequestId")
     public String requestId;

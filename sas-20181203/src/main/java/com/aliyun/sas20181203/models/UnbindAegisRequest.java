@@ -6,10 +6,13 @@ import com.aliyun.tea.*;
 public class UnbindAegisRequest extends TeaModel {
     /**
      * <p>The UUID of the server that you want to unbind. Separate multiple UUIDs with commas (,).</p>
-     * <br>
-     * <p>> You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4fe8e1cd-3c37-4851-b9de-124da32c****</p>
      */
     @NameInMap("Uuids")
     public String uuids;

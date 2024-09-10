@@ -18,6 +18,9 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6AEE7412-0065-1135-B790-AE2C38BA68FB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +57,36 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
     public static class DescribePropertySoftwareDetailResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries per page. Default value: **10**.</p>
+         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -118,72 +133,108 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
     public static class DescribePropertySoftwareDetailResponseBodyPropertys extends TeaModel {
         /**
          * <p>The timestamp generated when the last asset fingerprint collection is performed. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649149566000</p>
          */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
         /**
          * <p>The time at which the software is installed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-07 10:54:49</p>
          */
         @NameInMap("InstallTime")
         public String installTime;
 
         /**
          * <p>The timestamp generated when the software is installed. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649066826000</p>
          */
         @NameInMap("InstallTimeDt")
         public Long installTimeDt;
 
         /**
          * <p>The ID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-hp35tftuh52wbp1g****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hc-host-****</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The public IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.104.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>The IP addresses of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The name of the software.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aaa_base</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The installation path of the software.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/etc/test</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
          * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>162eb349-c2d9-4f8b-805c-75b43d4c****</p>
          */
         @NameInMap("Uuid")
         public String uuid;
 
         /**
          * <p>The version of the software.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.10.0</p>
          */
         @NameInMap("Version")
         public String version;

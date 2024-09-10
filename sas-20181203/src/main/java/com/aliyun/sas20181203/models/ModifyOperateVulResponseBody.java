@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyOperateVulResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DFE4F166-1AC9-4FAC-A4E4-F0608AD705A6</p>
      */
     @NameInMap("RequestId")
     public String requestId;

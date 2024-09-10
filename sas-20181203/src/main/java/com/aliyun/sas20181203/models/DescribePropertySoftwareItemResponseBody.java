@@ -18,6 +18,9 @@ public class DescribePropertySoftwareItemResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3A85CFCF-05C8-451A-9E41-C0D5E96BA407</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +57,36 @@ public class DescribePropertySoftwareItemResponseBody extends TeaModel {
     public static class DescribePropertySoftwareItemResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5037</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -118,12 +133,18 @@ public class DescribePropertySoftwareItemResponseBody extends TeaModel {
     public static class DescribePropertySoftwareItemResponseBodyPropertyItems extends TeaModel {
         /**
          * <p>The number of servers on which the software is installed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The name of the software.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aaa_base</p>
          */
         @NameInMap("Name")
         public String name;

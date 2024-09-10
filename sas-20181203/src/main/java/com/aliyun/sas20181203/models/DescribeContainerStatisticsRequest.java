@@ -6,10 +6,13 @@ import com.aliyun.tea.*;
 public class DescribeContainerStatisticsRequest extends TeaModel {
     /**
      * <p>The ID of the specified container cluster.</p>
-     * <br>
-     * <p>> You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to obtain the cluster ID.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain the cluster ID.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Cccfd68c474454665ace07efce924****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;

@@ -6,56 +6,84 @@ import com.aliyun.tea.*;
 public class DescribePropertyPortDetailRequest extends TeaModel {
     /**
      * <p>The IP address bound to the port.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.0.XX.XX</p>
      */
     @NameInMap("BindIp")
     public String bindIp;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>Specifies whether fuzzy search by port number is supported. If you want to use fuzzy search, set the parameter to **1**. If you set the parameter to a different value or leave the parameter empty, fuzzy search is not supported.</p>
+     * <p>Specifies whether fuzzy search by port number is supported. If you want to use fuzzy search, set the parameter to <strong>1</strong>. If you set the parameter to a different value or leave the parameter empty, fuzzy search is not supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Extend")
     public String extend;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The listening port of the server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22</p>
      */
     @NameInMap("Port")
     public String port;
 
     /**
      * <p>The name of the server process.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sshd</p>
      */
     @NameInMap("ProcName")
     public String procName;
 
     /**
      * <p>The name or IP address of the server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.XX.XX</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
      * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
-     * <br>
-     * <p>>  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>127608589417****</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
     /**
      * <p>The UUID of the server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50d213b4-3a35-427a-b8a5-04b0c7e1****</p>
      */
     @NameInMap("Uuid")
     public String uuid;

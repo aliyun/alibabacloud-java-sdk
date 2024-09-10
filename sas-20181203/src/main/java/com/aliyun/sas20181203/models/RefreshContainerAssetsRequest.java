@@ -6,11 +6,14 @@ import com.aliyun.tea.*;
 public class RefreshContainerAssetsRequest extends TeaModel {
     /**
      * <p>The type of the container asset whose statistics you want to refresh. Valid values:</p>
-     * <br>
-     * <p>*   **IMAGE**</p>
-     * <p>*   **CONTAINER**</p>
-     * <br>
+     * <ul>
+     * <li><strong>IMAGE</strong></li>
+     * <li><strong>CONTAINER</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IMAGE</p>
      */
     @NameInMap("AssetType")
     public String assetType;

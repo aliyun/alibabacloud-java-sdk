@@ -6,89 +6,120 @@ import com.aliyun.tea.*;
 public class HandleSecurityEventsRequest extends TeaModel {
     /**
      * <p>Specifies whether to add multiple alert events to the whitelist at a time. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("MarkBatch")
     public String markBatch;
 
     /**
      * <p>The whitelist rule. The value of this parameter is in the JSON format and contains the following fields:</p>
-     * <br>
-     * <p>*   **field**: The field based on which alert events are added to the whitelist.</p>
-     * <br>
-     * <p>*   **operate**: The method that is used to added alert events to the whitelist. Valid values:</p>
-     * <br>
-     * <p>    *   **notContains**: does not contain</p>
-     * <p>    *   **contains**: contains</p>
-     * <p>    *   **regex**: matches by regular expression</p>
-     * <p>    *   **strEqual**: equals</p>
-     * <p>    *   **strNotEqual**: does not equal</p>
-     * <br>
-     * <p>*   **fieldValue**: The value of the field based on which alert events are added to the whitelist.</p>
-     * <br>
-     * <p>*   **uuid**: The application scope of the whitelist rule. Valid values:</p>
-     * <br>
-     * <p>    *   **part**: the current asset</p>
-     * <p>    *   **ALL**: all assets</p>
-     * <br>
-     * <p>>  You can call the [DescribeSecurityEventOperations](~~DescribeSecurityEventOperations~~) operation to obtain the fields that you can specify for **field**.</p>
+     * <ul>
+     * <li><p><strong>field</strong>: The field based on which alert events are added to the whitelist.</p>
+     * </li>
+     * <li><p><strong>operate</strong>: The method that is used to added alert events to the whitelist. Valid values:</p>
+     * <ul>
+     * <li><strong>notContains</strong>: does not contain</li>
+     * <li><strong>contains</strong>: contains</li>
+     * <li><strong>regex</strong>: matches by regular expression</li>
+     * <li><strong>strEqual</strong>: equals</li>
+     * <li><strong>strNotEqual</strong>: does not equal</li>
+     * </ul>
+     * </li>
+     * <li><p><strong>fieldValue</strong>: The value of the field based on which alert events are added to the whitelist.</p>
+     * </li>
+     * <li><p><strong>uuid</strong>: The application scope of the whitelist rule. Valid values:</p>
+     * <ul>
+     * <li><strong>part</strong>: the current asset</li>
+     * <li><strong>ALL</strong>: all assets</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeSecurityEventOperations~~">DescribeSecurityEventOperations</a> operation to obtain the fields that you can specify for <strong>field</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;uuid&quot;:&quot;part&quot;,&quot;field&quot;:&quot;gmtModified&quot;,&quot;operate&quot;:&quot;contains&quot;,&quot;fieldValue&quot;:&quot;asd&quot;},{&quot;uuid&quot;:&quot;part&quot;,&quot;field&quot;:&quot;loginUser&quot;,&quot;operate&quot;:&quot;contains&quot;,&quot;fieldValue&quot;:&quot;vff&quot;}]</p>
      */
     @NameInMap("MarkMissParam")
     public String markMissParam;
 
     /**
      * <p>The operation that you want to perform to handle the alert events. Valid values:</p>
-     * <br>
-     * <p>*   **block_ip**: blocks the source IP address.</p>
-     * <p>*   **advance_mark_mis_info**: adds the alert events to the whitelist.</p>
-     * <p>*   **ignore**: ignores the alert events.</p>
-     * <p>*   **manual_handled**: marks the alert events as manually handled.</p>
-     * <p>*   **kill_process**: terminates the malicious process.</p>
-     * <p>*   **cleanup**: performs in-depth virus detection and removal.</p>
-     * <p>*   **kill_and_quara**: kills the malicious processes and quarantines the source file.</p>
-     * <p>*   **disable_malicious_defense**: stops the container on which the alerting files or processes exist.</p>
-     * <p>*   **client_problem_check**: performs troubleshooting.</p>
-     * <p>*   **quara**: quarantines the source file of the malicious process.</p>
-     * <br>
+     * <ul>
+     * <li><strong>block_ip</strong>: blocks the source IP address.</li>
+     * <li><strong>advance_mark_mis_info</strong>: adds the alert events to the whitelist.</li>
+     * <li><strong>ignore</strong>: ignores the alert events.</li>
+     * <li><strong>manual_handled</strong>: marks the alert events as manually handled.</li>
+     * <li><strong>kill_process</strong>: terminates the malicious process.</li>
+     * <li><strong>cleanup</strong>: performs in-depth virus detection and removal.</li>
+     * <li><strong>kill_and_quara</strong>: kills the malicious processes and quarantines the source file.</li>
+     * <li><strong>disable_malicious_defense</strong>: stops the container on which the alerting files or processes exist.</li>
+     * <li><strong>client_problem_check</strong>: performs troubleshooting.</li>
+     * <li><strong>quara</strong>: quarantines the source file of the malicious process.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>block_ip</p>
      */
     @NameInMap("OperationCode")
     public String operationCode;
 
     /**
      * <p>The configuration of the operation that you want to perform to handle the alert events.</p>
-     * <br>
-     * <p>>  If you set OperationCode to `kill_and_quara` or `block_ip`, you must specify OperationParams. If you set OperationCode to other values, you can leave OperationParams empty.</p>
+     * <blockquote>
+     * <p> If you set OperationCode to <code>kill_and_quara</code> or <code>block_ip</code>, you must specify OperationParams. If you set OperationCode to other values, you can leave OperationParams empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("OperationParams")
     public String operationParams;
 
     /**
      * <p>The remarks of the handling operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>remark test.</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
      * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
-     * <br>
-     * <p>>  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>16670360956*****</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
     /**
      * <p>The IDs of the alert events.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;909361&quot;]</p>
      */
     @NameInMap("SecurityEventIds")
     public java.util.List<String> securityEventIds;
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.2.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

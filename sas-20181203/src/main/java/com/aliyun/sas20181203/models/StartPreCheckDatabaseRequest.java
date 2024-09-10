@@ -6,30 +6,38 @@ import com.aliyun.tea.*;
 public class StartPreCheckDatabaseRequest extends TeaModel {
     /**
      * <p>The type of the database. Valid values:</p>
-     * <br>
-     * <p>*   **MYSQL**</p>
-     * <p>*   **MSSQL**</p>
-     * <p>*   **Oracle**</p>
-     * <br>
+     * <ul>
+     * <li><strong>MYSQL</strong></li>
+     * <li><strong>MSSQL</strong></li>
+     * <li><strong>Oracle</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MYSQL</p>
      */
     @NameInMap("DatabaseType")
     public String databaseType;
 
     /**
      * <p>The UUID of the agent that is used to back up the data of the database.</p>
-     * <br>
-     * <p>> You can call the [DescribeUniBackupDatabase](~~DescribeUniBackupDatabase~~) operation to query the UUID.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeUniBackupDatabase~~">DescribeUniBackupDatabase</a> operation to query the UUID.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ec1c0ba21d2911ed800000163e0e****</p>
      */
     @NameInMap("InstanceUuid")
     public String instanceUuid;
 
     /**
      * <p>The region ID of the server that hosts the database.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hongkong</p>
      */
     @NameInMap("UniRegionId")
     public String uniRegionId;

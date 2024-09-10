@@ -6,24 +6,35 @@ import com.aliyun.tea.*;
 public class DescribeAffectedAssetsRequest extends TeaModel {
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Current")
     public String current;
 
     /**
      * <p>The severity. Separate multiple severities with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   serious</p>
-     * <p>*   suspicious</p>
-     * <p>*   remind</p>
+     * <ul>
+     * <li>serious</li>
+     * <li>suspicious</li>
+     * <li>remind</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>serious,suspicious,remind</p>
      */
     @NameInMap("Levels")
     public String levels;
 
     /**
      * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
-     * <br>
-     * <p>> We recommend that you do not leave this parameter empty.</p>
+     * <blockquote>
+     * <p>We recommend that you do not leave this parameter empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public String pageSize;

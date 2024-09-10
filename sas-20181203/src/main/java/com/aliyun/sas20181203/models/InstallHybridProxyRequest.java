@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class InstallHybridProxyRequest extends TeaModel {
     /**
      * <p>The cluster name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>proxy-test</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
      * <p>The installation code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Z9c8SA</p>
      */
     @NameInMap("InstallCode")
     public String installCode;

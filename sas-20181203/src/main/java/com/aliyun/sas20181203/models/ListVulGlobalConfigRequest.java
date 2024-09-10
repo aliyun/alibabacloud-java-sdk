@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class ListVulGlobalConfigRequest extends TeaModel {
     /**
      * <p>The key of the configuration item. Valid values:</p>
-     * <br>
-     * <p>*   **vul_scan_ip_list**: The IP addresses that are detected.</p>
+     * <ul>
+     * <li><strong>vul_scan_ip_list</strong>: The IP addresses that are detected.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>vul_scan_ip_list</p>
      */
     @NameInMap("ConfigKey")
     public String configKey;

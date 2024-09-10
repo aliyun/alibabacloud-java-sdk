@@ -4,12 +4,24 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeScanTaskProgressResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>EA15BA8A-D631-4375-8D40-CB7C769B0279</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("ScanTaskProgress")
     public String scanTaskProgress;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[{&quot;type&quot;:&quot;uuid&quot;,&quot;name&quot;:&quot;host001&quot;,&quot;target&quot;:&quot;503201a7-14c6-4280-801b-1169ed42****&quot;}]</p>
+     */
     @NameInMap("TargetInfo")
     public String targetInfo;
 

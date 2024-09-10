@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
     /**
-     * <p>The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,27 +21,40 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code. The value 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F8B6F758-BCD4-597A-8A2C-DA5A552C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -99,80 +115,119 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
     public static class GetMaliciousFileWhitelistConfigResponseBodyData extends TeaModel {
         /**
          * <p>The number of assets on which the whitelist rule takes effect.</p>
-         * <br>
-         * <p>>  The value of this parameter is returned only if the value of TargetType is SELECTION_KEY.</p>
+         * <blockquote>
+         * <p> The value of this parameter is returned only if the value of TargetType is SELECTION_KEY.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Count")
         public String count;
 
         /**
          * <p>The name of the alert.</p>
-         * <br>
-         * <p>*   The value is fixed as ALL, which indicates all alert types.</p>
+         * <ul>
+         * <li>The value is fixed as ALL, which indicates all alert types.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         @NameInMap("EventName")
         public String eventName;
 
         /**
          * <p>The field that is used in the whitelist rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fileMd5</p>
          */
         @NameInMap("Field")
         public String field;
 
         /**
          * <p>The value of the field that is used in the whitelist rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b2cf9747ee49d8d9b105cf16e078cc16</p>
          */
         @NameInMap("FieldValue")
         public String fieldValue;
 
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1671607025000</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1674095396000</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The ID of the whitelist rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The logical operator that is used in the whitelist rule.</p>
-         * <br>
-         * <p>*   The value is fixed as strEqual, which indicates the equality operator (=).</p>
+         * <ul>
+         * <li>The value is fixed as strEqual, which indicates the equality operator (=).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>strEqual</p>
          */
         @NameInMap("Operator")
         public String operator;
 
         /**
          * <p>The feature to which this operation belongs.</p>
-         * <br>
-         * <p>*   The value is fixed as agentless, which indicates the agentless detection feature.</p>
+         * <ul>
+         * <li>The value is fixed as agentless, which indicates the agentless detection feature.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>agentless</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
          * <p>The type of the assets on which the whitelist rule takes effect. Valid values:</p>
-         * <br>
-         * <p>*   ALL: all assets</p>
-         * <p>*   SELECTION_KEY: selected assets</p>
+         * <ul>
+         * <li>ALL: all assets</li>
+         * <li>SELECTION_KEY: selected assets</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         @NameInMap("TargetType")
         public String targetType;
 
         /**
          * <p>The assets on which the whitelist rule takes effect. Valid values:</p>
-         * <br>
-         * <p>*   ALL: all assets</p>
-         * <p>*   Others: selected assets</p>
+         * <ul>
+         * <li>ALL: all assets</li>
+         * <li>Others: selected assets</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         @NameInMap("TargetValue")
         public String targetValue;

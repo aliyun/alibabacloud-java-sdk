@@ -6,16 +6,23 @@ import com.aliyun.tea.*;
 public class DescribeClusterVulStatisticsRequest extends TeaModel {
     /**
      * <p>The ID of the container cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c471f0f61b9c04f8380556e922cf1****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The type of the vulnerabilities. Valid values:</p>
-     * <br>
-     * <p>*   **cve**: Linux software vulnerabilities</p>
-     * <p>*   **app**: application vulnerabilities</p>
-     * <p>*   **sca**: vulnerabilities that are detected based on software component analysis</p>
+     * <ul>
+     * <li><strong>cve</strong>: Linux software vulnerabilities</li>
+     * <li><strong>app</strong>: application vulnerabilities</li>
+     * <li><strong>sca</strong>: vulnerabilities that are detected based on software component analysis</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cve,app,sca</p>
      */
     @NameInMap("Types")
     public String types;

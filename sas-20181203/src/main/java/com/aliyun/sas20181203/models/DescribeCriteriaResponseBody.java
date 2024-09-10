@@ -12,6 +12,9 @@ public class DescribeCriteriaResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8E6DDACF-99AF-5939-AFFD-FCCD3B01E724</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,54 +43,69 @@ public class DescribeCriteriaResponseBody extends TeaModel {
     public static class DescribeCriteriaResponseBodyCriteriaList extends TeaModel {
         /**
          * <p>The structured attribute values of the assets that match the keyword. The value of this parameter is in the JSON format and contains the following fields:</p>
-         * <br>
-         * <p>*   **vendor**: providers.</p>
-         * <p>*   **regionIds**: IDs of supported regions</p>
+         * <ul>
+         * <li><strong>vendor</strong>: providers.</li>
+         * <li><strong>regionIds</strong>: IDs of supported regions</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;vendor&quot;:0,&quot;regionIds&quot;:{&quot;default&quot;:[&quot;ap-southeast-1&quot;,&quot;ap-northeast-2&quot;,&quot;ap-southeast-3&quot;,&quot;ap-southeast-5&quot;,&quot;ap-southeast-7&quot;,&quot;me-central-1&quot;]}},{&quot;vendor&quot;:1,&quot;regionIds&quot;:{&quot;default&quot;:[&quot;outside-of-aliyun&quot;]}}]</p>
          */
         @NameInMap("MultiValues")
         public String multiValues;
 
         /**
          * <p>The name of the search condition. Valid values:</p>
-         * <br>
-         * <p>*   **internetIp**: the public IP address.</p>
-         * <p>*   **intranetIp**: the private IP address.</p>
-         * <p>*   **instanceName**: the name of the instance.</p>
-         * <p>*   **instanceId**: the instance ID.</p>
-         * <p>*   **vpcInstanceId**: the ID of the virtual private cloud (VPC) to which the instance belongs.</p>
-         * <p>*   **osName**: the operating system.</p>
-         * <p>*   **osType**: the operating system type.</p>
-         * <p>*   **hcStatus**: indicates whether baseline risks exist.</p>
-         * <p>*   **vulStatus**: indicates whether vulnerabilities exist.</p>
-         * <p>*   **alarmStatus**: indicates whether security alerts exist.</p>
-         * <p>*   **riskStatus**: indicates whether risks exist.</p>
-         * <p>*   **clientStatus**: indicates the status of the client.</p>
-         * <p>*   **runningStatus**: the running status of the asset.</p>
-         * <p>*   **tagName**: the name of the tag.</p>
-         * <p>*   **groupName**: the name of the server group.</p>
-         * <p>*   **regionId**: the region ID.</p>
-         * <p>*   **importance**: the importance of the asset.</p>
-         * <p>*   **exposedStatus**: indicates whether the server is exposed.</p>
-         * <p>*   **authVersion**: the authorization version.</p>
-         * <p>*   **flag**: the cloud service provider.</p>
-         * <p>*   **ipList**: the IP addresses.</p>
-         * <p>*   **uuidList** :the UUID.</p>
-         * <p>*   **tagKeyValue**: the ECS tag.</p>
+         * <ul>
+         * <li><strong>internetIp</strong>: the public IP address.</li>
+         * <li><strong>intranetIp</strong>: the private IP address.</li>
+         * <li><strong>instanceName</strong>: the name of the instance.</li>
+         * <li><strong>instanceId</strong>: the instance ID.</li>
+         * <li><strong>vpcInstanceId</strong>: the ID of the virtual private cloud (VPC) to which the instance belongs.</li>
+         * <li><strong>osName</strong>: the operating system.</li>
+         * <li><strong>osType</strong>: the operating system type.</li>
+         * <li><strong>hcStatus</strong>: indicates whether baseline risks exist.</li>
+         * <li><strong>vulStatus</strong>: indicates whether vulnerabilities exist.</li>
+         * <li><strong>alarmStatus</strong>: indicates whether security alerts exist.</li>
+         * <li><strong>riskStatus</strong>: indicates whether risks exist.</li>
+         * <li><strong>clientStatus</strong>: indicates the status of the client.</li>
+         * <li><strong>runningStatus</strong>: the running status of the asset.</li>
+         * <li><strong>tagName</strong>: the name of the tag.</li>
+         * <li><strong>groupName</strong>: the name of the server group.</li>
+         * <li><strong>regionId</strong>: the region ID.</li>
+         * <li><strong>importance</strong>: the importance of the asset.</li>
+         * <li><strong>exposedStatus</strong>: indicates whether the server is exposed.</li>
+         * <li><strong>authVersion</strong>: the authorization version.</li>
+         * <li><strong>flag</strong>: the cloud service provider.</li>
+         * <li><strong>ipList</strong>: the IP addresses.</li>
+         * <li><strong>uuidList</strong> :the UUID.</li>
+         * <li><strong>tagKeyValue</strong>: the ECS tag.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>internetIp</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The type of the search condition. Valid values:</p>
-         * <br>
-         * <p>*   **input**: The search condition needs to be specified.</p>
-         * <p>*   **select**: The search condition is an option that can be selected from the drop-down list.</p>
+         * <ul>
+         * <li><strong>input</strong>: The search condition needs to be specified.</li>
+         * <li><strong>select</strong>: The search condition is an option that can be selected from the drop-down list.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>input</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The attribute values of the assets that match the keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.96.XX.XX</p>
          */
         @NameInMap("Values")
         public String values;

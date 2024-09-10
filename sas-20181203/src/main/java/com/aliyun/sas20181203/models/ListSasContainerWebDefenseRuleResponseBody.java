@@ -18,6 +18,9 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
 
     /**
      * <p>The request ID, which is used to query logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8C376***AE74FB4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,60 +57,89 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
     public static class ListSasContainerWebDefenseRuleResponseBodyContainerWebDefenseRuleListPathConfDTOList extends TeaModel {
         /**
          * <p>The backup paths.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/tmp/test</p>
          */
         @NameInMap("BackupPath")
         public String backupPath;
 
         /**
          * <p>The prevention mode. Valid values:</p>
-         * <br>
-         * <p>*   **block**</p>
-         * <p>*   **audit**</p>
+         * <ul>
+         * <li><strong>block</strong></li>
+         * <li><strong>audit</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>audit</p>
          */
         @NameInMap("DefenseMode")
         public String defenseMode;
 
         /**
          * <p>The protected path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/test/</p>
          */
         @NameInMap("DefensePath")
         public String defensePath;
 
         /**
          * <p>The file that is excluded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>php</p>
          */
         @NameInMap("ExcludeFile")
         public String excludeFile;
 
         /**
          * <p>The path to the file that is excluded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/tt</p>
          */
         @NameInMap("ExcludeFilePath")
         public String excludeFilePath;
 
         /**
          * <p>The type of the file that is excluded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jsp</p>
          */
         @NameInMap("ExcludeFileType")
         public String excludeFileType;
 
         /**
          * <p>The protection mode. Valid values:</p>
-         * <br>
-         * <p>*   **0**: basic mode (whitelist)</p>
-         * <p>*   **1**: complex mode (blacklist)</p>
+         * <ul>
+         * <li><strong>0</strong>: basic mode (whitelist)</li>
+         * <li><strong>1</strong>: complex mode (blacklist)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("GuardType")
         public Integer guardType;
 
         /**
          * <p>The file that is included.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/test</p>
          */
         @NameInMap("IncludeFile")
         public String includeFile;
 
         /**
          * <p>The type of the file that is included.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>php</p>
          */
         @NameInMap("IncludeFileType")
         public String includeFileType;
@@ -208,30 +240,45 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
     public static class ListSasContainerWebDefenseRuleResponseBodyContainerWebDefenseRuleList extends TeaModel {
         /**
          * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1766185894104675</p>
          */
         @NameInMap("AliUid")
         public Long aliUid;
 
         /**
          * <p>The number of the applications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("ApptotalCount")
         public Integer apptotalCount;
 
         /**
          * <p>The creation time. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1698978109000</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
          * <p>The timestamp when the alert event was last modified. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1678852686000</p>
          */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
         /**
          * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>420336648</p>
          */
         @NameInMap("Id")
         public Long id;
@@ -244,15 +291,22 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
 
         /**
          * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test2</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
          * <p>The status of the rule. Valid values:</p>
-         * <br>
-         * <p>*   **1**: enabled</p>
-         * <p>*   **0**: disabled</p>
+         * <ul>
+         * <li><strong>1</strong>: enabled</li>
+         * <li><strong>0</strong>: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RuleStatus")
         public Integer ruleStatus;
@@ -331,24 +385,36 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
     public static class ListSasContainerWebDefenseRuleResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

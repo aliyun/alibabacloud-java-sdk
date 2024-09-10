@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class DeleteVulAutoRepairConfigRequest extends TeaModel {
     /**
      * <p>The alias of the vulnerability.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RHSA-2017:0184-Important: mysql security update</p>
      */
     @NameInMap("AliasName")
     public String aliasName;
 
     /**
-     * <p>The configuration ID of the vulnerability. You can call the [ListVulAutoRepairConfig](~~ListVulAutoRepairConfig~~) operation to query the configuration IDs of the vulnerability.</p>
+     * <p>The IDs of the configurations.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~ListVulAutoRepairConfig~~">ListVulAutoRepairConfig</a> operation to query the IDs.</p>
+     * </blockquote>
      */
     @NameInMap("ConfigIdList")
     public java.util.List<Long> configIdList;
 
     /**
      * <p>The type of the vulnerability. Valid values:</p>
-     * <br>
-     * <p>*   **cve**: Linux software vulnerability</p>
-     * <p>*   **sys**: Windows system vulnerability</p>
+     * <ul>
+     * <li>cve: Linux software vulnerability</li>
+     * <li>sys: Windows system vulnerability</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cve</p>
      */
     @NameInMap("Type")
     public String type;

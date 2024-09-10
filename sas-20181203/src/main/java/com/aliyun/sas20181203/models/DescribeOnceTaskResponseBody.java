@@ -12,6 +12,9 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +57,36 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
     public static class DescribeOnceTaskResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page. Default value: **20**.</p>
+         * <p>The number of entries returned per page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -118,101 +133,155 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
     public static class DescribeOnceTaskResponseBodyTaskManageResponseList extends TeaModel {
         /**
          * <p>The execution details of the task. The value of this parameter is in the JSON format.</p>
-         * <br>
-         * <p>*   **causeCode**: the returned code for the cause.</p>
-         * <p>*   **causeMsg**: the returned message for the cause.</p>
-         * <p>*   **resCode**: the returned code for troubleshooting.</p>
-         * <p>*   **resMsg**: the returned message for troubleshooting.</p>
-         * <p>*   **problemType**: the type of the issue.</p>
-         * <p>*   **dispatchType**: the task delivery method.</p>
-         * <p>*   **uuid**: the UUID of the server.</p>
-         * <p>*   **instanceId**: the instance ID of the server.</p>
-         * <p>*   **internetIp**: the public IP address of the server.</p>
-         * <p>*   **intranetIp**: the private IP address of the server.</p>
-         * <p>*   **instanceName**: the instance name of the server.</p>
-         * <p>*   **url**: the download URL of the troubleshooting log.</p>
+         * <ul>
+         * <li><strong>causeCode</strong>: the returned code for the cause.</li>
+         * <li><strong>causeMsg</strong>: the returned message for the cause.</li>
+         * <li><strong>resCode</strong>: the returned code for troubleshooting.</li>
+         * <li><strong>resMsg</strong>: the returned message for troubleshooting.</li>
+         * <li><strong>problemType</strong>: the type of the issue.</li>
+         * <li><strong>dispatchType</strong>: the task delivery method.</li>
+         * <li><strong>uuid</strong>: the UUID of the server.</li>
+         * <li><strong>instanceId</strong>: the instance ID of the server.</li>
+         * <li><strong>internetIp</strong>: the public IP address of the server.</li>
+         * <li><strong>intranetIp</strong>: the private IP address of the server.</li>
+         * <li><strong>instanceName</strong>: the instance name of the server.</li>
+         * <li><strong>url</strong>: the download URL of the troubleshooting log.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *       {
+         *             &quot;dispatchType&quot;: &quot;manual&quot;,
+         *             &quot;causeMsg&quot;: [],
+         *             &quot;causeCode&quot;: [],
+         *             &quot;resCode&quot;: [
+         *                   &quot;1003&quot;
+         *             ],
+         *             &quot;resMsg&quot;: [
+         *                   &quot;powershell -executionpolicy bypass -c \&quot;(New-Object Net.WebClient).DownloadFile(\&quot;<a href="http://aegis.alicdn.com/download/aegis_client_self_check/win32/aegis_checker.exe%5C%5C">http://aegis.alicdn.com/download/aegis_client_self_check/win32/aegis_checker.exe\\</a>&quot;, $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(\&quot;.\\\\aegis_checker.exe\&quot;))\&quot;; \&quot;./aegis_checker.exe -b eyJtb2RlIjoxLCJqc3J2X2RvbWFpbiI6W10sImlzc3VlIjoib2ZmbGluZSIsInVwZGF0ZV9kb21haW4iOltdLCJ1dWlkIjoiaW5ldC1lYWUwNDg2Ny0wMDJmLTQyM2QtYWYwMC1jNzJjZDYyOWIyNDgiLCJjbWRfaWR4IjoiNDRjZThiZWI3ZGYyYTQxMjQ1NGM4ZDc5OTE1ODI1MzMifQ==\&quot;&quot;
+         *             ],
+         *             &quot;problemType&quot;: &quot;offline&quot;,
+         *             &quot;uuid&quot;: &quot;inet-eae04867-002f-423d-af00-c72cd629****&quot;
+         *       }
+         * ]</p>
          */
         @NameInMap("DetailData")
         public String detailData;
 
         /**
          * <p>The number of tasks that fail to be executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("FailCount")
         public Integer failCount;
 
         /**
          * <p>The progress of the task. Unit: percent (%).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10%</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The execution result of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         @NameInMap("ResultInfo")
         public String resultInfo;
 
         /**
          * <p>The number of tasks that are executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         @NameInMap("SuccessCount")
         public Integer successCount;
 
         /**
          * <p>The timestamp that indicates the time when the task ends. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1650267989000</p>
          */
         @NameInMap("TaskEndTime")
         public Long taskEndTime;
 
         /**
          * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e900f528f5a6229bb640ca27cb44c98e</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
          * <p>The name of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CLIENT_PROBLEM_CHECK</p>
          */
         @NameInMap("TaskName")
         public String taskName;
 
         /**
          * <p>The timestamp that indicates the time when the task starts. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649732012000</p>
          */
         @NameInMap("TaskStartTime")
         public Long taskStartTime;
 
         /**
          * <p>The status of the task. Valid values:</p>
-         * <br>
-         * <p>*   **1**: The task is started.</p>
-         * <p>*   **2**: The task is complete.</p>
-         * <p>*   **3**: The task fails.</p>
-         * <p>*   **4**: The task times out.</p>
+         * <ul>
+         * <li><strong>1</strong>: The task is started.</li>
+         * <li><strong>2</strong>: The task is complete.</li>
+         * <li><strong>3</strong>: The task fails.</li>
+         * <li><strong>4</strong>: The task times out.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TaskStatus")
         public Integer taskStatus;
 
         /**
          * <p>The text description of the status for the task. Valid values:</p>
-         * <br>
-         * <p>*   **INIT**: The task is pending start.</p>
-         * <p>*   **START**: The task is started.</p>
-         * <p>*   **DISPATCH**: The self-check command is issued.</p>
-         * <p>*   **SUCCESS**: The self-check is complete.</p>
-         * <p>*   **FAIL**: The task fails.</p>
-         * <p>*   **TIMEOUT**: The task times out.</p>
+         * <ul>
+         * <li><strong>INIT</strong>: The task is pending start.</li>
+         * <li><strong>START</strong>: The task is started.</li>
+         * <li><strong>DISPATCH</strong>: The self-check command is issued.</li>
+         * <li><strong>SUCCESS</strong>: The self-check is complete.</li>
+         * <li><strong>FAIL</strong>: The task fails.</li>
+         * <li><strong>TIMEOUT</strong>: The task times out.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>INIT</p>
          */
         @NameInMap("TaskStatusText")
         public String taskStatusText;
 
         /**
          * <p>The type of the task. Valid values:</p>
-         * <br>
-         * <p>*   **CLIENT_PROBLEM_CHECK**: a task of the Security Center client</p>
-         * <p>*   **CLIENT_DEV_OPS**: an O\\&M task of Cloud Assistant</p>
-         * <p>*   **ASSET_SECURITY_CHECK**: a task for asset information collection</p>
+         * <ul>
+         * <li><strong>CLIENT_PROBLEM_CHECK</strong>: a task of the Security Center client</li>
+         * <li><strong>CLIENT_DEV_OPS</strong>: an O\&amp;M task of Cloud Assistant</li>
+         * <li><strong>ASSET_SECURITY_CHECK</strong>: a task for asset information collection</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CLIENT_PROBLEM_CHECK</p>
          */
         @NameInMap("TaskType")
         public String taskType;

@@ -6,32 +6,43 @@ import com.aliyun.tea.*;
 public class ModifyClientConfStrategyRequest extends TeaModel {
     /**
      * <p>The key of the tag that is added to the agent configuration policy.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>machineResource</p>
      */
     @NameInMap("Tag")
     public String tag;
 
     /**
      * <p>The extended tag of the agent configuration policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>auto</p>
      */
     @NameInMap("TagExt")
     public String tagExt;
 
     /**
      * <p>The value of the tag that is added to the agent configuration policy.</p>
-     * <br>
-     * <p>*   major</p>
-     * <p>*   advanced</p>
-     * <p>*   basic</p>
-     * <br>
+     * <ul>
+     * <li>major</li>
+     * <li>advanced</li>
+     * <li>basic</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>advanced</p>
      */
     @NameInMap("TagValue")
     public String tagValue;
 
     /**
      * <p>The UUID of the server that you want to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4fe8e1cd-3c37-4851-b9de-124da32c****</p>
      */
     @NameInMap("Uuid")
     public String uuid;

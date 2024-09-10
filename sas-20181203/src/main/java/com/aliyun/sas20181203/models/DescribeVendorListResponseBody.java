@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeVendorListResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>340D7FC4-D575-1661-8ACD-CFA7BE57B795</p>
      */
     @NameInMap("RequestId")
     public String requestId;

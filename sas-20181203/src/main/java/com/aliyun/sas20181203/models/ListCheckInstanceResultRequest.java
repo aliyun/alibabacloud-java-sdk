@@ -6,20 +6,28 @@ import com.aliyun.tea.*;
 public class ListCheckInstanceResultRequest extends TeaModel {
     /**
      * <p>The ID of the check item.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23</p>
      */
     @NameInMap("CheckId")
     public Long checkId;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-uf64w4q6p9jti5gl****</p>
      */
     @NameInMap("InstanceIdKey")
     public String instanceIdKey;
@@ -32,27 +40,40 @@ public class ListCheckInstanceResultRequest extends TeaModel {
 
     /**
      * <p>The name of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-uf64w4q6p9jti5gl****</p>
      */
     @NameInMap("InstanceNameKey")
     public String instanceNameKey;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value : 100.</p>
+     * <p>The number of entries per page. Maximum value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-qingdao</p>
      */
     @NameInMap("RegionIdKey")
     public String regionIdKey;

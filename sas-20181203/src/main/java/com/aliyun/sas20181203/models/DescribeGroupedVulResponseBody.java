@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeGroupedVulResponseBody extends TeaModel {
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -18,18 +21,27 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries per page. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9BFA6D78-07EA-5C0A-9358-E4434573507B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,91 +94,131 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
     public static class DescribeGroupedVulResponseBodyGroupedVulItems extends TeaModel {
         /**
          * <p>The alias of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RHSA-2017:0184-Important: mysql security update</p>
          */
         @NameInMap("AliasName")
         public String aliasName;
 
         /**
-         * <p>The number of vulnerabilities that have the **high** priority.</p>
+         * <p>The number of vulnerabilities that have the <strong>high</strong> priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AsapCount")
         public Integer asapCount;
 
         /**
          * <p>The timestamp when the vulnerability was last detected. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1639371446000</p>
          */
         @NameInMap("GmtLast")
         public Long gmtLast;
 
         /**
          * <p>The number of handled vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("HandledCount")
         public Integer handledCount;
 
         /**
-         * <p>The number of vulnerabilities that have the **medium** priority.</p>
+         * <p>The number of vulnerabilities that have the <strong>medium</strong> priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("LaterCount")
         public Integer laterCount;
 
         /**
          * <p>The name of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oval:com.redhat.rhsa:def:20170184</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The number of vulnerabilities that have the **low** priority.</p>
+         * <p>The number of vulnerabilities that have the <strong>low</strong> priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>59</p>
          */
         @NameInMap("NntfCount")
         public Integer nntfCount;
 
         /**
          * <p>Indicates whether the application protection feature is supported. Valid values:</p>
-         * <br>
-         * <p>*   **0**: not supported</p>
-         * <p>*   **1**: supported</p>
-         * <br>
-         * <p>>  If this parameter is not returned, the application protection feature is not supported.</p>
+         * <ul>
+         * <li><strong>0</strong>: not supported</li>
+         * <li><strong>1</strong>: supported</li>
+         * </ul>
+         * <blockquote>
+         * <p> If this parameter is not returned, the application protection feature is not supported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RaspDefend")
         public Integer raspDefend;
 
         /**
          * <p>The IDs of the common vulnerabilities and exposures (CVEs) that are related to the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CVE-2023-24881,CVE-2023-24898</p>
          */
         @NameInMap("Related")
         public String related;
 
         /**
          * <p>The tag of the vulnerability. Valid values:</p>
-         * <br>
-         * <p>*   **Restart required**</p>
-         * <p>*   **Remote utilization**</p>
-         * <p>*   **EXP exists**</p>
-         * <p>*   **Available**</p>
-         * <p>*   **Elevation of Privilege**</p>
-         * <p>*   **Code Execution**</p>
+         * <ul>
+         * <li><strong>Restart required</strong></li>
+         * <li><strong>Remote utilization</strong></li>
+         * <li><strong>EXP exists</strong></li>
+         * <li><strong>Available</strong></li>
+         * <li><strong>Elevation of Privilege</strong></li>
+         * <li><strong>Code Execution</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Code Execution</p>
          */
         @NameInMap("Tags")
         public String tags;
 
         /**
          * <p>The total number of fixed vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("TotalFixCount")
         public Long totalFixCount;
 
         /**
          * <p>The type of the vulnerability. Valid values:</p>
-         * <br>
-         * <p>*   **cve**: Linux software vulnerability</p>
-         * <p>*   **sys**: Windows system vulnerability</p>
-         * <p>*   **cms**: Web-CMS vulnerability</p>
-         * <p>*   **app**: application vulnerability</p>
-         * <p>*   **emg**: urgent vulnerability</p>
-         * <p>*   **sca**: vulnerability that is detected by software component analysis</p>
+         * <ul>
+         * <li><strong>cve</strong>: Linux software vulnerability</li>
+         * <li><strong>sys</strong>: Windows system vulnerability</li>
+         * <li><strong>cms</strong>: Web-CMS vulnerability</li>
+         * <li><strong>app</strong>: application vulnerability</li>
+         * <li><strong>emg</strong>: urgent vulnerability</li>
+         * <li><strong>sca</strong>: vulnerability that is detected by software component analysis</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cve</p>
          */
         @NameInMap("Type")
         public String type;

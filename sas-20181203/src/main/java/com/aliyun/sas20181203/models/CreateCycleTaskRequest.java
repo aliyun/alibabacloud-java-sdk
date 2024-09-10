@@ -6,90 +6,129 @@ import com.aliyun.tea.*;
 public class CreateCycleTaskRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the task. Valid values:</p>
-     * <br>
-     * <p>*   **1**: yes</p>
-     * <p>*   **0**: no</p>
-     * <br>
+     * <ul>
+     * <li><strong>1</strong>: yes</li>
+     * <li><strong>0</strong>: no</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Enable")
     public Integer enable;
 
     /**
      * <p>The first time when the task is performed.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1650556800000</p>
      */
     @NameInMap("FirstDateStr")
     public Long firstDateStr;
 
     /**
      * <p>The interval of the task.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
      */
     @NameInMap("IntervalPeriod")
     public Integer intervalPeriod;
 
     /**
      * <p>The additional information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *       &quot;targetInfo&quot;: [
+     *             {
+     *                   &quot;type&quot;: &quot;groupId&quot;,
+     *                   &quot;name&quot;: &quot;TI HOST&quot;,
+     *                   &quot;target&quot;: 10597***
+     *             },
+     *             {
+     *                   &quot;type&quot;: &quot;groupId&quot;,
+     *                   &quot;name&quot;: &quot;expense HOST&quot;,
+     *                   &quot;target&quot;: 10597***
+     *             }
+     *       ]
+     * }</p>
      */
     @NameInMap("Param")
     public String param;
 
     /**
      * <p>The unit of the scan interval. Valid values:</p>
-     * <br>
-     * <p>*   **day**: days</p>
-     * <p>*   **hour**: hours</p>
-     * <br>
+     * <ul>
+     * <li><strong>day</strong>: days</li>
+     * <li><strong>hour</strong>: hours</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>day</p>
      */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
     /**
      * <p>The additional source for the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>console_batch</p>
      */
     @NameInMap("Source")
     public String source;
 
     /**
      * <p>The time when the task ends. Unit: hours.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6</p>
      */
     @NameInMap("TargetEndTime")
     public Integer targetEndTime;
 
     /**
      * <p>The time when the task is started. Unit: hours.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("TargetStartTime")
     public Integer targetStartTime;
 
     /**
      * <p>The name of the task. Valid values:</p>
-     * <br>
-     * <p>*   **VIRUS_VUL_SCHEDULE_SCAN**: virus scan task</p>
-     * <p>*   **IMAGE_SCAN**: image scan task</p>
-     * <p>*   **EMG_VUL_SCHEDULE_SCAN**: urgent vulnerability scan task</p>
-     * <br>
+     * <ul>
+     * <li><strong>VIRUS_VUL_SCHEDULE_SCAN</strong>: virus scan task</li>
+     * <li><strong>IMAGE_SCAN</strong>: image scan task</li>
+     * <li><strong>EMG_VUL_SCHEDULE_SCAN</strong>: urgent vulnerability scan task</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EMG_VUL_SCHEDULE_SCAN</p>
      */
     @NameInMap("TaskName")
     public String taskName;
 
     /**
      * <p>The type of the task. Valid values:</p>
-     * <br>
-     * <p>*   **VIRUS_VUL_SCHEDULE_SCAN**: virus scan task</p>
-     * <p>*   **IMAGE_SCAN**: image scan task</p>
-     * <p>*   **EMG_VUL_SCHEDULE_SCAN**: urgent vulnerability scan task</p>
-     * <br>
+     * <ul>
+     * <li><strong>VIRUS_VUL_SCHEDULE_SCAN</strong>: virus scan task</li>
+     * <li><strong>IMAGE_SCAN</strong>: image scan task</li>
+     * <li><strong>EMG_VUL_SCHEDULE_SCAN</strong>: urgent vulnerability scan task</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VIRUS_VUL_SCHEDULE_SCAN</p>
      */
     @NameInMap("TaskType")
     public String taskType;

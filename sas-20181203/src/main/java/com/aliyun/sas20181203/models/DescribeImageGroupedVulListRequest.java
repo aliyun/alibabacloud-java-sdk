@@ -6,126 +6,187 @@ import com.aliyun.tea.*;
 public class DescribeImageGroupedVulListRequest extends TeaModel {
     /**
      * <p>The alias of the vulnerability.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>High severity vulnerability that affects org.eclipse.jetty:jetty-server</p>
      */
     @NameInMap("AliasName")
     public String aliasName;
 
     /**
      * <p>The ID of the container cluster.</p>
-     * <br>
-     * <p>> You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the ID of the container cluster.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the ID of the container cluster.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>c60b77fe62093480db6164a3c2fa5****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The Common Vulnerabilities and Exposures (CVE) ID of the vulnerability.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CVE-2017-15420</p>
      */
     @NameInMap("CveId")
     public String cveId;
 
     /**
      * <p>The ID of the asset group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1311</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The SHA-256 value of the image digest.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>w213412341dfsfasdfafadfasfasf</p>
      */
     @NameInMap("ImageDigest")
     public String imageDigest;
 
     /**
      * <p>The layer of the image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b1f5b9420803ad0657cf21566e3e20acc08581e7f22991249ef3aa80b8b1c587</p>
      */
     @NameInMap("ImageLayer")
     public String imageLayer;
 
     /**
      * <p>The tag of the image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oval</p>
      */
     @NameInMap("ImageTag")
     public String imageTag;
 
     /**
      * <p>Specifies whether to query the vulnerabilities in the latest images. If you do not specify this parameter, the vulnerabilities in all images are queried. Valid values:</p>
-     * <br>
-     * <p>*   **0**: does not query the vulnerabilities in the latest images.</p>
-     * <p>*   **1**: queries the vulnerabilities in the latest images.</p>
+     * <ul>
+     * <li><strong>0</strong>: does not query the vulnerabilities in the latest images.</li>
+     * <li><strong>1</strong>: queries the vulnerabilities in the latest images.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("IsLatest")
     public Integer isLatest;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The name of the vulnerability.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>debian:10:CVE-2019-9893</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The priority to fix the vulnerability. Valid values:</p>
-     * <br>
-     * <p>*   **asap**: high. You must fix the vulnerability at the earliest opportunity.</p>
-     * <p>*   **later**: medium. You can fix the vulnerability based on your business requirements.</p>
-     * <p>*   **nntf**: low. You can ignore the vulnerability.</p>
+     * <ul>
+     * <li><strong>asap</strong>: high. You must fix the vulnerability at the earliest opportunity.</li>
+     * <li><strong>later</strong>: medium. You can fix the vulnerability based on your business requirements.</li>
+     * <li><strong>nntf</strong>: low. You can ignore the vulnerability.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>asap</p>
      */
     @NameInMap("Necessity")
     public String necessity;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **20**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the patch that is used to fix the vulnerability.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1341512412</p>
      */
     @NameInMap("PatchId")
     public Long patchId;
 
     /**
      * <p>The ID of the image repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qew****</p>
      */
     @NameInMap("RepoId")
     public String repoId;
 
     /**
      * <p>The instance ID of the image repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-qewqrqcsadf****</p>
      */
     @NameInMap("RepoInstanceId")
     public String repoInstanceId;
 
     /**
      * <p>The name of the image repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>libssh2</p>
      */
     @NameInMap("RepoName")
     public String repoName;
 
     /**
      * <p>The namespace to which the image repository belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>libssh2</p>
      */
     @NameInMap("RepoNamespace")
     public String repoNamespace;
 
     /**
      * <p>The region ID of the image repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RepoRegionId")
     public String repoRegionId;
@@ -138,15 +199,22 @@ public class DescribeImageGroupedVulListRequest extends TeaModel {
 
     /**
      * <p>The type of the vulnerability that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   **cve**: image system vulnerability</p>
-     * <p>*   **sca**: image application vulnerability</p>
+     * <ul>
+     * <li><strong>cve</strong>: image system vulnerability</li>
+     * <li><strong>sca</strong>: image application vulnerability</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cve</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>The UUID of the asset. Separate multiple UUIDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>uuid-13134124****</p>
      */
     @NameInMap("Uuids")
     public String uuids;

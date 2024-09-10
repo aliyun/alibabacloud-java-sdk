@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class GetLastOnceTaskInfoResponseBody extends TeaModel {
     /**
      * <p>The time at which the task was run.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1671184531000</p>
      */
     @NameInMap("CollectTime")
     public Long collectTime;
 
     /**
      * <p>The number of tasks that have been completed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>67</p>
      */
     @NameInMap("FinishCount")
     public Integer finishCount;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BE120DAB-F4E7-4C53-ADC3-A97578AB****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the latest scan task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3f65e1f1bb13118891a889d569a3****</p>
      */
     @NameInMap("TaskId")
     public Long taskId;
@@ -36,6 +48,9 @@ public class GetLastOnceTaskInfoResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>44</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -96,27 +111,38 @@ public class GetLastOnceTaskInfoResponseBody extends TeaModel {
     public static class GetLastOnceTaskInfoResponseBodyTaskInfo extends TeaModel {
         /**
          * <p>The progress of the task in percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69</p>
          */
         @NameInMap("Progress")
         public Integer progress;
 
         /**
          * <p>The result of the scan task. Valid values:</p>
-         * <br>
-         * <p>*   **SUCCESS**: The task is successful.</p>
-         * <p>*   **TASK_NOT_SUPPORT_REGION**: The images are deployed in a region that is not supported by container image scan.</p>
-         * <p>*   **TASK_NOT_EXISTS**: The task does not exist.</p>
+         * <ul>
+         * <li><strong>SUCCESS</strong>: The task is successful.</li>
+         * <li><strong>TASK_NOT_SUPPORT_REGION</strong>: The images are deployed in a region that is not supported by container image scan.</li>
+         * <li><strong>TASK_NOT_EXISTS</strong>: The task does not exist.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         @NameInMap("Result")
         public String result;
 
         /**
          * <p>The status of the task. Valid values:</p>
-         * <br>
-         * <p>*   **INIT**: The task is not started.</p>
-         * <p>*   **START**: The task is started.</p>
-         * <p>*   **SUCCESS**: The task is complete.</p>
-         * <p>*   **TIMEOUT**: The task timed out.</p>
+         * <ul>
+         * <li><strong>INIT</strong>: The task is not started.</li>
+         * <li><strong>START</strong>: The task is started.</li>
+         * <li><strong>SUCCESS</strong>: The task is complete.</li>
+         * <li><strong>TIMEOUT</strong>: The task timed out.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         @NameInMap("Status")
         public String status;

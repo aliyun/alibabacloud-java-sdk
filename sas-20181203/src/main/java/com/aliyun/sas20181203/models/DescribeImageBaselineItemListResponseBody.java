@@ -18,6 +18,9 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24A20733-10A0-4AF6-BE6B-E3322413****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,56 +57,82 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
     public static class DescribeImageBaselineItemListResponseBodyBaselineItemInfos extends TeaModel {
         /**
          * <p>The alias of the baseline type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AccessKey pair leak</p>
          */
         @NameInMap("BaselineClassAlias")
         public String baselineClassAlias;
 
         /**
          * <p>The key of the baseline type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ak_leak</p>
          */
         @NameInMap("BaselineClassKey")
         public String baselineClassKey;
 
         /**
          * <p>The alias of the baseline check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AccessKey pair leak</p>
          */
         @NameInMap("BaselineItemAlias")
         public String baselineItemAlias;
 
         /**
          * <p>The key of the baseline check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ak_leak</p>
          */
         @NameInMap("BaselineItemKey")
         public String baselineItemKey;
 
         /**
          * <p>The alias of the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AccessKey pair leak</p>
          */
         @NameInMap("BaselineNameAlias")
         public String baselineNameAlias;
 
         /**
          * <p>The key of the baseline name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ak_leak</p>
          */
         @NameInMap("BaselineNameKey")
         public String baselineNameKey;
 
         /**
          * <p>The status of the baseline risks. Valid values:</p>
-         * <br>
-         * <p>*   **0**: unfixed</p>
-         * <p>*   **1**: fixed</p>
-         * <p>*   **2**: pending verification</p>
-         * <p>*   **3**: fixing failed</p>
+         * <ul>
+         * <li><strong>0</strong>: unfixed</li>
+         * <li><strong>1</strong>: fixed</li>
+         * <li><strong>2</strong>: pending verification</li>
+         * <li><strong>3</strong>: fixing failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>Indicates whether the baseline check item is added to the whitelist. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The baseline check item is not added to the whitelist.</p>
-         * <p>*   **1**: The baseline check item is added to the whitelist.</p>
+         * <ul>
+         * <li><strong>0</strong>: The baseline check item is not added to the whitelist.</li>
+         * <li><strong>1</strong>: The baseline check item is added to the whitelist.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("WhiteList")
         public Integer whiteList;
@@ -182,24 +211,36 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
     public static class DescribeImageBaselineItemListResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>253</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

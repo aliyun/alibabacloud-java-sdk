@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ModifyPropertyScheduleConfigRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ScheduleTime")
     public String scheduleTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>scheduler_port_period</p>
      */
     @NameInMap("Type")
     public String type;

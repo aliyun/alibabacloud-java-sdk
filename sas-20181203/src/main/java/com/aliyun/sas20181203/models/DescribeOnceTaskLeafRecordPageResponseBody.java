@@ -18,6 +18,9 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A4EB8B1C-1DEC-5E18-BCD0-D1BBB393****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,107 +57,156 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
     public static class DescribeOnceTaskLeafRecordPageResponseBodyOnceTasksTaskImageInfo extends TeaModel {
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ack-jenkins-****</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a765ba1435e7f9446065370e9a41****</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACK-test-****</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
 
         /**
          * <p>The time consumed. The value is in the JSON format. The end time of each item is displayed.</p>
-         * <br>
-         * <p>*   **vul**: system vulnerabilities</p>
-         * <p>*   **scaVul**: application vulnerabilities</p>
-         * <p>*   **scaVul**: baseline</p>
-         * <p>*   **binary**: binary</p>
-         * <p>*   **forbiddenPackageInfo**: information about the prohibited package</p>
-         * <p>*   **identificationInfo**: identity authentication</p>
-         * <p>*   **script**: malicious scripts</p>
-         * <p>*   **sensitiveFile**: sensitive files</p>
-         * <p>*   **sensitiveInfo**: AccessKey pair leaks</p>
-         * <p>*   **webshell**: website scripts</p>
+         * <ul>
+         * <li><strong>vul</strong>: system vulnerabilities</li>
+         * <li><strong>scaVul</strong>: application vulnerabilities</li>
+         * <li><strong>scaVul</strong>: baseline</li>
+         * <li><strong>binary</strong>: binary</li>
+         * <li><strong>forbiddenPackageInfo</strong>: information about the prohibited package</li>
+         * <li><strong>identificationInfo</strong>: identity authentication</li>
+         * <li><strong>script</strong>: malicious scripts</li>
+         * <li><strong>sensitiveFile</strong>: sensitive files</li>
+         * <li><strong>sensitiveInfo</strong>: AccessKey pair leaks</li>
+         * <li><strong>webshell</strong>: website scripts</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;scaVul&quot;:&quot;2023-09-04 09:37:21&quot;,&quot;identificationInfo&quot;:&quot;2023-09-04 09:37:30&quot;,&quot;forbiddenPackageInfo&quot;:&quot;2023-09-04 09:37:16&quot;,&quot;binary&quot;:&quot;2023-09-04 09:37:25&quot;,&quot;baseline&quot;:&quot;2023-09-04 09:37:19&quot;,&quot;sensitiveFile&quot;:&quot;2023-09-04 09:38:34&quot;,&quot;vul&quot;:&quot;2023-09-04 09:37:31&quot;,&quot;webshell&quot;:&quot;2023-09-04 09:38:27&quot;,&quot;sensitiveInfo&quot;:&quot;2023-09-04 09:37:16&quot;,&quot;script&quot;:&quot;2023-09-04 09:39:44&quot;}</p>
          */
         @NameInMap("CostTimeInfo")
         public String costTimeInfo;
 
         /**
          * <p>The digest of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9e0dc29d872d2e386cc5c0c92b529a84e3acfade16f5cb1d054a2ee3c99****</p>
          */
         @NameInMap("Digest")
         public String digest;
 
         /**
          * <p>The image of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><em><strong>s.com/sas_test/baseli</strong></em></p>
          */
         @NameInMap("Image")
         public String image;
 
         /**
          * <p>The instance ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-0xi5mxvtmfw9****</p>
          */
         @NameInMap("NodeInstanceId")
         public String nodeInstanceId;
 
         /**
          * <p>The IP address of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.18.XXX.XXX</p>
          */
         @NameInMap("NodeIp")
         public String nodeIp;
 
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pztest****</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
          * <p>The pod of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>expoit-law-****</p>
          */
         @NameInMap("Pod")
         public String pod;
 
         /**
          * <p>The region ID of the server image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crr-r88w2vryp8m****</p>
          */
         @NameInMap("RepoId")
         public String repoId;
 
         /**
          * <p>The name of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testyyy</p>
          */
         @NameInMap("RepoName")
         public String repoName;
 
         /**
          * <p>The name of the namespace to which the image repository belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bitn***</p>
          */
         @NameInMap("RepoNamespace")
         public String repoNamespace;
 
         /**
          * <p>The region ID of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RepoRegionId")
         public String repoRegionId;
 
         /**
          * <p>The tag that is added to the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1.20-002-a2*****</p>
          */
         @NameInMap("Tag")
         public String tag;
@@ -297,83 +349,122 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
     public static class DescribeOnceTaskLeafRecordPageResponseBodyOnceTasks extends TeaModel {
         /**
          * <p>The time when the sub-task ends.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1670307567000</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
          * <p>Indicates whether the sub-task is complete.</p>
-         * <br>
-         * <p>*   **0**: no</p>
-         * <p>*   **1**: yes</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Finish")
         public Integer finish;
 
         /**
          * <p>The number of the assets that are scanned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67</p>
          */
         @NameInMap("FinishCount")
         public String finishCount;
 
         /**
          * <p>The progress percentage of the sub-task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75</p>
          */
         @NameInMap("Progress")
         public Long progress;
 
         /**
          * <p>The execution duration of the sub-task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1670307567000</p>
          */
         @NameInMap("RealRunTime")
         public Long realRunTime;
 
         /**
          * <p>The execution result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TASK_NOT_SUPPORT_REGION</p>
          */
         @NameInMap("ResultInfo")
         public String resultInfo;
 
         /**
          * <p>The time when the sub-task starts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1640102400000</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
         /**
          * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The sub-task status. Valid values:</p>
-         * <br>
-         * <p>*   **INIT**: The sub-task is not started.</p>
-         * <p>*   **START**: The sub-task is started.</p>
-         * <p>*   **SUCCESS**: The sub-task is complete.</p>
-         * <p>*   **TIMEOUT**: The sub-task timed out.</p>
+         * <ul>
+         * <li><strong>INIT</strong>: The sub-task is not started.</li>
+         * <li><strong>START</strong>: The sub-task is started.</li>
+         * <li><strong>SUCCESS</strong>: The sub-task is complete.</li>
+         * <li><strong>TIMEOUT</strong>: The sub-task timed out.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         @NameInMap("StatusText")
         public String statusText;
 
         /**
          * <p>The objective of the sub-task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>238cf050a7270dd6940602e70f1e5a11eeaf4e02035f445b7f613ff5e064****</p>
          */
         @NameInMap("Target")
         public String target;
 
         /**
          * <p>The type of the assets that are scanned. Valid values:</p>
-         * <br>
-         * <p>*   **IMAGE_REPO**: image repository</p>
-         * <p>*   **IMAGE**: image</p>
+         * <ul>
+         * <li><strong>IMAGE_REPO</strong>: image repository</li>
+         * <li><strong>IMAGE</strong>: image</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IMAGE</p>
          */
         @NameInMap("TargetType")
         public String targetType;
 
         /**
          * <p>The sub-task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9fb50f2af8bb67c9fdb684194c83****</p>
          */
         @NameInMap("TaskId")
         public String taskId;
@@ -386,18 +477,27 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
 
         /**
          * <p>The name of the sub-task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IMAGE_SCAN</p>
          */
         @NameInMap("TaskName")
         public String taskName;
 
         /**
          * <p>The type of the sub-task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IMAGE_SCAN</p>
          */
         @NameInMap("TaskType")
         public String taskType;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("TotalCount")
         public String totalCount;
@@ -540,24 +640,36 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
     public static class DescribeOnceTaskLeafRecordPageResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

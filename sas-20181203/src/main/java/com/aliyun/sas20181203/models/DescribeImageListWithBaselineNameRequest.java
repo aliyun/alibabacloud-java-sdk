@@ -6,106 +6,156 @@ import com.aliyun.tea.*;
 public class DescribeImageListWithBaselineNameRequest extends TeaModel {
     /**
      * <p>The name of the image baseline.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ak_leak</p>
      */
     @NameInMap("BaselineNameKey")
     public String baselineNameKey;
 
     /**
      * <p>The ID of the container cluster.</p>
-     * <br>
-     * <p>>  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cc20a1024011c44b6a8710d6f8b****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The name of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>docker-law</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
      * <p>The ID of the container.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c08d5fc1a329a4b88950a253d082f****</p>
      */
     @NameInMap("ContainerId")
     public String containerId;
 
     /**
      * <p>The search condition for the image baseline.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Unauthorized access</p>
      */
     @NameInMap("Criteria")
     public String criteria;
 
     /**
      * <p>The type of the search condition. Valid values:</p>
-     * <br>
-     * <p>*   **BaselineNameAlias**: baseline name</p>
-     * <p>*   **BaselineClassAlias**: baseline category</p>
+     * <ul>
+     * <li><strong>BaselineNameAlias</strong>: baseline name</li>
+     * <li><strong>BaselineClassAlias</strong>: baseline category</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>BaselineNameAlias</p>
      */
     @NameInMap("CriteriaType")
     public String criteriaType;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The name of the image to which the container belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>registry.cn-wulanchabu.aliyuncs.com/sas_test/huxin-test-001:nuxeo6-****</p>
      */
     @NameInMap("Image")
     public String image;
 
     /**
      * <p>The SHA-256 value of the image digest.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2e6daffce524ffeae66cccaa90c8fc47de912346dcec295c27395b6d66db6423</p>
      */
     @NameInMap("ImageDigest")
     public String imageDigest;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-002</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The pod.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22222-7xsqq</p>
      */
     @NameInMap("Pod")
     public String pod;
 
     /**
      * <p>The instance ID of the image repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-qewqrqcsadf****</p>
      */
     @NameInMap("RepoInstanceId")
     public String repoInstanceId;
 
     /**
      * <p>The name of the image repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>libssh2</p>
      */
     @NameInMap("RepoName")
     public String repoName;
 
     /**
      * <p>The namespace to which the image repository belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>libssh2</p>
      */
     @NameInMap("RepoNamespace")
     public String repoNamespace;

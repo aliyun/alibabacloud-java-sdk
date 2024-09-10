@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeEventLevelCountResponseBody extends TeaModel {
     /**
-     * <p>The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,21 +21,31 @@ public class DescribeEventLevelCountResponseBody extends TeaModel {
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CE8CA5EA-24EF-5D41-B735-53ACE7XXXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,18 +98,27 @@ public class DescribeEventLevelCountResponseBody extends TeaModel {
     public static class DescribeEventLevelCountResponseBodyEventLevels extends TeaModel {
         /**
          * <p>The number of alerts whose Emergency level is Reminder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Remind")
         public Integer remind;
 
         /**
          * <p>The number of alerts whose Emergency level is Urgent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Serious")
         public Integer serious;
 
         /**
          * <p>The number of alerts whose Emergency level is Suspicious.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Suspicious")
         public Integer suspicious;

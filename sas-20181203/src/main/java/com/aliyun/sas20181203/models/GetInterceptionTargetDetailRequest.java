@@ -6,10 +6,13 @@ import com.aliyun.tea.*;
 public class GetInterceptionTargetDetailRequest extends TeaModel {
     /**
      * <p>The ID of the network object.</p>
-     * <br>
-     * <p>> You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to query the IDs of network objects.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to query the IDs of network objects.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>402008</p>
      */
     @NameInMap("TargetId")
     public Long targetId;

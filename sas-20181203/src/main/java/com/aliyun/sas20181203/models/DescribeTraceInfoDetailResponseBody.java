@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class DescribeTraceInfoDetailResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24A20733-10A0-4AF6-BE6B-XXXXXXXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -57,30 +64,45 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
     public static class DescribeTraceInfoDetailResponseBodyTraceInfoDetailEdgeList extends TeaModel {
         /**
          * <p>The number of times.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The ending vertex ID of the edge of the tracing diagram.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1d1fa39e5345dcef3f9712172cxxxxx</p>
          */
         @NameInMap("EndId")
         public String endId;
 
         /**
          * <p>The starting vertex ID of the edge of the tracing diagram.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02b4bf933c8e3bb8b9465eee502xxxxx</p>
          */
         @NameInMap("StartId")
         public String startId;
 
         /**
          * <p>The point in time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-21 10:24:42</p>
          */
         @NameInMap("Time")
         public String time;
 
         /**
          * <p>The type of the edge of the tracing diagram.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trigger_file_alert</p>
          */
         @NameInMap("Type")
         public String type;
@@ -135,66 +157,101 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
     public static class DescribeTraceInfoDetailResponseBodyTraceInfoDetailEntityTypeList extends TeaModel {
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Deprecated</p>
          */
         @NameInMap("DbId")
         public Integer dbId;
 
         /**
          * <p>The rendering color of the vertex.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>#fff</p>
          */
         @NameInMap("DisplayColor")
         public String displayColor;
 
         /**
          * <p>The icon style of the vertex.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://img.alicdn.com/tfs/TB176P5OgDqK1RjSZSyXXaxEVXa-49-48.png">https://img.alicdn.com/tfs/TB176P5OgDqK1RjSZSyXXaxEVXa-49-48.png</a></p>
          */
         @NameInMap("DisplayIcon")
         public String displayIcon;
 
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;${logtime}&quot;,&quot;value&quot;:&quot;$!{time}&quot;}]</p>
          */
         @NameInMap("DisplayTemplate")
         public String displayTemplate;
 
         /**
          * <p>The timestamp when the vertex was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-09T11:47Z</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
          * <p>The time when the vertex was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-09T11:47Z</p>
          */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
         /**
          * <p>The ID of the vertex type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alert</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Deprecated</p>
          */
         @NameInMap("Limit")
         public Integer limit;
 
         /**
          * <p>The name of the vertex type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alert</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Deprecated</p>
          */
         @NameInMap("Offset")
         public Integer offset;
@@ -297,33 +354,49 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
     public static class DescribeTraceInfoDetailResponseBodyTraceInfoDetailRelationTypeList extends TeaModel {
         /**
          * <p>Indicates whether the edge is a directional edge. Valid values:</p>
-         * <br>
-         * <p>*   **1**: yes</p>
-         * <p>*   **0**: no</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Directed")
         public Integer directed;
 
         /**
          * <p>The rendering color of the edge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>#fff</p>
          */
         @NameInMap("DisplayColor")
         public String displayColor;
 
         /**
          * <p>The name of the edge type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>file</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the edge type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>netflow_to_process</p>
          */
         @NameInMap("RelationTypeId")
         public String relationTypeId;
 
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Deprecated</p>
          */
         @NameInMap("ShowType")
         public String showType;
@@ -378,18 +451,27 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
     public static class DescribeTraceInfoDetailResponseBodyTraceInfoDetailVertexListNeighborList extends TeaModel {
         /**
          * <p>The number of neighbor nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>Indicates whether one more page is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         @NameInMap("HasMore")
         public Boolean hasMore;
 
         /**
-         * <p>The type of the neighbor node. The value is fixed as **alert**.</p>
+         * <p>The type of the neighbor node. The value is fixed as <strong>alert</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alert</p>
          */
         @NameInMap("Type")
         public String type;
@@ -428,18 +510,27 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
     public static class DescribeTraceInfoDetailResponseBodyTraceInfoDetailVertexList extends TeaModel {
         /**
          * <p>The number of times.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The ID of the vertex.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1d1fa39e5345dcef3f9712172xxxxxx</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The name of the entity represented by the vertex.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/local/tomcat</p>
          */
         @NameInMap("Name")
         public String name;
@@ -452,12 +543,18 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
 
         /**
          * <p>The point in time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-21 10:24:42</p>
          */
         @NameInMap("Time")
         public String time;
 
         /**
          * <p>The type of the entity represented by the vertex.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>file_path</p>
          */
         @NameInMap("Type")
         public String type;

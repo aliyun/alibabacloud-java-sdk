@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetHoneypotNodeResponseBody extends TeaModel {
     /**
-     * <p>The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,27 +21,40 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0A453658-070B-5554-B46C-867425BE4FD4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -99,63 +115,94 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
     public static class GetHoneypotNodeResponseBodyHoneypotNode extends TeaModel {
         /**
          * <p>Indicates whether a honeypot is allowed to access the Internet. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The honeypot is allowed to access the Internet.</p>
-         * <p>*   **false**: The honeypot is not allowed to access the Internet.</p>
+         * <ul>
+         * <li><strong>true</strong>: The honeypot is allowed to access the Internet.</li>
+         * <li><strong>false</strong>: The honeypot is not allowed to access the Internet.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AllowHoneypotAccessInternet")
         public Boolean allowHoneypotAccessInternet;
 
         /**
          * <p>The time when the management node was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-02 17:13:43</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-2vccskxjunf1ag6w****</p>
          */
         @NameInMap("EcsInstanceId")
         public String ecsInstanceId;
 
         /**
          * <p>The maximum number of honeypots that can be deployed to the management node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("HoneypotTotalCount")
         public Integer honeypotTotalCount;
 
         /**
          * <p>The number of honeypots that are deployed to the management node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("HoneypotUsedCount")
         public Integer honeypotUsedCount;
 
         /**
          * <p>The ID of the management node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a7409a58-bc60-41af-9d36-080d58ae****</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
          * <p>The IP address of the management node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101.37.XX.XX</p>
          */
         @NameInMap("NodeIp")
         public String nodeIp;
 
         /**
          * <p>The name of the management node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gmmc</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
          * <p>The maximum number of probes that can be deployed for the management node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("ProbeTotalCount")
         public Integer probeTotalCount;
 
         /**
          * <p>The number of probes that are deployed for the management node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         @NameInMap("ProbeUsedCount")
         public Integer probeUsedCount;
@@ -168,21 +215,29 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
 
         /**
          * <p>The status of the management node. Valid values:</p>
-         * <br>
-         * <p>*   **0**: preparing</p>
-         * <p>*   **1**: normal</p>
-         * <p>*   **2**: abnormal</p>
-         * <p>*   **4**: starting</p>
-         * <p>*   **5**: upgrading</p>
+         * <ul>
+         * <li><strong>0</strong>: preparing</li>
+         * <li><strong>1</strong>: normal</li>
+         * <li><strong>2</strong>: abnormal</li>
+         * <li><strong>4</strong>: starting</li>
+         * <li><strong>5</strong>: upgrading</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TotalStatus")
         public Integer totalStatus;
 
         /**
          * <p>Indicates whether the management node can be upgraded. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("UpgradeAvailable")
         public Boolean upgradeAvailable;

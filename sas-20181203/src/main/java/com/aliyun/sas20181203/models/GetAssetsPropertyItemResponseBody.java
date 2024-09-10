@@ -18,6 +18,9 @@ public class GetAssetsPropertyItemResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>340D7FC4-D575-1661-8ACD-CFA7BE57****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +57,36 @@ public class GetAssetsPropertyItemResponseBody extends TeaModel {
     public static class GetAssetsPropertyItemResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -118,30 +133,45 @@ public class GetAssetsPropertyItemResponseBody extends TeaModel {
     public static class GetAssetsPropertyItemResponseBodyPropertyItems extends TeaModel {
         /**
          * <p>The number of servers related to the asset fingerprints.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The endpoint.</p>
-         * <br>
-         * <p>> This parameter is returned only when **Biz** is set to **web_server**.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when <strong>Biz</strong> is set to <strong>web_server</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>localhost</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
          * <p>The name of the module.</p>
-         * <br>
-         * <p>> This parameter is returned only when **Biz** is set to **lkm**.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when <strong>Biz</strong> is set to <strong>lkm</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>alihids</p>
          */
         @NameInMap("ModuleName")
         public String moduleName;
 
         /**
          * <p>The path to the startup item.</p>
-         * <br>
-         * <p>> This parameter is returned only when **Biz** is set to **autorun**.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when <strong>Biz</strong> is set to <strong>autorun</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>C:/Program Files/****</p>
          */
         @NameInMap("Path")
         public String path;

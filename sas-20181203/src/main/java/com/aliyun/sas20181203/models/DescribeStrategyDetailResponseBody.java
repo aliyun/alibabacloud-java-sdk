@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeStrategyDetailResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C5B28F65-9245-5DC1-B3CF-5F2756A756A8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,51 +43,76 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
     public static class DescribeStrategyDetailResponseBodyStrategyRiskTypeWhiteListQueryResultListSubTypesCheckDetailsRulesParamList extends TeaModel {
         /**
          * <p>The options that can be selected for the rule parameter if the value of ParamType is set to 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0,1,2,3</p>
          */
         @NameInMap("EnumValue")
         public String enumValue;
 
         /**
          * <p>The maximum value of the rule parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>999</p>
          */
         @NameInMap("MaxValue")
         public Integer maxValue;
 
         /**
          * <p>The minimum value of the rule parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MinValue")
         public Integer minValue;
 
         /**
          * <p>The default value of the rule parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         @NameInMap("ParamDefaultValue")
         public String paramDefaultValue;
 
         /**
          * <p>The description of the rule parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The setting value is 0 means no definition, 1 means success, 2 means failure, 3 means success and failure</p>
          */
         @NameInMap("ParamDesc")
         public String paramDesc;
 
         /**
          * <p>The name of the rule parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>range_val</p>
          */
         @NameInMap("ParamName")
         public String paramName;
 
         /**
          * <p>The type of the rule parameter. Valid values:</p>
-         * <br>
-         * <p>*   **1**: input</p>
-         * <p>*   **2**: selection</p>
+         * <ul>
+         * <li><strong>1</strong>: input</li>
+         * <li><strong>2</strong>: selection</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ParamType")
         public Integer paramType;
 
         /**
          * <p>The configured value of the rule parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         @NameInMap("Value")
         public String value;
@@ -163,15 +191,22 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
     public static class DescribeStrategyDetailResponseBodyStrategyRiskTypeWhiteListQueryResultListSubTypesCheckDetailsRules extends TeaModel {
         /**
          * <p>The default value of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("DefaultValue")
         public Integer defaultValue;
 
         /**
          * <p>Indicates whether the rule can be selected. Valid values:</p>
-         * <br>
-         * <p>*   **1**: yes</p>
-         * <p>*   **0**: no</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Optional")
         public Integer optional;
@@ -184,12 +219,18 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
 
         /**
          * <p>The description of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Please customize the password expiration time detection standard as</p>
          */
         @NameInMap("RuleDesc")
         public String ruleDesc;
 
         /**
          * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>login_unlock_deny_pam_faillock.must.cus</p>
          */
         @NameInMap("RuleId")
         public String ruleId;
@@ -244,18 +285,27 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
     public static class DescribeStrategyDetailResponseBodyStrategyRiskTypeWhiteListQueryResultListSubTypesCheckDetails extends TeaModel {
         /**
          * <p>The description of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Set password expiration time, force regular modification of password, reduce password leakage and guess risk.Use non-password login (e.g. key pair) please ignore this item.</p>
          */
         @NameInMap("CheckDesc")
         public String checkDesc;
 
         /**
          * <p>The ID of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>206</p>
          */
         @NameInMap("CheckId")
         public Long checkId;
 
         /**
          * <p>The check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ensure password expiration period is set.</p>
          */
         @NameInMap("CheckItem")
         public String checkItem;
@@ -308,6 +358,9 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
     public static class DescribeStrategyDetailResponseBodyStrategyRiskTypeWhiteListQueryResultListSubTypes extends TeaModel {
         /**
          * <p>The alias of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Redis unauthorized access high exploit vulnerability risk</p>
          */
         @NameInMap("Alias")
         public String alias;
@@ -320,23 +373,35 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the sub-check item is selected. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("On")
         public Boolean on;
 
         /**
          * <p>The operating system type of the server. Valid values:</p>
-         * <p>*   **windows**</p>
-         * <p>*   **linux**</p>
+         * <ul>
+         * <li><strong>windows</strong></li>
+         * <li><strong>linux</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>windows</p>
          */
         @NameInMap("SupportedOs")
         public String supportedOs;
 
         /**
          * <p>The type of the sub-check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hc_exploit_redis</p>
          */
         @NameInMap("TypeName")
         public String typeName;
@@ -391,15 +456,22 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
     public static class DescribeStrategyDetailResponseBodyStrategyRiskTypeWhiteListQueryResultList extends TeaModel {
         /**
          * <p>The alias of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unauthorized Access</p>
          */
         @NameInMap("Alias")
         public String alias;
 
         /**
          * <p>Indicates whether the check item is selected. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("On")
         public Boolean on;
@@ -412,6 +484,9 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
 
         /**
          * <p>The name of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hc_exploit</p>
          */
         @NameInMap("TypeName")
         public String typeName;
@@ -458,52 +533,76 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
     public static class DescribeStrategyDetailResponseBodyStrategy extends TeaModel {
         /**
          * <p>The type of the baseline check policy that you want to query. Valid values:</p>
-         * <br>
-         * <p>*   **common**: standard baseline check policy</p>
-         * <p>*   **custom**: custom baseline check policy</p>
+         * <ul>
+         * <li><strong>common</strong>: standard baseline check policy</li>
+         * <li><strong>custom</strong>: custom baseline check policy</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>common</p>
          */
         @NameInMap("CustomType")
         public String customType;
 
         /**
          * <p>The check interval of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("CycleDays")
         public Integer cycleDays;
 
         /**
          * <p>The time period during which the check starts. Valid values:</p>
-         * <br>
-         * <p>*   **0**: 00:00 to 06:00</p>
-         * <p>*   **6**: 06:00 to 12:00</p>
-         * <p>*   **12**: 12:00 to 18:00</p>
-         * <p>*   **18**: 18:00 to 24:00</p>
+         * <ul>
+         * <li><strong>0</strong>: 00:00 to 06:00</li>
+         * <li><strong>6</strong>: 06:00 to 12:00</li>
+         * <li><strong>12</strong>: 12:00 to 18:00</li>
+         * <li><strong>18</strong>: 18:00 to 24:00</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("CycleStartTime")
         public Integer cycleStartTime;
 
         /**
          * <p>The end time of the check. Specify the time in the HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03:00:00</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The ID of the baseline check policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Id")
         public Integer id;
 
         /**
          * <p>The name of the baseline check policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestStrategy</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The subtype of the baselines. </p>
-         * <br>
-         * <p>> You can call the [DescribeRiskType](~~DescribeRiskType~~) operation to query the subtypes of baselines.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation to query the subtypes of baselines.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>hc_nginx_linux,tomcat7,hc_mysql_ali,hc_docker</p>
          */
         @NameInMap("RiskSubTypeName")
         public String riskSubTypeName;
@@ -516,24 +615,35 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
 
         /**
          * <p>The start time of the check. Specify the time in the HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02:00:00</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The method that is used to apply the baseline check policy. Valid values:</p>
-         * <br>
-         * <p>*   **groupId**: asset groups</p>
-         * <p>*   **uuid**: assets</p>
+         * <ul>
+         * <li><strong>groupId</strong>: asset groups</li>
+         * <li><strong>uuid</strong>: assets</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>groupId</p>
          */
         @NameInMap("TargetType")
         public String targetType;
 
         /**
          * <p>The type of the baseline check policy. Valid values:</p>
-         * <br>
-         * <p>*   **1**: standard policies</p>
-         * <p>*   **2**: custom policies</p>
+         * <ul>
+         * <li><strong>1</strong>: standard policies</li>
+         * <li><strong>2</strong>: custom policies</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Type")
         public Integer type;

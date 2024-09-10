@@ -6,23 +6,34 @@ import com.aliyun.tea.*;
 public class ModifyContainerScanConfigRequest extends TeaModel {
     /**
      * <p>The name of the container application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[\&quot;logtail-ds\&quot;,\&quot;alicloud-monitor-controller\&quot;,\&quot;storage-snapshot-manager\&quot;]</p>
      */
     @NameInMap("AppNames")
     public String appNames;
 
     /**
      * <p>The cluster ID.</p>
-     * <br>
-     * <p>>  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cfb7a55a81f7246b5ac18845ea79a****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;

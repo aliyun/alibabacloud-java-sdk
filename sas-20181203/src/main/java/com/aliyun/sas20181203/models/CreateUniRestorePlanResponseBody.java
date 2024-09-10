@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateUniRestorePlanResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F5CF78A7-30AA-59DB-847F-13EE3AE7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

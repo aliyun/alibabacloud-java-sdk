@@ -12,6 +12,9 @@ public class GetCommonSwitchConfigResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24A20733-10A0-4AF6-BE6B-E3322413****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,26 @@ public class GetCommonSwitchConfigResponseBody extends TeaModel {
     public static class GetCommonSwitchConfigResponseBodyData extends TeaModel {
         /**
          * <p>Specifies whether to turn on the switch for newly added servers. Valid values:</p>
-         * <br>
-         * <p>*   **add**: By default, the switch is turned on for newly added servers.</p>
-         * <p>*   **del**: By default, the switch is turned off for newly added servers.</p>
+         * <ul>
+         * <li><strong>add</strong>: By default, the switch is turned on for newly added servers.</li>
+         * <li><strong>del</strong>: By default, the switch is turned off for newly added servers.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>add</p>
          */
         @NameInMap("TargetDefault")
         public String targetDefault;
 
         /**
          * <p>The status of the synchronization. Valid values:</p>
-         * <br>
-         * <p>*   **sync**: The modifications are being synchronized.</p>
-         * <p>*   **valid**: The modifications has taken effect.</p>
+         * <ul>
+         * <li><strong>sync</strong>: The modifications are being synchronized.</li>
+         * <li><strong>valid</strong>: The modifications has taken effect.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>valid</p>
          */
         @NameInMap("TargetSyncStatus")
         public String targetSyncStatus;

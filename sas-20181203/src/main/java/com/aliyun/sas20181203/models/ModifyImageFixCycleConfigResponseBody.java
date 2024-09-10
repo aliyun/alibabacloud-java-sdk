@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class ModifyImageFixCycleConfigResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the configurations of the scheduled image fix are modified.</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Data")
     public Boolean data;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F7A4DF7E-57A4-5BBF-8290-223754AD****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

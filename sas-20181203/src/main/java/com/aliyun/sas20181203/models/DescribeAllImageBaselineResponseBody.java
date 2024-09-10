@@ -12,6 +12,9 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to query logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1A975D03-5F49-5354-B2CB-3918D5DA****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
     public static class DescribeAllImageBaselineResponseBodyImageBaselinesBaselineClassListBaselineNameListBaselineItemList extends TeaModel {
         /**
          * <p>The alias of the baseline check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ensure that no accounts use the same Hash password.</p>
          */
         @NameInMap("Alias")
         public String alias;
 
         /**
          * <p>The key of the type for the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>identification</p>
          */
         @NameInMap("ClassKey")
         public String classKey;
 
         /**
          * <p>The key of the name for the baseline check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>duplicate_pwd_hash</p>
          */
         @NameInMap("ItemKey")
         public String itemKey;
 
         /**
          * <p>The key of the name for the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>identification</p>
          */
         @NameInMap("NameKey")
         public String nameKey;
@@ -104,6 +119,9 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
     public static class DescribeAllImageBaselineResponseBodyImageBaselinesBaselineClassListBaselineNameList extends TeaModel {
         /**
          * <p>The alias of the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Identity authentication</p>
          */
         @NameInMap("Alias")
         public String alias;
@@ -116,12 +134,18 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
 
         /**
          * <p>The key of the type for the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>identification</p>
          */
         @NameInMap("ClassKey")
         public String classKey;
 
         /**
          * <p>The key of the name for the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>identification</p>
          */
         @NameInMap("NameKey")
         public String nameKey;
@@ -168,6 +192,9 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
     public static class DescribeAllImageBaselineResponseBodyImageBaselinesBaselineClassList extends TeaModel {
         /**
          * <p>The alias of the baseline type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Identity authentication</p>
          */
         @NameInMap("Alias")
         public String alias;
@@ -180,6 +207,9 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
 
         /**
          * <p>The key of the baseline type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>identification</p>
          */
         @NameInMap("ClassKey")
         public String classKey;

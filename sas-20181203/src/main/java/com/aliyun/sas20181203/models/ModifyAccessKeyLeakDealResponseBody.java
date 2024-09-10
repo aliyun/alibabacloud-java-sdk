@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyAccessKeyLeakDealResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD4617B4-133A-53C8-ADAE-7B30FF89****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

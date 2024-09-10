@@ -12,6 +12,9 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>92016EC8-D52D-49D8-9FF7-9EA340A950B9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,105 +43,153 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
     public static class DescribeAssetDetailByUuidsResponseBodyAssetList extends TeaModel {
         /**
          * <p>The type of the asset.</p>
-         * <br>
-         * <p>The value is fixed as **0**, which indicates ECS instances.</p>
+         * <p>The value is fixed as <strong>0</strong>, which indicates ECS instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AssetType")
         public String assetType;
 
         /**
          * <p>The status of the Security Center agent. Valid values:</p>
-         * <br>
-         * <p>*   **online**</p>
-         * <p>*   **offline**</p>
+         * <ul>
+         * <li><strong>online</strong></li>
+         * <li><strong>offline</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         @NameInMap("ClientStatus")
         public String clientStatus;
 
         /**
          * <p>The type of the asset by source. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The asset is provided by Alibaba Cloud.</p>
-         * <p>*   **1**: The asset is not provided by Alibaba Cloud.</p>
-         * <p>*   **2**: The asset resides in a data center.</p>
-         * <p>*   **3**, **4**, **5**, and **7**: other cloud asset.</p>
-         * <p>*   **8**: light-weight assets.</p>
+         * <ul>
+         * <li><strong>0</strong>: The asset is provided by Alibaba Cloud.</li>
+         * <li><strong>1</strong>: The asset is not provided by Alibaba Cloud.</li>
+         * <li><strong>2</strong>: The asset resides in a data center.</li>
+         * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: other cloud asset.</li>
+         * <li><strong>8</strong>: light-weight assets.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Flag")
         public Integer flag;
 
         /**
          * <p>The ID of the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-rj9gda4wolo0zixi****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestInstanceName</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The public IP address of the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.10.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address of the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>The IP address of the ECS instance.</p>
-         * <br>
-         * <p>>  If the ECS instance has a public IP address, the value of this parameter is the public IP address of the ECS instance. If the ECS instance does not have a public IP address, the value of this parameter is the private IP address of the ECS instance.</p>
+         * <blockquote>
+         * <p> If the ECS instance has a public IP address, the value of this parameter is the public IP address of the ECS instance. If the ECS instance does not have a public IP address, the value of this parameter is the private IP address of the ECS instance.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>10.10.XX.XX</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The operating system of the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Linux</p>
          */
         @NameInMap("Os")
         public String os;
 
         /**
          * <p>The name of the operating system run by the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS 7.6 64-bit</p>
          */
         @NameInMap("OsName")
         public String osName;
 
         /**
          * <p>The region in which the ECS instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-guangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The region in which the ECS instance resides.</p>
-         * <br>
-         * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](https://help.aliyun.com/document_detail/40654.html).</p>
+         * <blockquote>
+         * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The name of the region in which the ECS instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         @NameInMap("RegionName")
         public String regionName;
 
         /**
          * <p>The UUID of the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2a98f149-0256-414c-a29a-a69f8a75****</p>
          */
         @NameInMap("Uuid")
         public String uuid;
 
         /**
          * <p>The ID of the virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13231-331331</p>
          */
         @NameInMap("VpcInstanceId")
         public String vpcInstanceId;

@@ -5,73 +5,97 @@ import com.aliyun.tea.*;
 
 public class ModifyOperateVulRequest extends TeaModel {
     /**
-     * <p>The request ID. Set the value to **sas**.</p>
+     * <p>The request ID. Set the value to <strong>sas</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sas</p>
      */
     @NameInMap("From")
     public String from;
 
     /**
      * <p>The details of the vulnerability. The value of this parameter is in the JSON format and contains the following fields:</p>
-     * <br>
-     * <p>*   **name**: the name of the vulnerability.</p>
-     * <br>
-     * <p>*   **uuid**: the UUID of the server on which the vulnerability is detected.</p>
-     * <br>
-     * <p>*   **tag**: the tag that is added to the vulnerability. Valid values:</p>
-     * <br>
-     * <p>    *   **oval**: Linux software vulnerability</p>
-     * <p>    *   **system**: Windows system vulnerability</p>
-     * <p>    *   **cms**: Web-CMS vulnerability</p>
-     * <br>
-     * <p>>  You can call the [DescribeVulList](~~DescribeVulList~~) operation to query the tags that are added to vulnerabilities of other types.</p>
-     * <br>
-     * <p>*   **isFront**: specifies whether a pre-patch is required to fix the Windows system vulnerability. This field is required only for Windows system vulnerabilities. Valid values:</p>
-     * <br>
-     * <p>    *   **0**: no</p>
-     * <p>    *   **1**: yes</p>
-     * <br>
-     * <p>>  You can fix multiple vulnerabilities at a time. Separate the details of multiple vulnerabilities with commas (,). You can call the [DescribeVulLIst](~~DescribeVulList~~) operation to query the details of vulnerabilities.</p>
-     * <br>
+     * <ul>
+     * <li><p><strong>name</strong>: the name of the vulnerability.</p>
+     * </li>
+     * <li><p><strong>uuid</strong>: the UUID of the server on which the vulnerability is detected.</p>
+     * </li>
+     * <li><p><strong>tag</strong>: the tag that is added to the vulnerability. Valid values:</p>
+     * <ul>
+     * <li><strong>oval</strong>: Linux software vulnerability</li>
+     * <li><strong>system</strong>: Windows system vulnerability</li>
+     * <li><strong>cms</strong>: Web-CMS vulnerability</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to query the tags that are added to vulnerabilities of other types.</p>
+     * </blockquote>
+     * <ul>
+     * <li><p><strong>isFront</strong>: specifies whether a pre-patch is required to fix the Windows system vulnerability. This field is required only for Windows system vulnerabilities. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: no</li>
+     * <li><strong>1</strong>: yes</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p> You can fix multiple vulnerabilities at a time. Separate the details of multiple vulnerabilities with commas (,). You can call the <a href="~~DescribeVulList~~">DescribeVulLIst</a> operation to query the details of vulnerabilities.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;name&quot;:&quot;alilinux2:2.1903:ALINUX2-SA-2022:0007&quot;,&quot;uuid&quot;:&quot;a3bb82a8-a3bd-4546-acce-45ac34af****&quot;,&quot;tag&quot;:&quot;oval&quot;,&quot;isFront&quot;:0},{&quot;name&quot;:&quot;alilinux2:2.1903:ALINUX2-SA-2022:0007&quot;,&quot;uuid&quot;:&quot;98a6fecc-88cd-46f2-8e35-f808a388****&quot;,&quot;tag&quot;:&quot;oval&quot;,&quot;isFront&quot;:0}]</p>
      */
     @NameInMap("Info")
     public String info;
 
     /**
      * <p>The operation that you want to perform on the vulnerability. Valid values:</p>
-     * <br>
-     * <p>*   **vul_fix**: fixes the vulnerability.</p>
-     * <p>*   **vul_verify**: verifies the vulnerability fix.</p>
-     * <p>*   **vul_ignore**: ignores the vulnerability.</p>
-     * <p>*   **vul_undo_ignore**: cancels ignoring the vulnerability.</p>
-     * <p>*   **vul_delete**: deletes the vulnerability.</p>
-     * <br>
+     * <ul>
+     * <li><strong>vul_fix</strong>: fixes the vulnerability.</li>
+     * <li><strong>vul_verify</strong>: verifies the vulnerability fix.</li>
+     * <li><strong>vul_ignore</strong>: ignores the vulnerability.</li>
+     * <li><strong>vul_undo_ignore</strong>: cancels ignoring the vulnerability.</li>
+     * <li><strong>vul_delete</strong>: deletes the vulnerability.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vul_fix</p>
      */
     @NameInMap("OperateType")
     public String operateType;
 
     /**
-     * <p>The reason why the vulnerability is **ignored**.</p>
-     * <br>
-     * <p>>  This parameter is required only when you set **OperateType** to **vul_ignore**.</p>
+     * <p>The reason why the vulnerability is <strong>ignored</strong>.</p>
+     * <blockquote>
+     * <p> This parameter is required only when you set <strong>OperateType</strong> to <strong>vul_ignore</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>not operate</p>
      */
     @NameInMap("Reason")
     public String reason;
 
     /**
      * <p>The type of the vulnerability. Valid values:</p>
-     * <br>
-     * <p>*   **cve**: Linux software vulnerability</p>
-     * <p>*   **sys**: Windows system vulnerability</p>
-     * <p>*   **cms**: Web-CMS vulnerability</p>
-     * <p>*   **emg**: urgent vulnerability</p>
-     * <p>*   **app**: application vulnerability</p>
-     * <p>*   **sca**: vulnerability that is detected based on software component analysis</p>
-     * <br>
-     * <p>>  You cannot fix the urgent vulnerabilities, application vulnerabilities, or vulnerabilities that are detected based on software component analysis.</p>
-     * <br>
+     * <ul>
+     * <li><strong>cve</strong>: Linux software vulnerability</li>
+     * <li><strong>sys</strong>: Windows system vulnerability</li>
+     * <li><strong>cms</strong>: Web-CMS vulnerability</li>
+     * <li><strong>emg</strong>: urgent vulnerability</li>
+     * <li><strong>app</strong>: application vulnerability</li>
+     * <li><strong>sca</strong>: vulnerability that is detected based on software component analysis</li>
+     * </ul>
+     * <blockquote>
+     * <p> You cannot fix the urgent vulnerabilities, application vulnerabilities, or vulnerabilities that are detected based on software component analysis.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cve</p>
      */
     @NameInMap("Type")
     public String type;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteBinarySecurityPolicyResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A6CFADC0-1167-521A-9284-8CD8034C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

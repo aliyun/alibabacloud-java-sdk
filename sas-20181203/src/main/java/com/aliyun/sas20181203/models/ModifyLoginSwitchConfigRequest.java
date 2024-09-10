@@ -6,23 +6,29 @@ import com.aliyun.tea.*;
 public class ModifyLoginSwitchConfigRequest extends TeaModel {
     /**
      * <p>The type of the logon security settings that you want to enable or disable. Valid values:</p>
-     * <br>
-     * <p>*   **login_common_ip**: unapproved logon IP addresses</p>
-     * <p>*   **login_common_time**: unapproved logon time ranges</p>
-     * <p>*   **login_common_account**: unapproved logon accounts</p>
-     * <br>
+     * <ul>
+     * <li><strong>login_common_ip</strong>: unapproved logon IP addresses</li>
+     * <li><strong>login_common_time</strong>: unapproved logon time ranges</li>
+     * <li><strong>login_common_account</strong>: unapproved logon accounts</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>login_common_account</p>
      */
     @NameInMap("Item")
     public String item;
 
     /**
      * <p>Specifies whether to enable the logon security settings. Valid values:</p>
-     * <br>
-     * <p>*   **0**: no</p>
-     * <p>*   **1**: yes</p>
-     * <br>
+     * <ul>
+     * <li><strong>0</strong>: no</li>
+     * <li><strong>1</strong>: yes</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Status")
     public Integer status;

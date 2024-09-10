@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class BatchOperateCommonOverallConfigResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>765EDBDE-1686-5DBA-B76F-2E0E6E7E1B96</p>
      */
     @NameInMap("RequestId")
     public String requestId;

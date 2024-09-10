@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>291B49F9-1685-4005-9D34-606B6F78740F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,15 +43,22 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
     public static class DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroupsCountByStatus extends TeaModel {
         /**
          * <p>The number of detected risk items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The status of the check item after the check is finished. Valid values:</p>
-         * <br>
-         * <p>*   **pass**: The check item passed the check, which indicates that the check item is normal.</p>
-         * <p>*   **failed**: The check item failed the check, which indicates that risks are detected based on the check item.</p>
+         * <ul>
+         * <li><strong>pass</strong>: The check item passed the check, which indicates that the check item is normal.</li>
+         * <li><strong>failed</strong>: The check item failed the check, which indicates that risks are detected based on the check item.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>pass</p>
          */
         @NameInMap("Status")
         public String status;
@@ -85,35 +95,51 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the check item type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The remaining time before the check is complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RemainingTime")
         public Integer remainingTime;
 
         /**
-         * <p>The sequence number of the check item type in the **All Types** drop-down list in the Security Center console.</p>
+         * <p>The sequence number of the check item type in the <strong>All Types</strong> drop-down list in the Security Center console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Sort")
         public Integer sort;
 
         /**
          * <p>The status of the check. Valid values:</p>
-         * <br>
-         * <p>*   **finish**: The check is finished.</p>
-         * <p>*   **running**: The check is in progress.</p>
-         * <p>*   **waiting**: The check is pending.</p>
-         * <p>*   **notStart**: The check is not started.</p>
+         * <ul>
+         * <li><strong>finish</strong>: The check is finished.</li>
+         * <li><strong>running</strong>: The check is in progress.</li>
+         * <li><strong>waiting</strong>: The check is pending.</li>
+         * <li><strong>notStart</strong>: The check is not started.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>finish</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The name of the check item type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Identity authentication and permissions</p>
          */
         @NameInMap("Title")
         public String title;
@@ -176,16 +202,23 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
     public static class DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryRiskLevelCount extends TeaModel {
         /**
          * <p>The number of check items at the specified risk level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The risk level of the check items. Valid values:</p>
-         * <br>
-         * <p>*   **high**</p>
-         * <p>*   **medium**</p>
-         * <p>*   **low**</p>
+         * <ul>
+         * <li><strong>high</strong></li>
+         * <li><strong>medium</strong></li>
+         * <li><strong>low</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>medium</p>
          */
         @NameInMap("Key")
         public String key;
@@ -216,18 +249,27 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
     public static class DescribeRiskCheckSummaryResponseBodyRiskCheckSummary extends TeaModel {
         /**
          * <p>The number of affected assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AffectedAssetCount")
         public Integer affectedAssetCount;
 
         /**
          * <p>The number of the check items that failed the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DisabledRiskCount")
         public Integer disabledRiskCount;
 
         /**
          * <p>The number of the check items that passed the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("EnabledRiskCount")
         public Integer enabledRiskCount;
@@ -240,24 +282,36 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
 
         /**
          * <p>The number of check items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("ItemCount")
         public Integer itemCount;
 
         /**
          * <p>The number of risk items detected in the last check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PreviousCount")
         public Integer previousCount;
 
         /**
          * <p>The timestamp of the last check. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1545012926000</p>
          */
         @NameInMap("PreviousTime")
         public Long previousTime;
 
         /**
          * <p>The number of detected risk items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RiskCount")
         public Integer riskCount;
@@ -270,6 +324,9 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
 
         /**
          * <p>The proportion of risk items to all check items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.25</p>
          */
         @NameInMap("RiskRate")
         public Float riskRate;

@@ -12,6 +12,9 @@ public class DescribeUserBackupMachinesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D0D6E6E4-CB8C-4897-B852-46AEFDA04B21</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class DescribeUserBackupMachinesResponseBody extends TeaModel {
     public static class DescribeUserBackupMachinesResponseBodyMachines extends TeaModel {
         /**
          * <p>The ID of the anti-ransomware policy that is applied to the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name of the anti-ransomware policy that is applied to the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policy_name_A</p>
          */
         @NameInMap("PolicyName")
         public String policyName;
 
         /**
          * <p>The UUID of the server to which the anti-ransomware policy is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D0D6E6E4-CB8C-4897-B852-46AEFDA0****</p>
          */
         @NameInMap("Uuid")
         public String uuid;

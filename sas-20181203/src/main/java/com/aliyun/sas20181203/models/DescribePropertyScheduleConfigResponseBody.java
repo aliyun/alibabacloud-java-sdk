@@ -6,14 +6,21 @@ import com.aliyun.tea.*;
 public class DescribePropertyScheduleConfigResponseBody extends TeaModel {
     /**
      * <p>The configuration time. Unit: hours.</p>
-     * <br>
-     * <p>>  A value **0** indicates that asset fingerprint collection is disabled for this type of asset.</p>
+     * <blockquote>
+     * <p> A value <strong>0</strong> indicates that asset fingerprint collection is disabled for this type of asset.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("Config")
     public String config;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>
      */
     @NameInMap("RequestId")
     public String requestId;

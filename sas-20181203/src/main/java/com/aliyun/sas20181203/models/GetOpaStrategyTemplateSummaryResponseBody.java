@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetOpaStrategyTemplateSummaryResponseBody extends TeaModel {
     /**
-     * <p>The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,21 +21,31 @@ public class GetOpaStrategyTemplateSummaryResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>54572138-3390-5774-B71D-799DC8C2161B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,24 +98,36 @@ public class GetOpaStrategyTemplateSummaryResponseBody extends TeaModel {
     public static class GetOpaStrategyTemplateSummaryResponseBodyData extends TeaModel {
         /**
          * <p>The number of times that the template is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The description of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom defense configuration</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TemplateId")
         public Long templateId;
 
         /**
          * <p>The name of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Blank template</p>
          */
         @NameInMap("TemplateName")
         public String templateName;

@@ -12,6 +12,9 @@ public class DescribeAssetsSecurityEventSummaryResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D03DD0FD-6041-5107-AC00-383E28F1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,26 +43,36 @@ public class DescribeAssetsSecurityEventSummaryResponseBody extends TeaModel {
     public static class DescribeAssetsSecurityEventSummaryResponseBodyAssets extends TeaModel {
         /**
          * <p>The type of the asset. Valid values:</p>
-         * <br>
-         * <p>*   **namespace**</p>
-         * <p>*   **clusters**</p>
-         * <p>*   **applications**</p>
-         * <p>*   **pods**</p>
-         * <p>*   **containers**</p>
-         * <p>*   **images**</p>
-         * <p>*   **hosts**</p>
+         * <ul>
+         * <li><strong>namespace</strong></li>
+         * <li><strong>clusters</strong></li>
+         * <li><strong>applications</strong></li>
+         * <li><strong>pods</strong></li>
+         * <li><strong>containers</strong></li>
+         * <li><strong>images</strong></li>
+         * <li><strong>hosts</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>namespace</p>
          */
         @NameInMap("AssetType")
         public String assetType;
 
         /**
          * <p>The number of potential risky assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         @NameInMap("RiskCount")
         public Long riskCount;
 
         /**
          * <p>The total number of assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UnbindAegisResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>825F5526-2A17-4279-857F-F790E9590171</p>
      */
     @NameInMap("RequestId")
     public String requestId;

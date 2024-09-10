@@ -5,175 +5,251 @@ import com.aliyun.tea.*;
 
 public class DescribePropertyScaDetailRequest extends TeaModel {
     /**
-     * <p>The type of the asset fingerprint that you want to query. Default value: **sca**. Valid values:</p>
-     * <br>
-     * <p>*   **sca**: middleware</p>
-     * <p>*   **sca_database**: database</p>
-     * <p>*   **sca_web**: web service</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the default value **sca** is used, which indicates that middleware fingerprints are queried.</p>
+     * <p>The type of the asset fingerprint that you want to query. Default value: <strong>sca</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>sca</strong>: middleware</li>
+     * <li><strong>sca_database</strong>: database</li>
+     * <li><strong>sca_web</strong>: web service</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the default value <strong>sca</strong> is used, which indicates that middleware fingerprints are queried.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>sca</p>
      */
     @NameInMap("Biz")
     public String biz;
 
     /**
      * <p>The type of the middleware, database, or web service that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   **system_service**: system service</p>
-     * <p>*   **software_library**: software library</p>
-     * <p>*   **docker_component**: container component</p>
-     * <p>*   **database**: database</p>
-     * <p>*   **web_container**: web container</p>
-     * <p>*   **jar**: JAR package</p>
-     * <p>*   **web_framework**: web framework</p>
+     * <ul>
+     * <li><strong>system_service</strong>: system service</li>
+     * <li><strong>software_library</strong>: software library</li>
+     * <li><strong>docker_component</strong>: container component</li>
+     * <li><strong>database</strong>: database</li>
+     * <li><strong>web_container</strong>: web container</li>
+     * <li><strong>jar</strong>: JAR package</li>
+     * <li><strong>web_framework</strong>: web framework</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>system_service</p>
      */
     @NameInMap("BizType")
     public String bizType;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The name of the middleware, database, or web service.</p>
-     * <br>
-     * <p>>  This parameter is deprecated. You can ignore it.</p>
+     * <blockquote>
+     * <p> This parameter is deprecated. You can ignore it.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Name")
     public Long name;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**.</p>
-     * <br>
-     * <p>>  We recommend that you do not leave this parameter empty.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * <blockquote>
+     * <p> We recommend that you do not leave this parameter empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The PID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>756</p>
      */
     @NameInMap("Pid")
     public String pid;
 
     /**
      * <p>The port that the process monitors.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>68</p>
      */
     @NameInMap("Port")
     public String port;
 
     /**
      * <p>The timestamp when the process ends. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1641110965</p>
      */
     @NameInMap("ProcessStartedEnd")
     public Long processStartedEnd;
 
     /**
      * <p>The timestamp when the process starts. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1641024565</p>
      */
     @NameInMap("ProcessStartedStart")
     public Long processStartedStart;
 
     /**
      * <p>The search condition, such as a server name or a server IP address.</p>
-     * <br>
-     * <p>>  Fuzzy match is supported.</p>
+     * <blockquote>
+     * <p> Fuzzy match is supported.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
      * <p>The name of the asset fingerprint that you want to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>openssl</p>
      */
     @NameInMap("ScaName")
     public String scaName;
 
     /**
      * <p>The name of the process.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>open</p>
      */
     @NameInMap("ScaNamePattern")
     public String scaNamePattern;
 
     /**
      * <p>The version of the middleware, database, or web service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0.2k</p>
      */
     @NameInMap("ScaVersion")
     public String scaVersion;
 
     /**
-     * <p>The search keyword. You must specify this parameter based on the value of the **SearchItem** parameter.</p>
-     * <br>
-     * <p>*   If the **SearchItem** parameter is set to **name**, you must enter the name of an asset fingerprint.</p>
-     * <br>
-     * <p>*   If the **SearchItem** parameter is set to **type**, you must enter the type of an asset fingerprint. Valid values:</p>
-     * <br>
-     * <p>    *   **system_service**: system service</p>
-     * <p>    *   **software_library**: software library</p>
-     * <p>    *   **docker_component**: container component</p>
-     * <p>    *   **database**: database</p>
-     * <p>    *   **web_container**: web container</p>
-     * <p>    *   **jar**: JAR package</p>
-     * <p>    *   **web_framework**: web framework</p>
-     * <br>
-     * <p>>  You must specify both the **SearchItem** and **SearchInfo** parameters before you can query the asset fingerprints based on the specified name or type.</p>
+     * <p>The search keyword. You must specify this parameter based on the value of the <strong>SearchItem</strong> parameter.</p>
+     * <ul>
+     * <li><p>If the <strong>SearchItem</strong> parameter is set to <strong>name</strong>, you must enter the name of an asset fingerprint.</p>
+     * </li>
+     * <li><p>If the <strong>SearchItem</strong> parameter is set to <strong>type</strong>, you must enter the type of an asset fingerprint. Valid values:</p>
+     * <ul>
+     * <li><strong>system_service</strong>: system service</li>
+     * <li><strong>software_library</strong>: software library</li>
+     * <li><strong>docker_component</strong>: container component</li>
+     * <li><strong>database</strong>: database</li>
+     * <li><strong>web_container</strong>: web container</li>
+     * <li><strong>jar</strong>: JAR package</li>
+     * <li><strong>web_framework</strong>: web framework</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p> You must specify both the <strong>SearchItem</strong> and <strong>SearchInfo</strong> parameters before you can query the asset fingerprints based on the specified name or type.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>openssl</p>
      */
     @NameInMap("SearchInfo")
     public String searchInfo;
 
     /**
-     * <p>The keyword of the subquery. You must specify this parameter based on the value of the **SearchItemSub** parameter.</p>
-     * <br>
-     * <p>*   If the **SearchItemSub** parameter is set to **port**, you must enter a port number.</p>
-     * <p>*   If the **SearchItemSub** parameter is set to **pid**, you must enter a process ID (PID).</p>
-     * <p>*   If the **SearchItemSub** parameter is set to **version**, you must enter the version of a database, middleware, or web service.</p>
-     * <p>*   If the **SearchItemSub** parameter is set to **user**, you must enter a username.</p>
-     * <br>
-     * <p>>  The subquery is used to search for data of a specified database, middleware, or web service.</p>
+     * <p>The keyword of the subquery. You must specify this parameter based on the value of the <strong>SearchItemSub</strong> parameter.</p>
+     * <ul>
+     * <li>If the <strong>SearchItemSub</strong> parameter is set to <strong>port</strong>, you must enter a port number.</li>
+     * <li>If the <strong>SearchItemSub</strong> parameter is set to <strong>pid</strong>, you must enter a process ID (PID).</li>
+     * <li>If the <strong>SearchItemSub</strong> parameter is set to <strong>version</strong>, you must enter the version of a database, middleware, or web service.</li>
+     * <li>If the <strong>SearchItemSub</strong> parameter is set to <strong>user</strong>, you must enter a username.</li>
+     * </ul>
+     * <blockquote>
+     * <p> The subquery is used to search for data of a specified database, middleware, or web service.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0.2k</p>
      */
     @NameInMap("SearchInfoSub")
     public String searchInfoSub;
 
     /**
      * <p>The type of the search condition. Valid values:</p>
-     * <br>
-     * <p>*   **name**: the name of a database, middleware, or web service</p>
-     * <p>*   **type**: the type of a database, middleware, or web service</p>
-     * <br>
-     * <p>>  You must specify both the **SearchItem** and **SearchInfo** parameters before you can query the asset fingerprints based on the specified name or type.</p>
+     * <ul>
+     * <li><strong>name</strong>: the name of a database, middleware, or web service</li>
+     * <li><strong>type</strong>: the type of a database, middleware, or web service</li>
+     * </ul>
+     * <blockquote>
+     * <p> You must specify both the <strong>SearchItem</strong> and <strong>SearchInfo</strong> parameters before you can query the asset fingerprints based on the specified name or type.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>name</p>
      */
     @NameInMap("SearchItem")
     public String searchItem;
 
     /**
      * <p>The type of the subquery. Valid values:</p>
-     * <br>
-     * <p>*   **port**</p>
-     * <p>*   **pid**</p>
-     * <p>*   **version**</p>
-     * <p>*   **user**</p>
+     * <ul>
+     * <li><strong>port</strong></li>
+     * <li><strong>pid</strong></li>
+     * <li><strong>version</strong></li>
+     * <li><strong>user</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>version</p>
      */
     @NameInMap("SearchItemSub")
     public String searchItemSub;
 
     /**
      * <p>The user who runs the process.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>root</p>
      */
     @NameInMap("User")
     public String user;
 
     /**
      * <p>The UUID of the server on which the middleware, database, or web service is run.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>uuid-02ebabe7-1c19-ab****</p>
      */
     @NameInMap("Uuid")
     public String uuid;

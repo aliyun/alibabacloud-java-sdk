@@ -12,6 +12,9 @@ public class GenerateK8sAccessInfoResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>061955B2-BC40-589F-AF63-C40A901EE279</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,54 +43,81 @@ public class GenerateK8sAccessInfoResponseBody extends TeaModel {
     public static class GenerateK8sAccessInfoResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1766185894104***</p>
          */
         @NameInMap("AliUid")
         public Long aliUid;
 
         /**
          * <p>The Simple Log Service Logstore that is used to store the audit logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>audit-cf6baf6afa106eca665296fdf68b65bf</p>
          */
         @NameInMap("AuditLogStore")
         public String auditLogStore;
 
         /**
          * <p>The Simple Log Service project that is used to store the audit logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k8s-log-custom-your-project-sd89ehaaa</p>
          */
         @NameInMap("AuditProject")
         public String auditProject;
 
         /**
          * <p>The ID of the region in which the server is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("AuditRegionId")
         public String auditRegionId;
 
         /**
          * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c8ca91e0907d94efaba7fb0827eb9****</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
 
         /**
          * <p>The expiration time. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1804230578566</p>
          */
         @NameInMap("ExpireDate")
         public Long expireDate;
 
         /**
          * <p>The server group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11618788</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The installation key of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BC66185***</p>
          */
         @NameInMap("InstallKey")
         public String installKey;

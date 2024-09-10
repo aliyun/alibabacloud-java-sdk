@@ -12,6 +12,9 @@ public class DescribeClientConfSetupResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>151F6EB6-D5F3-417A-AF7B-4D84975D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,22 +43,32 @@ public class DescribeClientConfSetupResponseBody extends TeaModel {
     public static class DescribeClientConfSetupResponseBodyClientConf extends TeaModel {
         /**
          * <p>The configurations of the usage for the Security Center agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;mem&quot;:&quot;200&quot;,&quot;cpu&quot;:&quot;10&quot;,&quot;cpu_all&quot;:&quot;0&quot;}</p>
          */
         @NameInMap("Config")
         public String config;
 
         /**
          * <p>The tag that is added to the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>machineResource</p>
          */
         @NameInMap("StrategyTag")
         public String strategyTag;
 
         /**
          * <p>The value of the tag. Valid values:</p>
-         * <br>
-         * <p>*   major</p>
-         * <p>*   advanced</p>
-         * <p>*   basic</p>
+         * <ul>
+         * <li>major</li>
+         * <li>advanced</li>
+         * <li>basic</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>major</p>
          */
         @NameInMap("StrategyTagValue")
         public String strategyTagValue;

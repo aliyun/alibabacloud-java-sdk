@@ -12,6 +12,9 @@ public class GetAlarmMachineCountResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6D3A2E7D-1238-5DD4-B3C3-BF06FCAD****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class GetAlarmMachineCountResponseBody extends TeaModel {
     public static class GetAlarmMachineCountResponseBodyData extends TeaModel {
         /**
          * <p>The number of servers on which alerts are generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MachineCount")
         public Integer machineCount;

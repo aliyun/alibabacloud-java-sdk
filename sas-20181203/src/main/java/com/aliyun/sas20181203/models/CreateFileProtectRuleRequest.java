@@ -6,18 +6,21 @@ import com.aliyun.tea.*;
 public class CreateFileProtectRuleRequest extends TeaModel {
     /**
      * <p>The severity of alerts. Valid values:</p>
-     * <br>
-     * <p>*   0: does not generate alerts</p>
-     * <p>*   1: sends notifications</p>
-     * <p>*   2: suspicious</p>
-     * <p>*   3: high-risk</p>
+     * <ul>
+     * <li>0: does not generate alerts</li>
+     * <li>1: sends notifications</li>
+     * <li>2: suspicious</li>
+     * <li>3: high-risk</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("AlertLevel")
     public Integer alertLevel;
 
     /**
      * <p>The operations that you want to perform on the files.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("FileOps")
@@ -25,15 +28,26 @@ public class CreateFileProtectRuleRequest extends TeaModel {
 
     /**
      * <p>The paths to the files that you want to monitor. Wildcard characters are supported.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("FilePaths")
     public java.util.List<String> filePaths;
 
     /**
+     * <p>The type of the operating system. Valid values:</p>
+     * <ul>
+     * <li><strong>windows</strong>: Windows</li>
+     * <li><strong>linux</strong>: Linux</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>linux</p>
+     */
+    @NameInMap("Platform")
+    public String platform;
+
+    /**
      * <p>The paths to the processes that you want to monitor. Wildcard characters are supported.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ProcPaths")
@@ -41,34 +55,46 @@ public class CreateFileProtectRuleRequest extends TeaModel {
 
     /**
      * <p>The handling method of the rule. Valid values:</p>
-     * <br>
-     * <p>*   pass: allow</p>
-     * <p>*   alert</p>
-     * <br>
+     * <ul>
+     * <li>pass: allow</li>
+     * <li>alert</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pass</p>
      */
     @NameInMap("RuleAction")
     public String ruleAction;
 
     /**
      * <p>The name of the rule.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tetsRule</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
 
     /**
      * <p>Specifies whether to enable the rule. Valid values:</p>
-     * <br>
-     * <p>*   **1**: yes</p>
-     * <p>*   **0**: no</p>
+     * <ul>
+     * <li><strong>1</strong>: yes</li>
+     * <li><strong>0</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Status")
     public Integer status;
 
     /**
      * <p>The switch ID of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FILE_PROTECT_RULE_SWITCH_TYPE_0000</p>
      */
     @NameInMap("SwitchId")
     public String switchId;
@@ -100,6 +126,14 @@ public class CreateFileProtectRuleRequest extends TeaModel {
     }
     public java.util.List<String> getFilePaths() {
         return this.filePaths;
+    }
+
+    public CreateFileProtectRuleRequest setPlatform(String platform) {
+        this.platform = platform;
+        return this;
+    }
+    public String getPlatform() {
+        return this.platform;
     }
 
     public CreateFileProtectRuleRequest setProcPaths(java.util.List<String> procPaths) {

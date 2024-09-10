@@ -12,6 +12,9 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9f368b6e-d60a-43c5-bd6f-c7087f2d****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,42 +43,62 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
     public static class GetFileDetectApiInvokeInfoResponseBodyData extends TeaModel {
         /**
          * <p>The total number of authorizations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("AuthCount")
         public Long authCount;
 
         /**
          * <p>The timestamp of the expiration date of the authorization number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1815753600000</p>
          */
         @NameInMap("Expire")
         public Long expire;
 
         /**
          * <p>The frequency of calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("FlowRate")
         public Integer flowRate;
 
         /**
          * <p>The number of remaining authorizations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>900</p>
          */
         @NameInMap("RemainAuthCount")
         public Long remainAuthCount;
 
         /**
          * <p>The Authorized Version. Valid values include:</p>
-         * <br>
-         * <p>* **1:** trial version</p>
-         * <p>* **2:** Enterprise Edition</p>
+         * <ul>
+         * <li><strong>1:</strong> trial version</li>
+         * <li><strong>2:</strong> Enterprise Edition</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("SaleVersion")
         public Integer saleVersion;
 
         /**
          * <p>The time unit of the frequency limit. Value:</p>
-         * <br>
-         * <p>* **SECONDS**</p>
-         * <p>* **MINUTES**</p>
+         * <ul>
+         * <li><strong>SECONDS</strong></li>
+         * <li><strong>MINUTES</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SECONDS</p>
          */
         @NameInMap("TimeUnit")
         public String timeUnit;

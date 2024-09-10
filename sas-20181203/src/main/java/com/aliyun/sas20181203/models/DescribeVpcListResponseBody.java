@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeVpcListResponseBody extends TeaModel {
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Count")
     public Integer count;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,30 +60,45 @@ public class DescribeVpcListResponseBody extends TeaModel {
     public static class DescribeVpcListResponseBodyVpcList extends TeaModel {
         /**
          * <p>The number of Elastic Compute Service (ECS) instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         @NameInMap("EcsCount")
         public Integer ecsCount;
 
         /**
          * <p>The information about the virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestVpcNote</p>
          */
         @NameInMap("InstanceDesc")
         public String instanceDesc;
 
         /**
          * <p>The ID of the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ins_1321_asedb_ada</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The region in which the server resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;

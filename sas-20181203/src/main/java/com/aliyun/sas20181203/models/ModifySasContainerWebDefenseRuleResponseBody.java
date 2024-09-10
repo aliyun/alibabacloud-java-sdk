@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifySasContainerWebDefenseRuleResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A447E4E3-42A3-58B7-A7D4-2287745BEFDC</p>
      */
     @NameInMap("RequestId")
     public String requestId;

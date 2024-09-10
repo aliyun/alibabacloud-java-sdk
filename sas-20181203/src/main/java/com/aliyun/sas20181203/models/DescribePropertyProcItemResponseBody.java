@@ -18,6 +18,9 @@ public class DescribePropertyProcItemResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BD8AD4C6-A169-4FA3-BA1F-ED40ED52973B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +57,36 @@ public class DescribePropertyProcItemResponseBody extends TeaModel {
     public static class DescribePropertyProcItemResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>372</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -118,12 +133,18 @@ public class DescribePropertyProcItemResponseBody extends TeaModel {
     public static class DescribePropertyProcItemResponseBodyPropertyItems extends TeaModel {
         /**
          * <p>The number of servers on which the process runs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8888</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The name of the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>.ss</p>
          */
         @NameInMap("Name")
         public String name;

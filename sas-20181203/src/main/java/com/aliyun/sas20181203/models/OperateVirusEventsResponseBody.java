@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class OperateVirusEventsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B72BEC03-001C-5C77-A4BB-1E6XXXXXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the task to handle multiple alert events at a time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

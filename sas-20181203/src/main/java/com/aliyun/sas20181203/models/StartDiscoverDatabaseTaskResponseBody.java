@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class StartDiscoverDatabaseTaskResponseBody extends TeaModel {
     /**
      * <p>The ID of the scan task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>48bced6d-2aee-4fa2-9aba-b846b77b****</p>
      */
     @NameInMap("CreateMark")
     public String createMark;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F46921AF-CC55-5971-92C9-7E09E160****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

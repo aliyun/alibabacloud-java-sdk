@@ -12,6 +12,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A4EB8B1C-1DEC-5E18-BCD0-D1BBB3936FA7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,79 +43,150 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public static class DescribeBackupPolicyResponseBodyBackupPolicyDetail extends TeaModel {
         /**
          * <p>The status of the anti-ransomware agent. Valid values:</p>
-         * <br>
-         * <p>*   **running**: normal</p>
-         * <p>*   **exception**: abnormal</p>
+         * <ul>
+         * <li><strong>running</strong>: normal</li>
+         * <li><strong>exception</strong>: abnormal</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         @NameInMap("ClientStatus")
         public String clientStatus;
 
         /**
          * <p>The ID of the anti-ransomware policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51880</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name of the anti-ransomware policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testBuckUp</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>*   **IsDefault**: the type of the anti-ransomware policy. Valid values:</p>
-         * <br>
-         * <p>    *   **1**: recommended policy</p>
-         * <p>    *   **0**: custom policy</p>
-         * <br>
-         * <p>*   **Include**: the format of the files that you want to protect. If you want to protect the files in all formats, set this field to [].</p>
-         * <br>
-         * <p>*   **Source**: the directory that you want to protect. If you want to protect all directories, set this field to [].</p>
-         * <br>
-         * <p>*   **ExcludeSystemPath**: specifies whether to exclude a specific directory from the anti-ransomware policy. If you want to exclude a directory, set this field to **true**. If you do not want to exclude a directory, leave this field empty.</p>
-         * <br>
-         * <p>*   **Exclude**: the directory that you want to exclude from the anti-ransomware policy. If you do not want to exclude a directory, set this field to [].</p>
-         * <br>
-         * <p>*   **Schedule**: the start time and interval of a data backup task. We recommend that you specify a start time that begins during off-peak hours but does not start on the hour. Examples:</p>
-         * <br>
-         * <p>    *   If you set this field to I|1583216092|P21D, the data backup task starts from 2020-03-03 14:14:52, and the task is run at an interval of three weeks.</p>
-         * <p>    *   If you set this field to I|1583216092|PT24H, the data backup task starts from 2020-03-03 14:14:52, and the task is run at an interval of 24 hours.</p>
-         * <br>
-         * <p>*   **Retention**: the period during which backup data is retained. Unit: days. If you set this field to 7, backup data is retained for a week. If you set this field to 365, backup data is retained for a year. If you set this field to -1, backup data is permanently retained.</p>
-         * <br>
-         * <p>*   **SpeedLimiter**: the limit on the network bandwidth for data backup tasks. If you set this field to 0:24:30720, the maximum bandwidth for a data backup task is 30 MB/s from 00:00 to 24:00.</p>
-         * <br>
-         * <p>*   **UseVss**: specifies whether to enable the VSS feature. The feature is available only for Windows servers. Valid values:</p>
-         * <br>
-         * <p>    *   **true**: yes</p>
-         * <p>    *   **false**: no</p>
-         * <br>
-         * <p>>  The VSS feature is available only if you create the anti-ransomware policy for Windows servers. After you enable the feature, the number of backup failures due to running processes is significantly reduced. We recommend that you enable the VSS feature. After you enable the feature, the data of disks that are in the exFAT and FAT32 formats cannot be backed up.</p>
+         * <ul>
+         * <li><p><strong>IsDefault</strong>: the type of the anti-ransomware policy. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: recommended policy</li>
+         * <li><strong>0</strong>: custom policy</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>Include</strong>: the format of the files that you want to protect. If you want to protect the files in all formats, set this field to [].</p>
+         * </li>
+         * <li><p><strong>Source</strong>: the directory that you want to protect. If you want to protect all directories, set this field to [].</p>
+         * </li>
+         * <li><p><strong>ExcludeSystemPath</strong>: specifies whether to exclude a specific directory from the anti-ransomware policy. If you want to exclude a directory, set this field to <strong>true</strong>. If you do not want to exclude a directory, leave this field empty.</p>
+         * </li>
+         * <li><p><strong>Exclude</strong>: the directory that you want to exclude from the anti-ransomware policy. If you do not want to exclude a directory, set this field to [].</p>
+         * </li>
+         * <li><p><strong>Schedule</strong>: the start time and interval of a data backup task. We recommend that you specify a start time that begins during off-peak hours but does not start on the hour. Examples:</p>
+         * <ul>
+         * <li>If you set this field to I|1583216092|P21D, the data backup task starts from 2020-03-03 14:14:52, and the task is run at an interval of three weeks.</li>
+         * <li>If you set this field to I|1583216092|PT24H, the data backup task starts from 2020-03-03 14:14:52, and the task is run at an interval of 24 hours.</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>Retention</strong>: the period during which backup data is retained. Unit: days. If you set this field to 7, backup data is retained for a week. If you set this field to 365, backup data is retained for a year. If you set this field to -1, backup data is permanently retained.</p>
+         * </li>
+         * <li><p><strong>SpeedLimiter</strong>: the limit on the network bandwidth for data backup tasks. If you set this field to 0:24:30720, the maximum bandwidth for a data backup task is 30 MB/s from 00:00 to 24:00.</p>
+         * </li>
+         * <li><p><strong>UseVss</strong>: specifies whether to enable the VSS feature. The feature is available only for Windows servers. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p> The VSS feature is available only if you create the anti-ransomware policy for Windows servers. After you enable the feature, the number of backup failures due to running processes is significantly reduced. We recommend that you enable the VSS feature. After you enable the feature, the data of disks that are in the exFAT and FAT32 formats cannot be backed up.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;Exclude&quot;: [
+         *             &quot;/bin/&quot;,
+         *             &quot;/usr/bin/&quot;,
+         *             &quot;/sbin/&quot;,
+         *             &quot;/boot/&quot;,
+         *             &quot;/proc/&quot;,
+         *             &quot;/sys/&quot;,
+         *             &quot;/srv/&quot;,
+         *             &quot;/lib/&quot;,
+         *             &quot;/selinux/&quot;,
+         *             &quot;/usr/sbin/&quot;,
+         *             &quot;/run/&quot;,
+         *             &quot;/lib32/&quot;,
+         *             &quot;/lib64/&quot;,
+         *             &quot;/lost+found/&quot;,
+         *             &quot;/var/lib/kubelet/&quot;,
+         *             &quot;/var/lib/ntp/proc&quot;,
+         *             &quot;/var/lib/container&quot;,
+         *             &quot;Windows\\&quot;,
+         *             &quot;Python27\\&quot;,
+         *             &quot;Program Files (x86)\\&quot;,
+         *             &quot;Program Files\\&quot;,
+         *             &quot;Boot\\&quot;,
+         *             &quot;$RECYCLE.BIN&quot;,
+         *             &quot;System Volume Information\\&quot;,
+         *             &quot;Users\\Administrator\\NTUSER.DAT*&quot;,
+         *             &quot;ProgramData\\&quot;,
+         *             &quot;pagefile.sys&quot;,
+         *             &quot;Users\\Default\\NTUSER.DAT*&quot;,
+         *             &quot;Users\\Administrator\\ntuser.*&quot;
+         *       ],
+         *       &quot;ExcludeSystemPath&quot;: true,
+         *       &quot;Include&quot;: [],
+         *       &quot;IsDefault&quot;: 1,
+         *       &quot;Retention&quot;: 7,
+         *       &quot;Schedule&quot;: &quot;I|1630689360|PT24H&quot;,
+         *       &quot;Source&quot;: [],
+         *       &quot;SpeedLimiter&quot;: &quot;&quot;,
+         *       &quot;UseVss&quot;: true
+         * }</p>
          */
         @NameInMap("Policy")
         public String policy;
 
         /**
          * <p>The version of the anti-ransomware policy.</p>
-         * <br>
-         * <p>*   **1.0.0**</p>
-         * <p>*   **2.0.0**</p>
+         * <ul>
+         * <li><strong>1.0.0</strong></li>
+         * <li><strong>2.0.0</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0.0</p>
          */
         @NameInMap("PolicyVersion")
         public String policyVersion;
 
         /**
          * <p>The ID of the region in which backup data is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The status of the anti-ransomware policy. Valid values:</p>
-         * <br>
-         * <p>*   **enabled**: The anti-ransomware policy is manually enabled.</p>
-         * <p>*   **disabled**: The anti-ransomware policy is manually disabled. After an anti-ransomware policy is disabled, the data backup task that is running based on the policy stops.</p>
-         * <p>*   **closed**: The anti-ransomware policy automatically stops because the anti-ransomware capacity is insufficient.</p>
+         * <ul>
+         * <li><strong>enabled</strong>: The anti-ransomware policy is manually enabled.</li>
+         * <li><strong>disabled</strong>: The anti-ransomware policy is manually disabled. After an anti-ransomware policy is disabled, the data backup task that is running based on the policy stops.</li>
+         * <li><strong>closed</strong>: The anti-ransomware policy automatically stops because the anti-ransomware capacity is insufficient.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>closed</p>
          */
         @NameInMap("Status")
         public String status;

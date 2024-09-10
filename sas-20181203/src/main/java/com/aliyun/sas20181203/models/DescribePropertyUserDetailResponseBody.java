@@ -18,6 +18,9 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>33A71BE3-2CC2-14CB-B460-33A1DD82953A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +57,36 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
     public static class DescribePropertyUserDetailResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page. Default value: **10**.</p>
+         * <p>The number of entries returned per page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -118,12 +133,18 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
     public static class DescribePropertyUserDetailResponseBodyPropertys extends TeaModel {
         /**
          * <p>The date on which the account expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>never</p>
          */
         @NameInMap("AccountsExpirationDate")
         public String accountsExpirationDate;
 
         /**
          * <p>The timestamp at which the last asset fingerprint collection is performed. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649149566000</p>
          */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
@@ -136,132 +157,195 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-hp35tftuh52wbp1g****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hc-host-****</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The public IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.104.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>The IP addresses of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>Indicates whether the account is an interactive logon account. Valid values:</p>
-         * <br>
-         * <p>*   **0**: no</p>
-         * <p>*   **1**: yes</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("IsCouldLogin")
         public Integer isCouldLogin;
 
         /**
          * <p>Indicates whether the password expires. Valid values:</p>
-         * <br>
-         * <p>*   **0**: yes</p>
-         * <p>*   **1**: no</p>
+         * <ul>
+         * <li><strong>0</strong>: yes</li>
+         * <li><strong>1</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("IsPasswdExpired")
         public Integer isPasswdExpired;
 
         /**
          * <p>Indicates whether the password is locked. Valid values:</p>
-         * <br>
-         * <p>*   **0**: yes</p>
-         * <p>*   **1**: no</p>
+         * <ul>
+         * <li><strong>0</strong>: yes</li>
+         * <li><strong>1</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("IsPasswdLocked")
         public Integer isPasswdLocked;
 
         /**
          * <p>Indicates whether the account has root permissions. Valid values:</p>
-         * <br>
-         * <p>*   **0**: no</p>
-         * <p>*   **1**: yes</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("IsRoot")
         public String isRoot;
 
         /**
          * <p>Indicates whether the account is a sudo account. Valid values:</p>
-         * <br>
-         * <p>*   **0**: no</p>
-         * <p>*   **1**: yes</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("IsSudoer")
         public Integer isSudoer;
 
         /**
          * <p>Indicates whether the account expires. Valid values:</p>
-         * <br>
-         * <p>*   **0**: yes</p>
-         * <p>*   **1**: no</p>
+         * <ul>
+         * <li><strong>0</strong>: yes</li>
+         * <li><strong>1</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("IsUserExpired")
         public Integer isUserExpired;
 
         /**
          * <p>The source IP address of the last logon to the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("LastLoginIp")
         public String lastLoginIp;
 
         /**
          * <p>The last logon time of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-04 18:07:06</p>
          */
         @NameInMap("LastLoginTime")
         public String lastLoginTime;
 
         /**
          * <p>The timestamp of the last logon to the account. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649066826000</p>
          */
         @NameInMap("LastLoginTimeDt")
         public Long lastLoginTimeDt;
 
         /**
          * <p>The timestamp of the last logon to the account. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649066826000</p>
          */
         @NameInMap("LastLoginTimestamp")
         public Long lastLoginTimestamp;
 
         /**
          * <p>The date on which the password of the account expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>never</p>
          */
         @NameInMap("PasswordExpirationDate")
         public String passwordExpirationDate;
 
         /**
          * <p>This parameter is deprecated. You can ignore it.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>**</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The name of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bin</p>
          */
         @NameInMap("User")
         public String user;
 
         /**
          * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>162eb349-c2d9-4f8b-805c-75b43d4c****</p>
          */
         @NameInMap("Uuid")
         public String uuid;

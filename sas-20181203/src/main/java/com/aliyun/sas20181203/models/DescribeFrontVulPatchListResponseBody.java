@@ -12,6 +12,9 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F929E952-EBFC-56C3-BD35-BF8B59024C68</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
     public static class DescribeFrontVulPatchListResponseBodyFrontPatchListPatchList extends TeaModel {
         /**
          * <p>The name of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RHBA-2019:2599: krb5 bug fix update</p>
          */
         @NameInMap("AliasName")
         public String aliasName;
 
         /**
          * <p>The version number of the pre-patch that is required to fix the Windows system vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4523204</p>
          */
         @NameInMap("Name")
         public String name;
@@ -82,6 +91,9 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
 
         /**
          * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1587bedb-fdb4-48c4-9330-4545****</p>
          */
         @NameInMap("Uuid")
         public String uuid;

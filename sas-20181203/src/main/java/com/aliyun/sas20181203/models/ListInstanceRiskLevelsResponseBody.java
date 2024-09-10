@@ -12,6 +12,9 @@ public class ListInstanceRiskLevelsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F5CF78A7-30AA-59DB-847F-13EE3AE7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,23 +43,33 @@ public class ListInstanceRiskLevelsResponseBody extends TeaModel {
     public static class ListInstanceRiskLevelsResponseBodyInstanceRiskLevels extends TeaModel {
         /**
          * <p>The ID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-m5efigezp50l2cmb****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The risk level. Valid values:</p>
-         * <br>
-         * <p>*   **high**</p>
-         * <p>*   **medium**</p>
-         * <p>*   **low**</p>
-         * <p>*   **none**</p>
+         * <ul>
+         * <li><strong>high</strong></li>
+         * <li><strong>medium</strong></li>
+         * <li><strong>low</strong></li>
+         * <li><strong>none</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
          */
         @NameInMap("Level")
         public String level;
 
         /**
-         * <p>The UUID of the server for which you want to modify the defense rule. You can call the [DescribeCloudCenterInstances](https://help.aliyun.com/document_detail/141932.html) operation to query the UUIDs of servers.</p>
+         * <p>The UUID of the server for which you want to modify the defense rule. You can call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f2d6e901-1004-4ca8-9dae-53ec04a92765</p>
          */
         @NameInMap("Uuid")
         public String uuid;

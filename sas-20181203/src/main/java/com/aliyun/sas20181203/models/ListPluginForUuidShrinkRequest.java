@@ -12,10 +12,13 @@ public class ListPluginForUuidShrinkRequest extends TeaModel {
 
     /**
      * <p>The UUID of the server.</p>
-     * <br>
-     * <p>>  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bdb7071f-129d-4ceb-af80-4cf70c4571c6</p>
      */
     @NameInMap("Uuid")
     public String uuid;

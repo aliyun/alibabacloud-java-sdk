@@ -12,6 +12,9 @@ public class GetFileProtectEventResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0B48AB3C-84FC-424D-A01D-B9270EF46038</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,117 +43,186 @@ public class GetFileProtectEventResponseBody extends TeaModel {
     public static class GetFileProtectEventResponseBodyData extends TeaModel {
         /**
          * <p>The severity of alerts. Valid values:</p>
-         * <br>
-         * <p>*   0: does not generate alerts</p>
-         * <p>*   1: sends notifications</p>
-         * <p>*   2: suspicious</p>
-         * <p>*   3: high-risk</p>
+         * <ul>
+         * <li>0: does not generate alerts</li>
+         * <li>1: sends notifications</li>
+         * <li>2: suspicious</li>
+         * <li>3: high-risk</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AlertLevel")
         public Integer alertLevel;
 
         /**
          * <p>The event command line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;touch&quot;,&quot;/usr/local/aaaa&quot;]</p>
          */
         @NameInMap("CmdLine")
         public String cmdLine;
 
         /**
          * <p>The path to the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/local</p>
          */
         @NameInMap("FilePath")
         public String filePath;
 
         /**
          * <p>The permissions to run the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rwxr-xr-x</p>
          */
         @NameInMap("FilePermission")
         public String filePermission;
 
         /**
          * <p>The timestamp at which the event was first detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1694576692000</p>
          */
         @NameInMap("FirstTime")
         public Long firstTime;
 
         /**
          * <p>The time when the event was handled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1694576692000</p>
          */
         @NameInMap("HandleTime")
         public Long handleTime;
 
         /**
          * <p>The ID of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55037</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-wz92q7m5hsbgfhdss***</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The public IP address of the associated instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address of the associated instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.42.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>The time when the event last occurred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1694576692000</p>
          */
         @NameInMap("LatestTime")
         public Long latestTime;
 
         /**
          * <p>The operation that the process performed on the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DELETE</p>
          */
         @NameInMap("Operation")
         public String operation;
 
         /**
+         * <p>The type of the operating system. Valid values:</p>
+         * <ul>
+         * <li><strong>windows</strong>: Windows</li>
+         * <li><strong>linux</strong>: Linux</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>linux</p>
+         */
+        @NameInMap("Platform")
+        public String platform;
+
+        /**
          * <p>The path to the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/bin/bash33</p>
          */
         @NameInMap("ProcPath")
         public String procPath;
 
         /**
          * <p>The process ID of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3453</p>
          */
         @NameInMap("ProcessId")
         public String processId;
 
         /**
          * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;test&quot;]</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
          * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-000</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
          * <p>The status of the event. Valid values:</p>
-         * <br>
-         * <p>*   0: not handled</p>
-         * <p>*   1: handled</p>
-         * <p>*   2: added to the whitelist</p>
+         * <ul>
+         * <li>0: not handled</li>
+         * <li>1: handled</li>
+         * <li>2: added to the whitelist</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The UUID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49f1360f-62c8-4b48-a24c-5cc317656419</p>
          */
         @NameInMap("Uuid")
         public String uuid;
@@ -254,6 +326,14 @@ public class GetFileProtectEventResponseBody extends TeaModel {
         }
         public String getOperation() {
             return this.operation;
+        }
+
+        public GetFileProtectEventResponseBodyData setPlatform(String platform) {
+            this.platform = platform;
+            return this;
+        }
+        public String getPlatform() {
+            return this.platform;
         }
 
         public GetFileProtectEventResponseBodyData setProcPath(String procPath) {

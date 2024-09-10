@@ -12,6 +12,9 @@ public class DescribeTaskErrorLogResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F929E952-EBFC-56C3-BD35-BF8B59024C69</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class DescribeTaskErrorLogResponseBody extends TeaModel {
     public static class DescribeTaskErrorLogResponseBodyLogs extends TeaModel {
         /**
          * <p>The text content of the log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mv: cannot move \&quot;CentOS-Base.repo\&quot; to \&quot;CentOS-Base.repo.backup\&quot;: Permission denied</p>
          */
         @NameInMap("Text")
         public String text;

@@ -18,6 +18,9 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CE343162-35BF-565E-B85E-8E3B7A2B****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +57,36 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
     public static class ListAgentlessMaliciousFilesResponseBodyListDetails extends TeaModel {
         /**
          * <p>The name of the detailed item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MD5</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The name key of the detailed item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>${suspicious.mp.db.maliciousfilemd5}</p>
          */
         @NameInMap("NameKey")
         public String nameKey;
 
         /**
          * <p>The type of the detailed item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The value of the detailed item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Value")
         public String value;
@@ -118,18 +133,27 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
     public static class ListAgentlessMaliciousFilesResponseBodyListNotes extends TeaModel {
         /**
          * <p>The remark.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Serious***</p>
          */
         @NameInMap("Note")
         public String note;
 
         /**
          * <p>The ID of the remark.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50****</p>
          */
         @NameInMap("NoteId")
         public String noteId;
 
         /**
          * <p>The time when the remark was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-27 14:49:21</p>
          */
         @NameInMap("NoteTime")
         public String noteTime;
@@ -174,82 +198,122 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
 
         /**
          * <p>The URL to download the malicious image sample.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://upgrade-rule-pkg.oss-cn-beijing.aliyuncs.com/totalpackage/rule/V3.166.2/totalpackage_rule_V3.16_6.2_tip_20230220110">https://upgrade-rule-pkg.oss-cn-beijing.aliyuncs.com/totalpackage/rule/V3.166.2/totalpackage_rule_V3.16_6.2_tip_20230220110</a>****</p>
          */
         @NameInMap("DownloadUrl")
         public String downloadUrl;
 
         /**
          * <p>The file path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/root/etc/g****</p>
          */
         @NameInMap("FilePath")
         public Long filePath;
 
         /**
          * <p>The timestamp generated when the first scan was performed. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>168257753****</p>
          */
         @NameInMap("FirstScanTimestamp")
         public Long firstScanTimestamp;
 
         /**
          * <p>The highlighted JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;highlight\&quot;:{\&quot;ruleVersion\&quot;:\&quot;20230223\&quot;,\&quot;ruleId\&quot;:600139,\&quot;events\&quot;:[[207,284]]}}</p>
          */
         @NameInMap("HighLight")
         public String highLight;
 
         /**
          * <p>The event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1****</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sql-test-001****</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The public IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.210.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.25.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>The timestamp generated when the last scan was performed. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>168257753****</p>
          */
         @NameInMap("LatestScanTimestamp")
         public Long latestScanTimestamp;
 
         /**
          * <p>The severity of the malicious file. Valid values:</p>
-         * <br>
-         * <p>*   serious</p>
-         * <p>*   suspicious</p>
-         * <p>*   remind</p>
+         * <ul>
+         * <li>serious</li>
+         * <li>suspicious</li>
+         * <li>remind</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>serious</p>
          */
         @NameInMap("Level")
         public String level;
 
         /**
          * <p>The MD5 hash value of the malicious file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1f2e13a7c51ee89316ae50066515****</p>
          */
         @NameInMap("MaliciousMd5")
         public String maliciousMd5;
 
         /**
          * <p>The name of the malicious file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WebShell</p>
          */
         @NameInMap("MaliciousName")
         public String maliciousName;
 
         /**
          * <p>The type of the virus.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WebShell</p>
          */
         @NameInMap("MaliciousType")
         public String maliciousType;
@@ -262,44 +326,66 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
 
         /**
          * <p>The handling result of the alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>addWhitelist.USER.Success</p>
          */
         @NameInMap("OperateResult")
         public String operateResult;
 
         /**
          * <p>The timestamp generated when the alert is handled. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>168257753****</p>
          */
         @NameInMap("OperateTimestamp")
         public String operateTimestamp;
 
         /**
          * <p>The partition of the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/dev/xvda1</p>
          */
         @NameInMap("Partition")
         public String partition;
 
         /**
          * <p>The ID of the asset that is scanned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-****</p>
          */
         @NameInMap("TargetId")
         public String targetId;
 
         /**
          * <p>The name of the asset that is scanned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jenkins****</p>
          */
         @NameInMap("TargetName")
         public String targetName;
 
         /**
          * <p>The type of the asset that is scanned. Valid values:</p>
-         * <br>
-         * <p>*   2: The scanned asset is an image.</p>
+         * <ul>
+         * <li>2: The scanned asset is an image.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TargetType")
         public String targetType;
 
         /**
          * <p>The UUID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49e25e0f-bb51-4a5a-a1b3-13a4ddaa****</p>
          */
         @NameInMap("Uuid")
         public String uuid;
@@ -490,24 +576,36 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
     public static class ListAgentlessMaliciousFilesResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

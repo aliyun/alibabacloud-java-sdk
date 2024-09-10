@@ -4,30 +4,66 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class PublicPreCheckImageScanTaskRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>6a5e103187b31a94592a47a5858617f7****</p>
+     */
     @NameInMap("Digests")
     public String digests;
 
+    /**
+     * <strong>example:</strong>
+     * <p>i-uf6j8vq9l4r5ntht****</p>
+     */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionIds")
     public String regionIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acr</p>
+     */
     @NameInMap("RegistryTypes")
     public String registryTypes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>crr-vridcl4****</p>
+     */
     @NameInMap("RepoIds")
     public String repoIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>centos</p>
+     */
     @NameInMap("RepoNames")
     public String repoNames;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hanghai-namespace</p>
+     */
     @NameInMap("RepoNamespaces")
     public String repoNamespaces;
 
+    /**
+     * <strong>example:</strong>
+     * <p>192.168.XX.XX</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.2</p>
+     */
     @NameInMap("Tags")
     public String tags;
 

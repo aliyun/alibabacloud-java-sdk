@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class DeleteAntiBruteForceRuleRequest extends TeaModel {
     /**
      * <p>The IDs of the defense rules against brute-force attacks to delete.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Ids")

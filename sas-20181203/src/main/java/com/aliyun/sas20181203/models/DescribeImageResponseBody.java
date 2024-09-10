@@ -12,6 +12,9 @@ public class DescribeImageResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class DescribeImageResponseBody extends TeaModel {
     public static class DescribeImageResponseBodyData extends TeaModel {
         /**
          * <p>The digest value of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0afb98d97f1a4030782fcf47e186909e5ad957bcc182d8be70334e0684b2****</p>
          */
         @NameInMap("Digest")
         public String digest;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryIncidentSubNodesCountResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CE500770-42D3-442E-9DDD-156E0F9F3B45</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,6 +21,9 @@ public class QueryIncidentSubNodesCountResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
      */
     @NameInMap("Success")
     public Boolean success;

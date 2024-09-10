@@ -6,13 +6,24 @@ import com.aliyun.tea.*;
 public class InstallBackupClientRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2.0.0</p>
      */
     @NameInMap("PolicyVersion")
     public String policyVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>inet-617eddab-7df4-4a51-b217-a3f59194****</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;3bb30859-b3b5-4f28-868f-b0892c98****&quot;, &quot;3bb30859-b3b5-4f28-868f-b0892c98****&quot;]</p>
+     */
     @NameInMap("UuidList")
     public java.util.List<String> uuidList;
 

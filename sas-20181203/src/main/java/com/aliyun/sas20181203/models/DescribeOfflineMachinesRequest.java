@@ -5,61 +5,89 @@ import com.aliyun.tea.*;
 
 public class DescribeOfflineMachinesRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The operating system of the server.</p>
-     * <br>
-     * <p>>  The value of this parameter is the value of the Values parameter that is returned by calling the [DescribeCriteria](~~DescribeCriteria~~) operation. If the value of the **Name** parameter in the response is **osType**, the value of the **Values** parameter indicates an operating system.</p>
+     * <blockquote>
+     * <p> The value of this parameter is the value of the Values parameter that is returned by calling the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation. If the value of the <strong>Name</strong> parameter in the response is <strong>osType</strong>, the value of the <strong>Values</strong> parameter indicates an operating system.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>linux</p>
      */
     @NameInMap("Os")
     public String os;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **5**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>5</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region in which the server resides.</p>
-     * <br>
-     * <p>>  The value of this parameter is the value of the Values parameter that is returned by calling the [DescribeCriteria](~~DescribeCriteria~~) operation. If the value of the **Name** parameter in the response is **regionId**, the value of the **Values** parameter indicates a region ID.</p>
+     * <blockquote>
+     * <p> The value of this parameter is the value of the Values parameter that is returned by calling the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation. If the value of the <strong>Name</strong> parameter in the response is <strong>regionId</strong>, the value of the <strong>Values</strong> parameter indicates a region ID.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionIdStr")
     public String regionIdStr;
 
     /**
      * <p>The region in which the server resides.</p>
-     * <br>
-     * <p>>  The value of this parameter is the value of the Values parameter that is returned by calling the [DescribeCriteria](~~DescribeCriteria~~) operation. If the value of the **Name** parameter in the response is **regionId**, the value of the **Values** parameter indicates a region ID.</p>
+     * <blockquote>
+     * <p> The value of this parameter is the value of the Values parameter that is returned by calling the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation. If the value of the <strong>Name</strong> parameter in the response is <strong>regionId</strong>, the value of the <strong>Values</strong> parameter indicates a region ID.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionNo")
     public String regionNo;
 
     /**
      * <p>The information about the server that you want to query. The value can be the name or the public IP address of the server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172.20.XX.XX</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>180.113.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;
 
     /**
      * <p>The source of the server. Valid values:</p>
-     * <br>
-     * <p>*   **0**: an asset provided by Alibaba Cloud.</p>
-     * <p>*   **1**: a third-party cloud server</p>
-     * <p>*   **2**: a server in a data center</p>
-     * <p>*   **3**, **4**, **5**, and **7**: other cloud asset</p>
-     * <p>*   **8**: a lightweight asset</p>
+     * <ul>
+     * <li><strong>0</strong>: an asset provided by Alibaba Cloud.</li>
+     * <li><strong>1</strong>: a third-party cloud server</li>
+     * <li><strong>2</strong>: a server in a data center</li>
+     * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: other cloud asset</li>
+     * <li><strong>8</strong>: a lightweight asset</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Vendor")
     public Integer vendor;

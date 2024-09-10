@@ -6,18 +6,26 @@ import com.aliyun.tea.*;
 public class ListInstanceCatalogRequest extends TeaModel {
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The ID of the region in which the asset resides. Valid values:</p>
-     * <br>
-     * <p>*   **cn-hangzhou**: International</p>
-     * <p>*   **ap-southeast-1**: Singapore</p>
+     * <ul>
+     * <li><strong>cn-hangzhou</strong>: International</li>
+     * <li><strong>ap-southeast-1</strong>: Singapore</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

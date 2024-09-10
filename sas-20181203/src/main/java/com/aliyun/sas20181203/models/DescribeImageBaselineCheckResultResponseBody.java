@@ -18,6 +18,9 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24A20733-10A0-4AF6-BE6B-E3322413****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,73 +57,108 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
     public static class DescribeImageBaselineCheckResultResponseBodyBaselineResult extends TeaModel {
         /**
          * <p>The key of the image baseline type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>identification</p>
          */
         @NameInMap("BaselineClassAlias")
         public String baselineClassAlias;
 
         /**
          * <p>The number of baseline check items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("BaselineItemCount")
         public Integer baselineItemCount;
 
         /**
          * <p>The alias of the image baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Identity authentication</p>
          */
         @NameInMap("BaselineNameAlias")
         public String baselineNameAlias;
 
         /**
          * <p>The key of the image baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>identification</p>
          */
         @NameInMap("BaselineNameKey")
         public String baselineNameKey;
 
         /**
          * <p>The severity of the image baseline. Valid values:</p>
-         * <br>
-         * <p>*   **high**</p>
-         * <p>*   **medium**</p>
-         * <p>*   **low**</p>
+         * <ul>
+         * <li><strong>high</strong></li>
+         * <li><strong>medium</strong></li>
+         * <li><strong>low</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
          */
         @NameInMap("BaselineNameLevel")
         public String baselineNameLevel;
 
         /**
          * <p>The timestamp generated when the first scan was performed. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1610304058366</p>
          */
         @NameInMap("FirstScanTime")
         public Long firstScanTime;
 
         /**
          * <p>The number of high-risk images that are affected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("HighRiskItemCount")
         public Integer highRiskItemCount;
 
         /**
          * <p>The timestamp generated when the last scan was performed. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1610304058301</p>
          */
         @NameInMap("LastScanTime")
         public Long lastScanTime;
 
         /**
          * <p>The number of low-risk images that are affected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("LowRiskItemCount")
         public Integer lowRiskItemCount;
 
         /**
          * <p>The number of medium-risk images that are affected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MiddleRiskItemCount")
         public Integer middleRiskItemCount;
 
         /**
          * <p>The status of the baseline risks. Valid values:</p>
-         * <br>
-         * <p>*   **0**: unfixed</p>
-         * <p>*   **1**: fixed</p>
+         * <ul>
+         * <li><strong>0</strong>: unfixed</li>
+         * <li><strong>1</strong>: fixed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
@@ -223,24 +261,36 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
     public static class DescribeImageBaselineCheckResultResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

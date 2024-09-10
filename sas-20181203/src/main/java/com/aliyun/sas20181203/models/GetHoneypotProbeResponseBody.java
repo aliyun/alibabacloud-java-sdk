@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetHoneypotProbeResponseBody extends TeaModel {
     /**
-     * <p>The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,27 +21,40 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6550E0E6-FD6C-5F39-AB5E-35B30DCA97B5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -99,18 +115,27 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
     public static class GetHoneypotProbeResponseBodyDataControlNode extends TeaModel {
         /**
          * <p>The instance ID of the management node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp19ijepxytwtzrk****</p>
          */
         @NameInMap("EcsInstanceId")
         public String ecsInstanceId;
 
         /**
          * <p>The ID of the management node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>37a15ff1-3475-4897-aa6c-f7fd9122****</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
          * <p>The name of the management node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>online-honeypot</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
@@ -149,18 +174,30 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
     public static class GetHoneypotProbeResponseBodyDataHoneyPotProbeScanPort extends TeaModel {
         /**
          * <p>The unique ID of the service that is monitored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15389</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The ports that are monitored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;tcp&quot;: &quot;1-65535&quot;,
+         *     &quot;udp&quot;: &quot;1-65535&quot;
+         * }</p>
          */
         @NameInMap("Ports")
         public String ports;
 
         /**
          * <p>The ID of the probe.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a46f5162-c70d-4e26-8ddf-7435feca****</p>
          */
         @NameInMap("ProbeId")
         public String probeId;
@@ -173,9 +210,13 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
 
         /**
          * <p>The monitoring status. Valid values:</p>
-         * <br>
-         * <p>*   **1**: abnormal</p>
-         * <p>*   **3**: normal</p>
+         * <ul>
+         * <li><strong>1</strong>: abnormal</li>
+         * <li><strong>3</strong>: normal</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Status")
         public Integer status;
@@ -230,63 +271,94 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
     public static class GetHoneypotProbeResponseBodyDataHoneypotProbeBindListBindPortList extends TeaModel {
         /**
          * <p>Indicates whether the port is bound.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("BindPort")
         public Boolean bindPort;
 
         /**
          * <p>The end port on which the probe monitors.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("EndPort")
         public Integer endPort;
 
         /**
          * <p>The error that is returned if an error occurred in the port of the honeypot that is bound to the probe.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>portmap failed</p>
          */
         @NameInMap("Err")
         public String err;
 
         /**
          * <p>Indicates whether the port is a fixed port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Fixed")
         public Boolean fixed;
 
         /**
          * <p>The unique ID of the port binding record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2512</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The error message that is returned if an error occurred in the port of the honeypot that is bound to the probe.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>listen 22 tcp4 failed</p>
          */
         @NameInMap("Msg")
         public String msg;
 
         /**
          * <p>The type of the protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         @NameInMap("Proto")
         public String proto;
 
         /**
          * <p>The start port on which the probe monitors.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         @NameInMap("StartPort")
         public Integer startPort;
 
         /**
          * <p>The status of the port of the honeypot that is bound to the probe. Valid values:</p>
-         * <br>
-         * <p>*   **1**: abnormal</p>
-         * <p>*   **3**: normal</p>
+         * <ul>
+         * <li><strong>1</strong>: abnormal</li>
+         * <li><strong>3</strong>: normal</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The destination port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("TargetPort")
         public Integer targetPort;
@@ -381,6 +453,9 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
     public static class GetHoneypotProbeResponseBodyDataHoneypotProbeBindList extends TeaModel {
         /**
          * <p>The unique ID of the honeypot that is bound to the probe.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45378f64-d7b4-4a53-9c48-4303eb4b****</p>
          */
         @NameInMap("BindId")
         public String bindId;
@@ -393,6 +468,9 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
 
         /**
          * <p>The honeypot ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>913347774a3b3c378c6a50f66de23dfa097765214ec3f0526b01c67bf59c****</p>
          */
         @NameInMap("HoneypotId")
         public String honeypotId;
@@ -405,9 +483,13 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
 
         /**
          * <p>The status of the honeypot that is bound to the probe. Valid values:</p>
-         * <br>
-         * <p>*   **1**: abnormal</p>
-         * <p>*   **3**: normal</p>
+         * <ul>
+         * <li><strong>1</strong>: abnormal</li>
+         * <li><strong>3</strong>: normal</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Status")
         public Integer status;
@@ -462,6 +544,9 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
     public static class GetHoneypotProbeResponseBodyData extends TeaModel {
         /**
          * <p>Indicates whether address resolution protocol (ARP) is enabled for the check type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Arp")
         public Boolean arp;
@@ -486,18 +571,27 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
 
         /**
          * <p>The CPU utilization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.51</p>
          */
         @NameInMap("CpuLoad")
         public Double cpuLoad;
 
         /**
          * <p>The time when the probe was deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1669363825000</p>
          */
         @NameInMap("DeployTime")
         public Long deployTime;
 
         /**
          * <p>The name of the probe.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-probe</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
@@ -516,6 +610,9 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
 
         /**
          * <p>The IP address of the server on which the probe is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33.53.XX.XX</p>
          */
         @NameInMap("HostIp")
         public String hostIp;
@@ -528,77 +625,110 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
 
         /**
          * <p>The memory usage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.94</p>
          */
         @NameInMap("MemoryLoad")
         public Double memoryLoad;
 
         /**
          * <p>The operating system of the server on which the probe is deployed. Valid values:</p>
-         * <br>
-         * <p>*   windows</p>
-         * <p>*   linux</p>
+         * <ul>
+         * <li>windows</li>
+         * <li>linux</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>windows</p>
          */
         @NameInMap("OsType")
         public String osType;
 
         /**
          * <p>Indicates whether ping is enabled for the check type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Ping")
         public Boolean ping;
 
         /**
          * <p>The ID of the probe.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40f6501d-45ec-4bf0-b813-0072ceb4****</p>
          */
         @NameInMap("ProbeId")
         public String probeId;
 
         /**
          * <p>The type of the probe. Valid values:</p>
-         * <br>
-         * <p>*   **host_probe**: host probe</p>
-         * <p>*   **vpc_black_hole_probe**: virtual private cloud (VPC) probe</p>
+         * <ul>
+         * <li><strong>host_probe</strong>: host probe</li>
+         * <li><strong>vpc_black_hole_probe</strong>: virtual private cloud (VPC) probe</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>host_probe</p>
          */
         @NameInMap("ProbeType")
         public String probeType;
 
         /**
          * <p>The version of the probe.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18060096</p>
          */
         @NameInMap("ProbeVersion")
         public String probeVersion;
 
         /**
          * <p>The IP address of the proxy server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.108.XX.XX</p>
          */
         @NameInMap("ProxyIp")
         public String proxyIp;
 
         /**
          * <p>The status of the probe. Valid values:</p>
-         * <br>
-         * <p>*   **installed**: installed</p>
-         * <p>*   **install_failed**: installation failed</p>
-         * <p>*   **online**: online</p>
-         * <p>*   **offline**: offline</p>
-         * <p>*   **unnormal**: abnormal</p>
-         * <p>*   **unprobe**: unauthorized</p>
-         * <p>*   **uninstalling**: being uninstalled</p>
-         * <p>*   **uninstalled**: uninstalled</p>
-         * <p>*   **uninstall_failed**: uninstallation failed</p>
-         * <p>*   **not_exist**: not installed</p>
+         * <ul>
+         * <li><strong>installed</strong>: installed</li>
+         * <li><strong>install_failed</strong>: installation failed</li>
+         * <li><strong>online</strong>: online</li>
+         * <li><strong>offline</strong>: offline</li>
+         * <li><strong>unnormal</strong>: abnormal</li>
+         * <li><strong>unprobe</strong>: unauthorized</li>
+         * <li><strong>uninstalling</strong>: being uninstalled</li>
+         * <li><strong>uninstalled</strong>: uninstalled</li>
+         * <li><strong>uninstall_failed</strong>: uninstallation failed</li>
+         * <li><strong>not_exist</strong>: not installed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The UUID of the asset on which the host probe is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6690a46c-0edb-4663-a641-3629d1a9****</p>
          */
         @NameInMap("Uuid")
         public String uuid;
 
         /**
          * <p>The ID of the VPC in which the probe is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2vchkxmf2j9yjt3x2****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

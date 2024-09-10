@@ -18,6 +18,9 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>79CFF74D-E967-5407-8A78-EE03B925FDAA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,201 +57,299 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
     public static class DescribeContainerInstancesResponseBodyContainerInstanceList extends TeaModel {
         /**
          * <p>The number of alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AlarmCount")
         public Integer alarmCount;
 
         /**
          * <p>Indicates whether alerts are generated for the container. Valid values:</p>
-         * <br>
-         * <p>*   **YES**</p>
-         * <p>*   **NO**</p>
+         * <ul>
+         * <li><strong>YES</strong></li>
+         * <li><strong>NO</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>YES</p>
          */
         @NameInMap("AlarmStatus")
         public String alarmStatus;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibaba-log-controller</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cfb41a869c71e4678a97021582dd8a****</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
 
         /**
          * <p>The ID of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48a6d9a92435a13ad573372c3f3c63b7e04d106458141df9f92155709d****</p>
          */
         @NameInMap("ContainerId")
         public String containerId;
 
         /**
          * <p>The timestamp when the cluster was created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1670368337000</p>
          */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
         /**
          * <p>Indicates whether the asset is exposed to the Internet.</p>
-         * <br>
-         * <p>*   **1**: exposed</p>
-         * <p>*   **0**: not exposed</p>
+         * <ul>
+         * <li><strong>1</strong>: exposed</li>
+         * <li><strong>0</strong>: not exposed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Exposed")
         public Integer exposed;
 
         /**
          * <p>The exposure details. The value is a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{}]</p>
          */
         @NameInMap("ExposedDetail")
         public String exposedDetail;
 
         /**
          * <p>The number of baseline risks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("HcCount")
         public Integer hcCount;
 
         /**
          * <p>Indicates whether baseline risks are detected. Valid values:</p>
-         * <br>
-         * <p>*   **NO**</p>
-         * <p>*   **YES**</p>
+         * <ul>
+         * <li><strong>NO</strong></li>
+         * <li><strong>YES</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>YES</p>
          */
         @NameInMap("HcStatus")
         public String hcStatus;
 
         /**
          * <p>The IP address of the host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.24.XX.XX</p>
          */
         @NameInMap("HostIp")
         public String hostIp;
 
         /**
          * <p>The image of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>docker.io/library/nginx:latest</p>
          */
         @NameInMap("Image")
         public String image;
 
         /**
          * <p>The digest value of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5b046e2de8c490819125193ee2eb71a66f2cc16c032dcd8b69ead4be1024****</p>
          */
         @NameInMap("ImageDigest")
         public String imageDigest;
 
         /**
          * <p>The image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry-vpc.cn-beijing.aliyuncs.com/acs/log-controller@sha256:5b046e2de8c490819125193ee2eb71a66f2cc16c032dcd8b69ead4be1024****</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
          * <p>The name of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>log-controller</p>
          */
         @NameInMap("ImageRepoName")
         public String imageRepoName;
 
         /**
          * <p>The namespace of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs</p>
          */
         @NameInMap("ImageRepoNamespace")
         public String imageRepoNamespace;
 
         /**
          * <p>The tag that is added to the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.3.1.0-dfa2010-aliyun</p>
          */
         @NameInMap("ImageRepoTag")
         public String imageRepoTag;
 
         /**
          * <p>The UUID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5f23dfbceec289a49ac94e035e2****</p>
          */
         @NameInMap("ImageUuid")
         public String imageUuid;
 
         /**
          * <p>The instance ID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-2zegzjyotydfkz9****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kube-system</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The node information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("NodeInfo")
         public String nodeInfo;
 
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
          * <p>The pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibaba-log-controller-6f847f8786-mk2mg</p>
          */
         @NameInMap("Pod")
         public String pod;
 
         /**
          * <p>The IP address of the pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.24.XX.XX</p>
          */
         @NameInMap("PodIp")
         public String podIp;
 
         /**
          * <p>The region ID of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The number of risks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RiskCount")
         public String riskCount;
 
         /**
          * <p>Indicates whether risks exist. Valid values:</p>
-         * <br>
-         * <p>*   **NO**</p>
-         * <p>*   **YES**</p>
+         * <ul>
+         * <li><strong>NO</strong></li>
+         * <li><strong>YES</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>YES</p>
          */
         @NameInMap("RiskStatus")
         public String riskStatus;
 
         /**
          * <p>The update identifier of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79cff74d-e967-5407-8a78-ee03b9****</p>
          */
         @NameInMap("UpdateMark")
         public String updateMark;
 
         /**
          * <p>The number of vulnerabilities that are detected in the container cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         @NameInMap("VulCount")
         public Integer vulCount;
 
         /**
          * <p>Indicates whether vulnerabilities are detected in the container. Valid values:</p>
-         * <br>
-         * <p>*   **YES**</p>
-         * <p>*   **NO**</p>
+         * <ul>
+         * <li><strong>YES</strong></li>
+         * <li><strong>NO</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>YES</p>
          */
         @NameInMap("VulStatus")
         public String vulStatus;
@@ -511,24 +612,36 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
     public static class DescribeContainerInstancesResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

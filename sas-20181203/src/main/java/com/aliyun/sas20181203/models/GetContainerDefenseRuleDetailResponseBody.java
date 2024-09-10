@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
     /**
-     * <p>The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,27 +21,40 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>77546BF4-CCE8-5F8D-B42B-5FD3306B43B4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -99,15 +115,22 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
     public static class GetContainerDefenseRuleDetailResponseBodyDataScope extends TeaModel {
         /**
          * <p>Indicates whether all namespaces are included. Valid values:</p>
-         * <br>
-         * <p>*   **0**: no</p>
-         * <p>*   **1**: yes</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AllNamespace")
         public Integer allNamespace;
 
         /**
          * <p>The ID of the container cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c9bea04<em>2b25</em>*</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
@@ -152,8 +175,9 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
     public static class GetContainerDefenseRuleDetailResponseBodyDataWhitelist extends TeaModel {
         /**
          * <p>The hash values of the files that are added to the whitelist.</p>
-         * <br>
-         * <p>>  This parameter is not supported.</p>
+         * <blockquote>
+         * <p> This parameter is not supported.</p>
+         * </blockquote>
          */
         @NameInMap("Hash")
         public java.util.List<String> hash;
@@ -204,67 +228,99 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
     public static class GetContainerDefenseRuleDetailResponseBodyData extends TeaModel {
         /**
          * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1766185894104***</p>
          */
         @NameInMap("AliUid")
         public Long aliUid;
 
         /**
          * <p>The description of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom defense configuration</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The alert name. Valid values:</p>
-         * <br>
-         * <p>*   **Non-image Program Startup**</p>
+         * <ul>
+         * <li><strong>Non-image Program Startup</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>EventName</p>
          */
         @NameInMap("EventName")
         public String eventName;
 
         /**
          * <p>The alert type. Valid values:</p>
-         * <br>
-         * <p>*   **Proactive Defense for Containers**</p>
+         * <ul>
+         * <li><strong>Proactive Defense for Containers</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>EventType</p>
          */
         @NameInMap("EventType")
         public String eventType;
 
         /**
          * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1948</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The action specified in the rule. Valid values:</p>
-         * <br>
-         * <p>*   **1**: alert</p>
-         * <p>*   **2**: block</p>
+         * <ul>
+         * <li><strong>1</strong>: alert</li>
+         * <li><strong>2</strong>: block</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RuleAction")
         public Integer ruleAction;
 
         /**
          * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-000</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
          * <p>The status of the rule. Valid values:</p>
-         * <br>
-         * <p>*   **1**: enabled</p>
-         * <p>*   **0**: disabled</p>
+         * <ul>
+         * <li><strong>1</strong>: enabled</li>
+         * <li><strong>0</strong>: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RuleSwitch")
         public Integer ruleSwitch;
 
         /**
          * <p>The type of the rule. Valid values:</p>
-         * <br>
-         * <p>*   **1**: system rule</p>
-         * <p>*   **2**: custom rule</p>
+         * <ul>
+         * <li><strong>1</strong>: system rule</li>
+         * <li><strong>2</strong>: custom rule</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RuleType")
         public String ruleType;

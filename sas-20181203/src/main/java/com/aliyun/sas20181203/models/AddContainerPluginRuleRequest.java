@@ -5,53 +5,67 @@ import com.aliyun.tea.*;
 
 public class AddContainerPluginRuleRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The action that you want to specify for the rule. Valid values:</p>
-     * <br>
-     * <p>*   **1**: triggers alerts.</p>
-     * <p>*   **2**: blocks escapes.</p>
-     * <br>
+     * <ul>
+     * <li><strong>1</strong>: triggers alerts.</li>
+     * <li><strong>2</strong>: blocks escapes.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Mode")
     public Integer mode;
 
     /**
      * <p>The name of the rule. The name must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_). The names of rules that are created for the same user must be unique.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tyest111</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
 
     /**
      * <p>The ID of the rule template. You can call the ListSystemClientRules operation to query the ID of the rule template.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>86863</p>
      */
     @NameInMap("RuleTemplateId")
     public Integer ruleTemplateId;
 
     /**
      * <p>The type of the rule. Valid values:</p>
-     * <br>
-     * <p>*   **0**: custom rule</p>
-     * <p>*   **1**: system rule</p>
+     * <ul>
+     * <li><strong>0</strong>: custom rule</li>
+     * <li><strong>1</strong>: system rule</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("RuleType")
     public Integer ruleType;
 
     /**
      * <p>The check items that are enabled for the rule.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SelectedPolicy")

@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class GetFileDetectResultRequest extends TeaModel {
     /**
      * <p>The identifiers of files. Only MD5 hash values are supported.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("HashKeyList")
@@ -14,21 +13,28 @@ public class GetFileDetectResultRequest extends TeaModel {
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>183.46.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;
 
     /**
      * <p>The type of the file. Valid values:</p>
-     * <br>
-     * <p>*   **0**: unknown file</p>
-     * <p>*   **1**: binary file</p>
-     * <p>*   **2**: webshell file</p>
-     * <p>*   **4**: script file</p>
-     * <br>
-     * <p>> If you do not know the type of the file, set this parameter to 0.</p>
-     * <br>
+     * <ul>
+     * <li><strong>0</strong>: unknown file</li>
+     * <li><strong>1</strong>: binary file</li>
+     * <li><strong>2</strong>: webshell file</li>
+     * <li><strong>4</strong>: script file</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you do not know the type of the file, set this parameter to 0.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Type")
     public Integer type;

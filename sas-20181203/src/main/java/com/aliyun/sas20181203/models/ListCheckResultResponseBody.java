@@ -18,6 +18,9 @@ public class ListCheckResultResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F9B6DD67-B289-5406-B35C-B0F4A217S23</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,36 +57,54 @@ public class ListCheckResultResponseBody extends TeaModel {
     public static class ListCheckResultResponseBodyChecksCheckPolicies extends TeaModel {
         /**
          * <p>The ID of the requirement item for the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("RequirementId")
         public Long requirementId;
 
         /**
          * <p>The display name of the requirement item for the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba cloud OSS best security practices</p>
          */
         @NameInMap("RequirementShowName")
         public String requirementShowName;
 
         /**
          * <p>The ID of the section for the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("SectionId")
         public Long sectionId;
 
         /**
          * <p>The display name of the section for the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Log Audit</p>
          */
         @NameInMap("SectionShowName")
         public String sectionShowName;
 
         /**
          * <p>The standard ID of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("StandardId")
         public Long standardId;
 
         /**
          * <p>The standard display name of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Best security practices</p>
          */
         @NameInMap("StandardShowName")
         public String standardShowName;
@@ -144,8 +165,20 @@ public class ListCheckResultResponseBody extends TeaModel {
     }
 
     public static class ListCheckResultResponseBodyChecks extends TeaModel {
+        @NameInMap("AssetSubType")
+        public Integer assetSubType;
+
+        @NameInMap("AssetType")
+        public Integer assetType;
+
+        @NameInMap("AssetVendor")
+        public Integer assetVendor;
+
         /**
          * <p>The ID of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("CheckId")
         public Long checkId;
@@ -158,134 +191,181 @@ public class ListCheckResultResponseBody extends TeaModel {
 
         /**
          * <p>The type of the check item. Valid values:</p>
-         * <br>
-         * <p>*   **0**: paid</p>
-         * <p>*   **1**: free</p>
+         * <ul>
+         * <li><strong>0</strong>: paid</li>
+         * <li><strong>1</strong>: free</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CheckSaleType")
         public Integer checkSaleType;
 
         /**
          * <p>The name of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS-PublicReadOpenManifestFileWithoutEncryption</p>
          */
         @NameInMap("CheckShowName")
         public String checkShowName;
 
         /**
          * <p>The asset subtype of the cloud service. Valid values:</p>
-         * <br>
-         * <p>*   If the **InstanceType** parameter is set to **ECS**, this parameter supports the following valid values:</p>
-         * <br>
-         * <p>    *   **INSTANCE**</p>
-         * <p>    *   **DISK**</p>
-         * <p>    *   **SECURITY_GROUP**</p>
-         * <br>
-         * <p>*   If the **InstanceType** parameter is set to **ACR**, this parameter supports the following valid values:</p>
-         * <br>
-         * <p>    *   **REPOSITORY_ENTERPRISE**</p>
-         * <p>    *   **REPOSITORY_PERSON**</p>
-         * <br>
-         * <p>*   If the **InstanceType** parameter is set to **RAM**, this parameter supports the following valid values:</p>
-         * <br>
-         * <p>    *   **ALIAS**</p>
-         * <p>    *   **USER**</p>
-         * <p>    *   **POLICY**</p>
-         * <p>    *   **GROUP**</p>
-         * <br>
-         * <p>*   If the **InstanceType** parameter is set to **WAF**, this parameter supports the following valid values:</p>
-         * <br>
-         * <p>    *   **DOMAIN**</p>
-         * <br>
-         * <p>*   If the **InstanceType** parameter is set to other values, this parameter supports the following valid values:</p>
-         * <br>
-         * <p>    *   **INSTANCE**</p>
+         * <ul>
+         * <li><p>If the <strong>InstanceType</strong> parameter is set to <strong>ECS</strong>, this parameter supports the following valid values:</p>
+         * <ul>
+         * <li><strong>INSTANCE</strong></li>
+         * <li><strong>DISK</strong></li>
+         * <li><strong>SECURITY_GROUP</strong></li>
+         * </ul>
+         * </li>
+         * <li><p>If the <strong>InstanceType</strong> parameter is set to <strong>ACR</strong>, this parameter supports the following valid values:</p>
+         * <ul>
+         * <li><strong>REPOSITORY_ENTERPRISE</strong></li>
+         * <li><strong>REPOSITORY_PERSON</strong></li>
+         * </ul>
+         * </li>
+         * <li><p>If the <strong>InstanceType</strong> parameter is set to <strong>RAM</strong>, this parameter supports the following valid values:</p>
+         * <ul>
+         * <li><strong>ALIAS</strong></li>
+         * <li><strong>USER</strong></li>
+         * <li><strong>POLICY</strong></li>
+         * <li><strong>GROUP</strong></li>
+         * </ul>
+         * </li>
+         * <li><p>If the <strong>InstanceType</strong> parameter is set to <strong>WAF</strong>, this parameter supports the following valid values:</p>
+         * <ul>
+         * <li><strong>DOMAIN</strong></li>
+         * </ul>
+         * </li>
+         * <li><p>If the <strong>InstanceType</strong> parameter is set to other values, this parameter supports the following valid values:</p>
+         * <ul>
+         * <li><strong>INSTANCE</strong></li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DISK</p>
          */
         @NameInMap("InstanceSubType")
         public String instanceSubType;
 
         /**
          * <p>The asset type of the cloud service. Valid values:</p>
-         * <br>
-         * <p>*   **ECS**: ECS</p>
-         * <p>*   **SLB**: SLB</p>
-         * <p>*   **RDS**: ApsaraDB RDS</p>
-         * <p>*   **MONGODB**: MongoDB</p>
-         * <p>*   **KVSTORE**: Redis</p>
-         * <p>*   **ACR**: Container Registry</p>
-         * <p>*   **CSK**: ACK</p>
-         * <p>*   **VPC**: VPC</p>
-         * <p>*   **ACTIONTRAIL**: ActionTrail</p>
-         * <p>*   **CDN**: CDN</p>
-         * <p>*   **CAS**: Certificate Management Service (formerly SSL Certificates Service)</p>
-         * <p>*   **RDC**: Apsara Devops</p>
-         * <p>*   **RAM**: RAM</p>
-         * <p>*   **DDOS**: Anti-DDoS</p>
-         * <p>*   **WAF**: WAF</p>
-         * <p>*   **OSS**: OSS</p>
-         * <p>*   **POLARDB**: PolarDB</p>
-         * <p>*   **POSTGRESQL**: ApsaraDB RDS for PostgreSQL</p>
-         * <p>*   **MSE**: MSE</p>
-         * <p>*   **NAS**: NAS</p>
-         * <p>*   **SDDP**: SDDP</p>
-         * <p>*   **EIP**: EIP</p>
+         * <ul>
+         * <li><strong>ECS</strong>: ECS</li>
+         * <li><strong>SLB</strong>: SLB</li>
+         * <li><strong>RDS</strong>: ApsaraDB RDS</li>
+         * <li><strong>MONGODB</strong>: MongoDB</li>
+         * <li><strong>KVSTORE</strong>: Redis</li>
+         * <li><strong>ACR</strong>: Container Registry</li>
+         * <li><strong>CSK</strong>: ACK</li>
+         * <li><strong>VPC</strong>: VPC</li>
+         * <li><strong>ACTIONTRAIL</strong>: ActionTrail</li>
+         * <li><strong>CDN</strong>: CDN</li>
+         * <li><strong>CAS</strong>: Certificate Management Service (formerly SSL Certificates Service)</li>
+         * <li><strong>RDC</strong>: Apsara Devops</li>
+         * <li><strong>RAM</strong>: RAM</li>
+         * <li><strong>DDOS</strong>: Anti-DDoS</li>
+         * <li><strong>WAF</strong>: WAF</li>
+         * <li><strong>OSS</strong>: OSS</li>
+         * <li><strong>POLARDB</strong>: PolarDB</li>
+         * <li><strong>POSTGRESQL</strong>: ApsaraDB RDS for PostgreSQL</li>
+         * <li><strong>MSE</strong>: MSE</li>
+         * <li><strong>NAS</strong>: NAS</li>
+         * <li><strong>SDDP</strong>: SDDP</li>
+         * <li><strong>EIP</strong>: EIP</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The timestamp when the last check was performed. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1657793398000</p>
          */
         @NameInMap("LastCheckTime")
         public Long lastCheckTime;
 
         /**
          * <p>The risk level of the check item. Valid values:</p>
-         * <br>
-         * <p>*   **HIGH**</p>
-         * <p>*   **MEDIUM**</p>
-         * <p>*   **LOW**</p>
+         * <ul>
+         * <li><strong>HIGH</strong></li>
+         * <li><strong>MEDIUM</strong></li>
+         * <li><strong>LOW</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HIGH</p>
          */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
         /**
          * <p>The status of the check item. Valid values:</p>
-         * <br>
-         * <p>*   **PASS**: passed</p>
-         * <p>*   **NOT_PASS**: failed</p>
-         * <p>*   **CHECKING**: being checked</p>
-         * <p>*   **NOT_CHECK**: not checked</p>
-         * <p>*   **WHITELIST**: added to the whitelist</p>
+         * <ul>
+         * <li><strong>PASS</strong>: passed</li>
+         * <li><strong>NOT_PASS</strong>: failed</li>
+         * <li><strong>CHECKING</strong>: being checked</li>
+         * <li><strong>NOT_CHECK</strong>: not checked</li>
+         * <li><strong>WHITELIST</strong>: added to the whitelist</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PASS</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The message returned if the status of the check item is abnormal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TIMEOUT</p>
          */
         @NameInMap("StatusMessage")
         public String statusMessage;
 
         /**
          * <p>The ID of the check task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
          * <p>Indicates whether the TRIAL permission is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("TrialPermission")
         public Boolean trialPermission;
 
         /**
          * <p>The cloud service provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN</p>
          */
         @NameInMap("Vendor")
         public String vendor;
 
         /**
          * <p>The name of the cloud service provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun</p>
          */
         @NameInMap("VendorShowName")
         public String vendorShowName;
@@ -293,6 +373,30 @@ public class ListCheckResultResponseBody extends TeaModel {
         public static ListCheckResultResponseBodyChecks build(java.util.Map<String, ?> map) throws Exception {
             ListCheckResultResponseBodyChecks self = new ListCheckResultResponseBodyChecks();
             return TeaModel.build(map, self);
+        }
+
+        public ListCheckResultResponseBodyChecks setAssetSubType(Integer assetSubType) {
+            this.assetSubType = assetSubType;
+            return this;
+        }
+        public Integer getAssetSubType() {
+            return this.assetSubType;
+        }
+
+        public ListCheckResultResponseBodyChecks setAssetType(Integer assetType) {
+            this.assetType = assetType;
+            return this;
+        }
+        public Integer getAssetType() {
+            return this.assetType;
+        }
+
+        public ListCheckResultResponseBodyChecks setAssetVendor(Integer assetVendor) {
+            this.assetVendor = assetVendor;
+            return this;
+        }
+        public Integer getAssetVendor() {
+            return this.assetVendor;
         }
 
         public ListCheckResultResponseBodyChecks setCheckId(Long checkId) {
@@ -412,24 +516,36 @@ public class ListCheckResultResponseBody extends TeaModel {
     public static class ListCheckResultResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

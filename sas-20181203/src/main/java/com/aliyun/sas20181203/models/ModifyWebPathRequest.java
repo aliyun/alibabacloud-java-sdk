@@ -6,25 +6,39 @@ import com.aliyun.tea.*;
 public class ModifyWebPathRequest extends TeaModel {
     /**
      * <p>The configuration of the web directory. The value of this parameter is in the JSON format and contains the following fields:</p>
-     * <br>
-     * <p>*   **webPathType**: the type of the web directory</p>
-     * <p>*   **webPath**: the web directory</p>
+     * <ul>
+     * <li><strong>webPathType</strong>: the type of the web directory</li>
+     * <li><strong>webPath</strong>: the web directory</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *       &quot;webPathType&quot;: &quot;customize&quot;,
+     *       &quot;webPath&quot;: &quot;/root/www****&quot;
+     * }</p>
      */
     @NameInMap("Config")
     public String config;
 
     /**
      * <p>The protected asset to which the web directory belongs. The value of this parameter is in the JSON format and contains the following fields:</p>
-     * <br>
-     * <p>*   **target**: the protected asset.</p>
-     * <p>*   **targetType**: the type of the asset. Set the value to uuid.</p>
-     * <p>*   **flag**: the type of the operation.</p>
+     * <ul>
+     * <li><strong>target</strong>: the protected asset.</li>
+     * <li><strong>targetType</strong>: the type of the asset. Set the value to uuid.</li>
+     * <li><strong>flag</strong>: the type of the operation.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;target&quot;:&quot;0186127a-d33e-4d0c-94fb-8f25f87bc69f&quot;,&quot;targetType&quot;:&quot;uuid&quot;,&quot;flag&quot;:&quot;add&quot;}]</p>
      */
     @NameInMap("Target")
     public String target;
 
     /**
-     * <p>The type of the configuration item. Set the value to **web_path**.</p>
+     * <p>The type of the configuration item. Set the value to <strong>web_path</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>web_path</p>
      */
     @NameInMap("Type")
     public String type;

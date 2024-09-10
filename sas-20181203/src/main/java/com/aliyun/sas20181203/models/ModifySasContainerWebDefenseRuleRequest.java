@@ -12,14 +12,19 @@ public class ModifySasContainerWebDefenseRuleRequest extends TeaModel {
 
     /**
      * <p>The ID of the rule.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200634</p>
      */
     @NameInMap("RuleId")
     public Long ruleId;
 
     /**
      * <p>The name of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wwwwwww</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
@@ -56,72 +61,101 @@ public class ModifySasContainerWebDefenseRuleRequest extends TeaModel {
     public static class ModifySasContainerWebDefenseRuleRequestPathConfDTOList extends TeaModel {
         /**
          * <p>The backup paths.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/tmp/test</p>
          */
         @NameInMap("BackupPath")
         public String backupPath;
 
         /**
          * <p>The prevention mode. Valid values:</p>
-         * <br>
-         * <p>*   **block**</p>
-         * <p>*   **audit**</p>
-         * <br>
+         * <ul>
+         * <li><strong>block</strong></li>
+         * <li><strong>audit</strong></li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>audit</p>
          */
         @NameInMap("DefenseMode")
         public String defenseMode;
 
         /**
          * <p>The path that is protected.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/test/home/</p>
          */
         @NameInMap("DefensePath")
         public String defensePath;
 
         /**
          * <p>The files that are excluded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/test</p>
          */
         @NameInMap("ExcludeFile")
         public String excludeFile;
 
         /**
          * <p>The paths to the files that are excluded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/test/home/qq</p>
          */
         @NameInMap("ExcludeFilePath")
         public String excludeFilePath;
 
         /**
          * <p>The types of the files that are excluded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>php</p>
          */
         @NameInMap("ExcludeFileType")
         public String excludeFileType;
 
         /**
          * <p>The protection mode. Valid values:</p>
-         * <br>
-         * <p>*   **0**: basic mode (whitelist)</p>
-         * <p>*   **1**: complex mode (blacklist)</p>
-         * <br>
+         * <ul>
+         * <li><strong>0</strong>: basic mode (whitelist)</li>
+         * <li><strong>1</strong>: complex mode (blacklist)</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("GuardType")
         public Integer guardType;
 
         /**
          * <p>The files that are included.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/home/admin/test</p>
          */
         @NameInMap("IncludeFile")
         public String includeFile;
 
         /**
          * <p>The type of the files that are included.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jsp</p>
          */
         @NameInMap("IncludeFileType")
         public String includeFileType;
 
         /**
          * <p>The path ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678</p>
          */
         @NameInMap("PathConfId")
         public Long pathConfId;

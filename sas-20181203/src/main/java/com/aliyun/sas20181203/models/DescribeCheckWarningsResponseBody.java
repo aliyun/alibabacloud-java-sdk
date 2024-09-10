@@ -12,30 +12,45 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries returned on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Count")
     public Integer count;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The number of entries returned per page. Default value: **20**.</p>
+     * <p>The number of entries returned per page. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0DFCADBA-7065-42DA-AF17-6868B9C2A8CF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -96,91 +111,133 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
     public static class DescribeCheckWarningsResponseBodyCheckWarnings extends TeaModel {
         /**
          * <p>The ID of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2546</p>
          */
         @NameInMap("CheckId")
         public Long checkId;
 
         /**
          * <p>The ID of the alert that is generated for the baseline check result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>212251441</p>
          */
         @NameInMap("CheckWarningId")
         public Long checkWarningId;
 
         /**
          * <p>The ID of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8de456b00ff0a2009ee8ef7fc59fd0457fa44f20b8282af3e79c2a0e2492****</p>
          */
         @NameInMap("ContainerId")
         public String containerId;
 
         /**
          * <p>The name of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/svn-host</p>
          */
         @NameInMap("ContainerName")
         public String containerName;
 
         /**
          * <p>The error message in the check result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ScriptKilledOfCpuHigh</p>
          */
         @NameInMap("ExecErrorMessage")
         public String execErrorMessage;
 
         /**
          * <p>Indicates whether fixing is supported. Valid values:</p>
-         * <br>
-         * <p>*   **0**: Fixing is not supported.</p>
-         * <p>*   **1**: Fixing is supported.</p>
+         * <ul>
+         * <li><strong>0</strong>: Fixing is not supported.</li>
+         * <li><strong>1</strong>: Fixing is supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("FixStatus")
         public Integer fixStatus;
 
         /**
          * <p>The name of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>passwordExpire</p>
          */
         @NameInMap("Item")
         public String item;
 
         /**
          * <p>The timestamp of the latest processing of the check item risk of the machine. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1694692471000</p>
          */
         @NameInMap("LastHandleTime")
         public Long lastHandleTime;
 
         /**
          * <p>The risk level of the risk item. Valid values:</p>
-         * <br>
-         * <p>*   **high**</p>
-         * <p>*   **medium**</p>
-         * <p>*   **low**</p>
+         * <ul>
+         * <li><strong>high</strong></li>
+         * <li><strong>medium</strong></li>
+         * <li><strong>low</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
          */
         @NameInMap("Level")
         public String level;
 
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ignore</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
          * <p>The status of the check item. Valid values:</p>
-         * <br>
-         * <p>*   **1**: failed.</p>
-         * <p>*   **2**: verifying.</p>
-         * <p>*   **3**: passed.</p>
-         * <p>*   **5**: expired.</p>
-         * <p>*   **6**: ignored.</p>
+         * <ul>
+         * <li><strong>1</strong>: failed.</li>
+         * <li><strong>2</strong>: verifying.</li>
+         * <li><strong>3</strong>: passed.</li>
+         * <li><strong>5</strong>: expired.</li>
+         * <li><strong>6</strong>: ignored.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The type of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hc.check.type.identity_auth</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The ID of the server on which the baseline check is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d42f938c-d962-48a0-90f9-****</p>
          */
         @NameInMap("Uuid")
         public String uuid;

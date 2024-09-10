@@ -6,10 +6,13 @@ import com.aliyun.tea.*;
 public class DeleteInterceptionRuleRequest extends TeaModel {
     /**
      * <p>The ID of the cluster that you want to query.</p>
-     * <br>
-     * <p>> You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cdf629147cc3747d292a3f587xxxxxxxx</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;

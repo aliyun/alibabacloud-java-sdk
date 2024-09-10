@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class SetImageSensitiveFileStatusResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,21 +21,31 @@ public class SetImageSensitiveFileStatusResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20456DD5-5CBF-5015-9173-12CA4246****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,6 +98,9 @@ public class SetImageSensitiveFileStatusResponseBody extends TeaModel {
     public static class SetImageSensitiveFileStatusResponseBodyData extends TeaModel {
         /**
          * <p>The primary key ID of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18551</p>
          */
         @NameInMap("Id")
         public Long id;

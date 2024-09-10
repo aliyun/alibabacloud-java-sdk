@@ -12,6 +12,9 @@ public class HandleSecurityEventsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FF0020B9-999F-5DE2-985F-DB282BDA5311</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class HandleSecurityEventsResponseBody extends TeaModel {
     public static class HandleSecurityEventsResponseBodyHandleSecurityEventsResponse extends TeaModel {
         /**
          * <p>The ID of the task to handle the alert events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15411</p>
          */
         @NameInMap("TaskId")
         public Long taskId;

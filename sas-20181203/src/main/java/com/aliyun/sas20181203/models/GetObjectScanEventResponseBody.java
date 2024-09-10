@@ -12,6 +12,9 @@ public class GetObjectScanEventResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30CBF632-109F-596F-97F2-451C8B2A****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,36 +43,54 @@ public class GetObjectScanEventResponseBody extends TeaModel {
     public static class GetObjectScanEventResponseBodyDataDetails extends TeaModel {
         /**
          * <p>The type of the item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>html</p>
          */
         @NameInMap("InfoType")
         public String infoType;
 
         /**
          * <p>The name of the item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DownloadUrl</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The display name of the item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DownloadUrl</p>
          */
         @NameInMap("NameDisplay")
         public String nameDisplay;
 
         /**
          * <p>The type of the item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>html</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The value of the item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http://****</p>
          */
         @NameInMap("Value")
         public String value;
 
         /**
          * <p>The display value of the item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http://****</p>
          */
         @NameInMap("ValueDisplay")
         public String valueDisplay;
@@ -138,18 +159,27 @@ public class GetObjectScanEventResponseBody extends TeaModel {
 
         /**
          * <p>The name of the alert item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WebShell</p>
          */
         @NameInMap("EventName")
         public String eventName;
 
         /**
          * <p>The name of the object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sca_2023****</p>
          */
         @NameInMap("FileName")
         public String fileName;
 
         /**
          * <p>The MD5 hash value of the object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0552c44e243abdea1729d4507bce****</p>
          */
         @NameInMap("Md5")
         public String md5;

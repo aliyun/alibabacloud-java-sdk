@@ -6,18 +6,23 @@ import com.aliyun.tea.*;
 public class OperateSwitchStatusRequest extends TeaModel {
     /**
      * <p>The ID of the rule.</p>
-     * <br>
-     * <p>>  You can call the ListContainerWebDefenseRule operation to query the IDs of rules.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the ListContainerWebDefenseRule operation to query the IDs of rules.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>900001</p>
      */
     @NameInMap("RuleId")
     public Long ruleId;
 
     /**
      * <p>The status of the rule. Valid values: on and off.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
      */
     @NameInMap("Status")
     public String status;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageInstancesResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the information about the image.</p>
+     * <p>The information about the images.</p>
      */
     @NameInMap("ImageInstanceList")
     public java.util.List<DescribeImageInstancesResponseBodyImageInstanceList> imageInstanceList;
@@ -18,6 +18,9 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BE120DAB-F4E7-4C53-ADC3-A97578ABF384</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,206 +57,306 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
     public static class DescribeImageInstancesResponseBodyImageInstanceList extends TeaModel {
         /**
          * <p>The number of alerts that are generated for the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AlarmCount")
         public Integer alarmCount;
 
         /**
          * <p>Indicates whether alerts are generated for the image. Valid values:</p>
-         * <br>
-         * <p>*   **YES**</p>
-         * <p>*   **NO**</p>
+         * <ul>
+         * <li><strong>YES</strong></li>
+         * <li><strong>NO</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NO</p>
          */
         @NameInMap("AlarmStatus")
         public String alarmStatus;
 
         /**
          * <p>Indicates whether the image was deployed. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The image was not deployed.</p>
-         * <p>*   **1**: The image was deployed.</p>
+         * <ul>
+         * <li><strong>0</strong>: The image was not deployed.</li>
+         * <li><strong>1</strong>: The image was deployed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Deployed")
         public Integer deployed;
 
         /**
          * <p>The digest value of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a5ccdd9b166b67e02954aa9b618fe19b7968bd56a15463d2ad7f2643ba5b****</p>
          */
         @NameInMap("Digest")
         public String digest;
 
         /**
          * <p>The address of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         @NameInMap("Endpoints")
         public String endpoints;
 
         /**
          * <p>The number of baseline risks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("HcCount")
         public Integer hcCount;
 
         /**
-         * <p>Indicates whether the baseline risks exist. Valid values:</p>
-         * <br>
-         * <p>*   **NO**</p>
-         * <p>*   **YES**</p>
+         * <p>Indicates whether baseline risks exist. Valid values:</p>
+         * <ul>
+         * <li><strong>NO</strong></li>
+         * <li><strong>YES</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NO</p>
          */
         @NameInMap("HcStatus")
         public String hcStatus;
 
         /**
          * <p>The timestamp generated when the image was created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1600069948849</p>
          */
         @NameInMap("ImageCreate")
         public String imageCreate;
 
         /**
-         * <p>The image ID.</p>
+         * <p>The ID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c20987f18b130f9d144c9828df630417e2a9523148930dc3963e9d0dab30****</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
          * <p>The size of the image. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1604487690</p>
          */
         @NameInMap("ImageSize")
         public String imageSize;
 
         /**
          * <p>The timestamp generated when the image was updated. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1600069948849</p>
          */
         @NameInMap("ImageUpdate")
         public String imageUpdate;
 
         /**
-         * <p>The ID of the image.</p>
+         * <p>The instance ID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39010****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The ID of the region in which the image resides.</p>
+         * <p>The timestamp when the last scan was performed. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1721363159000</p>
+         */
+        @NameInMap("LastScanTime")
+        public Long lastScanTime;
+
+        /**
+         * <p>The region ID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The type of the image. Valid values:</p>
-         * <br>
-         * <p>*   **acr**</p>
-         * <p>*   **harbor**</p>
-         * <p>*   **quay**</p>
-         * <p>*   **CI/CD**</p>
+         * <ul>
+         * <li><strong>acr</strong></li>
+         * <li><strong>harbor</strong></li>
+         * <li><strong>quay</strong></li>
+         * <li><strong>CI/CD</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>acr</p>
          */
         @NameInMap("RegistryType")
         public String registryType;
 
         /**
          * <p>The ID of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f2b86d20bf0855af6aa268ce90fd****</p>
          */
         @NameInMap("RepoId")
         public String repoId;
 
         /**
          * <p>The name of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas-script-test</p>
          */
         @NameInMap("RepoName")
         public String repoName;
 
         /**
          * <p>The namespace to which the image repository belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N/A</p>
          */
         @NameInMap("RepoNamespace")
         public String repoNamespace;
 
         /**
          * <p>The type of the repository. Valid values:</p>
-         * <br>
-         * <p>*   **private**</p>
-         * <p>*   **public**</p>
+         * <ul>
+         * <li><strong>private</strong></li>
+         * <li><strong>public</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>private</p>
          */
         @NameInMap("RepoType")
         public String repoType;
 
         /**
          * <p>Indicates whether risks exist. Valid values:</p>
-         * <br>
-         * <p>*   **NO**</p>
-         * <p>*   **YES**</p>
+         * <ul>
+         * <li><strong>NO</strong></li>
+         * <li><strong>YES</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NO</p>
          */
         @NameInMap("RiskStatus")
         public String riskStatus;
 
         /**
          * <p>The scan progress of the image. Valid values: 0 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("ScaProgress")
         public Integer scaProgress;
 
         /**
          * <p>The error code of the image scan result. Valid values:</p>
-         * <br>
-         * <p>*   **TASK_NOT_EXISTS**: The image scan task does not exist.</p>
-         * <p>*   **TASK_NOT_SUPPORT_REGION**: The image scan task cannot be performed in the current region.</p>
-         * <p>*   **forbid_create_repeat_task**: The image scan task already exists.</p>
+         * <ul>
+         * <li><strong>TASK_NOT_EXISTS</strong>: The image scan task does not exist.</li>
+         * <li><strong>TASK_NOT_SUPPORT_REGION</strong>: The image scan task cannot be performed in the current region.</li>
+         * <li><strong>forbid_create_repeat_task</strong>: The image scan task already exists.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TASK_NOT_SUPPORT_REGION</p>
          */
         @NameInMap("ScaResult")
         public String scaResult;
 
         /**
          * <p>The scan status of the image. Valid values:</p>
-         * <br>
-         * <p>*   **INIT**: The image scan task is pending startup.</p>
-         * <p>*   **START**: The image scan task is started.</p>
-         * <p>*   **MESSAGE_SEND**: The message about the image scan task is sent.</p>
-         * <p>*   **START_RUN**: The image analysis task is started.</p>
-         * <p>*   **DOWNLOAD**: The image scan result is downloaded.</p>
-         * <p>*   **PRE_ANALYZER**: The image pre-analysis is started.</p>
-         * <p>*   **WEB_SHELL_ANALYZER**: The WebShell analysis is complete.</p>
-         * <p>*   **CVE_ANALYZER**: The Common Vulnerabilities and Exposures (CVE) analysis is complete.</p>
-         * <p>*   **BIN_ANALYZER**: The binary analysis of the image is complete.</p>
-         * <p>*   **OTHER_ANALYZER**: The extended analysis of the image is complete.</p>
-         * <p>*   **SUCCESS**: The image scan task is complete.</p>
-         * <p>*   **PRE_ANALYZER_SUCCESS**: The image pre-analysis is complete.</p>
-         * <p>*   **FAIL**: The image scan task failed.</p>
-         * <p>*   **TIMEOUT**: The image scan task timed out.</p>
+         * <ul>
+         * <li><strong>INIT</strong>: The image scan task is pending startup.</li>
+         * <li><strong>START</strong>: The image scan task is started.</li>
+         * <li><strong>MESSAGE_SEND</strong>: The message about the image scan task is sent.</li>
+         * <li><strong>START_RUN</strong>: The image analysis task is started.</li>
+         * <li><strong>DOWNLOAD</strong>: The image scan result is downloaded.</li>
+         * <li><strong>PRE_ANALYZER</strong>: The image pre-analysis is started.</li>
+         * <li><strong>WEB_SHELL_ANALYZER</strong>: The WebShell analysis of the image is complete.</li>
+         * <li><strong>CVE_ANALYZER</strong>: The Common Vulnerabilities and Exposures (CVE) analysis of the image is complete.</li>
+         * <li><strong>BIN_ANALYZER</strong>: The binary analysis of the image is complete.</li>
+         * <li><strong>OTHER_ANALYZER</strong>: The extended analysis of the image is complete.</li>
+         * <li><strong>SUCCESS</strong>: The image scan task is complete.</li>
+         * <li><strong>PRE_ANALYZER_SUCCESS</strong>: The image pre-analysis is complete.</li>
+         * <li><strong>FAIL</strong>: The image scan task failed.</li>
+         * <li><strong>TIMEOUT</strong>: The image scan task timed out.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         @NameInMap("ScaStatus")
         public String scaStatus;
 
         /**
-         * <p>The status of the image. Valid value:</p>
-         * <br>
-         * <p>*   **NORMAL**</p>
+         * <p>The status of the image. Valid values:</p>
+         * <ul>
+         * <li><strong>NORMAL</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The tag of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql_5.7</p>
          */
         @NameInMap("Tag")
         public String tag;
 
         /**
          * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12f80307-60aa-4efa-863a-56d72fb****</p>
          */
         @NameInMap("Uuid")
         public String uuid;
 
         /**
          * <p>The number of vulnerabilities in the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("VulCount")
         public Integer vulCount;
 
         /**
          * <p>Indicates whether vulnerabilities exist in the image. Valid values:</p>
-         * <br>
-         * <p>*   **YES**</p>
-         * <p>*   **NO**</p>
+         * <ul>
+         * <li><strong>YES</strong></li>
+         * <li><strong>NO</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NO</p>
          */
         @NameInMap("VulStatus")
         public String vulStatus;
@@ -357,6 +460,14 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeImageInstancesResponseBodyImageInstanceList setLastScanTime(Long lastScanTime) {
+            this.lastScanTime = lastScanTime;
+            return this;
+        }
+        public Long getLastScanTime() {
+            return this.lastScanTime;
         }
 
         public DescribeImageInstancesResponseBodyImageInstanceList setRegionId(String regionId) {
@@ -484,24 +595,36 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
     public static class DescribeImageInstancesResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of images returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

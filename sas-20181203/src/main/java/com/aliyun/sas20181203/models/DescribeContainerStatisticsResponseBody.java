@@ -12,6 +12,9 @@ public class DescribeContainerStatisticsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21DA46CA-2DCE-4FF6-907D-D5DBBB7518C8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,37 +42,55 @@ public class DescribeContainerStatisticsResponseBody extends TeaModel {
 
     public static class DescribeContainerStatisticsResponseBodyData extends TeaModel {
         /**
-         * <p>The number of alerts whose risk level is **Reminder**.</p>
+         * <p>The number of alerts whose risk level is <strong>Reminder</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RemindAlarmCount")
         public Integer remindAlarmCount;
 
         /**
-         * <p>The number of alerts whose risk level is **Urgent**.</p>
+         * <p>The number of alerts whose risk level is <strong>Urgent</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("SeriousAlarmCount")
         public Integer seriousAlarmCount;
 
         /**
-         * <p>The number of alerts whose risk level is **Suspicious**.</p>
+         * <p>The number of alerts whose risk level is <strong>Suspicious</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("SuspiciousAlarmCount")
         public Integer suspiciousAlarmCount;
 
         /**
          * <p>The total number of alerts that are generated in the current container cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("TotalAlarmCount")
         public Integer totalAlarmCount;
 
         /**
          * <p>The total number of nodes in the current container cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("TotalNode")
         public Integer totalNode;
 
         /**
          * <p>The number of nodes on which alerts are generated in the current container cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("hasRiskNode")
         public Integer hasRiskNode;

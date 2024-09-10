@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class DeleteOssScanConfigRequest extends TeaModel {
     /**
      * <p>The configuration ID.</p>
-     * <br>
-     * <p>>  You can call the [ListOssScanConfig](~~ListOssScanConfig~~) operation to query configuration IDs.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~ListOssScanConfig~~">ListOssScanConfig</a> operation to query configuration IDs.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1589</p>
      */
     @NameInMap("Id")
     public Long id;

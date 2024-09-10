@@ -6,82 +6,116 @@ import com.aliyun.tea.*;
 public class CreateInterceptionRuleShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the container cluster.</p>
-     * <br>
-     * <p>> You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c35xxxa416</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The name of the cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sas-test-cnnf</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
      * <p>The information about the destination network object. The value of this parameter contains the following fields:</p>
-     * <br>
-     * <p>*   targetId: the ID of the destination network object. You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to query the ID.</p>
-     * <p>*   ports: the destination port ranges.</p>
+     * <ul>
+     * <li>targetId: the ID of the destination network object. You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to query the ID.</li>
+     * <li>ports: the destination port ranges.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[
+     *       {
+     *             &quot;targetId&quot;: 600036,
+     *             &quot;ports&quot;: [
+     *                   &quot;1/65535&quot;
+     *             ]
+     *       }
+     * ]</p>
      */
     @NameInMap("DstTargetList")
     public String dstTargetListShrink;
 
     /**
      * <p>The action on traffic. Valid values:</p>
-     * <br>
-     * <p>*   **1**: blocks traffic.</p>
-     * <p>*   **2**: allows traffic and generates alerts.</p>
-     * <p>*   **3**: allows traffic and does not generate alerts.</p>
-     * <br>
+     * <ul>
+     * <li><strong>1</strong>: blocks traffic.</li>
+     * <li><strong>2</strong>: allows traffic and generates alerts.</li>
+     * <li><strong>3</strong>: allows traffic and does not generate alerts.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("InterceptType")
     public Long interceptType;
 
     /**
      * <p>The priority of the defense rule. Valid values: 1 to 1000. A smaller value indicates a higher priority.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("OrderIndex")
     public Long orderIndex;
 
     /**
      * <p>The name of the defense rule.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-rule-1</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
 
     /**
      * <p>Specifies the status of the defense rule. Valid values:</p>
-     * <br>
-     * <p>*   **0**: disables the rule.</p>
-     * <p>*   **1**: enables the rule.</p>
-     * <br>
+     * <ul>
+     * <li><strong>0</strong>: disables the rule.</li>
+     * <li><strong>1</strong>: enables the rule.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("RuleSwitch")
     public Integer ruleSwitch;
 
     /**
      * <p>The type of the defense rule. Valid values:</p>
-     * <br>
-     * <p>*   customize: custom rule</p>
+     * <ul>
+     * <li>customize: custom rule</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>customize</p>
      */
     @NameInMap("RuleType")
     public String ruleType;
 
     /**
      * <p>The source network object. The value of this parameter contains the following field:</p>
-     * <br>
-     * <p>*   targetId: the ID of the source network object. You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to query the ID.</p>
+     * <ul>
+     * <li>targetId: the ID of the source network object. You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to query the ID.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;targetId&quot;:301940}</p>
      */
     @NameInMap("SrcTarget")
     public String srcTargetShrink;

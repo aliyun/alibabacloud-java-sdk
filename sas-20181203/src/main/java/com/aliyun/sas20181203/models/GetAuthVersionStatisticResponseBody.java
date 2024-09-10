@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetAuthVersionStatisticResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2CA2BDF6-F3BD-51A4-BAAC-30B02F7A3FBB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,19 +43,26 @@ public class GetAuthVersionStatisticResponseBody extends TeaModel {
     public static class GetAuthVersionStatisticResponseBodyStatistics extends TeaModel {
         /**
          * <p>The edition of Security Center. Valid values:</p>
-         * <br>
-         * <p>*   **1**: Basic edition (Unauthorized)</p>
-         * <p>*   **6**: Anti-virus edition</p>
-         * <p>*   **5**: Advanced edition</p>
-         * <p>*   **3**: Enterprise edition</p>
-         * <p>*   **7**: Ultimate edition</p>
-         * <p>*   **10**: Value-added Plan edition</p>
+         * <ul>
+         * <li><strong>1</strong>: Basic edition (Unauthorized)</li>
+         * <li><strong>6</strong>: Anti-virus edition</li>
+         * <li><strong>5</strong>: Advanced edition</li>
+         * <li><strong>3</strong>: Enterprise edition</li>
+         * <li><strong>7</strong>: Ultimate edition</li>
+         * <li><strong>10</strong>: Value-added Plan edition</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("AuthVersion")
         public Integer authVersion;
 
         /**
          * <p>The number of authorized servers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public Integer count;

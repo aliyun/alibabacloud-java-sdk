@@ -12,6 +12,9 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C0D6119F-92EE-1276-B8B6-C81A7F9D57F5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,54 +43,80 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
     public static class DescribeInstallCodesResponseBodyInstallCodes extends TeaModel {
         /**
          * <p>The verification code for you to manually install the Security Center agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15v02r</p>
          */
         @NameInMap("CaptchaCode")
         public String captchaCode;
 
         /**
          * <p>The timestamp generated when the commands used to install the Security Center agent expire. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1637810007000</p>
          */
         @NameInMap("ExpiredDate")
         public Long expiredDate;
 
         /**
          * <p>The ID of the server group to which the server belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9165712</p>
          */
         @NameInMap("GroupId")
         public Long groupId;
 
         /**
          * <p>The name of the server group to which the server belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>Indicates whether an image is used to install the Security Center agent. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("OnlyImage")
         public Boolean onlyImage;
 
         /**
          * <p>The operating system of the server. Valid values:</p>
-         * <br>
-         * <p>*   **linux**</p>
-         * <p>*   **windows**</p>
+         * <ul>
+         * <li><strong>linux</strong></li>
+         * <li><strong>windows</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>linux</p>
          */
         @NameInMap("Os")
         public String os;
 
         /**
          * <p>The name of the proxy cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>proxy_test</p>
          */
         @NameInMap("ProxyCluster")
         public String proxyCluster;
 
         /**
          * <p>The name of the server provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN</p>
          */
         @NameInMap("VendorName")
         public String vendorName;

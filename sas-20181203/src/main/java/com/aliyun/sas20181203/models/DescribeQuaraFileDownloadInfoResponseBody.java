@@ -6,42 +6,63 @@ import com.aliyun.tea.*;
 public class DescribeQuaraFileDownloadInfoResponseBody extends TeaModel {
     /**
      * <p>The URL that is used to download the file. The URL is valid for five minutes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://xxxxxxxx.oss-cn-hangzhou-1.aliyuncs.com/xxxxx/xxxxxxxxxxxxxx?Expires=1671448125&OSSAccessKeyId=xxx">https://xxxxxxxx.oss-cn-hangzhou-1.aliyuncs.com/xxxxx/xxxxxxxxxxxxxx?Expires=1671448125&amp;OSSAccessKeyId=xxx</a></p>
      */
     @NameInMap("DownloadUrl")
     public String downloadUrl;
 
     /**
      * <p>The MD5 hash value of the quarantined file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bb62ef1311bc564377a0378d3axxxxxx</p>
      */
     @NameInMap("Md5")
     public String md5;
 
     /**
      * <p>The file path.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/etc/test</p>
      */
     @NameInMap("Path")
     public String path;
 
     /**
      * <p>The ID of the quarantined file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("QuaraFileId")
     public Integer quaraFileId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>29874225-EAAC-5415-8501-32DD20FXXXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The tag that is added to the related alert.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6d4ff40a22b15c86adecf2aa48xxxxx</p>
      */
     @NameInMap("Tag")
     public String tag;
 
     /**
      * <p>The UUID of the server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4fe8e1cd-3c37-4851-b9de-124da32c****</p>
      */
     @NameInMap("Uuid")
     public String uuid;

@@ -6,136 +6,202 @@ import com.aliyun.tea.*;
 public class DescribeImageVulListRequest extends TeaModel {
     /**
      * <p>The alias of the vulnerability.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>High severity vulnerability that affects org.eclipse.jetty:jetty-server</p>
      */
     @NameInMap("AliasName")
     public String aliasName;
 
     /**
      * <p>The ID of the cluster to which the container belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc20a1024011c44b6a8710d6f8b****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The name of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>docker-law</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
      * <p>The ID of the container.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c08d5fc1a329a4b88950a253d082f****</p>
      */
     @NameInMap("ContainerId")
     public String containerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong></p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>Specifies whether the vulnerability is handled. Valid values:</p>
-     * <br>
-     * <p>*   **y**: handled</p>
-     * <p>*   **n**: unhandled</p>
+     * <ul>
+     * <li><strong>y</strong>: handled</li>
+     * <li><strong>n</strong>: unhandled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>y</p>
      */
     @NameInMap("Dealed")
     public String dealed;
 
     /**
      * <p>The digest of the image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8f0fbdb41d3d1ade4ffdf21558443f4c03342010563bb8c43ccc09594d507012</p>
      */
     @NameInMap("Digest")
     public String digest;
 
     /**
      * <p>The name of the image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>registry.cn-wulanchabu.aliyuncs.com/sas_test/huxin-test-001:nuxeo6-****</p>
      */
     @NameInMap("Image")
     public String image;
 
     /**
      * <p>The instance ID of the asset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1-qeqewqw****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The name of the vulnerability.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>debian:10:CVE-2019-9893</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-002</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The priority to fix the vulnerability. Valid values:</p>
-     * <br>
-     * <p>*   **asap**: high. You must fix the vulnerability at the earliest opportunity.</p>
-     * <p>*   **later**: medium. You can fix the vulnerability based on your business requirements.</p>
-     * <p>*   **nntf**: low. You can ignore the vulnerability.</p>
+     * <ul>
+     * <li><strong>asap</strong>: high. You must fix the vulnerability at the earliest opportunity.</li>
+     * <li><strong>later</strong>: medium. You can fix the vulnerability based on your business requirements.</li>
+     * <li><strong>nntf</strong>: low. You can ignore the vulnerability.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>asap</p>
      */
     @NameInMap("Necessity")
     public String necessity;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**</p>
+     * <p>The number of entries to return on each page. Default value: <strong>10</strong></p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The pod.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22222-7xsqq</p>
      */
     @NameInMap("Pod")
     public String pod;
 
     /**
      * <p>The region ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the image repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qew****</p>
      */
     @NameInMap("RepoId")
     public String repoId;
 
     /**
      * <p>The instance ID of the image repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-qewqrqcsadf****</p>
      */
     @NameInMap("RepoInstanceId")
     public String repoInstanceId;
 
     /**
      * <p>The name of the image repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>libssh2</p>
      */
     @NameInMap("RepoName")
     public String repoName;
 
     /**
      * <p>The namespace to which the image repository belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>libssh2</p>
      */
     @NameInMap("RepoNamespace")
     public String repoNamespace;
 
     /**
      * <p>The region ID of the image repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RepoRegionId")
     public String repoRegionId;
@@ -148,30 +214,42 @@ public class DescribeImageVulListRequest extends TeaModel {
 
     /**
      * <p>The status of the vulnerability. Valid values:</p>
-     * <br>
-     * <p>*   **1**: unfixed</p>
-     * <p>*   **4**: being fixed</p>
-     * <p>*   **7**: fixed</p>
+     * <ul>
+     * <li><strong>1</strong>: unfixed</li>
+     * <li><strong>4</strong>: being fixed</li>
+     * <li><strong>7</strong>: fixed</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("StatusList")
     public String statusList;
 
     /**
      * <p>The tag that is added to the image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oval</p>
      */
     @NameInMap("Tag")
     public String tag;
 
     /**
-     * <p>The type of the vulnerability. Set the value to **cve**, which indicates image vulnerabilities.</p>
-     * <br>
+     * <p>The type of the vulnerability. Set the value to <strong>cve</strong>, which indicates image vulnerabilities.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cve</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>The UUIDs of the assets. Separate multiple UUIDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0004a32a0305a7f6ab5ff9600d47****</p>
      */
     @NameInMap("Uuids")
     public String uuids;

@@ -5,77 +5,109 @@ import com.aliyun.tea.*;
 
 public class GetAssetsPropertyItemRequest extends TeaModel {
     /**
-     * <p>The type of the asset fingerprint that you want to query. Default value: **sca**. Valid values:</p>
-     * <br>
-     * <p>*   **lkm**: kernel module</p>
-     * <p>*   **autorun**: startup item</p>
-     * <p>*   **web_server**: website</p>
-     * <br>
+     * <p>The type of the asset fingerprint that you want to query. Default value: <strong>sca</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>lkm</strong>: kernel module</li>
+     * <li><strong>autorun</strong>: startup item</li>
+     * <li><strong>web_server</strong>: website</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lkm</p>
      */
     @NameInMap("Biz")
     public String biz;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>Specifies whether to forcefully refresh the data that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ForceFlush")
     public Boolean forceFlush;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
-     * <br>
-     * <p>> We recommend that you do not leave this parameter empty.</p>
+     * <blockquote>
+     * <p>We recommend that you do not leave this parameter empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The value of the search condition. You must specify this parameter based on the value of the **SearchItem** parameter.</p>
-     * <br>
-     * <p>*   If you set **SearchItem** to **domain**, you must enter the domain name.</p>
-     * <p>*   If you set **SearchItem** to **module_name**, you must enter the module name.</p>
-     * <p>*   If you set **SearchItem** to **path**, you must enter the path to the self-starting item.</p>
-     * <br>
-     * <p>>  You must specify both the **SearchItem** and **SearchInfo** parameters before you can query the information about asset fingerprints by asset fingerprint name.</p>
+     * <p>The value of the search condition. You must specify this parameter based on the value of the <strong>SearchItem</strong> parameter.</p>
+     * <ul>
+     * <li>If you set <strong>SearchItem</strong> to <strong>domain</strong>, you must enter the domain name.</li>
+     * <li>If you set <strong>SearchItem</strong> to <strong>module_name</strong>, you must enter the module name.</li>
+     * <li>If you set <strong>SearchItem</strong> to <strong>path</strong>, you must enter the path to the self-starting item.</li>
+     * </ul>
+     * <blockquote>
+     * <p> You must specify both the <strong>SearchItem</strong> and <strong>SearchInfo</strong> parameters before you can query the information about asset fingerprints by asset fingerprint name.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>/lib/systemd/s****</p>
      */
     @NameInMap("SearchInfo")
     public String searchInfo;
 
     /**
-     * <p>The type of the search condition. You must specify this parameter based on the value of the **Biz** parameter. Valid values:</p>
-     * <br>
-     * <p>*   If you set **Biz** to **web_server**, set **SearchItem** to the following value:</p>
-     * <br>
-     * <p>    *   **domain**: the domain name</p>
-     * <br>
-     * <p>*   If you set **Biz** to **lkm**, set **SearchItem** to the following value:</p>
-     * <br>
-     * <p>    *   **module_name**: the name of the module</p>
-     * <br>
-     * <p>*   If you set **Biz** to **autorun**, set **SearchItem** to the following value:</p>
-     * <br>
-     * <p>    *   **path**: the path to the self-starting item</p>
-     * <br>
-     * <p>>  You must specify both the **SearchItem** and **SearchInfo** parameters before you can query the information about asset fingerprints by asset fingerprint name.</p>
+     * <p>The type of the search condition. You must specify this parameter based on the value of the <strong>Biz</strong> parameter. Valid values:</p>
+     * <ul>
+     * <li><p>If you set <strong>Biz</strong> to <strong>web_server</strong>, set <strong>SearchItem</strong> to the following value:</p>
+     * <ul>
+     * <li><strong>domain</strong>: the domain name</li>
+     * </ul>
+     * </li>
+     * <li><p>If you set <strong>Biz</strong> to <strong>lkm</strong>, set <strong>SearchItem</strong> to the following value:</p>
+     * <ul>
+     * <li><strong>module_name</strong>: the name of the module</li>
+     * </ul>
+     * </li>
+     * <li><p>If you set <strong>Biz</strong> to <strong>autorun</strong>, set <strong>SearchItem</strong> to the following value:</p>
+     * <ul>
+     * <li><strong>path</strong>: the path to the self-starting item</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p> You must specify both the <strong>SearchItem</strong> and <strong>SearchInfo</strong> parameters before you can query the information about asset fingerprints by asset fingerprint name.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>path</p>
      */
     @NameInMap("SearchItem")
     public String searchItem;

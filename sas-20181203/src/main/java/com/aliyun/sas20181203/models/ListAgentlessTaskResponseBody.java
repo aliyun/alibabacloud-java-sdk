@@ -18,6 +18,9 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1A975D03-5F49-5354-B2CB-3918D5DA****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,116 +57,179 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
     public static class ListAgentlessTaskResponseBodyList extends TeaModel {
         /**
          * <p>The end timestamp of the task. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1678895999999</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
+         * <p>The instance ID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-wz95vuqky0ada4******</p>
+         */
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        /**
          * <p>The name of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sql-test-0****</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The public IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.210.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.25.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
-         * <p>The volume of detection data, in MB.</p>
+         * <p>The amount of data detected. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>154.11</p>
          */
         @NameInMap("MeasureSpace")
         public Long measureSpace;
 
         /**
          * <p>The progress of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("Progress")
         public Integer progress;
 
         /**
-         * <p>The execution progress of the inspection items.</p>
+         * <p>The execution progress of the check items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;{\&quot;scaVul\&quot;:100,\&quot;binary\&quot;:100,\&quot;baseline\&quot;:100,\&quot;vul\&quot;:100,\&quot;webshell\&quot;:100,\&quot;script\&quot;:100,\&quot;sensitiveInfo\&quot;:100}&quot;</p>
          */
         @NameInMap("ProgressByProject")
         public String progressByProject;
 
         /**
-         * <p>The download link for the report.</p>
+         * <p>The download URL of the report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://newsas-oss-bucket.oss-cn-hangzhou.aliyuncs.com/agent_less_single_report">http://newsas-oss-bucket.oss-cn-hangzhou.aliyuncs.com/agent_less_single_report</a>****</p>
          */
         @NameInMap("ReportDownloadUrl")
         public String reportDownloadUrl;
 
         /**
-         * <p>The status of the report. Possible values:</p>
-         * <br>
-         * <p>*   **PREPARED**: In preparation.</p>
-         * <p>*   **RUNNING**: In progress.</p>
-         * <p>*   **SUCCESS**: Successful.</p>
-         * <p>*   **TIMEOUT**: Timeout.</p>
-         * <p>*   **FAILED**: Failed.</p>
+         * <p>The status of the report. Valid values:</p>
+         * <ul>
+         * <li><strong>PREPARED</strong>: preparing</li>
+         * <li><strong>RUNNING</strong>: running</li>
+         * <li><strong>SUCCESS</strong>: succeeded</li>
+         * <li><strong>TIMEOUT</strong>: timed out</li>
+         * <li><strong>FAILED</strong>: failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         @NameInMap("ReportStatus")
         public String reportStatus;
 
         /**
          * <p>The result of the detection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         @NameInMap("Result")
         public String result;
 
         /**
          * <p>The start timestamp of the task. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1672741657897</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
         /**
          * <p>The status of the detection task.</p>
-         * <br>
-         * <p>*   **1**: The detection task is in progress.</p>
-         * <p>*   **2**: The detection task is complete.</p>
-         * <p>*   **3**: The detection task fails.</p>
-         * <p>*   **4**: The detection task times out.</p>
+         * <ul>
+         * <li><strong>1</strong>: The detection task is in progress.</li>
+         * <li><strong>2</strong>: The detection task is complete.</li>
+         * <li><strong>3</strong>: The detection task fails.</li>
+         * <li><strong>4</strong>: The detection task times out.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The name of the asset that is detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hkdevt****</p>
          */
         @NameInMap("TargetName")
         public String targetName;
 
         /**
          * <p>The type of the asset that is detected. Valid values:</p>
-         * <br>
-         * <p>*   **1**: snapshot</p>
-         * <p>*   **2**: image</p>
+         * <ul>
+         * <li><strong>1</strong>: snapshot</li>
+         * <li><strong>2</strong>: image</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TargetType")
         public Integer targetType;
 
         /**
          * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1538****</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
          * <p>The name of the detection task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AGENTLESS_SCAN</p>
          */
         @NameInMap("TaskName")
         public String taskName;
 
         /**
          * <p>The UUID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49e25e0f-bb51-4a5a-a1b3-13a4ddaa****</p>
          */
         @NameInMap("Uuid")
         public String uuid;
@@ -179,6 +245,14 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
         }
         public Long getEndTime() {
             return this.endTime;
+        }
+
+        public ListAgentlessTaskResponseBodyList setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public ListAgentlessTaskResponseBodyList setInstanceName(String instanceName) {
@@ -314,18 +388,27 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
     public static class ListAgentlessTaskResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

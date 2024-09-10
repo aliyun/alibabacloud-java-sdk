@@ -6,71 +6,105 @@ import com.aliyun.tea.*;
 public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
     /**
      * <p>The handling status for the exception. Valid values:</p>
-     * <br>
-     * <p>*   **exporting**: in progress</p>
-     * <p>*   **success**: successful</p>
-     * <p>*   **failed**: failed</p>
-     * <p>*   **pending**: pending</p>
+     * <ul>
+     * <li><strong>exporting</strong>: in progress</li>
+     * <li><strong>success</strong>: successful</li>
+     * <li><strong>failed</strong>: failed</li>
+     * <li><strong>pending</strong>: pending</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("ExportStatus")
     public String exportStatus;
 
     /**
      * <p>The name of the exported file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>suspicious_event_20221221_1671590521234.zip</p>
      */
     @NameInMap("FileName")
     public String fileName;
 
     /**
      * <p>The time when the export task was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-12-20T15:18Z</p>
      */
     @NameInMap("GmtCreate")
     public Long gmtCreate;
 
     /**
      * <p>The time when the export task was modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-12-20T15:18Z</p>
      */
     @NameInMap("GmtModified")
     public Long gmtModified;
 
     /**
      * <p>The ID of the export task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11</p>
      */
     @NameInMap("Id")
     public Integer id;
 
     /**
      * <p>The URL at which you can download the exported Excel file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://suspicious-xxxxxxx.oss-cn-shanghai.aliyuncs.com/xxxxxxxxxxx/suspicious_event_20221221_1671590525269.zip?Expires=1671594125&OSSAccessKeyId=LTAIxxxxxxxxxxxxxx&Signature=xxxxxxxxxxxxxxxxxx">http://suspicious-xxxxxxx.oss-cn-shanghai.aliyuncs.com/xxxxxxxxxxx/suspicious_event_20221221_1671590525269.zip?Expires=1671594125&amp;OSSAccessKeyId=LTAIxxxxxxxxxxxxxx&amp;Signature=xxxxxxxxxxxxxxxxxx</a></p>
      */
     @NameInMap("Link")
     public String link;
 
     /**
      * <p>The progress percentage of the export task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("Progress")
     public Integer progress;
 
     /**
      * <p>The exported parameters of exceptions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>id,eventSubType,eventDetail,level,status,ip,instanceName,desc,lastTime,operateTime,note</p>
      */
     @NameInMap("Properties")
     public String properties;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BE120DAB-F4E7-4C53-ADC3-A97578AXXXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of exceptions exported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
     /**
      * <p>The type of the export task. The value is fixed as suspiciousEvent.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>suspiciousEvent</p>
      */
     @NameInMap("Type")
     public String type;

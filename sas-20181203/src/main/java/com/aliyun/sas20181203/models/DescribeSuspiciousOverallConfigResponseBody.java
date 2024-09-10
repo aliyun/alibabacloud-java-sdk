@@ -12,6 +12,9 @@ public class DescribeSuspiciousOverallConfigResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6673D49C-A9AB-40DD-B4A2-B92306701AE7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,22 +43,30 @@ public class DescribeSuspiciousOverallConfigResponseBody extends TeaModel {
     public static class DescribeSuspiciousOverallConfigResponseBodyOverallConfig extends TeaModel {
         /**
          * <p>The status of the feature. Valid values:</p>
-         * <br>
-         * <p>*   **off**: disabled</p>
-         * <p>*   **on**: enabled</p>
+         * <ul>
+         * <li><strong>off</strong>: disabled</li>
+         * <li><strong>on</strong>: enabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("Config")
         public String config;
 
         /**
          * <p>The type of the feature. Valid values:</p>
-         * <br>
-         * <p>*   **auto_breaking**: Anti-Virus</p>
-         * <p>*   **ransomware_breaking**: Anti-ransomware (Bait Capture)</p>
-         * <p>*   **webshell_cloud_breaking**: Webshell Protection</p>
-         * <p>*   **alinet**: Behavior prevention</p>
-         * <p>*   **k8s_log_analysis**: K8s Threat Detection</p>
-         * <p>*   **alisecguard**: Defense mode for Client Protection</p>
+         * <ul>
+         * <li><strong>auto_breaking</strong>: Anti-Virus</li>
+         * <li><strong>ransomware_breaking</strong>: Anti-ransomware (Bait Capture)</li>
+         * <li><strong>webshell_cloud_breaking</strong>: Webshell Protection</li>
+         * <li><strong>alinet</strong>: Behavior prevention</li>
+         * <li><strong>k8s_log_analysis</strong>: K8s Threat Detection</li>
+         * <li><strong>alisecguard</strong>: Defense mode for Client Protection</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>auto_breaking</p>
          */
         @NameInMap("Type")
         public String type;

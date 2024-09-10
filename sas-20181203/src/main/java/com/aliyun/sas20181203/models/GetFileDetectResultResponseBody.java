@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetFileDetectResultResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24A20733-10A0-4AF6-BE6B-E3322413BB68</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,80 +42,108 @@ public class GetFileDetectResultResponseBody extends TeaModel {
 
     public static class GetFileDetectResultResponseBodyResultList extends TeaModel {
         /**
-         * <p>The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>Whether to identify as a compressed package. Valid values:</p>
-         * <p>- **true**: Yes.</p>
-         * <p>- **false**: No.</p>
+         * <ul>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Compress")
         public Boolean compress;
 
         /**
          * <p>The extended information about the file detection result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;HighLight&quot;:[[23245,23212]]}</p>
          */
         @NameInMap("Ext")
         public String ext;
 
         /**
          * <p>The identifier of the file. Only MD5 hash values are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a212417e65c26ff133cfff28f6c****</p>
          */
         @NameInMap("HashKey")
         public String hashKey;
 
         /**
          * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The file detection result. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The file is normal.</p>
-         * <p>*   **1**: The file is suspicious.</p>
-         * <p>*   **3**: The detection is in progress.</p>
+         * <ul>
+         * <li><strong>0</strong>: The file is normal.</li>
+         * <li><strong>1</strong>: The file is suspicious.</li>
+         * <li><strong>3</strong>: The detection is in progress.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Result")
         public Integer result;
 
         /**
          * <p>The score of file detection result.</p>
-         * <br>
-         * <p>> A higher score indicates a more suspicious file.</p>
+         * <blockquote>
+         * <p>A higher score indicates a more suspicious file.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Score")
         public Integer score;
 
         /**
          * <p>The type of the virus. Valid values:</p>
-         * <br>
-         * <p>*   **Trojan**: self-mutating trojan</p>
-         * <p>*   **WebShell**: webshell</p>
-         * <p>*   **Backdoor**: backdoor program</p>
-         * <p>*   **RansomWare**: ransomware</p>
-         * <p>*   **Scanner**: scanner</p>
-         * <p>*   **Stealer**: tool that is used to steal information</p>
-         * <p>*   **Malbaseware**: tainted basic software</p>
-         * <p>*   **Hacktool**: attacker tool</p>
-         * <p>*   **Engtest**: engine test program</p>
-         * <p>*   **Downloader**: trojan downloader</p>
-         * <p>*   **Virus**: infectious virus</p>
-         * <p>*   **Miner**: mining program</p>
-         * <p>*   **Worm**: worm</p>
-         * <p>*   **DDoS**: DDoS trojan</p>
-         * <p>*   **Malware**: malicious program</p>
-         * <p>*   **Backdoor**: reverse shell</p>
-         * <p>*   **RiskWare**: software that has risks</p>
-         * <p>*   **Proxytool**: proxy</p>
-         * <p>*   **Suspicious**: suspicious program</p>
-         * <p>*   **MalScript**: malicious script</p>
-         * <p>*   **Rootkit**: rootkit</p>
-         * <p>*   **Exploit**: exploit</p>
+         * <ul>
+         * <li><strong>Trojan</strong>: trojan horse</li>
+         * <li><strong>WebShell</strong>: webshell</li>
+         * <li><strong>Backdoor</strong>: backdoor program</li>
+         * <li><strong>RansomWare</strong>: ransomware</li>
+         * <li><strong>Scanner</strong>: scanner</li>
+         * <li><strong>Stealer</strong>: tool that is used to steal information</li>
+         * <li><strong>Malbaseware</strong>: tainted basic software</li>
+         * <li><strong>Hacktool</strong>: attacker tool</li>
+         * <li><strong>Engtest</strong>: engine test program</li>
+         * <li><strong>Downloader</strong>: trojan downloader</li>
+         * <li><strong>Virus</strong>: infectious virus</li>
+         * <li><strong>Miner</strong>: mining program</li>
+         * <li><strong>Worm</strong>: worm</li>
+         * <li><strong>DDoS</strong>: DDoS trojan</li>
+         * <li><strong>Malware</strong>: malicious program</li>
+         * <li><strong>RiskWare</strong>: software that has risks</li>
+         * <li><strong>Proxytool</strong>: proxy</li>
+         * <li><strong>Suspicious</strong>: suspicious program</li>
+         * <li><strong>MalScript</strong>: malicious script</li>
+         * <li><strong>Rootkit</strong>: rootkit</li>
+         * <li><strong>Exploit</strong>: exploit</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>WEBSHELL</p>
          */
         @NameInMap("VirusType")
         public String virusType;

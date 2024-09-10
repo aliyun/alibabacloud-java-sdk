@@ -6,37 +6,55 @@ import com.aliyun.tea.*;
 public class DescribeRisksRequest extends TeaModel {
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The maximum number of entries to return. Default value: 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Limit")
     public Integer limit;
 
     /**
      * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
-     * <br>
-     * <p>>  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>127608589417****</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
     /**
      * <p>The baseline ID.</p>
-     * <br>
-     * <p>>  You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the baseline IDs.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeCheckWarningSummary~~">DescribeCheckWarningSummary</a> operation to query the baseline IDs.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>75</p>
      */
     @NameInMap("RiskId")
     public Long riskId;
 
     /**
      * <p>The name of the baseline.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>docker</p>
      */
     @NameInMap("RiskName")
     public String riskName;

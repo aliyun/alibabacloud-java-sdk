@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class AddSasContainerWebDefenseRuleResponseBody extends TeaModel {
     /**
      * <p>The unique value of the created rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200634</p>
      */
     @NameInMap("Data")
     public Long data;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8B4B6E6D-B0B0-5F05-A14E-82917D9648EE</p>
      */
     @NameInMap("RequestId")
     public String requestId;

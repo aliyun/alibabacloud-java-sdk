@@ -6,44 +6,57 @@ import com.aliyun.tea.*;
 public class ListInterceptionRulePageRequest extends TeaModel {
     /**
      * <p>The ID of the container cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc41de13ab5474210bc0ce772a009****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The query condition.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("Criteria")
     public String criteria;
 
     /**
      * <p>The type of the query condition. Valid values:</p>
-     * <br>
-     * <p>*   **ID**</p>
-     * <p>*   **RULE_NAME**</p>
-     * <p>*   **SRC_TARGET**</p>
-     * <p>*   **DST_TARGET**</p>
-     * <p>*   **DST_PORT**</p>
-     * <p>*   **RULE_SWITCH**</p>
-     * <p>*   **INTERCEPTOR_TYPE**</p>
+     * <ul>
+     * <li><strong>ID</strong></li>
+     * <li><strong>RULE_NAME</strong></li>
+     * <li><strong>SRC_TARGET</strong></li>
+     * <li><strong>DST_TARGET</strong></li>
+     * <li><strong>DST_PORT</strong></li>
+     * <li><strong>RULE_SWITCH</strong></li>
+     * <li><strong>INTERCEPTOR_TYPE</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>DST_PORT</p>
      */
     @NameInMap("CriteriaType")
     public String criteriaType;
 
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

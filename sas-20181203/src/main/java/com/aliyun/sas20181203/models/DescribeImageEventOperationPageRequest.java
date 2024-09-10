@@ -6,47 +6,70 @@ import com.aliyun.tea.*;
 public class DescribeImageEventOperationPageRequest extends TeaModel {
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The keyword of the alert item.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PEM</p>
      */
     @NameInMap("EventKey")
     public String eventKey;
 
     /**
      * <p>The name of the alert item.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PEM</p>
      */
     @NameInMap("EventName")
     public String eventName;
 
     /**
      * <p>The alert type.</p>
-     * <br>
-     * <p>*   Set the value to **sensitiveFile**.</p>
+     * <ul>
+     * <li>Set the value to <strong>sensitiveFile</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>sensitiveFile</p>
      */
     @NameInMap("EventType")
     public String eventType;
 
     /**
      * <p>The ID of the alert handling rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>49616</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese.</p>
-     * <p>*   **en**: English.</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

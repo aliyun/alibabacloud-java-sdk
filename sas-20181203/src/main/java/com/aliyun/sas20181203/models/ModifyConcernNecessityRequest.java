@@ -6,10 +6,14 @@ import com.aliyun.tea.*;
 public class ModifyConcernNecessityRequest extends TeaModel {
     /**
      * <p>The priorities to fix the vulnerabilities. Valid values:</p>
-     * <br>
-     * <p>*   asap: high</p>
-     * <p>*   later: medium</p>
-     * <p>*   nntf: low</p>
+     * <ul>
+     * <li>asap: high</li>
+     * <li>later: medium</li>
+     * <li>nntf: low</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>asap,nntf</p>
      */
     @NameInMap("ConcernNecessity")
     public String concernNecessity;

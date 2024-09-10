@@ -18,6 +18,9 @@ public class ListAssetSelectionTargetResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50A75355-F58F-5D65-8377-98C88DED9C51</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,12 +57,18 @@ public class ListAssetSelectionTargetResponseBody extends TeaModel {
     public static class ListAssetSelectionTargetResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30****</p>
          */
         @NameInMap("TargetId")
         public String targetId;
 
         /**
          * <p>The name of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test****</p>
          */
         @NameInMap("TargetName")
         public String targetName;
@@ -90,18 +99,27 @@ public class ListAssetSelectionTargetResponseBody extends TeaModel {
     public static class ListAssetSelectionTargetResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>639</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

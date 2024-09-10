@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteInterceptionRuleResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D65AADFC-1D20-5A6A-8F6A-9FA53CXXXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;

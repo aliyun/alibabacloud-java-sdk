@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class DescribeSuspEventsRequest extends TeaModel {
     /**
      * <p>The ID of the alert event.</p>
-     * <br>
-     * <p>> To query the details of an alert event, you must specify the ID of the alert event. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the IDs of alert events.</p>
+     * <blockquote>
+     * <p>To query the details of an alert event, you must specify the ID of the alert event. You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to query the IDs of alert events.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>8df914418f4211fb****</p>
      */
     @NameInMap("AlarmUniqueInfo")
     public String alarmUniqueInfo;
@@ -20,95 +24,138 @@ public class DescribeSuspEventsRequest extends TeaModel {
 
     /**
      * <p>The ID of the cluster of whose alert events you want to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c4af4fdf38a98496a9b63c2be5dae****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The key of the condition that is used to query alert events on containers. Valid values:</p>
-     * <br>
-     * <p>*   **instanceId**: the ID of the asset</p>
-     * <p>*   **appName**: the name of the application</p>
-     * <p>*   **clusterId**: the ID of the cluster</p>
-     * <p>*   **regionId**: the ID of the region</p>
-     * <p>*   **nodeName**: the name of the node</p>
-     * <p>*   **namespace**: the namespace</p>
-     * <p>*   **clusterName**: the name of the cluster</p>
-     * <p>*   **image**: the name of the image</p>
-     * <p>*   **imageRepoName**: the name of the image repository</p>
-     * <p>*   **imageRepoNamespace**: the namespace to which the image repository belongs</p>
-     * <p>*   **imageRepoTag**: the tag that is added to the image</p>
-     * <p>*   **imageDigest**: the digest of the image</p>
+     * <ul>
+     * <li><strong>instanceId</strong>: the ID of the asset</li>
+     * <li><strong>appName</strong>: the name of the application</li>
+     * <li><strong>clusterId</strong>: the ID of the cluster</li>
+     * <li><strong>regionId</strong>: the ID of the region</li>
+     * <li><strong>nodeName</strong>: the name of the node</li>
+     * <li><strong>namespace</strong>: the namespace</li>
+     * <li><strong>clusterName</strong>: the name of the cluster</li>
+     * <li><strong>image</strong>: the name of the image</li>
+     * <li><strong>imageRepoName</strong>: the name of the image repository</li>
+     * <li><strong>imageRepoNamespace</strong>: the namespace to which the image repository belongs</li>
+     * <li><strong>imageRepoTag</strong>: the tag that is added to the image</li>
+     * <li><strong>imageDigest</strong>: the digest of the image</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>instanceId</p>
      */
     @NameInMap("ContainerFieldName")
     public String containerFieldName;
 
     /**
      * <p>The value of the condition that is used to query alert events on containers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccf9769c22b844ff9b8d57417683b****</p>
      */
     @NameInMap("ContainerFieldValue")
     public String containerFieldValue;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public String currentPage;
 
     /**
      * <p>Specifies whether the alert event is handled. Valid values:</p>
-     * <br>
-     * <p>*   **N**: unhandled</p>
-     * <p>*   **Y**: handled</p>
+     * <ul>
+     * <li><strong>N</strong>: unhandled</li>
+     * <li><strong>Y</strong>: handled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>N</p>
      */
     @NameInMap("Dealed")
     public String dealed;
 
     /**
      * <p>The subtype of the alert event. Separate multiple subtypes with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WEBSHELL</p>
      */
     @NameInMap("EventNames")
     public String eventNames;
 
     /**
      * <p>The data source of the alert event. Set the value to sas.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sas</p>
      */
     @NameInMap("From")
     public String from;
 
     /**
      * <p>The ID of the asset group to which the affected asset belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>18768</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
 
     /**
      * <p>The ID of the alert event.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The severity of the alert event. Separate multiple severities with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **serious**</p>
-     * <p>*   **suspicious**</p>
-     * <p>*   **remind**</p>
+     * <ul>
+     * <li><strong>serious</strong></li>
+     * <li><strong>suspicious</strong></li>
+     * <li><strong>remind</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>serious</p>
      */
     @NameInMap("Levels")
     public String levels;
 
+    @NameInMap("MultiAccountActionType")
+    public Integer multiAccountActionType;
+
     /**
      * <p>The name of the asset that is affected by the alert event.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs-xxx</p>
      */
     @NameInMap("Name")
     public String name;
@@ -121,164 +168,232 @@ public class DescribeSuspEventsRequest extends TeaModel {
 
     /**
      * <p>The timestamp when the handling operation ends.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-07-06 13:50:38</p>
      */
     @NameInMap("OperateTimeEnd")
     public String operateTimeEnd;
 
     /**
      * <p>The timestamp when the handling operation starts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-07-05 13:50:38</p>
      */
     @NameInMap("OperateTimeStart")
     public String operateTimeStart;
 
     /**
-     * <p>The number of entries per page. Default value: **20**. Maximum value: 100.</p>
+     * <p>The number of entries per page. Default value: <strong>20</strong>. Maximum value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The alert type of the alert event. Valid values:</p>
-     * <br>
-     * <p>*   **Suspicious process**</p>
-     * <p>*   **Webshell**</p>
-     * <p>*   **Unusual logon**</p>
-     * <p>*   **Exception**</p>
-     * <p>*   **Sensitive file tampering**</p>
-     * <p>*   **Malicious process (cloud threat detection)**</p>
-     * <p>*   **Suspicious network connection**</p>
-     * <p>*   **Suspicious account**</p>
-     * <p>*   **Application intrusion event**</p>
-     * <p>*   **Cloud threat detection**</p>
-     * <p>*   **Precise defense**</p>
-     * <p>*   **Application whitelist**</p>
-     * <p>*   **Persistent webshell**</p>
-     * <p>*   **Web application threat detection**</p>
-     * <p>*   **Malicious script**</p>
-     * <p>*   **Threat intelligence**</p>
-     * <p>*   **Malicious network activity**</p>
-     * <p>*   **Cluster exception**</p>
-     * <p>*   **Webshell (on-premises threat detection)**</p>
-     * <p>*   **Vulnerability exploitation**</p>
-     * <p>*   **Malicious process (on-premises threat detection)**</p>
-     * <p>*   **Trusted exception**</p>
-     * <p>*   **Operations to manage other resources**</p>
+     * <ul>
+     * <li><strong>Suspicious process</strong></li>
+     * <li><strong>Webshell</strong></li>
+     * <li><strong>Unusual logon</strong></li>
+     * <li><strong>Exception</strong></li>
+     * <li><strong>Sensitive file tampering</strong></li>
+     * <li><strong>Malicious process (cloud threat detection)</strong></li>
+     * <li><strong>Suspicious network connection</strong></li>
+     * <li><strong>Suspicious account</strong></li>
+     * <li><strong>Application intrusion event</strong></li>
+     * <li><strong>Cloud threat detection</strong></li>
+     * <li><strong>Precise defense</strong></li>
+     * <li><strong>Application whitelist</strong></li>
+     * <li><strong>Persistent webshell</strong></li>
+     * <li><strong>Web application threat detection</strong></li>
+     * <li><strong>Malicious script</strong></li>
+     * <li><strong>Threat intelligence</strong></li>
+     * <li><strong>Malicious network activity</strong></li>
+     * <li><strong>Cluster exception</strong></li>
+     * <li><strong>Webshell (on-premises threat detection)</strong></li>
+     * <li><strong>Vulnerability exploitation</strong></li>
+     * <li><strong>Malicious process (on-premises threat detection)</strong></li>
+     * <li><strong>Trusted exception</strong></li>
+     * <li><strong>Operations to manage other resources</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Webshell</p>
      */
     @NameInMap("ParentEventTypes")
     public String parentEventTypes;
 
     /**
      * <p>The name of the alert or the information about the asset.</p>
-     * <br>
-     * <p>>  Fuzzy search is supported. The asset information includes the name, public IP address, and private IP address of an asset.</p>
+     * <blockquote>
+     * <p> Fuzzy search is supported. The asset information includes the name, public IP address, and private IP address of an asset.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.XX.XX</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
      * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
-     * <br>
-     * <p>>  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to query the ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to query the ID.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>16670360956*****</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
     /**
-     * <p>The custom sorting field. Default value: **operateTime**. Valid values:</p>
-     * <br>
-     * <p>*   **lastTime**: the latest occurrence time.</p>
-     * <p>*   **operateTime**: the handling time.</p>
-     * <br>
-     * <p>>  This parameter takes effect if you set the **Dealed** parameter to Y.</p>
+     * <p>The custom sorting field. Default value: <strong>operateTime</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>lastTime</strong>: the latest occurrence time.</li>
+     * <li><strong>operateTime</strong>: the handling time.</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter takes effect if you set the <strong>Dealed</strong> parameter to Y.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>operateTime</p>
      */
     @NameInMap("SortColumn")
     public String sortColumn;
 
     /**
-     * <p>The custom sorting order. Default value: **desc**. Valid values:</p>
-     * <br>
-     * <p>*   **asc**: the ascending order</p>
-     * <p>*   **desc**: the descending order</p>
-     * <br>
-     * <p>>  This parameter takes effect if you set the **Dealed** parameter to Y.</p>
+     * <p>The custom sorting order. Default value: <strong>desc</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>asc</strong>: the ascending order</li>
+     * <li><strong>desc</strong>: the descending order</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter takes effect if you set the <strong>Dealed</strong> parameter to Y.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>desc</p>
      */
     @NameInMap("SortType")
     public String sortType;
 
     /**
      * <p>The source of the alert.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aegis_suspicious_file_v2</p>
      */
     @NameInMap("Source")
     public String source;
 
+    @NameInMap("SourceAliUids")
+    public java.util.List<Long> sourceAliUids;
+
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;
 
     /**
      * <p>The status of the alert event. Valid values:</p>
-     * <br>
-     * <p>*   **0**: all</p>
-     * <p>*   **1**: pending handling</p>
-     * <p>*   **2**: ignored</p>
-     * <p>*   **4**: confirmed</p>
-     * <p>*   **8**: marked as a false positive</p>
-     * <p>*   **16**: handling</p>
-     * <p>*   **32**: handled</p>
-     * <p>*   **64**: expired</p>
-     * <p>*   **128**: deleted</p>
-     * <p>*   **512**: automatically blocking</p>
-     * <p>*   **513**: automatically blocked</p>
+     * <ul>
+     * <li><strong>0</strong>: all</li>
+     * <li><strong>1</strong>: pending handling</li>
+     * <li><strong>2</strong>: ignored</li>
+     * <li><strong>4</strong>: confirmed</li>
+     * <li><strong>8</strong>: marked as a false positive</li>
+     * <li><strong>16</strong>: handling</li>
+     * <li><strong>32</strong>: handled</li>
+     * <li><strong>64</strong>: expired</li>
+     * <li><strong>128</strong>: deleted</li>
+     * <li><strong>512</strong>: automatically blocking</li>
+     * <li><strong>513</strong>: automatically blocked</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>Whether it is strictly a mode flag.</p>
-     * <p>- N: No</p>
-     * <p>- Y: Yes</p>
+     * <p>Specifies whether to enable the strict alerting mode.</p>
+     * <ul>
+     * <li>N: no</li>
+     * <li>Y: Yes</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Y</p>
      */
     @NameInMap("StrictMode")
     public String strictMode;
 
     /**
-     * <p>The tactic ID of ATT\\&CK.</p>
+     * <p>The tactic ID of ATT\&amp;CK.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TA0001</p>
      */
     @NameInMap("TacticId")
     public String tacticId;
 
     /**
      * <p>The item that is used to search for the container. Valid values:</p>
-     * <br>
-     * <p>*   **containerId**: the ID of the container</p>
-     * <p>*   **uuid**: the UUID of the server</p>
-     * <p>*   **imageUuid**: the UUID of the image</p>
+     * <ul>
+     * <li><strong>containerId</strong>: the ID of the container</li>
+     * <li><strong>uuid</strong>: the UUID of the server</li>
+     * <li><strong>imageUuid</strong>: the UUID of the image</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>containerId</p>
      */
     @NameInMap("TargetType")
     public String targetType;
 
     /**
      * <p>The end time when the alert event was last detected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-07-06 13:50:38</p>
      */
     @NameInMap("TimeEnd")
     public String timeEnd;
 
     /**
      * <p>The start time when the alert event was last detected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-07-05 13:50:38</p>
      */
     @NameInMap("TimeStart")
     public String timeStart;
 
     /**
      * <p>The unique key of the alert.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>73fc06fb175a7405697e402f52864****</p>
      */
     @NameInMap("UniqueInfo")
     public String uniqueInfo;
 
     /**
      * <p>The UUID of the server on which the alert is detected. Separate multiple UUIDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bb5d2484-f10e-450d-8917-3e79667e****,0e7c2fcd-7100-42c7-a21a-db6e4f32****</p>
      */
     @NameInMap("Uuids")
     public String uuids;
@@ -392,6 +507,14 @@ public class DescribeSuspEventsRequest extends TeaModel {
         return this.levels;
     }
 
+    public DescribeSuspEventsRequest setMultiAccountActionType(Integer multiAccountActionType) {
+        this.multiAccountActionType = multiAccountActionType;
+        return this;
+    }
+    public Integer getMultiAccountActionType() {
+        return this.multiAccountActionType;
+    }
+
     public DescribeSuspEventsRequest setName(String name) {
         this.name = name;
         return this;
@@ -478,6 +601,14 @@ public class DescribeSuspEventsRequest extends TeaModel {
     }
     public String getSource() {
         return this.source;
+    }
+
+    public DescribeSuspEventsRequest setSourceAliUids(java.util.List<Long> sourceAliUids) {
+        this.sourceAliUids = sourceAliUids;
+        return this;
+    }
+    public java.util.List<Long> getSourceAliUids() {
+        return this.sourceAliUids;
     }
 
     public DescribeSuspEventsRequest setSourceIp(String sourceIp) {

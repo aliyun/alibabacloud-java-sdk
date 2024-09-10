@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class DescribeVulNumStatisticsRequest extends TeaModel {
     /**
      * <p>The source of the request.</p>
-     * <br>
-     * <p>*   If you want to query Security Center-related data, set the value to **sas**.</p>
-     * <p>*   If you want to query Server Guard-related data, you do not need to specify this parameter.</p>
+     * <ul>
+     * <li>If you want to query Security Center-related data, set the value to <strong>sas</strong>.</li>
+     * <li>If you want to query Server Guard-related data, you do not need to specify this parameter.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>sas</p>
      */
     @NameInMap("From")
     public String from;

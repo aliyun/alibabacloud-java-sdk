@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F35F45B0-5D6B-4238-BE02-A62D0760****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -46,22 +49,32 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
 
         /**
          * <p>The interval of backup tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Interval")
         public Integer interval;
 
         /**
          * <p>The unit of the interval. Valid values:</p>
-         * <br>
-         * <p>*   **hourly**: hour</p>
-         * <p>*   **daily**: day</p>
-         * <p>*   **weekly**: week</p>
+         * <ul>
+         * <li><strong>hourly</strong>: hour</li>
+         * <li><strong>daily</strong>: day</li>
+         * <li><strong>weekly</strong>: week</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>daily</p>
          */
         @NameInMap("PlanType")
         public String planType;
 
         /**
          * <p>The time when the full backup started. The time is in the HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:10:00</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -114,22 +127,32 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
 
         /**
          * <p>The interval of backup tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Interval")
         public Integer interval;
 
         /**
          * <p>The unit of the interval. Valid values:</p>
-         * <br>
-         * <p>*   **hourly**: hour</p>
-         * <p>*   **daily**: day</p>
-         * <p>*   **weekly**: week</p>
+         * <ul>
+         * <li><strong>hourly</strong>: hour</li>
+         * <li><strong>daily</strong>: day</li>
+         * <li><strong>weekly</strong>: week</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>daily</p>
          */
         @NameInMap("PlanType")
         public String planType;
 
         /**
          * <p>The time when the incremental data backup starts. The time is in the hh:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:10:00</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -176,27 +199,38 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
     public static class DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTO extends TeaModel {
         /**
          * <p>The name of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
          * <p>The status of the database client. Valid values:</p>
-         * <br>
-         * <p>*   **UNKNOWN**: unknown</p>
-         * <p>*   **INSTALLED**: installed</p>
-         * <p>*   **INSTALL_FAILED**: installation failed</p>
-         * <p>*   **UNINSTALL_FAILED**: uninstallation failed</p>
+         * <ul>
+         * <li><strong>UNKNOWN</strong>: unknown</li>
+         * <li><strong>INSTALLED</strong>: installed</li>
+         * <li><strong>INSTALL_FAILED</strong>: installation failed</li>
+         * <li><strong>UNINSTALL_FAILED</strong>: uninstallation failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTALLED</p>
          */
         @NameInMap("AgentStatus")
         public String agentStatus;
 
         /**
          * <p>The type of the database. Valid values:</p>
-         * <br>
-         * <p>*   **MYSQL**</p>
-         * <p>*   **MSSQL**</p>
-         * <p>*   **Oracle**</p>
+         * <ul>
+         * <li><strong>MYSQL</strong></li>
+         * <li><strong>MSSQL</strong></li>
+         * <li><strong>Oracle</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ORACLE</p>
          */
         @NameInMap("DatabaseType")
         public String databaseType;
@@ -215,47 +249,69 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-2zefcy2id5d60m9t****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sql-test-01</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The ID of the anti-ransomware policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("PolicyId")
         public Long policyId;
 
         /**
          * <p>The name of the anti-ransomware policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>auto_test_sql</p>
          */
         @NameInMap("PolicyName")
         public String policyName;
 
         /**
          * <p>The status of the anti-ransomware policy. Valid values:</p>
-         * <br>
-         * <p>*   **initiating**: initializing</p>
-         * <p>*   **opening**: enabled</p>
-         * <p>*   **closing**: disabled</p>
-         * <p>*   **deleting**: deleting</p>
+         * <ul>
+         * <li><strong>initiating</strong>: initializing</li>
+         * <li><strong>opening</strong>: enabled</li>
+         * <li><strong>closing</strong>: disabled</li>
+         * <li><strong>deleting</strong>: deleting</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>opening</p>
          */
         @NameInMap("PolicyStatus")
         public String policyStatus;
 
         /**
          * <p>The retention period of the backup snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         @NameInMap("Retention")
         public Integer retention;
 
         /**
          * <p>The maximum network bandwidth that is allowed during data backup. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5242880</p>
          */
         @NameInMap("SpeedLimiter")
         public Long speedLimiter;

@@ -12,6 +12,9 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FAC50208-E56B-5CC8-8738-2B219D1A****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,60 +43,90 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
     public static class GetOssBucketScanStatisticResponseBodyData extends TeaModel {
         /**
          * <p>The expiration time of the purchased quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1714442403000</p>
          */
         @NameInMap("ExpireTime")
         public Long expireTime;
 
         /**
          * <p>The number of high-risk objects.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("HighRisk")
         public Long highRisk;
 
         /**
          * <p>The number of low-risk objects.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("LowRisk")
         public Long lowRisk;
 
         /**
          * <p>The number of medium-risk objects.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("MediumRisk")
         public Long mediumRisk;
 
         /**
          * <p>The number of buckets that are not checked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NoScanBucket")
         public Integer noScanBucket;
 
         /**
          * <p>The remaining quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RemainAuth")
         public Integer remainAuth;
 
         /**
          * <p>The number of buckets in which at-risk objects exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RiskBucket")
         public Integer riskBucket;
 
         /**
          * <p>The number of objects that are checked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ScanObject")
         public Long scanObject;
 
         /**
          * <p>The total number of buckets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalBucket")
         public Integer totalBucket;
 
         /**
          * <p>The total number of objects in the bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalObject")
         public Long totalObject;

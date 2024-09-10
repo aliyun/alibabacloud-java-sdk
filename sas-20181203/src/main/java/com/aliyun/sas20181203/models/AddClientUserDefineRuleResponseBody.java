@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AddClientUserDefineRuleResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>379a9b8f-107b-4630-9e95-2299a1ea****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,22 +43,32 @@ public class AddClientUserDefineRuleResponseBody extends TeaModel {
     public static class AddClientUserDefineRuleResponseBodyUserDefineRuleAddResult extends TeaModel {
         /**
          * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The type of the operating system. Valid values:</p>
-         * <br>
-         * <p>*   **windows**: Windows</p>
-         * <p>*   **linux**: Linux</p>
-         * <p>*   **all**: all types</p>
+         * <ul>
+         * <li><strong>windows</strong>: Windows</li>
+         * <li><strong>linux</strong>: Linux</li>
+         * <li><strong>all</strong>: all types</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>linux</p>
          */
         @NameInMap("Platform")
         public String platform;
 
         /**
          * <p>The switch ID of the custom defense rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USER-DEFINE-RULE-SWITCH-TYPE_200****</p>
          */
         @NameInMap("SwitchId")
         public String switchId;

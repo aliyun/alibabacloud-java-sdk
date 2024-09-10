@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class DeleteServiceTrailRequest extends TeaModel {
     /**
      * <p>The region in which your Security Center service is deployed. Valid values:</p>
-     * <br>
-     * <p>*   **cn-hangzhou**: center.</p>
-     * <p>*   **ap-southeast-1**: Singapore.</p>
+     * <ul>
+     * <li><strong>cn-hangzhou</strong>: center.</li>
+     * <li><strong>ap-southeast-1</strong>: Singapore.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

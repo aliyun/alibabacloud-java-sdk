@@ -6,23 +6,34 @@ import com.aliyun.tea.*;
 public class DescribeInstallCaptchaRequest extends TeaModel {
     /**
      * <p>The validity period of verification codes. If this parameter is not specified, only the valid verification codes are returned.</p>
-     * <br>
-     * <p>>  An installation verification code can be used only within the validity period. An expired installation verification code cannot be used to install the Security Center agent.</p>
+     * <blockquote>
+     * <p> An installation verification code can be used only within the validity period. An expired installation verification code cannot be used to install the Security Center agent.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-10-11 16:26:22</p>
      */
     @NameInMap("Deadline")
     public String deadline;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese.</p>
-     * <p>*   **en**: English.</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

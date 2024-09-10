@@ -12,6 +12,9 @@ public class DescribeClusterInfoListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,50 +43,71 @@ public class DescribeClusterInfoListResponseBody extends TeaModel {
     public static class DescribeClusterInfoListResponseBodyClusterList extends TeaModel {
         /**
          * <p>The ID of the container cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cfeb7a9f99ce740e98c5595d0fe37****</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The name of the container cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test111</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
 
         /**
          * <p>The type of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   **ManagedKubernetes**: managed Kubernetes cluster.</p>
-         * <p>*   **NotManagedKubernetes**: non-managed Kubernetes cluster.</p>
-         * <p>*   **PrivateKubernetes**: private cluster.</p>
-         * <p>*   **kubernetes**: dedicated Kubernetes cluster.</p>
-         * <p>*   **ask**: dedicated serverless Kubernetes (ASK) cluster.</p>
+         * <ul>
+         * <li><strong>ManagedKubernetes</strong>: managed Kubernetes cluster.</li>
+         * <li><strong>NotManagedKubernetes</strong>: non-managed Kubernetes cluster.</li>
+         * <li><strong>PrivateKubernetes</strong>: private cluster.</li>
+         * <li><strong>kubernetes</strong>: dedicated Kubernetes cluster.</li>
+         * <li><strong>ask</strong>: dedicated serverless Kubernetes (ASK) cluster.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ManagedKubernetes</p>
          */
         @NameInMap("ClusterType")
         public String clusterType;
 
         /**
          * <p>The region in which the cluster resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The status of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   **unavailable**: The cluster is unavailable.</p>
-         * <p>*   **Available**: The cluster is available.</p>
-         * <p>*   **Creating**: The cluster is being created.</p>
-         * <p>*   **CreateFailed**: The cluster failed to be created.</p>
+         * <ul>
+         * <li><strong>unavailable</strong>: The cluster is unavailable.</li>
+         * <li><strong>Available</strong>: The cluster is available.</li>
+         * <li><strong>Creating</strong>: The cluster is being created.</li>
+         * <li><strong>CreateFailed</strong>: The cluster failed to be created.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
          * <p>Indicates whether container network topology was enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("TargetResult")
         public Boolean targetResult;

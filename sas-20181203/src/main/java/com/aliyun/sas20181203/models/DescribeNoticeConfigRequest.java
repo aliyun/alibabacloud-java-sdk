@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeNoticeConfigRequest extends TeaModel {
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60.191.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

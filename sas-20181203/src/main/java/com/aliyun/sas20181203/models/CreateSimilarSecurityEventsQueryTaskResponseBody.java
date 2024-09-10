@@ -12,6 +12,9 @@ public class CreateSimilarSecurityEventsQueryTaskResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5861EE3E-F0B3-48B8-A5DC-A5080BFBE052</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,20 +43,27 @@ public class CreateSimilarSecurityEventsQueryTaskResponseBody extends TeaModel {
     public static class CreateSimilarSecurityEventsQueryTaskResponseBodyCreateSimilarSecurityEventsQueryTaskResponse extends TeaModel {
         /**
          * <p>The status of the task. Valid values:</p>
-         * <br>
-         * <p>*   **New**: The task is created.</p>
-         * <p>*   **RetrievingData**: Data is being retrieved.</p>
-         * <p>*   **DataRetrieved**: Data is retrieved.</p>
-         * <p>*   **Processing**: The task is running.</p>
-         * <p>*   **Success**: The task is successful.</p>
-         * <p>*   **Failed**: The task failed.</p>
-         * <p>*   **PartialFailed**: The task partially failed.</p>
+         * <ul>
+         * <li><strong>New</strong>: The task is created.</li>
+         * <li><strong>RetrievingData</strong>: Data is being retrieved.</li>
+         * <li><strong>DataRetrieved</strong>: Data is retrieved.</li>
+         * <li><strong>Processing</strong>: The task is running.</li>
+         * <li><strong>Success</strong>: The task is successful.</li>
+         * <li><strong>Failed</strong>: The task failed.</li>
+         * <li><strong>PartialFailed</strong>: The task partially failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>New</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2915</p>
          */
         @NameInMap("TaskId")
         public Long taskId;

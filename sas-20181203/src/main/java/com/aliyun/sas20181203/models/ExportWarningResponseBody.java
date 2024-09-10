@@ -6,20 +6,30 @@ import com.aliyun.tea.*;
 public class ExportWarningResponseBody extends TeaModel {
     /**
      * <p>The name of the file that contains exported baseline check results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>health_check_export_20220407</p>
      */
     @NameInMap("FileName")
     public String fileName;
 
     /**
      * <p>The ID of the task to export baseline check results.</p>
-     * <br>
-     * <p>> You can call use the value of this parameter to call the [DescribeHcExportInfo](~~DescribeHcExportInfo~~) operation to query the export progress.</p>
+     * <blockquote>
+     * <p>You can call use the value of this parameter to call the <a href="~~DescribeHcExportInfo~~">DescribeHcExportInfo</a> operation to query the export progress.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>439316</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A7FC828B-C242-1005-9736-C7CC5DC09FF0</p>
      */
     @NameInMap("RequestId")
     public String requestId;

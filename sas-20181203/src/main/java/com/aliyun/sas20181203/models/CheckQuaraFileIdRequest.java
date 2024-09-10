@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class CheckQuaraFileIdRequest extends TeaModel {
     /**
      * <p>The IDs of quarantined files that you want to check.</p>
-     * <br>
-     * <p>>  You can call the [DescribeSuspEventQuaraFiles](~~DescribeSuspEventQuaraFiles~~) operation to query the IDs of quarantined files.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeSuspEventQuaraFiles~~">DescribeSuspEventQuaraFiles</a> operation to query the IDs of quarantined files.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      */
     @NameInMap("QuaraFileIds")
@@ -16,10 +16,13 @@ public class CheckQuaraFileIdRequest extends TeaModel {
 
     /**
      * <p>The UUID of the server on which you want to check quarantined files.</p>
-     * <br>
-     * <p>>  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4fe8e1cd-3c37-4851-b9de-124da32c****</p>
      */
     @NameInMap("Uuid")
     public String uuid;

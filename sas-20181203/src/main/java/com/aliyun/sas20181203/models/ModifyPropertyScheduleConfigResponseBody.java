@@ -4,9 +4,17 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyPropertyScheduleConfigResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ModifyResult")
     public Boolean modifyResult;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C0D1DF51-D879-55A8-B6C7-7D3B913EF34D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

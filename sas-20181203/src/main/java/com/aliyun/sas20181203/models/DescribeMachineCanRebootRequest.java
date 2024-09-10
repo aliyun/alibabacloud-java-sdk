@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class DescribeMachineCanRebootRequest extends TeaModel {
     /**
      * <p>The type of the vulnerabilities. Valid values:</p>
-     * <br>
-     * <p>*   cve: Linux software vulnerabilities</p>
-     * <p>*   sys: Windows system vulnerabilities</p>
+     * <ul>
+     * <li>cve: Linux software vulnerabilities</li>
+     * <li>sys: Windows system vulnerabilities</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>sys</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>The UUID of the server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5b268326-273e-44fc-a0e3-9482435c****</p>
      */
     @NameInMap("Uuid")
     public String uuid;

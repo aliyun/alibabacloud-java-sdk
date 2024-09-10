@@ -12,6 +12,9 @@ public class DescribeVpcHoneyPotCriteriaResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FCE38ADB-7361-4212-AD87-A4514E4DF925</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,23 +43,34 @@ public class DescribeVpcHoneyPotCriteriaResponseBody extends TeaModel {
     public static class DescribeVpcHoneyPotCriteriaResponseBodyCriteriaList extends TeaModel {
         /**
          * <p>The name of the search condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpcRegionId</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The type of the search condition. Valid values:</p>
-         * <br>
-         * <p>*   **input**: You must manually enter the search condition.</p>
-         * <p>*   **select**: You must select a search condition from the **Values** drop-down list.</p>
+         * <ul>
+         * <li><strong>input</strong>: You must manually enter the search condition.</li>
+         * <li><strong>select</strong>: You must select a search condition from the <strong>Values</strong> drop-down list.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>select</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The values of the search condition. This parameter is returned only if the value of **Type** is **select**.</p>
-         * <br>
-         * <p>> If the value of **Type** is **input**, the value of this parameter is an empty string.</p>
+         * <p>The values of the search condition. This parameter is returned only if the value of <strong>Type</strong> is <strong>select</strong>.</p>
+         * <blockquote>
+         * <p>If the value of <strong>Type</strong> is <strong>input</strong>, the value of this parameter is an empty string.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-southeast-2,eu-west-1</p>
          */
         @NameInMap("Values")
         public String values;

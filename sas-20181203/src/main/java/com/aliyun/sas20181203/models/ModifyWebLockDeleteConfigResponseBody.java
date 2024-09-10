@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyWebLockDeleteConfigResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>299D0992-271A-5750-ACEB-46D322862BFF</p>
      */
     @NameInMap("RequestId")
     public String requestId;

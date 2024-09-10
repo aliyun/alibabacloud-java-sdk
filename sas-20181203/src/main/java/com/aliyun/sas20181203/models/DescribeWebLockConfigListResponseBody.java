@@ -12,12 +12,18 @@ public class DescribeWebLockConfigListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D9354C1A-D709-4873-9AAE-41513327B247</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of directories that have web tamper proofing enabled on the server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -54,82 +60,122 @@ public class DescribeWebLockConfigListResponseBody extends TeaModel {
     public static class DescribeWebLockConfigListResponseBodyConfigList extends TeaModel {
         /**
          * <p>The prevention mode. Valid values:</p>
-         * <br>
-         * <p>*   **block**: Interception Mode</p>
-         * <p>*   **audit**: Alert Mode</p>
+         * <ul>
+         * <li><strong>block</strong>: Interception Mode</li>
+         * <li><strong>audit</strong>: Alert Mode</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>audit</p>
          */
         @NameInMap("DefenceMode")
         public String defenceMode;
 
         /**
          * <p>The directory that has web tamper proofing enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/www/tmp/</p>
          */
         @NameInMap("Dir")
         public String dir;
 
         /**
          * <p>The directory that has web tamper proofing disabled.</p>
-         * <br>
-         * <p>> If the value of **Mode** is **blacklist**, this parameter is returned.</p>
+         * <blockquote>
+         * <p>If the value of <strong>Mode</strong> is <strong>blacklist</strong>, this parameter is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>/home/admin/tomcat</p>
          */
         @NameInMap("ExclusiveDir")
         public String exclusiveDir;
 
         /**
          * <p>The file that has web tamper proofing disabled.</p>
-         * <br>
-         * <p>> If the value of **Mode** is **blacklist**, this parameter is returned.</p>
+         * <blockquote>
+         * <p>If the value of <strong>Mode</strong> is <strong>blacklist</strong>, this parameter is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>/home/admin/tomcat/localhost.log</p>
          */
         @NameInMap("ExclusiveFile")
         public String exclusiveFile;
 
         /**
          * <p>The type of the file that has web tamper proofing disabled.</p>
-         * <br>
-         * <p>> If the value of **Mode** is **blacklist**, this parameter is returned.</p>
+         * <blockquote>
+         * <p>If the value of <strong>Mode</strong> is <strong>blacklist</strong>, this parameter is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>*.jpg</p>
          */
         @NameInMap("ExclusiveFileType")
         public String exclusiveFileType;
 
         /**
          * <p>The ID of the directory that has web tamper proofing enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The file that has web tamper proofing enabled.</p>
-         * <br>
-         * <p>> If the value of **Mode** is **whitelist**, this parameter is returned.</p>
+         * <blockquote>
+         * <p>If the value of <strong>Mode</strong> is <strong>whitelist</strong>, this parameter is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>/home/admin/tomcat/aaa.log</p>
          */
         @NameInMap("InclusiveFile")
         public String inclusiveFile;
 
         /**
          * <p>The type of the file that has web tamper proofing enabled.</p>
-         * <br>
-         * <p>> If the value of **Mode** is **whitelist**, this parameter is returned.</p>
+         * <blockquote>
+         * <p>If the value of <strong>Mode</strong> is <strong>whitelist</strong>, this parameter is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>jpg</p>
          */
         @NameInMap("InclusiveFileType")
         public String inclusiveFileType;
 
         /**
          * <p>The local path to the backup files of the protected directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/local/backup</p>
          */
         @NameInMap("LocalBackupDir")
         public String localBackupDir;
 
         /**
          * <p>The protection mode of web tamper proofing. Valid values:</p>
-         * <br>
-         * <p>*   **whitelist**: In this mode, web tamper proofing is enabled for the specified directories and file types.</p>
-         * <p>*   **blacklist**: In this mode, web tamper proofing is enabled for the unspecified subdirectories, file types, and files in the protected directory.</p>
+         * <ul>
+         * <li><strong>whitelist</strong>: In this mode, web tamper proofing is enabled for the specified directories and file types.</li>
+         * <li><strong>blacklist</strong>: In this mode, web tamper proofing is enabled for the unspecified subdirectories, file types, and files in the protected directory.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>blacklist</p>
          */
         @NameInMap("Mode")
         public String mode;
 
         /**
          * <p>The UUID of the server that has web tamper proofing enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80d2f7d6-31a9-4d7f-8ff4-7ecc42f8****</p>
          */
         @NameInMap("Uuid")
         public String uuid;

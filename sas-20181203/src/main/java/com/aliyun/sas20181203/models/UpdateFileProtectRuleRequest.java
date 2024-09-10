@@ -6,18 +6,21 @@ import com.aliyun.tea.*;
 public class UpdateFileProtectRuleRequest extends TeaModel {
     /**
      * <p>The severity of alerts. Valid values:</p>
-     * <br>
-     * <p>*   0: does not generate alerts</p>
-     * <p>*   1: sends notifications</p>
-     * <p>*   2: suspicious</p>
-     * <p>*   3: high-risk</p>
+     * <ul>
+     * <li>0: does not generate alerts</li>
+     * <li>1: sends notifications</li>
+     * <li>2: suspicious</li>
+     * <li>3: high-risk</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("AlertLevel")
     public Integer alertLevel;
 
     /**
      * <p>The operations that you want to perform on the files.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("FileOps")
@@ -25,7 +28,6 @@ public class UpdateFileProtectRuleRequest extends TeaModel {
 
     /**
      * <p>The paths to the monitored files. Wildcard characters are supported.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("FilePaths")
@@ -33,13 +35,15 @@ public class UpdateFileProtectRuleRequest extends TeaModel {
 
     /**
      * <p>The ID of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1062</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The paths to the monitored processes.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ProcPaths")
@@ -47,26 +51,36 @@ public class UpdateFileProtectRuleRequest extends TeaModel {
 
     /**
      * <p>The handling method of the rule. Valid values:</p>
-     * <br>
-     * <p>*   pass: allow</p>
-     * <p>*   alert</p>
+     * <ul>
+     * <li>pass: allow</li>
+     * <li>alert</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>pass</p>
      */
     @NameInMap("RuleAction")
     public String ruleAction;
 
     /**
      * <p>The name of the rule.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-rule-1</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
 
     /**
      * <p>The status of the rule. Valid values:</p>
-     * <br>
-     * <p>*   **0**: disabled</p>
-     * <p>*   **1**: enabled</p>
+     * <ul>
+     * <li><strong>0</strong>: disabled</li>
+     * <li><strong>1</strong>: enabled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Status")
     public Integer status;

@@ -6,36 +6,51 @@ import com.aliyun.tea.*;
 public class DescribeSuspEventsResponseBody extends TeaModel {
     /**
      * <p>The number of entries returned on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("Count")
     public Integer count;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0D6E20E4-8326-1D03-A553-2182BE9E82F9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The information about the alert event.</p>
+     * <p>The information about the alert events.</p>
      */
     @NameInMap("SuspEvents")
     public java.util.List<DescribeSuspEventsResponseBodySuspEvents> suspEvents;
 
     /**
      * <p>The total number of alert events.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -96,24 +111,36 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
     public static class DescribeSuspEventsResponseBodySuspEventsDetails extends TeaModel {
         /**
          * <p>The display name of the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Login with unusual location</p>
          */
         @NameInMap("NameDisplay")
         public String nameDisplay;
 
         /**
          * <p>The type of the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The path of the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/etc/crontab</p>
          */
         @NameInMap("Value")
         public String value;
 
         /**
          * <p>The display name of the path of the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/etc/crontab</p>
          */
         @NameInMap("ValueDisplay")
         public String valueDisplay;
@@ -160,18 +187,27 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
     public static class DescribeSuspEventsResponseBodySuspEventsEventNotes extends TeaModel {
         /**
          * <p>The note.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         @NameInMap("Note")
         public String note;
 
         /**
          * <p>The ID of the note.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("NoteId")
         public Long noteId;
 
         /**
          * <p>The time when the note was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-09-26 01:51:01</p>
          */
         @NameInMap("NoteTime")
         public String noteTime;
@@ -209,13 +245,19 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
 
     public static class DescribeSuspEventsResponseBodySuspEventsTacticItems extends TeaModel {
         /**
-         * <p>The ATT\\&CK tactic name.</p>
+         * <p>The tactic name of ATT\&amp;CK.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Malicious scripts-Malicious script code execution</p>
          */
         @NameInMap("TacticDisplayName")
         public String tacticDisplayName;
 
         /**
-         * <p>The ATT\\&CK stage information.</p>
+         * <p>The stage information about ATT\&amp;CK.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TA0001</p>
          */
         @NameInMap("TacticId")
         public String tacticId;
@@ -246,105 +288,156 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
     public static class DescribeSuspEventsResponseBodySuspEvents extends TeaModel {
         /**
          * <p>Indicates whether the alert event was analyzed offline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Advanced")
         public Boolean advanced;
 
         /**
          * <p>The name of the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>login_common_location</p>
          */
         @NameInMap("AlarmEventName")
         public String alarmEventName;
 
         /**
          * <p>The name of the alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Login with unusual location</p>
          */
         @NameInMap("AlarmEventNameDisplay")
         public String alarmEventNameDisplay;
 
         /**
          * <p>The type of the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unusual Logon</p>
          */
         @NameInMap("AlarmEventType")
         public String alarmEventType;
 
         /**
          * <p>The display name of the type of the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unusual Logon</p>
          */
         @NameInMap("AlarmEventTypeDisplay")
         public String alarmEventTypeDisplay;
 
         /**
          * <p>The unique ID of the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8df914418f****</p>
          */
         @NameInMap("AlarmUniqueInfo")
         public String alarmUniqueInfo;
 
         /**
          * <p>The name of the application to which the alert event belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pro-deploy-tibasic</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>Indicates whether automatic defense is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AutoBreaking")
         public Boolean autoBreaking;
 
         /**
          * <p>Indicates whether you can handle the alert event online, such as quarantining the source file of the malicious process. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("CanBeDealOnLine")
         public Boolean canBeDealOnLine;
 
         /**
          * <p>Indicates whether you can cancel marking the alert event as a false positive. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("CanCancelFault")
         public Boolean canCancelFault;
 
         /**
          * <p>Indicates whether the safeguard mode for major activities is enabled for the server. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("ContainHwMode")
         public Boolean containHwMode;
 
         /**
          * <p>The ID of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>container_1648601865161_14925_02_000****</p>
          */
         @NameInMap("ContainerId")
         public String containerId;
 
         /**
-         * <p>The ID of the image to which the container belongs.</p>
+         * <p>The ID of the container image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sha256:2e5a3b0ae5f452b3cb458789a9a7542ef40035a84318469a8528c5e444db1****</p>
          */
         @NameInMap("ContainerImageId")
         public String containerImageId;
 
         /**
-         * <p>The name of the image to which the container belongs.</p>
+         * <p>The name of the container image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>centos7_apache:v1.0.1</p>
          */
         @NameInMap("ContainerImageName")
         public String containerImageName;
 
         /**
          * <p>The source of data. This parameter can be ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aegis_suspicious_****</p>
          */
         @NameInMap("DataSource")
         public String dataSource;
 
         /**
          * <p>The impact of the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>webshell</p>
          */
         @NameInMap("Desc")
         public String desc;
@@ -357,9 +450,13 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the alert event can be detected by cloud sandbox. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DisplaySandboxResult")
         public Boolean displaySandboxResult;
@@ -372,204 +469,309 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
 
         /**
          * <p>The status of the alert event. Valid values:</p>
-         * <br>
-         * <p>*   **1**: pending handling</p>
-         * <p>*   **2**: ignored</p>
-         * <p>*   **4**: confirmed</p>
-         * <p>*   **8**: marked as a false positive</p>
-         * <p>*   **16**: handling</p>
-         * <p>*   **32**: handled</p>
-         * <p>*   **64**: expired</p>
+         * <ul>
+         * <li><strong>1</strong>: pending handling</li>
+         * <li><strong>2</strong>: ignored</li>
+         * <li><strong>4</strong>: confirmed</li>
+         * <li><strong>8</strong>: marked as a false positive</li>
+         * <li><strong>16</strong>: handling</li>
+         * <li><strong>32</strong>: handled</li>
+         * <li><strong>64</strong>: expired</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("EventStatus")
         public Integer eventStatus;
 
         /**
          * <p>The subtype of the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>login_common_location</p>
          */
         @NameInMap("EventSubType")
         public String eventSubType;
 
         /**
          * <p>Indicates whether the alert event has tracing information. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("HasTraceInfo")
         public Boolean hasTraceInfo;
 
         /**
          * <p>The unique ID of the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The UUID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70489fb520cea585ad9761d5a842****</p>
          */
         @NameInMap("ImageUuid")
         public String imageUuid;
 
         /**
-         * <p>The ID of the affected asset.</p>
+         * <p>The instance ID of the affected asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-9dp6dwsxdl9z5u1e2f****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the associated instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nginx</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>The public IP address that is associated with instance.</p>
+         * <p>The public IP address of the associated instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address of the associated instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.100.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>The ID of the Kubernetes cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c517b37e1401e4961b3951863a49a****</p>
          */
         @NameInMap("K8sClusterId")
         public String k8sClusterId;
 
         /**
          * <p>The name of the Kubernetes cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k8s-daily</p>
          */
         @NameInMap("K8sClusterName")
         public String k8sClusterName;
 
         /**
          * <p>The namespace of the Kubernetes cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("K8sNamespace")
         public String k8sNamespace;
 
         /**
          * <p>The ID of the Kubernetes node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp14a1ay8e0aa9t0****</p>
          */
         @NameInMap("K8sNodeId")
         public String k8sNodeId;
 
         /**
          * <p>The name of the Kubernetes node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N/A</p>
          */
         @NameInMap("K8sNodeName")
         public String k8sNodeName;
 
         /**
          * <p>The name of the Kubernetes pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myapp-pod</p>
          */
         @NameInMap("K8sPodName")
         public String k8sPodName;
 
         /**
          * <p>Indicates whether the large model analysis tag is supported. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("LargeModel")
         public Boolean largeModel;
 
         /**
          * <p>The time when the alert event was last detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-09-26 01:51:01</p>
          */
         @NameInMap("LastTime")
         public String lastTime;
 
         /**
          * <p>The timestamp when the alert event was last detected. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1631699497000</p>
          */
         @NameInMap("LastTimeStamp")
         public Long lastTimeStamp;
 
         /**
          * <p>The severity of the alert event. Valid values:</p>
-         * <br>
-         * <p>*   **serious**</p>
-         * <p>*   **suspicious**</p>
-         * <p>*   **remind**</p>
+         * <ul>
+         * <li><strong>serious</strong></li>
+         * <li><strong>suspicious</strong></li>
+         * <li><strong>remind</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>serious</p>
          */
         @NameInMap("Level")
         public String level;
 
         /**
          * <p>The status of the malicious behavior defense rule. Valid values:</p>
-         * <br>
-         * <p>*   **open**</p>
-         * <p>*   **close**</p>
+         * <ul>
+         * <li><strong>open</strong></li>
+         * <li><strong>close</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>open</p>
          */
         @NameInMap("MaliciousRuleStatus")
         public String maliciousRuleStatus;
 
         /**
+         * <p>The labels of alarm event.</p>
+         */
+        @NameInMap("MarkList")
+        public java.util.List<String> markList;
+
+        /**
          * <p>The advanced whitelist rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;uuid\&quot;:\&quot;ALL\&quot;,\&quot;field\&quot;:\&quot;gmtModified\&quot;,\&quot;operate\&quot;:\&quot;contains\&quot;,\&quot;fieldValue\&quot;:\&quot;222\&quot;}]</p>
          */
         @NameInMap("MarkMisRules")
         public String markMisRules;
 
         /**
          * <p>The complete name of the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unusual Logon-Login with unusual location</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The time when the alert event was first detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-09-26 01:51:01</p>
          */
         @NameInMap("OccurrenceTime")
         public String occurrenceTime;
 
         /**
          * <p>The timestamp when the alert event was first detected. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1631699497000</p>
          */
         @NameInMap("OccurrenceTimeStamp")
         public Long occurrenceTimeStamp;
 
         /**
          * <p>The handling result code of the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kill_and_quara.Success</p>
          */
         @NameInMap("OperateErrorCode")
         public String operateErrorCode;
 
         /**
          * <p>The handing result message of the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("OperateMsg")
         public String operateMsg;
 
         /**
          * <p>The handling timestamp of the alert event. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1631699497000</p>
          */
         @NameInMap("OperateTime")
         public Long operateTime;
 
         /**
          * <p>The edition of Security Center in which the alert event can be detected. Valid values:</p>
-         * <br>
-         * <p>*   **0**: Basic edition</p>
-         * <p>*   **1**: Enterprise edition</p>
+         * <ul>
+         * <li><strong>0</strong>: Basic edition</li>
+         * <li><strong>1</strong>: Enterprise edition</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("SaleVersion")
         public String saleVersion;
 
         /**
          * <p>The ID of the associated alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>270789</p>
          */
         @NameInMap("SecurityEventIds")
         public String securityEventIds;
 
+        @NameInMap("SourceAliUid")
+        public Long sourceAliUid;
+
         /**
          * <p>The stage at which the attack is detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;[&quot;authority_maintenance&quot;]&quot;</p>
          */
         @NameInMap("Stages")
         public String stages;
@@ -582,18 +784,27 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
 
         /**
          * <p>The unique key of the alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e17e****</p>
          */
         @NameInMap("UniqueInfo")
         public String uniqueInfo;
 
         /**
          * <p>The unique ID of the associated instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bf6b30d3-eea8-4924-9f0a-****</p>
          */
         @NameInMap("Uuid")
         public String uuid;
 
         /**
          * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c2051775877374cccbf68af596e6****</p>
          */
         @NameInMap("clusterId")
         public String clusterId;
@@ -915,6 +1126,14 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             return this.maliciousRuleStatus;
         }
 
+        public DescribeSuspEventsResponseBodySuspEvents setMarkList(java.util.List<String> markList) {
+            this.markList = markList;
+            return this;
+        }
+        public java.util.List<String> getMarkList() {
+            return this.markList;
+        }
+
         public DescribeSuspEventsResponseBodySuspEvents setMarkMisRules(String markMisRules) {
             this.markMisRules = markMisRules;
             return this;
@@ -985,6 +1204,14 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
         public String getSecurityEventIds() {
             return this.securityEventIds;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setSourceAliUid(Long sourceAliUid) {
+            this.sourceAliUid = sourceAliUid;
+            return this;
+        }
+        public Long getSourceAliUid() {
+            return this.sourceAliUid;
         }
 
         public DescribeSuspEventsResponseBodySuspEvents setStages(String stages) {

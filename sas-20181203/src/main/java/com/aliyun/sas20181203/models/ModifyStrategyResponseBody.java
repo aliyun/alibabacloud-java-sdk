@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ModifyStrategyResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8EFA2BD9-00CD-5D69-B6B0-4EE83EAF072E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -24,9 +30,13 @@ public class ModifyStrategyResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -71,6 +81,9 @@ public class ModifyStrategyResponseBody extends TeaModel {
     public static class ModifyStrategyResponseBodyResult extends TeaModel {
         /**
          * <p>The ID of the baseline check policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8164239</p>
          */
         @NameInMap("StrategyId")
         public Integer strategyId;

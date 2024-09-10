@@ -12,6 +12,9 @@ public class DescribeAllEntityResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,45 +43,67 @@ public class DescribeAllEntityResponseBody extends TeaModel {
     public static class DescribeAllEntityResponseBodyEntityList extends TeaModel {
         /**
          * <p>The ID of the asset group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>281801</p>
          */
         @NameInMap("GroupId")
         public Integer groupId;
 
         /**
          * <p>The name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The public IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.19.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.104.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>The IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101.132.XX.XX</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The operating system of the server. Valid values:</p>
-         * <br>
-         * <p>*   **linux**</p>
-         * <p>*   **windows**</p>
+         * <ul>
+         * <li><strong>linux</strong></li>
+         * <li><strong>windows</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>windows</p>
          */
         @NameInMap("Os")
         public String os;
 
         /**
          * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4fe8e1cd-3c37-4851-b9de-124da32c****</p>
          */
         @NameInMap("Uuid")
         public String uuid;

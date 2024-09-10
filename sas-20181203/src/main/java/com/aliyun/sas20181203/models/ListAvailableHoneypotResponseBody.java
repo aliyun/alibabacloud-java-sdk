@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListAvailableHoneypotResponseBody extends TeaModel {
     /**
-     * <p>The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The number of images that are used for the honeypot.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22</p>
      */
     @NameInMap("Count")
     public Integer count;
@@ -24,27 +30,40 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6C24D883-984D-52FD-BB66-5F89F86E4837</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -113,61 +132,89 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
     public static class ListAvailableHoneypotResponseBodyData extends TeaModel {
         /**
          * <p>The display name of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RuoYi</p>
          */
         @NameInMap("HoneypotImageDisplayName")
         public String honeypotImageDisplayName;
 
         /**
          * <p>The ID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sha256:007095d6de9c7a343e9fc1f74a7efc9c5de9d5454789d2fa505a1b3fc62****</p>
          */
         @NameInMap("HoneypotImageId")
         public String honeypotImageId;
 
         /**
          * <p>The name of the image that is used for the honeypot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ruoyi</p>
          */
         @NameInMap("HoneypotImageName")
         public String honeypotImageName;
 
         /**
          * <p>The type of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Web</p>
          */
         @NameInMap("HoneypotImageType")
         public String honeypotImageType;
 
         /**
          * <p>The version of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.2</p>
          */
         @NameInMap("HoneypotImageVersion")
         public String honeypotImageVersion;
 
         /**
          * <p>The port that is supported by the honeypot. The value is in the JSON format. Valid values:</p>
-         * <br>
-         * <p>*   **log_type**: the log type</p>
-         * <p>*   **proto**: the supported protocol</p>
-         * <p>*   **description**: the description</p>
-         * <p>*   **ports**: the supported ports</p>
-         * <p>*   **port_str**: the supported port number of the string type</p>
-         * <p>*   **type**: the type</p>
+         * <ul>
+         * <li><strong>log_type</strong>: the log type</li>
+         * <li><strong>proto</strong>: the supported protocol</li>
+         * <li><strong>description</strong>: the description</li>
+         * <li><strong>ports</strong>: the supported ports</li>
+         * <li><strong>port_str</strong>: the supported port number of the string type</li>
+         * <li><strong>type</strong>: the type</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;log_type&quot;:&quot;web&quot;,&quot;proto&quot;:&quot;tcp&quot;,&quot;description&quot;:&quot;webServerPort&quot;,&quot;ports&quot;:[80.0],&quot;port_str&quot;:&quot;80&quot;,&quot;type&quot;:&quot;web&quot;}]</p>
          */
         @NameInMap("Multiports")
         public String multiports;
 
         /**
          * <p>The protocol that is supported by the honeypot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         @NameInMap("Proto")
         public String proto;
 
         /**
          * <p>The service port of the honeypot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27017.0</p>
          */
         @NameInMap("ServicePort")
         public String servicePort;
 
         /**
          * <p>The configuration template of the honeypot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("Template")
         public String template;

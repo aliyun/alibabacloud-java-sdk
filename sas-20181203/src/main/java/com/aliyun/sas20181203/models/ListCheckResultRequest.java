@@ -4,23 +4,36 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListCheckResultRequest extends TeaModel {
+    @NameInMap("CheckIds")
+    public java.util.List<Long> checkIds;
+
     /**
      * <p>The key that you want to use to search for check items in fuzzy match mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OSS</p>
      */
     @NameInMap("CheckKey")
     public String checkKey;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>Specifies whether the check item supports custom parameters. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("CustomParam")
     public Boolean customParam;
@@ -33,53 +46,65 @@ public class ListCheckResultRequest extends TeaModel {
 
     /**
      * <p>The asset type of the cloud services. Valid values:</p>
-     * <br>
-     * <p>*   **ECS**: Elastic Compute Service (ECS)</p>
-     * <p>*   **SLB**: Server Load Balancer (SLB)</p>
-     * <p>*   **RDS**: ApsaraDB RDS</p>
-     * <p>*   **MONGODB**: ApsaraDB for MongoDB (MongoDB)</p>
-     * <p>*   **KVSTORE**: ApsaraDB for Redis (Redis)</p>
-     * <p>*   **ACR**: Container Registry</p>
-     * <p>*   **CSK**: Container Service for Kubernetes (ACK)</p>
-     * <p>*   **VPC**: Virtual Private Cloud (VPC)</p>
-     * <p>*   **ACTIONTRAIL**: ActionTrail</p>
-     * <p>*   **CDN**: Alibaba Cloud CDN (CDN)</p>
-     * <p>*   **CAS**: Certificate Management Service (formerly SSL Certificates Service)</p>
-     * <p>*   **RDC**: Apsara Devops</p>
-     * <p>*   **RAM**: Resource Access Management (RAM)</p>
-     * <p>*   **DDOS**: Anti-DDoS</p>
-     * <p>*   **WAF**: Web Application Firewall (WAF)</p>
-     * <p>*   **OSS**: Object Storage Service (OSS)</p>
-     * <p>*   **POLARDB**: PolarDB</p>
-     * <p>*   **POSTGRESQL**: ApsaraDB RDS for PostgreSQL</p>
-     * <p>*   **MSE**: Microservices Engine (MSE)</p>
-     * <p>*   **NAS**: Apsara File Storage NAS (NAS)</p>
-     * <p>*   **SDDP**: Sensitive Data Discovery and Protection (SDDP)</p>
-     * <p>*   **EIP**: Elastic IP Address (EIP)</p>
+     * <ul>
+     * <li><strong>ECS</strong>: Elastic Compute Service (ECS)</li>
+     * <li><strong>SLB</strong>: Server Load Balancer (SLB)</li>
+     * <li><strong>RDS</strong>: ApsaraDB RDS</li>
+     * <li><strong>MONGODB</strong>: ApsaraDB for MongoDB (MongoDB)</li>
+     * <li><strong>KVSTORE</strong>: ApsaraDB for Redis (Redis)</li>
+     * <li><strong>ACR</strong>: Container Registry</li>
+     * <li><strong>CSK</strong>: Container Service for Kubernetes (ACK)</li>
+     * <li><strong>VPC</strong>: Virtual Private Cloud (VPC)</li>
+     * <li><strong>ACTIONTRAIL</strong>: ActionTrail</li>
+     * <li><strong>CDN</strong>: Alibaba Cloud CDN (CDN)</li>
+     * <li><strong>CAS</strong>: Certificate Management Service (formerly SSL Certificates Service)</li>
+     * <li><strong>RDC</strong>: Apsara Devops</li>
+     * <li><strong>RAM</strong>: Resource Access Management (RAM)</li>
+     * <li><strong>DDOS</strong>: Anti-DDoS</li>
+     * <li><strong>WAF</strong>: Web Application Firewall (WAF)</li>
+     * <li><strong>OSS</strong>: Object Storage Service (OSS)</li>
+     * <li><strong>POLARDB</strong>: PolarDB</li>
+     * <li><strong>POSTGRESQL</strong>: ApsaraDB RDS for PostgreSQL</li>
+     * <li><strong>MSE</strong>: Microservices Engine (MSE)</li>
+     * <li><strong>NAS</strong>: Apsara File Storage NAS (NAS)</li>
+     * <li><strong>SDDP</strong>: Sensitive Data Discovery and Protection (SDDP)</li>
+     * <li><strong>EIP</strong>: Elastic IP Address (EIP)</li>
+     * </ul>
      */
     @NameInMap("InstanceTypes")
     public java.util.List<String> instanceTypes;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The number of entries per page. Maximum value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **cn-hangzhou**: International</p>
-     * <p>*   **ap-southeast-1**: Singapore</p>
+     * <ul>
+     * <li><strong>cn-hangzhou</strong>: International</li>
+     * <li><strong>ap-southeast-1</strong>: Singapore</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -92,19 +117,21 @@ public class ListCheckResultRequest extends TeaModel {
 
     /**
      * <p>The risk levels of check items. Separate multiple risk levels with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **HIGH**</p>
-     * <p>*   **MEDIUM**</p>
-     * <p>*   **LOW**</p>
+     * <ul>
+     * <li><strong>HIGH</strong></li>
+     * <li><strong>MEDIUM</strong></li>
+     * <li><strong>LOW</strong></li>
+     * </ul>
      */
     @NameInMap("RiskLevels")
     public java.util.List<String> riskLevels;
 
     /**
      * <p>The types of the conditions based on which check items are sorted. Valid values:</p>
-     * <br>
-     * <p>*   **RISK_LEVEL**: risk level</p>
-     * <p>*   **STATUS**: status</p>
+     * <ul>
+     * <li><strong>RISK_LEVEL</strong>: risk level</li>
+     * <li><strong>STATUS</strong>: status</li>
+     * </ul>
      */
     @NameInMap("SortTypes")
     public java.util.List<String> sortTypes;
@@ -117,12 +144,13 @@ public class ListCheckResultRequest extends TeaModel {
 
     /**
      * <p>The statuses of check items. Separate multiple statuses with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **PASS**</p>
-     * <p>*   **NOT_PASS**</p>
-     * <p>*   **CHECKING**</p>
-     * <p>*   **NOT_CHECK**</p>
-     * <p>*   **WHITELIST**</p>
+     * <ul>
+     * <li><strong>PASS</strong></li>
+     * <li><strong>NOT_PASS</strong></li>
+     * <li><strong>CHECKING</strong></li>
+     * <li><strong>NOT_CHECK</strong></li>
+     * <li><strong>WHITELIST</strong></li>
+     * </ul>
      */
     @NameInMap("Statuses")
     public java.util.List<String> statuses;
@@ -135,8 +163,9 @@ public class ListCheckResultRequest extends TeaModel {
 
     /**
      * <p>The cloud service providers. Valid value:</p>
-     * <br>
-     * <p>*   **ALIYUN**: Alibaba Cloud</p>
+     * <ul>
+     * <li><strong>ALIYUN</strong>: Alibaba Cloud</li>
+     * </ul>
      */
     @NameInMap("Vendors")
     public java.util.List<String> vendors;
@@ -144,6 +173,14 @@ public class ListCheckResultRequest extends TeaModel {
     public static ListCheckResultRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCheckResultRequest self = new ListCheckResultRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListCheckResultRequest setCheckIds(java.util.List<Long> checkIds) {
+        this.checkIds = checkIds;
+        return this;
+    }
+    public java.util.List<Long> getCheckIds() {
+        return this.checkIds;
     }
 
     public ListCheckResultRequest setCheckKey(String checkKey) {

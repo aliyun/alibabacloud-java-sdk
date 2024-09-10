@@ -12,6 +12,9 @@ public class GetVirusScanLatestTaskStatisticResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7532B7EE-7CE7-5F4D-BF04-B12447DDCAE1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,40 +43,59 @@ public class GetVirusScanLatestTaskStatisticResponseBody extends TeaModel {
     public static class GetVirusScanLatestTaskStatisticResponseBodyData extends TeaModel {
         /**
          * <p>The number of machines on which the virus scan task is complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("CompleteMachine")
         public Integer completeMachine;
 
         /**
          * <p>The name of the machine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testMahine1</p>
          */
         @NameInMap("MachineName")
         public String machineName;
 
         /**
          * <p>The progress of the virus scan task in percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>92</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The highest risk level of the detected alerts. Valid values:</p>
-         * <br>
-         * <p>*   **high**</p>
-         * <p>*   **medium**</p>
-         * <p>*   **low**</p>
+         * <ul>
+         * <li><strong>high</strong></li>
+         * <li><strong>medium</strong></li>
+         * <li><strong>low</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>medium</p>
          */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
         /**
          * <p>The number of safe machines that are detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("SafeMachine")
         public Integer safeMachine;
 
         /**
          * <p>The number of machines that are scanned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("ScanMachine")
         public Integer scanMachine;
@@ -86,58 +108,80 @@ public class GetVirusScanLatestTaskStatisticResponseBody extends TeaModel {
 
         /**
          * <p>The timestamp generated when the virus scan task was performed. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1681145862000</p>
          */
         @NameInMap("ScanTime")
         public Long scanTime;
 
         /**
          * <p>The type of the virus scan. Valid values:</p>
-         * <br>
-         * <p>*   **system**: automatic scan.</p>
-         * <p>*   **user**: custom scan.</p>
+         * <ul>
+         * <li><strong>system</strong>: automatic scan.</li>
+         * <li><strong>user</strong>: custom scan.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>system</p>
          */
         @NameInMap("ScanType")
         public String scanType;
 
         /**
          * <p>The status of the virus scan task.</p>
-         * <br>
-         * <p>**Valid values for a main task**:</p>
-         * <br>
-         * <p>*   **0**: The main task is to be started.</p>
-         * <p>*   **10**: The main task is running.</p>
-         * <p>*   **100**: The main task is complete.</p>
-         * <br>
-         * <p>**Valid values for a subtask**:</p>
-         * <br>
-         * <p>*   **0**: The subtask is to be started.</p>
-         * <p>*   **20**: The scan script is sent.</p>
-         * <p>*   **50**: The subtask is running.</p>
-         * <p>*   **100**: The subtask is complete.</p>
+         * <p><strong>Valid values for a main task</strong>:</p>
+         * <ul>
+         * <li><strong>0</strong>: The main task is to be started.</li>
+         * <li><strong>10</strong>: The main task is running.</li>
+         * <li><strong>100</strong>: The main task is complete.</li>
+         * </ul>
+         * <p><strong>Valid values for a subtask</strong>:</p>
+         * <ul>
+         * <li><strong>0</strong>: The subtask is to be started.</li>
+         * <li><strong>20</strong>: The scan script is sent.</li>
+         * <li><strong>50</strong>: The subtask is running.</li>
+         * <li><strong>100</strong>: The subtask is complete.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The number of alerts that are detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("SuspiciousCount")
         public Integer suspiciousCount;
 
         /**
          * <p>The number of suspicious machines that are detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("SuspiciousMachine")
         public Integer suspiciousMachine;
 
         /**
          * <p>The ID of the virus scan task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fc98d58eb56f699d49bf7ebbd6d7****</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
          * <p>The number of machines on which the virus scan task was not complete or failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("UnCompleteMachine")
         public Integer unCompleteMachine;

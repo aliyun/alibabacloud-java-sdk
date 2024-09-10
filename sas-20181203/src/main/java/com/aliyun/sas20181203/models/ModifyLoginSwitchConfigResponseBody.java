@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyLoginSwitchConfigResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B256A525-7E42-4BB9-A27C-9017FDDFF1A2</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -18,6 +18,9 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8686CE6E-9BFA-5436-A9D9-77B984AEE7F8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,6 +57,9 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
     public static class FindContainerNetworkConnectResponseBodyConnectsDstContainer extends TeaModel {
         /**
          * <p>The ID of the destination container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48a6dxxx9d5a5866</p>
          */
         @NameInMap("ContainerId")
         public String containerId;
@@ -76,6 +82,9 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
     public static class FindContainerNetworkConnectResponseBodyConnectsSrcContainer extends TeaModel {
         /**
          * <p>The ID of the source container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48a6xxx5709d5a5866</p>
          */
         @NameInMap("ContainerId")
         public String containerId;
@@ -98,58 +107,81 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
     public static class FindContainerNetworkConnectResponseBodyConnects extends TeaModel {
         /**
          * <p>The information about the destination container.</p>
-         * <br>
-         * <p>> This parameter is not supported.</p>
+         * <blockquote>
+         * <p>This parameter is not supported.</p>
+         * </blockquote>
          */
         @NameInMap("DstContainer")
         public FindContainerNetworkConnectResponseBodyConnectsDstContainer dstContainer;
 
         /**
          * <p>The destination IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.20.62.176</p>
          */
         @NameInMap("DstIp")
         public String dstIp;
 
         /**
          * <p>The destination port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>443</p>
          */
         @NameInMap("DstPort")
         public String dstPort;
 
         /**
          * <p>The timestamp when the connection was first established.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-11 20:54:32</p>
          */
         @NameInMap("FirstTime")
         public Long firstTime;
 
         /**
          * <p>The ID of the network connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1458</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The timestamp when the connection was last established.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-24 10:26:00</p>
          */
         @NameInMap("LastTime")
         public Long lastTime;
 
         /**
          * <p>The information about the source container.</p>
-         * <br>
-         * <p>> This parameter is not supported.</p>
+         * <blockquote>
+         * <p>This parameter is not supported.</p>
+         * </blockquote>
          */
         @NameInMap("SrcContainer")
         public FindContainerNetworkConnectResponseBodyConnectsSrcContainer srcContainer;
 
         /**
          * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35.233.62.116</p>
          */
         @NameInMap("SrcIp")
         public String srcIp;
 
         /**
          * <p>The source port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         @NameInMap("SrcPort")
         public String srcPort;
@@ -236,24 +268,36 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
     public static class FindContainerNetworkConnectResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Long currentPage;
 
         /**
-         * <p>The number of entries returned per page. Default value: **20**.</p>
+         * <p>The number of entries returned per page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Long pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

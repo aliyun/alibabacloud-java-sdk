@@ -12,6 +12,9 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4FEC7F58-FCDA-415F-AE25-CD8BC0931DF2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +57,36 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
     public static class DescribeVpcHoneyPotListResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -118,18 +133,27 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
     public static class DescribeVpcHoneyPotListResponseBodyVpcHoneyPotDTOListVpcSwitchIdList extends TeaModel {
         /**
          * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-p0wdnyv4wzp6jkuu4****</p>
          */
         @NameInMap("VpcSwitchId")
         public String vpcSwitchId;
 
         /**
          * <p>The name of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc01</p>
          */
         @NameInMap("VpcSwitchName")
         public String vpcSwitchName;
 
         /**
          * <p>The zone ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-southeast-2b</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
@@ -168,86 +192,124 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
     public static class DescribeVpcHoneyPotListResponseBodyVpcHoneyPotDTOList extends TeaModel {
         /**
          * <p>The CIDR block of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX/16</p>
          */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
         /**
          * <p>The time at which the VPC was created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1607365213000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The status of the server on which the honeypot is deployed. Valid values:</p>
-         * <br>
-         * <p>*   **Pending**: The server is being created.</p>
-         * <p>*   **Running**: The server is running.</p>
-         * <p>*   **Starting**: The server is being started.</p>
-         * <p>*   **Stopping**: The server is being stopped.</p>
-         * <p>*   **Stopped**: The server is stopped.</p>
+         * <ul>
+         * <li><strong>Pending</strong>: The server is being created.</li>
+         * <li><strong>Running</strong>: The server is running.</li>
+         * <li><strong>Starting</strong>: The server is being started.</li>
+         * <li><strong>Stopping</strong>: The server is being stopped.</li>
+         * <li><strong>Stopped</strong>: The server is stopped.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("HoneyPotEcsInstanceStatus")
         public String honeyPotEcsInstanceStatus;
 
         /**
          * <p>The ID of the elastic network interface (ENI) used by the honeypot in the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-p0whwgg7bing8b80****</p>
          */
         @NameInMap("HoneyPotEniInstanceId")
         public String honeyPotEniInstanceId;
 
         /**
          * <p>Indicates whether the cloud honeypot feature is enabled for the VPC. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("HoneyPotExistence")
         public Boolean honeyPotExistence;
 
         /**
          * <p>The status of the honeypot. Valid values:</p>
-         * <br>
-         * <p>*   **pending**: The honeypot is being created.</p>
-         * <p>*   **deleting**: The honeypot is being deleted.</p>
-         * <p>*   **off**: The honeypot is disabled.</p>
-         * <p>*   **suspending**: The honeypot is suspended.</p>
-         * <p>*   **on**: The honeypot is enabled.</p>
+         * <ul>
+         * <li><strong>pending</strong>: The honeypot is being created.</li>
+         * <li><strong>deleting</strong>: The honeypot is being deleted.</li>
+         * <li><strong>off</strong>: The honeypot is disabled.</li>
+         * <li><strong>suspending</strong>: The honeypot is suspended.</li>
+         * <li><strong>on</strong>: The honeypot is enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("HoneyPotInstanceStatus")
         public String honeyPotInstanceStatus;
 
         /**
          * <p>The ID of the vSwitch to which the ENI used by the honeypot is connected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-p0w7gdcfvn20tvdul****</p>
          */
         @NameInMap("HoneyPotVpcSwitchId")
         public String honeyPotVpcSwitchId;
 
         /**
          * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-p0w223apdl49sr5zv****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The name of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc-vpcname</p>
          */
         @NameInMap("VpcName")
         public String vpcName;
 
         /**
          * <p>The region ID of the VPC.</p>
-         * <br>
-         * <p>> For more information about the mapping between region IDs and region names, see [Regions and zones](https://help.aliyun.com/document_detail/40654.html).</p>
+         * <blockquote>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-southeast-2</p>
          */
         @NameInMap("VpcRegionId")
         public String vpcRegionId;
 
         /**
          * <p>The status of the VPC. Valid values:</p>
-         * <br>
-         * <p>*   **Available**: The VPC is normal and available.</p>
-         * <p>*   **Pending**: The VPC is being configured.</p>
+         * <ul>
+         * <li><strong>Available</strong>: The VPC is normal and available.</li>
+         * <li><strong>Pending</strong>: The VPC is being configured.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("VpcStatus")
         public String vpcStatus;

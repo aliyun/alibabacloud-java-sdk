@@ -12,72 +12,124 @@ public class ListFileProtectEventRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The end of the time range to query.</p>
+     * <p>The end timestamp of the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1683195595204</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>The instance ID of the asset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp1fu4aqltf1huhc****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ca_cpm_****</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
-     * <p>The public IP address of the asset that you want to query.</p>
+     * <p>The public IP address of the server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>120.27.XX.XX</p>
      */
     @NameInMap("InternetIp")
     public String internetIp;
 
     /**
-     * <p>The private IP address of the asset that you want to query.</p>
+     * <p>The private IP address of the server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172.26.XX.XX</p>
      */
     @NameInMap("IntranetIp")
     public String intranetIp;
 
     /**
+     * <p>Type of operation on a file. eg:</p>
+     * <ul>
+     * <li><strong>DELETE</strong>: delete the file.</li>
+     * <li><strong>WRITE</strong>: write the file.</li>
+     * <li><strong>READ</strong>: read the file.</li>
+     * <li><strong>RENAME</strong>: rename the file.</li>
+     * <li><strong>CHOWN</strong>: set the file owner and file association group operations.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>READ</p>
+     */
+    @NameInMap("Operation")
+    public String operation;
+
+    /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The name of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-rule-1</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
 
     /**
-     * <p>The start of the time range to query.</p>
+     * <p>The start timestamp of the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1683080489594</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
 
     /**
      * <p>The status of the event. Valid values:</p>
-     * <br>
-     * <p>*   0: unhandled</p>
-     * <p>*   1: handled</p>
-     * <p>*   2: added to the whitelist</p>
+     * <ul>
+     * <li>0: unhandled</li>
+     * <li>1: handled</li>
+     * <li>2: added to the whitelist</li>
+     * <li>3: ignored</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>The server UUID.</p>
-     * <br>
-     * <p>>  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the server UUID.</p>
+     * <p>The UUID of the server.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUID of the server.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>inet-ecs-4e876cb0-09f7-43b8-82ef-4bc7a937***</p>
      */
     @NameInMap("Uuid")
     public String uuid;
@@ -141,6 +193,14 @@ public class ListFileProtectEventRequest extends TeaModel {
     }
     public String getIntranetIp() {
         return this.intranetIp;
+    }
+
+    public ListFileProtectEventRequest setOperation(String operation) {
+        this.operation = operation;
+        return this;
+    }
+    public String getOperation() {
+        return this.operation;
     }
 
     public ListFileProtectEventRequest setPageSize(String pageSize) {

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteFileProtectRuleResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7FD1C1DC-AA67-510A-A022-5D23310C3658</p>
      */
     @NameInMap("RequestId")
     public String requestId;

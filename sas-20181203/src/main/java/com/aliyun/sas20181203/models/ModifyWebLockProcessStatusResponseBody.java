@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyWebLockProcessStatusResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6A540B52-2441-5493-902B-37376C412776</p>
      */
     @NameInMap("RequestId")
     public String requestId;

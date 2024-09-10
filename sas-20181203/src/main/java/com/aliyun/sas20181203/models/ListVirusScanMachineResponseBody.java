@@ -18,6 +18,9 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A27C1C09-828B-5CB8-9203-F55423BE****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,36 +57,54 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
     public static class ListVirusScanMachineResponseBodyData extends TeaModel {
         /**
          * <p>The number of times that the alert is triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28</p>
          */
         @NameInMap("EventCount")
         public Integer eventCount;
 
         /**
          * <p>The instance ID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp180bogui4fc0z4****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>centos****</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The public IP address of the associated server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address of the associated server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.42.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6690a46c-0edb-4663-a641-3629d1a9****</p>
          */
         @NameInMap("Uuid")
         public String uuid;
@@ -146,18 +167,27 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
     public static class ListVirusScanMachineResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>168</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

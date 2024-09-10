@@ -12,44 +12,64 @@ public class ListCloudAssetInstancesRequest extends TeaModel {
 
     /**
      * <p>The search conditions for assets. The value of this parameter is in the JSON format and contains the following fields:</p>
-     * <br>
-     * <p>*   **name**: the name of the search condition.</p>
-     * <br>
-     * <p>*   **value**: the value of the search condition.</p>
-     * <br>
-     * <p>*   **logicalExp**: the logical relation for multiple search conditions. Valid values:</p>
-     * <br>
-     * <p>    *   **OR**: The search conditions use a logical **OR**.</p>
-     * <p>    *   **AND**: The search conditions use a logical **AND**.</p>
-     * <br>
-     * <p>> You can call the [GetCloudAssetCriteria](~~GetCloudAssetCriteria~~) operation to query supported search conditions.</p>
+     * <ul>
+     * <li><p><strong>name</strong>: the name of the search condition.</p>
+     * </li>
+     * <li><p><strong>value</strong>: the value of the search condition.</p>
+     * </li>
+     * <li><p><strong>logicalExp</strong>: the logical relation for multiple search conditions. Valid values:</p>
+     * <ul>
+     * <li><strong>OR</strong>: The search conditions use a logical <strong>OR</strong>.</li>
+     * <li><strong>AND</strong>: The search conditions use a logical <strong>AND</strong>.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>You can call the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation to query supported search conditions.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>[{\&quot;name\&quot;:\&quot;internetIp\&quot;,\&quot;value\&quot;:\&quot;192.168\&quot;,\&quot;logicalExp\&quot;:\&quot;OR\&quot;}]</p>
      */
     @NameInMap("Criteria")
     public String criteria;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The logical relation for multiple search conditions. Valid values:</p>
-     * <br>
-     * <p>*   **OR**: The search conditions use a logical **OR**.</p>
-     * <p>*   **AND**: The search conditions use a logical **AND**.</p>
+     * <ul>
+     * <li><strong>OR</strong>: The search conditions use a logical <strong>OR</strong>.</li>
+     * <li><strong>AND</strong>: The search conditions use a logical <strong>AND</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OR</p>
      */
     @NameInMap("LogicalExp")
     public String logicalExp;
 
     /**
      * <p>The number of entries to return on each page. Maximum value: 100. Default value: 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -110,28 +130,36 @@ public class ListCloudAssetInstancesRequest extends TeaModel {
     public static class ListCloudAssetInstancesRequestCloudAssetTypes extends TeaModel {
         /**
          * <p>The subtype of the cloud asset.</p>
-         * <br>
-         * <p>You can call the [GetCloudAssetCriteria](~~GetCloudAssetCriteria~~) operation to query the subtype of the cloud asset.</p>
+         * <p>You can call the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation to query the subtype of the cloud asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AssetSubType")
         public Integer assetSubType;
 
         /**
          * <p>The type of the cloud asset.</p>
-         * <br>
-         * <p>You can call the [GetCloudAssetCriteria](~~GetCloudAssetCriteria~~) operation to query the cloud asset type.</p>
+         * <p>You can call the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation to query the cloud asset type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18</p>
          */
         @NameInMap("AssetType")
         public Integer assetType;
 
         /**
          * <p>The server type. Valid values:</p>
-         * <br>
-         * <p>*   **0**: a cloud asset provided by Alibaba Cloud</p>
-         * <p>*   **1**: a cloud asset outside Alibaba Cloud</p>
-         * <p>*   **2**: a cloud asset in a data center</p>
-         * <p>*   **3**, **4**, **5**, and **7**: a cloud asset provided by a third-party service provider</p>
-         * <p>*   **8**: a lightweight cloud asset</p>
+         * <ul>
+         * <li><strong>0</strong>: a cloud asset provided by Alibaba Cloud</li>
+         * <li><strong>1</strong>: a cloud asset outside Alibaba Cloud</li>
+         * <li><strong>2</strong>: a cloud asset in a data center</li>
+         * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: a cloud asset provided by a third-party service provider</li>
+         * <li><strong>8</strong>: a lightweight cloud asset</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Vendor")
         public Integer vendor;

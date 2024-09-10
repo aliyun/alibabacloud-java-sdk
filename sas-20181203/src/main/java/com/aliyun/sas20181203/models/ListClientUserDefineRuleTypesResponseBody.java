@@ -4,6 +4,10 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListClientUserDefineRuleTypesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>340D7FC4-D575-1661-8ACD-CFA7BE57****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

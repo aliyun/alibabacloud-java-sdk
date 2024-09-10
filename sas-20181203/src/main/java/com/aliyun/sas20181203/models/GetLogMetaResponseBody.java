@@ -12,6 +12,9 @@ public class GetLogMetaResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3956048F-9D73-5EDB-834B-4827BB48****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,21 +43,31 @@ public class GetLogMetaResponseBody extends TeaModel {
     public static class GetLogMetaResponseBodyLogMeta extends TeaModel {
         /**
          * <p>The name of the dedicated Logstore in which logs are stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aegis-log-login</p>
          */
         @NameInMap("LogStore")
         public String logStore;
 
         /**
          * <p>The Simple Log Service project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas-log</p>
          */
         @NameInMap("Project")
         public String project;
 
         /**
          * <p>The status of a data shipping task of a log. Valid values:</p>
-         * <br>
-         * <p>*   **enabled**</p>
-         * <p>*   **disabled**</p>
+         * <ul>
+         * <li><strong>enabled</strong></li>
+         * <li><strong>disabled</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         @NameInMap("Status")
         public String status;

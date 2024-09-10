@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchDeleteMaliciousFileWhitelistConfigRequest extends TeaModel {
     /**
-     * <p>The IDs of the whitelist rules. You can call the [ListMaliciousFileWhitelistConfigs](~~ListMaliciousFileWhitelistConfigs~~) operation to query the IDs of whitelist rules.</p>
+     * <p>The IDs of the whitelist rules. You can call the <a href="~~ListMaliciousFileWhitelistConfigs~~">ListMaliciousFileWhitelistConfigs</a> operation to query the IDs of whitelist rules.</p>
      */
     @NameInMap("ConfigIdList")
     public java.util.List<Long> configIdList;

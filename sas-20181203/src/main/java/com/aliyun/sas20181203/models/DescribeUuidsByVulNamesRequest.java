@@ -6,118 +6,166 @@ import com.aliyun.tea.*;
 public class DescribeUuidsByVulNamesRequest extends TeaModel {
     /**
      * <p>Specifies whether the vulnerability is fixed. Valid values:</p>
-     * <br>
-     * <p>*   **y**: the vulnerability is fixed.</p>
-     * <p>*   **n**: the vulnerability is not fixed.</p>
+     * <ul>
+     * <li><strong>y</strong>: the vulnerability is fixed.</li>
+     * <li><strong>n</strong>: the vulnerability is not fixed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>n</p>
      */
     @NameInMap("Dealed")
     public String dealed;
 
     /**
      * <p>The name of the search field that is used to query containers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>namespace</p>
      */
     @NameInMap("FieldName")
     public String fieldName;
 
     /**
      * <p>The value of the search field that is used to query containers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cas-adad-qeqwe</p>
      */
     @NameInMap("FieldValue")
     public String fieldValue;
 
     /**
      * <p>The ID of the asset group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11286014</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The severity of the vulnerability. Separate multiple severities with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **high**</p>
-     * <p>*   **medium**</p>
-     * <p>*   **low**</p>
+     * <ul>
+     * <li><strong>high</strong></li>
+     * <li><strong>medium</strong></li>
+     * <li><strong>low</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>high,low</p>
      */
     @NameInMap("Level")
     public String level;
 
     /**
      * <p>The priority based on which the vulnerability is fixed. Separate multiple priorities with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **asap**: high</p>
-     * <p>*   **later**: medium</p>
-     * <p>*   **nntf**: low</p>
+     * <ul>
+     * <li><strong>asap</strong>: high</li>
+     * <li><strong>later</strong>: medium</li>
+     * <li><strong>nntf</strong>: low</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>asap,later,nntf</p>
      */
     @NameInMap("Necessity")
     public String necessity;
 
     /**
      * <p>The remarks for the asset affected by the vulnerability. The value can be the private IP address, public IP address, or name of the asset. Fuzzy match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.7.</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
      * <p>The tags that are used to search for the vulnerability.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oval</p>
      */
     @NameInMap("SearchTags")
     public String searchTags;
 
     /**
      * <p>The status of the vulnerability. Separate multiple states with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **1**: unfixed</p>
-     * <p>*   **2**: fix failed</p>
+     * <ul>
+     * <li><strong>1</strong>: unfixed</li>
+     * <li><strong>2</strong>: fix failed</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1,4</p>
      */
     @NameInMap("StatusList")
     public String statusList;
 
     /**
      * <p>The tag of the vulnerability.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oval</p>
      */
     @NameInMap("Tag")
     public String tag;
 
     /**
      * <p>The type of the query condition. Valid values:</p>
-     * <br>
-     * <p>*   **containerId**: the ID of the container</p>
-     * <p>*   **uuid**: the ID of the asset</p>
+     * <ul>
+     * <li><strong>containerId</strong>: the ID of the container</li>
+     * <li><strong>uuid</strong>: the ID of the asset</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>uuid</p>
      */
     @NameInMap("TargetType")
     public String targetType;
 
     /**
      * <p>The type of the vulnerability. Valid values:</p>
-     * <br>
-     * <p>*   **cve**: Linux software vulnerability</p>
-     * <p>*   **sys**: Windows system vulnerability</p>
-     * <br>
+     * <ul>
+     * <li><strong>cve</strong>: Linux software vulnerability</li>
+     * <li><strong>sys</strong>: Windows system vulnerability</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cve</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>The ID of the virtual private cloud (VPC) in which the vulnerability is detected. Separate multiple IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-uf6ssrvbrwe37ekw****,vpc-bp1aevy8sofi8mh1q****</p>
      */
     @NameInMap("VpcInstanceIds")
     public String vpcInstanceIds;
 
     /**
      * <p>An array that consists of the names of vulnerabilities.</p>
-     * <br>
-     * <p>>  You can call the [DescribeGroupedVul](~~DescribeGroupedVul~~) operation to obtain the names of vulnerabilities.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeGroupedVul~~">DescribeGroupedVul</a> operation to obtain the names of vulnerabilities.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      */
     @NameInMap("VulNames")

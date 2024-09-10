@@ -6,25 +6,37 @@ import com.aliyun.tea.*;
 public class ModifyInterceptionRuleSwitchRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
-     * <p>> You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ce5c29aba99694ade9ba85dc620b4****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The IDs of the rules whose status you want to change. Separate multiple IDs with commas (,).</p>
-     * <br>
-     * <p>> You can call the [ListInterceptionRulePage](https://help.aliyun.com/document_detail/182997.html) operation to query the IDs of rules.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/182997.html">ListInterceptionRulePage</a> operation to query the IDs of rules.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>403287</p>
      */
     @NameInMap("RuleIds")
     public String ruleIds;
 
     /**
      * <p>Specifies whether the rule is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **1**: enabled</p>
-     * <p>*   **0**: disabled</p>
+     * <ul>
+     * <li><strong>1</strong>: enabled</li>
+     * <li><strong>0</strong>: disabled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("RuleSwitch")
     public Integer ruleSwitch;

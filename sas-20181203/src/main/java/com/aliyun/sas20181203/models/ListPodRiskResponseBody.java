@@ -18,6 +18,9 @@ public class ListPodRiskResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>94254AD7-5026-5847-833B-403C2326BD6E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +57,36 @@ public class ListPodRiskResponseBody extends TeaModel {
     public static class ListPodRiskResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2-</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>29</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -118,66 +133,99 @@ public class ListPodRiskResponseBody extends TeaModel {
     public static class ListPodRiskResponseBodyPodRiskList extends TeaModel {
         /**
          * <p>The number of alerts that are generated for the pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("AlarmCount")
         public Integer alarmCount;
 
         /**
          * <p>The ID of the container cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c1d903a628af043659a043af59d89****</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test66</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
 
         /**
          * <p>The timestamp that indicates the time when the pod was created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1644283112720</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The number of baseline risk items that are detected in the pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("HcCount")
         public Integer hcCount;
 
         /**
          * <p>The instance ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-7yvdq597****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The namespace of the Kubernetes cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kube-system</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
          * <p>The name of the pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>expoit-xxx-b****</p>
          */
         @NameInMap("Pod")
         public String pod;
 
         /**
          * <p>The IP address of the pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.0.XXX.XXX</p>
          */
         @NameInMap("PodIp")
         public String podIp;
 
         /**
          * <p>The number of vulnerabilities that are detected in the pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("VulCount")
         public Integer vulCount;

@@ -18,6 +18,9 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CE500770-42D3-442E-9DDD-156E0F9F3B45</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,36 +57,52 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
     public static class DescribeVulFixStatisticsResponseBodyFixStat extends TeaModel {
         /**
          * <p>The number of vulnerabilities that are fixed on the current day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("FixedTodayNum")
         public Integer fixedTodayNum;
 
         /**
          * <p>The total number of fixed vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         @NameInMap("FixedTotalNum")
         public Integer fixedTotalNum;
 
         /**
          * <p>The number of vulnerabilities that are being fixed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17</p>
          */
         @NameInMap("FixingNum")
         public Integer fixingNum;
 
         /**
          * <p>The number of unfixed vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("NeedFixNum")
         public Integer needFixNum;
 
         /**
          * <p>The type of the vulnerability. Valid values:</p>
-         * <br>
-         * <p>*   **cve**: Linux software vulnerability</p>
-         * <p>*   **sys**: Windows system vulnerability</p>
-         * <p>*   **cms**: Web-CMS vulnerability</p>
-         * <p>*   **app**: application vulnerability</p>
-         * <p>*   **emg**: urgent vulnerability</p>
+         * <ul>
+         * <li><strong>cve</strong>: Linux software vulnerability</li>
+         * <li><strong>sys</strong>: Windows system vulnerability</li>
+         * <li><strong>cms</strong>: Web-CMS vulnerability</li>
+         * <li><strong>app</strong>: application vulnerability</li>
+         * <li><strong>emg</strong>: urgent vulnerability</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cve</p>
          */
         @NameInMap("Type")
         public String type;
@@ -138,24 +157,36 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
     public static class DescribeVulFixStatisticsResponseBodyFixTotal extends TeaModel {
         /**
          * <p>The number of vulnerabilities that are fixed on the current day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         @NameInMap("FixedTodayNum")
         public Integer fixedTodayNum;
 
         /**
          * <p>The total number of fixed vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47</p>
          */
         @NameInMap("FixedTotalNum")
         public Integer fixedTotalNum;
 
         /**
          * <p>The number of vulnerabilities that are being fixed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         @NameInMap("FixingNum")
         public Integer fixingNum;
 
         /**
          * <p>The number of unfixed vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>62</p>
          */
         @NameInMap("NeedFixNum")
         public Integer needFixNum;

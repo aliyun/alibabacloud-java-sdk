@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteBinarySecurityPolicyRequest extends TeaModel {
     /**
      * <p>The name of the binary security policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>policy-auto-bfu7pm</p>
      */
     @NameInMap("Name")
     public String name;
@@ -15,6 +18,9 @@ public class DeleteBinarySecurityPolicyRequest extends TeaModel {
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>42.120.XXX.XXX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

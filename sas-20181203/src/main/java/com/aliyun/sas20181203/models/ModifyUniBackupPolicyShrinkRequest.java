@@ -6,71 +6,101 @@ import com.aliyun.tea.*;
 public class ModifyUniBackupPolicyShrinkRequest extends TeaModel {
     /**
      * <p>The name of the database account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sa</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>The password of the database account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sa@****</p>
      */
     @NameInMap("AccountPassword")
     public String accountPassword;
 
     /**
      * <p>The policy for full backup. The value of this parameter is a JSON string that contains the following fields:</p>
-     * <br>
-     * <p>*   **start**: the start time of a backup task</p>
-     * <p>*   **interval**: the interval of backup tasks</p>
-     * <p>*   **type**: the unit of the interval</p>
-     * <p>*   **days**: the days of a week on which a backup task is performed</p>
+     * <ul>
+     * <li><strong>start</strong>: the start time of a backup task</li>
+     * <li><strong>interval</strong>: the interval of backup tasks</li>
+     * <li><strong>type</strong>: the unit of the interval</li>
+     * <li><strong>days</strong>: the days of a week on which a backup task is performed</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;days&quot;:[4],&quot;interval&quot;:1,&quot;planType&quot;:&quot;weekly&quot;,&quot;startTime&quot;:&quot;22:00:00&quot;}</p>
      */
     @NameInMap("FullPlan")
     public String fullPlanShrink;
 
     /**
      * <p>The policy for incremental backup. The value of this parameter is a JSON string that contains the following fields:</p>
-     * <br>
-     * <p>*   **start**: the start time of a backup task</p>
-     * <p>*   **interval**: the interval of backup tasks</p>
-     * <p>*   **type**: the unit of the interval</p>
-     * <p>*   **days**: the days of a week on which a backup task is performed</p>
+     * <ul>
+     * <li><strong>start</strong>: the start time of a backup task</li>
+     * <li><strong>interval</strong>: the interval of backup tasks</li>
+     * <li><strong>type</strong>: the unit of the interval</li>
+     * <li><strong>days</strong>: the days of a week on which a backup task is performed</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;interval&quot;:1,&quot;planType&quot;:&quot;daily&quot;,&quot;startTime&quot;:&quot;23:30:00&quot;}</p>
      */
     @NameInMap("IncPlan")
     public String incPlanShrink;
 
     /**
      * <p>The ID of the anti-ransomware policy.</p>
-     * <br>
-     * <p>> You can call the [DescribeUniBackupPolicies](~~DescribeUniBackupPolicies~~) operation to query the IDs of anti-ransomware policies.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeUniBackupPolicies~~">DescribeUniBackupPolicies</a> operation to query the IDs of anti-ransomware policies.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("PolicyId")
     public Long policyId;
 
     /**
      * <p>The name of the anti-ransomware policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>databak</p>
      */
     @NameInMap("PolicyName")
     public String policyName;
 
     /**
      * <p>The status of the anti-ransomware policy. Valid values:</p>
-     * <br>
-     * <p>*   **enabled**</p>
-     * <p>*   **disabled**</p>
+     * <ul>
+     * <li><strong>enabled</strong></li>
+     * <li><strong>disabled</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>enabled</p>
      */
     @NameInMap("PolicyStatus")
     public String policyStatus;
 
     /**
      * <p>The retention period of the backup snapshot.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
      */
     @NameInMap("Retention")
     public Integer retention;
 
     /**
      * <p>The maximum network bandwidth that is allowed during data backup. Unit: bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1048576</p>
      */
     @NameInMap("SpeedLimiter")
     public Long speedLimiter;

@@ -5,19 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the statistics about the assets.</p>
+     * <p>The statistics about the servers.</p>
      */
     @NameInMap("MachineInfoStatistics")
     public java.util.List<DescribeUuidsByVulNamesResponseBodyMachineInfoStatistics> machineInfoStatistics;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>97286A-4A6B-4A4-95FA-EC7E3E2451</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of vulnerabilities on the server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("VulCount")
     public Integer vulCount;
@@ -52,44 +58,74 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
     }
 
     public static class DescribeUuidsByVulNamesResponseBodyMachineInfoStatistics extends TeaModel {
+        /**
+         * <p>The public IP address of the server on which the exception was detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.98.XX.XX</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <p>The private IP address of the server on which the exception was detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.18.XX.XX</p>
+         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The instance ID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-wz9gd1os5talju****</p>
          */
         @NameInMap("MachineInstanceId")
         public String machineInstanceId;
 
         /**
          * <p>The IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("MachineIp")
         public String machineIp;
 
         /**
          * <p>The name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestMachine</p>
          */
         @NameInMap("MachineName")
         public String machineName;
 
         /**
          * <p>The operating system that the server runs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>windows</p>
          */
         @NameInMap("Os")
         public String os;
 
         /**
-         * <p>The ID of the region in which the server resides.</p>
+         * <p>The region ID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18375c64-eaa2-4702-92b0-4ee7******</p>
          */
         @NameInMap("Uuid")
         public String uuid;

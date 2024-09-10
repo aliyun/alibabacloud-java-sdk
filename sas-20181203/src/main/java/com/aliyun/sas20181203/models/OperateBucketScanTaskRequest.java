@@ -6,14 +6,21 @@ import com.aliyun.tea.*;
 public class OperateBucketScanTaskRequest extends TeaModel {
     /**
      * <p>The name of the bucket.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iboxpublic****</p>
      */
     @NameInMap("BucketName")
     public String bucketName;
 
     /**
      * <p>The operation that you want to perform on the bucket. Valid value:</p>
-     * <br>
-     * <p>*   **1**: cancels the bucket check.</p>
+     * <ul>
+     * <li><strong>1</strong>: cancels the bucket check.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("OperateCode")
     public Integer operateCode;

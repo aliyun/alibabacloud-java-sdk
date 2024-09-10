@@ -26,12 +26,18 @@ public class ListInstanceRiskNumRequest extends TeaModel {
     public static class ListInstanceRiskNumRequestInstanceList extends TeaModel {
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-wz9fdluqx20mp2x7****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The UUID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f2d6e901-1004-4ca8-9dae-53ec04a9****</p>
          */
         @NameInMap("Uuid")
         public String uuid;

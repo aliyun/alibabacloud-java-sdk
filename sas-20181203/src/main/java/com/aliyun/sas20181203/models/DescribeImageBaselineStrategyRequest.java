@@ -6,24 +6,35 @@ import com.aliyun.tea.*;
 public class DescribeImageBaselineStrategyRequest extends TeaModel {
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The data source. Default value: default. Valid values:</p>
-     * <br>
-     * <p>*   **default**: queries the information about a baseline check policy for images.</p>
-     * <p>*   **agentless**: queries the information about a baseline check policy for agentless detection.</p>
+     * <ul>
+     * <li><strong>default</strong>: queries the information about a baseline check policy for images.</li>
+     * <li><strong>agentless</strong>: queries the information about a baseline check policy for agentless detection.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>agentless</p>
      */
     @NameInMap("Source")
     public String source;
 
     /**
      * <p>The ID of the baseline check policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8037</p>
      */
     @NameInMap("StrategyId")
     public Long strategyId;

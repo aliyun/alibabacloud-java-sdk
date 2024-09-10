@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class GetImageEventOperationRequest extends TeaModel {
     /**
      * <p>The primary key of the alert handling rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>814163</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;

@@ -6,88 +6,126 @@ import com.aliyun.tea.*;
 public class ListCheckItemWarningMachineRequest extends TeaModel {
     /**
      * <p>The ID of the check item.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8</p>
      */
     @NameInMap("CheckId")
     public Long checkId;
 
     /**
      * <p>The name of the field that is used to query containers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>clusterId</p>
      */
     @NameInMap("ContainerFieldName")
     public String containerFieldName;
 
     /**
      * <p>The value of the field that is used to query containers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ce89cdd0ea732472a8703821b19e****</p>
      */
     @NameInMap("ContainerFieldValue")
     public String containerFieldValue;
 
     /**
-     * <p>The number of the page to return. Pages start from page **1**. Default value: **1**.</p>
+     * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The ID of the asset group.</p>
-     * <br>
-     * <p>> You can call the [DescribeAllGroups](https://help.aliyun.com/document_detail/130972.html) operation to query the ID of the asset group.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/130972.html">DescribeAllGroups</a> operation to query the ID of the asset group.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1161****</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
-     * <br>
-     * <p>> We recommend that you do not leave this parameter empty.</p>
+     * <blockquote>
+     * <p>We recommend that you do not leave this parameter empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The keyword that is used to query servers in fuzzy match mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>225</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
      * <p>The type of the check item.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cis</p>
      */
     @NameInMap("RiskType")
     public String riskType;
 
     /**
      * <p>The data source. Default value: default. Valid values:</p>
-     * <br>
-     * <p>*   **default**: The check items of baselines for hosts.</p>
-     * <p>*   **agentless**: The check items of baselines for agentless detection.</p>
+     * <ul>
+     * <li><strong>default</strong>: The check items of baselines for hosts.</li>
+     * <li><strong>agentless</strong>: The check items of baselines for agentless detection.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>agentless</p>
      */
     @NameInMap("Source")
     public String source;
 
     /**
      * <p>The status of the check item. Valid values:</p>
-     * <br>
-     * <p>*   1: failed</p>
-     * <br>
-     * <p>*   2: verifying</p>
-     * <br>
-     * <p>*   3: passed</p>
-     * <br>
-     * <p>*   6: ignored</p>
-     * <br>
-     * <p>*   7: fixing</p>
+     * <ul>
+     * <li><p>1: failed</p>
+     * </li>
+     * <li><p>2: verifying</p>
+     * </li>
+     * <li><p>3: passed</p>
+     * </li>
+     * <li><p>6: ignored</p>
+     * </li>
+     * <li><p>7: fixing</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("Status")
     public Integer status;

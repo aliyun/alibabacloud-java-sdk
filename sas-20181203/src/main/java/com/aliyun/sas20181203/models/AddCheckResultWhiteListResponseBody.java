@@ -12,9 +12,15 @@ public class AddCheckResultWhiteListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C699E4E4-F2F4-58FC-A949-457FFE59****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("RuleIds")
+    public java.util.List<Long> ruleIds;
 
     public static AddCheckResultWhiteListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddCheckResultWhiteListResponseBody self = new AddCheckResultWhiteListResponseBody();
@@ -35,6 +41,14 @@ public class AddCheckResultWhiteListResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public AddCheckResultWhiteListResponseBody setRuleIds(java.util.List<Long> ruleIds) {
+        this.ruleIds = ruleIds;
+        return this;
+    }
+    public java.util.List<Long> getRuleIds() {
+        return this.ruleIds;
     }
 
 }

@@ -12,6 +12,9 @@ public class ListOssBucketResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3956048F-9D73-5EDB-834B-4827BB48****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,47 +43,68 @@ public class ListOssBucketResponseBody extends TeaModel {
     public static class ListOssBucketResponseBodyData extends TeaModel {
         /**
          * <p>The name of the bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iboxpublic****</p>
          */
         @NameInMap("BucketName")
         public String bucketName;
 
         /**
          * <p>The reason why the bucket cannot be checked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unsupported Region.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The storage class of the bucket. Valid values:</p>
-         * <br>
-         * <p>*   Standard (default)</p>
-         * <p>*   IA</p>
-         * <p>*   Archive</p>
-         * <p>*   ColdArchive</p>
+         * <ul>
+         * <li>Standard (default)</li>
+         * <li>IA</li>
+         * <li>Archive</li>
+         * <li>ColdArchive</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         @NameInMap("StorageClass")
         public String storageClass;
 
         /**
          * <p>Indicates whether the bucket can be checked. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Support")
         public Boolean support;
 
         /**
          * <p>Whether to support config. Valid values:</p>
-         * <br>
-         * <p>* true</p>
-         * <p>* false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("SupportConfig")
         public String supportConfig;

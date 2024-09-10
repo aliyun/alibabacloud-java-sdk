@@ -6,18 +6,25 @@ import com.aliyun.tea.*;
 public class GetLogMetaRequest extends TeaModel {
     /**
      * <p>The name of the dedicated Logstore in which logs are stored.</p>
-     * <br>
-     * <p>>  You can call the [DescribeLogMeta](~~DescribeLogMeta~~) operation to query the name of the Logstore.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeLogMeta~~">DescribeLogMeta</a> operation to query the name of the Logstore.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aegis-log-login</p>
      */
     @NameInMap("LogStore")
     public String logStore;
 
     /**
      * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
-     * <br>
-     * <p>>  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>127608589417****</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;

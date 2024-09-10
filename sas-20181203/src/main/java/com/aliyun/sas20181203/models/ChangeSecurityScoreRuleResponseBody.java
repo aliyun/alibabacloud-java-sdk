@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ChangeSecurityScoreRuleResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23AD0BD2-8771-5647-819E-6BA51E21****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,11 +6,15 @@ import com.aliyun.tea.*;
 public class ListPrivateRegistryListRequest extends TeaModel {
     /**
      * <p>The type of the image repository. Valid values:</p>
-     * <br>
-     * <p>*   **acr**: Container Registry</p>
-     * <p>*   **harbor**: Harbor</p>
-     * <p>*   **quay**: Quay</p>
-     * <p>*   **CI/CD**: Jenkins</p>
+     * <ul>
+     * <li><strong>acr</strong>: Container Registry</li>
+     * <li><strong>harbor</strong>: Harbor</li>
+     * <li><strong>quay</strong>: Quay</li>
+     * <li><strong>CI/CD</strong>: Jenkins</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>harbor</p>
      */
     @NameInMap("RegistryType")
     public String registryType;

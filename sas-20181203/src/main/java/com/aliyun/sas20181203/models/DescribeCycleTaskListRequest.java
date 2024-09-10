@@ -6,34 +6,47 @@ import com.aliyun.tea.*;
 public class DescribeCycleTaskListRequest extends TeaModel {
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The name of the task. Valid values:</p>
-     * <br>
-     * <p>*   **VIRUS_VUL_SCHEDULE_SCAN**: virus scan task</p>
-     * <p>*   **IMAGE_SCAN**: image scan task</p>
-     * <p>*   **EMG_VUL_SCHEDULE_SCAN**: urgent vulnerability scan task</p>
+     * <ul>
+     * <li><strong>VIRUS_VUL_SCHEDULE_SCAN</strong>: virus scan task</li>
+     * <li><strong>IMAGE_SCAN</strong>: image scan task</li>
+     * <li><strong>EMG_VUL_SCHEDULE_SCAN</strong>: urgent vulnerability scan task</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>IMAGE_SCAN</p>
      */
     @NameInMap("TaskName")
     public String taskName;
 
     /**
      * <p>The type of the task. Valid values:</p>
-     * <br>
-     * <p>*   **VIRUS_VUL_SCHEDULE_SCAN**: virus scan task</p>
-     * <p>*   **IMAGE_SCAN**: image scan task</p>
-     * <p>*   **EMG_VUL_SCHEDULE_SCAN**: urgent vulnerability scan task</p>
-     * <br>
+     * <ul>
+     * <li><strong>VIRUS_VUL_SCHEDULE_SCAN</strong>: virus scan task</li>
+     * <li><strong>IMAGE_SCAN</strong>: image scan task</li>
+     * <li><strong>EMG_VUL_SCHEDULE_SCAN</strong>: urgent vulnerability scan task</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IMAGE_SCAN</p>
      */
     @NameInMap("TaskType")
     public String taskType;

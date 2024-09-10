@@ -18,6 +18,9 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F9146867-16C8-4AAB-BB4FB8C2A4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +57,36 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
     public static class DescribePropertyScaDetailResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page. Default value: **10**.</p>
+         * <p>The number of entries returned per page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -118,198 +133,290 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
     public static class DescribePropertyScaDetailResponseBodyPropertys extends TeaModel {
         /**
          * <p>The type of the middleware, database, or web service. Valid values:</p>
-         * <br>
-         * <p>*   **system_service**: system service</p>
-         * <p>*   **software_library**: software library</p>
-         * <p>*   **docker_component**: container component</p>
-         * <p>*   **database**: database</p>
-         * <p>*   **web_container**: web container</p>
-         * <p>*   **jar**: JAR package</p>
-         * <p>*   **web_framework**: web framework</p>
+         * <ul>
+         * <li><strong>system_service</strong>: system service</li>
+         * <li><strong>software_library</strong>: software library</li>
+         * <li><strong>docker_component</strong>: container component</li>
+         * <li><strong>database</strong>: database</li>
+         * <li><strong>web_container</strong>: web container</li>
+         * <li><strong>jar</strong>: JAR package</li>
+         * <li><strong>web_framework</strong>: web framework</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>software_library</p>
          */
         @NameInMap("BizType")
         public String bizType;
 
         /**
          * <p>The display name of the type of the middleware, database, or web service . Valid values:</p>
-         * <br>
-         * <p>*   System service</p>
-         * <p>*   Software library</p>
-         * <p>*   Container component</p>
-         * <p>*   Database</p>
-         * <p>*   Web container</p>
-         * <p>*   JAR package</p>
-         * <p>*   Web framework</p>
+         * <ul>
+         * <li>System service</li>
+         * <li>Software library</li>
+         * <li>Container component</li>
+         * <li>Database</li>
+         * <li>Web container</li>
+         * <li>JAR package</li>
+         * <li>Web framework</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>System Service</p>
          */
         @NameInMap("BizTypeDispaly")
         public String bizTypeDispaly;
 
         /**
          * <p>The command line of the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/sbin/dhclient -H iz2zeflhhbtk8gtxzt087az -1 -q -lf /var/lib/dhclient/dhclient--eth0.lease -pf /var/run/dhclient-eth0.pid eth0</p>
          */
         @NameInMap("Cmdline")
         public String cmdline;
 
         /**
          * <p>The path to the configuration file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/etc/my.cnf</p>
          */
         @NameInMap("ConfigPath")
         public String configPath;
 
         /**
          * <p>The name of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5-rce_web_1</p>
          */
         @NameInMap("ContainerName")
         public String containerName;
 
         /**
          * <p>The latest collection timestamp, which indicates the last timestamp when Security Center collected the information about the middleware, database, or web service. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1597987834000</p>
          */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
         /**
          * <p>The name of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry-vpc.cn-beijing.aliyuncs.com/acs/aliyun-ingress-controller****</p>
          */
         @NameInMap("ImageName")
         public String imageName;
 
         /**
          * <p>The ID of the server on which the middleware, database, or web service is run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-2zeclqj7ti****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the server on which the middleware, database, or web service is run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test01</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The public IP address of the server on which the middleware, database, or web service is run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.42.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address of the server on which the middleware, database, or web service is run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.210.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>The public IP address of the server on which the middleware, database, or web service is run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.42.XX.XX</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The IP address that the process monitors.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.XX.XX</p>
          */
         @NameInMap("ListenIp")
         public String listenIp;
 
         /**
          * <p>The protocol of the traffic on which the process listens. Valid values:</p>
-         * <br>
-         * <p>*   **UDP**</p>
-         * <p>*   **TCP**</p>
+         * <ul>
+         * <li><strong>UDP</strong></li>
+         * <li><strong>TCP</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UDP</p>
          */
         @NameInMap("ListenProtocol")
         public String listenProtocol;
 
         /**
          * <p>The listening status of the process. Valid values:</p>
-         * <br>
-         * <p>*   **NONE**: not listening</p>
-         * <p>*   **LISTEN**: listening</p>
+         * <ul>
+         * <li><strong>NONE</strong>: not listening</li>
+         * <li><strong>LISTEN</strong>: listening</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NONE</p>
          */
         @NameInMap("ListenStatus")
         public String listenStatus;
 
         /**
          * <p>The name of the middleware, database, or web service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>openssl</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The path of the middleware, database, or web service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/lib64/libssl.so.1.0.2k</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
          * <p>The PID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>756</p>
          */
         @NameInMap("Pid")
         public String pid;
 
         /**
          * <p>The name of the Kubernetes pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myapp-pod</p>
          */
         @NameInMap("PodName")
         public String podName;
 
         /**
          * <p>The port of the middleware, database, or web service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
          * <p>The ID of the parent process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Ppid")
         public String ppid;
 
         /**
          * <p>The timestamp when the process starts. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1596539788</p>
          */
         @NameInMap("ProcessStarted")
         public Long processStarted;
 
         /**
          * <p>The name of the user who runs the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         @NameInMap("ProcessUser")
         public String processUser;
 
         /**
          * <p>The version verification information about the middleware, database, or web service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/lib64/libssl.so.1.0.2k</p>
          */
         @NameInMap("Proof")
         public String proof;
 
         /**
          * <p>The version of the runtime environment.</p>
-         * <br>
-         * <p>>  The value of this parameter can be the Java Development Kit (JDK) version of the runtime environment for a Java process.</p>
+         * <blockquote>
+         * <p> The value of this parameter can be the Java Development Kit (JDK) version of the runtime environment for a Java process.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1.8.0_144</p>
          */
         @NameInMap("RuntimeEnvVersion")
         public String runtimeEnvVersion;
 
         /**
          * <p>The type of the middleware, database, or web service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>library</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The UUID of the server on which the middleware, database, or web service is run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>uuid-02ebabe7-1c19-a****</p>
          */
         @NameInMap("Uuid")
         public String uuid;
 
         /**
          * <p>The version of the middleware, database, or web service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.2k</p>
          */
         @NameInMap("Version")
         public String version;
 
         /**
          * <p>The web directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/share/nginx/html</p>
          */
         @NameInMap("WebPath")
         public String webPath;

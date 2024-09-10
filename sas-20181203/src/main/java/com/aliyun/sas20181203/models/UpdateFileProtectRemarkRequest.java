@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateFileProtectRemarkRequest extends TeaModel {
     /**
      * <p>The ID of the event.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1764</p>
      */
     @NameInMap("Id")
     public Long id;

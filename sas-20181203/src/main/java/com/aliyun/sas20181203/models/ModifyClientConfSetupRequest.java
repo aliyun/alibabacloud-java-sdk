@@ -6,29 +6,40 @@ import com.aliyun.tea.*;
 public class ModifyClientConfSetupRequest extends TeaModel {
     /**
      * <p>The configurations of the Security Center agent.</p>
-     * <br>
-     * <p>*   cpu: the maximum CPU utilization that can be occupied by the Security Center agent on the server</p>
-     * <p>*   mem: the maximum memory usage that can be occupied by the Security Center agent on the server</p>
+     * <ul>
+     * <li>cpu: the maximum CPU utilization that can be occupied by the Security Center agent on the server</li>
+     * <li>mem: the maximum memory usage that can be occupied by the Security Center agent on the server</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *       &quot;cpu&quot;: &quot;20&quot;
+     * }</p>
      */
     @NameInMap("StrategyConfig")
     public String strategyConfig;
 
     /**
      * <p>The type of the tag.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>machineResource</p>
      */
     @NameInMap("StrategyTag")
     public String strategyTag;
 
     /**
      * <p>The value of the tag. Valid values:</p>
-     * <br>
-     * <p>*   major</p>
-     * <p>*   advanced</p>
-     * <p>*   basic</p>
-     * <br>
+     * <ul>
+     * <li>major</li>
+     * <li>advanced</li>
+     * <li>basic</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>major</p>
      */
     @NameInMap("StrategyTagValue")
     public String strategyTagValue;

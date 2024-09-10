@@ -12,6 +12,9 @@ public class GetImageScanNumInPeriodResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7E0618A9-D5EF-4220-9471-C42B5E92****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class GetImageScanNumInPeriodResponseBody extends TeaModel {
     public static class GetImageScanNumInPeriodResponseBodyImageScanData extends TeaModel {
         /**
          * <p>The number of image scans.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150</p>
          */
         @NameInMap("ImageScanCount")
         public Integer imageScanCount;

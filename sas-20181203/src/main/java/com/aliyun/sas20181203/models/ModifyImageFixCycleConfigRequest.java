@@ -6,30 +6,44 @@ import com.aliyun.tea.*;
 public class ModifyImageFixCycleConfigRequest extends TeaModel {
     /**
      * <p>The cycle of the scheduled fix. Unit: day.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
      */
     @NameInMap("ImageFixCycle")
     public Integer imageFixCycle;
 
     /**
      * <p>Specifies whether to enable the schedule image fix.</p>
-     * <br>
-     * <p>*   **on**: enable</p>
-     * <p>*   **off**: disable</p>
+     * <ul>
+     * <li><strong>on</strong>: enable</li>
+     * <li><strong>off</strong>: disable</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
      */
     @NameInMap("ImageFixSwitch")
     public String imageFixSwitch;
 
     /**
      * <p>The range of the scheduled fix. The value of this parameter is in the JSON format and contains the following fields:</p>
-     * <br>
-     * <p>*   **type**: The type of the image. The value is fixed to repo.</p>
-     * <p>*   **target**: The content of the image. The value is in the format of Namespace/Image repository.</p>
+     * <ul>
+     * <li><strong>type</strong>: The type of the image. The value is fixed to repo.</li>
+     * <li><strong>target</strong>: The content of the image. The value is in the format of Namespace/Image repository.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;type\&quot;:\&quot;repo\&quot;,\&quot;target\&quot;:[\&quot;cdp-uat/zentao\&quot;,\&quot;qa-dac/yyuan9\&quot;,\&quot;cafdms-qa/xxl-job-admin\&quot;]}</p>
      */
     @NameInMap("ImageFixTarget")
     public String imageFixTarget;
 
     /**
      * <p>The time range during which the image was modified. Unit: day.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("ImageTimeRange")
     public Integer imageTimeRange;

@@ -6,59 +6,75 @@ import com.aliyun.tea.*;
 public class RefreshAssetsRequest extends TeaModel {
     /**
      * <p>The type of the asset that you want to synchronize. Valid values:</p>
-     * <br>
-     * <p>*   **cloud_product**: Alibaba Cloud service</p>
-     * <p>*   **ecs**: Elastic Compute Service (ECS) instance</p>
-     * <p>*   **container_image**: container image</p>
+     * <ul>
+     * <li><strong>cloud_product</strong>: Alibaba Cloud service</li>
+     * <li><strong>ecs</strong>: Elastic Compute Service (ECS) instance</li>
+     * <li><strong>container_image</strong>: container image</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cloud_product</p>
      */
     @NameInMap("AssetType")
     public String assetType;
 
     /**
      * <p>The subtype of the cloud service.</p>
-     * <br>
-     * <p>>  The following list describes the subtypes of cloud services.</p>
+     * <blockquote>
+     * <p> The following list describes the subtypes of cloud services.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("CloudAssetSubType")
     public Integer cloudAssetSubType;
 
     /**
      * <p>The type of the cloud service. Valid values:</p>
-     * <br>
-     * <p>*   **0**: ECS</p>
-     * <p>*   **1**: Server Load Balancer (SLB)</p>
-     * <p>*   **3**: ApsaraDB RDS</p>
-     * <p>*   **4**: ApsaraDB for MongoDB (MongoDB)</p>
-     * <p>*   **5**: ApsaraDB for Redis (Redis)</p>
-     * <p>*   **6**: Container Registry</p>
-     * <p>*   **8**: Container Service for Kubernetes (ACK)</p>
-     * <p>*   **9**: Virtual Private Cloud (VPC)</p>
-     * <p>*   **11**: ActionTrail</p>
-     * <p>*   **12**: Alibaba Cloud CDN (CDN)</p>
-     * <p>*   **13**: Certificate Management Service (formerly SSL Certificates Service)</p>
-     * <p>*   **14**: Apsara Devops</p>
-     * <p>*   **15**: Resource Access Management (RAM)</p>
-     * <p>*   **16**: Anti-DDoS</p>
-     * <p>*   **17**: Web Application Firewall (WAF)</p>
-     * <p>*   **18**: Object Storage Service (OSS)</p>
-     * <p>*   **19**: PolarDB</p>
-     * <p>*   **20**: ApsaraDB RDS for PostgreSQL</p>
-     * <p>*   **21**: Microservices Engine (MSE)</p>
-     * <p>*   **22**: Apsara File Storage NAS (NAS)</p>
-     * <p>*   **23**: Data Security Center (DSC)</p>
-     * <p>*   **24**: Elastic IP Address (EIP)</p>
+     * <ul>
+     * <li><strong>0</strong>: ECS</li>
+     * <li><strong>1</strong>: Server Load Balancer (SLB)</li>
+     * <li><strong>3</strong>: ApsaraDB RDS</li>
+     * <li><strong>4</strong>: ApsaraDB for MongoDB (MongoDB)</li>
+     * <li><strong>5</strong>: ApsaraDB for Redis (Redis)</li>
+     * <li><strong>6</strong>: Container Registry</li>
+     * <li><strong>8</strong>: Container Service for Kubernetes (ACK)</li>
+     * <li><strong>9</strong>: Virtual Private Cloud (VPC)</li>
+     * <li><strong>11</strong>: ActionTrail</li>
+     * <li><strong>12</strong>: Alibaba Cloud CDN (CDN)</li>
+     * <li><strong>13</strong>: Certificate Management Service (formerly SSL Certificates Service)</li>
+     * <li><strong>14</strong>: Apsara Devops</li>
+     * <li><strong>15</strong>: Resource Access Management (RAM)</li>
+     * <li><strong>16</strong>: Anti-DDoS</li>
+     * <li><strong>17</strong>: Web Application Firewall (WAF)</li>
+     * <li><strong>18</strong>: Object Storage Service (OSS)</li>
+     * <li><strong>19</strong>: PolarDB</li>
+     * <li><strong>20</strong>: ApsaraDB RDS for PostgreSQL</li>
+     * <li><strong>21</strong>: Microservices Engine (MSE)</li>
+     * <li><strong>22</strong>: Apsara File Storage NAS (NAS)</li>
+     * <li><strong>23</strong>: Data Security Center (DSC)</li>
+     * <li><strong>24</strong>: Elastic IP Address (EIP)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("CloudAssetType")
     public Integer cloudAssetType;
 
     /**
      * <p>The type of the server. Valid values:</p>
-     * <br>
-     * <p>*   **0**: an asset provided by Alibaba Cloud</p>
-     * <p>*   **1**: a third-party cloud asset</p>
-     * <p>*   **2**: an asset in a data center</p>
-     * <p>*   **3**, **4**, **5**, and **7**: an asset provided by another cloud</p>
-     * <p>*   **8**: a lightweight asset</p>
+     * <ul>
+     * <li><strong>0</strong>: an asset provided by Alibaba Cloud</li>
+     * <li><strong>1</strong>: a third-party cloud asset</li>
+     * <li><strong>2</strong>: an asset in a data center</li>
+     * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: an asset provided by another cloud</li>
+     * <li><strong>8</strong>: a lightweight asset</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Vendor")
     public Integer vendor;

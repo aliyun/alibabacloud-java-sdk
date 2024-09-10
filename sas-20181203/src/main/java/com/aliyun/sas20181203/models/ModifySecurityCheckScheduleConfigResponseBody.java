@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifySecurityCheckScheduleConfigResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>02287C0D-8DA9-5766-B51A-A63192BD3E80</p>
      */
     @NameInMap("RequestId")
     public String requestId;

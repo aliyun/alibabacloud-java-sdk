@@ -12,12 +12,18 @@ public class DescribeVulListPageResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4347E985-6E64-467B-96EC-30D4EA9E32FB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -54,54 +60,80 @@ public class DescribeVulListPageResponseBody extends TeaModel {
     public static class DescribeVulListPageResponseBodyData extends TeaModel {
         /**
          * <p>The common vulnerabilities and exposures (CVE) ID of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CVE-2022-42836</p>
          */
         @NameInMap("CveId")
         public String cveId;
 
         /**
          * <p>The extended field for Server Guard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;relatedType\&quot;:[{\&quot;type\&quot;:\&quot;sys\&quot;}]}</p>
          */
         @NameInMap("ExtAegis")
         public String extAegis;
 
         /**
          * <p>The primary key ID of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40586</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>Indicates whether the vulnerability was detected based on version comparison. Valid values:</p>
-         * <br>
-         * <p>*   1: The vulnerability was detected based on version comparison.</p>
-         * <p>*   0: The vulnerability was not detected based on version comparison.</p>
+         * <ul>
+         * <li>1: The vulnerability was detected based on version comparison.</li>
+         * <li>0: The vulnerability was not detected based on version comparison.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("IsAegis")
         public Integer isAegis;
 
         /**
          * <p>Indicates whether the vulnerability was detected based on proof of concept (POC) verification. Valid values:</p>
-         * <br>
-         * <p>*   1: The vulnerability was detected based on POC verification.</p>
-         * <p>*   0: The vulnerability was not detected based on POC verification.</p>
+         * <ul>
+         * <li>1: The vulnerability was detected based on POC verification.</li>
+         * <li>0: The vulnerability was not detected based on POC verification.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("IsSas")
         public Integer isSas;
 
         /**
          * <p>The ID of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AVD-2018-8218</p>
          */
         @NameInMap("OtherId")
         public String otherId;
 
         /**
          * <p>The time when the vulnerability was disclosed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-13T08:00Z</p>
          */
         @NameInMap("ReleaseTime")
         public Long releaseTime;
 
         /**
          * <p>The name of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Windows RCE vulnerability</p>
          */
         @NameInMap("Title")
         public String title;

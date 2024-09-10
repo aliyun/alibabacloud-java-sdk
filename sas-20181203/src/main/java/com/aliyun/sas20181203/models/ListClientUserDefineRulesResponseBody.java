@@ -12,6 +12,9 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A4EB8B1C-1DEC-5E18-BCD0-D1BBB393***</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,18 +57,27 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
     public static class ListClientUserDefineRulesResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -104,51 +116,72 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
     public static class ListClientUserDefineRulesResponseBodyUserDefineRuleList extends TeaModel {
         /**
          * <p>The action of the rule. Valid values:</p>
-         * <br>
-         * <p>*   **0**: allow</p>
-         * <p>*   **1**: block</p>
+         * <ul>
+         * <li><strong>0</strong>: allow</li>
+         * <li><strong>1</strong>: block</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ActionType")
         public Integer actionType;
 
         /**
          * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200****</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Rule\<em>\</em>\<em>\</em></p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The type of the operating system. Valid values:</p>
-         * <br>
-         * <p>*   **windows**: Windows</p>
-         * <p>*   **linux**: Linux</p>
-         * <p>*   **all**: all types</p>
+         * <ul>
+         * <li><strong>windows</strong>: Windows</li>
+         * <li><strong>linux</strong>: Linux</li>
+         * <li><strong>all</strong>: all types</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>linux</p>
          */
         @NameInMap("Platform")
         public String platform;
 
         /**
          * <p>The switch ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USER-DEFINE-RULE-SWITCH-TYPE_200****</p>
          */
         @NameInMap("SwitchId")
         public String switchId;
 
         /**
          * <p>The type of the rule. Valid values:</p>
-         * <br>
-         * <p>*   **1**: Process hash</p>
-         * <p>*   **2**: Command line</p>
-         * <p>*   **3**: Process Network</p>
-         * <p>*   **4**: File Read and Write</p>
-         * <p>*   **5**: Operation on Registry</p>
-         * <p>*   **6**: Dynamic-link Library Loading</p>
-         * <p>*   **7**: File Renaming</p>
+         * <ul>
+         * <li><strong>1</strong>: Process hash</li>
+         * <li><strong>2</strong>: Command line</li>
+         * <li><strong>3</strong>: Process Network</li>
+         * <li><strong>4</strong>: File Read and Write</li>
+         * <li><strong>5</strong>: Operation on Registry</li>
+         * <li><strong>6</strong>: Dynamic-link Library Loading</li>
+         * <li><strong>7</strong>: File Renaming</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Type")
         public Integer type;

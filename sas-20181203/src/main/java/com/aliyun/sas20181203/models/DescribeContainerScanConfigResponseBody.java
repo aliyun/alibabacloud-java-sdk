@@ -12,12 +12,18 @@ public class DescribeContainerScanConfigResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>69BFFCDE-37D6-5A49-A8BC-BB03AC83****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,30 +60,45 @@ public class DescribeContainerScanConfigResponseBody extends TeaModel {
     public static class DescribeContainerScanConfigResponseBodyData extends TeaModel {
         /**
          * <p>The total number of container applications in the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("AllCount")
         public Integer allCount;
 
         /**
          * <p>The names of the container applications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[\&quot;alicloud-monitor-controller\&quot;]</p>
          */
         @NameInMap("AppNames")
         public String appNames;
 
         /**
          * <p>The number of selected container applications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("ChooseCount")
         public Integer chooseCount;
 
         /**
          * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c8ca91e0907d94efaba7fb0827eb9****</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hhht-cluster-02</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;

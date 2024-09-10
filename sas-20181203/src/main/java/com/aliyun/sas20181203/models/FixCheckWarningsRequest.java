@@ -6,49 +6,66 @@ import com.aliyun.tea.*;
 public class FixCheckWarningsRequest extends TeaModel {
     /**
      * <p>The parameters for the baseline risk item that you want to fix.</p>
-     * <br>
-     * <p>*   **checkId**: the ID of the check item that corresponds to the baseline risk item.</p>
-     * <br>
-     * <p>*   **rules**: an array that consists of the rules applied to fixes.</p>
-     * <br>
-     * <p>    *   **value**: specifies whether a fix method is selected. Valid values: **0** and **1**. The value 0 indicates that no fix method is selected and the value 1 indicates that a fix method is selected.</p>
-     * <p>    *   **ruleId**: the ID of the fix method.</p>
-     * <p>    *   **paramList**: an array that consists of the details about the fix method.\\</p>
-     * <p>        • **paramName**: the name of the fix method.\\</p>
-     * <p>        • **value**: the value of the fix method.</p>
-     * <br>
+     * <ul>
+     * <li><p><strong>checkId</strong>: the ID of the check item that corresponds to the baseline risk item.</p>
+     * </li>
+     * <li><p><strong>rules</strong>: an array that consists of the rules applied to fixes.</p>
+     * <ul>
+     * <li><strong>value</strong>: specifies whether a fix method is selected. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that no fix method is selected and the value 1 indicates that a fix method is selected.</li>
+     * <li><strong>ruleId</strong>: the ID of the fix method.</li>
+     * <li><strong>paramList</strong>: an array that consists of the details about the fix method.\
+     * • <strong>paramName</strong>: the name of the fix method.\
+     * • <strong>value</strong>: the value of the fix method.</li>
+     * </ul>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;checkId&quot;:8,&quot;rules&quot;:[{&quot;ruleId&quot;:&quot;rule.ssh_Idle.interval&quot;,&quot;value&quot;:1,&quot;paramList&quot;:[{&quot;paramName&quot;:&quot;range_val&quot;,&quot;value&quot;:&quot;600&quot;},{&quot;paramName&quot;:&quot;range_val&quot;,&quot;value&quot;:&quot;600&quot;}]},{&quot;ruleId&quot;:&quot;rule.ssh_Idle.count&quot;,&quot;value&quot;:1,&quot;paramList&quot;:[{&quot;paramName&quot;:&quot;range_val&quot;,&quot;value&quot;:&quot;3&quot;}]}]}]</p>
      */
     @NameInMap("CheckParams")
     public String checkParams;
 
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The ID of the baseline risk item.</p>
-     * <br>
-     * <p>>  To query specified baseline risk items and the check items of a specified server, you must provide the IDs of the baseline risk items. You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs.</p>
+     * <blockquote>
+     * <p> To query specified baseline risk items and the check items of a specified server, you must provide the IDs of the baseline risk items. You can call the <a href="~~DescribeCheckWarningSummary~~">DescribeCheckWarningSummary</a> operation to query the IDs.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>10354</p>
      */
     @NameInMap("RiskId")
     public Long riskId;
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>165.225.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;
 
     /**
-     * <p>The UUID of the asset for which you want to fix the baseline risk item. You can call the [DescribeWarningMachines](~~DescribeWarningMachines~~) operation to query the UUIDs of assets.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The UUID of the asset for which you want to fix the baseline risk item. You can call the <a href="~~DescribeWarningMachines~~">DescribeWarningMachines</a> operation to query the UUIDs of assets.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>75a417dda5f25edb5bed8f208a9a****,c7e10fd794262a1510d5648f9e5d****</p>
      */
     @NameInMap("Uuids")
     public String uuids;

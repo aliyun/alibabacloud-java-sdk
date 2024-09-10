@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class CreateOpaClusterPluginRequest extends TeaModel {
     /**
      * <p>The cluster IDs.</p>
-     * <br>
-     * <p>>  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterIds")

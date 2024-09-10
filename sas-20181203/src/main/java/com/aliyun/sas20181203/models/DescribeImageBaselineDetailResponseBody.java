@@ -12,6 +12,9 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0B48AB3C-84FC-424D-A01D-B9270EF4****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,58 +43,86 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
     public static class DescribeImageBaselineDetailResponseBodyBaselineDetail extends TeaModel {
         /**
          * <p>The suggestion for the management of the risk item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Delete the leaked AccessKey pairs.</p>
          */
         @NameInMap("Advice")
         public String advice;
 
         /**
          * <p>The alias of the baseline type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ak_leak</p>
          */
         @NameInMap("BaselineClassAlias")
         public String baselineClassAlias;
 
         /**
          * <p>The alias of the baseline check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AccessKey pair leak</p>
          */
         @NameInMap("BaselineItemAlias")
         public String baselineItemAlias;
 
         /**
          * <p>The key of the baseline check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ak_leak</p>
          */
         @NameInMap("BaselineItemKey")
         public String baselineItemKey;
 
         /**
          * <p>The alias of the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AccessKey pair leak</p>
          */
         @NameInMap("BaselineNameAlias")
         public String baselineNameAlias;
 
         /**
          * <p>The description of the risk item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>If an AccessKey pair is leaked, the AccessKey pair may be fraudulently used.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The risk level of the baseline check item. Valid values:</p>
-         * <br>
-         * <p>*   **high**</p>
-         * <p>*   **medium**</p>
-         * <p>*   **low**</p>
+         * <ul>
+         * <li><strong>high</strong></li>
+         * <li><strong>medium</strong></li>
+         * <li><strong>low</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
          */
         @NameInMap("Level")
         public String level;
 
         /**
          * <p>The issue that is detected by using the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/aksk.txt:LTAI4GBEG5zaqX**********</p>
          */
         @NameInMap("Prompt")
         public String prompt;
 
         /**
          * <p>The ID of the asynchronous request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>async__c6f3b0b54613383b40bdce593ffe****</p>
          */
         @NameInMap("ResultId")
         public String resultId;

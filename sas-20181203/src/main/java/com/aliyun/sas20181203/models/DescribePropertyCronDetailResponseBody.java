@@ -18,6 +18,9 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B0C4E12E-CCE1-109D-9E62-7B95CBBAEF8C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +57,36 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
     public static class DescribePropertyCronDetailResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page. Default value: **10**.</p>
+         * <p>The number of entries returned per page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -118,48 +133,72 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
     public static class DescribePropertyCronDetailResponseBodyPropertys extends TeaModel {
         /**
          * <p>The command that is used to run the scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/lib64/sa/sa1 1 1</p>
          */
         @NameInMap("Cmd")
         public String cmd;
 
         /**
          * <p>The timestamp of the last fingerprint collection. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649149566000</p>
          */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
         /**
          * <p>The ID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-hp35tftuh52wbp1g****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hc-host-****</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The public IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.104.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>The IP addresses of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The MD5 hash value of the path to the scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4cc8f97c2bf9cbabb2c2be2erqw****</p>
          */
         @NameInMap("Md5")
         public String md5;
@@ -172,18 +211,27 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
 
         /**
          * <p>The path to the scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/etc/cron.d/root</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
          * <p>The username of the account that runs the scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         @NameInMap("User")
         public String user;
 
         /**
          * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>162eb349-c2d9-4f8b-805c-75b43d4c****</p>
          */
         @NameInMap("Uuid")
         public String uuid;

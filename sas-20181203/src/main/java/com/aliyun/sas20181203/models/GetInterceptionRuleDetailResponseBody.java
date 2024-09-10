@@ -12,6 +12,9 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9FBC6E47-7508-xxx</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
     public static class GetInterceptionRuleDetailResponseBodyInterceptionRuleDetailDstTarget extends TeaModel {
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>console</p>
          */
         @NameInMap("AppName")
         public String appName;
@@ -52,6 +58,9 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
 
         /**
          * <p>The namespace to which the network object belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kube-system</p>
          */
         @NameInMap("Namespace")
         public String namespace;
@@ -64,6 +73,9 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
 
         /**
          * <p>The type of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customize</p>
          */
         @NameInMap("RuleType")
         public String ruleType;
@@ -76,18 +88,27 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the network object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200014</p>
          */
         @NameInMap("TargetId")
         public Integer targetId;
 
         /**
          * <p>The name of the object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo4-be1</p>
          */
         @NameInMap("TargetName")
         public String targetName;
 
         /**
          * <p>The type of the network object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IMAGE</p>
          */
         @NameInMap("TargetType")
         public String targetType;
@@ -174,6 +195,9 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
     public static class GetInterceptionRuleDetailResponseBodyInterceptionRuleDetailSrcTarget extends TeaModel {
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>console</p>
          */
         @NameInMap("AppName")
         public String appName;
@@ -186,12 +210,18 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
 
         /**
          * <p>The namespace to which the network object belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The type of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customize</p>
          */
         @NameInMap("RuleType")
         public String ruleType;
@@ -204,18 +234,27 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the network object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300635</p>
          */
         @NameInMap("TargetId")
         public Integer targetId;
 
         /**
          * <p>The name of the object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dmz</p>
          */
         @NameInMap("TargetName")
         public String targetName;
 
         /**
          * <p>The type of the network object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IMAGE</p>
          */
         @NameInMap("TargetType")
         public String targetType;
@@ -300,47 +339,68 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
 
         /**
          * <p>The interception mode. Valid values:</p>
-         * <br>
-         * <p>*   **0**: monitor</p>
-         * <p>*   **1**: block</p>
-         * <p>*   **2**: alert</p>
-         * <p>*   **3**: allow</p>
+         * <ul>
+         * <li><strong>0</strong>: monitor</li>
+         * <li><strong>1</strong>: block</li>
+         * <li><strong>2</strong>: alert</li>
+         * <li><strong>3</strong>: allow</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("InterceptType")
         public Long interceptType;
 
         /**
          * <p>The priority of the rule. Valid values: 1 to 1000. A smaller value indicates a higher priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("OrderIndex")
         public Long orderIndex;
 
         /**
          * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>467</p>
          */
         @NameInMap("RuleId")
         public Long ruleId;
 
         /**
          * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dmz-frontend-accept</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
          * <p>The status of the defense rule. Valid values:</p>
-         * <br>
-         * <p>*   **1**: The rule is enabled.</p>
-         * <p>*   **0**: The rule is disabled.</p>
+         * <ul>
+         * <li><strong>1</strong>: The rule is enabled.</li>
+         * <li><strong>0</strong>: The rule is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RuleSwitch")
         public Integer ruleSwitch;
 
         /**
          * <p>The type of the rule. Valid values:</p>
-         * <br>
-         * <p>*   **suggest**: a suggestion rule</p>
-         * <p>*   **customize**: a custom rule</p>
+         * <ul>
+         * <li><strong>suggest</strong>: a suggestion rule</li>
+         * <li><strong>customize</strong>: a custom rule</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>customize</p>
          */
         @NameInMap("RuleType")
         public String ruleType;

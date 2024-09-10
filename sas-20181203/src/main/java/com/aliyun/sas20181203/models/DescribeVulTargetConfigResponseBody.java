@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeVulTargetConfigResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9FBC6E47-7508-58C9-9E76-528E118CB1CC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,6 +21,9 @@ public class DescribeVulTargetConfigResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -54,29 +60,41 @@ public class DescribeVulTargetConfigResponseBody extends TeaModel {
     public static class DescribeVulTargetConfigResponseBodyTargetConfigs extends TeaModel {
         /**
          * <p>Indicates whether the vulnerability scan feature is enabled for the server.</p>
-         * <br>
-         * <p>*   **off**: disabled</p>
-         * <p>*   **on**: enabled</p>
+         * <ul>
+         * <li><strong>off</strong>: disabled</li>
+         * <li><strong>on</strong>: enabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("Config")
         public String config;
 
         /**
          * <p>Indicates whether the vulnerability scan feature is enabled for all servers. Valid values:</p>
-         * <br>
-         * <p>*   **off**: disabled</p>
-         * <p>*   **on**: enabled</p>
+         * <ul>
+         * <li><strong>off</strong>: disabled</li>
+         * <li><strong>on</strong>: enabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("OverAllConfig")
         public String overAllConfig;
 
         /**
          * <p>The type of the vulnerability. Valid values:</p>
-         * <br>
-         * <p>*   **cve**: Linux software vulnerability</p>
-         * <p>*   **sys**: Windows system vulnerability</p>
-         * <p>*   **cms**: Web-CMS vulnerability</p>
-         * <p>*   **emg**: urgent vulnerability</p>
+         * <ul>
+         * <li><strong>cve</strong>: Linux software vulnerability</li>
+         * <li><strong>sys</strong>: Windows system vulnerability</li>
+         * <li><strong>cms</strong>: Web-CMS vulnerability</li>
+         * <li><strong>emg</strong>: urgent vulnerability</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cve</p>
          */
         @NameInMap("Type")
         public String type;

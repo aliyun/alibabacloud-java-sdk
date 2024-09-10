@@ -6,26 +6,32 @@ import com.aliyun.tea.*;
 public class CreateAssetSelectionConfigRequest extends TeaModel {
     /**
      * <p>The feature that you want to select for the asset. Valid values:</p>
-     * <br>
-     * <p>*   **VIRUS_SCAN_CYCLE_CONFIG**: virus detection and removal</p>
-     * <p>*   **VIRUS_SCAN_ONCE_TASK**: one-time scan for viruses</p>
-     * <p>*   **AGENTLESS_MALICIOUS_WHITE_LIST_[ID]**: a whitelist rule for alerts that are detected by using the agentless detection feature</p>
-     * <p>*   **AGENTLESS_VUL_WHITE_LIST_[ID]**: a whitelist rule for vulnerabilities that are detected by using the agentless detection feature</p>
-     * <p>*   **FILE_PROTECT_RULE_SWITCH_TYPE_[ID]**: core file protection</p>
-     * <br>
+     * <ul>
+     * <li><strong>VIRUS_SCAN_CYCLE_CONFIG</strong>: virus detection and removal</li>
+     * <li><strong>VIRUS_SCAN_ONCE_TASK</strong>: one-time scan for viruses</li>
+     * <li><strong>AGENTLESS_MALICIOUS_WHITE_LIST_[ID]</strong>: a whitelist rule for alerts that are detected by using the agentless detection feature</li>
+     * <li><strong>AGENTLESS_VUL_WHITE_LIST_[ID]</strong>: a whitelist rule for vulnerabilities that are detected by using the agentless detection feature</li>
+     * <li><strong>FILE_PROTECT_RULE_SWITCH_TYPE_[ID]</strong>: core file protection</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VIRUS_SCAN_CYCLE_CONFIG</p>
      */
     @NameInMap("BusinessType")
     public String businessType;
 
     /**
      * <p>The dimension based on which you want to select the asset. Valid values:</p>
-     * <br>
-     * <p>*   **instance**: selects the asset by server.</p>
-     * <p>*   **group**: selects the asset by group.</p>
-     * <p>*   **vpc**: selects the asset by virtual private cloud (VPC).</p>
-     * <br>
+     * <ul>
+     * <li><strong>instance</strong>: selects the asset by server.</li>
+     * <li><strong>group</strong>: selects the asset by group.</li>
+     * <li><strong>vpc</strong>: selects the asset by virtual private cloud (VPC).</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc</p>
      */
     @NameInMap("TargetType")
     public String targetType;

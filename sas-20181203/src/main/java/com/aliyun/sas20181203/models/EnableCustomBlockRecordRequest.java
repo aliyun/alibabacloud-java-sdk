@@ -6,19 +6,24 @@ import com.aliyun.tea.*;
 public class EnableCustomBlockRecordRequest extends TeaModel {
     /**
      * <p>The IP address that is specified in the policy.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>43.248.XX.XX</p>
      */
     @NameInMap("BlockIp")
     public String blockIp;
 
     /**
      * <p>The traffic direction that is specified in the policy. Valid values:</p>
-     * <br>
-     * <p>*   **in**: inbound</p>
-     * <p>*   **out**: outbound</p>
-     * <br>
+     * <ul>
+     * <li><strong>in</strong>: inbound</li>
+     * <li><strong>out</strong>: outbound</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>in</p>
      */
     @NameInMap("Bound")
     public String bound;

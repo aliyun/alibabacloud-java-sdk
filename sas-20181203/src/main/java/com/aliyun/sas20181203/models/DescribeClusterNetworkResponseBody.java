@@ -12,6 +12,9 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C286491D-4A2F-589A-B63B-D2AD3DA9BD71</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,41 +43,61 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
     public static class DescribeClusterNetworkResponseBodyClusterNetworkEdge extends TeaModel {
         /**
          * <p>The ID of the destination node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cfb41a869c71e4678a97021582dd8****</p>
          */
         @NameInMap("DstNodeId")
         public String dstNodeId;
 
         /**
          * <p>The type of the destination node. Valid values:</p>
-         * <br>
-         * <p>*   Set the value to **cluster**.</p>
+         * <ul>
+         * <li>Set the value to <strong>cluster</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster</p>
          */
         @NameInMap("DstNodeType")
         public String dstNodeType;
 
         /**
          * <p>The ID of the topology edge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The port number of the topology edge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6164</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
          * <p>The ID of the source node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cfb41a869c71e4678a97021582dd8****</p>
          */
         @NameInMap("SrcNodeId")
         public String srcNodeId;
 
         /**
          * <p>The type of the source node. Valid values:</p>
-         * <br>
-         * <p>*   **cluster**: a cluster.</p>
-         * <p>*   **internet**: a network node outside the cluster</p>
+         * <ul>
+         * <li><strong>cluster</strong>: a cluster.</li>
+         * <li><strong>internet</strong>: a network node outside the cluster</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster</p>
          */
         @NameInMap("SrcNodeType")
         public String srcNodeType;
@@ -137,60 +160,86 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
     public static class DescribeClusterNetworkResponseBodyClusterNetworkNode extends TeaModel {
         /**
          * <p>The status of the microsegmentation switch. Valid values:</p>
-         * <br>
-         * <p>*   **0**: off.</p>
-         * <p>*   **1**: on.</p>
+         * <ul>
+         * <li><strong>0</strong>: off.</li>
+         * <li><strong>1</strong>: on.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CnnfSwitch")
         public Integer cnnfSwitch;
 
         /**
          * <p>The ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cfeb7a9f99ce740e98c5595d0fe37****</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The network type. Valid values:</p>
-         * <br>
-         * <p>*   **0**: classic network.</p>
-         * <p>*   **1**: virtual private cloud (VPC).</p>
+         * <ul>
+         * <li><strong>0</strong>: classic network.</li>
+         * <li><strong>1</strong>: virtual private cloud (VPC).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("InterceptionType")
         public Integer interceptionType;
 
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testwww</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The status of the network topology switch. Valid values:</p>
-         * <br>
-         * <p>*   **ON**</p>
-         * <p>*   **OFF**</p>
+         * <ul>
+         * <li><strong>ON</strong></li>
+         * <li><strong>OFF</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ON</p>
          */
         @NameInMap("NetTopoSwitch")
         public String netTopoSwitch;
 
         /**
          * <p>The risk level. Valid values:</p>
-         * <br>
-         * <p>*   **3**: high.</p>
-         * <p>*   **2**: medium.</p>
-         * <p>*   **1**: low.</p>
-         * <p>*   **0**: secure.</p>
-         * <p>*   **-1**: unknown.</p>
+         * <ul>
+         * <li><strong>3</strong>: high.</li>
+         * <li><strong>2</strong>: medium.</li>
+         * <li><strong>1</strong>: low.</li>
+         * <li><strong>0</strong>: secure.</li>
+         * <li><strong>-1</strong>: unknown.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
         /**
          * <p>The type of the node. Valid values:</p>
-         * <br>
-         * <p>*   **cluster**: a cluster.</p>
-         * <p>*   **internet**: a network node outside the cluster.</p>
+         * <ul>
+         * <li><strong>cluster</strong>: a cluster.</li>
+         * <li><strong>internet</strong>: a network node outside the cluster.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster</p>
          */
         @NameInMap("Type")
         public String type;

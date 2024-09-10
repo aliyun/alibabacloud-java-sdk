@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class CreateServiceTrailRequest extends TeaModel {
     /**
      * <p>The region ID of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **cn-hangzhou**: International</p>
-     * <p>*   **ap-southeast-1**: Singapore</p>
+     * <ul>
+     * <li><strong>cn-hangzhou</strong>: International</li>
+     * <li><strong>ap-southeast-1</strong>: Singapore</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

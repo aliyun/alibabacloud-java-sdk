@@ -12,6 +12,9 @@ public class GetAppNetworkResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7D46EDB0-xxx</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,42 +43,62 @@ public class GetAppNetworkResponseBody extends TeaModel {
     public static class GetAppNetworkResponseBodyAppNetworkEdge extends TeaModel {
         /**
          * <p>The ID of the destination node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102</p>
          */
         @NameInMap("DstNodeId")
         public String dstNodeId;
 
         /**
          * <p>The type of the destination node. Valid values:</p>
-         * <br>
-         * <p>*   **app**: an application</p>
-         * <p>*   **internet**: a network node in another cluster</p>
+         * <ul>
+         * <li><strong>app</strong>: an application</li>
+         * <li><strong>internet</strong>: a network node in another cluster</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>app</p>
          */
         @NameInMap("DstNodeType")
         public String dstNodeType;
 
         /**
          * <p>The ID of the edge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3534</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The number of the destination port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
          * <p>The ID of the source node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
          */
         @NameInMap("SrcNodeId")
         public String srcNodeId;
 
         /**
          * <p>The type of the source node. Valid values:</p>
-         * <br>
-         * <p>*   **app**: an application</p>
-         * <p>*   **internet**: a network node in another cluster</p>
+         * <ul>
+         * <li><strong>app</strong>: an application</li>
+         * <li><strong>internet</strong>: a network node in another cluster</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>app</p>
          */
         @NameInMap("SrcNodeType")
         public String srcNodeType;
@@ -138,12 +161,18 @@ public class GetAppNetworkResponseBody extends TeaModel {
     public static class GetAppNetworkResponseBodyAppNetworkNamespace extends TeaModel {
         /**
          * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The name of the custom namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Name")
         public String name;
@@ -180,39 +209,56 @@ public class GetAppNetworkResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1274</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>console</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
         /**
          * <p>The risk level. Valid values:</p>
-         * <br>
-         * <p>*   **3**: high</p>
-         * <p>*   **2**: medium</p>
-         * <p>*   **1**: low</p>
-         * <p>*   **0**: warning</p>
-         * <p>*   **-1**: unknown</p>
+         * <ul>
+         * <li><strong>3</strong>: high</li>
+         * <li><strong>2</strong>: medium</li>
+         * <li><strong>1</strong>: low</li>
+         * <li><strong>0</strong>: warning</li>
+         * <li><strong>-1</strong>: unknown</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
         /**
          * <p>The type of the node. Valid values:</p>
-         * <br>
-         * <p>*   **app**: an application</p>
-         * <p>*   **internet**: a network node in another cluster</p>
+         * <ul>
+         * <li><strong>app</strong>: an application</li>
+         * <li><strong>internet</strong>: a network node in another cluster</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>app</p>
          */
         @NameInMap("Type")
         public String type;

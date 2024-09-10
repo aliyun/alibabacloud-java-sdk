@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeLogShipperStatusRequest extends TeaModel {
     /**
-     * <p>The ID of the request source. Set the value to **sas**.</p>
+     * <p>The ID of the request source. Set the value to <strong>sas</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sas</p>
      */
     @NameInMap("From")
     public String from;

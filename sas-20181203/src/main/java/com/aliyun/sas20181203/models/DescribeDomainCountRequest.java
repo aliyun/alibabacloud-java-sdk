@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDomainCountRequest extends TeaModel {
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.172.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

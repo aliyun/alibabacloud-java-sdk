@@ -18,6 +18,9 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FBBEB173-1F43-505F-A876-C03ECDF6CE4C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,26 +57,37 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
     public static class ListFileProtectRuleResponseBodyFileProtectList extends TeaModel {
         /**
          * <p>The handling method of the rule. Valid values:</p>
-         * <br>
-         * <p>*   pass: allow</p>
-         * <p>*   alert</p>
+         * <ul>
+         * <li>pass: allow</li>
+         * <li>alert</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>pass</p>
          */
         @NameInMap("Action")
         public String action;
 
         /**
          * <p>The severity of alerts. Valid values:</p>
-         * <br>
-         * <p>*   0: does not generate alerts</p>
-         * <p>*   1: sends notifications</p>
-         * <p>*   2: suspicious</p>
-         * <p>*   3: high-risk</p>
+         * <ul>
+         * <li>0: does not generate alerts</li>
+         * <li>1: sends notifications</li>
+         * <li>2: suspicious</li>
+         * <li>3: high-risk</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AlertLevel")
         public String alertLevel;
 
         /**
          * <p>The total number of affected assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("EffectInstanceCount")
         public Long effectInstanceCount;
@@ -92,21 +106,43 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
 
         /**
          * <p>The time when the rule was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1682304179000</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
          * <p>The time when the rule was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1682304179000</p>
          */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
         /**
          * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1412511</p>
          */
         @NameInMap("Id")
         public Long id;
+
+        /**
+         * <p>The type of the operating system. Valid values:</p>
+         * <ul>
+         * <li><strong>windows</strong>: Windows</li>
+         * <li><strong>linux</strong>: Linux</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>linux</p>
+         */
+        @NameInMap("Platform")
+        public String platform;
 
         /**
          * <p>The paths to the monitored processes. Wildcard characters are supported.</p>
@@ -116,21 +152,31 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
 
         /**
          * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test11</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
          * <p>The status of the rule. Valid values:</p>
-         * <br>
-         * <p>*   0: disabled</p>
-         * <p>*   1: enabled</p>
+         * <ul>
+         * <li>0: disabled</li>
+         * <li>1: enabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The switch ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FILE_PROTECT_RULE_SWITCH_TYPE_1693474122927</p>
          */
         @NameInMap("SwitchId")
         public String switchId;
@@ -204,6 +250,14 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
             return this.id;
         }
 
+        public ListFileProtectRuleResponseBodyFileProtectList setPlatform(String platform) {
+            this.platform = platform;
+            return this;
+        }
+        public String getPlatform() {
+            return this.platform;
+        }
+
         public ListFileProtectRuleResponseBodyFileProtectList setProcPaths(java.util.List<String> procPaths) {
             this.procPaths = procPaths;
             return this;
@@ -241,18 +295,27 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
     public static class ListFileProtectRuleResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>253</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class EnableBruteForceRecordResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DFAECA37-4660-5EB6-9A18-8FDF56B3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

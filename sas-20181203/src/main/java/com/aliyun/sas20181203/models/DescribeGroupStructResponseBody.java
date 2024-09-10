@@ -6,39 +6,58 @@ import com.aliyun.tea.*;
 public class DescribeGroupStructResponseBody extends TeaModel {
     /**
      * <p>The parent node of the group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>958****</p>
      */
     @NameInMap("GroupFather")
     public Integer groupFather;
 
     /**
      * <p>The type of the server group. Valid values:</p>
-     * <br>
-     * <p>*   **0**: the default group</p>
-     * <p>*   **1**: other groups</p>
+     * <ul>
+     * <li><strong>0</strong>: the default group</li>
+     * <li><strong>1</strong>: other groups</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("GroupFlag")
     public Integer groupFlag;
 
     /**
      * <p>The ID of the server group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>958****</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
 
     /**
      * <p>The sequence number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("GroupIndex")
     public Integer groupIndex;
 
     /**
      * <p>The level of the application group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("GroupLevel")
     public Integer groupLevel;
 
     /**
      * <p>The name of the server group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestGroupName</p>
      */
     @NameInMap("GroupName")
     public String groupName;
@@ -51,12 +70,18 @@ public class DescribeGroupStructResponseBody extends TeaModel {
 
     /**
      * <p>The number of servers in the group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("MachineNum")
     public Integer machineNum;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9FBC6E47-7508-58C9-9E76-528E118C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

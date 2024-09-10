@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class InstallRaspAttachResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>86CFF42E-E00A-57A3-8656-22291EFB****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

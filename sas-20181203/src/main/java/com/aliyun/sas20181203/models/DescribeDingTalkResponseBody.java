@@ -18,6 +18,9 @@ public class DescribeDingTalkResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B256A525-7E42-4BB9-A27C-9017FDDFF1A2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,72 +57,107 @@ public class DescribeDingTalkResponseBody extends TeaModel {
     public static class DescribeDingTalkResponseBodyActionList extends TeaModel {
         /**
          * <p>The name of the notification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alert notification</p>
          */
         @NameInMap("ActionName")
         public String actionName;
 
         /**
          * <p>The UID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12312412341</p>
          */
         @NameInMap("AliUid")
         public Long aliUid;
 
         /**
          * <p>The list of notification settings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;type\&quot;:\&quot;vul\&quot;,\&quot;configItemList\&quot;:[{\&quot;key\&quot;:\&quot;key\&quot;, \&quot;valueList\&quot;:\&quot;123\&quot;}]}]</p>
          */
         @NameInMap("ConfigList")
         public String configList;
 
         /**
          * <p>The language of the content within notifications. Valid values:</p>
-         * <br>
-         * <p>*   **zh**: Chinese</p>
-         * <p>*   **en**: English</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         @NameInMap("DingTalkLang")
         public String dingTalkLang;
 
         /**
          * <p>The creation time. unit:millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1550828400000</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
          * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1550828400000</p>
          */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
         /**
          * <p>The group IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;123,456&quot;</p>
          */
         @NameInMap("GroupIdList")
         public String groupIdList;
 
         /**
          * <p>The ID of the notification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public Integer id;
 
         /**
          * <p>The interval at which the notifications are sent.unit:minute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("IntervalTime")
         public Integer intervalTime;
 
         /**
          * <p>The status of the notification. Valid values:</p>
-         * <br>
-         * <p>*   **0**: disabled</p>
-         * <p>*   **1**: enabled</p>
+         * <ul>
+         * <li><strong>0</strong>: disabled</li>
+         * <li><strong>1</strong>: enabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The parameters of the notification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oapi.dingtalk.com/robot/send">https://oapi.dingtalk.com/robot/send</a></p>
          */
         @NameInMap("Url")
         public String url;
@@ -222,18 +260,27 @@ public class DescribeDingTalkResponseBody extends TeaModel {
     public static class DescribeDingTalkResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of messages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

@@ -18,6 +18,9 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>00A60A6D-33E0-5D5A-9B7C-E5D4DCA88148</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,27 +57,40 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
     public static class DescribeBackupFilesResponseBodyBackupFiles extends TeaModel {
         /**
          * <p>The name of the anti-ransomware policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Group 1</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The size of the backup file. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Size")
         public Long size;
 
         /**
          * <p>The path to the subdirectory of the backup file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Python27\</p>
          */
         @NameInMap("Subtree")
         public String subtree;
 
         /**
          * <p>The type of the protected file. Valid values:</p>
-         * <br>
-         * <p>*   **file**: files</p>
-         * <p>*   **dir**: folders</p>
+         * <ul>
+         * <li><strong>file</strong>: files</li>
+         * <li><strong>dir</strong>: folders</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>dir</p>
          */
         @NameInMap("Type")
         public String type;
@@ -121,24 +137,36 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
     public static class DescribeBackupFilesResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of backup files returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page. Default value: **10**.</p>
+         * <p>The number of entries returned per page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of backup files returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

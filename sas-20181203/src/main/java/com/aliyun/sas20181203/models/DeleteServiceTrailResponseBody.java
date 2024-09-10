@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteServiceTrailResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20456DD5-5CBF-5015-9173-12CA4246B***</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,78 +6,117 @@ import com.aliyun.tea.*;
 public class DescribeVulNumStatisticsResponseBody extends TeaModel {
     /**
      * <p>The number of application vulnerabilities that are detected on the asset by using the web scanner.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("AppCnt")
     public Integer appCnt;
 
     /**
      * <p>The number of application vulnerabilities that are detected on the asset by using the web scanner.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("AppNum")
     public Integer appNum;
 
     /**
      * <p>The number of Web-CMS vulnerabilities that are handled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("CmsDealedTotalNum")
     public Integer cmsDealedTotalNum;
 
     /**
      * <p>The number of Web-CMS vulnerabilities that are detected on the asset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("CmsNum")
     public Integer cmsNum;
 
     /**
      * <p>The number of Linux software vulnerabilities that are detected on the asset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("CveNum")
     public Integer cveNum;
 
     /**
      * <p>The number of urgent vulnerabilities that are detected on the asset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("EmgNum")
     public Integer emgNum;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E22C89D2-FE13-5800-8746-9D0EF1827A59</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of middleware vulnerabilities that are detected on the asset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("ScaNum")
     public Integer scaNum;
 
     /**
      * <p>The number of Windows system vulnerabilities that are detected on the asset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("SysNum")
     public Integer sysNum;
 
     /**
      * <p>The number of vulnerabilities that have the high priority.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("VulAsapSum")
     public Integer vulAsapSum;
 
     /**
      * <p>The number of vulnerabilities that are handled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("VulDealedTotalNum")
     public Integer vulDealedTotalNum;
 
     /**
      * <p>The number of vulnerabilities that have the medium priority.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("VulLaterSum")
     public Integer vulLaterSum;
 
     /**
      * <p>The number of vulnerabilities that have the low priority.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("VulNntfSum")
     public Integer vulNntfSum;

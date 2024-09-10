@@ -6,14 +6,21 @@ import com.aliyun.tea.*;
 public class FindContainerNetworkConnectShrinkRequest extends TeaModel {
     /**
      * <p>The type of the information that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   **EDGE**: connection information</p>
+     * <ul>
+     * <li><strong>EDGE</strong>: connection information</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>EDGE</p>
      */
     @NameInMap("CriteriaType")
     public String criteriaType;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Long currentPage;
@@ -26,14 +33,21 @@ public class FindContainerNetworkConnectShrinkRequest extends TeaModel {
 
     /**
      * <p>The end time of the network connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1649260799999</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
-     * <br>
-     * <p>> We recommend that you do not leave this parameter empty.</p>
+     * <blockquote>
+     * <p>We recommend that you do not leave this parameter empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
@@ -46,6 +60,9 @@ public class FindContainerNetworkConnectShrinkRequest extends TeaModel {
 
     /**
      * <p>The start time of the network connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1666886400000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

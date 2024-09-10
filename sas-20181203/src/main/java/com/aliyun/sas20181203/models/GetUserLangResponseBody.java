@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetUserLangResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23AD0BD2-8771-5647-819E-6BA51E21****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,9 +43,13 @@ public class GetUserLangResponseBody extends TeaModel {
     public static class GetUserLangResponseBodySasUserLang extends TeaModel {
         /**
          * <p>The language specified for log analysis. Valid values:</p>
-         * <br>
-         * <p>*   zh: Chinese</p>
-         * <p>*   en: English</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         @NameInMap("Lang")
         public String lang;

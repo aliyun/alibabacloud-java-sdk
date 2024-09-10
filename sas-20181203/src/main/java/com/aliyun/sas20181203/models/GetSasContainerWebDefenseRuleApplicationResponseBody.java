@@ -12,6 +12,9 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>09969D2C-4FAD-429E-BFBF-9A60DEF8****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,44 +43,66 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
     public static class GetSasContainerWebDefenseRuleApplicationResponseBodyContainerWebDefenseAppList extends TeaModel {
         /**
          * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5944922169365****</p>
          */
         @NameInMap("AliUid")
         public Long aliUid;
 
         /**
          * <p>The ID of the container cluster.</p>
-         * <br>
-         * <p>>  The IDs of clusters can be obtained by using the [DescribeGroupedContainerInstances](https://help.aliyun.com/document_detail/182997.html) operation.</p>
+         * <blockquote>
+         * <p> The IDs of clusters can be obtained by using the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cfb41a869c71e4678a97021582dd8****</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The time when the application was created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1677839038000</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
          * <p>The last modification time. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1667891185000</p>
          */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
         /**
          * <p>The ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>143761</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403327</p>
          */
         @NameInMap("RuleId")
         public Long ruleId;
 
         /**
          * <p>The value of the application label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app:test</p>
          */
         @NameInMap("Tag")
         public String tag;

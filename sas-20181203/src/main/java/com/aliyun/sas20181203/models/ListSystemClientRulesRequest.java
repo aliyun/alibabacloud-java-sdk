@@ -12,40 +12,55 @@ public class ListSystemClientRulesRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>Specifies whether to query only container images. Valid values:</p>
-     * <br>
-     * <p>*   **0**: no</p>
-     * <p>*   **1**: yes</p>
+     * <ul>
+     * <li><strong>0</strong>: no</li>
+     * <li><strong>1</strong>: yes</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("IsContainer")
     public Integer isContainer;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The name of the system defense rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Rule\<em>\</em>\<em>\</em></p>
      */
     @NameInMap("RuleName")
     public String ruleName;
@@ -58,10 +73,14 @@ public class ListSystemClientRulesRequest extends TeaModel {
 
     /**
      * <p>The type of the OS. Valid values:</p>
-     * <br>
-     * <p>*   **2**: Windows</p>
-     * <p>*   **1**: Linux</p>
-     * <p>*   **0**: all types</p>
+     * <ul>
+     * <li><strong>2</strong>: Windows</li>
+     * <li><strong>1</strong>: Linux</li>
+     * <li><strong>0</strong>: all types</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("SystemType")
     public Integer systemType;

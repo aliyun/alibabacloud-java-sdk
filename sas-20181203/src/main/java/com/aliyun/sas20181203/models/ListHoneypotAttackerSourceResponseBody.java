@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
     /**
-     * <p>The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
@@ -24,6 +30,9 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
@@ -36,15 +45,22 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9915DC4D-B4DA-5140-8138-FD80636*****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -113,40 +129,59 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
     public static class ListHoneypotAttackerSourceResponseBodyList extends TeaModel {
         /**
          * <p>The total number of attack events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("EventCount")
         public Integer eventCount;
 
         /**
          * <p>The most recent honeypot that was attacked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc tcp honeypot</p>
          */
         @NameInMap("LastTargetHoneypot")
         public String lastTargetHoneypot;
 
         /**
          * <p>The most recent IP address that was attacked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>144.23.66.***</p>
          */
         @NameInMap("LastTargetIp")
         public String lastTargetIp;
 
         /**
          * <p>The last time when the attack event occurred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1693446913000</p>
          */
         @NameInMap("LastTime")
         public Long lastTime;
 
         /**
          * <p>The risk level. Valid values:</p>
-         * <br>
-         * <p>*   **2**: low</p>
-         * <p>*   **3**: medium</p>
-         * <p>*   **4**: high</p>
+         * <ul>
+         * <li><strong>2</strong>: low</li>
+         * <li><strong>3</strong>: medium</li>
+         * <li><strong>4</strong>: high</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
         /**
          * <p>The source IP address of the attack.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101.102.61.***</p>
          */
         @NameInMap("SrcIp")
         public String srcIp;
@@ -209,24 +244,36 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
     public static class ListHoneypotAttackerSourceResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

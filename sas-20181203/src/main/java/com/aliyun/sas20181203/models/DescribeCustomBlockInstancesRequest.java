@@ -6,29 +6,43 @@ import com.aliyun.tea.*;
 public class DescribeCustomBlockInstancesRequest extends TeaModel {
     /**
      * <p>The IP address that you want to specify in the rule.</p>
-     * <br>
-     * <p>>  You can call the [DescribeCustomBlockRecords](~~DescribeCustomBlockRecords~~) operation to obtain the IP address.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeCustomBlockRecords~~">DescribeCustomBlockRecords</a> operation to obtain the IP address.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>47.92.33.1xx</p>
      */
     @NameInMap("BlockIp")
     public String blockIp;
 
     /**
      * <p>The traffic direction that you want to specify in the custom rule. Valid values:</p>
-     * <br>
-     * <p>*   **in**: inbound</p>
-     * <p>*   **out**: outbound</p>
+     * <ul>
+     * <li><strong>in</strong>: inbound</li>
+     * <li><strong>out</strong>: outbound</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>in</p>
      */
     @NameInMap("Bound")
     public String bound;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The number of entries per page. Default value: **20**.</p>
+     * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -38,10 +52,14 @@ public class DescribeCustomBlockInstancesRequest extends TeaModel {
 
     /**
      * <p>Specifies whether the rule is enabled for the server.</p>
-     * <br>
-     * <p>*   **2**: enabling failed</p>
-     * <p>*   **1**: enabled</p>
-     * <p>*   **0**: disabled</p>
+     * <ul>
+     * <li><strong>2</strong>: enabling failed</li>
+     * <li><strong>1</strong>: enabled</li>
+     * <li><strong>0</strong>: disabled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Status")
     public Integer status;

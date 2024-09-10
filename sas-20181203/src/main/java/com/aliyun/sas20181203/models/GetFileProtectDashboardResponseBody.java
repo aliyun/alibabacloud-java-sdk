@@ -12,6 +12,9 @@ public class GetFileProtectDashboardResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6673D49C-A9AB-40DD-B4A2-B92306701AE7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class GetFileProtectDashboardResponseBody extends TeaModel {
     public static class GetFileProtectDashboardResponseBodyData extends TeaModel {
         /**
          * <p>The total number of enabled rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("EnableRuleCount")
         public Integer enableRuleCount;
 
         /**
          * <p>The total number of servers on which the Security Center agent is installed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("PluginCount")
         public Integer pluginCount;
 
         /**
          * <p>The total number of servers on which the Security Center agent is offline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PluginOfflineCount")
         public Integer pluginOfflineCount;
 
         /**
          * <p>The total number of servers on which the Security Center agent is online.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         @NameInMap("PluginOnlineCount")
         public Integer pluginOnlineCount;

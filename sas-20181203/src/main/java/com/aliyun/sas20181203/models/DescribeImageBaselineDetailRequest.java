@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class DescribeImageBaselineDetailRequest extends TeaModel {
     /**
      * <p>The information about the baseline.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Valid values include but are not limited to ak_leak, duplicate_uid, duplicate_pwd_hash, and non_pwd_user.</p>
      */
     @NameInMap("BaselineItemKey")
     public String baselineItemKey;
 
     /**
      * <p>The UUID of the image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>06293273b67d19516cfcc712194f****</p>
      */
     @NameInMap("ImageUuid")
     public String imageUuid;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;

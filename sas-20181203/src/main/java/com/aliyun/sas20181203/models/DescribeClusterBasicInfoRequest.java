@@ -6,31 +6,40 @@ import com.aliyun.tea.*;
 public class DescribeClusterBasicInfoRequest extends TeaModel {
     /**
      * <p>The ID of the cluster that you want to query.</p>
-     * <br>
-     * <p>> You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c870ec78ecbcb41d2a35c679823ef****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The dimension from which you want to configure the feature. Valid values:</p>
-     * <br>
-     * <p>*   **Cluster**: the ID of the cluster</p>
-     * <br>
+     * <ul>
+     * <li><strong>Cluster</strong>: the ID of the cluster</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Cluster</p>
      */
     @NameInMap("TargetType")
     public String targetType;
 
     /**
      * <p>The type of the feature. Valid values:</p>
-     * <br>
-     * <p>*   **containerNetwork**: container network topology</p>
-     * <p>*   **interceptionSwitch**: cluster microsegmentation</p>
-     * <br>
+     * <ul>
+     * <li><strong>containerNetwork</strong>: container network topology</li>
+     * <li><strong>interceptionSwitch</strong>: cluster microsegmentation</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>containerNetwork</p>
      */
     @NameInMap("Type")
     public String type;

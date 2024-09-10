@@ -4,30 +4,62 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeStrategyExecDetailResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2021-12-05 00:12:46</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>94</p>
+     */
     @NameInMap("FailCount")
     public Integer failCount;
 
     @NameInMap("FailedEcsList")
     public java.util.List<DescribeStrategyExecDetailResponseBodyFailedEcsList> failedEcsList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("InProcessCount")
     public Integer inProcessCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100%</p>
+     */
     @NameInMap("Percent")
     public String percent;
 
+    /**
+     * <strong>example:</strong>
+     * <p>01611D72-1E33-53F5-A9A5-C81B5561970F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Manual</p>
+     */
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-12-05 00:12:16</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>81</p>
+     */
     @NameInMap("SuccessCount")
     public Integer successCount;
 
@@ -109,18 +141,38 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeStrategyExecDetailResponseBodyFailedEcsList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>115.28.XX.XX</p>
+         */
         @NameInMap("IP")
         public String IP;
 
+        /**
+         * <strong>example:</strong>
+         * <p>worker-k8s-for-cs-cf5741fb95c3a45d0864f0e4544dc****</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>115.28.XX.XX</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>172.31.XX.XX</p>
+         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Detect timeout</p>
+         */
         @NameInMap("Reason")
         public String reason;
 

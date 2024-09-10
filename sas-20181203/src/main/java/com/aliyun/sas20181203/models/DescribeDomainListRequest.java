@@ -5,34 +5,50 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainListRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The type of the domain name that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   **root**: root domain name</p>
-     * <p>*   **sub**: subdomain name</p>
+     * <ul>
+     * <li><strong>root</strong>: root domain name</li>
+     * <li><strong>sub</strong>: subdomain name</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>root</p>
      */
     @NameInMap("DomainType")
     public String domainType;
 
     /**
      * <p>The keyword that is used to query domain names. Fuzzy match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sas</p>
      */
     @NameInMap("FuzzyDomain")
     public String fuzzyDomain;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.122.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

@@ -5,25 +5,35 @@ import com.aliyun.tea.*;
 
 public class InstallCloudMonitorRequest extends TeaModel {
     /**
-     * <p>The AccessKey ID that is required to install the CloudMonitor agent. You can call the [DescribeMonitoringAgentAccessKey](https://help.aliyun.com/document_detail/114948.html) operation to query the AccessKey ID.</p>
-     * <br>
-     * <p>> This parameter is required only when you install the CloudMonitor agent on servers that are not deployed on Alibaba Cloud.</p>
+     * <p>The AccessKey ID that is required to install the CloudMonitor agent. You can call the <a href="https://help.aliyun.com/document_detail/114948.html">DescribeMonitoringAgentAccessKey</a> operation to query the AccessKey ID.</p>
+     * <blockquote>
+     * <p>This parameter is required only when you install the CloudMonitor agent on servers that are not deployed on Alibaba Cloud.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>usY*****R_U</p>
      */
     @NameInMap("AgentAccessKey")
     public String agentAccessKey;
 
     /**
-     * <p>The AccessKey secret that is required to install the CloudMonitor agent. You can call the [DescribeMonitoringAgentAccessKey](https://help.aliyun.com/document_detail/114948.html) operation to query the AccessKey secret.</p>
-     * <br>
-     * <p>> This parameter is required only when you install the CloudMonitor agent on servers that are not deployed on Alibaba Cloud.</p>
+     * <p>The AccessKey secret that is required to install the CloudMonitor agent. You can call the <a href="https://help.aliyun.com/document_detail/114948.html">DescribeMonitoringAgentAccessKey</a> operation to query the AccessKey secret.</p>
+     * <blockquote>
+     * <p>This parameter is required only when you install the CloudMonitor agent on servers that are not deployed on Alibaba Cloud.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>UCxF2R1sIO90XlU9****</p>
      */
     @NameInMap("AgentSecretKey")
     public String agentSecretKey;
 
     /**
-     * <p>The version of the CloudMonitor agent that you want to install on the servers. For more information about the latest version of the CloudMonitor agent, see [Overview](https://help.aliyun.com/document_detail/183431.html).</p>
-     * <br>
+     * <p>The version of the CloudMonitor agent that you want to install on the servers. For more information about the latest version of the CloudMonitor agent, see <a href="https://help.aliyun.com/document_detail/183431.html">Overview</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3.5.6</p>
      */
     @NameInMap("ArgusVersion")
     public String argusVersion;

@@ -6,25 +6,35 @@ import com.aliyun.tea.*;
 public class AddAssetSelectionCriteriaRequest extends TeaModel {
     /**
      * <p>The search conditions that are used to query assets. The value of this parameter is in the JSON format and is case-sensitive.</p>
-     * <br>
-     * <p>> A search condition can be an instance ID, instance name, virtual private cloud (VPC) ID, region, or public IP address. You can call the [DescribeCriteria](~~DescribeCriteria~~) operation to query the supported search conditions.</p>
+     * <blockquote>
+     * <p>A search condition can be an instance ID, instance name, virtual private cloud (VPC) ID, region, or public IP address. You can call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;LogicalExp&quot;:&quot;AND&quot;,&quot;Criteria&quot;:&quot;[{\&quot;name\&quot;:\&quot;osType\&quot;,\&quot;value\&quot;:\&quot;linux\&quot;,\&quot;logicalExp\&quot;:\&quot;AND\&quot;},{\&quot;name\&quot;:\&quot;alarmStatus\&quot;,\&quot;value\&quot;:\&quot;YES\&quot;,\&quot;logicalExp\&quot;:\&quot;AND\&quot;}]&quot;}</p>
      */
     @NameInMap("Criteria")
     public String criteria;
 
     /**
      * <p>The type of the operation on search conditions. Valid values:</p>
-     * <br>
-     * <p>*   **add**: adds assets.</p>
-     * <p>*   **del**: deletes assets.</p>
+     * <ul>
+     * <li><strong>add</strong>: adds assets.</li>
+     * <li><strong>del</strong>: deletes assets.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>add</p>
      */
     @NameInMap("CriteriaOperation")
     public String criteriaOperation;
 
     /**
      * <p>The unique ID of the asset.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5196d280-5bfa-496a-ba70-8a3935e3****</p>
      */
     @NameInMap("SelectionKey")
     public String selectionKey;
@@ -75,15 +85,22 @@ public class AddAssetSelectionCriteriaRequest extends TeaModel {
     public static class AddAssetSelectionCriteriaRequestTargetOperationList extends TeaModel {
         /**
          * <p>The type of the operation. Valid values:</p>
-         * <br>
-         * <p>*   **add**</p>
-         * <p>*   **del**</p>
+         * <ul>
+         * <li><strong>add</strong></li>
+         * <li><strong>del</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>del</p>
          */
         @NameInMap("Operation")
         public String operation;
 
         /**
          * <p>The ID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1188****</p>
          */
         @NameInMap("Target")
         public String target;
