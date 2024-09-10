@@ -1197,8 +1197,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("kibanaPort")
         public Integer kibanaPort;
 
+        @NameInMap("kibanaPrivateDomain")
+        public String kibanaPrivateDomain;
+
         @NameInMap("kibanaPrivateIPWhitelist")
         public java.util.List<String> kibanaPrivateIPWhitelist;
+
+        @NameInMap("kibanaPrivatePort")
+        public String kibanaPrivatePort;
 
         @NameInMap("masterConfiguration")
         public DescribeInstanceResponseBodyResultMasterConfiguration masterConfiguration;
@@ -1570,12 +1576,28 @@ public class DescribeInstanceResponseBody extends TeaModel {
             return this.kibanaPort;
         }
 
+        public DescribeInstanceResponseBodyResult setKibanaPrivateDomain(String kibanaPrivateDomain) {
+            this.kibanaPrivateDomain = kibanaPrivateDomain;
+            return this;
+        }
+        public String getKibanaPrivateDomain() {
+            return this.kibanaPrivateDomain;
+        }
+
         public DescribeInstanceResponseBodyResult setKibanaPrivateIPWhitelist(java.util.List<String> kibanaPrivateIPWhitelist) {
             this.kibanaPrivateIPWhitelist = kibanaPrivateIPWhitelist;
             return this;
         }
         public java.util.List<String> getKibanaPrivateIPWhitelist() {
             return this.kibanaPrivateIPWhitelist;
+        }
+
+        public DescribeInstanceResponseBodyResult setKibanaPrivatePort(String kibanaPrivatePort) {
+            this.kibanaPrivatePort = kibanaPrivatePort;
+            return this;
+        }
+        public String getKibanaPrivatePort() {
+            return this.kibanaPrivatePort;
         }
 
         public DescribeInstanceResponseBodyResult setMasterConfiguration(DescribeInstanceResponseBodyResultMasterConfiguration masterConfiguration) {
