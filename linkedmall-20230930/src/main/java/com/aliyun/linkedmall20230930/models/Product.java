@@ -55,6 +55,9 @@ public class Product extends TeaModel {
     @NameInMap("images")
     public java.util.List<String> images;
 
+    @NameInMap("limitRules")
+    public java.util.List<LimitRule> limitRules;
+
     /**
      * <strong>example:</strong>
      * <p>21000017-4580902812</p>
@@ -223,6 +226,14 @@ public class Product extends TeaModel {
     }
     public java.util.List<String> getImages() {
         return this.images;
+    }
+
+    public Product setLimitRules(java.util.List<LimitRule> limitRules) {
+        this.limitRules = limitRules;
+        return this;
+    }
+    public java.util.List<LimitRule> getLimitRules() {
+        return this.limitRules;
     }
 
     public Product setLmItemId(String lmItemId) {
