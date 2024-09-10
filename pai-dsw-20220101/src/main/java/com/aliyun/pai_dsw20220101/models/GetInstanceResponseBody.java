@@ -42,6 +42,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("CredentialConfig")
+    public CredentialConfig credentialConfig;
+
     @NameInMap("Datasets")
     public java.util.List<GetInstanceResponseBodyDatasets> datasets;
 
@@ -353,6 +356,14 @@ public class GetInstanceResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetInstanceResponseBody setCredentialConfig(CredentialConfig credentialConfig) {
+        this.credentialConfig = credentialConfig;
+        return this;
+    }
+    public CredentialConfig getCredentialConfig() {
+        return this.credentialConfig;
     }
 
     public GetInstanceResponseBody setDatasets(java.util.List<GetInstanceResponseBodyDatasets> datasets) {
