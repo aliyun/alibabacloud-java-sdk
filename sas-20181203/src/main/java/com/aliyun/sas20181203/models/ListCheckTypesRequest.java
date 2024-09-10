@@ -5,58 +5,85 @@ import com.aliyun.tea.*;
 
 public class ListCheckTypesRequest extends TeaModel {
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</p>
-     * <br>
-     * <p>>  We recommend that you do not leave this parameter empty.</p>
+     * <blockquote>
+     * <p> We recommend that you do not leave this parameter empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the baseline.</p>
-     * <br>
-     * <p>>  You can call the [DescribeCheckWarningSummary](https://help.aliyun.com/document_detail/116179.html) operation to query the IDs of baselines.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/116179.html">DescribeCheckWarningSummary</a> operation to query the IDs of baselines.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>34</p>
      */
     @NameInMap("RiskId")
     public Long riskId;
 
     /**
      * <p>Whether to query the check item list. The default value is false. Valid values:</p>
-     * <br>
-     * <p>- **false**: Not Query</p>
-     * <p>- **true**: Query</p>
+     * <ul>
+     * <li><strong>false</strong>: Not Query</li>
+     * <li><strong>true</strong>: Query</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ShowChecks")
     public Boolean showChecks;
 
     /**
-     * <p>The data source. Default value: **default**. Valid values:</p>
-     * <br>
-     * <p>*   **agentless**: The check items of baselines for agentless detection.</p>
-     * <p>*   **default**: The check items of baselines for hosts.</p>
+     * <p>The data source. Default value: <strong>default</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>agentless</strong>: The check items of baselines for agentless detection.</li>
+     * <li><strong>default</strong>: The check items of baselines for hosts.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>agentless</p>
      */
     @NameInMap("Source")
     public String source;
 
     /**
      * <p>The UUID of the server.</p>
-     * <br>
-     * <p>>  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>293b07cb-db2d-4f39-941f-b2e4abb8****</p>
      */
     @NameInMap("Uuid")
     public String uuid;

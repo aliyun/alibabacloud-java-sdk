@@ -6,74 +6,101 @@ import com.aliyun.tea.*;
 public class GenerateK8sAccessInfoRequest extends TeaModel {
     /**
      * <p>This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("AliyunYundunGatewayApiName")
     public String aliyunYundunGatewayApiName;
 
     /**
      * <p>This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("AliyunYundunGatewayPopName")
     public String aliyunYundunGatewayPopName;
 
     /**
      * <p>This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("AliyunYundunGatewayProjectName")
     public String aliyunYundunGatewayProjectName;
 
     /**
      * <p>The Simple Log Service Logstore that is used to store the audit logs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>audit-cf6baf6afa106eca665296fdf68b65bf</p>
      */
     @NameInMap("AuditLogStore")
     public String auditLogStore;
 
     /**
      * <p>The Simple Log Service project that is used to store the audit logs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>k8s-log-custom-huxintest1018-2</p>
      */
     @NameInMap("AuditProject")
     public String auditProject;
 
     /**
      * <p>The ID of the region in which the audit logs are stored.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("AuditRegionId")
     public String auditRegionId;
 
     /**
      * <p>The name of the Kubernetes cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
      * <p>The time at which the container ends to be added.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1711951508388</p>
      */
     @NameInMap("ExpireDate")
     public Long expireDate;
 
     /**
      * <p>The group ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11341690</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
 
     /**
      * <p>The service provider of the cloud asset. Valid values:</p>
-     * <br>
-     * <p>*   **Tencent**</p>
-     * <p>*   **HUAWEICLOUD**</p>
-     * <p>*   **Azure**</p>
-     * <p>*   **AWS**</p>
-     * <p>*   **Others**</p>
-     * <br>
+     * <ul>
+     * <li><strong>Tencent</strong></li>
+     * <li><strong>HUAWEICLOUD</strong></li>
+     * <li><strong>Azure</strong></li>
+     * <li><strong>AWS</strong></li>
+     * <li><strong>Others</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Tencent</p>
      */
     @NameInMap("Vendor")
     public String vendor;

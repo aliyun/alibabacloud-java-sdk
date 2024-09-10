@@ -6,94 +6,135 @@ import com.aliyun.tea.*;
 public class ListAgentlessMaliciousFilesRequest extends TeaModel {
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>Specifies whether the vulnerability is handled. Valid values:</p>
-     * <br>
-     * <p>*   Y: The vulnerability is handled.</p>
-     * <p>*   N: The vulnerability is not handled.</p>
+     * <ul>
+     * <li>Y: The vulnerability is handled.</li>
+     * <li>N: The vulnerability is not handled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Y</p>
      */
     @NameInMap("Dealed")
     public String dealed;
 
     /**
      * <p>The event ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>81****</p>
      */
     @NameInMap("EventId")
     public Long eventId;
 
     /**
      * <p>The name of the malicious file that you want to query.</p>
-     * <br>
-     * <p>> Fuzzy match is supported.</p>
+     * <blockquote>
+     * <p>Fuzzy match is supported.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>WebShell</p>
      */
     @NameInMap("FuzzyMaliciousName")
     public String fuzzyMaliciousName;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese.</p>
-     * <p>*   **en**: English.</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The severities of the malicious files. Separate multiple values with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   serious</p>
-     * <p>*   suspicious</p>
-     * <p>*   remind</p>
+     * <ul>
+     * <li>serious</li>
+     * <li>suspicious</li>
+     * <li>remind</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>remind,suspicious</p>
      */
     @NameInMap("Levels")
     public String levels;
 
     /**
      * <p>The MD5 hash value of the malicious file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d836968041f7683b5459****</p>
      */
     @NameInMap("MaliciousMd5")
     public String maliciousMd5;
 
     /**
      * <p>The alert type.</p>
-     * <br>
      * <p>Valid values when Lang is set to zh:</p>
-     * <br>
-     * <p>*   WebShell</p>
-     * <p>*   Malicious Software</p>
-     * <p>*   Malicious Script</p>
-     * <br>
+     * <ul>
+     * <li>WebShell</li>
+     * <li>Malicious Software</li>
+     * <li>Malicious Script</li>
+     * </ul>
      * <p>Valid values when Lang is set to en:</p>
-     * <br>
-     * <p>*   WebShell</p>
-     * <p>*   Malicious Software</p>
-     * <p>*   Malicious Script</p>
+     * <ul>
+     * <li>WebShell</li>
+     * <li>Malicious Software</li>
+     * <li>Malicious Script</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>WebShell</p>
      */
     @NameInMap("MaliciousType")
     public String maliciousType;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The remarks for the asset affected by the vulnerability. The value can be the private IP address, public IP address, or name of the asset. Fuzzy match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.XX.XX</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
+     * <p>The source of the malicious file.</p>
+     */
+    @NameInMap("ScanRange")
+    public java.util.List<String> scanRange;
+
+    /**
      * <p>The UUID of the asset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d2d94e8b-bb25-4744-8004-1e08a53c****</p>
      */
     @NameInMap("Uuid")
     public String uuid;
@@ -181,6 +222,14 @@ public class ListAgentlessMaliciousFilesRequest extends TeaModel {
     }
     public String getRemark() {
         return this.remark;
+    }
+
+    public ListAgentlessMaliciousFilesRequest setScanRange(java.util.List<String> scanRange) {
+        this.scanRange = scanRange;
+        return this;
+    }
+    public java.util.List<String> getScanRange() {
+        return this.scanRange;
     }
 
     public ListAgentlessMaliciousFilesRequest setUuid(String uuid) {

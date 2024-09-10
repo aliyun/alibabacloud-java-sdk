@@ -12,30 +12,45 @@ public class DescribeWebPathResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries returned on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Count")
     public Integer count;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B37C9052-A73E-4707-A024-92477028****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -96,14 +111,21 @@ public class DescribeWebPathResponseBody extends TeaModel {
     public static class DescribeWebPathResponseBodyConfigListTargetList extends TeaModel {
         /**
          * <p>The object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>82048187-bb9b-4e19-8320-7b4ddb97****</p>
          */
         @NameInMap("Target")
         public String target;
 
         /**
          * <p>The object type. Valid values:</p>
-         * <br>
-         * <p>*   **uuid**</p>
+         * <ul>
+         * <li><strong>uuid</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>uuid</p>
          */
         @NameInMap("TargetType")
         public String targetType;
@@ -140,15 +162,22 @@ public class DescribeWebPathResponseBody extends TeaModel {
 
         /**
          * <p>The path to the web directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/root/www****</p>
          */
         @NameInMap("WebPath")
         public String webPath;
 
         /**
          * <p>The path type of the web directory. Valid values:</p>
-         * <br>
-         * <p>*   **def**: automatically identified</p>
-         * <p>*   **customize**: manually added</p>
+         * <ul>
+         * <li><strong>def</strong>: automatically identified</li>
+         * <li><strong>customize</strong>: manually added</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>def</p>
          */
         @NameInMap("WebPathType")
         public String webPathType;

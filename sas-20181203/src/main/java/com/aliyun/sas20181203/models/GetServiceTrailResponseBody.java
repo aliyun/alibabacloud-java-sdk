@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetServiceTrailResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C699E4E4-F2F4-58FC-A949-457FFE59****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,21 +43,31 @@ public class GetServiceTrailResponseBody extends TeaModel {
     public static class GetServiceTrailResponseBodyServiceTrail extends TeaModel {
         /**
          * <p>The status of the service trail. Valid values:</p>
-         * <br>
-         * <p>*   **on:**</p>
-         * <p>*   **off:**</p>
+         * <ul>
+         * <li><strong>on:</strong></li>
+         * <li><strong>off:</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("Config")
         public String config;
 
         /**
          * <p>The timestamp generated when the service trail was created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1687250241000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The timestamp generated when the service trail was last updated. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1687250241000</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;

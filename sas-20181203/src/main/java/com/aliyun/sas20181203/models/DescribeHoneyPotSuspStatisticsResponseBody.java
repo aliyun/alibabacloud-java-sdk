@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeHoneyPotSuspStatisticsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9E3969FA-5ACC-4256-9FDE-BB6918CD0410</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,47 +43,70 @@ public class DescribeHoneyPotSuspStatisticsResponseBody extends TeaModel {
     public static class DescribeHoneyPotSuspStatisticsResponseBodySuspHoneyPotStatisticsResponse extends TeaModel {
         /**
          * <p>The total number of alerts that are generated for the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8793</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The ID of the server.</p>
-         * <br>
-         * <p>> This parameter is returned only when **StatisticsKeyType** is set to **uuid**.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when <strong>StatisticsKeyType</strong> is set to <strong>uuid</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>i-p0whhoba24wd28p8****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the server.</p>
-         * <br>
-         * <p>> This parameter is returned only when **StatisticsKeyType** is set to **uuid**.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when <strong>StatisticsKeyType</strong> is set to <strong>uuid</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>abc-launch-advisor</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The type of the asset. Valid values:</p>
-         * <br>
-         * <p>*   **vpcInstanceId**: VPC</p>
-         * <p>*   **uuid**: server</p>
+         * <ul>
+         * <li><strong>vpcInstanceId</strong>: VPC</li>
+         * <li><strong>uuid</strong>: server</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>vpcInstanceId</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The ID of the VPC.</p>
-         * <br>
-         * <p>> This parameter is returned only when **StatisticsKeyType** is set to **vpcInstanceId**.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when <strong>StatisticsKeyType</strong> is set to <strong>vpcInstanceId</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-p0wwdsuutdyu1ygkt****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The name of the VPC.</p>
-         * <br>
-         * <p>> This parameter is returned only when **StatisticsKeyType** is set to **vpcInstanceId**.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when <strong>StatisticsKeyType</strong> is set to <strong>vpcInstanceId</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>abc01</p>
          */
         @NameInMap("VpcName")
         public String vpcName;

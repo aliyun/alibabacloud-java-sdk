@@ -12,6 +12,9 @@ public class ListAgentlessRegionResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7E0618A9-D5EF-4220-9471-C42B5E92****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

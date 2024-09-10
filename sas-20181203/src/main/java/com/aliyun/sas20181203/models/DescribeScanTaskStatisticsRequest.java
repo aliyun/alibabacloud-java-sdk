@@ -6,10 +6,14 @@ import com.aliyun.tea.*;
 public class DescribeScanTaskStatisticsRequest extends TeaModel {
     /**
      * <p>The severities of the alert events handled by the virus detection task. Separate multiple severities with commas (,). The severities decrease in descending order. Valid values:</p>
-     * <br>
-     * <p>*   **serious**</p>
-     * <p>*   **suspicious**</p>
-     * <p>*   **remind**</p>
+     * <ul>
+     * <li><strong>serious</strong></li>
+     * <li><strong>suspicious</strong></li>
+     * <li><strong>remind</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>serious,suspicious,remind</p>
      */
     @NameInMap("Levels")
     public String levels;

@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class AddSasModuleTrialResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public AddSasModuleTrialResponseBodyData data;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>09969D2C-4FAD-429E-BFBF-9A60DEF8****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,43 +42,63 @@ public class AddSasModuleTrialResponseBody extends TeaModel {
 
     public static class AddSasModuleTrialResponseBodyDataTrialRecordList extends TeaModel {
         /**
-         * <p>The purchased quota.</p>
+         * <p>The quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("AuthLimit")
         public Long authLimit;
 
         /**
-         * <p>List of purchased quotas.</p>
+         * <p>The list of quotas. This parameter is available if the value of the ModuleCode parameter is cloudSiem. The value of this parameter consists of the log storage capacity for the threat analysis and response feature and the log data to add. Units: GB and GB-day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[1,100]</p>
          */
         @NameInMap("AuthLimitList")
         public String authLimitList;
 
         /**
          * <p>The end time of the trial use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1638201599999</p>
          */
         @NameInMap("GmtEnd")
         public Long gmtEnd;
 
         /**
          * <p>The start time of the trial use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1667232000000</p>
          */
         @NameInMap("GmtStart")
         public Long gmtStart;
 
         /**
-         * <p>The code of the module. Valid values:</p>
-         * <br>
-         * <p>*   **vulFix**: vulnerability fixing</p>
-         * <p>*   **cloudSiem**: threat analysis</p>
+         * <p>The code of the feature. Valid values:</p>
+         * <ul>
+         * <li><strong>vulFix</strong>: vulnerability fixing.</li>
+         * <li><strong>cloudSiem</strong>: threat analysis and response.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>vulFix</p>
          */
         @NameInMap("ModuleCode")
         public String moduleCode;
 
         /**
          * <p>The status of the trial use. Valid values:</p>
-         * <br>
-         * <p>*   **1**: enabled</p>
-         * <p>*   **0**: finished</p>
+         * <ul>
+         * <li><strong>1</strong>: The feature is in trial use.</li>
+         * <li><strong>0</strong>: The trial use ends.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;

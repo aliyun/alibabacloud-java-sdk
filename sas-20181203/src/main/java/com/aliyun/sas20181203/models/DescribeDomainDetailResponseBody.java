@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeDomainDetailResponseBody extends TeaModel {
     /**
      * <p>The total number of alerts in your website assets.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("AlarmCount")
     public Integer alarmCount;
 
     /**
      * <p>The domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("Domain")
     public String domain;
@@ -24,18 +30,27 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3A85CFCF-05C8-451A-9E41-C0D5E96BA407</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The name of the root domain that corresponds to the domain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("RootDomain")
     public String rootDomain;
 
     /**
      * <p>The total number of vulnerabilities in your website assets.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("VulCount")
     public Integer vulCount;
@@ -96,42 +111,61 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
     public static class DescribeDomainDetailResponseBodyDomainDetailItems extends TeaModel {
         /**
          * <p>The type of the domain asset. Valid values:</p>
-         * <br>
-         * <p>*   **0**: an Elastic Compute Service (ECS) instance</p>
-         * <p>*   **1**: a Server Load Balancer (SLB) instance</p>
-         * <p>*   **2**: a Network Address Translation (NAT) gateway</p>
-         * <p>*   **3**: an ApsaraDB RDS instance</p>
-         * <p>*   **4**: an ApsaraDB for MongoDB instance</p>
+         * <ul>
+         * <li><strong>0</strong>: an Elastic Compute Service (ECS) instance</li>
+         * <li><strong>1</strong>: a Server Load Balancer (SLB) instance</li>
+         * <li><strong>2</strong>: a Network Address Translation (NAT) gateway</li>
+         * <li><strong>3</strong>: an ApsaraDB RDS instance</li>
+         * <li><strong>4</strong>: an ApsaraDB for MongoDB instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AssetType")
         public String assetType;
 
         /**
          * <p>The instance ID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-m5e6w7dzsktt6mz4***</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iZm5e6w7dzsktt6mz4yimeZ-6****</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The public IP address of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>The instance UUID of the domain asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1g9dohoyin9cjhn6****</p>
          */
         @NameInMap("Uuid")
         public String uuid;

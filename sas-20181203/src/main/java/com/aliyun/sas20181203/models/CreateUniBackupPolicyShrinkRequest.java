@@ -6,109 +6,143 @@ import com.aliyun.tea.*;
 public class CreateUniBackupPolicyShrinkRequest extends TeaModel {
     /**
      * <p>The name of the database account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>admin</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>The password of the database account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Pass****</p>
      */
     @NameInMap("AccountPassword")
     public String accountPassword;
 
     /**
      * <p>Specifies whether the database is manually added. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("DatabaseAddByUser")
     public String databaseAddByUser;
 
     /**
      * <p>The type of the database. Valid values:</p>
-     * <br>
-     * <p>*   **MYSQL**</p>
-     * <p>*   **ORACLE**</p>
-     * <p>*   **MSSQL**</p>
-     * <br>
+     * <ul>
+     * <li><strong>MYSQL</strong></li>
+     * <li><strong>ORACLE</strong></li>
+     * <li><strong>MSSQL</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MYSQL</p>
      */
     @NameInMap("DatabaseType")
     public String databaseType;
 
     /**
      * <p>The policy for full data backup. The value of this parameter is a JSON string. The JSON string contains the following fields:</p>
-     * <br>
-     * <p>*   **start**: the start time of a backup task.</p>
-     * <p>*   **interval**: the interval of backup tasks.</p>
-     * <p>*   **type**: the unit of the interval.</p>
-     * <p>*   **days**: the days of a week on which a backup task is performed.</p>
-     * <br>
+     * <ul>
+     * <li><strong>start</strong>: the start time of a backup task.</li>
+     * <li><strong>interval</strong>: the interval of backup tasks.</li>
+     * <li><strong>type</strong>: the unit of the interval.</li>
+     * <li><strong>days</strong>: the days of a week on which a backup task is performed.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;days&quot;:[4],&quot;interval&quot;:1,&quot;planType&quot;:&quot;weekly&quot;,&quot;startTime&quot;:&quot;22:00:00&quot;}</p>
      */
     @NameInMap("FullPlan")
     public String fullPlanShrink;
 
     /**
      * <p>The policy for incremental data backup. The value of this parameter is a JSON string. The JSON string contains the following fields:</p>
-     * <br>
-     * <p>*   **start**: the start time of a backup task.</p>
-     * <p>*   **interval**: the interval of backup tasks.</p>
-     * <p>*   **type**: the unit of the interval.</p>
-     * <p>*   **days**: the days of a week on which a backup task is performed.</p>
-     * <br>
+     * <ul>
+     * <li><strong>start</strong>: the start time of a backup task.</li>
+     * <li><strong>interval</strong>: the interval of backup tasks.</li>
+     * <li><strong>type</strong>: the unit of the interval.</li>
+     * <li><strong>days</strong>: the days of a week on which a backup task is performed.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;interval&quot;:1,&quot;planType&quot;:&quot;daily&quot;,&quot;startTime&quot;:&quot;23:30:00&quot;}</p>
      */
     @NameInMap("IncPlan")
     public String incPlanShrink;
 
     /**
      * <p>The ID of the Elastic Compute Service (ECS) instance.</p>
-     * <br>
-     * <p>>  You can call the [DescribeUniBackupDatabase](~~DescribeUniBackupDatabase~~) operation to query the IDs of ECS instances.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeUniBackupDatabase~~">DescribeUniBackupDatabase</a> operation to query the IDs of ECS instances.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp1fu4aqltf1huhc****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the anti-ransomware policy.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql-policy</p>
      */
     @NameInMap("PolicyName")
     public String policyName;
 
     /**
      * <p>The retention period of backup data.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
      */
     @NameInMap("Retention")
     public Integer retention;
 
     /**
      * <p>The maximum network bandwidth that is allowed during data backup. Unit: bytes.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5242880</p>
      */
     @NameInMap("SpeedLimiter")
     public Long speedLimiter;
 
     /**
      * <p>The region in which the server resides.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("UniRegionId")
     public String uniRegionId;
 
     /**
      * <p>The UUID of the server whose data is backed up based on the anti-ransomware policy.</p>
-     * <br>
-     * <p>>  You can call the [DescribeCloudCenterInstances](https://help.aliyun.com/document_detail/141932.html) operation to query the UUIDs of servers.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>045cad48-eb08-4047-a70c-713aec7b****</p>
      */
     @NameInMap("Uuid")
     public String uuid;

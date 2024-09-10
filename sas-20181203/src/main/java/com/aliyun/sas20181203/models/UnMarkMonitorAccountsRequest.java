@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class UnMarkMonitorAccountsRequest extends TeaModel {
     /**
      * <p>The IDs of the members.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>125267953644XXXX,125807832682XXXX</p>
      */
     @NameInMap("AccountIds")
     public String accountIds;

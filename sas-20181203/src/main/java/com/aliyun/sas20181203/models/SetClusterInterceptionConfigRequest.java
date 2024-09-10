@@ -6,33 +6,42 @@ import com.aliyun.tea.*;
 public class SetClusterInterceptionConfigRequest extends TeaModel {
     /**
      * <p>The ID of the cluster. Separate multiple cluster IDs with commas (,).</p>
-     * <br>
-     * <p>> You can call the [ListClusterInterceptionConfig](~~ListClusterInterceptionConfig~~) operation to query the IDs of clusters.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="~~ListClusterInterceptionConfig~~">ListClusterInterceptionConfig</a> operation to query the IDs of clusters.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c60b77fe62093480db6164a3c2fa****</p>
      */
     @NameInMap("ClusterIds")
     public String clusterIds;
 
     /**
      * <p>Specifies whether to turn on the switch. Valid values:</p>
-     * <br>
-     * <p>*   **1**: yes</p>
-     * <p>*   **0**: no</p>
-     * <br>
+     * <ul>
+     * <li><strong>1</strong>: yes</li>
+     * <li><strong>0</strong>: no</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("SwitchOn")
     public Integer switchOn;
 
     /**
      * <p>The type of the switch that you want to configure. Valid values:</p>
-     * <br>
-     * <p>*   **0**: the interception switch</p>
-     * <p>*   **1**: the interception type switch</p>
-     * <p>*   **2**: the interception history switch</p>
-     * <br>
+     * <ul>
+     * <li><strong>0</strong>: the interception switch</li>
+     * <li><strong>1</strong>: the interception type switch</li>
+     * <li><strong>2</strong>: the interception history switch</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("SwitchType")
     public Integer switchType;

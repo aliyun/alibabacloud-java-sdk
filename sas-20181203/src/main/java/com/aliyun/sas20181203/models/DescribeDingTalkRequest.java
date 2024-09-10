@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeDingTalkRequest extends TeaModel {
     /**
      * <p>The number of the page to return.Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The number of entries to return on each page.Default value: 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The name of the notification.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Vulnerability notification</p>
      */
     @NameInMap("RuleActionName")
     public String ruleActionName;

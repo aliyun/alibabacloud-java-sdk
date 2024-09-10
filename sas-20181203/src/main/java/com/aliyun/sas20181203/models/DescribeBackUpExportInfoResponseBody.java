@@ -18,6 +18,9 @@ public class DescribeBackUpExportInfoResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BE120DAB-F4E7-4C53-ADC3-A97578ABF384</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,58 +57,86 @@ public class DescribeBackUpExportInfoResponseBody extends TeaModel {
     public static class DescribeBackUpExportInfoResponseBodyData extends TeaModel {
         /**
          * <p>The number of exported entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>29</p>
          */
         @NameInMap("CurrentCount")
         public Integer currentCount;
 
         /**
          * <p>The name of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>suspicious_event_20221203</p>
          */
         @NameInMap("FileName")
         public String fileName;
 
         /**
          * <p>The time when the export task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1671607025000</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
          * <p>The ID of the export task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>273698***</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The URL at which you can download the archived information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxx.oss-cn-xxx.aliyuncs.com/export/assetInstance_20221221_1671606250570.zip">http://xxx.oss-cn-xxx.aliyuncs.com/export/assetInstance_20221221_1671606250570.zip</a></p>
          */
         @NameInMap("Link")
         public String link;
 
         /**
          * <p>The error message that is returned when the export task fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The progress percentage of the export task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Progress")
         public Integer progress;
 
         /**
          * <p>The status of the export task. Valid values:</p>
-         * <br>
-         * <p>*   **init**: The task is being initialized.</p>
-         * <p>*   **exporting**: The task is in progress.</p>
-         * <p>*   **success**: The task is complete.</p>
+         * <ul>
+         * <li><strong>init</strong>: The task is being initialized.</li>
+         * <li><strong>exporting</strong>: The task is in progress.</li>
+         * <li><strong>success</strong>: The task is complete.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The total number of entries in the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>29</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -192,24 +223,36 @@ public class DescribeBackUpExportInfoResponseBody extends TeaModel {
     public static class DescribeBackUpExportInfoResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>29</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class EnableCustomBlockRecordResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F02D5F26-70B9-53BD-9CDF-A316FD11****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

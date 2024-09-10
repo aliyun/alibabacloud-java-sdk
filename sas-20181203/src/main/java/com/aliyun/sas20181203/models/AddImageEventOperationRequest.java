@@ -6,47 +6,69 @@ import com.aliyun.tea.*;
 public class AddImageEventOperationRequest extends TeaModel {
     /**
      * <p>The rule conditions. The value is in the JSON format. Valid values of keys:</p>
-     * <br>
-     * <p>*   **condition**: the matching condition.</p>
-     * <p>*   **type**: the matching type.</p>
-     * <p>*   **value**: the matching value.</p>
+     * <ul>
+     * <li><strong>condition</strong>: the matching condition.</li>
+     * <li><strong>type</strong>: the matching type.</li>
+     * <li><strong>value</strong>: the matching value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[{\&quot;condition\&quot;: \&quot;MD5\&quot;, \&quot;type\&quot;: \&quot;equals\&quot;, \&quot;value\&quot;: \&quot;0083a31cc0083a31ccf7c10367a6e783e\&quot;}]</p>
      */
     @NameInMap("Conditions")
     public String conditions;
 
     /**
      * <p>The keyword of the alert item.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PEM</p>
      */
     @NameInMap("EventKey")
     public String eventKey;
 
     /**
      * <p>The name of the alert item.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PEM</p>
      */
     @NameInMap("EventName")
     public String eventName;
 
     /**
      * <p>The alert type.</p>
-     * <br>
-     * <p>*   Set the value to **sensitiveFile**.</p>
+     * <ul>
+     * <li>Set the value to <strong>sensitiveFile</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>sensitiveFile</p>
      */
     @NameInMap("EventType")
     public String eventType;
 
     /**
      * <p>The operation code.</p>
-     * <br>
-     * <p>*   Set the value to **whitelist** to add the alert item to the whitelist.</p>
+     * <ul>
+     * <li>Set the value to <strong>whitelist</strong> to add the alert item to the whitelist.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>whitelist</p>
      */
     @NameInMap("OperationCode")
     public String operationCode;
 
     /**
      * <p>The application scope of the rule. The value is in the JSON format. Valid values of keys:</p>
-     * <br>
-     * <p>*   **type**</p>
-     * <p>*   **value**</p>
+     * <ul>
+     * <li><strong>type</strong></li>
+     * <li><strong>value</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;type\&quot;: \&quot;repo\&quot;, \&quot;value\&quot;: \&quot;test-aaa/shenzhen-repo-01\&quot;}</p>
      */
     @NameInMap("Scenarios")
     public String scenarios;

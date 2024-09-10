@@ -5,28 +5,41 @@ import com.aliyun.tea.*;
 
 public class GetHoneypotAttackStatisticsRequest extends TeaModel {
     /**
-     * <p>The page number. Pages start from page **1**. Default value: **1**.</p>
+     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The end time. The value is a UNIX timestamp.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1675058931215</p>
      */
     @NameInMap("EndTimeStamp")
     public Long endTimeStamp;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page. We recommend that you do not leave this parameter empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -39,27 +52,35 @@ public class GetHoneypotAttackStatisticsRequest extends TeaModel {
 
     /**
      * <p>The source IP address of the attack.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>47.92.139.**</p>
      */
     @NameInMap("SrcIp")
     public String srcIp;
 
     /**
      * <p>The start time. The value is a UNIX timestamp.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1681624877761</p>
      */
     @NameInMap("StartTimeStamp")
     public Long startTimeStamp;
 
     /**
      * <p>The type of the attack source statistics. Valid values:</p>
-     * <br>
-     * <p>*   **TOP_ATTACKED_AGENT**: the top 5 probes that are attacked the most frequently</p>
-     * <p>*   **TOP_ATTACKED_IP**: the top 5 IP addresses that are attacked the most frequently</p>
-     * <p>*   **ATTACK_EVENT_TYPE**: the type of the intrusion event</p>
-     * <p>*   **ATTACK_HONEYPOT_TYPE**: the type of the attacked honeypot</p>
-     * <br>
+     * <ul>
+     * <li><strong>TOP_ATTACKED_AGENT</strong>: the top 5 probes that are attacked the most frequently</li>
+     * <li><strong>TOP_ATTACKED_IP</strong>: the top 5 IP addresses that are attacked the most frequently</li>
+     * <li><strong>ATTACK_EVENT_TYPE</strong>: the type of the intrusion event</li>
+     * <li><strong>ATTACK_HONEYPOT_TYPE</strong>: the type of the attacked honeypot</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TOP_ATTACKED_IP</p>
      */
     @NameInMap("StatisticsType")
     public String statisticsType;

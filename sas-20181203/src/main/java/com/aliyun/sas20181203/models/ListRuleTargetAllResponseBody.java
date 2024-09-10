@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListRuleTargetAllResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30CBF632-109F-596F-97F2-451C8B2A****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,20 +43,30 @@ public class ListRuleTargetAllResponseBody extends TeaModel {
     public static class ListRuleTargetAllResponseBodyRuleTargetList extends TeaModel {
         /**
          * <p>The ID of the network object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>301944</p>
          */
         @NameInMap("TargetId")
         public Long targetId;
 
         /**
          * <p>The name of the network object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>source-test-obj-xFKcx</p>
          */
         @NameInMap("TargetName")
         public String targetName;
 
         /**
          * <p>The type of the object. Valid values:</p>
-         * <br>
-         * <p>*   IMAGE</p>
+         * <ul>
+         * <li>IMAGE</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IMAGE</p>
          */
         @NameInMap("TargetType")
         public String targetType;

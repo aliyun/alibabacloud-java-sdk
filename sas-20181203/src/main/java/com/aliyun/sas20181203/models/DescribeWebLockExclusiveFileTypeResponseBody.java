@@ -7,9 +7,17 @@ public class DescribeWebLockExclusiveFileTypeResponseBody extends TeaModel {
     @NameInMap("ExclusiveFileType")
     public java.util.List<String> exclusiveFileType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9CCD7D51-5E81-5FF5-BD74-813DDD248430</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

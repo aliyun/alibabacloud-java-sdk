@@ -18,6 +18,9 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>028CF634-5268-5660-9575-48C9ED6B7T8Y</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +57,36 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
     public static class DescribeCustomBlockRecordsResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>708</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -118,14 +133,21 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
     public static class DescribeCustomBlockRecordsResponseBodyRecordListTargetList extends TeaModel {
         /**
          * <p>The ID of the destination asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>032b618f-b220-4a0d-bd37-fbdc6*******</p>
          */
         @NameInMap("Target")
         public String target;
 
         /**
          * <p>The type of the query. Valid values:</p>
-         * <br>
-         * <p>*   Set the value to **uuid**.</p>
+         * <ul>
+         * <li>Set the value to <strong>uuid</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>uuid</p>
          */
         @NameInMap("TargetType")
         public String targetType;
@@ -156,55 +178,81 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
     public static class DescribeCustomBlockRecordsResponseBodyRecordList extends TeaModel {
         /**
          * <p>The timestamp generated when the block action on the IP address becomes invalid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1671506882063</p>
          */
         @NameInMap("BlockExpireDate")
         public Long blockExpireDate;
 
         /**
          * <p>The blocked IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45.227.XX.XX</p>
          */
         @NameInMap("BlockIp")
         public String blockIp;
 
         /**
          * <p>The direction of the traffic that is sent by the blocked IP address. Valid values:</p>
-         * <br>
-         * <p>*   **in**</p>
-         * <p>*   **out**</p>
+         * <ul>
+         * <li><strong>in</strong></li>
+         * <li><strong>out</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>in</p>
          */
         @NameInMap("Bound")
         public String bound;
 
         /**
          * <p>The number of servers for which the defense rule is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("EnableCount")
         public Integer enableCount;
 
         /**
          * <p>The record ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>353376</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The total number of servers on which the IP address is blocked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("ServerCount")
         public Integer serverCount;
 
         /**
          * <p>The source of the defense rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UserRule</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
          * <p>The status of the defense rule against brute-force attacks. Valid values:</p>
-         * <br>
-         * <p>*   **0**: invalid.</p>
-         * <p>*   **1**: enabled.</p>
-         * <p>*   **2**: failed.</p>
+         * <ul>
+         * <li><strong>0</strong>: invalid.</li>
+         * <li><strong>1</strong>: enabled.</li>
+         * <li><strong>2</strong>: failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;

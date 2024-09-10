@@ -12,6 +12,9 @@ public class DescribeExposedInstanceCriteriaResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6D9CDB47-6191-4415-BE63-7E8B12CD4FBE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,23 +43,34 @@ public class DescribeExposedInstanceCriteriaResponseBody extends TeaModel {
     public static class DescribeExposedInstanceCriteriaResponseBodyCriteriaList extends TeaModel {
         /**
          * <p>The name of the search condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceId</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The type of the search condition. Valid values:</p>
-         * <br>
-         * <p>*   **input**: You must configure the search condition.</p>
-         * <p>*   **select**: You must select a search condition from the **Values** list.</p>
+         * <ul>
+         * <li><strong>input</strong>: You must configure the search condition.</li>
+         * <li><strong>select</strong>: You must select a search condition from the <strong>Values</strong> list.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>select</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The value of the search condition. This parameter is returned only when the value of the **Type** parameter is **select**.</p>
-         * <br>
-         * <p>>  If the value of the **Type** parameter is **input**, this parameter is empty.</p>
+         * <p>The value of the search condition. This parameter is returned only when the value of the <strong>Type</strong> parameter is <strong>select</strong>.</p>
+         * <blockquote>
+         * <p> If the value of the <strong>Type</strong> parameter is <strong>input</strong>, this parameter is empty.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp19r0fdd39idxhf****</p>
          */
         @NameInMap("Values")
         public String values;

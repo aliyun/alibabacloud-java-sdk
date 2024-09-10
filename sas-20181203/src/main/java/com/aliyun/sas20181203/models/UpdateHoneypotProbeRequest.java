@@ -6,37 +6,53 @@ import com.aliyun.tea.*;
 public class UpdateHoneypotProbeRequest extends TeaModel {
     /**
      * <p>Specifies whether address resolution protocol (ARP) is enabled for the check type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Arp")
     public Boolean arp;
 
     /**
      * <p>The name of the probe.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>svwsx-vpc-4430</p>
      */
     @NameInMap("DisplayName")
     public String displayName;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese.</p>
-     * <p>*   **en**: English.</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>Specifies whether ping is enabled for the check type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Ping")
     public Boolean ping;
 
     /**
      * <p>The ID of the probe.</p>
-     * <br>
-     * <p>> You can call the [ListHoneypotProbe](~~ListHoneypotProbe~~) operation to query the IDs of probes.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="~~ListHoneypotProbe~~">ListHoneypotProbe</a> operation to query the IDs of probes.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bbe7e382-956f-473e-beed-bc73a258****</p>
      */
     @NameInMap("ProbeId")
     public String probeId;

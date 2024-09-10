@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateRestoreJobResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BD4B24CE-E5C4-5727-B731-BE85F1D4****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

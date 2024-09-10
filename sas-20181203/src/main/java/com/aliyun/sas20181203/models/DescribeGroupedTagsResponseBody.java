@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeGroupedTagsResponseBody extends TeaModel {
     /**
      * <p>This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Count")
     public Integer count;
@@ -18,21 +21,31 @@ public class DescribeGroupedTagsResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>151F6EB6-D5F3-417A-AF7B-4D84975DB586</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request is successful.</p>
-     * <p>*   **false**: The request fails.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,18 +98,27 @@ public class DescribeGroupedTagsResponseBody extends TeaModel {
     public static class DescribeGroupedTagsResponseBodyGroupedFileds extends TeaModel {
         /**
          * <p>The number of assets to which the tag is added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>152</p>
          */
         @NameInMap("Count")
         public String count;
 
         /**
          * <p>The name of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternetIp</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3252366</p>
          */
         @NameInMap("TagId")
         public Integer tagId;

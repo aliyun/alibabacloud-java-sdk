@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeStrategyTargetResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>001BAB34-D70A-54B0-B1D7-91B76DCDD8E8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,30 +43,44 @@ public class DescribeStrategyTargetResponseBody extends TeaModel {
     public static class DescribeStrategyTargetResponseBodyStrategyTargets extends TeaModel {
         /**
          * <p>The number of the assets that belong to the asset group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>85</p>
          */
         @NameInMap("BindUuidCount")
         public Integer bindUuidCount;
 
         /**
          * <p>Indicates whether the baseline check policy is applied to the asset group. Valid values:</p>
-         * <br>
-         * <p>*   **add**: The baseline check policy is applied to the asset group.</p>
-         * <p>*   **del**: the baseline check policy is not applied to the asset group.</p>
+         * <ul>
+         * <li><strong>add</strong>: The baseline check policy is applied to the asset group.</li>
+         * <li><strong>del</strong>: the baseline check policy is not applied to the asset group.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>add</p>
          */
         @NameInMap("Flag")
         public String flag;
 
         /**
          * <p>The ID of the asset group to which the assets belong or the UUID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9165712</p>
          */
         @NameInMap("Target")
         public String target;
 
         /**
          * <p>The method that is used to add the assets to the baseline check policy. Valid values:</p>
-         * <br>
-         * <p>*   **groupId**: the ID of the asset group</p>
-         * <p>*   **uuid**: the UUID of the asset</p>
+         * <ul>
+         * <li><strong>groupId</strong>: the ID of the asset group</li>
+         * <li><strong>uuid</strong>: the UUID of the asset</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>groupId</p>
          */
         @NameInMap("TargetType")
         public String targetType;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class QueryGroupIdByGroupNameResponseBody extends TeaModel {
     /**
      * <p>The ID of the asset group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9935302</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24A20733-10A0-4AF6-BE6B-E3322413BB68</p>
      */
     @NameInMap("RequestId")
     public String requestId;

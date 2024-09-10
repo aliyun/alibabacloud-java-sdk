@@ -12,25 +12,37 @@ public class CreateHoneypotProbeBindRequest extends TeaModel {
 
     /**
      * <p>The honeypot ID.</p>
-     * <br>
-     * <p>>  You can call the [ListHoneypot](~~ListHoneypot~~) operation to query the IDs of honeypots.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~ListHoneypot~~">ListHoneypot</a> operation to query the IDs of honeypots.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>dba7d44775be8e0e5888ee3b1a62554a93d2512247cabc38ddeac17a3b3f****</p>
      */
     @NameInMap("HoneypotId")
     public String honeypotId;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The probe ID.</p>
-     * <br>
-     * <p>>  You can call the [ListHoneypotProbe](~~ListHoneypotProbe~~) operation to query the IDs of probes.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~ListHoneypotProbe~~">ListHoneypotProbe</a> operation to query the IDs of probes.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>36bad711-d1ac-4419-ac68-c1aa280f****</p>
      */
     @NameInMap("ProbeId")
     public String probeId;
@@ -89,45 +101,66 @@ public class CreateHoneypotProbeBindRequest extends TeaModel {
     public static class CreateHoneypotProbeBindRequestBindPortList extends TeaModel {
         /**
          * <p>Specifies whether to bind the port. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("BindPort")
         public Boolean bindPort;
 
         /**
          * <p>The end port on which the probe monitors.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("EndPort")
         public Integer endPort;
 
         /**
          * <p>Specifies whether the port is a fixed port. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Fixed")
         public Boolean fixed;
 
         /**
          * <p>The type of the protocol. Valid values:</p>
-         * <br>
-         * <p>*   **tcp**</p>
-         * <p>*   **udp**</p>
+         * <ul>
+         * <li><strong>tcp</strong></li>
+         * <li><strong>udp</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         @NameInMap("Proto")
         public String proto;
 
         /**
          * <p>The start port on which the probe monitors.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("StartPort")
         public Integer startPort;
 
         /**
          * <p>The destination port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         @NameInMap("TargetPort")
         public Integer targetPort;

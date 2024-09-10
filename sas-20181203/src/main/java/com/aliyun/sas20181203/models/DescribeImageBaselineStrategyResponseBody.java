@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9F85AC10-A1FE-54D7-935A-F28D5256****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
     public static class DescribeImageBaselineStrategyResponseBodyStrategyBaselineItemList extends TeaModel {
         /**
          * <p>The key of the baseline type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>identification</p>
          */
         @NameInMap("ClassKey")
         public String classKey;
 
         /**
          * <p>The key of the baseline check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>duplicate_pwd_hash</p>
          */
         @NameInMap("ItemKey")
         public String itemKey;
 
         /**
          * <p>The key of the name for the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>identification</p>
          */
         @NameInMap("NameKey")
         public String nameKey;
@@ -90,6 +102,9 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
     public static class DescribeImageBaselineStrategyResponseBodyStrategy extends TeaModel {
         /**
          * <p>The baseline check policy for agentless detection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hc_win2008_cis_rules</p>
          */
         @NameInMap("BaselineItem")
         public String baselineItem;
@@ -102,34 +117,50 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
 
         /**
          * <p>The number of selected baseline check items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("SelectedItemCount")
         public Integer selectedItemCount;
 
         /**
          * <p>The ID of the baseline check policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8257</p>
          */
         @NameInMap("StrategyId")
         public Long strategyId;
 
         /**
          * <p>The name of the baseline check policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("StrategyName")
         public String strategyName;
 
         /**
          * <p>The total number of baseline check items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalItemCount")
         public Integer totalItemCount;
 
         /**
          * <p>The type of the baseline check policy. Valid values:</p>
-         * <br>
-         * <p>*   **default**: the default policy</p>
-         * <p>*   **full**: a policy that uses all baselines</p>
-         * <p>*   **normal**: a policy that uses general baselines</p>
+         * <ul>
+         * <li><strong>default</strong>: the default policy</li>
+         * <li><strong>full</strong>: a policy that uses all baselines</li>
+         * <li><strong>normal</strong>: a policy that uses general baselines</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Type")
         public String type;

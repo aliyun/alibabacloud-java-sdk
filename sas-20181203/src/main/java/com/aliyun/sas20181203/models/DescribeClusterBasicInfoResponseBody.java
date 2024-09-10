@@ -12,6 +12,9 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24A20733-10A0-4AF6-BE6B-E3322413BB68</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,68 +43,98 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
     public static class DescribeClusterBasicInfoResponseBodyClusterInfo extends TeaModel {
         /**
          * <p>The ID of cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c870ec78ecbcb41d2a35c679823ef****</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testackpro</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
 
         /**
          * <p>The type of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   **ManagedKubernetes**: managed Kubernetes cluster</p>
-         * <p>*   **NotManagedKubernetes**: non-managed Kubernetes cluster</p>
-         * <p>*   **PrivateKubernetes**: private cluster</p>
-         * <p>*   **kubernetes**: dedicated Kubernetes cluster</p>
-         * <p>*   **ask**: dedicated ASK cluster</p>
+         * <ul>
+         * <li><strong>ManagedKubernetes</strong>: managed Kubernetes cluster</li>
+         * <li><strong>NotManagedKubernetes</strong>: non-managed Kubernetes cluster</li>
+         * <li><strong>PrivateKubernetes</strong>: private cluster</li>
+         * <li><strong>kubernetes</strong>: dedicated Kubernetes cluster</li>
+         * <li><strong>ask</strong>: dedicated ASK cluster</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>kubernetes</p>
          */
         @NameInMap("ClusterType")
         public String clusterType;
 
         /**
          * <p>The timestamp when the cluster was created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1662038134000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The version of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.22.10-aliyun.1</p>
          */
         @NameInMap("CurrentVersion")
         public String currentVersion;
 
         /**
          * <p>The number of instances in the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
         /**
          * <p>The ID of the region in which the cluster is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The status of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   **unavailable**</p>
-         * <p>*   **Available**</p>
-         * <p>*   **Creating**</p>
-         * <p>*   **CreateFailed**</p>
+         * <ul>
+         * <li><strong>unavailable</strong></li>
+         * <li><strong>Available</strong></li>
+         * <li><strong>Creating</strong></li>
+         * <li><strong>CreateFailed</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
          * <p>Indicates whether the cluster is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The cluster is enabled.</p>
-         * <p>*   **false**: The cluster is disabled.</p>
+         * <ul>
+         * <li><strong>true</strong>: The cluster is enabled.</li>
+         * <li><strong>false</strong>: The cluster is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("TargetResult")
         public Boolean targetResult;

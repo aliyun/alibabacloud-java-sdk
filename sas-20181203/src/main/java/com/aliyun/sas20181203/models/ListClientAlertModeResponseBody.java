@@ -12,6 +12,9 @@ public class ListClientAlertModeResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A4EB8B1C-1DEC-5E18-BCD0-D1BBB3936FA7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class ListClientAlertModeResponseBody extends TeaModel {
     public static class ListClientAlertModeResponseBodyData extends TeaModel {
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("Count")
         public Integer count;

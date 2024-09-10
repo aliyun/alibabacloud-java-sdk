@@ -6,309 +6,454 @@ import com.aliyun.tea.*;
 public class DescribeVersionConfigResponseBody extends TeaModel {
     /**
      * <p>The quota for agentless detection.</p>
-     * <br>
-     * <p>>  The agentless detection feature is unavailable for purchase. You can ignore this parameter.</p>
+     * <blockquote>
+     * <p> The agentless detection feature is unavailable for purchase. You can ignore this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("AgentlessCapacity")
     public Long agentlessCapacity;
 
     /**
      * <p>Indicates whether the pay-as-you-go billing method is supported.</p>
-     * <br>
-     * <p>*   **0**: no</p>
-     * <p>*   **1**: yes</p>
+     * <ul>
+     * <li><strong>0</strong>: no</li>
+     * <li><strong>1</strong>: yes</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("AllowPartialBuy")
     public Integer allowPartialBuy;
 
     /**
      * <p>Switch of anti-ransomware hosting service. Valid values:</p>
-     * <br>
-     * <p>*   **0**: off</p>
-     * <p>*   **1**: on</p>
+     * <ul>
+     * <li><strong>0</strong>: off</li>
+     * <li><strong>1</strong>: on</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("AntiRansomwareService")
     public Integer antiRansomwareService;
 
     /**
      * <p>Indicates whether the application whitelist feature is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **0**: no</p>
-     * <p>*   **2**: yes</p>
+     * <ul>
+     * <li><strong>0</strong>: no</li>
+     * <li><strong>2</strong>: yes</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("AppWhiteList")
     public Integer appWhiteList;
 
     /**
      * <p>The quota for the application whitelist feature.</p>
-     * <br>
-     * <p>>  The quantity of servers that are allowed by the quota is deducted by one each time you apply an application whitelist to a server. After you enable the application whitelist feature, the quota is 20 by default.</p>
+     * <blockquote>
+     * <p> The quantity of servers that are allowed by the quota is deducted by one each time you apply an application whitelist to a server. After you enable the application whitelist feature, the quota is 20 by default.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("AppWhiteListAuthCount")
     public Long appWhiteListAuthCount;
 
     /**
      * <p>The quota for servers that can be protected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("AssetLevel")
     public Integer assetLevel;
 
     /**
      * <p>The purchased quota for configuration assessment. Unit: times/month.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("CspmCapacity")
     public Long cspmCapacity;
 
     /**
      * <p>The most advanced edition that is used. Valid values:</p>
-     * <br>
-     * <p>*   **1**: Basic edition</p>
-     * <p>*   **3**: Enterprise edition</p>
-     * <p>*   **5**: Advanced edition</p>
-     * <p>*   **6**: Anti-virus edition</p>
-     * <p>*   **7**: Ultimate edition</p>
-     * <p>*   **10**: Value-added Plan edition</p>
-     * <br>
-     * <p>>  If you purchase the Multi-version edition of Security Center, the value indicates the most advanced edition that is used in the Multi-version edition. If you do not purchase the Multi-version edition of Security Center, the value indicates the edition of Security Center.</p>
+     * <ul>
+     * <li><strong>1</strong>: Basic edition</li>
+     * <li><strong>3</strong>: Enterprise edition</li>
+     * <li><strong>5</strong>: Advanced edition</li>
+     * <li><strong>6</strong>: Anti-virus edition</li>
+     * <li><strong>7</strong>: Ultimate edition</li>
+     * <li><strong>10</strong>: Value-added Plan edition</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you purchase the Multi-version edition of Security Center, the value indicates the most advanced edition that is used in the Multi-version edition. If you do not purchase the Multi-version edition of Security Center, the value indicates the edition of Security Center.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("HighestVersion")
     public Integer highestVersion;
 
     /**
      * <p>The purchased quota for the cloud honeypot feature.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("HoneypotCapacity")
     public Long honeypotCapacity;
 
     /**
      * <p>The purchased quota for the container image scan feature.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8954</p>
      */
     @NameInMap("ImageScanCapacity")
     public Long imageScanCapacity;
 
     /**
      * <p>The ID of purchased Security Center.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sas-vg6hafdsafs****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>Indicates whether Security Center runs the latest version of the Ultimate edition.</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsNewContainerVersion")
     public Boolean isNewContainerVersion;
 
     /**
      * <p>Indicates whether Security Center runs the latest version of the Multi-version edition. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsNewMultiVersion")
     public Boolean isNewMultiVersion;
 
     /**
      * <p>Indicates whether the number of existing servers exceeds the purchased quota. Valid values:</p>
-     * <br>
-     * <p>*   **false**: no</p>
-     * <p>*   **true**: yes</p>
+     * <ul>
+     * <li><strong>false</strong>: no</li>
+     * <li><strong>true</strong>: yes<blockquote>
+     * <p>Notice: This parameter is deprecated. You can ignore it.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsOverBalance")
     public Boolean isOverBalance;
 
     /**
      * <p>Indicates whether the pay-as-you-go billing method is used. Valid values:</p>
-     * <br>
-     * <p>*   **false**</p>
-     * <p>*   **true**</p>
+     * <ul>
+     * <li><strong>false</strong></li>
+     * <li><strong>true</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsPostpay")
     public Boolean isPostpay;
 
     /**
      * <p>Indicates whether Security Center runs the free trial edition. Valid values:</p>
-     * <br>
-     * <p>*   **0**: no</p>
-     * <p>*   **1**: yes</p>
+     * <ul>
+     * <li><strong>0</strong>: no</li>
+     * <li><strong>1</strong>: yes</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("IsTrialVersion")
     public Integer isTrialVersion;
 
     /**
      * <p>The timestamp when the last trial of Security Center ends. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1603934844000</p>
      */
     @NameInMap("LastTrailEndTime")
     public Long lastTrailEndTime;
 
     /**
      * <p>The total quota in the Multi-version edition of purchased Security Center.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5000</p>
      */
     @NameInMap("MVAuthCount")
     public Integer MVAuthCount;
 
     /**
      * <p>The total remaining quota in the Multi-version edition of purchased Security Center.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40</p>
      */
     @NameInMap("MVUnusedAuthCount")
     public Integer MVUnusedAuthCount;
 
     /**
      * <p>Indicates whether the new version of the threat analysis and response feature is enabled. With the new version, you can purchase the amount of log data that you want to add to the feature and log storage capacity. Valid values:</p>
-     * <br>
-     * <p>*   **0**: no</p>
-     * <p>*   **1**: yes</p>
+     * <ul>
+     * <li><strong>0</strong>: no</li>
+     * <li><strong>1</strong>: yes</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("NewThreatAnalysis")
     public Integer newThreatAnalysis;
 
     /**
      * <p>The timestamp when Security Center is purchased. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1657244824669</p>
      */
     @NameInMap("OpenTime")
     public Long openTime;
 
     /**
      * <p>The instance ID of Security Center that uses the pay-as-you-go billing method.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>postpay-sas-**</p>
      */
     @NameInMap("PostPayInstanceId")
     public String postPayInstanceId;
 
     /**
      * <p>The configuration of the pay-as-you-go module. Valid values:</p>
-     * <br>
-     * <p>*   **VUL**: vulnerability fixing module</p>
+     * <ul>
+     * <li><strong>VUL</strong>: vulnerability fixing module</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;VUL&quot;:1}</p>
      */
     @NameInMap("PostPayModuleSwitch")
     public String postPayModuleSwitch;
 
     /**
      * <p>The creation time of Security Center that uses the pay-as-you-go billing method.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1698915219000</p>
      */
     @NameInMap("PostPayOpenTime")
     public Long postPayOpenTime;
 
     /**
      * <p>The status of Security Center that uses the pay-as-you-go billing method. Valid values:</p>
-     * <br>
-     * <p>*   **1**: The instance runs as expected.</p>
-     * <p>*   **2**: The instance is stopped due to overdue payments.</p>
+     * <ul>
+     * <li><strong>1</strong>: The instance runs as expected.</li>
+     * <li><strong>2</strong>: The instance is stopped due to overdue payments.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PostPayStatus")
     public Integer postPayStatus;
 
     /**
      * <p>The purchased quota for application protection. Unit: process/month.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("RaspCapacity")
     public Long raspCapacity;
 
     /**
      * <p>The timestamp when the Security Center subscription ends. Unit: milliseconds.</p>
-     * <br>
-     * <p>>  If you do not renew the subscription within seven days after the expiration date, Security Center of a paid edition is automatically downgraded to Security Center Basic. In this case, you can no longer use the features of the paid edition or view the existing configurations or statistics such as DDoS alerts in Security Center. You must purchase Security Center of a paid edition to use relevant features. For more information, see [Purchase Security Center](https://help.aliyun.com/document_detail/42308.html).</p>
+     * <blockquote>
+     * <p> If you do not renew the subscription within seven days after the expiration date, Security Center of a paid edition is automatically downgraded to Security Center Basic. In this case, you can no longer use the features of the paid edition or view the existing configurations or statistics such as DDoS alerts in Security Center. You must purchase Security Center of a paid edition to use relevant features. For more information, see <a href="https://help.aliyun.com/document_detail/42308.html">Purchase Security Center</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1625846400000</p>
      */
     @NameInMap("ReleaseTime")
     public Long releaseTime;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C2DC96D2-DD2E-49D9-A28E-85590475DF55</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether log analysis is purchased. Valid values:</p>
-     * <br>
-     * <p>*   **0**: no</p>
-     * <p>*   **1**: yes</p>
+     * <ul>
+     * <li><strong>0</strong>: no</li>
+     * <li><strong>1</strong>: yes</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("SasLog")
     public Integer sasLog;
 
     /**
      * <p>Indicates whether the security screen feature is purchased. Valid values:</p>
-     * <br>
-     * <p>*   **0**: no</p>
-     * <p>*   **1**: yes</p>
+     * <ul>
+     * <li><strong>0</strong>: no</li>
+     * <li><strong>1</strong>: yes</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("SasScreen")
     public Integer sasScreen;
 
     /**
      * <p>The purchased quota for malicious file detection SDK. Unit: process/month.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("SdkCapacity")
     public Long sdkCapacity;
 
     /**
      * <p>The log storage capacity that you purchase. Unit: GB. Valid values: 0 to 200000.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10240</p>
      */
     @NameInMap("SlsCapacity")
     public Long slsCapacity;
 
     /**
      * <p>The purchased log storage capacity for threat analysis. Unit: GB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25</p>
      */
     @NameInMap("ThreatAnalysisCapacity")
     public Long threatAnalysisCapacity;
 
     /**
      * <p>The amount of log data that you purchase for the threat analysis and response feature. Unit: GB-day.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("ThreatAnalysisFlow")
     public Integer threatAnalysisFlow;
 
     /**
      * <p>Indicates whether the custom alert feature is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **0**: no</p>
-     * <p>*   **2**: yes</p>
+     * <ul>
+     * <li><strong>0</strong>: no</li>
+     * <li><strong>2</strong>: yes</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("UserDefinedAlarms")
     public Integer userDefinedAlarms;
 
     /**
      * <p>The edition of purchased Security Center. Valid values:</p>
-     * <br>
-     * <p>*   **1**: Basic edition</p>
-     * <p>*   **3**: Enterprise edition</p>
-     * <p>*   **5**: Advanced edition</p>
-     * <p>*   **6**: Anti-virus edition</p>
-     * <p>*   **7**: Ultimate edition</p>
-     * <p>*   **8**: Multi-version edition</p>
-     * <p>*   **10**: Value-added Plan edition</p>
+     * <ul>
+     * <li><strong>1</strong>: Basic edition</li>
+     * <li><strong>3</strong>: Enterprise edition</li>
+     * <li><strong>5</strong>: Advanced edition</li>
+     * <li><strong>6</strong>: Anti-virus edition</li>
+     * <li><strong>7</strong>: Ultimate edition</li>
+     * <li><strong>8</strong>: Multi-version edition</li>
+     * <li><strong>10</strong>: Value-added Plan edition</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("Version")
     public Integer version;
 
     /**
      * <p>The quota for the cores of servers that can be protected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("VmCores")
     public Integer vmCores;
 
     /**
      * <p>The purchased quota for vulnerability fixing. Unit: times/month.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("VulFixCapacity")
     public Long vulFixCapacity;
 
     /**
      * <p>Indicates whether the web tamper proofing feature is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **0**: no</p>
-     * <p>*   **1**: yes</p>
+     * <ul>
+     * <li><strong>0</strong>: no</li>
+     * <li><strong>1</strong>: yes</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("WebLock")
     public Integer webLock;
 
     /**
      * <p>The quota for the web tamper proofing feature. The quantity of servers that are allowed by the quota is deducted by one each time a server is protected by the web tamper proofing feature. Valid values: 0 to N.</p>
-     * <br>
-     * <p>>  N indicates the number of servers that you own.</p>
+     * <blockquote>
+     * <p> N indicates the number of servers that you own.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("WebLockAuthCount")
     public Long webLockAuthCount;

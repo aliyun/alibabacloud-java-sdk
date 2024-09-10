@@ -6,40 +6,55 @@ import com.aliyun.tea.*;
 public class ListAegisContainerPluginRuleRequest extends TeaModel {
     /**
      * <p>The query condition.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{\&quot;name\&quot;: \&quot;name\&quot;, \&quot;value\&quot;: \&quot;test-1818\&quot;}]</p>
      */
     @NameInMap("Criteria")
     public String criteria;
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The type of the rule. Valid values:</p>
-     * <br>
-     * <p>*   **0**: custom</p>
-     * <p>*   **1**: system</p>
+     * <ul>
+     * <li><strong>0</strong>: custom</li>
+     * <li><strong>1</strong>: system</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("RuleType")
     public Integer ruleType;

@@ -6,55 +6,75 @@ import com.aliyun.tea.*;
 public class DescribeContainerTagsRequest extends TeaModel {
     /**
      * <p>The name of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>node-exporter</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
      * <p>The ID of the cluster to which the container belongs.</p>
-     * <br>
-     * <p>> You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>c22143730ab6e40b09ec7c1c51d4d****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
-     * <br>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The name of the attribute that is used for the query. Valid values:</p>
-     * <br>
-     * <p>*   **namespace**: the namespace</p>
-     * <p>*   **appName**: the application name</p>
-     * <p>*   **image**: the image</p>
-     * <p>*   **tag**: the tag</p>
-     * <br>
+     * <ul>
+     * <li><strong>namespace</strong>: the namespace</li>
+     * <li><strong>appName</strong>: the application name</li>
+     * <li><strong>image</strong>: the image</li>
+     * <li><strong>tag</strong>: the tag</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>namespace</p>
      */
     @NameInMap("FieldName")
     public String fieldName;
 
     /**
      * <p>The value of the attribute that is used for the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo4</p>
      */
     @NameInMap("FieldValue")
     public String fieldValue;
 
     /**
      * <p>The namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-name-01</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The number of entries to return on each page. Default value: 200.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeImageEventOperationPageResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,21 +21,31 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A3D7C47D-3F11-57BB-90E8-E5C20C61****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,53 +98,78 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
     public static class DescribeImageEventOperationPageResponseBodyDataList extends TeaModel {
         /**
          * <p>The rule conditions. The value is in the JSON format. Valid values of keys:</p>
-         * <br>
-         * <p>*   **condition**: the matching condition.</p>
-         * <p>*   **type**: the matching type.</p>
-         * <p>*   **value**: the matching value.</p>
+         * <ul>
+         * <li><strong>condition</strong>: the matching condition.</li>
+         * <li><strong>type</strong>: the matching type.</li>
+         * <li><strong>value</strong>: the matching value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;condition\&quot;: \&quot;MD5\&quot;, \&quot;type\&quot;: \&quot;equals\&quot;, \&quot;value\&quot;: \&quot;0083a31cc0083a31ccf7c10367a6e783e\&quot;}]</p>
          */
         @NameInMap("Conditions")
         public String conditions;
 
         /**
          * <p>The keyword of the alert item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PEM</p>
          */
         @NameInMap("EventKey")
         public String eventKey;
 
         /**
          * <p>The name of the alert item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PEM</p>
          */
         @NameInMap("EventName")
         public String eventName;
 
         /**
          * <p>The alert type.</p>
-         * <br>
-         * <p>*   Only **sensitiveFile** may be returned.</p>
+         * <ul>
+         * <li>Only <strong>sensitiveFile</strong> may be returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>sensitiveFile</p>
          */
         @NameInMap("EventType")
         public String eventType;
 
         /**
          * <p>The primary key of the alert handling rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2646624</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The operation code.</p>
-         * <br>
-         * <p>*   Only **whitelist** may be returned, which means that the alert item is added to the whitelist.</p>
+         * <ul>
+         * <li>Only <strong>whitelist</strong> may be returned, which means that the alert item is added to the whitelist.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>whitelist</p>
          */
         @NameInMap("OperationCode")
         public String operationCode;
 
         /**
          * <p>The application scope of the rule. The value is in the JSON format. Valid values of keys:</p>
-         * <br>
-         * <p>*   **type**</p>
-         * <p>*   **value**</p>
+         * <ul>
+         * <li><strong>type</strong></li>
+         * <li><strong>value</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;type\&quot;: \&quot;repo\&quot;, \&quot;value\&quot;: \&quot;test-aaa/shenzhen-repo-01\&quot;}</p>
          */
         @NameInMap("Scenarios")
         public String scenarios;
@@ -202,18 +240,27 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
     public static class DescribeImageEventOperationPageResponseBodyDataPageInfo extends TeaModel {
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>109</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

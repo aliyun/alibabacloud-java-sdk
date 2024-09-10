@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class OperateCommonTargetConfigResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>95D45C44-4F53-5ED2-8E12-7D134564B****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

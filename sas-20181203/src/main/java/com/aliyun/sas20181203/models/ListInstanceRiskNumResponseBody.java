@@ -12,6 +12,9 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>291B49F9-1685-4005-9D34-606B6F78****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
     public static class ListInstanceRiskNumResponseBodyInstanceRiskNumInstanceItem extends TeaModel {
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-wz9fdluqx20mp2x7****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The UUID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f2d6e901-1004-4ca8-9dae-53ec04a9****</p>
          */
         @NameInMap("Uuid")
         public String uuid;
@@ -76,42 +85,63 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
     public static class ListInstanceRiskNumResponseBodyInstanceRiskNumRiskNumEntity extends TeaModel {
         /**
          * <p>The number of high-risk alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("SuspiciousHighCount")
         public Integer suspiciousHighCount;
 
         /**
          * <p>The number of low-risk alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         @NameInMap("SuspiciousLowCount")
         public Integer suspiciousLowCount;
 
         /**
          * <p>The number of medium-risk alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("SuspiciousMediumCount")
         public Integer suspiciousMediumCount;
 
         /**
          * <p>The number of high-risk vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("VulHighCount")
         public Integer vulHighCount;
 
         /**
          * <p>The number of low-risk vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("VulLowCount")
         public Integer vulLowCount;
 
         /**
          * <p>The number of medium-risk vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("VulMediumCount")
         public Integer vulMediumCount;
 
         /**
          * <p>The number of weak passwords exposed on the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("WeakPassWordCount")
         public Integer weakPassWordCount;

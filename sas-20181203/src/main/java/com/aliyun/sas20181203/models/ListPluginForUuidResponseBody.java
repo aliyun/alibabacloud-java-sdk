@@ -11,19 +11,28 @@ public class ListPluginForUuidResponseBody extends TeaModel {
     public java.util.List<ListPluginForUuidResponseBodyAegisUuidTargetPluginConfigList> aegisUuidTargetPluginConfigList;
 
     /**
-     * <p>The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,39 +77,55 @@ public class ListPluginForUuidResponseBody extends TeaModel {
     public static class ListPluginForUuidResponseBodyAegisUuidTargetPluginConfigListAegisSuspiciousConfigList extends TeaModel {
         /**
          * <p>Indicates whether the plug-in is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Config")
         public Boolean config;
 
         /**
          * <p>The message that indicates whether you are authorized to install the plug-in on your server or whether the plug-in is installed on your server. Valid values:</p>
-         * <br>
-         * <p>*   **authorized**: authorized</p>
-         * <p>*   **unauthorized**: unauthorized</p>
-         * <p>*   **unbind**: not installed</p>
-         * <p>*   **nonsupport**: not supported</p>
+         * <ul>
+         * <li><strong>authorized</strong>: authorized</li>
+         * <li><strong>unauthorized</strong>: unauthorized</li>
+         * <li><strong>unbind</strong>: not installed</li>
+         * <li><strong>nonsupport</strong>: not supported</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>authorized</p>
          */
         @NameInMap("Msg")
         public String msg;
 
         /**
          * <p>Indicates whether the plug-in is globally configured. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("OverallConfig")
         public Boolean overallConfig;
 
         /**
          * <p>The name of the plug-in. Valid values:</p>
-         * <br>
-         * <p>*   **alihips**: trojan-specific prevention</p>
-         * <p>*   **alisecguard**: attack-specific prevention</p>
-         * <p>*   **alinet**: defense against attacks on servers</p>
+         * <ul>
+         * <li><strong>alihips</strong>: trojan-specific prevention</li>
+         * <li><strong>alisecguard</strong>: attack-specific prevention</li>
+         * <li><strong>alinet</strong>: defense against attacks on servers</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>alisecguard</p>
          */
         @NameInMap("Type")
         public String type;
@@ -153,40 +178,58 @@ public class ListPluginForUuidResponseBody extends TeaModel {
 
         /**
          * <p>The installation code of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k5O5nd</p>
          */
         @NameInMap("PluginInstallCode")
         public String pluginInstallCode;
 
         /**
          * <p>The name of the plug-in. Valid values:</p>
-         * <br>
-         * <p>*   **alihips**: trojan-specific prevention</p>
-         * <p>*   **alisecguard**: attack-specific prevention</p>
-         * <p>*   **alinet**: defense against attacks on servers</p>
+         * <ul>
+         * <li><strong>alihips</strong>: trojan-specific prevention</li>
+         * <li><strong>alisecguard</strong>: attack-specific prevention</li>
+         * <li><strong>alinet</strong>: defense against attacks on servers</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>alisecguard</p>
          */
         @NameInMap("PluginName")
         public String pluginName;
 
         /**
          * <p>Indicates whether the plug-in is installed. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("PluginOnlineInstalled")
         public Boolean pluginOnlineInstalled;
 
         /**
          * <p>Indicates whether the plug-in is online. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("PluginOnlineStatus")
         public Boolean pluginOnlineStatus;
 
         /**
          * <p>The version of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00_10</p>
          */
         @NameInMap("PluginVersion")
         public String pluginVersion;

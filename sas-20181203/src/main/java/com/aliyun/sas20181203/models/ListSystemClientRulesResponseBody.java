@@ -12,6 +12,9 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C43CA30F-EF67-51BB-8C95-F31B8303****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,18 +57,27 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
     public static class ListSystemClientRulesResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -104,12 +116,18 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
     public static class ListSystemClientRulesResponseBodyRuleListPolicies extends TeaModel {
         /**
          * <p>The policy key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system_auto_****</p>
          */
         @NameInMap("PolicyKey")
         public String policyKey;
 
         /**
          * <p>The name of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System self-starting task\<em>\</em>\<em>\</em></p>
          */
         @NameInMap("PolicyName")
         public String policyName;
@@ -140,22 +158,32 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
     public static class ListSystemClientRulesResponseBodyRuleList extends TeaModel {
         /**
          * <p>The name of the aggregation type for the system defense rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Initial entry</p>
          */
         @NameInMap("AggregationName")
         public String aggregationName;
 
         /**
          * <p>The description of the system defense rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Supports alerting or blocking of images that have high-risk vulnerabilities\<em>\</em>\<em>\</em></p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The type of the OS. Valid values:</p>
-         * <br>
-         * <p>*   **windows**: Windows</p>
-         * <p>*   **linux**: Linux</p>
-         * <p>*   **all**: all types</p>
+         * <ul>
+         * <li><strong>windows</strong>: Windows</li>
+         * <li><strong>linux</strong>: Linux</li>
+         * <li><strong>all</strong>: all types</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>linux</p>
          */
         @NameInMap("Platform")
         public String platform;
@@ -168,38 +196,53 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the system defense rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30****</p>
          */
         @NameInMap("RuleId")
         public Long ruleId;
 
         /**
          * <p>The name of the system defense rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Rule\<em>\</em>\<em>\</em></p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
          * <p>The type of the system defense rule. Valid values:</p>
-         * <br>
-         * <p>*   **1**: alihips</p>
-         * <p>*   **2**: alinet</p>
-         * <p>*   **3**: alidetect</p>
-         * <p>*   **4**: alisecguard</p>
+         * <ul>
+         * <li><strong>1</strong>: alihips, process-specific defense</li>
+         * <li><strong>2</strong>: alinet, network-specific defense</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>alihips</p>
          */
         @NameInMap("RuleType")
         public Integer ruleType;
 
         /**
          * <p>The status of the system defense rule. Valid values:</p>
-         * <br>
-         * <p>*   **online**: enabled</p>
-         * <p>*   **offline**: disabled</p>
+         * <ul>
+         * <li><strong>online</strong>: enabled</li>
+         * <li><strong>offline</strong>: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The switch ID of the system defense rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USER-ENABLE-SWITCH-TYPE_****</p>
          */
         @NameInMap("SwitchId")
         public String switchId;

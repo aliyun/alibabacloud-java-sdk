@@ -12,35 +12,50 @@ public class GetCheckConfigResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the check for new check items in the selected requirement item is enabled by default. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("EnableAddCheck")
     public Boolean enableAddCheck;
 
     /**
      * <p>Indicates whether the automatic check is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EnableAutoCheck")
     public Boolean enableAutoCheck;
 
     /**
      * <p>The end time of the check. The value indicates a point in time. The time period that is specified by the start time and end time must be one of the following time periods:</p>
-     * <br>
-     * <p>*   **00:00 to 06:00**: If StartTime is set to 00:00, EndTime must be set to 06:00.</p>
-     * <p>*   **06:00 to 12:00**: If StartTime is set to 06:00, EndTime must be set to 12:00.</p>
-     * <p>*   **12:00 to 18:00**: If StartTime is set to 12:00, EndTime must be set to 18:00.</p>
-     * <p>*   **18:00 to 24:00**: If StartTime is set to 18:00, EndTime must be set to 24:00.</p>
+     * <ul>
+     * <li><strong>00:00 to 06:00</strong>: If StartTime is set to 00:00, EndTime must be set to 06:00.</li>
+     * <li><strong>06:00 to 12:00</strong>: If StartTime is set to 06:00, EndTime must be set to 12:00.</li>
+     * <li><strong>12:00 to 18:00</strong>: If StartTime is set to 12:00, EndTime must be set to 18:00.</li>
+     * <li><strong>18:00 to 24:00</strong>: If StartTime is set to 18:00, EndTime must be set to 24:00.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>6</p>
      */
     @NameInMap("EndTime")
     public Integer endTime;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5A3D5C8F-2A42-5477-BDD8-27E64B5F1739</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -59,6 +74,9 @@ public class GetCheckConfigResponseBody extends TeaModel {
 
     /**
      * <p>The start time of the check. The value indicates a point in time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("StartTime")
     public Integer startTime;
@@ -135,12 +153,18 @@ public class GetCheckConfigResponseBody extends TeaModel {
     public static class GetCheckConfigResponseBodySelectedChecks extends TeaModel {
         /**
          * <p>The ID of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("CheckId")
         public Long checkId;
 
         /**
          * <p>The section ID of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69</p>
          */
         @NameInMap("SectionId")
         public Long sectionId;
@@ -171,31 +195,45 @@ public class GetCheckConfigResponseBody extends TeaModel {
     public static class GetCheckConfigResponseBodyStandards extends TeaModel {
         /**
          * <p>The ID of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cloud service configuration management</p>
          */
         @NameInMap("ShowName")
         public String showName;
 
         /**
          * <p>The status of the check item. Valid values:</p>
-         * <br>
-         * <p>*   **ON**: The check item is enabled.</p>
-         * <p>*   **OFF**: The check item is disabled.</p>
+         * <ul>
+         * <li><strong>ON</strong>: The check item is enabled.</li>
+         * <li><strong>OFF</strong>: The check item is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ON</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The type of the check item. Valid values:</p>
-         * <br>
-         * <p>*   **RISK**: cloud service configuration management</p>
-         * <p>*   **IDENTITY_PERMISSION**: identity and permission management</p>
-         * <p>*   **COMPLIANCE**: compliance</p>
+         * <ul>
+         * <li><strong>RISK</strong>: cloud service configuration management</li>
+         * <li><strong>IDENTITY_PERMISSION</strong>: identity and permission management</li>
+         * <li><strong>COMPLIANCE</strong>: compliance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RISK</p>
          */
         @NameInMap("Type")
         public String type;

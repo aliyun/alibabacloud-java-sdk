@@ -4,6 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeSupportRegionResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2C0699D3-4107-5A46-A4C4-E129A5967788</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

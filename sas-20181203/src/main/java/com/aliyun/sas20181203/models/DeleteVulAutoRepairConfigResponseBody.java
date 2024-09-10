@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteVulAutoRepairConfigResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3956048F-9D73-5EDB-834B-4827BB48****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

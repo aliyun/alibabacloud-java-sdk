@@ -12,6 +12,9 @@ public class CreateOpaClusterPluginResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D65AADFC-1D20-5A6A-8F6A-9FA53C0DC1F8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,15 +43,22 @@ public class CreateOpaClusterPluginResponseBody extends TeaModel {
     public static class CreateOpaClusterPluginResponseBodyInstallStatus extends TeaModel {
         /**
          * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c60b77fe62093480db6164a3c2fa****</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>Indicates whether the component is installed. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("InstallStatus")
         public Boolean installStatus;

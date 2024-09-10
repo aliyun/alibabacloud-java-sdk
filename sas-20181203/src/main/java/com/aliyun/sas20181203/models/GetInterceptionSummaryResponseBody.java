@@ -12,6 +12,9 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F35F45B0-5D6B-4238-BE02-A62D0760E840</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,60 +43,90 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
     public static class GetInterceptionSummaryResponseBodyInterceptionSummary extends TeaModel {
         /**
          * <p>The number of clusters that are not protected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("CloseClusterCount")
         public Integer closeClusterCount;
 
         /**
          * <p>The number of disabled cluster defense rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("CloseRuleCount")
         public Integer closeRuleCount;
 
         /**
          * <p>The total number of clusters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ClusterCount")
         public Integer clusterCount;
 
         /**
          * <p>The total number of interception records for the specified cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("InterceptionCountInDays")
         public Integer interceptionCountInDays;
 
         /**
          * <p>The number of clusters that are protected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("OpenClusterCount")
         public Integer openClusterCount;
 
         /**
          * <p>The number of enabled cluster defense rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("OpenRuleCount")
         public Integer openRuleCount;
 
         /**
          * <p>The number of security risks that are detected in the last 180 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RiskCount180Day")
         public Long riskCount180Day;
 
         /**
          * <p>The number of security risks that are detected in the last 30 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RiskCount30Day")
         public Long riskCount30Day;
 
         /**
          * <p>The number of security risks that are detected in the last 24 hours.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RiskCountToday")
         public Long riskCountToday;
 
         /**
          * <p>The total number of cluster defense rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RuleCount")
         public Integer ruleCount;

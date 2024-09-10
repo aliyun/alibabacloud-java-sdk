@@ -6,10 +6,13 @@ import com.aliyun.tea.*;
 public class DescribeBackupPolicyRequest extends TeaModel {
     /**
      * <p>The ID of the anti-ransomware policy.</p>
-     * <br>
-     * <p>>  You can call the [DescribeBackupPolicies](~~DescribeBackupPolicies~~) operation to query the IDs of anti-ransomware policies.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to query the IDs of anti-ransomware policies.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>51880</p>
      */
     @NameInMap("Id")
     public Long id;

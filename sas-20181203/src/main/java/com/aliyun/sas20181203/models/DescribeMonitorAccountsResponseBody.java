@@ -12,6 +12,9 @@ public class DescribeMonitorAccountsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>028CF634-5268-5660-9575-48C9ED6BF880</p>
      */
     @NameInMap("RequestId")
     public String requestId;

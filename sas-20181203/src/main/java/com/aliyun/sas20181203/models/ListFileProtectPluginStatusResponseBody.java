@@ -18,6 +18,9 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60F289EC-BAA3-5DF1-8476-B3F05A14EBC2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,66 +57,111 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
     public static class ListFileProtectPluginStatusResponseBodyData extends TeaModel {
         /**
          * <p>The version of the Security Center agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00_41</p>
          */
         @NameInMap("ClientVersion")
         public String clientVersion;
 
         /**
          * <p>The returned code after you install the Security Center agent. Valid values:</p>
-         * <br>
-         * <p>1.  0: The installation is successful.</p>
-         * <p>2.  \\-2: The kernel does not support the installation.</p>
+         * <ol>
+         * <li>0: The installation is successful.</li>
+         * <li>\-2: The kernel does not support the installation.</li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>-2</p>
          */
         @NameInMap("InstallCode")
         public String installCode;
 
         /**
          * <p>The returned message after you install the Security Center agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>driver file not exist</p>
          */
         @NameInMap("InstallMessage")
         public String installMessage;
 
         /**
          * <p>Indicates whether the Security Center agent is installed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Installed")
         public Boolean installed;
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-wz92q7m5hsbgfhdss***</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The public IP address that is associated with the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address that is associated with the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.42.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>Indicates whether the Security Center agent is online. Valid value:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Online")
         public Boolean online;
 
         /**
+         * <p>The type of the operating system. Valid values:</p>
+         * <ul>
+         * <li><strong>windows</strong>: Windows</li>
+         * <li><strong>linux</strong>: Linux</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>linux</p>
+         */
+        @NameInMap("Platform")
+        public String platform;
+
+        /**
          * <p>Indicates whether the core file monitoring file is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("SupportFile")
         public Boolean supportFile;
 
         /**
          * <p>The UUID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6690a46c-0edb-4663-a641-3629d1a9****</p>
          */
         @NameInMap("Uuid")
         public String uuid;
@@ -187,6 +235,14 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
             return this.online;
         }
 
+        public ListFileProtectPluginStatusResponseBodyData setPlatform(String platform) {
+            this.platform = platform;
+            return this;
+        }
+        public String getPlatform() {
+            return this.platform;
+        }
+
         public ListFileProtectPluginStatusResponseBodyData setSupportFile(Boolean supportFile) {
             this.supportFile = supportFile;
             return this;
@@ -208,18 +264,27 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
     public static class ListFileProtectPluginStatusResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>149</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

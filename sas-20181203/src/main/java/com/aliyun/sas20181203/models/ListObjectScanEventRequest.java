@@ -6,86 +6,123 @@ import com.aliyun.tea.*;
 public class ListObjectScanEventRequest extends TeaModel {
     /**
      * <p>The name of the OSS bucket.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ltrbuck****</p>
      */
     @NameInMap("BucketName")
     public String bucketName;
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The name of the alert.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WebShell</p>
      */
     @NameInMap("EventName")
     public String eventName;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The MD5 hash value of the file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0552c44e243abdea1729d4507bce****</p>
      */
     @NameInMap("Md5")
     public String md5;
 
     /**
      * <p>The key of the file that is stored in an OSS bucket.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1/2022/06/23/15/41/16559701077444693a0c6-33b2-4cc2-a99f-9f38b8b8****</p>
      */
     @NameInMap("OssKey")
     public String ossKey;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>When a file is a subfile within a compressed package, the ParentEventId represents the alert of the compressed package itself.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ParentEventId")
     public Long parentEventId;
 
     /**
      * <p>The risk level of the alert. Valid values:</p>
-     * <br>
-     * <p>*   **high**</p>
-     * <p>*   **medium**</p>
-     * <p>*   **low**</p>
+     * <ul>
+     * <li><strong>high</strong></li>
+     * <li><strong>medium</strong></li>
+     * <li><strong>low</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>low</p>
      */
     @NameInMap("RiskLevel")
     public String riskLevel;
 
     /**
      * <p>The method that is used to detect the malicious file. Valid values:</p>
-     * <br>
-     * <p>*   **API**: uses API operations.</p>
-     * <p>*   **OSS**: uses Object Storage Service (OSS) file check.</p>
+     * <ul>
+     * <li><strong>API</strong>: uses API operations.</li>
+     * <li><strong>OSS</strong>: uses Object Storage Service (OSS) file check.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OSS</p>
      */
     @NameInMap("Source")
     public String source;
 
     /**
      * <p>The end of the time range during which the exception is detected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1683862286000</p>
      */
     @NameInMap("TimeEnd")
     public Long timeEnd;
 
     /**
      * <p>The beginning of the time range during which the exception is detected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1683603086000</p>
      */
     @NameInMap("TimeStart")
     public Long timeStart;

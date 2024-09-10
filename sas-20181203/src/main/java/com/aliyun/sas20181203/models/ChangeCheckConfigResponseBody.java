@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ChangeCheckConfigResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6EBB8614-746D-555D-AB69-C801AEC7DCE0</p>
      */
     @NameInMap("RequestId")
     public String requestId;

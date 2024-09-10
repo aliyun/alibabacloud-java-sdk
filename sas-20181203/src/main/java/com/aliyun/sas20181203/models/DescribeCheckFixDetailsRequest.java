@@ -6,25 +6,37 @@ import com.aliyun.tea.*;
 public class DescribeCheckFixDetailsRequest extends TeaModel {
     /**
      * <p>The ID of the risk item.</p>
-     * <br>
-     * <p>>  You can call the [DescribeRiskType](~~DescribeRiskType~~) operation to query the IDs of risk items.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation to query the IDs of risk items.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>58</p>
      */
     @NameInMap("CheckIds")
     public String checkIds;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The ID of the baseline.</p>
-     * <br>
-     * <p>>  You can call the [DescribeCheckWarningSummary](https://help.aliyun.com/document_detail/116179.html) operation to query the IDs of baselines.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/116179.html">DescribeCheckWarningSummary</a> operation to query the IDs of baselines.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>51</p>
      */
     @NameInMap("RiskId")
     public Long riskId;

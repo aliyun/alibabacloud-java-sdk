@@ -12,6 +12,9 @@ public class ModifyContainerPluginRuleResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D03DD0FD-6041-5107-AC00-383E28F1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class ModifyContainerPluginRuleResponseBody extends TeaModel {
     public static class ModifyContainerPluginRuleResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600640</p>
          */
         @NameInMap("RuleId")
         public Long ruleId;
 
         /**
          * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test555</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
          * <p>The switch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USER-CONTAINER-RULE-SWITCH-TYPE_xxx</p>
          */
         @NameInMap("SwitchId")
         public String switchId;

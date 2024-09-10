@@ -5,27 +5,40 @@ import com.aliyun.tea.*;
 
 public class DescribeAntiBruteForceRulesRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The ID of the defense rule.</p>
-     * <br>
-     * <p>> You can call the [DescribeAntiBruteForceRules](~~DescribeAntiBruteForceRules~~) operation to query the IDs of defense rules.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeAntiBruteForceRules~~">DescribeAntiBruteForceRules</a> operation to query the IDs of defense rules.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1141****</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The name of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testName</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
@@ -35,6 +48,9 @@ public class DescribeAntiBruteForceRulesRequest extends TeaModel {
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>121.69.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

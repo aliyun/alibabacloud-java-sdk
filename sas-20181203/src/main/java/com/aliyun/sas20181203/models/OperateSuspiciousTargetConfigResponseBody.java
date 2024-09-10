@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class OperateSuspiciousTargetConfigResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ABCD-PSD2-5256-1DSA-4222-JHBN</p>
      */
     @NameInMap("RequestId")
     public String requestId;

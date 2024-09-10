@@ -18,6 +18,9 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0B48AB3C-84FC-424D-A01D-B9270EF46038</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,107 +57,176 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
     public static class DescribeImageRepoDetailListResponseBodyImageRepoResponses extends TeaModel {
         /**
          * <p>The number of alerts that are generated for the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AlarmCount")
         public Integer alarmCount;
 
         /**
          * <p>Indicates whether alerts are generated for the image repository. Valid values:</p>
-         * <br>
-         * <p>*   **YES**</p>
-         * <p>*   **NO**</p>
+         * <ul>
+         * <li><strong>YES</strong></li>
+         * <li><strong>NO</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NO</p>
          */
         @NameInMap("AlarmStatus")
         public String alarmStatus;
 
         /**
          * <p>The address of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *       {
+         *             &quot;domains&quot;: [
+         *                   &quot;<strong><strong>.cn-shenzhen.cr.aliyuncs.com&quot;
+         *             ],
+         *             &quot;type&quot;: &quot;internet&quot;
+         *       },
+         *       {
+         *             &quot;domains&quot;: [
+         *                   &quot;</strong></strong>.cn-shenzhen.cr.aliyuncs.com&quot;
+         *             ],
+         *             &quot;type&quot;: &quot;intranet&quot;
+         *       },
+         *       {
+         *             &quot;domains&quot;: [
+         *                   &quot;****.cn-shenzhen.cr.aliyuncs.com&quot;
+         *             ],
+         *             &quot;type&quot;: &quot;vpc&quot;
+         *       }
+         * ]</p>
          */
         @NameInMap("Endpoints")
         public String endpoints;
 
         /**
          * <p>The number of baseline risk items on the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("HcCount")
         public Integer hcCount;
 
         /**
          * <p>Indicates whether baseline risk items are detected on the image repository. Valid values:</p>
-         * <br>
-         * <p>*   **NO**</p>
-         * <p>*   **YES**</p>
+         * <ul>
+         * <li><strong>NO</strong></li>
+         * <li><strong>YES</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NO</p>
          */
         @NameInMap("HcStatus")
         public String hcStatus;
 
         /**
          * <p>The number of images.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("ImageCount")
         public Integer imageCount;
 
         /**
          * <p>The ID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-uf6fsg6xlmorug5****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The region ID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The type of the image repository. Valid values:</p>
-         * <br>
-         * <p>*   **acr**</p>
-         * <p>*   **harbor**</p>
-         * <p>*   **quay**</p>
-         * <p>*   **CI/CD**</p>
+         * <ul>
+         * <li><strong>acr</strong></li>
+         * <li><strong>harbor</strong></li>
+         * <li><strong>quay</strong></li>
+         * <li><strong>CI/CD</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>acr</p>
          */
         @NameInMap("RegistryType")
         public String registryType;
 
         /**
          * <p>The ID of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crr-2chlzf47w2rk****</p>
          */
         @NameInMap("RepoId")
         public String repoId;
 
         /**
          * <p>The name of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zeus</p>
          */
         @NameInMap("RepoName")
         public String repoName;
 
         /**
          * <p>The namespace to which the image repository belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-dev</p>
          */
         @NameInMap("RepoNamespace")
         public String repoNamespace;
 
         /**
          * <p>Indicates whether the image repository is at risk. Valid values:</p>
-         * <br>
-         * <p>*   **YES**</p>
-         * <p>*   **NO**</p>
+         * <ul>
+         * <li><strong>YES</strong></li>
+         * <li><strong>NO</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NO</p>
          */
         @NameInMap("RiskStatus")
         public String riskStatus;
 
         /**
          * <p>The number of vulnerabilities detected on the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("VulCount")
         public Integer vulCount;
 
         /**
          * <p>Indicates whether vulnerabilities are detected on the image repository. Valid values:</p>
-         * <br>
-         * <p>*   **YES**</p>
-         * <p>*   **NO**</p>
+         * <ul>
+         * <li><strong>YES</strong></li>
+         * <li><strong>NO</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NO</p>
          */
         @NameInMap("VulStatus")
         public String vulStatus;
@@ -289,24 +361,36 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
     public static class DescribeImageRepoDetailListResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of image repositories.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

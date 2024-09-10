@@ -12,6 +12,9 @@ public class OperateAgentClientInstallResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AE79B457-877C-51C6-AD72-0D34A025D***</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class OperateAgentClientInstallResponseBody extends TeaModel {
     public static class OperateAgentClientInstallResponseBodyAegisCelintInstallResposeList extends TeaModel {
         /**
          * <p>The ID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-uf6j8vq9l4r5ntht****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The ID of the installation task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2856</p>
          */
         @NameInMap("RecordId")
         public Long recordId;
 
         /**
          * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1587bedb-fdb4-48c4-9330-****</p>
          */
         @NameInMap("Uuid")
         public String uuid;

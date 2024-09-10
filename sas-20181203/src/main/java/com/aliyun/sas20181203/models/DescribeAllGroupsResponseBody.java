@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeAllGroupsResponseBody extends TeaModel {
     /**
      * <p>The total number of server groups.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Count")
     public Integer count;
@@ -18,6 +21,9 @@ public class DescribeAllGroupsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,21 +60,31 @@ public class DescribeAllGroupsResponseBody extends TeaModel {
     public static class DescribeAllGroupsResponseBodyGroups extends TeaModel {
         /**
          * <p>The type of the server group. Valid values:</p>
-         * <br>
-         * <p>*   **0**: default group</p>
-         * <p>*   **1**: other groups</p>
+         * <ul>
+         * <li><strong>0</strong>: default group</li>
+         * <li><strong>1</strong>: other groups</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("GroupFlag")
         public Integer groupFlag;
 
         /**
          * <p>The ID of the server group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8834224</p>
          */
         @NameInMap("GroupId")
         public Integer groupId;
 
         /**
          * <p>The name of the server group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("GroupName")
         public String groupName;

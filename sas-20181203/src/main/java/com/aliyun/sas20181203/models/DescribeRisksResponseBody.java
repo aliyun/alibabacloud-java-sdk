@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeRisksResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EA54FE21-B006-5DFF-8D64-C4FFECDA****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,6 +21,9 @@ public class DescribeRisksResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -54,42 +60,63 @@ public class DescribeRisksResponseBody extends TeaModel {
     public static class DescribeRisksResponseBodyRisks extends TeaModel {
         /**
          * <p>The description of the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ubuntu 14,Ubuntu 16 ,Ubuntu 18,Ubuntu 20 baseline based on Alibaba Cloud best security practices</p>
          */
         @NameInMap("RiskDetail")
         public String riskDetail;
 
         /**
          * <p>The baseline ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54</p>
          */
         @NameInMap("RiskId")
         public Long riskId;
 
         /**
          * <p>The name of the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba Cloud Standard - Ubuntu Security Baseline</p>
          */
         @NameInMap("RiskName")
         public String riskName;
 
         /**
          * <p>The name of the baseline type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cis</p>
          */
         @NameInMap("RiskType")
         public String riskType;
 
         /**
          * <p>The name of the baseline subtype.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hc_ubuntu</p>
          */
         @NameInMap("SubRiskType")
         public String subRiskType;
 
         /**
          * <p>The display name of the baseline subtype.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba Cloud Standard - Ubuntu Security Baseline</p>
          */
         @NameInMap("SubTypeAlias")
         public String subTypeAlias;
 
         /**
          * <p>The display name of the baseline type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Best security practices</p>
          */
         @NameInMap("TypeAlias")
         public String typeAlias;

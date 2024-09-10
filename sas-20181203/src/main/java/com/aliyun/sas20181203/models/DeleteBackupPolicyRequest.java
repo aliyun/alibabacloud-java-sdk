@@ -6,19 +6,26 @@ import com.aliyun.tea.*;
 public class DeleteBackupPolicyRequest extends TeaModel {
     /**
      * <p>The ID of the anti-ransomware policy that you want to delete.</p>
-     * <br>
-     * <p>>  You can call the [DescribeBackupPolicies](~~DescribeBackupPolicies~~) operation to query the IDs of anti-ransomware policies.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to query the IDs of anti-ransomware policies.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
-     * <p>The version of the anti-ransomware policy that you want to delete. You can call the [DescribeBackupPolicies](~~DescribeBackupPolicies~~) operation to query the versions of anti-ransomware policies. Valid values:</p>
-     * <br>
-     * <p>*   **1.0.0**</p>
-     * <p>*   **2.0.0**</p>
+     * <p>The version of the anti-ransomware policy that you want to delete. You can call the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to query the versions of anti-ransomware policies. Valid values:</p>
+     * <ul>
+     * <li><strong>1.0.0</strong></li>
+     * <li><strong>2.0.0</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2.0.0</p>
      */
     @NameInMap("PolicyVersion")
     public String policyVersion;

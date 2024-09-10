@@ -6,41 +6,58 @@ import com.aliyun.tea.*;
 public class UpdateHoneypotPresetRequest extends TeaModel {
     /**
      * <p>The name of the image that is used for the honeypot.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>metabase</p>
      */
     @NameInMap("HoneypotImageName")
     public String honeypotImageName;
 
     /**
      * <p>The ID of the honeypot template.</p>
-     * <br>
-     * <p>> You can call the [ListHoneypotPreset](~~ListHoneypotPreset~~) operation to query the IDs of honeypot templates.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="~~ListHoneypotPreset~~">ListHoneypotPreset</a> operation to query the IDs of honeypot templates.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>f75eddce-e9d3-4a88-af95-b10b6f65xxxx</p>
      */
     @NameInMap("HoneypotPresetId")
     public String honeypotPresetId;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese.</p>
-     * <p>*   **en**: English.</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The custom configurations of the honeypot template. The value is a JSON string that contains the following fields:</p>
-     * <br>
-     * <p>*   **portrait_option**: Social Source Tracing</p>
-     * <p>*   **burp**: Burp-specific Defense</p>
-     * <p>*   **trojan_git**: Git-specific Defense</p>
+     * <ul>
+     * <li><strong>portrait_option</strong>: Social Source Tracing</li>
+     * <li><strong>burp</strong>: Burp-specific Defense</li>
+     * <li><strong>trojan_git</strong>: Git-specific Defense</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;portrait_option&quot;:true,&quot;burp&quot;:&quot;open&quot;}</p>
      */
     @NameInMap("Meta")
     public String meta;
 
     /**
      * <p>The custom name of the honeypot template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>apc_web_python</p>
      */
     @NameInMap("PresetName")
     public String presetName;

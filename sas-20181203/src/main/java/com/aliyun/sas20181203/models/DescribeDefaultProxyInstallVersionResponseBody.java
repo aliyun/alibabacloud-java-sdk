@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeDefaultProxyInstallVersionResponseBody extends TeaModel {
     /**
      * <p>The default installation version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>proxy_01_03</p>
      */
     @NameInMap("InstallVersion")
     public String installVersion;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F9FCB51A-5078-5D31-9C4D-3B25BEF068C7</p>
      */
     @NameInMap("RequestId")
     public String requestId;

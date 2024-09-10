@@ -18,6 +18,9 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DC97C9EC-4B7D-5EFF-8A5E-A5CCC9ED****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,6 +57,9 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
     public static class ListCheckItemWarningSummaryResponseBodyList extends TeaModel {
         /**
          * <p>The suggestion on the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>In the Administrative Tools window, double-click Local Security Policy. In the Local Security Policy window that appears, choose Security Settings\\Local Policies\\Audit Policy, configure all audit policies as: <code>Success, Failure</code>.</p>
          */
         @NameInMap("Advice")
         public String advice;
@@ -72,49 +78,72 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
 
         /**
          * <p>The alias of the baseline type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>week_pa****</p>
          */
         @NameInMap("Alias")
         public String alias;
 
         /**
          * <p>The ID of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>696</p>
          */
         @NameInMap("CheckId")
         public Long checkId;
 
         /**
          * <p>The description of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Config the Event Audit policys</p>
          */
         @NameInMap("CheckItem")
         public String checkItem;
 
         /**
          * <p>The risk level of the check item. Valid values:</p>
-         * <br>
-         * <p>*   **high**</p>
-         * <p>*   **medium**</p>
-         * <p>*   **low**</p>
+         * <ul>
+         * <li><strong>high</strong></li>
+         * <li><strong>medium</strong></li>
+         * <li><strong>low</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
          */
         @NameInMap("CheckLevel")
         public String checkLevel;
 
         /**
          * <p>The type of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Security audit</p>
          */
         @NameInMap("CheckType")
         public String checkType;
 
         /**
          * <p>Indicates whether the check item belongs to the container runtime type. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ContainerCheckItem")
         public Boolean containerCheckItem;
 
         /**
          * <p>The description of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Config the Event Audit policys</p>
          */
         @NameInMap("Description")
         public String description;
@@ -127,21 +156,31 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
 
         /**
          * <p>The type of the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>weak_password</p>
          */
         @NameInMap("RiskType")
         public String riskType;
 
         /**
          * <p>The risk status of the check item. Valid values:</p>
-         * <br>
-         * <p>*   **1**: failed</p>
-         * <p>*   **3**: passed</p>
+         * <ul>
+         * <li><strong>1</strong>: failed</li>
+         * <li><strong>3</strong>: passed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The number of servers that are affected by the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("WarningMachineCount")
         public Integer warningMachineCount;
@@ -268,24 +307,36 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
     public static class ListCheckItemWarningSummaryResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>149</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

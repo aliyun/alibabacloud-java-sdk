@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyCycleTaskResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AA33E30-7192-5648-93CD-D0E476A2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

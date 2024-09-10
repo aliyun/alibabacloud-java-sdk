@@ -6,58 +6,86 @@ import com.aliyun.tea.*;
 public class DescribeVulExportInfoResponseBody extends TeaModel {
     /**
      * <p>The number of exported entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentCount")
     public Integer currentCount;
 
     /**
      * <p>The status of the export task. Valid values:</p>
-     * <br>
-     * <p>*   **init**: The task is being initialized.</p>
-     * <p>*   **exporting**: The task is in progress.</p>
-     * <p>*   **success**: The task is complete.</p>
+     * <ul>
+     * <li><strong>init</strong>: The task is being initialized.</li>
+     * <li><strong>exporting</strong>: The task is in progress.</li>
+     * <li><strong>success</strong>: The task is complete.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("ExportStatus")
     public String exportStatus;
 
     /**
      * <p>The name of the exported Excel file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>app_20210917</p>
      */
     @NameInMap("FileName")
     public String fileName;
 
     /**
      * <p>The ID of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>14356</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The URL at which you can download the exported Excel file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>
      */
     @NameInMap("Link")
     public String link;
 
     /**
-     * <p>The message that shows the results of the task. The value is fixed as **success**, which indicates that the task is complete.</p>
+     * <p>The message that shows the results of the task. The value is fixed as <strong>success</strong>, which indicates that the task is complete.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The progress percentage of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("Progress")
     public Integer progress;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4C1AE3F3-18FA-4108-BXXX-AFA1A032756C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries in the exported Excel file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;

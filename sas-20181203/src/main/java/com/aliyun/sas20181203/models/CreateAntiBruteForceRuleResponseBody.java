@@ -12,6 +12,9 @@ public class CreateAntiBruteForceRuleResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F35F45B0-5D6B-4238-BE02-A62D0760E840</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class CreateAntiBruteForceRuleResponseBody extends TeaModel {
     public static class CreateAntiBruteForceRuleResponseBodyCreateAntiBruteForceRule extends TeaModel {
         /**
          * <p>The ID of the defense rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65778</p>
          */
         @NameInMap("RuleId")
         public Long ruleId;

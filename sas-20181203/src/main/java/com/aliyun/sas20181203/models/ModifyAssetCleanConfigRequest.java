@@ -26,23 +26,32 @@ public class ModifyAssetCleanConfigRequest extends TeaModel {
     public static class ModifyAssetCleanConfigRequestAssetCleanConfigs extends TeaModel {
         /**
          * <p>The number of days before hosts whose provider cannot be identified are automatically cleaned after they enter the offline state. Valid value: an integer that ranges from 1 to 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         @NameInMap("CleanDays")
         public Integer cleanDays;
 
         /**
          * <p>Specifies whether to enable the feature of cleaning the offline hosts whose provider cannot be identified. Valid values:</p>
-         * <br>
-         * <p>*   **0**: disables the feature.</p>
-         * <p>*   **1**: enables the feature.</p>
+         * <ul>
+         * <li><strong>0</strong>: disables the feature.</li>
+         * <li><strong>1</strong>: enables the feature.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The type of hosts that you want to clean.</p>
-         * <br>
-         * <p>Set the value to **1**, which indicates hosts whose provider cannot be identified.</p>
+         * <p>Set the value to <strong>1</strong>, which indicates hosts whose provider cannot be identified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Type")
         public Integer type;

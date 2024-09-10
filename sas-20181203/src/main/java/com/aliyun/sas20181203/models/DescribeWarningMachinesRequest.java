@@ -6,109 +6,157 @@ import com.aliyun.tea.*;
 public class DescribeWarningMachinesRequest extends TeaModel {
     /**
      * <p>The ID of the container cluster.</p>
-     * <br>
-     * <p>> You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>c7e3c5b420a7947c2933303144688****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The name of the field that is used to search for the container. Valid values:</p>
-     * <br>
-     * <p>*   **CONTAINER_ID**: the ID of the container</p>
-     * <p>*   **IMAGE**: the name of the image</p>
-     * <p>*   **NAMESPACE**: the namespace</p>
-     * <p>*   **NODE_NAME**: the name of the node</p>
-     * <p>*   **POD_IP**: the IP address of the pod</p>
-     * <p>*   **HOST_IP**: the IP address of the host</p>
-     * <p>*   **INSTANCE_ID**: the ID of the instance</p>
+     * <ul>
+     * <li><strong>CONTAINER_ID</strong>: the ID of the container</li>
+     * <li><strong>IMAGE</strong>: the name of the image</li>
+     * <li><strong>NAMESPACE</strong>: the namespace</li>
+     * <li><strong>NODE_NAME</strong>: the name of the node</li>
+     * <li><strong>POD_IP</strong>: the IP address of the pod</li>
+     * <li><strong>HOST_IP</strong>: the IP address of the host</li>
+     * <li><strong>INSTANCE_ID</strong>: the ID of the instance</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>containerId</p>
      */
     @NameInMap("ContainerFieldName")
     public String containerFieldName;
 
     /**
      * <p>The value of the field that is used to search for the container.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c8bb3ef0f5ccf45508f0fd1ffc200****</p>
      */
     @NameInMap("ContainerFieldValue")
     public String containerFieldValue;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The ID of the asset group.</p>
-     * <br>
-     * <p>> You can call the [DescribeAllGroups](https://help.aliyun.com/document_detail/130972.html) operation to query the IDs of asset groups.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/130972.html">DescribeAllGroups</a> operation to query the IDs of asset groups.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
 
     /**
      * <p>Specifies whether risks were detected. Valid values:</p>
-     * <br>
-     * <p>*   **1**: yes</p>
-     * <p>*   **0**: no</p>
+     * <ul>
+     * <li><strong>1</strong>: yes</li>
+     * <li><strong>0</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("HaveRisk")
     public Integer haveRisk;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The name of the server on which the baseline check is performed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oracle-win-001****</p>
      */
     @NameInMap("MachineName")
     public String machineName;
 
     /**
-     * <p>The number of entries per page. Default value: **10**, which indicates that 10 entries of server information are displayed on each page. A maximum of 100 entries can be returned per page.</p>
+     * <p>The number of entries per page. Default value: <strong>10</strong>, which indicates that 10 entries of server information are displayed on each page. A maximum of 100 entries can be returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the risk item.</p>
-     * <br>
-     * <p>> You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of risk items.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeCheckWarningSummary~~">DescribeCheckWarningSummary</a> operation to query the IDs of risk items.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>196</p>
      */
     @NameInMap("RiskId")
     public Long riskId;
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.2.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;
 
     /**
      * <p>The ID of the baseline check policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16</p>
      */
     @NameInMap("StrategyId")
     public Long strategyId;
 
     /**
      * <p>The type of the query condition. Valid values:</p>
-     * <br>
-     * <p>*   **containerId**: the ID of the container</p>
-     * <p>*   **uuid**: the UUID of the asset</p>
+     * <ul>
+     * <li><strong>containerId</strong>: the ID of the container</li>
+     * <li><strong>uuid</strong>: the UUID of the asset</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>uuid</p>
      */
     @NameInMap("TargetType")
     public String targetType;
 
     /**
      * <p>The UUID of the server on which the baseline check is performed. Separate multiple UUIDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9888955c-0076-49da-bd9c-34f5492b****</p>
      */
     @NameInMap("Uuids")
     public String uuids;

@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListContainerDefenseRuleResponseBody extends TeaModel {
     /**
-     * <p>The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
@@ -24,6 +30,9 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
@@ -36,15 +45,22 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5E3A63BA-***843</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -113,57 +129,84 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
     public static class ListContainerDefenseRuleResponseBodyList extends TeaModel {
         /**
          * <p>The total number of clusters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ClusterCount")
         public Integer clusterCount;
 
         /**
          * <p>The clusters specified in the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cfb41a8**8a106</p>
          */
         @NameInMap("ClusterIdList")
         public String clusterIdList;
 
         /**
          * <p>The description of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>defense rule.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The action specified in the rule. Valid values:</p>
-         * <br>
-         * <p>*   **1**: alert</p>
-         * <p>*   **2**: block</p>
+         * <ul>
+         * <li><strong>1</strong>: alert</li>
+         * <li><strong>2</strong>: block</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RuleAction")
         public Integer ruleAction;
 
         /**
          * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>181</p>
          */
         @NameInMap("RuleId")
         public Long ruleId;
 
         /**
          * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-rule-01</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
          * <p>The status of the rule. Valid values:</p>
-         * <br>
-         * <p>*   **1**: enabled</p>
-         * <p>*   **0**: disabled</p>
+         * <ul>
+         * <li><strong>1</strong>: enabled</li>
+         * <li><strong>0</strong>: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RuleSwitch")
         public Integer ruleSwitch;
 
         /**
          * <p>The type of the rule. Valid values:</p>
-         * <br>
-         * <p>*   **1**: system rule</p>
-         * <p>*   **2**: custom rule</p>
+         * <ul>
+         * <li><strong>1</strong>: system rule</li>
+         * <li><strong>2</strong>: custom rule</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RuleType")
         public Integer ruleType;
@@ -242,36 +285,54 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
     public static class ListContainerDefenseRuleResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The key of the last data entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CAESGgo***jE2NDc4NjE=</p>
          */
         @NameInMap("LastRowKey")
         public String lastRowKey;
 
         /**
          * <p>The query credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B60***</p>
          */
         @NameInMap("NextToken")
         public String nextToken;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

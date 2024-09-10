@@ -10,11 +10,17 @@ public class ChangeCheckCustomConfigResponseBody extends TeaModel {
     @NameInMap("IllegalCustomConfigs")
     public java.util.List<ChangeCheckCustomConfigResponseBodyIllegalCustomConfigs> illegalCustomConfigs;
 
+    /**
+     * <p>An array that consists of the invalid parameters required for fixing risk items.</p>
+     */
     @NameInMap("IllegalRepairConfigs")
     public java.util.List<ChangeCheckCustomConfigResponseBodyIllegalRepairConfigs> illegalRepairConfigs;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DA8133CC-CCA0-5CF2-BF64-FE7D52C44***</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -50,7 +56,10 @@ public class ChangeCheckCustomConfigResponseBody extends TeaModel {
 
     public static class ChangeCheckCustomConfigResponseBodyIllegalCustomConfigs extends TeaModel {
         /**
-         * <p>The name of the custom configuration item. The name of a custom configuration item is unique in a check item.</p>
+         * <p>The name of the custom configuration item, which is unique in a check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SessionTimeMax</p>
          */
         @NameInMap("Name")
         public String name;
@@ -71,6 +80,12 @@ public class ChangeCheckCustomConfigResponseBody extends TeaModel {
     }
 
     public static class ChangeCheckCustomConfigResponseBodyIllegalRepairConfigs extends TeaModel {
+        /**
+         * <p>The name of the invalid parameter required for fixing a risk item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SessionTimeMax</p>
+         */
         @NameInMap("Name")
         public String name;
 

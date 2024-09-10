@@ -6,17 +6,24 @@ import com.aliyun.tea.*;
 public class DescribeTargetRequest extends TeaModel {
     /**
      * <p>The type of the vulnerability. Valid values:</p>
-     * <br>
-     * <p>*   **cms**: Web CMS vulnerability</p>
-     * <p>*   **sys**: Windows system vulnerability</p>
-     * <p>*   **cve**: Linux software vulnerability</p>
-     * <p>*   **emg**: urgent vulnerability</p>
+     * <ul>
+     * <li><strong>cms</strong>: Web CMS vulnerability</li>
+     * <li><strong>sys</strong>: Windows system vulnerability</li>
+     * <li><strong>cve</strong>: Linux software vulnerability</li>
+     * <li><strong>emg</strong>: urgent vulnerability</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;vulType&quot;:&quot;cms&quot;}</p>
      */
     @NameInMap("Config")
     public String config;
 
     /**
      * <p>The type of the query. Set the value to vul.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vul</p>
      */
     @NameInMap("Type")
     public String type;

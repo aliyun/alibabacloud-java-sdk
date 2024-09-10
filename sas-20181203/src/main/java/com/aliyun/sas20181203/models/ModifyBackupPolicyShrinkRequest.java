@@ -6,66 +6,82 @@ import com.aliyun.tea.*;
 public class ModifyBackupPolicyShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the anti-ransomware policy that you want to modify.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The name of the anti-ransomware policy that you want to modify.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>policy_name_A</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The configurations of the anti-ransomware policy that you want to modify. The value is a JSON string that contains the following fields:</p>
-     * <br>
-     * <p>*   **Source**: the directory that you want to protect. If you want to protect all directories, set this field to brackets [].</p>
-     * <br>
-     * <p>*   **Include**: the format of the file that you want to protect. Examples: \\*.jpg and \\*.doc.</p>
-     * <br>
-     * <p>*   **Exclude**: the directory that you want to exclude from the anti-ransomware policy. You can call the DescribeExcludeSystemPath operation to query all directories and then specify the directory that you want to exclude. Example: /home/user.</p>
-     * <br>
-     * <p>*   **Schedule**: the start time and interval of a data backup task. We recommend that you specify a start time that begins during off-peak hours but does not start on the hour.</p>
-     * <br>
-     * <p>    *   If you set this field to I|1583216092|P21D, the data backup task starts from 2020-03-03 14:14:52, and the task is executed at an interval of three weeks.</p>
-     * <p>    *   If you set this field to I|1583216092|PT24H, the data backup task starts from 2020-03-03 14:14:52, and the task is executed at an interval of 24 hours.</p>
-     * <br>
-     * <p>*   **Retention**: the period during which backup data is retained. Unit: day. If you set this field to 7, backup data is retained for a week. If you set this field to 365, backup data is retained for a year. If you set this field to -1, backup data is permanently retained.</p>
-     * <br>
-     * <p>*   **SpeedLimiter**: the limit on the network bandwidth for data backup tasks. If you set this field to 12:15:15360|6:12:5120, the maximum bandwidth for a data backup task is 15 Mbit/s from 12:00 to 15:00 and 5 Mbit/s from 06:00 to 12:00.</p>
-     * <br>
+     * <ul>
+     * <li><p><strong>Source</strong>: the directory that you want to protect. If you want to protect all directories, set this field to brackets [].</p>
+     * </li>
+     * <li><p><strong>Include</strong>: the format of the file that you want to protect. Examples: \<em>.jpg and \</em>.doc.</p>
+     * </li>
+     * <li><p><strong>Exclude</strong>: the directory that you want to exclude from the anti-ransomware policy. You can call the DescribeExcludeSystemPath operation to query all directories and then specify the directory that you want to exclude. Example: /home/user.</p>
+     * </li>
+     * <li><p><strong>Schedule</strong>: the start time and interval of a data backup task. We recommend that you specify a start time that begins during off-peak hours but does not start on the hour.</p>
+     * <ul>
+     * <li>If you set this field to I|1583216092|P21D, the data backup task starts from 2020-03-03 14:14:52, and the task is executed at an interval of three weeks.</li>
+     * <li>If you set this field to I|1583216092|PT24H, the data backup task starts from 2020-03-03 14:14:52, and the task is executed at an interval of 24 hours.</li>
+     * </ul>
+     * </li>
+     * <li><p><strong>Retention</strong>: the period during which backup data is retained. Unit: day. If you set this field to 7, backup data is retained for a week. If you set this field to 365, backup data is retained for a year. If you set this field to -1, backup data is permanently retained.</p>
+     * </li>
+     * <li><p><strong>SpeedLimiter</strong>: the limit on the network bandwidth for data backup tasks. If you set this field to 12:15:15360|6:12:5120, the maximum bandwidth for a data backup task is 15 Mbit/s from 12:00 to 15:00 and 5 Mbit/s from 06:00 to 12:00.</p>
+     * </li>
+     * </ul>
      * <p>If you back up data on an Elastic Compute Service (ECS) instance that is connected over an internal network, we recommend that you leave this field empty. If this field is left empty, the bandwidth for data backup tasks is unlimited.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Source&quot;:[&quot;home&quot;,&quot;admin&quot;]}</p>
      */
     @NameInMap("Policy")
     public String policyShrink;
 
     /**
      * <p>The region ID of the server to which the anti-ransomware policy is applied.</p>
-     * <br>
-     * <p>You can call the [DescribeSupportRegion](~~DescribeSupportRegion~~) operation to query the regions in which the anti-ransomware feature is supported.</p>
+     * <p>You can call the <a href="~~DescribeSupportRegion~~">DescribeSupportRegion</a> operation to query the regions in which the anti-ransomware feature is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("PolicyRegionId")
     public String policyRegionId;
 
     /**
-     * <p>The version of the anti-ransomware policy. You can call the [DescribeBackupPolicies](~~DescribeBackupPolicies~~) operation to query the versions of anti-ransomware policies.</p>
-     * <br>
-     * <p>*   **1.0.0**</p>
-     * <p>*   **2.0.0**</p>
+     * <p>The version of the anti-ransomware policy. You can call the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to query the versions of anti-ransomware policies.</p>
+     * <ul>
+     * <li><strong>1.0.0</strong></li>
+     * <li><strong>2.0.0</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2.0.0</p>
      */
     @NameInMap("PolicyVersion")
     public String policyVersion;
 
     /**
      * <p>The UUIDs of the servers to which the anti-ransomware policy is applied.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;3bb30859-b3b5-4f28-868f-b0892c98****&quot;, &quot;3bb30859-b3b5-4f28-868f-b0892c98****&quot;]</p>
      */
     @NameInMap("UuidList")
     public java.util.List<String> uuidList;

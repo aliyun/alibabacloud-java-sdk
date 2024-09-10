@@ -12,6 +12,9 @@ public class DescribeBackupRestoreCountResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECC6B3E3-D496-512D-B46D-E6996A6B63EE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,13 +42,19 @@ public class DescribeBackupRestoreCountResponseBody extends TeaModel {
 
     public static class DescribeBackupRestoreCountResponseBodyBackupRestoreCount extends TeaModel {
         /**
-         * <p>The number of the restoration tasks that are in the **being restored** state.</p>
+         * <p>The number of the restoration tasks that are in the <strong>being restored</strong> state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Recovering")
         public Integer recovering;
 
         /**
          * <p>The total number of the restoration tasks that you create.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("Total")
         public Integer total;

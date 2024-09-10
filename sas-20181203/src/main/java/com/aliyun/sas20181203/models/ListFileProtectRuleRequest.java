@@ -6,38 +6,58 @@ import com.aliyun.tea.*;
 public class ListFileProtectRuleRequest extends TeaModel {
     /**
      * <p>The severity of alerts. Valid values:</p>
-     * <br>
-     * <p>*   0: does not generate alerts</p>
-     * <p>*   1: sends notifications</p>
-     * <p>*   2: suspicious</p>
-     * <p>*   3: high-risk</p>
+     * <ul>
+     * <li>0: does not generate alerts</li>
+     * <li>1: sends notifications</li>
+     * <li>2: suspicious</li>
+     * <li>3: high-risk</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("AlertLevel")
     public Integer alertLevel;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("Platform")
+    public String platform;
+
     /**
      * <p>The handling method of the rule. Valid values:</p>
-     * <br>
-     * <p>*   pass: allow</p>
-     * <p>*   alert</p>
+     * <ul>
+     * <li>pass: allow</li>
+     * <li>alert</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>pass</p>
      */
     @NameInMap("RuleAction")
     public String ruleAction;
 
     /**
      * <p>The name of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-rule-1</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
@@ -69,6 +89,14 @@ public class ListFileProtectRuleRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListFileProtectRuleRequest setPlatform(String platform) {
+        this.platform = platform;
+        return this;
+    }
+    public String getPlatform() {
+        return this.platform;
     }
 
     public ListFileProtectRuleRequest setRuleAction(String ruleAction) {

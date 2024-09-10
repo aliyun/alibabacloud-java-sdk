@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetFileProtectEventCountResponseBody extends TeaModel {
     /**
      * <p>The data returned if the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16</p>
      */
     @NameInMap("Data")
     public Integer data;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9B28EC81-2FA7-5097-80D9-0DBE1A3DBD59</p>
      */
     @NameInMap("RequestId")
     public String requestId;

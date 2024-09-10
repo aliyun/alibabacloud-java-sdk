@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateCommonSwitchConfigResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>655B538A-A31B-58F2-A3FB-2EF4390D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

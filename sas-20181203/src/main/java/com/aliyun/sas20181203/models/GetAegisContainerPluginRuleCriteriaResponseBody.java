@@ -12,6 +12,9 @@ public class GetAegisContainerPluginRuleCriteriaResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DA8133CC-CCA0-5CF2-BF64-FE7D52C44***</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,32 +43,43 @@ public class GetAegisContainerPluginRuleCriteriaResponseBody extends TeaModel {
     public static class GetAegisContainerPluginRuleCriteriaResponseBodyCriteriaList extends TeaModel {
         /**
          * <p>The name of the search condition. Valid values:</p>
-         * <br>
-         * <p>*   **instanceId**: the ID of the container instance.</p>
-         * <p>*   **clusterId**: the cluster ID.</p>
-         * <p>*   **regionId**: the ID of the region in which the container resides.</p>
-         * <p>*   **clusterName**: the name of the cluster.</p>
-         * <p>*   **clusterType**: the type of the cluster.</p>
-         * <p>*   **hostIp**: the public IP address.</p>
-         * <p>*   **pod**: the pod.</p>
-         * <p>*   **podIp**: the IP address of the pod.</p>
-         * <p>*   **containerId**: the container ID.</p>
-         * <p>*   **containerScope**: the type of the container.</p>
+         * <ul>
+         * <li><strong>instanceId</strong>: the ID of the container instance.</li>
+         * <li><strong>clusterId</strong>: the cluster ID.</li>
+         * <li><strong>regionId</strong>: the ID of the region in which the container resides.</li>
+         * <li><strong>clusterName</strong>: the name of the cluster.</li>
+         * <li><strong>clusterType</strong>: the type of the cluster.</li>
+         * <li><strong>hostIp</strong>: the public IP address.</li>
+         * <li><strong>pod</strong>: the pod.</li>
+         * <li><strong>podIp</strong>: the IP address of the pod.</li>
+         * <li><strong>containerId</strong>: the container ID.</li>
+         * <li><strong>containerScope</strong>: the type of the container.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>containerScope</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The type of the search condition. Valid values:</p>
-         * <br>
-         * <p>*   **input**: The search condition needs to be specified.</p>
-         * <p>*   **select**: The search condition is an option that can be selected from the drop-down list.</p>
+         * <ul>
+         * <li><strong>input</strong>: The search condition needs to be specified.</li>
+         * <li><strong>select</strong>: The search condition is an option that can be selected from the drop-down list.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>select</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NO,YES</p>
          */
         @NameInMap("Values")
         public String values;

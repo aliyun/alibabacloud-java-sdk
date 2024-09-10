@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeDomainCountResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C286491D-4A2F-589A-B63B-D2AD3DA9BD71</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of root domains.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("RootDomainsCount")
     public Integer rootDomainsCount;
 
     /**
      * <p>The number of subdomains.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("SubDomainsCount")
     public Integer subDomainsCount;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalDomainsCount")
     public Integer totalDomainsCount;

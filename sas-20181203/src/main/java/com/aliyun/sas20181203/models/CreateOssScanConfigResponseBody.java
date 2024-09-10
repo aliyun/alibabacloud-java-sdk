@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateOssScanConfigResponseBody extends TeaModel {
     /**
      * <p>The ID of the policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>210****</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5DFD6277-CC36-57F7-ACE6-F5952123****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

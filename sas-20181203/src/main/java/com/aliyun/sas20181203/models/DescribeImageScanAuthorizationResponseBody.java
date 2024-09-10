@@ -12,6 +12,9 @@ public class DescribeImageScanAuthorizationResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>340D7FC4-D575-1661-8ACD-CFA7BE57****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,8 +43,13 @@ public class DescribeImageScanAuthorizationResponseBody extends TeaModel {
     public static class DescribeImageScanAuthorizationResponseBodyAuthStatus extends TeaModel {
         /**
          * <p>Indicates whether Security Center is authorized to scan images. Valid values:</p>
-         * <p>* **true**: yes </p>
-         * <p>* **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes </li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Status")
         public Boolean status;

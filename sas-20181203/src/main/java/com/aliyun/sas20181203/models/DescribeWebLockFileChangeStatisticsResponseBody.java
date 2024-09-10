@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeWebLockFileChangeStatisticsResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -18,18 +21,27 @@ public class DescribeWebLockFileChangeStatisticsResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>709A8C3D-A543-5B79-AB75-361B206F71D9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of files that are attempted to change.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,12 +94,18 @@ public class DescribeWebLockFileChangeStatisticsResponseBody extends TeaModel {
     public static class DescribeWebLockFileChangeStatisticsResponseBodyList extends TeaModel {
         /**
          * <p>The number of attempts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The file path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/tmp</p>
          */
         @NameInMap("File")
         public String file;

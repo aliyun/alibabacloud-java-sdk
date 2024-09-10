@@ -12,6 +12,9 @@ public class DescribeImageCriteriaResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24A20733-10A0-4AF6-BE6B-E3322413BB68</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,27 +43,42 @@ public class DescribeImageCriteriaResponseBody extends TeaModel {
     public static class DescribeImageCriteriaResponseBodyCriteriaList extends TeaModel {
         /**
          * <p>The name of the search condition.</p>
-         * <p>- **tag**: the tag of the image</p>
-         * <p>- **digest**: the digest of the image</p>
-         * <p>- **vulStatus**: the status of the vulnerability</p>
-         * <p>- **alarmStatus**: the status of the alert</p>
-         * <p>- **riskStatus**: the status of the risk</p>
-         * <p>- **registryType**: the type of the image repository</p>
+         * <ul>
+         * <li><strong>tag</strong>: the tag of the image</li>
+         * <li><strong>digest</strong>: the digest of the image</li>
+         * <li><strong>vulStatus</strong>: the status of the vulnerability</li>
+         * <li><strong>alarmStatus</strong>: the status of the alert</li>
+         * <li><strong>riskStatus</strong>: the status of the risk</li>
+         * <li><strong>registryType</strong>: the type of the image repository</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>vulStatus</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The type of the search condition. Valid values:</p>
-         * <p>- **input**: The search condition needs to be specified.</p>
-         * <p>- **select**: The search condition is an option that can be selected from the drop-down list.</p>
+         * <ul>
+         * <li><strong>input</strong>: The search condition needs to be specified.</li>
+         * <li><strong>select</strong>: The search condition is an option that can be selected from the drop-down list.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>input</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The values of the search condition. This parameter is returned only if the value of Type is select.</p>
-         * <p>> If the value of **Type** is **input**, the value of this parameter is an empty string.</p>
+         * <blockquote>
+         * <p>If the value of <strong>Type</strong> is <strong>input</strong>, the value of this parameter is an empty string.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>NO,YES</p>
          */
         @NameInMap("Values")
         public String values;

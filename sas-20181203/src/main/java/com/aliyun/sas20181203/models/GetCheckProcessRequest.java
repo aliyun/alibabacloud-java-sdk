@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class GetCheckProcessRequest extends TeaModel {
     /**
      * <p>The ID of the task.</p>
-     * <br>
-     * <p>> You can call the [SubmitCheck](~~SubmitCheck~~) operation to query the ID.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~SubmitCheck~~">SubmitCheck</a> operation to query the ID.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>5347c7b6-c85c-4070-846a-3029e08e****</p>
      */
     @NameInMap("TaskId")
     public String taskId;

@@ -5,51 +5,75 @@ import com.aliyun.tea.*;
 
 public class DescribeOnceTaskRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The timestamp when the root task ends. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1651766520000</p>
      */
     @NameInMap("EndTimeQuery")
     public Long endTimeQuery;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **20**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the root task.</p>
-     * <br>
-     * <p>> You must specify at least one of the **TaskType** and **RootTaskId** parameters.</p>
+     * <blockquote>
+     * <p>You must specify at least one of the <strong>TaskType</strong> and <strong>RootTaskId</strong> parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>bb5d657479bba5e1d308b6c9e85c9174</p>
      */
     @NameInMap("RootTaskId")
     public String rootTaskId;
 
     /**
      * <p>The timestamp when the root task starts. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1651737301000</p>
      */
     @NameInMap("StartTimeQuery")
     public Long startTimeQuery;
 
     /**
      * <p>The ID of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d7b2acf8d362742123e4a84e1bf8****</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
      * <p>The type of the task. Valid values:</p>
-     * <br>
-     * <p>*   **CLIENT_PROBLEM_CHECK**: a task of the Security Center agent</p>
-     * <p>*   **CLIENT_DEV_OPS**: an O\\&M task of Cloud Assistant</p>
-     * <p>*   **ASSET_SECURITY_CHECK**: a task of asset information collection</p>
-     * <br>
-     * <p>> You must specify at least one of the **TaskType** and **RootTaskId** parameters.</p>
+     * <ul>
+     * <li><strong>CLIENT_PROBLEM_CHECK</strong>: a task of the Security Center agent</li>
+     * <li><strong>CLIENT_DEV_OPS</strong>: an O\&amp;M task of Cloud Assistant</li>
+     * <li><strong>ASSET_SECURITY_CHECK</strong>: a task of asset information collection</li>
+     * </ul>
+     * <blockquote>
+     * <p>You must specify at least one of the <strong>TaskType</strong> and <strong>RootTaskId</strong> parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>CLIENT_PROBLEM_CHECK</p>
      */
     @NameInMap("TaskType")
     public String taskType;

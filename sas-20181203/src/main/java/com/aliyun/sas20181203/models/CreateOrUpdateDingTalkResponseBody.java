@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateOrUpdateDingTalkResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>76975B7A-34DC-5CB6-9538-91700D4F112E</p>
      */
     @NameInMap("RequestId")
     public String requestId;

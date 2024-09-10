@@ -18,6 +18,9 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +57,36 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
     public static class DescribePropertyPortItemResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>163</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -118,18 +133,27 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
     public static class DescribePropertyPortItemResponseBodyPropertyItems extends TeaModel {
         /**
          * <p>The number of servers that use the port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>495</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The number of the listening port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
          * <p>The network protocol of the port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         @NameInMap("Proto")
         public String proto;

@@ -12,6 +12,9 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AE60EAE3-ABD0-897C-B0F16CAC6C7D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,42 +43,63 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
     public static class DescribeBruteForceSummaryResponseBodyBruteForceSummary extends TeaModel {
         /**
          * <p>The number of anti-brute force IP blocking policies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13</p>
          */
         @NameInMap("AllStrategyCount")
         public Integer allStrategyCount;
 
         /**
          * <p>The number of defense policies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("AntiBruteForceRuleCount")
         public String antiBruteForceRuleCount;
 
         /**
          * <p>The number of custom blocking rules that are in effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("CustomEffectiveCount")
         public String customEffectiveCount;
 
         /**
          * <p>The number of custom blocking rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19730</p>
          */
         @NameInMap("CustomRecordCount")
         public String customRecordCount;
 
         /**
          * <p>The number of anti-brute force IP blocking policies enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("EffectiveCount")
         public Integer effectiveCount;
 
         /**
          * <p>The number of system blocking rules that are in effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("SystemEffectiveCount")
         public String systemEffectiveCount;
 
         /**
          * <p>The number of system blocking rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("SystemRecordCount")
         public String systemRecordCount;

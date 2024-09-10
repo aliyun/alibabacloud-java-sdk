@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class GetStrategyTemplateDetailRequest extends TeaModel {
     /**
      * <p>The ID of the template.</p>
-     * <br>
-     * <p>>  You can call the [GetOpaStrategyTemplateSummary](~~GetOpaStrategyTemplateSummary~~) operation to query the IDs of templates.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~GetOpaStrategyTemplateSummary~~">GetOpaStrategyTemplateSummary</a> operation to query the IDs of templates.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("StrategyId")
     public Long strategyId;

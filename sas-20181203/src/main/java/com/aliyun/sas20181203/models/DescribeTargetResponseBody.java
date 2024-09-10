@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeTargetResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>79CFF74D-E967-5407-8A78-EE03B925FDAA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,6 +21,9 @@ public class DescribeTargetResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -54,21 +60,31 @@ public class DescribeTargetResponseBody extends TeaModel {
     public static class DescribeTargetResponseBodyTargets extends TeaModel {
         /**
          * <p>The flag that is added to the server. This parameter can be empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>del</p>
          */
         @NameInMap("Flag")
         public String flag;
 
         /**
          * <p>The UUID of the server or the ID of the server group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5c5f0169-3527-40a2-b5ff-0bc1db8f****</p>
          */
         @NameInMap("Target")
         public String target;
 
         /**
          * <p>The type of the object. Valid values:</p>
-         * <br>
-         * <p>*   **uuid**: a server</p>
-         * <p>*   **groupId**: a server group</p>
+         * <ul>
+         * <li><strong>uuid</strong>: a server</li>
+         * <li><strong>groupId</strong>: a server group</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>uuid</p>
          */
         @NameInMap("TargetType")
         public String targetType;

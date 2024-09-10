@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateAgentlessScanTaskResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E90DE229-9FC6-58F6-BF4B-03AD6179****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

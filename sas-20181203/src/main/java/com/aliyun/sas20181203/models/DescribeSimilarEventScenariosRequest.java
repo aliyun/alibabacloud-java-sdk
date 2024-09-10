@@ -9,10 +9,17 @@ public class DescribeSimilarEventScenariosRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12321</p>
      */
     @NameInMap("SecurityEventId")
     public Long securityEventId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.2.XX.XX</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 

@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class ModifyInstanceAntiBruteForceRuleRequest extends TeaModel {
     /**
      * <p>The ID of the defense rule.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>65767</p>
      */
     @NameInMap("NewRuleId")
     public Long newRuleId;
@@ -17,14 +19,19 @@ public class ModifyInstanceAntiBruteForceRuleRequest extends TeaModel {
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.2.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;
 
     /**
-     * <p>The UUID of the server for which you want to modify the defense rule. You can call the [DescribeCloudCenterInstances](https://help.aliyun.com/document_detail/141932.html) operation to query the UUIDs of servers.</p>
-     * <br>
+     * <p>The UUID of the server for which you want to modify the defense rule. You can call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7cc91747-2845-40d4-bb69-c077597f****</p>
      */
     @NameInMap("Uuid")
     public String uuid;

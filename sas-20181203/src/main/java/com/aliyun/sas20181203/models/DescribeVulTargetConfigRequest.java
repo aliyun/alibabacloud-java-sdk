@@ -6,17 +6,24 @@ import com.aliyun.tea.*;
 public class DescribeVulTargetConfigRequest extends TeaModel {
     /**
      * <p>The type of the vulnerability. Valid values:</p>
-     * <br>
-     * <p>*   **cve**: Linux software vulnerability</p>
-     * <p>*   **sys**: Windows system vulnerability</p>
-     * <p>*   **cms**: Web-CMS vulnerability</p>
-     * <p>*   **emg**: urgent vulnerability</p>
+     * <ul>
+     * <li><strong>cve</strong>: Linux software vulnerability</li>
+     * <li><strong>sys</strong>: Windows system vulnerability</li>
+     * <li><strong>cms</strong>: Web-CMS vulnerability</li>
+     * <li><strong>emg</strong>: urgent vulnerability</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cve</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>The UUID of the server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ae1527a9-2308-46ab-b10a-48ae7ff7****</p>
      */
     @NameInMap("Uuid")
     public String uuid;

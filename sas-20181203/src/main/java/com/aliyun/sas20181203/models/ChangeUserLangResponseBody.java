@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ChangeUserLangResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2F5AA940-9EBF-5948-ACE7-3EF0FE54****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

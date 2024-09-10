@@ -12,93 +12,129 @@ public class ExportSuspEventsRequest extends TeaModel {
 
     /**
      * <p>The ID of the cluster that you want to query.</p>
-     * <br>
-     * <p>> You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>c4af4fdf38a98496a9b63c2be5dae****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The key of the condition that is used to query alert events on containers. Valid values:</p>
-     * <br>
-     * <p>*   **instanceId**: the ID of the asset</p>
-     * <p>*   **appName**: the name of the application</p>
-     * <p>*   **clusterId**: the ID of the cluster</p>
-     * <p>*   **regionId**: the ID of the region</p>
-     * <p>*   **nodeName**: the name of the node</p>
-     * <p>*   **namespace**: the namespace</p>
-     * <p>*   **clusterName**: the name of the cluster</p>
-     * <p>*   **image**: the name of the image</p>
-     * <p>*   **imageRepoName**: the name of the image repository</p>
-     * <p>*   **imageRepoNamespace**: the namespace to which the image repository belongs</p>
-     * <p>*   **imageRepoTag**: the tag that is added to the image</p>
-     * <p>*   **imageDigest**: the digest of the image</p>
+     * <ul>
+     * <li><strong>instanceId</strong>: the ID of the asset</li>
+     * <li><strong>appName</strong>: the name of the application</li>
+     * <li><strong>clusterId</strong>: the ID of the cluster</li>
+     * <li><strong>regionId</strong>: the ID of the region</li>
+     * <li><strong>nodeName</strong>: the name of the node</li>
+     * <li><strong>namespace</strong>: the namespace</li>
+     * <li><strong>clusterName</strong>: the name of the cluster</li>
+     * <li><strong>image</strong>: the name of the image</li>
+     * <li><strong>imageRepoName</strong>: the name of the image repository</li>
+     * <li><strong>imageRepoNamespace</strong>: the namespace to which the image repository belongs</li>
+     * <li><strong>imageRepoTag</strong>: the tag that is added to the image</li>
+     * <li><strong>imageDigest</strong>: the digest of the image</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>clusterId</p>
      */
     @NameInMap("ContainerFieldName")
     public String containerFieldName;
 
     /**
      * <p>The value of the condition that is used to query alert events on containers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c819391d2d520485fa3e81e2dc2ea****</p>
      */
     @NameInMap("ContainerFieldValue")
     public String containerFieldValue;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public String currentPage;
 
     /**
      * <p>The status of the alert event. Valid values:</p>
-     * <br>
-     * <p>*   **N**: unhandled</p>
-     * <p>*   **Y**: handled</p>
+     * <ul>
+     * <li><strong>N</strong>: unhandled</li>
+     * <li><strong>Y</strong>: handled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Y</p>
      */
     @NameInMap("Dealed")
     public String dealed;
 
     /**
      * <p>The data source of the exception. Set the value to sas.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sas</p>
      */
     @NameInMap("From")
     public String from;
 
     /**
-     * <p>The ID of the new server group to which the servers belong.</p>
-     * <br>
-     * <p>> You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of server groups.</p>
+     * <p>The ID of the asset group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8076980</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
 
     /**
      * <p>The unique ID of the alert event.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>17821</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The severity of the alert event. Separate multiple severities with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **serious**</p>
-     * <p>*   **suspicious**</p>
-     * <p>*   **remind**</p>
+     * <ul>
+     * <li><strong>serious</strong></li>
+     * <li><strong>suspicious</strong></li>
+     * <li><strong>remind</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>serious,suspicious,remind</p>
      */
     @NameInMap("Levels")
     public String levels;
 
     /**
      * <p>The complete name of the exception.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WEBSHELL</p>
      */
     @NameInMap("Name")
     public String name;
@@ -110,99 +146,132 @@ public class ExportSuspEventsRequest extends TeaModel {
     public java.util.List<String> operateErrorCodeList;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **20**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The alert type of the alert event. Valid values:</p>
-     * <br>
-     * <p>*   **Suspicious process**</p>
-     * <p>*   **Webshell**</p>
-     * <p>*   **Unusual logon**</p>
-     * <p>*   **Exception**</p>
-     * <p>*   **Sensitive file tampering**</p>
-     * <p>*   **Malicious process (cloud threat detection)**</p>
-     * <p>*   **Suspicious network connection**</p>
-     * <p>*   **Suspicious account**</p>
-     * <p>*   **Application intrusion event**</p>
-     * <p>*   **Cloud threat detection**</p>
-     * <p>*   **Precise defense**</p>
-     * <p>*   **Application whitelist**</p>
-     * <p>*   **Persistent webshell**</p>
-     * <p>*   **Web application threat detection**</p>
-     * <p>*   **Malicious script**</p>
-     * <p>*   **Threat intelligence**</p>
-     * <p>*   **Malicious network activity**</p>
-     * <p>*   **Cluster exception**</p>
-     * <p>*   **Webshell (on-premises threat detection)**</p>
-     * <p>*   **Vulnerability exploitation**</p>
-     * <p>*   **Malicious process (on-premises threat detection)**</p>
-     * <p>*   **Trusted exception**</p>
-     * <p>*   **Others**</p>
+     * <ul>
+     * <li><strong>Suspicious process</strong></li>
+     * <li><strong>Webshell</strong></li>
+     * <li><strong>Unusual logon</strong></li>
+     * <li><strong>Exception</strong></li>
+     * <li><strong>Sensitive file tampering</strong></li>
+     * <li><strong>Malicious process (cloud threat detection)</strong></li>
+     * <li><strong>Suspicious network connection</strong></li>
+     * <li><strong>Suspicious account</strong></li>
+     * <li><strong>Application intrusion event</strong></li>
+     * <li><strong>Cloud threat detection</strong></li>
+     * <li><strong>Precise defense</strong></li>
+     * <li><strong>Application whitelist</strong></li>
+     * <li><strong>Persistent webshell</strong></li>
+     * <li><strong>Web application threat detection</strong></li>
+     * <li><strong>Malicious script</strong></li>
+     * <li><strong>Threat intelligence</strong></li>
+     * <li><strong>Malicious network activity</strong></li>
+     * <li><strong>Cluster exception</strong></li>
+     * <li><strong>Webshell (on-premises threat detection)</strong></li>
+     * <li><strong>Vulnerability exploitation</strong></li>
+     * <li><strong>Malicious process (on-premises threat detection)</strong></li>
+     * <li><strong>Trusted exception</strong></li>
+     * <li><strong>Others</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>WEBSHELL</p>
      */
     @NameInMap("ParentEventTypes")
     public String parentEventTypes;
 
     /**
      * <p>The remarks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>remark</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
      * <p>The source IP address of the request. The value of this parameter is specified by the system.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>127.0.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;
 
     /**
      * <p>The handling status of the exception. Valid values:</p>
-     * <br>
-     * <p>*   **0**: all status</p>
-     * <p>*   **1**: pending handling</p>
-     * <p>*   **2**: ignored</p>
-     * <p>*   **4**: confirmed</p>
-     * <p>*   **8**: marked as false positive</p>
-     * <p>*   **16**: handling</p>
-     * <p>*   **32**: handled</p>
-     * <p>*   **64**: expired</p>
-     * <p>*   **128**: deleted</p>
+     * <ul>
+     * <li><strong>0</strong>: all status</li>
+     * <li><strong>1</strong>: pending handling</li>
+     * <li><strong>2</strong>: ignored</li>
+     * <li><strong>4</strong>: confirmed</li>
+     * <li><strong>8</strong>: marked as false positive</li>
+     * <li><strong>16</strong>: handling</li>
+     * <li><strong>32</strong>: handled</li>
+     * <li><strong>64</strong>: expired</li>
+     * <li><strong>128</strong>: deleted</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The dimension from which you want to configure the feature. Valid values:</p>
-     * <br>
-     * <p>*   **uuid**: the UUID of the asset</p>
-     * <p>*   **image_repo**: the ID of the image repository</p>
-     * <p>*   **Cluster**: the ID of the cluster</p>
+     * <ul>
+     * <li><strong>uuid</strong>: the UUID of the asset</li>
+     * <li><strong>image_repo</strong>: the ID of the image repository</li>
+     * <li><strong>Cluster</strong>: the ID of the cluster</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>uuid</p>
      */
     @NameInMap("TargetType")
     public String targetType;
 
     /**
      * <p>The end of the time range during which the exception is detected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-12-05 00:00:00</p>
      */
     @NameInMap("TimeEnd")
     public String timeEnd;
 
     /**
      * <p>The beginning of the time range during which the exception is detected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-10-01 00:00:00</p>
      */
     @NameInMap("TimeStart")
     public String timeStart;
 
     /**
      * <p>The unique key of the alert event.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1fbe8d16727f61d1478a674d6fa0****</p>
      */
     @NameInMap("UniqueInfo")
     public String uniqueInfo;
 
     /**
      * <p>The unique ID of the associated instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>18b7336e-d469-473b-af83-8e5420f9****</p>
      */
     @NameInMap("Uuid")
     public String uuid;

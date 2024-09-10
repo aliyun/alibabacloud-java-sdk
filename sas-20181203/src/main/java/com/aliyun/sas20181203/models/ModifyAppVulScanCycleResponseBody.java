@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyAppVulScanCycleResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AFEDC54D-70A2-5E56-A69B-E3D8AA8A5197</p>
      */
     @NameInMap("RequestId")
     public String requestId;

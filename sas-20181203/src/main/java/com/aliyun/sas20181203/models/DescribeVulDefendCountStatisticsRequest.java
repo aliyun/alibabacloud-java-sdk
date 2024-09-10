@@ -4,6 +4,16 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulDefendCountStatisticsRequest extends TeaModel {
+    /**
+     * <p>The type of the vulnerabilities. Valid values:</p>
+     * <ul>
+     * <li>app: application vulnerabilities</li>
+     * <li>emg: urgent vulnerabilities</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>emg</p>
+     */
     @NameInMap("VulType")
     public String vulType;
 

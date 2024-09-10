@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class GetRulesCountResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BE120DAB-F4E7-4C53-ADC3-A97578AB****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of system defense rules.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalSystemClientRuleCount")
     public Long totalSystemClientRuleCount;
 
     /**
      * <p>The total number of custom defense rules.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalUserDefineRuleCount")
     public Long totalUserDefineRuleCount;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class MarkMonitorAccountsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A4EB8B1C-1DEC-5E18-BCD0-D1BBB3936FA7</p>
      */
     @NameInMap("RequestId")
     public String requestId;

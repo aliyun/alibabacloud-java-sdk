@@ -18,6 +18,9 @@ public class DescribeSecurityEventMarkMissListResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24A20733-10A0-4AF6-BE6B-E3322413BB68</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,96 +57,142 @@ public class DescribeSecurityEventMarkMissListResponseBody extends TeaModel {
     public static class DescribeSecurityEventMarkMissListResponseBodyList extends TeaModel {
         /**
          * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>176618589410****</p>
          */
         @NameInMap("AliUid")
         public Long aliUid;
 
         /**
          * <p>The name of the alert event. The value indicates a subtype.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Login with unusual location</p>
          */
         @NameInMap("EventName")
         public String eventName;
 
         /**
          * <p>The name of the alert event. The value indicates a type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>login_common_location</p>
          */
         @NameInMap("EventNameOriginal")
         public String eventNameOriginal;
 
         /**
          * <p>The subtype of the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unusual Logon</p>
          */
         @NameInMap("EventType")
         public String eventType;
 
         /**
          * <p>The type of the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>login_common_location</p>
          */
         @NameInMap("EventTypeOriginal")
         public String eventTypeOriginal;
 
         /**
          * <p>The field that is used in the whitelist rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>type</p>
          */
         @NameInMap("Field")
         public String field;
 
         /**
          * <p>The value of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         @NameInMap("FieldValue")
         public String fieldValue;
 
         /**
          * <p>The alias of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Logon Time</p>
          */
         @NameInMap("FiledAliasName")
         public String filedAliasName;
 
         /**
          * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>104037</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The instance ID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1e8t4q15sr3****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The instance name of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sql-test-001</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The public IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.210.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.25.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>The operator. Valid values:</p>
-         * <br>
-         * <p>- **contains**: contains</p>
-         * <p>- **notContains**: does not contain</p>
-         * <p>- **strEqual**: equals</p>
-         * <p>- **strNotEqual**: does not equal</p>
-         * <p>- **regex**: regular expression</p>
+         * <ul>
+         * <li><strong>contains</strong>: contains</li>
+         * <li><strong>notContains</strong>: does not contain</li>
+         * <li><strong>strEqual</strong>: equals</li>
+         * <li><strong>strNotEqual</strong>: does not equal</li>
+         * <li><strong>regex</strong>: regular expression</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>contains</p>
          */
         @NameInMap("Operate")
         public String operate;
 
         /**
          * <p>The UUID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49e25e0f-bb51-4a5a-a1b3-13a4ddaa****</p>
          */
         @NameInMap("Uuid")
         public String uuid;
@@ -278,24 +327,36 @@ public class DescribeSecurityEventMarkMissListResponseBody extends TeaModel {
     public static class DescribeSecurityEventMarkMissListResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries per page. Default value: **20**.</p>
+         * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

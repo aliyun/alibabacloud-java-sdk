@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class DescribeHcExportInfoRequest extends TeaModel {
     /**
      * <p>The ID of the export task.</p>
-     * <br>
-     * <p>>  You can call the [ExportWarning](~~ExportWarning~~) operation to query the IDs of export tasks.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~ExportWarning~~">ExportWarning</a> operation to query the IDs of export tasks.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>443285</p>
      */
     @NameInMap("ExportId")
     public Long exportId;

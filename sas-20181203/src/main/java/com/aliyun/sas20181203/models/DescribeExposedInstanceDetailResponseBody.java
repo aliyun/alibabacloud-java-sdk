@@ -12,6 +12,9 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C590482B-54A7-4273-8115-9DBE2DE46B26</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,43 +43,61 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
     public static class DescribeExposedInstanceDetailResponseBodyExposedChainsAllVulList extends TeaModel {
         /**
          * <p>The alias of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RHSA-2022:0274-Important: polkit pkexec Local Privilege Escalation Vulnerability(CVE-2021-4034)</p>
          */
         @NameInMap("AliasName")
         public String aliasName;
 
         /**
          * <p>The name of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SCA:ACSV-2020-052801</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The priority to fix the vulnerability. Valid values:</p>
-         * <br>
-         * <p>*   **asap**: high</p>
-         * <p>*   **later**: medium</p>
-         * <p>*   **nntf**: low</p>
-         * <br>
-         * <p>>  We recommend that you fix the vulnerabilities that have the **high** priority at the earliest opportunity.</p>
+         * <ul>
+         * <li><strong>asap</strong>: high</li>
+         * <li><strong>later</strong>: medium</li>
+         * <li><strong>nntf</strong>: low</li>
+         * </ul>
+         * <blockquote>
+         * <p> We recommend that you fix the vulnerabilities that have the <strong>high</strong> priority at the earliest opportunity.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>asap</p>
          */
         @NameInMap("Necessity")
         public String necessity;
 
         /**
          * <p>The type of the vulnerability. Valid values:</p>
-         * <br>
-         * <p>*   **cve**: Linux software vulnerabilities</p>
-         * <p>*   **sys**: Windows system vulnerabilities</p>
-         * <p>*   **cms**: Web-CMS vulnerabilities</p>
-         * <p>*   **app**: application vulnerabilities</p>
-         * <p>*   **emg**: urgent vulnerabilities</p>
-         * <p>*   **sca**: middleware vulnerabilities</p>
+         * <ul>
+         * <li><strong>cve</strong>: Linux software vulnerabilities</li>
+         * <li><strong>sys</strong>: Windows system vulnerabilities</li>
+         * <li><strong>cms</strong>: Web-CMS vulnerabilities</li>
+         * <li><strong>app</strong>: application vulnerabilities</li>
+         * <li><strong>emg</strong>: urgent vulnerabilities</li>
+         * <li><strong>sca</strong>: middleware vulnerabilities</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>sca</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4f9ce097-4a7d-48fe-baef-6960e5b6****</p>
          */
         @NameInMap("Uuid")
         public String uuid;
@@ -131,43 +152,61 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
     public static class DescribeExposedInstanceDetailResponseBodyExposedChainsRealVulList extends TeaModel {
         /**
          * <p>The alias of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RHSA-2022:0274-Important: polkit pkexec Local Privilege Escalation Vulnerability(CVE-2021-4034)</p>
          */
         @NameInMap("AliasName")
         public String aliasName;
 
         /**
          * <p>The name of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SCA:ACSV-2020-052801</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The priority to fix the vulnerability. Valid values:</p>
-         * <br>
-         * <p>*   **asap**: high</p>
-         * <p>*   **later**: medium</p>
-         * <p>*   **nntf**: low</p>
-         * <br>
-         * <p>>  We recommend that you fix the vulnerabilities that have the **high** priority at the earliest opportunity.</p>
+         * <ul>
+         * <li><strong>asap</strong>: high</li>
+         * <li><strong>later</strong>: medium</li>
+         * <li><strong>nntf</strong>: low</li>
+         * </ul>
+         * <blockquote>
+         * <p> We recommend that you fix the vulnerabilities that have the <strong>high</strong> priority at the earliest opportunity.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>asap</p>
          */
         @NameInMap("Necessity")
         public String necessity;
 
         /**
          * <p>The type of the vulnerability. Valid values:</p>
-         * <br>
-         * <p>*   **cve**: Linux software vulnerabilities</p>
-         * <p>*   **sys**: Windows system vulnerabilities</p>
-         * <p>*   **cms**: Web-CMS vulnerabilities</p>
-         * <p>*   **app**: application vulnerabilities</p>
-         * <p>*   **emg**: urgent vulnerabilities</p>
-         * <p>*   **sca**: middleware vulnerabilities</p>
+         * <ul>
+         * <li><strong>cve</strong>: Linux software vulnerabilities</li>
+         * <li><strong>sys</strong>: Windows system vulnerabilities</li>
+         * <li><strong>cms</strong>: Web-CMS vulnerabilities</li>
+         * <li><strong>app</strong>: application vulnerabilities</li>
+         * <li><strong>emg</strong>: urgent vulnerabilities</li>
+         * <li><strong>sca</strong>: middleware vulnerabilities</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>sca</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4f9ce097-4a7d-48fe-baef-6960e5b6****</p>
          */
         @NameInMap("Uuid")
         public String uuid;
@@ -228,70 +267,102 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
 
         /**
          * <p>The server component that is exposed on the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>openssl,openssh</p>
          */
         @NameInMap("ExposureComponent")
         public String exposureComponent;
 
         /**
          * <p>The public IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.99.XX.XX</p>
          */
         @NameInMap("ExposureIp")
         public String exposureIp;
 
         /**
          * <p>The port that is exposed on the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         @NameInMap("ExposurePort")
         public String exposurePort;
 
         /**
          * <p>The resource from which the server is exposed. Valid values:</p>
-         * <br>
-         * <p>*   **INTERNET_IP**: the public IP address of an Elastic Compute Service (ECS) instance</p>
-         * <p>*   **SLB**: the public IP address of a Server Load Balancer (SLB) instance</p>
-         * <p>*   **EIP**: an elastic IP address (EIP)</p>
-         * <p>*   **DNAT**: the NAT gateway that connects to the Internet by using the DNAT feature</p>
+         * <ul>
+         * <li><strong>INTERNET_IP</strong>: the public IP address of an Elastic Compute Service (ECS) instance</li>
+         * <li><strong>SLB</strong>: the public IP address of a Server Load Balancer (SLB) instance</li>
+         * <li><strong>EIP</strong>: an elastic IP address (EIP)</li>
+         * <li><strong>DNAT</strong>: the NAT gateway that connects to the Internet by using the DNAT feature</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>INTERNET_IP</p>
          */
         @NameInMap("ExposureType")
         public String exposureType;
 
         /**
          * <p>The ID of the instance to which the resource belongs. The valid values of this parameter vary based on the value of the ExposureType parameter.</p>
-         * <br>
-         * <p>*   If the value of the ExposureType parameter is **INTERNET_IP**, the value of this parameter is an empty string.</p>
-         * <p>*   If the value of the ExposureType parameter is **SLB**, the value of this parameter is the ID of the Internet-facing SLB instance.</p>
-         * <p>*   If the value of the ExposureType parameter is **EIP**, the value of this parameter is the ID of the EIP.</p>
-         * <p>*   If the value of the ExposureType parameter is **DNAT**, the value of this parameter is the ID of the NAT gateway.</p>
+         * <ul>
+         * <li>If the value of the ExposureType parameter is <strong>INTERNET_IP</strong>, the value of this parameter is an empty string.</li>
+         * <li>If the value of the ExposureType parameter is <strong>SLB</strong>, the value of this parameter is the ID of the Internet-facing SLB instance.</li>
+         * <li>If the value of the ExposureType parameter is <strong>EIP</strong>, the value of this parameter is the ID of the EIP.</li>
+         * <li>If the value of the ExposureType parameter is <strong>DNAT</strong>, the value of this parameter is the ID of the NAT gateway.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-bp1bkgowzam49rld3****</p>
          */
         @NameInMap("ExposureTypeId")
         public String exposureTypeId;
 
         /**
          * <p>The server group to which the server belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp1iw5enua6gf5i2xr7z</p>
          */
         @NameInMap("GroupNo")
         public String groupNo;
 
         /**
          * <p>The ID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp116qem8npvchqc****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>worker-k8s-for-cs-c929ee2a145214f89a8b248005be5****</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The public IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.99.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
@@ -304,14 +375,21 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
 
         /**
          * <p>The region in which the server resides.</p>
-         * <br>
-         * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](https://help.aliyun.com/document_detail/40654.html).</p>
+         * <blockquote>
+         * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4f9ce097-4a7d-48fe-baef-6960e5b6****</p>
          */
         @NameInMap("Uuid")
         public String uuid;

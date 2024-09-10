@@ -12,6 +12,9 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30CBF632-109F-596F-97F2-451C8B2A****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,27 +43,40 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
     public static class GetSwitchRegionDetailResponseBodyDataRegionStatus extends TeaModel {
         /**
          * <p>The number of ECS instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27</p>
          */
         @NameInMap("EcsCount")
         public Integer ecsCount;
 
         /**
          * <p>The time when the migration is scheduled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1692858597000</p>
          */
         @NameInMap("GmtPlanSwitchTime")
         public Long gmtPlanSwitchTime;
 
         /**
          * <p>The region in which the server resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>us-east-1</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The migration status. Valid values:</p>
-         * <br>
-         * <p>*   **0**: pending</p>
-         * <p>*   **1**: successful</p>
+         * <ul>
+         * <li><strong>0</strong>: pending</li>
+         * <li><strong>1</strong>: successful</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Status")
         public Integer status;
@@ -107,24 +123,36 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
     public static class GetSwitchRegionDetailResponseBodyData extends TeaModel {
         /**
          * <p>The time when the permissions were modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1692858597000</p>
          */
         @NameInMap("GmtIsAgreeModified")
         public Long gmtIsAgreeModified;
 
         /**
          * <p>The notification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1692858597000</p>
          */
         @NameInMap("GmtNoticed")
         public Long gmtNoticed;
 
         /**
          * <p>Indicates whether the migration is approved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsAgree")
         public String isAgree;
 
         /**
          * <p>Indicates whether the notification is sent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>YES</p>
          */
         @NameInMap("IsNoticed")
         public String isNoticed;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListCheckTypesResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Count")
     public Integer count;
@@ -24,27 +30,40 @@ public class ListCheckTypesResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D65AADFC-1D20-5A6A-8F6A-9FA53C0D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -125,12 +144,18 @@ public class ListCheckTypesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31</p>
          */
         @NameInMap("CheckId")
         public Long checkId;
 
         /**
          * <p>The description of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Configure the idle session timeout period.</p>
          */
         @NameInMap("CheckItem")
         public String checkItem;
@@ -183,12 +208,18 @@ public class ListCheckTypesResponseBody extends TeaModel {
 
         /**
          * <p>The type of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>data_integrity</p>
          */
         @NameInMap("CheckType")
         public String checkType;
 
         /**
          * <p>The display name of the check item type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Data Integrity</p>
          */
         @NameInMap("CheckTypeDisName")
         public String checkTypeDisName;

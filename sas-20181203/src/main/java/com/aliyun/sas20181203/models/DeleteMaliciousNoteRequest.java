@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class DeleteMaliciousNoteRequest extends TeaModel {
     /**
      * <p>The ID of the remarks.</p>
-     * <br>
-     * <p>>  You can call the [ListAgentlessMaliciousFiles](~~ListAgentlessMaliciousFiles~~) operation to obtain the ID from the NoteId parameter.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~ListAgentlessMaliciousFiles~~">ListAgentlessMaliciousFiles</a> operation to obtain the ID from the NoteId parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("NoteId")
     public Long noteId;

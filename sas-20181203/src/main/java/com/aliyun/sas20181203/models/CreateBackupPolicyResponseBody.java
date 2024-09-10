@@ -12,6 +12,9 @@ public class CreateBackupPolicyResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24A20733-10A0-4AF6-BE6B-E3322413BB68</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,17 +43,25 @@ public class CreateBackupPolicyResponseBody extends TeaModel {
     public static class CreateBackupPolicyResponseBodyBackupPolicy extends TeaModel {
         /**
          * <p>The ID of the anti-ransomware policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1301575</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The status of the anti-ransomware policy. Valid values:</p>
-         * <br>
-         * <p>*   **enabled**</p>
-         * <p>*   **disabled**</p>
-         * <br>
-         * <p>>  After you create an anti-ransomware policy, the policy is enabled by default.</p>
+         * <ul>
+         * <li><strong>enabled</strong></li>
+         * <li><strong>disabled</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> After you create an anti-ransomware policy, the policy is enabled by default.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         @NameInMap("Status")
         public String status;

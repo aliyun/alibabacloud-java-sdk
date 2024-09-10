@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyWebLockStartResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D9354C1A-D709-4873-9AAE-41513327B247</p>
      */
     @NameInMap("RequestId")
     public String requestId;

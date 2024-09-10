@@ -12,22 +12,33 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
 
     /**
      * <p>The cluster ID.</p>
-     * <br>
-     * <p>> This parameter is deprecated. You can use the Scopes parameter to specify a scope in which cluster parameters take effect.</p>
+     * <blockquote>
+     * <p>This parameter is deprecated. You can use the Scopes parameter to specify a scope in which cluster parameters take effect.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>c870ec78ecbcb41d2a35c679823ef****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The cluster name.</p>
-     * <br>
-     * <p>> This parameter is deprecated.</p>
+     * <blockquote>
+     * <p>This parameter is deprecated.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>docker-law</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
      * <p>The rule description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4566</p>
      */
     @NameInMap("Description")
     public String description;
@@ -46,19 +57,27 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
 
     /**
      * <p>Specifies whether the rule supports malicious Internet images. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("MaliciousImage")
     public Boolean maliciousImage;
 
     /**
      * <p>The action that is performed when the rule is hit. Valid values:</p>
-     * <br>
-     * <p>*   **1**: alert</p>
-     * <p>*   **2**: block</p>
-     * <p>*   **3**: allow</p>
+     * <ul>
+     * <li><strong>1</strong>: alert</li>
+     * <li><strong>2</strong>: block</li>
+     * <li><strong>3</strong>: allow</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("RuleAction")
     public Integer ruleAction;
@@ -71,31 +90,46 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
 
     /**
      * <p>The ID of the rule.</p>
-     * <br>
-     * <p>>  You can call the [ListOpaClusterStrategyNew](https://help.aliyun.com/document_detail/2623574.html) operation to query the ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2623574.html">ListOpaClusterStrategyNew</a> operation to query the ID.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1003</p>
      */
     @NameInMap("StrategyId")
     public Long strategyId;
 
     /**
      * <p>The rule name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("StrategyName")
     public String strategyName;
 
     /**
      * <p>The ID of the rule template.</p>
-     * <br>
-     * <p>>  You can call the [GetOpaStrategyTemplateSummary](https://help.aliyun.com/document_detail/2539952.html) operation to query the ID of the rule template.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2539952.html">GetOpaStrategyTemplateSummary</a> operation to query the ID of the rule template.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>109</p>
      */
     @NameInMap("StrategyTemplateId")
     public Long strategyTemplateId;
 
     /**
      * <p>Specifies whether the rule supports unscanned images. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("UnScanedImage")
     public Boolean unScanedImage;
@@ -226,16 +260,24 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
     public static class UpdateOpaStrategyNewRequestAlarmDetailBaselineItem extends TeaModel {
         /**
          * <p>The ID of the baseline check item.</p>
-         * <br>
-         * <p>>  You can call the [GetOpaClusterBaseLineList](https://help.aliyun.com/document_detail/2539883.html) operation to query the ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2539883.html">GetOpaClusterBaseLineList</a> operation to query the ID.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>hc.image.checklist.identify.hc_exploit_couchdb_linux.item</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The name of the baseline check item.</p>
-         * <br>
-         * <p>>  You can call the [GetOpaClusterBaseLineList](https://help.aliyun.com/document_detail/2539883.html) operation to query the name.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2539883.html">GetOpaClusterBaseLineList</a> operation to query the name.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>passwd</p>
          */
         @NameInMap("Name")
         public String name;
@@ -302,16 +344,24 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
     public static class UpdateOpaStrategyNewRequestAlarmDetailBuildRiskItem extends TeaModel {
         /**
          * <p>The ID of the image build risk.</p>
-         * <br>
-         * <p>>  You can call the [ListImageBuildRiskItem](~~ListImageBuildRiskItem~~) operation to query the ID of the malicious sample.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListImageBuildRiskItem~~">ListImageBuildRiskItem</a> operation to query the ID of the malicious sample.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The name of the image build risk.</p>
-         * <br>
-         * <p>>  You can call the [ListImageBuildRiskItem](~~ListImageBuildRiskItem~~) operation to query the ID of the malicious sample.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListImageBuildRiskItem~~">ListImageBuildRiskItem</a> operation to query the ID of the malicious sample.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("Name")
         public String name;
@@ -378,16 +428,24 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
     public static class UpdateOpaStrategyNewRequestAlarmDetailMaliciousFileItem extends TeaModel {
         /**
          * <p>The ID of the malicious sample.</p>
-         * <br>
-         * <p>>  You can call the [DescribeMatchedMaliciousNames](~~DescribeMatchedMaliciousNames~~) operation to query the ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeMatchedMaliciousNames~~">DescribeMatchedMaliciousNames</a> operation to query the ID.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>65201</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The name of the malicious sample.</p>
-         * <br>
-         * <p>>  You can call the [DescribeMatchedMaliciousNames](~~DescribeMatchedMaliciousNames~~) operation to query the name.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeMatchedMaliciousNames~~">DescribeMatchedMaliciousNames</a> operation to query the name.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>abnormal binary file</p>
          */
         @NameInMap("Name")
         public String name;
@@ -454,16 +512,24 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
     public static class UpdateOpaStrategyNewRequestAlarmDetailSensitiveFileItem extends TeaModel {
         /**
          * <p>The ID of the sensitive files.</p>
-         * <br>
-         * <p>>  You can call the [GetSensitiveDefineRuleConfig](~~GetSensitiveDefineRuleConfig~~) operation to query the ID of the malicious sample.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~GetSensitiveDefineRuleConfig~~">GetSensitiveDefineRuleConfig</a> operation to query the ID of the malicious sample.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The name of the sensitive files.</p>
-         * <br>
-         * <p>>  You can call the [GetSensitiveDefineRuleConfig](~~GetSensitiveDefineRuleConfig~~) operation to query the ID of the malicious sample.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~GetSensitiveDefineRuleConfig~~">GetSensitiveDefineRuleConfig</a> operation to query the ID of the malicious sample.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("Name")
         public String name;
@@ -530,16 +596,24 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
     public static class UpdateOpaStrategyNewRequestAlarmDetailVulItem extends TeaModel {
         /**
          * <p>The ID of the vulnerability.</p>
-         * <br>
-         * <p>>  You can call the [DescribeVulListPage](https://help.aliyun.com/document_detail/471928.html) operation to query the ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/471928.html">DescribeVulListPage</a> operation to query the ID.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>CVE-2023-36034</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The name of the vulnerability.</p>
-         * <br>
-         * <p>>  You can call the [DescribeVulListPage](https://help.aliyun.com/document_detail/471928.html) operation to query the name.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/471928.html">DescribeVulListPage</a> operation to query the name.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>oval:com.redhat.rhsa:def:20227002</p>
          */
         @NameInMap("Name")
         public String name;
@@ -570,18 +644,26 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
     public static class UpdateOpaStrategyNewRequestAlarmDetailVulRiskClass extends TeaModel {
         /**
          * <p>The ID of the vulnerability types. Valid values:</p>
-         * <br>
-         * <p>*   **cve**: system vulnerability</p>
-         * <p>*   **app**: application vulnerability</p>
+         * <ul>
+         * <li><strong>cve</strong>: system vulnerability</li>
+         * <li><strong>app</strong>: application vulnerability</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cve</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The name of the vulnerability. Valid values:</p>
-         * <br>
-         * <p>*   **system vulnerability**</p>
-         * <p>*   **application vulnerability**</p>
+         * <ul>
+         * <li><strong>system vulnerability</strong></li>
+         * <li><strong>application vulnerability</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>system vulnerability</p>
          */
         @NameInMap("Name")
         public String name;
@@ -740,33 +822,46 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
     public static class UpdateOpaStrategyNewRequestScopes extends TeaModel {
         /**
          * <p>The ID of the cluster node to which the rule is applied.</p>
-         * <br>
-         * <p>>  You can call the [GetOpaStrategyDetailNew](~~GetOpaStrategyDetailNew~~) operation to query the ID of the cluster node to which the rule is applied.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~GetOpaStrategyDetailNew~~">GetOpaStrategyDetailNew</a> operation to query the ID of the cluster node to which the rule is applied.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ack-1</p>
          */
         @NameInMap("AckPolicyInstanceId")
         public String ackPolicyInstanceId;
 
         /**
          * <p>Specifies whether all namespaces are included. Valid values:</p>
-         * <br>
-         * <p>*   **0**: Not all namespaces are included.</p>
-         * <p>*   **1**: All namespaces are included.</p>
+         * <ul>
+         * <li><strong>0</strong>: Not all namespaces are included.</li>
+         * <li><strong>1</strong>: All namespaces are included.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AllNamespace")
         public Integer allNamespace;
 
         /**
          * <p>The cluster ID.</p>
-         * <br>
-         * <p>>  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the cluster ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the cluster ID.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cdcb56a931c**</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The namespaces.</p>
-         * <br>
-         * <p>> This parameter is valid only when the AllNamespace parameter is set to 0.</p>
+         * <blockquote>
+         * <p>This parameter is valid only when the AllNamespace parameter is set to 0.</p>
+         * </blockquote>
          */
         @NameInMap("NamespaceList")
         public java.util.List<String> namespaceList;

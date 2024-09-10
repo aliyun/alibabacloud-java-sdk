@@ -5,29 +5,38 @@ import com.aliyun.tea.*;
 
 public class ModifyEmgVulSubmitRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The name of the vulnerability.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>scan:ASCV-2019-032401</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>Specifies whether to scan for urgent vulnerabilities. Valid values:</p>
-     * <br>
-     * <p>*   **yes**</p>
-     * <p>*   **no**</p>
-     * <br>
+     * <ul>
+     * <li><strong>yes</strong></li>
+     * <li><strong>no</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yes</p>
      */
     @NameInMap("UserAgreement")
     public String userAgreement;

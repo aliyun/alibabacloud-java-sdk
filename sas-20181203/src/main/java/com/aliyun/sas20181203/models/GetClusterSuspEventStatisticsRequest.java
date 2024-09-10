@@ -6,14 +6,21 @@ import com.aliyun.tea.*;
 public class GetClusterSuspEventStatisticsRequest extends TeaModel {
     /**
      * <p>The ID of the container cluster.</p>
-     * <br>
-     * <p>>  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>c6094b964bfc145fe9e418c869e7e****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The ID of the request source. Set the value to sas.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sas</p>
      */
     @NameInMap("From")
     public String from;

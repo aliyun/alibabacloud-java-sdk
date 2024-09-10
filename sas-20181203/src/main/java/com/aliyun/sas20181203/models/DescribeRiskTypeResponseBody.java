@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeRiskTypeResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F22037B5-FCE4-5178-A9E7-71798E1F9270</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,45 +43,67 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
     public static class DescribeRiskTypeResponseBodyRiskTypesSubTypesCheckDetailsRulesParamList extends TeaModel {
         /**
          * <p>If the value of paramType is 1, this parameter is empty. If the value of paramType is 2, this parameter provides the options that can be selected for paramType.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0,1,2,3</p>
          */
         @NameInMap("EnumValue")
         public String enumValue;
 
         /**
          * <p>The maximum value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>999</p>
          */
         @NameInMap("MaxValue")
         public Integer maxValue;
 
         /**
          * <p>The minimum value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MinValue")
         public Integer minValue;
 
         /**
          * <p>The default value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         @NameInMap("ParamDefaultValue")
         public String paramDefaultValue;
 
         /**
          * <p>The description of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The setting value is 0 means no definition, 1 means success, 2 means failure, 3 means success and failure</p>
          */
         @NameInMap("ParamDesc")
         public String paramDesc;
 
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>range_val</p>
          */
         @NameInMap("ParamName")
         public String paramName;
 
         /**
          * <p>The configuration type of the parameter. Valid values:</p>
-         * <br>
-         * <p>*   **1**: input</p>
-         * <p>*   **2**: selection</p>
+         * <ul>
+         * <li><strong>1</strong>: input</li>
+         * <li><strong>2</strong>: selection</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ParamType")
         public Integer paramType;
@@ -149,9 +174,13 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
     public static class DescribeRiskTypeResponseBodyRiskTypesSubTypesCheckDetailsRules extends TeaModel {
         /**
          * <p>Indicates whether the baseline can be edited. Valid values:</p>
-         * <br>
-         * <p>*   **0**: no</p>
-         * <p>*   **1**: yes</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Optional")
         public Integer optional;
@@ -164,12 +193,18 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
 
         /**
          * <p>The description of the rule for the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Please customize the password expiration time detection standard as</p>
          */
         @NameInMap("RuleDesc")
         public String ruleDesc;
 
         /**
          * <p>The ID of the rule for the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>audit.audit_policy.auditpolicychange.cus</p>
          */
         @NameInMap("RuleId")
         public String ruleId;
@@ -216,18 +251,27 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
     public static class DescribeRiskTypeResponseBodyRiskTypesSubTypesCheckDetails extends TeaModel {
         /**
          * <p>The description of the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Set password expiration time, force regular modification of password, reduce password leakage and guess risk.Use non-password login (e.g. key pair) please ignore this item.</p>
          */
         @NameInMap("CheckDesc")
         public String checkDesc;
 
         /**
          * <p>The ID of the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1299</p>
          */
         @NameInMap("CheckId")
         public Long checkId;
 
         /**
          * <p>The baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ensure password expiration period is set.</p>
          */
         @NameInMap("CheckItem")
         public String checkItem;
@@ -280,15 +324,22 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
     public static class DescribeRiskTypeResponseBodyRiskTypesSubTypes extends TeaModel {
         /**
          * <p>The alias of the baseline subtype.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Redis unauthorized access high exploit vulnerability risk</p>
          */
         @NameInMap("Alias")
         public String alias;
 
         /**
          * <p>The baseline subtype permission flag of the current user version. Valid values:</p>
-         * <br>
-         * <p>- **true**: Have access</p>
-         * <p>- **false**: No permissions</p>
+         * <ul>
+         * <li><strong>true</strong>: Have access</li>
+         * <li><strong>false</strong>: No permissions</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AuthFlag")
         public Boolean authFlag;
@@ -301,15 +352,22 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
 
         /**
          * <p>The operating system type of the server. Valid values:</p>
-         * <br>
-         * <p>- **windows**</p>
-         * <p>- **linux**</p>
+         * <ul>
+         * <li><strong>windows</strong></li>
+         * <li><strong>linux</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>linux</p>
          */
         @NameInMap("SupportedOs")
         public String supportedOs;
 
         /**
          * <p>The name of the baseline subtype.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hc_exploit_redis</p>
          */
         @NameInMap("TypeName")
         public String typeName;
@@ -364,15 +422,22 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
     public static class DescribeRiskTypeResponseBodyRiskTypes extends TeaModel {
         /**
          * <p>The alias of the baseline type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Redis unauthorized access high exploit vulnerability risk</p>
          */
         @NameInMap("Alias")
         public String alias;
 
         /**
          * <p>The baseline type flag of the current user version. Valid values:</p>
-         * <br>
-         * <p>- **true**: Have access</p>
-         * <p>- **false**: No permissions</p>
+         * <ul>
+         * <li><strong>true</strong>: Have access</li>
+         * <li><strong>false</strong>: No permissions</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AuthFlag")
         public Boolean authFlag;
@@ -385,6 +450,9 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
 
         /**
          * <p>The name of the baseline type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hc_exploit</p>
          */
         @NameInMap("TypeName")
         public String typeName;

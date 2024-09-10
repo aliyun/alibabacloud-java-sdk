@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateFileProtectRuleResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>339227F4-C9E1-526F-8347-1099C11F65FB</p>
      */
     @NameInMap("RequestId")
     public String requestId;

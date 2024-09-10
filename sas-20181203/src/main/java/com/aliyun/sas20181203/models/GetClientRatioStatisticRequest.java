@@ -6,7 +6,12 @@ import com.aliyun.tea.*;
 public class GetClientRatioStatisticRequest extends TeaModel {
     /**
      * <p>The ID of the primary account of the Resource Directory member account.</p>
-     * <p>> call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) interface to obtain this parameter.</p>
+     * <blockquote>
+     * <p>call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> interface to obtain this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>127608589417****</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
@@ -19,16 +24,20 @@ public class GetClientRatioStatisticRequest extends TeaModel {
 
     /**
      * <p>The timestamp that specifies the end of the time range to collect statistics. Unit: milliseconds.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1686412799999</p>
      */
     @NameInMap("TimeEnd")
     public Long timeEnd;
 
     /**
      * <p>The timestamp that specifies the beginning of the time range to collect statistics. Unit: milliseconds.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1671382800000</p>
      */
     @NameInMap("TimeStart")
     public Long timeStart;

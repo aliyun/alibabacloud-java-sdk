@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RebootMachineResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>151F6EB6-D5F3-417A-AF7B-4D84975DB586</p>
      */
     @NameInMap("RequestId")
     public String requestId;

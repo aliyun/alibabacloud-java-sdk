@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyEmgVulSubmitResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>52A3AEE6-114A-499D-8990-4BA9B27FE0AA</p>
      */
     @NameInMap("RequestId")
     public String requestId;

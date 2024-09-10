@@ -6,24 +6,34 @@ import com.aliyun.tea.*;
 public class QueryPreCheckDatabaseRequest extends TeaModel {
     /**
      * <p>The UUID of the agent that is used to back up the data of the database.</p>
-     * <br>
-     * <p>> You can call the [DescribeUniBackupDatabase](~~DescribeUniBackupDatabase~~) operation to query the UUID.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeUniBackupDatabase~~">DescribeUniBackupDatabase</a> operation to query the UUID.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ebc895506c6911ed800000163e0e****</p>
      */
     @NameInMap("InstanceUuid")
     public String instanceUuid;
 
     /**
      * <p>The ID of the database precheck task.</p>
-     * <br>
-     * <p>> You can call the [StartPreCheckDatabase](~~StartPreCheckDatabase~~) operation to query the ID of the database precheck task.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~StartPreCheckDatabase~~">StartPreCheckDatabase</a> operation to query the ID of the database precheck task.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>t-000bc9nqwxsbyvod****</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
      * <p>The region ID of the server that hosts the database.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("UniRegionId")
     public String uniRegionId;

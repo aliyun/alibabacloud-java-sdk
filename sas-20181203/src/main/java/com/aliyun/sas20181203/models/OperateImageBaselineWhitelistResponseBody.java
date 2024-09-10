@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class OperateImageBaselineWhitelistResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>75AD186B-B46A-56CC-BE35-987ADDF6****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

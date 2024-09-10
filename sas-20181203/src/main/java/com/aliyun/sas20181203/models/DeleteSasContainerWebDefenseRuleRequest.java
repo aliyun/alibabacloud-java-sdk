@@ -6,10 +6,13 @@ import com.aliyun.tea.*;
 public class DeleteSasContainerWebDefenseRuleRequest extends TeaModel {
     /**
      * <p>The rule ID.</p>
-     * <br>
-     * <p>>  You can call the ListContainerWebDefenseRule operation to query the rule ID.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the ListContainerWebDefenseRule operation to query the rule ID.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>400597</p>
      */
     @NameInMap("RuleId")
     public Long ruleId;

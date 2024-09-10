@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6B23A612-D997-5176-8C3B-D640DFD65772</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
     public static class ModifyCreateVulWhitelistResponseBodyVulWhitelistList extends TeaModel {
         /**
          * <p>The ID of the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30376</p>
          */
         @NameInMap("Id")
         public Long id;

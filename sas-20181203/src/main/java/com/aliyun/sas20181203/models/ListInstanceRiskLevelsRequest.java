@@ -26,12 +26,18 @@ public class ListInstanceRiskLevelsRequest extends TeaModel {
     public static class ListInstanceRiskLevelsRequestInstanceList extends TeaModel {
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-m5efigezp50l2cmb****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The serial number of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f2d6e901-1004-4ca8-9dae-53ec04a9****</p>
          */
         @NameInMap("Uuid")
         public String uuid;

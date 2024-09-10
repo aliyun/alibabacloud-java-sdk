@@ -6,29 +6,40 @@ import com.aliyun.tea.*;
 public class DescribeRiskListCheckResultRequest extends TeaModel {
     /**
      * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The instance IDs of the cloud services that you want to query. Separate multiple IDs with commas (,).</p>
-     * <br>
-     * <p>> If you do not specify this parameter, an empty list is returned.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, an empty list is returned.</p>
+     * </blockquote>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -38,6 +49,9 @@ public class DescribeRiskListCheckResultRequest extends TeaModel {
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>59.57.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

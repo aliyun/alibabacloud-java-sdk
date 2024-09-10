@@ -6,16 +6,23 @@ import com.aliyun.tea.*;
 public class SaveSuspEventUserSettingRequest extends TeaModel {
     /**
      * <p>The data source of the exception. Set the value to sas.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sas</p>
      */
     @NameInMap("From")
     public String from;
 
     /**
      * <p>The severities of alert notifications. Valid values:</p>
-     * <br>
-     * <p>*   **remind**</p>
-     * <p>*   **suspicious**</p>
-     * <p>*   **serious**</p>
+     * <ul>
+     * <li><strong>remind</strong></li>
+     * <li><strong>suspicious</strong></li>
+     * <li><strong>serious</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>suspicious,serious,remind</p>
      */
     @NameInMap("LevelsOn")
     public String levelsOn;

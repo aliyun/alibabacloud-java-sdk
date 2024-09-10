@@ -5,34 +5,48 @@ import com.aliyun.tea.*;
 
 public class DescribeRestorePlansRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The name of the server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sql-test-001</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
      * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
-     * <br>
-     * <p>>  We recommend that you do not leave this parameter empty.</p>
+     * <blockquote>
+     * <p> We recommend that you do not leave this parameter empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The status of the restoration task. Valid values:</p>
-     * <br>
-     * <p>*   **init**: initializing</p>
-     * <p>*   **created**: creating</p>
-     * <p>*   **running**: running</p>
-     * <p>*   **completed**: complete</p>
-     * <p>*   **error**: failed</p>
-     * <p>*   **restoring**: restoring</p>
+     * <ul>
+     * <li><strong>init</strong>: initializing</li>
+     * <li><strong>created</strong>: creating</li>
+     * <li><strong>running</strong>: running</li>
+     * <li><strong>completed</strong>: complete</li>
+     * <li><strong>error</strong>: failed</li>
+     * <li><strong>restoring</strong>: restoring</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>running</p>
      */
     @NameInMap("Status")
     public String status;

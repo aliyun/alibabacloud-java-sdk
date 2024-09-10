@@ -6,60 +6,90 @@ import com.aliyun.tea.*;
 public class DescribeExposedStatisticsResponseBody extends TeaModel {
     /**
      * <p>The total number of high-risk vulnerabilities that are exposed on the Internet and can be exploited by attackers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ExposedAsapVulCount")
     public Integer exposedAsapVulCount;
 
     /**
      * <p>The total number of system components that are exposed on the Internet. The components include OpenSSL and OpenSSH.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
      */
     @NameInMap("ExposedComponentCount")
     public Integer exposedComponentCount;
 
     /**
      * <p>The total number of servers that are exposed on the Internet.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("ExposedInstanceCount")
     public Integer exposedInstanceCount;
 
     /**
      * <p>The total number of IP addresses that are exposed on the Internet.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("ExposedIpCount")
     public Integer exposedIpCount;
 
     /**
      * <p>The total number of medium-risk vulnerabilities that are exposed on the Internet and can be exploited by attackers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("ExposedLaterVulCount")
     public Integer exposedLaterVulCount;
 
     /**
      * <p>The total number of low-risk vulnerabilities that are exposed on the Internet and can be exploited by attackers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("ExposedNntfVulCount")
     public Integer exposedNntfVulCount;
 
     /**
      * <p>The total number of ports that are exposed on the Internet.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6</p>
      */
     @NameInMap("ExposedPortCount")
     public Integer exposedPortCount;
 
     /**
      * <p>The total number of system keys that are detected on your servers and are exposed on the Internet.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("ExposedWeekPasswordMachineCount")
     public Integer exposedWeekPasswordMachineCount;
 
     /**
      * <p>The total number of gateway assets that are exposed on the Internet. The gateway assets include NAT gateways and Server Load Balancer (SLB) instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("GatewayAssetCount")
     public Integer gatewayAssetCount;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4B897D10-B3CD-4A93-A5FA-591F3ED12A86</p>
      */
     @NameInMap("RequestId")
     public String requestId;

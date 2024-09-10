@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CancelOnceTaskResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D03DD0FD-6041-5107-AC00-383E28F1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

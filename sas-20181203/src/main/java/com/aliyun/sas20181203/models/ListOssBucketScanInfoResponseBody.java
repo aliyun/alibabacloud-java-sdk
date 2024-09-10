@@ -18,6 +18,9 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6C578F36-92D2-552C-8AA0-86EB1AC2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,118 +57,173 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
     public static class ListOssBucketScanInfoResponseBodyData extends TeaModel {
         /**
          * <p>The name of the bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hz-new02****</p>
          */
         @NameInMap("BucketName")
         public String bucketName;
 
         /**
          * <p>Configuration status, valid values:</p>
-         * <br>
-         * <p>- **0**: No Configuration.</p>
-         * <p>- **1**: Not Open.</p>
-         * <p>- **2**: Open.</p>
+         * <ul>
+         * <li><strong>0</strong>: No Configuration.</li>
+         * <li><strong>1</strong>: Not Open.</li>
+         * <li><strong>2</strong>: Open.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ConfigStatus")
         public Integer configStatus;
 
         /**
          * <p>Bucket decompression configuration status, valid values:</p>
-         * <p>- **0**: Decompression not configured.</p>
-         * <p>- **1**: Decompression configured.</p>
+         * <ul>
+         * <li><strong>0</strong>: Decompression not configured.</li>
+         * <li><strong>1</strong>: Decompression configured.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DecompressStatus")
         public Integer decompressStatus;
 
         /**
          * <p>The number of high-risk objects.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("HighRisk")
         public Long highRisk;
 
         /**
          * <p>The time when the most recent check ended. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1698388233883</p>
          */
         @NameInMap("LastScanEndTime")
         public Long lastScanEndTime;
 
         /**
          * <p>The time when the bucket was last checked. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1698388233883</p>
          */
         @NameInMap("LastScanTime")
         public Long lastScanTime;
 
         /**
          * <p>The number of low-risk objects.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("LowRisk")
         public Long lowRisk;
 
         /**
          * <p>The number of medium-risk objects.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("MediumRisk")
         public Long mediumRisk;
 
         /**
          * <p>The reason why the bucket cannot be checked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unsupported Region.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The number of objects that are checked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("ScanObject")
         public Long scanObject;
 
         /**
          * <p>Indicates whether the bucket is checked. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Scanned")
         public Boolean scanned;
 
         /**
          * <p>The check status of the bucket. Valid values:</p>
-         * <br>
-         * <p>*   **1**: The bucket is not checked.</p>
-         * <p>*   **2**: All objects in the bucket are being checked.</p>
-         * <p>*   **3**: Only new objects are being checked.</p>
-         * <p>*   **4**: The bucket is checked.</p>
+         * <ul>
+         * <li><strong>1</strong>: The bucket is not checked.</li>
+         * <li><strong>2</strong>: All objects in the bucket are being checked.</li>
+         * <li><strong>3</strong>: Only new objects are being checked.</li>
+         * <li><strong>4</strong>: The bucket is checked.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The storage class of the bucket. Valid values:</p>
-         * <br>
-         * <p>*   **Standard**</p>
-         * <p>*   **IA**</p>
-         * <p>*   **Archive**</p>
-         * <p>*   **ColdArchive**</p>
+         * <ul>
+         * <li><strong>Standard</strong></li>
+         * <li><strong>IA</strong></li>
+         * <li><strong>Archive</strong></li>
+         * <li><strong>ColdArchive</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Archive</p>
          */
         @NameInMap("StorageClass")
         public String storageClass;
 
         /**
          * <p>Indicates whether the bucket can be checked. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Support")
         public Boolean support;
 
         /**
          * <p>The total number of objects in the bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalObject")
         public Long totalObject;
@@ -308,18 +366,27 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
     public static class ListOssBucketScanInfoResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>165</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

@@ -12,6 +12,9 @@ public class ListAssetRefreshTaskConfigResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D65AADFC-1D20-5A6A-8F6A-9FA53C0DC1F8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,42 +43,58 @@ public class ListAssetRefreshTaskConfigResponseBody extends TeaModel {
     public static class ListAssetRefreshTaskConfigResponseBodyAssetRefreshConfig extends TeaModel {
         /**
          * <p>The type of the configuration. Valid values:</p>
-         * <br>
-         * <p>*   **0**: server synchronization task</p>
-         * <p>*   **1**: cloud service synchronization task</p>
-         * <p>*   **2**: scheduled AccessKey pair verification task</p>
+         * <ul>
+         * <li><strong>0</strong>: server synchronization task</li>
+         * <li><strong>1</strong>: cloud service synchronization task</li>
+         * <li><strong>2</strong>: scheduled AccessKey pair verification task</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RefreshConfigType")
         public Integer refreshConfigType;
 
         /**
          * <p>The synchronization cycle. Valid values:</p>
-         * <br>
-         * <p>*   **60**: 60 minutes</p>
-         * <p>*   **180**: 3 hours</p>
-         * <p>*   **360**: 6 hours</p>
-         * <p>*   **720**: 12 hours</p>
-         * <p>*   **1440**: 1 day</p>
-         * <p>*   **10080**: 7 days</p>
+         * <ul>
+         * <li><strong>60</strong>: 60 minutes</li>
+         * <li><strong>180</strong>: 3 hours</li>
+         * <li><strong>360</strong>: 6 hours</li>
+         * <li><strong>720</strong>: 12 hours</li>
+         * <li><strong>1440</strong>: 1 day</li>
+         * <li><strong>10080</strong>: 7 days</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>360</p>
          */
         @NameInMap("SchedulePeriod")
         public Integer schedulePeriod;
 
         /**
          * <p>The status of the configuration. Valid values:</p>
-         * <br>
-         * <p>*   **1**: enabled</p>
-         * <p>*   **0**: disabled</p>
+         * <ul>
+         * <li><strong>1</strong>: enabled</li>
+         * <li><strong>0</strong>: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The service provider of the cloud asset. Valid values:</p>
-         * <br>
-         * <p>*   **3**: Tencent Cloud</p>
-         * <p>*   **4**: Huawei Cloud</p>
-         * <p>*   **7**: Amazon Web Services (AWS) Cloud</p>
+         * <ul>
+         * <li><strong>3</strong>: Tencent Cloud</li>
+         * <li><strong>4</strong>: Huawei Cloud</li>
+         * <li><strong>7</strong>: Amazon Web Services (AWS) Cloud</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Vendor")
         public Integer vendor;

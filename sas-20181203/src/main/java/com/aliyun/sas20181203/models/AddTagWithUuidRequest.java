@@ -6,16 +6,22 @@ import com.aliyun.tea.*;
 public class AddTagWithUuidRequest extends TeaModel {
     /**
      * <p>The name of the tag.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InternetIp</p>
      */
     @NameInMap("TagName")
     public String tagName;
 
     /**
      * <p>The UUIDs of the servers. Separate multiple UUIDs with commas (,).</p>
-     * <br>
-     * <p>> You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>71f5313e-4355-4c59-86d1-557dda7b****,71f5313e-4355-4c59-86d1-557dda7b****</p>
      */
     @NameInMap("UuidList")
     public String uuidList;

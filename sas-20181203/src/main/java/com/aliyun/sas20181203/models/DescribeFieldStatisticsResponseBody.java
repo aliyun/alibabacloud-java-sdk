@@ -12,6 +12,9 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,168 +43,282 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
     public static class DescribeFieldStatisticsResponseBodyGroupedFields extends TeaModel {
         /**
          * <p>The number of assets that are deployed on Alibaba Cloud.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("AliYunInstanceCount")
         public Integer aliYunInstanceCount;
 
         /**
          * <p>The number of servers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("AwsInstanceCount")
         public Integer awsInstanceCount;
 
         /**
          * <p>The number of third-party cloud servers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("AzureInstanceCount")
         public Integer azureInstanceCount;
 
+        /**
+         * <p>The number of cores of exposed assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("ExposedInstanceCoreCount")
         public Long exposedInstanceCoreCount;
 
         /**
          * <p>The number of exposed servers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ExposedInstanceCount")
         public Integer exposedInstanceCount;
 
         /**
          * <p>The number of assets whose importance is common.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("GeneralAssetCount")
         public Integer generalAssetCount;
 
         /**
          * <p>The number of server groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("GroupCount")
         public Integer groupCount;
 
         /**
          * <p>The number of instances that are provisioned by third-party providers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("HuaweiInstanceCount")
         public Integer huaweiInstanceCount;
 
         /**
          * <p>The number of assets that can be protected by Security Center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("IdcInstanceCount")
         public Integer idcInstanceCount;
 
         /**
          * <p>The number of assets whose importance is important.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("ImportantAssetCount")
         public Integer importantAssetCount;
 
+        /**
+         * <p>The number of cores of assets in the specified asset type. If the asset type is not specified, the value of this parameter indicates the total number of cores of servers and Alibaba Cloud services within your account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>301</p>
+         */
         @NameInMap("InstanceCoreCount")
         public Long instanceCoreCount;
 
         /**
          * <p>The total number of assets of the specified type. If no asset types are specified, this parameter indicates the total number of all servers and Alibaba Cloud services within your account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
         /**
          * <p>The total number of tasks for the specified type of assets. If no asset types are specified, this parameter indicates the total number of all servers and Alibaba Cloud services within your account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("InstanceSyncTaskCount")
         public Integer instanceSyncTaskCount;
 
+        /**
+         * <p>The number of cores of new servers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("NewInstanceCoreCount")
         public Long newInstanceCoreCount;
 
         /**
          * <p>The number of newly added servers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("NewInstanceCount")
         public Integer newInstanceCount;
 
         /**
          * <p>The number of servers on which no risks are detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("NoRiskInstanceCount")
         public Integer noRiskInstanceCount;
 
+        @NameInMap("NotBindMachineInstanceCount")
+        public Integer notBindMachineInstanceCount;
+
+        /**
+         * <p>The number of cores of servers that are not started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("NotRunningStatusCoreCount")
         public Long notRunningStatusCoreCount;
 
         /**
          * <p>The number of servers that are shut down.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("NotRunningStatusCount")
         public Integer notRunningStatusCount;
 
         /**
          * <p>The number of servers whose Security Center agent status is Offline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21</p>
          */
         @NameInMap("OfflineInstanceCount")
         public Integer offlineInstanceCount;
 
         /**
          * <p>The number of servers outside the cloud.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("OutMachineInstanceCount")
         public Integer outMachineInstanceCount;
 
         /**
          * <p>The number of servers for which the Security Center agent suspends protection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PauseInstanceCount")
         public Integer pauseInstanceCount;
 
         /**
          * <p>The number of regions to which the servers belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         @NameInMap("RegionCount")
         public Integer regionCount;
 
+        /**
+         * <p>The number of cores of vulnerable assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>201</p>
+         */
         @NameInMap("RiskInstanceCoreCount")
         public Long riskInstanceCoreCount;
 
         /**
          * <p>The number of assets that are at risk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         @NameInMap("RiskInstanceCount")
         public Integer riskInstanceCount;
 
         /**
          * <p>The total number of cloud services that are protected by Security Center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("TencentInstanceCount")
         public Integer tencentInstanceCount;
 
         /**
          * <p>The number of assets whose importance is test.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("TestAssetCount")
         public Integer testAssetCount;
 
         /**
          * <p>The number of simple application servers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TripartiteInstanceCount")
         public Integer tripartiteInstanceCount;
 
         /**
          * <p>The number of servers that are in the Unknown state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("UnKnowStatusInstanceCount")
         public Integer unKnowStatusInstanceCount;
 
+        /**
+         * <p>The number of cores of unprotected assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("UnprotectedInstanceCoreCount")
         public Long unprotectedInstanceCoreCount;
 
         /**
          * <p>The number of unprotected assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("UnprotectedInstanceCount")
         public Integer unprotectedInstanceCount;
 
         /**
          * <p>The number of virtual private clouds (VPCs).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("VpcCount")
         public Integer vpcCount;
@@ -337,6 +454,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         }
         public Integer getNoRiskInstanceCount() {
             return this.noRiskInstanceCount;
+        }
+
+        public DescribeFieldStatisticsResponseBodyGroupedFields setNotBindMachineInstanceCount(Integer notBindMachineInstanceCount) {
+            this.notBindMachineInstanceCount = notBindMachineInstanceCount;
+            return this;
+        }
+        public Integer getNotBindMachineInstanceCount() {
+            return this.notBindMachineInstanceCount;
         }
 
         public DescribeFieldStatisticsResponseBodyGroupedFields setNotRunningStatusCoreCount(Long notRunningStatusCoreCount) {

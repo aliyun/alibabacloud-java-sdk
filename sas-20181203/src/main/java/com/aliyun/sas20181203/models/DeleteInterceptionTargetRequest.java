@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteInterceptionTargetRequest extends TeaModel {
     /**
-     * <p>The IDs of the network objects that you want to remove. You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to query the IDs of the network objects.</p>
-     * <br>
+     * <p>The IDs of the network objects that you want to remove. You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to query the IDs of the network objects.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1,11,111</p>
      */
     @NameInMap("TargetIds")
     public String targetIds;

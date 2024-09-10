@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RemoveCheckResultWhiteListRequest extends TeaModel {
     /**
      * <p>This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Deprecated</p>
      */
     @NameInMap("CheckGroupId")
     public String checkGroupId;
@@ -16,8 +19,14 @@ public class RemoveCheckResultWhiteListRequest extends TeaModel {
     @NameInMap("CheckIds")
     public java.util.List<Long> checkIds;
 
+    @NameInMap("RuleId")
+    public Long ruleId;
+
     /**
      * <p>This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Deprecated</p>
      */
     @NameInMap("Type")
     public String type;
@@ -41,6 +50,14 @@ public class RemoveCheckResultWhiteListRequest extends TeaModel {
     }
     public java.util.List<Long> getCheckIds() {
         return this.checkIds;
+    }
+
+    public RemoveCheckResultWhiteListRequest setRuleId(Long ruleId) {
+        this.ruleId = ruleId;
+        return this;
+    }
+    public Long getRuleId() {
+        return this.ruleId;
     }
 
     public RemoveCheckResultWhiteListRequest setType(String type) {

@@ -6,29 +6,40 @@ import com.aliyun.tea.*;
 public class ModifyVulConfigRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the vulnerability scan feature. Valid values:</p>
-     * <br>
-     * <p>*   **on**: enables the feature</p>
-     * <p>*   **off**: disables the feature</p>
-     * <br>
-     * <p>> Valid values when you set the Type parameter to scanMode:</p>
-     * <br>
-     * <p>*   **real**: displays only easily exploitable vulnerabilities.</p>
-     * <br>
-     * <p>*   **all**: displays all vulnerabilities.</p>
+     * <ul>
+     * <li><strong>on</strong>: enables the feature</li>
+     * <li><strong>off</strong>: disables the feature</li>
+     * </ul>
+     * <blockquote>
+     * <p>Valid values when you set the Type parameter to scanMode:</p>
+     * </blockquote>
+     * <ul>
+     * <li><p><strong>real</strong>: displays only easily exploitable vulnerabilities.</p>
+     * </li>
+     * <li><p><strong>all</strong>: displays all vulnerabilities.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
      */
     @NameInMap("Config")
     public String config;
 
     /**
      * <p>The type of the vulnerability. Valid values:</p>
-     * <br>
-     * <p>*   **cve**: Linux software vulnerability</p>
-     * <p>*   **sys**: Windows system vulnerability</p>
-     * <p>*   **cms**: Web-CMS vulnerability</p>
-     * <p>*   **emg**: urgent vulnerability</p>
-     * <p>*   **app**: application vulnerability</p>
-     * <p>*   **yum**: YUM and APT source configuration</p>
-     * <p>*   **scanMode**: easily exploitable vulnerability</p>
+     * <ul>
+     * <li><strong>cve</strong>: Linux software vulnerability</li>
+     * <li><strong>sys</strong>: Windows system vulnerability</li>
+     * <li><strong>cms</strong>: Web-CMS vulnerability</li>
+     * <li><strong>emg</strong>: urgent vulnerability</li>
+     * <li><strong>app</strong>: application vulnerability</li>
+     * <li><strong>yum</strong>: YUM and APT source configuration</li>
+     * <li><strong>scanMode</strong>: easily exploitable vulnerability</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cve</p>
      */
     @NameInMap("Type")
     public String type;

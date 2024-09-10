@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class UpdateImageEventOperationRequest extends TeaModel {
     /**
      * <p>The ID of the alert handling rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>814163</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The application scope of the rule. The value is in the JSON format. Valid values:</p>
-     * <br>
-     * <p>*   **type**</p>
-     * <p>*   **value**</p>
+     * <ul>
+     * <li><strong>type</strong></li>
+     * <li><strong>value</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;type\&quot;: \&quot;repo\&quot;, \&quot;value\&quot;: \&quot;test-aaa/shenzhen-repo-01\&quot;}</p>
      */
     @NameInMap("Scenarios")
     public String scenarios;

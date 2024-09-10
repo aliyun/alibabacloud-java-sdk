@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeImageGroupedVulListResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -17,19 +20,28 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
     public java.util.List<DescribeImageGroupedVulListResponseBodyGroupedVulItems> groupedVulItems;
 
     /**
-     * <p>The number of entries returned per page. Default value: **20**.</p>
+     * <p>The number of entries returned per page. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5E244439-UJND-8BF7-26F36E21B9AA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of image system vulnerabilities.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,84 +94,121 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
     public static class DescribeImageGroupedVulListResponseBodyGroupedVulItems extends TeaModel {
         /**
          * <p>The alias of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RHSA-2017:3075-Important: wget security update</p>
          */
         @NameInMap("AliasName")
         public String aliasName;
 
         /**
          * <p>The number of vulnerabilities that have the high priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26</p>
          */
         @NameInMap("AsapCount")
         public Integer asapCount;
 
         /**
          * <p>Indicates whether the vulnerability can be fixed in the Security Center console. Valid values:</p>
-         * <br>
-         * <p>*   **yes**</p>
-         * <p>*   **no**</p>
+         * <ul>
+         * <li><strong>yes</strong></li>
+         * <li><strong>no</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>yes</p>
          */
         @NameInMap("CanFix")
         public String canFix;
 
         /**
          * <p>The timestamp when the first scan was performed. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1611201274000</p>
          */
         @NameInMap("GmtLast")
         public Long gmtLast;
 
         /**
          * <p>The timestamp when the last scan was performed. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1611201274000</p>
          */
         @NameInMap("LastScanTime")
         public Long lastScanTime;
 
         /**
          * <p>The number of vulnerabilities that have the medium priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26</p>
          */
         @NameInMap("LaterCount")
         public Integer laterCount;
 
         /**
          * <p>The name of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>debian:9:CVE-2019-3858</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The number of vulnerabilities that have the low priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>29</p>
          */
         @NameInMap("NntfCount")
         public Integer nntfCount;
 
         /**
          * <p>The status of the vulnerability. Valid values:</p>
-         * <br>
-         * <p>*   **0**: unhandled</p>
-         * <p>*   **1**: handled</p>
-         * <p>*   **2**: verifying</p>
-         * <p>*   **3**: added to the whitelist</p>
+         * <ul>
+         * <li><strong>0</strong>: unhandled</li>
+         * <li><strong>1</strong>: handled</li>
+         * <li><strong>2</strong>: verifying</li>
+         * <li><strong>3</strong>: added to the whitelist</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The tag of the vulnerability. Valid values:</p>
-         * <br>
-         * <p>*   Restart required</p>
-         * <p>*   Remote exploitation</p>
-         * <p>*   Exploit exists</p>
-         * <p>*   Exploitable</p>
-         * <p>*   Privilege escalation</p>
-         * <p>*   Code execution</p>
+         * <ul>
+         * <li>Restart required</li>
+         * <li>Remote exploitation</li>
+         * <li>Exploit exists</li>
+         * <li>Exploitable</li>
+         * <li>Privilege escalation</li>
+         * <li>Code execution</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>EXP exists</p>
          */
         @NameInMap("Tags")
         public String tags;
 
         /**
          * <p>The type of the vulnerability. Valid values:</p>
-         * <br>
-         * <p>*   **cve**: image system vulnerability</p>
-         * <p>*   **sca**: image application vulnerability</p>
+         * <ul>
+         * <li><strong>cve</strong>: image system vulnerability</li>
+         * <li><strong>sca</strong>: image application vulnerability</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cve</p>
          */
         @NameInMap("Type")
         public String type;

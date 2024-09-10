@@ -18,6 +18,9 @@ public class PageImageRegistryResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FDA9E37C-6114-5945-8FF1-E3D4D397****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,131 +57,194 @@ public class PageImageRegistryResponseBody extends TeaModel {
     public static class PageImageRegistryResponseBodyList extends TeaModel {
         /**
          * <p>The IP address blacklist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>129.211.XXX.XXX</p>
          */
         @NameInMap("BlackList")
         public String blackList;
 
         /**
          * <p>The domain name of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sinochem.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The time when the image repository was created. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-30 10:23:30</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The time when the image repository was updated. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-09-30 10:23:30</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The ID of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1078312</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The number of images that are stored in the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ImageCount")
         public Integer imageCount;
 
         /**
          * <p>The information about the Jenkins environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>projectInfo</p>
          */
         @NameInMap("JenkinsEnv")
         public String jenkinsEnv;
 
         /**
          * <p>The network type. Valid values:</p>
-         * <br>
-         * <p>*   **1**: Internet.</p>
-         * <p>*   **2**: virtual private cloud (VPC).</p>
+         * <ul>
+         * <li><strong>1</strong>: Internet.</li>
+         * <li><strong>2</strong>: virtual private cloud (VPC).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NetType")
         public Integer netType;
 
         /**
          * <p>The password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Harbor******</p>
          */
         @NameInMap("Password")
         public String password;
 
         /**
          * <p>The number of days for which assets are retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("PersistenceDay")
         public Integer persistenceDay;
 
         /**
          * <p>The type of the protocol. Valid values:</p>
-         * <br>
-         * <p>*   **1**: HTTP.</p>
-         * <p>*   **2**: HTTPS.</p>
+         * <ul>
+         * <li><strong>1</strong>: HTTP.</li>
+         * <li><strong>2</strong>: HTTPS.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ProtocolType")
         public Integer protocolType;
 
         /**
          * <p>The region ID of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The IP address of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39.104.XXX.XXX</p>
          */
         @NameInMap("RegistryHostIp")
         public String registryHostIp;
 
         /**
          * <p>The alias of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         @NameInMap("RegistryName")
         public String registryName;
 
         /**
          * <p>The type of the image repository. Valid values:</p>
-         * <br>
-         * <p>*   **acr**: Container Registry.</p>
-         * <p>*   **harbor**: Harbor.</p>
-         * <p>*   **quay**: Quay.</p>
-         * <p>*   **CI/CD**: Jenkins.</p>
+         * <ul>
+         * <li><strong>acr</strong>: Container Registry.</li>
+         * <li><strong>harbor</strong>: Harbor.</li>
+         * <li><strong>quay</strong>: Quay.</li>
+         * <li><strong>CI/CD</strong>: Jenkins.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>harbor</p>
          */
         @NameInMap("RegistryType")
         public String registryType;
 
         /**
          * <p>The authentication token of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c7b90d29-632f-4e58-88b8-00ad77f6****</p>
          */
         @NameInMap("Token")
         public String token;
 
         /**
          * <p>The number of scan tasks that are performed per hour.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("TransPerHour")
         public Integer transPerHour;
 
         /**
          * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RegistryUser</p>
          */
         @NameInMap("UserName")
         public String userName;
 
         /**
          * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-5gu8iu68w9b472jbb****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The IP address whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XXX.XXX</p>
          */
         @NameInMap("WhiteList")
         public String whiteList;
@@ -353,24 +419,36 @@ public class PageImageRegistryResponseBody extends TeaModel {
     public static class PageImageRegistryResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

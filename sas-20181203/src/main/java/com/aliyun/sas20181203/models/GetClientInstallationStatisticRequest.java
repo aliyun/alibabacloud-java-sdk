@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class GetClientInstallationStatisticRequest extends TeaModel {
     /**
      * <p>The timestamp that specifies the end of the time range to collect statistics. Unit: millisecond.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1687708800000</p>
      */
     @NameInMap("TimeEnd")
     public Long timeEnd;
 
     /**
      * <p>The timestamp that specifies the beginning of the time range to collect statistics. Unit: millisecond.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1687104000000</p>
      */
     @NameInMap("TimeStart")
     public Long timeStart;

@@ -6,10 +6,14 @@ import com.aliyun.tea.*;
 public class ModifyAppVulScanCycleRequest extends TeaModel {
     /**
      * <p>The scan cycle for application vulnerabilities.</p>
-     * <br>
-     * <p>*   1week</p>
-     * <p>*   2weeks</p>
-     * <p>*   3days</p>
+     * <ul>
+     * <li>1week</li>
+     * <li>2weeks</li>
+     * <li>3days</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1week</p>
      */
     @NameInMap("Cycle")
     public String cycle;

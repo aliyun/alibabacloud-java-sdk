@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ExportSuspEventsResponseBody extends TeaModel {
     /**
      * <p>The name of the exported file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>suspicious_event_20221209</p>
      */
     @NameInMap("FileName")
     public String fileName;
 
     /**
      * <p>The ID of the export record of the anomalous event.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Id")
     public Integer id;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EF145C20-6A19-529A-8BDD-0671DXXXXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;

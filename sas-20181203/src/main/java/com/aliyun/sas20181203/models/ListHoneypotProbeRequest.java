@@ -5,56 +5,78 @@ import com.aliyun.tea.*;
 
 public class ListHoneypotProbeRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Pages start from page **1**. Default value: **1**.</p>
+     * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The name of the probe.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>probe-test</p>
      */
     @NameInMap("DisplayName")
     public String displayName;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
-     * <br>
-     * <p>> We recommend that you do not leave this parameter empty.</p>
+     * <blockquote>
+     * <p>We recommend that you do not leave this parameter empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The status of the probe. Valid values:</p>
-     * <br>
-     * <p>*   **installed**: installed</p>
-     * <p>*   **install_failed**: installation failed</p>
-     * <p>*   **online**: online</p>
-     * <p>*   **offline**: offline</p>
-     * <p>*   **unnormal**: abnormal</p>
-     * <p>*   **unprobe**: unauthorized</p>
-     * <p>*   **uninstalling**: being uninstalled</p>
-     * <p>*   **uninstalled**: uninstalled</p>
-     * <p>*   **uninstall_failed**: uninstallation failed</p>
-     * <p>*   **not_exist**: not installed</p>
+     * <ul>
+     * <li><strong>installed</strong>: installed</li>
+     * <li><strong>install_failed</strong>: installation failed</li>
+     * <li><strong>online</strong>: online</li>
+     * <li><strong>offline</strong>: offline</li>
+     * <li><strong>unnormal</strong>: abnormal</li>
+     * <li><strong>unprobe</strong>: unauthorized</li>
+     * <li><strong>uninstalling</strong>: being uninstalled</li>
+     * <li><strong>uninstalled</strong>: uninstalled</li>
+     * <li><strong>uninstall_failed</strong>: uninstallation failed</li>
+     * <li><strong>not_exist</strong>: not installed</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>online</p>
      */
     @NameInMap("ProbeStatus")
     public String probeStatus;
 
     /**
      * <p>The type of the probe. Valid values:</p>
-     * <br>
-     * <p>*   **host_probe**: host probe</p>
-     * <p>*   **vpc_black_hole_probe**: VPC probe</p>
+     * <ul>
+     * <li><strong>host_probe</strong>: host probe</li>
+     * <li><strong>vpc_black_hole_probe</strong>: VPC probe</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>host_probe</p>
      */
     @NameInMap("ProbeType")
     public String probeType;

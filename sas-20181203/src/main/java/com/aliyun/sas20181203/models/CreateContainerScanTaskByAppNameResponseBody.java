@@ -12,12 +12,18 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1EE7B150-D67E-53FD-A52D-3E8E669A****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,67 +60,97 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
     public static class CreateContainerScanTaskByAppNameResponseBodyData extends TeaModel {
         /**
          * <p>Indicates whether you can create more scan tasks. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("CanCreate")
         public Boolean canCreate;
 
         /**
          * <p>The timestamp generated when the image information was collected. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1644286364150</p>
          */
         @NameInMap("CollectTime")
         public Long collectTime;
 
         /**
          * <p>The timestamp generated when the scan task started. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1644286364150</p>
          */
         @NameInMap("ExecTime")
         public Long execTime;
 
         /**
          * <p>The number of container applications that are scanned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("FinishCount")
         public Integer finishCount;
 
         /**
          * <p>The progress of the scan task in percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Progress")
         public Integer progress;
 
         /**
          * <p>The result of the scan task. Valid values:</p>
-         * <br>
-         * <p>*   **SUCCESS**: The task is successful.</p>
-         * <p>*   **TASK_NOT_SUPPORT_REGION**: The task is not supported in the region where the image is deployed.</p>
-         * <br>
-         * <p>></p>
+         * <ul>
+         * <li><strong>SUCCESS</strong>: The task is successful.</li>
+         * <li><strong>TASK_NOT_SUPPORT_REGION</strong>: The task is not supported in the region where the image is deployed.</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         @NameInMap("Result")
         public String result;
 
         /**
          * <p>The status of the scan task. Valid values:</p>
-         * <br>
-         * <p>*   **INIT**: The task is being initialized.</p>
-         * <p>*   **PRE_ANALYZER**: The task is being pre-processed.</p>
-         * <p>*   **SUCCESS**: The task succeeds.</p>
-         * <p>*   **FAIL**: The task fails.</p>
+         * <ul>
+         * <li><strong>INIT</strong>: The task is being initialized.</li>
+         * <li><strong>PRE_ANALYZER</strong>: The task is being pre-processed.</li>
+         * <li><strong>SUCCESS</strong>: The task succeeds.</li>
+         * <li><strong>FAIL</strong>: The task fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the scan task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fc98d58eb56f699d49bf7ebbd6d7****</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
          * <p>The total number of container applications that you want to scan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

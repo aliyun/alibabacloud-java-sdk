@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryJenkinsImageRegistryPersistenceDayRequest extends TeaModel {
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>113.83.XXX.XXX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

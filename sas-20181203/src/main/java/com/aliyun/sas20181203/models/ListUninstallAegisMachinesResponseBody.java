@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListUninstallAegisMachinesResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -18,18 +21,27 @@ public class ListUninstallAegisMachinesResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>151F6EB6-D5F3-417A-AF7B-4D84975DB586</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>44</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,81 +94,113 @@ public class ListUninstallAegisMachinesResponseBody extends TeaModel {
     public static class ListUninstallAegisMachinesResponseBodyMachineList extends TeaModel {
         /**
          * <p>The ID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas-bdrvxb4b****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sql-test-001</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The public IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120.79.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>The region in which the server resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("MachineRegion")
         public String machineRegion;
 
         /**
          * <p>The operating system of the server. Valid values:</p>
-         * <br>
-         * <p>*   **linux**</p>
-         * <p>*   **windows**</p>
-         * <p>*   **windows-2003**</p>
+         * <ul>
+         * <li><strong>linux</strong></li>
+         * <li><strong>windows</strong></li>
+         * <li><strong>windows-2003</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>linux</p>
          */
         @NameInMap("Os")
         public String os;
 
         /**
          * <p>The ID of the region in which the server resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6d5b361f-958d-48a8-a9d2-d6e82c1****</p>
          */
         @NameInMap("Uuid")
         public String uuid;
 
         /**
          * <p>The source of the server. Valid values:</p>
-         * <br>
-         * <p>*   **0**: an asset provided by Alibaba Cloud</p>
-         * <p>*   **1**: a third-party cloud server</p>
-         * <p>*   **2**: a server in a data center</p>
-         * <p>*   **3**, **4**, **5**, and **7**: other cloud asset</p>
-         * <p>*   **8**: a lightweight asset</p>
+         * <ul>
+         * <li><strong>0</strong>: an asset provided by Alibaba Cloud</li>
+         * <li><strong>1</strong>: a third-party cloud server</li>
+         * <li><strong>2</strong>: a server in a data center</li>
+         * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: other cloud asset</li>
+         * <li><strong>8</strong>: a lightweight asset</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Vendor")
         public Integer vendor;
 
         /**
          * <p>The name of the service provider (SP) for the server.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   **ALIYUN**: Alibaba Cloud</p>
-         * <p>*   **OUT**: a third-party service provider</p>
-         * <p>*   **IDC**: a data center</p>
-         * <p>*   **TENCENT**: Tencent Cloud</p>
-         * <p>*   **HUAWEICLOUD**: Huawei Cloud</p>
-         * <p>*   **Microsoft**: Microsoft</p>
-         * <p>*   **AWS**: Amazon Web Services (AWS)</p>
-         * <p>*   **TRIPARTITE**: a lightweight server</p>
+         * <ul>
+         * <li><strong>ALIYUN</strong>: Alibaba Cloud</li>
+         * <li><strong>OUT</strong>: a third-party service provider</li>
+         * <li><strong>IDC</strong>: a data center</li>
+         * <li><strong>TENCENT</strong>: Tencent Cloud</li>
+         * <li><strong>HUAWEICLOUD</strong>: Huawei Cloud</li>
+         * <li><strong>Microsoft</strong>: Microsoft</li>
+         * <li><strong>AWS</strong>: Amazon Web Services (AWS)</li>
+         * <li><strong>TRIPARTITE</strong>: a lightweight server</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN</p>
          */
         @NameInMap("VendorName")
         public String vendorName;

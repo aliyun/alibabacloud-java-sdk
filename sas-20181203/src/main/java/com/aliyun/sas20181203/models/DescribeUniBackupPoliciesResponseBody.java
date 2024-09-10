@@ -12,6 +12,9 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACF97412-FD09-4D1F-994F-34DF12BR****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +57,36 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
     public static class DescribeUniBackupPoliciesResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -118,126 +133,184 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
     public static class DescribeUniBackupPoliciesResponseBodyUniBackupPolicies extends TeaModel {
         /**
          * <p>The error message for the anti-ransomware agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTALL_TIMEOUT</p>
          */
         @NameInMap("AgentErrorMessage")
         public String agentErrorMessage;
 
         /**
          * <p>The status of the agent. Valid values:</p>
-         * <br>
-         * <p>*   **UNKNOWN**: unknown</p>
-         * <p>*   **INSTALLED**: installed</p>
-         * <p>*   **INSTALL_FAILED**: installation failed</p>
-         * <p>*   **UNINSTALL_FAILED**: uninstallation failed</p>
+         * <ul>
+         * <li><strong>UNKNOWN</strong></li>
+         * <li><strong>INSTALLED</strong></li>
+         * <li><strong>INSTALL_FAILED</strong></li>
+         * <li><strong>UNINSTALL_FAILED</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTALLED</p>
          */
         @NameInMap("AgentStatus")
         public String agentStatus;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc123</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
 
         /**
          * <p>The type of the database. Valid values:</p>
-         * <br>
-         * <p>*   **MYSQL**</p>
-         * <p>*   **MSSQL**</p>
-         * <p>*   **Oracle**</p>
+         * <ul>
+         * <li><strong>MYSQL</strong></li>
+         * <li><strong>MSSQL</strong></li>
+         * <li><strong>Oracle</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MYSQL</p>
          */
         @NameInMap("DatabaseType")
         public String databaseType;
 
         /**
          * <p>The error code returned when the backup task fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXPIRED</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
          * <p>The error message for the anti-ransomware policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AttachRamRoleError</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The ID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-9dp7mubt5wit6g0h****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sql-test-001</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The status of the Elastic Compute Service (ECS) instance. Valid values:</p>
-         * <br>
-         * <p>*   **Stopped**</p>
-         * <p>*   **Running**</p>
+         * <ul>
+         * <li><strong>Stopped</strong></li>
+         * <li><strong>Running</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("InstanceStatus")
         public String instanceStatus;
 
         /**
          * <p>The UUID of the agent that is used to back up the data of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cf1bcad4063f11ed800000163e0e****</p>
          */
         @NameInMap("InstanceUuid")
         public String instanceUuid;
 
         /**
          * <p>The execution result of the last backup task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>completed</p>
          */
         @NameInMap("LatestBackResult")
         public String latestBackResult;
 
         /**
          * <p>The time when the last backup task was executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-01 00:00:11</p>
          */
         @NameInMap("LatestBackupTime")
         public String latestBackupTime;
 
         /**
          * <p>The status of the backup task. Valid values:</p>
-         * <br>
-         * <p>*   **init**: initializing</p>
-         * <p>*   **running**: running</p>
-         * <p>*   **completed**: complete</p>
-         * <p>*   **restoring**: restoring</p>
-         * <p>*   **creating**: creating</p>
-         * <p>*   **created**: created</p>
+         * <ul>
+         * <li><strong>init</strong></li>
+         * <li><strong>running</strong></li>
+         * <li><strong>completed</strong></li>
+         * <li><strong>restoring</strong></li>
+         * <li><strong>creating</strong></li>
+         * <li><strong>created</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>creating</p>
          */
         @NameInMap("PlanStatus")
         public String planStatus;
 
         /**
          * <p>The ID of the anti-ransomware policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("PolicyId")
         public Long policyId;
 
         /**
          * <p>The name of the anti-ransomware policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>auto_oracle_37f</p>
          */
         @NameInMap("PolicyName")
         public String policyName;
 
         /**
          * <p>The status of the anti-ransomware policy. Valid values:</p>
-         * <br>
-         * <p>*   **initiating**: initializing</p>
-         * <p>*   **opening**: enabled</p>
-         * <p>*   **closing**: disabled</p>
-         * <p>*   **deleting**: deleting</p>
+         * <ul>
+         * <li><strong>initiating</strong></li>
+         * <li><strong>opening</strong></li>
+         * <li><strong>closing</strong></li>
+         * <li><strong>deleting</strong></li>
+         * <li><strong>enabled</strong></li>
+         * <li><strong>disabled</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>opening</p>
          */
         @NameInMap("PolicyStatus")
         public String policyStatus;
 
         /**
          * <p>The region ID of the server that hosts the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("UniRegionId")
         public String uniRegionId;

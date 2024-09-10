@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeCommonTargetConfigResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>09969D2C-4FAD-429E-BFBF-9A60DEF8BF6F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,33 +43,46 @@ public class DescribeCommonTargetConfigResponseBody extends TeaModel {
     public static class DescribeCommonTargetConfigResponseBodyTargetList extends TeaModel {
         /**
          * <p>The mode in which the configuration takes effect. Valid values:</p>
-         * <br>
-         * <p>*   **add**: In this mode, the configuration takes effect on the assets.</p>
-         * <p>*   **del**: In this mode, the configuration does not take effect on the assets.</p>
+         * <ul>
+         * <li><strong>add</strong>: In this mode, the configuration takes effect on the assets.</li>
+         * <li><strong>del</strong>: In this mode, the configuration does not take effect on the assets.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>add</p>
          */
         @NameInMap("Flag")
         public String flag;
 
         /**
          * <p>The ID of the asset on which the configuration takes effect.</p>
-         * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   When you set the **TargetType** parameter to **uuid**, the value of this parameter indicates the UUID of an asset.</p>
-         * <br>
-         * <p>*   When you set the **TargetType** parameter to **Cluster**, the value of this parameter indicates the ID of a cluster.</p>
-         * <br>
-         * <p>*   When you set the **TargetType** parameter to **image_repo**, the value of this parameter indicates the ID of an image repository.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>When you set the <strong>TargetType</strong> parameter to <strong>uuid</strong>, the value of this parameter indicates the UUID of an asset.</p>
+         * </li>
+         * <li><p>When you set the <strong>TargetType</strong> parameter to <strong>Cluster</strong>, the value of this parameter indicates the ID of a cluster.</p>
+         * </li>
+         * <li><p>When you set the <strong>TargetType</strong> parameter to <strong>image_repo</strong>, the value of this parameter indicates the ID of an image repository.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>c23551de6149343e8a54e69fbefe6****</p>
          */
         @NameInMap("Target")
         public String target;
 
         /**
          * <p>The dimension from on which the feature was configured. Valid values:</p>
-         * <br>
-         * <p>*   **uuid**: the UUID of the asset</p>
-         * <p>*   **Cluster**: the ID of the cluster</p>
-         * <p>*   **image_repo**: the ID of the image repository</p>
+         * <ul>
+         * <li><strong>uuid</strong>: the UUID of the asset</li>
+         * <li><strong>Cluster</strong>: the ID of the cluster</li>
+         * <li><strong>image_repo</strong>: the ID of the image repository</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>image_repo</p>
          */
         @NameInMap("TargetType")
         public String targetType;

@@ -18,6 +18,9 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>513C9554-55A4-5504-B7C4-6E17EB4FC7A3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +57,36 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
     public static class ListHoneypotAlarmEventsResponseBodyHoneypotAlarmEventsMergeFieldList extends TeaModel {
         /**
          * <p>The extended value that corresponds to the field key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dest_ip_ext</p>
          */
         @NameInMap("FieldExtInfo")
         public String fieldExtInfo;
 
         /**
          * <p>The key of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dest_ip_count</p>
          */
         @NameInMap("FieldKey")
         public String fieldKey;
 
         /**
          * <p>The type of the field. You can ignore this internal parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>level1_item3</p>
          */
         @NameInMap("FieldType")
         public String fieldType;
 
         /**
          * <p>The value that corresponds to the field key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("FieldValue")
         public String fieldValue;
@@ -118,42 +133,63 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
     public static class ListHoneypotAlarmEventsResponseBodyHoneypotAlarmEvents extends TeaModel {
         /**
          * <p>The event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>940272</p>
          */
         @NameInMap("AlarmEventId")
         public Long alarmEventId;
 
         /**
          * <p>The name of the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Attack Honeypot</p>
          */
         @NameInMap("AlarmEventName")
         public String alarmEventName;
 
         /**
          * <p>The type of the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Initial Access</p>
          */
         @NameInMap("AlarmEventType")
         public String alarmEventType;
 
         /**
          * <p>The unique identifier of the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>167e6fc0d931917d2059efcd1d00f6ab</p>
          */
         @NameInMap("AlarmUniqueInfo")
         public String alarmUniqueInfo;
 
         /**
          * <p>The total number of times that the alert event was generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         @NameInMap("EventCount")
         public Integer eventCount;
 
         /**
          * <p>The timestamp that indicates the time when the alert event was first detected. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1658193602000</p>
          */
         @NameInMap("FirstTime")
         public Long firstTime;
 
         /**
          * <p>The timestamp that indicates the time when the alert event was last detected. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1660610772000</p>
          */
         @NameInMap("LastTime")
         public Long lastTime;
@@ -166,20 +202,28 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
 
         /**
          * <p>The handling status of the alert event. Valid values:</p>
-         * <br>
-         * <p>*   **1**: pending</p>
-         * <p>*   **2**: ignored</p>
-         * <p>*   **4**: confirmed</p>
+         * <ul>
+         * <li><strong>1</strong>: pending</li>
+         * <li><strong>2</strong>: ignored</li>
+         * <li><strong>4</strong>: confirmed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("OperateStatus")
         public Integer operateStatus;
 
         /**
          * <p>The risk level. Valid values:</p>
-         * <br>
-         * <p>*   **2**: low</p>
-         * <p>*   **3**: medium</p>
-         * <p>*   **4**: high</p>
+         * <ul>
+         * <li><strong>2</strong>: low</li>
+         * <li><strong>3</strong>: medium</li>
+         * <li><strong>4</strong>: high</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("RiskLevel")
         public String riskLevel;
@@ -274,24 +318,36 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
     public static class ListHoneypotAlarmEventsResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

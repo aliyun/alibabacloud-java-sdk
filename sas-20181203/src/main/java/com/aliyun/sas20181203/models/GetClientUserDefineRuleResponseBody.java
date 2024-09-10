@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetClientUserDefineRuleResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0B48AB3C-84FC-424D-A01D-B9270EF4****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,135 +43,198 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
     public static class GetClientUserDefineRuleResponseBodyUserDefineRuleDetail extends TeaModel {
         /**
          * <p>The action of the custom defense rule. Valid values:</p>
-         * <br>
-         * <p>*   **0**: allow</p>
-         * <p>*   **1**: block</p>
+         * <ul>
+         * <li><strong>0</strong>: allow</li>
+         * <li><strong>1</strong>: block</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ActionType")
         public String actionType;
 
         /**
          * <p>The command line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/sbin/s****</p>
          */
         @NameInMap("Cmdline")
         public String cmdline;
 
         /**
          * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
          * <p>The file path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/etc/pam****</p>
          */
         @NameInMap("FilePath")
         public String filePath;
 
         /**
          * <p>The time when the custom defense rule was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>167118088****</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
          * <p>The time when the custom defense rule was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>167118088****</p>
          */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
         /**
          * <p>The IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.240.XX.XX</p>
          */
         @NameInMap("IP")
         public String IP;
 
         /**
          * <p>The ID of the custom defense rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200****</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The hash values of processes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0c9045b5bec90f9825f1f3f64dd4****</p>
          */
         @NameInMap("Md5List")
         public String md5List;
 
         /**
          * <p>The name of the custom defense rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Rule\<em>\</em>\<em>\</em></p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The new file path after the file is renamed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/etc/pam****</p>
          */
         @NameInMap("NewFilePath")
         public String newFilePath;
 
         /**
          * <p>The parent command line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/sbin/s****</p>
          */
         @NameInMap("ParentCmdline")
         public String parentCmdline;
 
         /**
          * <p>The path to the parent process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c:/windows/system32/i****</p>
          */
         @NameInMap("ParentProcPath")
         public String parentProcPath;
 
         /**
          * <p>The type of the operating system. Valid values:</p>
-         * <br>
-         * <p>*   **linux**</p>
-         * <p>*   **windows**</p>
-         * <p>*   **all**</p>
+         * <ul>
+         * <li><strong>linux</strong></li>
+         * <li><strong>windows</strong></li>
+         * <li><strong>all</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>linux</p>
          */
         @NameInMap("Platform")
         public String platform;
 
         /**
          * <p>The port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The port number. Valid values: 1 to 65535.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("PortStr")
         public String portStr;
 
         /**
          * <p>The path to the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c:/windows/system32/i****</p>
          */
         @NameInMap("ProcPath")
         public String procPath;
 
         /**
          * <p>The registry value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><em>SECOH-QAD.exe</em></p>
          */
         @NameInMap("RegistryContent")
         public String registryContent;
 
         /**
          * <p>The registry key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HKEY_DYN_****</p>
          */
         @NameInMap("RegistryKey")
         public String registryKey;
 
         /**
          * <p>The type of the custom defense rule. Valid values:</p>
-         * <br>
-         * <p>*   **1**: Process hash</p>
-         * <p>*   **2**: Command line</p>
-         * <p>*   **3**: Process Network</p>
-         * <p>*   **4**: File Read and Write</p>
-         * <p>*   **5**: Operation on Registry</p>
-         * <p>*   **6**: Dynamic-link Library Loading</p>
-         * <p>*   **7**: File Renaming</p>
+         * <ul>
+         * <li><strong>1</strong>: Process hash</li>
+         * <li><strong>2</strong>: Command line</li>
+         * <li><strong>3</strong>: Process Network</li>
+         * <li><strong>4</strong>: File Read and Write</li>
+         * <li><strong>5</strong>: Operation on Registry</li>
+         * <li><strong>6</strong>: Dynamic-link Library Loading</li>
+         * <li><strong>7</strong>: File Renaming</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Type")
         public Integer type;

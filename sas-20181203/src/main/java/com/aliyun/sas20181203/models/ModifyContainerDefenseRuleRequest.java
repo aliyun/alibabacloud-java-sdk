@@ -6,47 +6,69 @@ import com.aliyun.tea.*;
 public class ModifyContainerDefenseRuleRequest extends TeaModel {
     /**
      * <p>The description of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Prevent non-mirror programs from starting in containers</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The action specified in the rule. Valid values:</p>
-     * <br>
-     * <p>*   **1**: alert</p>
-     * <p>*   **2**: block</p>
+     * <ul>
+     * <li><strong>1</strong>: alert</li>
+     * <li><strong>2</strong>: block</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("RuleAction")
     public Integer ruleAction;
 
     /**
      * <p>The ID of the rule.</p>
-     * <br>
-     * <p>>  You can call the [ListContainerDefenseRule](https://help.aliyun.com/document_detail/2590599.html) operation to query the IDs of rules.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2590599.html">ListContainerDefenseRule</a> operation to query the IDs of rules.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("RuleId")
     public Long ruleId;
 
     /**
      * <p>The name of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>text-001</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
 
     /**
      * <p>The status of the rule. Valid values:</p>
-     * <br>
-     * <p>*   **1**: enabled</p>
-     * <p>*   **0**: disabled</p>
+     * <ul>
+     * <li><strong>1</strong>: enabled</li>
+     * <li><strong>0</strong>: disabled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("RuleSwitch")
     public Integer ruleSwitch;
 
     /**
      * <p>The type of the rule. Valid values:</p>
-     * <br>
-     * <p>*   1: system rule</p>
-     * <p>*   2: custom rule</p>
+     * <ul>
+     * <li>1: system rule</li>
+     * <li>2: custom rule</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("RuleType")
     public Integer ruleType;
@@ -135,17 +157,25 @@ public class ModifyContainerDefenseRuleRequest extends TeaModel {
     public static class ModifyContainerDefenseRuleRequestScope extends TeaModel {
         /**
          * <p>Specifies whether to include all namespaces. Valid values:</p>
-         * <br>
-         * <p>*   **0**: no</p>
-         * <p>*   **1**: yes</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AllNamespace")
         public Integer allNamespace;
 
         /**
          * <p>The ID of the cluster on which the rule takes effect.</p>
-         * <br>
-         * <p>>  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>c54b***1501</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
@@ -190,8 +220,9 @@ public class ModifyContainerDefenseRuleRequest extends TeaModel {
     public static class ModifyContainerDefenseRuleRequestWhitelist extends TeaModel {
         /**
          * <p>The hash values of the files that need to be added to the whitelist.</p>
-         * <br>
-         * <p>>  This parameter is not supported.</p>
+         * <blockquote>
+         * <p> This parameter is not supported.</p>
+         * </blockquote>
          */
         @NameInMap("Hash")
         public java.util.List<String> hash;

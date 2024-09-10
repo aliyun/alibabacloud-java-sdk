@@ -4,12 +4,30 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulDefendCountStatisticsResponseBody extends TeaModel {
+    /**
+     * <p>The number of defended vulnerabilities.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("RaspDefendedCount")
     public Integer raspDefendedCount;
 
+    /**
+     * <p>The number of supported vulnerabilities.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("RaspDefensibleCount")
     public Integer raspDefensibleCount;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CE500770-42D3-442E-9DDD-156E0F9F3B45</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

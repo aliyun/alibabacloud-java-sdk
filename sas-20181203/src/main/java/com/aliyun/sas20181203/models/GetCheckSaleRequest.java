@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class GetCheckSaleRequest extends TeaModel {
     /**
      * <p>The region in which the Security Center instance is deployed. Valid values:</p>
-     * <br>
-     * <p>*   **cn-hangzhou:** inside China</p>
-     * <p>*   Global **ap-southeast-1:** outside China</p>
+     * <ul>
+     * <li><strong>cn-hangzhou:</strong> inside China</li>
+     * <li>Global <strong>ap-southeast-1:</strong> outside China</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetVulWhitelistRequest extends TeaModel {
     /**
      * <p>The ID of the whitelist.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1275</p>
      */
     @NameInMap("VulWhitelistId")
     public Long vulWhitelistId;

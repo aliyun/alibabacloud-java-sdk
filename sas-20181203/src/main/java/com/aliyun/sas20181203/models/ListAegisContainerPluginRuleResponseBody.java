@@ -12,6 +12,9 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CE500770-42D3-442E-9DDD-156E0F9F3B45</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,18 +57,27 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
     public static class ListAegisContainerPluginRuleResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -101,54 +113,127 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
 
     }
 
+    public static class ListAegisContainerPluginRuleResponseBodyRuleListPolicies extends TeaModel {
+        /**
+         * <p>The policy key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system_auto_****</p>
+         */
+        @NameInMap("PolicyKey")
+        public String policyKey;
+
+        /**
+         * <p>The name of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System self-starting task\<em>\</em>\<em>\</em></p>
+         */
+        @NameInMap("PolicyName")
+        public String policyName;
+
+        public static ListAegisContainerPluginRuleResponseBodyRuleListPolicies build(java.util.Map<String, ?> map) throws Exception {
+            ListAegisContainerPluginRuleResponseBodyRuleListPolicies self = new ListAegisContainerPluginRuleResponseBodyRuleListPolicies();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAegisContainerPluginRuleResponseBodyRuleListPolicies setPolicyKey(String policyKey) {
+            this.policyKey = policyKey;
+            return this;
+        }
+        public String getPolicyKey() {
+            return this.policyKey;
+        }
+
+        public ListAegisContainerPluginRuleResponseBodyRuleListPolicies setPolicyName(String policyName) {
+            this.policyName = policyName;
+            return this;
+        }
+        public String getPolicyName() {
+            return this.policyName;
+        }
+
+    }
+
     public static class ListAegisContainerPluginRuleResponseBodyRuleList extends TeaModel {
         /**
          * <p>The time when the rule was created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1676355025000</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
          * <p>The time when the rule was modified. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1681985833000</p>
          */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
         /**
          * <p>The action of the rule. Valid values:</p>
-         * <br>
-         * <p>*   **1**: Alert</p>
-         * <p>*   **2**: Block</p>
+         * <ul>
+         * <li><strong>1</strong>: Alert</li>
+         * <li><strong>2</strong>: Block</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Mode")
         public Integer mode;
 
         /**
+         * <p>An array that consists of policies.</p>
+         */
+        @NameInMap("Policies")
+        public java.util.List<ListAegisContainerPluginRuleResponseBodyRuleListPolicies> policies;
+
+        /**
          * <p>The description of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system_call</p>
          */
         @NameInMap("RuleDescription")
         public String ruleDescription;
 
         /**
          * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30****</p>
          */
         @NameInMap("RuleId")
         public Long ruleId;
 
         /**
          * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-18****</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
          * <p>The ID of the rule template. The ListSystemClientRules operation returns the ID of a rule template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>868**</p>
          */
         @NameInMap("RuleTemplateId")
         public String ruleTemplateId;
 
         /**
          * <p>The name of the rule template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system_call</p>
          */
         @NameInMap("RuleTemplateName")
         public String ruleTemplateName;
@@ -161,6 +246,9 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
 
         /**
          * <p>The switch ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USER-ENABLE-SWITCH-TYPE_****</p>
          */
         @NameInMap("SwitchId")
         public String switchId;
@@ -198,6 +286,14 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
         }
         public Integer getMode() {
             return this.mode;
+        }
+
+        public ListAegisContainerPluginRuleResponseBodyRuleList setPolicies(java.util.List<ListAegisContainerPluginRuleResponseBodyRuleListPolicies> policies) {
+            this.policies = policies;
+            return this;
+        }
+        public java.util.List<ListAegisContainerPluginRuleResponseBodyRuleListPolicies> getPolicies() {
+            return this.policies;
         }
 
         public ListAegisContainerPluginRuleResponseBodyRuleList setRuleDescription(String ruleDescription) {

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeSuspiciousUUIDConfigResponseBody extends TeaModel {
     /**
      * <p>The total number of servers on which proactive defense of the specified type takes effect.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Count")
     public Integer count;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6044DC07-86F1-5DDA-A611-EC578EA4EEE6</p>
      */
     @NameInMap("RequestId")
     public String requestId;

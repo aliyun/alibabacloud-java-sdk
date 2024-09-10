@@ -6,117 +6,171 @@ import com.aliyun.tea.*;
 public class DescribeCheckWarningSummaryRequest extends TeaModel {
     /**
      * <p>The ID of the container cluster.</p>
-     * <br>
-     * <p>>  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>c80dae73bd1be442699766b14ffd0****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The name of the container field. Valid values:</p>
-     * <br>
-     * <p>*   **clusterId**: the ID of the cluster</p>
-     * <p>*   **image**: the name of the image</p>
-     * <p>*   **imageId**: the ID of the image</p>
-     * <p>*   **namespace**: the namespace</p>
+     * <ul>
+     * <li><strong>clusterId</strong>: the ID of the cluster</li>
+     * <li><strong>image</strong>: the name of the image</li>
+     * <li><strong>imageId</strong>: the ID of the image</li>
+     * <li><strong>namespace</strong>: the namespace</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>namespace</p>
      */
     @NameInMap("ContainerFieldName")
     public String containerFieldName;
 
     /**
      * <p>The value of the container field.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c819391d2d520485fa3e81e2dc2ea****</p>
      */
     @NameInMap("ContainerFieldValue")
     public String containerFieldValue;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The ID of the asset group.</p>
-     * <br>
-     * <p>> You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of asset groups.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of asset groups.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
 
     /**
      * <p>The language of the content within the request and the response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The name of the risk item.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Redis</p>
      */
     @NameInMap("RiskName")
     public String riskName;
 
     /**
      * <p>The status of the baseline check. Valid values:</p>
-     * <br>
-     * <p>*   **1**: failed</p>
-     * <p>*   **3**: passed</p>
+     * <ul>
+     * <li><strong>1</strong>: failed</li>
+     * <li><strong>3</strong>: passed</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("RiskStatus")
     public Integer riskStatus;
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>219.133.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;
 
     /**
      * <p>The status of the check item. Valid values:</p>
-     * <br>
-     * <p>*   **1**: failed</p>
-     * <p>*   **2**: verifying</p>
-     * <p>*   **3**: passed</p>
-     * <p>*   **5**: expired</p>
-     * <p>*   **6**: ignored</p>
+     * <ul>
+     * <li><strong>1</strong>: failed</li>
+     * <li><strong>2</strong>: verifying</li>
+     * <li><strong>3</strong>: passed</li>
+     * <li><strong>5</strong>: expired</li>
+     * <li><strong>6</strong>: ignored</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The ID of the baseline check policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("StrategyId")
     public Long strategyId;
 
     /**
      * <p>The type of the query condition. Valid values:</p>
-     * <br>
-     * <p>*   **uuid**: the ID of an asset</p>
+     * <ul>
+     * <li><strong>uuid</strong>: the ID of an asset</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>uuid</p>
      */
     @NameInMap("TargetType")
     public String targetType;
 
     /**
      * <p>The level-1 type of check items.</p>
-     * <br>
-     * <p>>  You can call the [DescribeRiskType](~~DescribeRiskType~~) operation to query the level-1 types of check items.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation to query the level-1 types of check items.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>database</p>
      */
     @NameInMap("TypeName")
     public String typeName;
 
     /**
      * <p>The UUID of the asset.</p>
-     * <br>
-     * <p>>  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of assets.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of assets.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>f03259d8-1e81-4fae-bcbb-275fb5****</p>
      */
     @NameInMap("Uuids")
     public String uuids;

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeCustomBlockRecordsRequest extends TeaModel {
     /**
      * <p>The IP address that you want to block by using the defense rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>117.66.XX.XX</p>
      */
     @NameInMap("BlockIp")
     public String blockIp;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **20**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -27,10 +36,14 @@ public class DescribeCustomBlockRecordsRequest extends TeaModel {
 
     /**
      * <p>The status of the defense rule. Valid values:</p>
-     * <br>
-     * <p>*   **0**: invalid</p>
-     * <p>*   **1**: enabled</p>
-     * <p>*   **2**: failed</p>
+     * <ul>
+     * <li><strong>0</strong>: invalid</li>
+     * <li><strong>1</strong>: enabled</li>
+     * <li><strong>2</strong>: failed</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Status")
     public Integer status;

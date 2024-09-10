@@ -5,20 +5,29 @@ import com.aliyun.tea.*;
 
 public class ModifyOpenLogShipperRequest extends TeaModel {
     /**
-     * <p>The ID of the request source. Default value: **aegis**. Valid values:</p>
-     * <br>
-     * <p>*   **aegis**: Server Guard</p>
-     * <p>*   **sas**: Security Center</p>
-     * <br>
-     * <p>>  If you use Server Guard, set the value to **aegis**. If you use Security Center, set the value to **sas**.</p>
+     * <p>The ID of the request source. Default value: <strong>aegis</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>aegis</strong>: Server Guard</li>
+     * <li><strong>sas</strong>: Security Center</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you use Server Guard, set the value to <strong>aegis</strong>. If you use Security Center, set the value to <strong>sas</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>sas</p>
      */
     @NameInMap("From")
     public String from;
 
     /**
      * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
-     * <br>
-     * <p>>  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>127608589417****</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;

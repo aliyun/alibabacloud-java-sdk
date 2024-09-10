@@ -6,32 +6,40 @@ import com.aliyun.tea.*;
 public class GetOnceTaskResultInfoRequest extends TeaModel {
     /**
      * <p>The ID of the scan task.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9dfa3a7eb9547781632785b49003****</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
      * <p>The name of the task. Valid values:</p>
-     * <br>
-     * <p>*   **CLIENT_PROBLEM_CHECK**: a task of the Security Center agent</p>
-     * <p>*   **CLIENT_DEV_OPS**: an O\\&M task of Cloud Assistant</p>
-     * <p>*   **ASSET_SECURITY_CHECK**: a task of asset information collection</p>
-     * <br>
+     * <ul>
+     * <li><strong>CLIENT_PROBLEM_CHECK</strong>: a task of the Security Center agent</li>
+     * <li><strong>CLIENT_DEV_OPS</strong>: an O\&amp;M task of Cloud Assistant</li>
+     * <li><strong>ASSET_SECURITY_CHECK</strong>: a task of asset information collection</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ASSETS_COLLECTION</p>
      */
     @NameInMap("TaskName")
     public String taskName;
 
     /**
      * <p>The type of the task. Valid values:</p>
-     * <br>
-     * <p>*   **CLIENT_PROBLEM_CHECK**: a task of the Security Center agent</p>
-     * <p>*   **CLIENT_DEV_OPS**: an O\\&M task of Cloud Assistant</p>
-     * <p>*   **ASSET_SECURITY_CHECK**: a task of asset information collection</p>
-     * <br>
+     * <ul>
+     * <li><strong>CLIENT_PROBLEM_CHECK</strong>: a task of the Security Center agent</li>
+     * <li><strong>CLIENT_DEV_OPS</strong>: an O\&amp;M task of Cloud Assistant</li>
+     * <li><strong>ASSET_SECURITY_CHECK</strong>: a task of asset information collection</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ASSETS_COLLECTION</p>
      */
     @NameInMap("TaskType")
     public String taskType;

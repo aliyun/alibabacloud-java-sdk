@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class OperateWebLockFileEventsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2884C186-E8C0-5611-8207-3FF15EE7D9B4</p>
      */
     @NameInMap("RequestId")
     public String requestId;

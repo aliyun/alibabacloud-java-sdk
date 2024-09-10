@@ -12,12 +12,18 @@ public class SubmitCheckResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CE8369A6-A843-5E1B-A613-78E6920D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the configuration assessment task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5fe3f65d-4012-455d-8232-2a98a858****</p>
      */
     @NameInMap("TaskId")
     public String taskId;
@@ -54,8 +60,12 @@ public class SubmitCheckResponseBody extends TeaModel {
     public static class SubmitCheckResponseBodyData extends TeaModel {
         /**
          * <p>The operation code of the configuration assessment task.</p>
-         * <br>
-         * <p>*   **Throttling**: frequency limit</p>
+         * <ul>
+         * <li><strong>Throttling</strong>: frequency limit</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Throttling</p>
          */
         @NameInMap("OperateCode")
         public String operateCode;

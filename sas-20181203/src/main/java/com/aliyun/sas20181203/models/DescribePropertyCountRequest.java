@@ -6,24 +6,32 @@ import com.aliyun.tea.*;
 public class DescribePropertyCountRequest extends TeaModel {
     /**
      * <p>The type of the asset fingerprints. Separate multiple types with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **port**: port</p>
-     * <p>*   **process**: process</p>
-     * <p>*   **software**: software</p>
-     * <p>*   **user**: account</p>
-     * <p>*   **cron**: scheduled task</p>
-     * <p>*   **sca**: middleware</p>
-     * <p>*   **web**: website</p>
-     * <p>*   **database**: database</p>
-     * <p>*   **lkm**: kernel module</p>
-     * <p>*   **autorun**: startup item</p>
-     * <p>*   **web_server**: web service</p>
+     * <ul>
+     * <li><strong>port</strong>: port</li>
+     * <li><strong>process</strong>: process</li>
+     * <li><strong>software</strong>: software</li>
+     * <li><strong>user</strong>: account</li>
+     * <li><strong>cron</strong>: scheduled task</li>
+     * <li><strong>sca</strong>: middleware</li>
+     * <li><strong>web</strong>: website</li>
+     * <li><strong>database</strong>: database</li>
+     * <li><strong>lkm</strong>: kernel module</li>
+     * <li><strong>autorun</strong>: startup item</li>
+     * <li><strong>web_server</strong>: web service</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>port,process</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>The UUIDs of the assets. Separate multiple UUIDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9658314a-7609-4426-afc4-2c924072****,
+     * 9658314a-7609-4426-afc4-2c924072****</p>
      */
     @NameInMap("UuidList")
     public String uuidList;

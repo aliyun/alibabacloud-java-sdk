@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class JoinWebLockProcessWhiteListResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A47D621A-193E-5BDA-ADFA-A0D3133E199C</p>
      */
     @NameInMap("RequestId")
     public String requestId;

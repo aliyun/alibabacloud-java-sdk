@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateInterceptionTargetResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5B9ECCC0-38F7-***</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The response parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Result")
     public Boolean result;

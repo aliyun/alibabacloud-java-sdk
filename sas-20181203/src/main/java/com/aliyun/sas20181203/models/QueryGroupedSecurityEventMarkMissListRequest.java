@@ -5,60 +5,87 @@ import com.aliyun.tea.*;
 
 public class QueryGroupedSecurityEventMarkMissListRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The handling method. Valid values:</p>
-     * <br>
-     * <p>*   **1**: Automatically Added to Whitelist</p>
-     * <p>*   **2**: Defense Without Notification</p>
+     * <ul>
+     * <li><strong>1</strong>: Automatically Added to Whitelist</li>
+     * <li><strong>2</strong>: Defense Without Notification</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("DisposalWay")
     public String disposalWay;
 
     /**
      * <p>The name of the alert event. The value indicates a subtype.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Login with unusual location</p>
      */
     @NameInMap("EventName")
     public String eventName;
 
     /**
      * <p>The ID of the request source. Set the value to sas.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sas</p>
      */
     @NameInMap("From")
     public String from;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **20**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The condition that is used to query alert events by asset. You can specify a value of the following types:</p>
-     * <br>
-     * <p>*   The IP address of the asset.</p>
-     * <p>*   The public IP address of the asset.</p>
-     * <p>*   The private IP address of the asset.</p>
-     * <p>*   The name of the asset.</p>
+     * <ul>
+     * <li>The IP address of the asset.</li>
+     * <li>The public IP address of the asset.</li>
+     * <li>The private IP address of the asset.</li>
+     * <li>The name of the asset.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>222.185.XX.XX</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>113.66.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

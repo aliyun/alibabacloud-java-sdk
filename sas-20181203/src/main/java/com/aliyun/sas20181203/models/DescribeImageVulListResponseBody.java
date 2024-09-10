@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeImageVulListResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The number of entries returned per page. Default value: **10**</p>
+     * <p>The number of entries returned per page. Default value: <strong>10</strong></p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D6B20156-49B0-5CF0-B14D-7ECA4B50DAAB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,48 +94,72 @@ public class DescribeImageVulListResponseBody extends TeaModel {
     public static class DescribeImageVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList extends TeaModel {
         /**
          * <p>The complete version number of the package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.3.3-4</p>
          */
         @NameInMap("FullVersion")
         public String fullVersion;
 
         /**
          * <p>The SHA-256 value of the digest of the image layer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b1f5b9420803ad0657cf21566e3e20acc08581e7f22991249ef3aa80b8b1c587</p>
          */
         @NameInMap("Layer")
         public String layer;
 
         /**
          * <p>The reason why the vulnerability is detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>libseccomp2 version less than equals 2.3.3-4</p>
          */
         @NameInMap("MatchDetail")
         public String matchDetail;
 
         /**
          * <p>The details of the rules that are used to detect the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;libseccomp2 version less than equals 2.3.3-4&quot;]</p>
          */
         @NameInMap("MatchList")
         public java.util.List<String> matchList;
 
         /**
          * <p>The name of the software package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>libseccomp2</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The path to the software that has the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/lib64/libssh2.so.1</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
          * <p>The command that is used to fix the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apt-get update &amp;&amp; apt-get install libseccomp2  --only-upgrade</p>
          */
         @NameInMap("UpdateCmd")
         public String updateCmd;
 
         /**
          * <p>The version number of the package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.3.3-4</p>
          */
         @NameInMap("Version")
         public String version;
@@ -202,12 +238,18 @@ public class DescribeImageVulListResponseBody extends TeaModel {
     public static class DescribeImageVulListResponseBodyVulRecordsExtendContentJson extends TeaModel {
         /**
          * <p>The name of the operating system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>debian</p>
          */
         @NameInMap("Os")
         public String os;
 
         /**
          * <p>The version of the operating system in the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.9</p>
          */
         @NameInMap("OsRelease")
         public String osRelease;
@@ -252,42 +294,62 @@ public class DescribeImageVulListResponseBody extends TeaModel {
     public static class DescribeImageVulListResponseBodyVulRecords extends TeaModel {
         /**
          * <p>The alias of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CVE-2018-25010:libwebp up to 1.0.0 ApplyFilter out-of-bounds read</p>
          */
         @NameInMap("AliasName")
         public String aliasName;
 
         /**
          * <p>Indicates whether the vulnerability can be fixed in the Security Center console. Valid values:</p>
-         * <br>
-         * <p>*   **yes**</p>
-         * <p>*   **no**</p>
+         * <ul>
+         * <li><strong>yes</strong></li>
+         * <li><strong>no</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>yes</p>
          */
         @NameInMap("CanFix")
         public String canFix;
 
         /**
          * <p>Indicates whether the packages of the software that has the vulnerability can be upgraded by using Security Center. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("CanUpdate")
         public Boolean canUpdate;
 
         /**
          * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c08d5fc1a329a4b88950a253d082f1****</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>docker-law</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
 
         /**
          * <p>The ID of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04d20e98c8e2c93b7b864372084320a15a58c8671e53c972ce3a71d9c163****</p>
          */
         @NameInMap("ContainerId")
         public String containerId;
@@ -300,42 +362,63 @@ public class DescribeImageVulListResponseBody extends TeaModel {
 
         /**
          * <p>The timestamp when the first scan was performed. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1620752053000</p>
          */
         @NameInMap("FirstTs")
         public Long firstTs;
 
         /**
          * <p>The name of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry.cn-wulanchabu.aliyuncs.com/sas_test/huxin-test-001:nuxeo6-conta****</p>
          */
         @NameInMap("Image")
         public String image;
 
         /**
          * <p>The digest of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8f0fbdb41d3d1ade4ffdf21558443f4c03342010563bb8c43ccc09594d507012</p>
          */
         @NameInMap("ImageDigest")
         public String imageDigest;
 
         /**
          * <p>The name of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testInstance</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The public IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.19.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>The timestamp when the last scan was performed. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1631779996000</p>
          */
         @NameInMap("LastTs")
         public Long lastTs;
@@ -348,122 +431,180 @@ public class DescribeImageVulListResponseBody extends TeaModel {
 
         /**
          * <p>The source of the malicious file. Valid values:</p>
-         * <br>
-         * <p>*   **agentless**: agentless detection</p>
-         * <p>*   **image**: image</p>
-         * <p>*   **container**: container</p>
+         * <ul>
+         * <li><strong>agentless</strong>: agentless detection</li>
+         * <li><strong>image</strong>: image</li>
+         * <li><strong>container</strong>: container</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>agentless</p>
          */
         @NameInMap("MaliciousSource")
         public String maliciousSource;
 
         /**
          * <p>The timestamp when the information about the vulnerability was updated. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1580808765000</p>
          */
         @NameInMap("ModifyTs")
         public Long modifyTs;
 
         /**
          * <p>The name of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>debian:10:CVE-2019-9893</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-002</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The priority to fix the vulnerability. Valid values:</p>
-         * <br>
-         * <p>*   **asap**: high. You must fix the vulnerability at the earliest opportunity.</p>
-         * <p>*   **later**: medium. You can fix the vulnerability based on your business requirements.</p>
-         * <p>*   **nntf**: low. You can ignore the vulnerability.</p>
+         * <ul>
+         * <li><strong>asap</strong>: high. You must fix the vulnerability at the earliest opportunity.</li>
+         * <li><strong>later</strong>: medium. You can fix the vulnerability based on your business requirements.</li>
+         * <li><strong>nntf</strong>: low. You can ignore the vulnerability.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>asap</p>
          */
         @NameInMap("Necessity")
         public String necessity;
 
         /**
          * <p>The pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22222-7xsqq</p>
          */
         @NameInMap("Pod")
         public String pod;
 
         /**
          * <p>The ID of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>782661</p>
          */
         @NameInMap("PrimaryId")
         public Long primaryId;
 
         /**
          * <p>The Common Vulnerabilities and Exposures (CVE) ID of the associated vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CVE-2019-9893</p>
          */
         @NameInMap("Related")
         public String related;
 
         /**
          * <p>The name of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>varnish</p>
          */
         @NameInMap("RepoName")
         public String repoName;
 
         /**
          * <p>The namespace to which the image repository belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("RepoNamespace")
         public String repoNamespace;
 
         /**
          * <p>The time at which the scan was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649814050000</p>
          */
         @NameInMap("ScanTime")
         public Long scanTime;
 
         /**
          * <p>The status of the vulnerability. Valid values:</p>
-         * <br>
-         * <p>*   **1**: unfixed</p>
-         * <p>*   **7**: fixed</p>
+         * <ul>
+         * <li><strong>1</strong>: unfixed</li>
+         * <li><strong>7</strong>: fixed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The tag that is added to the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oval</p>
          */
         @NameInMap("Tag")
         public String tag;
 
         /**
          * <p>The ID of the asset on which the vulnerability is detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-bp17m0pc0xprzbwo****</p>
          */
         @NameInMap("TargetId")
         public String targetId;
 
         /**
          * <p>The name of the asset on which the vulnerability is detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>source-test-obj-XM0Ma</p>
          */
         @NameInMap("TargetName")
         public String targetName;
 
         /**
          * <p>The type of the asset on which the vulnerability is detected. Valid values:</p>
-         * <br>
-         * <p>*   **ECS_IMAGE**: image</p>
-         * <p>*   **ECS_SNAPSHOT**: snapshot</p>
+         * <ul>
+         * <li><strong>ECS_IMAGE</strong>: image</li>
+         * <li><strong>ECS_SNAPSHOT</strong>: snapshot</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS_IMAGE</p>
          */
         @NameInMap("TargetType")
         public String targetType;
 
         /**
          * <p>The type of the vulnerability. The value is fixed as cve, which indicates image vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cve</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0004a32a0305a7f6ab5ff9600d47****</p>
          */
         @NameInMap("Uuid")
         public String uuid;

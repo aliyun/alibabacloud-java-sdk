@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class GetContainerDefenseRuleDetailRequest extends TeaModel {
     /**
      * <p>The rule ID.</p>
-     * <br>
-     * <p>>  You can call the [ListContainerDefenseRule](https://help.aliyun.com/document_detail/2590599.html) operation to query the rule ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2590599.html">ListContainerDefenseRule</a> operation to query the rule ID.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>156</p>
      */
     @NameInMap("RuleId")
     public Long ruleId;

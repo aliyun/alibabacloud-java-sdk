@@ -12,6 +12,9 @@ public class GetCloudAssetCriteriaResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24A20733-10A0-4AF6-BE6B-E3322413BB68</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,38 +43,54 @@ public class GetCloudAssetCriteriaResponseBody extends TeaModel {
     public static class GetCloudAssetCriteriaResponseBodyCriteriaList extends TeaModel {
         /**
          * <p>The structured attribute values of the assets that match the keyword. The value of this parameter is in the JSON format and contains the following fields:</p>
-         * <br>
-         * <p>*   **vendor**: providers</p>
-         * <p>*   **regionIds**: IDs of supported regions</p>
+         * <ul>
+         * <li><strong>vendor</strong>: providers</li>
+         * <li><strong>regionIds</strong>: IDs of supported regions</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;vendor&quot;:0,&quot;regionIds&quot;:{&quot;default&quot;:[&quot;ap-southeast-1&quot;,&quot;ap-northeast-2&quot;,&quot;ap-southeast-3&quot;,&quot;ap-southeast-5&quot;,&quot;ap-southeast-7&quot;,&quot;me-central-1&quot;]}},{&quot;vendor&quot;:1,&quot;regionIds&quot;:{&quot;default&quot;:[&quot;outside-of-aliyun&quot;]}}]</p>
          */
         @NameInMap("MultiValues")
         public String multiValues;
 
         /**
          * <p>The name of the filter condition. Valid values:</p>
-         * <br>
-         * <p>*   **instanceId**: the ID of the instance</p>
-         * <p>*   **instanceName**: the name of an instance</p>
-         * <p>*   **internetIp**: the public IP address</p>
-         * <p>*   **riskStatus**: the risk status</p>
-         * <p>*   **vendorRegionId**: the region ID by service provider</p>
+         * <ul>
+         * <li><strong>instanceId</strong>: the ID of the instance</li>
+         * <li><strong>instanceName</strong>: the name of an instance</li>
+         * <li><strong>internetIp</strong>: the public IP address</li>
+         * <li><strong>riskStatus</strong>: the risk status</li>
+         * <li><strong>vendorRegionId</strong>: the region ID by service provider</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceId</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The type of the filter condition. Valid values:</p>
-         * <br>
-         * <p>*   **input**: The filter condition needs to be specified.</p>
-         * <p>*   **select**: The filter condition is an option that can be selected from the drop-down list.</p>
+         * <ul>
+         * <li><strong>input</strong>: The filter condition needs to be specified.</li>
+         * <li><strong>select</strong>: The filter condition is an option that can be selected from the drop-down list.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>select</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The values of the search condition. This parameter is returned only if the value of **Type** is **select**.</p>
-         * <br>
-         * <p>>  If the value of **Type** is **input**, the value of this parameter is an empty string.</p>
+         * <p>The values of the search condition. This parameter is returned only if the value of <strong>Type</strong> is <strong>select</strong>.</p>
+         * <blockquote>
+         * <p> If the value of <strong>Type</strong> is <strong>input</strong>, the value of this parameter is an empty string.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>fvt*</p>
          */
         @NameInMap("Values")
         public String values;

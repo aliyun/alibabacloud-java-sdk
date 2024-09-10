@@ -4,6 +4,10 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyStrategyTargetResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0E147337-5B0B-5776-B0B6-D569DBA8F60F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

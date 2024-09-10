@@ -6,8 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteContainerDefenseRuleRequest extends TeaModel {
     /**
      * <p>The IDs of the rules that you want to delete.</p>
-     * <br>
-     * <p>>  You can call the [ListContainerDefenseRule](https://help.aliyun.com/document_detail/2590599.html) operation to query the rule IDs.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2590599.html">ListContainerDefenseRule</a> operation to query the rule IDs.</p>
+     * </blockquote>
      */
     @NameInMap("RuleIds")
     public java.util.List<Long> ruleIds;

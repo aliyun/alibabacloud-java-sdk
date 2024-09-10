@@ -6,42 +6,59 @@ import com.aliyun.tea.*;
 public class ListBackupRecordRequest extends TeaModel {
     /**
      * <p>The timestamp when the backup task ended. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1699600611000</p>
      */
     @NameInMap("BackupEndTime")
     public Long backupEndTime;
 
     /**
      * <p>The timestamp when the backup task started. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1699514211000</p>
      */
     @NameInMap("BackupStartTime")
     public Long backupStartTime;
 
     /**
-     * <p>The page number. Default value: **1**. Pages start from page 1.</p>
+     * <p>The page number. Default value: <strong>1</strong>. Pages start from page 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The information that you want to use to identify the servers protected by the anti-ransomware policy. You can enter the IP address or ID of a server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.XX.XX</p>
      */
     @NameInMap("MachineRemark")
     public String machineRemark;
 
     /**
      * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
-     * <br>
-     * <p>>  We recommend that you do not leave this parameter empty.</p>
+     * <blockquote>
+     * <p> We recommend that you do not leave this parameter empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The backup task status. Valid values:</p>
-     * <br>
-     * <p>*   **BACKUP_COMPLETE**: The backup task is successful.</p>
-     * <p>*   **BACKUP_FAILED**: The backup task failed.</p>
-     * <p>*   **PARTIAL_COMPLETE**: The backup task is partially successful.</p>
+     * <ul>
+     * <li><strong>BACKUP_COMPLETE</strong>: The backup task is successful.</li>
+     * <li><strong>BACKUP_FAILED</strong>: The backup task failed.</li>
+     * <li><strong>PARTIAL_COMPLETE</strong>: The backup task is partially successful.</li>
+     * </ul>
      */
     @NameInMap("StatusList")
     public java.util.List<String> statusList;

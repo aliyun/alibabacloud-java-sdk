@@ -4,6 +4,10 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertyUsageNewestResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("ItemCount")
     public Integer itemCount;
 
@@ -13,6 +17,10 @@ public class DescribePropertyUsageNewestResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user</p>
+     */
     @NameInMap("Type")
     public String type;
 
@@ -54,9 +62,17 @@ public class DescribePropertyUsageNewestResponseBody extends TeaModel {
     }
 
     public static class DescribePropertyUsageNewestResponseBodyNewestStatisticItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1566178646000</p>
+         */
         @NameInMap("Create")
         public Long create;
 
+        /**
+         * <strong>example:</strong>
+         * <p>root</p>
+         */
         @NameInMap("Name")
         public String name;
 

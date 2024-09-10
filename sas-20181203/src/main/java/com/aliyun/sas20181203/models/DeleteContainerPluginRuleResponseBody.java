@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class DeleteContainerPluginRuleResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the container plug-in is manually deleted. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Data")
     public Boolean data;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A4EB8B1C-1DEC-5E18-BCD0-D1BBB3936FA7</p>
      */
     @NameInMap("RequestId")
     public String requestId;

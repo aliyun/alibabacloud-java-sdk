@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetStrategyTemplateDetailResponseBody extends TeaModel {
     /**
-     * <p>The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,21 +21,31 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1E36BEEA-0B27-58CC-8319-50279203B048</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,12 +98,18 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
     public static class GetStrategyTemplateDetailResponseBodyDataAlarmDetailBaselineItem extends TeaModel {
         /**
          * <p>The unique identifier of the baseline check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ak_leak</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The name of the baseline check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Access Key plaintext storage</p>
          */
         @NameInMap("Name")
         public String name;
@@ -127,10 +146,11 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
 
         /**
          * <p>The severities of the baselines. Valid values:</p>
-         * <br>
-         * <p>*   **high**</p>
-         * <p>*   **medium**</p>
-         * <p>*   **low**</p>
+         * <ul>
+         * <li><strong>high</strong></li>
+         * <li><strong>medium</strong></li>
+         * <li><strong>low</strong></li>
+         * </ul>
          */
         @NameInMap("RiskLevel")
         public java.util.List<String> riskLevel;
@@ -161,12 +181,18 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
     public static class GetStrategyTemplateDetailResponseBodyDataAlarmDetailMaliciousFileItem extends TeaModel {
         /**
          * <p>The unique identifier of the malicious sample.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The name of the malicious sample.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
@@ -233,12 +259,18 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
     public static class GetStrategyTemplateDetailResponseBodyDataAlarmDetailVulItem extends TeaModel {
         /**
          * <p>The ID of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AVD-2023-1680169</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The alias of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ezOffice evoInterfaceServlet Info Leak</p>
          */
         @NameInMap("Name")
         public String name;
@@ -361,18 +393,27 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
 
         /**
          * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c8ca91e0907d94efaba7fb0827eb9****</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hhht-cluster-02</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
 
         /**
          * <p>The description of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom defense configuration</p>
          */
         @NameInMap("Description")
         public String description;
@@ -391,9 +432,13 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the rule supports malicious Internet images. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("MaliciousImage")
         public Boolean maliciousImage;
@@ -406,37 +451,54 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
 
         /**
          * <p>The action on requests. Valid values:</p>
-         * <br>
-         * <p>*   **1**: trigger alerts</p>
-         * <p>*   **2**: block</p>
-         * <p>*   **3**: allow</p>
+         * <ul>
+         * <li><strong>1</strong>: trigger alerts</li>
+         * <li><strong>2</strong>: block</li>
+         * <li><strong>3</strong>: allow</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RuleAction")
         public Integer ruleAction;
 
         /**
          * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1005</p>
          */
         @NameInMap("StrategyId")
         public Long strategyId;
 
         /**
          * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Blank template</p>
          */
         @NameInMap("StrategyName")
         public String strategyName;
 
         /**
          * <p>The ID of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1204</p>
          */
         @NameInMap("StrategyTemplateId")
         public Long strategyTemplateId;
 
         /**
          * <p>Indicates whether the rule supports unscanned images. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("UnScanedImage")
         public Boolean unScanedImage;

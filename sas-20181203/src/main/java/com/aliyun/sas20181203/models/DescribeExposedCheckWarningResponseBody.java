@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeExposedCheckWarningResponseBody extends TeaModel {
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Count")
     public Integer count;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6D9CDB47-6191-4415-BE63-7E8B12CD****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,32 +60,48 @@ public class DescribeExposedCheckWarningResponseBody extends TeaModel {
     public static class DescribeExposedCheckWarningResponseBodyWarningList extends TeaModel {
         /**
          * <p>The ID of the baseline.</p>
-         * <br>
-         * <p>>  You can call the [DescribeCheckWarningSummary](https://help.aliyun.com/document_detail/116179.html) operation to query the IDs of baselines.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/116179.html">DescribeCheckWarningSummary</a> operation to query the IDs of baselines.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>107</p>
          */
         @NameInMap("RiskId")
         public Long riskId;
 
         /**
          * <p>The name of the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Weak password-Redis DB login weak password baseline</p>
          */
         @NameInMap("RiskName")
         public String riskName;
 
         /**
          * <p>The display name of the baseline sub type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Redis DB login weak password baseline</p>
          */
         @NameInMap("SubTypeAlias")
         public String subTypeAlias;
 
         /**
          * <p>The display name of the baseline type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Weak password</p>
          */
         @NameInMap("TypeAlias")
         public String typeAlias;
 
         /**
          * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1d35b031-ee4e-4e53-8b53-465ab712****</p>
          */
         @NameInMap("Uuid")
         public String uuid;

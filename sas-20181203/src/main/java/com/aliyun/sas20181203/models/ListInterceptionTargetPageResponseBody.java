@@ -12,6 +12,9 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>028CF634-5268-5660-9575-48C9ED6B****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,18 +57,27 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
     public static class ListInterceptionTargetPageResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -104,18 +116,27 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
     public static class ListInterceptionTargetPageResponseBodyRuleTargetList extends TeaModel {
         /**
          * <p>The name of the application of the network object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>frontend</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>The ID of the container cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c3e2eae03eb064d2ebf940cd5e1b17****</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The name of the container cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas-test-cnnf</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
@@ -128,14 +149,21 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
 
         /**
          * <p>The namespace to which the network object belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The type of the rule. Valid value:</p>
-         * <br>
-         * <p>*   customize: custom rule</p>
+         * <ul>
+         * <li>customize: custom rule</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>customize</p>
          */
         @NameInMap("RuleType")
         public String ruleType;
@@ -148,22 +176,33 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the network object.</p>
-         * <br>
-         * <p>> You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to query the IDs of network objects.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to query the IDs of network objects.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>400914</p>
          */
         @NameInMap("TargetId")
         public Long targetId;
 
         /**
          * <p>The name of the network object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>destination-test-obj-Na3cF</p>
          */
         @NameInMap("TargetName")
         public String targetName;
 
         /**
          * <p>The type of the network object. Valid value:</p>
-         * <br>
-         * <p>*   IMAGE</p>
+         * <ul>
+         * <li>IMAGE</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IMAGE</p>
          */
         @NameInMap("TargetType")
         public String targetType;

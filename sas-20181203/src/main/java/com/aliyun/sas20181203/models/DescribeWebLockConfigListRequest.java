@@ -6,23 +6,32 @@ import com.aliyun.tea.*;
 public class DescribeWebLockConfigListRequest extends TeaModel {
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.2.3.4</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;
 
     /**
      * <p>The UUID of the server.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>inet-1234567****</p>
      */
     @NameInMap("Uuid")
     public String uuid;

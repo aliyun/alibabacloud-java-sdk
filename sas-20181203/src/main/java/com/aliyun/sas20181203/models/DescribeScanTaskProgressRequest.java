@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeScanTaskProgressRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>282832</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

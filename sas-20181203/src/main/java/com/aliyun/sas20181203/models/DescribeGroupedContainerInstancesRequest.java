@@ -5,60 +5,83 @@ import com.aliyun.tea.*;
 
 public class DescribeGroupedContainerInstancesRequest extends TeaModel {
     /**
-     * <p>The search conditions for assets. Specify the value in the JSON format. Separate multiple search conditions with commas (,). Example: `[{"name":"riskStatus","value":"YES"},{"name":"riskLevel","value":"2"}]`.</p>
-     * <br>
-     * <p>>  Supported search conditions include the instance ID, instance name, virtual private cloud (VPC) ID, region, and public IP address. You can call the [DescribeCriteria](~~DescribeCriteria~~) operation to query the supported search conditions.</p>
+     * <p>The search conditions for assets. Specify the value in the JSON format. Separate multiple search conditions with commas (,). Example: <code>[{&quot;name&quot;:&quot;riskStatus&quot;,&quot;value&quot;:&quot;YES&quot;},{&quot;name&quot;:&quot;riskLevel&quot;,&quot;value&quot;:&quot;2&quot;}]</code>.</p>
+     * <blockquote>
+     * <p> Supported search conditions include the instance ID, instance name, virtual private cloud (VPC) ID, region, and public IP address. You can call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;name&quot;:&quot;riskStatus&quot;,&quot;value&quot;:&quot;YES&quot;},{&quot;name&quot;:&quot;riskLevel&quot;,&quot;value&quot;:&quot;2&quot;}]</p>
      */
     @NameInMap("Criteria")
     public String criteria;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The keyword that you want to use to query containers. This parameter depends on the value of the GroupField parameter.</p>
-     * <br>
-     * <p>*   If the **GroupField** parameter is set to **pod**, set this parameter to the name of the pod that you want to query.</p>
-     * <p>*   If the **GroupField** parameter is set to **appName**, set this parameter to the name of the application that you want to query.</p>
-     * <p>*   If the **GroupField** parameter is set to **namespace**, set this parameter to the namespace that you want to query.</p>
-     * <p>*   If the **GroupField** parameter is set to **clusterId**, set this parameter to the ID of the cluster that you want to query.</p>
-     * <p>*   If the **GroupField** parameter is set to **image**, set this parameter to the name of the image that you want to query.</p>
-     * <br>
-     * <p>>  Fuzzy match is supported.</p>
+     * <ul>
+     * <li>If the <strong>GroupField</strong> parameter is set to <strong>pod</strong>, set this parameter to the name of the pod that you want to query.</li>
+     * <li>If the <strong>GroupField</strong> parameter is set to <strong>appName</strong>, set this parameter to the name of the application that you want to query.</li>
+     * <li>If the <strong>GroupField</strong> parameter is set to <strong>namespace</strong>, set this parameter to the namespace that you want to query.</li>
+     * <li>If the <strong>GroupField</strong> parameter is set to <strong>clusterId</strong>, set this parameter to the ID of the cluster that you want to query.</li>
+     * <li>If the <strong>GroupField</strong> parameter is set to <strong>image</strong>, set this parameter to the name of the image that you want to query.</li>
+     * </ul>
+     * <blockquote>
+     * <p> Fuzzy match is supported.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cas-adad-qeqwe</p>
      */
     @NameInMap("FieldValue")
     public String fieldValue;
 
     /**
      * <p>The group type that you want to use to query containers. Valid values:</p>
-     * <br>
-     * <p>*   **pod**</p>
-     * <p>*   **appName**</p>
-     * <p>*   **namespace**</p>
-     * <p>*   **clusterId**</p>
-     * <p>*   **image**</p>
-     * <br>
+     * <ul>
+     * <li><strong>pod</strong></li>
+     * <li><strong>appName</strong></li>
+     * <li><strong>namespace</strong></li>
+     * <li><strong>clusterId</strong></li>
+     * <li><strong>image</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pod</p>
      */
     @NameInMap("GroupField")
     public String groupField;
 
     /**
      * <p>The logical relationship that you want to use to evaluate multiple search conditions. Valid values:</p>
-     * <br>
-     * <p>*   **OR**: Search conditions are evaluated by using a logical **OR**.</p>
-     * <p>*   **AND**: Search conditions are evaluated by using a logical **AND**.</p>
+     * <ul>
+     * <li><strong>OR</strong>: Search conditions are evaluated by using a logical <strong>OR</strong>.</li>
+     * <li><strong>AND</strong>: Search conditions are evaluated by using a logical <strong>AND</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OR</p>
      */
     @NameInMap("LogicalExp")
     public String logicalExp;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **20**.</p>
-     * <br>
-     * <p>>  We recommend that you do not leave this parameter empty.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * <blockquote>
+     * <p> We recommend that you do not leave this parameter empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

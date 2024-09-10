@@ -18,6 +18,9 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACF97412-FD09-4D1F-994F-34DF12BR****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,6 +57,9 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
     public static class ListInterceptionRulePageResponseBodyInterceptionRuleListDstTarget extends TeaModel {
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>console</p>
          */
         @NameInMap("AppName")
         public String appName;
@@ -66,6 +72,9 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
 
         /**
          * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Namespace")
         public String namespace;
@@ -78,10 +87,14 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
 
         /**
          * <p>The type of the defense rule. Valid values:</p>
-         * <br>
-         * <p>*   **suggest**: intelligently recommended rule</p>
-         * <p>*   **customize**: custom rule</p>
-         * <p>*   **system**: system rule</p>
+         * <ul>
+         * <li><strong>suggest</strong>: intelligently recommended rule</li>
+         * <li><strong>customize</strong>: custom rule</li>
+         * <li><strong>system</strong>: system rule</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>customize</p>
          */
         @NameInMap("RuleType")
         public String ruleType;
@@ -94,18 +107,27 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the network object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>302001</p>
          */
         @NameInMap("TargetId")
         public Integer targetId;
 
         /**
          * <p>The name of the network object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo4****</p>
          */
         @NameInMap("TargetName")
         public String targetName;
 
         /**
          * <p>The type of the network object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IMAGE</p>
          */
         @NameInMap("TargetType")
         public String targetType;
@@ -192,6 +214,9 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
     public static class ListInterceptionRulePageResponseBodyInterceptionRuleListSrcTarget extends TeaModel {
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ack-jenkins-lawr****</p>
          */
         @NameInMap("AppName")
         public String appName;
@@ -204,16 +229,23 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
 
         /**
          * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jenkins</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The type of the defense rule. Valid values:</p>
-         * <br>
-         * <p>*   **suggest**: intelligently recommended rule</p>
-         * <p>*   **customize**: custom rule</p>
-         * <p>*   **system**: system rule</p>
+         * <ul>
+         * <li><strong>suggest</strong>: intelligently recommended rule</li>
+         * <li><strong>customize</strong>: custom rule</li>
+         * <li><strong>system</strong>: system rule</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>customize</p>
          */
         @NameInMap("RuleType")
         public String ruleType;
@@ -226,18 +258,27 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the network object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40****</p>
          */
         @NameInMap("TargetId")
         public Integer targetId;
 
         /**
          * <p>The name of the network object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mhh-te****</p>
          */
         @NameInMap("TargetName")
         public String targetName;
 
         /**
          * <p>The type of the affected assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>containerId</p>
          */
         @NameInMap("TargetType")
         public String targetType;
@@ -322,44 +363,64 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
 
         /**
          * <p>The interception mode. Valid values:</p>
-         * <br>
-         * <p>*   **0**: monitor</p>
-         * <p>*   **1**: block</p>
-         * <p>*   **2**: alert</p>
-         * <p>*   **3**: allow</p>
+         * <ul>
+         * <li><strong>0</strong>: monitor</li>
+         * <li><strong>1</strong>: block</li>
+         * <li><strong>2</strong>: alert</li>
+         * <li><strong>3</strong>: allow</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("InterceptType")
         public Long interceptType;
 
         /**
          * <p>The order in which the entries are sorted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("OrderIndex")
         public Long orderIndex;
 
         /**
          * <p>The ID of the defense rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30****</p>
          */
         @NameInMap("RuleId")
         public Long ruleId;
 
         /**
          * <p>The name of the defense rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
          * <p>The status of the defense rule. Valid values:</p>
-         * <br>
-         * <p>*   **1**: enabled</p>
-         * <p>*   **0**: disabled</p>
+         * <ul>
+         * <li><strong>1</strong>: enabled</li>
+         * <li><strong>0</strong>: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RuleSwitch")
         public Integer ruleSwitch;
 
         /**
          * <p>The type of the defense rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customize</p>
          */
         @NameInMap("RuleType")
         public String ruleType;
@@ -444,24 +505,36 @@ public class ListInterceptionRulePageResponseBody extends TeaModel {
     public static class ListInterceptionRulePageResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

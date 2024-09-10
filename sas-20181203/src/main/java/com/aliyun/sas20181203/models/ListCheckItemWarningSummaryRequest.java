@@ -6,95 +6,140 @@ import com.aliyun.tea.*;
 public class ListCheckItemWarningSummaryRequest extends TeaModel {
     /**
      * <p>The name of the check item. Fuzzy match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>password</p>
      */
     @NameInMap("CheckItemFuzzy")
     public String checkItemFuzzy;
 
     /**
      * <p>The risk level. Default value: null, which indicates that check items at all risk levels are queried.Valid values:</p>
-     * <p>*   **high**</p>
-     * <p>*   **medium**</p>
-     * <p>*   **low**</p>
+     * <ul>
+     * <li><strong>high</strong></li>
+     * <li><strong>medium</strong></li>
+     * <li><strong>low</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>medium</p>
      */
     @NameInMap("CheckLevel")
     public String checkLevel;
 
     /**
      * <p>The type of the check item.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hc.check.type.attack_defense</p>
      */
     @NameInMap("CheckType")
     public String checkType;
 
     /**
      * <p>The risk status. Default value: null, which indicates that check items in all states are queried.Valid values:</p>
-     * <p>*   **1**: failed</p>
-     * <p>*   **3**: passed</p>
+     * <ul>
+     * <li><strong>1</strong>: failed</li>
+     * <li><strong>3</strong>: passed</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("CheckWarningStatus")
     public Integer checkWarningStatus;
 
     /**
      * <p>The name of the field that is used to query containers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>clusterId</p>
      */
     @NameInMap("ContainerFieldName")
     public String containerFieldName;
 
     /**
      * <p>The value of the field that is used to query containers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c471f0f61b9c04f8380556e922cf1****</p>
      */
     @NameInMap("ContainerFieldValue")
     public String containerFieldValue;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The ID of the asset group.</p>
-     * <br>
-     * <p>> You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of asset groups.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of asset groups.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1161****</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
-     * <br>
-     * <p>> We recommend that you do not leave this parameter empty.</p>
+     * <blockquote>
+     * <p>We recommend that you do not leave this parameter empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The type of the baseline.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>weak_password</p>
      */
     @NameInMap("RiskType")
     public String riskType;
 
     /**
-     * <p>The data source. Default value: **default**. Valid value:</p>
-     * <br>
-     * <p>*   **agentless**: The check items of baselines for agentless detection.</p>
-     * <p>*   **default**: The check items of baselines for hosts.</p>
+     * <p>The data source. Default value: <strong>default</strong>. Valid value:</p>
+     * <ul>
+     * <li><strong>agentless</strong>: The check items of baselines for agentless detection.</li>
+     * <li><strong>default</strong>: The check items of baselines for hosts.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>agentless</p>
      */
     @NameInMap("Source")
     public String source;
 
     /**
      * <p>The UUIDs of the servers.</p>
-     * <br>
-     * <p>>  You can call the [DescribeCloudCenterInstances](https://help.aliyun.com/document_detail/141932.html) operation to query the UUIDs of the servers.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeCloudCenterInstances</a> operation to query the UUIDs of the servers.</p>
+     * </blockquote>
      */
     @NameInMap("UuidList")
     public java.util.List<String> uuidList;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateMaliciousNoteResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F8B6F758-BCD4-597A-8A2C-DA5A552C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

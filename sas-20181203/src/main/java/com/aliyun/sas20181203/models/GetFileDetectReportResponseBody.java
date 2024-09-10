@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetFileDetectReportResponseBody extends TeaModel {
     /**
-     * <p>The status code that is returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * <p>The status code that is returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,21 +21,31 @@ public class GetFileDetectReportResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A4EB8B1C-1DEC-5E18-BCD0-D1BBB393XXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,73 +98,116 @@ public class GetFileDetectReportResponseBody extends TeaModel {
     public static class GetFileDetectReportResponseBodyData extends TeaModel {
         /**
          * <p>The basic information about the detected file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *         &quot;sha256&quot;: &quot;&quot;,
+         *         &quot;sha512&quot;: &quot;&quot;,
+         *         &quot;source&quot;: &quot;aegis&quot;,
+         *         &quot;gmt_first_submit&quot;: &quot;&quot;,
+         *         &quot;sha1&quot;: &quot;&quot;,
+         *         &quot;virus_result&quot;: &quot;&quot;,
+         *         &quot;webshell_result&quot;: &quot;&quot;,
+         *         &quot;gmt_update&quot;: &quot;&quot;,
+         *         &quot;sandbox_result&quot;: &quot;2&quot;,
+         *         &quot;fileSize&quot;: &quot;363752&quot;,
+         *         &quot;virus_name&quot;: &quot;&quot;,
+         *     }</p>
          */
         @NameInMap("Basic")
         public String basic;
 
         /**
          * <p>The hash value of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c42b5f6bde0b730ece2923266333****</p>
          */
         @NameInMap("FileHash")
         public String fileHash;
 
         /**
          * <p>The name of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.zip</p>
          */
         @NameInMap("Filename")
         public String filename;
 
         /**
          * <p>Indicates whether the file data exists in the cloud sandbox. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("HasData")
         public Boolean hasData;
 
         /**
          * <p>The threat intelligence event, which is a JSON array.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   The threat type. The value is an array. The elements in the array can be DDoS trojans, mining programs, network layer intrusions, network service scans, network sharing and discovery, mining pools, exploits, dark webs, malicious logons, malicious download sources, C\\&C servers, webshells, and web attacks.</p>
+         * <ul>
+         * <li>The threat type. The value is an array. The elements in the array can be DDoS trojans, mining programs, network layer intrusions, network service scans, network sharing and discovery, mining pools, exploits, dark webs, malicious logons, malicious download sources, C\&amp;C servers, webshells, and web attacks.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;The threat type&quot;]</p>
          */
         @NameInMap("Intelligences")
         public String intelligences;
 
         /**
          * <p>The details of the cloud sandbox check results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;BehaviorData\&quot;: {}, \&quot;ProcessData\&quot;: {}, \&quot;SandboxData\&quot;: {}, \&quot;AttackData\&quot;: [], \&quot;NetworkData\&quot;: {}, \&quot;SolutionData\&quot;: {}, \&quot;FileData\&quot;: {}}</p>
          */
         @NameInMap("Sandbox")
         public String sandbox;
 
         /**
          * <p>Indicates whether the check report is displayed. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ShowTab")
         public Boolean showTab;
 
         /**
          * <p>The threat level. Valid values:</p>
-         * <br>
-         * <p>*   **0**: normal</p>
-         * <p>*   **1**: suspicious</p>
-         * <p>*   **2**: high</p>
+         * <ul>
+         * <li><strong>0</strong>: normal</li>
+         * <li><strong>1</strong>: suspicious</li>
+         * <li><strong>2</strong>: high</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ThreatLevel")
         public Long threatLevel;
 
         /**
          * <p>The risk tags and server tags that are generated by analyzing threat intelligence and security events. The value is a string array. The array includes the following elements:</p>
-         * <br>
-         * <p>*   **threat_type_desc**: the threat type.</p>
-         * <p>*   **last_find_time**: the last time the threat was detected.</p>
-         * <p>*   **risk_type**: indicates whether the tag is malicious. The value 0 indicates that the tag is not malicious. The value 1 indicates that the tag is malicious. The value -1 indicates that whether the tag type is malicious is unknown.</p>
-         * <p>*   **threat_type**: the threat type. The value is an array. The elements in the array can be network layer intrusion, network service scanning, network sharing and discovery, mining pool, exploits, darknet, malicious logon, malicious download source, central control, web shell, and web attack.</p>
+         * <ul>
+         * <li><strong>threat_type_desc</strong>: the threat type.</li>
+         * <li><strong>last_find_time</strong>: the last time the threat was detected.</li>
+         * <li><strong>risk_type</strong>: indicates whether the tag is malicious. The value 0 indicates that the tag is not malicious. The value 1 indicates that the tag is malicious. The value -1 indicates that whether the tag type is malicious is unknown.</li>
+         * <li><strong>threat_type</strong>: the threat type. The value is an array. The elements in the array can be network layer intrusion, network service scanning, network sharing and discovery, mining pool, exploits, darknet, malicious logon, malicious download source, central control, web shell, and web attack.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;threat_type_desc&quot;: &quot;test&quot;,&quot;risk_type&quot;: 1,&quot;threat_type&quot;: &quot;&quot;}]</p>
          */
         @NameInMap("ThreatTypes")
         public String threatTypes;

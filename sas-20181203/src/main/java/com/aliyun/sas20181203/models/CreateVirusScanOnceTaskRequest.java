@@ -12,17 +12,25 @@ public class CreateVirusScanOnceTaskRequest extends TeaModel {
 
     /**
      * <p>The type of the virus scan. Valid values:</p>
-     * <br>
-     * <p>*   **system**: system scan.</p>
-     * <p>*   **user**: custom scan.</p>
+     * <ul>
+     * <li><strong>system</strong>: system scan.</li>
+     * <li><strong>user</strong>: custom scan.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>system</p>
      */
     @NameInMap("ScanType")
     public String scanType;
 
     /**
      * <p>The key that stores the asset information.</p>
-     * <br>
-     * <p>> You can call the [GetAssetSelectionConfig](~~GetAssetSelectionConfig~~) operation to obtain the key value.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~GetAssetSelectionConfig~~">GetAssetSelectionConfig</a> operation to obtain the key value.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>845de1ec-4b08-42e1-b564-31321e48xxxx</p>
      */
     @NameInMap("SelectionKey")
     public String selectionKey;

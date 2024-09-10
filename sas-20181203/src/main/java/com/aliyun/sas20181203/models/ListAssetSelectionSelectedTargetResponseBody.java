@@ -12,6 +12,9 @@ public class ListAssetSelectionSelectedTargetResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1EB12F73-6828-59D2-9FBF-F3713FD55128</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class ListAssetSelectionSelectedTargetResponseBody extends TeaModel {
     public static class ListAssetSelectionSelectedTargetResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30****</p>
          */
         @NameInMap("TargetId")
         public String targetId;
 
         /**
          * <p>The name of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jen****</p>
          */
         @NameInMap("TargetName")
         public String targetName;

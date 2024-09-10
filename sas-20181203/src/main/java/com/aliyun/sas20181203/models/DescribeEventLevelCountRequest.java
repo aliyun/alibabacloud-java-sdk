@@ -6,54 +6,78 @@ import com.aliyun.tea.*;
 public class DescribeEventLevelCountRequest extends TeaModel {
     /**
      * <p>The ID of the container cluster.</p>
-     * <br>
-     * <p>> You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>c7e3c5b420a7947c2933303144688****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The key of the condition that is used to query alert events on containers. Valid values:</p>
-     * <br>
-     * <p>*   **instanceId**: the ID of the asset</p>
-     * <p>*   **appName**: the name of the application</p>
-     * <p>*   **clusterId**: the ID of the cluster</p>
-     * <p>*   **regionId**: the ID of the region</p>
-     * <p>*   **nodeName**: the name of the node</p>
-     * <p>*   **namespace**: the namespace</p>
-     * <p>*   **clusterName**: the name of the cluster</p>
-     * <p>*   **image**: the name of the image</p>
-     * <p>*   **imageRepoName**: the name of the image repository</p>
-     * <p>*   **imageRepoNamespace**: the namespace to which the image repository belongs</p>
-     * <p>*   **imageRepoTag**: the tag that is added to the image</p>
-     * <p>*   **imageDigest**: the digest of the image</p>
+     * <ul>
+     * <li><strong>instanceId</strong>: the ID of the asset</li>
+     * <li><strong>appName</strong>: the name of the application</li>
+     * <li><strong>clusterId</strong>: the ID of the cluster</li>
+     * <li><strong>regionId</strong>: the ID of the region</li>
+     * <li><strong>nodeName</strong>: the name of the node</li>
+     * <li><strong>namespace</strong>: the namespace</li>
+     * <li><strong>clusterName</strong>: the name of the cluster</li>
+     * <li><strong>image</strong>: the name of the image</li>
+     * <li><strong>imageRepoName</strong>: the name of the image repository</li>
+     * <li><strong>imageRepoNamespace</strong>: the namespace to which the image repository belongs</li>
+     * <li><strong>imageRepoTag</strong>: the tag that is added to the image</li>
+     * <li><strong>imageDigest</strong>: the digest of the image</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>clusterId</p>
      */
     @NameInMap("ContainerFieldName")
     public String containerFieldName;
 
     /**
      * <p>The value of the condition that is used to query alert events on containers. If you specify multiple values, separate them with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c951761046a9c4afe92be0a7b5bexxxxx</p>
      */
     @NameInMap("ContainerFieldValue")
     public String containerFieldValue;
 
     /**
      * <p>The ID of the container.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxx30389a10c28f6d38f2398f0dcexxxxxxx922b9e8290dc7c3019d4a8,48b87f2c0662e334820f436cb9133f1ae4e053d39b6fad42xxxxxxxxxx</p>
      */
     @NameInMap("ContainerIds")
     public String containerIds;
 
     /**
-     * <p>The ID of the request source. Set the value to **sas**.</p>
+     * <p>The ID of the request source. Set the value to <strong>sas</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sas</p>
      */
     @NameInMap("From")
     public String from;
 
+    @NameInMap("MultiAccountActionType")
+    public Integer multiAccountActionType;
+
     /**
      * <p>The type of the query condition. Valid values:</p>
-     * <br>
-     * <p>*   **containerId**: the ID of the container</p>
-     * <p>*   **uuid**: the UUID of the asset</p>
+     * <ul>
+     * <li><strong>containerId</strong>: the ID of the container</li>
+     * <li><strong>uuid</strong>: the UUID of the asset</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>uuid</p>
      */
     @NameInMap("TargetType")
     public String targetType;
@@ -101,6 +125,14 @@ public class DescribeEventLevelCountRequest extends TeaModel {
     }
     public String getFrom() {
         return this.from;
+    }
+
+    public DescribeEventLevelCountRequest setMultiAccountActionType(Integer multiAccountActionType) {
+        this.multiAccountActionType = multiAccountActionType;
+        return this;
+    }
+    public Integer getMultiAccountActionType() {
+        return this.multiAccountActionType;
     }
 
     public DescribeEventLevelCountRequest setTargetType(String targetType) {

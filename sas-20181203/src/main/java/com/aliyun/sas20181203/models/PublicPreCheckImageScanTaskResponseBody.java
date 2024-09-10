@@ -7,6 +7,10 @@ public class PublicPreCheckImageScanTaskResponseBody extends TeaModel {
     @NameInMap("Data")
     public PublicPreCheckImageScanTaskResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F9353221-40F4-5F98-B73C-2803DC804033</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class PublicPreCheckImageScanTaskResponseBody extends TeaModel {
     }
 
     public static class PublicPreCheckImageScanTaskResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("NeedAuthCount")
         public Integer needAuthCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("ScanImageCount")
         public Integer scanImageCount;
 

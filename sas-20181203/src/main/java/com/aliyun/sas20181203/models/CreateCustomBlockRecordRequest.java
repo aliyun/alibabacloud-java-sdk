@@ -6,27 +6,34 @@ import com.aliyun.tea.*;
 public class CreateCustomBlockRecordRequest extends TeaModel {
     /**
      * <p>The IP address that you want to specify in the policy.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.xx.xx</p>
      */
     @NameInMap("BlockIp")
     public String blockIp;
 
     /**
      * <p>The traffic direction that you want to specify in the policy. Valid values:</p>
-     * <br>
-     * <p>*   **in**: inbound</p>
-     * <p>*   **out**: outbound</p>
-     * <br>
+     * <ul>
+     * <li><strong>in</strong>: inbound</li>
+     * <li><strong>out</strong>: outbound</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>in</p>
      */
     @NameInMap("Bound")
     public String bound;
 
     /**
      * <p>The expiration time of the policy.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1859094550000</p>
      */
     @NameInMap("ExpireTime")
     public Long expireTime;
@@ -36,8 +43,10 @@ public class CreateCustomBlockRecordRequest extends TeaModel {
 
     /**
      * <p>The UUIDs of the servers. Separate multiple UUIDs with commas (,).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>71c846d6-5c84-4714-acfc-58265bc3****,5013b5e8-1613-43a8-b4de-651db318****,df53f0ad-b3ba-4fe0-9ec7-f42a2ae2****</p>
      */
     @NameInMap("Uuids")
     public String uuids;

@@ -18,6 +18,9 @@ public class ListCheckItemResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9F4E6157-9600-5588-86B9-38F09067****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,30 +57,45 @@ public class ListCheckItemResponseBody extends TeaModel {
     public static class ListCheckItemResponseBodyCheckItemsCustomConfigs extends TeaModel {
         /**
          * <p>The default value of the check item. The value is a string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
         /**
          * <p>The name of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IPList</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The display name of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ensure RAM password policy prevents password reuse</p>
          */
         @NameInMap("ShowName")
         public String showName;
 
         /**
          * <p>The type of the check item. The value is a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;type\&quot;:\&quot;LIST\&quot;,\&quot;range\&quot;:[1,512],\&quot;listType\&quot;:{\&quot;type\&quot;:\&quot;STRING\&quot;,\&quot;range\&quot;:[0,22]}}</p>
          */
         @NameInMap("TypeDefine")
         public String typeDefine;
 
         /**
          * <p>The specified value of the check item. The value is a string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Value")
         public String value;
@@ -132,14 +150,21 @@ public class ListCheckItemResponseBody extends TeaModel {
     public static class ListCheckItemResponseBodyCheckItemsDescription extends TeaModel {
         /**
          * <p>The type of the description of the check item. Valid value:</p>
-         * <br>
-         * <p>*   **text**</p>
+         * <ul>
+         * <li><strong>text</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The content of the description for the check item when the Type parameter is text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The download of query results that are returned by SELECT statements in DataStudio must be prohibited at the MaxCompute level.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -170,12 +195,18 @@ public class ListCheckItemResponseBody extends TeaModel {
     public static class ListCheckItemResponseBodyCheckItems extends TeaModel {
         /**
          * <p>The ID of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21</p>
          */
         @NameInMap("CheckId")
         public Long checkId;
 
         /**
          * <p>The name of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enable deletion protection</p>
          */
         @NameInMap("CheckShowName")
         public String checkShowName;
@@ -194,77 +225,98 @@ public class ListCheckItemResponseBody extends TeaModel {
 
         /**
          * <p>The estimated quota that will be consumed by this check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("EstimatedCount")
         public Integer estimatedCount;
 
         /**
          * <p>The asset subtype of the cloud service. Valid values:</p>
-         * <br>
-         * <p>*   If **InstanceType** is set to **ECS**, this parameter supports the following valid values:</p>
-         * <br>
-         * <p>    *   **INSTANCE**</p>
-         * <p>    *   **DISK**</p>
-         * <p>    *   **SECURITY_GROUP**</p>
-         * <br>
-         * <p>*   If **InstanceType** is set to **ACR**, this parameter supports the following valid values:</p>
-         * <br>
-         * <p>    *   **REPOSITORY_ENTERPRISE**</p>
-         * <p>    *   **REPOSITORY_PERSON**</p>
-         * <br>
-         * <p>*   If **InstanceType** is set to **RAM**, this parameter supports the following valid values:</p>
-         * <br>
-         * <p>    *   **ALIAS**</p>
-         * <p>    *   **USER**</p>
-         * <p>    *   **POLICY**</p>
-         * <p>    *   **GROUP**</p>
-         * <br>
-         * <p>*   If **InstanceType** is set to **WAF**, this parameter supports the following valid value:</p>
-         * <br>
-         * <p>    *   **DOMAIN**</p>
-         * <br>
-         * <p>*   If **InstanceType** is set to other values, this parameter supports the following valid values:</p>
-         * <br>
-         * <p>    *   **INSTANCE**</p>
+         * <ul>
+         * <li><p>If <strong>InstanceType</strong> is set to <strong>ECS</strong>, this parameter supports the following valid values:</p>
+         * <ul>
+         * <li><strong>INSTANCE</strong></li>
+         * <li><strong>DISK</strong></li>
+         * <li><strong>SECURITY_GROUP</strong></li>
+         * </ul>
+         * </li>
+         * <li><p>If <strong>InstanceType</strong> is set to <strong>ACR</strong>, this parameter supports the following valid values:</p>
+         * <ul>
+         * <li><strong>REPOSITORY_ENTERPRISE</strong></li>
+         * <li><strong>REPOSITORY_PERSON</strong></li>
+         * </ul>
+         * </li>
+         * <li><p>If <strong>InstanceType</strong> is set to <strong>RAM</strong>, this parameter supports the following valid values:</p>
+         * <ul>
+         * <li><strong>ALIAS</strong></li>
+         * <li><strong>USER</strong></li>
+         * <li><strong>POLICY</strong></li>
+         * <li><strong>GROUP</strong></li>
+         * </ul>
+         * </li>
+         * <li><p>If <strong>InstanceType</strong> is set to <strong>WAF</strong>, this parameter supports the following valid value:</p>
+         * <ul>
+         * <li><strong>DOMAIN</strong></li>
+         * </ul>
+         * </li>
+         * <li><p>If <strong>InstanceType</strong> is set to other values, this parameter supports the following valid values:</p>
+         * <ul>
+         * <li><strong>INSTANCE</strong></li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         @NameInMap("InstanceSubType")
         public String instanceSubType;
 
         /**
          * <p>The asset type of the cloud service. Valid values:</p>
-         * <br>
-         * <p>*   **ECS**: Elastic Compute Service (ECS).</p>
-         * <p>*   **SLB**: Server Load Balancer (SLB).</p>
-         * <p>*   **RDS**: ApsaraDB RDS.</p>
-         * <p>*   **MONGODB**: ApsaraDB for MongoDB (MongoDB).</p>
-         * <p>*   **KVSTORE**: ApsaraDB for Redis (Redis).</p>
-         * <p>*   **ACR**: Container Registry.</p>
-         * <p>*   **CSK**: Container Service for Kubernetes (ACK).</p>
-         * <p>*   **VPC**: Virtual Private Cloud (VPC).</p>
-         * <p>*   **ACTIONTRAIL**: ActionTrail.</p>
-         * <p>*   **CDN**: Alibaba Cloud CDN (CDN).</p>
-         * <p>*   **CAS**: Certificate Management Service (formerly SSL Certificates Service).</p>
-         * <p>*   **RDC**: Apsara Devops.</p>
-         * <p>*   **RAM**: Resource Access Management (RAM).</p>
-         * <p>*   **DDOS**: Anti-DDoS.</p>
-         * <p>*   **WAF**: Web Application Firewall (WAF).</p>
-         * <p>*   **OSS**: Object Storage Service (OSS).</p>
-         * <p>*   **POLARDB**: PolarDB.</p>
-         * <p>*   **POSTGRESQL**: ApsaraDB RDS for PostgreSQL.</p>
-         * <p>*   **MSE**: Microservices Engine (MSE).</p>
-         * <p>*   **NAS**: Apsara File Storage NAS (NAS).</p>
-         * <p>*   **SDDP**: Sensitive Data Discovery and Protection (SDDP).</p>
-         * <p>*   **EIP**: Elastic IP Address (EIP).</p>
+         * <ul>
+         * <li><strong>ECS</strong>: Elastic Compute Service (ECS).</li>
+         * <li><strong>SLB</strong>: Server Load Balancer (SLB).</li>
+         * <li><strong>RDS</strong>: ApsaraDB RDS.</li>
+         * <li><strong>MONGODB</strong>: ApsaraDB for MongoDB (MongoDB).</li>
+         * <li><strong>KVSTORE</strong>: ApsaraDB for Redis (Redis).</li>
+         * <li><strong>ACR</strong>: Container Registry.</li>
+         * <li><strong>CSK</strong>: Container Service for Kubernetes (ACK).</li>
+         * <li><strong>VPC</strong>: Virtual Private Cloud (VPC).</li>
+         * <li><strong>ACTIONTRAIL</strong>: ActionTrail.</li>
+         * <li><strong>CDN</strong>: Alibaba Cloud CDN (CDN).</li>
+         * <li><strong>CAS</strong>: Certificate Management Service (formerly SSL Certificates Service).</li>
+         * <li><strong>RDC</strong>: Apsara Devops.</li>
+         * <li><strong>RAM</strong>: Resource Access Management (RAM).</li>
+         * <li><strong>DDOS</strong>: Anti-DDoS.</li>
+         * <li><strong>WAF</strong>: Web Application Firewall (WAF).</li>
+         * <li><strong>OSS</strong>: Object Storage Service (OSS).</li>
+         * <li><strong>POLARDB</strong>: PolarDB.</li>
+         * <li><strong>POSTGRESQL</strong>: ApsaraDB RDS for PostgreSQL.</li>
+         * <li><strong>MSE</strong>: Microservices Engine (MSE).</li>
+         * <li><strong>NAS</strong>: Apsara File Storage NAS (NAS).</li>
+         * <li><strong>SDDP</strong>: Sensitive Data Discovery and Protection (SDDP).</li>
+         * <li><strong>EIP</strong>: Elastic IP Address (EIP).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The risk level of the check item. Valid values:</p>
-         * <br>
-         * <p>*   **HIGH**</p>
-         * <p>*   **MEDIUM**</p>
-         * <p>*   **LOW**</p>
+         * <ul>
+         * <li><strong>HIGH</strong></li>
+         * <li><strong>MEDIUM</strong></li>
+         * <li><strong>LOW</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HIGH</p>
          */
         @NameInMap("RiskLevel")
         public String riskLevel;
@@ -277,12 +329,16 @@ public class ListCheckItemResponseBody extends TeaModel {
 
         /**
          * <p>The type of the cloud asset. Valid values:</p>
-         * <br>
-         * <p>*   **0**: an asset provided by Alibaba Cloud.</p>
-         * <p>*   **1**: an asset outside Alibaba Cloud.</p>
-         * <p>*   **2**: an asset in a data center.</p>
-         * <p>*   **3**, **4**, **5**, and **7**: other cloud asset.</p>
-         * <p>*   **8**: a simple application server.</p>
+         * <ul>
+         * <li><strong>0</strong>: an asset provided by Alibaba Cloud.</li>
+         * <li><strong>1</strong>: an asset outside Alibaba Cloud.</li>
+         * <li><strong>2</strong>: an asset in a data center.</li>
+         * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: other cloud asset.</li>
+         * <li><strong>8</strong>: a simple application server.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Vendor")
         public String vendor;
@@ -377,24 +433,36 @@ public class ListCheckItemResponseBody extends TeaModel {
     public static class ListCheckItemResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>149</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

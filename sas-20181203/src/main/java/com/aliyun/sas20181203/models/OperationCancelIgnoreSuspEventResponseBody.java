@@ -5,40 +5,59 @@ import com.aliyun.tea.*;
 
 public class OperationCancelIgnoreSuspEventResponseBody extends TeaModel {
     /**
-     * <p>The status code returned. The status code **200** indicates that the request was is successful. Other status codes indicate that the request fails. You can identify the cause of the failure based on the status code.</p>
+     * <p>The status code returned. The status code <strong>200</strong> indicates that the request was is successful. Other status codes indicate that the request fails. You can identify the cause of the failure based on the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CE500770-42D3-442E-9DDD-156E0F9F3B45</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The handling result of an exception. Valid values:</p>
-     * <br>
-     * <p>*   **true**: successful</p>
-     * <p>*   **false**: failed</p>
+     * <ul>
+     * <li><strong>true</strong>: successful</li>
+     * <li><strong>false</strong>: failed</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The time consumed for the request. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TimeCost")
     public Long timeCost;

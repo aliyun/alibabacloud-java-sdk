@@ -6,55 +6,85 @@ import com.aliyun.tea.*;
 public class DescribeNsasSuspEventTypeRequest extends TeaModel {
     /**
      * <p>The name of the container field. Valid values:</p>
-     * <br>
-     * <p>*   **clusterId**: the ID of the cluster</p>
+     * <ul>
+     * <li><strong>clusterId</strong>: the ID of the cluster</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>clusterId</p>
      */
     @NameInMap("ContainerFieldName")
     public String containerFieldName;
 
     /**
      * <p>The value of the container field.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ca3108551c83c4d949106e1ab9e1e****</p>
      */
     @NameInMap("ContainerFieldValue")
     public String containerFieldValue;
 
     /**
-     * <p>The ID of the request source. Set the value to **sas**, which indicates that the request is sent from Security Center.</p>
+     * <p>The ID of the request source. Set the value to <strong>sas</strong>, which indicates that the request is sent from Security Center.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sas</p>
      */
     @NameInMap("From")
     public String from;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("MultiAccountActionType")
+    public Integer multiAccountActionType;
+
     /**
      * <p>The name of the alert type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Unusual Logon</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The name of the server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testECS</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>180.212.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;
 
     /**
      * <p>The UUIDs of servers. Separate multiple UUIDs with commas (,).</p>
-     * <br>
-     * <p>> You can call the [DescribeCloudCenterInstances](https://help.aliyun.com/document_detail/141932.html) operation to query the UUIDs of servers.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>f56406cb-916d-42db-b6f7-2ff79e34****</p>
      */
     @NameInMap("Uuids")
     public String uuids;
@@ -94,6 +124,14 @@ public class DescribeNsasSuspEventTypeRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public DescribeNsasSuspEventTypeRequest setMultiAccountActionType(Integer multiAccountActionType) {
+        this.multiAccountActionType = multiAccountActionType;
+        return this;
+    }
+    public Integer getMultiAccountActionType() {
+        return this.multiAccountActionType;
     }
 
     public DescribeNsasSuspEventTypeRequest setName(String name) {

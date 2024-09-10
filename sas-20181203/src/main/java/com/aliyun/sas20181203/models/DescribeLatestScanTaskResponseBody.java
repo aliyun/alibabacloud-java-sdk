@@ -4,15 +4,31 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeLatestScanTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1671610264000</p>
+     */
     @NameInMap("LastCheckTime")
     public Long lastCheckTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7E0618A9-D5EF-4220-9471-C42XXXXXXXX</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RiskNum")
     public Integer riskNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[{&quot;type&quot;:&quot;uuid&quot;,&quot;name&quot;:&quot;Host001&quot;,&quot;target&quot;:&quot;503201a7-14c6-4280-801b-1169ed42****&quot;}]</p>
+     */
     @NameInMap("TargetInfo")
     public String targetInfo;
 

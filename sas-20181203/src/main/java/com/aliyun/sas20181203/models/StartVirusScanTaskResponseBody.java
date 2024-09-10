@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class StartVirusScanTaskResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DAE17926-4ABE-4DBD-9600-DDCB9B200F35</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the virus scan task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>282832</p>
      */
     @NameInMap("ScanTaskId")
     public Long scanTaskId;

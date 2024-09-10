@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
     /**
-     * <p>The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
@@ -23,7 +29,10 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
     public java.util.List<ListOpaClusterStrategyNewResponseBodyList> list;
 
     /**
-     * <p>The message that shows the export task result. The value is fixed as **success**, which indicates that the export task is successful.</p>
+     * <p>The message that shows the export task result. The value is fixed as <strong>success</strong>, which indicates that the export task is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
@@ -36,15 +45,22 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7DFD947C-9172-5129-B783-DD14C55191D2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -113,16 +129,23 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
     public static class ListOpaClusterStrategyNewResponseBodyList extends TeaModel {
         /**
          * <p>The action of the rule. Valid values:</p>
-         * <br>
-         * <p>*   **1**: trigger alerts</p>
-         * <p>*   **2**: block</p>
-         * <p>*   **3**: allow</p>
+         * <ul>
+         * <li><strong>1</strong>: trigger alerts</li>
+         * <li><strong>2</strong>: block</li>
+         * <li><strong>3</strong>: allow</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Action")
         public Integer action;
 
         /**
          * <p>The number of clusters on which the rule takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ClusterCount")
         public Integer clusterCount;
@@ -135,6 +158,9 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
 
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Config the Event Audit policys</p>
          */
         @NameInMap("Description")
         public String description;
@@ -153,30 +179,44 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the rule supports malicious Internet images. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("MaliciousImage")
         public Boolean maliciousImage;
 
         /**
          * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("StrategyId")
         public Long strategyId;
 
         /**
          * <p>The rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>auto-strategy-vohuiq</p>
          */
         @NameInMap("StrategyName")
         public String strategyName;
 
         /**
          * <p>Indicates whether the rule supports unscanned images. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("UnScanedImage")
         public Boolean unScanedImage;
@@ -271,24 +311,36 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
     public static class ListOpaClusterStrategyNewResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

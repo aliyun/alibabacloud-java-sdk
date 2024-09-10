@@ -23,16 +23,21 @@ public class GetCheckDetailResponseBody extends TeaModel {
     public GetCheckDetailResponseBodyDescription description;
 
     @NameInMap("RepairReset")
+    @Deprecated
     public String repairReset;
 
     @NameInMap("RepairSetting")
     public GetCheckDetailResponseBodyRepairSetting repairSetting;
 
     @NameInMap("RepairSupportType")
+    @Deprecated
     public Integer repairSupportType;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15A6ED6A-DBFE-5255-A248-289907809BEC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -115,21 +120,31 @@ public class GetCheckDetailResponseBody extends TeaModel {
     public static class GetCheckDetailResponseBodyAssistInfo extends TeaModel {
         /**
          * <p>The link to the help information about the risk item when the Type parameter is set to link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.alibabacloud.com/help/en/resource-access-management/latest/faq-about-ram-users">https://www.alibabacloud.com/help/en/resource-access-management/latest/faq-about-ram-users</a></p>
          */
         @NameInMap("Link")
         public String link;
 
         /**
          * <p>The type of the help information about the risk item. Valid values:</p>
-         * <br>
-         * <p>*   **text**</p>
-         * <p>*   **link**</p>
+         * <ul>
+         * <li><strong>text</strong></li>
+         * <li><strong>link</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The content in the help information about the risk item when the Type parameter is set to text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Configure an IP address whitelist</p>
          */
         @NameInMap("Value")
         public String value;
@@ -168,30 +183,45 @@ public class GetCheckDetailResponseBody extends TeaModel {
     public static class GetCheckDetailResponseBodyCustomConfigs extends TeaModel {
         /**
          * <p>The default value of the custom configuration item. The value is a string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
         /**
          * <p>The name of the custom configuration item. The name of a custom configuration item is unique in a check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SessionTimeMax</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The keyword that identifies the custom configuration item for internationalization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Maximum session time</p>
          */
         @NameInMap("ShowName")
         public String showName;
 
         /**
          * <p>The type of the custom configuration item. The value is a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;type\&quot;:\&quot;NUMBER\&quot;,\&quot;range\&quot;:[1,24]}</p>
          */
         @NameInMap("TypeDefine")
         public String typeDefine;
 
         /**
          * <p>The value of the custom configuration item. The value is a string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         @NameInMap("Value")
         public String value;
@@ -246,18 +276,27 @@ public class GetCheckDetailResponseBody extends TeaModel {
     public static class GetCheckDetailResponseBodyDescription extends TeaModel {
         /**
          * <p>The link to the description of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.alibabacloud.com/help/en/object-storage-service/latest/tutorial-implement-data-sharing-across-departments-based-on-bucket-policies">https://www.alibabacloud.com/help/en/object-storage-service/latest/tutorial-implement-data-sharing-across-departments-based-on-bucket-policies</a></p>
          */
         @NameInMap("Link")
         public String link;
 
         /**
          * <p>The type of the description of the check item. The value is fixed as text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The content in the description of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The MSE instance does not enable authentication by default. If public network access is enabled at the same time, the data in the configuration center may be dragged and there is a security risk.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -324,11 +363,20 @@ public class GetCheckDetailResponseBody extends TeaModel {
     }
 
     public static class GetCheckDetailResponseBodyRepairSettingRepairConfigs extends TeaModel {
+        @NameInMap("ConsoleParamType")
+        public String consoleParamType;
+
         @NameInMap("CustomFlag")
         public Boolean customFlag;
 
+        @NameInMap("DataTransformType")
+        public String dataTransformType;
+
         @NameInMap("DefaultValue")
         public String defaultValue;
+
+        @NameInMap("EmptyParamSwitch")
+        public String emptyParamSwitch;
 
         @NameInMap("ExclusiveName")
         public java.util.List<String> exclusiveName;
@@ -345,12 +393,23 @@ public class GetCheckDetailResponseBody extends TeaModel {
         @NameInMap("TypeDefine")
         public String typeDefine;
 
+        @NameInMap("UsageType")
+        public String usageType;
+
         @NameInMap("Value")
         public String value;
 
         public static GetCheckDetailResponseBodyRepairSettingRepairConfigs build(java.util.Map<String, ?> map) throws Exception {
             GetCheckDetailResponseBodyRepairSettingRepairConfigs self = new GetCheckDetailResponseBodyRepairSettingRepairConfigs();
             return TeaModel.build(map, self);
+        }
+
+        public GetCheckDetailResponseBodyRepairSettingRepairConfigs setConsoleParamType(String consoleParamType) {
+            this.consoleParamType = consoleParamType;
+            return this;
+        }
+        public String getConsoleParamType() {
+            return this.consoleParamType;
         }
 
         public GetCheckDetailResponseBodyRepairSettingRepairConfigs setCustomFlag(Boolean customFlag) {
@@ -361,12 +420,28 @@ public class GetCheckDetailResponseBody extends TeaModel {
             return this.customFlag;
         }
 
+        public GetCheckDetailResponseBodyRepairSettingRepairConfigs setDataTransformType(String dataTransformType) {
+            this.dataTransformType = dataTransformType;
+            return this;
+        }
+        public String getDataTransformType() {
+            return this.dataTransformType;
+        }
+
         public GetCheckDetailResponseBodyRepairSettingRepairConfigs setDefaultValue(String defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
         public String getDefaultValue() {
             return this.defaultValue;
+        }
+
+        public GetCheckDetailResponseBodyRepairSettingRepairConfigs setEmptyParamSwitch(String emptyParamSwitch) {
+            this.emptyParamSwitch = emptyParamSwitch;
+            return this;
+        }
+        public String getEmptyParamSwitch() {
+            return this.emptyParamSwitch;
         }
 
         public GetCheckDetailResponseBodyRepairSettingRepairConfigs setExclusiveName(java.util.List<String> exclusiveName) {
@@ -407,6 +482,14 @@ public class GetCheckDetailResponseBody extends TeaModel {
         }
         public String getTypeDefine() {
             return this.typeDefine;
+        }
+
+        public GetCheckDetailResponseBodyRepairSettingRepairConfigs setUsageType(String usageType) {
+            this.usageType = usageType;
+            return this;
+        }
+        public String getUsageType() {
+            return this.usageType;
         }
 
         public GetCheckDetailResponseBodyRepairSettingRepairConfigs setValue(String value) {
@@ -485,21 +568,31 @@ public class GetCheckDetailResponseBody extends TeaModel {
     public static class GetCheckDetailResponseBodySolution extends TeaModel {
         /**
          * <p>The link to the solution to handle the risk item when the Type parameter is set to link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.alibabacloud.com/help/en/object-storage-service/latest/tutorial-implement-data-sharing-across-departments-based-on-bucket-policies">https://www.alibabacloud.com/help/en/object-storage-service/latest/tutorial-implement-data-sharing-across-departments-based-on-bucket-policies</a></p>
          */
         @NameInMap("Link")
         public String link;
 
         /**
          * <p>The type of the solution to handle the risk item. Valid values:</p>
-         * <br>
-         * <p>*   **text**</p>
-         * <p>*   **link**</p>
+         * <ul>
+         * <li><strong>text</strong></li>
+         * <li><strong>link</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The content of the solution to handle the risk item when the Type parameter is set to text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enter the MSE product console - registration and configuration center - instance list, click the corresponding instance name to enter the instance details, find the public network whitelist setting option in the basic information, and configure the whitelist according to business needs. It is forbidden to configure 0.0.0.0 or the whitelist as null.</p>
          */
         @NameInMap("Value")
         public String value;

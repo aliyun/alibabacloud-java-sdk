@@ -6,10 +6,13 @@ import com.aliyun.tea.*;
 public class DeleteInstallCodeRequest extends TeaModel {
     /**
      * <p>The installation command.</p>
-     * <br>
-     * <p>>  You can call the [DescribeInstallCodes](~~DescribeInstallCodes~~) operation to query installation commands.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeInstallCodes~~">DescribeInstallCodes</a> operation to query installation commands.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1q****</p>
      */
     @NameInMap("CaptchaCode")
     public String captchaCode;

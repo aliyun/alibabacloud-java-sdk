@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteVulWhitelistResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9FBC6E47-7508-58C9-9E76-528E118CB1CC</p>
      */
     @NameInMap("RequestId")
     public String requestId;

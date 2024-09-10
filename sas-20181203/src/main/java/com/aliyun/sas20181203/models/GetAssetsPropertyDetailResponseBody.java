@@ -18,6 +18,9 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4C1AE3F3-18FA-4108-BBB9-AFA1A032****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +57,36 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
     public static class GetAssetsPropertyDetailResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -118,173 +133,259 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
     public static class GetAssetsPropertyDetailResponseBodyPropertys extends TeaModel {
         /**
          * <p>The name of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5-rce_web_1</p>
          */
         @NameInMap("ContainerName")
         public String containerName;
 
         /**
          * <p>The timestamp of the last fingerprint collection. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649149566000</p>
          */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
         /**
          * <p>The domain name of the website.</p>
-         * <br>
-         * <p>> This parameter is returned only when **Biz** is set to **web_server**.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when <strong>Biz</strong> is set to <strong>web_server</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>localhost</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
          * <p>The path to the kernel module file.</p>
-         * <br>
-         * <p>> This parameter is returned only when **Biz** is set to **lkm**.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when <strong>Biz</strong> is set to <strong>lkm</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>/lib/modules/4****</p>
          */
         @NameInMap("Filepath")
         public String filepath;
 
         /**
          * <p>The name of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry-vpc.cn-beijing.aliyuncs.com/acs/aliyun-ingress-controller****</p>
          */
         @NameInMap("ImageName")
         public String imageName;
 
         /**
          * <p>The ID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-hp35tftuh52wbp1g****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hc-host-****</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The public IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.42.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.104.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>The IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.42.XX.XX</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The listening protocol that the website uses.</p>
-         * <br>
-         * <p>> This parameter is returned only when **Biz** is set to **web_server**.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when <strong>Biz</strong> is set to <strong>web_server</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         @NameInMap("ListenProtocol")
         public String listenProtocol;
 
         /**
          * <p>The name of the module.</p>
-         * <br>
-         * <p>> This parameter is returned only when **Biz** is set to **lkm**.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when <strong>Biz</strong> is set to <strong>lkm</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>alihids</p>
          */
         @NameInMap("ModuleName")
         public String moduleName;
 
         /**
-         * <p>The path. The value of this parameter varies based on the value of **Biz**.</p>
-         * <br>
-         * <p>*   If **Biz** is set to **web_server**, the value of this parameter indicates the path to the website root directory.</p>
-         * <p>*   If **Biz** is set to **autorun**, the value of this parameter indicates the path to the startup item.</p>
+         * <p>The path. The value of this parameter varies based on the value of <strong>Biz</strong>.</p>
+         * <ul>
+         * <li>If <strong>Biz</strong> is set to <strong>web_server</strong>, the value of this parameter indicates the path to the website root directory.</li>
+         * <li>If <strong>Biz</strong> is set to <strong>autorun</strong>, the value of this parameter indicates the path to the startup item.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>/lib/systemd/system****</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
          * <p>The permissions on the root directory of the website.</p>
-         * <br>
-         * <p>> This parameter is returned only when **Biz** is set to **web_server**.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when <strong>Biz</strong> is set to <strong>web_server</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>755</p>
          */
         @NameInMap("PathMode")
         public String pathMode;
 
         /**
          * <p>The process ID (PID) of the process that runs the website service.</p>
-         * <br>
-         * <p>> This parameter is returned only when **Biz** is set to **web_server**.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when <strong>Biz</strong> is set to <strong>web_server</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>813</p>
          */
         @NameInMap("Pid")
         public String pid;
 
         /**
          * <p>The port of the website.</p>
-         * <br>
-         * <p>> This parameter is returned only when **Biz** is set to **web_server**.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when <strong>Biz</strong> is set to <strong>web_server</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
          * <p>The timestamp generated when the process was started. Unit: milliseconds.</p>
-         * <br>
-         * <p>> This parameter is returned only when **Biz** is set to **web_server**.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when <strong>Biz</strong> is set to <strong>web_server</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1671186801000</p>
          */
         @NameInMap("ProcessStarted")
         public Long processStarted;
 
         /**
          * <p>The ID of the region in which the server resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The type of the website.</p>
-         * <br>
-         * <p>> This parameter is returned only when **Biz** is set to **web_server**.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when <strong>Biz</strong> is set to <strong>web_server</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>nginx</p>
          */
         @NameInMap("ServerType")
         public String serverType;
 
         /**
          * <p>The size of the kernel module.</p>
-         * <br>
-         * <p>> This parameter is returned only when **Biz** is set to **lkm**.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when <strong>Biz</strong> is set to <strong>lkm</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Size")
         public Integer size;
 
         /**
          * <p>The number of times that the kernel module is referenced.</p>
-         * <br>
-         * <p>> This parameter is returned only when **Biz** is set to **lkm**.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when <strong>Biz</strong> is set to <strong>lkm</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("UsedByCount")
         public Integer usedByCount;
 
         /**
          * <p>The user who started the process of the website.</p>
-         * <br>
-         * <p>> This parameter is returned only when **Biz** is set to **web_server**.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when <strong>Biz</strong> is set to <strong>web_server</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         @NameInMap("User")
         public String user;
 
         /**
          * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>162eb349-c2d9-4f8b-805c-75b43d4c****</p>
          */
         @NameInMap("Uuid")
         public String uuid;
 
         /**
          * <p>The path to the root directory of the website.</p>
-         * <br>
-         * <p>> This parameter is returned only when **Biz** is set to **web_server**.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when <strong>Biz</strong> is set to <strong>web_server</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/share/nginx/html</p>
          */
         @NameInMap("WebPath")
         public String webPath;

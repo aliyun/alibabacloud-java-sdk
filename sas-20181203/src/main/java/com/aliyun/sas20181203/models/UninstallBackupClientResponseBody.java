@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UninstallBackupClientResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8eec3b63-18af-454b-8c17-aabcf7190b70</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeContainerTagsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>028CF634-5268-5660-9575-48C9ED6BF880</p>
      */
     @NameInMap("RequestId")
     public String requestId;

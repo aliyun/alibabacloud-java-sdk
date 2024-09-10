@@ -4,15 +4,31 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyClearLogstoreStorageRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>sas</p>
+     */
     @NameInMap("From")
     public String from;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sas_sls_storage</p>
+     */
     @NameInMap("UserLogStore")
     public String userLogStore;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sas-log-1234(uid)-cn-hangzhou</p>
+     */
     @NameInMap("UserProject")
     public String userProject;
 

@@ -18,6 +18,9 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>05AE6B16-741A-5A75-9BF0-BC747DD9****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,60 +57,99 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
     public static class ListAgentlessRiskUuidResponseBodyList extends TeaModel {
         /**
          * <p>The number of baseline risks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("BaselineCount")
         public Integer baselineCount;
 
         /**
+         * <p>The instance ID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bp1g6wxdwps7s9dz****</p>
+         */
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        /**
          * <p>The instance name of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sql-test-0****</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The public IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.210.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.25.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>The number of malicious samples.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MaliciousCount")
         public Integer maliciousCount;
 
         /**
          * <p>The timestamp of the detection. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>168257753****</p>
          */
         @NameInMap("ScanTime")
         public Long scanTime;
 
         /**
          * <p>The ID of the asset that is detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30****</p>
          */
         @NameInMap("TargetId")
         public String targetId;
 
         /**
          * <p>The name of the asset that is detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test****</p>
          */
         @NameInMap("TargetName")
         public String targetName;
 
         /**
          * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49e25e0f-bb51-4a5a-a1b3-13a4ddaa****</p>
          */
         @NameInMap("Uuid")
         public String uuid;
 
         /**
          * <p>The number of detected vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("VulCount")
         public Integer vulCount;
@@ -123,6 +165,14 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
         }
         public Integer getBaselineCount() {
             return this.baselineCount;
+        }
+
+        public ListAgentlessRiskUuidResponseBodyList setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public ListAgentlessRiskUuidResponseBodyList setInstanceName(String instanceName) {
@@ -202,18 +252,27 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
     public static class ListAgentlessRiskUuidResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

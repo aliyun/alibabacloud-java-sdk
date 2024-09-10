@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateHoneypotProbeBindRequest extends TeaModel {
     /**
      * <p>The unique ID of the honeypot to which the probe is bound.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>f52e8624-e43c-473c-8312-e0fed384****</p>
      */
     @NameInMap("BindId")
     public String bindId;
@@ -18,60 +21,89 @@ public class UpdateHoneypotProbeBindRequest extends TeaModel {
 
     /**
      * <p>The operation that the probe performs. Valid values:</p>
-     * <br>
-     * <p>*   **forward_honey**: forward traffic to a honeypot</p>
-     * <p>*   **scan_port**: monitor and scan</p>
+     * <ul>
+     * <li><strong>forward_honey</strong>: forward traffic to a honeypot</li>
+     * <li><strong>scan_port</strong>: monitor and scan</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>forward_honey</p>
      */
     @NameInMap("BindType")
     public String bindType;
 
     /**
-     * <p>The page number. Pages start from page **1**. Default value: **1**.</p>
+     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The honeypot ID.</p>
-     * <br>
-     * <p>>  You can call the [ListHoneypot](~~ListHoneypot~~) operation to obtain the IDs of honeypots.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~ListHoneypot~~">ListHoneypot</a> operation to obtain the IDs of honeypots.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>dba7d44775be8e0e5888ee3b1a62554a93d2512247cabc38ddeac17a3b3f****</p>
      */
     @NameInMap("HoneypotId")
     public String honeypotId;
 
     /**
      * <p>The port ID of the probe service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1906</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</p>
-     * <br>
-     * <p>>  We recommend that you do not leave this parameter empty.</p>
+     * <blockquote>
+     * <p> We recommend that you do not leave this parameter empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ports that are monitored.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;tcp\&quot;:\&quot;1-65535\&quot;,\&quot;udp\&quot;:\&quot;1-65535\&quot;}</p>
      */
     @NameInMap("Ports")
     public String ports;
 
     /**
      * <p>The probe ID.</p>
-     * <br>
-     * <p>>  You can call the [ListHoneypotProbe](~~ListHoneypotProbe~~) operation to query the IDs of probes.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~ListHoneypotProbe~~">ListHoneypotProbe</a> operation to query the IDs of probes.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>36bad711-d1ac-4419-ac68-c1aa280f****</p>
      */
     @NameInMap("ProbeId")
     public String probeId;
@@ -84,6 +116,9 @@ public class UpdateHoneypotProbeBindRequest extends TeaModel {
 
     /**
      * <p>The status of the port.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("SetStatus")
     public Integer setStatus;
@@ -192,51 +227,75 @@ public class UpdateHoneypotProbeBindRequest extends TeaModel {
     public static class UpdateHoneypotProbeBindRequestBindPortList extends TeaModel {
         /**
          * <p>Specifies whether to bind a port. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("BindPort")
         public Boolean bindPort;
 
         /**
          * <p>The end port on which the probe monitors.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>81</p>
          */
         @NameInMap("EndPort")
         public Integer endPort;
 
         /**
          * <p>Specifies whether the port is fixed. Valid values:</p>
-         * <br>
-         * <p>*   **0**: no</p>
-         * <p>*   **1**: yes</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Fixed")
         public Boolean fixed;
 
         /**
          * <p>The UUID of the port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3183</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The type of the protocol. Valid values:</p>
-         * <br>
-         * <p>*   **tcp**</p>
-         * <p>*   **udp**</p>
+         * <ul>
+         * <li><strong>tcp</strong></li>
+         * <li><strong>udp</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         @NameInMap("Proto")
         public String proto;
 
         /**
          * <p>The start port on which the probe monitors.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>81</p>
          */
         @NameInMap("StartPort")
         public Integer startPort;
 
         /**
          * <p>The destination port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("TargetPort")
         public Integer targetPort;

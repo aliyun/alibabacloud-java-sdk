@@ -6,39 +6,61 @@ import com.aliyun.tea.*;
 public class ModifyVulWhitelistTargetRequest extends TeaModel {
     /**
      * <p>The ID of the whitelist.</p>
-     * <br>
-     * <p>>  You can call the [DescribeVulWhitelist](~~DescribeVulWhitelist~~) operation to query the IDs of whitelists.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeVulWhitelist~~">DescribeVulWhitelist</a> operation to query the IDs of whitelists.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2533681</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The reason why you add the server to the whitelist.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1221</p>
      */
     @NameInMap("Reason")
     public String reason;
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>42.120.75.150</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;
 
     /**
      * <p>The applicable scope of the whitelist. The value of this parameter is in the JSON format and contains the following fields:</p>
-     * <br>
-     * <p>*   **type**: the type of the applicable scope. Valid values:</p>
-     * <br>
-     * <p>    *   **GroupId**: the ID of a server group</p>
-     * <p>    *   **Uuid**: the UUID of a server</p>
-     * <br>
-     * <p>*   **uuids**: the UUIDs of servers</p>
-     * <br>
-     * <p>*   **groupIds**: the IDs of server groups</p>
-     * <br>
-     * <p>>  If you leave this parameter empty, all servers are added to the whitelist. If you set the **type** field to **GroupId**, you must also specify the **groupIds** field. If you set the **type** field to **Uuid**, you must also specify the **uuids** field.</p>
+     * <ul>
+     * <li><p><strong>type</strong>: the type of the applicable scope. Valid values:</p>
+     * <ul>
+     * <li><strong>GroupId</strong>: the ID of a server group</li>
+     * <li><strong>Uuid</strong>: the UUID of a server</li>
+     * </ul>
+     * </li>
+     * <li><p><strong>uuids</strong>: the UUIDs of servers</p>
+     * </li>
+     * <li><p><strong>groupIds</strong>: the IDs of server groups</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p> If you leave this parameter empty, all servers are added to the whitelist. If you set the <strong>type</strong> field to <strong>GroupId</strong>, you must also specify the <strong>groupIds</strong> field. If you set the <strong>type</strong> field to <strong>Uuid</strong>, you must also specify the <strong>uuids</strong> field.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *       &quot;type&quot;: &quot;GroupId&quot;,
+     *       &quot;uuids&quot;: [],
+     *       &quot;groupIds&quot;: [
+     *             10782678
+     *       ]
+     * }</p>
      */
     @NameInMap("TargetInfo")
     public String targetInfo;

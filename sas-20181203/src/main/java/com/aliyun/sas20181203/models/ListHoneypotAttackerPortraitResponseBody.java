@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
     /**
-     * <p>The status code that is returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * <p>The status code that is returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
@@ -24,6 +30,9 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
@@ -36,15 +45,22 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8A5A2DA6-67EA-5968-960F-6B20FD0C*****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -163,6 +179,9 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
     public static class ListHoneypotAttackerPortraitResponseBodyList extends TeaModel {
         /**
          * <p>The number of attacks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("AttackCount")
         public Integer attackCount;
@@ -181,6 +200,9 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
 
         /**
          * <p>The timestamp at which the attack was last detected. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1679896965</p>
          */
         @NameInMap("LastTime")
         public Long lastTime;
@@ -193,6 +215,9 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
 
         /**
          * <p>The attacker profile ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cd48604a-1694-4f03-ade0-ec6994c3****</p>
          */
         @NameInMap("PortraitId")
         public String portraitId;
@@ -269,24 +294,36 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
     public static class ListHoneypotAttackerPortraitResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

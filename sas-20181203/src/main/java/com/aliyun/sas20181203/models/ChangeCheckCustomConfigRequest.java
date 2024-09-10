@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class ChangeCheckCustomConfigRequest extends TeaModel {
     /**
      * <p>The ID of the check item.</p>
-     * <br>
-     * <p>> You can call the [ListCheckResult](~~ListCheckResult~~) operation to query the IDs of check items.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to query the IDs of check items.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>76</p>
      */
     @NameInMap("CheckId")
     public Long checkId;
@@ -20,13 +24,20 @@ public class ChangeCheckCustomConfigRequest extends TeaModel {
 
     /**
      * <p>The region where the Security Center instance is deployed. Valid values:</p>
-     * <br>
-     * <p>*   **cn-hangzhou**: International</p>
-     * <p>*   **ap-southeast-1**: Singapore</p>
+     * <ul>
+     * <li><strong>cn-hangzhou</strong>: International</li>
+     * <li><strong>ap-southeast-1</strong>: Singapore</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The parameters required for fixing risk items.</p>
+     */
     @NameInMap("RepairConfigs")
     public java.util.List<ChangeCheckCustomConfigRequestRepairConfigs> repairConfigs;
 
@@ -70,18 +81,27 @@ public class ChangeCheckCustomConfigRequest extends TeaModel {
     public static class ChangeCheckCustomConfigRequestCustomConfigs extends TeaModel {
         /**
          * <p>The name of the custom configuration item. The name of a custom configuration item is unique in a check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SessionTimeMax</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The operation that you want to perform on the custom configuration item. This parameter is required only if you want to delete the custom configuration item. To delete the custom configuration item, set the value to DELETE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DELETE</p>
          */
         @NameInMap("Operation")
         public String operation;
 
         /**
          * <p>The value of the custom configuration item. The value is a string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13</p>
          */
         @NameInMap("Value")
         public String value;
@@ -118,15 +138,39 @@ public class ChangeCheckCustomConfigRequest extends TeaModel {
     }
 
     public static class ChangeCheckCustomConfigRequestRepairConfigs extends TeaModel {
+        /**
+         * <p>The ID of the fixing process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ascgrmscyjgs*********</p>
+         */
         @NameInMap("FlowId")
         public String flowId;
 
+        /**
+         * <p>The name of the parameter required for fixing a risk item, which is unique in a check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Port</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The operation that you want to perform on the custom configuration item. This parameter is required only if you want to delete the custom configuration item. To delete the custom configuration item, set the value to DELETE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DELETE</p>
+         */
         @NameInMap("Operation")
         public String operation;
 
+        /**
+         * <p>The value of the parameter required for fixing a risk item. The value is a string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("Value")
         public String value;
 

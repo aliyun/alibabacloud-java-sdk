@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class InstallHybridProxyResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E55BE5DB-E2DF-57EB-A0C5-7A85EEA67A4C</p>
      */
     @NameInMap("RequestId")
     public String requestId;

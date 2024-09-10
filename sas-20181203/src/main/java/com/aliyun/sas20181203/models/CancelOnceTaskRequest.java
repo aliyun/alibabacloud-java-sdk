@@ -6,10 +6,13 @@ import com.aliyun.tea.*;
 public class CancelOnceTaskRequest extends TeaModel {
     /**
      * <p>The ID of the task.</p>
-     * <br>
-     * <p>>  You can call the [GenerateOnceTask](~~GenerateOnceTask~~) operation to query the IDs of tasks.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="~~GenerateOnceTask~~">GenerateOnceTask</a> operation to query the IDs of tasks.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ec9c0d88f36cc27765a98c554ee2****</p>
      */
     @NameInMap("TaskId")
     public String taskId;

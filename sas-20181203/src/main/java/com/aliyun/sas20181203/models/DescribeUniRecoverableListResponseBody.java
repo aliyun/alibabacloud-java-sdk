@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeUniRecoverableListResponseBody extends TeaModel {
     /**
      * <p>The number of entries returned on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("Count")
     public Integer count;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The name of the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>msdb</p>
      */
     @NameInMap("Database")
     public String database;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -36,12 +48,18 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F35F45B0-5D6B-4238-BE02-A62D0760****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -110,33 +128,55 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
     public static class DescribeUniRecoverableListResponseBodyRecoverableInfoList extends TeaModel {
         /**
          * <p>The timestamp of the first backup. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1671468180000</p>
          */
         @NameInMap("FirstTime")
         public Long firstTime;
 
         /**
          * <p>The timestamp of the last backup. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1671468180000</p>
          */
         @NameInMap("LastTime")
         public Long lastTime;
 
         /**
          * <p>The identifier of the point in time for restoration in the backup version that is used. The database is an Oracle database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4529940.0</p>
          */
         @NameInMap("ResetScn")
         public String resetScn;
 
         /**
          * <p>The point in time for restoration in the backup version that is used. The database is an Oracle database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-30 08:04:36</p>
          */
         @NameInMap("ResetTime")
         public Long resetTime;
 
         /**
          * <p>The information about the database. This parameter is available when the database is a Microsoft SQL Server (MSSQL) database. The value is a JSON string. Valid values:</p>
-         * <br>
-         * <p>*   **name**: the name of the database</p>
-         * <p>*   **files**: the path to the database files</p>
+         * <ul>
+         * <li><strong>name</strong>: the name of the database</li>
+         * <li><strong>files</strong>: the path to the database files</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;files&quot;: {
+         *             &quot;qtc&quot;: &quot;F:\\database\\qtc.mdf&quot;,
+         *             &quot;qtc_log&quot;: &quot;F:\\database\\qtc_0.ldf&quot;
+         *       },
+         *       &quot;name&quot;: &quot;qtc&quot;
+         * }</p>
          */
         @NameInMap("RestoreInfo")
         public String restoreInfo;

@@ -6,42 +6,57 @@ import com.aliyun.tea.*;
 public class DescribeOnceTaskLeafRecordPageRequest extends TeaModel {
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The end timestamp of the sub-task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1668064495000</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>The number of entries to return on each page. Default value: 20</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>Specifies whether extension information is associated.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("RelateInfo")
     public Boolean relateInfo;
 
     /**
      * <p>The source of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>console_batch</p>
      */
     @NameInMap("Source")
     public String source;
 
     /**
      * <p>The start timestamp of the sub-task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1648438617000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
@@ -54,17 +69,23 @@ public class DescribeOnceTaskLeafRecordPageRequest extends TeaModel {
 
     /**
      * <p>The ID of the sub-task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1471d8ebb96795b41ede090b9758****</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
      * <p>The type of the sub-task. Valid values:</p>
-     * <br>
-     * <p>*   **IMAGE_SCAN**: image scan task</p>
-     * <p>*   **IMAGE_REGISTRY_PULL**: image asset synchronization task</p>
-     * <br>
+     * <ul>
+     * <li><strong>IMAGE_SCAN</strong>: image scan task</li>
+     * <li><strong>IMAGE_REGISTRY_PULL</strong>: image asset synchronization task</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CLIENT_PROBLEM_CHECK</p>
      */
     @NameInMap("TaskType")
     public String taskType;

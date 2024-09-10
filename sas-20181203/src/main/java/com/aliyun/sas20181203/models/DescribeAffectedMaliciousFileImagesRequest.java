@@ -6,151 +6,214 @@ import com.aliyun.tea.*;
 public class DescribeAffectedMaliciousFileImagesRequest extends TeaModel {
     /**
      * <p>The ID of the container cluster.</p>
-     * <br>
-     * <p>>  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>c60b77fe62093480db6164a3c2fa5****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The name of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>minikube</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
      * <p>The ID of the container.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc20a1024011c44b6a8710d6f8b****</p>
      */
     @NameInMap("ContainerId")
     public String containerId;
 
     /**
-     * <p>The number of the page to return. Pages start from page **1**. Default value: **1**.</p>
-     * <br>
+     * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The name of the container image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>registry.cn-wulanchabu.aliyuncs.com/sas_test/huxin-test-001:nuxeo6-****</p>
      */
     @NameInMap("Image")
     public String image;
 
     /**
      * <p>The image digest.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6a5e103187b31a94592a47a5858617f7a179ead61df7606****</p>
      */
     @NameInMap("ImageDigest")
     public String imageDigest;
 
     /**
      * <p>The image layer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>27213ad375b53628dd152a5ca****</p>
      */
     @NameInMap("ImageLayer")
     public String imageLayer;
 
     /**
      * <p>The tag that is added to the image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.2</p>
      */
     @NameInMap("ImageTag")
     public String imageTag;
 
     /**
      * <p>The language of the content within the request and the response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The severity level of the malicious image sample. Separate multiple severity levels with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **serious**</p>
-     * <p>*   **suspicious**</p>
-     * <p>*   **remind**</p>
+     * <ul>
+     * <li><strong>serious</strong></li>
+     * <li><strong>suspicious</strong></li>
+     * <li><strong>remind</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>serious,suspicious</p>
      */
     @NameInMap("Levels")
     public String levels;
 
     /**
      * <p>The MD5 hash value of the malicious image sample.</p>
-     * <br>
-     * <p>>  You can call the [DescribeGroupedMaliciousFiles](~~DescribeGroupedMaliciousFiles~~) operation to query the MD5 hash values of malicious image samples.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeGroupedMaliciousFiles~~">DescribeGroupedMaliciousFiles</a> operation to query the MD5 hash values of malicious image samples.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>d836968041f7683b5459****</p>
      */
     @NameInMap("MaliciousMd5")
     public String maliciousMd5;
 
     /**
      * <p>The namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-002</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **20**.</p>
-     * <br>
+     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The pod.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22222-7xsqq</p>
      */
     @NameInMap("Pod")
     public String pod;
 
     /**
      * <p>The ID of the image repository.</p>
-     * <br>
-     * <p>>  You can call the [ListRepository](https://help.aliyun.com/document_detail/451339.html) operation to query the IDs of image repositories from the value of the **RepoId** response parameter.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/451339.html">ListRepository</a> operation to query the IDs of image repositories from the value of the <strong>RepoId</strong> response parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>crr-vridcl4****</p>
      */
     @NameInMap("RepoId")
     public String repoId;
 
     /**
      * <p>The ID of the container image.</p>
-     * <br>
-     * <p>>  You can call the [ListRepository](https://help.aliyun.com/document_detail/451339.html) operation to query the IDs of container images from the value of the **InstanceId** response parameter.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/451339.html">ListRepository</a> operation to query the IDs of container images from the value of the <strong>InstanceId</strong> response parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-datvailb****</p>
      */
     @NameInMap("RepoInstanceId")
     public String repoInstanceId;
 
     /**
      * <p>The name of the image repository.</p>
-     * <br>
-     * <p>>  Fuzzy match is supported.</p>
+     * <blockquote>
+     * <p> Fuzzy match is supported.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>centos</p>
      */
     @NameInMap("RepoName")
     public String repoName;
 
     /**
      * <p>The namespace to which the image repository belongs.</p>
-     * <br>
-     * <p>>  Fuzzy match is supported.</p>
+     * <blockquote>
+     * <p> Fuzzy match is supported.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>hanghai-namespace</p>
      */
     @NameInMap("RepoNamespace")
     public String repoNamespace;
 
     /**
      * <p>The region ID of the image repository. Valid values:</p>
-     * <br>
-     * <p>*   **cn-beijing**: China (Beijing)</p>
-     * <p>*   **cn-zhangjiakou**: China (Zhangjiakou)</p>
-     * <p>*   **cn-hangzhou**: China (Hangzhou)</p>
-     * <p>*   **cn-shanghai**: China (Shanghai)</p>
-     * <p>*   **cn-shenzhen**: China (Shenzhen)</p>
-     * <p>*   **cn-hongkong**: China (Hong Kong)</p>
-     * <p>*   **ap-southeast-1**: Singapore</p>
-     * <p>*   **ap-southeast-5**: Indonesia (Jakarta)</p>
-     * <p>*   **us-east-1**: US (Virginia)</p>
-     * <p>*   **us-west-1**: US (Silicon Valley)</p>
-     * <p>*   **eu-central-1**: Germany (Frankfurt)</p>
-     * <p>*   **eu-west-1**: UK (London)</p>
-     * <p>*   **ap-south-1**: India (Mumbai)</p>
+     * <ul>
+     * <li><strong>cn-beijing</strong>: China (Beijing)</li>
+     * <li><strong>cn-zhangjiakou</strong>: China (Zhangjiakou)</li>
+     * <li><strong>cn-hangzhou</strong>: China (Hangzhou)</li>
+     * <li><strong>cn-shanghai</strong>: China (Shanghai)</li>
+     * <li><strong>cn-shenzhen</strong>: China (Shenzhen)</li>
+     * <li><strong>cn-hongkong</strong>: China (Hong Kong)</li>
+     * <li><strong>ap-southeast-1</strong>: Singapore</li>
+     * <li><strong>ap-southeast-5</strong>: Indonesia (Jakarta)</li>
+     * <li><strong>us-east-1</strong>: US (Virginia)</li>
+     * <li><strong>us-west-1</strong>: US (Silicon Valley)</li>
+     * <li><strong>eu-central-1</strong>: Germany (Frankfurt)</li>
+     * <li><strong>eu-west-1</strong>: UK (London)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RepoRegionId")
     public String repoRegionId;
@@ -163,11 +226,15 @@ public class DescribeAffectedMaliciousFileImagesRequest extends TeaModel {
 
     /**
      * <p>The status of the malicious image sample. Valid values:</p>
-     * <br>
-     * <p>*   **0**: The malicious image sample is not handled.</p>
-     * <p>*   **1**: The malicious image sample is handled.</p>
-     * <p>*   **2**: The malicious image sample is being verified.</p>
-     * <p>*   **3**: The malicious image sample is added to the whitelist.</p>
+     * <ul>
+     * <li><strong>0</strong>: The malicious image sample is not handled.</li>
+     * <li><strong>1</strong>: The malicious image sample is handled.</li>
+     * <li><strong>2</strong>: The malicious image sample is being verified.</li>
+     * <li><strong>3</strong>: The malicious image sample is added to the whitelist.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Status")
     public String status;

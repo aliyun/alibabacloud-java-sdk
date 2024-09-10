@@ -6,26 +6,39 @@ import com.aliyun.tea.*;
 public class GetOpaClusterNamespaceListRequest extends TeaModel {
     /**
      * <p>The ID of the cluster that you want to query.</p>
-     * <br>
-     * <p>>  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ca0faf43e33904ecbb6c695df7906****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The name of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sit</p>
      */
     @NameInMap("NameSpaceName")
     public String nameSpaceName;
 
     /**
-     * <p>The number of entries per page. Default value: **20**.</p>
+     * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

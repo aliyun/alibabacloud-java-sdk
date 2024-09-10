@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeVulConfigResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24A20733-10A0-4AF6-BE6B-E3322413BB68</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,6 +21,9 @@ public class DescribeVulConfigResponseBody extends TeaModel {
 
     /**
      * <p>The total number of configurations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -54,44 +60,58 @@ public class DescribeVulConfigResponseBody extends TeaModel {
     public static class DescribeVulConfigResponseBodyTargetConfigs extends TeaModel {
         /**
          * <p>The configuration of vulnerability scan.</p>
-         * <br>
-         * <p>> Valid values when you set the Type parameter to **cve**, **sys**, **cms**, **app**, **emg**, or **yum**:</p>
-         * <br>
-         * <p>*   **on**: enabled</p>
-         * <br>
-         * <p>*   **off**: disabled</p>
-         * <br>
-         * <p>Valid values when you set the Type parameter to **scanMode**:</p>
-         * <br>
-         * <p>*   **real**: displays easily exploitable vulnerability.</p>
-         * <br>
-         * <p>*   **all**: displays all vulnerabilities.</p>
-         * <br>
-         * <p>When you set the Type parameter to **imageVulClean**, the value of this parameter indicates the vulnerability retention period in days.</p>
+         * <blockquote>
+         * <p>Valid values when you set the Type parameter to <strong>cve</strong>, <strong>sys</strong>, <strong>cms</strong>, <strong>app</strong>, <strong>emg</strong>, or <strong>yum</strong>:</p>
+         * </blockquote>
+         * <ul>
+         * <li><p><strong>on</strong>: enabled</p>
+         * </li>
+         * <li><p><strong>off</strong>: disabled</p>
+         * </li>
+         * </ul>
+         * <p>Valid values when you set the Type parameter to <strong>scanMode</strong>:</p>
+         * <ul>
+         * <li><p><strong>real</strong>: displays easily exploitable vulnerability.</p>
+         * </li>
+         * <li><p><strong>all</strong>: displays all vulnerabilities.</p>
+         * </li>
+         * </ul>
+         * <p>When you set the Type parameter to <strong>imageVulClean</strong>, the value of this parameter indicates the vulnerability retention period in days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         @NameInMap("Config")
         public String config;
 
         /**
          * <p>Indicates whether the vulnerability management feature is enabled for all servers. Valid values:</p>
-         * <br>
-         * <p>*   **off**: disabled</p>
-         * <p>*   **on**: enabled</p>
+         * <ul>
+         * <li><strong>off</strong>: disabled</li>
+         * <li><strong>on</strong>: enabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("OverAllConfig")
         public String overAllConfig;
 
         /**
          * <p>The type of configuration. Valid values:</p>
-         * <br>
-         * <p>*   **cve**: Linux software vulnerability.</p>
-         * <p>*   **sys**: Windows system vulnerability.</p>
-         * <p>*   **cms**: Web-CMS vulnerability.</p>
-         * <p>*   **app**: application vulnerability that is detected by using web scanner.</p>
-         * <p>*   **emg**: urgent vulnerability.</p>
-         * <p>*   **scanMode**: displays easily exploitable vulnerability.</p>
-         * <p>*   **imageVulClean**: vulnerability retention duration.</p>
-         * <p>*   **yum**: preferentially uses YUM or APT sources of Alibaba Cloud to fix vulnerabilities.</p>
+         * <ul>
+         * <li><strong>cve</strong>: Linux software vulnerability.</li>
+         * <li><strong>sys</strong>: Windows system vulnerability.</li>
+         * <li><strong>cms</strong>: Web-CMS vulnerability.</li>
+         * <li><strong>app</strong>: application vulnerability that is detected by using web scanner.</li>
+         * <li><strong>emg</strong>: urgent vulnerability.</li>
+         * <li><strong>scanMode</strong>: displays easily exploitable vulnerability.</li>
+         * <li><strong>imageVulClean</strong>: vulnerability retention duration.</li>
+         * <li><strong>yum</strong>: preferentially uses YUM or APT sources of Alibaba Cloud to fix vulnerabilities.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cve</p>
          */
         @NameInMap("Type")
         public String type;

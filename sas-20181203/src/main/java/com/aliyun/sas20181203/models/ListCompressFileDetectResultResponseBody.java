@@ -7,6 +7,10 @@ public class ListCompressFileDetectResultResponseBody extends TeaModel {
     @NameInMap("PageInfo")
     public ListCompressFileDetectResultResponseBodyPageInfo pageInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E10BAF1C-A6C5-51E2-866C-76D5922E****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,12 +47,24 @@ public class ListCompressFileDetectResultResponseBody extends TeaModel {
     }
 
     public static class ListCompressFileDetectResultResponseBodyPageInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>55</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -84,21 +100,60 @@ public class ListCompressFileDetectResultResponseBody extends TeaModel {
     }
 
     public static class ListCompressFileDetectResultResponseBodyResultList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;HighLight&quot;:
+         *     [
+         *         [
+         *             23245,
+         *             23212
+         *         ]
+         *     ],
+         *     &quot;FileLabel&quot;:
+         *     [
+         *         &quot;PE32&quot;,
+         *         &quot;Zip&quot;,
+         *         &quot;SFX&quot;,
+         *         &quot;encrypted&quot;
+         *     ]
+         * }</p>
+         */
         @NameInMap("Ext")
         public String ext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0a212417e65c26ff133cfff28f6c****</p>
+         */
         @NameInMap("HashKey")
         public String hashKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/root/1.zip/test****</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Result")
         public Integer result;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Score")
         public Integer score;
 
+        /**
+         * <strong>example:</strong>
+         * <p>WebShell</p>
+         */
         @NameInMap("VirusType")
         public String virusType;
 

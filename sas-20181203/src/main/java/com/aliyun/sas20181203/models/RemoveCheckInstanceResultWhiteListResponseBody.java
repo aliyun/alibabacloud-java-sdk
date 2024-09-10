@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RemoveCheckInstanceResultWhiteListResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F156EA41-8EEF-54B2-908B-EAE071XXXXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;

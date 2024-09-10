@@ -5,24 +5,35 @@ import com.aliyun.tea.*;
 
 public class DescribeTotalStatisticsRequest extends TeaModel {
     /**
-     * <p>The source of data. Default value: **aqs**. Valid values:</p>
-     * <br>
-     * <p>*   **sas**: Security Center</p>
-     * <p>*   **aqs**: Server Guard</p>
+     * <p>The source of data. Default value: <strong>aqs</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>sas</strong>: Security Center</li>
+     * <li><strong>aqs</strong>: Server Guard</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>sas</p>
      */
     @NameInMap("From")
     public String from;
 
     /**
      * <p>The ID of the asset group.</p>
-     * <br>
-     * <p>> You can call the [DescribeAllGroups](https://help.aliyun.com/document_detail/130972.html) operation to query the IDs of asset groups.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/130972.html">DescribeAllGroups</a> operation to query the IDs of asset groups.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>8076980</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
 
     /**
      * <p>The name or public IP address of the asset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>222.185.XX.XX</p>
      */
     @NameInMap("Remark")
     public String remark;

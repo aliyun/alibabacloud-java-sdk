@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteAntiBruteForceRuleResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FBBEB173-1F43-505F-A876-C03ECDF6CE4C</p>
      */
     @NameInMap("RequestId")
     public String requestId;

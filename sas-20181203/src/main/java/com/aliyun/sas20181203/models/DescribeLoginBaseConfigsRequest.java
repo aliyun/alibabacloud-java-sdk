@@ -5,42 +5,59 @@ import com.aliyun.tea.*;
 
 public class DescribeLoginBaseConfigsRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **5**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>5</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The server to which the configuration is applied. The value of this parameter is in the JSON format and contains the following fields:</p>
-     * <br>
-     * <p>*   **Target**: the UUID or group ID of the server to add or delete.</p>
-     * <br>
-     * <p>> If targetType is set to uuid, the value of Target is the UUID of the server. If targetType is set to groupId, the value of Target is the group ID of the server. If targetType is set to global, the value of Target is a hyphen (-).</p>
-     * <br>
-     * <p>*   **targetType**: the type of the server to which the configuration is applied. Valid values:</p>
-     * <br>
-     * <p>    *   **uuid**: a server</p>
-     * <p>    *   **groupId**: a server group</p>
-     * <p>    *   **global**: all servers</p>
+     * <ul>
+     * <li><strong>Target</strong>: the UUID or group ID of the server to add or delete.</li>
+     * </ul>
+     * <blockquote>
+     * <p>If targetType is set to uuid, the value of Target is the UUID of the server. If targetType is set to groupId, the value of Target is the group ID of the server. If targetType is set to global, the value of Target is a hyphen (-).</p>
+     * </blockquote>
+     * <ul>
+     * <li><p><strong>targetType</strong>: the type of the server to which the configuration is applied. Valid values:</p>
+     * <ul>
+     * <li><strong>uuid</strong>: a server</li>
+     * <li><strong>groupId</strong>: a server group</li>
+     * <li><strong>global</strong>: all servers</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[ {&quot;target&quot;: &quot;inet-7c676676-06fa-442e-90fb-b802e5d6****&quot;, &quot;targetType&quot;: &quot;uuid&quot; } ]</p>
      */
     @NameInMap("Target")
     public String target;
 
     /**
      * <p>The logon type of the configuration to query. Valid values:</p>
-     * <br>
-     * <p>*   **login_common_location**: common logon location</p>
-     * <p>*   **login_common_ip**: common logon IP address</p>
-     * <p>*   **login_common_time**: common logon time range</p>
-     * <p>*   **login_common_account**: common logon account</p>
-     * <br>
+     * <ul>
+     * <li><strong>login_common_location</strong>: common logon location</li>
+     * <li><strong>login_common_ip</strong>: common logon IP address</li>
+     * <li><strong>login_common_time</strong>: common logon time range</li>
+     * <li><strong>login_common_account</strong>: common logon account</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>login_common_location</p>
      */
     @NameInMap("Type")
     public String type;

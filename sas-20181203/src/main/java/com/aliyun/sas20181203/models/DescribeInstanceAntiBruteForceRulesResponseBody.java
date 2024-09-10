@@ -12,6 +12,9 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>97286A-4A6B-4A4-95FA-EC7E3E2451</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +57,36 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
     public static class DescribeInstanceAntiBruteForceRulesResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of servers returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of servers returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -118,18 +133,27 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
     public static class DescribeInstanceAntiBruteForceRulesResponseBodyRules extends TeaModel {
         /**
          * <p>The ID of the defense rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>215779601</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name of the defense rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestRule</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The UUID of the server to which the defense rule is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4fe8e1cd-3c37-4851-b9de-124da32c****</p>
          */
         @NameInMap("Uuid")
         public String uuid;

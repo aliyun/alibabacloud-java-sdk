@@ -12,22 +12,35 @@ public class CreateOpaStrategyNewShrinkRequest extends TeaModel {
 
     /**
      * <p>The cluster ID.</p>
-     * <br>
-     * <p>> This parameter is deprecated.</p>
+     * <blockquote>
+     * <p>This parameter is deprecated.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cfa7e2fb8c221483ba59e098c34c6****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The cluster name.</p>
-     * <br>
-     * <p>> This parameter is deprecated.</p>
+     * <blockquote>
+     * <p>This parameter is deprecated.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
      * <p>The rule description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default policy</p>
      */
     @NameInMap("Description")
     public String description;
@@ -46,19 +59,27 @@ public class CreateOpaStrategyNewShrinkRequest extends TeaModel {
 
     /**
      * <p>Specifies whether the rule supports malicious Internet images. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("MaliciousImage")
     public Boolean maliciousImage;
 
     /**
      * <p>The action that is performed when the rule is hit. Valid values:</p>
-     * <br>
-     * <p>*   **1**: trigger alerts</p>
-     * <p>*   **2**: block</p>
-     * <p>*   **3**: allow</p>
+     * <ul>
+     * <li><strong>1</strong>: trigger alerts</li>
+     * <li><strong>2</strong>: block</li>
+     * <li><strong>3</strong>: allow</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("RuleAction")
     public Integer ruleAction;
@@ -71,33 +92,49 @@ public class CreateOpaStrategyNewShrinkRequest extends TeaModel {
 
     /**
      * <p>The rule ID.</p>
-     * <br>
-     * <p>>  You can call the [ListOpaClusterStrategyNew](https://help.aliyun.com/document_detail/2623574.html) operation to query the rule ID.</p>
-     * <br>
-     * <p>> This parameter is invalid when you create a rule.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2623574.html">ListOpaClusterStrategyNew</a> operation to query the rule ID.</p>
+     * </blockquote>
+     * <blockquote>
+     * <p>This parameter is invalid when you create a rule.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>16</p>
      */
     @NameInMap("StrategyId")
     public Long strategyId;
 
     /**
      * <p>The rule name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("StrategyName")
     public String strategyName;
 
     /**
      * <p>The ID of the rule template.</p>
-     * <br>
-     * <p>>  You can call the [GetOpaStrategyTemplateSummary](https://help.aliyun.com/document_detail/2539952.html) operation to query the ID of the rule template.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2539952.html">GetOpaStrategyTemplateSummary</a> operation to query the ID of the rule template.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>109</p>
      */
     @NameInMap("StrategyTemplateId")
     public Long strategyTemplateId;
 
     /**
      * <p>Specifies whether the rule supports unscanned images. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("UnScanedImage")
     public Boolean unScanedImage;
@@ -228,33 +265,46 @@ public class CreateOpaStrategyNewShrinkRequest extends TeaModel {
     public static class CreateOpaStrategyNewShrinkRequestScopes extends TeaModel {
         /**
          * <p>The ID of the cluster node to which the rule is applied.</p>
-         * <br>
-         * <p>> This parameter is not required when you create the instance.</p>
+         * <blockquote>
+         * <p>This parameter is not required when you create the instance.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ack-p-1</p>
          */
         @NameInMap("AckPolicyInstanceId")
         public String ackPolicyInstanceId;
 
         /**
          * <p>Specifies whether to include all namespaces. Valid values:</p>
-         * <br>
-         * <p>*   **1**: includes all namespaces.</p>
-         * <p>*   **0**: does not include all namespaces.</p>
+         * <ul>
+         * <li><strong>1</strong>: includes all namespaces.</li>
+         * <li><strong>0</strong>: does not include all namespaces.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AllNamespace")
         public Integer allNamespace;
 
         /**
          * <p>The ID of the cluster that is specified in the rule.</p>
-         * <br>
-         * <p>>  You can call the [DescribeGroupedContainerInstances](https://help.aliyun.com/document_detail/421736.html) operation to query the cluster ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/421736.html">DescribeGroupedContainerInstances</a> operation to query the cluster ID.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cc50d***015d2</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The namespaces.</p>
-         * <br>
-         * <p>> This parameter is valid only when the AllNamespace parameter is set to 0.</p>
+         * <blockquote>
+         * <p>This parameter is valid only when the AllNamespace parameter is set to 0.</p>
+         * </blockquote>
          */
         @NameInMap("NamespaceList")
         public java.util.List<String> namespaceList;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyTagWithUuidResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>70C4B40D-D55E-4B7B-9992-8535E396B2F4</p>
      */
     @NameInMap("RequestId")
     public String requestId;

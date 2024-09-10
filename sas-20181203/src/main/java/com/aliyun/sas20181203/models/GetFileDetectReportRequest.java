@@ -6,44 +6,61 @@ import com.aliyun.tea.*;
 public class GetFileDetectReportRequest extends TeaModel {
     /**
      * <p>The event ID that corresponds to the file to be detected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>81****</p>
      */
     @NameInMap("EventId")
     public Long eventId;
 
     /**
      * <p>The field that you want to query. You can enter multiple fields and separate them with commas (,).</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   **ThreatTypes**: the type of the threat intelligence event</p>
-     * <p>*   **Intelligences**: the threat intelligence event</p>
-     * <p>*   **ThreatLevel**: the level of the threat intelligence event</p>
-     * <p>*   **Basic**: the basic information about the report (the scan result)</p>
-     * <p>*   **Sandbox**: the cloud sandbox check report</p>
+     * <ul>
+     * <li><strong>ThreatTypes</strong>: the type of the threat intelligence event</li>
+     * <li><strong>Intelligences</strong>: the threat intelligence event</li>
+     * <li><strong>ThreatLevel</strong>: the level of the threat intelligence event</li>
+     * <li><strong>Basic</strong>: the basic information about the report (the scan result)</li>
+     * <li><strong>Sandbox</strong>: the cloud sandbox check report</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Basic,,ThreatTypes,Intelligences,Sandbox</p>
      */
     @NameInMap("Field")
     public String field;
 
     /**
      * <p>The hash value of the file to be detected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b63917332950e5d219d0737ffe31****</p>
      */
     @NameInMap("FileHash")
     public String fileHash;
 
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The data source type. Valid values:</p>
-     * <br>
-     * <p>*   **machine**: host alerts</p>
-     * <p>*   **object_scan**: file detection alerts</p>
+     * <ul>
+     * <li><strong>machine</strong>: host alerts</li>
+     * <li><strong>object_scan</strong>: file detection alerts</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>object_scan</p>
      */
     @NameInMap("SourceType")
     public String sourceType;

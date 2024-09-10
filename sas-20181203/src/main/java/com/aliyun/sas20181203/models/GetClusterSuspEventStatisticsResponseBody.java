@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetClusterSuspEventStatisticsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACF97412-FD09-4D1F-994F-34DF12BR****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class GetClusterSuspEventStatisticsResponseBody extends TeaModel {
     public static class GetClusterSuspEventStatisticsResponseBodySuspStatistics extends TeaModel {
         /**
          * <p>The number of alerts whose Emergency level is Reminder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Remind")
         public Integer remind;
 
         /**
          * <p>The number of alerts whose Emergency level is Urgent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Serious")
         public Integer serious;
 
         /**
          * <p>The number of alerts whose Emergency level is Suspicious.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Suspicious")
         public Integer suspicious;

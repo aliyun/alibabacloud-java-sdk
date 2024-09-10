@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class OperateApplicationRequest extends TeaModel {
     /**
      * <p>The container application that is protected from being tampered with.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ContainerWebDefenseApplicationDTOS")
@@ -14,8 +13,10 @@ public class OperateApplicationRequest extends TeaModel {
 
     /**
      * <p>The ID of the rule.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300566</p>
      */
     @NameInMap("RuleId")
     public Long ruleId;
@@ -44,35 +45,46 @@ public class OperateApplicationRequest extends TeaModel {
     public static class OperateApplicationRequestContainerWebDefenseApplicationDTOS extends TeaModel {
         /**
          * <p>The ID of the cluster to which the container belongs.</p>
-         * <br>
-         * <p>>  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the cluster ID.</p>
-         * <br>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the cluster ID.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ceb68cc58234141828677e383bd21ff0c</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>Specifies whether to apply the configuration to the asset. Valid values:</p>
-         * <br>
-         * <p>*   **add**: applied</p>
-         * <p>*   **del**: not applied</p>
-         * <br>
+         * <ul>
+         * <li><strong>add</strong>: applied</li>
+         * <li><strong>del</strong>: not applied</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>add</p>
          */
         @NameInMap("Flag")
         public String flag;
 
         /**
          * <p>The application ID. If the application is newly added, you do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>196</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The value of the application tag.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app:app-003</p>
          */
         @NameInMap("Tag")
         public String tag;

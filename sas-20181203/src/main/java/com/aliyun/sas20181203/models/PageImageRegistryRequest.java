@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class PageImageRegistryRequest extends TeaModel {
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The number of entries to return on each page. Default value: 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The name of the image repository. Fuzzy match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asa</p>
      */
     @NameInMap("RegistryNameLike")
     public String registryNameLike;
@@ -36,6 +45,9 @@ public class PageImageRegistryRequest extends TeaModel {
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>140.207.XXX.XXX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

@@ -18,6 +18,9 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>49FDE92F-A0B8-56CC-B7A8-23B17646****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,62 +57,89 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
     public static class ListClusterInterceptionConfigResponseBodyClusterConfigList extends TeaModel {
         /**
          * <p>The status of the container firewall feature. Valid values:</p>
-         * <br>
-         * <p>*   **-1**: unknown</p>
-         * <p>*   **0**: abnormal</p>
-         * <p>*   **1**: normal</p>
-         * <p>*   **2**: normal to be confirmed</p>
+         * <ul>
+         * <li><strong>-1</strong>: unknown</li>
+         * <li><strong>0</strong>: abnormal</li>
+         * <li><strong>1</strong>: normal</li>
+         * <li><strong>2</strong>: normal to be confirmed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ClusterCNNFStatus")
         public Integer clusterCNNFStatus;
 
         /**
          * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c9051d30d8a044b4d99e1cb5d25ac****</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>container-opa-kill-02</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
 
         /**
          * <p>The type of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   **ManagedKubernetes**: managed Kubernetes cluster</p>
-         * <p>*   **NotManagedKubernetes**: non-managed Kubernetes cluster</p>
-         * <p>*   **PrivateKubernetes**: private cluster</p>
-         * <p>*   **kubernetes**: dedicated Kubernetes cluster</p>
-         * <p>*   **ask**: dedicated serverless Kubernetes (ASK) cluster</p>
+         * <ul>
+         * <li><strong>ManagedKubernetes</strong>: managed Kubernetes cluster</li>
+         * <li><strong>NotManagedKubernetes</strong>: non-managed Kubernetes cluster</li>
+         * <li><strong>PrivateKubernetes</strong>: private cluster</li>
+         * <li><strong>kubernetes</strong>: dedicated Kubernetes cluster</li>
+         * <li><strong>ask</strong>: dedicated serverless Kubernetes (ASK) cluster</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ManagedKubernetes</p>
          */
         @NameInMap("ClusterType")
         public String clusterType;
 
         /**
          * <p>The status of the defense rule. Valid values:</p>
-         * <br>
-         * <p>*   **0**: disabled</p>
-         * <p>*   **1**: enabled</p>
+         * <ul>
+         * <li><strong>0</strong>: disabled</li>
+         * <li><strong>1</strong>: enabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("InterceptionSwitch")
         public Integer interceptionSwitch;
 
         /**
          * <p>The number of defense rules that are in effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("OpenRuleCount")
         public Long openRuleCount;
 
         /**
          * <p>Indicates whether the container firewall feature is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("SupportCNNF")
         public Boolean supportCNNF;
 
         /**
          * <p>The total number of defense rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("TotalRuleCount")
         public Long totalRuleCount;
@@ -188,24 +218,36 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
     public static class ListClusterInterceptionConfigResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrrentPage")
         public Integer currrentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

@@ -18,6 +18,9 @@ public class DescribeDomainListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0B48AB3C-84FC-424D-A01D-B9270EF46038</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,12 +57,18 @@ public class DescribeDomainListResponseBody extends TeaModel {
     public static class DescribeDomainListResponseBodyDomainListResponseList extends TeaModel {
         /**
          * <p>The name of the domain or website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
          * <p>The IP addresses of the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.XX.XX,1.0.XX.XX</p>
          */
         @NameInMap("IpList")
         public String ipList;
@@ -90,24 +99,36 @@ public class DescribeDomainListResponseBody extends TeaModel {
     public static class DescribeDomainListResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page. Default value: **10**.</p>
+         * <p>The number of entries returned per page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

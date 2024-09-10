@@ -12,6 +12,9 @@ public class DescribeTraceInfoNodeResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F35F45B0-5D6B-4238-BE02-A62DXXXXXXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeTraceInfoNodeResponseBody extends TeaModel {
     public static class DescribeTraceInfoNodeResponseBodyNodePropertyList extends TeaModel {
         /**
          * <p>The name of the property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Incident</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The value of the property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alert</p>
          */
         @NameInMap("Value")
         public String value;
@@ -76,6 +85,9 @@ public class DescribeTraceInfoNodeResponseBody extends TeaModel {
     public static class DescribeTraceInfoNodeResponseBodyNode extends TeaModel {
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>login</p>
          */
         @NameInMap("Name")
         public String name;
@@ -88,6 +100,9 @@ public class DescribeTraceInfoNodeResponseBody extends TeaModel {
 
         /**
          * <p>The type of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alert</p>
          */
         @NameInMap("Type")
         public String type;

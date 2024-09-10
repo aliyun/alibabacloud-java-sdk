@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListFileProtectPluginStatusRequest extends TeaModel {
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Long currentPage;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The ID of the core file monitoring rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FILE_PROTECT_RULE_SWITCH_TYPE_1693474122927</p>
      */
     @NameInMap("SwitchId")
     public String switchId;

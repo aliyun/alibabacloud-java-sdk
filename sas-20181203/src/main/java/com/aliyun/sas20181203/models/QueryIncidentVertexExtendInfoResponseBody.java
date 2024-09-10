@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Count")
     public String count;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0BCDBBF1-0048-535A-8529-67EA0CD1A807</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -71,12 +81,18 @@ public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
     public static class QueryIncidentVertexExtendInfoResponseBodyVertexExtendInfoDisplayInfo extends TeaModel {
         /**
          * <p>The display name of the property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IDA</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The display value of the property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app:nxueo</p>
          */
         @NameInMap("Value")
         public String value;
@@ -107,27 +123,38 @@ public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
     public static class QueryIncidentVertexExtendInfoResponseBodyVertexExtendInfoNeighborList extends TeaModel {
         /**
          * <p>The number of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>Indicates whether more neighboring nodes exist. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         @NameInMap("HasMore")
         public Boolean hasMore;
 
         /**
          * <p>The node type. Valid values include but are not limited to:</p>
-         * <br>
-         * <p>*   **process**</p>
-         * <p>*   **file**</p>
-         * <p>*   **alert**</p>
-         * <p>*   **ip**</p>
-         * <p>*   **domain**</p>
+         * <ul>
+         * <li><strong>process</strong></li>
+         * <li><strong>file</strong></li>
+         * <li><strong>alert</strong></li>
+         * <li><strong>ip</strong></li>
+         * <li><strong>domain</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>alidetect</p>
          */
         @NameInMap("Type")
         public String type;
@@ -166,148 +193,223 @@ public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
     public static class QueryIncidentVertexExtendInfoResponseBodyVertexExtendInfoProperty extends TeaModel {
         /**
          * <p>The alert description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exploit</p>
          */
         @NameInMap("AlertDesc")
         public String alertDesc;
 
         /**
          * <p>The details of the alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("AlertDetail")
         public String alertDetail;
 
         /**
          * <p>The alert level. Valid values:</p>
-         * <br>
-         * <p>*   **serious**</p>
-         * <p>*   **suspicious**</p>
-         * <p>*   **remind**</p>
+         * <ul>
+         * <li><strong>serious</strong></li>
+         * <li><strong>suspicious</strong></li>
+         * <li><strong>remind</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>serious</p>
          */
         @NameInMap("AlertLevel")
         public String alertLevel;
 
         /**
          * <p>The alert name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pt_device_in_bps_down_alert</p>
          */
         @NameInMap("AlertName")
         public String alertName;
 
         /**
          * <p>The code of the alert name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6367</p>
          */
         @NameInMap("AlertNameCode")
         public String alertNameCode;
 
         /**
          * <p>The alert name. The value is in English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>attack_alert</p>
          */
         @NameInMap("AlertNameEn")
         public String alertNameEn;
 
         /**
          * <p>The service that generates the alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         @NameInMap("AlertSrcProd")
         public String alertSrcProd;
 
         /**
          * <p>The module of the service that generates the alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aegis</p>
          */
         @NameInMap("AlertSrcProdModule")
         public String alertSrcProdModule;
 
         /**
          * <p>The alert title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>login_common_account</p>
          */
         @NameInMap("AlertTitle")
         public String alertTitle;
 
         /**
          * <p>The alert type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>attack_alert</p>
          */
         @NameInMap("AlertType")
         public String alertType;
 
         /**
          * <p>The code of the alert type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>112</p>
          */
         @NameInMap("AlertTypeCode")
         public String alertTypeCode;
 
         /**
          * <p>The alert type. The value is in English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>attack_alert</p>
          */
         @NameInMap("AlertTypeEn")
         public String alertTypeEn;
 
         /**
          * <p>The alert ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alert-abc4990f2e1948eb960a2bb7ac0****</p>
          */
         @NameInMap("AlertUuid")
         public String alertUuid;
 
         /**
          * <p>The assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         @NameInMap("AssetList")
         public String assetList;
 
         /**
-         * <p>ATT\\&CK</p>
+         * <p>ATT\&amp;CK</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Keychain</p>
          */
         @NameInMap("AttCk")
         public String attCk;
 
         /**
          * <p>The code of the cloud service provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibaba_cloud</p>
          */
         @NameInMap("CloudCode")
         public String cloudCode;
 
         /**
          * <p>The instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *       &quot;003d544744249351****&quot;
+         * ]</p>
          */
         @NameInMap("EntityList")
         public String entityList;
 
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-24T10:13Z</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-08 20:06:07</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The time when the log was generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-24T10:13Z</p>
          */
         @NameInMap("LogTime")
         public String logTime;
 
         /**
          * <p>The log ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc4990f2e1948eb960a2bb7ac0f****</p>
          */
         @NameInMap("LogUuid")
         public String logUuid;
 
         /**
          * <p>The ID of the master account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>168370268****</p>
          */
         @NameInMap("MainUserId")
         public String mainUserId;
 
         /**
          * <p>The time when the alert was generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-24T10:13Z</p>
          */
         @NameInMap("OccurTime")
         public String occurTime;
 
         /**
          * <p>The ID of the sub-account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11689082709****</p>
          */
         @NameInMap("SubUserId")
         public String subUserId;
@@ -514,6 +616,9 @@ public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
     public static class QueryIncidentVertexExtendInfoResponseBodyVertexExtendInfo extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1168908270980461</p>
          */
         @NameInMap("Aliuid")
         public String aliuid;
@@ -526,21 +631,31 @@ public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
 
         /**
          * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1377</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The language of the content within the response. Valid values:</p>
-         * <br>
-         * <p>*   **zh**: Chinese</p>
-         * <p>*   **en**: English</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         @NameInMap("Lang")
         public String lang;
 
         /**
          * <p>The node name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oval:com.redhat.rhsa:def:20193878</p>
          */
         @NameInMap("Name")
         public String name;
@@ -553,6 +668,9 @@ public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
 
         /**
          * <p>The node properties. The value is in the text format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DIRECTORY</p>
          */
         @NameInMap("Properties")
         public String properties;
@@ -565,36 +683,52 @@ public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the rule for which the node was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400035</p>
          */
         @NameInMap("RuleId")
         public String ruleId;
 
         /**
          * <p>The time when the node was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-06 11:00:00</p>
          */
         @NameInMap("Time")
         public String time;
 
         /**
          * <p>The UNIX timestamp when the node was created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1645168444</p>
          */
         @NameInMap("Timestamp")
         public Long timestamp;
 
         /**
          * <p>The node type. Valid values include but are not limited to:</p>
-         * <br>
-         * <p>*   **process**</p>
-         * <p>*   **file**</p>
-         * <p>*   **alert**</p>
-         * <p>*   **ip**</p>
-         * <p>*   **domain**</p>
+         * <ul>
+         * <li><strong>process</strong></li>
+         * <li><strong>file</strong></li>
+         * <li><strong>alert</strong></li>
+         * <li><strong>ip</strong></li>
+         * <li><strong>domain</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cve</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The node UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>678e29f4-d78f-4a7c-a2bc-38434a138538</p>
          */
         @NameInMap("Uuid")
         public String uuid;

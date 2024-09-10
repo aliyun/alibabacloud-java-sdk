@@ -6,25 +6,35 @@ import com.aliyun.tea.*;
 public class DisableBruteForceRecordRequest extends TeaModel {
     /**
      * <p>The IP address that you want to specify in the policy.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8.210.XX.XX</p>
      */
     @NameInMap("BlockIp")
     public String blockIp;
 
     /**
      * <p>The traffic direction that you want to specify in the policy. Valid values:</p>
-     * <br>
-     * <p>*   **in**: inbound</p>
-     * <p>*   **out**: outbound</p>
+     * <ul>
+     * <li><strong>in</strong>: inbound</li>
+     * <li><strong>out</strong>: outbound</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>in</p>
      */
     @NameInMap("Bound")
     public String bound;
 
     /**
      * <p>The ID of the IP address blocking policy.</p>
-     * <br>
-     * <p>> You can call the [DescribeBruteForceRecords](~~DescribeBruteForceRecords~~) operation to query the policy ID.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeBruteForceRecords~~">DescribeBruteForceRecords</a> operation to query the policy ID.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>114166XX</p>
      */
     @NameInMap("Id")
     public Long id;
@@ -40,8 +50,10 @@ public class DisableBruteForceRecordRequest extends TeaModel {
 
     /**
      * <p>The UUID of the server.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cbb9aa80-a8d1-443c-9ff0-2c36cd39****</p>
      */
     @NameInMap("Uuid")
     public String uuid;

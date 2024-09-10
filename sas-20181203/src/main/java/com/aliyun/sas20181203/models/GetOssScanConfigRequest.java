@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetOssScanConfigRequest extends TeaModel {
     /**
      * <p>The name of the bucket.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iboxpublic****</p>
      */
     @NameInMap("BucketName")
     public String bucketName;
 
     /**
      * <p>The ID of the policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Id")
     public String id;

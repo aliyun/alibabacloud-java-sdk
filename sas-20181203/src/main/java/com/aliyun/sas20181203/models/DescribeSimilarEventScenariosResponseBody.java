@@ -4,6 +4,10 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeSimilarEventScenariosResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>FDF7B8D9-8493-4B90-8D13-E0C1FFCE5F97</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class DescribeSimilarEventScenariosResponseBody extends TeaModel {
     }
 
     public static class DescribeSimilarEventScenariosResponseBodyScenarios extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>same_url</p>
+         */
         @NameInMap("Code")
         public String code;
 

@@ -12,6 +12,9 @@ public class DescribeNsasSuspEventTypeResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9FBC6E47-7508-58C9-9E76-528E118CB1CC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class DescribeNsasSuspEventTypeResponseBody extends TeaModel {
     public static class DescribeNsasSuspEventTypeResponseBodyEventTypes extends TeaModel {
         /**
          * <p>The name of the alert type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unusual Logon</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The number of assets for which an alert of the type is generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         @NameInMap("SuspEventCount")
         public Integer suspEventCount;
 
         /**
          * <p>The alert type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unusual Logon</p>
          */
         @NameInMap("Type")
         public String type;

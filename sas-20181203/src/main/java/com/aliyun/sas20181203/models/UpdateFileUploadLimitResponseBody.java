@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateFileUploadLimitResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>09969D2C-4FAD-429E-BFBF-9A60DEF8BF6F</p>
      */
     @NameInMap("RequestId")
     public String requestId;

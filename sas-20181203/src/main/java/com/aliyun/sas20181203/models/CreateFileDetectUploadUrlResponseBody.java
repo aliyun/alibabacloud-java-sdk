@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>09969D2C-4FAD-429E-BFBF-9A60DEF8BF6F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
     public static class CreateFileDetectUploadUrlResponseBodyUploadUrlListContext extends TeaModel {
         /**
          * <p>The AccessKey ID that is used to access the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LTAI4G1mgPbjvGQuiV1X****</p>
          */
         @NameInMap("AccessId")
         public String accessId;
 
         /**
          * <p>The key of the file that is used after the file is uploaded to the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1/2022/06/23/15/41/16559701077444693a0c6-33b2-4cc2-a99f-9f38b8b8****</p>
          */
         @NameInMap("OssKey")
         public String ossKey;
 
         /**
          * <p>The policy that poses limits on file upload. For example, the policy can limit the size of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJleHBpcmF0aW9uIjoiMjAyMi0wNy0yM1QxMDo1ODoxMC43NTNaIiwiY29uZGl0aW9ucyI6W1siY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsMjA5NzE1MjBdLFsiZXEiLCIka2V5IiwiMS8yMDIyLzA2LzIzLzE4LzU4LzE2NTU5ODE4OTA3NTM4NTc2MjFkNS1kN2E1LTQ5YzAtOGJjZi0yMTMyY2JiYTdmYzMi****</p>
          */
         @NameInMap("Policy")
         public String policy;
 
         /**
          * <p>The signature that is used to upload the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wDhPgVdnY/bkKFYcYFl+4crl****</p>
          */
         @NameInMap("Signature")
         public String signature;
@@ -103,7 +118,10 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
 
     public static class CreateFileDetectUploadUrlResponseBodyUploadUrlList extends TeaModel {
         /**
-         * <p>The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("Code")
         public String code;
@@ -116,39 +134,58 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
 
         /**
          * <p>The timestamp when the values of the parameters expire. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1658562101370</p>
          */
         @NameInMap("Expire")
         public String expire;
 
         /**
          * <p>Indicates whether the file exists in the cloud. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The file exists in the cloud. You do not need to upload the file.</p>
-         * <p>*   **false**: The file does not exist in the cloud. You must upload the file.</p>
+         * <ul>
+         * <li><strong>true</strong>: The file exists in the cloud. You do not need to upload the file.</li>
+         * <li><strong>false</strong>: The file does not exist in the cloud. You must upload the file.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("FileExist")
         public Boolean fileExist;
 
         /**
          * <p>The identifier of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a212417e65c26ff133cfff28f6c****</p>
          */
         @NameInMap("HashKey")
         public String hashKey;
 
         /**
          * <p>The internal endpoint of the URL to which the file is uploaded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example.com">http://example.com</a></p>
          */
         @NameInMap("InternalUrl")
         public String internalUrl;
 
         /**
          * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The public endpoint of the URL to which the file is uploaded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example.com">http://example.com</a></p>
          */
         @NameInMap("PublicUrl")
         public String publicUrl;

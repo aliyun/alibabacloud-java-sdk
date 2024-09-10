@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListInstanceCatalogResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0D42A83F-CE33-5F54-A5AE-05DA39F59E1B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
     public static class ListInstanceCatalogResponseBodyVendorsInstanceTypesInstanceSubTypes extends TeaModel {
         /**
          * <p>The name of the asset subtype.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SECURITY_GROUP</p>
          */
         @NameInMap("Name")
         public String name;
@@ -68,6 +74,9 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
 
         /**
          * <p>The name of the asset type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         @NameInMap("Name")
         public String name;
@@ -104,6 +113,9 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
 
         /**
          * <p>The name of the service provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN</p>
          */
         @NameInMap("Name")
         public String name;

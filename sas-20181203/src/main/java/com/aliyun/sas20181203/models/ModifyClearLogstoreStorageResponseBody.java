@@ -4,6 +4,10 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyClearLogstoreStorageResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>DC84C453-8561-5EC4-B0E9-44E67ACCB5B5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

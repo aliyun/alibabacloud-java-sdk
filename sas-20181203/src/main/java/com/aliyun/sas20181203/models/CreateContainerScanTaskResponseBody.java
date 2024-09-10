@@ -12,12 +12,18 @@ public class CreateContainerScanTaskResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9F4E6157-9600-5588-86B9-38F09067****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,54 +60,81 @@ public class CreateContainerScanTaskResponseBody extends TeaModel {
     public static class CreateContainerScanTaskResponseBodyData extends TeaModel {
         /**
          * <p>Indicates whether you can create more scan tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("CanCreate")
         public Boolean canCreate;
 
         /**
          * <p>The collection time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1644286364150</p>
          */
         @NameInMap("CollectTime")
         public Long collectTime;
 
         /**
          * <p>The execution time of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1644286364150</p>
          */
         @NameInMap("ExecTime")
         public Long execTime;
 
         /**
          * <p>The number of scan tasks that are complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33</p>
          */
         @NameInMap("FinishCount")
         public Integer finishCount;
 
         /**
          * <p>The progress of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Progress")
         public Integer progress;
 
         /**
          * <p>The execution result of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         @NameInMap("Result")
         public String result;
 
         /**
          * <p>The status of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fc98d58eb56f699d49bf7ebbd6d7****</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
          * <p>The total number of scan tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>62</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

@@ -6,10 +6,13 @@ import com.aliyun.tea.*;
 public class DescribeExportInfoRequest extends TeaModel {
     /**
      * <p>The ID of the export task.</p>
-     * <br>
-     * <p>> You can call the [ExportRecord](~~ExportRecord~~) operation to query the IDs of export tasks.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="~~ExportRecord~~">ExportRecord</a> operation to query the IDs of export tasks.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>111</p>
      */
     @NameInMap("ExportId")
     public Long exportId;

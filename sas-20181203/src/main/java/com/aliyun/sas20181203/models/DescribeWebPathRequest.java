@@ -6,20 +6,30 @@ import com.aliyun.tea.*;
 public class DescribeWebPathRequest extends TeaModel {
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The type of the alert configuration. Valid values:</p>
-     * <br>
-     * <p>*   **web_path**</p>
+     * <ul>
+     * <li><strong>web_path</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>web_path</p>
      */
     @NameInMap("Type")
     public String type;

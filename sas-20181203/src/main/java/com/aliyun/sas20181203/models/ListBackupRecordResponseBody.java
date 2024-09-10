@@ -18,6 +18,9 @@ public class ListBackupRecordResponseBody extends TeaModel {
 
     /**
      * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3956048F-9D73-5EDB-834B-4827BB48****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,94 +57,140 @@ public class ListBackupRecordResponseBody extends TeaModel {
     public static class ListBackupRecordResponseBodyBackupRecordList extends TeaModel {
         /**
          * <p>The timestamp when the backup task ended. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1699600611000</p>
          */
         @NameInMap("BackupEndTime")
         public Long backupEndTime;
 
         /**
          * <p>The backup task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a006f24d069843c88688672d74ee****</p>
          */
         @NameInMap("BackupJobId")
         public String backupJobId;
 
         /**
          * <p>The backup plan ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>plan-000c4tt43nolmx96****</p>
          */
         @NameInMap("BackupPlanId")
         public String backupPlanId;
 
         /**
          * <p>The timestamp when the backup task started. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1699514211000</p>
          */
         @NameInMap("BackupStartTime")
         public Long backupStartTime;
 
         /**
          * <p>The backup task status. Valid value:</p>
-         * <br>
-         * <p>*   **BACKUP_COMPLETE**: The backup task is successful.</p>
-         * <p>*   **BACKUP_FAILED**: The backup task failed.</p>
-         * <p>*   **PARTIAL_COMPLETE**: The backup task is partially successful.</p>
+         * <ul>
+         * <li><strong>BACKUP_COMPLETE</strong>: The backup task is successful.</li>
+         * <li><strong>BACKUP_FAILED</strong>: The backup task failed.</li>
+         * <li><strong>PARTIAL_COMPLETE</strong>: The backup task is partially successful.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BACKUP_COMPLETE</p>
          */
         @NameInMap("BackupStatus")
         public String backupStatus;
 
         /**
          * <p>The ID of the anti-ransomware agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-0002bgagelj3d2sc****</p>
          */
         @NameInMap("ClientId")
         public String clientId;
 
         /**
          * <p>The error code of the backup task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FILE_CACHE_NO_SPACE</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
          * <p>The error message of the backup task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FILE_CACHE_NO_SPACE</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The instance ID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-wz9ikn44p46krnic****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The instance name of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>openapi</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The public IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.1.1</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.1</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>The IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.1.1</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The ID of the region in which the backup is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The UUID of the server whose data is backed up based on the anti-ransomware policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b93cccb9-f19f-4886-97fe-47df26ba****</p>
          */
         @NameInMap("Uuid")
         public String uuid;
@@ -276,24 +325,36 @@ public class ListBackupRecordResponseBody extends TeaModel {
     public static class ListBackupRecordResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

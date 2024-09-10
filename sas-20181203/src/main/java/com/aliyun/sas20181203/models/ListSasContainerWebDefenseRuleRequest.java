@@ -6,36 +6,52 @@ import com.aliyun.tea.*;
 public class ListSasContainerWebDefenseRuleRequest extends TeaModel {
     /**
      * <p>The search conditions for assets. The value of this parameter is in the JSON format and contains the following fields:</p>
-     * <br>
-     * <p>*   **name**: the name of the search condition.</p>
-     * <br>
-     * <p>*   **value**: the value of the search condition.</p>
-     * <br>
-     * <p>*   **logicalExp**: the logical relation for multiple search conditions. Valid values:</p>
-     * <br>
-     * <p>    *   **OR**: The search conditions use a logical **OR**.</p>
-     * <p>    *   **AND**: The search conditions use a logical **AND**.</p>
+     * <ul>
+     * <li><p><strong>name</strong>: the name of the search condition.</p>
+     * </li>
+     * <li><p><strong>value</strong>: the value of the search condition.</p>
+     * </li>
+     * <li><p><strong>logicalExp</strong>: the logical relation for multiple search conditions. Valid values:</p>
+     * <ul>
+     * <li><strong>OR</strong>: The search conditions use a logical <strong>OR</strong>.</li>
+     * <li><strong>AND</strong>: The search conditions use a logical <strong>AND</strong>.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[{\&quot;name\&quot;:\&quot;ruleName\&quot;,\&quot;value\&quot;:\&quot;test-1818\&quot;,\&quot;logicalExp\&quot;:\&quot;AND\&quot;}]</p>
      */
     @NameInMap("Criteria")
     public String criteria;
 
     /**
      * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The logical relation for multiple search conditions. Valid values:</p>
-     * <br>
-     * <p>*   **OR**: The search conditions use a logical **OR**.</p>
-     * <p>*   **AND**: The search conditions use a logical **AND**.</p>
+     * <ul>
+     * <li><strong>OR</strong>: The search conditions use a logical <strong>OR</strong>.</li>
+     * <li><strong>AND</strong>: The search conditions use a logical <strong>AND</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OR</p>
      */
     @NameInMap("LogicalExp")
     public String logicalExp;
 
     /**
-     * <p>The number of entries per page. Default value: **20**.</p>
+     * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

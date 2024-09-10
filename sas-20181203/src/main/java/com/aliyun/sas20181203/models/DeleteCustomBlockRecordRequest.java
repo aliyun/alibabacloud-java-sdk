@@ -6,10 +6,13 @@ import com.aliyun.tea.*;
 public class DeleteCustomBlockRecordRequest extends TeaModel {
     /**
      * <p>The ID of the IP address blocking policy.</p>
-     * <br>
-     * <p>> You can call the [DescribeCustomBlockRecords](~~DescribeCustomBlockRecords~~) operation to query the ID.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeCustomBlockRecords~~">DescribeCustomBlockRecords</a> operation to query the ID.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>381**</p>
      */
     @NameInMap("Id")
     public Long id;

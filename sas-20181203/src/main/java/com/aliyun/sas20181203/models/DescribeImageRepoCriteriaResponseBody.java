@@ -12,6 +12,9 @@ public class DescribeImageRepoCriteriaResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F35F45B0-5D6B-4238-BE02-A62D0760E840</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,36 +43,48 @@ public class DescribeImageRepoCriteriaResponseBody extends TeaModel {
     public static class DescribeImageRepoCriteriaResponseBodyCriteriaList extends TeaModel {
         /**
          * <p>The name of the search condition. Valid values:</p>
-         * <br>
-         * <p>*   **instanceId**: the ID of the image instance.</p>
-         * <p>*   **repoName**: the name of the image repository.</p>
-         * <p>*   **repoId**: the ID of the image repository.</p>
-         * <p>*   **repoNamespace**: the namespace of the image repository.</p>
-         * <p>*   **regionId**: the region in which the image resides.</p>
-         * <p>*   **vulStatus**: indicates whether vulnerabilities exist.</p>
-         * <p>*   **alarmStatus**: indicates whether security alerts exist.</p>
-         * <p>*   **hcStatus**: indicates whether baseline risks exist.</p>
-         * <p>*   **riskStatus**: indicates whether risks exist.</p>
-         * <p>*   **registryType**: the type of the image repository.</p>
-         * <p>*   **ImageId**: the image ID.</p>
-         * <p>*   **tag**: the image tag.</p>
+         * <ul>
+         * <li><strong>instanceId</strong>: the ID of the image instance.</li>
+         * <li><strong>repoName</strong>: the name of the image repository.</li>
+         * <li><strong>repoId</strong>: the ID of the image repository.</li>
+         * <li><strong>repoNamespace</strong>: the namespace of the image repository.</li>
+         * <li><strong>regionId</strong>: the region in which the image resides.</li>
+         * <li><strong>vulStatus</strong>: indicates whether vulnerabilities exist.</li>
+         * <li><strong>alarmStatus</strong>: indicates whether security alerts exist.</li>
+         * <li><strong>hcStatus</strong>: indicates whether baseline risks exist.</li>
+         * <li><strong>riskStatus</strong>: indicates whether risks exist.</li>
+         * <li><strong>registryType</strong>: the type of the image repository.</li>
+         * <li><strong>ImageId</strong>: the image ID.</li>
+         * <li><strong>tag</strong>: the image tag.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>vulStatus</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The type of the search condition. Valid values:</p>
-         * <br>
-         * <p>*   **input**: The search condition needs to be specified.</p>
-         * <p>*   **select**: The search condition is an option that can be selected from the drop-down list.</p>
+         * <ul>
+         * <li><strong>input</strong>: The search condition needs to be specified.</li>
+         * <li><strong>select</strong>: The search condition is an option that can be selected from the drop-down list.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>select</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The values of the search condition. This parameter is returned only if the value of **Type** is set to **select**.</p>
-         * <br>
-         * <p>> If the value of **Type** is set to **input**, the return value of this parameter is empty.</p>
+         * <p>The values of the search condition. This parameter is returned only if the value of <strong>Type</strong> is set to <strong>select</strong>.</p>
+         * <blockquote>
+         * <p>If the value of <strong>Type</strong> is set to <strong>input</strong>, the return value of this parameter is empty.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>NO,YES</p>
          */
         @NameInMap("Values")
         public String values;

@@ -6,39 +6,51 @@ import com.aliyun.tea.*;
 public class DeleteBackupPolicyMachineRequest extends TeaModel {
     /**
      * <p>The ID of the anti-ransomware policy.</p>
-     * <br>
-     * <p>> You can call the [DescribeBackupPolicies](~~DescribeBackupPolicies~~) operation to query the IDs of anti-ransomware policies.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to query the IDs of anti-ransomware policies.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11</p>
      */
     @NameInMap("PolicyId")
     public Long policyId;
 
     /**
      * <p>The version of the anti-ransomware policy. Valid values:</p>
-     * <br>
-     * <p>*   **1.0.0**</p>
-     * <p>*   **2.0.0**</p>
-     * <br>
-     * <p>>  You can call the [DescribeBackupPolicies](~~DescribeBackupPolicies~~) operation to query the versions of anti-ransomware policies.</p>
-     * <br>
+     * <ul>
+     * <li><strong>1.0.0</strong></li>
+     * <li><strong>2.0.0</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to query the versions of anti-ransomware policies.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2.0.0</p>
      */
     @NameInMap("PolicyVersion")
     public String policyVersion;
 
     /**
      * <p>The UUID of the server to which the anti-ransomware policy is applied.</p>
-     * <br>
-     * <p>> You must specify at least one of the `UuidList` and `Uuid` parameters.</p>
+     * <blockquote>
+     * <p>You must specify at least one of the <code>UuidList</code> and <code>Uuid</code> parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>083036e9-8411-4a9d-83af-9acbd****</p>
      */
     @NameInMap("Uuid")
     public String uuid;
 
     /**
      * <p>The UUIDs of the servers to which the anti-ransomware policy is applied.</p>
-     * <br>
-     * <p>> You must specify at least one of the `UuidList` and `Uuid` parameters.</p>
+     * <blockquote>
+     * <p>You must specify at least one of the <code>UuidList</code> and <code>Uuid</code> parameters.</p>
+     * </blockquote>
      */
     @NameInMap("UuidList")
     public java.util.List<String> uuidList;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeClientConfStrategyResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5BD95679-D63A-4151-97D0-188432F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,6 +21,9 @@ public class DescribeClientConfStrategyResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -54,6 +60,9 @@ public class DescribeClientConfStrategyResponseBody extends TeaModel {
     public static class DescribeClientConfStrategyResponseBodyTargetList extends TeaModel {
         /**
          * <p>The UUID of the Security Center agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2b1753a6-04d9-448e-ad17-7abdf19f****</p>
          */
         @NameInMap("Uuid")
         public String uuid;

@@ -18,6 +18,9 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FA7F1F4-488D-52CA-9BFC-3E47793B49D1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +57,36 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
     public static class DescribePropertyPortDetailResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page. Default value: **10**.</p>
+         * <p>The number of entries returned per page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -118,72 +133,108 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
     public static class DescribePropertyPortDetailResponseBodyPropertys extends TeaModel {
         /**
          * <p>The IP address bound to the port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.X.X</p>
          */
         @NameInMap("BindIp")
         public String bindIp;
 
         /**
          * <p>The timestamp of the last fingerprint collection. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649149566000</p>
          */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
         /**
          * <p>The instance ID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-hp35tftuh52wbp1g****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The instance name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hc-host-****</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The public IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.104.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>The IP address of the network interface controller (NIC) that is bound to the listening port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The ID of the server process that listens on the port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>522</p>
          */
         @NameInMap("Pid")
         public String pid;
 
         /**
          * <p>The listener port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
          * <p>The name of the server process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sshd</p>
          */
         @NameInMap("ProcName")
         public String procName;
 
         /**
          * <p>The network protocol that is used by the listening port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         @NameInMap("Proto")
         public String proto;
 
         /**
          * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>162eb349-c2d9-4f8b-805c-75b43d4c****</p>
          */
         @NameInMap("Uuid")
         public String uuid;

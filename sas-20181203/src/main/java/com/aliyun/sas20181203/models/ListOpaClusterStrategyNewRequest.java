@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListOpaClusterStrategyNewRequest extends TeaModel {
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -24,6 +27,9 @@ public class ListOpaClusterStrategyNewRequest extends TeaModel {
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

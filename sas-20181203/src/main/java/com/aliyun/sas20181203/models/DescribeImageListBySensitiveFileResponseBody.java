@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
     /**
-     * <p>The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
@@ -24,6 +30,9 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
@@ -36,14 +45,22 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E0C5C07F-1576-509A-AE44-1C36B8445B37</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <p>- **true**: The request was successful.</p>
-     * <p>- **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -112,74 +129,109 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
     public static class DescribeImageListBySensitiveFileResponseBodyImageInfos extends TeaModel {
         /**
          * <p>The image digest.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v005</p>
          */
         @NameInMap("Digest")
         public String digest;
 
         /**
          * <p>The timestamp generated when the first scan was performed. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649814050000</p>
          */
         @NameInMap("FirstScanTime")
         public Long firstScanTime;
 
         /**
          * <p>The image instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-a595qp31knh9****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The timestamp when the last scan was performed. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649814050000</p>
          */
         @NameInMap("LastScanTime")
         public Long lastScanTime;
 
         /**
          * <p>The ID of the region in which the image instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The image repository name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>opa-test</p>
          */
         @NameInMap("RepoName")
         public String repoName;
 
         /**
          * <p>The namespace to which the image repository belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>libssh2</p>
          */
         @NameInMap("RepoNamespace")
         public String repoNamespace;
 
         /**
          * <p>The risk level. Valid values:</p>
-         * <br>
-         * <p>*   **high**</p>
-         * <p>*   **medium**</p>
-         * <p>*   **low**</p>
+         * <ul>
+         * <li><strong>high</strong></li>
+         * <li><strong>medium</strong></li>
+         * <li><strong>low</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>low</p>
          */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
         /**
          * <p>The sensitive file status. Valid values:</p>
-         * <br>
-         * <p>*   **0**: unhandled</p>
-         * <p>*   **1**: ignored</p>
-         * <p>*   **2**: false positive</p>
+         * <ul>
+         * <li><strong>0</strong>: unhandled</li>
+         * <li><strong>1</strong>: ignored</li>
+         * <li><strong>2</strong>: false positive</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The tag that is added to the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nuxeo6</p>
          */
         @NameInMap("Tag")
         public String tag;
 
         /**
          * <p>The image UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f58681174f944623345379e23b7b****</p>
          */
         @NameInMap("Uuid")
         public String uuid;
@@ -282,30 +334,45 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
     public static class DescribeImageListBySensitiveFileResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The key of the last data entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CAESGgoSChAKDGNvbXBsZXRlVGltZRABCgQiAggAGAAiQAoJAGYXFWIAAAAACjMDLgAAADFTNzMyZDMwMzAzMDM1Mzc3Njc4MzA2ODY5NmI2YTY1Nzg2NTcxNjE2NDc4NjE=</p>
          */
         @NameInMap("LastRowKey")
         public String lastRowKey;
 
         /**
          * <p>The number of entries returned per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

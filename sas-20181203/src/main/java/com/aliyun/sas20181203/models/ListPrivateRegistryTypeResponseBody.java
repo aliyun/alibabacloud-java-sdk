@@ -12,6 +12,9 @@ public class ListPrivateRegistryTypeResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24A20733-10A0-4AF6-BE6B-E3322413****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,17 +43,24 @@ public class ListPrivateRegistryTypeResponseBody extends TeaModel {
     public static class ListPrivateRegistryTypeResponseBodyRegistryTypeInfos extends TeaModel {
         /**
          * <p>The number of image repositories.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
          * <p>The name of the image repository type. Valid values:</p>
-         * <br>
-         * <p>*   **acr**: Container Registry</p>
-         * <p>*   **harbor**: Harbor</p>
-         * <p>*   **quay**: Quay</p>
-         * <p>*   **CI/CD**: Jenkins</p>
+         * <ul>
+         * <li><strong>acr</strong>: Container Registry</li>
+         * <li><strong>harbor</strong>: Harbor</li>
+         * <li><strong>quay</strong>: Quay</li>
+         * <li><strong>CI/CD</strong>: Jenkins</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>harbor</p>
          */
         @NameInMap("RegistryType")
         public String registryType;

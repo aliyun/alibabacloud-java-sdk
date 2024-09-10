@@ -5,29 +5,39 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityEventMarkMissListRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
-     * <br>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The name of the alert event. The value indicates a subtype.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Login with unusual location</p>
      */
     @NameInMap("EventName")
     public String eventName;
 
     /**
-     * <p>The number of entries per page. Default value: **20**.</p>
-     * <br>
+     * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The condition that is used to query alert events by asset. You can enter an IP address, a public IP address, an internal IP address, or an asset name for fuzzy match.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.XX.XX</p>
      */
     @NameInMap("Remark")
     public String remark;
@@ -37,6 +47,9 @@ public class DescribeSecurityEventMarkMissListRequest extends TeaModel {
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>125.210.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

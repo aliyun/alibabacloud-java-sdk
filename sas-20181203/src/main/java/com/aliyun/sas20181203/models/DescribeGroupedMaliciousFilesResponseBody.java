@@ -18,6 +18,9 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8045E03E-6D91-4C53-9F22-5A1B84BB29D9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,57 +57,83 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
     public static class DescribeGroupedMaliciousFilesResponseBodyGroupedMaliciousFileResponse extends TeaModel {
         /**
          * <p>The timestamp generated when the first scan was performed. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1594907349000</p>
          */
         @NameInMap("FirstScanTimestamp")
         public Long firstScanTimestamp;
 
         /**
          * <p>The number of affected images.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("ImageCount")
         public Long imageCount;
 
         /**
          * <p>The timestamp generated when the last scan was performed. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1596533942000</p>
          */
         @NameInMap("LatestScanTimestamp")
         public Long latestScanTimestamp;
 
         /**
          * <p>The severity of the malicious image sample. Valid values:</p>
-         * <br>
-         * <p>*   **serious**</p>
-         * <p>*   **suspicious**</p>
-         * <p>*   **remind**</p>
+         * <ul>
+         * <li><strong>serious</strong></li>
+         * <li><strong>suspicious</strong></li>
+         * <li><strong>remind</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>serious</p>
          */
         @NameInMap("Level")
         public String level;
 
         /**
          * <p>The keyword of the malicious image sample.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WEBSHELL_IMG</p>
          */
         @NameInMap("MaliciousKey")
         public String maliciousKey;
 
         /**
          * <p>The MD5 hash value of the malicious image sample.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d836968041f7683b5459****</p>
          */
         @NameInMap("MaliciousMd5")
         public String maliciousMd5;
 
         /**
          * <p>The name of the malicious image sample.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testFile</p>
          */
         @NameInMap("MaliciousName")
         public String maliciousName;
 
         /**
          * <p>The handling status of the malicious image sample. Valid values:</p>
-         * <br>
-         * <p>*   **0**: unhandled</p>
-         * <p>*   **1**: handled</p>
-         * <p>*   **2**: verifying</p>
-         * <p>*   **3**: whitelisted</p>
+         * <ul>
+         * <li><strong>0</strong>: unhandled</li>
+         * <li><strong>1</strong>: handled</li>
+         * <li><strong>2</strong>: verifying</li>
+         * <li><strong>3</strong>: whitelisted</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Status")
         public Integer status;
@@ -183,24 +212,36 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
     public static class DescribeGroupedMaliciousFilesResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page. Default value: **20**.</p>
+         * <p>The number of entries returned per page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

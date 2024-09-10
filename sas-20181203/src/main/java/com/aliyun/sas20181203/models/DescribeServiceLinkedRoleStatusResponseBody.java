@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeServiceLinkedRoleStatusResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>39CE98F4-88C0-4539-B906-6B542E5C07B9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,9 +43,13 @@ public class DescribeServiceLinkedRoleStatusResponseBody extends TeaModel {
     public static class DescribeServiceLinkedRoleStatusResponseBodyRoleStatus extends TeaModel {
         /**
          * <p>Indicates whether the service-linked role is created. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Status")
         public Boolean status;

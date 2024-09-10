@@ -12,19 +12,27 @@ public class UpdateAlarmEventRequest extends TeaModel {
 
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The operation that you want to perform on the alert events. Valid values:</p>
-     * <br>
-     * <p>*   **manual_handled**: handle the alert events.</p>
-     * <p>*   **ignore**: igore the alert events.</p>
-     * <p>*   **cancel_ignore**: remove the alert events from the whitelist.</p>
+     * <ul>
+     * <li><strong>manual_handled</strong>: handle the alert events.</li>
+     * <li><strong>ignore</strong>: igore the alert events.</li>
+     * <li><strong>cancel_ignore</strong>: remove the alert events from the whitelist.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ignore</p>
      */
     @NameInMap("OperationCode")
     public String operationCode;

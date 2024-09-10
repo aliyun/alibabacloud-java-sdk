@@ -26,60 +26,89 @@ public class BatchUpdateMaliciousFileWhitelistConfigRequest extends TeaModel {
     public static class BatchUpdateMaliciousFileWhitelistConfigRequestConfigList extends TeaModel {
         /**
          * <p>The ID of the whitelist rule. If you do not specify this parameter, a whitelist rule is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ConfigId")
         public Long configId;
 
         /**
          * <p>The name of the alert.</p>
-         * <br>
-         * <p>*   Set the value to **ALL**, which indicates all alert types.</p>
+         * <ul>
+         * <li>Set the value to <strong>ALL</strong>, which indicates all alert types.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         @NameInMap("EventName")
         public String eventName;
 
         /**
          * <p>The field that you want to use in the whitelist rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fileMd5</p>
          */
         @NameInMap("Field")
         public String field;
 
         /**
          * <p>The value of the field that you want to use in the whitelist rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b2cf9747ee49d8d9b105cf16e078cc16</p>
          */
         @NameInMap("FieldValue")
         public String fieldValue;
 
         /**
          * <p>The logical operator that you want to use in the whitelist rule.</p>
-         * <br>
-         * <p>*   Set the value to strEqual, which indicates the equality operator (=).</p>
+         * <ul>
+         * <li>Set the value to strEqual, which indicates the equality operator (=).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>strEqual</p>
          */
         @NameInMap("Operator")
         public String operator;
 
         /**
          * <p>The feature to which this operation belongs.</p>
-         * <br>
-         * <p>*   Set the value to agentless, which indicates the agentless detection feature.</p>
+         * <ul>
+         * <li>Set the value to agentless, which indicates the agentless detection feature.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>agentless</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
          * <p>The type of the assets on which you want the whitelist rule to take effect. Valid values:</p>
-         * <br>
-         * <p>*   ALL: all assets</p>
-         * <p>*   SELECTION_KEY: selected assets</p>
+         * <ul>
+         * <li>ALL: all assets</li>
+         * <li>SELECTION_KEY: selected assets</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         @NameInMap("TargetType")
         public String targetType;
 
         /**
          * <p>The assets on which you want the whitelist rule to take effect. Valid values:</p>
-         * <br>
-         * <p>*   ALL: all assets</p>
-         * <p>*   Others: selected assets</p>
+         * <ul>
+         * <li>ALL: all assets</li>
+         * <li>Others: selected assets</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         @NameInMap("TargetValue")
         public String targetValue;

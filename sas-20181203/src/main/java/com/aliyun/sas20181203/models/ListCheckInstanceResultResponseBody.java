@@ -12,6 +12,17 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
 
     /**
      * <p>The extended information about the instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{
+     *     &quot;SecurityGroupNameShow&quot;: {
+     *         &quot;value&quot;: &quot;Sas_Malicious_Ip_Security_Group&quot;
+     *     },
+     *     &quot;InstanceIdShow&quot;: {
+     *         &quot;link&quot;: &quot;<a href="https://ecs.console.aliyun.com/#/securityGroupDetail/region/ap-southeast-1/groupId/sg-t4nbk2aodzio52xvj00s/rule/intranetIngress">https://ecs.console.aliyun.com/#/securityGroupDetail/region/ap-southeast-1/groupId/sg-t4nbk2aodzio52xvj00s/rule/intranetIngress</a>&quot;,
+     *         &quot;value&quot;: &quot;sg-t4nbk2aodzio52xv****&quot;
+     *     }
+     * }]</p>
      */
     @NameInMap("Checks")
     public java.util.List<java.util.Map<String, ?>> checks;
@@ -30,6 +41,9 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3AB18264-8A1B-52A6-A9AF-A886556E0F2E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -80,12 +94,30 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
     }
 
     public static class ListCheckInstanceResultResponseBodyBasicDataInstanceInfoConfig extends TeaModel {
+        /**
+         * <p>The name of the configuration item, which is unique.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prot</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The display name of the configuration item for internationalization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prot</p>
+         */
         @NameInMap("ShowName")
         public String showName;
 
+        /**
+         * <p>The value of the configuration item specified for the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -121,12 +153,27 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
     }
 
     public static class ListCheckInstanceResultResponseBodyBasicDataInstanceInfo extends TeaModel {
+        /**
+         * <p>The information about the configuration item whose risks are fixed for the instance.</p>
+         */
         @NameInMap("Config")
         public java.util.List<ListCheckInstanceResultResponseBodyBasicDataInstanceInfoConfig> config;
 
+        /**
+         * <p>The time of the first check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1716447535531</p>
+         */
         @NameInMap("FirstUpdateTime")
         public Long firstUpdateTime;
 
+        /**
+         * <p>The time of the last check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1716447535531</p>
+         */
         @NameInMap("LastUpdateTime")
         public Long lastUpdateTime;
 
@@ -163,46 +210,68 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
 
     public static class ListCheckInstanceResultResponseBodyBasicData extends TeaModel {
         /**
-         * <p>The check result ID of the instance.</p>
+         * <p>The ID of the check result for the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300054</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The instance ID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-m5es7ch1s62i4****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The information about the instance on which the check item is used.</p>
+         */
         @NameInMap("InstanceInfo")
         public ListCheckInstanceResultResponseBodyBasicDataInstanceInfo instanceInfo;
 
         /**
-         * <p>The instance name.</p>
+         * <p>The instance name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-t4nbk2aodzio52xv****</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>The ID of the region in which the instance resides.</p>
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-southeast-1</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The states of check items. Multiple states are separated with commas (,). Valid values:</p>
-         * <br>
-         * <p>*   **PASS**: The instance passed the check.</p>
-         * <p>*   **NOT_PASS**: The instance failed to pass the check.</p>
-         * <p>*   **CHECKING**: The instance is being checked.</p>
-         * <p>*   **NOT_CHECK**: The instance is not checked.</p>
-         * <p>*   **WHITELIST**: The instance is in the whitelist.</p>
+         * <ul>
+         * <li><strong>PASS</strong>: passed</li>
+         * <li><strong>NOT_PASS</strong>: failed</li>
+         * <li><strong>CHECKING</strong>: being checked</li>
+         * <li><strong>NOT_CHECK</strong>: not checked</li>
+         * <li><strong>WHITELIST</strong>: added to the whitelist</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NOT_PASS</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The exception message of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Task is failed.</p>
          */
         @NameInMap("StatusMessage")
         public String statusMessage;
@@ -273,21 +342,31 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
     public static class ListCheckInstanceResultResponseBodyColumnsGrids extends TeaModel {
         /**
          * <p>The search condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RegionIdShow</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The display name of the search condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Region</p>
          */
         @NameInMap("ShowName")
         public String showName;
 
         /**
          * <p>The format of the check result for the instance. Valid values:</p>
-         * <br>
-         * <p>*   **text**</p>
-         * <p>*   **link**</p>
+         * <ul>
+         * <li><strong>text</strong></li>
+         * <li><strong>link</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         @NameInMap("Type")
         public String type;
@@ -332,36 +411,53 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
 
         /**
          * <p>The search condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RegionIdShow</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>Indicates whether the search condition is used. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Search")
         public Boolean search;
 
         /**
          * <p>The search key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceIdKey</p>
          */
         @NameInMap("SearchKey")
         public String searchKey;
 
         /**
          * <p>The display name of the search condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Region</p>
          */
         @NameInMap("ShowName")
         public String showName;
 
         /**
          * <p>The type of the check result for the instance. Valid values:</p>
-         * <br>
-         * <p>*   **text**</p>
-         * <p>*   **link**</p>
+         * <ul>
+         * <li><strong>text</strong></li>
+         * <li><strong>link</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         @NameInMap("Type")
         public String type;
@@ -424,24 +520,36 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
     public static class ListCheckInstanceResultResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Count")
         public String count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

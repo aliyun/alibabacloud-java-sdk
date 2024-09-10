@@ -12,18 +12,27 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AF1E723-53F1-55BF-A4B2-15CB7A32****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The time consumed. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TimeCost")
     public Long timeCost;
@@ -68,116 +77,173 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
     public static class CreateJenkinsImageRegistryResponseBodyData extends TeaModel {
         /**
          * <p>The blacklist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61.9.XXX.XXX</p>
          */
         @NameInMap("BlackList")
         public String blackList;
 
         /**
          * <p>The domain name of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The creation time. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-16 18:17:16</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The update time. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-21 10:40:01</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The ID of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>443496</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The network type. Valid values:</p>
-         * <br>
-         * <p>*   **1**: Internet</p>
-         * <p>*   **2**: VPC</p>
+         * <ul>
+         * <li><strong>1</strong>: Internet</li>
+         * <li><strong>2</strong>: VPC</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NetType")
         public Integer netType;
 
         /**
          * <p>The password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Harbor******</p>
          */
         @NameInMap("Password")
         public String password;
 
         /**
          * <p>The number of days during which assets can be retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("PersistenceDay")
         public Integer persistenceDay;
 
         /**
          * <p>The type of the protocol. Valid values:</p>
-         * <br>
-         * <p>*   **1**: HTTP</p>
-         * <p>*   **2**: HTTPS</p>
+         * <ul>
+         * <li><strong>1</strong>: HTTP</li>
+         * <li><strong>2</strong>: HTTPS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ProtocolType")
         public Integer protocolType;
 
         /**
          * <p>The region ID of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The IP address of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.13.XXX.XXX</p>
          */
         @NameInMap("RegistryHostIp")
         public String registryHostIp;
 
         /**
          * <p>The alias of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fanyi</p>
          */
         @NameInMap("RegistryName")
         public String registryName;
 
         /**
          * <p>The type of the image repository. Valid values:</p>
-         * <br>
-         * <p>*   **CI/CD**: Jenkins</p>
+         * <ul>
+         * <li><strong>CI/CD</strong>: Jenkins</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CI/CD</p>
          */
         @NameInMap("RegistryType")
         public String registryType;
 
         /**
          * <p>The authentication token of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3c3c602c-fa1f-4bc0-992f-b4b2cac7****</p>
          */
         @NameInMap("Token")
         public String token;
 
         /**
          * <p>The number of images that can be scanned per hour.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("TransPerHour")
         public Integer transPerHour;
 
         /**
          * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RegistryUser</p>
          */
         @NameInMap("UserName")
         public String userName;
 
         /**
          * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2vchkxmf2j9yjt3x2****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XXX.XXX</p>
          */
         @NameInMap("WhiteList")
         public String whiteList;

@@ -12,6 +12,9 @@ public class ResetHoneypotResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A57C711B-AA15-55B2-8F61-4D09CEXXXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,42 +43,63 @@ public class ResetHoneypotResponseBody extends TeaModel {
     public static class ResetHoneypotResponseBodyData extends TeaModel {
         /**
          * <p>The name of the management node to which the honeypot belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>managerNodename</p>
          */
         @NameInMap("ControlNodeName")
         public String controlNodeName;
 
         /**
          * <p>The ID of the honeypot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9bf8cd373112263d4bc102fc5dba9d9f812ee05d4d35c487d330d52e937f****</p>
          */
         @NameInMap("HoneypotId")
         public String honeypotId;
 
         /**
          * <p>The display name of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RuoYi</p>
          */
         @NameInMap("HoneypotImageDisplayName")
         public String honeypotImageDisplayName;
 
         /**
          * <p>The name of the image that is used for the honeypot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ruoyi</p>
          */
         @NameInMap("HoneypotImageName")
         public String honeypotImageName;
 
         /**
          * <p>The custom name of the honeypot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ruoyi</p>
          */
         @NameInMap("HoneypotName")
         public String honeypotName;
 
         /**
          * <p>The ID of the management node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a882e590-b87b-45a6-87b9-d0a3e5a0****</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
          * <p>The ID of the custom configuration for the honeypot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>868a7579-00b5-4a74-999d-8bd3f411****</p>
          */
         @NameInMap("PresetId")
         public String presetId;

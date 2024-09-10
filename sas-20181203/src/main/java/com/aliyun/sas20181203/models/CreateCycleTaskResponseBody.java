@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateCycleTaskResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>86CFF42E-E00A-57A3-8656-22291EFB****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

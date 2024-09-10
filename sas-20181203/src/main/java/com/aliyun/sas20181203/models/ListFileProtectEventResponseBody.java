@@ -18,6 +18,9 @@ public class ListFileProtectEventResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23AD0BD2-8771-5647-819E-6BA51E212F80</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,111 +57,178 @@ public class ListFileProtectEventResponseBody extends TeaModel {
     public static class ListFileProtectEventResponseBodyEventList extends TeaModel {
         /**
          * <p>The severity of the alert. Valid values:</p>
-         * <br>
-         * <p>*   0: does not generate alerts</p>
-         * <p>*   1: sends notifications</p>
-         * <p>*   2: suspicious</p>
-         * <p>*   3: high-risk</p>
+         * <ul>
+         * <li>0: no alerts</li>
+         * <li>1: reminder</li>
+         * <li>2: suspicious</li>
+         * <li>3: high-risk</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AlertLevel")
         public Integer alertLevel;
 
         /**
          * <p>The command line of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;touch&quot;,&quot;/test/aaaa&quot;]</p>
          */
         @NameInMap("CmdLine")
         public String cmdLine;
 
         /**
-         * <p>The path to the file.</p>
+         * <p>The path to the file that is managed by the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/etc/pam.d/su</p>
          */
         @NameInMap("FilePath")
         public String filePath;
 
         /**
          * <p>The time when the event was handled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1694576692000</p>
          */
         @NameInMap("HandleTime")
         public Long handleTime;
 
         /**
          * <p>The ID of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>161757</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
-         * <p>The name of the server.</p>
+         * <p>The instance name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kyy-admin-01</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The public IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121.40.211.194</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
-         * <p>The private IP address of the asset.</p>
+         * <p>The private IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.22.5.36</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>The time when the event last occurred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1694576692000</p>
          */
         @NameInMap("LatestTime")
         public Long latestTime;
 
         /**
          * <p>The operation performed by the process on the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DELETE</p>
          */
         @NameInMap("Operation")
         public String operation;
 
         /**
+         * <p>The type of the operating system. Valid values:</p>
+         * <ul>
+         * <li><strong>windows</strong>: Windows</li>
+         * <li><strong>linux</strong>: Linux</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>linux</p>
+         */
+        @NameInMap("Platform")
+        public String platform;
+
+        /**
          * <p>The path to the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/bin/sshpass</p>
          */
         @NameInMap("ProcPath")
         public String procPath;
 
         /**
          * <p>The permissions required to start the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rwxr-xr-x</p>
          */
         @NameInMap("ProcPermission")
         public String procPermission;
 
         /**
-         * <p>The process ID (PID) of the event process.</p>
+         * <p>The ID of the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52636</p>
          */
         @NameInMap("ProcessId")
         public String processId;
 
         /**
-         * <p>The remarks.</p>
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
          * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-rule-1</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
          * <p>The status of the event. Valid values:</p>
-         * <br>
-         * <p>*   0: unhandled</p>
-         * <p>*   1: handled</p>
-         * <p>*   2: added to the whitelist</p>
+         * <ul>
+         * <li>0: unhandled</li>
+         * <li>1: handled</li>
+         * <li>2: added to the whitelist</li>
+         * <li>3: ignored</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The UUID of the server that is associated with the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94b44720-d982-4d20-a4e1-80a1a57b5a8e</p>
          */
         @NameInMap("Uuid")
         public String uuid;
@@ -248,6 +318,14 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             return this.operation;
         }
 
+        public ListFileProtectEventResponseBodyEventList setPlatform(String platform) {
+            this.platform = platform;
+            return this;
+        }
+        public String getPlatform() {
+            return this.platform;
+        }
+
         public ListFileProtectEventResponseBodyEventList setProcPath(String procPath) {
             this.procPath = procPath;
             return this;
@@ -309,18 +387,27 @@ public class ListFileProtectEventResponseBody extends TeaModel {
     public static class ListFileProtectEventResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>149</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

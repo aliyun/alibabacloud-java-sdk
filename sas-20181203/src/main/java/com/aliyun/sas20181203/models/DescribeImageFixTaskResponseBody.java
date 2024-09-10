@@ -18,6 +18,9 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8AC52BBA-85D3-5F64-9B48-D08437CAF916</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,82 +57,122 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
     public static class DescribeImageFixTaskResponseBodyBuildTasks extends TeaModel {
         /**
          * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ivf-939536b5-c3ca-427b-8183-91007756</p>
          */
         @NameInMap("BuildTaskId")
         public String buildTaskId;
 
         /**
          * <p>The timestamp when the task starts. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-14 20:34:07</p>
          */
         @NameInMap("FinishTime")
         public String finishTime;
 
         /**
          * <p>The timestamp when the task ends. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-14 20:32:05</p>
          */
         @NameInMap("FixTime")
         public String fixTime;
 
         /**
          * <p>The version of the image after image risks are fixed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>redhat8-vault</p>
          */
         @NameInMap("NewTag")
         public String newTag;
 
         /**
          * <p>The UUID of the image after image risks are fixed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2fa731681911ae8d1b5f11893ace****</p>
          */
         @NameInMap("NewUuid")
         public String newUuid;
 
         /**
          * <p>The version of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>centos8.1-ja</p>
          */
         @NameInMap("OldTag")
         public String oldTag;
 
         /**
          * <p>The UUID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2fa731681911ae8d1b5f11893ace****</p>
          */
         @NameInMap("OldUuid")
         public String oldUuid;
 
         /**
          * <p>The region of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The name of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-redhat</p>
          */
         @NameInMap("RepoName")
         public String repoName;
 
         /**
          * <p>The namespace of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name-002</p>
          */
         @NameInMap("RepoNamespace")
         public String repoNamespace;
 
         /**
          * <p>The status of the task. Valid values:</p>
-         * <br>
-         * <p>*   **1**: The task is running.</p>
-         * <p>*   **2**: The task is successful.</p>
-         * <p>*   **3**: The task failed.</p>
+         * <ul>
+         * <li><strong>1</strong>: The task is running.</li>
+         * <li><strong>2</strong>: The task is successful.</li>
+         * <li><strong>3</strong>: The task failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The type of the task. The value is fixed as IMAGE_REPAIR. The value indicates a task that fixes image risks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IMAGE_REPAIR</p>
          */
         @NameInMap("TaskType")
         public String taskType;
 
         /**
          * <p>The alias of the fixed vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CVE-2007-5686:rpath_linux Information Disclosure</p>
          */
         @NameInMap("VulAlias")
         public String vulAlias;
@@ -248,24 +291,36 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
     public static class DescribeImageFixTaskResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of tasks returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
-         * <p>The page number of the returned page. Default value: **1**</p>
+         * <p>The page number of the returned page. Default value: <strong>1</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page. Default value: **20**</p>
+         * <p>The number of entries returned per page. Default value: <strong>20</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of tasks returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

@@ -4,6 +4,10 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class InstallBackupClientResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>D0D6E6E4-CB8C-4897-B852-46AEFDA04B21</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

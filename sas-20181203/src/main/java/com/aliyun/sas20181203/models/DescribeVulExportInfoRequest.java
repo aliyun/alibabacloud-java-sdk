@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeVulExportInfoRequest extends TeaModel {
     /**
      * <p>The ID of the task.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>14356</p>
      */
     @NameInMap("ExportId")
     public Long exportId;

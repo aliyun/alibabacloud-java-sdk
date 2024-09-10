@@ -12,6 +12,9 @@ public class ListImageRegistryRegionResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>291B49F9-1685-4005-9D34-606B6F78****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class ListImageRegistryRegionResponseBody extends TeaModel {
     public static class ListImageRegistryRegionResponseBodyRegions extends TeaModel {
         /**
          * <p>The region ID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The name of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionName")
         public String regionName;

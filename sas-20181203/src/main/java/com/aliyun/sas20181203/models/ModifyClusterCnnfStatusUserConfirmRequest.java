@@ -12,9 +12,13 @@ public class ModifyClusterCnnfStatusUserConfirmRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to fix the blocking status of the cluster. Valid values:</p>
-     * <br>
-     * <p>*   true: yes</p>
-     * <p>*   false: no</p>
+     * <ul>
+     * <li>true: yes</li>
+     * <li>false: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("UserConfirm")
     public Boolean userConfirm;

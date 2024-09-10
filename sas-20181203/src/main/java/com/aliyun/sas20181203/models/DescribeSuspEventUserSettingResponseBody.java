@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class DescribeSuspEventUserSettingResponseBody extends TeaModel {
     /**
      * <p>An array that consists of the risk levels of alert notifications. Valid values:</p>
-     * <br>
-     * <p>*   **remind**</p>
-     * <p>*   **suspicious**</p>
-     * <p>*   **serious**</p>
+     * <ul>
+     * <li><strong>remind</strong></li>
+     * <li><strong>suspicious</strong></li>
+     * <li><strong>serious</strong></li>
+     * </ul>
      */
     @NameInMap("LevelsOn")
     public java.util.List<String> levelsOn;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>028CF634-5268-5660-9575-48C9ED6XXXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -12,10 +12,14 @@ public class UpdateFileProtectEventStatusRequest extends TeaModel {
 
     /**
      * <p>The handling status of the event. Valid values:</p>
-     * <br>
-     * <p>*   **0**: unhandled</p>
-     * <p>*   **1**: handled</p>
-     * <p>*   **2**: added to the whitelist</p>
+     * <ul>
+     * <li><strong>0</strong>: unhandled</li>
+     * <li><strong>1</strong>: handled</li>
+     * <li><strong>2</strong>: added to the whitelist</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Status")
     public Integer status;

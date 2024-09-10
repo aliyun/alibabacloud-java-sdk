@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeRiskCheckResultResponseBody extends TeaModel {
     /**
      * <p>The number of entries returned on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Count")
     public Integer count;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -24,24 +30,36 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
 
     /**
      * <p>The total number of pages returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageCount")
     public Integer pageCount;
 
     /**
-     * <p>The number of entries returned per page. Default value: **20**.</p>
+     * <p>The number of entries returned per page. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AD271C07-4ACE-413D-AA9B-F14FD3B7717F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -116,11 +134,15 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
 
         /**
          * <p>The title in the details. Valid values:</p>
-         * <br>
-         * <p>*   **bestPractice**: description</p>
-         * <p>*   **influence**: risk</p>
-         * <p>*   **suggestion**: solution</p>
-         * <p>*   **helpResource**: reference</p>
+         * <ul>
+         * <li><strong>bestPractice</strong>: description</li>
+         * <li><strong>influence</strong>: risk</li>
+         * <li><strong>suggestion</strong>: solution</li>
+         * <li><strong>helpResource</strong>: reference</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>bestPractice</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;
@@ -151,39 +173,58 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
     public static class DescribeRiskCheckResultResponseBodyList extends TeaModel {
         /**
          * <p>The number of affected assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AffectedCount")
         public Integer affectedCount;
 
         /**
          * <p>The timestamp when the last check was performed. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1639429164000</p>
          */
         @NameInMap("CheckTime")
         public Long checkTime;
 
         /**
-         * <p>The ID of the check item. For more information about the check item, see the check item table in the "Response parameters" section of this topic.</p>
+         * <p>The ID of the check item. For more information about the check item, see the check item table in the &quot;Response parameters&quot; section of this topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ItemId")
         public Long itemId;
 
         /**
          * <p>The time when the next check will be performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RemainingTime")
         public Integer remainingTime;
 
         /**
          * <p>Indicates whether the risks that are detected based on the check item can be fixed. Valid values:</p>
-         * <br>
-         * <p>*   **enabled**: yes</p>
-         * <p>*   **disabled**: no</p>
+         * <ul>
+         * <li><strong>enabled</strong>: yes</li>
+         * <li><strong>disabled</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>disabled</p>
          */
         @NameInMap("RepairStatus")
         public String repairStatus;
 
         /**
          * <p>The type of the affected assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         @NameInMap("RiskAssertType")
         public String riskAssertType;
@@ -196,63 +237,88 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
 
         /**
          * <p>The risk level of the check item. Valid values:</p>
-         * <br>
-         * <p>*   **high**</p>
-         * <p>*   **medium**</p>
-         * <p>*   **low**</p>
+         * <ul>
+         * <li><strong>high</strong></li>
+         * <li><strong>medium</strong></li>
+         * <li><strong>low</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
          */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
         /**
          * <p>The sequence number in the check results. The check items are sorted based on the sequence number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Sort")
         public Integer sort;
 
         /**
          * <p>Indicates whether the check item is supported by the edition of Security Center that you purchase. Valid values:</p>
-         * <br>
-         * <p>*   **enabled**: yes</p>
-         * <p>*   **disable**: no</p>
+         * <ul>
+         * <li><strong>enabled</strong>: yes</li>
+         * <li><strong>disable</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         @NameInMap("StartStatus")
         public String startStatus;
 
         /**
          * <p>The status of the check results. Valid values:</p>
-         * <br>
-         * <p>*   **pass**</p>
-         * <p>*   **failed**</p>
-         * <p>*   **running**</p>
-         * <p>*   **waiting**</p>
-         * <p>*   **ignored**</p>
-         * <p>*   **falsePositive**</p>
+         * <ul>
+         * <li><strong>pass</strong></li>
+         * <li><strong>failed</strong></li>
+         * <li><strong>running</strong></li>
+         * <li><strong>waiting</strong></li>
+         * <li><strong>ignored</strong></li>
+         * <li><strong>falsePositive</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>pass</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the check task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15384933</p>
          */
         @NameInMap("TaskId")
         public Long taskId;
 
         /**
          * <p>The name of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS - Whitelist Configuration</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
          * <p>The type of the check item. Valid values:</p>
-         * <br>
-         * <p>*   Identity authentication and permissions</p>
-         * <p>*   Network access control</p>
-         * <p>*   Log audit</p>
-         * <p>*   Data security</p>
-         * <p>*   Monitoring and alerting</p>
-         * <p>*   Basic security protection</p>
+         * <ul>
+         * <li>Identity authentication and permissions</li>
+         * <li>Network access control</li>
+         * <li>Log audit</li>
+         * <li>Data security</li>
+         * <li>Monitoring and alerting</li>
+         * <li>Basic security protection</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Log audit</p>
          */
         @NameInMap("Type")
         public String type;

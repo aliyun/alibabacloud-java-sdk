@@ -12,6 +12,9 @@ public class ListImageBuildRiskItemResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A3D7C47D-3F11-57BB-90E8-E5C20C619F37</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class ListImageBuildRiskItemResponseBody extends TeaModel {
     public static class ListImageBuildRiskItemResponseBodyData extends TeaModel {
         /**
          * <p>The type key of the risky build command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         @NameInMap("ItemKey")
         public String itemKey;
 
         /**
          * <p>The type name of the risky build command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>itemName.</p>
          */
         @NameInMap("ItemName")
         public String itemName;

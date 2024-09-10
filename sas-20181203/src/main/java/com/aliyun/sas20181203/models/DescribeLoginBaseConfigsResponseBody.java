@@ -12,24 +12,36 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The number of entries returned per page. Default value: **20**.</p>
+     * <p>The number of entries returned per page. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2C2D4B3C-0524-17B1-93D2-DA50119F4E1E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,16 +94,23 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
     public static class DescribeLoginBaseConfigsResponseBodyBaseConfigsTargetList extends TeaModel {
         /**
          * <p>The UUID or group ID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0011ea53-738c-4bff-93be-ce6a1cc9****</p>
          */
         @NameInMap("Target")
         public String target;
 
         /**
          * <p>The type of the server to which the configuration is applied. Valid values:</p>
-         * <br>
-         * <p>*   **uuid**: a server</p>
-         * <p>*   **groupId**: a server group</p>
-         * <p>*   **global**: all servers</p>
+         * <ul>
+         * <li><strong>uuid</strong>: a server</li>
+         * <li><strong>groupId</strong>: a server group</li>
+         * <li><strong>global</strong>: all servers</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>uuid</p>
          */
         @NameInMap("TargetType")
         public String targetType;
@@ -122,36 +141,54 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
     public static class DescribeLoginBaseConfigsResponseBodyBaseConfigs extends TeaModel {
         /**
          * <p>The common logon account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1582318****</p>
          */
         @NameInMap("Account")
         public String account;
 
         /**
          * <p>The end time of the common logon time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>07:00</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The common logon IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The common logon location.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Montenegro</p>
          */
         @NameInMap("Location")
         public String location;
 
         /**
          * <p>Corresponding configuration remark information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
          * <p>The start time of the common logon time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>08:00</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -164,12 +201,18 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
 
         /**
          * <p>The total number of servers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
         /**
          * <p>The number of servers to which the configuration is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13</p>
          */
         @NameInMap("UuidCount")
         public Integer uuidCount;

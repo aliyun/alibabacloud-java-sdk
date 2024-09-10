@@ -4,9 +4,17 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class RollbackSuspEventQuaraFileRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>sas</p>
+     */
     @NameInMap("From")
     public String from;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3921797</p>
+     */
     @NameInMap("QuaraFileId")
     public Integer quaraFileId;
 

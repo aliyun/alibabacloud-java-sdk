@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateOssScanConfigRequest extends TeaModel {
     /**
      * <p>Whether to match all prefixes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AllKeyPrefix")
     public Boolean allKeyPrefix;
@@ -18,27 +21,43 @@ public class CreateOssScanConfigRequest extends TeaModel {
 
     /**
      * <p>The maximum number of files for decompression. The minimum value is 1, and the maximum value is 1000. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("DecompressMaxFileCount")
     public Integer decompressMaxFileCount;
 
     /**
      * <p>The maximum level of decompression when dealing with nested compressed files with multiple levels. The minimum value is 1, and the maximum value is 5. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("DecompressMaxLayer")
     public Integer decompressMaxLayer;
 
+    @NameInMap("DecryptionList")
+    public java.util.List<String> decryptionList;
+
     /**
      * <p>Specifies whether to enable the policy. Valid values:</p>
-     * <br>
-     * <p>*   **1**: yes</p>
-     * <p>*   **0**: no</p>
+     * <ul>
+     * <li><strong>1</strong>: yes</li>
+     * <li><strong>0</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Enable")
     public Integer enable;
 
     /**
      * <p>The time when the scan ends. The time must be in the HH:mm:ss format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>01:01:00</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -55,8 +74,14 @@ public class CreateOssScanConfigRequest extends TeaModel {
     @NameInMap("KeySuffixList")
     public java.util.List<String> keySuffixList;
 
+    @NameInMap("LastModifiedStartTime")
+    public Long lastModifiedStartTime;
+
     /**
      * <p>The name of the policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>runtime</p>
      */
     @NameInMap("Name")
     public String name;
@@ -69,6 +94,9 @@ public class CreateOssScanConfigRequest extends TeaModel {
 
     /**
      * <p>The time when the scan starts. The time must be in the HH:mm:ss format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>00:00:00</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -110,6 +138,14 @@ public class CreateOssScanConfigRequest extends TeaModel {
         return this.decompressMaxLayer;
     }
 
+    public CreateOssScanConfigRequest setDecryptionList(java.util.List<String> decryptionList) {
+        this.decryptionList = decryptionList;
+        return this;
+    }
+    public java.util.List<String> getDecryptionList() {
+        return this.decryptionList;
+    }
+
     public CreateOssScanConfigRequest setEnable(Integer enable) {
         this.enable = enable;
         return this;
@@ -140,6 +176,14 @@ public class CreateOssScanConfigRequest extends TeaModel {
     }
     public java.util.List<String> getKeySuffixList() {
         return this.keySuffixList;
+    }
+
+    public CreateOssScanConfigRequest setLastModifiedStartTime(Long lastModifiedStartTime) {
+        this.lastModifiedStartTime = lastModifiedStartTime;
+        return this;
+    }
+    public Long getLastModifiedStartTime() {
+        return this.lastModifiedStartTime;
     }
 
     public CreateOssScanConfigRequest setName(String name) {

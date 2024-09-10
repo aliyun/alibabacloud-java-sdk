@@ -12,6 +12,9 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>91EB4AC7-7FEF-4C72-BE49-4414E459AEC2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,68 +43,101 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
     public static class ModifyPushAllTaskResponseBodyPushTaskRspPushTaskResultList extends TeaModel {
         /**
          * <p>The ID of the server group to which the server belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>226</p>
          */
         @NameInMap("GroupId")
         public Long groupId;
 
         /**
          * <p>The ID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-wz9f7wlklxqnvdk****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestInstance</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.XX.XX</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The message that describes the security check failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>Indicates whether the Security Center agent is online. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
-         * <br>
-         * <p>>  If the Security Center agent of the server is offline, Security Center does not protect the server.</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * <blockquote>
+         * <p> If the Security Center agent of the server is offline, Security Center does not protect the server.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Online")
         public Boolean online;
 
         /**
          * <p>The operating system version of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>linux</p>
          */
         @NameInMap("OsVersion")
         public String osVersion;
 
         /**
          * <p>The region in which the server resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>Indicates whether the security check task is successful. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Success")
         public Boolean success;
 
         /**
          * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5493fe42-61f5-4627-9aa2-8c449bbe****</p>
          */
         @NameInMap("Uuid")
         public String uuid;

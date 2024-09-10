@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class DescribeConcernNecessityResponseBody extends TeaModel {
     /**
      * <p>The priorities to fix the vulnerabilities. Valid values:</p>
-     * <br>
-     * <p>*   asap: high</p>
-     * <p>*   later: medium</p>
-     * <p>*   nntf: low</p>
+     * <ul>
+     * <li>asap: high</li>
+     * <li>later: medium</li>
+     * <li>nntf: low</li>
+     * </ul>
      */
     @NameInMap("ConcernNecessity")
     public java.util.List<String> concernNecessity;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECC6B3E3-D496-512D-B46D-E6996A6B63EE</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetHoneypotStatisticsResponseBody extends TeaModel {
     /**
-     * <p>The status code that is returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * <p>The status code that is returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,27 +21,40 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EB7181CB-32F3-5189-A935-4E24DD1A****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -99,45 +115,67 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
     public static class GetHoneypotStatisticsResponseBodyData extends TeaModel {
         /**
          * <p>The total number of honeypots.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("TotalHoneypotCount")
         public Integer totalHoneypotCount;
 
         /**
          * <p>The health status of the management node. Valid values:</p>
-         * <br>
-         * <p>*   1: normal</p>
-         * <p>*   2: abnormal</p>
+         * <ul>
+         * <li>1: normal</li>
+         * <li>2: abnormal</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalNodeStatus")
         public Integer totalNodeStatus;
 
         /**
          * <p>The total number of authorized probes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         @NameInMap("TotalProbeCount")
         public Integer totalProbeCount;
 
         /**
          * <p>The number of deployed honeypots.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         @NameInMap("UsedHoneypotCount")
         public Integer usedHoneypotCount;
 
         /**
          * <p>The number of deployed host probes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         @NameInMap("UsedHostProbeCount")
         public Integer usedHostProbeCount;
 
         /**
          * <p>The number of deployed probes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         @NameInMap("UsedProbeCount")
         public Integer usedProbeCount;
 
         /**
          * <p>The number of deployed VPC probes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("UsedVpcProbeCount")
         public Integer usedVpcProbeCount;

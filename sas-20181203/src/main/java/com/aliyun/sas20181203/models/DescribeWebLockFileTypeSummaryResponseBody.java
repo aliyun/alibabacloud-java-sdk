@@ -12,12 +12,18 @@ public class DescribeWebLockFileTypeSummaryResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4BB99533-4FDC-5B9C-A5E4-5AE3E9BE5C78</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of events on web tamper proofing.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>639</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -54,27 +60,34 @@ public class DescribeWebLockFileTypeSummaryResponseBody extends TeaModel {
     public static class DescribeWebLockFileTypeSummaryResponseBodyList extends TeaModel {
         /**
          * <p>The number of attempts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The type of the protected file. Valid values:</p>
-         * <br>
-         * <p>*   **php**: PHP file</p>
-         * <p>*   **jsp**: JSP file</p>
-         * <p>*   **asp**: ASP file</p>
-         * <p>*   **aspx**: ASPX file</p>
-         * <p>*   **js**: JS file</p>
-         * <p>*   **cgi**: CGI file</p>
-         * <p>*   **html**: HTML file</p>
-         * <p>*   **htm**: HTM file</p>
-         * <p>*   **xml**: XML file</p>
-         * <p>*   **shtml**: SHTML file</p>
-         * <p>*   **shtm**: SHTM file</p>
-         * <p>*   **jpg**: JPG file</p>
-         * <p>*   **gif**: GIF file</p>
-         * <p>*   **png**: PNG file</p>
+         * <ul>
+         * <li><strong>php</strong>: PHP file</li>
+         * <li><strong>jsp</strong>: JSP file</li>
+         * <li><strong>asp</strong>: ASP file</li>
+         * <li><strong>aspx</strong>: ASPX file</li>
+         * <li><strong>js</strong>: JS file</li>
+         * <li><strong>cgi</strong>: CGI file</li>
+         * <li><strong>html</strong>: HTML file</li>
+         * <li><strong>htm</strong>: HTM file</li>
+         * <li><strong>xml</strong>: XML file</li>
+         * <li><strong>shtml</strong>: SHTML file</li>
+         * <li><strong>shtm</strong>: SHTM file</li>
+         * <li><strong>jpg</strong>: JPG file</li>
+         * <li><strong>gif</strong>: GIF file</li>
+         * <li><strong>png</strong>: PNG file</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>jsp</p>
          */
         @NameInMap("Type")
         public String type;

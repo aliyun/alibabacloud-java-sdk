@@ -5,54 +5,72 @@ import com.aliyun.tea.*;
 
 public class DescribeTraceInfoDetailRequest extends TeaModel {
     /**
-     * <p>The ID of the request source. Set the value to **sas**.</p>
-     * <br>
+     * <p>The ID of the request source. Set the value to <strong>sas</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sas</p>
      */
     @NameInMap("From")
     public String from;
 
     /**
      * <p>The timestamp of the detection. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1670555392000</p>
      */
     @NameInMap("IncidentTime")
     public Long incidentTime;
 
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The source IP address of the request. The value of this parameter is specified by the system.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;
 
     /**
-     * <p>The type of the vertex. Set the value to **SAS_INCIDENT**.</p>
-     * <br>
+     * <p>The type of the vertex. Set the value to <strong>SAS_INCIDENT</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SAS_INCIDENT</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>The UUID of the server.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1627f2d7-aaa2-4ed1-b07a-xxxxxxxxxxxxxx</p>
      */
     @NameInMap("Uuid")
     public String uuid;
 
     /**
-     * <p>The ID of the vertex. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the ID.</p>
-     * <br>
+     * <p>The ID of the vertex. You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to query the ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cce1d28dxxxxxxxxxxxxxxxx</p>
      */
     @NameInMap("VertexId")
     public String vertexId;

@@ -6,30 +6,44 @@ import com.aliyun.tea.*;
 public class DescribeStrategyRequest extends TeaModel {
     /**
      * <p>The type of the baseline check policy that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   **common**: standard baseline check policy</p>
-     * <p>*   **custom**: custom baseline check policy</p>
+     * <ul>
+     * <li><strong>common</strong>: standard baseline check policy</li>
+     * <li><strong>custom</strong>: custom baseline check policy</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>custom</p>
      */
     @NameInMap("CustomType")
     public String customType;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.2.X.X</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;
 
     /**
      * <p>The ID of the baseline check policy that you want to query. Separate multiple IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8164248</p>
      */
     @NameInMap("StrategyIds")
     public String strategyIds;

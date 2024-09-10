@@ -18,6 +18,9 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4E5BFDCF-B9DD-430D-9DA4-151BCB581C9D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,185 +57,272 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
     public static class DescribeGroupedContainerInstancesResponseBodyGroupedContainerInstanceList extends TeaModel {
         /**
          * <p>The number of alerts that are detected for the current pod, application, namespace, or cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AlarmCount")
         public Integer alarmCount;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-liveness-probe</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cf3824769c85441b4bf3****</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
 
         /**
          * <p>The type of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   **Kubernetes**: dedicated Kubernetes cluster.</p>
-         * <p>*   **ManagedKubernetes**: standard managed cluster (edge cluster).</p>
-         * <p>*   **Ask**: serverless Kubernetes (ASK) cluster.</p>
+         * <ul>
+         * <li><strong>Kubernetes</strong>: dedicated Kubernetes cluster.</li>
+         * <li><strong>ManagedKubernetes</strong>: standard managed cluster (edge cluster).</li>
+         * <li><strong>Ask</strong>: serverless Kubernetes (ASK) cluster.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ManagedKubernetes</p>
          */
         @NameInMap("ClusterType")
         public String clusterType;
 
         /**
          * <p>The timestamp when the cluster was created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1600076893000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The status of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   **running**: The cluster is running.</p>
-         * <p>*   **stopped**: The cluster is stopped.</p>
-         * <p>*   **deleted**: The cluster is deleted.</p>
-         * <p>*   **delete_failed**: The cluster failed to be deleted.</p>
-         * <p>*   **failed**: The cluster failed to be created.</p>
+         * <ul>
+         * <li><strong>running</strong>: The cluster is running.</li>
+         * <li><strong>stopped</strong>: The cluster is stopped.</li>
+         * <li><strong>deleted</strong>: The cluster is deleted.</li>
+         * <li><strong>delete_failed</strong>: The cluster failed to be deleted.</li>
+         * <li><strong>failed</strong>: The cluster failed to be created.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         @NameInMap("CusterState")
         public String custerState;
 
         /**
          * <p>The number of baseline risks that are detected for the current pod, application, namespace, or cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("HcCount")
         public Integer hcCount;
 
         /**
          * <p>The IP address of the host in the container cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.114.XX.XX</p>
          */
         @NameInMap("HostIp")
         public String hostIp;
 
         /**
          * <p>The container image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry-vpc.ap-southeast-5.aliyuncs.com/log-service-release/sls-connector:1.1.77</p>
          */
         @NameInMap("Image")
         public String image;
 
         /**
          * <p>The digest value of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58e58c013f70bbfde140c8a55c1078074b3483479428d4069aa946827fd566cf</p>
          */
         @NameInMap("ImageDigest")
         public String imageDigest;
 
         /**
          * <p>The name of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-003</p>
          */
         @NameInMap("ImageRepoName")
         public String imageRepoName;
 
         /**
          * <p>The namespace of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name001</p>
          */
         @NameInMap("ImageRepoNamespace")
         public String imageRepoNamespace;
 
         /**
          * <p>The tag that is added to the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev-20220512-2</p>
          */
         @NameInMap("ImageRepoTag")
         public String imageRepoTag;
 
         /**
          * <p>The UUID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e4bdec1d9ba7e0967111a7ea467c****</p>
          */
         @NameInMap("ImageUuid")
         public String imageUuid;
 
         /**
          * <p>The number of pods, applications, clusters, or namespaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
         /**
          * <p>The ID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-8vb9ul5xec4tua4q****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The namespace of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kube-system</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The name of the pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>csi-plugin-2n****</p>
          */
         @NameInMap("Pod")
         public String pod;
 
         /**
          * <p>The IP address of the pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.114.XX.XX</p>
          */
         @NameInMap("PodIp")
         public String podIp;
 
         /**
          * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The number of at-risk instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RiskInstanceCount")
         public Integer riskInstanceCount;
 
         /**
          * <p>The risk level. Valid values:</p>
-         * <br>
-         * <p>*   **high**</p>
-         * <p>*   **medium**</p>
-         * <p>*   **low**</p>
+         * <ul>
+         * <li><strong>high</strong></li>
+         * <li><strong>medium</strong></li>
+         * <li><strong>low</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>low</p>
          */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
         /**
          * <p>Indicates whether risks were detected. Valid values:</p>
-         * <br>
-         * <p>*   **NO**</p>
-         * <p>*   **YES**</p>
+         * <ul>
+         * <li><strong>NO</strong></li>
+         * <li><strong>YES</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NO</p>
          */
         @NameInMap("RiskStatus")
         public String riskStatus;
 
         /**
          * <p>Indicates whether the synchronization of cluster audit logs is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **0**: disabled.</p>
-         * <p>*   **1**: enabled.</p>
+         * <ul>
+         * <li><strong>0</strong>: disabled.</li>
+         * <li><strong>1</strong>: enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("SyncOpen")
         public Integer syncOpen;
 
         /**
          * <p>The status of the synchronization of cluster audit logs. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The synchronization failed.</p>
-         * <p>*   **1**: The synchronization is successful.</p>
+         * <ul>
+         * <li><strong>0</strong>: The synchronization failed.</li>
+         * <li><strong>1</strong>: The synchronization is successful.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("SyncStatus")
         public Integer syncStatus;
 
         /**
          * <p>The number of vulnerabilities that are detected for the current pod, application, namespace, or cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("VulCount")
         public Integer vulCount;
@@ -463,24 +553,36 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
     public static class DescribeGroupedContainerInstancesResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of container assets returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page. Default value: **20**.</p>
+         * <p>The number of entries returned per page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of container assets returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

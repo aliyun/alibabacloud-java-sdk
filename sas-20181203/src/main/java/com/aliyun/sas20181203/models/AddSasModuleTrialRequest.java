@@ -6,18 +6,26 @@ import com.aliyun.tea.*;
 public class AddSasModuleTrialRequest extends TeaModel {
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The module code. Valid values:</p>
-     * <br>
-     * <p>*   **vulFix**: vulnerability fixing</p>
-     * <p>*   **cloudSiem**: threat analysis</p>
+     * <p>The code of the feature. Valid values:</p>
+     * <ul>
+     * <li><strong>vulFix</strong>: vulnerability fixing.</li>
+     * <li><strong>cloudSiem</strong>: threat analysis and response.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>vulFix</p>
      */
     @NameInMap("ModuleCode")
     public String moduleCode;

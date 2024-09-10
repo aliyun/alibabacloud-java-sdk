@@ -4,6 +4,10 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertyUsageNewestRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>user</p>
+     */
     @NameInMap("Type")
     public String type;
 

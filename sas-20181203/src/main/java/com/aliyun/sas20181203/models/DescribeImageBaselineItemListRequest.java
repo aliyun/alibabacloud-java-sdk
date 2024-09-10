@@ -6,41 +6,59 @@ import com.aliyun.tea.*;
 public class DescribeImageBaselineItemListRequest extends TeaModel {
     /**
      * <p>The key of the baseline type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ak_leak</p>
      */
     @NameInMap("BaselineClassKey")
     public String baselineClassKey;
 
     /**
      * <p>The key of the baseline name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AccessKey pair leak</p>
      */
     @NameInMap("BaselineNameKey")
     public String baselineNameKey;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The UUID of the image.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0b5c7193300da2070220038718ad****</p>
      */
     @NameInMap("ImageUuid")
     public String imageUuid;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -53,11 +71,15 @@ public class DescribeImageBaselineItemListRequest extends TeaModel {
 
     /**
      * <p>The status of the baseline risk item. Valid values:</p>
-     * <br>
-     * <p>*   **0**: unfixed</p>
-     * <p>*   **1**: fixed</p>
-     * <p>*   **2**: pending verification</p>
-     * <p>*   **3**: fixing failed</p>
+     * <ul>
+     * <li><strong>0</strong>: unfixed</li>
+     * <li><strong>1</strong>: fixed</li>
+     * <li><strong>2</strong>: pending verification</li>
+     * <li><strong>3</strong>: fixing failed</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Status")
     public String status;

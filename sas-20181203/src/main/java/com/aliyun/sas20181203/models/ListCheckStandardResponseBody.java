@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListCheckStandardResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FA91FBDA-***</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,21 +43,39 @@ public class ListCheckStandardResponseBody extends TeaModel {
     public static class ListCheckStandardResponseBodyStandardsRequirements extends TeaModel {
         /**
          * <p>The ID of the search condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The number of check items queried by using the search condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("RiskCheckCount")
         public Long riskCheckCount;
 
         /**
          * <p>The display name of the search condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RAM identity authentication</p>
          */
         @NameInMap("ShowName")
         public String showName;
+
+        /**
+         * <p>The priority field indicates the level of prominence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("ShowPriorityLevel")
+        public Integer showPriorityLevel;
 
         public static ListCheckStandardResponseBodyStandardsRequirements build(java.util.Map<String, ?> map) throws Exception {
             ListCheckStandardResponseBodyStandardsRequirements self = new ListCheckStandardResponseBodyStandardsRequirements();
@@ -85,11 +106,22 @@ public class ListCheckStandardResponseBody extends TeaModel {
             return this.showName;
         }
 
+        public ListCheckStandardResponseBodyStandardsRequirements setShowPriorityLevel(Integer showPriorityLevel) {
+            this.showPriorityLevel = showPriorityLevel;
+            return this;
+        }
+        public Integer getShowPriorityLevel() {
+            return this.showPriorityLevel;
+        }
+
     }
 
     public static class ListCheckStandardResponseBodyStandards extends TeaModel {
         /**
          * <p>The ID of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public Long id;
@@ -102,12 +134,27 @@ public class ListCheckStandardResponseBody extends TeaModel {
 
         /**
          * <p>The display name of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Identity and permission management</p>
          */
         @NameInMap("ShowName")
         public String showName;
 
         /**
+         * <p>The priority field indicates the level of prominence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("ShowPriorityLevel")
+        public Integer showPriorityLevel;
+
+        /**
          * <p>The type of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IDENTITY_PERMISSION</p>
          */
         @NameInMap("Type")
         public String type;
@@ -139,6 +186,14 @@ public class ListCheckStandardResponseBody extends TeaModel {
         }
         public String getShowName() {
             return this.showName;
+        }
+
+        public ListCheckStandardResponseBodyStandards setShowPriorityLevel(Integer showPriorityLevel) {
+            this.showPriorityLevel = showPriorityLevel;
+            return this;
+        }
+        public Integer getShowPriorityLevel() {
+            return this.showPriorityLevel;
         }
 
         public ListCheckStandardResponseBodyStandards setType(String type) {

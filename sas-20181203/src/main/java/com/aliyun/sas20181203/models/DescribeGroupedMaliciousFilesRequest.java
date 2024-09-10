@@ -6,125 +6,175 @@ import com.aliyun.tea.*;
 public class DescribeGroupedMaliciousFilesRequest extends TeaModel {
     /**
      * <p>The cluster ID of the container on which the malicious image sample is detected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c556c8133b5ad4378b7fc533ddbda****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The number of the page to return. Pages start from page **1**. Default value: **1**.</p>
-     * <br>
+     * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The name of the malicious image sample that you want to query.</p>
-     * <br>
-     * <p>>  Fuzzy match is supported.</p>
+     * <blockquote>
+     * <p> Fuzzy match is supported.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Mining</p>
      */
     @NameInMap("FuzzyMaliciousName")
     public String fuzzyMaliciousName;
 
     /**
      * <p>The image digest.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6a5e103187b31a94592a47a5858617f7****</p>
      */
     @NameInMap("ImageDigest")
     public String imageDigest;
 
     /**
      * <p>The image layer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>27213ad375b53628dd152a5ca****</p>
      */
     @NameInMap("ImageLayer")
     public String imageLayer;
 
     /**
      * <p>The image tag.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.2</p>
      */
     @NameInMap("ImageTag")
     public String imageTag;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The severity of the malicious image sample that you want to query. You can enter multiple severities. Separate the severities with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **serious**</p>
-     * <p>*   **suspicious**</p>
-     * <p>*   **remind**</p>
+     * <ul>
+     * <li><strong>serious</strong></li>
+     * <li><strong>suspicious</strong></li>
+     * <li><strong>remind</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>serious</p>
      */
     @NameInMap("Levels")
     public String levels;
 
     /**
      * <p>The MD5 hash value of the malicious image sample.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d836968041f7683b5459****</p>
      */
     @NameInMap("MaliciousMd5")
     public String maliciousMd5;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **20**.</p>
-     * <br>
+     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The ID of the image repository.</p>
-     * <br>
-     * <p>>  You can call the [ListRepository](https://help.aliyun.com/document_detail/145293.html) operation to query the IDs of image repositories from the value of the **RepoId** response parameter.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/145293.html">ListRepository</a> operation to query the IDs of image repositories from the value of the <strong>RepoId</strong> response parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>crr-vridcl4****</p>
      */
     @NameInMap("RepoId")
     public String repoId;
 
     /**
      * <p>The ID of the container image.</p>
-     * <br>
-     * <p>>  You can call the [ListRepository](https://help.aliyun.com/document_detail/145293.html) operation to query the IDs of container images from the value of the **InstanceId** response parameter.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/145293.html">ListRepository</a> operation to query the IDs of container images from the value of the <strong>InstanceId</strong> response parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-datvailb****</p>
      */
     @NameInMap("RepoInstanceId")
     public String repoInstanceId;
 
     /**
      * <p>The name of the image repository.</p>
-     * <br>
-     * <p>>  Fuzzy match is supported.</p>
+     * <blockquote>
+     * <p> Fuzzy match is supported.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>centos</p>
      */
     @NameInMap("RepoName")
     public String repoName;
 
     /**
      * <p>The namespace to which the image repository belongs.</p>
-     * <br>
-     * <p>>  Fuzzy match is supported.</p>
+     * <blockquote>
+     * <p> Fuzzy match is supported.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>hanghai-namespace</p>
      */
     @NameInMap("RepoNamespace")
     public String repoNamespace;
 
     /**
      * <p>The region ID of the image repository. Valid values:</p>
-     * <br>
-     * <p>*   **cn-beijing**: China (Beijing)</p>
-     * <p>*   **cn-zhangjiakou**: China (Zhangjiakou)</p>
-     * <p>*   **cn-hangzhou**: China (Hangzhou)</p>
-     * <p>*   **cn-shanghai**: China (Shanghai)</p>
-     * <p>*   **cn-shenzhen**: China (Shenzhen)</p>
-     * <p>*   **cn-hongkong**: China (Hong Kong)</p>
-     * <p>*   **ap-southeast-1**: Singapore</p>
-     * <p>*   **ap-southeast-5**: Indonesia (Jakarta)</p>
-     * <p>*   **us-east-1**: US (Virginia)</p>
-     * <p>*   **us-west-1**: US (Silicon Valley)</p>
-     * <p>*   **eu-central-1**: Germany (Frankfurt)</p>
-     * <p>*   **eu-west-1**: UK (London)</p>
-     * <p>*   **ap-south-1**: India (Mumbai)</p>
+     * <ul>
+     * <li><strong>cn-beijing</strong>: China (Beijing)</li>
+     * <li><strong>cn-zhangjiakou</strong>: China (Zhangjiakou)</li>
+     * <li><strong>cn-hangzhou</strong>: China (Hangzhou)</li>
+     * <li><strong>cn-shanghai</strong>: China (Shanghai)</li>
+     * <li><strong>cn-shenzhen</strong>: China (Shenzhen)</li>
+     * <li><strong>cn-hongkong</strong>: China (Hong Kong)</li>
+     * <li><strong>ap-southeast-1</strong>: Singapore</li>
+     * <li><strong>ap-southeast-5</strong>: Indonesia (Jakarta)</li>
+     * <li><strong>us-east-1</strong>: US (Virginia)</li>
+     * <li><strong>us-west-1</strong>: US (Silicon Valley)</li>
+     * <li><strong>eu-central-1</strong>: Germany (Frankfurt)</li>
+     * <li><strong>eu-west-1</strong>: UK (London)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RepoRegionId")
     public String repoRegionId;

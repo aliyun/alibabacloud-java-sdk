@@ -7,6 +7,10 @@ public class DescribeImageScanAuthCountResponseBody extends TeaModel {
     @NameInMap("ImageScan")
     public DescribeImageScanAuthCountResponseBodyImageScan imageScan;
 
+    /**
+     * <strong>example:</strong>
+     * <p>892NYH839-0EDC-4CD0-A2EF-5BD294656C99</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class DescribeImageScanAuthCountResponseBody extends TeaModel {
     }
 
     public static class DescribeImageScanAuthCountResponseBodyImageScan extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>15340</p>
+         */
         @NameInMap("ImageScanCapacity")
         public Long imageScanCapacity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sas-qdl123412****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5489</p>
+         */
         @NameInMap("ScanCount")
         public Long scanCount;
 

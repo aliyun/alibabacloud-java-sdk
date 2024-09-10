@@ -18,6 +18,9 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FBD28009-6096-5E90-BFE6-62CCD67*****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +57,36 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
     public static class ListHoneypotEventsResponseBodyHoneypotEventsMergeFieldList extends TeaModel {
         /**
          * <p>The supplementary information about the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>data</p>
          */
         @NameInMap("FieldExtInfo")
         public String fieldExtInfo;
 
         /**
          * <p>The key of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>type</p>
          */
         @NameInMap("FieldKey")
         public String fieldKey;
 
         /**
          * <p>The type of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>level2_item1</p>
          */
         @NameInMap("FieldType")
         public String fieldType;
 
         /**
          * <p>The value of the field key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>web_access</p>
          */
         @NameInMap("FieldValue")
         public String fieldValue;
@@ -118,48 +133,72 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
     public static class ListHoneypotEventsResponseBodyHoneypotEvents extends TeaModel {
         /**
          * <p>The probe ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27d44bd5815d401992ea672874d9****</p>
          */
         @NameInMap("AgentId")
         public String agentId;
 
         /**
          * <p>The name of the probe.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1193474_test_****</p>
          */
         @NameInMap("AgentName")
         public String agentName;
 
         /**
          * <p>The ID of the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1900752</p>
          */
         @NameInMap("AlarmEventId")
         public Long alarmEventId;
 
         /**
          * <p>The destination IP address of the attack.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>112.126.205.***</p>
          */
         @NameInMap("DstIp")
         public String dstIp;
 
         /**
          * <p>The timestamp at which the event was first detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1692670297</p>
          */
         @NameInMap("FirstTime")
         public Long firstTime;
 
         /**
          * <p>The name of the honeypot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>honeypot-2</p>
          */
         @NameInMap("HoneypotName")
         public String honeypotName;
 
         /**
          * <p>The timestamp at which the event was last detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1676558664</p>
          */
         @NameInMap("LastTime")
         public Long lastTime;
 
         /**
          * <p>The region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China Beijing</p>
          */
         @NameInMap("Location")
         public String location;
@@ -172,31 +211,45 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
 
         /**
          * <p>The protocol. Valid values:</p>
-         * <br>
-         * <p>*   **tcp**</p>
-         * <p>*   **udp**</p>
+         * <ul>
+         * <li><strong>tcp</strong></li>
+         * <li><strong>udp</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         @NameInMap("Protocol")
         public String protocol;
 
         /**
          * <p>The risk level. Valid values:</p>
-         * <br>
-         * <p>*   **2**: low</p>
-         * <p>*   **3**: medium</p>
-         * <p>*   **4**: high</p>
+         * <ul>
+         * <li><strong>2</strong>: low</li>
+         * <li><strong>3</strong>: medium</li>
+         * <li><strong>4</strong>: high</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
         /**
          * <p>The ID of the intrusion event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70427821</p>
          */
         @NameInMap("SecurityEventId")
         public Long securityEventId;
 
         /**
          * <p>The source IP address of the attack.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.62.***</p>
          */
         @NameInMap("SrcIp")
         public String srcIp;
@@ -315,36 +368,54 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
     public static class ListHoneypotEventsResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The key of the last data entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CAESGgoSChAKDGNvbXBsZXRlVGltZRABCgQiAggAGAAiQAoJAGYXFWIAAAAACjMDLgAAADFTNzMyZDMwMzAzMDM1Mzc3Njc4MzA2ODY5NmI2YTY*********</p>
          */
         @NameInMap("LastRowKey")
         public String lastRowKey;
 
         /**
          * <p>The value of the NextToken parameter that is returned by using the NextToken method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B604532DEF982B875E8360A6EFA3B***</p>
          */
         @NameInMap("NextToken")
         public String nextToken;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

@@ -6,9 +6,21 @@ import com.aliyun.tea.*;
 public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
     /**
      * <p>The number of the servers on which the same risk item is detected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Count")
     public Integer count;
+
+    /**
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
 
     /**
      * <p>The servers on which the same risk item is detected.</p>
@@ -17,7 +29,19 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
     public java.util.List<DescribeCheckWarningMachinesResponseBodyMachines> machines;
 
     /**
+     * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B3D989EB-2E59-584C-8438-5DFAA34A****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -35,12 +59,28 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
         return this.count;
     }
 
+    public DescribeCheckWarningMachinesResponseBody setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+        return this;
+    }
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
     public DescribeCheckWarningMachinesResponseBody setMachines(java.util.List<DescribeCheckWarningMachinesResponseBodyMachines> machines) {
         this.machines = machines;
         return this;
     }
     public java.util.List<DescribeCheckWarningMachinesResponseBodyMachines> getMachines() {
         return this.machines;
+    }
+
+    public DescribeCheckWarningMachinesResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeCheckWarningMachinesResponseBody setRequestId(String requestId) {
@@ -54,45 +94,67 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
     public static class DescribeCheckWarningMachinesResponseBodyMachines extends TeaModel {
         /**
          * <p>Indicates whether Security Center is authorized to protect the asset. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Bind")
         public Boolean bind;
 
         /**
          * <p>The instance ID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1dp42hgn1xcq8l****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The instance name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>win-oracl****</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The public IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.210.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.25.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>The ID of the region in which the server resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D0D6E6E4-CB8C-4897-B852-46AEFDA0****</p>
          */
         @NameInMap("Uuid")
         public String uuid;

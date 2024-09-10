@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeImageRepoListResponseBody extends TeaModel {
     /**
      * <p>The number of image repositories that are added to Security Center.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("AddTargetCount")
     public Integer addTargetCount;
 
     /**
      * <p>The total number of image repositories.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25</p>
      */
     @NameInMap("AllTargetCount")
     public Integer allTargetCount;
 
     /**
      * <p>The number of excluded image repositories.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("DelTargetCount")
     public Integer delTargetCount;
@@ -36,6 +45,9 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A4EB8B1C-1DEC-5E18-BCD0-D1BBB3936FA7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -96,21 +108,31 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
     public static class DescribeImageRepoListResponseBodyImageRepoList extends TeaModel {
         /**
          * <p>Indicates whether the feature takes effect on the image repository. Valid values:</p>
-         * <br>
-         * <p>*   **add**: yes</p>
-         * <p>*   **del**: no</p>
+         * <ul>
+         * <li><strong>add</strong>: yes</li>
+         * <li><strong>del</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>add</p>
          */
         @NameInMap("Flag")
         public String flag;
 
         /**
          * <p>The name of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zeus</p>
          */
         @NameInMap("RepoName")
         public String repoName;
 
         /**
          * <p>The namespace to which the image repository belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas-script</p>
          */
         @NameInMap("RepoNamespace")
         public String repoNamespace;
@@ -149,24 +171,36 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
     public static class DescribeImageRepoListResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of image repositories.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

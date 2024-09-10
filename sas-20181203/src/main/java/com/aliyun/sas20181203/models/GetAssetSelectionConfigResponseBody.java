@@ -12,6 +12,9 @@ public class GetAssetSelectionConfigResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C5936B67-3EDF-53ED-A542-02543972449A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,16 +43,23 @@ public class GetAssetSelectionConfigResponseBody extends TeaModel {
     public static class GetAssetSelectionConfigResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the current asset selection. It can be used to query and modify the asset that is selected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>657c8411-4e89-446c-ab66-d45d1331****</p>
          */
         @NameInMap("SelectionKey")
         public String selectionKey;
 
         /**
          * <p>The dimension based on which the asset is selected. Valid values:</p>
-         * <br>
-         * <p>*   **instance**: The asset is selected by server.</p>
-         * <p>*   **group**: The asset is selected by group.</p>
-         * <p>*   **vpc**: The asset is selected by VPC.</p>
+         * <ul>
+         * <li><strong>instance</strong>: The asset is selected by server.</li>
+         * <li><strong>group</strong>: The asset is selected by group.</li>
+         * <li><strong>vpc</strong>: The asset is selected by VPC.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         @NameInMap("TargetType")
         public String targetType;

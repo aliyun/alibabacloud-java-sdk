@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class QueryGroupIdByGroupNameRequest extends TeaModel {
     /**
      * <p>The name of the asset group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestGroupName</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.12.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

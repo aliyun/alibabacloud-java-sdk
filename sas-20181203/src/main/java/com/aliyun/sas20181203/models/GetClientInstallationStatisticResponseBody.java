@@ -12,6 +12,9 @@ public class GetClientInstallationStatisticResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F62DD457-2588-589A-B1F6-A1245895D2AB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class GetClientInstallationStatisticResponseBody extends TeaModel {
     public static class GetClientInstallationStatisticResponseBodyClientInstallRatioCurrentItemsItems extends TeaModel {
         /**
          * <p>The total number of cloud assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("AssetTotalCount")
         public Integer assetTotalCount;
 
         /**
          * <p>The timestamp of the calculation. Unit: millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1687759630045</p>
          */
         @NameInMap("CalculateTime")
         public Long calculateTime;
 
         /**
          * <p>The installation rate. Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70.00</p>
          */
         @NameInMap("InstallRatio")
         public Double installRatio;
 
         /**
          * <p>The number of assets on which the client is installed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70</p>
          */
         @NameInMap("InstalledAssetCount")
         public Integer installedAssetCount;
@@ -110,12 +125,16 @@ public class GetClientInstallationStatisticResponseBody extends TeaModel {
 
         /**
          * <p>The type of the cloud asset. Valid values:</p>
-         * <br>
-         * <p>*   **0**: a cloud asset provided by Alibaba Cloud.</p>
-         * <p>*   **1**: a third-party cloud asset</p>
-         * <p>*   **2**: an asset in a data center</p>
-         * <p>*   **3**, **4**, **5**, and **7**: other cloud asset</p>
-         * <p>*   **8**: a lightweight cloud asset</p>
+         * <ul>
+         * <li><strong>0</strong>: a cloud asset provided by Alibaba Cloud.</li>
+         * <li><strong>1</strong>: a third-party cloud asset</li>
+         * <li><strong>2</strong>: an asset in a data center</li>
+         * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: other cloud asset</li>
+         * <li><strong>8</strong>: a lightweight cloud asset</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         @NameInMap("Vendor")
         public Long vendor;
@@ -146,24 +165,36 @@ public class GetClientInstallationStatisticResponseBody extends TeaModel {
     public static class GetClientInstallationStatisticResponseBodyClientInstallRatioHistoryItemsItems extends TeaModel {
         /**
          * <p>The total number of cloud assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("AssetTotalCount")
         public Integer assetTotalCount;
 
         /**
          * <p>The timestamp of the calculation. Unit: millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1687759630045</p>
          */
         @NameInMap("CalculateTime")
         public Long calculateTime;
 
         /**
          * <p>The installation rate. Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80.00</p>
          */
         @NameInMap("InstallRatio")
         public Double installRatio;
 
         /**
          * <p>The number of cloud assets on which the client is installed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("InstalledAssetCount")
         public Integer installedAssetCount;
@@ -216,12 +247,16 @@ public class GetClientInstallationStatisticResponseBody extends TeaModel {
 
         /**
          * <p>The type of the cloud asset. Valid values:</p>
-         * <br>
-         * <p>*   **0**: a cloud asset provided by Alibaba Cloud.</p>
-         * <p>*   **1**: a third-party cloud asset</p>
-         * <p>*   **2**: an asset in a data center</p>
-         * <p>*   **3**, **4**, **5**, and **7**: other cloud asset</p>
-         * <p>*   **8**: a lightweight cloud asset</p>
+         * <ul>
+         * <li><strong>0</strong>: a cloud asset provided by Alibaba Cloud.</li>
+         * <li><strong>1</strong>: a third-party cloud asset</li>
+         * <li><strong>2</strong>: an asset in a data center</li>
+         * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: other cloud asset</li>
+         * <li><strong>8</strong>: a lightweight cloud asset</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("Vendor")
         public Long vendor;

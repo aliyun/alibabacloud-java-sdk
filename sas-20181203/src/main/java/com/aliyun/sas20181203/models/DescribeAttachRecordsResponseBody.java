@@ -12,6 +12,9 @@ public class DescribeAttachRecordsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9F4E6157-9600-5588-86B9-38F09067****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,48 +43,66 @@ public class DescribeAttachRecordsResponseBody extends TeaModel {
     public static class DescribeAttachRecordsResponseBodyAccessList extends TeaModel {
         /**
          * <p>The status of connecting applications on the ECS instance to the application protection feature. Valid values:</p>
-         * <br>
-         * <p>*   **0**: All applications are connected to the application protection feature.</p>
-         * <p>*   **1**: Partial applications are connected to the application protection feature.</p>
-         * <p>*   **2**: Applications failed to be connected to the application protection feature.</p>
-         * <p>*   **3**: Applications are being connected to the application protection feature.</p>
-         * <p>*   **4**: Applications are not connected to the application protection feature.</p>
+         * <ul>
+         * <li><strong>0</strong>: All applications are connected to the application protection feature.</li>
+         * <li><strong>1</strong>: Partial applications are connected to the application protection feature.</li>
+         * <li><strong>2</strong>: Applications failed to be connected to the application protection feature.</li>
+         * <li><strong>3</strong>: Applications are being connected to the application protection feature.</li>
+         * <li><strong>4</strong>: Applications are not connected to the application protection feature.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AttachState")
         public Long attachState;
 
         /**
          * <p>Indicates whether automatic protection is enabled for the applications on the ECS instance. Valid values:</p>
-         * <br>
-         * <p>*   **ON**: Automatic protection is enabled for the applications on the ECS instance.</p>
-         * <p>*   **OFF**: Automatic protection is disabled for the applications on the ECS instance.</p>
+         * <ul>
+         * <li><strong>ON</strong>: Automatic protection is enabled for the applications on the ECS instance.</li>
+         * <li><strong>OFF</strong>: Automatic protection is disabled for the applications on the ECS instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ON</p>
          */
         @NameInMap("AttachSwitch")
         public String attachSwitch;
 
         /**
          * <p>The UUID of the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cd405430-c027-4937-8398-10152dac****</p>
          */
         @NameInMap("EcsUUID")
         public String ecsUUID;
 
         /**
          * <p>The message that shows the results of installing the RASP agent on the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("InstallMsg")
         public String installMsg;
 
         /**
          * <p>The status of installing the RASP agent on the ECS instance to enable automatic application connection. Valid values:</p>
-         * <br>
-         * <p>*   **0**: installed</p>
-         * <p>*   **1**: installing</p>
-         * <p>*   **2**: installation failed</p>
-         * <p>*   **3**: installation timeout</p>
-         * <p>*   **4**: uninstalled</p>
-         * <p>*   **5**: uninstalling</p>
-         * <p>*   **6**: uninstallation failed</p>
-         * <p>*   **7**: uninstallation timeout</p>
+         * <ul>
+         * <li><strong>0</strong>: installed</li>
+         * <li><strong>1</strong>: installing</li>
+         * <li><strong>2</strong>: installation failed</li>
+         * <li><strong>3</strong>: installation timeout</li>
+         * <li><strong>4</strong>: uninstalled</li>
+         * <li><strong>5</strong>: uninstalling</li>
+         * <li><strong>6</strong>: uninstallation failed</li>
+         * <li><strong>7</strong>: uninstallation timeout</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("InstallState")
         public Long installState;

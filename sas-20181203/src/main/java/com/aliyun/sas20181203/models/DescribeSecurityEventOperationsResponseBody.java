@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B7A2000F-497E-5DA0-B14D-615CD410DD7E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,30 +43,43 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
     public static class DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkField extends TeaModel {
         /**
          * <p>The alias of the field that is used in the whitelist rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>file path</p>
          */
         @NameInMap("FiledAliasName")
         public String filedAliasName;
 
         /**
          * <p>The field that is used in the whitelist rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gmtModified</p>
          */
         @NameInMap("FiledName")
         public String filedName;
 
         /**
          * <p>The operation that is used in the whitelist rule. Valid values:</p>
-         * <br>
-         * <p>*   **contains**: contains</p>
-         * <p>*   **notContains**: does not contain</p>
-         * <p>*   **regex**: regular expression</p>
-         * <p>*   **strEqual**: equals</p>
-         * <p>*   **strNotEqual**: does not equal</p>
+         * <ul>
+         * <li><strong>contains</strong>: contains</li>
+         * <li><strong>notContains</strong>: does not contain</li>
+         * <li><strong>regex</strong>: regular expression</li>
+         * <li><strong>strEqual</strong>: equals</li>
+         * <li><strong>strNotEqual</strong>: does not equal</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>contains</p>
          */
         @NameInMap("MarkMisType")
         public String markMisType;
 
         /**
          * <p>The value of the field that is used in the whitelist rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-25 10:11:04</p>
          */
         @NameInMap("MarkMisValue")
         public String markMisValue;
@@ -76,6 +92,9 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
 
         /**
          * <p>The UUID of the server on which the alert event is detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3d6b4a75-c28f-447b-9142-38f6252c****</p>
          */
         @NameInMap("Uuid")
         public String uuid;
@@ -138,18 +157,27 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
     public static class DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkFieldsSource extends TeaModel {
         /**
          * <p>The alias of the field that can be used in the whitelist rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>file path</p>
          */
         @NameInMap("FiledAliasName")
         public String filedAliasName;
 
         /**
          * <p>The field that can be used in the whitelist rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gmtModified</p>
          */
         @NameInMap("FiledName")
         public String filedName;
 
         /**
          * <p>The value of the field that can be used in the whitelist rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>contains</p>
          */
         @NameInMap("MarkMisValue")
         public String markMisValue;
@@ -201,7 +229,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
 
     public static class DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponse extends TeaModel {
         /**
-         * <p>An array consisting of the configuration information that is used when the value of the OperationCode parameter is **advance_mark_mis_info**.</p>
+         * <p>An array consisting of the configuration information that is used when the value of the OperationCode parameter is <strong>advance_mark_mis_info</strong>.</p>
          */
         @NameInMap("MarkField")
         public java.util.List<DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkField> markField;
@@ -214,34 +242,46 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
 
         /**
          * <p>The operation that you can perform to handle the alert. Valid values:</p>
-         * <br>
-         * <p>*   **block_ip**: blocks the source IP address.</p>
-         * <p>*   **advance_mark_mis_info**: adds the alert to the whitelist.</p>
-         * <p>*   **ignore**: ignores the alert.</p>
-         * <p>*   **manual_handled**: marks the alert as manually handled.</p>
-         * <p>*   **kill_process**: terminates the malicious process.</p>
-         * <p>*   **cleanup**: performs in-depth virus detection and removal.</p>
-         * <p>*   **kill_and_quara**: terminates the malicious process and quarantines the source file.</p>
-         * <p>*   **disable_malicious_defense**: stops the container on which the alerting files or processes exist.</p>
-         * <p>*   **client_problem_check**: performs troubleshooting.</p>
-         * <p>*   **quara**: quarantines the source file of the malicious process.</p>
+         * <ul>
+         * <li><strong>block_ip</strong>: blocks the source IP address.</li>
+         * <li><strong>advance_mark_mis_info</strong>: adds the alert to the whitelist.</li>
+         * <li><strong>ignore</strong>: ignores the alert.</li>
+         * <li><strong>manual_handled</strong>: marks the alert as manually handled.</li>
+         * <li><strong>kill_process</strong>: terminates the malicious process.</li>
+         * <li><strong>cleanup</strong>: performs in-depth virus detection and removal.</li>
+         * <li><strong>kill_and_quara</strong>: terminates the malicious process and quarantines the source file.</li>
+         * <li><strong>disable_malicious_defense</strong>: stops the container on which the alerting files or processes exist.</li>
+         * <li><strong>client_problem_check</strong>: performs troubleshooting.</li>
+         * <li><strong>quara</strong>: quarantines the source file of the malicious process.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>advance_mark_mis_info</p>
          */
         @NameInMap("OperationCode")
         public String operationCode;
 
         /**
          * <p>The configuration of the operation that you can perform to handle the alert event.</p>
-         * <br>
-         * <p>>  If the value of the OperationCode parameter is `kill_and_quara` or `block_ip`, the OperationParams parameter is required. If the value of the OperationCode parameter is a different value, the OperationParams parameter can be left empty.</p>
+         * <blockquote>
+         * <p> If the value of the OperationCode parameter is <code>kill_and_quara</code> or <code>block_ip</code>, the OperationParams parameter is required. If the value of the OperationCode parameter is a different value, the OperationParams parameter can be left empty.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;expireTime&quot;:1641566807783}</p>
          */
         @NameInMap("OperationParams")
         public String operationParams;
 
         /**
          * <p>Indicates whether you can handle the alert event in the current edition of Security Center. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("UserCanOperate")
         public Boolean userCanOperate;

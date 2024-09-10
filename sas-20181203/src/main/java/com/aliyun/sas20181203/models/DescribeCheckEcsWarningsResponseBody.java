@@ -4,15 +4,31 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeCheckEcsWarningsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("CanTry")
     public String canTry;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4E5BFDCF-B9DD-430D-9DA4-151BCB581C9D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("SasVersion")
     public String sasVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("WeakPasswordCount")
     public String weakPasswordCount;
 

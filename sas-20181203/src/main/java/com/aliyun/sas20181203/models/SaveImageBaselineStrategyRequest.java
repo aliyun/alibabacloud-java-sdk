@@ -6,42 +6,60 @@ import com.aliyun.tea.*;
 public class SaveImageBaselineStrategyRequest extends TeaModel {
     /**
      * <p>The baseline check items.</p>
-     * <br>
-     * <p>> You can call the [DescribeImageBaselineStrategy](~~DescribeImageBaselineStrategy~~) operation to query baseline check items.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeImageBaselineStrategy~~">DescribeImageBaselineStrategy</a> operation to query baseline check items.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ak_leak</p>
      */
     @NameInMap("BaselineItemList")
     public String baselineItemList;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The data source. If this parameter is left empty, the baseline check policy for images is queried. Valid values:</p>
-     * <br>
-     * <p>*   **default**: the baseline check policy for images</p>
-     * <p>*   **agentless**: agentless detection</p>
+     * <ul>
+     * <li><strong>default</strong>: the baseline check policy for images</li>
+     * <li><strong>agentless</strong>: agentless detection</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>agentless</p>
      */
     @NameInMap("Source")
     public String source;
 
     /**
      * <p>The ID of the baseline check policy.</p>
-     * <br>
-     * <p>> You can call the [DescribeImageBaselineStrategy](~~DescribeImageBaselineStrategy~~) operation to query the IDs of baseline check policies.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeImageBaselineStrategy~~">DescribeImageBaselineStrategy</a> operation to query the IDs of baseline check policies.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>8639</p>
      */
     @NameInMap("StrategyId")
     public Long strategyId;
 
     /**
      * <p>The name of the baseline check policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("StrategyName")
     public String strategyName;

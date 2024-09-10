@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class SetSensitiveDefineRuleConfigRequest extends TeaModel {
     /**
      * <p>The configurations of the custom check rule. The value is in the JSON format. Valid values of keys:</p>
-     * <br>
-     * <p>*   **classKey**: the category keyword of the check rule.</p>
-     * <p>*   **ruleList**: the keyword of the check rule.</p>
+     * <ul>
+     * <li><strong>classKey</strong>: the category keyword of the check rule.</li>
+     * <li><strong>ruleList</strong>: the keyword of the check rule.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[{\&quot;classKey\&quot;: \&quot;password\&quot;, \&quot;ruleList\&quot;: [\&quot;huaweicloud_ak\&quot;, \&quot;ak_leak\&quot;]}]</p>
      */
     @NameInMap("Config")
     public String config;

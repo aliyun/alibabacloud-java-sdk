@@ -12,6 +12,9 @@ public class DescribeRiskItemTypeResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3B3F3A90-46A5-4023-A2D8-D68B14262F96</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeRiskItemTypeResponseBody extends TeaModel {
     public static class DescribeRiskItemTypeResponseBodyList extends TeaModel {
         /**
          * <p>The ID of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>37625</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name of the check type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Identity authentication and permissions</p>
          */
         @NameInMap("Title")
         public String title;

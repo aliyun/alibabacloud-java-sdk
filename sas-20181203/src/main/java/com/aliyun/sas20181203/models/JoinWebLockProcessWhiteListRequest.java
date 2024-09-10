@@ -12,6 +12,9 @@ public class JoinWebLockProcessWhiteListRequest extends TeaModel {
 
     /**
      * <p>The UUIDs of the servers on which the processes run. Separate multiple UUIDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0c1714dc-f7a3-4265-8364-7aa3fce8****,1cc45e7d-7698-4b2c-89d8-e8cba407****</p>
      */
     @NameInMap("Uuids")
     public String uuids;

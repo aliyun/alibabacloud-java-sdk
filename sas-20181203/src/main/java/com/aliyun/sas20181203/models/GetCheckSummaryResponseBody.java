@@ -18,6 +18,9 @@ public class GetCheckSummaryResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>843E4805-****-7EE12FA8DBFD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,12 +71,18 @@ public class GetCheckSummaryResponseBody extends TeaModel {
     public static class GetCheckSummaryResponseBodyOverallItemStatistic extends TeaModel {
         /**
          * <p>The number of check items supported by the system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>620</p>
          */
         @NameInMap("ReleaseCount")
         public Integer releaseCount;
 
         /**
          * <p>The number of check items available to you.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         @NameInMap("ResultCount")
         public Integer resultCount;
@@ -104,72 +113,108 @@ public class GetCheckSummaryResponseBody extends TeaModel {
     public static class GetCheckSummaryResponseBodyOverallStatistic extends TeaModel {
         /**
          * <p>The number of unchecked check items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("NotCheckCount")
         public Integer notCheckCount;
 
         /**
          * <p>The number of unchecked high-risk check items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NotCheckHighCount")
         public Integer notCheckHighCount;
 
         /**
          * <p>The number of unchecked low-risk check items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NotCheckLowCount")
         public Integer notCheckLowCount;
 
         /**
          * <p>The number of unchecked medium-risk check items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NotCheckMediumCount")
         public Integer notCheckMediumCount;
 
         /**
          * <p>The number of check items that failed to pass the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("NotPassCount")
         public Integer notPassCount;
 
         /**
          * <p>The number of high-risk check items that failed to pass the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NotPassHighCount")
         public Integer notPassHighCount;
 
         /**
          * <p>The number of low-risk check items that failed to pass the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NotPassLowCount")
         public Integer notPassLowCount;
 
         /**
          * <p>The number of medium-risk check items that failed to pass the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NotPassMediumCount")
         public Integer notPassMediumCount;
 
         /**
          * <p>The number of check items that pass the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("PassCount")
         public Integer passCount;
 
         /**
          * <p>The number of high-risk check items that pass the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PassHighCount")
         public Integer passHighCount;
 
         /**
          * <p>The number of low-risk check items that pass the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PassLowCount")
         public Integer passLowCount;
 
         /**
          * <p>The number of medium-risk check items that pass the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PassMediumCount")
         public Integer passMediumCount;
@@ -280,72 +325,108 @@ public class GetCheckSummaryResponseBody extends TeaModel {
     public static class GetCheckSummaryResponseBodySummarysStandardsStandardStatistic extends TeaModel {
         /**
          * <p>The number of unchecked check items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("NotCheckCount")
         public Integer notCheckCount;
 
         /**
          * <p>The number of unchecked high-risk check items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NotCheckHighCount")
         public Integer notCheckHighCount;
 
         /**
          * <p>The number of unchecked low-risk check items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NotCheckLowCount")
         public Integer notCheckLowCount;
 
         /**
          * <p>The number of unchecked medium-risk check items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NotCheckMediumCount")
         public Integer notCheckMediumCount;
 
         /**
          * <p>The number of check items that failed to pass the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("NotPassCount")
         public Integer notPassCount;
 
         /**
          * <p>The number of high-risk check items that failed to pass the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NotPassHighCount")
         public Integer notPassHighCount;
 
         /**
          * <p>The number of low-risk check items that failed to pass the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NotPassLowCount")
         public Integer notPassLowCount;
 
         /**
          * <p>The number of medium-risk check items that failed to pass the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NotPassMediumCount")
         public Integer notPassMediumCount;
 
         /**
          * <p>The number of check items that pass the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("PassCount")
         public Integer passCount;
 
         /**
          * <p>The number of high-risk check items that pass the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PassHighCount")
         public Integer passHighCount;
 
         /**
          * <p>The number of low-risk check items that pass the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PassLowCount")
         public Integer passLowCount;
 
         /**
          * <p>The number of medium-risk check items that pass the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PassMediumCount")
         public Integer passMediumCount;
@@ -456,42 +537,63 @@ public class GetCheckSummaryResponseBody extends TeaModel {
     public static class GetCheckSummaryResponseBodySummarysStandards extends TeaModel {
         /**
          * <p>The number of check items that failed to pass the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("FailCount")
         public Integer failCount;
 
         /**
          * <p>The ID of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The number of check items that pass the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PassCount")
         public Integer passCount;
 
         /**
-         * <p>The number of **high-risk** items.</p>
+         * <p>The number of <strong>high-risk</strong> items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RiskLevelHighCount")
         public Integer riskLevelHighCount;
 
         /**
-         * <p>The number of **low-risk** items.</p>
+         * <p>The number of <strong>low-risk</strong> items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RiskLevelLowCount")
         public Integer riskLevelLowCount;
 
         /**
-         * <p>The number of **medium-risk** items.</p>
+         * <p>The number of <strong>medium-risk</strong> items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RiskLevelMediumCount")
         public Integer riskLevelMediumCount;
 
         /**
          * <p>The name of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Identity and permission management</p>
          */
         @NameInMap("ShowName")
         public String showName;
@@ -576,72 +678,108 @@ public class GetCheckSummaryResponseBody extends TeaModel {
     public static class GetCheckSummaryResponseBodySummarysTypeStatistic extends TeaModel {
         /**
          * <p>The number of unchecked check items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("NotCheckCount")
         public Integer notCheckCount;
 
         /**
          * <p>The number of unchecked high-risk check items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NotCheckHighCount")
         public Integer notCheckHighCount;
 
         /**
          * <p>The number of unchecked low-risk check items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NotCheckLowCount")
         public Integer notCheckLowCount;
 
         /**
          * <p>The number of unchecked medium-risk check items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NotCheckMediumCount")
         public Integer notCheckMediumCount;
 
         /**
          * <p>The number of check items that failed to pass the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("NotPassCount")
         public Integer notPassCount;
 
         /**
          * <p>The number of high-risk check items that failed to pass the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NotPassHighCount")
         public Integer notPassHighCount;
 
         /**
          * <p>The number of low-risk check items that failed to pass the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NotPassLowCount")
         public Integer notPassLowCount;
 
         /**
          * <p>The number of medium-risk check items that failed to pass the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NotPassMediumCount")
         public Integer notPassMediumCount;
 
         /**
          * <p>The number of check items that pass the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("PassCount")
         public Integer passCount;
 
         /**
          * <p>The number of high-risk check items that pass the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PassHighCount")
         public Integer passHighCount;
 
         /**
          * <p>The number of low-risk check items that pass the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PassLowCount")
         public Integer passLowCount;
 
         /**
          * <p>The number of medium-risk check items that pass the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PassMediumCount")
         public Integer passMediumCount;
@@ -752,12 +890,18 @@ public class GetCheckSummaryResponseBody extends TeaModel {
     public static class GetCheckSummaryResponseBodySummarys extends TeaModel {
         /**
          * <p>The number of detected risk items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("FailCount")
         public Integer failCount;
 
         /**
          * <p>The number of check items that pass the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PassCount")
         public Long passCount;
@@ -770,10 +914,14 @@ public class GetCheckSummaryResponseBody extends TeaModel {
 
         /**
          * <p>The type of the check item. Valid values:</p>
-         * <br>
-         * <p>*   **COMPLIANCE**</p>
-         * <p>*   **RISK**</p>
-         * <p>*   **IDENTITY_PERMISSION**</p>
+         * <ul>
+         * <li><strong>COMPLIANCE</strong></li>
+         * <li><strong>RISK</strong></li>
+         * <li><strong>IDENTITY_PERMISSION</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IDENTITY_PERMISSION</p>
          */
         @NameInMap("Type")
         public String type;

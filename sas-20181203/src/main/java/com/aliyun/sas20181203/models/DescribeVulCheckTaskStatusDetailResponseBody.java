@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BE120DAB-F4E7-4C53-ADC3-A97578ABF384</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,6 +21,9 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
 
     /**
      * <p>The total number of vulnerability scan tasks on the server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -54,29 +60,40 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
     public static class DescribeVulCheckTaskStatusDetailResponseBodyTaskStatusesTaskStatusList extends TeaModel {
         /**
          * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>push_command_failed</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The status of the subtask. Valid values:</p>
-         * <br>
-         * <p>*   **0**: unhandled</p>
-         * <p>*   **1**: collecting</p>
-         * <p>*   **2**: collected</p>
-         * <p>*   **3**: matching</p>
-         * <p>*   **4**: complete</p>
+         * <ul>
+         * <li><strong>0</strong>: unhandled</li>
+         * <li><strong>1</strong>: collecting</li>
+         * <li><strong>2</strong>: collected</li>
+         * <li><strong>3</strong>: matching</li>
+         * <li><strong>4</strong>: complete</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The type of the vulnerability. Valid values:</p>
-         * <br>
-         * <p>*   **cve**: Linux software vulnerability</p>
-         * <p>*   **sys**: Windows system vulnerability</p>
-         * <p>*   **cms**: Web-CMS vulnerability</p>
-         * <p>*   **sca**: vulnerability that is detected based on software component analysis</p>
+         * <ul>
+         * <li><strong>cve</strong>: Linux software vulnerability</li>
+         * <li><strong>sys</strong>: Windows system vulnerability</li>
+         * <li><strong>cms</strong>: Web-CMS vulnerability</li>
+         * <li><strong>sca</strong>: vulnerability that is detected based on software component analysis</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cve</p>
          */
         @NameInMap("Type")
         public String type;
@@ -115,6 +132,9 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
     public static class DescribeVulCheckTaskStatusDetailResponseBodyTaskStatuses extends TeaModel {
         /**
          * <p>The ID of the main task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16190385</p>
          */
         @NameInMap("TaskId")
         public String taskId;

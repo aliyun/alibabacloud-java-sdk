@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class DescribeEmgUserAgreementResponseBody extends TeaModel {
     /**
      * <p>Indicates whether Security Center is authorized to scan for urgent vulnerabilities. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Auth")
     public Boolean auth;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>768BB9F5-8AF3-557F-A489-9BDD64CB3E4C</p>
      */
     @NameInMap("RequestId")
     public String requestId;

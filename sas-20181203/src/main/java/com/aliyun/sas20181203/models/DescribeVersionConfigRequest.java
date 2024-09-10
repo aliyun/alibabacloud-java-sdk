@@ -6,14 +6,21 @@ import com.aliyun.tea.*;
 public class DescribeVersionConfigRequest extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account that uses Security Center.</p>
-     * <br>
-     * <p>>  You can call the [GetUser](https://help.aliyun.com/document_detail/28681.html) operation to query the IDs of Alibaba Cloud accounts.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/28681.html">GetUser</a> operation to query the IDs of Alibaba Cloud accounts.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>127608589417****</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public String resourceDirectoryAccountId;
 
     /**
      * <p>The source IP address of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

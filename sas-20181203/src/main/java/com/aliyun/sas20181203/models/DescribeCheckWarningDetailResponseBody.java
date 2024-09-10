@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeCheckWarningDetailResponseBody extends TeaModel {
     /**
      * <p>The suggestion for the management of the risk item.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>You can fix it in the following ways:↵1. To configure authentication for redis service, click the redis.conf Configure complex password in requirepass, and then restart redis.↵2. In redis configuration file redis.conf The configuration is as follows: bind 127.0.0.1, only allow local access, and then restart redis</p>
      */
     @NameInMap("Advice")
     public String advice;
@@ -24,28 +27,41 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the check item.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>946</p>
      */
     @NameInMap("CheckId")
     public Long checkId;
 
     /**
      * <p>The additional information about the risk item.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The redis port is open to the outside world and there is no authentication option configured. In addition to directly obtaining all the information in the database, unauthorized users can also attack the system through unauthorized access vulnerability.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The name of the check item.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Redis unauthorized access</p>
      */
     @NameInMap("Item")
     public String item;
 
     /**
      * <p>The risk level of the check item. Valid values:</p>
-     * <br>
-     * <p>*   **high**: The item is a high-risk item and is highlighted in red.</p>
-     * <p>*   **medium**: The item is a medium-risk item and is highlighted in orange.</p>
-     * <p>*   **low**: The item is a low-risk item and is highlighted in gray.</p>
+     * <ul>
+     * <li><strong>high</strong>: The item is a high-risk item and is highlighted in red.</li>
+     * <li><strong>medium</strong>: The item is a medium-risk item and is highlighted in orange.</li>
+     * <li><strong>low</strong>: The item is a low-risk item and is highlighted in gray.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>high</p>
      */
     @NameInMap("Level")
     public String level;
@@ -58,20 +74,27 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BE120DAB-F4E7-4C53-ADC3-A97578ABF384</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The type of the check item. Valid values:</p>
-     * <br>
-     * <p>*   **hc_exploit**: unauthorized access</p>
-     * <p>*   **hc_djbh**: classified protection compliance</p>
-     * <p>*   **hc_best_secruity**: best security practice</p>
-     * <p>*   **hc_container**: container security</p>
-     * <p>*   **hc_custom**: custom baseline</p>
-     * <p>*   **cis**: Center for Internet Security (CIS) compliance</p>
-     * <p>*   **weak_password**: weak password</p>
+     * <ul>
+     * <li><strong>hc_exploit</strong>: unauthorized access</li>
+     * <li><strong>hc_djbh</strong>: classified protection compliance</li>
+     * <li><strong>hc_best_secruity</strong>: best security practice</li>
+     * <li><strong>hc_container</strong>: container security</li>
+     * <li><strong>hc_custom</strong>: custom baseline</li>
+     * <li><strong>cis</strong>: Center for Internet Security (CIS) compliance</li>
+     * <li><strong>weak_password</strong>: weak password</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>hc_exploit</p>
      */
     @NameInMap("Type")
     public String type;
@@ -164,20 +187,31 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
     public static class DescribeCheckWarningDetailResponseBodyCheckDetailColumnsGrids extends TeaModel {
         /**
          * <p>Key to detect content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Username</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The detection content key corresponds to the display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UserName</p>
          */
         @NameInMap("ShowName")
         public String showName;
 
         /**
          * <p>Display type. Value:</p>
-         * <p>- **grid**: Detection grid</p>
-         * <p>- **text**: text</p>
+         * <ul>
+         * <li><strong>grid</strong>: Detection grid</li>
+         * <li><strong>text</strong>: text</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         @NameInMap("Type")
         public String type;
@@ -222,20 +256,31 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
 
         /**
          * <p>Key to detect content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Containername</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The detection content key corresponds to the display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ContainerName</p>
          */
         @NameInMap("ShowName")
         public String showName;
 
         /**
          * <p>Display type. Value:</p>
-         * <p>- **grid**: Detection grid</p>
-         * <p>- **text**: text</p>
+         * <ul>
+         * <li><strong>grid</strong>: Detection grid</li>
+         * <li><strong>text</strong>: text</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         @NameInMap("Type")
         public String type;

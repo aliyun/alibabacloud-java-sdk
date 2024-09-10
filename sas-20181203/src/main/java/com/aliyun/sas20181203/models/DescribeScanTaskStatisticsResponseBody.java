@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class DescribeScanTaskStatisticsResponseBody extends TeaModel {
     /**
      * <p>The number of risks that are handled for the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11</p>
      */
     @NameInMap("DealedRiskNum")
     public Integer dealedRiskNum;
 
     /**
      * <p>The total number of tasks that are created for the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11</p>
      */
     @NameInMap("PersonalTaskNum")
     public Long personalTaskNum;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>765EDBDE-1686-5DBA-B76F-2E0XXXXXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of virus detection tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11</p>
      */
     @NameInMap("TotalTaskNum")
     public Long totalTaskNum;
 
     /**
      * <p>The number of risks that are detected for the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11</p>
      */
     @NameInMap("UserNum")
     public Long userNum;

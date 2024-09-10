@@ -6,116 +6,134 @@ import com.aliyun.tea.*;
 public class DescribeAttackAnalysisDataResponseBody extends TeaModel {
     /**
      * <p>The attack events. The value contains the following fields:</p>
-     * <br>
-     * <p>*   **client_url**: the URL of the attack request.</p>
-     * <br>
-     * <p>*   **internetIp**: the IP address of the asset.</p>
-     * <br>
-     * <p>*   **instanceName**: the name of the asset.</p>
-     * <br>
-     * <p>*   **table_src**: the source of data.</p>
-     * <br>
-     * <p>*   **uuid**: the UUID of the asset.</p>
-     * <br>
-     * <p>*   **crack_method**: the method of the attack request.</p>
-     * <br>
-     * <p>*   **crack_hour**: the attack time.</p>
-     * <br>
-     * <p>*   **crack_src_ip**: the IP address from which the attack is launched.</p>
-     * <br>
-     * <p>*   **instanceId**: the ID of the asset.</p>
-     * <br>
-     * <p>*   **dst_port**: the attacked port.</p>
-     * <br>
-     * <p>*   **client_ip**: the attacked IP address.</p>
-     * <br>
-     * <p>*   **location**: the region from which the attack is launched.</p>
-     * <br>
-     * <p>*   **aliuid**: the ID of the Alibaba Cloud account.</p>
-     * <br>
-     * <p>*   **crack_cnt**: the number of times that the attack is launched.</p>
-     * <br>
-     * <p>*   **crack_type**: the type of the attack. Valid values:</p>
-     * <br>
-     * <p>    *   **113**: improper authorization</p>
-     * <p>    *   **112**: redirection attack</p>
-     * <p>    *   **upload**: vulnerability upload</p>
-     * <p>    *   **other**: others</p>
-     * <p>    *   **webshell**: trojan script</p>
-     * <p>    *   **201**: suspicious connection</p>
-     * <p>    *   **9**: brute-force attack on Microsoft SQL Server</p>
-     * <p>    *   **5**: SSH brute-force attack</p>
-     * <p>    *   **6**: RDP brute-force attack</p>
-     * <p>    *   **lfi**: local file inclusion</p>
-     * <p>    *   **7**: code execution</p>
-     * <p>    *   **sqli**: SQL injection</p>
-     * <p>    *   **209**: web attack</p>
-     * <p>    *   **31**: buffer overflow</p>
-     * <p>    *   **3**: brute-force attack on MySQL</p>
-     * <p>    *   **30**: clickjacking</p>
-     * <p>    *   **4**: FTP brute-force attack</p>
-     * <p>    *   **bypass**: unauthorized access</p>
-     * <p>    *   **33**: format string</p>
-     * <p>    *   **deeplearning**: others</p>
-     * <p>    *   **32**: integer overflow</p>
-     * <p>    *   **203**: brute-force attack</p>
-     * <p>    *   **34**: race condition</p>
-     * <p>    *   **rfi**: remote file inclusion</p>
-     * <p>    *   **0**: SQL injection</p>
-     * <p>    *   **212**: mining behavior</p>
-     * <p>    *   **213**: reverse shell</p>
-     * <p>    *   **211**: worm</p>
-     * <p>    *   **61**: session timeout</p>
-     * <p>    *   **20**: directory traversal</p>
-     * <p>    *   **xss**: XSS</p>
-     * <p>    *   **22**: unauthorized access</p>
-     * <p>    *   **21**: scan attack</p>
-     * <p>    *   **24**: file modification</p>
-     * <p>    *   **26**: file deletion</p>
-     * <p>    *   **25**: file reading</p>
-     * <p>    *   **28**: CRLF injection</p>
-     * <p>    *   **27**: logic error</p>
-     * <p>    *   **29**: template injection</p>
-     * <p>    *   **csrf**: CSRF</p>
-     * <p>    *   **path**: directory traversal</p>
-     * <p>    *   **crlf**: CRLF</p>
-     * <p>    *   **102**: CSRF</p>
-     * <p>    *   **103**: server-side request forgery (SSRF)</p>
-     * <p>    *   **101**: XSS</p>
-     * <p>    *   **11**: file inclusion</p>
-     * <p>    *   **10**: file upload</p>
-     * <p>    *   **12**: vulnerability upload</p>
-     * <p>    *   **15**: unauthorized access</p>
-     * <p>    *   **14**: information leakage</p>
-     * <p>    *   **17**: XML entity injection</p>
-     * <p>    *   **16**: insecure configuration</p>
-     * <p>    *   **19**: Lightweight Directory Access Protocol (LDAP) injection</p>
-     * <p>    *   **18**: XPath injection</p>
-     * <p>    *   **codei**: code execution</p>
+     * <ul>
+     * <li><p><strong>client_url</strong>: the URL of the attack request.</p>
+     * </li>
+     * <li><p><strong>internetIp</strong>: the IP address of the asset.</p>
+     * </li>
+     * <li><p><strong>instanceName</strong>: the name of the asset.</p>
+     * </li>
+     * <li><p><strong>table_src</strong>: the source of data.</p>
+     * </li>
+     * <li><p><strong>uuid</strong>: the UUID of the asset.</p>
+     * </li>
+     * <li><p><strong>crack_method</strong>: the method of the attack request.</p>
+     * </li>
+     * <li><p><strong>crack_hour</strong>: the attack time.</p>
+     * </li>
+     * <li><p><strong>crack_src_ip</strong>: the IP address from which the attack is launched.</p>
+     * </li>
+     * <li><p><strong>instanceId</strong>: the ID of the asset.</p>
+     * </li>
+     * <li><p><strong>dst_port</strong>: the attacked port.</p>
+     * </li>
+     * <li><p><strong>client_ip</strong>: the attacked IP address.</p>
+     * </li>
+     * <li><p><strong>location</strong>: the region from which the attack is launched.</p>
+     * </li>
+     * <li><p><strong>aliuid</strong>: the ID of the Alibaba Cloud account.</p>
+     * </li>
+     * <li><p><strong>crack_cnt</strong>: the number of times that the attack is launched.</p>
+     * </li>
+     * <li><p><strong>crack_type</strong>: the type of the attack. Valid values:</p>
+     * <ul>
+     * <li><strong>113</strong>: improper authorization</li>
+     * <li><strong>112</strong>: redirection attack</li>
+     * <li><strong>upload</strong>: vulnerability upload</li>
+     * <li><strong>other</strong>: others</li>
+     * <li><strong>webshell</strong>: trojan script</li>
+     * <li><strong>201</strong>: suspicious connection</li>
+     * <li><strong>9</strong>: brute-force attack on Microsoft SQL Server</li>
+     * <li><strong>5</strong>: SSH brute-force attack</li>
+     * <li><strong>6</strong>: RDP brute-force attack</li>
+     * <li><strong>lfi</strong>: local file inclusion</li>
+     * <li><strong>7</strong>: code execution</li>
+     * <li><strong>sqli</strong>: SQL injection</li>
+     * <li><strong>209</strong>: web attack</li>
+     * <li><strong>31</strong>: buffer overflow</li>
+     * <li><strong>3</strong>: brute-force attack on MySQL</li>
+     * <li><strong>30</strong>: clickjacking</li>
+     * <li><strong>4</strong>: FTP brute-force attack</li>
+     * <li><strong>bypass</strong>: unauthorized access</li>
+     * <li><strong>33</strong>: format string</li>
+     * <li><strong>deeplearning</strong>: others</li>
+     * <li><strong>32</strong>: integer overflow</li>
+     * <li><strong>203</strong>: brute-force attack</li>
+     * <li><strong>34</strong>: race condition</li>
+     * <li><strong>rfi</strong>: remote file inclusion</li>
+     * <li><strong>0</strong>: SQL injection</li>
+     * <li><strong>212</strong>: mining behavior</li>
+     * <li><strong>213</strong>: reverse shell</li>
+     * <li><strong>211</strong>: worm</li>
+     * <li><strong>61</strong>: session timeout</li>
+     * <li><strong>20</strong>: directory traversal</li>
+     * <li><strong>xss</strong>: XSS</li>
+     * <li><strong>22</strong>: unauthorized access</li>
+     * <li><strong>21</strong>: scan attack</li>
+     * <li><strong>24</strong>: file modification</li>
+     * <li><strong>26</strong>: file deletion</li>
+     * <li><strong>25</strong>: file reading</li>
+     * <li><strong>28</strong>: CRLF injection</li>
+     * <li><strong>27</strong>: logic error</li>
+     * <li><strong>29</strong>: template injection</li>
+     * <li><strong>csrf</strong>: CSRF</li>
+     * <li><strong>path</strong>: directory traversal</li>
+     * <li><strong>crlf</strong>: CRLF</li>
+     * <li><strong>102</strong>: CSRF</li>
+     * <li><strong>103</strong>: server-side request forgery (SSRF)</li>
+     * <li><strong>101</strong>: XSS</li>
+     * <li><strong>11</strong>: file inclusion</li>
+     * <li><strong>10</strong>: file upload</li>
+     * <li><strong>12</strong>: vulnerability upload</li>
+     * <li><strong>15</strong>: unauthorized access</li>
+     * <li><strong>14</strong>: information leakage</li>
+     * <li><strong>17</strong>: XML entity injection</li>
+     * <li><strong>16</strong>: insecure configuration</li>
+     * <li><strong>19</strong>: Lightweight Directory Access Protocol (LDAP) injection</li>
+     * <li><strong>18</strong>: XPath injection</li>
+     * <li><strong>codei</strong>: code execution</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[{\&quot;crack_hour\&quot;:1662480000000,\&quot;crack_cnt\&quot;:471},{\&quot;crack_hour\&quot;:1662483600000,\&quot;crack_cnt\&quot;:461},{\&quot;crack_hour\&quot;:1662487200000,\&quot;crack_cnt\&quot;:445},{\&quot;crack_hour\&quot;:1662490800000,\&quot;crack_cnt\&quot;:471},{\&quot;crack_hour\&quot;:1662494400000,\&quot;crack_cnt\&quot;:534},{\&quot;crack_hour\&quot;:1662498000000,\&quot;crack_cnt\&quot;:652},{\&quot;crack_hour\&quot;:1662501600000,\&quot;crack_cnt\&quot;:706},{\&quot;crack_hour\&quot;:1662505200000,\&quot;crack_cnt\&quot;:613},{\&quot;crack_hour\&quot;:1662508800000,\&quot;crack_cnt\&quot;:578},{\&quot;crack_hour\&quot;:1662512400000,\&quot;crack_cnt\&quot;:577},{\&quot;crack_hour\&quot;:1662516000000,\&quot;crack_cnt\&quot;:616},{\&quot;crack_hour\&quot;:1662519600000,\&quot;crack_cnt\&quot;:597},{\&quot;crack_hour\&quot;:1662523200000,\&quot;crack_cnt\&quot;:575},{\&quot;crack_hour\&quot;:1662526800000,\&quot;crack_cnt\&quot;:507}]</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Page")
     public Integer page;
 
     /**
      * <p>The number of entries returned per page. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4C1AE3F3-18FA-4108-BBB9-AFA1A032756C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of attack events returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("Total")
     public Integer total;

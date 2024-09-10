@@ -12,6 +12,9 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9F4217C8-763F-51EF-84D4-5535E072B2D8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +57,36 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
     public static class DescribeSimilarSecurityEventsResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page. Default value: **20**.</p>
+         * <p>The number of entries returned per page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -118,59 +133,77 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
     public static class DescribeSimilarSecurityEventsResponseBodySecurityEventsResponse extends TeaModel {
         /**
          * <p>The name of the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Trojan</p>
          */
         @NameInMap("EventName")
         public String eventName;
 
         /**
          * <p>The type of the alert event. Valid values:</p>
-         * <br>
-         * <p>*   Suspicious Process</p>
-         * <p>*   Webshell</p>
-         * <p>*   Unusual Logon</p>
-         * <p>*   Malicious Software</p>
-         * <p>*   Sensitive File Tampering</p>
-         * <p>*   Unusual Network Connection</p>
-         * <p>*   Other</p>
-         * <p>*   Suspicious Account</p>
-         * <p>*   Cloud threat detection</p>
-         * <p>*   Precision defense</p>
-         * <p>*   Application Whitelist</p>
-         * <p>*   Persistence</p>
-         * <p>*   Web Application Threat Detection</p>
-         * <p>*   Malicious scripts</p>
-         * <p>*   Malicious Network Activity</p>
-         * <p>*   K8s Abnormal Behavior</p>
-         * <p>*   Website backdoor (local engine)</p>
-         * <p>*   Exploit</p>
-         * <p>*   Image Scan</p>
-         * <p>*   Trusted exception</p>
-         * <br>
-         * <p>For more information about alert types, see [Overview](https://help.aliyun.com/document_detail/68388.html).</p>
+         * <ul>
+         * <li>Suspicious Process</li>
+         * <li>Webshell</li>
+         * <li>Unusual Logon</li>
+         * <li>Malicious Software</li>
+         * <li>Sensitive File Tampering</li>
+         * <li>Unusual Network Connection</li>
+         * <li>Other</li>
+         * <li>Suspicious Account</li>
+         * <li>Cloud threat detection</li>
+         * <li>Precision defense</li>
+         * <li>Application Whitelist</li>
+         * <li>Persistence</li>
+         * <li>Web Application Threat Detection</li>
+         * <li>Malicious scripts</li>
+         * <li>Malicious Network Activity</li>
+         * <li>K8s Abnormal Behavior</li>
+         * <li>Website backdoor (local engine)</li>
+         * <li>Exploit</li>
+         * <li>Image Scan</li>
+         * <li>Trusted exception</li>
+         * </ul>
+         * <p>For more information about alert types, see <a href="https://help.aliyun.com/document_detail/68388.html">Overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Malicious Software</p>
          */
         @NameInMap("EventType")
         public String eventType;
 
         /**
          * <p>The timestamp generated when the alert event was last detected. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1648544361480</p>
          */
         @NameInMap("LastTime")
         public Long lastTime;
 
         /**
          * <p>The timestamp generated when the alert event was first detected. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1648457961000</p>
          */
         @NameInMap("OccurrenceTime")
         public Long occurrenceTime;
 
         /**
          * <p>The ID of the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>158661</p>
          */
         @NameInMap("SecurityEventId")
         public Long securityEventId;
 
         /**
          * <p>The UUID of the server that was affected by the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qweeqq-13232-daweq-w****</p>
          */
         @NameInMap("Uuid")
         public String uuid;

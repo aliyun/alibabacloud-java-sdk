@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeAttachRecordsRequest extends TeaModel {
     /**
      * <p>The application group ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>64b8b994563c306b4fed****</p>
      */
     @NameInMap("ApplicationId")
     public String applicationId;

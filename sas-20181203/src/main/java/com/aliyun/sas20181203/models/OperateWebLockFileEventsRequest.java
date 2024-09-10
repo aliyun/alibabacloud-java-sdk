@@ -6,18 +6,20 @@ import com.aliyun.tea.*;
 public class OperateWebLockFileEventsRequest extends TeaModel {
     /**
      * <p>Specifies whether to handle all alert events that are generated for web tamper proofing. Valid values:</p>
-     * <br>
-     * <p>*   **1**: yes</p>
-     * <p>*   **0**: no</p>
-     * <br>
+     * <ul>
+     * <li><strong>1</strong>: yes</li>
+     * <li><strong>0</strong>: no</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("DealAll")
     public Integer dealAll;
 
     /**
      * <p>The IDs of alert events.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("EventIds")
@@ -25,14 +27,17 @@ public class OperateWebLockFileEventsRequest extends TeaModel {
 
     /**
      * <p>The operation that you want to perform on the alert events. Valid values:</p>
-     * <br>
-     * <p>*   **mark_mis_info**: marks the alert events as false positives</p>
-     * <p>*   **rm_mark_mis_info**: cancels marking the alerts events as false positives</p>
-     * <p>*   **offline_handled**: marks the alert events as handled offline</p>
-     * <p>*   **whitelist**: adds the alert events to the whitelist</p>
-     * <p>*   **rm_whitelist**: cancels adding the alert events to the whitelist</p>
-     * <br>
+     * <ul>
+     * <li><strong>mark_mis_info</strong>: marks the alert events as false positives</li>
+     * <li><strong>rm_mark_mis_info</strong>: cancels marking the alerts events as false positives</li>
+     * <li><strong>offline_handled</strong>: marks the alert events as handled offline</li>
+     * <li><strong>whitelist</strong>: adds the alert events to the whitelist</li>
+     * <li><strong>rm_whitelist</strong>: cancels adding the alert events to the whitelist</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>whitelist</p>
      */
     @NameInMap("OperationCode")
     public String operationCode;

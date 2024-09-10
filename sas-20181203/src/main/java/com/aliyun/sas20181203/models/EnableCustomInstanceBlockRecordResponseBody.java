@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class EnableCustomInstanceBlockRecordResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>571B2642-BF51-5BDD-906B-D2340DB9****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

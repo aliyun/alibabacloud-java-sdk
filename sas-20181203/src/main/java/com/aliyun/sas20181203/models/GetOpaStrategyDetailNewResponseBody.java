@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
     /**
-     * <p>The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,27 +21,40 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E819FD71-D240-5E54-AA7F-20FED2ECBEB6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -99,12 +115,18 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
     public static class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailBaselineItem extends TeaModel {
         /**
          * <p>The ID of the baseline check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ak_leak</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The name of the baseline check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Access Key plaintext storage</p>
          */
         @NameInMap("Name")
         public String name;
@@ -171,16 +193,24 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
     public static class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailBuildRiskItem extends TeaModel {
         /**
          * <p>The ID of the image build risk.</p>
-         * <br>
-         * <p>>  You can call the [ListImageBuildRiskItem](~~ListImageBuildRiskItem~~) operation to query the ID of the malicious sample.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListImageBuildRiskItem~~">ListImageBuildRiskItem</a> operation to query the ID of the malicious sample.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The name of the image build risk.</p>
-         * <br>
-         * <p>>  You can call the [ListImageBuildRiskItem](~~ListImageBuildRiskItem~~) operation to query the ID of the malicious sample.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListImageBuildRiskItem~~">ListImageBuildRiskItem</a> operation to query the ID of the malicious sample.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("Name")
         public String name;
@@ -247,12 +277,18 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
     public static class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailMaliciousFileItem extends TeaModel {
         /**
          * <p>The ID of the malicious sample.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1811</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The name of the malicious sample.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abnormal binary file</p>
          */
         @NameInMap("Name")
         public String name;
@@ -319,16 +355,24 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
     public static class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailSensitiveFileItem extends TeaModel {
         /**
          * <p>The ID of the sensitive files.</p>
-         * <br>
-         * <p>>  You can call the [GetSensitiveDefineRuleConfig](~~GetSensitiveDefineRuleConfig~~) operation to query the ID of the malicious sample.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~GetSensitiveDefineRuleConfig~~">GetSensitiveDefineRuleConfig</a> operation to query the ID of the malicious sample.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The name of the sensitive files.</p>
-         * <br>
-         * <p>>  You can call the [GetSensitiveDefineRuleConfig](https://help.aliyun.com/document_detail/4576877.html) operation to query the ID of the malicious sample.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~GetSensitiveDefineRuleConfig~~">GetSensitiveDefineRuleConfig</a> operation to query the ID of the malicious sample.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("Name")
         public String name;
@@ -395,12 +439,18 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
     public static class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailVulItem extends TeaModel {
         /**
          * <p>The ID of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AVD-2023-1680169</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The name of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ezOffice evoInterfaceServlet Info Leak</p>
          */
         @NameInMap("Name")
         public String name;
@@ -431,18 +481,26 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
     public static class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailVulRiskClass extends TeaModel {
         /**
          * <p>The ID of the vulnerability types. Valid values:</p>
-         * <br>
-         * <p>*   **cve**: system vulnerability</p>
-         * <p>*   **app**: application vulnerability</p>
+         * <ul>
+         * <li><strong>cve</strong>: system vulnerability</li>
+         * <li><strong>app</strong>: application vulnerability</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cve</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The name of the vulnerability. Valid values:</p>
-         * <br>
-         * <p>*   **system vulnerability**</p>
-         * <p>*   **application vulnerability**</p>
+         * <ul>
+         * <li><strong>system vulnerability</strong></li>
+         * <li><strong>application vulnerability</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>system vulnerability</p>
          */
         @NameInMap("Name")
         public String name;
@@ -601,21 +659,31 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
     public static class GetOpaStrategyDetailNewResponseBodyDataScopes extends TeaModel {
         /**
          * <p>The rule instance ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ack-0</p>
          */
         @NameInMap("AckPolicyInstanceId")
         public String ackPolicyInstanceId;
 
         /**
          * <p>Indicates whether all namespaces are included. Valid values:</p>
-         * <br>
-         * <p>*   **1**: yes</p>
-         * <p>*   **0**: no</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AllNamespace")
         public Integer allNamespace;
 
         /**
          * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c1fdb5fd8d**7163</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
@@ -674,24 +742,36 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
 
         /**
          * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c8ca91e0907d94efaba7fb0827eb9****</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
 
         /**
-         * <p>The page number. Default value: **1**. Pages start from page 1.</p>
+         * <p>The page number. Default value: <strong>1</strong>. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom defense configuration</p>
          */
         @NameInMap("Description")
         public String description;
@@ -709,35 +789,50 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         public java.util.List<String> label;
 
         /**
-         * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-         * <br>
-         * <p>*   **zh**: Chinese</p>
-         * <p>*   **en**: English</p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         @NameInMap("Lang")
         public String lang;
 
         /**
          * <p>Indicates whether the rule supports malicious Internet images. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("MaliciousImage")
         public Boolean maliciousImage;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The action that is performed when the rule is hit. Valid values:</p>
-         * <br>
-         * <p>*   **1**: trigger alerts</p>
-         * <p>*   **2**: block</p>
-         * <p>*   **3**: allow</p>
+         * <ul>
+         * <li><strong>1</strong>: trigger alerts</li>
+         * <li><strong>2</strong>: block</li>
+         * <li><strong>3</strong>: allow</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RuleAction")
         public Integer ruleAction;
@@ -750,27 +845,40 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
 
         /**
          * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1005</p>
          */
         @NameInMap("StrategyId")
         public Long strategyId;
 
         /**
          * <p>The rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test001</p>
          */
         @NameInMap("StrategyName")
         public String strategyName;
 
         /**
          * <p>The ID of the rule template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1204</p>
          */
         @NameInMap("StrategyTemplateId")
         public Long strategyTemplateId;
 
         /**
          * <p>Indicates whether the rule supports unscanned images. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("UnScanedImage")
         public Boolean unScanedImage;

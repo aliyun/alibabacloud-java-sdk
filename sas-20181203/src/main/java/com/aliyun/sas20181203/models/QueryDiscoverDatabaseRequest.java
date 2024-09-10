@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class QueryDiscoverDatabaseRequest extends TeaModel {
     /**
      * <p>The ID of the scan task.</p>
-     * <br>
-     * <p>> You can call the [StartDiscoverDatabaseTask](~~StartDiscoverDatabaseTask~~) operation to query the ID of the task.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~StartDiscoverDatabaseTask~~">StartDiscoverDatabaseTask</a> operation to query the ID of the task.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>7f7b051f-7d1c-46da-b253-a03f3a27****</p>
      */
     @NameInMap("CreateMark")
     public String createMark;

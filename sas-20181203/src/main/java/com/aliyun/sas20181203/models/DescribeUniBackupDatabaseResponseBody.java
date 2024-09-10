@@ -18,6 +18,9 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>09969D2C-4FAD-429E-BFBF-9A60DEF8****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,75 +57,109 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
     public static class DescribeUniBackupDatabaseResponseBodyDatabaseList extends TeaModel {
         /**
          * <p>The status of the anti-ransomware agent. Valid values:</p>
-         * <br>
-         * <p>*   **UNKNOWN**: unknown</p>
-         * <p>*   **INSTALLED**: installed</p>
-         * <p>*   **INSTALL_FAILED**: installation failed</p>
-         * <p>*   **UNINSTALL_FAILED**: uninstallation failed</p>
+         * <ul>
+         * <li><strong>UNKNOWN</strong>: unknown</li>
+         * <li><strong>INSTALLED</strong>: installed</li>
+         * <li><strong>INSTALL_FAILED</strong>: installation failed</li>
+         * <li><strong>UNINSTALL_FAILED</strong>: uninstallation failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTALLED</p>
          */
         @NameInMap("AgentStatus")
         public String agentStatus;
 
         /**
          * <p>The service from which the database is created. Valid values:</p>
-         * <br>
-         * <p>*   **HBR**: HBR</p>
-         * <p>*   **AEGIS**: Security Center</p>
+         * <ul>
+         * <li><strong>HBR</strong>: HBR</li>
+         * <li><strong>AEGIS</strong>: Security Center</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AEGIS</p>
          */
         @NameInMap("CreatedByProduct")
         public String createdByProduct;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apns_tt180</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
 
         /**
          * <p>The type of the database. Valid values:</p>
-         * <br>
-         * <p>*   **MYSQL**</p>
-         * <p>*   **MSSQL**</p>
-         * <p>*   **Oracle**</p>
+         * <ul>
+         * <li><strong>MYSQL</strong></li>
+         * <li><strong>MSSQL</strong></li>
+         * <li><strong>Oracle</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MYSQL</p>
          */
         @NameInMap("DatabaseType")
         public String databaseType;
 
         /**
          * <p>The version of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12.0.4100.1</p>
          */
         @NameInMap("DatabaseVersion")
         public String databaseVersion;
 
         /**
          * <p>The ID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp15aho9hhftvmhw****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the instance to which the database belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sql-test-001</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The UUID of the Hybrid Backup Recovery (HBR) agent that is used to back up the data of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>85878b284df911ec800000163e19****</p>
          */
         @NameInMap("InstanceUuid")
         public String instanceUuid;
 
         /**
          * <p>The ID of the anti-ransomware policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("PolicyId")
         public Long policyId;
 
         /**
          * <p>The status of the ECS instance. Valid values:</p>
-         * <br>
-         * <p>*   **Stopped**</p>
-         * <p>*   **Running**</p>
+         * <ul>
+         * <li><strong>Stopped</strong></li>
+         * <li><strong>Running</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("Status")
         public String status;
@@ -217,24 +254,36 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
     public static class DescribeUniBackupDatabaseResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

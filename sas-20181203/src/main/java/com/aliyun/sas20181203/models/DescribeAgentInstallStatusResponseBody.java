@@ -12,6 +12,9 @@ public class DescribeAgentInstallStatusResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A4EB8B1C-1DEC-5E18-BCD0-D1BBB3936FA7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,51 +43,65 @@ public class DescribeAgentInstallStatusResponseBody extends TeaModel {
     public static class DescribeAgentInstallStatusResponseBodyAegisClientInvokeStatusResponseList extends TeaModel {
         /**
          * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Installed</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The installation status. Valid value:</p>
-         * <br>
-         * <p>*   **-1**: The agent is not installed.</p>
-         * <p>*   **0**: The agent is installed.</p>
-         * <p>*   **1**: Failed to create a directory in the client.</p>
-         * <p>*   **2**: Failed to download the installation package.</p>
-         * <p>*   **3**: The installation file does not exist.</p>
-         * <p>*   **4**: The verification information of the installation file does not exist.</p>
-         * <p>*   **5**: Failed to verify the installation file.</p>
-         * <p>*   **6**: Failed to execute the installation file.</p>
-         * <p>*   **7**: You do not have the required permissions. The installation failed.</p>
-         * <p>*   **8**: No client process is detected.</p>
-         * <p>*   **100**: The installation failed due to an unknown error.</p>
-         * <p>*   **1001**: The installation failed. One-click installation is not supported in this region.</p>
-         * <p>*   **1002**: The installation failed. Servers that are not provided by Alibaba Cloud are not supported. Install the agent by executing a script on the server.</p>
-         * <p>*   **1003**: The installation failed. The operating system is not supported.</p>
-         * <p>*   **1004**: An internal error occurred. Try again later.</p>
-         * <p>*   **1005**: The Elastic Compute Service (ECS) instance is not started. Start the ECS instance and try again.</p>
-         * <p>*   **1006**: One-click installation is not supported for ECS instances of the classic network type.</p>
-         * <p>*   **1007**: The running command is manually stopped.</p>
-         * <p>*   **1008**: Cloud Assistant is not installed. You cannot install the client.</p>
-         * <p>*   **1009**: The command execution timed out. Try again later.</p>
-         * <p>*   **1010**: The machine is already online. You do not need to install a client.</p>
+         * <ul>
+         * <li><strong>-1</strong>: The agent is not installed.</li>
+         * <li><strong>0</strong>: The agent is installed.</li>
+         * <li><strong>1</strong>: Failed to create a directory in the client.</li>
+         * <li><strong>2</strong>: Failed to download the installation package.</li>
+         * <li><strong>3</strong>: The installation file does not exist.</li>
+         * <li><strong>4</strong>: The verification information of the installation file does not exist.</li>
+         * <li><strong>5</strong>: Failed to verify the installation file.</li>
+         * <li><strong>6</strong>: Failed to execute the installation file.</li>
+         * <li><strong>7</strong>: You do not have the required permissions. The installation failed.</li>
+         * <li><strong>8</strong>: No client process is detected.</li>
+         * <li><strong>100</strong>: The installation failed due to an unknown error.</li>
+         * <li><strong>1001</strong>: The installation failed. One-click installation is not supported in this region.</li>
+         * <li><strong>1002</strong>: The installation failed. Servers that are not provided by Alibaba Cloud are not supported. Install the agent by executing a script on the server.</li>
+         * <li><strong>1003</strong>: The installation failed. The operating system is not supported.</li>
+         * <li><strong>1004</strong>: An internal error occurred. Try again later.</li>
+         * <li><strong>1005</strong>: The Elastic Compute Service (ECS) instance is not started. Start the ECS instance and try again.</li>
+         * <li><strong>1006</strong>: One-click installation is not supported for ECS instances of the classic network type.</li>
+         * <li><strong>1007</strong>: The running command is manually stopped.</li>
+         * <li><strong>1008</strong>: Cloud Assistant is not installed. You cannot install the client.</li>
+         * <li><strong>1009</strong>: The command execution timed out. Try again later.</li>
+         * <li><strong>1010</strong>: The machine is already online. You do not need to install a client.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ResuleCode")
         public String resuleCode;
 
         /**
          * <p>The installation result. Valid value:</p>
-         * <br>
-         * <p>*   **-1**: The agent is not installed.</p>
-         * <p>*   **0**: The agent is being installed.</p>
-         * <p>*   **1**: The agent is installed.</p>
-         * <p>*   **2**: The installation failed.</p>
+         * <ul>
+         * <li><strong>-1</strong>: The agent is not installed.</li>
+         * <li><strong>0</strong>: The agent is being installed.</li>
+         * <li><strong>1</strong>: The agent is installed.</li>
+         * <li><strong>2</strong>: The installation failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Result")
         public Integer result;
 
         /**
          * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d123f6ae-9749-4338-8c7f-3c2c1ead****</p>
          */
         @NameInMap("Uuid")
         public String uuid;

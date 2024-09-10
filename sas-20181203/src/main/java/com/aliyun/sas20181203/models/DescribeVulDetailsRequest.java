@@ -6,50 +6,66 @@ import com.aliyun.tea.*;
 public class DescribeVulDetailsRequest extends TeaModel {
     /**
      * <p>The vulnerability announcement.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RHSA-2019:3197-Important: sudo security update</p>
      */
     @NameInMap("AliasName")
     public String aliasName;
 
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
-     * <br>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The name of the vulnerability.</p>
-     * <br>
-     * <p>> You can call the [DescribeGroupedVul](~~DescribeGroupedVul~~) or [DescribeVulList](~~DescribeVulList~~) operation to query the names of vulnerabilities.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeGroupedVul~~">DescribeGroupedVul</a> or <a href="~~DescribeVulList~~">DescribeVulList</a> operation to query the names of vulnerabilities.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SCA:ACSV-2020-052801</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
-     * <br>
-     * <p>>  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>127608589417****</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
     /**
      * <p>The type of the vulnerability. Valid values:</p>
-     * <br>
-     * <p>*   **cve**: Linux software vulnerability</p>
-     * <p>*   **sys**: Windows system vulnerability</p>
-     * <p>*   **cms**: Web-CMS vulnerability</p>
-     * <p>*   **app**: application vulnerabilitiy</p>
-     * <p>*   **emg**: urgent vulnerability</p>
-     * <p>*   **sca**: vulnerability that is detected based on software component analysis</p>
-     * <br>
+     * <ul>
+     * <li><strong>cve</strong>: Linux software vulnerability</li>
+     * <li><strong>sys</strong>: Windows system vulnerability</li>
+     * <li><strong>cms</strong>: Web-CMS vulnerability</li>
+     * <li><strong>app</strong>: application vulnerabilitiy</li>
+     * <li><strong>emg</strong>: urgent vulnerability</li>
+     * <li><strong>sca</strong>: vulnerability that is detected based on software component analysis</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sca</p>
      */
     @NameInMap("Type")
     public String type;

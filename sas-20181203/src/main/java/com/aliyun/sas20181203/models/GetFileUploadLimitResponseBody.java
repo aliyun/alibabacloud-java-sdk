@@ -12,6 +12,9 @@ public class GetFileUploadLimitResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1A975D03-5F49-5354-B2CB-3918D5DA431A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class GetFileUploadLimitResponseBody extends TeaModel {
     public static class GetFileUploadLimitResponseBodyData extends TeaModel {
         /**
          * <p>The QPS limit on the files uploaded from the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Limit")
         public String limit;

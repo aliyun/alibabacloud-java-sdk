@@ -12,22 +12,32 @@ public class ListHoneypotEventsRequest extends TeaModel {
 
     /**
      * <p>The ID of the alert.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1259925</p>
      */
     @NameInMap("AlarmEventId")
     public Long alarmEventId;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The status of the event. Valid values:</p>
-     * <br>
-     * <p>*   **y**: handled</p>
-     * <p>*   **n**: unhandled</p>
-     * <p>*   **a**: all statuses</p>
+     * <ul>
+     * <li><strong>y</strong>: handled</li>
+     * <li><strong>n</strong>: unhandled</li>
+     * <li><strong>a</strong>: all statuses</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>y</p>
      */
     @NameInMap("Dealed")
     public String dealed;
@@ -39,28 +49,41 @@ public class ListHoneypotEventsRequest extends TeaModel {
     public java.util.List<String> honeypotIdList;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The number of entries per page. Default value: **20**.</p>
+     * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the attacker profile.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cd48604a-1694-4f03-ade0-ec6994c3*****</p>
      */
     @NameInMap("PortraitId")
     public String portraitId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2F9CE167-58D5-5DA6-AA3B-923EED02****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -73,6 +96,9 @@ public class ListHoneypotEventsRequest extends TeaModel {
 
     /**
      * <p>The source IP address of the attack.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>185.237.96.***</p>
      */
     @NameInMap("SrcIp")
     public String srcIp;

@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class DescribeWarningMachinesResponseBody extends TeaModel {
     /**
      * <p>The number of entries returned on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Count")
     public Integer count;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The number of entries returned per page. Default value: **10**.</p>
+     * <p>The number of entries returned per page. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6E4CBE87-E887-5AF1-86D2-78EB4AA3E771</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -96,112 +111,164 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
     public static class DescribeWarningMachinesResponseBodyWarningMachines extends TeaModel {
         /**
          * <p>The edition of Security Center that is authorized to protect the asset. Valid values:</p>
-         * <br>
-         * <p>*   **1**: Basic edition</p>
-         * <p>*   **6**: Anti-virus edition</p>
-         * <p>*   **5**: Advanced edition</p>
-         * <p>*   **3**: Enterprise edition</p>
-         * <p>*   **7**: Ultimate edition</p>
-         * <p>*   **10**: Value-added Plan edition</p>
+         * <ul>
+         * <li><strong>1</strong>: Basic edition</li>
+         * <li><strong>6</strong>: Anti-virus edition</li>
+         * <li><strong>5</strong>: Advanced edition</li>
+         * <li><strong>3</strong>: Enterprise edition</li>
+         * <li><strong>7</strong>: Ultimate edition</li>
+         * <li><strong>10</strong>: Value-added Plan edition</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         @NameInMap("AuthVersion")
         public Integer authVersion;
 
         /**
          * <p>Indicates whether Security Center is authorized to protect the asset. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Bind")
         public Boolean bind;
 
         /**
          * <p>The container ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48a6d9a92435a13ad573372c3f3c63b7e04d106458141df9f92155709d******</p>
          */
         @NameInMap("ContainerId")
         public String containerId;
 
         /**
          * <p>The name of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>redis</p>
          */
         @NameInMap("ContainerName")
         public String containerName;
 
         /**
-         * <p>The number of **high-risk** items on the server.</p>
+         * <p>The number of <strong>high-risk</strong> items on the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("HighWarningCount")
         public Integer highWarningCount;
 
         /**
          * <p>The server ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-m5ee8b9nr3h30mhb****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oracle-win-00****</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The public IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
-         * <p>The number of **low-risk** items on the server.</p>
+         * <p>The number of <strong>low-risk</strong> items on the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("LowWarningCount")
         public Integer lowWarningCount;
 
         /**
-         * <p>The number of **medium-risk** items on the server.</p>
+         * <p>The number of <strong>medium-risk</strong> items on the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("MediumWarningCount")
         public Integer mediumWarningCount;
 
         /**
          * <p>The number of the check items that passed the baseline check on the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PassCount")
         public Integer passCount;
 
         /**
          * <p>Indicates whether a port on the server is accessible over the Internet. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("PortOpen")
         public Boolean portOpen;
 
         /**
          * <p>The ID of the region in which the server is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The verification status of the risk item after the risk item is fixed. Valid values:</p>
-         * <br>
-         * <p>*   **1**: complete</p>
-         * <p>*   **2**: verifying</p>
+         * <ul>
+         * <li><strong>1</strong>: complete</li>
+         * <li><strong>2</strong>: verifying</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The UUID of the server on which the baseline check is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9888955c-0076-49da-bd9c-34f5492b****</p>
          */
         @NameInMap("Uuid")
         public String uuid;

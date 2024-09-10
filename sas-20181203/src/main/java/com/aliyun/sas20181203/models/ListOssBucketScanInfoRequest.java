@@ -6,57 +6,79 @@ import com.aliyun.tea.*;
 public class ListOssBucketScanInfoRequest extends TeaModel {
     /**
      * <p>The name of the bucket.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iboxpublic****</p>
      */
     @NameInMap("BucketName")
     public String bucketName;
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The name of the bucket that is used for fuzzy match.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("FuzzBucketName")
     public String fuzzBucketName;
 
     /**
      * <p>Specifies whether at-risk objects are detected. Valid values:</p>
-     * <br>
-     * <p>*   **0**: No at-risk objects are detected.</p>
-     * <p>*   **1**: At-risk objects are detected.</p>
+     * <ul>
+     * <li><strong>0</strong>: No at-risk objects are detected.</li>
+     * <li><strong>1</strong>: At-risk objects are detected.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("HasRisk")
     public Integer hasRisk;
 
     /**
-     * <p>The language of the content in the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese.</p>
-     * <p>*   **en**: English.</p>
+     * <p>The language of the content in the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The check status of the bucket. Valid values:</p>
-     * <br>
-     * <p>*   **1**: The bucket is not checked.</p>
-     * <p>*   **2**: All objects in the bucket are being checked.</p>
-     * <p>*   **3**: Only new objects in the bucket are being checked.</p>
-     * <p>*   **4**: The bucket is checked.</p>
+     * <ul>
+     * <li><strong>1</strong>: The bucket is not checked.</li>
+     * <li><strong>2</strong>: All objects in the bucket are being checked.</li>
+     * <li><strong>3</strong>: Only new objects in the bucket are being checked.</li>
+     * <li><strong>4</strong>: The bucket is checked.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Status")
     public Integer status;

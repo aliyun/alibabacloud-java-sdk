@@ -12,12 +12,18 @@ public class DescribeLoginSwitchConfigsResponseBody extends TeaModel {
 
     /**
      * <p>The number of returned configuration items.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Count")
     public Integer count;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0B48AB3C-84FC-424D-A01D-B9270EF4****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,19 +60,27 @@ public class DescribeLoginSwitchConfigsResponseBody extends TeaModel {
     public static class DescribeLoginSwitchConfigsResponseBodyConfigList extends TeaModel {
         /**
          * <p>The type of the alert that you enabled or disabled. Valid values:</p>
-         * <br>
-         * <p>*   **login_common_ip**: alerts for unapproved logon IP addresses</p>
-         * <p>*   **login_common_time**: alerts for unapproved logon time ranges</p>
-         * <p>*   **login_common_account**: alerts for unapproved logon accounts</p>
+         * <ul>
+         * <li><strong>login_common_ip</strong>: alerts for unapproved logon IP addresses</li>
+         * <li><strong>login_common_time</strong>: alerts for unapproved logon time ranges</li>
+         * <li><strong>login_common_account</strong>: alerts for unapproved logon accounts</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>login_common_ip</p>
          */
         @NameInMap("Item")
         public String item;
 
         /**
          * <p>The status of the Log Service feature. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The feature is disabled.</p>
-         * <p>*   **1**: The feature is enabled.</p>
+         * <ul>
+         * <li><strong>0</strong>: The feature is disabled.</li>
+         * <li><strong>1</strong>: The feature is enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Status")
         public Integer status;

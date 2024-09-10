@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListVulGlobalConfigResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class ListVulGlobalConfigResponseBody extends TeaModel {
     public static class ListVulGlobalConfigResponseBodyVulGlobalConfigList extends TeaModel {
         /**
          * <p>The key of the configuration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vul_scan_ip_list</p>
          */
         @NameInMap("ConfigKey")
         public String configKey;
 
         /**
          * <p>The value of the configuration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.<em>.</em>,127.0.<em>.</em></p>
          */
         @NameInMap("ConfigValue")
         public String configValue;

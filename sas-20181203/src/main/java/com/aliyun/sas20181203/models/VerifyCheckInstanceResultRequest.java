@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class VerifyCheckInstanceResultRequest extends TeaModel {
     /**
      * <p>The ID of the check item.</p>
-     * <br>
-     * <p>> You can call the [ListCheckResult](~~ListCheckResult~~) operation to query the IDs of check items.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to query the IDs of check items.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>16</p>
      */
     @NameInMap("CheckId")
     public Long checkId;

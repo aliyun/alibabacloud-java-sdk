@@ -6,14 +6,17 @@ import com.aliyun.tea.*;
 public class GetAssetSelectionConfigRequest extends TeaModel {
     /**
      * <p>The feature that is selected for the asset. Valid values:</p>
-     * <br>
-     * <p>*   **VIRUS_SCAN_CYCLE_CONFIG**: virus detection and removal</p>
-     * <p>*   **VIRUS_SCAN_ONCE_TASK**: one-time scan for viruses</p>
-     * <p>*   **AGENTLESS_MALICIOUS_WHITE_LIST_[ID]**: a whitelist rule for alerts that are detected by using the agentless detection feature</p>
-     * <p>*   **AGENTLESS_VUL_WHITE_LIST_[ID]**: a whitelist rule for vulnerabilities that are detected by using the agentless detection feature</p>
-     * <p>*   **FILE_PROTECT_RULE_SWITCH_TYPE_[ID]**: core file protectioion</p>
-     * <br>
+     * <ul>
+     * <li><strong>VIRUS_SCAN_CYCLE_CONFIG</strong>: virus detection and removal</li>
+     * <li><strong>VIRUS_SCAN_ONCE_TASK</strong>: one-time scan for viruses</li>
+     * <li><strong>AGENTLESS_MALICIOUS_WHITE_LIST_[ID]</strong>: a whitelist rule for alerts that are detected by using the agentless detection feature</li>
+     * <li><strong>AGENTLESS_VUL_WHITE_LIST_[ID]</strong>: a whitelist rule for vulnerabilities that are detected by using the agentless detection feature</li>
+     * <li><strong>FILE_PROTECT_RULE_SWITCH_TYPE_[ID]</strong>: core file protectioion</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VIRUS_SCAN_CYCLE_CONFIG</p>
      */
     @NameInMap("BusinessType")
     public String businessType;

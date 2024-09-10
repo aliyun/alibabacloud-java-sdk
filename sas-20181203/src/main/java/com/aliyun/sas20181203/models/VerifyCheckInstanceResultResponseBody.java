@@ -12,6 +12,9 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B869E3A0-1147-539D-9920-47580700****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -46,9 +49,13 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
 
         /**
          * <p>The operation code of the task that checks the configurations of cloud services. Valid values:</p>
-         * <br>
-         * <p>*   **Throttling**</p>
-         * <p>*   **ActionTrialUnauthorized**</p>
+         * <ul>
+         * <li><strong>Throttling</strong></li>
+         * <li><strong>ActionTrialUnauthorized</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ActionTrialUnauthorized</p>
          */
         @NameInMap("OperateCode")
         public String operateCode;

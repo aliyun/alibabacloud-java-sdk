@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteImageEventOperationResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,21 +21,31 @@ public class DeleteImageEventOperationResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A3D7C47D-3F11-57BB-90E8-E5C20C61****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,6 +98,9 @@ public class DeleteImageEventOperationResponseBody extends TeaModel {
     public static class DeleteImageEventOperationResponseBodyData extends TeaModel {
         /**
          * <p>The primary key of the alert handling rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>443496</p>
          */
         @NameInMap("Id")
         public Long id;

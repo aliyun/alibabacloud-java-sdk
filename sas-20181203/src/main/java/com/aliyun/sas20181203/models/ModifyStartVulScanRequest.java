@@ -6,22 +6,30 @@ import com.aliyun.tea.*;
 public class ModifyStartVulScanRequest extends TeaModel {
     /**
      * <p>The types of vulnerabilities that can be detected. Valid values:</p>
-     * <br>
-     * <p>*   **cve**: Linux software vulnerabilities</p>
-     * <p>*   **sys**: Windows system vulnerabilities</p>
-     * <p>*   **cms**: Web-CMS vulnerabilities</p>
-     * <p>*   **app**: application vulnerabilities</p>
-     * <p>*   **emg**: urgent vulnerabilities</p>
-     * <p>*   **image**: container image vulnerabilities</p>
-     * <p>*   **sca**: vulnerabilities that are detected based on software component analysis</p>
-     * <br>
-     * <p>> If you leave this parameter empty, all types of vulnerabilities can be detected.</p>
+     * <ul>
+     * <li><strong>cve</strong>: Linux software vulnerabilities</li>
+     * <li><strong>sys</strong>: Windows system vulnerabilities</li>
+     * <li><strong>cms</strong>: Web-CMS vulnerabilities</li>
+     * <li><strong>app</strong>: application vulnerabilities</li>
+     * <li><strong>emg</strong>: urgent vulnerabilities</li>
+     * <li><strong>image</strong>: container image vulnerabilities</li>
+     * <li><strong>sca</strong>: vulnerabilities that are detected based on software component analysis</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you leave this parameter empty, all types of vulnerabilities can be detected.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;cve,sys,cms,app,emg&quot;</p>
      */
     @NameInMap("Types")
     public String types;
 
     /**
      * <p>The UUIDs of servers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;i-sdada-xxxxx&quot;,&quot;i-ifaedada-sfsasdxxx&quot;}</p>
      */
     @NameInMap("Uuids")
     public String uuids;

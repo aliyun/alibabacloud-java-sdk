@@ -6,38 +6,45 @@ import com.aliyun.tea.*;
 public class GetCloudAssetDetailRequest extends TeaModel {
     /**
      * <p>The subtype of the cloud service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("AssetSubType")
     public Integer assetSubType;
 
     /**
      * <p>The type of the cloud asset. Valid values:</p>
-     * <br>
-     * <p>*   **0**: Elastic Compute Service (ECS).</p>
-     * <p>*   **1**: Server Load Balancer (SLB).</p>
-     * <p>*   **3**: ApsaraDB RDS.</p>
-     * <p>*   **4**: ApsaraDB for MongoDB.</p>
-     * <p>*   **5**: ApsaraDB for Redis.</p>
-     * <p>*   **6**: Container Registry.</p>
-     * <p>*   **8**: Container Service for Kubernetes.</p>
-     * <p>*   **9**: Virtual Private Cloud (VPC).</p>
-     * <p>*   **11**: ActionTrail.</p>
-     * <p>*   **12**: Alibaba Cloud CDN (CDN).</p>
-     * <p>*   **13**: Certificate Management Service.</p>
-     * <p>*   **14**: Apsara Devops.</p>
-     * <p>*   **15**: Resource Access Management (RAM).</p>
-     * <p>*   **16**: Anti-DDoS.</p>
-     * <p>*   **17**: Web Application Firewall (WAF).</p>
-     * <p>*   **18**: Object Storage Service (OSS).</p>
-     * <p>*   **19**: PolarDB.</p>
-     * <p>*   **20**: ApsaraDB RDS for PostgreSQL.</p>
-     * <p>*   **21**: Microservices Engine (MSE).</p>
-     * <p>*   **22**: Apsara File Storage NAS (NAS).</p>
-     * <p>*   **23**: Data Security Center (DSC).</p>
-     * <p>*   **24**: Elastic IP Address (EIP).</p>
-     * <p>*   **25**: Identity as a Service (IDaaS)-Employee Identity and Access Management (EIAM).</p>
-     * <p>*   **26**: PolarDB-X.</p>
-     * <p>*   **27**: Elasticsearch.</p>
+     * <ul>
+     * <li><strong>0</strong>: Elastic Compute Service (ECS).</li>
+     * <li><strong>1</strong>: Server Load Balancer (SLB).</li>
+     * <li><strong>3</strong>: ApsaraDB RDS.</li>
+     * <li><strong>4</strong>: ApsaraDB for MongoDB.</li>
+     * <li><strong>5</strong>: ApsaraDB for Redis.</li>
+     * <li><strong>6</strong>: Container Registry.</li>
+     * <li><strong>8</strong>: Container Service for Kubernetes.</li>
+     * <li><strong>9</strong>: Virtual Private Cloud (VPC).</li>
+     * <li><strong>11</strong>: ActionTrail.</li>
+     * <li><strong>12</strong>: Alibaba Cloud CDN (CDN).</li>
+     * <li><strong>13</strong>: Certificate Management Service.</li>
+     * <li><strong>14</strong>: Apsara Devops.</li>
+     * <li><strong>15</strong>: Resource Access Management (RAM).</li>
+     * <li><strong>16</strong>: Anti-DDoS.</li>
+     * <li><strong>17</strong>: Web Application Firewall (WAF).</li>
+     * <li><strong>18</strong>: Object Storage Service (OSS).</li>
+     * <li><strong>19</strong>: PolarDB.</li>
+     * <li><strong>20</strong>: ApsaraDB RDS for PostgreSQL.</li>
+     * <li><strong>21</strong>: Microservices Engine (MSE).</li>
+     * <li><strong>22</strong>: Apsara File Storage NAS (NAS).</li>
+     * <li><strong>23</strong>: Data Security Center (DSC).</li>
+     * <li><strong>24</strong>: Elastic IP Address (EIP).</li>
+     * <li><strong>25</strong>: Identity as a Service (IDaaS)-Employee Identity and Access Management (EIAM).</li>
+     * <li><strong>26</strong>: PolarDB-X.</li>
+     * <li><strong>27</strong>: Elasticsearch.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>14</p>
      */
     @NameInMap("AssetType")
     public Integer assetType;
@@ -50,12 +57,16 @@ public class GetCloudAssetDetailRequest extends TeaModel {
 
     /**
      * <p>The service provider of the cloud asset. Valid values:</p>
-     * <br>
-     * <p>*   **0**: Alibaba Cloud.</p>
-     * <p>*   **1**: service provider that is unrecognized.</p>
-     * <p>*   **2**: data center.</p>
-     * <p>*   **3**, **4**, **5**, and **7**: third-party service provider.</p>
-     * <p>*   **8**: simple application server.</p>
+     * <ul>
+     * <li><strong>0</strong>: Alibaba Cloud.</li>
+     * <li><strong>1</strong>: service provider that is unrecognized.</li>
+     * <li><strong>2</strong>: data center.</li>
+     * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: third-party service provider.</li>
+     * <li><strong>8</strong>: simple application server.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Vendor")
     public Integer vendor;
@@ -100,14 +111,21 @@ public class GetCloudAssetDetailRequest extends TeaModel {
     public static class GetCloudAssetDetailRequestCloudAssetInstances extends TeaModel {
         /**
          * <p>The instance ID of the cloud asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-wz9hf86vbzbrrde7****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The region in which the cloud asset resides.</p>
-         * <br>
-         * <p>> For more information about the mapping between region IDs and region names, see [Regions and zones](https://help.aliyun.com/document_detail/40654.html).</p>
+         * <blockquote>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;

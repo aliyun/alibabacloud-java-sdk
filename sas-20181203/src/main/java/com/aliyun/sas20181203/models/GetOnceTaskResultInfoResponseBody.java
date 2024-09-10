@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class GetOnceTaskResultInfoResponseBody extends TeaModel {
     /**
      * <p>The execution time of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1671184531000</p>
      */
     @NameInMap("CollectTime")
     public Long collectTime;
 
     /**
      * <p>The number of tasks that were completed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>47</p>
      */
     @NameInMap("FinishCount")
     public Integer finishCount;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CE500770-42D3-442E-9DDD-156E0F9F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the scan task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e7b70a4b030db086db52231f1b58****</p>
      */
     @NameInMap("TaskId")
     public Long taskId;
@@ -36,6 +48,9 @@ public class GetOnceTaskResultInfoResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>44</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -96,11 +111,15 @@ public class GetOnceTaskResultInfoResponseBody extends TeaModel {
     public static class GetOnceTaskResultInfoResponseBodyTaskInfo extends TeaModel {
         /**
          * <p>The status of the task. Valid values:</p>
-         * <br>
-         * <p>*   **INIT**: The task is not started.</p>
-         * <p>*   **START**: The task is started.</p>
-         * <p>*   **SUCCESS**: The task is complete.</p>
-         * <p>*   **TIMEOUT**: The task times out.</p>
+         * <ul>
+         * <li><strong>INIT</strong>: The task is not started.</li>
+         * <li><strong>START</strong>: The task is started.</li>
+         * <li><strong>SUCCESS</strong>: The task is complete.</li>
+         * <li><strong>TIMEOUT</strong>: The task times out.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>START</p>
          */
         @NameInMap("Status")
         public String status;

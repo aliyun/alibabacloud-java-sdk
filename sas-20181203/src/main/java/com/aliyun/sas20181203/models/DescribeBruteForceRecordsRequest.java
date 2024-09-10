@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class DescribeBruteForceRecordsRequest extends TeaModel {
     /**
      * <p>The IP address that is blocked.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>175.106.XX.XX</p>
      */
     @NameInMap("BlockIp")
     public String blockIp;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The ID of the server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp1g6wxdwps7s9dz****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page. We recommend that you do not leave this parameter empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The name or IP address of the server to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.2.XX.XX</p>
      */
     @NameInMap("Remark")
     public String remark;
@@ -39,10 +54,14 @@ public class DescribeBruteForceRecordsRequest extends TeaModel {
 
     /**
      * <p>The status of the defense rule. Valid values:</p>
-     * <br>
-     * <p>*   **0**: invalid</p>
-     * <p>*   **1**: enabled</p>
-     * <p>*   **2**: failed</p>
+     * <ul>
+     * <li><strong>0</strong>: invalid</li>
+     * <li><strong>1</strong>: enabled</li>
+     * <li><strong>2</strong>: failed</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Status")
     public Integer status;

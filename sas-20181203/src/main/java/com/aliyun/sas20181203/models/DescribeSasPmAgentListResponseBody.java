@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeSasPmAgentListResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8EF3ACC2-9400-5B64-B72D-4A1D35113750</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,59 +43,84 @@ public class DescribeSasPmAgentListResponseBody extends TeaModel {
     public static class DescribeSasPmAgentListResponseBodySasPmAgentList extends TeaModel {
         /**
          * <p>The ID of Cloud Assistant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mi-hz034jn***yxhc0</p>
          */
         @NameInMap("AliyunAssistId")
         public String aliyunAssistId;
 
         /**
          * <p>The ID of the CloudMonitor agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5d5ef6be-54ff-11ed-82cf-8f01475e****</p>
          */
         @NameInMap("AliyunMonitorId")
         public String aliyunMonitorId;
 
         /**
          * <p>The installation result of Cloud Assistant. Valid values:</p>
-         * <br>
-         * <p>*   **0**: SUCCESS</p>
-         * <p>*   **1**: MISSING_PARAM</p>
-         * <p>*   **2**: UNKNOWN_SYSTEM</p>
-         * <p>*   **3**: DOWNLOAD_FAILED</p>
-         * <p>*   **4**: INSTALL_FAILED</p>
+         * <ul>
+         * <li><strong>0</strong>: SUCCESS</li>
+         * <li><strong>1</strong>: MISSING_PARAM</li>
+         * <li><strong>2</strong>: UNKNOWN_SYSTEM</li>
+         * <li><strong>3</strong>: DOWNLOAD_FAILED</li>
+         * <li><strong>4</strong>: INSTALL_FAILED</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AssistInstallResult")
         public Integer assistInstallResult;
 
         /**
          * <p>The status of Cloud Assistant. Valid values:</p>
-         * <br>
-         * <p>*   **0**: installing</p>
-         * <p>*   **1**: installed</p>
-         * <p>*   **2**: installation failed</p>
-         * <p>*   **3**: installation timed out</p>
+         * <ul>
+         * <li><strong>0</strong>: installing</li>
+         * <li><strong>1</strong>: installed</li>
+         * <li><strong>2</strong>: installation failed</li>
+         * <li><strong>3</strong>: installation timed out</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AssistInstallStatus")
         public Integer assistInstallStatus;
 
         /**
          * <p>The installation result of the CloudMonitor agent. Valid values:</p>
-         * <br>
-         * <p>*   **0**: failed</p>
-         * <p>*   **1**: successful</p>
+         * <ul>
+         * <li><strong>0</strong>: failed</li>
+         * <li><strong>1</strong>: successful</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MonitorInstallResult")
         public Integer monitorInstallResult;
 
         /**
          * <p>The status of the CloudMonitor agent. Valid values:</p>
-         * <br>
-         * <p>*   **0**: installation failed</p>
-         * <p>*   **1**: installed</p>
+         * <ul>
+         * <li><strong>0</strong>: installation failed</li>
+         * <li><strong>1</strong>: installed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MonitorInstallStatus")
         public Integer monitorInstallStatus;
 
         /**
          * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>87f1724d-075e-48d3-95fd-78c2dd36****</p>
          */
         @NameInMap("Uuid")
         public String uuid;

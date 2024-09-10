@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class StartBaselineSecurityCheckResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>48D2E9A9-A1B0-4295-B727-0995757C47E9</p>
      */
     @NameInMap("RequestId")
     public String requestId;

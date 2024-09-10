@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListHoneypotPresetResponseBody extends TeaModel {
     /**
-     * <p>The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
@@ -24,6 +30,9 @@ public class ListHoneypotPresetResponseBody extends TeaModel {
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
@@ -36,15 +45,22 @@ public class ListHoneypotPresetResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0C656B33-0D6B-5953-A26A-D766BD75B44A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -113,46 +129,68 @@ public class ListHoneypotPresetResponseBody extends TeaModel {
     public static class ListHoneypotPresetResponseBodyList extends TeaModel {
         /**
          * <p>The name of the management node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>node1</p>
          */
         @NameInMap("ControlNodeName")
         public String controlNodeName;
 
         /**
          * <p>The display name of the honeypot image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Metabase</p>
          */
         @NameInMap("HoneypotImageDisplayName")
         public String honeypotImageDisplayName;
 
         /**
          * <p>The name of the honeypot image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>metabase</p>
          */
         @NameInMap("HoneypotImageName")
         public String honeypotImageName;
 
         /**
          * <p>The ID of the honeypot template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3cc04a47-7229-418c-8101-f10a2887****</p>
          */
         @NameInMap("HoneypotPresetId")
         public String honeypotPresetId;
 
         /**
          * <p>The ID of the management node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c94eff5b-ea48-4805-8b7f-e04d3509****</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
          * <p>The custom name of the honeypot template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WebMin-online</p>
          */
         @NameInMap("PresetName")
         public String presetName;
 
         /**
          * <p>The type of the honeypot template. Valid values:</p>
-         * <br>
-         * <p>*   **TEMP**: automatically generated template</p>
-         * <p>*   **CUSTOM**: custom template</p>
-         * <p>*   **DEFAULT**: default template</p>
+         * <ul>
+         * <li><strong>TEMP</strong>: automatically generated template</li>
+         * <li><strong>CUSTOM</strong>: custom template</li>
+         * <li><strong>DEFAULT</strong>: default template</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CUSTOM</p>
          */
         @NameInMap("PresetType")
         public String presetType;
@@ -223,24 +261,36 @@ public class ListHoneypotPresetResponseBody extends TeaModel {
     public static class ListHoneypotPresetResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

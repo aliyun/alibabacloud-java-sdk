@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class PauseClientResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6673D49C-A9AB-40DD-B4A2-B92306701AE7</p>
      */
     @NameInMap("RequestId")
     public String requestId;

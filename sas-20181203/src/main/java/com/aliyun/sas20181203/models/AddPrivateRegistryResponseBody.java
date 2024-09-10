@@ -12,6 +12,9 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F8B6F758-BCD4-597A-8A2C-DA5A552C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,97 +43,143 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
     public static class AddPrivateRegistryResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1766185894104***</p>
          */
         @NameInMap("AliUid")
         public Long aliUid;
 
         /**
          * <p>The domain name of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The ID of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>273698***</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The network type. Valid values:</p>
-         * <br>
-         * <p>*   **1**: Internet</p>
-         * <p>*   **2**: VPC</p>
+         * <ul>
+         * <li><strong>1</strong>: Internet</li>
+         * <li><strong>2</strong>: VPC</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("NetType")
         public Long netType;
 
         /**
          * <p>The password.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         @NameInMap("Password")
         public String password;
 
         /**
          * <p>The type of the protocol. Valid values:</p>
-         * <br>
-         * <p>*   **1**: HTTP</p>
-         * <p>*   **2**: HTTPS</p>
+         * <ul>
+         * <li><strong>1</strong>: HTTP</li>
+         * <li><strong>2</strong>: HTTPS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ProtocolType")
         public Long protocolType;
 
         /**
          * <p>The region ID of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The IP address of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>114.55.**.**</p>
          */
         @NameInMap("RegistryHostIp")
         public String registryHostIp;
 
         /**
          * <p>The type of the image repository. Valid values:</p>
-         * <br>
-         * <p>*   **harbor**</p>
-         * <p>*   **quay**</p>
+         * <ul>
+         * <li><strong>harbor</strong></li>
+         * <li><strong>quay</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>harbor</p>
          */
         @NameInMap("RegistryType")
         public String registryType;
 
         /**
          * <p>The version of the image repository. Default value: -. Valid values:</p>
-         * <br>
-         * <p>*   **-**: the default version</p>
-         * <p>*   **V1**</p>
-         * <p>*   **V2**</p>
+         * <ul>
+         * <li><strong>-</strong>: the default version</li>
+         * <li><strong>V1</strong></li>
+         * <li><strong>V2</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>V2</p>
          */
         @NameInMap("RegistryVersion")
         public String registryVersion;
 
         /**
          * <p>The value of the token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3c3c602c-fa1f-4bc0-992f-b4b2cac7****</p>
          */
         @NameInMap("Token")
         public String token;
 
         /**
          * <p>The number of scan tasks that are performed per hour.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("TransPerHour")
         public Integer transPerHour;
 
         /**
          * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         @NameInMap("UserName")
         public String userName;
 
         /**
          * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2vchkxmf2j9yjt3x2****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

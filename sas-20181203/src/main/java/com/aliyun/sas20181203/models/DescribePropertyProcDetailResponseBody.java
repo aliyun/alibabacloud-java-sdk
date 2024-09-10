@@ -18,6 +18,9 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AA47D46F-10DE-138C-BBB4-8A0003F75CD7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +57,36 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
     public static class DescribePropertyProcDetailResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page. Default value: **10**.</p>
+         * <p>The number of entries returned per page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -118,63 +133,94 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
     public static class DescribePropertyProcDetailResponseBodyPropertys extends TeaModel {
         /**
          * <p>The startup parameter of the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>./8888</p>
          */
         @NameInMap("Cmdline")
         public String cmdline;
 
         /**
          * <p>The timestamp of last data collection. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1565686951000</p>
          */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
         /**
          * <p>The permission that is required to run the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         @NameInMap("EuidName")
         public String euidName;
 
         /**
          * <p>The ID of the server that is associated with the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-hp35tftuh52wbp1g****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the server that is associated with the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hc-host-****</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The public IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>Indicates whether the process is a package installation process. Valid values:</p>
-         * <br>
-         * <p>*   **1**: yes</p>
-         * <p>*   **0**: no</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("IsPackage")
         public Integer isPackage;
 
         /**
          * <p>The MD5 hash value of the process file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>842644ea3d88bd7f7e14c1c089ef****</p>
          */
         @NameInMap("Md5")
         public String md5;
 
         /**
          * <p>The name of the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agetty</p>
          */
         @NameInMap("Name")
         public String name;
@@ -187,42 +233,63 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12826</p>
          */
         @NameInMap("Pid")
         public String pid;
 
         /**
          * <p>The name of the parent process to which the process belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>start***.s</p>
          */
         @NameInMap("Pname")
         public String pname;
 
         /**
          * <p>The time when the process starts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-08-07 10:09:05</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The timestamp when the process starts. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1648783107000</p>
          */
         @NameInMap("StartTimeDt")
         public Long startTimeDt;
 
         /**
          * <p>The status of the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sleeping</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
          * <p>The user who runs the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         @NameInMap("User")
         public String user;
 
         /**
          * <p>The UUID of the server that is associated with the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>162eb349-c2d9-4f8b-805c-75b43d4c****</p>
          */
         @NameInMap("Uuid")
         public String uuid;

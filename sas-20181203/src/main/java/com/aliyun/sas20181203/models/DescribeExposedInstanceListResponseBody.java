@@ -18,6 +18,9 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>598A4A61-ABA7-456B-8725-7378258276D9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,120 +57,177 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
     public static class DescribeExposedInstanceListResponseBodyExposedInstances extends TeaModel {
         /**
          * <p>The number of high-severity vulnerabilities that are exposed on the Internet and can be exploited by attackers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AsapVulCount")
         public Integer asapVulCount;
 
         /**
          * <p>The total number of servers that are exposed on the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ExploitHealthCount")
         public Integer exploitHealthCount;
 
         /**
          * <p>The server component that is exposed on the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>openssl,openssh</p>
          */
         @NameInMap("ExposureComponent")
         public String exposureComponent;
 
         /**
          * <p>The public IP address that is exposed on the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>116.12.XX.XX</p>
          */
         @NameInMap("ExposureIp")
         public String exposureIp;
 
         /**
          * <p>The port that is exposed on the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         @NameInMap("ExposurePort")
         public String exposurePort;
 
         /**
          * <p>The resource from which the asset is exposed. Valid values:</p>
-         * <br>
-         * <p>*   **INTERNET_IP**: the public IP address of an ECS instance</p>
-         * <p>*   **SLB**: the public IP address of a Server Load Balancer (SLB) instance</p>
-         * <p>*   **EIP**: an elastic IP address (EIP)</p>
-         * <p>*   **DNAT**: the NAT gateway that connects to the Internet by using the DNAT feature</p>
+         * <ul>
+         * <li><strong>INTERNET_IP</strong>: the public IP address of an ECS instance</li>
+         * <li><strong>SLB</strong>: the public IP address of a Server Load Balancer (SLB) instance</li>
+         * <li><strong>EIP</strong>: an elastic IP address (EIP)</li>
+         * <li><strong>DNAT</strong>: the NAT gateway that connects to the Internet by using the DNAT feature</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>INTERNET_IP</p>
          */
         @NameInMap("ExposureType")
         public String exposureType;
 
         /**
          * <p>The ID of the instance to which the resource belongs. The valid values of this parameter vary based on the ExposureType parameter.</p>
-         * <br>
-         * <p>*   If the value of the ExposureType parameter is **INTERNET_IP**, this parameter is empty.</p>
-         * <p>*   If the value of the ExposureType parameter is **SLB**, the value of this parameter is the ID of the SLB instance.</p>
-         * <p>*   If the value of the ExposureType parameter is **EIP**, the value of this parameter is the ID of the EIP.</p>
-         * <p>*   If the value of the ExposureType parameter is **DNAT**, the value of this parameter is the ID of the NAT gateway.</p>
+         * <ul>
+         * <li>If the value of the ExposureType parameter is <strong>INTERNET_IP</strong>, this parameter is empty.</li>
+         * <li>If the value of the ExposureType parameter is <strong>SLB</strong>, the value of this parameter is the ID of the SLB instance.</li>
+         * <li>If the value of the ExposureType parameter is <strong>EIP</strong>, the value of this parameter is the ID of the EIP.</li>
+         * <li>If the value of the ExposureType parameter is <strong>DNAT</strong>, the value of this parameter is the ID of the NAT gateway.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>i-ew11313a****</p>
          */
         @NameInMap("ExposureTypeId")
         public String exposureTypeId;
 
         /**
          * <p>The ID of the server group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9469268</p>
          */
         @NameInMap("GroupId")
         public Long groupId;
 
         /**
          * <p>The name of the server group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testGroup</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The ID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1g6wxdwps7s9dz****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc_centos7.2_005</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The public IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>116.12.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>The number of medium-severity vulnerabilities that are exposed on the Internet and can be exploited by attackers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("LaterVulCount")
         public Integer laterVulCount;
 
         /**
          * <p>The number of low-severity vulnerabilities that are exposed on the Internet and can be exploited by attackers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("NntfVulCount")
         public Integer nntfVulCount;
 
         /**
          * <p>The ID of the region where the server resides.</p>
-         * <br>
-         * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](https://help.aliyun.com/document_detail/40654.html).</p>
+         * <blockquote>
+         * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The total number of vulnerabilities that are exposed on the Internet and can be exploited by attackers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("TotalVulCount")
         public Integer totalVulCount;
 
         /**
          * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dd803d9e-a337-4add-9c5b-7d503e08****</p>
          */
         @NameInMap("Uuid")
         public String uuid;
@@ -326,24 +386,36 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
     public static class DescribeExposedInstanceListResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries about the servers that are exposed on the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

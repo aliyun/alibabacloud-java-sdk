@@ -12,6 +12,9 @@ public class GetCheckSaleResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F5CF78A7-30AA-59DB-847F-13EE3AE7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,31 +43,45 @@ public class GetCheckSaleResponseBody extends TeaModel {
     public static class GetCheckSaleResponseBodyCheckSale extends TeaModel {
         /**
          * <p>The consumed quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         @NameInMap("ConsumeCount")
         public Long consumeCount;
 
         /**
          * <p>Indicates whether the user is an existing user and whether the user uses the configuration assessment feature before the feature is released for sale on July 07, 2023. Valid values:</p>
-         * <br>
-         * <p>*   **true**: existing user</p>
-         * <p>*   **false**: new user</p>
+         * <ul>
+         * <li><strong>true</strong>: existing user</li>
+         * <li><strong>false</strong>: new user</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("LoyalUser")
         public Boolean loyalUser;
 
         /**
          * <p>The purchased quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("PurchaseCount")
         public Long purchaseCount;
 
         /**
          * <p>The type of the user. Valid values:</p>
-         * <br>
-         * <p>*   **1**: a user who can use all check items.</p>
-         * <p>*   **2**: an user who can only use the check items before the release of the feature on July 07, 2023. This type of users must upgrade Security Center before the users can use all check items.</p>
-         * <p>*   **3**: a new user who cannot use the configuration assessment feature. This type of users must make a purchase before the users can use the feature.</p>
+         * <ul>
+         * <li><strong>1</strong>: a user who can use all check items.</li>
+         * <li><strong>2</strong>: an user who can only use the check items before the release of the feature on July 07, 2023. This type of users must upgrade Security Center before the users can use all check items.</li>
+         * <li><strong>3</strong>: a new user who cannot use the configuration assessment feature. This type of users must make a purchase before the users can use the feature.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("SaleUserType")
         public Integer saleUserType;

@@ -18,6 +18,9 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,97 +57,143 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
     public static class DescribeBruteForceRecordsResponseBodyMachineList extends TeaModel {
         /**
          * <p>The status of the host network extension. Valid values:</p>
-         * <br>
-         * <p>*   **true**: online</p>
-         * <p>*   **false**: offline</p>
+         * <ul>
+         * <li><strong>true</strong>: online</li>
+         * <li><strong>false</strong>: offline</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("AliNetOnline")
         public Boolean aliNetOnline;
 
         /**
          * <p>The timestamp when the block action on the IP address becomes invalid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1671506882063</p>
          */
         @NameInMap("BlockExpireDate")
         public Long blockExpireDate;
 
         /**
          * <p>The IP address that is blocked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.12.XX.XX</p>
          */
         @NameInMap("BlockIp")
         public String blockIp;
 
         /**
          * <p>The blocking type. Valid values:</p>
-         * <br>
-         * <p>*   **group**: security group</p>
-         * <p>*   **alinet**: host network extension</p>
+         * <ul>
+         * <li><strong>group</strong>: security group</li>
+         * <li><strong>alinet</strong>: host network extension</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>alinet</p>
          */
         @NameInMap("BlockType")
         public String blockType;
 
         /**
          * <p>The error code returned when the defense rule fails to block the IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceSecurityGroupLimitExceeded</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
          * <p>The ID of the primary key that is recorded in the defense rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>112XX</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The instance name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>record-test-***</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The public IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120.79.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>The port that is attacked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22/22</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
          * <p>The name of the defense rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AntiRuleName</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
          * <p>The type of the defense rule. Valid values:</p>
-         * <br>
-         * <p>*   **userRule**: custom rule</p>
-         * <p>*   **blinkRule**: system rule</p>
+         * <ul>
+         * <li><strong>userRule</strong>: custom rule</li>
+         * <li><strong>blinkRule</strong>: system rule</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>userRule</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
          * <p>The status of the defense rule. Valid values:</p>
-         * <br>
-         * <p>*   **0**: invalid</p>
-         * <p>*   **1**: enabled</p>
-         * <p>*   **2**: failed</p>
+         * <ul>
+         * <li><strong>0</strong>: invalid</li>
+         * <li><strong>1</strong>: enabled</li>
+         * <li><strong>2</strong>: failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The UUID of the server on which the defense rule takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6d5b361f-958d-48a8-a9d2-d6e82c1****</p>
          */
         @NameInMap("Uuid")
         public String uuid;
@@ -271,24 +320,36 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
     public static class DescribeBruteForceRecordsResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page. Default value: **20**.</p>
+         * <p>The number of entries returned per page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>263</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

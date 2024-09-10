@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class QueryAttackCountResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The number of entries returned on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Count")
     public Integer count;
@@ -24,21 +30,31 @@ public class QueryAttackCountResponseBody extends TeaModel {
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D4BE7D77-5B02-5126-A684-A73F6CD3XXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether exceptions are handled. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -99,18 +115,27 @@ public class QueryAttackCountResponseBody extends TeaModel {
     public static class QueryAttackCountResponseBodyData extends TeaModel {
         /**
          * <p>The number of times that the alert is triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28</p>
          */
         @NameInMap("EventCount")
         public Integer eventCount;
 
         /**
-         * <p>The stage ID of the ATT\\&CK attack.</p>
+         * <p>The stage ID of the ATT\&amp;CK attack.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TA0043</p>
          */
         @NameInMap("TacticId")
         public String tacticId;
 
         /**
-         * <p>The type of stage of the ATT\\&CK attack.</p>
+         * <p>The type of stage of the ATT\&amp;CK attack.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Data collection</p>
          */
         @NameInMap("TacticType")
         public String tacticType;

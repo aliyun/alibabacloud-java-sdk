@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RemoveCheckInstanceResultWhiteListRequest extends TeaModel {
     /**
      * <p>The ID of the check item.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11</p>
      */
     @NameInMap("CheckId")
     public Long checkId;

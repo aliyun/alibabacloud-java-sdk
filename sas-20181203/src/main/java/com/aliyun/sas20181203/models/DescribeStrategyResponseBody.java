@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeStrategyResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>75C127E6-76CD-59A7-B6E4-1CBBDC98F2EB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,35 @@ public class DescribeStrategyResponseBody extends TeaModel {
     public static class DescribeStrategyResponseBodyStrategiesConfigTargets extends TeaModel {
         /**
          * <p>Indicates whether the baseline check policy is applied to the asset group. Valid values:</p>
-         * <br>
-         * <p>*   **add**: The baseline check policy is applied to the asset group.</p>
-         * <p>*   **del**: the baseline check policy is not applied to the asset group.</p>
+         * <ul>
+         * <li><strong>add</strong>: The baseline check policy is applied to the asset group.</li>
+         * <li><strong>del</strong>: the baseline check policy is not applied to the asset group.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>add</p>
          */
         @NameInMap("Flag")
         public String flag;
 
         /**
          * <p>The asset group ID or UUID of the asset to which the baseline check policy is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10099713</p>
          */
         @NameInMap("Target")
         public String target;
 
         /**
          * <p>The condition by which the baseline check policy is applied to the asset. Valid values:</p>
-         * <br>
-         * <p>*   **groupId**: the ID of the asset group</p>
-         * <p>*   **uuid**: the UUID of the asset</p>
+         * <ul>
+         * <li><strong>groupId</strong>: the ID of the asset group</li>
+         * <li><strong>uuid</strong>: the UUID of the asset</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>groupId</p>
          */
         @NameInMap("TargetType")
         public String targetType;
@@ -102,97 +116,141 @@ public class DescribeStrategyResponseBody extends TeaModel {
 
         /**
          * <p>The type of the baseline check policy. Valid values:</p>
-         * <br>
-         * <p>*   **common**</p>
-         * <p>*   **custom**</p>
+         * <ul>
+         * <li><strong>common</strong></li>
+         * <li><strong>custom</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         @NameInMap("CustomType")
         public String customType;
 
         /**
          * <p>The cycle of the baseline check. Valid values:</p>
-         * <br>
-         * <p>*   **1**: every 2 days</p>
-         * <p>*   **3**: every 4 days</p>
-         * <p>*   **7**: every 8 days</p>
-         * <p>*   30: every 31 days</p>
+         * <ul>
+         * <li><strong>1</strong>: every 2 days</li>
+         * <li><strong>3</strong>: every 4 days</li>
+         * <li><strong>7</strong>: every 8 days</li>
+         * <li>30: every 31 days</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CycleDays")
         public Integer cycleDays;
 
         /**
          * <p>The time when the baseline check starts. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The baseline check starts within the time range from 00:00 to 06:00.</p>
-         * <p>*   **6**: The baseline check starts within the time range from 06:00 to 12:00.</p>
-         * <p>*   **12**: The baseline check starts within the time range from 12:00 to 18:00.</p>
-         * <p>*   **18**: The baseline check starts within the time range from 18:00 to 24:00.</p>
+         * <ul>
+         * <li><strong>0</strong>: The baseline check starts within the time range from 00:00 to 06:00.</li>
+         * <li><strong>6</strong>: The baseline check starts within the time range from 06:00 to 12:00.</li>
+         * <li><strong>12</strong>: The baseline check starts within the time range from 12:00 to 18:00.</li>
+         * <li><strong>18</strong>: The baseline check starts within the time range from 18:00 to 24:00.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("CycleStartTime")
         public Integer cycleStartTime;
 
         /**
          * <p>The number of the assets to which the baseline check policy is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("EcsCount")
         public Integer ecsCount;
 
         /**
          * <p>The end time of the baseline check policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03:00:00</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The status of the baseline check policy. Valid values:</p>
-         * <br>
-         * <p>*   **1**: not executed</p>
-         * <p>*   **2**: executing</p>
+         * <ul>
+         * <li><strong>1</strong>: not executed</li>
+         * <li><strong>2</strong>: executing</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ExecStatus")
         public Integer execStatus;
 
         /**
          * <p>The ID of the baseline check policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8164248</p>
          */
         @NameInMap("Id")
         public Integer id;
 
         /**
          * <p>The name of the baseline check policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text2</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The proportion of risky baselines in the baseline check result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PassRate")
         public Integer passRate;
 
         /**
          * <p>The number of the assets on which the baseline check is complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("ProcessRate")
         public Integer processRate;
 
         /**
          * <p>The number of baseline check items in the baseline check policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         @NameInMap("RiskCount")
         public Integer riskCount;
 
         /**
          * <p>The start time of the baseline check policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00:00</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The source type of the baseline check policy. Valid values:</p>
-         * <br>
-         * <p>*   **1**: indicates a built-in policy provided and performed by Security Center by default.</p>
-         * <p>*   **2**: indicates a user-defined policy. It can be a standard or custom baseline check policy.</p>
+         * <ul>
+         * <li><strong>1</strong>: indicates a built-in policy provided and performed by Security Center by default.</li>
+         * <li><strong>2</strong>: indicates a user-defined policy. It can be a standard or custom baseline check policy.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Type")
         public Integer type;

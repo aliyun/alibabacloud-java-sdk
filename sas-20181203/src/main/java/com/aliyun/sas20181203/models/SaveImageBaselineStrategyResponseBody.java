@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class SaveImageBaselineStrategyResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9AB5D3DE-6E0F-5633-AA71-4B90C724****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

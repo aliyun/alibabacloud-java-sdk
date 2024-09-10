@@ -18,6 +18,9 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FCA270CC-24C8-5DA1-9184-20F2605C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,42 +57,63 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
     public static class ListAgentlessRelateMaliciousResponseBodyList extends TeaModel {
         /**
          * <p>The file path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/root/logs/arms/tracelogs/log****</p>
          */
         @NameInMap("FilePath")
         public String filePath;
 
         /**
          * <p>The timestamp when the first scan was performed. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>168257753****</p>
          */
         @NameInMap("FirstScanTimestamp")
         public Long firstScanTimestamp;
 
         /**
          * <p>The name of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sql-test-0****</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The public IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.210.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.25.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>The timestamp when the last scan was performed. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>168257753****</p>
          */
         @NameInMap("LatestScanTimestamp")
         public Long latestScanTimestamp;
 
         /**
          * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49e25e0f-bb51-4a5a-a1b3-13a4ddaa****</p>
          */
         @NameInMap("Uuid")
         public String uuid;
@@ -160,24 +184,36 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
     public static class ListAgentlessRelateMaliciousResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>197</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

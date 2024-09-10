@@ -12,6 +12,9 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BE120DAB-F4E7-4C53-ADC3-A97578AB****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,122 +43,180 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
     public static class ListPrivateRegistryListResponseBodyImageRegistryInfos extends TeaModel {
         /**
          * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1766185894******</p>
          */
         @NameInMap("AliUid")
         public Long aliUid;
 
         /**
          * <p>The domain name of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The ID of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66485</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The information about the Jenkins environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JenkinsInfo</p>
          */
         @NameInMap("JenkinsEnv")
         public String jenkinsEnv;
 
         /**
          * <p>The network type. Valid values:</p>
-         * <br>
-         * <p>*   **1**: Internet</p>
-         * <p>*   **2**: VPC</p>
+         * <ul>
+         * <li><strong>1</strong>: Internet</li>
+         * <li><strong>2</strong>: VPC</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NetType")
         public Long netType;
 
         /**
          * <p>The password used to log on to the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Harbor******</p>
          */
         @NameInMap("Password")
         public String password;
 
         /**
          * <p>The number of days during which assets can be retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         @NameInMap("PersistenceDay")
         public Long persistenceDay;
 
         /**
          * <p>The type of the protocol. Valid values:</p>
-         * <br>
-         * <p>*   **1**: HTTP</p>
-         * <p>*   **2**: HTTPS</p>
+         * <ul>
+         * <li><strong>1</strong>: HTTP</li>
+         * <li><strong>2</strong>: HTTPS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ProtocolType")
         public Long protocolType;
 
         /**
          * <p>The region ID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The IP address of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>114.55.XXX.XXX</p>
          */
         @NameInMap("RegistryHostIp")
         public String registryHostIp;
 
         /**
          * <p>The alias of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         @NameInMap("RegistryName")
         public String registryName;
 
         /**
          * <p>The type of the image repository. Valid values:</p>
-         * <br>
-         * <p>*   **acr**: Container Registry</p>
-         * <p>*   **harbor**: Harbor</p>
-         * <p>*   **quay**: Quay</p>
-         * <p>*   **CI/CD**: Jenkins</p>
+         * <ul>
+         * <li><strong>acr</strong>: Container Registry</li>
+         * <li><strong>harbor</strong>: Harbor</li>
+         * <li><strong>quay</strong>: Quay</li>
+         * <li><strong>CI/CD</strong>: Jenkins</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>harbor</p>
          */
         @NameInMap("RegistryType")
         public String registryType;
 
         /**
          * <p>The version of the image repository. Valid values:</p>
-         * <br>
-         * <p>*   **V1**: V1.0</p>
-         * <p>*   **V2**: V2.0</p>
+         * <ul>
+         * <li><strong>V1</strong>: V1.0</li>
+         * <li><strong>V2</strong>: V2.0</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>V1</p>
          */
         @NameInMap("RegistryVersion")
         public String registryVersion;
 
         /**
          * <p>The authentication token of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0da12bce-cc36-4c48-b3e6-2215fc3a****</p>
          */
         @NameInMap("Token")
         public String token;
 
         /**
          * <p>The number of images that can be scanned per hour.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("TransPerHour")
         public Integer transPerHour;
 
         /**
          * <p>The username used to log on to the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RegistryUser</p>
          */
         @NameInMap("UserName")
         public String userName;
 
         /**
          * <p>The ID of the virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp12897gqrex01zn0****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The whitelist of IP addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.104.XXX.XXX</p>
          */
         @NameInMap("WhiteList")
         public String whiteList;
