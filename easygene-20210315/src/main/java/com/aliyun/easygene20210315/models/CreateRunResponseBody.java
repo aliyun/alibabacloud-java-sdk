@@ -4,15 +4,31 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class CreateRunResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>easygene.cn-beijing.aliyuncs.com</p>
+     */
     @NameInMap("HostId")
     public String hostId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DA980AD0-158F-44F3-847D-5EAB96C0EB6B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>run-13BeYuxc0fxO24uA75UppTiMRoQ</p>
+     */
     @NameInMap("RunId")
     public String runId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test-workspace</p>
+     */
     @NameInMap("Workspace")
     public String workspace;
 

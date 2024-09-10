@@ -4,48 +4,108 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class CreateAppShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestApp</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>App</p>
+     */
     @NameInMap("AppType")
     public String appType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TestToken</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("Configs")
     public String configsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>import &quot;./task/echo.wdl&quot; as echo workflow wf_echo {   call echo.echo }</p>
+     */
     @NameInMap("Definition")
     public String definition;
 
     @NameInMap("Dependencies")
     public String dependenciesShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>This is a test app</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Example documentation content</p>
+     */
     @NameInMap("Documentation")
     public String documentation;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;:&quot;value&quot;}</p>
+     */
     @NameInMap("Labels")
     public String labels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>WDL</p>
+     */
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.0</p>
+     */
     @NameInMap("LanguageVersion")
     public String languageVersion;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>main.wdl</p>
+     */
     @NameInMap("Path")
     public String path;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Example revision comment</p>
+     */
     @NameInMap("RevisionComment")
     public String revisionComment;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ProduceVersion</p>
+     */
     @NameInMap("RevisionTag")
     public String revisionTag;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestWorkspace</p>
+     */
     @NameInMap("Workspace")
     public String workspace;
 

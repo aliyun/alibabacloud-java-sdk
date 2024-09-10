@@ -7,18 +7,38 @@ public class GetEntityResponseBody extends TeaModel {
     @NameInMap("Attributes")
     public java.util.List<String> attributes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sample</p>
+     */
     @NameInMap("EntityType")
     public String entityType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>easygene.cn-beijing.aliyuncs.com</p>
+     */
     @NameInMap("HostId")
     public String hostId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DA980AD0-158F-44F3-847D-5EAB96C0EB6B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test-workspace</p>
+     */
     @NameInMap("Workspace")
     public String workspace;
 

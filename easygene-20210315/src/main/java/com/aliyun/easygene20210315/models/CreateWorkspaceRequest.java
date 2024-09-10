@@ -4,24 +4,56 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class CreateWorkspaceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>TestToken</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>This is a test workspace</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("JobLifecycle")
     public Integer jobLifecycle;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;:&quot;value&quot;}</p>
+     */
     @NameInMap("Labels")
     public String labels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TestRole</p>
+     */
     @NameInMap("Role")
     public String role;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://gstor-default-workspace-cn-shanghai-bae3193d/</p>
+     */
     @NameInMap("Storage")
     public String storage;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestWorkspace</p>
+     */
     @NameInMap("Workspace")
     public String workspace;
 

@@ -4,30 +4,66 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListGlobalAppsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OpenAccess</p>
+     */
     @NameInMap("AppScope")
     public String appScope;
 
+    /**
+     * <strong>example:</strong>
+     * <p>群体变异</p>
+     */
     @NameInMap("Category")
     public String category;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsReversed")
     public Boolean isReversed;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shenzhen</p>
+     */
     @NameInMap("Location")
     public String location;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0f2cc944-67db-4fb1-bb10-f136cda74bda</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AppName, LastModified, Used</p>
+     */
     @NameInMap("OrderBy")
     public String orderBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>群体变异</p>
+     */
     @NameInMap("Search")
     public String search;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Sentieon</p>
+     */
     @NameInMap("Toolkit")
     public String toolkit;
 

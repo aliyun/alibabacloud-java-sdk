@@ -7,18 +7,38 @@ public class ListPublicDatasetResponseBody extends TeaModel {
     @NameInMap("Datasets")
     public java.util.List<ListPublicDatasetResponseBodyDatasets> datasets;
 
+    /**
+     * <strong>example:</strong>
+     * <p>easygene.cn-beijing.aliyuncs.com</p>
+     */
     @NameInMap("HostId")
     public String hostId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ba6d88e2-a6f2-4d2c-a2ae-68b76b078445</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DA980AD0-158F-44F3-847D-5EAB96C0EB6B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -76,24 +96,48 @@ public class ListPublicDatasetResponseBody extends TeaModel {
     }
 
     public static class ListPublicDatasetResponseBodyDatasets extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>This is description about dataset.</p>
+         */
         @NameInMap("About")
         public String about;
 
+        /**
+         * <strong>example:</strong>
+         * <p>This are access requirements.</p>
+         */
         @NameInMap("AccessRequirements")
         public String accessRequirements;
 
+        /**
+         * <strong>example:</strong>
+         * <p>This is copyright.</p>
+         */
         @NameInMap("Copyright")
         public String copyright;
 
+        /**
+         * <strong>example:</strong>
+         * <p>This are access requirements</p>
+         */
         @NameInMap("DatasetDescription")
         public String datasetDescription;
 
         @NameInMap("DatasetId")
         public String datasetId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>西蒙斯基因组多样性计划</p>
+         */
         @NameInMap("DatasetName")
         public String datasetName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>yyyy/MM/dd HH:mm:ss</p>
+         */
         @NameInMap("LastModified")
         public String lastModified;
 
@@ -103,6 +147,10 @@ public class ListPublicDatasetResponseBody extends TeaModel {
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>源站更新后及时同步</p>
+         */
         @NameInMap("UpdateFrequency")
         public String updateFrequency;
 

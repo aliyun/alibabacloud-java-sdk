@@ -4,15 +4,34 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class CreateEntityShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>T93cy1mMDE4OTgxNGU1ZTkK</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EntityItems")
     public String entityItemsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sample</p>
+     */
     @NameInMap("EntityType")
     public String entityType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-workspace</p>
+     */
     @NameInMap("Workspace")
     public String workspace;
 

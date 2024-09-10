@@ -7,6 +7,12 @@ public class GetPublicDatasetRequest extends TeaModel {
     @NameInMap("Attributes")
     public java.util.List<String> attributes;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>西蒙斯基因组多样性计划</p>
+     */
     @NameInMap("DatasetName")
     public String datasetName;
 

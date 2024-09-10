@@ -4,24 +4,56 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListEntityItemsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sample</p>
+     */
     @NameInMap("EntityType")
     public String entityType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsReversed")
     public Boolean isReversed;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MTIzNDU2P1dvcmtzcGFjZT93cy1mMDE4OTgxNGU1ZTkK</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>createtime</p>
+     */
     @NameInMap("OrderBy")
     public String orderBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Search")
     public String search;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-workspace</p>
+     */
     @NameInMap("Workspace")
     public String workspace;
 

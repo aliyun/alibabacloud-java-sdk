@@ -4,18 +4,42 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class GetGlobalAppShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>joint-calling</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.0</p>
+     */
     @NameInMap("AppVersion")
     public String appVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AppVersion, AppDescriptorFiles, DescriptorType, DAG, Document, Comment, Alias, NamespaceName, AppScope, AppName, AppDescription, RegionIds, Categories, Toolkit, AppVersions, AppDefaultVersion, AppFee, LastModified, Pinned, Contact, Links, AppType</p>
+     */
     @NameInMap("Attributes")
     public String attributesShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shenzhen</p>
+     */
     @NameInMap("Location")
     public String location;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sentieon</p>
+     */
     @NameInMap("NamespaceName")
     public String namespaceName;
 

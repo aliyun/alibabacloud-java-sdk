@@ -4,45 +4,101 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListRunsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>MyApp</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4.1.4.1-v1.0</p>
+     */
     @NameInMap("AppRevision")
     public String appRevision;
 
+    /**
+     * <strong>example:</strong>
+     * <p>S001</p>
+     */
     @NameInMap("EntityName")
     public String entityName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sample</p>
+     */
     @NameInMap("EntityType")
     public String entityType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("GetTotal")
     public Boolean getTotal;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsReversed")
     public Boolean isReversed;
 
+    /**
+     * <strong>example:</strong>
+     * <p>env=test</p>
+     */
     @NameInMap("LabelSelector")
     public String labelSelector;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MTIzNDU2P1dvcmtzcGFjZT93cy1mMDE4OTgxNGU1ZTkK</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>createtime</p>
+     */
     @NameInMap("OrderBy")
     public String orderBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>run-13BeYuxc0fxO24uA75UppTiMRoQ</p>
+     */
     @NameInMap("Search")
     public String search;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sub-13BeXWnGvrOl3MC124tazcJVKaV</p>
+     */
     @NameInMap("SubmissionId")
     public String submissionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test-workspace</p>
+     */
     @NameInMap("Workspace")
     public String workspace;
 

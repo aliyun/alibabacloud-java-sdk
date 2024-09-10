@@ -4,18 +4,48 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class InstallGlobalAppRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>joint-calling</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>joint-calling</p>
+     */
     @NameInMap("InstalledAppName")
     public String installedAppName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sentieon</p>
+     */
     @NameInMap("NamespaceName")
     public String namespaceName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EasyGene</p>
+     */
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default-workspace</p>
+     */
     @NameInMap("Workspace")
     public String workspace;
 

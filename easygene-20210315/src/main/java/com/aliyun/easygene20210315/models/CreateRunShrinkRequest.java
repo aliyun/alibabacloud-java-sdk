@@ -4,45 +4,107 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class CreateRunShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sentieon</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>16</p>
+     */
     @NameInMap("AppRevision")
     public String appRevision;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MTIzNDU2P1dvcmtzcGFjZT93cy1mMDE4OTgxNGU1ZTkK</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("DefaultRuntime")
     public String defaultRuntime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test run</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://my-bucket/exec/</p>
+     */
     @NameInMap("ExecuteDirectory")
     public String executeDirectory;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{ 	&quot;CallCaching&quot;: true,     &quot;FailureMode&quot;: &quot;NoNewCalls&quot; }</p>
+     */
     @NameInMap("ExecuteOptions")
     public String executeOptionsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{         &quot;workflow1.task1.param1&quot;: &quot;helloooo.txt&quot;,         &quot;workflow1.task1.param2&quot;: &quot;abc&quot;,         &quot;workflow1.task2.param1&quot;: &quot;new_helloooo.txt&quot;,         &quot;workflow1.task2.param2&quot;: &quot;def&quot;     }</p>
+     */
     @NameInMap("Inputs")
     public String inputs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;env&quot;: &quot;test&quot;}</p>
+     */
     @NameInMap("Labels")
     public String labels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://my-bucket/output/</p>
+     */
     @NameInMap("OutputFolder")
     public String outputFolder;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ProduceVersion</p>
+     */
     @NameInMap("RevisionTag")
     public String revisionTag;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TestRole</p>
+     */
     @NameInMap("Role")
     public String role;
 
+    /**
+     * <strong>example:</strong>
+     * <p>wgs_sentieon_hc_with_qc_NGPTS1900029301</p>
+     */
     @NameInMap("RunName")
     public String runName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-workspace</p>
+     */
     @NameInMap("Workspace")
     public String workspace;
 

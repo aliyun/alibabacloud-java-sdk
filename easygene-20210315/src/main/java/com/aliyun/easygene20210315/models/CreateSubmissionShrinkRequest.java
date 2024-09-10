@@ -4,42 +4,100 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class CreateSubmissionShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestApp</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TestToken</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("DefaultRuntime")
     public String defaultRuntime;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EntityNames")
     public String entityNamesShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestEntityType</p>
+     */
     @NameInMap("EntityType")
     public String entityType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://my-bucket/my-exe-dir/</p>
+     */
     @NameInMap("ExecuteDirectory")
     public String executeDirectory;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{ 	        &quot;CallCaching&quot;: false, 	        &quot;DeleteIntermediateResults&quot;: true, 	        &quot;FailureMode&quot;: &quot;NoNewCalls&quot;         }</p>
+     */
     @NameInMap("ExecuteOptions")
     public String executeOptions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Inputs")
     public String inputs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://my-bucket/my-output-dir/</p>
+     */
     @NameInMap("OutputFolder")
     public String outputFolder;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Outputs")
     public String outputs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Revision")
     public String revision;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ProduceVersion</p>
+     */
     @NameInMap("RevisionTag")
     public String revisionTag;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestWorkspace</p>
+     */
     @NameInMap("Workspace")
     public String workspace;
 

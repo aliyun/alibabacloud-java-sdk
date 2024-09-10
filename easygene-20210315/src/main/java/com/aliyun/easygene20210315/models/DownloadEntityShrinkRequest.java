@@ -7,9 +7,21 @@ public class DownloadEntityShrinkRequest extends TeaModel {
     @NameInMap("EntityNames")
     public String entityNamesShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sample</p>
+     */
     @NameInMap("EntityType")
     public String entityType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-workspace</p>
+     */
     @NameInMap("Workspace")
     public String workspace;
 

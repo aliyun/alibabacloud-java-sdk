@@ -4,24 +4,54 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class UpdateTemplateRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>This is a test template</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InputsExpression")
     public java.util.List<UpdateTemplateRequestInputsExpression> inputsExpression;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;: &quot;value&quot;}</p>
+     */
     @NameInMap("Labels")
     public String labels;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OutputsExpression")
     public java.util.List<UpdateTemplateRequestOutputsExpression> outputsExpression;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test-entity</p>
+     */
     @NameInMap("RootEntity")
     public String rootEntity;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-template</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-workspace</p>
+     */
     @NameInMap("Workspace")
     public String workspace;
 
@@ -90,21 +120,55 @@ public class UpdateTemplateRequest extends TeaModel {
         @NameInMap("Help")
         public String help;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
         @NameInMap("Required")
         public Boolean required;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("StepOrder")
         public Integer stepOrder;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Task1</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fastq1</p>
+         */
         @NameInMap("VariableName")
         public String variableName;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>String</p>
+         */
         @NameInMap("VariableType")
         public String variableType;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>read_1.fastq.gz</p>
+         */
         @NameInMap("VariableValue")
         public String variableValue;
 
@@ -175,21 +239,51 @@ public class UpdateTemplateRequest extends TeaModel {
         @NameInMap("Help")
         public String help;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
         @NameInMap("Required")
         public Boolean required;
 
         @NameInMap("StepOrder")
         public Integer stepOrder;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Task1</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bam</p>
+         */
         @NameInMap("VariableName")
         public String variableName;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>String</p>
+         */
         @NameInMap("VariableType")
         public String variableType;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>out.bam</p>
+         */
         @NameInMap("VariableValue")
         public String variableValue;
 

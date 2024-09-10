@@ -4,12 +4,24 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class DownloadEntityResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://my-bucket.oss.aliyucs.com/entity.csv">https://my-bucket.oss.aliyucs.com/entity.csv</a></p>
+     */
     @NameInMap("EntityCSVFile")
     public String entityCSVFile;
 
+    /**
+     * <strong>example:</strong>
+     * <p>easygene.cn-beijing.aliyuncs.com</p>
+     */
     @NameInMap("HostId")
     public String hostId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DA980AD0-158F-44F3-847D-5EAB96C0EB6B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

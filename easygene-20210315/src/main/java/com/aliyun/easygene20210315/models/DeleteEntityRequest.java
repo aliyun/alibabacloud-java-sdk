@@ -4,9 +4,21 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class DeleteEntityRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sample</p>
+     */
     @NameInMap("EntityType")
     public String entityType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default-workspace</p>
+     */
     @NameInMap("Workspace")
     public String workspace;
 

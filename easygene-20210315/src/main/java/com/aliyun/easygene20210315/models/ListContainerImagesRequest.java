@@ -4,12 +4,26 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListContainerImagesRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("Location")
     public String location;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0f2cc944-67db-4fb1-bb10-f136cda74bda</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 

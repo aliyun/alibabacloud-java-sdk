@@ -4,18 +4,38 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ImportAppResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>InstalledApp</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>easygene.cn-beijing.aliyuncs.com</p>
+     */
     @NameInMap("HostId")
     public String hostId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DA980AD0-158F-44F3-847D-5EAB96C0EB6B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TestWorkspace</p>
+     */
     @NameInMap("Workspace")
     public String workspace;
 

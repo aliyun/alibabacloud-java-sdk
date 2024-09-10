@@ -4,9 +4,17 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class GetSubmissionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>easygene.cn-beijing.aliyuncs.com</p>
+     */
     @NameInMap("HostId")
     public String hostId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DA980AD0-158F-44F3-847D-5EAB96C0EB6B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,24 +51,52 @@ public class GetSubmissionResponseBody extends TeaModel {
     }
 
     public static class GetSubmissionResponseBodySubmissionRunStats extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Aborted")
         public Long aborted;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Aborting")
         public Long aborting;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Failed")
         public Long failed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Pending")
         public Long pending;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Running")
         public Long running;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Submitted")
         public Long submitted;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Succeeded")
         public Long succeeded;
 
@@ -128,27 +164,55 @@ public class GetSubmissionResponseBody extends TeaModel {
     }
 
     public static class GetSubmissionResponseBodySubmission extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-06-16T15:09:14.378297+08:00</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-06-16T15:09:14.378297+08:00</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestEntityType</p>
+         */
         @NameInMap("EntityType")
         public String entityType;
 
         @NameInMap("RunStats")
         public GetSubmissionResponseBodySubmissionRunStats runStats;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-06-16T15:09:14.378297+08:00</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sub-13BeXWnGvrOl3MC124tazcJVKaV</p>
+         */
         @NameInMap("SubmissionId")
         public String submissionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestWorkspace</p>
+         */
         @NameInMap("Workspace")
         public String workspace;
 

@@ -4,6 +4,12 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class DeleteWorkspaceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyTestWorkspace</p>
+     */
     @NameInMap("Workspace")
     public String workspace;
 

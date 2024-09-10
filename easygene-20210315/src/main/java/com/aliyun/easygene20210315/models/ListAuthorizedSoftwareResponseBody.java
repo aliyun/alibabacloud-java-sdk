@@ -4,21 +4,41 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListAuthorizedSoftwareResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>easygene.cn-beijing.aliyuncs.com</p>
+     */
     @NameInMap("HostId")
     public String hostId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ba6d88e2-a6f2-4d2c-a2ae-68b76b078445</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DA980AD0-158F-44F3-847D-5EAB96C0EB6B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Softwares")
     public java.util.List<ListAuthorizedSoftwareResponseBodySoftwares> softwares;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -76,9 +96,17 @@ public class ListAuthorizedSoftwareResponseBody extends TeaModel {
     }
 
     public static class ListAuthorizedSoftwareResponseBodySoftwares extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://help.aliyun.com/document_detail/257750.html">https://help.aliyun.com/document_detail/257750.html</a></p>
+         */
         @NameInMap("HelpLink")
         public String helpLink;
 
+        /**
+         * <strong>example:</strong>
+         * <p>yyyy/MM/dd HH:mm:ss</p>
+         */
         @NameInMap("LastModified")
         public String lastModified;
 
@@ -88,21 +116,45 @@ public class ListAuthorizedSoftwareResponseBody extends TeaModel {
         @NameInMap("Promotion")
         public String promotion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>201911</p>
+         */
         @NameInMap("SoftwareDefaultVersion")
         public String softwareDefaultVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NGS数据二级分析软件，提供基于CPU的加速方案，可替代BWA，GATK，HaplotypeCaller，Mutect和Mutect2等分析流程。包括DNASeq，DNAScope，TNScope等工具</p>
+         */
         @NameInMap("SoftwareDescription")
         public String softwareDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://img.alicdn.com/imgextra/i2/O1CN01mmZovA1UJfeKQAYvF_!!6000000002497-2-tps-256-256.png">https://img.alicdn.com/imgextra/i2/O1CN01mmZovA1UJfeKQAYvF_!!6000000002497-2-tps-256-256.png</a></p>
+         */
         @NameInMap("SoftwareIcon")
         public String softwareIcon;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.15</p>
+         */
         @NameInMap("SoftwareLicenseFee")
         public Float softwareLicenseFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Sentieon加速软件</p>
+         */
         @NameInMap("SoftwareLongName")
         public String softwareLongName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sentieon</p>
+         */
         @NameInMap("SoftwareName")
         public String softwareName;
 
