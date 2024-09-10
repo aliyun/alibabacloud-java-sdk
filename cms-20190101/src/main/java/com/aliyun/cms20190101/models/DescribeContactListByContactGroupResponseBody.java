@@ -6,35 +6,49 @@ import com.aliyun.tea.*;
 public class DescribeContactListByContactGroupResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <blockquote>
+     * <p> The status code 200 indicates that the request was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The alert group.</p>
+     * <p>The alert contacts that receive alert notifications.</p>
      */
     @NameInMap("Contacts")
     public DescribeContactListByContactGroupResponseBodyContacts contacts;
 
     /**
-     * <p>The error message.</p>
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The group is not exists.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>06D5ECC2-B9BE-42A4-8FA3-1A610FB08B83</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The call was successful.</p>
-     * <p>*   false: The call failed.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -87,28 +101,42 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
     public static class DescribeContactListByContactGroupResponseBodyContactsContactChannels extends TeaModel {
         /**
          * <p>The TradeManager ID of the alert contact.</p>
-         * <br>
-         * <p>>  This parameter can be returned only on the China site (aliyun.com).</p>
+         * <blockquote>
+         * <p> This parameter can be returned only on the China site (aliyun.com).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         @NameInMap("AliIM")
         public String aliIM;
 
         /**
          * <p>The webhook URL of the DingTalk chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=9bf44f8189597d07dfdd7a123455ffc112">https://oapi.dingtalk.com/robot/send?access_token=9bf44f8189597d07dfdd7a123455ffc112</a>****</p>
          */
         @NameInMap("DingWebHook")
         public String dingWebHook;
 
         /**
          * <p>The email address of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:alice@example.com">alice@example.com</a></p>
          */
         @NameInMap("Mail")
         public String mail;
 
         /**
-         * <p>The phone number of the alert contact.</p>
-         * <br>
-         * <p>>  This parameter can be returned only on the China site (aliyun.com).</p>
+         * <p>The mobile number of the alert contact.</p>
+         * <blockquote>
+         * <p> This parameter can be returned only on the China site (aliyun.com).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1333333****</p>
          */
         @NameInMap("SMS")
         public String SMS;
@@ -154,31 +182,45 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
 
     public static class DescribeContactListByContactGroupResponseBodyContactsContact extends TeaModel {
         /**
-         * <p>The alert notification targets.</p>
+         * <p>The alert notification methods.</p>
          */
         @NameInMap("Channels")
         public DescribeContactListByContactGroupResponseBodyContactsContactChannels channels;
 
         /**
          * <p>The time when the alert contact was created.</p>
+         * <p>Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1552314252000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The description of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         @NameInMap("Desc")
         public String desc;
 
         /**
          * <p>The name of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The time when the alert contact was modified.</p>
+         * <p>Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1552314252000</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;

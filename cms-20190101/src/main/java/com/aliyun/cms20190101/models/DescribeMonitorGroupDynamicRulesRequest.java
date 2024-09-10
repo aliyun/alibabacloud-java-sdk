@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeMonitorGroupDynamicRulesRequest extends TeaModel {
     /**
-     * <p>The ID of application group.</p>
+     * <p>The ID of the application group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("GroupId")
     public Long groupId;

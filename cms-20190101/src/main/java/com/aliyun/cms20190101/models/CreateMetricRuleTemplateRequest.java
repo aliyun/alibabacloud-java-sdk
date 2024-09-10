@@ -9,12 +9,19 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
 
     /**
      * <p>The description of the alert template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS_Template1</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The name of the alert template.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Template1</p>
      */
     @NameInMap("Name")
     public String name;
@@ -295,52 +302,73 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
 
         /**
          * <p>The abbreviation of the Alibaba Cloud service name.</p>
-         * <br>
-         * <p>To obtain the abbreviation of an Alibaba Cloud service name, call the [DescribeProjectMeta](~~114916~~) operation. The `metricCategory` tag in the `Labels` response parameter indicates the abbreviation of the Alibaba Cloud service name.</p>
+         * <p>To obtain the abbreviation of an Alibaba Cloud service name, call the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation. The <code>metricCategory</code> tag in the <code>Labels</code> response parameter indicates the abbreviation of the Alibaba Cloud service name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>The name of the metric. Valid values of N: 1 to 200.</p>
-         * <br>
-         * <p>>  For more information, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~28619~~).</p>
+         * <blockquote>
+         * <p> For more information, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/28619.html">Appendix 1: Metrics</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu_total</p>
          */
         @NameInMap("MetricName")
         public String metricName;
 
         /**
          * <p>The namespace of the cloud service. Valid values of N: 1 to 200.</p>
-         * <br>
-         * <p>>  For more information, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~28619~~).</p>
+         * <blockquote>
+         * <p> For more information, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/28619.html">Appendix 1: Metrics</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs_ecs_dashboard</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The aggregation period of monitoring data. Unit: seconds.</p>
-         * <br>
          * <p>The default value is the minimum aggregation period. Generally, you do not need to specify the minimum aggregation period.</p>
-         * <br>
          * <p>Valid values of N: 1 to 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("Period")
         public Integer period;
 
         /**
          * <p>The name of the alert rule. Valid values of N: 1 to 200.</p>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
          * <p>The extended field selectors. Valid values of N: 1 to 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;disk&quot;:&quot;/&quot;}</p>
          */
         @NameInMap("Selector")
         public String selector;
 
         /**
          * <p>The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://ww.aliyun.com">http://ww.aliyun.com</a></p>
          */
         @NameInMap("Webhook")
         public String webhook;

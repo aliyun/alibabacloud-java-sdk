@@ -6,21 +6,30 @@ import com.aliyun.tea.*;
 public class PutMonitorGroupDynamicRuleRequest extends TeaModel {
     /**
      * <p>The ID of the application group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
 
     /**
      * <p>None.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupRules")
     public java.util.List<PutMonitorGroupDynamicRuleRequestGroupRules> groupRules;
 
     /**
      * <p>The mode for creating the alert rule. Valid values:</p>
-     * <br>
-     * <p>*   true: creates asynchronously</p>
-     * <p>*   false (default): creates synchronously</p>
+     * <ul>
+     * <li>true: creates asynchronously</li>
+     * <li>false (default): creates synchronously</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsAsync")
     public Boolean isAsync;
@@ -68,25 +77,37 @@ public class PutMonitorGroupDynamicRuleRequest extends TeaModel {
     public static class PutMonitorGroupDynamicRuleRequestGroupRulesFilters extends TeaModel {
         /**
          * <p>The method that is used to filter instances. Valid values of N: 1 to 3. Valid values:</p>
-         * <br>
-         * <p>*   contains: contains</p>
-         * <p>*   notContains: does not contain</p>
-         * <p>*   startWith: starts with a prefix</p>
-         * <p>*   endWith: ends with a suffix</p>
+         * <ul>
+         * <li>contains: contains</li>
+         * <li>notContains: does not contain</li>
+         * <li>startWith: starts with a prefix</li>
+         * <li>endWith: ends with a suffix</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>contains</p>
          */
         @NameInMap("Function")
         public String function;
 
         /**
          * <p>The name of the field based on which instances are filtered. Valid values of N: 1 to 3.</p>
-         * <br>
          * <p>Only hostnames are supported. Example: hostName.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hostName</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The value to be matched with the specified field. Valid values of N: 1 to 3.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nginx</p>
          */
         @NameInMap("Value")
         public String value;
@@ -125,25 +146,36 @@ public class PutMonitorGroupDynamicRuleRequest extends TeaModel {
     public static class PutMonitorGroupDynamicRuleRequestGroupRules extends TeaModel {
         /**
          * <p>The cloud service to which the alert rule is applied. Valid values of N: 1 to 3. Valid values:</p>
-         * <br>
-         * <p>*   ecs: Elastic Compute Service (ECS)</p>
-         * <p>*   rds: ApsaraDB RDS</p>
-         * <p>*   slb: Server Load Balancer (SLB)</p>
+         * <ul>
+         * <li>ecs: Elastic Compute Service (ECS)</li>
+         * <li>rds: ApsaraDB RDS</li>
+         * <li>slb: Server Load Balancer (SLB)</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>The logical operator used between conditional expressions in the alert rule. Valid values of N: 1 to 3. Valid values:</p>
-         * <br>
-         * <p>*   and: The instances that meet all the conditional expressions are automatically added to the application group.</p>
-         * <p>*   or: The instances that meet one of the conditional expressions are automatically added to the application group.</p>
+         * <ul>
+         * <li>and: The instances that meet all the conditional expressions are automatically added to the application group.</li>
+         * <li>or: The instances that meet one of the conditional expressions are automatically added to the application group.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>and</p>
          */
         @NameInMap("FilterRelation")
         public String filterRelation;
 
         /**
          * <p>None.</p>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Filters")
         public java.util.List<PutMonitorGroupDynamicRuleRequestGroupRulesFilters> filters;

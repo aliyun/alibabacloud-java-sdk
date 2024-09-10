@@ -6,32 +6,38 @@ import com.aliyun.tea.*;
 public class DescribeProjectMetaRequest extends TeaModel {
     /**
      * <p>The tags. Tags are used to filter services.</p>
-     * <br>
-     * <p>You can filter services only by the tag whose `name` is `product`. Example: {"name":"product","value":"ECS"}.</p>
-     * <br>
-     * <p>> We recommend that you do not use the special tags in the CloudMonitor console.</p>
+     * <p>You can filter services only by the tag whose <code>name</code> is <code>product</code>. Example: {&quot;name&quot;:&quot;product&quot;,&quot;value&quot;:&quot;ECS&quot;}.</p>
+     * <blockquote>
+     * <p>We recommend that you do not use the special tags in the CloudMonitor console.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;name&quot;:&quot;product&quot;,&quot;value&quot;:&quot;ECS&quot;}]</p>
      */
     @NameInMap("Labels")
     public String labels;
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Valid values: 1 to 100.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Valid values: 1 to 10000.</p>
-     * <br>
      * <p>Default value: 30.</p>
-     * <br>
-     * <p>> The value of this parameter is not limited. You can view a large number of entries per page.</p>
+     * <blockquote>
+     * <p>The value of this parameter is not limited. You can view a large number of entries per page.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

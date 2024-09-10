@@ -5,19 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveMetricRuleListRequest extends TeaModel {
     /**
-     * <p>The abbreviation of the service name. The following services support one-click alert:</p>
-     * <br>
-     * <p>*   ecs: Elastic Compute Service (ECS)</p>
-     * <p>*   rds: ApsaraDB for RDS</p>
-     * <p>*   slb: Server Load Balancer (SLB)</p>
-     * <p>*   redis_standard: ApsaraDB for Redis of the standard architecture</p>
-     * <p>*   redis_sharding: ApsaraDB for Redis of the cluster architecture</p>
-     * <p>*   redis_splitrw: ApsaraDB for Redis of the read/write splitting architecture</p>
-     * <p>*   mongodb: ApsaraDB for MongoDB of the replica set architecture</p>
-     * <p>*   mongodb_sharding: ApsaraDB for MongoDB of the sharded cluster architecture</p>
-     * <p>*   hbase: ApsaraDB for HBase</p>
-     * <p>*   elasticsearch: Elasticsearch</p>
-     * <p>*   opensearch: Open Search</p>
+     * <p>The abbreviation of the cloud service that supports initiative alert rules.</p>
+     * <p>For more information about how to obtain the name of a cloud service, see <a href="https://help.aliyun.com/document_detail/114930.html">DescribeProductsOfActiveMetricRule</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
      */
     @NameInMap("Product")
     public String product;

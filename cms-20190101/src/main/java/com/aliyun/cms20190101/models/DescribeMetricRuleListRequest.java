@@ -6,67 +6,87 @@ import com.aliyun.tea.*;
 public class DescribeMetricRuleListRequest extends TeaModel {
     /**
      * <p>The status of the alert rule. Valid values:</p>
-     * <br>
-     * <p>*   OK: The alert rule has no active alerts.</p>
-     * <p>*   ALARM: The alert rule has active alerts.</p>
-     * <p>*   INSUFFICIENT_DATA: No data is available.</p>
+     * <ul>
+     * <li>OK: The alert rule has no active alerts.</li>
+     * <li>ALARM: The alert rule has active alerts.</li>
+     * <li>INSUFFICIENT_DATA: No data is available.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("AlertState")
     public String alertState;
 
     /**
      * <p>The monitoring dimensions of the specified resource.</p>
-     * <br>
-     * <p>Set the value to a collection of `key:value` pairs. Example: `{"userId":"120886317861****"}` or `{"instanceId":"i-2ze2d6j5uhg20x47****"}`.</p>
+     * <p>Set the value to a collection of <code>key:value</code> pairs. Example: <code>{&quot;userId&quot;:&quot;120886317861****&quot;}</code> or <code>{&quot;instanceId&quot;:&quot;i-2ze2d6j5uhg20x47****&quot;}</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;instanceId&quot;:&quot;i-2ze2d6j5uhg20x47****&quot;}</p>
      */
     @NameInMap("Dimensions")
     public String dimensions;
 
     /**
      * <p>Specifies whether to query enabled or disabled alert rules. Valid values:</p>
-     * <br>
-     * <p>*   true: queries enabled alert rules.</p>
-     * <p>*   false: queries disabled alert rules.</p>
+     * <ul>
+     * <li>true: queries enabled alert rules.</li>
+     * <li>false: queries disabled alert rules.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EnableState")
     public Boolean enableState;
 
     /**
      * <p>The ID of the application group.</p>
-     * <br>
-     * <p>For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).</p>
+     * <p>For information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7301****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The name of the metric.</p>
-     * <br>
-     * <p>For information about how to obtain the name of a metric, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~163515~~).</p>
+     * <p>For information about how to obtain the name of a metric, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cpu_total</p>
      */
     @NameInMap("MetricName")
     public String metricName;
 
     /**
      * <p>The namespace of the cloud service.</p>
-     * <br>
-     * <p>For information about how to obtain the namespace of a cloud service, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~163515~~).</p>
+     * <p>For information about how to obtain the namespace of a cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs_ecs_dashboard</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The page number of the page to return.</p>
-     * <br>
      * <p>Minimum value: 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Page")
     public Integer page;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Minimum value: 1. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -76,14 +96,19 @@ public class DescribeMetricRuleListRequest extends TeaModel {
 
     /**
      * <p>The ID of the alert rule. You can specify up to 20 IDs at a time. Separate multiple IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>applyTemplate344cfd42-0f32-4fd6-805a-88d7908a****</p>
      */
     @NameInMap("RuleIds")
     public String ruleIds;
 
     /**
      * <p>The name of the alert rule.</p>
-     * <br>
      * <p>This parameter supports fuzzy match.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Rule_01</p>
      */
     @NameInMap("RuleName")
     public String ruleName;

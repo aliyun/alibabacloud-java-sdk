@@ -9,28 +9,38 @@ public class PutGroupMetricRuleRequest extends TeaModel {
 
     /**
      * <p>The abbreviation of the cloud service name.</p>
-     * <br>
-     * <p>For more information about how to obtain the abbreviation of a cloud service name, see `metricCategory` in the response parameter `Labels` of the [DescribeProjectMeta](~~114916~~) operation.</p>
+     * <p>For more information about how to obtain the abbreviation of a cloud service name, see <code>metricCategory</code> in the response parameter <code>Labels</code> of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS</p>
      */
     @NameInMap("Category")
     public String category;
 
     /**
      * <p>The alert contact group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS_Group</p>
      */
     @NameInMap("ContactGroups")
     public String contactGroups;
 
     /**
      * <p>The first-level dimension of the alert rule in the application group.</p>
-     * <br>
-     * <p>Set the value to a set of key-value pairs, for example, `userId:120886317861****` or `instanceId:i-m5e1qg6uo38rztr4****`.</p>
+     * <p>Set the value to a set of key-value pairs, for example, <code>userId:120886317861****</code> or <code>instanceId:i-m5e1qg6uo38rztr4****</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;instanceId&quot;:&quot;i-m5e1qg6uo38rztr4****&quot;}]</p>
      */
     @NameInMap("Dimensions")
     public String dimensions;
 
     /**
      * <p>The time period during which the alert rule is effective.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>05:31-23:59</p>
      */
     @NameInMap("EffectiveInterval")
     public String effectiveInterval;
@@ -43,33 +53,40 @@ public class PutGroupMetricRuleRequest extends TeaModel {
 
     /**
      * <p>The second-level or third-level dimension of the alert rule in the application group.</p>
-     * <br>
-     * <p>Set the value to a set of key-value pairs, for example, `port:80` or `/dev/xvda:d-m5e6yphgzn3aprwu****`.</p>
-     * <br>
-     * <p>If the first-level dimension of the alert rule is `instanceId:i-m5e1qg6uo38rztr4****`, its second-level dimension is the `/dev/xvda:d-m5e6yphgzn3aprwu****` disk in the instance.</p>
+     * <p>Set the value to a set of key-value pairs, for example, <code>port:80</code> or <code>/dev/xvda:d-m5e6yphgzn3aprwu****</code>.</p>
+     * <p>If the first-level dimension of the alert rule is <code>instanceId:i-m5e1qg6uo38rztr4****</code>, its second-level dimension is the <code>/dev/xvda:d-m5e6yphgzn3aprwu****</code> disk in the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;/dev/xvda&quot;:&quot;d-m5e6yphgzn3aprwu****&quot;}</p>
      */
     @NameInMap("ExtraDimensionJson")
     public String extraDimensionJson;
 
     /**
      * <p>The application group ID.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).</p>
+     * <p>For more information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>17285****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The interval at which CloudMonitor checks whether the alert rule is triggered. Unit: seconds.</p>
-     * <br>
-     * <p>>  We recommend that you set the interval to the data aggregation period. If the interval is shorter than the data aggregation period, alerts cannot be triggered due to insufficient data.</p>
+     * <blockquote>
+     * <p> We recommend that you set the interval to the data aggregation period. If the interval is shorter than the data aggregation period, alerts cannot be triggered due to insufficient data.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("Interval")
     public String interval;
 
     /**
      * <p>The tags of the alert rule.</p>
-     * <br>
      * <p>The specified tag is contained in alert notifications.</p>
      */
     @NameInMap("Labels")
@@ -77,32 +94,45 @@ public class PutGroupMetricRuleRequest extends TeaModel {
 
     /**
      * <p>The metric name.</p>
-     * <br>
-     * <p>For more information about how to obtain the name of a metric, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~163515~~).</p>
+     * <p>For more information about how to obtain the name of a metric, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cpu_total</p>
      */
     @NameInMap("MetricName")
     public String metricName;
 
     /**
      * <p>The namespace of the cloud service.</p>
-     * <br>
-     * <p>For more information about how to obtain the namespace of a cloud service, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~163515~~).</p>
+     * <p>For more information about how to obtain the namespace of a cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs_ecs_dashboard</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The method that is used to handle alerts when no monitoring data is found. Valid values:</p>
-     * <br>
-     * <p>*   KEEP_LAST_STATE (default): No operation is performed.</p>
-     * <p>*   INSUFFICIENT_DATA: An alert whose content is "Insufficient data" is triggered.</p>
-     * <p>*   OK: The status is considered normal.</p>
+     * <ul>
+     * <li>KEEP_LAST_STATE (default): No operation is performed.</li>
+     * <li>INSUFFICIENT_DATA: An alert whose content is &quot;Insufficient data&quot; is triggered.</li>
+     * <li>OK: The status is considered normal.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>KEEP_LAST_STATE</p>
      */
     @NameInMap("NoDataPolicy")
     public String noDataPolicy;
 
     /**
      * <p>The time period during which the alert rule is ineffective.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>00:00-05:30</p>
      */
     @NameInMap("NoEffectiveInterval")
     public String noEffectiveInterval;
@@ -112,42 +142,58 @@ public class PutGroupMetricRuleRequest extends TeaModel {
 
     /**
      * <p>The aggregation period of the metric data.</p>
-     * <br>
-     * <p>Set the `Period` parameter to an integral multiple of 60. Unit: seconds. Default value: 300.</p>
+     * <p>Set the <code>Period</code> parameter to an integral multiple of 60. Unit: seconds. Default value: 300.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("Period")
     public String period;
 
     /**
      * <p>The ID of the alert rule.</p>
-     * <br>
-     * <p>*   When you create an alert rule for the application group, enter the ID of the alert rule.</p>
-     * <p>*   When you modify a specified alert rule in the application group, you must obtain the ID of the alert rule. For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).</p>
+     * <ul>
+     * <li>When you create an alert rule for the application group, enter the ID of the alert rule.</li>
+     * <li>When you modify a specified alert rule in the application group, you must obtain the ID of the alert rule. For information about how to obtain the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("RuleId")
     public String ruleId;
 
     /**
      * <p>The name of the alert rule.</p>
-     * <br>
-     * <p>*   When you create an alert rule for the application group, enter the name of the alert rule.</p>
-     * <p>*   When you modify a specified alert rule in the application group, you must obtain the name of the alert rule. For more information about how to obtain the name of an alert rule, see [DescribeMetricRuleList](~~114941~~).</p>
+     * <ul>
+     * <li>When you create an alert rule for the application group, enter the name of the alert rule.</li>
+     * <li>When you modify a specified alert rule in the application group, you must obtain the name of the alert rule. For more information about how to obtain the name of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Rule_01</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
 
     /**
      * <p>The mute period during which new alerts are not sent even if the trigger conditions are met.</p>
-     * <br>
      * <p>Unit: seconds. Default value: 86400.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>86400</p>
      */
     @NameInMap("SilenceTime")
     public Integer silenceTime;
 
     /**
      * <p>The callback URL.</p>
-     * <br>
      * <p>The callback URL must be accessible over the Internet. CloudMonitor sends a POST request to push an alert notification to the callback URL that you specify. Only HTTP requests are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
      */
     @NameInMap("Webhook")
     public String webhook;
@@ -320,38 +366,50 @@ public class PutGroupMetricRuleRequest extends TeaModel {
     public static class PutGroupMetricRuleRequestEscalationsCritical extends TeaModel {
         /**
          * <p>The operator that is used to compare the metric value with the threshold for Critical-level alerts. Valid values:</p>
-         * <br>
-         * <p>*   GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
-         * <p>*   GreaterThanThreshold: greater than the threshold</p>
-         * <p>*   LessThanOrEqualToThreshold: less than or equal to the threshold</p>
-         * <p>*   LessThanThreshold: less than the threshold</p>
-         * <p>*   NotEqualToThreshold: not equal to the threshold</p>
-         * <p>*   GreaterThanYesterday: greater than the metric value at the same time yesterday</p>
-         * <p>*   LessThanYesterday: less than the metric value at the same time yesterday</p>
-         * <p>*   GreaterThanLastWeek: greater than the metric value at the same time last week</p>
-         * <p>*   LessThanLastWeek: less than the metric value at the same time last week</p>
-         * <p>*   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
-         * <p>*   LessThanLastPeriod: less than the metric value in the last monitoring cycle</p>
+         * <ul>
+         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
+         * <li>GreaterThanThreshold: greater than the threshold</li>
+         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
+         * <li>LessThanThreshold: less than the threshold</li>
+         * <li>NotEqualToThreshold: not equal to the threshold</li>
+         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
+         * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
+         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
+         * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
+         * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
+         * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GreaterThanOrEqualToThreshold</p>
          */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
         /**
          * <p>The statistical methods for Critical-level alerts. Separate multiple statistical methods with commas (,).</p>
-         * <br>
-         * <p>The value of this parameter is determined by the `Statistics` column corresponding to the `MetricName` parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see [Appendix 1: Metrics](~~163515~~).</p>
+         * <p>The value of this parameter is determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Average</p>
          */
         @NameInMap("Statistics")
         public String statistics;
 
         /**
          * <p>The threshold for Critical-level alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         @NameInMap("Threshold")
         public String threshold;
 
         /**
          * <p>The consecutive number of times for which the metric value meets the alert condition before a Critical-level alert is triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Times")
         public Integer times;
@@ -398,38 +456,50 @@ public class PutGroupMetricRuleRequest extends TeaModel {
     public static class PutGroupMetricRuleRequestEscalationsInfo extends TeaModel {
         /**
          * <p>The operator that is used to compare the metric value with the threshold for Info-level alerts. Valid values:</p>
-         * <br>
-         * <p>*   GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
-         * <p>*   GreaterThanThreshold: greater than the threshold</p>
-         * <p>*   LessThanOrEqualToThreshold: less than or equal to the threshold</p>
-         * <p>*   LessThanThreshold: less than the threshold</p>
-         * <p>*   NotEqualToThreshold: not equal to the threshold</p>
-         * <p>*   GreaterThanYesterday: greater than the metric value at the same time yesterday</p>
-         * <p>*   LessThanYesterday: less than the metric value at the same time yesterday</p>
-         * <p>*   GreaterThanLastWeek: greater than the metric value at the same time last week</p>
-         * <p>*   LessThanLastWeek: less than the metric value at the same time last week</p>
-         * <p>*   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
-         * <p>*   LessThanLastPeriod: less than the metric value in the last monitoring cycle</p>
+         * <ul>
+         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
+         * <li>GreaterThanThreshold: greater than the threshold</li>
+         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
+         * <li>LessThanThreshold: less than the threshold</li>
+         * <li>NotEqualToThreshold: not equal to the threshold</li>
+         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
+         * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
+         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
+         * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
+         * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
+         * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GreaterThanOrEqualToThreshold</p>
          */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
         /**
          * <p>The statistical methods for Info-level alerts. Separate multiple statistical methods with commas (,).</p>
-         * <br>
-         * <p>The value of this parameter is determined by the `Statistics` column corresponding to the `MetricName` parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see [Appendix 1: Metrics](~~163515~~).</p>
+         * <p>The value of this parameter is determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Average</p>
          */
         @NameInMap("Statistics")
         public String statistics;
 
         /**
          * <p>The threshold for Info-level alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         @NameInMap("Threshold")
         public String threshold;
 
         /**
          * <p>The consecutive number of times for which the metric value meets the alert condition before an Info-level alert is triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Times")
         public Integer times;
@@ -476,38 +546,50 @@ public class PutGroupMetricRuleRequest extends TeaModel {
     public static class PutGroupMetricRuleRequestEscalationsWarn extends TeaModel {
         /**
          * <p>The operator that is used to compare the metric value with the threshold for Warn-level alerts. Valid values:</p>
-         * <br>
-         * <p>*   GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
-         * <p>*   GreaterThanThreshold: greater than the threshold</p>
-         * <p>*   LessThanOrEqualToThreshold: less than or equal to the threshold</p>
-         * <p>*   LessThanThreshold: less than the threshold</p>
-         * <p>*   NotEqualToThreshold: not equal to the threshold</p>
-         * <p>*   GreaterThanYesterday: greater than the metric value at the same time yesterday</p>
-         * <p>*   LessThanYesterday: less than the metric value at the same time yesterday</p>
-         * <p>*   GreaterThanLastWeek: greater than the metric value at the same time last week</p>
-         * <p>*   LessThanLastWeek: less than the metric value at the same time last week</p>
-         * <p>*   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
-         * <p>*   LessThanLastPeriod: less than the metric value in the last monitoring cycle</p>
+         * <ul>
+         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
+         * <li>GreaterThanThreshold: greater than the threshold</li>
+         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
+         * <li>LessThanThreshold: less than the threshold</li>
+         * <li>NotEqualToThreshold: not equal to the threshold</li>
+         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
+         * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
+         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
+         * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
+         * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
+         * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GreaterThanOrEqualToThreshold</p>
          */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
         /**
          * <p>The statistical methods for Warn-level alerts. Separate multiple statistical methods with commas (,).</p>
-         * <br>
-         * <p>The value of this parameter is determined by the `Statistics` column corresponding to the `MetricName` parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see [Appendix 1: Metrics](~~163515~~).</p>
+         * <p>The value of this parameter is determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Average</p>
          */
         @NameInMap("Statistics")
         public String statistics;
 
         /**
          * <p>The threshold for Warn-level alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         @NameInMap("Threshold")
         public String threshold;
 
         /**
          * <p>The consecutive number of times for which the metric value meets the alert condition before a Warn-level alert is triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Times")
         public Integer times;
@@ -595,12 +677,18 @@ public class PutGroupMetricRuleRequest extends TeaModel {
     public static class PutGroupMetricRuleRequestLabels extends TeaModel {
         /**
          * <p>The tag key of the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value of the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value1</p>
          */
         @NameInMap("Value")
         public String value;

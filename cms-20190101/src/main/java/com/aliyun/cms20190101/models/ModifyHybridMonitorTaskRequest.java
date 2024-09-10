@@ -12,11 +12,14 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
 
     /**
      * <p>The collection period of the metric. Valid values:</p>
-     * <br>
-     * <p>*   15</p>
-     * <p>*   60</p>
-     * <br>
+     * <ul>
+     * <li>15</li>
+     * <li>60</li>
+     * </ul>
      * <p>Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15</p>
      */
     @NameInMap("CollectInterval")
     public String collectInterval;
@@ -38,16 +41,21 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
 
     /**
      * <p>The ID of the metric import task.</p>
-     * <br>
-     * <p>For information about how to obtain the ID of a metric import task, see [DescribeHybridMonitorTaskList](~~428624~~).</p>
+     * <p>For information about how to obtain the ID of a metric import task, see <a href="https://help.aliyun.com/document_detail/428624.html">DescribeHybridMonitorTaskList</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>36****</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
      * <p>The name of the metric import task.</p>
-     * <br>
-     * <p>For information about how to obtain the ID of a metric import task, see [DescribeHybridMonitorTaskList](~~428624~~).</p>
+     * <p>For information about how to obtain the ID of a metric import task, see <a href="https://help.aliyun.com/document_detail/428624.html">DescribeHybridMonitorTaskList</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SLS_task</p>
      */
     @NameInMap("TaskName")
     public String taskName;
@@ -116,12 +124,18 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
     public static class ModifyHybridMonitorTaskRequestAttachLabels extends TeaModel {
         /**
          * <p>The tag key of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_service</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The tag value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testValue</p>
          */
         @NameInMap("Value")
         public String value;
@@ -152,12 +166,18 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
     public static class ModifyHybridMonitorTaskRequestSLSProcessConfigExpress extends TeaModel {
         /**
          * <p>The alias of the extended field that specifies the result of basic operations performed on aggregation results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SuccRate</p>
          */
         @NameInMap("Alias")
         public String alias;
 
         /**
          * <p>The extended field that specifies the result of basic operations performed on aggregation results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success_count</p>
          */
         @NameInMap("Express")
         public String express;
@@ -188,27 +208,37 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
     public static class ModifyHybridMonitorTaskRequestSLSProcessConfigFilterFilters extends TeaModel {
         /**
          * <p>The method that is used to filter logs imported from Log Service. Valid values:</p>
-         * <br>
-         * <p>*   `contain`: contains</p>
-         * <p>*   `notContain`: does not contain</p>
-         * <p>*   `>`: greater than</p>
-         * <p>*   `<`: less than</p>
-         * <p>*   `=`: equal to</p>
-         * <p>*   `! =`: not equal to</p>
-         * <p>*   `>=`: greater than or equal to</p>
-         * <p>*   `<=`: less than or equal to</p>
+         * <ul>
+         * <li><code>contain</code>: contains</li>
+         * <li><code>notContain</code>: does not contain</li>
+         * <li><code>&gt;</code>: greater than</li>
+         * <li><code>&lt;</code>: less than</li>
+         * <li><code>=</code>: equal to</li>
+         * <li><code>! =</code>: not equal to</li>
+         * <li><code>&gt;=</code>: greater than or equal to</li>
+         * <li><code>&lt;=</code>: less than or equal to</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>=</p>
          */
         @NameInMap("Operator")
         public String operator;
 
         /**
          * <p>The name of the key that is used to filter logs imported from Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code</p>
          */
         @NameInMap("SLSKeyName")
         public String SLSKeyName;
 
         /**
          * <p>The value of the key that is used to filter logs imported from Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("Value")
         public String value;
@@ -253,9 +283,13 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
 
         /**
          * <p>The relationship between multiple filter conditions. Valid values:</p>
-         * <br>
-         * <p>*   and (default): Logs are processed only if all filter conditions are met.</p>
-         * <p>*   or: Logs are processed if one of the filter conditions is met.</p>
+         * <ul>
+         * <li>and (default): Logs are processed only if all filter conditions are met.</li>
+         * <li>or: Logs are processed if one of the filter conditions is met.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>and</p>
          */
         @NameInMap("Relation")
         public String relation;
@@ -286,12 +320,18 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
     public static class ModifyHybridMonitorTaskRequestSLSProcessConfigGroupBy extends TeaModel {
         /**
          * <p>The alias of the aggregation result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ApiResult</p>
          */
         @NameInMap("Alias")
         public String alias;
 
         /**
          * <p>The name of the key that is used to aggregate logs imported from Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code</p>
          */
         @NameInMap("SLSKeyName")
         public String SLSKeyName;
@@ -322,47 +362,65 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
     public static class ModifyHybridMonitorTaskRequestSLSProcessConfigStatistics extends TeaModel {
         /**
          * <p>The alias of the aggregation result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>level_count</p>
          */
         @NameInMap("Alias")
         public String alias;
 
         /**
          * <p>The function that is used to aggregate the log data of a statistical period. Valid values:</p>
-         * <br>
-         * <p>*   count: counts the number.</p>
-         * <p>*   sum: calculates the total value.</p>
-         * <p>*   avg: calculates the average value.</p>
-         * <p>*   max: calculates the maximum value.</p>
-         * <p>*   min: calculates the minimum value.</p>
-         * <p>*   value: collects samples within the statistical period.</p>
-         * <p>*   countps: calculates the counted number of the specified field divided by the total number of seconds within the statistical period.</p>
-         * <p>*   sumps: calculates the total value of the specified field divided by the total number of seconds within the statistical period.</p>
-         * <p>*   distinct: counts the number of logs where the specified field appears within the statistical period.</p>
-         * <p>*   distribution: counts the number of logs that meet a specified condition within the statistical period.</p>
-         * <p>*   percentile: sorts the values of the specified field in ascending order, and then returns the value that is at the specified percentile within the statistical period. Example: P50.</p>
+         * <ul>
+         * <li>count: counts the number.</li>
+         * <li>sum: calculates the total value.</li>
+         * <li>avg: calculates the average value.</li>
+         * <li>max: calculates the maximum value.</li>
+         * <li>min: calculates the minimum value.</li>
+         * <li>value: collects samples within the statistical period.</li>
+         * <li>countps: calculates the counted number of the specified field divided by the total number of seconds within the statistical period.</li>
+         * <li>sumps: calculates the total value of the specified field divided by the total number of seconds within the statistical period.</li>
+         * <li>distinct: counts the number of logs where the specified field appears within the statistical period.</li>
+         * <li>distribution: counts the number of logs that meet a specified condition within the statistical period.</li>
+         * <li>percentile: sorts the values of the specified field in ascending order, and then returns the value that is at the specified percentile within the statistical period. Example: P50.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>count</p>
          */
         @NameInMap("Function")
         public String function;
 
         /**
          * <p>The value of the function that is used to aggregate logs imported from Log Service.</p>
-         * <br>
-         * <p>*   If the `Function` parameter is set to `distribution`, this parameter specifies the lower limit of the statistical interval. For example, if you want to calculate the number of HTTP requests whose status code is 2XX, set this parameter to 200.</p>
-         * <p>*   If you set the `Function` parameter to `percentile`, this parameter specifies the percentile at which the expected value is. For example, 0.5 specifies P50.</p>
+         * <ul>
+         * <li>If the <code>Function</code> parameter is set to <code>distribution</code>, this parameter specifies the lower limit of the statistical interval. For example, if you want to calculate the number of HTTP requests whose status code is 2XX, set this parameter to 200.</li>
+         * <li>If you set the <code>Function</code> parameter to <code>percentile</code>, this parameter specifies the percentile at which the expected value is. For example, 0.5 specifies P50.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("Parameter1")
         public String parameter1;
 
         /**
          * <p>The value of the function that is used to aggregate logs imported from Log Service.</p>
-         * <br>
-         * <p>> This parameter must be specified when `Function` is set to `distribution`. This parameter specifies the upper limit of the statistical interval. For example, if you want to calculate the number of HTTP requests whose status code is 2XX, set this parameter to 299.</p>
+         * <blockquote>
+         * <p>This parameter must be specified when <code>Function</code> is set to <code>distribution</code>. This parameter specifies the upper limit of the statistical interval. For example, if you want to calculate the number of HTTP requests whose status code is 2XX, set this parameter to 299.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>299</p>
          */
         @NameInMap("Parameter2")
         public String parameter2;
 
         /**
          * <p>The name of the key that is used to aggregate logs imported from Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("SLSKeyName")
         public String SLSKeyName;

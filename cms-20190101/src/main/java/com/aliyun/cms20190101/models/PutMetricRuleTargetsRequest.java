@@ -9,12 +9,19 @@ public class PutMetricRuleTargetsRequest extends TeaModel {
 
     /**
      * <p>The ID of the alert rule.</p>
-     * <br>
-     * <p>For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).</p>
+     * <p>For information about how to obtain the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ae06917_75a8c43178ab66****</p>
      */
     @NameInMap("RuleId")
     public String ruleId;
 
+    /**
+     * <p>N/A.</p>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Targets")
     public java.util.List<PutMetricRuleTargetsRequestTargets> targets;
 
@@ -49,40 +56,71 @@ public class PutMetricRuleTargetsRequest extends TeaModel {
 
     public static class PutMetricRuleTargetsRequestTargets extends TeaModel {
         /**
-         * <p>The ARN of the resource.</p>
-         * <br>
-         * <p>For information about how to obtain the ARN of a resource, see [DescribeMetricRuleTargets](~~121592~~).</p>
-         * <br>
-         * <p>Format: `acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message`. Example: `acs:mns:cn-hangzhou:120886317861****:/queues/test123/message`. Fields:</p>
-         * <br>
-         * <p>*   {Service name abbreviation}: the abbreviation of the service name. Valid value: mns.</p>
-         * <p>*   {userId}: the ID of the Alibaba Cloud account.</p>
-         * <p>*   {regionId}: the region ID of the message queue or topic.</p>
-         * <p>*   {Resource type}`: the type of the resource for which alerts are triggered. Valid values: - **queues** - **topics** {Resource name}: the name of the resource. - If the resource type is set to **queues**, the resource name is the name of the message queue. - If the resource type is set to **topics**, the resource name is the name of the topic.`</p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the resource. Message Service (MNS), Auto Scaling, Simple Log Service, and Function Compute are supported.</p>
+         * <p>The following part describes the ARN of MNS and the parameters provided by the ARN:</p>
+         * <p><code>acs:mns:{regionId}:{userId}:/{Resource type}/{Resource name}/message</code>.</p>
+         * <ul>
+         * <li><p>{regionId}: the region ID of the message queue or topic.</p>
+         * </li>
+         * <li><p>{userId}: the ID of the Alibaba Cloud account that owns the resource.</p>
+         * </li>
+         * <li><p>{Resource type}: the type of the resource for which alerts are triggered. Valid values:</p>
+         * <ul>
+         * <li><strong>queues</strong></li>
+         * <li><strong>topics</strong></li>
+         * </ul>
+         * </li>
+         * <li><p>{Resource name}: the resource name.</p>
+         * <ul>
+         * <li>If the resource type is <strong>queues</strong>, the resource name is the queue name.</li>
+         * <li>If the resource type is <strong>topics</strong>, the resource name is the topic name.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <p>ARN of Auto Scaling:</p>
+         * <p>acs:ess:{regionId}:{userId}:scalingGroupId/{Scaling group ID}:scalingRuleId/{Scaling rule ID}</p>
+         * <p>ARN of Simple Log Service:</p>
+         * <p>acs:log:{regionId}:{userId}:project/{Project name}/logstore/{Logstore name}</p>
+         * <p>ARN of Function Compute:</p>
+         * <p>acs:fc:{regionId}:{userId}:services/{Service name}/functions/{Function name}</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:mns:cn-hangzhou:120886317861****:/queues/test/message</p>
          */
         @NameInMap("Arn")
         public String arn;
 
         /**
          * <p>The ID of the resource for which alerts are triggered.</p>
-         * <br>
-         * <p>For information about how to obtain the ID of a resource for which alerts are triggered, see [DescribeMetricRuleTargets](~~121592~~).</p>
+         * <p>For more information about how to obtain the ID of the resource for which alerts are triggered, see <a href="https://help.aliyun.com/document_detail/121592.html">DescribeMetricRuleTargets</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
-         * <p>The parameters of the alert callback. The parameters are in the JSON format.</p>
+         * <p>The JSON-formatted parameters of the alert callback.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;customField1&quot;:&quot;value1&quot;,&quot;customField2&quot;:&quot;$.name&quot;}</p>
          */
         @NameInMap("JsonParams")
         public String jsonParams;
 
         /**
-         * <p>The level of the alert. Valid values:</p>
-         * <br>
-         * <p>*   INFO: information</p>
-         * <p>*   WARN: warning</p>
-         * <p>*   CRITICAL: critical</p>
+         * <p>The alert level. Valid values:</p>
+         * <ul>
+         * <li>INFO</li>
+         * <li>WARN</li>
+         * <li>CRITICAL</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;INFO&quot;, &quot;WARN&quot;, &quot;CRITICAL&quot;]</p>
          */
         @NameInMap("Level")
         public String level;

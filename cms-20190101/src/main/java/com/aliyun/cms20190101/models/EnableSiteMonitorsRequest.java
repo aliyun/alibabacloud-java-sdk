@@ -9,6 +9,10 @@ public class EnableSiteMonitorsRequest extends TeaModel {
 
     /**
      * <p>The IDs of the site monitoring tasks. Separate multiple instance IDs with commas (,).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>49f7b317-7645-4cc9-94fd-ea42e522****,49f7b317-7645-4cc9-94fd-ea42e522****</p>
      */
     @NameInMap("TaskIds")
     public String taskIds;

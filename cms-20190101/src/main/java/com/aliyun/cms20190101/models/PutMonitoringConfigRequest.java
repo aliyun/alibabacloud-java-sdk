@@ -5,19 +5,23 @@ import com.aliyun.tea.*;
 
 public class PutMonitoringConfigRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically install the CloudMonitor agent on existing Elastic Compute Service (ECS) instances. Valid values:</p>
-     * <br>
-     * <p>*   true (default value)</p>
-     * <p>*   false</p>
+     * <p>This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AutoInstall")
     public Boolean autoInstall;
 
     /**
      * <p>Specifies whether to automatically install the CloudMonitor agent on new ECS instances. Valid values:</p>
-     * <br>
-     * <p>*   true (default value)</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true (default): The CloudMonitor agent is automatically installed on new ECS instances.</li>
+     * <li>false: The CloudMonitor agent is not automatically installed on new ECS instances.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EnableInstallAgentNewECS")
     public Boolean enableInstallAgentNewECS;

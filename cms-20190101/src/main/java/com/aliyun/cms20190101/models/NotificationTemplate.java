@@ -10,18 +10,37 @@ public class NotificationTemplate extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Alarm $.alertName</p>
+     */
     @NameInMap("EnContent")
     public String enContent;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Alarm $.alertName</p>
+     */
     @NameInMap("EnItemContent")
     public String enItemContent;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Alarm $.alertName</p>
+     */
     @NameInMap("EnTitle")
     public String enTitle;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DATA,  SMS,  ONCALL,  MAIL,  DING,  WEIXIN,  FEISHU,  SLACK</p>
+     */
     @NameInMap("Type")
     public String type;
 
@@ -34,15 +53,31 @@ public class NotificationTemplate extends TeaModel {
     @NameInMap("Uuid")
     public String uuid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TEXT, MARKDOWN,CARD</p>
+     */
     @NameInMap("WraperType")
     public String wraperType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>报警 $.alertName</p>
+     */
     @NameInMap("ZhContent")
     public String zhContent;
 
+    /**
+     * <strong>example:</strong>
+     * <p>报警 $.alertName</p>
+     */
     @NameInMap("ZhItemContent")
     public String zhItemContent;
 
+    /**
+     * <strong>example:</strong>
+     * <p>报警通知 $.alertName</p>
+     */
     @NameInMap("ZhTitle")
     public String zhTitle;
 

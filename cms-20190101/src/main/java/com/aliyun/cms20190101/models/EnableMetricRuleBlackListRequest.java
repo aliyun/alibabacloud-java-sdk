@@ -6,19 +6,28 @@ import com.aliyun.tea.*;
 public class EnableMetricRuleBlackListRequest extends TeaModel {
     /**
      * <p>The IDs of the blacklist policies. Separate multiple IDs with commas (,). You can specify up to 50 IDs.</p>
-     * <br>
-     * <p>For information about how to obtain the ID of a blacklist policy, see [DescribeMetricRuleBlackList](~~457257~~).</p>
-     * <br>
-     * <p>> You can also set this parameter to a JSON array. Example: `["a9ad2ac2-3ed9-11ed-b878-0242ac12****","5cb8a9a4-198f-4651-a353-f8b28788****"]`.</p>
+     * <p>For information about how to obtain the ID of a blacklist policy, see <a href="https://help.aliyun.com/document_detail/457257.html">DescribeMetricRuleBlackList</a>.</p>
+     * <blockquote>
+     * <p>You can also set this parameter to a JSON array. Example: <code>[&quot;a9ad2ac2-3ed9-11ed-b878-0242ac12****&quot;,&quot;5cb8a9a4-198f-4651-a353-f8b28788****&quot;]</code>.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a9ad2ac2-3ed9-11ed-b878-0242ac12****</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
      * <p>Specifies whether to enable the blacklist policy. Valid values:</p>
-     * <br>
-     * <p>*   true: The blacklist policy is enabled.</p>
-     * <p>*   false (default): The blacklist policy is disabled.</p>
+     * <ul>
+     * <li>true: The blacklist policy is enabled.</li>
+     * <li>false (default): The blacklist policy is disabled.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsEnable")
     public Boolean isEnable;

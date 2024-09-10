@@ -6,38 +6,57 @@ import com.aliyun.tea.*;
 public class DescribeSiteMonitorDataRequest extends TeaModel {
     /**
      * <p>The end of the time range for the query. Supported formats:</p>
-     * <br>
-     * <p>*   UNIX timestamp: The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
-     * <p>*   Time format: The value is in the YYYY-MM-DDThh:mm:ssZ format.</p>
+     * <ul>
+     * <li>UNIX timestamp: The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</li>
+     * <li>Time format: The value is in the YYYY-MM-DDThh:mm:ssZ format.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1551581437000</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The number of data points to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("Length")
     public Integer length;
 
     /**
      * <p>The name of the metric. Valid values:</p>
-     * <br>
-     * <p>*   Availability</p>
-     * <p>*   ResponseTime</p>
+     * <ul>
+     * <li>Availability</li>
+     * <li>ResponseTime</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Availability</p>
      */
     @NameInMap("MetricName")
     public String metricName;
 
     /**
      * <p>The pagination cursor.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>49f7b317-7645-4cc9-94fd-ea42e5220930ea42e5220930ea42e522****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The interval at which monitoring data is returned. The value is an integral multiple of 60. Unit: seconds.</p>
-     * <br>
-     * <p>>  The default value equals the minimum interval at which detection requests are sent to the monitored address.</p>
+     * <blockquote>
+     * <p> The default value equals the minimum interval at which detection requests are sent to the monitored address.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("Period")
     public String period;
@@ -47,24 +66,36 @@ public class DescribeSiteMonitorDataRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range for the query. Supported formats:</p>
-     * <br>
-     * <p>*   UNIX timestamp: The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
-     * <p>*   Time format: The value is in the YYYY-MM-DDThh:mm:ssZ format.</p>
+     * <ul>
+     * <li>UNIX timestamp: The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</li>
+     * <li>Time format: The value is in the YYYY-MM-DDThh:mm:ssZ format.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1551579637000</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The ID of the site monitoring task.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>49f7b317-7645-4cc9-94fd-ea42e522****</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
      * <p>The type of the monitored object whose monitoring data is to be queried. Valid values:</p>
-     * <br>
-     * <p>*   metric</p>
-     * <p>*   event</p>
+     * <ul>
+     * <li>metric</li>
+     * <li>event</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>metric</p>
      */
     @NameInMap("Type")
     public String type;

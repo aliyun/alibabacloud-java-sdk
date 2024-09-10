@@ -12,6 +12,7 @@ public class CreateHostAvailabilityRequest extends TeaModel {
 
     /**
      * <p>None</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AlertConfigEscalationList")
     public java.util.List<CreateHostAvailabilityRequestAlertConfigEscalationList> alertConfigEscalationList;
@@ -24,14 +25,22 @@ public class CreateHostAvailabilityRequest extends TeaModel {
 
     /**
      * <p>The ID of the application group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
 
     /**
      * <p>The ECS instances that are monitored. Valid values of N: 1 to 21.</p>
-     * <br>
-     * <p>> This parameter must be specified when `TaskScope` is set to `GROUP_SPEC_INSTANCE`.</p>
+     * <blockquote>
+     * <p>This parameter must be specified when <code>TaskScope</code> is set to <code>GROUP_SPEC_INSTANCE</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>i-absdfkwl321****</p>
      */
     @NameInMap("InstanceList")
     public java.util.List<String> instanceList;
@@ -40,26 +49,39 @@ public class CreateHostAvailabilityRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the availability monitoring task. The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (\_).</p>
+     * <p>The name of the availability monitoring task. The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (_).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>task1</p>
      */
     @NameInMap("TaskName")
     public String taskName;
 
     /**
      * <p>The range of instances that are monitored by the availability monitoring task. Valid values:</p>
-     * <br>
-     * <p>*   GROUP: All Elastic Compute Service (ECS) instances in the application group are monitored.</p>
-     * <p>*   GROUP_SPEC_INSTANCE: Specified ECS instances in the application group are monitored. The TaskScope parameter must be used in combination with the InstanceList.N parameter. The InstanceList.N parameter specifies the ECS instances to be monitored.</p>
+     * <ul>
+     * <li>GROUP: All Elastic Compute Service (ECS) instances in the application group are monitored.</li>
+     * <li>GROUP_SPEC_INSTANCE: Specified ECS instances in the application group are monitored. The TaskScope parameter must be used in combination with the InstanceList.N parameter. The InstanceList.N parameter specifies the ECS instances to be monitored.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>GROUP</p>
      */
     @NameInMap("TaskScope")
     public String taskScope;
 
     /**
      * <p>The monitoring type of the availability monitoring task. Valid values:</p>
-     * <br>
-     * <p>*   PING</p>
-     * <p>*   TELNET</p>
-     * <p>*   HTTP</p>
+     * <ul>
+     * <li>PING</li>
+     * <li>TELNET</li>
+     * <li>HTTP</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HTTP</p>
      */
     @NameInMap("TaskType")
     public String taskType;
@@ -152,40 +174,55 @@ public class CreateHostAvailabilityRequest extends TeaModel {
     public static class CreateHostAvailabilityRequestAlertConfig extends TeaModel {
         /**
          * <p>The end of the time range during which the alert rule is effective. Valid values: 0 to 23.</p>
-         * <br>
-         * <p>For example, if the `AlertConfig.StartTime` parameter is set to 0 and the `AlertConfig.EndTime` parameter is set to 22, the alert rule is effective from 00:00:00 to 22:00:00.</p>
-         * <br>
-         * <p>> Alert notifications are sent based on the specified threshold only if the alert rule is effective.</p>
+         * <p>For example, if the <code>AlertConfig.StartTime</code> parameter is set to 0 and the <code>AlertConfig.EndTime</code> parameter is set to 22, the alert rule is effective from 00:00:00 to 22:00:00.</p>
+         * <blockquote>
+         * <p>Alert notifications are sent based on the specified threshold only if the alert rule is effective.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         @NameInMap("EndTime")
         public Integer endTime;
 
         /**
          * <p>The alert notification methods. Valid values:</p>
-         * <br>
          * <p>0: Alert notifications are sent by using emails and DingTalk chatbots.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("NotifyType")
         public Integer notifyType;
 
         /**
          * <p>The mute period during which new alerts are not sent even if the trigger conditions are met. Unit: seconds. Default value: 86400. The default value indicates one day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
          */
         @NameInMap("SilenceTime")
         public Integer silenceTime;
 
         /**
          * <p>The beginning of the time range during which the alert rule is effective. Valid values: 0 to 23.</p>
-         * <br>
-         * <p>For example, if the `AlertConfig.StartTime` parameter is set to 0 and the `AlertConfig.EndTime` parameter is set to 22, the alert rule is effective from 00:00:00 to 22:00:00.</p>
-         * <br>
-         * <p>> Alert notifications are sent based on the specified threshold only if the alert rule is effective.</p>
+         * <p>For example, if the <code>AlertConfig.StartTime</code> parameter is set to 0 and the <code>AlertConfig.EndTime</code> parameter is set to 22, the alert rule is effective from 00:00:00 to 22:00:00.</p>
+         * <blockquote>
+         * <p>Alert notifications are sent based on the specified threshold only if the alert rule is effective.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("StartTime")
         public Integer startTime;
 
         /**
          * <p>The callback URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.aliyun.com/webhook.json">https://www.aliyun.com/webhook.json</a></p>
          */
         @NameInMap("WebHook")
         public String webHook;
@@ -239,75 +276,109 @@ public class CreateHostAvailabilityRequest extends TeaModel {
 
     public static class CreateHostAvailabilityRequestTaskOption extends TeaModel {
         /**
-         * <p>The header of the HTTP request. Format: `Parameter name:Parameter value`. Separate multiple parameters with carriage return characters. Example:</p>
-         * <br>
-         * <p>    params1:value1</p>
-         * <p>    params2:value2</p>
+         * <p>The header of the HTTP request. Format: <code>Parameter name:Parameter value</code>. Separate multiple parameters with carriage return characters. Example:</p>
+         * <pre><code>params1:value1
+         * params2:value2
+         * </code></pre>
+         * 
+         * <strong>example:</strong>
+         * <p>token:testTokenValue</p>
          */
         @NameInMap("HttpHeader")
         public String httpHeader;
 
         /**
          * <p>The HTTP request method. Valid values:</p>
-         * <br>
-         * <p>*   GET</p>
-         * <p>*   POST</p>
-         * <p>*   HEAD</p>
-         * <br>
-         * <p>> This parameter must be specified when TaskType is set to HTTP.</p>
+         * <ul>
+         * <li>GET</li>
+         * <li>POST</li>
+         * <li>HEAD</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter must be specified when TaskType is set to HTTP.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>GET</p>
          */
         @NameInMap("HttpMethod")
         public String httpMethod;
 
         /**
          * <p>The method to trigger an alert. The alert can be triggered based on whether the specified alert rule is included in the response body. Valid values:</p>
-         * <br>
-         * <p>*   true: If the HTTP response body includes the alert rule, an alert is triggered.</p>
-         * <p>*   false: If the HTTP response does not include the alert rule, an alert is triggered.</p>
-         * <br>
-         * <p>> This parameter must be specified when TaskType is set to HTTP.</p>
+         * <ul>
+         * <li>true: If the HTTP response body includes the alert rule, an alert is triggered.</li>
+         * <li>false: If the HTTP response does not include the alert rule, an alert is triggered.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter must be specified when TaskType is set to HTTP.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("HttpNegative")
         public Boolean httpNegative;
 
         /**
          * <p>The content of the HTTP POST request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>params1=paramsValue1</p>
          */
         @NameInMap("HttpPostContent")
         public String httpPostContent;
 
         /**
          * <p>The character set that is used in the HTTP response.</p>
-         * <br>
-         * <p>> Only UTF-8 is supported.</p>
+         * <blockquote>
+         * <p>Only UTF-8 is supported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>UTF-8</p>
          */
         @NameInMap("HttpResponseCharset")
         public String httpResponseCharset;
 
         /**
          * <p>The response to the HTTP request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         @NameInMap("HttpResponseMatchContent")
         public String httpResponseMatchContent;
 
         /**
          * <p>The URI that you want to monitor. This parameter must be specified when TaskType is set to HTTP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
          */
         @NameInMap("HttpURI")
         public String httpURI;
 
         /**
          * <p>The interval at which detection requests are sent. Unit: seconds. Valid values: 15, 30, 60, 120, 300, 900, 1800, and 3600.</p>
-         * <br>
-         * <p>> This parameter is available only for the CloudMonitor agent V3.5.1 or later.</p>
+         * <blockquote>
+         * <p>This parameter is available only for the CloudMonitor agent V3.5.1 or later.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("Interval")
         public Integer interval;
 
         /**
          * <p>The domain name or IP address that you want to monitor.</p>
-         * <br>
-         * <p>> This parameter must be specified when TaskType is set to PING or TELNET.</p>
+         * <blockquote>
+         * <p>This parameter must be specified when TaskType is set to PING or TELNET.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
          */
         @NameInMap("TelnetOrPingHost")
         public String telnetOrPingHost;
@@ -394,50 +465,71 @@ public class CreateHostAvailabilityRequest extends TeaModel {
     public static class CreateHostAvailabilityRequestAlertConfigEscalationList extends TeaModel {
         /**
          * <p>The method used to calculate the metric values that trigger alerts. Valid values of N: 1 to 21. Valid values:</p>
-         * <br>
-         * <p>*   HttpStatus: Value</p>
-         * <p>*   HttpLatency: Average</p>
-         * <p>*   TelnetStatus: Value</p>
-         * <p>*   TelnetLatency: Average</p>
-         * <p>*   PingLostRate: Average</p>
-         * <br>
-         * <p>> The value Value indicates the original value and is used for metrics such as status codes. The value Average indicates the average value and is used for metrics such as the latency and packet loss rate.</p>
+         * <ul>
+         * <li>HttpStatus: Value</li>
+         * <li>HttpLatency: Average</li>
+         * <li>TelnetStatus: Value</li>
+         * <li>TelnetLatency: Average</li>
+         * <li>PingLostRate: Average</li>
+         * </ul>
+         * <blockquote>
+         * <p>The value Value indicates the original value and is used for metrics such as status codes. The value Average indicates the average value and is used for metrics such as the latency and packet loss rate.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Value</p>
          */
         @NameInMap("Aggregate")
         public String aggregate;
 
         /**
          * <p>The metric for which the alert feature is enabled. Valid values of N: 1 to 21. Valid values:</p>
-         * <br>
-         * <p>*   HttpStatus: HTTP status code</p>
-         * <p>*   HttpLatency: HTTP response time</p>
-         * <p>*   TelnetStatus: Telnet status code</p>
-         * <p>*   TelnetLatency: Telnet response time</p>
-         * <p>*   PingLostRate: Ping packet loss rate</p>
+         * <ul>
+         * <li>HttpStatus: HTTP status code</li>
+         * <li>HttpLatency: HTTP response time</li>
+         * <li>TelnetStatus: Telnet status code</li>
+         * <li>TelnetLatency: Telnet response time</li>
+         * <li>PingLostRate: Ping packet loss rate</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HttpStatus</p>
          */
         @NameInMap("MetricName")
         public String metricName;
 
         /**
          * <p>The comparison operator that is used in the alert rule. Valid values of N: 1 to 21. Valid values:</p>
-         * <br>
-         * <p>*   `>`</p>
-         * <p>*   `>=`</p>
-         * <p>*   `<`</p>
-         * <p>*   `<=`</p>
-         * <p>*   `=`</p>
+         * <ul>
+         * <li><code>&gt;</code></li>
+         * <li><code>&gt;=</code></li>
+         * <li><code>&lt;</code></li>
+         * <li><code>&lt;=</code></li>
+         * <li><code>=</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <blockquote>
+         * </blockquote>
          */
         @NameInMap("Operator")
         public String operator;
 
         /**
          * <p>The consecutive number of times for which the metric value meets the alert condition before an alert is triggered. Valid values of N: 1 to 21.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Times")
         public Integer times;
 
         /**
          * <p>The alert threshold. Valid values of N: 1 to 21.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         @NameInMap("Value")
         public String value;
@@ -491,45 +583,62 @@ public class CreateHostAvailabilityRequest extends TeaModel {
 
     public static class CreateHostAvailabilityRequestAlertConfigTargetList extends TeaModel {
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the resource. Format: `acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message`. Example: `acs:mns:cn-hangzhou:120886317861****:/queues/test123/message`. Fields:</p>
-         * <br>
-         * <p>*   {Service name abbreviation}: the abbreviation of the service name. Valid value: mns.</p>
-         * <br>
-         * <p>*   {userId}: the ID of the Alibaba Cloud account.</p>
-         * <br>
-         * <p>*   {regionId}: the region ID of the message queue or topic.</p>
-         * <br>
-         * <p>*   {Resource type}: the type of the resource that triggers the alert. Valid values:</p>
-         * <br>
-         * <p>    *   **queues**</p>
-         * <p>    *   **topics**</p>
-         * <br>
-         * <p>*   {Resource name}: the resource name.</p>
-         * <br>
-         * <p>    *   If the resource type is **queues**, the resource name is the queue name.</p>
-         * <p>    *   If the resource type is **topics**, the resource name is the topic name.</p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the resource. Format: <code>acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message</code>. Example: <code>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</code>. Fields:</p>
+         * <ul>
+         * <li><p>{Service name abbreviation}: the abbreviation of the service name. Valid value: mns.</p>
+         * </li>
+         * <li><p>{userId}: the ID of the Alibaba Cloud account.</p>
+         * </li>
+         * <li><p>{regionId}: the region ID of the message queue or topic.</p>
+         * </li>
+         * <li><p>{Resource type}: the type of the resource that triggers the alert. Valid values:</p>
+         * <ul>
+         * <li><strong>queues</strong></li>
+         * <li><strong>topics</strong></li>
+         * </ul>
+         * </li>
+         * <li><p>{Resource name}: the resource name.</p>
+         * <ul>
+         * <li>If the resource type is <strong>queues</strong>, the resource name is the queue name.</li>
+         * <li>If the resource type is <strong>topics</strong>, the resource name is the topic name.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:mns:cn-hangzhou:120886317861****:/queues/test/message</p>
          */
         @NameInMap("Arn")
         public String arn;
 
         /**
          * <p>The ID of the resource for which alerts are triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The parameters of the alert callback. The parameters are in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;customField1&quot;:&quot;value1&quot;,&quot;customField2&quot;:&quot;$.name&quot;}</p>
          */
         @NameInMap("JsonParams")
         public String jsonParams;
 
         /**
          * <p>The alert level. Valid values:</p>
-         * <br>
-         * <p>*   INFO</p>
-         * <p>*   WARN</p>
-         * <p>*   CRITICAL</p>
+         * <ul>
+         * <li>INFO</li>
+         * <li>WARN</li>
+         * <li>CRITICAL</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;INFO&quot;, &quot;WARN&quot;, &quot;CRITICAL&quot;]</p>
          */
         @NameInMap("Level")
         public String level;

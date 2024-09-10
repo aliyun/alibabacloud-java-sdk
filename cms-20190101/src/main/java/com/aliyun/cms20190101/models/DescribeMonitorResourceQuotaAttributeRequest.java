@@ -9,9 +9,13 @@ public class DescribeMonitorResourceQuotaAttributeRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to return information about used quotas. Valid values:</p>
-     * <br>
-     * <p>*   true (default): yes</p>
-     * <p>*   false: no</p>
+     * <ul>
+     * <li>true (default): yes</li>
+     * <li>false: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ShowUsed")
     public Boolean showUsed;

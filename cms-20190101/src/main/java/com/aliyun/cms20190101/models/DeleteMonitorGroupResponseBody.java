@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class DeleteMonitorGroupResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <blockquote>
+     * <p> The status code 200 indicates that the call was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -20,18 +24,27 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The Request is not authorization.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CA35B3AE-4FFD-4A33-AE67-67EF68711EFA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -84,6 +97,9 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
     public static class DeleteMonitorGroupResponseBodyGroupContactGroupsContactGroup extends TeaModel {
         /**
          * <p>The name of the alert group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS_Group</p>
          */
         @NameInMap("Name")
         public String name;
@@ -131,6 +147,9 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
 
         /**
          * <p>The name of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS_test</p>
          */
         @NameInMap("GroupName")
         public String groupName;

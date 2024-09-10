@@ -4,6 +4,10 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutCustomEventRequest extends TeaModel {
+    /**
+     * <p>The event details.</p>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EventInfo")
     public java.util.List<PutCustomEventRequestEventInfo> eventInfo;
 
@@ -33,33 +37,45 @@ public class PutCustomEventRequest extends TeaModel {
 
     public static class PutCustomEventRequestEventInfo extends TeaModel {
         /**
-         * <p>The content of the custom event. Valid values of N: 1 to 50.</p>
+         * <p>The event content. Valid values of N: 1 to 50.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IOException</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
-         * <p>The name of the custom event. Valid values of N: 1 to 50.</p>
+         * <p>The event name. Valid values of N: 1 to 50.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myEvent</p>
          */
         @NameInMap("EventName")
         public String eventName;
 
         /**
-         * <p>The ID of the application group. Valid values of N: 0 to 50.</p>
-         * <br>
-         * <p>Default value: 0. This value indicates that the custom event to be reported does not belong to any application group.</p>
+         * <p>The ID of the application group. Valid values of N: 1 to 50.</p>
+         * <p>Default value: 0. This value indicates that the event to be reported does not belong to any application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
-         * <p>The time when the custom event occurred.</p>
-         * <br>
-         * <p>Format: `yyyyMMddTHHmmss.SSSZ`.</p>
-         * <br>
+         * <p>The time when the event occurred.</p>
+         * <p>Format: <code>yyyyMMddTHHmmss.SSSZ</code>.</p>
          * <p>Valid values of N: 1 to 50.</p>
-         * <br>
-         * <p>>  You can also specify a UNIX timestamp. Example: 1552199984000. Unit: milliseconds.</p>
+         * <blockquote>
+         * <p> You can also specify a UNIX timestamp. Example: 1552199984000. Unit: milliseconds.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>20171013T170923.456+0800</p>
          */
         @NameInMap("Time")
         public String time;

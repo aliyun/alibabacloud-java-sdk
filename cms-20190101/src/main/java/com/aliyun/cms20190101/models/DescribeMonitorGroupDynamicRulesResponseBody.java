@@ -5,31 +5,51 @@ import com.aliyun.tea.*;
 
 public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The value 200 indicates that the call was successful.</p>
+     * <p>The responses code.</p>
+     * <blockquote>
+     * <p> The status code 200 indicates that the request was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The error message.</p>
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified resource is not found.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2170B94A-1576-4D65-900E-2093037CDAF3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The resources that is associated with the application group.</p>
+     * <p>The resources that are associated with the application group.</p>
      */
     @NameInMap("Resource")
     public DescribeMonitorGroupDynamicRulesResponseBodyResource resource;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -81,22 +101,32 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
     public static class DescribeMonitorGroupDynamicRulesResponseBodyResourceResourceFiltersFilter extends TeaModel {
         /**
          * <p>The method that is used to filter the instances. Valid values:</p>
-         * <br>
-         * <p>*   contains: includes a specified element</p>
-         * <p>*   startWith: specifies a prefix</p>
-         * <p>*   endWith: specifies a suffix</p>
+         * <ul>
+         * <li>contains: contains</li>
+         * <li>startWith: starts with a prefix</li>
+         * <li>endWith: ends with a suffix</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>contains</p>
          */
         @NameInMap("Function")
         public String function;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hostName</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The value of the dynamic rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Value")
         public String value;
@@ -154,19 +184,27 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
     public static class DescribeMonitorGroupDynamicRulesResponseBodyResourceResource extends TeaModel {
         /**
          * <p>The type of the cloud service to which the dynamic rule belongs. Valid values:</p>
-         * <br>
-         * <p>*   ecs: Elastic Compute Service (ECS)</p>
-         * <p>*   rds: ApsaraDB RDS</p>
-         * <p>*   slb: Server Load Balancer (SLB)</p>
+         * <ul>
+         * <li>ecs: Elastic Compute Service (ECS)</li>
+         * <li>rds: ApsaraDB RDS</li>
+         * <li>slb: Server Load Balancer (SLB)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
-         * <p>The filtering condition. Valid values:</p>
-         * <br>
-         * <p>*   and: queries the instances that meet all alert rules</p>
-         * <p>*   or: queries the instances that meet any alert rule</p>
+         * <p>The filter condition. Valid values:</p>
+         * <ul>
+         * <li>and: queries the instances that meet all alert rules.</li>
+         * <li>or: queries the instances that meet any alert rule.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>and</p>
          */
         @NameInMap("FilterRelation")
         public String filterRelation;

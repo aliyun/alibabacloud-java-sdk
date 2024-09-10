@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class DeleteSiteMonitorsRequest extends TeaModel {
     /**
      * <p>Specifies whether to delete the alert rules configured for the site monitoring tasks. Valid values:</p>
-     * <br>
-     * <p>*   true (default value)</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true (default value)</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsDeleteAlarms")
     public Boolean isDeleteAlarms;
@@ -18,6 +22,10 @@ public class DeleteSiteMonitorsRequest extends TeaModel {
 
     /**
      * <p>The IDs of the site monitoring tasks that you want to delete. Separate multiple task IDs with commas (,).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>01adacc2-ece5-41b6-afa2-3143ab5d****,43bd1ead-514f-4524-813e-228ce091****</p>
      */
     @NameInMap("TaskIds")
     public String taskIds;

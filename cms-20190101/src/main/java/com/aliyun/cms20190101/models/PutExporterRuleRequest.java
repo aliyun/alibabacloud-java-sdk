@@ -6,30 +6,43 @@ import com.aliyun.tea.*;
 public class PutExporterRuleRequest extends TeaModel {
     /**
      * <p>The description of the data export rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Export CPU metrics</p>
      */
     @NameInMap("Describe")
     public String describe;
 
     /**
      * <p>The destination to which the data is exported. Valid values of N: 1 to 20.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>distName1</p>
      */
     @NameInMap("DstNames")
     public java.util.List<String> dstNames;
 
     /**
      * <p>The name of the metric.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>For more information, see [Appendix 1: Metrics](~~163515~~).</p>
+     * <blockquote>
+     * </blockquote>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cpu_total</p>
      */
     @NameInMap("MetricName")
     public String metricName;
 
     /**
      * <p>The namespace of the cloud service.</p>
-     * <br>
-     * <p>> For more information, see [Appendix 1: Metrics](~~163515~~).</p>
+     * <blockquote>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>acs_ecs_dashboard</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -39,20 +52,29 @@ public class PutExporterRuleRequest extends TeaModel {
 
     /**
      * <p>The name of the rule.</p>
-     * <br>
-     * <p>> If the specified rule exists, the existing rule is modified. Otherwise, a rule is created.</p>
+     * <blockquote>
+     * <p>If the specified rule exists, the existing rule is modified. Otherwise, a rule is created.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>MyRuleName</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
 
     /**
      * <p>The time window of the exported data. Unit: seconds.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   Separate multiple time windows with commas (,).</p>
-     * <br>
-     * <p>*   Data in a time window of less than 60 seconds cannot be exported.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>Separate multiple time windows with commas (,).</p>
+     * </li>
+     * <li><p>Data in a time window of less than 60 seconds cannot be exported.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>60,300</p>
      */
     @NameInMap("TargetWindows")
     public String targetWindows;

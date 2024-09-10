@@ -9,23 +9,36 @@ public class PutContactRequest extends TeaModel {
 
     /**
      * <p>The name of the alert contact.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Alice</p>
      */
     @NameInMap("ContactName")
     public String contactName;
 
     /**
      * <p>The description of the alert contact.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS_Instance</p>
      */
     @NameInMap("Describe")
     public String describe;
 
     /**
      * <p>The language in which the alert information is displayed. Valid values:</p>
-     * <br>
-     * <p>*   zh-cn: simplified Chinese</p>
-     * <p>*   en: English</p>
-     * <br>
-     * <p>>  If you do not specify a value for this parameter, Cloud Monitor identifies the language of the alert information based on the region of your Alibaba Cloud account.</p>
+     * <ul>
+     * <li>zh-cn: simplified Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you do not specify a value for this parameter, Cloud Monitor identifies the language of the alert information based on the region of your Alibaba Cloud account.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-cn</p>
      */
     @NameInMap("Lang")
     public String lang;
@@ -70,32 +83,40 @@ public class PutContactRequest extends TeaModel {
     public static class PutContactRequestChannels extends TeaModel {
         /**
          * <p>The TradeManager ID of the alert contact.</p>
-         * <br>
          * <p>Specify at least one of the following alert notification targets: email address or webhook URL of the DingTalk chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Jim</p>
          */
         @NameInMap("AliIM")
         public String aliIM;
 
         /**
          * <p>The webhook URL of the DingTalk chatbot.</p>
-         * <br>
          * <p>Specify at least one of the following alert notification targets: email address or webhook URL of the DingTalk chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=7d49515e8ebf21106a80a9cc4bb3d247771305d52fb15d6201234565">https://oapi.dingtalk.com/robot/send?access_token=7d49515e8ebf21106a80a9cc4bb3d247771305d52fb15d6201234565</a>****</p>
          */
         @NameInMap("DingWebHook")
         public String dingWebHook;
 
         /**
          * <p>The email address of the alert contact. After you add or modify an email address, the recipient receives an email that contains an activation link. The system adds the recipient to the list of alert contacts only after the recipient activates the email address.</p>
-         * <br>
          * <p>Specify at least one of the following alert notification targets: email address or webhook URL of the DingTalk chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@aliyun.com">test@aliyun.com</a></p>
          */
         @NameInMap("Mail")
         public String mail;
 
         /**
          * <p>The phone number of the alert contact. After you add or modify a phone number, the recipient receives a text message that contains an activation link. The system adds the recipient to the list of alert contacts only after the recipient activates the phone number.</p>
-         * <br>
          * <p>Specify at least one of the following alert notification targets: email address or webhook URL of the DingTalk chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1333333****</p>
          */
         @NameInMap("SMS")
         public String SMS;

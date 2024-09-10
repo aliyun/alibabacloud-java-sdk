@@ -19,6 +19,9 @@ public class NotificationStrategy extends TeaModel {
     @NameInMap("GroupingSetting")
     public NotificationStrategyGroupingSetting groupingSetting;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -27,6 +30,9 @@ public class NotificationStrategy extends TeaModel {
 
     @NameInMap("PushingSetting")
     public NotificationStrategyPushingSetting pushingSetting;
+
+    @NameInMap("RouteSetting")
+    public NotificationStrategyRouteSetting routeSetting;
 
     @NameInMap("UpdateTime")
     public String updateTime;
@@ -106,6 +112,14 @@ public class NotificationStrategy extends TeaModel {
         return this.pushingSetting;
     }
 
+    public NotificationStrategy setRouteSetting(NotificationStrategyRouteSetting routeSetting) {
+        this.routeSetting = routeSetting;
+        return this;
+    }
+    public NotificationStrategyRouteSetting getRouteSetting() {
+        return this.routeSetting;
+    }
+
     public NotificationStrategy setUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -131,6 +145,9 @@ public class NotificationStrategy extends TeaModel {
     }
 
     public static class NotificationStrategyEscalationSettingCustomChannels extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("ChannelType")
         public String channelType;
 
@@ -246,12 +263,21 @@ public class NotificationStrategy extends TeaModel {
     }
 
     public static class NotificationStrategyFilterSettingBlackList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Field")
         public String field;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Op")
         public String op;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -287,12 +313,21 @@ public class NotificationStrategy extends TeaModel {
     }
 
     public static class NotificationStrategyFilterSettingWhiteList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Field")
         public String field;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Op")
         public String op;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -498,6 +533,96 @@ public class NotificationStrategy extends TeaModel {
         }
         public String getTemplateUuid() {
             return this.templateUuid;
+        }
+
+    }
+
+    public static class NotificationStrategyRouteSettingRoutesConditions extends TeaModel {
+        @NameInMap("Field")
+        public String field;
+
+        @NameInMap("Op")
+        public String op;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static NotificationStrategyRouteSettingRoutesConditions build(java.util.Map<String, ?> map) throws Exception {
+            NotificationStrategyRouteSettingRoutesConditions self = new NotificationStrategyRouteSettingRoutesConditions();
+            return TeaModel.build(map, self);
+        }
+
+        public NotificationStrategyRouteSettingRoutesConditions setField(String field) {
+            this.field = field;
+            return this;
+        }
+        public String getField() {
+            return this.field;
+        }
+
+        public NotificationStrategyRouteSettingRoutesConditions setOp(String op) {
+            this.op = op;
+            return this;
+        }
+        public String getOp() {
+            return this.op;
+        }
+
+        public NotificationStrategyRouteSettingRoutesConditions setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class NotificationStrategyRouteSettingRoutes extends TeaModel {
+        @NameInMap("Conditions")
+        public java.util.List<NotificationStrategyRouteSettingRoutesConditions> conditions;
+
+        @NameInMap("EscalationUuid")
+        public String escalationUuid;
+
+        public static NotificationStrategyRouteSettingRoutes build(java.util.Map<String, ?> map) throws Exception {
+            NotificationStrategyRouteSettingRoutes self = new NotificationStrategyRouteSettingRoutes();
+            return TeaModel.build(map, self);
+        }
+
+        public NotificationStrategyRouteSettingRoutes setConditions(java.util.List<NotificationStrategyRouteSettingRoutesConditions> conditions) {
+            this.conditions = conditions;
+            return this;
+        }
+        public java.util.List<NotificationStrategyRouteSettingRoutesConditions> getConditions() {
+            return this.conditions;
+        }
+
+        public NotificationStrategyRouteSettingRoutes setEscalationUuid(String escalationUuid) {
+            this.escalationUuid = escalationUuid;
+            return this;
+        }
+        public String getEscalationUuid() {
+            return this.escalationUuid;
+        }
+
+    }
+
+    public static class NotificationStrategyRouteSetting extends TeaModel {
+        @NameInMap("Routes")
+        public java.util.List<NotificationStrategyRouteSettingRoutes> routes;
+
+        public static NotificationStrategyRouteSetting build(java.util.Map<String, ?> map) throws Exception {
+            NotificationStrategyRouteSetting self = new NotificationStrategyRouteSetting();
+            return TeaModel.build(map, self);
+        }
+
+        public NotificationStrategyRouteSetting setRoutes(java.util.List<NotificationStrategyRouteSettingRoutes> routes) {
+            this.routes = routes;
+            return this;
+        }
+        public java.util.List<NotificationStrategyRouteSettingRoutes> getRoutes() {
+            return this.routes;
         }
 
     }

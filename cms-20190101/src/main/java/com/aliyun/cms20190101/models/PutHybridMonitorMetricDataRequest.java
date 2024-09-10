@@ -6,16 +6,19 @@ import com.aliyun.tea.*;
 public class PutHybridMonitorMetricDataRequest extends TeaModel {
     /**
      * <p>The monitoring data.</p>
-     * <br>
      * <p>Valid values of N: 1 to 100.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MetricList")
     public java.util.List<PutHybridMonitorMetricDataRequestMetricList> metricList;
 
     /**
      * <p>The name of the namespace.</p>
-     * <br>
-     * <p>For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).</p>
+     * <p>For information about how to obtain the name of a namespace, see <a href="https://help.aliyun.com/document_detail/428880.html">DescribeHybridMonitorNamespaceList</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default-aliyun</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -55,22 +58,27 @@ public class PutHybridMonitorMetricDataRequest extends TeaModel {
     public static class PutHybridMonitorMetricDataRequestMetricListLabels extends TeaModel {
         /**
          * <p>The tag key of the metric.</p>
-         * <br>
          * <p>Valid values of N: 1 to 100.</p>
-         * <br>
-         * <p>The key can contain letters, digits, and underscores (*). The key must start with a letter or an underscore (*).</p>
-         * <br>
-         * <p>>  You must specify both the Key and Value parameters.</p>
+         * <p>The key can contain letters, digits, and underscores (<em>). The key must start with a letter or an underscore (</em>).</p>
+         * <blockquote>
+         * <p> You must specify both the Key and Value parameters.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>IP</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value of the metric.</p>
-         * <br>
          * <p>Valid values of N: 1 to 100.</p>
-         * <br>
-         * <p>>  You must specify both the Key and Value parameters.</p>
+         * <blockquote>
+         * <p> You must specify both the Key and Value parameters.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("Value")
         public String value;
@@ -101,38 +109,45 @@ public class PutHybridMonitorMetricDataRequest extends TeaModel {
     public static class PutHybridMonitorMetricDataRequestMetricList extends TeaModel {
         /**
          * <p>The tags of the metric.</p>
-         * <br>
          * <p>Valid values of N: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app、ip、hostName等标识信息</p>
          */
         @NameInMap("Labels")
         public java.util.List<PutHybridMonitorMetricDataRequestMetricListLabels> labels;
 
         /**
          * <p>The metric name.</p>
-         * <br>
          * <p>Valid values of N: 1 to 100.</p>
-         * <br>
-         * <p>The name can contain letters, digits, and underscores (\_). The name must start with a letter.</p>
+         * <p>The name can contain letters, digits, and underscores (_). The name must start with a letter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CPU_Usage</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The timestamp when the monitoring data is imported.</p>
-         * <br>
+         * <p>The time when the monitoring data is imported. The value is a timestamp.</p>
          * <p>Valid values of N: 1 to 100.</p>
-         * <br>
-         * <p>Unit: milliseconds. By default, the current timestamp is used.</p>
+         * <p>Unit: milliseconds. By default, the current time is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1640776119473</p>
          */
         @NameInMap("TS")
         public Long TS;
 
         /**
          * <p>The value of the metric.</p>
-         * <br>
          * <p>Valid values of N: 1 to 100.</p>
-         * <br>
          * <p>The value must be an integer or a floating-point number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         @NameInMap("Value")
         public String value;

@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class DescribeSystemEventMetaListResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <blockquote>
+     * <p> The status code 200 indicates that the call was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,20 +22,33 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
     @NameInMap("Data")
     public DescribeSystemEventMetaListResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A6582C8B-E67C-4A19-BC15-EAEFEBDC7995</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The call was successful.</p>
-     * <p>*   false: The call failed.</p>
+     * <ul>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -84,32 +101,46 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
     public static class DescribeSystemEventMetaListResponseBodyDataResource extends TeaModel {
         /**
          * <p>The type of the system event. Valid values:</p>
-         * <br>
-         * <p>*   StatusNotification</p>
-         * <p>*   Exception</p>
-         * <p>*   Maintenance</p>
+         * <ul>
+         * <li>StatusNotification</li>
+         * <li>Exception</li>
+         * <li>Maintenance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Exception</p>
          */
         @NameInMap("EventType")
         public String eventType;
 
         /**
          * <p>The level of the alert. Valid values:</p>
-         * <br>
-         * <p>*   CRITICAL</p>
-         * <p>*   WARN</p>
-         * <p>*   INFO</p>
+         * <ul>
+         * <li>CRITICAL</li>
+         * <li>WARN</li>
+         * <li>INFO</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>INFO</p>
          */
         @NameInMap("Level")
         public String level;
 
         /**
          * <p>The name of the system event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SelectFailureRate</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The description of the system event, in Chinese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>High query failure rate</p>
          */
         @NameInMap("NameDesc")
         public String nameDesc;
@@ -119,18 +150,27 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
 
         /**
          * <p>The abbreviation of the service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADS</p>
          */
         @NameInMap("Product")
         public String product;
 
         /**
          * <p>The status of the system event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>failed</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The description of the event status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Operation Failed</p>
          */
         @NameInMap("StatusDesc")
         public String statusDesc;

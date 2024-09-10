@@ -5,30 +5,46 @@ import com.aliyun.tea.*;
 
 public class DescribeSystemEventHistogramResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <p>The response code.</p>
+     * <blockquote>
+     * <p> The status code 200 indicates that the request was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The Request is not authorization.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>486029C9-53E1-44B4-85A8-16A571A043FD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.</p>
+     * <p>Indicates whether the request was successful. Valid values: true: The request was successful. false: The request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
 
     /**
-     * <p>The information about the number of times that the system event occurred during each interval of a time period.</p>
+     * <p>The information about the number of times the system event occurred during each interval of a time period.</p>
      */
     @NameInMap("SystemEventHistograms")
     public DescribeSystemEventHistogramResponseBodySystemEventHistograms systemEventHistograms;
@@ -80,23 +96,30 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
 
     public static class DescribeSystemEventHistogramResponseBodySystemEventHistogramsSystemEventHistogram extends TeaModel {
         /**
-         * <p>The number of times that the system event occurred.</p>
+         * <p>The number of times the system event occurred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
-         * <p>The end of an interval.</p>
-         * <br>
-         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The end time.</p>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1552225753000</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
-         * <p>The beginning of an interval.</p>
-         * <br>
-         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The start time.</p>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1552225770000</p>
          */
         @NameInMap("StartTime")
         public Long startTime;

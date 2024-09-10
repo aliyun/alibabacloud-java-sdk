@@ -4,6 +4,13 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteEventRuleTargetsRequest extends TeaModel {
+    /**
+     * <p>The IDs of event-triggered alert rules.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Ids")
     public java.util.List<String> ids;
 
@@ -12,6 +19,11 @@ public class DeleteEventRuleTargetsRequest extends TeaModel {
 
     /**
      * <p>The name of the event-triggered alert rule.</p>
+     * <p>For information about how to obtain the name of an event-triggered alert rule, see <a href="https://help.aliyun.com/document_detail/114996.html">DescribeEventRuleList</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testRule</p>
      */
     @NameInMap("RuleName")
     public String ruleName;

@@ -4,6 +4,12 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteMetricRulesRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ab05733c97b7ce239fb1b53393dc1697c7e12****</p>
+     */
     @NameInMap("Id")
     public java.util.List<String> id;
 

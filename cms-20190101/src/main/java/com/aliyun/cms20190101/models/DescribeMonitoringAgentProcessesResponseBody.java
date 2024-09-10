@@ -6,14 +6,21 @@ import com.aliyun.tea.*;
 public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The value 200 indicates that the call was successful.</p>
+     * <blockquote>
+     * <p> The value 200 indicates that the call was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified resource is not found.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -24,14 +31,24 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
     @NameInMap("NodeProcesses")
     public DescribeMonitoringAgentProcessesResponseBodyNodeProcesses nodeProcesses;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C11C0E85-6862-4F25-8D66-D6A5E0882984</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The call was successful.</p>
-     * <p>*   false: The call failed.</p>
+     * <ul>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -83,39 +100,58 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
 
     public static class DescribeMonitoringAgentProcessesResponseBodyNodeProcessesNodeProcess extends TeaModel {
         /**
-         * <p>The command used to obtain the number of processes. Valid value: `number`.</p>
-         * <br>
-         * <p>>  The `number` command obtains the number of processes that match the condition.</p>
+         * <p>The command used to obtain the number of processes. Valid value: <code>number</code>.</p>
+         * <blockquote>
+         * <p> The <code>number</code> command obtains the number of processes that match the condition.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>number</p>
          */
         @NameInMap("Command")
         public String command;
 
         /**
          * <p>The ID of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3619****</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-hp3hl3cx1pbahzy8****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The ID of the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>234567</p>
          */
         @NameInMap("ProcessId")
         public Long processId;
 
         /**
          * <p>The name of the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Nginx</p>
          */
         @NameInMap("ProcessName")
         public String processName;
 
         /**
          * <p>The user who launched the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         @NameInMap("ProcessUser")
         public String processUser;

@@ -6,52 +6,76 @@ import com.aliyun.tea.*;
 public class DescribeMonitoringAgentHostsRequest extends TeaModel {
     /**
      * <p>Specifies whether to query Elastic Compute Service (ECS) instances that are provided by Alibaba Cloud or to query hosts that are not provided by Alibaba Cloud. Valid values:</p>
-     * <br>
-     * <p>*   true (default value): queries all the ECS instances that are provided by Alibaba Cloud.</p>
-     * <p>*   false: queries all the hosts that are not provided by Alibaba Cloud.</p>
+     * <ul>
+     * <li>true (default value): queries all the ECS instances that are provided by Alibaba Cloud.</li>
+     * <li>false: queries all the hosts that are not provided by Alibaba Cloud.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AliyunHost")
     public Boolean aliyunHost;
 
     /**
      * <p>The name of the host.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hostNam1</p>
      */
     @NameInMap("HostName")
     public String hostName;
 
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-a3d1q1pm2f9yr29e****</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
     /**
      * <p>The region ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("InstanceRegionId")
     public String instanceRegionId;
 
     /**
      * <p>The keyword that is used in fuzzy match.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>host1</p>
      */
     @NameInMap("KeyWord")
     public String keyWord;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Valid values:</p>
-     * <br>
-     * <p>*   10</p>
-     * <p>*   20</p>
-     * <p>*   50</p>
-     * <p>*   100</p>
-     * <br>
-     * <p>> Although Alibaba Cloud does not limit the maximum value of this parameter, we recommend that you do not set it to an excessively large value. If you set it to an excessively large value, a timeout error may occur.</p>
+     * <ul>
+     * <li>10</li>
+     * <li>20</li>
+     * <li>50</li>
+     * <li>100</li>
+     * </ul>
+     * <blockquote>
+     * <p>Although Alibaba Cloud does not limit the maximum value of this parameter, we recommend that you do not set it to an excessively large value. If you set it to an excessively large value, a timeout error may occur.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -61,30 +85,41 @@ public class DescribeMonitoringAgentHostsRequest extends TeaModel {
 
     /**
      * <p>The serial number of the host.</p>
-     * <br>
      * <p>After the CloudMonitor agent is installed on a host, a globally unique serial number is generated. A host that is not provided by Alibaba Cloud has a serial number instead of an instance ID.</p>
-     * <br>
-     * <p>> This parameter can be used to accurately search for a monitored host.</p>
+     * <blockquote>
+     * <p>This parameter can be used to accurately search for a monitored host.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>a1ab31a3-1234-40f2-9e95-c8caa8f0****</p>
      */
     @NameInMap("SerialNumbers")
     public String serialNumbers;
 
     /**
      * <p>The status of the hosts that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   Running: queries the hosts that are running.</p>
-     * <p>*   Stopped: queries the hosts that are stopped, are not installed, or fail to be installed.</p>
+     * <ul>
+     * <li>Running: queries the hosts that are running.</li>
+     * <li>Stopped: queries the hosts that are stopped, are not installed, or fail to be installed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The status of SysOM. Valid values:</p>
-     * <br>
-     * <p>*   installing: SysOM is being installed.</p>
-     * <p>*   running: SysOM is running.</p>
-     * <p>*   stopped: SysOM is stopped.</p>
-     * <p>*   uninstalling: SysOM is being uninstalled.</p>
+     * <ul>
+     * <li>installing: SysOM is being installed.</li>
+     * <li>running: SysOM is running.</li>
+     * <li>stopped: SysOM is stopped.</li>
+     * <li>uninstalling: SysOM is being uninstalled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>running</p>
      */
     @NameInMap("SysomStatus")
     public String sysomStatus;

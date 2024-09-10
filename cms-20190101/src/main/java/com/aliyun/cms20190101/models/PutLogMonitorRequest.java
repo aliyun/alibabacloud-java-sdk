@@ -4,40 +4,59 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutLogMonitorRequest extends TeaModel {
+    /**
+     * <p>The aggregation logic.</p>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Aggregates")
     public java.util.List<PutLogMonitorRequestAggregates> aggregates;
 
     /**
      * <p>The ID of the application group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7301****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The dimension based on which the data is grouped. This parameter is equivalent to the GROUP BY clause in SQL statements. If no dimension is specified, all data is aggregated based on the aggregate function.</p>
+     */
     @NameInMap("Groupbys")
     public java.util.List<PutLogMonitorRequestGroupbys> groupbys;
 
     /**
      * <p>The ID of the log monitoring metric.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16****</p>
      */
     @NameInMap("LogId")
     public String logId;
 
     /**
      * <p>The extended field. The extended field allows you to perform basic operations on the aggregation results.</p>
-     * <br>
-     * <p>For example, if you have calculated TotalNumber and 5XXNumber by aggregating the data. TotalNumber indicates the total number of HTTP requests, and 5XXNumber indicates the number of HTTP requests whose status code is greater than 499. You can calculate the server error rate by adding the following formula to the extended field: 5XXNumber/TotalNumber\*100.</p>
-     * <br>
-     * <p>JSON format: {"extend":{"errorPercent":"5XXNumber/TotalNumber\*100"}}. Description:</p>
-     * <br>
-     * <p>*   extend: required.</p>
-     * <p>*   errorPercent: the alias of the field generated in the calculation result. You can specify the alias as needed.</p>
-     * <p>*   5XXNumber/TotalNumber\*100: the calculation expression.</p>
+     * <p>For example, you have calculated TotalNumber and 5XXNumber by aggregating the data. TotalNumber indicates the total number of HTTP requests, and 5XXNumber indicates the number of HTTP requests whose status code is greater than 499. You can calculate the server error rate by adding the following formula to the extended field: 5XXNumber/TotalNumber\*100.</p>
+     * <p>JSON format: {&quot;extend&quot;:{&quot;errorPercent&quot;:&quot;5XXNumber/TotalNumber\*100&quot;}}. Description:</p>
+     * <ul>
+     * <li>extend: required.</li>
+     * <li>errorPercent: the alias of the field generated in the calculation result. You can specify the alias as needed.</li>
+     * <li>5XXNumber/TotalNumber\*100: the calculation expression.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;extend&quot;:{&quot;errorPercent&quot;:&quot;5XXNumber/TotalNumber*100&quot;}}</p>
      */
     @NameInMap("MetricExpress")
     public String metricExpress;
 
     /**
-     * <p>The name of the metric. For more information about the metrics for cloud services, see [Appendix 1: Metrics](~~163515~~).</p>
+     * <p>The metric name. For more information about the metrics for cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cpu_total</p>
      */
     @NameInMap("MetricName")
     public String metricName;
@@ -46,45 +65,72 @@ public class PutLogMonitorRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the Log Service Logstore.</p>
+     * <p>The name of the Simple Log Service Logstore.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-logstore</p>
      */
     @NameInMap("SlsLogstore")
     public String slsLogstore;
 
     /**
-     * <p>The name of the Log Service project.</p>
+     * <p>The name of the Simple Log Service project.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-project</p>
      */
     @NameInMap("SlsProject")
     public String slsProject;
 
     /**
-     * <p>The region in which the Log Service project resides.</p>
+     * <p>The region in which the Simple Log Service project resides.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("SlsRegionId")
     public String slsRegionId;
 
     /**
      * <p>The size of the tumbling window for calculation. Unit: seconds. CloudMonitor performs aggregation for each tumbling window.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60,300</p>
      */
     @NameInMap("Tumblingwindows")
     public String tumblingwindows;
 
     /**
      * <p>The unit.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Percent</p>
      */
     @NameInMap("Unit")
     public String unit;
 
+    /**
+     * <p>The condition that is used to filter logs. The ValueFilter and ValueFilterRelation parameters are used in pair. The filter condition is equivalent to the WHERE clause in SQL statements. If no filter condition is specified, all logs are processed. For example, logs contain the Level and Error fields. If you need to calculate the number of times that logs of the Error level appear every minute, you can set the filter condition to Level=Error and count the number of logs that meet this condition.</p>
+     */
     @NameInMap("ValueFilter")
     public java.util.List<PutLogMonitorRequestValueFilter> valueFilter;
 
     /**
      * <p>The logical operator that is used between log filter conditions. Valid values:</p>
-     * <br>
-     * <p>*   and</p>
-     * <p>*   or</p>
-     * <br>
-     * <p>>  The ValueFilterRelation and `ValueFilter.N.Key` parameters must be used in pair.</p>
+     * <ul>
+     * <li>and</li>
+     * <li>or</li>
+     * </ul>
+     * <blockquote>
+     * <p> The ValueFilterRelation and <code>ValueFilter.N.Key</code> parameters must be used in pair.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>and</p>
      */
     @NameInMap("ValueFilterRelation")
     public String valueFilterRelation;
@@ -209,27 +255,40 @@ public class PutLogMonitorRequest extends TeaModel {
     public static class PutLogMonitorRequestAggregates extends TeaModel {
         /**
          * <p>The alias of the aggregate function. Valid values of N: 1 to 10.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Count</p>
          */
         @NameInMap("Alias")
         public String alias;
 
         /**
          * <p>The name of the field to be aggregated. Valid values of N: 1 to 10.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sourceCount</p>
          */
         @NameInMap("FieldName")
         public String fieldName;
 
         /**
-         * <p>The function that is used to aggregate the monitoring data of logs within an aggregation period. Valid values of N: 1 to 10. Valid values:</p>
-         * <br>
-         * <p>*   count: counts the number.</p>
-         * <p>*   sum: calculates the total value.</p>
-         * <p>*   avg: calculates the average value.</p>
-         * <p>*   max: selects the maximum value.</p>
-         * <p>*   min: selects the minimum value.</p>
-         * <p>*   countps: calculates the counted number of the specified field divided by the total number of seconds of the aggregation period.</p>
-         * <p>*   sumps: calculates the total value of the specified field divided by the total number of seconds of the aggregation period.</p>
-         * <p>*   distinct: counts the number of logs where the specified field appears within the aggregation period.</p>
+         * <p>The function that is used to aggregate log data within a statistical period. Valid values of N: 1 to 10. Valid values:</p>
+         * <ul>
+         * <li>count: counts the number.</li>
+         * <li>sum: calculates the total value.</li>
+         * <li>avg: calculates the average value.</li>
+         * <li>max: calculates the maximum value.</li>
+         * <li>min: calculates the minimum value.</li>
+         * <li>countps: calculates the number of values of the specified field divided by the total number of seconds within a statistical period.</li>
+         * <li>sumps: calculates the sum of the values of the specified field divided by the total number of seconds within a statistical period.</li>
+         * <li>distinct: calculates the number of unique values of the specified field within a statistical period.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>count</p>
          */
         @NameInMap("Function")
         public String function;
@@ -268,12 +327,18 @@ public class PutLogMonitorRequest extends TeaModel {
     public static class PutLogMonitorRequestGroupbys extends TeaModel {
         /**
          * <p>The alias of the dimension based on which the data is grouped. Valid values of N: 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CPUUtilization</p>
          */
         @NameInMap("Alias")
         public String alias;
 
         /**
          * <p>The name of the field that is specified as the dimension. Valid values of N: 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu</p>
          */
         @NameInMap("FieldName")
         public String fieldName;
@@ -304,25 +369,35 @@ public class PutLogMonitorRequest extends TeaModel {
     public static class PutLogMonitorRequestValueFilter extends TeaModel {
         /**
          * <p>The name of the log field that is used for matching in the filter condition. Valid values of N: 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lh_source</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The method that is used to match the field value. Valid values of N: 1 to 10. Valid values:</p>
-         * <br>
-         * <p>*   `contain`: contains</p>
-         * <p>*   `notContain`: does not contain</p>
-         * <p>*   `>`: be greater than</p>
-         * <p>*   `<`: be less than</p>
-         * <p>*   `>=`: be greater than or equal to</p>
-         * <p>*   `<=`: be less than or equal to</p>
+         * <ul>
+         * <li><code>contain</code>: contains</li>
+         * <li><code>notContain</code>: does not contain</li>
+         * <li><code>&gt;</code>: greater than</li>
+         * <li><code>&lt;</code>: less than</li>
+         * <li><code>&gt;=</code>: greater than or equal to</li>
+         * <li><code>&lt;=</code>: less than or equal to</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>contain</p>
          */
         @NameInMap("Operator")
         public String operator;
 
         /**
          * <p>The field value to be matched in the filter condition. Valid values of N: 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Value")
         public String value;

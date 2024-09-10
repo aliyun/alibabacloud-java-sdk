@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeExporterRuleListRequest extends TeaModel {
     /**
      * <p>The page number. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page. Default value: 1000.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

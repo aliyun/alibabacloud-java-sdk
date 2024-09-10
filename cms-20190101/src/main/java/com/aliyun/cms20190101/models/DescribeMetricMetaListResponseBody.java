@@ -6,38 +6,58 @@ import com.aliyun.tea.*;
 public class DescribeMetricMetaListResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
-     * <br>
-     * <p>>  The HTTP 200 code indicates that the request was successful.</p>
+     * <blockquote>
+     * <p> The status code 200 indicates that the request was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The error message.</p>
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The Request is not authorization.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0CCE0AF0-053C-4B13-A583-DC9A85785D49</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The configuration of the metric.</p>
+     * <p>The configuration of the metrics in the resources.</p>
      */
     @NameInMap("Resources")
     public DescribeMetricMetaListResponseBodyResources resources;
 
     /**
-     * <p>Indicates whether the request was successful. The value true indicates success. The value false indicates failure.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The total number of returned records.</p>
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -97,58 +117,83 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
 
     public static class DescribeMetricMetaListResponseBodyResourcesResource extends TeaModel {
         /**
-         * <p>The description of the metric.</p>
+         * <p>The metric description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CPUUtilization</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The dimensions of the metric. Multiple dimensions are separated with commas (,).</p>
+         * <p>The monitoring dimensions of the resource. Multiple monitoring dimensions are separated with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceId</p>
          */
         @NameInMap("Dimensions")
         public String dimensions;
 
         /**
-         * <p>The tags of the metric, including one or more JSON strings. Format: `[{"name":"tag name","value":"tag value"}]`. The `name` can be repeated.</p>
-         * <br>
-         * <p>The following tags are available:</p>
-         * <br>
-         * <p>*   metricCategory: the category of the metric.</p>
-         * <p>*   alertEnable: specifies whether to report alerts for the metric.</p>
-         * <p>*   alertUnit: the suggested unit of the metric value in alerts.</p>
-         * <p>*   unitFactor: the factor for metric unit conversion.</p>
-         * <p>*   minAlertPeriod: the minimum time interval to report a new alert.</p>
-         * <p>*   productCategory: the category of the service.</p>
+         * <p>The tags of the metric, including one or more JSON strings.</p>
+         * <p>Format: <code>[{&quot;name&quot;:&quot;tag key&quot;,&quot;value&quot;:&quot;tag value&quot;}]</code>. The <code>name</code> can be repeated. The following tags are available:</p>
+         * <ul>
+         * <li>metricCategory: the category of the metric.</li>
+         * <li>alertEnable: indicates whether to report alerts for the metric.</li>
+         * <li>alertUnit: the unit of the metric in the alerts.</li>
+         * <li>unitFactor: the factor for metric unit conversion.</li>
+         * <li>minAlertPeriod: the minimum interval at which the alert is reported.</li>
+         * <li>productCategory: the category of the service.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;name\&quot;:\&quot;alertUnit\&quot;,\&quot;value\&quot;:\&quot;Bytes\&quot;},{\&quot;name\&quot;:\&quot;minAlertPeriod\&quot;,\&quot;value\&quot;:\&quot;60\&quot;},{\&quot;name\&quot;:\&quot;metricCategory\&quot;,\&quot;value\&quot;:\&quot;instanceId\&quot;},{\&quot;name\&quot;:\&quot;instanceType\&quot;,\&quot;value\&quot;:\&quot;disaster\&quot;},{\&quot;name\&quot;:\&quot;is_alarm\&quot;,\&quot;value\&quot;:\&quot;true\&quot;},{\&quot;name\&quot;:\&quot;productCategory\&quot;,\&quot;value\&quot;:\&quot;kvstore_old\&quot;}]</p>
          */
         @NameInMap("Labels")
         public String labels;
 
         /**
-         * <p>The name of the metric.</p>
+         * <p>The metric name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CPUUtilization</p>
          */
         @NameInMap("MetricName")
         public String metricName;
 
         /**
-         * <p>The namespace of the service. The value is usually in the format of acs_Service.</p>
+         * <p>The namespace of the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs_kvstore</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
-         * <p>The statistical period of the metric. Multiple statistical periods are separated with commas (,).</p>
+         * <p>The statistical periods of the metric. Multiple statistical periods are separated with commas (,).</p>
+         * <p>Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60,300</p>
          */
         @NameInMap("Periods")
         public String periods;
 
         /**
-         * <p>The statistical method. Multiple statistic methods are separated with commas (,).</p>
+         * <p>The statistical method. Multiple statistical methods are separated with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Average,Minimum,Maximum</p>
          */
         @NameInMap("Statistics")
         public String statistics;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>%</p>
          */
         @NameInMap("Unit")
         public String unit;

@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class UninstallMonitoringAgentRequest extends TeaModel {
     /**
      * <p>The ID of the host.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>host-****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

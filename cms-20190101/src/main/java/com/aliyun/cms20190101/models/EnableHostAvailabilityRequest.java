@@ -4,6 +4,12 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class EnableHostAvailabilityRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("Id")
     public java.util.List<Long> id;
 

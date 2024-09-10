@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteMonitorGroupRequest extends TeaModel {
     /**
      * <p>The ID of the application group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("GroupId")
     public Long groupId;

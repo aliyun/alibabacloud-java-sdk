@@ -12,25 +12,36 @@ public class CreateHybridMonitorNamespaceRequest extends TeaModel {
 
     /**
      * <p>The name of the namespace.</p>
-     * <br>
      * <p>The name can contain lowercase letters, digits, and hyphens (-).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aliyun</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The region where the metric data is stored.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("NamespaceRegion")
     public String namespaceRegion;
 
     /**
      * <p>The storage scheme of metric data. Valid values:</p>
-     * <br>
-     * <p>*   m_prom_pool: The metric data is stored in Simple Log Service.</p>
-     * <p>*   m_prometheus: The metric data is stored in the storage space provided by CloudMonitor.</p>
-     * <br>
-     * <p>>  For more information about the storage schemes of metric data, see [Storage schemes of metric data in Hybrid Cloud Monitoring](~~2594921~~).</p>
+     * <ul>
+     * <li>m_prom_user: The metric data is stored in Simple Log Service.</li>
+     * <li>m_prom_pool: The metric data is stored in the private storage space provided by CloudMonitor.</li>
+     * </ul>
+     * <blockquote>
+     * <p> For more information about the storage schemes of metric data, see <a href="https://help.aliyun.com/document_detail/2594921.html">Data storage schemes for Hybrid Cloud Monitoring</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>m_prometheus</p>
      */
     @NameInMap("NamespaceType")
     public String namespaceType;
@@ -40,15 +51,18 @@ public class CreateHybridMonitorNamespaceRequest extends TeaModel {
 
     /**
      * <p>The data retention period. Valid values:</p>
-     * <br>
-     * <p>*   cms.s1.large (Retention Period 15 Days)</p>
-     * <p>*   cms.s1.xlarge (Retention Period 32 Days)</p>
-     * <p>*   cms.s1.2xlarge (Retention Period 63 Days)</p>
-     * <p>*   cms.s1.3xlarge (Retention Period 93 Days) (default)</p>
-     * <p>*   cms.s1.6xlarge (Retention Period 185 Days)</p>
-     * <p>*   cms.s1.12xlarge (Retention Period 367 Days)</p>
-     * <br>
-     * <p>For information about the pricing for different retention periods, see the **Pricing** section in [Billing of the dashboard feature](~~223532~~).</p>
+     * <ul>
+     * <li>cms.s1.large (Retention Period 15 Days)</li>
+     * <li>cms.s1.xlarge (Retention Period 32 Days)</li>
+     * <li>cms.s1.2xlarge (Retention Period 63 Days)</li>
+     * <li>cms.s1.3xlarge (Retention Period 93 Days) (default)</li>
+     * <li>cms.s1.6xlarge (Retention Period 185 Days)</li>
+     * <li>cms.s1.12xlarge (Retention Period 367 Days)</li>
+     * </ul>
+     * <p>For information about the pricing for different retention periods, see the <strong>Pricing</strong> section in <a href="https://help.aliyun.com/document_detail/223532.html">Billing of the dashboard feature</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cms.s1.3xlarge</p>
      */
     @NameInMap("Spec")
     public String spec;

@@ -6,69 +6,99 @@ import com.aliyun.tea.*;
 public class DescribeSiteMonitorLogRequest extends TeaModel {
     /**
      * <p>浏览器类型。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Chrome</p>
      */
     @NameInMap("Browser")
     public String browser;
 
     /**
      * <p>该参数已废弃，无需关注。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
      */
     @NameInMap("BrowserInfo")
     public String browserInfo;
 
     /**
      * <p>The city identification code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>546</p>
      */
     @NameInMap("City")
     public String city;
 
     /**
      * <p>设备类型（模拟屏幕大小类型）。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>laptop</p>
      */
     @NameInMap("Device")
     public String device;
 
     /**
      * <p>The end of the time range to query. Valid values:</p>
-     * <br>
-     * <p>*   UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970</p>
-     * <p>*   UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format</p>
-     * <br>
-     * <p>>  We recommend that you use UNIX timestamps to prevent time zone-related issues.</p>
+     * <ul>
+     * <li>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970</li>
+     * <li>UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format</li>
+     * </ul>
+     * <blockquote>
+     * <p> We recommend that you use UNIX timestamps to prevent time zone-related issues.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1638422475687</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The filter condition.</p>
-     * <br>
-     * <p>You can specify a simple expression, for example, `TotalTime>100`. In this case, the operation returns only the data for instant test tasks whose total response time exceeds 100 milliseconds.</p>
+     * <p>You can specify a simple expression, for example, <code>TotalTime&gt;100</code>. In this case, the operation returns only the data for instant test tasks whose total response time exceeds 100 milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TotalTime&gt;100</p>
      */
     @NameInMap("Filter")
     public String filter;
 
     /**
      * <p>The carrier identification code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>465</p>
      */
     @NameInMap("Isp")
     public String isp;
 
     /**
      * <p>The number of entries to return on each page. Valid values: 1 to 1440.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("Length")
     public Integer length;
 
     /**
      * <p>The name of the metric.</p>
-     * <br>
-     * <p>Only the `ProbeLog` metric is supported.</p>
+     * <p>Only the <code>ProbeLog</code> metric is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ProbeLog</p>
      */
     @NameInMap("MetricName")
     public String metricName;
 
     /**
      * <p>The token that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.``</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IWBjqMYSy0is7zSMGu16****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -78,20 +108,29 @@ public class DescribeSiteMonitorLogRequest extends TeaModel {
 
     /**
      * <p>The start of the time range to query. The following formats are supported:</p>
-     * <br>
-     * <p>*   UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970</p>
-     * <p>*   UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   The specified time range includes the end time and excludes the start time. The start time must be earlier than the end time.\</p>
-     * <p>    We recommend that you use UNIX timestamps to prevent time zone-related issues.</p>
+     * <ul>
+     * <li>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970</li>
+     * <li>UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format</li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>The specified time range includes the end time and excludes the start time. The start time must be earlier than the end time.\
+     * We recommend that you use UNIX timestamps to prevent time zone-related issues.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1638422474389</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The IDs of the instant test tasks. Separate multiple task IDs with commas (,).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>afa5c3ce-f944-4363-9edb-ce919a29****</p>
      */
     @NameInMap("TaskIds")
     public String taskIds;

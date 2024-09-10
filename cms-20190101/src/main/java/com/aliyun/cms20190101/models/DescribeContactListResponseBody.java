@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class DescribeContactListResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <blockquote>
+     * <p> The status code 200 indicates that the call was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -20,27 +24,40 @@ public class DescribeContactListResponseBody extends TeaModel {
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The Request is not authorization.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>06D5ECC2-B9BE-42A4-8FA3-1A610FB08B83</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The call was successful.</p>
-     * <p>*   false: The call failed.</p>
+     * <ul>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -101,24 +118,36 @@ public class DescribeContactListResponseBody extends TeaModel {
     public static class DescribeContactListResponseBodyContactsContactChannels extends TeaModel {
         /**
          * <p>The TradeManager ID of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         @NameInMap("AliIM")
         public String aliIM;
 
         /**
          * <p>The webhook URL of the DingTalk chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=9bf44f8189597d07dfdd7a123455ffc112">https://oapi.dingtalk.com/robot/send?access_token=9bf44f8189597d07dfdd7a123455ffc112</a>****</p>
          */
         @NameInMap("DingWebHook")
         public String dingWebHook;
 
         /**
          * <p>The email address of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:Alice@example.com">Alice@example.com</a></p>
          */
         @NameInMap("Mail")
         public String mail;
 
         /**
          * <p>The phone number of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1333333****</p>
          */
         @NameInMap("SMS")
         public String SMS;
@@ -165,38 +194,52 @@ public class DescribeContactListResponseBody extends TeaModel {
     public static class DescribeContactListResponseBodyContactsContactChannelsState extends TeaModel {
         /**
          * <p>The status of the TradeManager ID.</p>
-         * <br>
          * <p>Valid value: OK. The value OK indicates that the TradeManager ID is valid and can receive alert notifications.</p>
-         * <br>
-         * <p>>  This parameter can be returned only on the China site (aliyun.com).</p>
+         * <blockquote>
+         * <p> This parameter can be returned only on the China site (aliyun.com).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         @NameInMap("AliIM")
         public String aliIM;
 
         /**
          * <p>The status of the DingTalk chatbot.</p>
-         * <br>
          * <p>Valid value: OK. The value OK indicates that the DingTalk chatbot is normal and alert notifications can be received in a DingTalk group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         @NameInMap("DingWebHook")
         public String dingWebHook;
 
         /**
          * <p>The status of the email address. Valid values:</p>
-         * <br>
-         * <p>*   PENDING: The email address is not activated. Alert notifications can be sent to the email address only after the email address is activated.</p>
-         * <p>*   OK: The email address is activated and can receive alert notifications.</p>
+         * <ul>
+         * <li>PENDING: The email address is not activated. Alert notifications can be sent to the email address only after the email address is activated.</li>
+         * <li>OK: The email address is activated and can receive alert notifications.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PENDING</p>
          */
         @NameInMap("Mail")
         public String mail;
 
         /**
          * <p>The status of the phone number. Valid values:</p>
-         * <br>
-         * <p>*   PENDING: The phone number is not activated. Alert notifications can be sent to the phone number by using text messages only after the phone number is activated.</p>
-         * <p>*   OK: The phone number is activated and can receive alert notifications.</p>
-         * <br>
-         * <p>>  This parameter can be returned only on the China site (aliyun.com).</p>
+         * <ul>
+         * <li>PENDING: The phone number is not activated. Alert notifications can be sent to the phone number by using text messages only after the phone number is activated.</li>
+         * <li>OK: The phone number is activated and can receive alert notifications.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter can be returned only on the China site (aliyun.com).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         @NameInMap("SMS")
         public String SMS;
@@ -268,7 +311,6 @@ public class DescribeContactListResponseBody extends TeaModel {
 
         /**
          * <p>The status of the alert notification method. Valid values: PENDING and OK.</p>
-         * <br>
          * <p>The email address must be activated after it is added as the value specified for the alert notification method. The value PENDING indicates that the email address is not activated. The value OK indicates that the email address is activated.</p>
          */
         @NameInMap("ChannelsState")
@@ -282,8 +324,10 @@ public class DescribeContactListResponseBody extends TeaModel {
 
         /**
          * <p>The timestamp when the alert contact was created.</p>
-         * <br>
          * <p>Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1552356159000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
@@ -296,23 +340,32 @@ public class DescribeContactListResponseBody extends TeaModel {
 
         /**
          * <p>The language in which the alert information is displayed. Valid values:</p>
-         * <br>
-         * <p>*   zh-cn: simplified Chinese</p>
-         * <p>*   en: English</p>
+         * <ul>
+         * <li>zh-cn: simplified Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-cn</p>
          */
         @NameInMap("Lang")
         public String lang;
 
         /**
          * <p>The name of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The timestamp when the alert contact was updated.</p>
-         * <br>
          * <p>Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1552356159000</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;

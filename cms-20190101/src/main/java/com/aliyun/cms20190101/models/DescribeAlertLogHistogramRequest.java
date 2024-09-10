@@ -6,100 +6,140 @@ import com.aliyun.tea.*;
 public class DescribeAlertLogHistogramRequest extends TeaModel {
     /**
      * <p>The alert contact group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS_Group</p>
      */
     @NameInMap("ContactGroup")
     public String contactGroup;
 
     /**
      * <p>The end timestamp of the alert logs to be queried.</p>
-     * <br>
      * <p>Unit: milliseconds.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   You can query only the alert logs within the last year.</p>
-     * <br>
-     * <p>*   The interval between the start time (`StartTime`) and end time (`EndTime`) must be less than or equal to 15 days.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>You can query only the alert logs within the last year.</p>
+     * </li>
+     * <li><p>The interval between the start time (<code>StartTime</code>) and end time (<code>EndTime</code>) must be less than or equal to 15 days.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1609989009694</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>The type of the alert event. Valid values:</p>
-     * <br>
-     * <p>*   TRIGGERED: The alert is triggered.</p>
-     * <p>*   RESOLVED: The alert is resolved.</p>
+     * <ul>
+     * <li>TRIGGERED: The alert is triggered.</li>
+     * <li>RESOLVED: The alert is resolved.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>RESOLVED</p>
      */
     @NameInMap("EventType")
     public String eventType;
 
     /**
      * <p>The dimensions based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL. Valid values:</p>
-     * <br>
-     * <p>*   `product`: aggregates data by cloud service.</p>
-     * <p>*   `level`: aggregates data by alert level.</p>
-     * <p>*   `groupId`: aggregates data by application group.</p>
-     * <p>*   `contactGroup`: aggregates data by alert contact group.</p>
-     * <p>*   `product,metricName`: aggregates data both by cloud service and by metric.</p>
+     * <ul>
+     * <li><code>product</code>: aggregates data by cloud service.</li>
+     * <li><code>level</code>: aggregates data by alert level.</li>
+     * <li><code>groupId</code>: aggregates data by application group.</li>
+     * <li><code>contactGroup</code>: aggregates data by alert contact group.</li>
+     * <li><code>product,metricName</code>: aggregates data both by cloud service and by metric.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>product</p>
      */
     @NameInMap("GroupBy")
     public String groupBy;
 
     /**
      * <p>The ID of the application group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7301****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The statistical period of alert logs. Unit: minutes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>360</p>
      */
     @NameInMap("LastMin")
     public String lastMin;
 
     /**
      * <p>The severity level and notification methods of the alert. Valid values:</p>
-     * <br>
-     * <p>*   P4: Alert notifications are sent by using emails and DingTalk chatbots.</p>
-     * <p>*   OK: No alert is generated.</p>
+     * <ul>
+     * <li>P4: Alert notifications are sent by using emails and DingTalk chatbots.</li>
+     * <li>OK: No alert is generated.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>P4</p>
      */
     @NameInMap("Level")
     public String level;
 
     /**
      * <p>The metric name.</p>
-     * <br>
-     * <p>>  For more information about the metrics of different cloud services, see [Appendix 1: Metrics](~~163515~~).</p>
+     * <blockquote>
+     * <p> For more information about the metrics of different cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cpu_total</p>
      */
     @NameInMap("MetricName")
     public String metricName;
 
     /**
      * <p>The namespace of the Alibaba Cloud service.</p>
-     * <br>
-     * <p>>  For more information about the namespaces of different cloud services, see [Appendix 1: Metrics](~~163515~~).</p>
+     * <blockquote>
+     * <p> For more information about the namespaces of different cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>acs_ecs_dashboard</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The abbreviation of the Alibaba Cloud service name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS</p>
      */
     @NameInMap("Product")
     public String product;
@@ -109,54 +149,72 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
 
     /**
      * <p>The ID of the alert rule.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).</p>
+     * <p>For more information about how to obtain the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ae06917_75a8c43178ab66****</p>
      */
     @NameInMap("RuleId")
     public String ruleId;
 
     /**
      * <p>The name of the alert rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test123</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
 
     /**
      * <p>The keyword that is used to query alert logs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alert</p>
      */
     @NameInMap("SearchKey")
     public String searchKey;
 
     /**
      * <p>The alert status. Valid values:</p>
-     * <br>
-     * <p>*   0: The alert is triggered or cleared.</p>
-     * <p>*   1: The alert is ineffective.</p>
-     * <p>*   2: The alert is muted and not triggered in a specified period.</p>
-     * <p>*   3: The host is restarting.</p>
-     * <p>*   4: No alert notification is sent.</p>
-     * <br>
+     * <ul>
+     * <li>0: The alert is triggered or cleared.</li>
+     * <li>1: The alert is ineffective.</li>
+     * <li>2: The alert is muted and not triggered in a specified period.</li>
+     * <li>3: The host is restarting.</li>
+     * <li>4: No alert notification is sent.</li>
+     * </ul>
      * <p>If the value of the SendStatus parameter is 0, the value P4 of the Level parameter indicates a triggered alert and the value OK indicates a cleared alert.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("SendStatus")
     public String sendStatus;
 
     /**
      * <p>This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("SourceType")
     public String sourceType;
 
     /**
      * <p>The start timestamp of the alert logs to be queried.</p>
-     * <br>
      * <p>Unit: milliseconds.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   You can query only the alert logs within the last year.</p>
-     * <br>
-     * <p>*   The interval between the start time (`StartTime`) and end time (`EndTime`) must be less than or equal to 15 days.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>You can query only the alert logs within the last year.</p>
+     * </li>
+     * <li><p>The interval between the start time (<code>StartTime</code>) and end time (<code>EndTime</code>) must be less than or equal to 15 days.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1609988009694</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

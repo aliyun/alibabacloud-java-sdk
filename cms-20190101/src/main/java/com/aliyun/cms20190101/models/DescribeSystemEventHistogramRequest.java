@@ -5,49 +5,70 @@ import com.aliyun.tea.*;
 
 public class DescribeSystemEventHistogramRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query.</p>
-     * <br>
-     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The end time.</p>
+     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1552220485596</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The type of the system event.</p>
-     * <br>
-     * <p>>  You can call the [DescribeSystemEventMetaList](~~114972~~) operation to view the types of system events.</p>
+     * <p>The event type.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the types of system events.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Exception</p>
      */
     @NameInMap("EventType")
     public String eventType;
 
     /**
      * <p>The ID of the application group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The level of the system event. Valid values:</p>
-     * <br>
-     * <p>*   CRITICAL</p>
-     * <p>*   WARN</p>
-     * <p>*   INFO</p>
+     * <p>The level of the event. Valid values:</p>
+     * <ul>
+     * <li>CRITICAL</li>
+     * <li>WARN</li>
+     * <li>INFO</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CRITICAL</p>
      */
     @NameInMap("Level")
     public String level;
 
     /**
-     * <p>The name of the system event.</p>
-     * <br>
-     * <p>>  You can call the [DescribeSystemEventMetaList](~~114972~~) operation to view the names of system events.</p>
+     * <p>The event name.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the names of system events.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>BucketIngressBandwidth</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The abbreviation of the service name.</p>
-     * <br>
-     * <p>>  You can call the [DescribeSystemEventMetaList](~~114972~~) operation to view the abbreviations of service names.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the abbreviations of service names.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>OSS</p>
      */
     @NameInMap("Product")
     public String product;
@@ -56,26 +77,36 @@ public class DescribeSystemEventHistogramRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The keywords contained in the content of the system event to query. You can use a logical operator between keywords. Examples:</p>
-     * <br>
-     * <p>*   If you need to query the system event whose content contains a and b, set the value to `a and b`.</p>
-     * <p>*   If you need to query the system event whose content contains a or b, set the value to `a or b`.</p>
+     * <p>The keywords that are used to search for the system event. Valid values:</p>
+     * <ul>
+     * <li>If you want to search for the system event whose content contains a and b, set the value to <code>a and b</code>.</li>
+     * <li>If you want to search for the system event whose content contains a or b, set the value to <code>a or b</code>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cms</p>
      */
     @NameInMap("SearchKeywords")
     public String searchKeywords;
 
     /**
-     * <p>The beginning of the time range to query.</p>
-     * <br>
-     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The start time.</p>
+     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1552209685596</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The status of the system event.</p>
-     * <br>
-     * <p>>  You can call the [DescribeSystemEventMetaList](~~114972~~) operation to view the statuses of system events.</p>
+     * <p>The event status.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the status of system events.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
      */
     @NameInMap("Status")
     public String status;

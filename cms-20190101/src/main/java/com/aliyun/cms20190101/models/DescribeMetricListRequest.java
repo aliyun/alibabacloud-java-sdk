@@ -6,71 +6,98 @@ import com.aliyun.tea.*;
 public class DescribeMetricListRequest extends TeaModel {
     /**
      * <p>The dimensions that specify the resources whose monitoring data you want to query.</p>
-     * <br>
-     * <p>Set the value to a collection of key-value pairs. A typical key-value pair is `instanceId:i-2ze2d6j5uhg20x47****`.</p>
-     * <br>
-     * <p>>  You can query a maximum of 50 instances in a single request.</p>
+     * <p>Set the value to a collection of key-value pairs. A typical key-value pair is <code>instanceId:i-2ze2d6j5uhg20x47****</code>.</p>
+     * <blockquote>
+     * <p> You can query a maximum of 50 instances in a single request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;instanceId&quot;: &quot;i-abcdefgh12****&quot;}]</p>
      */
     @NameInMap("Dimensions")
     public String dimensions;
 
     /**
      * <p>The end of the time range to query. The following formats are supported:</p>
-     * <br>
-     * <p>*   UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970</p>
-     * <p>*   UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format</p>
+     * <ul>
+     * <li>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970</li>
+     * <li>UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-01-30 00:10:00</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The expression that is used to compute the query results in real time.</p>
-     * <br>
-     * <p>>  Only the groupby expression is supported. This expression is similar to the GROUP BY statement that is used in databases.</p>
+     * <blockquote>
+     * <p> Only the groupby expression is supported. This expression is similar to the GROUP BY statement that is used in databases.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;groupby&quot;:[&quot;userId&quot;,&quot;instanceId&quot;]}</p>
      */
     @NameInMap("Express")
     public String express;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>>  The maximum value of the Length parameter in a request is 1440.</p>
+     * <blockquote>
+     * <p> The maximum value of the Length parameter in a request is 1440.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("Length")
     public String length;
 
     /**
      * <p>The name of the metric.</p>
-     * <br>
-     * <p>For more information about metric names, see [Appendix 1: Metrics](~~163515~~).</p>
+     * <p>For more information about metric names, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cpu_idle</p>
      */
     @NameInMap("MetricName")
     public String metricName;
 
     /**
      * <p>The namespace of the cloud service. Format: acs_service name.</p>
-     * <br>
-     * <p>For more information about the namespaces of cloud services, see [Appendix 1: Metrics](~~163515~~).</p>
+     * <p>For more information about the namespaces of cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs_ecs_dashboard</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The paging token.</p>
-     * <br>
-     * <p>>  If this parameter is not specified, the data on the first page is returned. A return value other than Null of this parameter indicates that not all entries have been returned. You can use this value as an input parameter to obtain entries on the next page. The value Null indicates that all query results have been returned.</p>
+     * <blockquote>
+     * <p> If this parameter is not specified, the data on the first page is returned. A return value other than Null of this parameter indicates that not all entries have been returned. You can use this value as an input parameter to obtain entries on the next page. The value Null indicates that all query results have been returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>15761485350009dd70bb64cff1f0fff750b08ffff073be5fb1e785e2b020f1a949d5ea14aea7fed82f01dd8****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The interval at which the monitoring data is queried.</p>
-     * <br>
      * <p>Valid values: 60, 300, and 900.</p>
-     * <br>
      * <p>Unit: seconds.</p>
-     * <br>
-     * <p>>  Configure this parameter based on your business scenario.</p>
+     * <blockquote>
+     * <p> Configure this parameter based on your business scenario.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("Period")
     public String period;
@@ -80,11 +107,16 @@ public class DescribeMetricListRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query. The following formats are supported:</p>
-     * <br>
-     * <p>*   UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970</p>
-     * <p>*   UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format</p>
-     * <br>
-     * <p>>  The specified period includes the end time and excludes the start time. The start time must be earlier than the end time.</p>
+     * <ul>
+     * <li>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970</li>
+     * <li>UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format</li>
+     * </ul>
+     * <blockquote>
+     * <p> The specified period includes the end time and excludes the start time. The start time must be earlier than the end time.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-01-30 00:00:00</p>
      */
     @NameInMap("StartTime")
     public String startTime;

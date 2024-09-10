@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeMetricRuleBlackListRequest extends TeaModel {
     /**
      * <p>The ID of the blacklist policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
      */
     @NameInMap("Category")
     public String category;
@@ -15,7 +18,6 @@ public class DescribeMetricRuleBlackListRequest extends TeaModel {
 
     /**
      * <p>The IDs of the instances in the blacklist policy.</p>
-     * <br>
      * <p>Valid values of N: 0 to 10.</p>
      */
     @NameInMap("InstanceIds")
@@ -23,45 +25,63 @@ public class DescribeMetricRuleBlackListRequest extends TeaModel {
 
     /**
      * <p>The status of the blacklist policy. Valid values:</p>
-     * <br>
-     * <p>*   true: The blacklist policy is enabled.</p>
-     * <p>*   false: The blacklist policy is disabled.</p>
+     * <ul>
+     * <li>true: The blacklist policy is enabled.</li>
+     * <li>false: The blacklist policy is disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsEnable")
     public Boolean isEnable;
 
     /**
      * <p>The name of the blacklist policy.</p>
-     * <br>
      * <p>This parameter supports fuzzy match.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Blacklist-01</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The timestamp when the blacklist policy expired.</p>
-     * <br>
      * <p>Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs_ecs_dashboard</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <blockquote>
+     * <p> The status code 200 indicates that the call was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>DESC</p>
      */
     @NameInMap("Order")
     public Integer order;
 
     /**
      * <p>The name of the metric.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The categories of the Alibaba Cloud service. For example, ApsaraDB for Redis includes the following categories: ApsaraDB for Redis (standard architecture), ApsaraDB for Redis (cluster architecture), and ApsaraDB for Redis (read/write splitting architecture). In this case, the valid values of this parameter for ApsaraDB for Redis include `kvstore_standard`, `kvstore_sharding`, and `kvstore_splitrw`.</p>
+     * <p>The categories of the Alibaba Cloud service. For example, ApsaraDB for Redis includes the following categories: ApsaraDB for Redis (standard architecture), ApsaraDB for Redis (cluster architecture), and ApsaraDB for Redis (read/write splitting architecture). In this case, the valid values of this parameter for ApsaraDB for Redis include <code>kvstore_standard</code>, <code>kvstore_sharding</code>, and <code>kvstore_splitrw</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -71,9 +91,13 @@ public class DescribeMetricRuleBlackListRequest extends TeaModel {
 
     /**
      * <p>The effective scope of the blacklist policy. Valid values:</p>
-     * <br>
-     * <p>*   USER: The blacklist policy takes effect only within the current Alibaba Cloud account.</p>
-     * <p>*   GROUP: The blacklist policy takes effect only within the specified application group.</p>
+     * <ul>
+     * <li>USER: The blacklist policy takes effect only within the current Alibaba Cloud account.</li>
+     * <li>GROUP: The blacklist policy takes effect only within the specified application group.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>USER</p>
      */
     @NameInMap("ScopeType")
     public String scopeType;

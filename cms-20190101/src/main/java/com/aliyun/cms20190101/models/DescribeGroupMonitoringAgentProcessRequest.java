@@ -6,24 +6,37 @@ import com.aliyun.tea.*;
 public class DescribeGroupMonitoringAgentProcessRequest extends TeaModel {
     /**
      * <p>The ID of the application group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The page number. Default value: 1</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The process name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sshd</p>
      */
     @NameInMap("ProcessName")
     public String processName;

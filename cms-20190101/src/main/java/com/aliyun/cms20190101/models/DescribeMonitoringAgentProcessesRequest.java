@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeMonitoringAgentProcessesRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-hp3hl3cx1pbahzy8****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

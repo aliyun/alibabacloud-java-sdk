@@ -9,10 +9,12 @@ public class EnableMetricRulesRequest extends TeaModel {
 
     /**
      * <p>The IDs of the alert rules.</p>
-     * <br>
      * <p>Valid values of N: 1 to 100.</p>
-     * <br>
-     * <p>For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).</p>
+     * <p>For information about how to obtain the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ab05733c97b7ce239fb1b53393dc1697c123****</p>
      */
     @NameInMap("RuleId")
     public java.util.List<String> ruleId;

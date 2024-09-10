@@ -6,47 +6,62 @@ import com.aliyun.tea.*;
 public class DescribeHybridMonitorTaskListRequest extends TeaModel {
     /**
      * <p>The ID of the application group.</p>
-     * <br>
-     * <p>For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).</p>
+     * <p>For information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3607****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>Specifies whether the returned result includes metric import tasks for Alibaba Cloud services. Valid values:</p>
-     * <br>
-     * <p>*   true (default): The returned result includes metric import tasks for Alibaba Cloud services.</p>
-     * <p>*   false: The returned result excludes metric import tasks for Alibaba Cloud services.</p>
+     * <ul>
+     * <li>true (default): The returned result includes metric import tasks for Alibaba Cloud services.</li>
+     * <li>false: The returned result excludes metric import tasks for Alibaba Cloud services.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IncludeAliyunTask")
     public Boolean includeAliyunTask;
 
     /**
      * <p>The keyword that is used for the search.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>task</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
      * <p>The name of the namespace.</p>
-     * <br>
-     * <p>For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).</p>
+     * <p>For information about how to obtain the name of a namespace, see <a href="https://help.aliyun.com/document_detail/428880.html">DescribeHybridMonitorNamespaceList</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aliyun</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Pages start from page 1. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -56,23 +71,34 @@ public class DescribeHybridMonitorTaskListRequest extends TeaModel {
 
     /**
      * <p>The ID of the member account.</p>
-     * <br>
-     * <p>> This parameter is required only if you use a management account to call this operation to delete the metric import tasks that belong to a member in a resource directory. In this case, the `TaskType` parameter is set to `aliyun_fc`.</p>
+     * <blockquote>
+     * <p>This parameter is required only if you use a management account to call this operation to delete the metric import tasks that belong to a member in a resource directory. In this case, the <code>TaskType</code> parameter is set to <code>aliyun_fc</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>120886317861****</p>
      */
     @NameInMap("TargetUserId")
     public Long targetUserId;
 
     /**
      * <p>The ID of the metric import task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>36****</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
      * <p>The type of the metric import task. Valid values:</p>
-     * <br>
-     * <p>*   aliyun_fc: metric import tasks for Alibaba Cloud services</p>
-     * <p>*   aliyun_sls: metrics for logs imported from Log Service</p>
+     * <ul>
+     * <li>aliyun_fc: metric import tasks for Alibaba Cloud services</li>
+     * <li>aliyun_sls: metrics for logs imported from Log Service</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>aliyun_fc</p>
      */
     @NameInMap("TaskType")
     public String taskType;

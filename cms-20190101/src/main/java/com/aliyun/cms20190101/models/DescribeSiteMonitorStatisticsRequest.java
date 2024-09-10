@@ -6,10 +6,15 @@ import com.aliyun.tea.*;
 public class DescribeSiteMonitorStatisticsRequest extends TeaModel {
     /**
      * <p>The name of the metric. Valid values:</p>
-     * <br>
-     * <p>*   Availability</p>
-     * <p>*   ErrorRate</p>
-     * <p>*   ResponseTime</p>
+     * <ul>
+     * <li>Availability</li>
+     * <li>ErrorRate</li>
+     * <li>ResponseTime</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Availability</p>
      */
     @NameInMap("MetricName")
     public String metricName;
@@ -19,24 +24,31 @@ public class DescribeSiteMonitorStatisticsRequest extends TeaModel {
 
     /**
      * <p>The timestamp that specifies the beginning of the time range to query.</p>
-     * <br>
      * <p>Unit: milliseconds. The default value is 1 hour ahead of the current time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1576142850527</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The ID of the site monitoring task.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of a site monitoring task, see [DescribeSiteMonitorList](~~115052~~).</p>
+     * <p>For more information about how to obtain the ID of a site monitoring task, see <a href="https://help.aliyun.com/document_detail/115052.html">DescribeSiteMonitorList</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ef4cdc8b-9dc7-43e7-810e-f950e56c****</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
      * <p>The statistical period.</p>
-     * <br>
      * <p>Unit: minutes. Default value: 1440 (1 day). Maximum value: 43200 (30 days).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1440</p>
      */
     @NameInMap("TimeRange")
     public String timeRange;

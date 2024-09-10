@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class PutResourceMetricRulesResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the request was successful.</p>
+     * <blockquote>
+     * <p> The status code 200 indicates that the request was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -20,21 +24,31 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request processing has failed due to some unknown error.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15D1440E-BF24-5A41-93E4-36864635179E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -87,21 +101,31 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
     public static class PutResourceMetricRulesResponseBodyFailedListResultTargetResult extends TeaModel {
         /**
          * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>404</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request processing has failed due to some unknown error.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Success")
         public Boolean success;
@@ -146,6 +170,9 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a151cd6023eacee2f0978e03863cc1697c89508****</p>
          */
         @NameInMap("RuleId")
         public String ruleId;

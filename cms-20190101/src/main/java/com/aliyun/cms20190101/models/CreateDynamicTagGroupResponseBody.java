@@ -5,36 +5,53 @@ import com.aliyun.tea.*;
 
 public class CreateDynamicTagGroupResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
-     * <br>
-     * <p>> The status code 200 indicates that the request was successful.</p>
+     * <p>The HTTP status code.</p>
+     * <blockquote>
+     * <p> The status code 200 indicates that the call is successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The ID of the tag matching rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2534dc0a-e3e5-4ae1-a2fc-75ef166c****</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified resource is not found.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>84AC6F0B-7945-466A-AA44-99BB5A561F86</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call is successful.</li>
+     * <li>false: The call fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

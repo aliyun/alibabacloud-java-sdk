@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
-     * <br>
-     * <p>> The status code 200 indicates that the request was successful.</p>
+     * <blockquote>
+     * <p>The status code 200 indicates that the request was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -20,21 +24,31 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B35D7D84-547B-4E61-B909-48A1F8A0C756</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -112,6 +126,9 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
 
         /**
          * <p>The city ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("City")
         public String city;
@@ -124,8 +141,12 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
 
         /**
          * <p>The country name.</p>
-         * <br>
-         * <p>> This parameter is valid only on the China site (aliyun.com).</p>
+         * <blockquote>
+         * <p>This parameter is valid only on the China site (aliyun.com).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>629</p>
          */
         @NameInMap("Country")
         public String country;
@@ -144,18 +165,27 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
 
         /**
          * <p>The number of IPv4 probes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("IPV4ProbeCount")
         public String IPV4ProbeCount;
 
         /**
          * <p>The number of IPv6 probes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("IPV6ProbeCount")
         public String IPV6ProbeCount;
 
         /**
          * <p>The carrier ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>232</p>
          */
         @NameInMap("Isp")
         public String isp;
@@ -168,6 +198,9 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
 
         /**
          * <p>The province name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>264</p>
          */
         @NameInMap("Region")
         public String region;

@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class RemoveTagsRequest extends TeaModel {
     /**
      * <p>The IDs of the application groups.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("GroupIds")
     public java.util.List<String> groupIds;
@@ -15,6 +19,7 @@ public class RemoveTagsRequest extends TeaModel {
 
     /**
      * <p>The tags.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
     public java.util.List<RemoveTagsRequestTag> tag;
@@ -51,16 +56,26 @@ public class RemoveTagsRequest extends TeaModel {
     public static class RemoveTagsRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
-         * <br>
-         * <p>> The tag key (`Tag.N.Key`) and tag value (`Tag.N.Value`) must be specified at the same time.</p>
+         * <blockquote>
+         * <p>The tag key (<code>Tag.N.Key</code>) and tag value (<code>Tag.N.Value</code>) must be specified at the same time.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Key1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
-         * <br>
-         * <p>> The tag key (`Tag.N.Key`) and tag value (`Tag.N.Value`) must be specified at the same time.</p>
+         * <blockquote>
+         * <p>The tag key (<code>Tag.N.Key</code>) and tag value (<code>Tag.N.Value</code>) must be specified at the same time.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Value1</p>
          */
         @NameInMap("Value")
         public String value;

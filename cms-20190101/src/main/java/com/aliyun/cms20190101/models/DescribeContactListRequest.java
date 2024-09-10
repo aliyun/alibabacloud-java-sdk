@@ -6,39 +6,54 @@ import com.aliyun.tea.*;
 public class DescribeContactListRequest extends TeaModel {
     /**
      * <p>The alert notification method. Valid values:</p>
-     * <br>
-     * <p>*   Mail: emails</p>
-     * <p>*   DingWebHook: DingTalk chatbots</p>
+     * <ul>
+     * <li>Mail: emails</li>
+     * <li>DingWebHook: DingTalk chatbots</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Mail</p>
      */
     @NameInMap("ChanelType")
     public String chanelType;
 
     /**
      * <p>The value specified for the alert notification method.</p>
-     * <br>
-     * <p>>  This parameter is required only if you set the `ChanelType` parameter to `Mail`.</p>
+     * <blockquote>
+     * <p> This parameter is required only if you set the <code>ChanelType</code> parameter to <code>Mail</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:Alice@example.com">Alice@example.com</a></p>
      */
     @NameInMap("ChanelValue")
     public String chanelValue;
 
     /**
      * <p>The name of the alert contact.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Alice</p>
      */
     @NameInMap("ContactName")
     public String contactName;
 
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Default value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

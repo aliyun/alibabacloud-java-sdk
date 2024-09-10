@@ -9,6 +9,10 @@ public class DeleteExporterRuleRequest extends TeaModel {
 
     /**
      * <p>The name of the data export rule.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>myRuleName</p>
      */
     @NameInMap("RuleName")
     public String ruleName;

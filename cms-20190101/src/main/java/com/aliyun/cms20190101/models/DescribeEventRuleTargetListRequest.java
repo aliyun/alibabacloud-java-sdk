@@ -9,6 +9,10 @@ public class DescribeEventRuleTargetListRequest extends TeaModel {
 
     /**
      * <p>The name of the event-triggered alert rule.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testRule</p>
      */
     @NameInMap("RuleName")
     public String ruleName;

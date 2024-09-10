@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class DescribeCustomEventHistogramResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <blockquote>
+     * <p> The status code 200 indicates that the call was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -20,18 +24,27 @@ public class DescribeCustomEventHistogramResponseBody extends TeaModel {
 
     /**
      * <p>The returned message. If the call was successful, the value success is returned. If the call failed, an error message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>486029C9-53E1-44B4-85A8-16A571A043FD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -84,22 +97,29 @@ public class DescribeCustomEventHistogramResponseBody extends TeaModel {
     public static class DescribeCustomEventHistogramResponseBodyEventHistogramsEventHistogram extends TeaModel {
         /**
          * <p>The information about the number of times that the custom event occurred during an interval of a time period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
          * <p>The end of an interval.</p>
-         * <br>
          * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1552226750000</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
          * <p>The beginning of an interval.</p>
-         * <br>
          * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1552226740000</p>
          */
         @NameInMap("StartTime")
         public Long startTime;

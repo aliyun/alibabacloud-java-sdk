@@ -6,18 +6,23 @@ import com.aliyun.tea.*;
 public class EnableActiveMetricRuleRequest extends TeaModel {
     /**
      * <p>The cloud service for which you want to enable initiative alert. Valid values:</p>
-     * <br>
-     * <p>*   ecs: Elastic Compute Service (ECS)</p>
-     * <p>*   rds: ApsaraDB RDS</p>
-     * <p>*   slb: Server Load Balancer (SLB)</p>
-     * <p>*   redis_standard: ApsaraDB for Redis of the standard architecture</p>
-     * <p>*   redis_sharding: ApsaraDB for Redis of the cluster architecture</p>
-     * <p>*   redis_splitrw: ApsaraDB for Redis of the read/write splitting architecture</p>
-     * <p>*   mongodb: ApsaraDB for MongoDB of the replica set architecture</p>
-     * <p>*   mongodb_sharding: ApsaraDB for MongoDB of the sharded cluster architecture</p>
-     * <p>*   hbase: ApsaraDB for HBase</p>
-     * <p>*   elasticsearch: Elasticsearch</p>
-     * <p>*   opensearch: OpenSearch</p>
+     * <ul>
+     * <li>ecs: Elastic Compute Service (ECS)</li>
+     * <li>rds: ApsaraDB RDS</li>
+     * <li>slb: Server Load Balancer (SLB)</li>
+     * <li>redis_standard: ApsaraDB for Redis of the standard architecture</li>
+     * <li>redis_sharding: ApsaraDB for Redis of the cluster architecture</li>
+     * <li>redis_splitrw: ApsaraDB for Redis of the read/write splitting architecture</li>
+     * <li>mongodb: ApsaraDB for MongoDB of the replica set architecture</li>
+     * <li>mongodb_sharding: ApsaraDB for MongoDB of the sharded cluster architecture</li>
+     * <li>hbase: ApsaraDB for HBase</li>
+     * <li>elasticsearch: Elasticsearch</li>
+     * <li>opensearch: OpenSearch</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
      */
     @NameInMap("Product")
     public String product;

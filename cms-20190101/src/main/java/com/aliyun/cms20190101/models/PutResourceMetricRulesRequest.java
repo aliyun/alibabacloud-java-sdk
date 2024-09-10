@@ -6,8 +6,8 @@ import com.aliyun.tea.*;
 public class PutResourceMetricRulesRequest extends TeaModel {
     /**
      * <p>The threshold-triggered alert rules.</p>
-     * <br>
      * <p>Valid values of N: 1 to 500.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Rules")
     public java.util.List<PutResourceMetricRulesRequestRules> rules;
@@ -291,14 +291,21 @@ public class PutResourceMetricRulesRequest extends TeaModel {
     public static class PutResourceMetricRulesRequestRulesLabels extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tagKey1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
-         * <br>
-         * <p>>  You can use a template parameter to specify a tag value. CloudMonitor replaces the value of the template parameter with an actual tag value.</p>
+         * <blockquote>
+         * <p> You can use a template parameter to specify a tag value. CloudMonitor replaces the value of the template parameter with an actual tag value.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         @NameInMap("Value")
         public String value;
@@ -332,25 +339,30 @@ public class PutResourceMetricRulesRequest extends TeaModel {
 
         /**
          * <p>The alert contact groups. The alert notifications are sent to the alert contacts in the alert contact group.</p>
-         * <br>
          * <p>Valid values of N: 1 to 500.</p>
-         * <br>
-         * <p>>  An alert contact group can contain one or more alert contacts. For information about how to create alert contacts and alert contact groups, see [PutContact](~~114923~~) and [PutContactGroup](~~114929~~).</p>
+         * <blockquote>
+         * <p> An alert contact group can contain one or more alert contacts. For information about how to create alert contacts and alert contact groups, see <a href="https://help.aliyun.com/document_detail/114923.html">PutContact</a> and <a href="https://help.aliyun.com/document_detail/114929.html">PutContactGroup</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS_Group</p>
          */
         @NameInMap("ContactGroups")
         public String contactGroups;
 
         /**
          * <p>The time period during which the alert rule is effective.</p>
-         * <br>
          * <p>Valid values of N: 1 to 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00-23:59</p>
          */
         @NameInMap("EffectiveInterval")
         public String effectiveInterval;
 
         /**
          * <p>The subject of the alert notification email.</p>
-         * <br>
          * <p>Valid values of N: 1 to 500.</p>
          */
         @NameInMap("EmailSubject")
@@ -358,12 +370,14 @@ public class PutResourceMetricRulesRequest extends TeaModel {
 
         /**
          * <p>The interval at which alerts are triggered based on the alert rule.</p>
-         * <br>
          * <p>Unit: seconds.</p>
-         * <br>
          * <p>Valid values of N: 1 to 500.</p>
-         * <br>
-         * <p>>  For information about how to query the statistical period of a metric, see [Appendix 1: Metrics](~~163515~~).</p>
+         * <blockquote>
+         * <p> For information about how to query the statistical period of a metric, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("Interval")
         public String interval;
@@ -376,106 +390,128 @@ public class PutResourceMetricRulesRequest extends TeaModel {
 
         /**
          * <p>The metric name.</p>
-         * <br>
          * <p>Valid values of N: 1 to 500.</p>
-         * <br>
-         * <p>For information about how to query the name of a metric, see [Appendix 1: Metrics](~~163515~~).</p>
+         * <p>For information about how to query the name of a metric, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu_total</p>
          */
         @NameInMap("MetricName")
         public String metricName;
 
         /**
          * <p>The namespace of the cloud service.</p>
-         * <br>
          * <p>Valid values of N: 1 to 500.</p>
-         * <br>
-         * <p>For information about how to query the namespace of a cloud service, see [Appendix 1: Metrics](~~163515~~).</p>
+         * <p>For information about how to query the namespace of a cloud service, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs_ecs_dashboard</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The method that is used to handle alerts when no monitoring data is found. Valid values:</p>
-         * <br>
-         * <p>*   KEEP_LAST_STATE (default): No operation is performed.</p>
-         * <p>*   INSUFFICIENT_DATA: An alert whose content is "Insufficient data" is triggered.</p>
-         * <p>*   OK: The status is considered normal.</p>
-         * <br>
+         * <ul>
+         * <li>KEEP_LAST_STATE (default): No operation is performed.</li>
+         * <li>INSUFFICIENT_DATA: An alert whose content is &quot;Insufficient data&quot; is triggered.</li>
+         * <li>OK: The status is considered normal.</li>
+         * </ul>
          * <p>Valid values of N: 1 to 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KEEP_LAST_STATE</p>
          */
         @NameInMap("NoDataPolicy")
         public String noDataPolicy;
 
         /**
          * <p>The time period during which the alert rule is ineffective.</p>
-         * <br>
          * <p>Valid values of N: 1 to 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00-06:00</p>
          */
         @NameInMap("NoEffectiveInterval")
         public String noEffectiveInterval;
 
         /**
          * <p>The statistical period of the metric.</p>
-         * <br>
          * <p>Unit: seconds. The default value is the interval at which the monitoring data of the metric is collected.</p>
-         * <br>
          * <p>Valid values of N: 1 to 500.</p>
-         * <br>
-         * <p>>  For information about how to query the statistical period of a metric, see [Appendix 1: Metrics](~~163515~~).</p>
+         * <blockquote>
+         * <p> For information about how to query the statistical period of a metric, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("Period")
         public String period;
 
         /**
-         * <p>The information about the resource. Example: `[{"instanceId":"i-uf6j91r34rnwawoo****"}]` or `[{"userId":"100931896542****"}]`.</p>
-         * <br>
+         * <p>The information about the resource. Example: <code>[{&quot;instanceId&quot;:&quot;i-uf6j91r34rnwawoo****&quot;}]</code> or <code>[{&quot;userId&quot;:&quot;100931896542****&quot;}]</code>.</p>
          * <p>Valid values of N: 1 to 500.</p>
-         * <br>
-         * <p>For more information about the supported dimensions that are used to query resources, see [Appendix 1: Metrics](~~163515~~).</p>
+         * <p>For more information about the supported dimensions that are used to query resources, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;instanceId&quot;:&quot;i-uf6j91r34rnwawoo****&quot;}]</p>
          */
         @NameInMap("Resources")
         public String resources;
 
         /**
          * <p>The ID of the alert rule.</p>
-         * <br>
          * <p>Valid values of N: 1 to 500.</p>
-         * <br>
-         * <p>You can specify a new ID or the ID of an existing alert rule. For information about how to query the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).</p>
-         * <br>
-         * <p>>  If you specify a new ID, a threshold-triggered alert rule is created.</p>
+         * <p>You can specify a new ID or the ID of an existing alert rule. For information about how to query the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+         * <blockquote>
+         * <p> If you specify a new ID, a threshold-triggered alert rule is created.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a151cd6023eacee2f0978e03863cc1697c89508****</p>
          */
         @NameInMap("RuleId")
         public String ruleId;
 
         /**
          * <p>The name of the alert rule.</p>
-         * <br>
          * <p>Valid values of N: 1 to 500.</p>
-         * <br>
-         * <p>You can specify a new name or the name of an existing alert rule. For information about how to query the name of an alert rule, see [DescribeMetricRuleList](~~114941~~).</p>
-         * <br>
-         * <p>>  If you specify a new name, a threshold-triggered alert rule is created.</p>
+         * <p>You can specify a new name or the name of an existing alert rule. For information about how to query the name of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+         * <blockquote>
+         * <p> If you specify a new name, a threshold-triggered alert rule is created.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test123</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
          * <p>The mute period during which new alert notifications are not sent even if the trigger conditions are met.</p>
-         * <br>
          * <p>Unit: seconds. Default value: 86400.</p>
-         * <br>
          * <p>Valid values of N: 1 to 500.</p>
-         * <br>
-         * <p>>  If an alert is not cleared after the mute period ends, CloudMonitor resends an alert notification.</p>
+         * <blockquote>
+         * <p> If an alert is not cleared after the mute period ends, CloudMonitor resends an alert notification.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
          */
         @NameInMap("SilenceTime")
         public Integer silenceTime;
 
         /**
          * <p>The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.</p>
-         * <br>
          * <p>Valid values of N: 1 to 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://alert.aliyun.com.com:8080/callback">https://alert.aliyun.com.com:8080/callback</a></p>
          */
         @NameInMap("Webhook")
         public String webhook;

@@ -6,29 +6,43 @@ import com.aliyun.tea.*;
 public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
-     * <br>
-     * <p>> The status code 200 indicates that the request was successful.</p>
+     * <blockquote>
+     * <p>The status code 200 indicates that the request was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The Request is not authorization.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>659401C0-6214-5C02-972A-CFA929D717B7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -41,6 +55,9 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Total")
     public Long total;
@@ -101,20 +118,28 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
     public static class DescribeMetricRuleTemplateListResponseBodyTemplatesTemplateApplyHistoriesApplyHistory extends TeaModel {
         /**
          * <p>The timestamp when the alert template was applied to the application group.</p>
-         * <br>
          * <p>Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1646055898000</p>
          */
         @NameInMap("ApplyTime")
         public Long applyTime;
 
         /**
          * <p>The ID of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3607****</p>
          */
         @NameInMap("GroupId")
         public Long groupId;
 
         /**
          * <p>The name of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS_Group</p>
          */
         @NameInMap("GroupName")
         public String groupName;
@@ -184,36 +209,48 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
 
         /**
          * <p>The timestamp when the alert template was created.</p>
-         * <br>
          * <p>Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1646018798000</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
          * <p>The timestamp when the alert template was modified.</p>
-         * <br>
          * <p>Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1646054798000</p>
          */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
         /**
          * <p>The name of the alert template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS_Template1</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The version of the alert template.</p>
-         * <br>
          * <p>Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RestVersion")
         public Long restVersion;
 
         /**
          * <p>The ID of the alert template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70****</p>
          */
         @NameInMap("TemplateId")
         public Long templateId;

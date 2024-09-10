@@ -6,30 +6,47 @@ import com.aliyun.tea.*;
 public class SendDryRunSystemEventRequest extends TeaModel {
     /**
      * <p>The content of the system event.</p>
-     * <br>
-     * <p>>  The value of this parameter is a JSON object. We recommend that you include the `product`, `resourceId`, and `regionId` fields in the JSON object.</p>
+     * <blockquote>
+     * <p> The value of this parameter is a JSON object. We recommend that you include the <code>product</code>, <code>resourceId</code>, and <code>regionId</code> fields in the JSON object.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;product&quot;:&quot;CloudMonitor&quot;,&quot;resourceId&quot;:&quot;acs:ecs:cn-hongkong:173651113438****:instance/{instanceId}&quot;,&quot;level&quot;:&quot;CRITICAL&quot;,&quot;instanceName&quot;:&quot;instanceName&quot;,&quot;regionId&quot;:&quot;cn-hangzhou&quot;,&quot;name&quot;:&quot;Agent_Status_Stopped&quot;,&quot;content&quot;:{&quot;ipGroup&quot;:&quot;0.0.0.0,0.0.0.1&quot;,&quot;tianjimonVersion&quot;:&quot;1.2.11&quot;},&quot;status&quot;:&quot;stopped&quot;}</p>
      */
     @NameInMap("EventContent")
     public String eventContent;
 
     /**
      * <p>The name of the system event.</p>
-     * <br>
-     * <p>>  For more information, see [DescribeSystemEventMetaList](~~114972~~).</p>
+     * <blockquote>
+     * <p> For more information, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Agent_Status_Stopped</p>
      */
     @NameInMap("EventName")
     public String eventName;
 
     /**
      * <p>The ID of the application group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The name of the cloud service.</p>
-     * <br>
-     * <p>>  For information about the system events supported by Cloud Monitor for Alibaba Cloud services, see [System events](~~167388~~).</p>
+     * <blockquote>
+     * <p> For information about the system events supported by Cloud Monitor for Alibaba Cloud services, see <a href="https://help.aliyun.com/document_detail/167388.html">System events</a>.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
      */
     @NameInMap("Product")
     public String product;

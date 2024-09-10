@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeMonitoringAgentStatusesRequest extends TeaModel {
     /**
      * <p>The ID of the availability monitoring task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>126****</p>
      */
     @NameInMap("HostAvailabilityTaskId")
     public String hostAvailabilityTaskId;
 
     /**
      * <p>The instance IDs. Separate multiple instance IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-hp3dunahluwajv6f****</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;

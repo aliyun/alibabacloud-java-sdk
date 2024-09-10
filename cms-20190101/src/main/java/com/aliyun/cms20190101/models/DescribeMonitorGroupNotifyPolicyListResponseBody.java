@@ -6,14 +6,21 @@ import com.aliyun.tea.*;
 public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
-     * <br>
-     * <p>> The status code 200 indicates that the request was successful.</p>
+     * <blockquote>
+     * <p>The status code 200 indicates that the request was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The Request is not authorization.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -26,21 +33,31 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6072F026-C441-41A6-B114-35A1E8F8FDD3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -101,34 +118,47 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
     public static class DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyListNotifyPolicy extends TeaModel {
         /**
          * <p>The end of the time range to query.</p>
-         * <br>
          * <p>Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1551761781273</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
          * <p>The ID of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6780****</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123****</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The beginning of the time range to query.</p>
-         * <br>
          * <p>Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1551761781273</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
         /**
          * <p>The policy type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PauseNotify</p>
          */
         @NameInMap("Type")
         public String type;

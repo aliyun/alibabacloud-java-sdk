@@ -6,57 +6,73 @@ import com.aliyun.tea.*;
 public class DescribeAlertHistoryListRequest extends TeaModel {
     /**
      * <p>The order of alerts. Valid values:</p>
-     * <br>
-     * <p>*   true (default value): reverse chronological order</p>
-     * <p>*   false: chronological order</p>
+     * <ul>
+     * <li>true (default value): reverse chronological order</li>
+     * <li>false: chronological order</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Ascending")
     public Boolean ascending;
 
     /**
      * <p>The end timestamp of the historical alerts that you want to query.</p>
-     * <br>
      * <p>Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1640608200000</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The ID of the application group.</p>
-     * <br>
-     * <p>For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).</p>
+     * <p>For information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7671****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The metric that is used to monitor the cloud service.</p>
-     * <br>
-     * <p>For information about how to query the name of a metric, see [Appendix 1: Metrics](~~163515~~).</p>
+     * <p>For information about how to query the name of a metric, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cpu_total</p>
      */
     @NameInMap("MetricName")
     public String metricName;
 
     /**
      * <p>The namespace of the cloud service.</p>
-     * <br>
-     * <p>For information about how to query the namespace of a cloud service, see [Appendix 1: Metrics](~~163515~~).</p>
+     * <p>For information about how to query the namespace of a cloud service, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs_ecs_dashboard</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Page")
     public Integer page;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -66,43 +82,57 @@ public class DescribeAlertHistoryListRequest extends TeaModel {
 
     /**
      * <p>The ID of the alert rule.</p>
-     * <br>
-     * <p>For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).</p>
+     * <p>For information about how to obtain the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>applyTemplate61dc81b5-d357-4cf6-a9b7-9f83c1d5****</p>
      */
     @NameInMap("RuleId")
     public String ruleId;
 
     /**
      * <p>The name of the alert rule.</p>
-     * <br>
-     * <p>For information about how to query the name of an alert rule, see [DescribeMetricRuleList](~~114941~~).</p>
+     * <p>For information about how to query the name of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS_Rule</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
 
     /**
      * <p>The start timestamp of the historical alerts that you want to query.</p>
-     * <br>
      * <p>Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1640237400000</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The status of the alert. Valid values:</p>
-     * <br>
-     * <p>*   ALARM (default value): Alerts are triggered.</p>
-     * <p>*   OK: No alerts are triggered.</p>
+     * <ul>
+     * <li>ALARM (default value): Alerts are triggered.</li>
+     * <li>OK: No alerts are triggered.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ALARM</p>
      */
     @NameInMap("State")
     public String state;
 
     /**
      * <p>Specifies whether alerts are muted. Valid values:</p>
-     * <br>
-     * <p>*   2 (default value): Alerts are muted and are not triggered within the mute period, even if the condition specified in the alert rule is met.</p>
-     * <p>*   0: Alerts are triggered or cleared.</p>
-     * <p>*   1: The alert rule is ineffective.</p>
+     * <ul>
+     * <li>2 (default value): Alerts are muted and are not triggered within the mute period, even if the condition specified in the alert rule is met.</li>
+     * <li>0: Alerts are triggered or cleared.</li>
+     * <li>1: The alert rule is ineffective.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Status")
     public String status;

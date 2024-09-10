@@ -6,10 +6,11 @@ import com.aliyun.tea.*;
 public class DeleteMetricRuleTargetsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
-     * <br>
      * <p>**</p>
-     * <br>
-     * <p>**Description** The status code 200 indicates that the request was successful.</p>
+     * <p><strong>Description</strong> The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -22,21 +23,31 @@ public class DeleteMetricRuleTargetsResponseBody extends TeaModel {
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The Request is not authorization.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>786E92D2-AC66-4250-B76F-F1E2FCDDBA1C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

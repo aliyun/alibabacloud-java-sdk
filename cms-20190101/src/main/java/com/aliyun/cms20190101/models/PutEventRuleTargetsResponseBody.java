@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class PutEventRuleTargetsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the request was successful.</p>
+     * <blockquote>
+     * <p> The status code 200 indicates that the request was successful.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -32,24 +36,36 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
 
     /**
      * <p>The number of resources that failed to be created or modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("FailedParameterCount")
     public String failedParameterCount;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The Request is not authorization.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>409C64DA-CF14-45DF-B463-471C790DD15A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -132,14 +148,19 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the recipient.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Id")
         public Integer id;
 
         /**
          * <p>The alert level and the corresponding notification methods. Valid values:</p>
-         * <br>
          * <p>4: Alert notifications are sent by using DingTalk chatbots and emails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Level")
         public String level;
@@ -197,24 +218,36 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
     public static class PutEventRuleTargetsResponseBodyFailedFcParametersFcParameter extends TeaModel {
         /**
          * <p>The name of the function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>functionTest1</p>
          */
         @NameInMap("FunctionName")
         public String functionName;
 
         /**
          * <p>The ID of the recipient.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public Integer id;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The name of the Function Compute service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>serviceTest1</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
@@ -280,18 +313,27 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
     public static class PutEventRuleTargetsResponseBodyFailedMnsParametersMnsParameter extends TeaModel {
         /**
          * <p>The ID of the recipient.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Id")
         public Integer id;
 
         /**
          * <p>The name of the MNS queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testQueue</p>
          */
         @NameInMap("Queue")
         public String queue;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
