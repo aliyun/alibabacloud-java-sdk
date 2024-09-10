@@ -7,18 +7,38 @@ public class ListGlobalAppsResponseBody extends TeaModel {
     @NameInMap("GlobalApps")
     public java.util.List<ListGlobalAppsResponseBodyGlobalApps> globalApps;
 
+    /**
+     * <strong>example:</strong>
+     * <p>easygene.cn-beijing.aliyuncs.com</p>
+     */
     @NameInMap("HostId")
     public String hostId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ba6d88e2-a6f2-4d2c-a2ae-68b76b078445</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DA980AD0-158F-44F3-847D-5EAB96C0EB6B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -76,36 +96,72 @@ public class ListGlobalAppsResponseBody extends TeaModel {
     }
 
     public static class ListGlobalAppsResponseBodyGlobalApps extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("AppDefaultVersion")
         public String appDefaultVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>This is app description.</p>
+         */
         @NameInMap("AppDescription")
         public String appDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>实际使用时，计算该应用消耗的资源费用。</p>
+         */
         @NameInMap("AppFee")
         public String appFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>joint-calling</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OpenAccess</p>
+         */
         @NameInMap("AppScope")
         public String appScope;
 
         @NameInMap("Categories")
         public java.util.List<String> categories;
 
+        /**
+         * <strong>example:</strong>
+         * <p>yyyy/MM/dd HH:mm:ss</p>
+         */
         @NameInMap("LastModified")
         public String lastModified;
 
         @NameInMap("Locations")
         public java.util.List<String> locations;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sentieon</p>
+         */
         @NameInMap("NamespaceName")
         public String namespaceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Pinned")
         public Boolean pinned;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Sentieon</p>
+         */
         @NameInMap("Toolkit")
         public String toolkit;
 

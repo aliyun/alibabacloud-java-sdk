@@ -4,12 +4,28 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class GetPublicDatasetEntityRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>西蒙斯基因组多样性计划</p>
+     */
     @NameInMap("DatasetName")
     public String datasetName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sample</p>
+     */
     @NameInMap("EntityType")
     public String entityType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("Location")
     public String location;
 

@@ -4,24 +4,48 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListPublicDatasetEntityItemsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>西蒙斯基因组多样性计划</p>
+     */
     @NameInMap("DatasetName")
     public String datasetName;
 
     @NameInMap("EntityItems")
     public java.util.List<ListPublicDatasetEntityItemsResponseBodyEntityItems> entityItems;
 
+    /**
+     * <strong>example:</strong>
+     * <p>easygene.cn-beijing.aliyuncs.com</p>
+     */
     @NameInMap("HostId")
     public String hostId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ba6d88e2-a6f2-4d2c-a2ae-68b76b078445</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DA980AD0-158F-44F3-847D-5EAB96C0EB6B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -90,6 +114,10 @@ public class ListPublicDatasetEntityItemsResponseBody extends TeaModel {
         @NameInMap("EntityData")
         public java.util.Map<String, String> entityData;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sample</p>
+         */
         @NameInMap("EntityName")
         public String entityName;
 

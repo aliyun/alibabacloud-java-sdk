@@ -4,18 +4,38 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class GetTemplateResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>MyApp</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("AppRevision")
     public String appRevision;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-06-10T13:30:20.414557061Z</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test template</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>easygene.cn-beijing.aliyuncs.com</p>
+     */
     @NameInMap("HostId")
     public String hostId;
 
@@ -25,27 +45,55 @@ public class GetTemplateResponseBody extends TeaModel {
     @NameInMap("Labels")
     public java.util.Map<String, String> labels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-06-10T13:30:20.405878292Z</p>
+     */
     @NameInMap("LastModifiedTime")
     public String lastModifiedTime;
 
     @NameInMap("OutputsExpression")
     public java.util.List<GetTemplateResponseBodyOutputsExpression> outputsExpression;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DA980AD0-158F-44F3-847D-5EAB96C0EB6B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>produceVersion</p>
+     */
     @NameInMap("RevisionTag")
     public String revisionTag;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test-entity</p>
+     */
     @NameInMap("RootEntity")
     public String rootEntity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EasyGene</p>
+     */
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test-template</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test-workspace</p>
+     */
     @NameInMap("Workspace")
     public String workspace;
 
@@ -175,24 +223,52 @@ public class GetTemplateResponseBody extends TeaModel {
     }
 
     public static class GetTemplateResponseBodyInputsExpression extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test help</p>
+         */
         @NameInMap("Help")
         public String help;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Required")
         public Boolean required;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("StepOrder")
         public Long stepOrder;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Task1</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v1</p>
+         */
         @NameInMap("VariableName")
         public String variableName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>File</p>
+         */
         @NameInMap("VariableType")
         public String variableType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss://bucket/file1.fastq</p>
+         */
         @NameInMap("VariableValue")
         public String variableValue;
 
@@ -263,21 +339,45 @@ public class GetTemplateResponseBody extends TeaModel {
         @NameInMap("Help")
         public String help;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Required")
         public Boolean required;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("StepOrder")
         public Long stepOrder;
 
+        /**
+         * <strong>example:</strong>
+         * <p>jobname</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>fastq1</p>
+         */
         @NameInMap("VariableName")
         public String variableName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>string</p>
+         */
         @NameInMap("VariableType")
         public String variableType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc_1.fastq.gz</p>
+         */
         @NameInMap("VariableValue")
         public String variableValue;
 

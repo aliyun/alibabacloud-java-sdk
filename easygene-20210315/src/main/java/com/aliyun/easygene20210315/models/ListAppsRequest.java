@@ -4,36 +4,77 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListAppsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>App</p>
+     */
     @NameInMap("AppType")
     public String appType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsReversed")
     public Boolean isReversed;
 
+    /**
+     * <strong>example:</strong>
+     * <p>env=test</p>
+     */
     @NameInMap("LabelSelector")
     public String labelSelector;
 
+    /**
+     * <strong>example:</strong>
+     * <p>WDL</p>
+     */
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>Next Token</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestToken</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>createtime</p>
+     */
     @NameInMap("OrderBy")
     public String orderBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Public</p>
+     */
     @NameInMap("Scope")
     public String scope;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TestName</p>
+     */
     @NameInMap("Search")
     public String search;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestWorkspace</p>
+     */
     @NameInMap("Workspace")
     public String workspace;
 

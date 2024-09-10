@@ -7,18 +7,38 @@ public class ListContainerImagesResponseBody extends TeaModel {
     @NameInMap("ContainerImages")
     public java.util.List<ListContainerImagesResponseBodyContainerImages> containerImages;
 
+    /**
+     * <strong>example:</strong>
+     * <p>easygene.cn-beijing.aliyuncs.com</p>
+     */
     @NameInMap("HostId")
     public String hostId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ba6d88e2-a6f2-4d2c-a2ae-68b76b078445</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DA980AD0-158F-44F3-847D-5EAB96C0EB6B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -76,24 +96,48 @@ public class ListContainerImagesResponseBody extends TeaModel {
     }
 
     public static class ListContainerImagesResponseBodyContainerImages extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>a suite of programs for interacting with high-throughput sequencing data.</p>
+         */
         @NameInMap("ContainerImageDescription")
         public String containerImageDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>samtools</p>
+         */
         @NameInMap("ContainerImageName")
         public String containerImageName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>samtools</p>
+         */
         @NameInMap("ContainerImageNamespace")
         public String containerImageNamespace;
 
         @NameInMap("ContainerImageVersions")
         public java.util.List<String> containerImageVersions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>registry-vpc.cn-shenzhen.aliyuncs.com</p>
+         */
         @NameInMap("ContainerRegistry")
         public String containerRegistry;
 
+        /**
+         * <strong>example:</strong>
+         * <p>yyyy/MM/dd HH:mm:ss</p>
+         */
         @NameInMap("LastModified")
         public String lastModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
+         */
         @NameInMap("Location")
         public String location;
 

@@ -4,21 +4,45 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListPublicDatasetRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsReversed")
     public Boolean isReversed;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0f2cc944-67db-4fb1-bb10-f136cda74bda</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>LastModified, DatasetName</p>
+     */
     @NameInMap("OrderBy")
     public String orderBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>西蒙斯基因组多样性计划</p>
+     */
     @NameInMap("Search")
     public String search;
 
+    /**
+     * <strong>example:</strong>
+     * <p>遗传多样性</p>
+     */
     @NameInMap("Tag")
     public String tag;
 

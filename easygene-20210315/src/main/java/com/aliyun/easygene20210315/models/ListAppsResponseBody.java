@@ -7,21 +7,40 @@ public class ListAppsResponseBody extends TeaModel {
     @NameInMap("Apps")
     public java.util.List<ListAppsResponseBodyApps> apps;
 
+    /**
+     * <strong>example:</strong>
+     * <p>easygene.cn-beijing.aliyuncs.com</p>
+     */
     @NameInMap("HostId")
     public String hostId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>Next Token</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestToken</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DA980AD0-158F-44F3-847D-5EAB96C0EB6B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -79,33 +98,69 @@ public class ListAppsResponseBody extends TeaModel {
     }
 
     public static class ListAppsResponseBodyApps extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>v1</p>
+         */
         @NameInMap("AppDefaultVersion")
         public String appDefaultVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestApp</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>App</p>
+         */
         @NameInMap("AppType")
         public String appType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-06-10T13:30:20.414557061Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>This is a test app</p>
+         */
         @NameInMap("Description")
         public String description;
 
         @NameInMap("Labels")
         public java.util.Map<String, String> labels;
 
+        /**
+         * <strong>example:</strong>
+         * <p>WDL</p>
+         */
         @NameInMap("Language")
         public String language;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Public</p>
+         */
         @NameInMap("Scope")
         public String scope;
 
+        /**
+         * <strong>example:</strong>
+         * <p>EasyGene</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestWorkspace</p>
+         */
         @NameInMap("Workspace")
         public String workspace;
 

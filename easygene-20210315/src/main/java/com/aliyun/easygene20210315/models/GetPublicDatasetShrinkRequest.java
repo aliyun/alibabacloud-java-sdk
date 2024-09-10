@@ -7,6 +7,12 @@ public class GetPublicDatasetShrinkRequest extends TeaModel {
     @NameInMap("Attributes")
     public String attributesShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>西蒙斯基因组多样性计划</p>
+     */
     @NameInMap("DatasetName")
     public String datasetName;
 

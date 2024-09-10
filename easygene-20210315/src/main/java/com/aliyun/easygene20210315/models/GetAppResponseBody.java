@@ -4,30 +4,58 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class GetAppResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>MyTestApp</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>App</p>
+     */
     @NameInMap("AppType")
     public String appType;
 
     @NameInMap("Configs")
     public java.util.List<GetAppResponseBodyConfigs> configs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-06-16T15:09:14.378297+08:00</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>WDL content</p>
+     */
     @NameInMap("Definition")
     public String definition;
 
     @NameInMap("Dependencies")
     public java.util.List<GetAppResponseBodyDependencies> dependencies;
 
+    /**
+     * <strong>example:</strong>
+     * <p>This is a test app</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>example documentation content</p>
+     */
     @NameInMap("Documentation")
     public String documentation;
 
+    /**
+     * <strong>example:</strong>
+     * <p>easygene.cn-beijing.aliyuncs.com</p>
+     */
     @NameInMap("HostId")
     public String hostId;
 
@@ -37,48 +65,100 @@ public class GetAppResponseBody extends TeaModel {
     @NameInMap("Labels")
     public java.util.Map<String, String> labels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>WDL</p>
+     */
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.0</p>
+     */
     @NameInMap("LanguageVersion")
     public String languageVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-06-16T15:09:14.378297+08:00</p>
+     */
     @NameInMap("LastModifiedTime")
     public String lastModifiedTime;
 
     @NameInMap("Outputs")
     public java.util.List<GetAppResponseBodyOutputs> outputs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>main.wdl</p>
+     */
     @NameInMap("Path")
     public String path;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DA980AD0-158F-44F3-847D-5EAB96C0EB6B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Revision")
     public String revision;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Example revision comment</p>
+     */
     @NameInMap("RevisionComment")
     public String revisionComment;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TestTag</p>
+     */
     @NameInMap("RevisionTag")
     public String revisionTag;
 
     @NameInMap("Revisions")
     public java.util.List<GetAppResponseBodyRevisions> revisions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Public</p>
+     */
     @NameInMap("Scope")
     public String scope;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EasyGene</p>
+     */
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Example url</p>
+     */
     @NameInMap("URL")
     public String URL;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MyTestWorkflow</p>
+     */
     @NameInMap("WorkflowName")
     public String workflowName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TestWorkspace</p>
+     */
     @NameInMap("Workspace")
     public String workspace;
 
@@ -296,9 +376,17 @@ public class GetAppResponseBody extends TeaModel {
     }
 
     public static class GetAppResponseBodyConfigs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{     &quot;wgs.apply_bqsr.cpu&quot;: 4,     &quot;wgs.apply_bqsr.disks&quot;: &quot;local-disk 250 cloud_ssd&quot;,     &quot;wgs.apply_bqsr.gatk_Launcher&quot;: &quot;/usr/local/bin/gatk-4.1.4.1/gatk&quot;,     &quot;wgs.apply_bqsr.java_opts&quot;: &quot;\&quot;-XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10 -Xms3000m -Djava.io.tmpdir=/mnt\&quot;&quot;,     &quot;wgs.apply_bqsr.memory&quot;: &quot;8G&quot;}</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>./config/example.json</p>
+         */
         @NameInMap("Path")
         public String path;
 
@@ -326,9 +414,17 @@ public class GetAppResponseBody extends TeaModel {
     }
 
     public static class GetAppResponseBodyDependencies extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>task echo {   String txt_out = &quot;default_txt_out&quot;   String dd_out = &quot;default_dd_out&quot;    command {     echo Hello &gt; ${txt_out}     /bin/bash -c &quot;dd if=/dev/zero of=${dd_out} bs=1M count=15&quot;     echo &quot;This is a test std out.&quot;   }    runtime {     cpu: &quot;2&quot;     memory: &quot;4G&quot;     autoReleaseJob: false     reserveOnFail: true     userData: &quot;key1 value1&quot;     disks: &quot;local-disk 40 cloud_ssd, /home/mount/ 40 cloud_efficiency&quot;     tag: &quot;TestTag&quot;   }    output {     File outTxtFile = &quot;${txt_out}&quot;     File outDdFile = &quot;${dd_out}&quot;   } }</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>./task/echo.wdl</p>
+         */
         @NameInMap("Path")
         public String path;
 
@@ -356,24 +452,52 @@ public class GetAppResponseBody extends TeaModel {
     }
 
     public static class GetAppResponseBodyInputs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>help information</p>
+         */
         @NameInMap("Help")
         public String help;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Required")
         public Boolean required;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("StepOrder")
         public Long stepOrder;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestTaskName</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestVariableName</p>
+         */
         @NameInMap("VariableName")
         public String variableName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestVariableType</p>
+         */
         @NameInMap("VariableType")
         public String variableType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestVariableValue</p>
+         */
         @NameInMap("VariableValue")
         public String variableValue;
 
@@ -441,24 +565,52 @@ public class GetAppResponseBody extends TeaModel {
     }
 
     public static class GetAppResponseBodyOutputs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Example help information</p>
+         */
         @NameInMap("Help")
         public String help;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Required")
         public Boolean required;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("StepOrder")
         public Long stepOrder;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestTaskName</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestVariableName</p>
+         */
         @NameInMap("VariableName")
         public String variableName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Int</p>
+         */
         @NameInMap("VariableType")
         public String variableType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ExampleValue</p>
+         */
         @NameInMap("VariableValue")
         public String variableValue;
 
@@ -526,15 +678,31 @@ public class GetAppResponseBody extends TeaModel {
     }
 
     public static class GetAppResponseBodyRevisions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-06-16T15:09:14.378297+08:00</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Revision")
         public String revision;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Example revision comment</p>
+         */
         @NameInMap("RevisionComment")
         public String revisionComment;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ProduceVersion</p>
+         */
         @NameInMap("RevisionTag")
         public String revisionTag;
 

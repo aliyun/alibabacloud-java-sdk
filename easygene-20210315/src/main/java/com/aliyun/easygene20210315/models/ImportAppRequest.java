@@ -4,12 +4,30 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ImportAppRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fastp</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>easygene:opengene/fastp</p>
+     */
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestWorkspace</p>
+     */
     @NameInMap("Workspace")
     public String workspace;
 

@@ -4,9 +4,17 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class AbortSubmissionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>easygene.cn-beijing.aliyuncs.com</p>
+     */
     @NameInMap("HostId")
     public String hostId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>easygene.cn-beijing.aliyuncs.com</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

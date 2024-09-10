@@ -4,6 +4,10 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListUserActiveRunsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 

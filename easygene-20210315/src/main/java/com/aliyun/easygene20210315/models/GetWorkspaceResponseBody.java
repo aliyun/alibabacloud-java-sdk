@@ -4,42 +4,90 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class GetWorkspaceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>my-bucket</p>
+     */
     @NameInMap("BucketName")
     public String bucketName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-06-16T15:09:14.378297+08:00</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>This is a test workspace</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>easygene.cn-beijing.aliyuncs.com</p>
+     */
     @NameInMap("HostId")
     public String hostId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("JobLifecycle")
     public Integer jobLifecycle;
 
     @NameInMap("Labels")
     public java.util.Map<String, String> labels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-06-16T15:09:14.378297+08:00</p>
+     */
     @NameInMap("LastModifiedTime")
     public String lastModifiedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("Location")
     public String location;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DA980AD0-158F-44F3-847D-5EAB96C0EB6B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TestRole</p>
+     */
     @NameInMap("Role")
     public String role;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Active</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://my-bucket/my-path/</p>
+     */
     @NameInMap("Storage")
     public String storage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TestWorkspace</p>
+     */
     @NameInMap("Workspace")
     public String workspace;
 

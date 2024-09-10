@@ -4,24 +4,47 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListWorkspacesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsReversed")
     public Boolean isReversed;
 
+    /**
+     * <strong>example:</strong>
+     * <p>env=test</p>
+     */
     @NameInMap("LabelSelector")
     public String labelSelector;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>NextToken</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestToken</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>createtime</p>
+     */
     @NameInMap("OrderBy")
     public String orderBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TestName</p>
+     */
     @NameInMap("Search")
     public String search;
 

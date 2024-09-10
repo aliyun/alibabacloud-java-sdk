@@ -4,15 +4,35 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class GetAppRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestApp</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Revision")
     public String revision;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TestTag</p>
+     */
     @NameInMap("RevisionTag")
     public String revisionTag;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestWorkspace</p>
+     */
     @NameInMap("Workspace")
     public String workspace;
 

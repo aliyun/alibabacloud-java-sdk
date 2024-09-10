@@ -4,12 +4,20 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListRegionsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>easygene.cn-beijing.aliyuncs.com</p>
+     */
     @NameInMap("HostId")
     public String hostId;
 
     @NameInMap("Regions")
     public java.util.List<ListRegionsResponseBodyRegions> regions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DA980AD0-158F-44F3-847D-5EAB96C0EB6B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,12 +51,24 @@ public class ListRegionsResponseBody extends TeaModel {
     }
 
     public static class ListRegionsResponseBodyRegions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>华北2-北京</p>
+         */
         @NameInMap("LocalName")
         public String localName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>easygene.cn-beijing.aliyuncs.com</p>
+         */
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

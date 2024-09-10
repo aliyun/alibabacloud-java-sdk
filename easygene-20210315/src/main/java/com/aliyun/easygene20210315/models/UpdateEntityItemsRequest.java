@@ -4,12 +4,27 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class UpdateEntityItemsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EntityItems")
     public java.util.List<UpdateEntityItemsRequestEntityItems> entityItems;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sample</p>
+     */
     @NameInMap("EntityType")
     public String entityType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-workspace</p>
+     */
     @NameInMap("Workspace")
     public String workspace;
 
@@ -46,6 +61,10 @@ public class UpdateEntityItemsRequest extends TeaModel {
         @NameInMap("EntityData")
         public java.util.Map<String, String> entityData;
 
+        /**
+         * <strong>example:</strong>
+         * <p>s1</p>
+         */
         @NameInMap("EntityName")
         public String entityName;
 

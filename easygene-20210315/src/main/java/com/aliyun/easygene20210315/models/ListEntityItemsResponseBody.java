@@ -7,18 +7,38 @@ public class ListEntityItemsResponseBody extends TeaModel {
     @NameInMap("EntityItems")
     public java.util.List<ListEntityItemsResponseBodyEntityItems> entityItems;
 
+    /**
+     * <strong>example:</strong>
+     * <p>easygene.cn-beijing.aliyuncs.com</p>
+     */
     @NameInMap("HostId")
     public String hostId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MTIzNDU2P1dvcmtzcGFjZT93cy1mMDE4OTgxNGU1ZTkK</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DA980AD0-158F-44F3-847D-5EAB96C0EB6B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -79,6 +99,10 @@ public class ListEntityItemsResponseBody extends TeaModel {
         @NameInMap("EntityData")
         public java.util.Map<String, String> entityData;
 
+        /**
+         * <strong>example:</strong>
+         * <p>s1</p>
+         */
         @NameInMap("EntityName")
         public String entityName;
 

@@ -4,24 +4,54 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class UpdateTemplateShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>This is a test template</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InputsExpression")
     public String inputsExpressionShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;: &quot;value&quot;}</p>
+     */
     @NameInMap("Labels")
     public String labels;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OutputsExpression")
     public String outputsExpressionShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test-entity</p>
+     */
     @NameInMap("RootEntity")
     public String rootEntity;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-template</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-workspace</p>
+     */
     @NameInMap("Workspace")
     public String workspace;
 

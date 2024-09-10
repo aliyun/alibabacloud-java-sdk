@@ -4,30 +4,62 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class GetGlobalAppResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1.0</p>
+     */
     @NameInMap("AppDefaultVersion")
     public String appDefaultVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>This is app description.</p>
+     */
     @NameInMap("AppDescription")
     public String appDescription;
 
     @NameInMap("AppDescriptorFiles")
     public java.util.List<GetGlobalAppResponseBodyAppDescriptorFiles> appDescriptorFiles;
 
+    /**
+     * <strong>example:</strong>
+     * <p>WDL / CWL</p>
+     */
     @NameInMap("AppDescriptorType")
     public String appDescriptorType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>实际使用时，计算该应用消耗的资源费用</p>
+     */
     @NameInMap("AppFee")
     public String appFee;
 
+    /**
+     * <strong>example:</strong>
+     * <p>joint-calling</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OpenAccess / Protected</p>
+     */
     @NameInMap("AppScope")
     public String appScope;
 
+    /**
+     * <strong>example:</strong>
+     * <p>workflow</p>
+     */
     @NameInMap("AppType")
     public String appType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.2a-3</p>
+     */
     @NameInMap("AppVersion")
     public String appVersion;
 
@@ -37,21 +69,45 @@ public class GetGlobalAppResponseBody extends TeaModel {
     @NameInMap("Categories")
     public java.util.List<String> categories;
 
+    /**
+     * <strong>example:</strong>
+     * <p>初始版本</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:support@sentieon.com">support@sentieon.com</a></p>
+     */
     @NameInMap("Contact")
     public String contact;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DAG</p>
+     */
     @NameInMap("DAG")
     public String DAG;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The app details.</p>
+     */
     @NameInMap("Document")
     public String document;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DA980AD0-158F-44F3-847D-5EAB96C0EB6B</p>
+     */
     @NameInMap("HostId")
     public String hostId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>yyyy/MM/dd HH:mm:ss</p>
+     */
     @NameInMap("LastModified")
     public String lastModified;
 
@@ -61,15 +117,31 @@ public class GetGlobalAppResponseBody extends TeaModel {
     @NameInMap("Locations")
     public java.util.List<String> locations;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sentieon</p>
+     */
     @NameInMap("NamespaceName")
     public String namespaceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Pinned")
     public Boolean pinned;
 
+    /**
+     * <strong>example:</strong>
+     * <p>easygene.cn-beijing.aliyuncs.com</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Sentieon</p>
+     */
     @NameInMap("Toolkit")
     public String toolkit;
 
@@ -269,9 +341,17 @@ public class GetGlobalAppResponseBody extends TeaModel {
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PRIMARY_DESCRIPTOR（主WDL） SECONDARY_DESCRIPTOR（依赖WDL）  CONFIG（推荐的输入参数）  CONTAINERFILE（镜像制作文件）  DATA（输入参数中引用的参考文件）  OTHER（其他）</p>
+         */
         @NameInMap("FileType")
         public String fileType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>./main.wdl</p>
+         */
         @NameInMap("Path")
         public String path;
 
@@ -326,12 +406,24 @@ public class GetGlobalAppResponseBody extends TeaModel {
     }
 
     public static class GetGlobalAppResponseBodyAppVersions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("AppVersion")
         public String appVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>初始版本</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <strong>example:</strong>
+         * <p>yyyy/MM/dd HH:mm:ss</p>
+         */
         @NameInMap("LastModified")
         public String lastModified;
 

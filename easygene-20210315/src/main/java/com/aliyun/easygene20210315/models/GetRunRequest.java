@@ -4,9 +4,21 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class GetRunRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>run-12kDbbqp5O9dfsH0sEdQeRclGQb</p>
+     */
     @NameInMap("RunId")
     public String runId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default-workspace</p>
+     */
     @NameInMap("Workspace")
     public String workspace;
 
