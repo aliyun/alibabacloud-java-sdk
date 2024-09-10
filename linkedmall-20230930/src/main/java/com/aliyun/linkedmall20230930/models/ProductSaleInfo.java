@@ -25,6 +25,9 @@ public class ProductSaleInfo extends TeaModel {
     @NameInMap("fuzzyQuantity")
     public String fuzzyQuantity;
 
+    @NameInMap("limitRules")
+    public java.util.List<LimitRule> limitRules;
+
     /**
      * <strong>example:</strong>
      * <p>21000017-4580902812</p>
@@ -104,6 +107,14 @@ public class ProductSaleInfo extends TeaModel {
     }
     public String getFuzzyQuantity() {
         return this.fuzzyQuantity;
+    }
+
+    public ProductSaleInfo setLimitRules(java.util.List<LimitRule> limitRules) {
+        this.limitRules = limitRules;
+        return this;
+    }
+    public java.util.List<LimitRule> getLimitRules() {
+        return this.limitRules;
     }
 
     public ProductSaleInfo setLmItemId(String lmItemId) {

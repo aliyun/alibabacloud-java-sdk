@@ -112,6 +112,9 @@ public class Sku extends TeaModel {
     @NameInMap("skuStatus")
     public String skuStatus;
 
+    @NameInMap("suggestedRetailPrice")
+    public Long suggestedRetailPrice;
+
     /**
      * <strong>example:</strong>
      * <p>天蓝色</p>
@@ -250,6 +253,14 @@ public class Sku extends TeaModel {
     }
     public String getSkuStatus() {
         return this.skuStatus;
+    }
+
+    public Sku setSuggestedRetailPrice(Long suggestedRetailPrice) {
+        this.suggestedRetailPrice = suggestedRetailPrice;
+        return this;
+    }
+    public Long getSuggestedRetailPrice() {
+        return this.suggestedRetailPrice;
     }
 
     public Sku setTitle(String title) {
