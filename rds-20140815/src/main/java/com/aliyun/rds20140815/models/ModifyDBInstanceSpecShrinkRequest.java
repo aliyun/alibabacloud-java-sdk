@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
+    @NameInMap("AllowMajorVersionUpgrade")
+    public Boolean allowMajorVersionUpgrade;
+
     /**
      * <p>Specifies whether to use vouchers to offset fees. Valid values:</p>
      * <ul>
@@ -282,6 +285,9 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     @NameInMap("UsedTime")
     public Long usedTime;
 
+    @NameInMap("VSwitchId")
+    public String vSwitchId;
+
     /**
      * <p>The RDS edition of the instance. Valid values:</p>
      * <ul>
@@ -300,9 +306,20 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     @NameInMap("ZoneId")
     public String zoneId;
 
+    @NameInMap("ZoneIdSlave1")
+    public String zoneIdSlave1;
+
     public static ModifyDBInstanceSpecShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceSpecShrinkRequest self = new ModifyDBInstanceSpecShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDBInstanceSpecShrinkRequest setAllowMajorVersionUpgrade(Boolean allowMajorVersionUpgrade) {
+        this.allowMajorVersionUpgrade = allowMajorVersionUpgrade;
+        return this;
+    }
+    public Boolean getAllowMajorVersionUpgrade() {
+        return this.allowMajorVersionUpgrade;
     }
 
     public ModifyDBInstanceSpecShrinkRequest setAutoUseCoupon(Boolean autoUseCoupon) {
@@ -497,12 +514,28 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
         return this.usedTime;
     }
 
+    public ModifyDBInstanceSpecShrinkRequest setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
+        return this;
+    }
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
     public ModifyDBInstanceSpecShrinkRequest setZoneId(String zoneId) {
         this.zoneId = zoneId;
         return this;
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public ModifyDBInstanceSpecShrinkRequest setZoneIdSlave1(String zoneIdSlave1) {
+        this.zoneIdSlave1 = zoneIdSlave1;
+        return this;
+    }
+    public String getZoneIdSlave1() {
+        return this.zoneIdSlave1;
     }
 
 }

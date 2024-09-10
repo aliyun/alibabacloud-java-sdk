@@ -5,7 +5,14 @@ import com.aliyun.tea.*;
 
 public class ModifyTaskInfoRequest extends TeaModel {
     /**
-     * <p>The action parameter.</p>
+     * <p>The action-related parameters. You can add action-related parameters based on your business requirements. If you set the TaskAction parameter to modifySwitchTime, you must set this parameter to <code>{&quot;recoverMode&quot;: &quot;xxx&quot;, &quot;recoverTime&quot;: &quot;xxx&quot;}</code>.</p>
+     * <p>The recoverMode field specifies the task restoration mode. valid values:</p>
+     * <ul>
+     * <li><strong>timePoint</strong>: The task is executed at a specified point in time.</li>
+     * <li><strong>Immediate</strong>: The task is executed immediately.</li>
+     * <li><strong>maintainTime</strong>: The task is executed based on the O\&amp;M time.</li>
+     * </ul>
+     * <p>The recoverTime field specifies restoration time. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If you set the recoverMode field to timePoint, you must also specify the recoverTime field.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;recoverTime\&quot;:\&quot;2023-04-12T18:30:00Z\&quot;,\&quot;recoverMode\&quot;:\&quot;timePoint\&quot;}</p>
@@ -42,13 +49,7 @@ public class ModifyTaskInfoRequest extends TeaModel {
     public String stepName;
 
     /**
-     * <p>The name of the operation that you can call to execute the task. Valid values:</p>
-     * <ul>
-     * <li>ImportImage</li>
-     * <li>ExportImage</li>
-     * <li>RedeployInstance</li>
-     * <li>ModifyDiskSpec</li>
-     * </ul>
+     * <p>The task action. Set the value to modifySwitchTime. The value specifies that you want to change the switching time or restoration time.</p>
      * 
      * <strong>example:</strong>
      * <p>ImportImage</p>
@@ -57,7 +58,7 @@ public class ModifyTaskInfoRequest extends TeaModel {
     public String taskAction;
 
     /**
-     * <p>The task ID.</p>
+     * <p>The task ID. You can call the DescribeTasks operation to query task IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

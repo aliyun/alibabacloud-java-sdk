@@ -71,7 +71,7 @@ public class CreateReplicationLinkRequest extends TeaModel {
     /**
      * <p>The name of the source instance.</p>
      * <blockquote>
-     * <p> You must specify this parameter if <strong>SourceCategory</strong> is set to <strong>aliyunRDS</strong>.</p>
+     * <p> This parameter is required when you set the <strong>SourceCategory</strong> parameter to <strong>aliyunRDS</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -81,9 +81,9 @@ public class CreateReplicationLinkRequest extends TeaModel {
     public String sourceInstanceName;
 
     /**
-     * <p>The ID of the region where the source instance is located.</p>
+     * <p>The region ID of the source instance.</p>
      * <blockquote>
-     * <p> You must specify this parameter if <strong>SourceCategory</strong> is set to <strong>aliyunRDS</strong>.</p>
+     * <p> This parameter is required when you set the <strong>SourceCategory</strong> parameter to <strong>aliyunRDS</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -93,7 +93,7 @@ public class CreateReplicationLinkRequest extends TeaModel {
     public String sourceInstanceRegionId;
 
     /**
-     * <p>The port number of the source instance.</p>
+     * <p>The port of the source instance.</p>
      * 
      * <strong>example:</strong>
      * <p>5432</p>

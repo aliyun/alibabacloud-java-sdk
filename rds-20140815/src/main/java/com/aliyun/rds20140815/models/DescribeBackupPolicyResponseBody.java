@@ -343,6 +343,16 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("SupportVolumeShadowCopy")
     public Integer supportVolumeShadowCopy;
 
+    /**
+     * <p>Indicates whether log backups for SQL Server are performed verery five minutes.</p>
+     * <ul>
+     * <li>0: No</li>
+     * <li>1: Yes</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SupportsHighFrequencyBackup")
     public Long supportsHighFrequencyBackup;
 

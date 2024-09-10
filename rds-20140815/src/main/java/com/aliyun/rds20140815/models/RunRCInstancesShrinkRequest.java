@@ -28,6 +28,9 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     @NameInMap("ImageId")
     public String imageId;
 
@@ -147,6 +150,14 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public RunRCInstancesShrinkRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public RunRCInstancesShrinkRequest setImageId(String imageId) {

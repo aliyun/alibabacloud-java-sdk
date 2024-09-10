@@ -94,6 +94,20 @@ public class CreateDdrInstanceRequest extends TeaModel {
     @NameInMap("DBInstanceStorageType")
     public String DBInstanceStorageType;
 
+    /**
+     * <p>The ID of the customer master key (CMK) for cloud disk encryption. If this parameter is specified, cloud disk encryption is enabled and you must also specify the <strong>RoleARN</strong> parameter. Cloud disk encryption cannot be disabled after it is enabled. You can obtain the ID of the key in the KMS console or create a key. For more information, see <a href="https://help.aliyun.com/document_detail/181610.html">Create a key</a>.</p>
+     * <p>**</p>
+     * <p><strong>Notes</strong></p>
+     * <ul>
+     * <li><p>This parameter is applicable only to ApsaraDB RDS for SQL Server instances.</p>
+     * </li>
+     * <li><p>You can leave this parameter empty. If you do not specify this parameter, you only need to specify the <strong>RoleARN</strong> to use the service key that is managed by ApsaraDB RDS to encrypt cloud disks.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>749c1df7-<strong><strong>-</strong></strong>-<strong><strong>-</strong></strong></p>
+     */
     @NameInMap("EncryptionKey")
     public String encryptionKey;
 
@@ -240,6 +254,15 @@ public class CreateDdrInstanceRequest extends TeaModel {
     @NameInMap("RestoreType")
     public String restoreType;
 
+    /**
+     * <p>The Alibaba Cloud Resource Name (ARN) that is provided by your Alibaba Cloud account for Resource Access Management (RAM) users. RAM users can use the ARN to connect to ApsaraDB RDS to Key Management Service (KMS). You can call the <a href="https://help.aliyun.com/document_detail/2628797.html">CheckCloudResourceAuthorized</a> operation to query the ARN.</p>
+     * <blockquote>
+     * <p> This parameter is applicable only to ApsaraDB RDS for SQL Server instances.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram::1406****:role/aliyunrdsinstanceencryptiondefaultrole</p>
+     */
     @NameInMap("RoleARN")
     public String roleARN;
 

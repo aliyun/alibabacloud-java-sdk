@@ -14,7 +14,7 @@ public class DescribeHistoryTasksStatRequest extends TeaModel {
     public Integer fromExecTime;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>t<em>HH:mm:ss</em>z format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -110,7 +110,7 @@ public class DescribeHistoryTasksStatRequest extends TeaModel {
     public Integer toExecTime;
 
     /**
-     * <p>The end of the time range to query. Only tasks that have a start time earlier than or equal to the time specified by this parameter are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. Only tasks that have a start time earlier than or equal to the time specified by this parameter are queried. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

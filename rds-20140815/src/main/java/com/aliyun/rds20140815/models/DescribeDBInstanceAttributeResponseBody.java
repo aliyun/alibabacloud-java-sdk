@@ -307,6 +307,16 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtra extends TeaModel {
+        /**
+         * <p>Instance account group policy.</p>
+         * <ul>
+         * <li>MaximumPasswordAge: Maximum usage time</li>
+         * <li>MinimumPasswordAge: Minimum usage time</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;MaximumPasswordAge&quot;: 42,&quot;MinimumPasswordAge&quot;: 30}</p>
+         */
         @NameInMap("AccountSecurityPolicy")
         public String accountSecurityPolicy;
 
@@ -876,9 +886,21 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("DeletionProtection")
         public Boolean deletionProtection;
 
+        /**
+         * <p>Disaster recovery source instance information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;replicatorAccount&quot;: &quot;<strong><strong><strong>&quot;,&quot;sourcePort&quot;:</strong></strong></strong>,&quot;sourceAddress&quot;: &quot;pgm-2ze******&quot;,&quot;sourceCategory&quot;: &quot;aliyunRDS&quot;,&quot;sourceInstanceRegionId&quot;: &quot;cn-<strong><strong><strong>&quot;,&quot;replicatorPassword&quot;: &quot;</strong></strong></strong>&quot;,&quot;sourceInstanceName&quot;: &quot;pgm-2ze******&quot;}</p>
+         */
         @NameInMap("DisasterRecoveryInfo")
         public String disasterRecoveryInfo;
 
+        /**
+         * <p>All disaster recovery instances of the current instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;regionId&quot;:&quot;cn-<strong><strong><strong>&quot;,&quot;insName&quot;:&quot;pgm-2ze</strong></strong></strong>&quot;},{&quot;regionId&quot;:&quot;cn-<strong><strong><strong>&quot;,&quot;insName&quot;:&quot;pgm-2ze</strong></strong></strong>&quot;}]</p>
+         */
         @NameInMap("DisasterRecoveryInstances")
         public String disasterRecoveryInstances;
 
