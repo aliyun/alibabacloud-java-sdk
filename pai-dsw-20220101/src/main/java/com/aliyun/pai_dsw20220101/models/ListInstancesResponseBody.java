@@ -986,6 +986,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("CloudDisks")
         public java.util.List<ListInstancesResponseBodyInstancesCloudDisks> cloudDisks;
 
+        @NameInMap("CredentialConfig")
+        public CredentialConfig credentialConfig;
+
         @NameInMap("Datasets")
         public java.util.List<ListInstancesResponseBodyInstancesDatasets> datasets;
 
@@ -1258,6 +1261,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public java.util.List<ListInstancesResponseBodyInstancesCloudDisks> getCloudDisks() {
             return this.cloudDisks;
+        }
+
+        public ListInstancesResponseBodyInstances setCredentialConfig(CredentialConfig credentialConfig) {
+            this.credentialConfig = credentialConfig;
+            return this;
+        }
+        public CredentialConfig getCredentialConfig() {
+            return this.credentialConfig;
         }
 
         public ListInstancesResponseBodyInstances setDatasets(java.util.List<ListInstancesResponseBodyInstancesDatasets> datasets) {
