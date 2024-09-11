@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>wyota20210420</artifactId>
-  <version>1.0.3</version>
+  <version>1.1.0</version>
   <packaging>jar</packaging>
   <name>wyota20210420</name>
   <description>Alibaba Cloud wyota (20210420) SDK for Java
