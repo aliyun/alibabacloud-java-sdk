@@ -14,6 +14,9 @@ public class ListGrantVSwitchesToCenRequest extends TeaModel {
     @NameInMap("CenId")
     public String cenId;
 
+    @NameInMap("EnabledIpv6")
+    public Boolean enabledIpv6;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -90,6 +93,14 @@ public class ListGrantVSwitchesToCenRequest extends TeaModel {
     }
     public String getCenId() {
         return this.cenId;
+    }
+
+    public ListGrantVSwitchesToCenRequest setEnabledIpv6(Boolean enabledIpv6) {
+        this.enabledIpv6 = enabledIpv6;
+        return this;
+    }
+    public Boolean getEnabledIpv6() {
+        return this.enabledIpv6;
     }
 
     public ListGrantVSwitchesToCenRequest setOwnerAccount(String ownerAccount) {
