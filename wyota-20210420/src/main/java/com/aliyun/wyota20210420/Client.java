@@ -3862,6 +3862,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>解绑免密登录用户</p>
+     * 
+     * @param request UnbindPasswordFreeLoginUserRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UnbindPasswordFreeLoginUserResponse
+     */
+    public UnbindPasswordFreeLoginUserResponse unbindPasswordFreeLoginUserWithOptions(UnbindPasswordFreeLoginUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.serialNumber)) {
+            body.put("SerialNumber", request.serialNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uuid)) {
+            body.put("Uuid", request.uuid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UnbindPasswordFreeLoginUser"),
+            new TeaPair("version", "2021-04-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UnbindPasswordFreeLoginUserResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>解绑免密登录用户</p>
+     * 
+     * @param request UnbindPasswordFreeLoginUserRequest
+     * @return UnbindPasswordFreeLoginUserResponse
+     */
+    public UnbindPasswordFreeLoginUserResponse unbindPasswordFreeLoginUser(UnbindPasswordFreeLoginUserRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.unbindPasswordFreeLoginUserWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>更新设备别名</p>
      * 
      * @param request UpdateAliasRequest
