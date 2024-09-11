@@ -204,6 +204,9 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
     }
 
     public static class CreateTrafficMarkingPolicyRequestTrafficMatchRules extends TeaModel {
+        @NameInMap("AddressFamily")
+        public String addressFamily;
+
         /**
          * <p>The destination CIDR block that is used to match packets.</p>
          * <p>Packets whose destination IP addresses fall into the specified destination CIDR block meet the traffic classification rule. If you do not specify a destination CIDR block, all packets meet the traffic classification rule.</p>
@@ -319,6 +322,14 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
         public static CreateTrafficMarkingPolicyRequestTrafficMatchRules build(java.util.Map<String, ?> map) throws Exception {
             CreateTrafficMarkingPolicyRequestTrafficMatchRules self = new CreateTrafficMarkingPolicyRequestTrafficMatchRules();
             return TeaModel.build(map, self);
+        }
+
+        public CreateTrafficMarkingPolicyRequestTrafficMatchRules setAddressFamily(String addressFamily) {
+            this.addressFamily = addressFamily;
+            return this;
+        }
+        public String getAddressFamily() {
+            return this.addressFamily;
         }
 
         public CreateTrafficMarkingPolicyRequestTrafficMatchRules setDstCidr(String dstCidr) {

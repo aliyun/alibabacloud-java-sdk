@@ -179,6 +179,9 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends TeaModel {
     }
 
     public static class UpdateTrafficMarkingPolicyAttributeRequestAddTrafficMatchRules extends TeaModel {
+        @NameInMap("AddressFamily")
+        public String addressFamily;
+
         /**
          * <p>The destination CIDR block that is used to match packets.</p>
          * <p>Packets whose destination IP addresses fall into the specified destination CIDR block meet the traffic classification rule. If you do not specify a destination CIDR block, all packets meet the traffic classification rule.</p>
@@ -296,6 +299,14 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public UpdateTrafficMarkingPolicyAttributeRequestAddTrafficMatchRules setAddressFamily(String addressFamily) {
+            this.addressFamily = addressFamily;
+            return this;
+        }
+        public String getAddressFamily() {
+            return this.addressFamily;
+        }
+
         public UpdateTrafficMarkingPolicyAttributeRequestAddTrafficMatchRules setDstCidr(String dstCidr) {
             this.dstCidr = dstCidr;
             return this;
@@ -363,6 +374,9 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends TeaModel {
     }
 
     public static class UpdateTrafficMarkingPolicyAttributeRequestDeleteTrafficMatchRules extends TeaModel {
+        @NameInMap("AddressFamily")
+        public String addressFamily;
+
         /**
          * <p>The destination CIDR block that is used to match packets.</p>
          * 
@@ -435,6 +449,14 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends TeaModel {
         public static UpdateTrafficMarkingPolicyAttributeRequestDeleteTrafficMatchRules build(java.util.Map<String, ?> map) throws Exception {
             UpdateTrafficMarkingPolicyAttributeRequestDeleteTrafficMatchRules self = new UpdateTrafficMarkingPolicyAttributeRequestDeleteTrafficMatchRules();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateTrafficMarkingPolicyAttributeRequestDeleteTrafficMatchRules setAddressFamily(String addressFamily) {
+            this.addressFamily = addressFamily;
+            return this;
+        }
+        public String getAddressFamily() {
+            return this.addressFamily;
         }
 
         public UpdateTrafficMarkingPolicyAttributeRequestDeleteTrafficMatchRules setDstCidr(String dstCidr) {

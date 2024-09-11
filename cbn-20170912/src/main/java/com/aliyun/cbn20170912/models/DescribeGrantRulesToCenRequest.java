@@ -32,6 +32,9 @@ public class DescribeGrantRulesToCenRequest extends TeaModel {
     @NameInMap("ChildInstanceOwnerId")
     public Long childInstanceOwnerId;
 
+    @NameInMap("EnabledIpv6")
+    public Boolean enabledIpv6;
+
     /**
      * <ul>
      * <li>If you do not set <strong>MaxResults</strong>, it indicates that you do not need to query results in batches. The value of <strong>MaxResults</strong> in the response indicates the total number of entries returned.</li>
@@ -122,6 +125,14 @@ public class DescribeGrantRulesToCenRequest extends TeaModel {
     }
     public Long getChildInstanceOwnerId() {
         return this.childInstanceOwnerId;
+    }
+
+    public DescribeGrantRulesToCenRequest setEnabledIpv6(Boolean enabledIpv6) {
+        this.enabledIpv6 = enabledIpv6;
+        return this;
+    }
+    public Boolean getEnabledIpv6() {
+        return this.enabledIpv6;
     }
 
     public DescribeGrantRulesToCenRequest setMaxResults(Long maxResults) {

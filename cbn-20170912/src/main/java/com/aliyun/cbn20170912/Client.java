@@ -2980,12 +2980,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Attaches virtual private clouds (VPCs) that you want to connect to a transit router. After you attach the VPCs to the same transit router, the VPCs can communicate with each other.</p>
      * 
-     * @param request CreateTransitRouterVpcAttachmentRequest
+     * @param tmpReq CreateTransitRouterVpcAttachmentRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateTransitRouterVpcAttachmentResponse
      */
-    public CreateTransitRouterVpcAttachmentResponse createTransitRouterVpcAttachmentWithOptions(CreateTransitRouterVpcAttachmentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateTransitRouterVpcAttachmentResponse createTransitRouterVpcAttachmentWithOptions(CreateTransitRouterVpcAttachmentRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateTransitRouterVpcAttachmentShrinkRequest request = new CreateTransitRouterVpcAttachmentShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.transitRouterVPCAttachmentOptions)) {
+            request.transitRouterVPCAttachmentOptionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.transitRouterVPCAttachmentOptions, "TransitRouterVPCAttachmentOptions", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.autoPublishRouteEnabled)) {
             query.put("AutoPublishRouteEnabled", request.autoPublishRouteEnabled);
@@ -3041,6 +3047,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.transitRouterId)) {
             query.put("TransitRouterId", request.transitRouterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transitRouterVPCAttachmentOptionsShrink)) {
+            query.put("TransitRouterVPCAttachmentOptions", request.transitRouterVPCAttachmentOptionsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
@@ -6718,6 +6728,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ChildInstanceOwnerId", request.childInstanceOwnerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enabledIpv6)) {
+            query.put("EnabledIpv6", request.enabledIpv6);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("MaxResults", request.maxResults);
         }
@@ -8406,6 +8420,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.cenId)) {
             query.put("CenId", request.cenId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enabledIpv6)) {
+            query.put("EnabledIpv6", request.enabledIpv6);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
@@ -13629,12 +13647,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Modifies the name and description of a virtual private cloud (VPC) connection on an Enterprise Edition transit router.</p>
      * 
-     * @param request UpdateTransitRouterVpcAttachmentAttributeRequest
+     * @param tmpReq UpdateTransitRouterVpcAttachmentAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateTransitRouterVpcAttachmentAttributeResponse
      */
-    public UpdateTransitRouterVpcAttachmentAttributeResponse updateTransitRouterVpcAttachmentAttributeWithOptions(UpdateTransitRouterVpcAttachmentAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public UpdateTransitRouterVpcAttachmentAttributeResponse updateTransitRouterVpcAttachmentAttributeWithOptions(UpdateTransitRouterVpcAttachmentAttributeRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateTransitRouterVpcAttachmentAttributeShrinkRequest request = new UpdateTransitRouterVpcAttachmentAttributeShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.transitRouterVPCAttachmentOptions)) {
+            request.transitRouterVPCAttachmentOptionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.transitRouterVPCAttachmentOptions, "TransitRouterVPCAttachmentOptions", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.autoPublishRouteEnabled)) {
             query.put("AutoPublishRouteEnabled", request.autoPublishRouteEnabled);
@@ -13674,6 +13698,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.transitRouterAttachmentName)) {
             query.put("TransitRouterAttachmentName", request.transitRouterAttachmentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transitRouterVPCAttachmentOptionsShrink)) {
+            query.put("TransitRouterVPCAttachmentOptions", request.transitRouterVPCAttachmentOptionsShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

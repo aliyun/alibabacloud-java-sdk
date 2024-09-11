@@ -3,7 +3,7 @@ package com.aliyun.cbn20170912.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateTransitRouterVpcAttachmentAttributeRequest extends TeaModel {
+public class UpdateTransitRouterVpcAttachmentAttributeShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to allow the Enterprise Edition transit router to advertise routes to the VPC. Valid values:</p>
      * <ul>
@@ -86,14 +86,14 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends TeaModel {
     public String transitRouterAttachmentName;
 
     @NameInMap("TransitRouterVPCAttachmentOptions")
-    public java.util.Map<String, String> transitRouterVPCAttachmentOptions;
+    public String transitRouterVPCAttachmentOptionsShrink;
 
-    public static UpdateTransitRouterVpcAttachmentAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
-        UpdateTransitRouterVpcAttachmentAttributeRequest self = new UpdateTransitRouterVpcAttachmentAttributeRequest();
+    public static UpdateTransitRouterVpcAttachmentAttributeShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateTransitRouterVpcAttachmentAttributeShrinkRequest self = new UpdateTransitRouterVpcAttachmentAttributeShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateTransitRouterVpcAttachmentAttributeRequest setAutoPublishRouteEnabled(Boolean autoPublishRouteEnabled) {
+    public UpdateTransitRouterVpcAttachmentAttributeShrinkRequest setAutoPublishRouteEnabled(Boolean autoPublishRouteEnabled) {
         this.autoPublishRouteEnabled = autoPublishRouteEnabled;
         return this;
     }
@@ -101,7 +101,7 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends TeaModel {
         return this.autoPublishRouteEnabled;
     }
 
-    public UpdateTransitRouterVpcAttachmentAttributeRequest setClientToken(String clientToken) {
+    public UpdateTransitRouterVpcAttachmentAttributeShrinkRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -109,7 +109,7 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public UpdateTransitRouterVpcAttachmentAttributeRequest setDryRun(Boolean dryRun) {
+    public UpdateTransitRouterVpcAttachmentAttributeShrinkRequest setDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
@@ -117,7 +117,7 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends TeaModel {
         return this.dryRun;
     }
 
-    public UpdateTransitRouterVpcAttachmentAttributeRequest setOwnerAccount(String ownerAccount) {
+    public UpdateTransitRouterVpcAttachmentAttributeShrinkRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -125,7 +125,7 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public UpdateTransitRouterVpcAttachmentAttributeRequest setOwnerId(Long ownerId) {
+    public UpdateTransitRouterVpcAttachmentAttributeShrinkRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -133,7 +133,7 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public UpdateTransitRouterVpcAttachmentAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public UpdateTransitRouterVpcAttachmentAttributeShrinkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -141,7 +141,7 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public UpdateTransitRouterVpcAttachmentAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
+    public UpdateTransitRouterVpcAttachmentAttributeShrinkRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -149,7 +149,7 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public UpdateTransitRouterVpcAttachmentAttributeRequest setTransitRouterAttachmentDescription(String transitRouterAttachmentDescription) {
+    public UpdateTransitRouterVpcAttachmentAttributeShrinkRequest setTransitRouterAttachmentDescription(String transitRouterAttachmentDescription) {
         this.transitRouterAttachmentDescription = transitRouterAttachmentDescription;
         return this;
     }
@@ -157,7 +157,7 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends TeaModel {
         return this.transitRouterAttachmentDescription;
     }
 
-    public UpdateTransitRouterVpcAttachmentAttributeRequest setTransitRouterAttachmentId(String transitRouterAttachmentId) {
+    public UpdateTransitRouterVpcAttachmentAttributeShrinkRequest setTransitRouterAttachmentId(String transitRouterAttachmentId) {
         this.transitRouterAttachmentId = transitRouterAttachmentId;
         return this;
     }
@@ -165,7 +165,7 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends TeaModel {
         return this.transitRouterAttachmentId;
     }
 
-    public UpdateTransitRouterVpcAttachmentAttributeRequest setTransitRouterAttachmentName(String transitRouterAttachmentName) {
+    public UpdateTransitRouterVpcAttachmentAttributeShrinkRequest setTransitRouterAttachmentName(String transitRouterAttachmentName) {
         this.transitRouterAttachmentName = transitRouterAttachmentName;
         return this;
     }
@@ -173,12 +173,12 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends TeaModel {
         return this.transitRouterAttachmentName;
     }
 
-    public UpdateTransitRouterVpcAttachmentAttributeRequest setTransitRouterVPCAttachmentOptions(java.util.Map<String, String> transitRouterVPCAttachmentOptions) {
-        this.transitRouterVPCAttachmentOptions = transitRouterVPCAttachmentOptions;
+    public UpdateTransitRouterVpcAttachmentAttributeShrinkRequest setTransitRouterVPCAttachmentOptionsShrink(String transitRouterVPCAttachmentOptionsShrink) {
+        this.transitRouterVPCAttachmentOptionsShrink = transitRouterVPCAttachmentOptionsShrink;
         return this;
     }
-    public java.util.Map<String, String> getTransitRouterVPCAttachmentOptions() {
-        return this.transitRouterVPCAttachmentOptions;
+    public String getTransitRouterVPCAttachmentOptionsShrink() {
+        return this.transitRouterVPCAttachmentOptionsShrink;
     }
 
 }

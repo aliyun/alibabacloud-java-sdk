@@ -3,7 +3,7 @@ package com.aliyun.cbn20170912.models;
 
 import com.aliyun.tea.*;
 
-public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
+public class CreateTransitRouterVpcAttachmentShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the Enterprise Edition transit router to automatically advertise routes to VPCs. Valid values:</p>
      * <ul>
@@ -88,7 +88,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
      * <p>You can specify at most 20 tags in each call.</p>
      */
     @NameInMap("Tag")
-    public java.util.List<CreateTransitRouterVpcAttachmentRequestTag> tag;
+    public java.util.List<CreateTransitRouterVpcAttachmentShrinkRequestTag> tag;
 
     /**
      * <p>The description of the VPC connection.</p>
@@ -120,7 +120,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     public String transitRouterId;
 
     @NameInMap("TransitRouterVPCAttachmentOptions")
-    public java.util.Map<String, String> transitRouterVPCAttachmentOptions;
+    public String transitRouterVPCAttachmentOptionsShrink;
 
     /**
      * <p>The VPC ID.</p>
@@ -150,14 +150,14 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
      * <p>This parameter is required.</p>
      */
     @NameInMap("ZoneMappings")
-    public java.util.List<CreateTransitRouterVpcAttachmentRequestZoneMappings> zoneMappings;
+    public java.util.List<CreateTransitRouterVpcAttachmentShrinkRequestZoneMappings> zoneMappings;
 
-    public static CreateTransitRouterVpcAttachmentRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateTransitRouterVpcAttachmentRequest self = new CreateTransitRouterVpcAttachmentRequest();
+    public static CreateTransitRouterVpcAttachmentShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateTransitRouterVpcAttachmentShrinkRequest self = new CreateTransitRouterVpcAttachmentShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateTransitRouterVpcAttachmentRequest setAutoPublishRouteEnabled(Boolean autoPublishRouteEnabled) {
+    public CreateTransitRouterVpcAttachmentShrinkRequest setAutoPublishRouteEnabled(Boolean autoPublishRouteEnabled) {
         this.autoPublishRouteEnabled = autoPublishRouteEnabled;
         return this;
     }
@@ -165,7 +165,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
         return this.autoPublishRouteEnabled;
     }
 
-    public CreateTransitRouterVpcAttachmentRequest setCenId(String cenId) {
+    public CreateTransitRouterVpcAttachmentShrinkRequest setCenId(String cenId) {
         this.cenId = cenId;
         return this;
     }
@@ -173,7 +173,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
         return this.cenId;
     }
 
-    public CreateTransitRouterVpcAttachmentRequest setChargeType(String chargeType) {
+    public CreateTransitRouterVpcAttachmentShrinkRequest setChargeType(String chargeType) {
         this.chargeType = chargeType;
         return this;
     }
@@ -181,7 +181,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
         return this.chargeType;
     }
 
-    public CreateTransitRouterVpcAttachmentRequest setClientToken(String clientToken) {
+    public CreateTransitRouterVpcAttachmentShrinkRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -189,7 +189,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateTransitRouterVpcAttachmentRequest setDryRun(Boolean dryRun) {
+    public CreateTransitRouterVpcAttachmentShrinkRequest setDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
@@ -197,7 +197,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
         return this.dryRun;
     }
 
-    public CreateTransitRouterVpcAttachmentRequest setOwnerAccount(String ownerAccount) {
+    public CreateTransitRouterVpcAttachmentShrinkRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -205,7 +205,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public CreateTransitRouterVpcAttachmentRequest setOwnerId(Long ownerId) {
+    public CreateTransitRouterVpcAttachmentShrinkRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -213,7 +213,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public CreateTransitRouterVpcAttachmentRequest setRegionId(String regionId) {
+    public CreateTransitRouterVpcAttachmentShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -221,7 +221,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CreateTransitRouterVpcAttachmentRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public CreateTransitRouterVpcAttachmentShrinkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -229,7 +229,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public CreateTransitRouterVpcAttachmentRequest setResourceOwnerId(Long resourceOwnerId) {
+    public CreateTransitRouterVpcAttachmentShrinkRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -237,15 +237,15 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public CreateTransitRouterVpcAttachmentRequest setTag(java.util.List<CreateTransitRouterVpcAttachmentRequestTag> tag) {
+    public CreateTransitRouterVpcAttachmentShrinkRequest setTag(java.util.List<CreateTransitRouterVpcAttachmentShrinkRequestTag> tag) {
         this.tag = tag;
         return this;
     }
-    public java.util.List<CreateTransitRouterVpcAttachmentRequestTag> getTag() {
+    public java.util.List<CreateTransitRouterVpcAttachmentShrinkRequestTag> getTag() {
         return this.tag;
     }
 
-    public CreateTransitRouterVpcAttachmentRequest setTransitRouterAttachmentDescription(String transitRouterAttachmentDescription) {
+    public CreateTransitRouterVpcAttachmentShrinkRequest setTransitRouterAttachmentDescription(String transitRouterAttachmentDescription) {
         this.transitRouterAttachmentDescription = transitRouterAttachmentDescription;
         return this;
     }
@@ -253,7 +253,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
         return this.transitRouterAttachmentDescription;
     }
 
-    public CreateTransitRouterVpcAttachmentRequest setTransitRouterAttachmentName(String transitRouterAttachmentName) {
+    public CreateTransitRouterVpcAttachmentShrinkRequest setTransitRouterAttachmentName(String transitRouterAttachmentName) {
         this.transitRouterAttachmentName = transitRouterAttachmentName;
         return this;
     }
@@ -261,7 +261,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
         return this.transitRouterAttachmentName;
     }
 
-    public CreateTransitRouterVpcAttachmentRequest setTransitRouterId(String transitRouterId) {
+    public CreateTransitRouterVpcAttachmentShrinkRequest setTransitRouterId(String transitRouterId) {
         this.transitRouterId = transitRouterId;
         return this;
     }
@@ -269,15 +269,15 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
         return this.transitRouterId;
     }
 
-    public CreateTransitRouterVpcAttachmentRequest setTransitRouterVPCAttachmentOptions(java.util.Map<String, String> transitRouterVPCAttachmentOptions) {
-        this.transitRouterVPCAttachmentOptions = transitRouterVPCAttachmentOptions;
+    public CreateTransitRouterVpcAttachmentShrinkRequest setTransitRouterVPCAttachmentOptionsShrink(String transitRouterVPCAttachmentOptionsShrink) {
+        this.transitRouterVPCAttachmentOptionsShrink = transitRouterVPCAttachmentOptionsShrink;
         return this;
     }
-    public java.util.Map<String, String> getTransitRouterVPCAttachmentOptions() {
-        return this.transitRouterVPCAttachmentOptions;
+    public String getTransitRouterVPCAttachmentOptionsShrink() {
+        return this.transitRouterVPCAttachmentOptionsShrink;
     }
 
-    public CreateTransitRouterVpcAttachmentRequest setVpcId(String vpcId) {
+    public CreateTransitRouterVpcAttachmentShrinkRequest setVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
@@ -285,7 +285,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
         return this.vpcId;
     }
 
-    public CreateTransitRouterVpcAttachmentRequest setVpcOwnerId(Long vpcOwnerId) {
+    public CreateTransitRouterVpcAttachmentShrinkRequest setVpcOwnerId(Long vpcOwnerId) {
         this.vpcOwnerId = vpcOwnerId;
         return this;
     }
@@ -293,15 +293,15 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
         return this.vpcOwnerId;
     }
 
-    public CreateTransitRouterVpcAttachmentRequest setZoneMappings(java.util.List<CreateTransitRouterVpcAttachmentRequestZoneMappings> zoneMappings) {
+    public CreateTransitRouterVpcAttachmentShrinkRequest setZoneMappings(java.util.List<CreateTransitRouterVpcAttachmentShrinkRequestZoneMappings> zoneMappings) {
         this.zoneMappings = zoneMappings;
         return this;
     }
-    public java.util.List<CreateTransitRouterVpcAttachmentRequestZoneMappings> getZoneMappings() {
+    public java.util.List<CreateTransitRouterVpcAttachmentShrinkRequestZoneMappings> getZoneMappings() {
         return this.zoneMappings;
     }
 
-    public static class CreateTransitRouterVpcAttachmentRequestTag extends TeaModel {
+    public static class CreateTransitRouterVpcAttachmentShrinkRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
          * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
@@ -324,12 +324,12 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static CreateTransitRouterVpcAttachmentRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            CreateTransitRouterVpcAttachmentRequestTag self = new CreateTransitRouterVpcAttachmentRequestTag();
+        public static CreateTransitRouterVpcAttachmentShrinkRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateTransitRouterVpcAttachmentShrinkRequestTag self = new CreateTransitRouterVpcAttachmentShrinkRequestTag();
             return TeaModel.build(map, self);
         }
 
-        public CreateTransitRouterVpcAttachmentRequestTag setKey(String key) {
+        public CreateTransitRouterVpcAttachmentShrinkRequestTag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -337,7 +337,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
             return this.key;
         }
 
-        public CreateTransitRouterVpcAttachmentRequestTag setValue(String value) {
+        public CreateTransitRouterVpcAttachmentShrinkRequestTag setValue(String value) {
             this.value = value;
             return this;
         }
@@ -347,7 +347,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
 
     }
 
-    public static class CreateTransitRouterVpcAttachmentRequestZoneMappings extends TeaModel {
+    public static class CreateTransitRouterVpcAttachmentShrinkRequestZoneMappings extends TeaModel {
         /**
          * <p>A vSwitch that is deployed in the zone that supports Enterprise Edition transit routers.</p>
          * <p>You can specify vSwitches for at most 10 zones in each call.</p>
@@ -371,12 +371,12 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
         @NameInMap("ZoneId")
         public String zoneId;
 
-        public static CreateTransitRouterVpcAttachmentRequestZoneMappings build(java.util.Map<String, ?> map) throws Exception {
-            CreateTransitRouterVpcAttachmentRequestZoneMappings self = new CreateTransitRouterVpcAttachmentRequestZoneMappings();
+        public static CreateTransitRouterVpcAttachmentShrinkRequestZoneMappings build(java.util.Map<String, ?> map) throws Exception {
+            CreateTransitRouterVpcAttachmentShrinkRequestZoneMappings self = new CreateTransitRouterVpcAttachmentShrinkRequestZoneMappings();
             return TeaModel.build(map, self);
         }
 
-        public CreateTransitRouterVpcAttachmentRequestZoneMappings setVSwitchId(String vSwitchId) {
+        public CreateTransitRouterVpcAttachmentShrinkRequestZoneMappings setVSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
             return this;
         }
@@ -384,7 +384,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
             return this.vSwitchId;
         }
 
-        public CreateTransitRouterVpcAttachmentRequestZoneMappings setZoneId(String zoneId) {
+        public CreateTransitRouterVpcAttachmentShrinkRequestZoneMappings setZoneId(String zoneId) {
             this.zoneId = zoneId;
             return this;
         }

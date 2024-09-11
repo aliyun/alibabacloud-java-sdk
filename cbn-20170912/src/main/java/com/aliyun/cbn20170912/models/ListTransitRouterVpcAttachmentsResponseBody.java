@@ -318,6 +318,9 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         @NameInMap("TransitRouterId")
         public String transitRouterId;
 
+        @NameInMap("TransitRouterVPCAttachmentOptions")
+        public java.util.Map<String, String> transitRouterVPCAttachmentOptions;
+
         /**
          * <p>The VPC ID.</p>
          * 
@@ -450,6 +453,14 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         }
         public String getTransitRouterId() {
             return this.transitRouterId;
+        }
+
+        public ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachments setTransitRouterVPCAttachmentOptions(java.util.Map<String, String> transitRouterVPCAttachmentOptions) {
+            this.transitRouterVPCAttachmentOptions = transitRouterVPCAttachmentOptions;
+            return this;
+        }
+        public java.util.Map<String, String> getTransitRouterVPCAttachmentOptions() {
+            return this.transitRouterVPCAttachmentOptions;
         }
 
         public ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachments setVpcId(String vpcId) {
