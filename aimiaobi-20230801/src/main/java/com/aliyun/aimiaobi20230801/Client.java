@@ -304,6 +304,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>根据主题删除自定义主题事件</p>
+     * 
+     * @param request DeleteCustomTopicByTopicRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCustomTopicByTopicResponse
+     */
+    public DeleteCustomTopicByTopicResponse deleteCustomTopicByTopicWithOptions(DeleteCustomTopicByTopicRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentKey)) {
+            query.put("AgentKey", request.agentKey);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.topic)) {
+            body.put("Topic", request.topic);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCustomTopicByTopic"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCustomTopicByTopicResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>根据主题删除自定义主题事件</p>
+     * 
+     * @param request DeleteCustomTopicByTopicRequest
+     * @return DeleteCustomTopicByTopicResponse
+     */
+    public DeleteCustomTopicByTopicResponse deleteCustomTopicByTopic(DeleteCustomTopicByTopicRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteCustomTopicByTopicWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>根据自定义观点ID删除自定义观点</p>
+     * 
+     * @param request DeleteCustomTopicViewPointByIdRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCustomTopicViewPointByIdResponse
+     */
+    public DeleteCustomTopicViewPointByIdResponse deleteCustomTopicViewPointByIdWithOptions(DeleteCustomTopicViewPointByIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentKey)) {
+            query.put("AgentKey", request.agentKey);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customViewPointId)) {
+            body.put("CustomViewPointId", request.customViewPointId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCustomTopicViewPointById"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCustomTopicViewPointByIdResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>根据自定义观点ID删除自定义观点</p>
+     * 
+     * @param request DeleteCustomTopicViewPointByIdRequest
+     * @return DeleteCustomTopicViewPointByIdResponse
+     */
+    public DeleteCustomTopicViewPointByIdResponse deleteCustomTopicViewPointById(DeleteCustomTopicViewPointByIdRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteCustomTopicViewPointByIdWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>文档管理-删除。</p>
      * 
      * @param request DeleteGeneratedContentRequest
@@ -560,6 +660,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ExportGeneratedContentResponse exportGeneratedContent(ExportGeneratedContentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.exportGeneratedContentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>导出选题策划文档，响应为一个可公开访问的URL。一小时后失效</p>
+     * 
+     * @param tmpReq ExportHotTopicPlanningProposalsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExportHotTopicPlanningProposalsResponse
+     */
+    public ExportHotTopicPlanningProposalsResponse exportHotTopicPlanningProposalsWithOptions(ExportHotTopicPlanningProposalsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ExportHotTopicPlanningProposalsShrinkRequest request = new ExportHotTopicPlanningProposalsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.customViewPointIds)) {
+            request.customViewPointIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.customViewPointIds, "CustomViewPointIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.titles)) {
+            request.titlesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.titles, "Titles", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentKey)) {
+            query.put("AgentKey", request.agentKey);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customViewPointIdsShrink)) {
+            body.put("CustomViewPointIds", request.customViewPointIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.exportType)) {
+            body.put("ExportType", request.exportType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.titlesShrink)) {
+            body.put("Titles", request.titlesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topic)) {
+            body.put("Topic", request.topic);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topicSource)) {
+            body.put("TopicSource", request.topicSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.viewPointType)) {
+            body.put("ViewPointType", request.viewPointType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExportHotTopicPlanningProposals"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExportHotTopicPlanningProposalsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>导出选题策划文档，响应为一个可公开访问的URL。一小时后失效</p>
+     * 
+     * @param request ExportHotTopicPlanningProposalsRequest
+     * @return ExportHotTopicPlanningProposalsResponse
+     */
+    public ExportHotTopicPlanningProposalsResponse exportHotTopicPlanningProposals(ExportHotTopicPlanningProposalsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.exportHotTopicPlanningProposalsWithOptions(request, runtime);
     }
 
     /**
@@ -1034,6 +1214,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取自定义选题视角分析任务结果</p>
+     * 
+     * @param request GetCustomTopicSelectionPerspectiveAnalysisTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCustomTopicSelectionPerspectiveAnalysisTaskResponse
+     */
+    public GetCustomTopicSelectionPerspectiveAnalysisTaskResponse getCustomTopicSelectionPerspectiveAnalysisTaskWithOptions(GetCustomTopicSelectionPerspectiveAnalysisTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentKey)) {
+            query.put("AgentKey", request.agentKey);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCustomTopicSelectionPerspectiveAnalysisTask"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCustomTopicSelectionPerspectiveAnalysisTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取自定义选题视角分析任务结果</p>
+     * 
+     * @param request GetCustomTopicSelectionPerspectiveAnalysisTaskRequest
+     * @return GetCustomTopicSelectionPerspectiveAnalysisTaskResponse
+     */
+    public GetCustomTopicSelectionPerspectiveAnalysisTaskResponse getCustomTopicSelectionPerspectiveAnalysisTask(GetCustomTopicSelectionPerspectiveAnalysisTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCustomTopicSelectionPerspectiveAnalysisTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取系统数据源配置和个人配置</p>
      * 
      * @param request GetDataSourceOrderConfigRequest
@@ -1080,6 +1310,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetDataSourceOrderConfigResponse getDataSourceOrderConfig(GetDataSourceOrderConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getDataSourceOrderConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文档聚合任务结果</p>
+     * 
+     * @param request GetDocClusterTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDocClusterTaskResponse
+     */
+    public GetDocClusterTaskResponse getDocClusterTaskWithOptions(GetDocClusterTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentKey)) {
+            query.put("AgentKey", request.agentKey);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDocClusterTask"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDocClusterTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文档聚合任务结果</p>
+     * 
+     * @param request GetDocClusterTaskRequest
+     * @return GetDocClusterTaskResponse
+     */
+    public GetDocClusterTaskResponse getDocClusterTask(GetDocClusterTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDocClusterTaskWithOptions(request, runtime);
     }
 
     /**
@@ -1412,6 +1692,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetPropertiesResponse getProperties(GetPropertiesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getPropertiesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>根据ID获取热点事件信息</p>
+     * 
+     * @param request GetTopicByIdRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTopicByIdResponse
+     */
+    public GetTopicByIdResponse getTopicByIdWithOptions(GetTopicByIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentKey)) {
+            query.put("AgentKey", request.agentKey);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetTopicById"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTopicByIdResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>根据ID获取热点事件信息</p>
+     * 
+     * @param request GetTopicByIdRequest
+     * @return GetTopicByIdResponse
+     */
+    public GetTopicByIdResponse getTopicById(GetTopicByIdRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getTopicByIdWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取选题视角分析任务结果</p>
+     * 
+     * @param request GetTopicSelectionPerspectiveAnalysisTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTopicSelectionPerspectiveAnalysisTaskResponse
+     */
+    public GetTopicSelectionPerspectiveAnalysisTaskResponse getTopicSelectionPerspectiveAnalysisTaskWithOptions(GetTopicSelectionPerspectiveAnalysisTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentKey)) {
+            query.put("AgentKey", request.agentKey);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetTopicSelectionPerspectiveAnalysisTask"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTopicSelectionPerspectiveAnalysisTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取选题视角分析任务结果</p>
+     * 
+     * @param request GetTopicSelectionPerspectiveAnalysisTaskRequest
+     * @return GetTopicSelectionPerspectiveAnalysisTaskResponse
+     */
+    public GetTopicSelectionPerspectiveAnalysisTaskResponse getTopicSelectionPerspectiveAnalysisTask(GetTopicSelectionPerspectiveAnalysisTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getTopicSelectionPerspectiveAnalysisTaskWithOptions(request, runtime);
     }
 
     /**
@@ -1844,6 +2224,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>自定义视角列表</p>
+     * 
+     * @param tmpReq ListCustomViewPointsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCustomViewPointsResponse
+     */
+    public ListCustomViewPointsResponse listCustomViewPointsWithOptions(ListCustomViewPointsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListCustomViewPointsShrinkRequest request = new ListCustomViewPointsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.attitudes)) {
+            request.attitudesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.attitudes, "Attitudes", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.customViewPointIds)) {
+            request.customViewPointIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.customViewPointIds, "CustomViewPointIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentKey)) {
+            query.put("AgentKey", request.agentKey);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.attitude)) {
+            body.put("Attitude", request.attitude);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.attitudesShrink)) {
+            body.put("Attitudes", request.attitudesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customViewPointId)) {
+            body.put("CustomViewPointId", request.customViewPointId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customViewPointIdsShrink)) {
+            body.put("CustomViewPointIds", request.customViewPointIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topic)) {
+            body.put("Topic", request.topic);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topicId)) {
+            body.put("TopicId", request.topicId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCustomViewPoints"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCustomViewPointsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>自定义视角列表</p>
+     * 
+     * @param request ListCustomViewPointsRequest
+     * @return ListCustomViewPointsResponse
+     */
+    public ListCustomViewPointsResponse listCustomViewPoints(ListCustomViewPointsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCustomViewPointsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>生成历史列表</p>
      * 
      * @param request ListDialoguesRequest
@@ -1910,6 +2378,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListDialoguesResponse listDialogues(ListDialoguesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDialoguesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>新颖视角列表</p>
+     * 
+     * @param request ListFreshViewPointsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListFreshViewPointsResponse
+     */
+    public ListFreshViewPointsResponse listFreshViewPointsWithOptions(ListFreshViewPointsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentKey)) {
+            query.put("AgentKey", request.agentKey);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topic)) {
+            body.put("Topic", request.topic);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topicSource)) {
+            body.put("TopicSource", request.topicSource);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListFreshViewPoints"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListFreshViewPointsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>新颖视角列表</p>
+     * 
+     * @param request ListFreshViewPointsRequest
+     * @return ListFreshViewPointsResponse
+     */
+    public ListFreshViewPointsResponse listFreshViewPoints(ListFreshViewPointsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listFreshViewPointsWithOptions(request, runtime);
     }
 
     /**
@@ -2056,6 +2586,210 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListHotNewsWithTypeResponse listHotNewsWithType(ListHotNewsWithTypeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listHotNewsWithTypeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取所有平台热榜源列表</p>
+     * 
+     * @param request ListHotSourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListHotSourcesResponse
+     */
+    public ListHotSourcesResponse listHotSourcesWithOptions(ListHotSourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentKey)) {
+            query.put("AgentKey", request.agentKey);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListHotSources"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListHotSourcesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取所有平台热榜源列表</p>
+     * 
+     * @param request ListHotSourcesRequest
+     * @return ListHotSourcesResponse
+     */
+    public ListHotSourcesResponse listHotSources(ListHotSourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listHotSourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取热点事件列表</p>
+     * 
+     * @param tmpReq ListHotTopicsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListHotTopicsResponse
+     */
+    public ListHotTopicsResponse listHotTopicsWithOptions(ListHotTopicsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListHotTopicsShrinkRequest request = new ListHotTopicsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.topicIds)) {
+            request.topicIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.topicIds, "TopicIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.topics)) {
+            request.topicsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.topics, "Topics", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentKey)) {
+            query.put("AgentKey", request.agentKey);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topicIdsShrink)) {
+            body.put("TopicIds", request.topicIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topicQuery)) {
+            body.put("TopicQuery", request.topicQuery);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topicSource)) {
+            body.put("TopicSource", request.topicSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topicVersion)) {
+            body.put("TopicVersion", request.topicVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topicsShrink)) {
+            body.put("Topics", request.topicsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.withNews)) {
+            body.put("WithNews", request.withNews);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListHotTopics"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListHotTopicsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取热点事件列表</p>
+     * 
+     * @param request ListHotTopicsRequest
+     * @return ListHotTopicsResponse
+     */
+    public ListHotTopicsResponse listHotTopics(ListHotTopicsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listHotTopicsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>热门视角列表</p>
+     * 
+     * @param request ListHotViewPointsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListHotViewPointsResponse
+     */
+    public ListHotViewPointsResponse listHotViewPointsWithOptions(ListHotViewPointsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentKey)) {
+            query.put("AgentKey", request.agentKey);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topic)) {
+            body.put("Topic", request.topic);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topicSource)) {
+            body.put("TopicSource", request.topicSource);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListHotViewPoints"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListHotViewPointsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>热门视角列表</p>
+     * 
+     * @param request ListHotViewPointsRequest
+     * @return ListHotViewPointsResponse
+     */
+    public ListHotViewPointsResponse listHotViewPoints(ListHotViewPointsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listHotViewPointsWithOptions(request, runtime);
     }
 
     /**
@@ -2404,6 +3138,272 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取选题策划列表</p>
+     * 
+     * @param tmpReq ListPlanningProposalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPlanningProposalResponse
+     */
+    public ListPlanningProposalResponse listPlanningProposalWithOptions(ListPlanningProposalRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListPlanningProposalShrinkRequest request = new ListPlanningProposalShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.customViewPointIds)) {
+            request.customViewPointIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.customViewPointIds, "CustomViewPointIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.titles)) {
+            request.titlesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.titles, "Titles", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentKey)) {
+            query.put("AgentKey", request.agentKey);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customViewPointId)) {
+            body.put("CustomViewPointId", request.customViewPointId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customViewPointIdsShrink)) {
+            body.put("CustomViewPointIds", request.customViewPointIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.titlesShrink)) {
+            body.put("Titles", request.titlesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topic)) {
+            body.put("Topic", request.topic);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topicSource)) {
+            body.put("TopicSource", request.topicSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topicVersion)) {
+            body.put("TopicVersion", request.topicVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.viewPointType)) {
+            body.put("ViewPointType", request.viewPointType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListPlanningProposal"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPlanningProposalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取选题策划列表</p>
+     * 
+     * @param request ListPlanningProposalRequest
+     * @return ListPlanningProposalResponse
+     */
+    public ListPlanningProposalResponse listPlanningProposal(ListPlanningProposalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listPlanningProposalWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>时效性视角列表</p>
+     * 
+     * @param request ListTimedViewAttitudeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTimedViewAttitudeResponse
+     */
+    public ListTimedViewAttitudeResponse listTimedViewAttitudeWithOptions(ListTimedViewAttitudeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentKey)) {
+            query.put("AgentKey", request.agentKey);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topic)) {
+            body.put("Topic", request.topic);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topicSource)) {
+            body.put("TopicSource", request.topicSource);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTimedViewAttitude"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTimedViewAttitudeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>时效性视角列表</p>
+     * 
+     * @param request ListTimedViewAttitudeRequest
+     * @return ListTimedViewAttitudeResponse
+     */
+    public ListTimedViewAttitudeResponse listTimedViewAttitude(ListTimedViewAttitudeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listTimedViewAttitudeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取热点推荐事件</p>
+     * 
+     * @param request ListTopicRecommendEventListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTopicRecommendEventListResponse
+     */
+    public ListTopicRecommendEventListResponse listTopicRecommendEventListWithOptions(ListTopicRecommendEventListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentKey)) {
+            query.put("AgentKey", request.agentKey);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTopicRecommendEventList"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTopicRecommendEventListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取热点推荐事件</p>
+     * 
+     * @param request ListTopicRecommendEventListRequest
+     * @return ListTopicRecommendEventListResponse
+     */
+    public ListTopicRecommendEventListResponse listTopicRecommendEventList(ListTopicRecommendEventListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listTopicRecommendEventListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取主题事件推荐观点列表</p>
+     * 
+     * @param request ListTopicViewPointRecommendEventListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTopicViewPointRecommendEventListResponse
+     */
+    public ListTopicViewPointRecommendEventListResponse listTopicViewPointRecommendEventListWithOptions(ListTopicViewPointRecommendEventListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentKey)) {
+            query.put("AgentKey", request.agentKey);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTopicViewPointRecommendEventList"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTopicViewPointRecommendEventListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取主题事件推荐观点列表</p>
+     * 
+     * @param request ListTopicViewPointRecommendEventListRequest
+     * @return ListTopicViewPointRecommendEventListResponse
+     */
+    public ListTopicViewPointRecommendEventListResponse listTopicViewPointRecommendEventList(ListTopicViewPointRecommendEventListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listTopicViewPointRecommendEventListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取系统所有实例信息</p>
      * 
      * @param request ListVersionsRequest
@@ -2444,6 +3444,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListVersionsResponse listVersions(ListVersionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listVersionsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>网友视角列表</p>
+     * 
+     * @param request ListWebReviewPointsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListWebReviewPointsResponse
+     */
+    public ListWebReviewPointsResponse listWebReviewPointsWithOptions(ListWebReviewPointsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentKey)) {
+            query.put("AgentKey", request.agentKey);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topic)) {
+            body.put("Topic", request.topic);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topicSource)) {
+            body.put("TopicSource", request.topicSource);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListWebReviewPoints"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListWebReviewPointsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>网友视角列表</p>
+     * 
+     * @param request ListWebReviewPointsRequest
+     * @return ListWebReviewPointsResponse
+     */
+    public ListWebReviewPointsResponse listWebReviewPoints(ListWebReviewPointsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listWebReviewPointsWithOptions(request, runtime);
     }
 
     /**
@@ -2594,6 +3656,154 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>自定义热点话题分析</p>
+     * 
+     * @param request RunCustomHotTopicAnalysisRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RunCustomHotTopicAnalysisResponse
+     */
+    public RunCustomHotTopicAnalysisResponse runCustomHotTopicAnalysisWithOptions(RunCustomHotTopicAnalysisRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.askUser)) {
+            body.put("AskUser", request.askUser);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.forceAnalysisExistsTopic)) {
+            body.put("ForceAnalysisExistsTopic", request.forceAnalysisExistsTopic);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
+            body.put("Prompt", request.prompt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            body.put("SessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userBack)) {
+            body.put("UserBack", request.userBack);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RunCustomHotTopicAnalysis"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RunCustomHotTopicAnalysisResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>自定义热点话题分析</p>
+     * 
+     * @param request RunCustomHotTopicAnalysisRequest
+     * @return RunCustomHotTopicAnalysisResponse
+     */
+    public RunCustomHotTopicAnalysisResponse runCustomHotTopicAnalysis(RunCustomHotTopicAnalysisRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.runCustomHotTopicAnalysisWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>自定义选题视角分析</p>
+     * 
+     * @param request RunCustomHotTopicViewPointAnalysisRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RunCustomHotTopicViewPointAnalysisResponse
+     */
+    public RunCustomHotTopicViewPointAnalysisResponse runCustomHotTopicViewPointAnalysisWithOptions(RunCustomHotTopicViewPointAnalysisRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.askUser)) {
+            body.put("AskUser", request.askUser);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
+            body.put("Prompt", request.prompt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchQuery)) {
+            body.put("SearchQuery", request.searchQuery);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skipAskUser)) {
+            body.put("SkipAskUser", request.skipAskUser);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topic)) {
+            body.put("Topic", request.topic);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topicId)) {
+            body.put("TopicId", request.topicId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topicSource)) {
+            body.put("TopicSource", request.topicSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topicVersion)) {
+            body.put("TopicVersion", request.topicVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userBack)) {
+            body.put("UserBack", request.userBack);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RunCustomHotTopicViewPointAnalysis"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RunCustomHotTopicViewPointAnalysisResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>自定义选题视角分析</p>
+     * 
+     * @param request RunCustomHotTopicViewPointAnalysisRequest
+     * @return RunCustomHotTopicViewPointAnalysisResponse
+     */
+    public RunCustomHotTopicViewPointAnalysisResponse runCustomHotTopicViewPointAnalysis(RunCustomHotTopicViewPointAnalysisRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.runCustomHotTopicViewPointAnalysisWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>内容扩写</p>
      * 
      * @param request RunExpandContentRequest
@@ -2696,6 +3906,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RunKeywordsExtractionGenerationResponse runKeywordsExtractionGeneration(RunKeywordsExtractionGenerationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.runKeywordsExtractionGenerationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创作-分步骤写作</p>
+     * 
+     * @param tmpReq RunStepByStepWritingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RunStepByStepWritingResponse
+     */
+    public RunStepByStepWritingResponse runStepByStepWritingWithOptions(RunStepByStepWritingRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        RunStepByStepWritingShrinkRequest request = new RunStepByStepWritingShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.referenceData)) {
+            request.referenceDataShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.referenceData, "ReferenceData", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.writingConfig)) {
+            request.writingConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.writingConfig, "WritingConfig", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.originSessionId)) {
+            body.put("OriginSessionId", request.originSessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
+            body.put("Prompt", request.prompt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.referenceDataShrink)) {
+            body.put("ReferenceData", request.referenceDataShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            body.put("SessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.writingConfigShrink)) {
+            body.put("WritingConfig", request.writingConfigShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RunStepByStepWriting"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RunStepByStepWritingResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创作-分步骤写作</p>
+     * 
+     * @param request RunStepByStepWritingRequest
+     * @return RunStepByStepWritingResponse
+     */
+    public RunStepByStepWritingResponse runStepByStepWriting(RunStepByStepWritingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.runStepByStepWritingWithOptions(request, runtime);
     }
 
     /**
@@ -3478,6 +4766,206 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitAsyncTaskResponse submitAsyncTask(SubmitAsyncTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitAsyncTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交自定义热点选题视角分析任务</p>
+     * 
+     * @param tmpReq SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitCustomTopicSelectionPerspectiveAnalysisTaskResponse
+     */
+    public SubmitCustomTopicSelectionPerspectiveAnalysisTaskResponse submitCustomTopicSelectionPerspectiveAnalysisTaskWithOptions(SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SubmitCustomTopicSelectionPerspectiveAnalysisTaskShrinkRequest request = new SubmitCustomTopicSelectionPerspectiveAnalysisTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.documents)) {
+            request.documentsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.documents, "Documents", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentKey)) {
+            query.put("AgentKey", request.agentKey);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.documentsShrink)) {
+            body.put("Documents", request.documentsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
+            body.put("Prompt", request.prompt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topic)) {
+            body.put("Topic", request.topic);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitCustomTopicSelectionPerspectiveAnalysisTask"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitCustomTopicSelectionPerspectiveAnalysisTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交自定义热点选题视角分析任务</p>
+     * 
+     * @param request SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest
+     * @return SubmitCustomTopicSelectionPerspectiveAnalysisTaskResponse
+     */
+    public SubmitCustomTopicSelectionPerspectiveAnalysisTaskResponse submitCustomTopicSelectionPerspectiveAnalysisTask(SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitCustomTopicSelectionPerspectiveAnalysisTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交文档聚合任务</p>
+     * 
+     * @param tmpReq SubmitDocClusterTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitDocClusterTaskResponse
+     */
+    public SubmitDocClusterTaskResponse submitDocClusterTaskWithOptions(SubmitDocClusterTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SubmitDocClusterTaskShrinkRequest request = new SubmitDocClusterTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.documents)) {
+            request.documentsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.documents, "Documents", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentKey)) {
+            query.put("AgentKey", request.agentKey);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.documentsShrink)) {
+            body.put("Documents", request.documentsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.summaryLength)) {
+            body.put("SummaryLength", request.summaryLength);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.titleLength)) {
+            body.put("TitleLength", request.titleLength);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topicCount)) {
+            body.put("TopicCount", request.topicCount);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitDocClusterTask"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitDocClusterTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交文档聚合任务</p>
+     * 
+     * @param request SubmitDocClusterTaskRequest
+     * @return SubmitDocClusterTaskResponse
+     */
+    public SubmitDocClusterTaskResponse submitDocClusterTask(SubmitDocClusterTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitDocClusterTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交选题热点分析任务</p>
+     * 
+     * @param tmpReq SubmitTopicSelectionPerspectiveAnalysisTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitTopicSelectionPerspectiveAnalysisTaskResponse
+     */
+    public SubmitTopicSelectionPerspectiveAnalysisTaskResponse submitTopicSelectionPerspectiveAnalysisTaskWithOptions(SubmitTopicSelectionPerspectiveAnalysisTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SubmitTopicSelectionPerspectiveAnalysisTaskShrinkRequest request = new SubmitTopicSelectionPerspectiveAnalysisTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.documents)) {
+            request.documentsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.documents, "Documents", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.perspectiveTypes)) {
+            request.perspectiveTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.perspectiveTypes, "PerspectiveTypes", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentKey)) {
+            query.put("AgentKey", request.agentKey);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.documentsShrink)) {
+            body.put("Documents", request.documentsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.perspectiveTypesShrink)) {
+            body.put("PerspectiveTypes", request.perspectiveTypesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topic)) {
+            body.put("Topic", request.topic);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitTopicSelectionPerspectiveAnalysisTask"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitTopicSelectionPerspectiveAnalysisTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交选题热点分析任务</p>
+     * 
+     * @param request SubmitTopicSelectionPerspectiveAnalysisTaskRequest
+     * @return SubmitTopicSelectionPerspectiveAnalysisTaskResponse
+     */
+    public SubmitTopicSelectionPerspectiveAnalysisTaskResponse submitTopicSelectionPerspectiveAnalysisTask(SubmitTopicSelectionPerspectiveAnalysisTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitTopicSelectionPerspectiveAnalysisTaskWithOptions(request, runtime);
     }
 
     /**
