@@ -149,6 +149,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取天猫精灵用户绑定的手机号</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetUserPhoneResponse
+     */
+    public GetUserPhoneResponse getUserPhoneWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUserPhone"),
+            new TeaPair("version", "oauth2_1.0"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1.0/oauth2/user/profile/phone"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserPhoneResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取天猫精灵用户绑定的手机号</p>
+     * @return GetUserPhoneResponse
+     */
+    public GetUserPhoneResponse getUserPhone() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getUserPhoneWithOptions(headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>OAuth2令牌撤销端点</p>
      * 
      * @param request OAuth2RevocationEndpointRequest
