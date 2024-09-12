@@ -4,6 +4,9 @@ package com.aliyun.searchplat20240529.models;
 import com.aliyun.tea.*;
 
 public class GetQueryAnalysisRequest extends TeaModel {
+    @NameInMap("functions")
+    public java.util.List<GetQueryAnalysisRequestFunctions> functions;
+
     @NameInMap("history")
     public java.util.List<GetQueryAnalysisRequestHistory> history;
 
@@ -16,6 +19,14 @@ public class GetQueryAnalysisRequest extends TeaModel {
     public static GetQueryAnalysisRequest build(java.util.Map<String, ?> map) throws Exception {
         GetQueryAnalysisRequest self = new GetQueryAnalysisRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetQueryAnalysisRequest setFunctions(java.util.List<GetQueryAnalysisRequestFunctions> functions) {
+        this.functions = functions;
+        return this;
+    }
+    public java.util.List<GetQueryAnalysisRequestFunctions> getFunctions() {
+        return this.functions;
     }
 
     public GetQueryAnalysisRequest setHistory(java.util.List<GetQueryAnalysisRequestHistory> history) {
@@ -32,6 +43,36 @@ public class GetQueryAnalysisRequest extends TeaModel {
     }
     public String getQuery() {
         return this.query;
+    }
+
+    public static class GetQueryAnalysisRequestFunctions extends TeaModel {
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("parameters")
+        public java.util.Map<String, ?> parameters;
+
+        public static GetQueryAnalysisRequestFunctions build(java.util.Map<String, ?> map) throws Exception {
+            GetQueryAnalysisRequestFunctions self = new GetQueryAnalysisRequestFunctions();
+            return TeaModel.build(map, self);
+        }
+
+        public GetQueryAnalysisRequestFunctions setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetQueryAnalysisRequestFunctions setParameters(java.util.Map<String, ?> parameters) {
+            this.parameters = parameters;
+            return this;
+        }
+        public java.util.Map<String, ?> getParameters() {
+            return this.parameters;
+        }
+
     }
 
     public static class GetQueryAnalysisRequestHistory extends TeaModel {
