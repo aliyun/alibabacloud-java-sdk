@@ -1853,6 +1853,294 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>车五项信息识别</p>
+     * 
+     * @param request Vehicle5ItemQueryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return Vehicle5ItemQueryResponse
+     */
+    public Vehicle5ItemQueryResponse vehicle5ItemQueryWithOptions(Vehicle5ItemQueryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.paramType)) {
+            query.put("ParamType", request.paramType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vehicleNum)) {
+            query.put("VehicleNum", request.vehicleNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vehicleType)) {
+            query.put("VehicleType", request.vehicleType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "Vehicle5ItemQuery"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new Vehicle5ItemQueryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>车五项信息识别</p>
+     * 
+     * @param request Vehicle5ItemQueryRequest
+     * @return Vehicle5ItemQueryResponse
+     */
+    public Vehicle5ItemQueryResponse vehicle5ItemQuery(Vehicle5ItemQueryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.vehicle5ItemQueryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>车辆投保日期查询</p>
+     * 
+     * @param request VehicleInsureQueryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return VehicleInsureQueryResponse
+     */
+    public VehicleInsureQueryResponse vehicleInsureQueryWithOptions(VehicleInsureQueryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.paramType)) {
+            query.put("ParamType", request.paramType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vehicleNum)) {
+            query.put("VehicleNum", request.vehicleNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vehicleType)) {
+            query.put("VehicleType", request.vehicleType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vin)) {
+            query.put("Vin", request.vin);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "VehicleInsureQuery"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new VehicleInsureQueryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>车辆投保日期查询</p>
+     * 
+     * @param request VehicleInsureQueryRequest
+     * @return VehicleInsureQueryResponse
+     */
+    public VehicleInsureQueryResponse vehicleInsureQuery(VehicleInsureQueryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.vehicleInsureQueryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>车辆要素核验</p>
+     * 
+     * @param request VehicleMetaVerifyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return VehicleMetaVerifyResponse
+     */
+    public VehicleMetaVerifyResponse vehicleMetaVerifyWithOptions(VehicleMetaVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.identifyNum)) {
+            query.put("IdentifyNum", request.identifyNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paramType)) {
+            query.put("ParamType", request.paramType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            query.put("UserName", request.userName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vehicleNum)) {
+            query.put("VehicleNum", request.vehicleNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vehicleType)) {
+            query.put("VehicleType", request.vehicleType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.verifyMetaType)) {
+            query.put("VerifyMetaType", request.verifyMetaType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "VehicleMetaVerify"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new VehicleMetaVerifyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>车辆要素核验</p>
+     * 
+     * @param request VehicleMetaVerifyRequest
+     * @return VehicleMetaVerifyResponse
+     */
+    public VehicleMetaVerifyResponse vehicleMetaVerify(VehicleMetaVerifyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.vehicleMetaVerifyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>车辆要素核验增强版</p>
+     * 
+     * @param request VehicleMetaVerifyV2Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return VehicleMetaVerifyV2Response
+     */
+    public VehicleMetaVerifyV2Response vehicleMetaVerifyV2WithOptions(VehicleMetaVerifyV2Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.identifyNum)) {
+            query.put("IdentifyNum", request.identifyNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paramType)) {
+            query.put("ParamType", request.paramType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            query.put("UserName", request.userName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vehicleNum)) {
+            query.put("VehicleNum", request.vehicleNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vehicleType)) {
+            query.put("VehicleType", request.vehicleType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.verifyMetaType)) {
+            query.put("VerifyMetaType", request.verifyMetaType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "VehicleMetaVerifyV2"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new VehicleMetaVerifyV2Response());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>车辆要素核验增强版</p>
+     * 
+     * @param request VehicleMetaVerifyV2Request
+     * @return VehicleMetaVerifyV2Response
+     */
+    public VehicleMetaVerifyV2Response vehicleMetaVerifyV2(VehicleMetaVerifyV2Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.vehicleMetaVerifyV2WithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>车辆信息识别</p>
+     * 
+     * @param request VehicleQueryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return VehicleQueryResponse
+     */
+    public VehicleQueryResponse vehicleQueryWithOptions(VehicleQueryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.paramType)) {
+            query.put("ParamType", request.paramType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vehicleNum)) {
+            query.put("VehicleNum", request.vehicleNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vehicleType)) {
+            query.put("VehicleType", request.vehicleType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "VehicleQuery"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new VehicleQueryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>车辆信息识别</p>
+     * 
+     * @param request VehicleQueryRequest
+     * @return VehicleQueryResponse
+     */
+    public VehicleQueryResponse vehicleQuery(VehicleQueryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.vehicleQueryWithOptions(request, runtime);
+    }
+
+    /**
      * @param request VerifyMaterialRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return VerifyMaterialResponse
