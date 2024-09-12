@@ -202,6 +202,9 @@ public class ModifyNodePoolAttributeRequest extends TeaModel {
     }
 
     public static class ModifyNodePoolAttributeRequestNodePoolStrategy extends TeaModel {
+        @NameInMap("MaxIdleAppInstanceAmount")
+        public Integer maxIdleAppInstanceAmount;
+
         /**
          * <strong>example:</strong>
          * <p>10</p>
@@ -284,6 +287,14 @@ public class ModifyNodePoolAttributeRequest extends TeaModel {
         public static ModifyNodePoolAttributeRequestNodePoolStrategy build(java.util.Map<String, ?> map) throws Exception {
             ModifyNodePoolAttributeRequestNodePoolStrategy self = new ModifyNodePoolAttributeRequestNodePoolStrategy();
             return TeaModel.build(map, self);
+        }
+
+        public ModifyNodePoolAttributeRequestNodePoolStrategy setMaxIdleAppInstanceAmount(Integer maxIdleAppInstanceAmount) {
+            this.maxIdleAppInstanceAmount = maxIdleAppInstanceAmount;
+            return this;
+        }
+        public Integer getMaxIdleAppInstanceAmount() {
+            return this.maxIdleAppInstanceAmount;
         }
 
         public ModifyNodePoolAttributeRequestNodePoolStrategy setMaxScalingAmount(Integer maxScalingAmount) {

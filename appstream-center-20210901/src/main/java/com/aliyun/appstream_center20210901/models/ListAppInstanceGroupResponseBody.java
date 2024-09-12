@@ -271,6 +271,9 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         @NameInMap("Amount")
         public Integer amount;
 
+        @NameInMap("MaxIdleAppInstanceAmount")
+        public Integer maxIdleAppInstanceAmount;
+
         /**
          * <strong>example:</strong>
          * <p>8</p>
@@ -393,6 +396,14 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         }
         public Integer getAmount() {
             return this.amount;
+        }
+
+        public ListAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePool setMaxIdleAppInstanceAmount(Integer maxIdleAppInstanceAmount) {
+            this.maxIdleAppInstanceAmount = maxIdleAppInstanceAmount;
+            return this;
+        }
+        public Integer getMaxIdleAppInstanceAmount() {
+            return this.maxIdleAppInstanceAmount;
         }
 
         public ListAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePool setMaxScalingAmount(Integer maxScalingAmount) {
