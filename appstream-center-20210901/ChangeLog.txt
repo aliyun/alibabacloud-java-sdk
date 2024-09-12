@@ -1,3 +1,10 @@
+2024-09-12 Version: 1.2.2
+- Update API CreateAppInstanceGroup: update param NodePool.
+- Update API GetAppInstanceGroup: update response param.
+- Update API ListAppInstanceGroup: update response param.
+- Update API ModifyNodePoolAttribute: update param NodePoolStrategy.
+
+
 2024-08-02 Version: 1.2.1
 - Update API AuthorizeInstanceGroup: update param AuthorizeUserIds.
 - Update API AuthorizeInstanceGroup: update param UnAuthorizeUserIds.

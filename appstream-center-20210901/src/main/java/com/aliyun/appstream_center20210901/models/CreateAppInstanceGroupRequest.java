@@ -542,6 +542,9 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     }
 
     public static class CreateAppInstanceGroupRequestNodePool extends TeaModel {
+        @NameInMap("MaxIdleAppInstanceAmount")
+        public Integer maxIdleAppInstanceAmount;
+
         /**
          * <strong>example:</strong>
          * <p>10</p>
@@ -621,6 +624,14 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         public static CreateAppInstanceGroupRequestNodePool build(java.util.Map<String, ?> map) throws Exception {
             CreateAppInstanceGroupRequestNodePool self = new CreateAppInstanceGroupRequestNodePool();
             return TeaModel.build(map, self);
+        }
+
+        public CreateAppInstanceGroupRequestNodePool setMaxIdleAppInstanceAmount(Integer maxIdleAppInstanceAmount) {
+            this.maxIdleAppInstanceAmount = maxIdleAppInstanceAmount;
+            return this;
+        }
+        public Integer getMaxIdleAppInstanceAmount() {
+            return this.maxIdleAppInstanceAmount;
         }
 
         public CreateAppInstanceGroupRequestNodePool setMaxScalingAmount(Integer maxScalingAmount) {
