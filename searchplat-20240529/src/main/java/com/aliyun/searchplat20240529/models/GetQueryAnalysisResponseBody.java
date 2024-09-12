@@ -63,6 +63,9 @@ public class GetQueryAnalysisResponseBody extends TeaModel {
         @NameInMap("query")
         public String query;
 
+        @NameInMap("sql")
+        public java.util.Map<String, ?> sql;
+
         public static GetQueryAnalysisResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetQueryAnalysisResponseBodyResult self = new GetQueryAnalysisResponseBodyResult();
             return TeaModel.build(map, self);
@@ -90,6 +93,14 @@ public class GetQueryAnalysisResponseBody extends TeaModel {
         }
         public String getQuery() {
             return this.query;
+        }
+
+        public GetQueryAnalysisResponseBodyResult setSql(java.util.Map<String, ?> sql) {
+            this.sql = sql;
+            return this;
+        }
+        public java.util.Map<String, ?> getSql() {
+            return this.sql;
         }
 
     }

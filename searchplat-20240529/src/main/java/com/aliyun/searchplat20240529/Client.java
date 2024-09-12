@@ -320,6 +320,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetQueryAnalysisResponse getQueryAnalysisWithOptions(String workspaceName, String serviceId, GetQueryAnalysisRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.functions)) {
+            body.put("functions", request.functions);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.history)) {
             body.put("history", request.history);
         }
