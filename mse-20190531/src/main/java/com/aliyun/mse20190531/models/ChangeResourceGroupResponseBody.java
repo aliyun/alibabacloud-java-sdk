@@ -3,22 +3,22 @@ package com.aliyun.mse20190531.models;
 
 import com.aliyun.tea.*;
 
-public class DeletePluginConfigResponseBody extends TeaModel {
+public class ChangeResourceGroupResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
-     * <p>DC34E4A3-5F1C-4E40-86EA-02EDF967****</p>
+     * <p>54973C90-F379-4372-9AA5-053A3F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeletePluginConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeletePluginConfigResponseBody self = new DeletePluginConfigResponseBody();
+    public static ChangeResourceGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ChangeResourceGroupResponseBody self = new ChangeResourceGroupResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeletePluginConfigResponseBody setRequestId(String requestId) {
+    public ChangeResourceGroupResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

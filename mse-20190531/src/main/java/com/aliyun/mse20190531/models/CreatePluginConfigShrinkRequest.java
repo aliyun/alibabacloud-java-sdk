@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreatePluginConfigShrinkRequest extends TeaModel {
     /**
+     * <p>The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,8 @@ public class CreatePluginConfigShrinkRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The plug-in configuration. The configuration content of the WebAssembly (Wasm) plug-in is in the YAML format. The configuration content of the Lua plug-in is Lua code.</p>
+     * 
      * <strong>example:</strong>
      * <p>status_code: 200
      * headers:</p>
@@ -24,6 +28,12 @@ public class CreatePluginConfigShrinkRequest extends TeaModel {
     public String config;
 
     /**
+     * <p>The application scope of the plug-in. Valid values:</p>
+     * <ul>
+     * <li>0: global</li>
+     * <li>1: route</li>
+     * <li>2: domain name</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +43,7 @@ public class CreatePluginConfigShrinkRequest extends TeaModel {
     public Integer configLevel;
 
     /**
+     * <p>Indicates whether the plug-in is enabled.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +53,7 @@ public class CreatePluginConfigShrinkRequest extends TeaModel {
     public Boolean enable;
 
     /**
+     * <p>The unique ID of the gateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +63,7 @@ public class CreatePluginConfigShrinkRequest extends TeaModel {
     public String gatewayUniqueId;
 
     /**
+     * <p>The gateway plug-in ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,6 +72,9 @@ public class CreatePluginConfigShrinkRequest extends TeaModel {
     @NameInMap("PluginId")
     public Long pluginId;
 
+    /**
+     * <p>The domain IDs or route IDs. They are distinguished based on ConfigLevel.</p>
+     */
     @NameInMap("ResourceIdList")
     public String resourceIdListShrink;
 

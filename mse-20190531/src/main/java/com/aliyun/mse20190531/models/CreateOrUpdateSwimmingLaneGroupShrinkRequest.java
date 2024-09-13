@@ -126,6 +126,9 @@ public class CreateOrUpdateSwimmingLaneGroupShrinkRequest extends TeaModel {
     @NameInMap("Status")
     public Integer status;
 
+    @NameInMap("SwimVersion")
+    public Integer swimVersion;
+
     public static CreateOrUpdateSwimmingLaneGroupShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateOrUpdateSwimmingLaneGroupShrinkRequest self = new CreateOrUpdateSwimmingLaneGroupShrinkRequest();
         return TeaModel.build(map, self);
@@ -249,6 +252,14 @@ public class CreateOrUpdateSwimmingLaneGroupShrinkRequest extends TeaModel {
     }
     public Integer getStatus() {
         return this.status;
+    }
+
+    public CreateOrUpdateSwimmingLaneGroupShrinkRequest setSwimVersion(Integer swimVersion) {
+        this.swimVersion = swimVersion;
+        return this;
+    }
+    public Integer getSwimVersion() {
+        return this.swimVersion;
     }
 
 }

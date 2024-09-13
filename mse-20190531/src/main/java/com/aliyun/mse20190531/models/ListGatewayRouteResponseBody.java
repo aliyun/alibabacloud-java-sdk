@@ -1220,6 +1220,9 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         @NameInMap("DomainNameList")
         public java.util.List<String> domainNameList;
 
+        @NameInMap("DynamicRoute")
+        public Boolean dynamicRoute;
+
         /**
          * <p>Indicates whether Web Application Firewall (WAF) is activated.</p>
          * 
@@ -1436,6 +1439,14 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         }
         public java.util.List<String> getDomainNameList() {
             return this.domainNameList;
+        }
+
+        public ListGatewayRouteResponseBodyDataResult setDynamicRoute(Boolean dynamicRoute) {
+            this.dynamicRoute = dynamicRoute;
+            return this;
+        }
+        public Boolean getDynamicRoute() {
+            return this.dynamicRoute;
         }
 
         public ListGatewayRouteResponseBodyDataResult setEnableWaf(String enableWaf) {

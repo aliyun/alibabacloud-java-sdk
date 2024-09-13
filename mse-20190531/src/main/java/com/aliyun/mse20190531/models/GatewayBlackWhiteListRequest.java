@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GatewayBlackWhiteListRequest extends TeaModel {
     /**
+     * <p>The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,8 @@ public class GatewayBlackWhiteListRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>This parameter is unavailable for public use.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -19,12 +23,14 @@ public class GatewayBlackWhiteListRequest extends TeaModel {
     public Boolean descSort;
 
     /**
-     * <p>parse from filterParams</p>
+     * <p>The filter parameters.</p>
      */
     @NameInMap("FilterParams")
     public GatewayBlackWhiteListRequestFilterParams filterParams;
 
     /**
+     * <p>This parameter is unavailable for public use.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -32,6 +38,8 @@ public class GatewayBlackWhiteListRequest extends TeaModel {
     public String orderItem;
 
     /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -39,6 +47,8 @@ public class GatewayBlackWhiteListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -100,6 +110,8 @@ public class GatewayBlackWhiteListRequest extends TeaModel {
 
     public static class GatewayBlackWhiteListRequestFilterParams extends TeaModel {
         /**
+         * <p>The gateway ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>81</p>
          */
@@ -107,6 +119,8 @@ public class GatewayBlackWhiteListRequest extends TeaModel {
         public Long gatewayId;
 
         /**
+         * <p>The unique ID of the gateway. If this parameter is used together with the GatewayId parameter, the value of the GatewayId parameter is used.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-5017305290e14centbrveca****</p>
          */
@@ -114,6 +128,8 @@ public class GatewayBlackWhiteListRequest extends TeaModel {
         public String gatewayUniqueId;
 
         /**
+         * <p>This parameter is unavailable for public use.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
          */
@@ -121,6 +137,8 @@ public class GatewayBlackWhiteListRequest extends TeaModel {
         public Boolean isWhite;
 
         /**
+         * <p>This parameter is unavailable for public use.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
          */
@@ -128,6 +146,8 @@ public class GatewayBlackWhiteListRequest extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The content that you want to query.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.1.1.1</p>
          */
@@ -135,6 +155,13 @@ public class GatewayBlackWhiteListRequest extends TeaModel {
         public String searchContent;
 
         /**
+         * <p>The query type. Valid values:</p>
+         * <ul>
+         * <li>ROUTE: The list is queried by route. If the value of this parameter is ROUTE, set the SearchContent parameter to the route name.</li>
+         * <li>DOMAIN: The list is queried by domain name. If the value of this parameter is DOMAIN, set the SearchContent parameter to the domain name.</li>
+         * <li>IP: The list is queried by specified IP address. If the value of this parameter is IP, set the SearchContent parameter to the IP address.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>IP</p>
          */
@@ -142,6 +169,8 @@ public class GatewayBlackWhiteListRequest extends TeaModel {
         public String searchType;
 
         /**
+         * <p>This parameter is unavailable for public use.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
          */

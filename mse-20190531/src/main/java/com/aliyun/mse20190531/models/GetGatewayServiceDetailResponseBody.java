@@ -616,6 +616,9 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         @NameInMap("ServiceNameInRegistry")
         public String serviceNameInRegistry;
 
+        @NameInMap("ServicePort")
+        public Integer servicePort;
+
         /**
          * <p>The protocol of the service.</p>
          * 
@@ -802,6 +805,14 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         }
         public String getServiceNameInRegistry() {
             return this.serviceNameInRegistry;
+        }
+
+        public GetGatewayServiceDetailResponseBodyData setServicePort(Integer servicePort) {
+            this.servicePort = servicePort;
+            return this;
+        }
+        public Integer getServicePort() {
+            return this.servicePort;
         }
 
         public GetGatewayServiceDetailResponseBodyData setServiceProtocol(String serviceProtocol) {

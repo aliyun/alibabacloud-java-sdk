@@ -17,7 +17,7 @@ public class CloneNacosConfigResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The number of skipped operations.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public CloneNacosConfigResponseBodyData data;
@@ -246,7 +246,7 @@ public class CloneNacosConfigResponseBody extends TeaModel {
 
     public static class CloneNacosConfigResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the data.</p>
+         * <p>The details of the failed configurations.</p>
          */
         @NameInMap("FailData")
         public java.util.List<CloneNacosConfigResponseBodyDataFailData> failData;

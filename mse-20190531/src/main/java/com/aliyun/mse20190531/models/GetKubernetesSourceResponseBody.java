@@ -14,7 +14,7 @@ public class GetKubernetesSourceResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data structure.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public java.util.List<GetKubernetesSourceResponseBodyData> data;
