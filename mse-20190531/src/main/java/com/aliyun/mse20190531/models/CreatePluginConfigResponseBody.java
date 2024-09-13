@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreatePluginConfigResponseBody extends TeaModel {
     /**
+     * <p>The plug-in configuration ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class CreatePluginConfigResponseBody extends TeaModel {
     public Long pluginConfigID;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>03A3E2F4-6804-5663-9D5D-2EC47A1*****</p>
      */

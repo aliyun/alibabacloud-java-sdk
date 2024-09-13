@@ -112,6 +112,36 @@ public class ListGatewayResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class ListGatewayResponseBodyDataResultElasticPolicyEnableScaleTimePolicyList extends TeaModel {
+        @NameInMap("EndTime")
+        public String endTime;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
+        public static ListGatewayResponseBodyDataResultElasticPolicyEnableScaleTimePolicyList build(java.util.Map<String, ?> map) throws Exception {
+            ListGatewayResponseBodyDataResultElasticPolicyEnableScaleTimePolicyList self = new ListGatewayResponseBodyDataResultElasticPolicyEnableScaleTimePolicyList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGatewayResponseBodyDataResultElasticPolicyEnableScaleTimePolicyList setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public ListGatewayResponseBodyDataResultElasticPolicyEnableScaleTimePolicyList setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+    }
+
     public static class ListGatewayResponseBodyDataResultElasticPolicyTimePolicyList extends TeaModel {
         /**
          * <p>The expected number of replicas for auto scale-out.</p>
@@ -193,6 +223,12 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("ElasticType")
         public String elasticType;
 
+        @NameInMap("EnableScaleTimePolicyList")
+        public java.util.List<ListGatewayResponseBodyDataResultElasticPolicyEnableScaleTimePolicyList> enableScaleTimePolicyList;
+
+        @NameInMap("LoadWarningThreshold")
+        public Boolean loadWarningThreshold;
+
         /**
          * <p>The maximum number of instances that are automatically scaled out. This parameter is used for horizontal scale-out.</p>
          * 
@@ -227,6 +263,22 @@ public class ListGatewayResponseBody extends TeaModel {
         }
         public String getElasticType() {
             return this.elasticType;
+        }
+
+        public ListGatewayResponseBodyDataResultElasticPolicy setEnableScaleTimePolicyList(java.util.List<ListGatewayResponseBodyDataResultElasticPolicyEnableScaleTimePolicyList> enableScaleTimePolicyList) {
+            this.enableScaleTimePolicyList = enableScaleTimePolicyList;
+            return this;
+        }
+        public java.util.List<ListGatewayResponseBodyDataResultElasticPolicyEnableScaleTimePolicyList> getEnableScaleTimePolicyList() {
+            return this.enableScaleTimePolicyList;
+        }
+
+        public ListGatewayResponseBodyDataResultElasticPolicy setLoadWarningThreshold(Boolean loadWarningThreshold) {
+            this.loadWarningThreshold = loadWarningThreshold;
+            return this;
+        }
+        public Boolean getLoadWarningThreshold() {
+            return this.loadWarningThreshold;
         }
 
         public ListGatewayResponseBodyDataResultElasticPolicy setMaxReplica(Integer maxReplica) {

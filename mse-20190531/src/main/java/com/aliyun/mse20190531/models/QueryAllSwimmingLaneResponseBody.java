@@ -283,6 +283,9 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("NameList")
+        public java.util.List<String> nameList;
+
         /**
          * <strong>example:</strong>
          * <p>header</p>
@@ -316,6 +319,14 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRouteConditions setNameList(java.util.List<String> nameList) {
+            this.nameList = nameList;
+            return this;
+        }
+        public java.util.List<String> getNameList() {
+            return this.nameList;
         }
 
         public QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRouteConditions setType(String type) {

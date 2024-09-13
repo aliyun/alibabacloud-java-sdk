@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeletePluginConfigRequest extends TeaModel {
     /**
+     * <p>The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,7 @@ public class DeletePluginConfigRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The unique ID of the gateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class DeletePluginConfigRequest extends TeaModel {
     public String gatewayUniqueId;
 
     /**
+     * <p>The plug-in configuration ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

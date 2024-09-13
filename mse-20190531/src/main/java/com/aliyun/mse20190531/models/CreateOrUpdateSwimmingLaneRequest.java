@@ -519,6 +519,9 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         @NameInMap("CanaryModel")
         public Integer canaryModel;
 
+        @NameInMap("Condition")
+        public String condition;
+
         /**
          * <p>The matching conditions.</p>
          */
@@ -573,6 +576,14 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         }
         public Integer getCanaryModel() {
             return this.canaryModel;
+        }
+
+        public CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson setCondition(String condition) {
+            this.condition = condition;
+            return this;
+        }
+        public String getCondition() {
+            return this.condition;
         }
 
         public CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson setConditions(java.util.List<CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJsonConditions> conditions) {

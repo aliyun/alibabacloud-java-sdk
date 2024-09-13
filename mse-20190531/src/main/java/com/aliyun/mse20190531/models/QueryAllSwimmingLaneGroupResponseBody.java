@@ -215,6 +215,9 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         @NameInMap("Region")
         public String region;
 
+        @NameInMap("SwimVersion")
+        public Integer swimVersion;
+
         /**
          * <strong>example:</strong>
          * <p>12345</p>
@@ -313,6 +316,14 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         }
         public String getRegion() {
             return this.region;
+        }
+
+        public QueryAllSwimmingLaneGroupResponseBodyData setSwimVersion(Integer swimVersion) {
+            this.swimVersion = swimVersion;
+            return this;
+        }
+        public Integer getSwimVersion() {
+            return this.swimVersion;
         }
 
         public QueryAllSwimmingLaneGroupResponseBodyData setUserId(String userId) {

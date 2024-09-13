@@ -17,11 +17,14 @@ public class CloneNacosConfigRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The configuration items that you want to clone. The value of this parameter is the combination of the values of the dataId and group parameters. Separate multiple configuration items with commas (,).</p>
+     */
     @NameInMap("DataIds")
     public String dataIds;
 
     /**
-     * <p>The data structure.</p>
+     * <p>The list of configuration IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>253661,253662</p>
