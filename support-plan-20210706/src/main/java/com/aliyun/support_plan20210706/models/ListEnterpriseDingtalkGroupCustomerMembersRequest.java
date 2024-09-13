@@ -8,7 +8,7 @@ public class ListEnterpriseDingtalkGroupCustomerMembersRequest extends TeaModel 
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>123</p>
+     * <p>DAWNN14N</p>
      */
     @NameInMap("OpenGroupId")
     public String openGroupId;
