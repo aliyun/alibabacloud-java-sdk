@@ -95,8 +95,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Billing: This operation is free of charge.</p>
+     * <ul>
+     * <li>QPS limit: You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询异步检测结果</p>
+     * <p>Obtains the moderation results of an Image Moderation 2.0 task.</p>
      * 
      * @param request DescribeImageModerationResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -127,8 +133,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Billing: This operation is free of charge.</p>
+     * <ul>
+     * <li>QPS limit: You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询异步检测结果</p>
+     * <p>Obtains the moderation results of an Image Moderation 2.0 task.</p>
      * 
      * @param request DescribeImageModerationResultRequest
      * @return DescribeImageModerationResultResponse
@@ -477,8 +489,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you have <a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">activated the Content Moderation 2.0 service</a> and are familiar with the <a href="https://help.aliyun.com/document_detail/2671445.html?#section-6od-32j-99n">billing</a> of the Text Moderation 2.0 Plus service.</p>
+     * 
      * <b>summary</b> : 
-     * <p>文本检测Plus版</p>
+     * <p>Moderates the input command and generated text of large language models (LLMs). Specific model input commands can be used to retrieve standard answers. The feature of enabling and disabling the moderation labels is also available.</p>
      * 
      * @param request TextModerationPlusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -513,8 +528,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you have <a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">activated the Content Moderation 2.0 service</a> and are familiar with the <a href="https://help.aliyun.com/document_detail/2671445.html?#section-6od-32j-99n">billing</a> of the Text Moderation 2.0 Plus service.</p>
+     * 
      * <b>summary</b> : 
-     * <p>文本检测Plus版</p>
+     * <p>Moderates the input command and generated text of large language models (LLMs). Specific model input commands can be used to retrieve standard answers. The feature of enabling and disabling the moderation labels is also available.</p>
      * 
      * @param request TextModerationPlusRequest
      * @return TextModerationPlusResponse

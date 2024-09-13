@@ -133,6 +133,430 @@ public class ImageModerationResponseBody extends TeaModel {
 
     }
 
+    public static class ImageModerationResponseBodyDataExtFaceDataBang extends TeaModel {
+        @NameInMap("Confidence")
+        public Float confidence;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ImageModerationResponseBodyDataExtFaceDataBang build(java.util.Map<String, ?> map) throws Exception {
+            ImageModerationResponseBodyDataExtFaceDataBang self = new ImageModerationResponseBodyDataExtFaceDataBang();
+            return TeaModel.build(map, self);
+        }
+
+        public ImageModerationResponseBodyDataExtFaceDataBang setConfidence(Float confidence) {
+            this.confidence = confidence;
+            return this;
+        }
+        public Float getConfidence() {
+            return this.confidence;
+        }
+
+        public ImageModerationResponseBodyDataExtFaceDataBang setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ImageModerationResponseBodyDataExtFaceDataGender extends TeaModel {
+        @NameInMap("Confidence")
+        public Float confidence;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ImageModerationResponseBodyDataExtFaceDataGender build(java.util.Map<String, ?> map) throws Exception {
+            ImageModerationResponseBodyDataExtFaceDataGender self = new ImageModerationResponseBodyDataExtFaceDataGender();
+            return TeaModel.build(map, self);
+        }
+
+        public ImageModerationResponseBodyDataExtFaceDataGender setConfidence(Float confidence) {
+            this.confidence = confidence;
+            return this;
+        }
+        public Float getConfidence() {
+            return this.confidence;
+        }
+
+        public ImageModerationResponseBodyDataExtFaceDataGender setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ImageModerationResponseBodyDataExtFaceDataHairstyle extends TeaModel {
+        @NameInMap("Confidence")
+        public Float confidence;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ImageModerationResponseBodyDataExtFaceDataHairstyle build(java.util.Map<String, ?> map) throws Exception {
+            ImageModerationResponseBodyDataExtFaceDataHairstyle self = new ImageModerationResponseBodyDataExtFaceDataHairstyle();
+            return TeaModel.build(map, self);
+        }
+
+        public ImageModerationResponseBodyDataExtFaceDataHairstyle setConfidence(Float confidence) {
+            this.confidence = confidence;
+            return this;
+        }
+        public Float getConfidence() {
+            return this.confidence;
+        }
+
+        public ImageModerationResponseBodyDataExtFaceDataHairstyle setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ImageModerationResponseBodyDataExtFaceDataHat extends TeaModel {
+        @NameInMap("Confidence")
+        public Float confidence;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ImageModerationResponseBodyDataExtFaceDataHat build(java.util.Map<String, ?> map) throws Exception {
+            ImageModerationResponseBodyDataExtFaceDataHat self = new ImageModerationResponseBodyDataExtFaceDataHat();
+            return TeaModel.build(map, self);
+        }
+
+        public ImageModerationResponseBodyDataExtFaceDataHat setConfidence(Float confidence) {
+            this.confidence = confidence;
+            return this;
+        }
+        public Float getConfidence() {
+            return this.confidence;
+        }
+
+        public ImageModerationResponseBodyDataExtFaceDataHat setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ImageModerationResponseBodyDataExtFaceDataLocation extends TeaModel {
+        @NameInMap("H")
+        public Integer h;
+
+        @NameInMap("W")
+        public Integer w;
+
+        @NameInMap("X")
+        public Integer x;
+
+        @NameInMap("Y")
+        public Integer y;
+
+        public static ImageModerationResponseBodyDataExtFaceDataLocation build(java.util.Map<String, ?> map) throws Exception {
+            ImageModerationResponseBodyDataExtFaceDataLocation self = new ImageModerationResponseBodyDataExtFaceDataLocation();
+            return TeaModel.build(map, self);
+        }
+
+        public ImageModerationResponseBodyDataExtFaceDataLocation setH(Integer h) {
+            this.h = h;
+            return this;
+        }
+        public Integer getH() {
+            return this.h;
+        }
+
+        public ImageModerationResponseBodyDataExtFaceDataLocation setW(Integer w) {
+            this.w = w;
+            return this;
+        }
+        public Integer getW() {
+            return this.w;
+        }
+
+        public ImageModerationResponseBodyDataExtFaceDataLocation setX(Integer x) {
+            this.x = x;
+            return this;
+        }
+        public Integer getX() {
+            return this.x;
+        }
+
+        public ImageModerationResponseBodyDataExtFaceDataLocation setY(Integer y) {
+            this.y = y;
+            return this;
+        }
+        public Integer getY() {
+            return this.y;
+        }
+
+    }
+
+    public static class ImageModerationResponseBodyDataExtFaceDataMask extends TeaModel {
+        @NameInMap("Confidence")
+        public Float confidence;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ImageModerationResponseBodyDataExtFaceDataMask build(java.util.Map<String, ?> map) throws Exception {
+            ImageModerationResponseBodyDataExtFaceDataMask self = new ImageModerationResponseBodyDataExtFaceDataMask();
+            return TeaModel.build(map, self);
+        }
+
+        public ImageModerationResponseBodyDataExtFaceDataMask setConfidence(Float confidence) {
+            this.confidence = confidence;
+            return this;
+        }
+        public Float getConfidence() {
+            return this.confidence;
+        }
+
+        public ImageModerationResponseBodyDataExtFaceDataMask setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ImageModerationResponseBodyDataExtFaceDataMustache extends TeaModel {
+        @NameInMap("Confidence")
+        public Float confidence;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ImageModerationResponseBodyDataExtFaceDataMustache build(java.util.Map<String, ?> map) throws Exception {
+            ImageModerationResponseBodyDataExtFaceDataMustache self = new ImageModerationResponseBodyDataExtFaceDataMustache();
+            return TeaModel.build(map, self);
+        }
+
+        public ImageModerationResponseBodyDataExtFaceDataMustache setConfidence(Float confidence) {
+            this.confidence = confidence;
+            return this;
+        }
+        public Float getConfidence() {
+            return this.confidence;
+        }
+
+        public ImageModerationResponseBodyDataExtFaceDataMustache setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ImageModerationResponseBodyDataExtFaceDataQuality extends TeaModel {
+        @NameInMap("Blur")
+        public Float blur;
+
+        @NameInMap("Integrity")
+        public Float integrity;
+
+        @NameInMap("Pitch")
+        public Float pitch;
+
+        @NameInMap("Roll")
+        public Float roll;
+
+        @NameInMap("Yaw")
+        public Float yaw;
+
+        public static ImageModerationResponseBodyDataExtFaceDataQuality build(java.util.Map<String, ?> map) throws Exception {
+            ImageModerationResponseBodyDataExtFaceDataQuality self = new ImageModerationResponseBodyDataExtFaceDataQuality();
+            return TeaModel.build(map, self);
+        }
+
+        public ImageModerationResponseBodyDataExtFaceDataQuality setBlur(Float blur) {
+            this.blur = blur;
+            return this;
+        }
+        public Float getBlur() {
+            return this.blur;
+        }
+
+        public ImageModerationResponseBodyDataExtFaceDataQuality setIntegrity(Float integrity) {
+            this.integrity = integrity;
+            return this;
+        }
+        public Float getIntegrity() {
+            return this.integrity;
+        }
+
+        public ImageModerationResponseBodyDataExtFaceDataQuality setPitch(Float pitch) {
+            this.pitch = pitch;
+            return this;
+        }
+        public Float getPitch() {
+            return this.pitch;
+        }
+
+        public ImageModerationResponseBodyDataExtFaceDataQuality setRoll(Float roll) {
+            this.roll = roll;
+            return this;
+        }
+        public Float getRoll() {
+            return this.roll;
+        }
+
+        public ImageModerationResponseBodyDataExtFaceDataQuality setYaw(Float yaw) {
+            this.yaw = yaw;
+            return this;
+        }
+        public Float getYaw() {
+            return this.yaw;
+        }
+
+    }
+
+    public static class ImageModerationResponseBodyDataExtFaceData extends TeaModel {
+        @NameInMap("Age")
+        public Integer age;
+
+        @NameInMap("Bang")
+        public ImageModerationResponseBodyDataExtFaceDataBang bang;
+
+        @NameInMap("Gender")
+        public ImageModerationResponseBodyDataExtFaceDataGender gender;
+
+        @NameInMap("Glasses")
+        public String glasses;
+
+        @NameInMap("Hairstyle")
+        public ImageModerationResponseBodyDataExtFaceDataHairstyle hairstyle;
+
+        @NameInMap("Hat")
+        public ImageModerationResponseBodyDataExtFaceDataHat hat;
+
+        @NameInMap("Location")
+        public ImageModerationResponseBodyDataExtFaceDataLocation location;
+
+        @NameInMap("Mask")
+        public ImageModerationResponseBodyDataExtFaceDataMask mask;
+
+        @NameInMap("Mustache")
+        public ImageModerationResponseBodyDataExtFaceDataMustache mustache;
+
+        @NameInMap("Quality")
+        public ImageModerationResponseBodyDataExtFaceDataQuality quality;
+
+        @NameInMap("Smile")
+        public Float smile;
+
+        public static ImageModerationResponseBodyDataExtFaceData build(java.util.Map<String, ?> map) throws Exception {
+            ImageModerationResponseBodyDataExtFaceData self = new ImageModerationResponseBodyDataExtFaceData();
+            return TeaModel.build(map, self);
+        }
+
+        public ImageModerationResponseBodyDataExtFaceData setAge(Integer age) {
+            this.age = age;
+            return this;
+        }
+        public Integer getAge() {
+            return this.age;
+        }
+
+        public ImageModerationResponseBodyDataExtFaceData setBang(ImageModerationResponseBodyDataExtFaceDataBang bang) {
+            this.bang = bang;
+            return this;
+        }
+        public ImageModerationResponseBodyDataExtFaceDataBang getBang() {
+            return this.bang;
+        }
+
+        public ImageModerationResponseBodyDataExtFaceData setGender(ImageModerationResponseBodyDataExtFaceDataGender gender) {
+            this.gender = gender;
+            return this;
+        }
+        public ImageModerationResponseBodyDataExtFaceDataGender getGender() {
+            return this.gender;
+        }
+
+        public ImageModerationResponseBodyDataExtFaceData setGlasses(String glasses) {
+            this.glasses = glasses;
+            return this;
+        }
+        public String getGlasses() {
+            return this.glasses;
+        }
+
+        public ImageModerationResponseBodyDataExtFaceData setHairstyle(ImageModerationResponseBodyDataExtFaceDataHairstyle hairstyle) {
+            this.hairstyle = hairstyle;
+            return this;
+        }
+        public ImageModerationResponseBodyDataExtFaceDataHairstyle getHairstyle() {
+            return this.hairstyle;
+        }
+
+        public ImageModerationResponseBodyDataExtFaceData setHat(ImageModerationResponseBodyDataExtFaceDataHat hat) {
+            this.hat = hat;
+            return this;
+        }
+        public ImageModerationResponseBodyDataExtFaceDataHat getHat() {
+            return this.hat;
+        }
+
+        public ImageModerationResponseBodyDataExtFaceData setLocation(ImageModerationResponseBodyDataExtFaceDataLocation location) {
+            this.location = location;
+            return this;
+        }
+        public ImageModerationResponseBodyDataExtFaceDataLocation getLocation() {
+            return this.location;
+        }
+
+        public ImageModerationResponseBodyDataExtFaceData setMask(ImageModerationResponseBodyDataExtFaceDataMask mask) {
+            this.mask = mask;
+            return this;
+        }
+        public ImageModerationResponseBodyDataExtFaceDataMask getMask() {
+            return this.mask;
+        }
+
+        public ImageModerationResponseBodyDataExtFaceData setMustache(ImageModerationResponseBodyDataExtFaceDataMustache mustache) {
+            this.mustache = mustache;
+            return this;
+        }
+        public ImageModerationResponseBodyDataExtFaceDataMustache getMustache() {
+            return this.mustache;
+        }
+
+        public ImageModerationResponseBodyDataExtFaceData setQuality(ImageModerationResponseBodyDataExtFaceDataQuality quality) {
+            this.quality = quality;
+            return this;
+        }
+        public ImageModerationResponseBodyDataExtFaceDataQuality getQuality() {
+            return this.quality;
+        }
+
+        public ImageModerationResponseBodyDataExtFaceData setSmile(Float smile) {
+            this.smile = smile;
+            return this;
+        }
+        public Float getSmile() {
+            return this.smile;
+        }
+
+    }
+
     public static class ImageModerationResponseBodyDataExtLogoDataLocation extends TeaModel {
         /**
          * <p>The height of the text area, in pixels.</p>
@@ -824,6 +1248,9 @@ public class ImageModerationResponseBody extends TeaModel {
         @NameInMap("CustomImage")
         public java.util.List<ImageModerationResponseBodyDataExtCustomImage> customImage;
 
+        @NameInMap("FaceData")
+        public java.util.List<ImageModerationResponseBodyDataExtFaceData> faceData;
+
         /**
          * <p>Logo information.</p>
          */
@@ -865,6 +1292,14 @@ public class ImageModerationResponseBody extends TeaModel {
         }
         public java.util.List<ImageModerationResponseBodyDataExtCustomImage> getCustomImage() {
             return this.customImage;
+        }
+
+        public ImageModerationResponseBodyDataExt setFaceData(java.util.List<ImageModerationResponseBodyDataExtFaceData> faceData) {
+            this.faceData = faceData;
+            return this;
+        }
+        public java.util.List<ImageModerationResponseBodyDataExtFaceData> getFaceData() {
+            return this.faceData;
         }
 
         public ImageModerationResponseBodyDataExt setLogoData(java.util.List<ImageModerationResponseBodyDataExtLogoData> logoData) {
@@ -919,6 +1354,12 @@ public class ImageModerationResponseBody extends TeaModel {
         @NameInMap("Confidence")
         public Float confidence;
 
+        /**
+         * <p>The description of the result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>no risk</p>
+         */
         @NameInMap("Description")
         public String description;
 

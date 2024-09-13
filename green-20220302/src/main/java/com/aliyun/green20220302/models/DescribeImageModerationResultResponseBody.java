@@ -14,7 +14,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The image moderation results.</p>
      */
     @NameInMap("Data")
     public DescribeImageModerationResultResponseBodyData data;
@@ -29,7 +29,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID, which is used to locate and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>2881AD4F-638B-52A3-BA20-F74C5B1CEAE3</p>
@@ -76,7 +76,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
 
     public static class DescribeImageModerationResultResponseBodyDataResult extends TeaModel {
         /**
-         * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places. Some labels do not have scores of confidence levels.</p>
+         * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.</p>
          * 
          * <strong>example:</strong>
          * <p>81.22</p>
@@ -84,6 +84,12 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         @NameInMap("Confidence")
         public Float confidence;
 
+        /**
+         * <p>The description of the result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>no risk</p>
+         */
         @NameInMap("Description")
         public String description;
 
@@ -129,7 +135,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
 
     public static class DescribeImageModerationResultResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the moderated object.</p>
+         * <p>The value of dataId that is specified in the API request. If this parameter is not specified in the API request, this field is not available in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>2a5389eb-4ff8-4584-ac99-644e2a539aa1</p>
@@ -138,7 +144,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         public String dataId;
 
         /**
-         * <p>Image frame information.</p>
+         * <p>The information about the captured frames.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;result&quot;:[{&quot;confidence&quot;:81.22,&quot;label&quot;:&quot;violent_explosion&quot;}]}]</p>
@@ -147,7 +153,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         public String frame;
 
         /**
-         * <p>Number of result frames</p>
+         * <p>The number of frames.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
