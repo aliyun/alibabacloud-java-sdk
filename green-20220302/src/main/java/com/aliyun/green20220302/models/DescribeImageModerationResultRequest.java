@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageModerationResultRequest extends TeaModel {
     /**
-     * <p>The reqId field returned by the Image Async Moderation API.</p>
+     * <p>The ReqId field returned by the asynchronous Image Moderation 2.0 API.</p>
      * 
      * <strong>example:</strong>
      * <p>B0963D30-BAB4-562F-9ED0-7A23AEC51C7C</p>

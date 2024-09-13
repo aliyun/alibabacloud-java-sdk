@@ -84,6 +84,9 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         @NameInMap("Confidence")
         public Float confidence;
 
+        @NameInMap("Description")
+        public String description;
+
         /**
          * <p>The details of the labels.</p>
          * 
@@ -104,6 +107,14 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         }
         public Float getConfidence() {
             return this.confidence;
+        }
+
+        public DescribeFileModerationResultResponseBodyDataPageResultImageResultLabelResult setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribeFileModerationResultResponseBodyDataPageResultImageResultLabelResult setLabel(String label) {
@@ -214,6 +225,9 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         @NameInMap("Location")
         public DescribeFileModerationResultResponseBodyDataPageResultImageResultLocation location;
 
+        @NameInMap("RiskLevel")
+        public String riskLevel;
+
         /**
          * <p>The moderation service.</p>
          * 
@@ -252,6 +266,14 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             return this.location;
         }
 
+        public DescribeFileModerationResultResponseBodyDataPageResultImageResult setRiskLevel(String riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public String getRiskLevel() {
+            return this.riskLevel;
+        }
+
         public DescribeFileModerationResultResponseBodyDataPageResultImageResult setService(String service) {
             this.service = service;
             return this;
@@ -280,6 +302,9 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
          */
         @NameInMap("Labels")
         public String labels;
+
+        @NameInMap("RiskLevel")
+        public String riskLevel;
 
         /**
          * <p>The risk details that are hit.</p>
@@ -345,6 +370,14 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         }
         public String getLabels() {
             return this.labels;
+        }
+
+        public DescribeFileModerationResultResponseBodyDataPageResultTextResult setRiskLevel(String riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public String getRiskLevel() {
+            return this.riskLevel;
         }
 
         public DescribeFileModerationResultResponseBodyDataPageResultTextResult setRiskTips(String riskTips) {
@@ -476,6 +509,178 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeFileModerationResultResponseBodyDataPageSummaryImageSummaryImageLabels extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("LabelSum")
+        public Integer labelSum;
+
+        public static DescribeFileModerationResultResponseBodyDataPageSummaryImageSummaryImageLabels build(java.util.Map<String, ?> map) throws Exception {
+            DescribeFileModerationResultResponseBodyDataPageSummaryImageSummaryImageLabels self = new DescribeFileModerationResultResponseBodyDataPageSummaryImageSummaryImageLabels();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeFileModerationResultResponseBodyDataPageSummaryImageSummaryImageLabels setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeFileModerationResultResponseBodyDataPageSummaryImageSummaryImageLabels setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public DescribeFileModerationResultResponseBodyDataPageSummaryImageSummaryImageLabels setLabelSum(Integer labelSum) {
+            this.labelSum = labelSum;
+            return this;
+        }
+        public Integer getLabelSum() {
+            return this.labelSum;
+        }
+
+    }
+
+    public static class DescribeFileModerationResultResponseBodyDataPageSummaryImageSummary extends TeaModel {
+        @NameInMap("ImageLabels")
+        public java.util.List<DescribeFileModerationResultResponseBodyDataPageSummaryImageSummaryImageLabels> imageLabels;
+
+        @NameInMap("RiskLevel")
+        public String riskLevel;
+
+        public static DescribeFileModerationResultResponseBodyDataPageSummaryImageSummary build(java.util.Map<String, ?> map) throws Exception {
+            DescribeFileModerationResultResponseBodyDataPageSummaryImageSummary self = new DescribeFileModerationResultResponseBodyDataPageSummaryImageSummary();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeFileModerationResultResponseBodyDataPageSummaryImageSummary setImageLabels(java.util.List<DescribeFileModerationResultResponseBodyDataPageSummaryImageSummaryImageLabels> imageLabels) {
+            this.imageLabels = imageLabels;
+            return this;
+        }
+        public java.util.List<DescribeFileModerationResultResponseBodyDataPageSummaryImageSummaryImageLabels> getImageLabels() {
+            return this.imageLabels;
+        }
+
+        public DescribeFileModerationResultResponseBodyDataPageSummaryImageSummary setRiskLevel(String riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public String getRiskLevel() {
+            return this.riskLevel;
+        }
+
+    }
+
+    public static class DescribeFileModerationResultResponseBodyDataPageSummaryTextSummaryTextLabels extends TeaModel {
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("LabelSum")
+        public Integer labelSum;
+
+        public static DescribeFileModerationResultResponseBodyDataPageSummaryTextSummaryTextLabels build(java.util.Map<String, ?> map) throws Exception {
+            DescribeFileModerationResultResponseBodyDataPageSummaryTextSummaryTextLabels self = new DescribeFileModerationResultResponseBodyDataPageSummaryTextSummaryTextLabels();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeFileModerationResultResponseBodyDataPageSummaryTextSummaryTextLabels setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public DescribeFileModerationResultResponseBodyDataPageSummaryTextSummaryTextLabels setLabelSum(Integer labelSum) {
+            this.labelSum = labelSum;
+            return this;
+        }
+        public Integer getLabelSum() {
+            return this.labelSum;
+        }
+
+    }
+
+    public static class DescribeFileModerationResultResponseBodyDataPageSummaryTextSummary extends TeaModel {
+        @NameInMap("RiskLevel")
+        public String riskLevel;
+
+        @NameInMap("TextLabels")
+        public java.util.List<DescribeFileModerationResultResponseBodyDataPageSummaryTextSummaryTextLabels> textLabels;
+
+        public static DescribeFileModerationResultResponseBodyDataPageSummaryTextSummary build(java.util.Map<String, ?> map) throws Exception {
+            DescribeFileModerationResultResponseBodyDataPageSummaryTextSummary self = new DescribeFileModerationResultResponseBodyDataPageSummaryTextSummary();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeFileModerationResultResponseBodyDataPageSummaryTextSummary setRiskLevel(String riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public String getRiskLevel() {
+            return this.riskLevel;
+        }
+
+        public DescribeFileModerationResultResponseBodyDataPageSummaryTextSummary setTextLabels(java.util.List<DescribeFileModerationResultResponseBodyDataPageSummaryTextSummaryTextLabels> textLabels) {
+            this.textLabels = textLabels;
+            return this;
+        }
+        public java.util.List<DescribeFileModerationResultResponseBodyDataPageSummaryTextSummaryTextLabels> getTextLabels() {
+            return this.textLabels;
+        }
+
+    }
+
+    public static class DescribeFileModerationResultResponseBodyDataPageSummary extends TeaModel {
+        @NameInMap("ImageSummary")
+        public DescribeFileModerationResultResponseBodyDataPageSummaryImageSummary imageSummary;
+
+        @NameInMap("PageSum")
+        public Integer pageSum;
+
+        @NameInMap("TextSummary")
+        public DescribeFileModerationResultResponseBodyDataPageSummaryTextSummary textSummary;
+
+        public static DescribeFileModerationResultResponseBodyDataPageSummary build(java.util.Map<String, ?> map) throws Exception {
+            DescribeFileModerationResultResponseBodyDataPageSummary self = new DescribeFileModerationResultResponseBodyDataPageSummary();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeFileModerationResultResponseBodyDataPageSummary setImageSummary(DescribeFileModerationResultResponseBodyDataPageSummaryImageSummary imageSummary) {
+            this.imageSummary = imageSummary;
+            return this;
+        }
+        public DescribeFileModerationResultResponseBodyDataPageSummaryImageSummary getImageSummary() {
+            return this.imageSummary;
+        }
+
+        public DescribeFileModerationResultResponseBodyDataPageSummary setPageSum(Integer pageSum) {
+            this.pageSum = pageSum;
+            return this;
+        }
+        public Integer getPageSum() {
+            return this.pageSum;
+        }
+
+        public DescribeFileModerationResultResponseBodyDataPageSummary setTextSummary(DescribeFileModerationResultResponseBodyDataPageSummaryTextSummary textSummary) {
+            this.textSummary = textSummary;
+            return this;
+        }
+        public DescribeFileModerationResultResponseBodyDataPageSummaryTextSummary getTextSummary() {
+            return this.textSummary;
+        }
+
+    }
+
     public static class DescribeFileModerationResultResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the moderated object.</p>
@@ -500,6 +705,12 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
          */
         @NameInMap("PageResult")
         public java.util.List<DescribeFileModerationResultResponseBodyDataPageResult> pageResult;
+
+        @NameInMap("PageSummary")
+        public DescribeFileModerationResultResponseBodyDataPageSummary pageSummary;
+
+        @NameInMap("RiskLevel")
+        public String riskLevel;
 
         /**
          * <p>The URL of the moderation object.</p>
@@ -537,6 +748,22 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         }
         public java.util.List<DescribeFileModerationResultResponseBodyDataPageResult> getPageResult() {
             return this.pageResult;
+        }
+
+        public DescribeFileModerationResultResponseBodyData setPageSummary(DescribeFileModerationResultResponseBodyDataPageSummary pageSummary) {
+            this.pageSummary = pageSummary;
+            return this;
+        }
+        public DescribeFileModerationResultResponseBodyDataPageSummary getPageSummary() {
+            return this.pageSummary;
+        }
+
+        public DescribeFileModerationResultResponseBodyData setRiskLevel(String riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public String getRiskLevel() {
+            return this.riskLevel;
         }
 
         public DescribeFileModerationResultResponseBodyData setUrl(String url) {
