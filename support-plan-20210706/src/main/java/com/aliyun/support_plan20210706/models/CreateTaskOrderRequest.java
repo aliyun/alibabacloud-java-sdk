@@ -5,34 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateTaskOrderRequest extends TeaModel {
     /**
-     * <strong>example:</strong>
-     * <p>建单人姓名：快手客户</p>
-     */
-    @NameInMap("CustomerRealName")
-    public String customerRealName;
-
-    /**
-     * <strong>example:</strong>
-     * <p>123</p>
-     */
-    @NameInMap("CustomerUserId")
-    public String customerUserId;
-
-    /**
-     * <strong>example:</strong>
-     * <p>重要性描述</p>
-     */
-    @NameInMap("ImportantDescription")
-    public String importantDescription;
-
-    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>如:normal或者hurry</p>
+     * <p>123</p>
      */
-    @NameInMap("IsImportant")
-    public String isImportant;
+    @NameInMap("CreateUserId")
+    public String createUserId;
+
+    @NameInMap("IsUrgent")
+    public Boolean isUrgent;
 
     /**
      * <p>This parameter is required.</p>
@@ -44,67 +26,49 @@ public class CreateTaskOrderRequest extends TeaModel {
     public String openGroupId;
 
     /**
-     * <p>productType</p>
-     * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>3270</p>
-     */
-    @NameInMap("ProductType")
-    public String productType;
-
-    /**
-     * <strong>example:</strong>
-     * <p>lc-云享咨询</p>
-     */
-    @NameInMap("ProductTypeName")
-    public String productTypeName;
-
-    /**
-     * <p>taskTitle</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>任务单标题：必填</p>
      */
-    @NameInMap("TaskTitle")
-    public String taskTitle;
+    @NameInMap("Overview")
+    public String overview;
+
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
+     */
+    @NameInMap("ProductCode")
+    public String productCode;
+
+    /**
+     * <strong>example:</strong>
+     * <p>重要性描述</p>
+     */
+    @NameInMap("UrgentDescription")
+    public String urgentDescription;
 
     public static CreateTaskOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTaskOrderRequest self = new CreateTaskOrderRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateTaskOrderRequest setCustomerRealName(String customerRealName) {
-        this.customerRealName = customerRealName;
+    public CreateTaskOrderRequest setCreateUserId(String createUserId) {
+        this.createUserId = createUserId;
         return this;
     }
-    public String getCustomerRealName() {
-        return this.customerRealName;
+    public String getCreateUserId() {
+        return this.createUserId;
     }
 
-    public CreateTaskOrderRequest setCustomerUserId(String customerUserId) {
-        this.customerUserId = customerUserId;
+    public CreateTaskOrderRequest setIsUrgent(Boolean isUrgent) {
+        this.isUrgent = isUrgent;
         return this;
     }
-    public String getCustomerUserId() {
-        return this.customerUserId;
-    }
-
-    public CreateTaskOrderRequest setImportantDescription(String importantDescription) {
-        this.importantDescription = importantDescription;
-        return this;
-    }
-    public String getImportantDescription() {
-        return this.importantDescription;
-    }
-
-    public CreateTaskOrderRequest setIsImportant(String isImportant) {
-        this.isImportant = isImportant;
-        return this;
-    }
-    public String getIsImportant() {
-        return this.isImportant;
+    public Boolean getIsUrgent() {
+        return this.isUrgent;
     }
 
     public CreateTaskOrderRequest setOpenGroupId(String openGroupId) {
@@ -115,28 +79,28 @@ public class CreateTaskOrderRequest extends TeaModel {
         return this.openGroupId;
     }
 
-    public CreateTaskOrderRequest setProductType(String productType) {
-        this.productType = productType;
+    public CreateTaskOrderRequest setOverview(String overview) {
+        this.overview = overview;
         return this;
     }
-    public String getProductType() {
-        return this.productType;
+    public String getOverview() {
+        return this.overview;
     }
 
-    public CreateTaskOrderRequest setProductTypeName(String productTypeName) {
-        this.productTypeName = productTypeName;
+    public CreateTaskOrderRequest setProductCode(String productCode) {
+        this.productCode = productCode;
         return this;
     }
-    public String getProductTypeName() {
-        return this.productTypeName;
+    public String getProductCode() {
+        return this.productCode;
     }
 
-    public CreateTaskOrderRequest setTaskTitle(String taskTitle) {
-        this.taskTitle = taskTitle;
+    public CreateTaskOrderRequest setUrgentDescription(String urgentDescription) {
+        this.urgentDescription = urgentDescription;
         return this;
     }
-    public String getTaskTitle() {
-        return this.taskTitle;
+    public String getUrgentDescription() {
+        return this.urgentDescription;
     }
 
 }

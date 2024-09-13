@@ -5,33 +5,6 @@ import com.aliyun.tea.*;
 
 public class ListDdTaskOrderRequest extends TeaModel {
     /**
-     * <p>callerParentId</p>
-     * 
-     * <strong>example:</strong>
-     * <p>123</p>
-     */
-    @NameInMap("CallerParentId")
-    public Long callerParentId;
-
-    /**
-     * <p>callerType</p>
-     * 
-     * <strong>example:</strong>
-     * <p>123</p>
-     */
-    @NameInMap("CallerType")
-    public String callerType;
-
-    /**
-     * <p>callerUid</p>
-     * 
-     * <strong>example:</strong>
-     * <p>123</p>
-     */
-    @NameInMap("CallerUid")
-    public Long callerUid;
-
-    /**
      * <p>createRealName</p>
      * 
      * <strong>example:</strong>
@@ -49,8 +22,12 @@ public class ListDdTaskOrderRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("IsUrgent")
+    public Boolean isUrgent;
+
     /**
      * <p>openGroupId</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>DAWNN14N</p>
@@ -59,22 +36,13 @@ public class ListDdTaskOrderRequest extends TeaModel {
     public String openGroupId;
 
     /**
-     * <p>orderId</p>
-     * 
-     * <strong>example:</strong>
-     * <p>E2112019N14PBY</p>
-     */
-    @NameInMap("OrderId")
-    public String orderId;
-
-    /**
      * <p>pageNo</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("PageNo")
-    public String pageNo;
+    public Long pageNo;
 
     /**
      * <p>pageSize</p>
@@ -83,16 +51,7 @@ public class ListDdTaskOrderRequest extends TeaModel {
      * <p>10</p>
      */
     @NameInMap("PageSize")
-    public String pageSize;
-
-    /**
-     * <p>requestId</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2F8557E4-742B-1CF7-8E83-28CD0C1F7B48</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
+    public Long pageSize;
 
     /**
      * <p>startTime</p>
@@ -117,30 +76,6 @@ public class ListDdTaskOrderRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListDdTaskOrderRequest setCallerParentId(Long callerParentId) {
-        this.callerParentId = callerParentId;
-        return this;
-    }
-    public Long getCallerParentId() {
-        return this.callerParentId;
-    }
-
-    public ListDdTaskOrderRequest setCallerType(String callerType) {
-        this.callerType = callerType;
-        return this;
-    }
-    public String getCallerType() {
-        return this.callerType;
-    }
-
-    public ListDdTaskOrderRequest setCallerUid(Long callerUid) {
-        this.callerUid = callerUid;
-        return this;
-    }
-    public Long getCallerUid() {
-        return this.callerUid;
-    }
-
     public ListDdTaskOrderRequest setCreateRealName(String createRealName) {
         this.createRealName = createRealName;
         return this;
@@ -157,6 +92,14 @@ public class ListDdTaskOrderRequest extends TeaModel {
         return this.endTime;
     }
 
+    public ListDdTaskOrderRequest setIsUrgent(Boolean isUrgent) {
+        this.isUrgent = isUrgent;
+        return this;
+    }
+    public Boolean getIsUrgent() {
+        return this.isUrgent;
+    }
+
     public ListDdTaskOrderRequest setOpenGroupId(String openGroupId) {
         this.openGroupId = openGroupId;
         return this;
@@ -165,36 +108,20 @@ public class ListDdTaskOrderRequest extends TeaModel {
         return this.openGroupId;
     }
 
-    public ListDdTaskOrderRequest setOrderId(String orderId) {
-        this.orderId = orderId;
-        return this;
-    }
-    public String getOrderId() {
-        return this.orderId;
-    }
-
-    public ListDdTaskOrderRequest setPageNo(String pageNo) {
+    public ListDdTaskOrderRequest setPageNo(Long pageNo) {
         this.pageNo = pageNo;
         return this;
     }
-    public String getPageNo() {
+    public Long getPageNo() {
         return this.pageNo;
     }
 
-    public ListDdTaskOrderRequest setPageSize(String pageSize) {
+    public ListDdTaskOrderRequest setPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
-    public String getPageSize() {
+    public Long getPageSize() {
         return this.pageSize;
-    }
-
-    public ListDdTaskOrderRequest setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListDdTaskOrderRequest setStartTime(String startTime) {
