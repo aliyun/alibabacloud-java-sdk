@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaModel {
     /**
-     * <p>The backend port that is used by the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>The port used by the backend ELB server of the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>8080</p>
@@ -14,12 +14,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     public Integer backendServerPort;
 
     /**
-     * <p>The maximum bandwidth of the elastic IP address (EIP).</p>
-     * <ul>
-     * <li>Default value: 5.</li>
-     * <li>Valid values: <strong>5</strong> to <strong>10000</strong>.</li>
-     * <li>Unit: Mbit/s.</li>
-     * </ul>
+     * <p>The peak bandwidth of the Edge Load Balancer (ELB) instance. The default value is -1, which indicates that the bandwidth is not limited.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -28,7 +23,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     public Integer bandwidth;
 
     /**
-     * <p>The description of the listener.</p>
+     * <p>The name of the listener.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -48,6 +43,15 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
      */
     @NameInMap("EipTransmit")
     public String eipTransmit;
+
+    /**
+     * <p>The timeout period of a connection. Valid values: <strong>10</strong> to <strong>900</strong>. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>500</p>
+     */
+    @NameInMap("EstablishedTimeout")
+    public Integer establishedTimeout;
 
     /**
      * <p>Specifies whether to enable the health check feature. Valid values:</p>
@@ -72,7 +76,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     public Integer healthCheckConnectPort;
 
     /**
-     * <p>The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails to pass the health check.</p>
+     * <p>The timeout period for a health check response. If a backend server does not respond within the specified timeout period, the server fails the health check.</p>
      * <ul>
      * <li>Default value: 5.</li>
      * <li>Valid values: <strong>1</strong> to <strong>300</strong>.</li>
@@ -81,9 +85,9 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
      * <blockquote>
      * </blockquote>
      * <ul>
-     * <li><p>This parameter takes effect only if you set HealthCheck to on.</p>
+     * <li><p>This parameter takes effect only if the HealthCheck parameter is set to on.</p>
      * </li>
-     * <li><p>If the value of the HealthCheckConnectTimeout parameter is smaller than that of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckConnectTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.</p>
+     * <li><p>If the value of the HealthCheckTimeout property is smaller than the value of the HealthCheckInterval property, the timeout period specified by the HealthCheckTimeout property becomes invalid and the value of the HealthCheckInterval property is used as the timeout period.</p>
      * </li>
      * </ul>
      * 
@@ -136,7 +140,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     public Integer healthyThreshold;
 
     /**
-     * <p>The frontend port that is used by the ELB instance.</p>
+     * <p>The listener port.</p>
      * 
      * <strong>example:</strong>
      * <p>80</p>
@@ -233,6 +237,14 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     }
     public String getEipTransmit() {
         return this.eipTransmit;
+    }
+
+    public DescribeLoadBalancerUDPListenerAttributeResponseBody setEstablishedTimeout(Integer establishedTimeout) {
+        this.establishedTimeout = establishedTimeout;
+        return this;
+    }
+    public Integer getEstablishedTimeout() {
+        return this.establishedTimeout;
     }
 
     public DescribeLoadBalancerUDPListenerAttributeResponseBody setHealthCheck(String healthCheck) {

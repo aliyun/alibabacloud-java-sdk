@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DeleteSDGResponseBody extends TeaModel {
+    /**
+     * <p>The returned data object.</p>
+     */
     @NameInMap("Data")
     public DeleteSDGResponseBodyData data;
 
@@ -38,6 +41,12 @@ public class DeleteSDGResponseBody extends TeaModel {
     }
 
     public static class DeleteSDGResponseBodyDataResultFailedItemsItem extends TeaModel {
+        /**
+         * <p>The ID of the shared data group (SDG).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sdg-dfet5vvvgy</p>
+         */
         @NameInMap("SdgId")
         public String sdgId;
 
@@ -57,9 +66,18 @@ public class DeleteSDGResponseBody extends TeaModel {
     }
 
     public static class DeleteSDGResponseBodyDataResultFailedItems extends TeaModel {
+        /**
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sdg not found</p>
+         */
         @NameInMap("ErrMessage")
         public String errMessage;
 
+        /**
+         * <p>Description</p>
+         */
         @NameInMap("Item")
         public DeleteSDGResponseBodyDataResultFailedItemsItem item;
 
@@ -87,12 +105,27 @@ public class DeleteSDGResponseBody extends TeaModel {
     }
 
     public static class DeleteSDGResponseBodyDataResult extends TeaModel {
+        /**
+         * <p>The number of failed tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("FailedCount")
         public Long failedCount;
 
+        /**
+         * <p>Details about the failed tasks.</p>
+         */
         @NameInMap("FailedItems")
         public java.util.List<DeleteSDGResponseBodyDataResultFailedItems> failedItems;
 
+        /**
+         * <p>The number of successful tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SuccessCount")
         public Long successCount;
 
@@ -128,12 +161,31 @@ public class DeleteSDGResponseBody extends TeaModel {
     }
 
     public static class DeleteSDGResponseBodyData extends TeaModel {
+        /**
+         * <p>The response message. Success is returned for a successful request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The execution result of the synchronization request.</p>
+         */
         @NameInMap("Result")
         public DeleteSDGResponseBodyDataResult result;
 
+        /**
+         * <p>Indicates whether all tasks are successful. Valid values:</p>
+         * <ul>
+         * <li>true: All tasks are successful.</li>
+         * <li>false: Failed tasks exist.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 

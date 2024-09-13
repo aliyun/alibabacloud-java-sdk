@@ -9,7 +9,7 @@ public class UnAssociateEnsEipAddressRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>eip-5sqa431nx3vee8heqxfxp4e4r</p>
+     * <p>eip-5sqa431nx3vee8heqxfxp****</p>
      */
     @NameInMap("AllocationId")
     public String allocationId;

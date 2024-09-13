@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLoadBalancerTCPListenerRequest extends TeaModel {
     /**
-     * <p>The backend port that is used by the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>The port used by the backend ELB server of the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>8080</p>
@@ -14,7 +14,7 @@ public class CreateLoadBalancerTCPListenerRequest extends TeaModel {
     public Integer backendServerPort;
 
     /**
-     * <p>The description of the listener. The description must be <strong>1</strong> to <strong>80</strong> characters in length.</p>
+     * <p>The name of the listener. The value must be <strong>1</strong> to <strong>80</strong> characters in length.</p>
      * <blockquote>
      * <p> The value cannot start with <code>http://</code> or <code>https://</code>.</p>
      * </blockquote>
@@ -57,14 +57,14 @@ public class CreateLoadBalancerTCPListenerRequest extends TeaModel {
     public Integer healthCheckConnectPort;
 
     /**
-     * <p>The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails to pass the health check.</p>
+     * <p>The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails the health check.</p>
      * <ul>
      * <li>Default value: 5.</li>
      * <li>Valid values: <strong>1</strong> to <strong>300</strong>.</li>
      * <li>Unit: seconds.</li>
      * </ul>
      * <blockquote>
-     * <p> If the value that you specified for HealthCheckConnectTimeout is smaller than the value of HealthCheckInterval, HealthCheckConnectTimeout becomes invalid and the timeout period that you specified for HealthCheckInterval is used.</p>
+     * <p> If the value of the HealthCheckConnectTimeout parameter is smaller than that of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckConnectTimeout parameter is ignored and the period of time specified by the HealthCheckInterval parameter is used as the timeout period.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class CreateLoadBalancerTCPListenerRequest extends TeaModel {
     public Integer healthyThreshold;
 
     /**
-     * <p>The frontend port that is used by the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>The listener port that is used by Edge Load Balancer (ELB) to receive requests and forward the requests to backend servers. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

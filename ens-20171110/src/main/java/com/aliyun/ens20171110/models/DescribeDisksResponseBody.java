@@ -206,6 +206,9 @@ public class DescribeDisksResponseBody extends TeaModel {
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Edge Prod Environment Streaming Machine -1063</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;

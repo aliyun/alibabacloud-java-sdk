@@ -25,7 +25,7 @@ public class CreateSnapshotRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>The ID of the edge node.</p>
+     * <p>The ID of the ENS node.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

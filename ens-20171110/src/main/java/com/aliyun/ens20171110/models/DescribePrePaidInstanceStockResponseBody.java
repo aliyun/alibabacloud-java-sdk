@@ -14,7 +14,7 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
     public Integer avaliableCount;
 
     /**
-     * <p>The number of vCPUs.</p>
+     * <p>The number of CPU cores.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
     public String ensRegionId;
 
     /**
-     * <p>The instance type.</p>
+     * <p>The specification of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ens.sn1.stiny</p>
@@ -59,7 +59,7 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
     public Integer memory;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>007833C8-E819-4122-B636-0D48D7BF6DFB</p>
@@ -68,7 +68,7 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The reasons for resource scarcity</p>
+     * <p>The reason why resources are insufficient.</p>
      * 
      * <strong>example:</strong>
      * <p>StockNotEnough</p>
@@ -77,7 +77,7 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
     public String resourceGap;
 
     /**
-     * <p>The size of the system disk. Unit: GB.</p>
+     * <p>The size of the system disk.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

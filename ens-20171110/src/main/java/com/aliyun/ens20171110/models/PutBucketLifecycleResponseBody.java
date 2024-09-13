@@ -13,6 +13,9 @@ public class PutBucketLifecycleResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("RuleId")
+    public String ruleId;
+
     public static PutBucketLifecycleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PutBucketLifecycleResponseBody self = new PutBucketLifecycleResponseBody();
         return TeaModel.build(map, self);
@@ -24,6 +27,14 @@ public class PutBucketLifecycleResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public PutBucketLifecycleResponseBody setRuleId(String ruleId) {
+        this.ruleId = ruleId;
+        return this;
+    }
+    public String getRuleId() {
+        return this.ruleId;
     }
 
 }

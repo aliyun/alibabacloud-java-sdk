@@ -47,7 +47,7 @@ public class RemoveBackendServersRequest extends TeaModel {
          * <p>The IP address of the backend server.</p>
          * 
          * <strong>example:</strong>
-         * <p>192.168.0.1</p>
+         * <p>192.XXX.X.X</p>
          */
         @NameInMap("Ip")
         public String ip;

@@ -48,14 +48,14 @@ public class SetLoadBalancerTCPListenerAttributeRequest extends TeaModel {
     public Integer healthCheckConnectPort;
 
     /**
-     * <p>The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails to pass the health check.</p>
+     * <p>The timeout period for a health check response. If the value of HealthCheckTimeout is smaller than the value of HealthCheckInterval, the timeout period specified by HealthCheckTimeout becomes invalid, and the value of HealthCheckInterval is used as the timeout period.</p>
      * <ul>
      * <li>Default value: 5.</li>
      * <li>Valid values: <strong>1</strong> to <strong>300</strong>.</li>
      * <li>Unit: seconds.</li>
      * </ul>
      * <blockquote>
-     * <p> If the value that you specified for HealthCheckConnectTimeout is smaller than the value of HealthCheckInterval, HealthCheckConnectTimeout becomes invalid and the timeout period that you specified for HealthCheckInterval is used.</p>
+     * <p> If the value of the HealthCheckConnectTimeout parameter is smaller than that of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckConnectTimeout parameter is ignored and the period of time specified by the HealthCheckInterval parameter is used as the timeout period.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class SetLoadBalancerTCPListenerAttributeRequest extends TeaModel {
     public Integer healthyThreshold;
 
     /**
-     * <p>The frontend port that is used by the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>The listener port whose attributes are to be modified. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

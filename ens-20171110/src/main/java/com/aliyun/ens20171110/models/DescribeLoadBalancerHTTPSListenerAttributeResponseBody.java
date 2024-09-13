@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaModel {
     /**
-     * <p>The maximum bandwidth of the EIP.</p>
-     * <ul>
-     * <li>Default value: 5.</li>
-     * <li>Valid values: <strong>5</strong> to <strong>10000</strong>.</li>
-     * <li>Unit: Mbit/s.</li>
-     * </ul>
+     * <p>The backend port that is used by the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8080</p>
+     */
+    @NameInMap("BackendServerPort")
+    public Integer backendServerPort;
+
+    /**
+     * <p>The peak bandwidth of the Edge Load Balancer (ELB). The default value is -1, which indicates that the bandwidth is not limited.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -120,7 +124,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
     public String healthCheckMethod;
 
     /**
-     * <p>The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails to pass the health check.</p>
+     * <p>The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails the health check.</p>
      * <ul>
      * <li>Default value: 5.</li>
      * <li>Valid values: <strong>1</strong> to <strong>300</strong>.</li>
@@ -129,9 +133,9 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
      * <blockquote>
      * </blockquote>
      * <ul>
-     * <li><p>This parameter is returned only if the HealthCheck parameter is set to on.</p>
+     * <li><p>This parameter takes effect only if the HealthCheck parameter is set to on.</p>
      * </li>
-     * <li><p>If the value of the HealthCheckTimeout parameter is smaller than the value of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.</p>
+     * <li><p>If the value of HealthCheckTimeout is smaller than the value of HealthCheckInterval, the timeout period specified by HealthCheckTimeout becomes invalid, and the value of HealthCheckInterval is used as the timeout period.</p>
      * </li>
      * </ul>
      * 
@@ -242,7 +246,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
      * <p>The ID of the server certificate.</p>
      * 
      * <strong>example:</strong>
-     * <p>6027667</p>
+     * <p>60276**</p>
      */
     @NameInMap("ServerCertificateId")
     public String serverCertificateId;
@@ -278,6 +282,14 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
     public static DescribeLoadBalancerHTTPSListenerAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLoadBalancerHTTPSListenerAttributeResponseBody self = new DescribeLoadBalancerHTTPSListenerAttributeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setBackendServerPort(Integer backendServerPort) {
+        this.backendServerPort = backendServerPort;
+        return this;
+    }
+    public Integer getBackendServerPort() {
+        return this.backendServerPort;
     }
 
     public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setBandwidth(Integer bandwidth) {

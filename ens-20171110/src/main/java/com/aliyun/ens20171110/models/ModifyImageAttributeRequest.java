@@ -17,6 +17,9 @@ public class ModifyImageAttributeRequest extends TeaModel {
     /**
      * <p>The name of the image.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Image Name</p>
      */
     @NameInMap("ImageName")
     public String imageName;

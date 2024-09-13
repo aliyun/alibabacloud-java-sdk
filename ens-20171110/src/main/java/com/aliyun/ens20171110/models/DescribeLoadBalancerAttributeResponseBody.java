@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     /**
-     * <p>The IP address that the ELB instance uses to provide services.</p>
+     * <p>The IP address that the Edge Load Balancer (ELB) instance uses to provide services.</p>
      * 
      * <strong>example:</strong>
-     * <p>192.168.0.1</p>
+     * <p>192.168XX.XX</p>
      */
     @NameInMap("Address")
     public String address;
@@ -23,16 +23,16 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     public String addressIPVersion;
 
     /**
-     * <p>The backend servers.</p>
+     * <p>The list of backend servers.</p>
      */
     @NameInMap("BackendServers")
     public java.util.List<DescribeLoadBalancerAttributeResponseBodyBackendServers> backendServers;
 
     /**
-     * <p>The maximum bandwidth of the elastic IP address (EIP). Default value: 5. Valid values: <strong>5</strong> to <strong>10000</strong>. Unit: Mbit/s.</p>
+     * <p>The peak bandwidth of the ELB. The default value is -1, which indicates that the bandwidth is unlimited.</p>
      * 
      * <strong>example:</strong>
-     * <p>2000</p>
+     * <p>-1</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
@@ -302,7 +302,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
          * <p>The IP address of the backend server.</p>
          * 
          * <strong>example:</strong>
-         * <p>192.168.0.5</p>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("Ip")
         public String ip;
@@ -326,7 +326,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         public String serverId;
 
         /**
-         * <p>The type of the backend server.</p>
+         * <p>The type of backend server.</p>
          * 
          * <strong>example:</strong>
          * <p>ens</p>
@@ -428,7 +428,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         public Integer listenerPort;
 
         /**
-         * <p>The listener protocol.</p>
+         * <p>The listener protocol of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>tcp</p>

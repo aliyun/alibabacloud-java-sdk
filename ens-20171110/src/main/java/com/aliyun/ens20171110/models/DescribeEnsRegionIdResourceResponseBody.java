@@ -130,6 +130,9 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
 
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Nanjing Mobile</p>
          */
         @NameInMap("EnsRegionIdName")
         public String ensRegionIdName;

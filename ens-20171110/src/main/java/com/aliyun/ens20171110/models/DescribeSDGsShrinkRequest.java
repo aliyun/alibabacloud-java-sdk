@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSDGsShrinkRequest extends TeaModel {
     /**
-     * <p>The IDs of instances that you want to query. By default, all instances are queried.</p>
-     * <blockquote>
-     * <p> If you specify the <strong>SDGIds</strong> and <strong>InstanceIds</strong> parameters at the same time, the query result is the intersection of the two conditions.</p>
-     * </blockquote>
+     * <p>The AIC instance ID to be queried.</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIdsShrink;

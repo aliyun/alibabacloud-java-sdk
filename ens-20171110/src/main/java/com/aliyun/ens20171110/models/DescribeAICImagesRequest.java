@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeAICImagesRequest extends TeaModel {
     /**
      * <p>The description of the image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test operation of console</p>
      */
     @NameInMap("Description")
     public String description;

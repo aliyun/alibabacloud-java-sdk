@@ -91,6 +91,44 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6SetsIpv6Set extends TeaModel {
+        @NameInMap("Ipv6Address")
+        public String ipv6Address;
+
+        public static DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6SetsIpv6Set build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6SetsIpv6Set self = new DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6SetsIpv6Set();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6SetsIpv6Set setIpv6Address(String ipv6Address) {
+            this.ipv6Address = ipv6Address;
+            return this;
+        }
+        public String getIpv6Address() {
+            return this.ipv6Address;
+        }
+
+    }
+
+    public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6Sets extends TeaModel {
+        @NameInMap("Ipv6Set")
+        public java.util.List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6SetsIpv6Set> ipv6Set;
+
+        public static DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6Sets build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6Sets self = new DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6Sets();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6Sets setIpv6Set(java.util.List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6SetsIpv6Set> ipv6Set) {
+            this.ipv6Set = ipv6Set;
+            return this;
+        }
+        public java.util.List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6SetsIpv6Set> getIpv6Set() {
+            return this.ipv6Set;
+        }
+
+    }
+
     public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet extends TeaModel {
         /**
          * <p>Specifies whether the private IP address is the primary private IP address. Valid values:</p>
@@ -211,6 +249,9 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
          */
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("Ipv6Sets")
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6Sets ipv6Sets;
 
         /**
          * <p>The MAC address of the ENI.</p>
@@ -355,6 +396,14 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setIpv6Sets(DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6Sets ipv6Sets) {
+            this.ipv6Sets = ipv6Sets;
+            return this;
+        }
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6Sets getIpv6Sets() {
+            return this.ipv6Sets;
         }
 
         public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setMacAddress(String macAddress) {

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class RemoveInstanceSDGResponseBody extends TeaModel {
     /**
+     * <p>The returned service code. 0 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned data object.</p>
+     */
     @NameInMap("Data")
     public RemoveInstanceSDGResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>125B04C7-3D0D-4245-AF96-14E3758E3F06</p>
      */
@@ -52,6 +59,8 @@ public class RemoveInstanceSDGResponseBody extends TeaModel {
 
     public static class RemoveInstanceSDGResponseBodyDataResultFailedItems extends TeaModel {
         /**
+         * <p>The error message that is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>sdg not found</p>
          */
@@ -59,6 +68,8 @@ public class RemoveInstanceSDGResponseBody extends TeaModel {
         public String errMessage;
 
         /**
+         * <p>The ID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>aic-xxxxx-0</p>
          */
@@ -90,16 +101,23 @@ public class RemoveInstanceSDGResponseBody extends TeaModel {
 
     public static class RemoveInstanceSDGResponseBodyDataResult extends TeaModel {
         /**
+         * <p>The number of failed tasks.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("FailedCount")
         public Long failedCount;
 
+        /**
+         * <p>Details about the failed tasks.</p>
+         */
         @NameInMap("FailedItems")
         public java.util.List<RemoveInstanceSDGResponseBodyDataResultFailedItems> failedItems;
 
         /**
+         * <p>The number of successful tasks.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -139,16 +157,27 @@ public class RemoveInstanceSDGResponseBody extends TeaModel {
 
     public static class RemoveInstanceSDGResponseBodyData extends TeaModel {
         /**
+         * <p>The response message. Success is returned for a successful request.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The execution result of the synchronization request.</p>
+         */
         @NameInMap("Result")
         public RemoveInstanceSDGResponseBodyDataResult result;
 
         /**
+         * <p>Indicates whether all tasks are successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: All tasks are successful.</li>
+         * <li><strong>false</strong>: Failed tasks exist.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

@@ -4,6 +4,12 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeSDGDeploymentStatusRequest extends TeaModel {
+    @NameInMap("DeploymentType")
+    public String deploymentType;
+
+    @NameInMap("InstanceIds")
+    public java.util.List<String> instanceIds;
+
     /**
      * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
      * 
@@ -11,16 +17,19 @@ public class DescribeSDGDeploymentStatusRequest extends TeaModel {
      * <p>1</p>
      */
     @NameInMap("PageNumber")
-    public String pageNumber;
+    public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
-    public String pageSize;
+    public Integer pageSize;
+
+    @NameInMap("RegionIds")
+    public java.util.List<String> regionIds;
 
     /**
      * <p>The ID of the SDG.</p>
@@ -32,25 +41,52 @@ public class DescribeSDGDeploymentStatusRequest extends TeaModel {
     @NameInMap("SDGId")
     public String SDGId;
 
+    @NameInMap("Status")
+    public String status;
+
     public static DescribeSDGDeploymentStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSDGDeploymentStatusRequest self = new DescribeSDGDeploymentStatusRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSDGDeploymentStatusRequest setPageNumber(String pageNumber) {
+    public DescribeSDGDeploymentStatusRequest setDeploymentType(String deploymentType) {
+        this.deploymentType = deploymentType;
+        return this;
+    }
+    public String getDeploymentType() {
+        return this.deploymentType;
+    }
+
+    public DescribeSDGDeploymentStatusRequest setInstanceIds(java.util.List<String> instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+    public java.util.List<String> getInstanceIds() {
+        return this.instanceIds;
+    }
+
+    public DescribeSDGDeploymentStatusRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
-    public String getPageNumber() {
+    public Integer getPageNumber() {
         return this.pageNumber;
     }
 
-    public DescribeSDGDeploymentStatusRequest setPageSize(String pageSize) {
+    public DescribeSDGDeploymentStatusRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
-    public String getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeSDGDeploymentStatusRequest setRegionIds(java.util.List<String> regionIds) {
+        this.regionIds = regionIds;
+        return this;
+    }
+    public java.util.List<String> getRegionIds() {
+        return this.regionIds;
     }
 
     public DescribeSDGDeploymentStatusRequest setSDGId(String SDGId) {
@@ -59,6 +95,14 @@ public class DescribeSDGDeploymentStatusRequest extends TeaModel {
     }
     public String getSDGId() {
         return this.SDGId;
+    }
+
+    public DescribeSDGDeploymentStatusRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
 }

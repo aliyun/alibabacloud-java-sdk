@@ -5,15 +5,20 @@ import com.aliyun.tea.*;
 
 public class UnloadRegionSDGRequest extends TeaModel {
     /**
+     * <p>The destination nodes.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationRegionIds")
     public java.util.List<String> destinationRegionIds;
 
+    /**
+     * <p>The namespaces.</p>
+     */
     @NameInMap("Namespaces")
     public java.util.List<String> namespaces;
 
     /**
+     * <p>Deletes the shared data group (SDG) ID of the preloaded data.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

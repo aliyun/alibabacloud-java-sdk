@@ -103,6 +103,9 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
 
         /**
          * <p>The name of the task node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Beijing Mobile</p>
          */
         @NameInMap("EnsRegionName")
         public String ensRegionName;

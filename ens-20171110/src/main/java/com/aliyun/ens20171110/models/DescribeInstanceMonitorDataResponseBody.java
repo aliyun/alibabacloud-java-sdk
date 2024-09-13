@@ -78,6 +78,9 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
 
         /**
          * <p>This parameter is not yet supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Not currently supported</p>
          */
         @NameInMap("Memory")
         public String memory;

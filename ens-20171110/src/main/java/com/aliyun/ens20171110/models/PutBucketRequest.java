@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PutBucketRequest extends TeaModel {
     /**
-     * <p>The access control list (ACL) of the bucket.</p>
+     * <p>The access control list (ACL) of the bucket. Valid values:</p>
      * <ul>
      * <li><strong>private</strong> (default)</li>
      * <li><strong>public-read-write</strong></li>
@@ -38,12 +38,10 @@ public class PutBucketRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>Scheduling Scope, this parameter is only effective for globally scheduled Buckets.</p>
+     * <p>The scheduling scope. This parameter takes effect only when the value of the LogicalBucketType parameter is standard. Valid values:</p>
      * <ul>
-     * <li><p>domestic</p>
-     * </li>
-     * <li><p>oversea</p>
-     * </li>
+     * <li><strong>domestic</strong>: Chinese mainland.</li>
+     * <li><strong>oversea</strong>: outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,7 +51,7 @@ public class PutBucketRequest extends TeaModel {
     public String dispatchScope;
 
     /**
-     * <p>The ID of the region where the node is located. If this parameter is not specified, the node is the global default node.</p>
+     * <p>The region ID of the node. This parameter is required if the value of the LogicalBucketType parameter is sink.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing-15</p>
@@ -62,7 +60,11 @@ public class PutBucketRequest extends TeaModel {
     public String ensRegionId;
 
     /**
-     * <p>Single-node storage. Set the value to sink.</p>
+     * <p>The type of the bucket. Valid values:</p>
+     * <ul>
+     * <li><strong>sink</strong>: single-node bucket.</li>
+     * <li><strong>standard</strong>: bucket for global scheduling.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>sink</p>

@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
+     * <p>Specifies whether to remove all tags from the resource. This parameter takes effect only if you do not specify TagKey.N. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,12 +19,18 @@ public class UntagResourcesRequest extends TeaModel {
     public Boolean all;
 
     /**
+     * <p>The resource IDs. You can specify up to 50 resource IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
+     * <p>The resource type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>instance</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +39,9 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The keys of the tags. Valid values of N: 1 to 20.</p>
+     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

@@ -5,15 +5,20 @@ import com.aliyun.tea.*;
 
 public class PreloadRegionSDGShrinkRequest extends TeaModel {
     /**
+     * <p>The IDs of the destination nodes.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationRegionIds")
     public String destinationRegionIdsShrink;
 
+    /**
+     * <p>The namespaces.</p>
+     */
     @NameInMap("Namespaces")
     public String namespacesShrink;
 
     /**
+     * <p>The number of redundant replicas to support rapid deployment.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +28,7 @@ public class PreloadRegionSDGShrinkRequest extends TeaModel {
     public Integer redundantNum;
 
     /**
+     * <p>The ID of the SDG for which data is preloaded.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

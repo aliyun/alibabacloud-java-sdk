@@ -64,6 +64,9 @@ public class DescribeImagesRequest extends TeaModel {
 
     /**
      * <p>This parameter is unavailable.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This parameter is not currently in use.</p>
      */
     @NameInMap("Status")
     public String status;

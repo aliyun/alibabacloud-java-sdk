@@ -209,12 +209,18 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
 
         /**
          * <p>The name of the edge node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Taizhou Telecom, China Unicom, and China Mobile</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The province.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zhejiang Province</p>
          */
         @NameInMap("Province")
         public String province;
@@ -332,6 +338,9 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResource extends TeaModel {
+        /**
+         * <p>Bandwidth billing method.</p>
+         */
         @NameInMap("BandwidthTypes")
         public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceBandwidthTypes bandwidthTypes;
 
@@ -353,6 +362,9 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         @NameInMap("DataDiskMinSize")
         public Integer dataDiskMinSize;
 
+        /**
+         * <p>node ID</p>
+         */
         @NameInMap("EnsRegionIds")
         public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceEnsRegionIds ensRegionIds;
 
@@ -365,6 +377,9 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         @NameInMap("InstanceSpeces")
         public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceInstanceSpeces instanceSpeces;
 
+        /**
+         * <p>Operator</p>
+         */
         @NameInMap("Isp")
         public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceIsp isp;
 

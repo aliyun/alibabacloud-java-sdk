@@ -51,7 +51,7 @@ public class DescribeSDGsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The ID of the edge node.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-26</p>
@@ -250,6 +250,9 @@ public class DescribeSDGsResponseBody extends TeaModel {
 
         /**
          * <p>The description of the SDG.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Testing SDGs</p>
          */
         @NameInMap("Description")
         public String description;

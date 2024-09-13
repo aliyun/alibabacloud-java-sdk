@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeSDGShrinkRequest extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,12 +14,18 @@ public class DescribeSDGShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * <p>Default value: 10</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The IDs of SDGs that you want to query. By default, all SDGs are queried.</p>
+     */
     @NameInMap("SDGIds")
     public String SDGIdsShrink;
 

@@ -9,6 +9,9 @@ public class CreateSDGRequest extends TeaModel {
      * <blockquote>
      * <p> We recommend that you specify this parameter in details for subsequent queries.</p>
      * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Testing SDGs</p>
      */
     @NameInMap("Description")
     public String description;
@@ -33,7 +36,7 @@ public class CreateSDGRequest extends TeaModel {
     public String fromSDGId;
 
     /**
-     * <p>The ID of the device.</p>
+     * <p>The ID of the AIC instance. You can call the <a href="~~DescribeARMServerInstances~~">DescribeARMServerInstances</a> operation to query the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,11 +54,7 @@ public class CreateSDGRequest extends TeaModel {
      * </li>
      * <li><p>The first time that you create an SDG, the <strong>Size</strong> parameter is required.</p>
      * </li>
-     * <li><p>When the amount of data increases, you can pass a new <strong>Size</strong> parameter for resizing.</p>
-     * <ul>
-     * <li>If the value of the <strong>Size</strong> parameter is not empty and is greater than the value of the <strong>Size</strong> parameter of the original SDG, the original disk corresponding to the SDG is scaled out to the size that is specified by the current <strong>Size</strong> parameter.</li>
-     * <li>If the value of the <strong>Size</strong> parameter is not empty, or the value of the <strong>Size</strong> parameter is smaller than the value of the <strong>Size</strong> parameter of the original SDG, no operation is performed.</li>
-     * </ul>
+     * <li><p>When the amount of data increases, you can pass a new <strong>Size</strong> parameter for resizing. If the value of the new <strong>Size</strong> parameter is greater than the value of the old <strong>Size</strong> parameter, the disk size of the SDG is increased to the size that is specified by the new <strong>Size</strong> parameter. If the value of the new <strong>Size</strong> parameter is empty or smaller than that of the old <strong>Size</strong> parameter, no operation is performed.</p>
      * </li>
      * </ul>
      * 

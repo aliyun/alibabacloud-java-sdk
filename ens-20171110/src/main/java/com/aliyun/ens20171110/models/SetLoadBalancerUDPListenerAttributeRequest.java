@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetLoadBalancerUDPListenerAttributeRequest extends TeaModel {
     /**
-     * <p>The description of the listener. The description must be <strong>1</strong> to <strong>80</strong> characters in length.</p>
+     * <p>The name of the listener. The valuemust be <strong>1</strong> to <strong>80</strong> characters in length.</p>
      * <blockquote>
      * <p> The value cannot start with <code>http://</code> or <code>https://</code>.</p>
      * </blockquote>
@@ -30,6 +30,15 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends TeaModel {
     public String eipTransmit;
 
     /**
+     * <p>The timeout period of a connection. Valid values: <strong>10</strong> to <strong>900</strong>. Default value: <strong>900</strong>. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>500</p>
+     */
+    @NameInMap("EstablishedTimeout")
+    public Integer establishedTimeout;
+
+    /**
      * <p>The port that is used for health checks. Valid values: <strong>1</strong> to <strong>65535</strong>. If you leave this parameter empty, the port specified for BackendServerPort is used for health checks.</p>
      * 
      * <strong>example:</strong>
@@ -39,14 +48,14 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends TeaModel {
     public Integer healthCheckConnectPort;
 
     /**
-     * <p>The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails to pass the health check.</p>
+     * <p>The timeout period of a health check response. If the backend ENS does not respond within the specified time, the health check fails.</p>
      * <ul>
      * <li>Default value: 5.</li>
      * <li>Valid values: <strong>1</strong> to <strong>300</strong>.</li>
      * <li>Unit: seconds.</li>
      * </ul>
      * <blockquote>
-     * <p> If the value that you specified for HealthCheckConnectTimeout is smaller than the value of HealthCheckInterval, HealthCheckConnectTimeout becomes invalid and the timeout period that you specified for HealthCheckInterval is used.</p>
+     * <p> If the value of the HealthCheckTimeout property is smaller than the value of the HealthCheckInterval property, the timeout period specified by the HealthCheckTimeout property becomes invalid and the value of the HealthCheckInterval property is used as the timeout period.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -92,7 +101,7 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends TeaModel {
     public Integer healthyThreshold;
 
     /**
-     * <p>The frontend port that is used by the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>The listener port whose attributes are to be modified. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -156,6 +165,14 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends TeaModel {
     }
     public String getEipTransmit() {
         return this.eipTransmit;
+    }
+
+    public SetLoadBalancerUDPListenerAttributeRequest setEstablishedTimeout(Integer establishedTimeout) {
+        this.establishedTimeout = establishedTimeout;
+        return this;
+    }
+    public Integer getEstablishedTimeout() {
+        return this.establishedTimeout;
     }
 
     public SetLoadBalancerUDPListenerAttributeRequest setHealthCheckConnectPort(Integer healthCheckConnectPort) {

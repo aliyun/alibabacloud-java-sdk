@@ -87,12 +87,18 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dalian Unicom</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The province where the node is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Liaoning Province</p>
          */
         @NameInMap("Province")
         public String province;

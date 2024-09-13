@@ -60,6 +60,9 @@ public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
     public static class DescribeEnsNetSaleDistrictResponseBodyEnsNetDistrictsEnsNetDistrict extends TeaModel {
         /**
          * <p>The information about the ISP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{                         &quot;count&quot;:2,                         &quot;name&quot;:&quot;telecommunication&quot;,                         &quot;code&quot;:&quot;telecom&quot;,                         &quot;country&quot;:&quot;cn&quot;                     }</p>
          */
         @NameInMap("EnsRegionIdCount")
         public String ensRegionIdCount;
@@ -116,6 +119,9 @@ public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
 
         /**
          * <p>The Chinese name of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Northeast China</p>
          */
         @NameInMap("NetDistrictName")
         public String netDistrictName;

@@ -172,7 +172,7 @@ public class DescribeInstancesShrinkRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tags that are added to the resource.</p>
+     * <p>The tags that are added to the resource. This operation does not return tag information. You can call this operation in combination with the tag-related operations.</p>
      */
     @NameInMap("Tags")
     public String tagsShrink;

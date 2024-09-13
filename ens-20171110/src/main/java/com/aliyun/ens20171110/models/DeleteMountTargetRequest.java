@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteMountTargetRequest extends TeaModel {
     /**
-     * <p>The ID of the region.</p>
+     * <p>The ID of the edge node.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

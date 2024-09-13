@@ -11,7 +11,7 @@ public class CopySnapshotResponseBody extends TeaModel {
     public java.util.List<CopySnapshotResponseBodyAllocationId> allocationId;
 
     /**
-     * <p>Success status code.</p>
+     * <p>The success status code.</p>
      * <ul>
      * <li><strong>PartSuccess</strong>: partially succeeded.</li>
      * <li><strong>AllSuccess</strong>: all succeeded.</li>
@@ -86,7 +86,7 @@ public class CopySnapshotResponseBody extends TeaModel {
         public String ensRegionId;
 
         /**
-         * <p>An array of instance IDs.</p>
+         * <p>The IDs of the instances.</p>
          */
         @NameInMap("InstanceId")
         public java.util.List<String> instanceId;

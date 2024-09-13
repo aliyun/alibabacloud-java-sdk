@@ -110,6 +110,9 @@ public class DescribeEnsNetDistrictResponseBody extends TeaModel {
 
         /**
          * <p>The name of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>southwest China</p>
          */
         @NameInMap("NetDistrictName")
         public String netDistrictName;

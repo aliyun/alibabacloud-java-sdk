@@ -3,7 +3,7 @@ package com.aliyun.ens20171110.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeEipAddressesResponse extends TeaModel {
+public class UnassociateHaVipResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DescribeEipAddressesResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DescribeEipAddressesResponseBody body;
+    public UnassociateHaVipResponseBody body;
 
-    public static DescribeEipAddressesResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeEipAddressesResponse self = new DescribeEipAddressesResponse();
+    public static UnassociateHaVipResponse build(java.util.Map<String, ?> map) throws Exception {
+        UnassociateHaVipResponse self = new UnassociateHaVipResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeEipAddressesResponse setHeaders(java.util.Map<String, String> headers) {
+    public UnassociateHaVipResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DescribeEipAddressesResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeEipAddressesResponse setStatusCode(Integer statusCode) {
+    public UnassociateHaVipResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DescribeEipAddressesResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeEipAddressesResponse setBody(DescribeEipAddressesResponseBody body) {
+    public UnassociateHaVipResponse setBody(UnassociateHaVipResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeEipAddressesResponseBody getBody() {
+    public UnassociateHaVipResponseBody getBody() {
         return this.body;
     }
 

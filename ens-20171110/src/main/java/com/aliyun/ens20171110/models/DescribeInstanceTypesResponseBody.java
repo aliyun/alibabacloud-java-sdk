@@ -69,6 +69,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
         /**
          * <p>This parameter is unavailable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This parameter is not needed temporarily.</p>
          */
         @NameInMap("InstanceTypeId")
         public String instanceTypeId;

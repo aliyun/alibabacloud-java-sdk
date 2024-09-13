@@ -5,17 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartLoadBalancerListenerRequest extends TeaModel {
     /**
-     * <p>The frontend port that is used by the Edge Load Balance (ELB) instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
-     * <blockquote>
-     * </blockquote>
-     * <ul>
-     * <li><p>You cannot specify port 250, 4789, or 4790 for UDP listeners. The preceding ports are system reserved ports.</p>
-     * </li>
-     * <li><p>We recommend that you use port 80 for HTTP.</p>
-     * </li>
-     * <li><p>We recommend that you use port 443 for HTTPS.</p>
-     * </li>
-     * </ul>
+     * <p>The listener port to be enabled. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

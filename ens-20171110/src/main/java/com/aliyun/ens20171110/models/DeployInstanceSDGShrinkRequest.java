@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeployInstanceSDGShrinkRequest extends TeaModel {
     /**
+     * <p>The deployment type of the SDG. Valid values:</p>
+     * <ul>
+     * <li>shared: shared read/write splitting deployment. The content of the SDG is read-only, and data updates are written to the local storage of the instance.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>shared</p>
      */
@@ -12,12 +17,14 @@ public class DeployInstanceSDGShrinkRequest extends TeaModel {
     public String deploymentType;
 
     /**
+     * <p>The IDs of the instances. The value is a JSON array that consists of up to 100 IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIdsShrink;
 
     /**
+     * <p>The ID of the SDG.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

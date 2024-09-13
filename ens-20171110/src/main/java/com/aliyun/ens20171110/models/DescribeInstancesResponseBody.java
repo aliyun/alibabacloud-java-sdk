@@ -150,6 +150,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("DiskSize")
         public Integer diskSize;
 
+        @NameInMap("EncryptKeyId")
+        public String encryptKeyId;
+
+        @NameInMap("Encrypted")
+        public Boolean encrypted;
+
         /**
          * <p>The size of the disk. Unit: MiB.</p>
          * 
@@ -245,6 +251,22 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public Integer getDiskSize() {
             return this.diskSize;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceDataDiskDataDisk setEncryptKeyId(String encryptKeyId) {
+            this.encryptKeyId = encryptKeyId;
+            return this;
+        }
+        public String getEncryptKeyId() {
+            return this.encryptKeyId;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceDataDiskDataDisk setEncrypted(Boolean encrypted) {
+            this.encrypted = encrypted;
+            return this;
+        }
+        public Boolean getEncrypted() {
+            return this.encrypted;
         }
 
         public DescribeInstancesResponseBodyInstancesInstanceDataDiskDataDisk setSize(Integer size) {
@@ -999,6 +1021,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("InternetMaxBandwidthOut")
         public Integer internetMaxBandwidthOut;
 
+        @NameInMap("KeyPairName")
+        public String keyPairName;
+
         /**
          * <p>The memory size. Unit: MB.</p>
          * 
@@ -1048,7 +1073,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds securityGroupIds;
 
         /**
-         * <p>The code of the instance type.</p>
+         * <p>The instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>ens.sn1.stiny</p>
@@ -1222,6 +1247,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public Integer getInternetMaxBandwidthOut() {
             return this.internetMaxBandwidthOut;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setKeyPairName(String keyPairName) {
+            this.keyPairName = keyPairName;
+            return this;
+        }
+        public String getKeyPairName() {
+            return this.keyPairName;
         }
 
         public DescribeInstancesResponseBodyInstancesInstance setMemory(Integer memory) {

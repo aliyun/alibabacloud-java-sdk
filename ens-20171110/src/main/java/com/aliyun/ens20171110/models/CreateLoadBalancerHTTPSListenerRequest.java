@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
     /**
+     * <p>The listening port that is used by the backend instances. Valid values: 1 to 65535.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8080</p>
+     */
+    @NameInMap("BackendServerPort")
+    public Integer backendServerPort;
+
+    /**
      * <p>The cookie that is configured on the server. The cookie must be <strong>1</strong> to <strong>200</strong> characters in length and contain only ASCII characters and digits.</p>
      * <blockquote>
      * <p> This parameter is required if you set StickySession to on and StickySessionType to server.</p>
@@ -35,7 +44,7 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>监听说明</p>
+     * <p>https_80</p>
      */
     @NameInMap("Description")
     public String description;
@@ -143,9 +152,9 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
      * <blockquote>
      * </blockquote>
      * <ul>
-     * <li><p>This parameter takes effect only if you set HealthCheck to on.</p>
+     * <li><p>This parameter takes effect only if the HealthCheck parameter is set to on.</p>
      * </li>
-     * <li><p>If the value of the HealthCheckTimeout parameter is smaller than the value of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.</p>
+     * <li><p>If the value of HealthCheckTimeout is smaller than the value of HealthCheckInterval, the timeout period specified by HealthCheckTimeout becomes invalid, and the value of HealthCheckInterval is used as the timeout period.</p>
      * </li>
      * </ul>
      * 
@@ -156,12 +165,10 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
     public Integer healthCheckTimeout;
 
     /**
-     * <p>The Uniform Resource Identifier (URI) that you want to use for health checks. The URI must be <strong>1</strong> to <strong>80</strong> characters in length.</p>
+     * <p>The URI used for health checks. The URI must be <strong>1</strong> to <strong>80</strong> characters in length.</p>
      * <blockquote>
+     * <p> A URL must start with a forward slash (<code>/</code>) but cannot contain only forward slashes (<code>/</code>).</p>
      * </blockquote>
-     * <ul>
-     * <li>The URL must start with a forward slash (<code>/</code>) and contain characters other than forward slashes (<code>/</code>).</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>/checkpreload.htm</p>
@@ -207,7 +214,10 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
     public String listenerForward;
 
     /**
-     * <p>The frontend port that is used by the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>The listening port that is used by Edge Load Balancer (ELB) to receive requests and forward the requests to backend servers. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <blockquote>
+     * <p> We recommend that you use port 443 for HTTPS.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -260,7 +270,7 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>6027667</p>
+     * <p>60276**</p>
      */
     @NameInMap("ServerCertificateId")
     public String serverCertificateId;
@@ -296,6 +306,14 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
     public static CreateLoadBalancerHTTPSListenerRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLoadBalancerHTTPSListenerRequest self = new CreateLoadBalancerHTTPSListenerRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateLoadBalancerHTTPSListenerRequest setBackendServerPort(Integer backendServerPort) {
+        this.backendServerPort = backendServerPort;
+        return this;
+    }
+    public Integer getBackendServerPort() {
+        return this.backendServerPort;
     }
 
     public CreateLoadBalancerHTTPSListenerRequest setCookie(String cookie) {

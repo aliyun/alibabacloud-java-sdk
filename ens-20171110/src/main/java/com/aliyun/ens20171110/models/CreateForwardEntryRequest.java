@@ -19,7 +19,7 @@ public class CreateForwardEntryRequest extends TeaModel {
      * <ul>
      * <li>Valid values: 1 to 65535.</li>
      * <li>To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20.</li>
-     * <li>If you set ExternalPort to a port range, you must also set InternalPort to a port range, and the number of ports specified must be the same for both parameters. For example, if you set ExternalPort to 10/20, you can set InternalPort to 80/90.</li>
+     * <li>If you set ExternalPort to a port range, you must also set InternalPort to a port range. The number of ports in the port ranges must be the same. For example, if you set ExternalPort to 10/20, you can set InternalPort to 80/90.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

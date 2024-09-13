@@ -15,9 +15,9 @@ public class SetLoadBalancerStatusRequest extends TeaModel {
     public String loadBalancerId;
 
     /**
-     * <p>The status of the ELB instance. Valid values:</p>
+     * <p>The status of the listener after the modification. Valid values:</p>
      * <ul>
-     * <li><strong>Active</strong> (default): The listener for the instance can forward the received traffic based on the rule.</li>
+     * <li><strong>Active</strong>: The listener for the instance can forward the received traffic based on forwarding rules.</li>
      * <li><strong>InActive</strong>: The listener for the instance does not forward the received traffic.</li>
      * </ul>
      * <p>This parameter is required.</p>
