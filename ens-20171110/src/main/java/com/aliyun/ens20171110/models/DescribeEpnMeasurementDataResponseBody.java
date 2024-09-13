@@ -52,6 +52,9 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
 
         /**
          * <p>The name of the billable item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Beijing, Shanghai, and Guangzhou Mobile</p>
          */
         @NameInMap("CostName")
         public String costName;
@@ -80,6 +83,9 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
 
         /**
          * <p>This parameter is unavailable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This parameter is not currently in use.</p>
          */
         @NameInMap("IspLine")
         public String ispLine;

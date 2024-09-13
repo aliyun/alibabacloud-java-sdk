@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnassignPrivateIpAddressesResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1ECC937A-AE0E-4626-BE51-DED1D6D1C888</p>

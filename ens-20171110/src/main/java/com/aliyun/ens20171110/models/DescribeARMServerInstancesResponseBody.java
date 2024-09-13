@@ -96,7 +96,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
          * <p>The IP address of the AIC instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>192.168.1.1</p>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("IpAddress")
         public String ipAddress;

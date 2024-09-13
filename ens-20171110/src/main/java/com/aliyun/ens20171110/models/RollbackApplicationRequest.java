@@ -9,7 +9,7 @@ public class RollbackApplicationRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>474bdef0-d149-4695-abfb-52912d9143f0</p>
+     * <p>474bdef0-d149-4695-abfb-52912d91****</p>
      */
     @NameInMap("AppId")
     public String appId;

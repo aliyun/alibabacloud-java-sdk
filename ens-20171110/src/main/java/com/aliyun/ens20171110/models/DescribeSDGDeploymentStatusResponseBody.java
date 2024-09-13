@@ -93,7 +93,7 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
 
     public static class DescribeSDGDeploymentStatusResponseBodyDeploymentStatus extends TeaModel {
         /**
-         * <p>The ID of the instance</p>
+         * <p>The ID of the AIC instance.</p>
          * 
          * <strong>example:</strong>
          * <p>aic-xxxx</p>
@@ -105,28 +105,8 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
          * <p>The deployment type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>overlay</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>read/write splitting</p>
-         * <!-- -->
-         * 
-         * <p>.</p>
-         * </li>
-         * <li><p>common</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>common deployment</p>
-         * <!-- -->
-         * 
-         * <p>.</p>
-         * </li>
+         * <li>overlay: read/write splitting.</li>
+         * <li>common: common deployment.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -136,7 +116,7 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
         public String mountType;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The ID of the edge node.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -145,29 +125,12 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The deployment status of the SDG.</p>
+         * <p>the deployment status of the shared data group SDG.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>sdg_deploying</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>success</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>failed</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
+         * <li>sdg_deploying</li>
+         * <li>success</li>
+         * <li>failed</li>
          * </ul>
          * 
          * <strong>example:</strong>

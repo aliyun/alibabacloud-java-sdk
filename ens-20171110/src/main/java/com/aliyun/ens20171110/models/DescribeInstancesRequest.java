@@ -172,7 +172,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tags that are added to the resource.</p>
+     * <p>The tags that are added to the resource. This operation does not return tag information. You can call this operation in combination with the tag-related operations.</p>
      */
     @NameInMap("Tags")
     public java.util.List<DescribeInstancesRequestTags> tags;
@@ -345,7 +345,7 @@ public class DescribeInstancesRequest extends TeaModel {
 
     public static class DescribeInstancesRequestTags extends TeaModel {
         /**
-         * <p>The tag key. Valid values: 1 to 20.</p>
+         * <p>The key of the tag that are to add to the instance. Valid values: 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>tag</p>
@@ -354,7 +354,7 @@ public class DescribeInstancesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. Valid values: 1 to 20.</p>
+         * <p>The tag value of the instance. Valid values: 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

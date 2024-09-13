@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeBandWithdChargeTypeResponseBody extends TeaModel {
     /**
      * <p>The information about the metering method.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{ &quot;BandWidthName&quot;: &quot;Monthly peak bandwidth of 95&quot;, 			&quot;BandWidthType&quot;: &quot;95BandwidthByMonth&quot; 		}</p>
      */
     @NameInMap("BandWithTypeInfo")
     public String bandWithTypeInfo;

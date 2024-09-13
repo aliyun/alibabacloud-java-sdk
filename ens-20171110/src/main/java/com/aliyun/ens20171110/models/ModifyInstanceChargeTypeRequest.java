@@ -17,7 +17,7 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable auto-renewal when you change the billing method from pay-as-you-go to subscription. Valid values:</p>
-     * <p>true</p>
+     * <p>true: enables auto-renewal for the instance.</p>
      * <p>false</p>
      * 
      * <strong>example:</strong>
@@ -68,15 +68,9 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The unit of the subscription duration. This parameter is required if you set the InstanceChargeType parameter to PrePaid. Examples:</p>
+     * <p>The unit of the subscription duration. This parameter is required if you set the InstanceChargeType parameter to PrePaid. Valid values:</p>
      * <p>Month</p>
      * <p>Day</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Year</li>
-     * <li>Month</li>
-     * <li>Day</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Month</p>

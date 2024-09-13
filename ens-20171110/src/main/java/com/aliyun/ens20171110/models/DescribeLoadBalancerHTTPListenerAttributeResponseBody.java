@@ -5,15 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaModel {
     /**
-     * <p>The maximum bandwidth of the EIP.</p>
-     * <ul>
-     * <li>Default value: 5.</li>
-     * <li>Valid values: <strong>5</strong> to <strong>10000</strong>.</li>
-     * <li>Unit: Mbit/s.</li>
-     * </ul>
+     * <p>The backend port that is used by the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * 
      * <strong>example:</strong>
-     * <p>50</p>
+     * <p>8080</p>
+     */
+    @NameInMap("BackendServerPort")
+    public Integer backendServerPort;
+
+    /**
+     * <p>The peak bandwidth of the Edge Load Balancer (ELB) instance. The default value is -1, which indicates that the bandwidth is not limited.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-1</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
@@ -123,18 +127,20 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
     public String healthCheckMethod;
 
     /**
-     * <p>The timeout period of a health check. If a backend server does not respond within the specified timeout period, the server fails to pass the health check.</p>
+     * <p>The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails the health check.</p>
      * <ul>
      * <li>Default value: 5.</li>
      * <li>Valid values: <strong>1</strong> to <strong>300</strong>.</li>
      * <li>Unit: seconds.</li>
      * </ul>
      * <blockquote>
-     * <ul>
-     * <li>This parameter is returned only if you set HealthCheck to on.</li>
-     * <li>If the value of the HealthCheckTimeout parameter is smaller than the value of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.</li>
-     * </ul>
      * </blockquote>
+     * <ul>
+     * <li><p>This parameter takes effect only if the HealthCheck parameter is set to on.</p>
+     * </li>
+     * <li><p>If the value of HealthCheckTimeout is smaller than the value of HealthCheckInterval, the timeout period specified by HealthCheckTimeout becomes invalid, and the value of HealthCheckInterval is used as the timeout period.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -143,13 +149,15 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
     public Integer healthCheckTimeout;
 
     /**
-     * <p>The Uniform Resource Identifier (URI) that is used for health checks. The URI must be <strong>1</strong> to <strong>80</strong> characters in length.</p>
+     * <p>The URI used for health checks. The URI must be <strong>1</strong> to <strong>80</strong> characters in length.</p>
      * <blockquote>
-     * <ul>
-     * <li>The URL must start with a forward slash (<code>/</code>) and contain characters other than forward slashes (<code>/</code>).</li>
-     * <li>This parameter is returned only if you set HealthCheck to on.</li>
-     * </ul>
      * </blockquote>
+     * <ul>
+     * <li><p>A URL must start with a forward slash (<code>/</code>) but cannot contain only forward slashes (<code>/</code>).</p>
+     * </li>
+     * <li><p>This parameter takes effect only if the HealthCheck parameter is set to on.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>/checkpreload.htm</p>
@@ -195,10 +203,10 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
     public String listenerForward;
 
     /**
-     * <p>The frontend port that is used by the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>The listener port.</p>
      * 
      * <strong>example:</strong>
-     * <p>8080</p>
+     * <p>80</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
@@ -279,10 +287,10 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
     public Integer unhealthyThreshold;
 
     /**
-     * <p>Specifies whether to use the X-Forwarded-For header to obtain the real IP address of the client. Valid values:</p>
+     * <p>Indicates whether the X-Forwarded-For header is used to obtain the real IP address of the client. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong></li>
-     * <li><strong>off</strong> (default)</li>
+     * <li><strong>on</strong> (default)</li>
+     * <li><strong>off</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -294,6 +302,14 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
     public static DescribeLoadBalancerHTTPListenerAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLoadBalancerHTTPListenerAttributeResponseBody self = new DescribeLoadBalancerHTTPListenerAttributeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLoadBalancerHTTPListenerAttributeResponseBody setBackendServerPort(Integer backendServerPort) {
+        this.backendServerPort = backendServerPort;
+        return this;
+    }
+    public Integer getBackendServerPort() {
+        return this.backendServerPort;
     }
 
     public DescribeLoadBalancerHTTPListenerAttributeResponseBody setBandwidth(Integer bandwidth) {

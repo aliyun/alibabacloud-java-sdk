@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSDGRequest extends TeaModel {
     /**
-     * <p>IDs of SDGs that you want to delete. You can delete a maximum of 10 SDGs at a time.</p>
+     * <p>The IDs of the SDGs that you want to delete.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SDGId")

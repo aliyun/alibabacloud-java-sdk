@@ -8,7 +8,7 @@ public class RebootARMServerInstanceRequest extends TeaModel {
      * <p>The ID of the server.</p>
      * 
      * <strong>example:</strong>
-     * <p>cas-instance****</p>
+     * <p>yourInstance ID</p>
      */
     @NameInMap("ServerId")
     public String serverId;

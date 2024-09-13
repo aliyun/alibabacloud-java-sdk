@@ -31,8 +31,8 @@ public class RunInstancesRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><strong>true</strong>.</li>
+     * <li><strong>false</strong> (default).</li>
      * </ul>
      * <blockquote>
      * <p> This parameter is not available when InstanceChargeType is set to PostPaid.</p>
@@ -56,8 +56,8 @@ public class RunInstancesRequest extends TeaModel {
     /**
      * <p>The billing cycle of computing resources of the instance. Only pay-as-you-go instances are supported. Valid values:</p>
      * <ul>
-     * <li><strong>Day</strong></li>
-     * <li><strong>Month</strong></li>
+     * <li><strong>Day</strong>.</li>
+     * <li><strong>Month</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class RunInstancesRequest extends TeaModel {
     public String carrier;
 
     /**
-     * <p>The specifications of the data disk.</p>
+     * <p>The specifications of data disks.</p>
      */
     @NameInMap("DataDisk")
     public java.util.List<RunInstancesRequestDataDisk> dataDisk;
@@ -190,9 +190,9 @@ public class RunInstancesRequest extends TeaModel {
     /**
      * <p>The type of the IP address. Valid values:</p>
      * <ul>
-     * <li><strong>ipv4</strong> (default)</li>
-     * <li><strong>ipv6</strong></li>
-     * <li><strong>ipv4Andipv6</strong></li>
+     * <li><strong>ipv4</strong> (default).</li>
+     * <li><strong>ipv6</strong>.</li>
+     * <li><strong>ipv4Andipv6</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -279,10 +279,10 @@ public class RunInstancesRequest extends TeaModel {
     public Long period;
 
     /**
-     * <p>The unit of the subscription duration. Valid values:</p>
+     * <p>The unit of the subscription period. Valid values:</p>
      * <ul>
-     * <li><strong>Month</strong> (default)</li>
-     * <li><strong>Day</strong></li>
+     * <li><strong>Month</strong> (default).</li>
+     * <li><strong>Day</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -365,6 +365,9 @@ public class RunInstancesRequest extends TeaModel {
      */
     @NameInMap("SecurityId")
     public String securityId;
+
+    @NameInMap("SpotDuration")
+    public Integer spotDuration;
 
     /**
      * <p>The bidding policy for the pay-as-you-go instance. This parameter is valid only when the <code>InstanceChargeType</code> parameter is set to <code>PostPaid</code>. Valid values:</p>
@@ -667,6 +670,14 @@ public class RunInstancesRequest extends TeaModel {
         return this.securityId;
     }
 
+    public RunInstancesRequest setSpotDuration(Integer spotDuration) {
+        this.spotDuration = spotDuration;
+        return this;
+    }
+    public Integer getSpotDuration() {
+        return this.spotDuration;
+    }
+
     public RunInstancesRequest setSpotStrategy(String spotStrategy) {
         this.spotStrategy = spotStrategy;
         return this;
@@ -732,10 +743,10 @@ public class RunInstancesRequest extends TeaModel {
         public String category;
 
         /**
-         * <p>Specifies whether to encrypt the disk. Valid values:</p>
+         * <p>Indicates whether the cloud disk is encrypted. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false (default)</li>
+         * <li>true.</li>
+         * <li>false (default).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -747,8 +758,8 @@ public class RunInstancesRequest extends TeaModel {
         /**
          * <p>The ID of the Key Management Service (KMS) key that is used for the disk. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false (default)</li>
+         * <li>true.</li>
+         * <li>false (default).</li>
          * </ul>
          * <blockquote>
          * <p> If you set the Encrypted parameter to true, the default service key is used when the KMSKeyId parameter is empty.</p>

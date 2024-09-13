@@ -110,8 +110,8 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         /**
          * <p>The source of the image. Valid values:</p>
          * <ul>
-         * <li><strong>system</strong>: public images</li>
-         * <li><strong>self</strong>: your custom images</li>
+         * <li><strong>others</strong>: a custom image that is shared by other Alibaba Cloud accounts.</li>
+         * <li><strong>self</strong>: your own custom image.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -129,8 +129,11 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         @NameInMap("ImageSize")
         public String imageSize;
 
+        @NameInMap("ImageStorageSize")
+        public String imageStorageSize;
+
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>i-5iqczfxps7csjrxeca****</p>
@@ -165,7 +168,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         public String platform;
 
         /**
-         * <p>The ID of the snapshot.</p>
+         * <p>The snapshot ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sp-5yt3bdedxzdz6t6uuw****</p>
@@ -251,6 +254,14 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         }
         public String getImageSize() {
             return this.imageSize;
+        }
+
+        public DescribeSelfImagesResponseBodyImagesImage setImageStorageSize(String imageStorageSize) {
+            this.imageStorageSize = imageStorageSize;
+            return this;
+        }
+        public String getImageStorageSize() {
+            return this.imageStorageSize;
         }
 
         public DescribeSelfImagesResponseBodyImagesImage setInstanceId(String instanceId) {

@@ -15,7 +15,7 @@ public class ModifyFileSystemRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The ID of the edge node.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

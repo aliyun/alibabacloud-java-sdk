@@ -143,6 +143,9 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
 
         /**
          * <p>The description of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test application</p>
          */
         @NameInMap("Description")
         public String description;
@@ -235,6 +238,9 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
 
         /**
          * <p>The description of the application status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Creating in progress</p>
          */
         @NameInMap("StatusDescrip")
         public String statusDescrip;
@@ -664,6 +670,9 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
 
         /**
          * <p>The region name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Jiaozuo City, Henan Province, Central China</p>
          */
         @NameInMap("AreaName")
         public String areaName;
@@ -733,6 +742,9 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
 
         /**
          * <p>The name of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China Jiaozuo-2</p>
          */
         @NameInMap("RegionName")
         public String regionName;

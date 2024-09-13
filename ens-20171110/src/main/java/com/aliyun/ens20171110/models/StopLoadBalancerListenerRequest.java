@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopLoadBalancerListenerRequest extends TeaModel {
     /**
-     * <p>The frontend port that is used by the Edge Load Balance (ELB) instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>The listener port that you want to disable. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -40,7 +40,7 @@ public class CreateFileSystemRequest extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The ID of the edge node.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -50,7 +50,7 @@ public class CreateFileSystemRequest extends TeaModel {
         public String ensRegionId;
 
         /**
-         * <p>The name of the file system.</p>
+         * <p>The name of the file system. The name must be 1 to 80 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class CreateFileSystemRequest extends TeaModel {
         public String fileSystemName;
 
         /**
-         * <p>The name of the mount target.</p>
+         * <p>The name of the mount target. The name must be 1 to 80 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -80,7 +80,7 @@ public class CreateFileSystemRequest extends TeaModel {
         public String networkId;
 
         /**
-         * <p>The type of the order.</p>
+         * <p>The type of the order. Set the value to BUY.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +100,11 @@ public class CreateFileSystemRequest extends TeaModel {
         public String protocolType;
 
         /**
-         * <p>The type of the storage. Set the value to capacity.</p>
+         * <p>The storage type. Valid values:</p>
+         * <ul>
+         * <li>Capacity.</li>
+         * <li>Performance.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

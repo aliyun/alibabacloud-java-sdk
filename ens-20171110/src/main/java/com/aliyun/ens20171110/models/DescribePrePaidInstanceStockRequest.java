@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePrePaidInstanceStockRequest extends TeaModel {
     /**
-     * <p>The ID of the datadisk.</p>
+     * <p>The size of the data disk. Unit: GB.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DescribePrePaidInstanceStockRequest extends TeaModel {
     public String ensRegionId;
 
     /**
-     * <p>The size of the system disk. Unit: GB.</p>
+     * <p>The specification of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class DescribePrePaidInstanceStockRequest extends TeaModel {
     public String instanceSpec;
 
     /**
-     * <p>The ID of the systemdisk</p>
+     * <p>The size of the system disk. Unit: GB.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

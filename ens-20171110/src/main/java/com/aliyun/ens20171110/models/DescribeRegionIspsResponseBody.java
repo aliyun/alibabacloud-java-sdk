@@ -52,6 +52,9 @@ public class DescribeRegionIspsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the ISP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>move</p>
          */
         @NameInMap("Name")
         public String name;

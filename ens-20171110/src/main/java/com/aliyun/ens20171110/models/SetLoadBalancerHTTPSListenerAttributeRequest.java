@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
     /**
-     * <p>The description of the listener. The description must be <strong>1</strong> to <strong>80</strong> characters in length.</p>
+     * <p>The name of the listener. The value must be <strong>1</strong> to <strong>80</strong> characters in length.</p>
      * <blockquote>
      * <p> The value cannot start with <code>http://</code> or <code>https://</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>监听说明</p>
+     * <p>Monitoring instructions</p>
      */
     @NameInMap("Description")
     public String description;
@@ -100,7 +100,7 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
     public String healthCheckMethod;
 
     /**
-     * <p>The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails to pass the health check.</p>
+     * <p>The timeout period of a health check response. If the backend ENS does not respond within the specified time, the health check fails.</p>
      * <ul>
      * <li>Default value: 5.</li>
      * <li>Valid values: <strong>1</strong> to <strong>300</strong>.</li>
@@ -109,9 +109,9 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
      * <blockquote>
      * </blockquote>
      * <ul>
-     * <li><p>This parameter takes effect only if you set HealthCheck to on.</p>
+     * <li><p>This parameter takes effect only if the HealthCheck parameter is set to on.</p>
      * </li>
-     * <li><p>If the value of the HealthCheckTimeout parameter is smaller than the value of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.</p>
+     * <li><p>If the value of the HealthCheckTimeout property is smaller than the value of the HealthCheckInterval property, the timeout period specified by the HealthCheckTimeout property becomes invalid and the value of the HealthCheckInterval property is used as the timeout period.</p>
      * </li>
      * </ul>
      * 
@@ -122,13 +122,13 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
     public Integer healthCheckTimeout;
 
     /**
-     * <p>The Uniform Resource Identifier (URI) that you want to use for health checks. The URI must be <strong>1</strong> to <strong>80</strong> characters in length.</p>
+     * <p>The URI used for health checks. The URI must be <strong>1</strong> to <strong>80</strong> characters in length.</p>
      * <blockquote>
      * </blockquote>
      * <ul>
-     * <li><p>The URL must start with a forward slash (<code>/</code>) and contain characters other than forward slashes (<code>/</code>).</p>
+     * <li><p>A URL must start with a forward slash (<code>/</code>) but cannot contain only forward slashes (<code>/</code>).</p>
      * </li>
-     * <li><p>This parameter takes effect only if you set HealthCheck to on.</p>
+     * <li><p>This parameter takes effect only if the HealthCheck parameter is set to on.</p>
      * </li>
      * </ul>
      * 
@@ -163,7 +163,7 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
     public Integer idleTimeout;
 
     /**
-     * <p>The frontend port that is used by the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>The listener port whose attributes are to be modified. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

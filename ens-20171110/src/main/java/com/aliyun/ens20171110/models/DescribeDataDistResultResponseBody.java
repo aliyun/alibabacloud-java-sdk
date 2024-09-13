@@ -112,6 +112,9 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
 
         /**
          * <p>The description of the distribution status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         @NameInMap("StatusDescrip")
         public String statusDescrip;

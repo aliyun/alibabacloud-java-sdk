@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CopySnapshotShrinkRequest extends TeaModel {
     /**
-     * <p>The destination nodes.</p>
+     * <p>The IDs of destination nodes.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationRegionIds")

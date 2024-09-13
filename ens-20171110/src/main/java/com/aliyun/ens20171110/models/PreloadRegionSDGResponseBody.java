@@ -4,10 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class PreloadRegionSDGResponseBody extends TeaModel {
+    /**
+     * <p>The returned data object.</p>
+     */
     @NameInMap("Data")
     public PreloadRegionSDGResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C0003E8B-B930-4F59-ADC0-0E209A9012A8</p>
      */
@@ -37,6 +42,8 @@ public class PreloadRegionSDGResponseBody extends TeaModel {
 
     public static class PreloadRegionSDGResponseBodyDataResultFailedItems extends TeaModel {
         /**
+         * <p>The ID of the destination node.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-xxx</p>
          */
@@ -44,6 +51,8 @@ public class PreloadRegionSDGResponseBody extends TeaModel {
         public String destinationRegionId;
 
         /**
+         * <p>The error message that is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>region not found</p>
          */
@@ -75,16 +84,23 @@ public class PreloadRegionSDGResponseBody extends TeaModel {
 
     public static class PreloadRegionSDGResponseBodyDataResult extends TeaModel {
         /**
+         * <p>The number of failed tasks.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("FailedCount")
         public Long failedCount;
 
+        /**
+         * <p>Details about failed tasks.</p>
+         */
         @NameInMap("FailedItems")
         public java.util.List<PreloadRegionSDGResponseBodyDataResultFailedItems> failedItems;
 
         /**
+         * <p>The number of successful tasks.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -124,16 +140,27 @@ public class PreloadRegionSDGResponseBody extends TeaModel {
 
     public static class PreloadRegionSDGResponseBodyData extends TeaModel {
         /**
+         * <p>The message returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The execution result of the synchronization request.</p>
+         */
         @NameInMap("Result")
         public PreloadRegionSDGResponseBodyDataResult result;
 
         /**
+         * <p>Indicates whether all tasks are successful. Valid values:</p>
+         * <ul>
+         * <li>true: All tasks are successful.</li>
+         * <li>false: Failed tasks exist.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLoadBalancersResponseBody extends TeaModel {
     /**
-     * <p>The returned ELB instances.</p>
+     * <p>An array of ELB instances.</p>
      */
     @NameInMap("LoadBalancers")
     public DescribeLoadBalancersResponseBodyLoadBalancers loadBalancers;
@@ -38,7 +38,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -96,13 +96,13 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
          * <p>The IP address that the ELB instance uses to provide services.</p>
          * 
          * <strong>example:</strong>
-         * <p>10.10.10.10</p>
+         * <p>10.10.XX.XX</p>
          */
         @NameInMap("Address")
         public String address;
 
         /**
-         * <p>The version of the IP address. Valid values: ipv4 and ipv6.</p>
+         * <p>The IP version. Valid values: ipv4 and ipv6.</p>
          * 
          * <strong>example:</strong>
          * <p>ipv4</p>
@@ -147,9 +147,9 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         public String loadBalancerName;
 
         /**
-         * <p>The status of the ELB instance. Valid values:</p>
+         * <p>The status of the listener for the ELB instance. Valid values:</p>
          * <ul>
-         * <li><strong>Active</strong> (default): The listener for the instance can forward the received traffic based on the rule.</li>
+         * <li><strong>Active</strong>: The listener for the instance can forward the received traffic based on forwarding rules.</li>
          * <li><strong>InActive</strong>: The listener for the instance does not forward the received traffic.</li>
          * </ul>
          * 

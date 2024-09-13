@@ -8,7 +8,7 @@ public class DescribeLoadBalancersRequest extends TeaModel {
      * <p>The IP address that the ELB instance uses to provide services.</p>
      * 
      * <strong>example:</strong>
-     * <p>10.0.0.8</p>
+     * <p>10.0.XX.XX</p>
      */
     @NameInMap("Address")
     public String address;
@@ -41,9 +41,9 @@ public class DescribeLoadBalancersRequest extends TeaModel {
     public String loadBalancerName;
 
     /**
-     * <p>The status of the ELB instance. Valid values:</p>
+     * <p>The status of the listener for the ELB instance. Valid values:</p>
      * <ul>
-     * <li><strong>Active</strong> (default): The listener for the instance can forward the received traffic based on the rule.</li>
+     * <li><strong>Active</strong>: The listener for the instance can forward the received traffic based on forwarding rules.</li>
      * <li><strong>InActive</strong>: The listener for the instance does not forward the received traffic.</li>
      * </ul>
      * 

@@ -52,6 +52,9 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
 
         /**
          * <p>The name of the bandwidth plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Beijing, Shanghai, and Guangzhou Mobile</p>
          */
         @NameInMap("CostName")
         public String costName;

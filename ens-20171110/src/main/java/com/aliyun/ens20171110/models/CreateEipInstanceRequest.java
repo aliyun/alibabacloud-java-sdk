@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateEipInstanceRequest extends TeaModel {
     /**
-     * <p>The peak bandwidth of the EIP. Default value: 5. Valid values: 5 to 10000. Unit: Mbit/s.</p>
+     * <p>The maximum bandwidth of the EIP. Default value: 5. Valid values: 5 to 10000. Unit: Mbit/s.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -55,9 +55,9 @@ public class CreateEipInstanceRequest extends TeaModel {
     /**
      * <p>The Internet service provider. Valid values:</p>
      * <ul>
-     * <li><strong>cmcc</strong>: China Mobile</li>
-     * <li><strong>unicom</strong>: China Unicom</li>
-     * <li><strong>telecom</strong>: China Telecom</li>
+     * <li><strong>cmcc</strong>: China Mobile.</li>
+     * <li><strong>unicom</strong>: China Unicom.</li>
+     * <li><strong>telecom</strong>: China Telecom.</li>
      * </ul>
      * 
      * <strong>example:</strong>

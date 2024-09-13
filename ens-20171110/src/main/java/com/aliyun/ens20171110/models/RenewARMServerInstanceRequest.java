@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class RenewARMServerInstanceRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable auto-renewal for the subscription. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false (default)</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

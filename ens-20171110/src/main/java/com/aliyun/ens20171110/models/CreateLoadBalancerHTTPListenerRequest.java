@@ -5,13 +5,22 @@ import com.aliyun.tea.*;
 
 public class CreateLoadBalancerHTTPListenerRequest extends TeaModel {
     /**
-     * <p>The description of the listener. The description must be <strong>1</strong> to <strong>80</strong> characters in length.</p>
+     * <p>负载均衡实例后端服务器使用的端口，取值：<strong>1</strong>~<strong>65535</strong>。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8080</p>
+     */
+    @NameInMap("BackendServerPort")
+    public Integer backendServerPort;
+
+    /**
+     * <p>The name of the listener. The value must be <strong>1</strong> to <strong>80</strong> characters in length.</p>
      * <blockquote>
      * <p> The value cannot start with <code>http://</code> or <code>https://</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>监听说明</p>
+     * <p>Monitoring instructions</p>
      */
     @NameInMap("Description")
     public String description;
@@ -110,7 +119,7 @@ public class CreateLoadBalancerHTTPListenerRequest extends TeaModel {
     public String healthCheckMethod;
 
     /**
-     * <p>The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails to pass the health check.</p>
+     * <p>The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails the health check.</p>
      * <ul>
      * <li>Default value: 5.</li>
      * <li>Valid values: <strong>1</strong> to <strong>300</strong>.</li>
@@ -119,9 +128,9 @@ public class CreateLoadBalancerHTTPListenerRequest extends TeaModel {
      * <blockquote>
      * </blockquote>
      * <ul>
-     * <li><p>This parameter takes effect only if you set HealthCheck to on.</p>
+     * <li><p>This parameter takes effect only if the HealthCheck parameter is set to on.</p>
      * </li>
-     * <li><p>If the value of the HealthCheckTimeout parameter is smaller than the value of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.</p>
+     * <li><p>If the value of HealthCheckTimeout is smaller than the value of HealthCheckInterval, the timeout period specified by HealthCheckTimeout becomes invalid, and the value of HealthCheckInterval is used as the timeout period.</p>
      * </li>
      * </ul>
      * 
@@ -132,13 +141,13 @@ public class CreateLoadBalancerHTTPListenerRequest extends TeaModel {
     public Integer healthCheckTimeout;
 
     /**
-     * <p>The Uniform Resource Identifier (URI) that you want to use for health checks. The URI must be <strong>1</strong> to <strong>80</strong> characters in length.</p>
+     * <p>The URI used for health checks. The URI must be <strong>1</strong> to <strong>80</strong> characters in length.</p>
      * <blockquote>
      * </blockquote>
      * <ul>
-     * <li><p>The URL must start with <code>/</code> and contain characters other than <code>/</code>.</p>
+     * <li><p>A URL must start with a forward slash (<code>/</code>) but cannot contain only forward slashes (<code>/</code>).</p>
      * </li>
-     * <li><p>This parameter takes effect only if you set HealthCheck to on.</p>
+     * <li><p>This parameter takes effect only if the HealthCheck parameter is set to on.</p>
      * </li>
      * </ul>
      * 
@@ -186,7 +195,10 @@ public class CreateLoadBalancerHTTPListenerRequest extends TeaModel {
     public String listenerForward;
 
     /**
-     * <p>The frontend port that is used by the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>The listener port that is used by Edge Load Balancer (ELB) to receive requests and forward the requests to backend servers. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <blockquote>
+     * <p> We recommend that you use port 80 for HTTP.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -262,6 +274,14 @@ public class CreateLoadBalancerHTTPListenerRequest extends TeaModel {
     public static CreateLoadBalancerHTTPListenerRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLoadBalancerHTTPListenerRequest self = new CreateLoadBalancerHTTPListenerRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateLoadBalancerHTTPListenerRequest setBackendServerPort(Integer backendServerPort) {
+        this.backendServerPort = backendServerPort;
+        return this;
+    }
+    public Integer getBackendServerPort() {
+        return this.backendServerPort;
     }
 
     public CreateLoadBalancerHTTPListenerRequest setDescription(String description) {

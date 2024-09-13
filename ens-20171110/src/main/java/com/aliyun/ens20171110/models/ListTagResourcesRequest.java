@@ -5,16 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
+     * <p>The token of the first page to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>153ba0bbb2be03f84eb48b699f0a4123</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The IDs of resources. Valid values of N: 1 to 50.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
+     * <p>The type of the resource. Valid values:</p>
+     * <ul>
+     * <li>instance</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +32,9 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
@@ -65,6 +77,13 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
+         * <p>The key of tag N of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
+         * <ul>
+         * <li>The key cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</li>
+         * <li>The key must be up to 64 characters in length.</li>
+         * <li>The tag key cannot be an empty string.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>team</p>
          */
@@ -72,6 +91,13 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of a tag that is attached to the topics you want to query. This parameter is not required. If you configure this parameter, you must also configure the <strong>Key</strong> parameter.**** If you include the Key and Value parameters in a request, this operation queries only the topics that use the specified tags. If you do not include these parameters in a request, this operation queries all topics that you can access.</p>
+         * <ul>
+         * <li>Valid values of N: 1 to 20.</li>
+         * <li>The value of this parameter can be an empty string.</li>
+         * <li>The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>tagValue</p>
          */

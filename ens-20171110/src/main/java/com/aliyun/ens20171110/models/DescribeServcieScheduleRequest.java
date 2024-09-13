@@ -9,7 +9,7 @@ public class DescribeServcieScheduleRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>474bdef0-d149-4695-abfb-52912d9143f0</p>
+     * <p>474bdef0-d149-4695-abfb-52912d91****</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -24,11 +24,11 @@ public class DescribeServcieScheduleRequest extends TeaModel {
     public String podConfigName;
 
     /**
-     * <p>The UUID of the device.</p>
+     * <p>The unique ID of the device.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>hdm_f022bf160dc69e2d8eb421e508eb9170</p>
+     * <p>hdm_f022bf160dc69e2d8eb421e508eb****</p>
      */
     @NameInMap("Uuid")
     public String uuid;

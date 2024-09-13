@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveInstanceSDGShrinkRequest extends TeaModel {
     /**
+     * <p>The IDs of the instances. The value is a JSON array that consists of up to 100 IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")

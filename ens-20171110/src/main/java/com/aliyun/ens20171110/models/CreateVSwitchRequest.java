@@ -55,6 +55,9 @@ public class CreateVSwitchRequest extends TeaModel {
      * <li>The name must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
      * </ul>
      * <p>Default value: null.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("VSwitchName")
     public String vSwitchName;

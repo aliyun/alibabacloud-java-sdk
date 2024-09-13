@@ -17,16 +17,16 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
      * <p>The ID of the scheduled instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>i-5myukg7hnpbto7m024002w8qd</p>
+     * <p>i-5myukg7hnpbto7m024002****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The IP address of the scheduled instance.</p>
+     * <p>The ID of the scheduled instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>120.26.79.96</p>
+     * <p>120.26.XX.XX</p>
      */
     @NameInMap("InstanceIp")
     public String instanceIp;

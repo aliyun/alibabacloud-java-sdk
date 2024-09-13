@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
     /**
-     * <p>The description of the listener. The description must be <strong>1</strong> to <strong>80</strong> characters in length.</p>
+     * <p>The name of the listener. The value must be <strong>1</strong> to <strong>80</strong> characters in length.</p>
      * <blockquote>
      * <p> The value cannot start with <code>http://</code> or <code>https://</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>监听说明</p>
+     * <p>http_8080</p>
      */
     @NameInMap("Description")
     public String description;
@@ -84,7 +84,7 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
     public Integer healthCheckInterval;
 
     /**
-     * <p>The HTTP request method for health checks. Examples:</p>
+     * <p>The HTTP request method for health checks. Valid values:</p>
      * <ul>
      * <li><strong>head</strong></li>
      * <li><strong>get</strong></li>
@@ -107,11 +107,13 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
      * <li>Unit: seconds.</li>
      * </ul>
      * <blockquote>
-     * <ul>
-     * <li>This parameter takes effect only if you set HealthCheck to on.</li>
-     * <li>If the value of the HealthCheckTimeout parameter is smaller than the value of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.</li>
-     * </ul>
      * </blockquote>
+     * <ul>
+     * <li><p>This parameter takes effect only if the HealthCheck parameter is set to on.</p>
+     * </li>
+     * <li><p>If the value of HealthCheckTimeout is smaller than the value of HealthCheckInterval, the timeout period specified by HealthCheckTimeout becomes invalid, and the value of HealthCheckInterval is used as the timeout period.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -120,13 +122,15 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
     public Integer healthCheckTimeout;
 
     /**
-     * <p>The Uniform Resource Identifier (URI) that is used for health checks. The URI must be <strong>1</strong> to <strong>80</strong> characters in length.</p>
+     * <p>The URI used for health checks. The URI must be <strong>1</strong> to <strong>80</strong> characters in length.</p>
      * <blockquote>
-     * <ul>
-     * <li>The URL must start with a forward slash (<code>/</code>) and contain characters other than forward slashes (<code>/</code>).</li>
-     * <li>This parameter takes effect only if you set HealthCheck to on.</li>
-     * </ul>
      * </blockquote>
+     * <ul>
+     * <li><p>A URL must start with a forward slash (<code>/</code>) but cannot contain only forward slashes (<code>/</code>).</p>
+     * </li>
+     * <li><p>This parameter takes effect only if the HealthCheck parameter is set to on.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>/checkpreload.htm</p>
@@ -159,7 +163,7 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
     public Integer idleTimeout;
 
     /**
-     * <p>The frontend port that is used by the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>The listener port whose attributes are to be modified. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -191,7 +195,7 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
     public Integer requestTimeout;
 
     /**
-     * <p>The scheduling algorithm. Examples:</p>
+     * <p>The scheduling algorithm. Valid values:</p>
      * <ul>
      * <li><strong>wrr</strong>: Backend servers with higher weights receive more requests than those with lower weights.</li>
      * <li><strong>wlc</strong>: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.</li>
@@ -222,8 +226,8 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
     /**
      * <p>Specifies whether to use the X-Forwarded-For header to obtain the real IP address of the client. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong></li>
-     * <li><strong>off</strong> (default)</li>
+     * <li><strong>on</strong> (default)</li>
+     * <li><strong>off</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>

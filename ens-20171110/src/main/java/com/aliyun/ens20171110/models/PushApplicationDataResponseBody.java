@@ -67,6 +67,9 @@ public class PushApplicationDataResponseBody extends TeaModel {
 
         /**
          * <p>The description of the push status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("ResultDescrip")
         public String resultDescrip;

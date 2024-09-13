@@ -136,6 +136,9 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
     public static class DescribeEnsRouteEntryListResponseBodyRouteEntrys extends TeaModel {
         /**
          * <p>Enter a description for the route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;

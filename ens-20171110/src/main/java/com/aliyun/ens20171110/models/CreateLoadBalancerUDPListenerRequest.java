@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     /**
-     * <p>The backend port that is used by the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>The port used by the backend ELB server of the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>8080</p>
@@ -14,7 +14,7 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     public Integer backendServerPort;
 
     /**
-     * <p>The description of the listener. The description must be <strong>1</strong> to <strong>80</strong> characters in length.</p>
+     * <p>The name of the listener. The value must be <strong>1</strong> to <strong>80</strong> characters in length.</p>
      * <blockquote>
      * <p> The value cannot start with <code>http://</code> or <code>https://</code>.</p>
      * </blockquote>
@@ -26,7 +26,7 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to enable elastic IP address (EIP) pass-through. Valid values:</p>
+     * <p>Specifies whether to enable Elastic IP address (EIP) pass-through. Valid values:</p>
      * <ul>
      * <li><strong>on</strong></li>
      * <li><strong>off</strong> (default)</li>
@@ -39,6 +39,13 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     public String eipTransmit;
 
     /**
+     * <strong>example:</strong>
+     * <p>500</p>
+     */
+    @NameInMap("EstablishedTimeout")
+    public Integer establishedTimeout;
+
+    /**
      * <p>The port that is used for health checks. Valid values: <strong>1</strong> to <strong>65535</strong>. If you leave this parameter empty, the port specified by BackendServerPort is used for health checks.</p>
      * 
      * <strong>example:</strong>
@@ -48,14 +55,14 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     public Integer healthCheckConnectPort;
 
     /**
-     * <p>The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails to pass the health check.</p>
+     * <p>The timeout period for a health check response. If a backend server does not respond within the specified timeout period, the server fails the health check.</p>
      * <ul>
      * <li>Default value: 5.</li>
      * <li>Valid values: <strong>1</strong> to <strong>300</strong>.</li>
      * <li>Unit: seconds.</li>
      * </ul>
      * <blockquote>
-     * <p> If the value that you specified for HealthCheckConnectTimeout is smaller than the value of HealthCheckInterval, HealthCheckConnectTimeout becomes invalid and the timeout period that you specified for HealthCheckInterval is used.</p>
+     * <p> If the value of the HealthCheckConnectTimeout parameter is smaller than that of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckConnectTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -101,7 +108,10 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     public Integer healthyThreshold;
 
     /**
-     * <p>The frontend port that is used by the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>The listener port that is used by Edge Load Balancer (ELB) to receive requests and forward the requests to backend servers. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <blockquote>
+     * <p> You cannot specify ports 250, 4789, or 4790 for UDP listeners. They are system reserved ports.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -121,14 +131,14 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     public String loadBalancerId;
 
     /**
-     * <p>The routing algorithm. Valid values:</p>
+     * <p>The scheduling algorithm. Valid values:</p>
      * <ul>
-     * <li><strong>wrr</strong> (default): Backend servers with higher weights receive more requests than backend servers with lower weights.</li>
+     * <li><strong>wrr</strong>: Backend servers with higher weights receive more requests than backend servers with lower weights. This is the default value.</li>
      * <li><strong>wlc</strong>: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.</li>
      * <li><strong>rr</strong>: Requests are distributed to backend servers in sequence.</li>
-     * <li><strong>sch</strong>: consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</li>
-     * <li><strong>qch</strong>: consistent hashing that is based on QUIC connection IDs. Requests that contain the same QUIC connection ID are distributed to the same backend server.</li>
-     * <li><strong>iqch</strong>: consistent hashing that is based on specific three bytes of the iQUIC CIDs. Requests whose second to fourth bytes are the same are distributed to the same backend server.</li>
+     * <li><strong>sch</strong>: Consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</li>
+     * <li><strong>qch</strong>: Consistent hashing based on Quick UDP Internet Connection (QUIC) IDs. Requests that contain the same QUIC ID are scheduled to the same backend server.</li>
+     * <li><strong>iqch</strong>: Consistent hashing based on three specific bytes of iQUIC CID. Requests with the same second, third, and forth bytes are scheduled to the same backend server.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -173,6 +183,14 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     }
     public String getEipTransmit() {
         return this.eipTransmit;
+    }
+
+    public CreateLoadBalancerUDPListenerRequest setEstablishedTimeout(Integer establishedTimeout) {
+        this.establishedTimeout = establishedTimeout;
+        return this;
+    }
+    public Integer getEstablishedTimeout() {
+        return this.establishedTimeout;
     }
 
     public CreateLoadBalancerUDPListenerRequest setHealthCheckConnectPort(Integer healthCheckConnectPort) {

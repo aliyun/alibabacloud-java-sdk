@@ -137,6 +137,9 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
 
         /**
          * <p>The display name of the instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Computational 1C2G</p>
          */
         @NameInMap("DisplayName")
         public String displayName;

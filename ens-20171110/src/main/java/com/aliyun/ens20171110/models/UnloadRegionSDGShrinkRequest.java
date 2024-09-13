@@ -5,15 +5,20 @@ import com.aliyun.tea.*;
 
 public class UnloadRegionSDGShrinkRequest extends TeaModel {
     /**
+     * <p>The destination nodes.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationRegionIds")
     public String destinationRegionIdsShrink;
 
+    /**
+     * <p>The namespaces.</p>
+     */
     @NameInMap("Namespaces")
     public String namespacesShrink;
 
     /**
+     * <p>Deletes the shared data group (SDG) ID of the preloaded data.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
