@@ -3,12 +3,9 @@ package com.aliyun.ververica20220718.models;
 
 import com.aliyun.tea.*;
 
-public class GetFolderResponseBody extends TeaModel {
-    /**
-     * <p>The data structure of the folder.</p>
-     */
+public class GetAppliedScheduledPlanResponseBody extends TeaModel {
     @NameInMap("data")
-    public Folder data;
+    public ScheduledPlanAppliedInfo data;
 
     /**
      * <strong>example:</strong>
@@ -45,20 +42,20 @@ public class GetFolderResponseBody extends TeaModel {
     @NameInMap("success")
     public Boolean success;
 
-    public static GetFolderResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetFolderResponseBody self = new GetFolderResponseBody();
+    public static GetAppliedScheduledPlanResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetAppliedScheduledPlanResponseBody self = new GetAppliedScheduledPlanResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetFolderResponseBody setData(Folder data) {
+    public GetAppliedScheduledPlanResponseBody setData(ScheduledPlanAppliedInfo data) {
         this.data = data;
         return this;
     }
-    public Folder getData() {
+    public ScheduledPlanAppliedInfo getData() {
         return this.data;
     }
 
-    public GetFolderResponseBody setErrorCode(String errorCode) {
+    public GetAppliedScheduledPlanResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -66,7 +63,7 @@ public class GetFolderResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public GetFolderResponseBody setErrorMessage(String errorMessage) {
+    public GetAppliedScheduledPlanResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
@@ -74,7 +71,7 @@ public class GetFolderResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public GetFolderResponseBody setHttpCode(Integer httpCode) {
+    public GetAppliedScheduledPlanResponseBody setHttpCode(Integer httpCode) {
         this.httpCode = httpCode;
         return this;
     }
@@ -82,7 +79,7 @@ public class GetFolderResponseBody extends TeaModel {
         return this.httpCode;
     }
 
-    public GetFolderResponseBody setRequestId(String requestId) {
+    public GetAppliedScheduledPlanResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -90,7 +87,7 @@ public class GetFolderResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetFolderResponseBody setSuccess(Boolean success) {
+    public GetAppliedScheduledPlanResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

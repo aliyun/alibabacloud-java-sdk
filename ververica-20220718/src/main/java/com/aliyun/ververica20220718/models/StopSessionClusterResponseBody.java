@@ -3,13 +3,7 @@ package com.aliyun.ververica20220718.models;
 
 import com.aliyun.tea.*;
 
-public class GetFolderResponseBody extends TeaModel {
-    /**
-     * <p>The data structure of the folder.</p>
-     */
-    @NameInMap("data")
-    public Folder data;
-
+public class StopSessionClusterResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -45,20 +39,12 @@ public class GetFolderResponseBody extends TeaModel {
     @NameInMap("success")
     public Boolean success;
 
-    public static GetFolderResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetFolderResponseBody self = new GetFolderResponseBody();
+    public static StopSessionClusterResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        StopSessionClusterResponseBody self = new StopSessionClusterResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetFolderResponseBody setData(Folder data) {
-        this.data = data;
-        return this;
-    }
-    public Folder getData() {
-        return this.data;
-    }
-
-    public GetFolderResponseBody setErrorCode(String errorCode) {
+    public StopSessionClusterResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -66,7 +52,7 @@ public class GetFolderResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public GetFolderResponseBody setErrorMessage(String errorMessage) {
+    public StopSessionClusterResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
@@ -74,7 +60,7 @@ public class GetFolderResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public GetFolderResponseBody setHttpCode(Integer httpCode) {
+    public StopSessionClusterResponseBody setHttpCode(Integer httpCode) {
         this.httpCode = httpCode;
         return this;
     }
@@ -82,7 +68,7 @@ public class GetFolderResponseBody extends TeaModel {
         return this.httpCode;
     }
 
-    public GetFolderResponseBody setRequestId(String requestId) {
+    public StopSessionClusterResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -90,7 +76,7 @@ public class GetFolderResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetFolderResponseBody setSuccess(Boolean success) {
+    public StopSessionClusterResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

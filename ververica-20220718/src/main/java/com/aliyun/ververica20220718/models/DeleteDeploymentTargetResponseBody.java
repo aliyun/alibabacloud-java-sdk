@@ -3,12 +3,9 @@ package com.aliyun.ververica20220718.models;
 
 import com.aliyun.tea.*;
 
-public class GetFolderResponseBody extends TeaModel {
-    /**
-     * <p>The data structure of the folder.</p>
-     */
+public class DeleteDeploymentTargetResponseBody extends TeaModel {
     @NameInMap("data")
-    public Folder data;
+    public DeploymentTarget data;
 
     /**
      * <strong>example:</strong>
@@ -45,20 +42,20 @@ public class GetFolderResponseBody extends TeaModel {
     @NameInMap("success")
     public Boolean success;
 
-    public static GetFolderResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetFolderResponseBody self = new GetFolderResponseBody();
+    public static DeleteDeploymentTargetResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteDeploymentTargetResponseBody self = new DeleteDeploymentTargetResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetFolderResponseBody setData(Folder data) {
+    public DeleteDeploymentTargetResponseBody setData(DeploymentTarget data) {
         this.data = data;
         return this;
     }
-    public Folder getData() {
+    public DeploymentTarget getData() {
         return this.data;
     }
 
-    public GetFolderResponseBody setErrorCode(String errorCode) {
+    public DeleteDeploymentTargetResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -66,7 +63,7 @@ public class GetFolderResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public GetFolderResponseBody setErrorMessage(String errorMessage) {
+    public DeleteDeploymentTargetResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
@@ -74,7 +71,7 @@ public class GetFolderResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public GetFolderResponseBody setHttpCode(Integer httpCode) {
+    public DeleteDeploymentTargetResponseBody setHttpCode(Integer httpCode) {
         this.httpCode = httpCode;
         return this;
     }
@@ -82,7 +79,7 @@ public class GetFolderResponseBody extends TeaModel {
         return this.httpCode;
     }
 
-    public GetFolderResponseBody setRequestId(String requestId) {
+    public DeleteDeploymentTargetResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -90,7 +87,7 @@ public class GetFolderResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetFolderResponseBody setSuccess(Boolean success) {
+    public DeleteDeploymentTargetResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
