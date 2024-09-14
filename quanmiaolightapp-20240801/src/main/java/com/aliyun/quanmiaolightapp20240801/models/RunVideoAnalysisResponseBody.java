@@ -877,9 +877,53 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
 
     }
 
+    public static class RunVideoAnalysisResponseBodyPayloadUsage extends TeaModel {
+        @NameInMap("inputTokens")
+        public Long inputTokens;
+
+        @NameInMap("outputTokens")
+        public Long outputTokens;
+
+        @NameInMap("totalTokens")
+        public Long totalTokens;
+
+        public static RunVideoAnalysisResponseBodyPayloadUsage build(java.util.Map<String, ?> map) throws Exception {
+            RunVideoAnalysisResponseBodyPayloadUsage self = new RunVideoAnalysisResponseBodyPayloadUsage();
+            return TeaModel.build(map, self);
+        }
+
+        public RunVideoAnalysisResponseBodyPayloadUsage setInputTokens(Long inputTokens) {
+            this.inputTokens = inputTokens;
+            return this;
+        }
+        public Long getInputTokens() {
+            return this.inputTokens;
+        }
+
+        public RunVideoAnalysisResponseBodyPayloadUsage setOutputTokens(Long outputTokens) {
+            this.outputTokens = outputTokens;
+            return this;
+        }
+        public Long getOutputTokens() {
+            return this.outputTokens;
+        }
+
+        public RunVideoAnalysisResponseBodyPayloadUsage setTotalTokens(Long totalTokens) {
+            this.totalTokens = totalTokens;
+            return this;
+        }
+        public Long getTotalTokens() {
+            return this.totalTokens;
+        }
+
+    }
+
     public static class RunVideoAnalysisResponseBodyPayload extends TeaModel {
         @NameInMap("output")
         public RunVideoAnalysisResponseBodyPayloadOutput output;
+
+        @NameInMap("usage")
+        public RunVideoAnalysisResponseBodyPayloadUsage usage;
 
         public static RunVideoAnalysisResponseBodyPayload build(java.util.Map<String, ?> map) throws Exception {
             RunVideoAnalysisResponseBodyPayload self = new RunVideoAnalysisResponseBodyPayload();
@@ -892,6 +936,14 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         }
         public RunVideoAnalysisResponseBodyPayloadOutput getOutput() {
             return this.output;
+        }
+
+        public RunVideoAnalysisResponseBodyPayload setUsage(RunVideoAnalysisResponseBodyPayloadUsage usage) {
+            this.usage = usage;
+            return this;
+        }
+        public RunVideoAnalysisResponseBodyPayloadUsage getUsage() {
+            return this.usage;
         }
 
     }
