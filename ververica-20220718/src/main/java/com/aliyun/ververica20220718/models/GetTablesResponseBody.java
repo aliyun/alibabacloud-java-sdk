@@ -4,6 +4,9 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class GetTablesResponseBody extends TeaModel {
+    /**
+     * <p>If the value of success was true, the list and details of tables that meet the condition were returned. If the value of success was false, a null value was returned.</p>
+     */
     @NameInMap("data")
     public java.util.List<Table> data;
 

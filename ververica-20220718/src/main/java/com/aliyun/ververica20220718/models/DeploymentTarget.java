@@ -18,6 +18,9 @@ public class DeploymentTarget extends TeaModel {
     @NameInMap("namespace")
     public String namespace;
 
+    @NameInMap("quota")
+    public ResourceQuota quota;
+
     public static DeploymentTarget build(java.util.Map<String, ?> map) throws Exception {
         DeploymentTarget self = new DeploymentTarget();
         return TeaModel.build(map, self);
@@ -37,6 +40,14 @@ public class DeploymentTarget extends TeaModel {
     }
     public String getNamespace() {
         return this.namespace;
+    }
+
+    public DeploymentTarget setQuota(ResourceQuota quota) {
+        this.quota = quota;
+        return this;
+    }
+    public ResourceQuota getQuota() {
+        return this.quota;
     }
 
 }

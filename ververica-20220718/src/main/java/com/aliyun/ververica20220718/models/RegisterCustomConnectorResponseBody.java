@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RegisterCustomConnectorResponseBody extends TeaModel {
     /**
-     * <p>If the value of success was true, a list of deployments in which custom connectors were registered was returned. If the value of success was false, a null value was returned.</p>
+     * <p>If the value of success was true, a list of deployments in which custom connectors were deleted was returned. If the value of success was false, a null value was returned.</p>
      */
     @NameInMap("data")
     public java.util.List<Connector> data;

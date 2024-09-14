@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RegisterCustomConnectorRequest extends TeaModel {
     /**
-     * <p>The URL in which the JAR package of the custom connector is stored. The URL must be connected to the platform.</p>
+     * <p>The URL in which the JAR package of the custom connector is stored. The platform must be able to access this address.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

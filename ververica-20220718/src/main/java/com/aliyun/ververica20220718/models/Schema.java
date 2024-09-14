@@ -8,7 +8,7 @@ public class Schema extends TeaModel {
     public java.util.List<TableColumn> columns;
 
     @NameInMap("primaryKey")
-    public java.util.List<PrimaryKey> primaryKey;
+    public PrimaryKey primaryKey;
 
     @NameInMap("watermarkSpecs")
     public java.util.List<WatermarkSpec> watermarkSpecs;
@@ -26,11 +26,11 @@ public class Schema extends TeaModel {
         return this.columns;
     }
 
-    public Schema setPrimaryKey(java.util.List<PrimaryKey> primaryKey) {
+    public Schema setPrimaryKey(PrimaryKey primaryKey) {
         this.primaryKey = primaryKey;
         return this;
     }
-    public java.util.List<PrimaryKey> getPrimaryKey() {
+    public PrimaryKey getPrimaryKey() {
         return this.primaryKey;
     }
 

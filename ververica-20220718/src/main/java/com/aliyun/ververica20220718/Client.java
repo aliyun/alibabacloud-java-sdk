@@ -28,6 +28,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>执行定时计划</p>
+     * 
+     * @param headers ApplyScheduledPlanHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ApplyScheduledPlanResponse
+     */
+    public ApplyScheduledPlanResponse applyScheduledPlanWithOptions(String namespace, String scheduledPlanId, ApplyScheduledPlanHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ApplyScheduledPlan"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/scheduled-plans/" + com.aliyun.openapiutil.Client.getEncodeParam(scheduledPlanId) + "%3Aapply"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ApplyScheduledPlanResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>执行定时计划</p>
+     * @return ApplyScheduledPlanResponse
+     */
+    public ApplyScheduledPlanResponse applyScheduledPlan(String namespace, String scheduledPlanId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ApplyScheduledPlanHeaders headers = new ApplyScheduledPlanHeaders();
+        return this.applyScheduledPlanWithOptions(namespace, scheduledPlanId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a deployment.</p>
      * 
      * @param request CreateDeploymentRequest
@@ -126,6 +172,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         CreateDeploymentDraftHeaders headers = new CreateDeploymentDraftHeaders();
         return this.createDeploymentDraftWithOptions(namespace, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建deploymentTarget</p>
+     * 
+     * @param request CreateDeploymentTargetRequest
+     * @param headers CreateDeploymentTargetHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDeploymentTargetResponse
+     */
+    public CreateDeploymentTargetResponse createDeploymentTargetWithOptions(String namespace, CreateDeploymentTargetRequest request, CreateDeploymentTargetHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deploymentTargetName)) {
+            query.put("deploymentTargetName", request.deploymentTargetName);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDeploymentTarget"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/deployment-targets"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDeploymentTargetResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建deploymentTarget</p>
+     * 
+     * @param request CreateDeploymentTargetRequest
+     * @return CreateDeploymentTargetResponse
+     */
+    public CreateDeploymentTargetResponse createDeploymentTarget(String namespace, CreateDeploymentTargetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        CreateDeploymentTargetHeaders headers = new CreateDeploymentTargetHeaders();
+        return this.createDeploymentTargetWithOptions(namespace, request, headers, runtime);
     }
 
     /**
@@ -292,6 +395,108 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         CreateSavepointHeaders headers = new CreateSavepointHeaders();
         return this.createSavepointWithOptions(namespace, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建定时执行计划</p>
+     * 
+     * @param request CreateScheduledPlanRequest
+     * @param headers CreateScheduledPlanHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateScheduledPlanResponse
+     */
+    public CreateScheduledPlanResponse createScheduledPlanWithOptions(String namespace, CreateScheduledPlanRequest request, CreateScheduledPlanHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateScheduledPlan"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/scheduled-plans"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateScheduledPlanResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建定时执行计划</p>
+     * 
+     * @param request CreateScheduledPlanRequest
+     * @return CreateScheduledPlanResponse
+     */
+    public CreateScheduledPlanResponse createScheduledPlan(String namespace, CreateScheduledPlanRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        CreateScheduledPlanHeaders headers = new CreateScheduledPlanHeaders();
+        return this.createScheduledPlanWithOptions(namespace, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建session集群</p>
+     * 
+     * @param request CreateSessionClusterRequest
+     * @param headers CreateSessionClusterHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSessionClusterResponse
+     */
+    public CreateSessionClusterResponse createSessionClusterWithOptions(String namespace, CreateSessionClusterRequest request, CreateSessionClusterHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSessionCluster"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/sessionclusters"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSessionClusterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建session集群</p>
+     * 
+     * @param request CreateSessionClusterRequest
+     * @return CreateSessionClusterResponse
+     */
+    public CreateSessionClusterResponse createSessionCluster(String namespace, CreateSessionClusterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        CreateSessionClusterHeaders headers = new CreateSessionClusterHeaders();
+        return this.createSessionClusterWithOptions(namespace, request, headers, runtime);
     }
 
     /**
@@ -536,6 +741,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除deploymentTarget</p>
+     * 
+     * @param headers DeleteDeploymentTargetHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDeploymentTargetResponse
+     */
+    public DeleteDeploymentTargetResponse deleteDeploymentTargetWithOptions(String namespace, String deploymentTargetName, DeleteDeploymentTargetHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDeploymentTarget"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/deployment-targets/" + com.aliyun.openapiutil.Client.getEncodeParam(deploymentTargetName) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDeploymentTargetResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除deploymentTarget</p>
+     * @return DeleteDeploymentTargetResponse
+     */
+    public DeleteDeploymentTargetResponse deleteDeploymentTarget(String namespace, String deploymentTargetName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        DeleteDeploymentTargetHeaders headers = new DeleteDeploymentTargetHeaders();
+        return this.deleteDeploymentTargetWithOptions(namespace, deploymentTargetName, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>delete a folder</p>
      * 
      * @param headers DeleteFolderHeaders
@@ -716,6 +967,98 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         DeleteSavepointHeaders headers = new DeleteSavepointHeaders();
         return this.deleteSavepointWithOptions(namespace, savepointId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除定时执行计划</p>
+     * 
+     * @param headers DeleteScheduledPlanHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteScheduledPlanResponse
+     */
+    public DeleteScheduledPlanResponse deleteScheduledPlanWithOptions(String namespace, String scheduledPlanId, DeleteScheduledPlanHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteScheduledPlan"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/scheduled-plans/" + com.aliyun.openapiutil.Client.getEncodeParam(scheduledPlanId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteScheduledPlanResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除定时执行计划</p>
+     * @return DeleteScheduledPlanResponse
+     */
+    public DeleteScheduledPlanResponse deleteScheduledPlan(String namespace, String scheduledPlanId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        DeleteScheduledPlanHeaders headers = new DeleteScheduledPlanHeaders();
+        return this.deleteScheduledPlanWithOptions(namespace, scheduledPlanId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除session集群</p>
+     * 
+     * @param headers DeleteSessionClusterHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteSessionClusterResponse
+     */
+    public DeleteSessionClusterResponse deleteSessionClusterWithOptions(String namespace, String sessionClusterName, DeleteSessionClusterHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteSessionCluster"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/sessionclusters/" + com.aliyun.openapiutil.Client.getEncodeParam(sessionClusterName) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSessionClusterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除session集群</p>
+     * @return DeleteSessionClusterResponse
+     */
+    public DeleteSessionClusterResponse deleteSessionCluster(String namespace, String sessionClusterName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        DeleteSessionClusterHeaders headers = new DeleteSessionClusterHeaders();
+        return this.deleteSessionClusterWithOptions(namespace, sessionClusterName, headers, runtime);
     }
 
     /**
@@ -1093,6 +1436,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取应用中的执行定时计划</p>
+     * 
+     * @param request GetAppliedScheduledPlanRequest
+     * @param headers GetAppliedScheduledPlanHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAppliedScheduledPlanResponse
+     */
+    public GetAppliedScheduledPlanResponse getAppliedScheduledPlanWithOptions(String namespace, GetAppliedScheduledPlanRequest request, GetAppliedScheduledPlanHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deploymentId)) {
+            query.put("deploymentId", request.deploymentId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAppliedScheduledPlan"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/scheduled-plans%3AgetExecutedScheduledPlan"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAppliedScheduledPlanResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取应用中的执行定时计划</p>
+     * 
+     * @param request GetAppliedScheduledPlanRequest
+     * @return GetAppliedScheduledPlanResponse
+     */
+    public GetAppliedScheduledPlanResponse getAppliedScheduledPlan(String namespace, GetAppliedScheduledPlanRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetAppliedScheduledPlanHeaders headers = new GetAppliedScheduledPlanHeaders();
+        return this.getAppliedScheduledPlanWithOptions(namespace, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取catalog</p>
      * 
      * @param request GetCatalogsRequest
@@ -1395,6 +1794,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         GetDeploymentDraftLockHeaders headers = new GetDeploymentDraftLockHeaders();
         return this.getDeploymentDraftLockWithOptions(namespace, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取运行事件</p>
+     * 
+     * @param request GetEventsRequest
+     * @param headers GetEventsHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetEventsResponse
+     */
+    public GetEventsResponse getEventsWithOptions(String namespace, GetEventsRequest request, GetEventsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deploymentId)) {
+            query.put("deploymentId", request.deploymentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageIndex)) {
+            query.put("pageIndex", request.pageIndex);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetEvents"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/events"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetEventsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取运行事件</p>
+     * 
+     * @param request GetEventsRequest
+     * @return GetEventsResponse
+     */
+    public GetEventsResponse getEvents(String namespace, GetEventsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetEventsHeaders headers = new GetEventsHeaders();
+        return this.getEventsWithOptions(namespace, request, headers, runtime);
     }
 
     /**
@@ -1778,6 +2241,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         GetSavepointHeaders headers = new GetSavepointHeaders();
         return this.getSavepointWithOptions(namespace, savepointId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取session集群</p>
+     * 
+     * @param headers GetSessionClusterHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSessionClusterResponse
+     */
+    public GetSessionClusterResponse getSessionClusterWithOptions(String namespace, String sessionClusterName, GetSessionClusterHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSessionCluster"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/sessionclusters/" + com.aliyun.openapiutil.Client.getEncodeParam(sessionClusterName) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSessionClusterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取session集群</p>
+     * @return GetSessionClusterResponse
+     */
+    public GetSessionClusterResponse getSessionCluster(String namespace, String sessionClusterName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetSessionClusterHeaders headers = new GetSessionClusterHeaders();
+        return this.getSessionClusterWithOptions(namespace, sessionClusterName, headers, runtime);
     }
 
     /**
@@ -2499,6 +3008,176 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>列表定时执行计划</p>
+     * 
+     * @param request ListScheduledPlanRequest
+     * @param headers ListScheduledPlanHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListScheduledPlanResponse
+     */
+    public ListScheduledPlanResponse listScheduledPlanWithOptions(String namespace, ListScheduledPlanRequest request, ListScheduledPlanHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deploymentId)) {
+            query.put("deploymentId", request.deploymentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageIndex)) {
+            query.put("pageIndex", request.pageIndex);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListScheduledPlan"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/scheduled-plans"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListScheduledPlanResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列表定时执行计划</p>
+     * 
+     * @param request ListScheduledPlanRequest
+     * @return ListScheduledPlanResponse
+     */
+    public ListScheduledPlanResponse listScheduledPlan(String namespace, ListScheduledPlanRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ListScheduledPlanHeaders headers = new ListScheduledPlanHeaders();
+        return this.listScheduledPlanWithOptions(namespace, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取作业资源变更历史</p>
+     * 
+     * @param request ListScheduledPlanExecutedHistoryRequest
+     * @param headers ListScheduledPlanExecutedHistoryHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListScheduledPlanExecutedHistoryResponse
+     */
+    public ListScheduledPlanExecutedHistoryResponse listScheduledPlanExecutedHistoryWithOptions(String namespace, ListScheduledPlanExecutedHistoryRequest request, ListScheduledPlanExecutedHistoryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deploymentId)) {
+            query.put("deploymentId", request.deploymentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.origin)) {
+            query.put("origin", request.origin);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListScheduledPlanExecutedHistory"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/job-resource-upgradings"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListScheduledPlanExecutedHistoryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取作业资源变更历史</p>
+     * 
+     * @param request ListScheduledPlanExecutedHistoryRequest
+     * @return ListScheduledPlanExecutedHistoryResponse
+     */
+    public ListScheduledPlanExecutedHistoryResponse listScheduledPlanExecutedHistory(String namespace, ListScheduledPlanExecutedHistoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ListScheduledPlanExecutedHistoryHeaders headers = new ListScheduledPlanExecutedHistoryHeaders();
+        return this.listScheduledPlanExecutedHistoryWithOptions(namespace, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列举session集群</p>
+     * 
+     * @param headers ListSessionClustersHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSessionClustersResponse
+     */
+    public ListSessionClustersResponse listSessionClustersWithOptions(String namespace, ListSessionClustersHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSessionClusters"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/sessionclusters"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSessionClustersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列举session集群</p>
+     * @return ListSessionClustersResponse
+     */
+    public ListSessionClustersResponse listSessionClusters(String namespace) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ListSessionClustersHeaders headers = new ListSessionClustersHeaders();
+        return this.listSessionClustersWithOptions(namespace, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Obtains a list of variables.</p>
      * 
      * @param request ListVariablesRequest
@@ -2789,6 +3468,98 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>启动session集群</p>
+     * 
+     * @param headers StartSessionClusterHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartSessionClusterResponse
+     */
+    public StartSessionClusterResponse startSessionClusterWithOptions(String namespace, String sessionClusterName, StartSessionClusterHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartSessionCluster"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/sessionclusters/" + com.aliyun.openapiutil.Client.getEncodeParam(sessionClusterName) + "%3Astart"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartSessionClusterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启动session集群</p>
+     * @return StartSessionClusterResponse
+     */
+    public StartSessionClusterResponse startSessionCluster(String namespace, String sessionClusterName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        StartSessionClusterHeaders headers = new StartSessionClusterHeaders();
+        return this.startSessionClusterWithOptions(namespace, sessionClusterName, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停止应用执行定时计划</p>
+     * 
+     * @param headers StopApplyScheduledPlanHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopApplyScheduledPlanResponse
+     */
+    public StopApplyScheduledPlanResponse stopApplyScheduledPlanWithOptions(String namespace, String scheduledPlanId, StopApplyScheduledPlanHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopApplyScheduledPlan"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/scheduled-plans/" + com.aliyun.openapiutil.Client.getEncodeParam(scheduledPlanId) + "%3Astop"),
+            new TeaPair("method", "PATCH"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopApplyScheduledPlanResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停止应用执行定时计划</p>
+     * @return StopApplyScheduledPlanResponse
+     */
+    public StopApplyScheduledPlanResponse stopApplyScheduledPlan(String namespace, String scheduledPlanId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        StopApplyScheduledPlanHeaders headers = new StopApplyScheduledPlanHeaders();
+        return this.stopApplyScheduledPlanWithOptions(namespace, scheduledPlanId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Stops a job.</p>
      * 
      * @param request StopJobRequest
@@ -2836,6 +3607,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         StopJobHeaders headers = new StopJobHeaders();
         return this.stopJobWithOptions(namespace, jobId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停止session集群</p>
+     * 
+     * @param headers StopSessionClusterHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopSessionClusterResponse
+     */
+    public StopSessionClusterResponse stopSessionClusterWithOptions(String namespace, String sessionClusterName, StopSessionClusterHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopSessionCluster"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/sessionclusters/" + com.aliyun.openapiutil.Client.getEncodeParam(sessionClusterName) + "%3Astop"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopSessionClusterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停止session集群</p>
+     * @return StopSessionClusterResponse
+     */
+    public StopSessionClusterResponse stopSessionCluster(String namespace, String sessionClusterName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        StopSessionClusterHeaders headers = new StopSessionClusterHeaders();
+        return this.stopSessionClusterWithOptions(namespace, sessionClusterName, headers, runtime);
     }
 
     /**
@@ -2942,6 +3759,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>修改deploymentTarget</p>
+     * 
+     * @param request UpdateDeploymentTargetRequest
+     * @param headers UpdateDeploymentTargetHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateDeploymentTargetResponse
+     */
+    public UpdateDeploymentTargetResponse updateDeploymentTargetWithOptions(String namespace, String deploymentTargetName, UpdateDeploymentTargetRequest request, UpdateDeploymentTargetHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateDeploymentTarget"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/deployment-targets/" + com.aliyun.openapiutil.Client.getEncodeParam(deploymentTargetName) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDeploymentTargetResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改deploymentTarget</p>
+     * 
+     * @param request UpdateDeploymentTargetRequest
+     * @return UpdateDeploymentTargetResponse
+     */
+    public UpdateDeploymentTargetResponse updateDeploymentTarget(String namespace, String deploymentTargetName, UpdateDeploymentTargetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        UpdateDeploymentTargetHeaders headers = new UpdateDeploymentTargetHeaders();
+        return this.updateDeploymentTargetWithOptions(namespace, deploymentTargetName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>update a folder</p>
      * 
      * @param request UpdateFolderRequest
@@ -3040,6 +3908,108 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         UpdateMemberHeaders headers = new UpdateMemberHeaders();
         return this.updateMemberWithOptions(namespace, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新定时执行计划</p>
+     * 
+     * @param request UpdateScheduledPlanRequest
+     * @param headers UpdateScheduledPlanHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateScheduledPlanResponse
+     */
+    public UpdateScheduledPlanResponse updateScheduledPlanWithOptions(String namespace, String scheduledPlanId, UpdateScheduledPlanRequest request, UpdateScheduledPlanHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateScheduledPlan"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/scheduled-plans/" + com.aliyun.openapiutil.Client.getEncodeParam(scheduledPlanId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateScheduledPlanResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新定时执行计划</p>
+     * 
+     * @param request UpdateScheduledPlanRequest
+     * @return UpdateScheduledPlanResponse
+     */
+    public UpdateScheduledPlanResponse updateScheduledPlan(String namespace, String scheduledPlanId, UpdateScheduledPlanRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        UpdateScheduledPlanHeaders headers = new UpdateScheduledPlanHeaders();
+        return this.updateScheduledPlanWithOptions(namespace, scheduledPlanId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新session集群</p>
+     * 
+     * @param request UpdateSessionClusterRequest
+     * @param headers UpdateSessionClusterHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateSessionClusterResponse
+     */
+    public UpdateSessionClusterResponse updateSessionClusterWithOptions(String namespace, String sessionClusterName, UpdateSessionClusterRequest request, UpdateSessionClusterHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateSessionCluster"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/sessionclusters/" + com.aliyun.openapiutil.Client.getEncodeParam(sessionClusterName) + ""),
+            new TeaPair("method", "PATCH"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSessionClusterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新session集群</p>
+     * 
+     * @param request UpdateSessionClusterRequest
+     * @return UpdateSessionClusterResponse
+     */
+    public UpdateSessionClusterResponse updateSessionCluster(String namespace, String sessionClusterName, UpdateSessionClusterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        UpdateSessionClusterHeaders headers = new UpdateSessionClusterHeaders();
+        return this.updateSessionClusterWithOptions(namespace, sessionClusterName, request, headers, runtime);
     }
 
     /**
