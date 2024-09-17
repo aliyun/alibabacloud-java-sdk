@@ -17,6 +17,9 @@ public class CreateIndexRequest extends TeaModel {
     @NameInMap("Columns")
     public java.util.List<CreateIndexRequestColumns> columns;
 
+    @NameInMap("DataSource")
+    public CreateIndexRequestDataSource dataSource;
+
     @NameInMap("Description")
     public String description;
 
@@ -135,6 +138,14 @@ public class CreateIndexRequest extends TeaModel {
     }
     public java.util.List<CreateIndexRequestColumns> getColumns() {
         return this.columns;
+    }
+
+    public CreateIndexRequest setDataSource(CreateIndexRequestDataSource dataSource) {
+        this.dataSource = dataSource;
+        return this;
+    }
+    public CreateIndexRequestDataSource getDataSource() {
+        return this.dataSource;
     }
 
     public CreateIndexRequest setDescription(String description) {
@@ -295,6 +306,124 @@ public class CreateIndexRequest extends TeaModel {
         }
 
         public CreateIndexRequestColumns setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class CreateIndexRequestDataSource extends TeaModel {
+        @NameInMap("CredentialId")
+        public String credentialId;
+
+        @NameInMap("CredentialKey")
+        public String credentialKey;
+
+        @NameInMap("Database")
+        public String database;
+
+        @NameInMap("Endpoint")
+        public String endpoint;
+
+        @NameInMap("IsPrivateLink")
+        public Boolean isPrivateLink;
+
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("SubPath")
+        public String subPath;
+
+        @NameInMap("SubType")
+        public String subType;
+
+        @NameInMap("Table")
+        public String table;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static CreateIndexRequestDataSource build(java.util.Map<String, ?> map) throws Exception {
+            CreateIndexRequestDataSource self = new CreateIndexRequestDataSource();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateIndexRequestDataSource setCredentialId(String credentialId) {
+            this.credentialId = credentialId;
+            return this;
+        }
+        public String getCredentialId() {
+            return this.credentialId;
+        }
+
+        public CreateIndexRequestDataSource setCredentialKey(String credentialKey) {
+            this.credentialKey = credentialKey;
+            return this;
+        }
+        public String getCredentialKey() {
+            return this.credentialKey;
+        }
+
+        public CreateIndexRequestDataSource setDatabase(String database) {
+            this.database = database;
+            return this;
+        }
+        public String getDatabase() {
+            return this.database;
+        }
+
+        public CreateIndexRequestDataSource setEndpoint(String endpoint) {
+            this.endpoint = endpoint;
+            return this;
+        }
+        public String getEndpoint() {
+            return this.endpoint;
+        }
+
+        public CreateIndexRequestDataSource setIsPrivateLink(Boolean isPrivateLink) {
+            this.isPrivateLink = isPrivateLink;
+            return this;
+        }
+        public Boolean getIsPrivateLink() {
+            return this.isPrivateLink;
+        }
+
+        public CreateIndexRequestDataSource setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public CreateIndexRequestDataSource setSubPath(String subPath) {
+            this.subPath = subPath;
+            return this;
+        }
+        public String getSubPath() {
+            return this.subPath;
+        }
+
+        public CreateIndexRequestDataSource setSubType(String subType) {
+            this.subType = subType;
+            return this;
+        }
+        public String getSubType() {
+            return this.subType;
+        }
+
+        public CreateIndexRequestDataSource setTable(String table) {
+            this.table = table;
+            return this;
+        }
+        public String getTable() {
+            return this.table;
+        }
+
+        public CreateIndexRequestDataSource setType(String type) {
             this.type = type;
             return this;
         }

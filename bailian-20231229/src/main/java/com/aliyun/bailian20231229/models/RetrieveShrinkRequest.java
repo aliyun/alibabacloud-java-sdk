@@ -25,6 +25,9 @@ public class RetrieveShrinkRequest extends TeaModel {
     @NameInMap("EnableRewrite")
     public Boolean enableRewrite;
 
+    @NameInMap("Images")
+    public String imagesShrink;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -101,6 +104,14 @@ public class RetrieveShrinkRequest extends TeaModel {
     }
     public Boolean getEnableRewrite() {
         return this.enableRewrite;
+    }
+
+    public RetrieveShrinkRequest setImagesShrink(String imagesShrink) {
+        this.imagesShrink = imagesShrink;
+        return this;
+    }
+    public String getImagesShrink() {
+        return this.imagesShrink;
     }
 
     public RetrieveShrinkRequest setIndexId(String indexId) {

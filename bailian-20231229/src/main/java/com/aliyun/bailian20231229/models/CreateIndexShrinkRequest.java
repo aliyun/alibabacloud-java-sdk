@@ -17,6 +17,9 @@ public class CreateIndexShrinkRequest extends TeaModel {
     @NameInMap("Columns")
     public String columnsShrink;
 
+    @NameInMap("DataSource")
+    public String dataSourceShrink;
+
     @NameInMap("Description")
     public String description;
 
@@ -135,6 +138,14 @@ public class CreateIndexShrinkRequest extends TeaModel {
     }
     public String getColumnsShrink() {
         return this.columnsShrink;
+    }
+
+    public CreateIndexShrinkRequest setDataSourceShrink(String dataSourceShrink) {
+        this.dataSourceShrink = dataSourceShrink;
+        return this;
+    }
+    public String getDataSourceShrink() {
+        return this.dataSourceShrink;
     }
 
     public CreateIndexShrinkRequest setDescription(String description) {

@@ -25,6 +25,9 @@ public class RetrieveRequest extends TeaModel {
     @NameInMap("EnableRewrite")
     public Boolean enableRewrite;
 
+    @NameInMap("Images")
+    public java.util.List<String> images;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -101,6 +104,14 @@ public class RetrieveRequest extends TeaModel {
     }
     public Boolean getEnableRewrite() {
         return this.enableRewrite;
+    }
+
+    public RetrieveRequest setImages(java.util.List<String> images) {
+        this.images = images;
+        return this;
+    }
+    public java.util.List<String> getImages() {
+        return this.images;
     }
 
     public RetrieveRequest setIndexId(String indexId) {

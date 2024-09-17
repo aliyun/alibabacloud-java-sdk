@@ -271,6 +271,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.columnsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.columns, "Columns", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dataSource)) {
+            request.dataSourceShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dataSource, "DataSource", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.documentIds)) {
             request.documentIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.documentIds, "DocumentIds", "json");
         }
@@ -286,6 +290,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.columnsShrink)) {
             query.put("Columns", request.columnsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceShrink)) {
+            query.put("DataSource", request.dataSourceShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
@@ -1417,6 +1425,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         RetrieveShrinkRequest request = new RetrieveShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.images)) {
+            request.imagesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.images, "Images", "simple");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.rerank)) {
             request.rerankShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.rerank, "Rerank", "json");
         }
@@ -1440,6 +1452,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableRewrite)) {
             query.put("EnableRewrite", request.enableRewrite);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imagesShrink)) {
+            query.put("Images", request.imagesShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.indexId)) {
