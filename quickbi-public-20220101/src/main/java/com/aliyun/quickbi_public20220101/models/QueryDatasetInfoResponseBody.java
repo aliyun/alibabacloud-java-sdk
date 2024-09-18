@@ -271,6 +271,13 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         public String factColumn;
 
         /**
+         * <strong>example:</strong>
+         * <p>hhhh</p>
+         */
+        @NameInMap("FieldDescription")
+        public String fieldDescription;
+
+        /**
          * <p>The type of the dimension. Valid values:</p>
          * <ul>
          * <li>standard_dimension: General Dimension</li>
@@ -354,6 +361,14 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         }
         public String getFactColumn() {
             return this.factColumn;
+        }
+
+        public QueryDatasetInfoResponseBodyResultDimensionList setFieldDescription(String fieldDescription) {
+            this.fieldDescription = fieldDescription;
+            return this;
+        }
+        public String getFieldDescription() {
+            return this.fieldDescription;
         }
 
         public QueryDatasetInfoResponseBodyResultDimensionList setGranularity(String granularity) {
@@ -513,6 +528,13 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         public String factColumn;
 
         /**
+         * <strong>example:</strong>
+         * <p>hhhh</p>
+         */
+        @NameInMap("FieldDescription")
+        public String fieldDescription;
+
+        /**
          * <p>An expression that calculates a measure; valid only for calculated measures.</p>
          * 
          * <strong>example:</strong>
@@ -574,6 +596,14 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         }
         public String getFactColumn() {
             return this.factColumn;
+        }
+
+        public QueryDatasetInfoResponseBodyResultMeasureList setFieldDescription(String fieldDescription) {
+            this.fieldDescription = fieldDescription;
+            return this;
+        }
+        public String getFieldDescription() {
+            return this.fieldDescription;
         }
 
         public QueryDatasetInfoResponseBodyResultMeasureList setMeasureType(String measureType) {

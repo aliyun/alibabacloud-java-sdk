@@ -417,6 +417,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>添加成员到指定工作空间。</p>
+     * 
      * @param request AddUserToWorkspaceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddUserToWorkspaceResponse
@@ -454,6 +457,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>添加成员到指定工作空间。</p>
+     * 
      * @param request AddUserToWorkspaceRequest
      * @return AddUserToWorkspaceResponse
      */
@@ -463,6 +469,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>批量添加成员到工作空间。</p>
+     * 
      * @param request AddWorkspaceUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddWorkspaceUsersResponse
@@ -500,6 +509,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>批量添加成员到工作空间。</p>
+     * 
      * @param request AddWorkspaceUsersRequest
      * @return AddWorkspaceUsersResponse
      */
@@ -510,7 +522,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>触发数据集抽取加速</p>
+     * <p>触发数据集抽取加速。</p>
      * 
      * @param request AllotDatasetAccelerationTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -542,7 +554,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>触发数据集抽取加速</p>
+     * <p>触发数据集抽取加速。</p>
      * 
      * @param request AllotDatasetAccelerationTaskRequest
      * @return AllotDatasetAccelerationTaskResponse
@@ -614,7 +626,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量添加飞书用户</p>
+     * <p>批量添加飞书用户。</p>
      * 
      * @param request BatchAddFeishuUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -662,7 +674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量添加飞书用户</p>
+     * <p>批量添加飞书用户。</p>
      * 
      * @param request BatchAddFeishuUsersRequest
      * @return BatchAddFeishuUsersResponse
@@ -673,6 +685,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>根据门户菜单ID，取消指定用户、用户组的授权记录。</p>
+     * 
      * @param request CancelAuthorizationMenuRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CancelAuthorizationMenuResponse
@@ -714,6 +729,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>根据门户菜单ID，取消指定用户、用户组的授权记录。</p>
+     * 
      * @param request CancelAuthorizationMenuRequest
      * @return CancelAuthorizationMenuResponse
      */
@@ -924,7 +942,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>生成三方嵌入的ticket</p>
+     * <p>生成三方嵌入的ticket。</p>
      * 
      * @param request CreateTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -988,7 +1006,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>生成三方嵌入的ticket</p>
+     * <p>生成三方嵌入的ticket。</p>
      * 
      * @param request CreateTicketRequest
      * @return CreateTicketResponse
@@ -1000,7 +1018,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>生成智能小Q嵌入ticket</p>
+     * <p>生成智能小Q嵌入ticket。</p>
      * 
      * @param request CreateTicket4CopilotRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1052,7 +1070,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>生成智能小Q嵌入ticket</p>
+     * <p>生成智能小Q嵌入ticket。</p>
      * 
      * @param request CreateTicket4CopilotRequest
      * @return CreateTicket4CopilotResponse
@@ -1120,7 +1138,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询引用指定数据集下的作品信息</p>
+     * <p>查询引用指定数据集下的作品信息。</p>
      * 
      * @param request DataSetBloodRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1160,7 +1178,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询引用指定数据集下的作品信息</p>
+     * <p>查询引用指定数据集下的作品信息。</p>
      * 
      * @param request DataSetBloodRequest
      * @return DataSetBloodResponse
@@ -1172,7 +1190,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询引用指定数据源下的数据集信息</p>
+     * <p>查询引用指定数据源下的数据集信息。</p>
      * 
      * @param request DataSourceBloodRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1204,7 +1222,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询引用指定数据源下的数据集信息</p>
+     * <p>查询引用指定数据源下的数据集信息。</p>
      * 
      * @param request DataSourceBloodRequest
      * @return DataSourceBloodResponse
@@ -1459,6 +1477,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除指定工作空间的成员。</p>
+     * 
      * @param request DeleteUserFromWorkspaceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteUserFromWorkspaceResponse
@@ -1492,6 +1513,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除指定工作空间的成员。</p>
+     * 
      * @param request DeleteUserFromWorkspaceRequest
      * @return DeleteUserFromWorkspaceResponse
      */
@@ -1738,7 +1762,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>概述</p>
+     * <p>查询API数据源列表。</p>
      * 
      * @param request ListApiDatasourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1782,7 +1806,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>概述</p>
+     * <p>查询API数据源列表。</p>
      * 
      * @param request ListApiDatasourceRequest
      * @return ListApiDatasourceResponse
@@ -1939,6 +1963,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>根据行列权限种类，获取数据集行列权限的白名单列表。</p>
+     * 
      * @param request ListDataLevelPermissionWhiteListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDataLevelPermissionWhiteListResponse
@@ -1972,6 +1999,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>根据行列权限种类，获取数据集行列权限的白名单列表。</p>
+     * 
      * @param request ListDataLevelPermissionWhiteListRequest
      * @return ListDataLevelPermissionWhiteListResponse
      */
@@ -1982,7 +2012,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>概述</p>
+     * <p>获取指定用户在首页看板中展示的收藏作品列表。</p>
      * 
      * @param request ListFavoriteReportsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2026,7 +2056,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>概述</p>
+     * <p>获取指定用户在首页看板中展示的收藏作品列表。</p>
      * 
      * @param request ListFavoriteReportsRequest
      * @return ListFavoriteReportsResponse
@@ -2038,7 +2068,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定组织角色下的用户列表</p>
+     * <p>获取指定组织角色下的用户列表。</p>
      * 
      * @param request ListOrganizationRoleUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2082,7 +2112,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定组织角色下的用户列表</p>
+     * <p>获取指定组织角色下的用户列表。</p>
      * 
      * @param request ListOrganizationRoleUsersRequest
      * @return ListOrganizationRoleUsersResponse
@@ -2094,7 +2124,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取组织级别自定义角色列表</p>
+     * <p>获取组织级别自定义角色列表。</p>
      * 
      * @param request ListOrganizationRolesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2118,7 +2148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取组织级别自定义角色列表</p>
+     * <p>获取组织级别自定义角色列表。</p>
      * @return ListOrganizationRolesResponse
      */
     public ListOrganizationRolesResponse listOrganizationRoles() throws Exception {
@@ -2220,7 +2250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取首页看板常看和足迹列表</p>
+     * <p>获取首页看板常看和足迹列表。</p>
      * 
      * @param request ListRecentViewReportsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2272,7 +2302,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取首页看板常看和足迹列表</p>
+     * <p>获取首页看板常看和足迹列表。</p>
      * 
      * @param request ListRecentViewReportsRequest
      * @return ListRecentViewReportsResponse
@@ -2284,7 +2314,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>概述</p>
+     * <p>获取指定用户在首页看板中展示的被授权的作品列表。</p>
      * 
      * @param request ListSharedReportsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2328,7 +2358,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>概述</p>
+     * <p>获取指定用户在首页看板中展示的被授权的作品列表。</p>
      * 
      * @param request ListSharedReportsRequest
      * @return ListSharedReportsResponse
@@ -2384,7 +2414,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定空间角色下的用户列表</p>
+     * <p>获取指定空间角色下的用户列表。</p>
      * 
      * @param request ListWorkspaceRoleUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2432,7 +2462,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定空间角色下的用户列表</p>
+     * <p>获取指定空间角色下的用户列表。</p>
      * 
      * @param request ListWorkspaceRoleUsersRequest
      * @return ListWorkspaceRoleUsersResponse
@@ -2444,7 +2474,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取空间角色列表</p>
+     * <p>获取空间角色列表。</p>
      * 
      * @param request ListWorkspaceRolesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2476,7 +2506,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取空间角色列表</p>
+     * <p>获取空间角色列表。</p>
      * 
      * @param request ListWorkspaceRolesRequest
      * @return ListWorkspaceRolesResponse
@@ -2488,7 +2518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改指定API数据源参数值</p>
+     * <p>修改指定API数据源参数值。</p>
      * 
      * @param request ModifyApiDatasourceParametersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2528,7 +2558,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改指定API数据源参数值</p>
+     * <p>修改指定API数据源参数值。</p>
      * 
      * @param request ModifyApiDatasourceParametersRequest
      * @return ModifyApiDatasourceParametersResponse
@@ -2540,7 +2570,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改智能问数嵌入配置</p>
+     * <p>修改智能问数嵌入配置。</p>
      * 
      * @param request ModifyCopilotEmbedConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2584,7 +2614,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改智能问数嵌入配置</p>
+     * <p>修改智能问数嵌入配置。</p>
      * 
      * @param request ModifyCopilotEmbedConfigRequest
      * @return ModifyCopilotEmbedConfigResponse
@@ -2596,7 +2626,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据审批人获取相应的审批流信息</p>
+     * <p>根据审批人获取相应的审批流信息。</p>
      * 
      * @param request QueryApprovalInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2640,7 +2670,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据审批人获取相应的审批流信息</p>
+     * <p>根据审批人获取相应的审批流信息。</p>
      * 
      * @param request QueryApprovalInfoRequest
      * @return QueryApprovalInfoResponse
@@ -2652,7 +2682,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询审计日志信息</p>
+     * <p>查询审计日志信息。</p>
      * 
      * @param request QueryAuditLogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2708,7 +2738,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询审计日志信息</p>
+     * <p>查询审计日志信息。</p>
      * 
      * @param request QueryAuditLogRequest
      * @return QueryAuditLogResponse
@@ -2720,7 +2750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询组件性能列表</p>
+     * <p>查询组件性能列表。</p>
      * 
      * @param request QueryComponentPerformanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2776,7 +2806,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询组件性能列表</p>
+     * <p>查询组件性能列表。</p>
      * 
      * @param request QueryComponentPerformanceRequest
      * @return QueryComponentPerformanceResponse
@@ -2788,7 +2818,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取开通小Q嵌入的配置列表</p>
+     * <p>获取开通小Q嵌入的配置列表。</p>
      * 
      * @param request QueryCopilotEmbedConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2820,7 +2850,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取开通小Q嵌入的配置列表</p>
+     * <p>获取开通小Q嵌入的配置列表。</p>
      * 
      * @param request QueryCopilotEmbedConfigRequest
      * @return QueryCopilotEmbedConfigResponse
@@ -2832,7 +2862,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询数据集优化建议</p>
+     * <p>查询数据集优化建议。</p>
      * 
      * @param request QueryCubeOptimizationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2864,7 +2894,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询数据集优化建议</p>
+     * <p>查询数据集优化建议。</p>
      * 
      * @param request QueryCubeOptimizationRequest
      * @return QueryCubeOptimizationResponse
@@ -2876,7 +2906,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询数据集性能</p>
+     * <p>查询数据集性能。</p>
      * 
      * @param request QueryCubePerformanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2928,7 +2958,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询数据集性能</p>
+     * <p>查询数据集性能。</p>
      * 
      * @param request QueryCubePerformanceRequest
      * @return QueryCubePerformanceResponse
@@ -2940,7 +2970,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>调用开放数据服务API</p>
+     * <p>调用开放数据服务API。</p>
      * 
      * @param request QueryDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2984,7 +3014,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>调用开放数据服务API</p>
+     * <p>调用开放数据服务API。</p>
      * 
      * @param request QueryDataRequest
      * @return QueryDataResponse
@@ -2996,7 +3026,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据范围目录列表</p>
+     * <p>获取数据范围目录列表。</p>
      * 
      * @param request QueryDataRangeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3032,7 +3062,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据范围目录列表</p>
+     * <p>获取数据范围目录列表。</p>
      * 
      * @param request QueryDataRangeRequest
      * @return QueryDataRangeResponse
@@ -3102,7 +3132,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询数据服务API列表</p>
+     * <p>查询数据服务API列表。</p>
      * 
      * @param request QueryDataServiceListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3146,7 +3176,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询数据服务API列表</p>
+     * <p>查询数据服务API列表。</p>
      * 
      * @param request QueryDataServiceListRequest
      * @return QueryDataServiceListResponse
@@ -3323,6 +3353,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取指定数据集的行级权限开关状态。</p>
+     * 
      * @param request QueryDatasetSwitchInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDatasetSwitchInfoResponse
@@ -3352,6 +3385,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取指定数据集的行级权限开关状态。</p>
+     * 
      * @param request QueryDatasetSwitchInfoRequest
      * @return QueryDatasetSwitchInfoResponse
      */
@@ -3827,6 +3863,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取用户组下的成员列表信息。</p>
+     * 
      * @param request QueryUserGroupMemberRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryUserGroupMemberResponse
@@ -3860,6 +3899,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取用户组下的成员列表信息。</p>
+     * 
      * @param request QueryUserGroupMemberRequest
      * @return QueryUserGroupMemberResponse
      */
@@ -3961,6 +4003,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询组织成员列表信息。</p>
+     * 
      * @param request QueryUserListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryUserListResponse
@@ -3986,6 +4031,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询组织成员列表信息。</p>
+     * 
      * @param request QueryUserListRequest
      * @return QueryUserListResponse
      */
@@ -3995,6 +4043,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取指定工作空间成员的预置空间角色信息。</p>
+     * 
      * @param request QueryUserRoleInfoInWorkspaceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryUserRoleInfoInWorkspaceResponse
@@ -4028,6 +4079,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取指定工作空间成员的预置空间角色信息。</p>
+     * 
      * @param request QueryUserRoleInfoInWorkspaceRequest
      * @return QueryUserRoleInfoInWorkspaceResponse
      */
@@ -4367,6 +4421,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询指定工作空间下的成员列表信息。</p>
+     * 
      * @param request QueryWorkspaceUserListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryWorkspaceUserListResponse
@@ -4408,6 +4465,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询指定工作空间下的成员列表信息。</p>
+     * 
      * @param request QueryWorkspaceUserListRequest
      * @return QueryWorkspaceUserListResponse
      */
@@ -4517,6 +4577,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>设置行列权限的额外配置</p>
+     * 
      * @param request SetDataLevelPermissionExtraConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetDataLevelPermissionExtraConfigResponse
@@ -4554,6 +4617,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>设置行列权限的额外配置</p>
+     * 
      * @param request SetDataLevelPermissionExtraConfigRequest
      * @return SetDataLevelPermissionExtraConfigResponse
      */
@@ -4563,6 +4629,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>设置单条数据集行列权限配置信息（新增和更新）</p>
+     * 
      * @param request SetDataLevelPermissionRuleConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetDataLevelPermissionRuleConfigResponse
@@ -4592,6 +4661,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>设置单条数据集行列权限配置信息（新增和更新）</p>
+     * 
      * @param request SetDataLevelPermissionRuleConfigRequest
      * @return SetDataLevelPermissionRuleConfigResponse
      */
@@ -4945,6 +5017,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>用于更新组织成员标签元信息</p>
+     * 
      * @param request UpdateUserTagMetaRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateUserTagMetaResponse
@@ -4982,6 +5057,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>用于更新组织成员标签元信息</p>
+     * 
      * @param request UpdateUserTagMetaRequest
      * @return UpdateUserTagMetaResponse
      */
@@ -4991,6 +5069,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>更新组织成员标签值</p>
+     * 
      * @param request UpdateUserTagValueRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateUserTagValueResponse
@@ -5028,6 +5109,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>更新组织成员标签值</p>
+     * 
      * @param request UpdateUserTagValueRequest
      * @return UpdateUserTagValueResponse
      */
@@ -5037,6 +5121,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改工作空间下指定成员的角色，已有的角色会被覆盖</p>
+     * 
      * @param request UpdateWorkspaceUserRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateWorkspaceUserRoleResponse
@@ -5074,6 +5161,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改工作空间下指定成员的角色，已有的角色会被覆盖</p>
+     * 
      * @param request UpdateWorkspaceUserRoleRequest
      * @return UpdateWorkspaceUserRoleResponse
      */
@@ -5083,6 +5173,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>批量更新工作空间成员的角色信息，已有角色会被覆盖</p>
+     * 
      * @param request UpdateWorkspaceUsersRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateWorkspaceUsersRoleResponse
@@ -5120,6 +5213,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>批量更新工作空间成员的角色信息，已有角色会被覆盖</p>
+     * 
      * @param request UpdateWorkspaceUsersRoleRequest
      * @return UpdateWorkspaceUsersRoleResponse
      */
