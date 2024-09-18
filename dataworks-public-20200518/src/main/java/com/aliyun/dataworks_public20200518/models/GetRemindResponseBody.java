@@ -284,6 +284,36 @@ public class GetRemindResponseBody extends TeaModel {
 
     }
 
+    public static class GetRemindResponseBodyDataReceivers extends TeaModel {
+        @NameInMap("AlertTargets")
+        public java.util.List<String> alertTargets;
+
+        @NameInMap("AlertUnit")
+        public String alertUnit;
+
+        public static GetRemindResponseBodyDataReceivers build(java.util.Map<String, ?> map) throws Exception {
+            GetRemindResponseBodyDataReceivers self = new GetRemindResponseBodyDataReceivers();
+            return TeaModel.build(map, self);
+        }
+
+        public GetRemindResponseBodyDataReceivers setAlertTargets(java.util.List<String> alertTargets) {
+            this.alertTargets = alertTargets;
+            return this;
+        }
+        public java.util.List<String> getAlertTargets() {
+            return this.alertTargets;
+        }
+
+        public GetRemindResponseBodyDataReceivers setAlertUnit(String alertUnit) {
+            this.alertUnit = alertUnit;
+            return this;
+        }
+        public String getAlertUnit() {
+            return this.alertUnit;
+        }
+
+    }
+
     public static class GetRemindResponseBodyDataRobots extends TeaModel {
         /**
          * <p>Indicates whether all group members are notified when the alert notification is sent to a DingTalk group. Valid values: true and false.</p>
@@ -350,6 +380,9 @@ public class GetRemindResponseBody extends TeaModel {
          */
         @NameInMap("AlertUnit")
         public String alertUnit;
+
+        @NameInMap("AllowNodes")
+        public java.util.List<Long> allowNodes;
 
         /**
          * <p>The baselines to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is BASELINE.</p>
@@ -425,6 +458,9 @@ public class GetRemindResponseBody extends TeaModel {
          */
         @NameInMap("Projects")
         public java.util.List<GetRemindResponseBodyDataProjects> projects;
+
+        @NameInMap("Receivers")
+        public java.util.List<GetRemindResponseBodyDataReceivers> receivers;
 
         /**
          * <p>The custom alert rule ID.</p>
@@ -514,6 +550,14 @@ public class GetRemindResponseBody extends TeaModel {
             return this.alertUnit;
         }
 
+        public GetRemindResponseBodyData setAllowNodes(java.util.List<Long> allowNodes) {
+            this.allowNodes = allowNodes;
+            return this;
+        }
+        public java.util.List<Long> getAllowNodes() {
+            return this.allowNodes;
+        }
+
         public GetRemindResponseBodyData setBaselines(java.util.List<GetRemindResponseBodyDataBaselines> baselines) {
             this.baselines = baselines;
             return this;
@@ -584,6 +628,14 @@ public class GetRemindResponseBody extends TeaModel {
         }
         public java.util.List<GetRemindResponseBodyDataProjects> getProjects() {
             return this.projects;
+        }
+
+        public GetRemindResponseBodyData setReceivers(java.util.List<GetRemindResponseBodyDataReceivers> receivers) {
+            this.receivers = receivers;
+            return this;
+        }
+        public java.util.List<GetRemindResponseBodyDataReceivers> getReceivers() {
+            return this.receivers;
         }
 
         public GetRemindResponseBodyData setRemindId(Long remindId) {
