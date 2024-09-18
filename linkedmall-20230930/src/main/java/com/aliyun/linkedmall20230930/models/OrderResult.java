@@ -34,6 +34,13 @@ public class OrderResult extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>系统关单</p>
+     */
+    @NameInMap("orderClosedReason")
+    public String orderClosedReason;
+
+    /**
+     * <strong>example:</strong>
      * <p>6692****5457</p>
      */
     @NameInMap("orderId")
@@ -91,6 +98,14 @@ public class OrderResult extends TeaModel {
     }
     public Long getOrderAmount() {
         return this.orderAmount;
+    }
+
+    public OrderResult setOrderClosedReason(String orderClosedReason) {
+        this.orderClosedReason = orderClosedReason;
+        return this;
+    }
+    public String getOrderClosedReason() {
+        return this.orderClosedReason;
     }
 
     public OrderResult setOrderId(String orderId) {
