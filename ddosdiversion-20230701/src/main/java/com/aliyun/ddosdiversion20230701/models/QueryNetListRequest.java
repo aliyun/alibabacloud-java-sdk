@@ -6,41 +6,61 @@ import com.aliyun.tea.*;
 public class QueryNetListRequest extends TeaModel {
     /**
      * <p>The primary CIDR block of the anti-DDoS diversion instance for which an extended CIDR block is configured. If no extended CIDR blocks are configured for the anti-DDoS diversion instance, leave this parameter empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.XX.XX/22</p>
      */
     @NameInMap("MainNet")
     public String mainNet;
 
     /**
      * <p>The scheduling mode. Valid values:</p>
-     * <br>
-     * <p>*   manual: manual scheduling</p>
-     * <p>*   netflow-auto: automatic scheduling</p>
+     * <ul>
+     * <li>manual: manual scheduling</li>
+     * <li>netflow-auto: automatic scheduling</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>netflow-auto</p>
      */
     @NameInMap("Mode")
     public String mode;
 
     /**
      * <p>The CIDR block of the anti-DDoS diversion instance.</p>
-     * <br>
-     * <p>>  If no extended CIDR blocks are configured for the anti-DDoS diversion instance, this parameter specifies the CIDR block of the instance. If an extended CIDR block is configured for the anti-DDoS diversion instance, this parameter specifies the extended CIDR block that is configured for the instance. If this parameter is specified, the MainNet parameter is required.</p>
+     * <blockquote>
+     * <p>If no extended CIDR blocks are configured for the anti-DDoS diversion instance, this parameter specifies the CIDR block of the instance. If an extended CIDR block is configured for the anti-DDoS diversion instance, this parameter specifies the extended CIDR block that is configured for the instance. If this parameter is specified, the MainNet parameter is required.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.XX.XX/24</p>
      */
     @NameInMap("Net")
     public String net;
 
     /**
      * <p>The number of entries per page. Default value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("Num")
     public Long num;
 
     /**
      * <p>The page number. Default value: 1</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Page")
     public Long page;
 
     /**
      * <p>The ID of the anti-DDoS diversion instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddos_diversion_public_cn-xxxxxxxxxxxxx</p>
      */
     @NameInMap("SaleId")
     public String saleId;

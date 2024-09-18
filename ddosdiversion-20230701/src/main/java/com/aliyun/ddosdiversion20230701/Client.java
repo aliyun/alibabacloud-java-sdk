@@ -26,6 +26,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Configures the advertising of a CIDR block.</p>
+     * 
+     * @param request ConfigNetStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ConfigNetStatusResponse
+     */
     public ConfigNetStatusResponse configNetStatusWithOptions(ConfigNetStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -66,11 +74,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ConfigNetStatusResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Configures the advertising of a CIDR block.</p>
+     * 
+     * @param request ConfigNetStatusRequest
+     * @return ConfigNetStatusResponse
+     */
     public ConfigNetStatusResponse configNetStatus(ConfigNetStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.configNetStatusWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries anti-DDoS diversion instances.</p>
+     * 
+     * @param request ListInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListInstanceResponse
+     */
     public ListInstanceResponse listInstanceWithOptions(ListInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -111,11 +134,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstanceResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries anti-DDoS diversion instances.</p>
+     * 
+     * @param request ListInstanceRequest
+     * @return ListInstanceResponse
+     */
     public ListInstanceResponse listInstance(ListInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listInstanceWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the CIDR blocks of an anti-DDoS diversion instance.</p>
+     * 
+     * @param request QueryNetListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryNetListResponse
+     */
     public QueryNetListResponse queryNetListWithOptions(QueryNetListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -160,6 +198,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryNetListResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the CIDR blocks of an anti-DDoS diversion instance.</p>
+     * 
+     * @param request QueryNetListRequest
+     * @return QueryNetListResponse
+     */
     public QueryNetListResponse queryNetList(QueryNetListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryNetListWithOptions(request, runtime);

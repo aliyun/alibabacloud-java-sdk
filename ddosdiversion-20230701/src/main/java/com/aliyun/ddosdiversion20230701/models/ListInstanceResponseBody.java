@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class ListInstanceResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
-     * <br>
-     * <p>*   **200**: The request was successful.</p>
-     * <p>*   Other codes: The request failed.</p>
+     * <ul>
+     * <li>200: The request was successful.</li>
+     * <li>Other codes: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Long code;
@@ -21,12 +25,18 @@ public class ListInstanceResponseBody extends TeaModel {
 
     /**
      * <p>The response parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B0949F09-B9C1-1D5E-8F27-0A5BF3CD5D95</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -69,39 +79,111 @@ public class ListInstanceResponseBody extends TeaModel {
     }
 
     public static class ListInstanceResponseBodyDataInstancesSpec extends TeaModel {
+        /**
+         * <p>The region of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>international_and_hmt</p>
+         */
         @NameInMap("Coverage")
         public String coverage;
 
+        /**
+         * <p>The diversion mode. Valid values: on-demand always-on</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on-demand</p>
+         */
         @NameInMap("DiversionType")
         public String diversionType;
 
+        /**
+         * <p>The mitigation plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enterprise</p>
+         */
         @NameInMap("Edition")
         public String edition;
 
+        /**
+         * <p>The number of data centers. Valid values: 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("IdcNumbers")
         public String idcNumbers;
 
+        /**
+         * <p>The initial installation mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gre_tunnel_by_pccw</p>
+         */
         @NameInMap("InitialInstallation")
         public String initialInstallation;
 
+        /**
+         * <p>The initial installation quantity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("InitialQty")
         public String initialQty;
 
+        /**
+         * <p>The number of CIDR blocks. Value range: 1 to 10000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("IpSubnetNums")
         public String ipSubnetNums;
 
+        /**
+         * <p>The mitigation analysis feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("MitigationAnalysis")
         public String mitigationAnalysis;
 
+        /**
+         * <p>The log storage capacity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3T</p>
+         */
         @NameInMap("MitigationAnalysisCapacity")
         public String mitigationAnalysisCapacity;
 
+        /**
+         * <p>The maximum mitigation capability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>unlimited</p>
+         */
         @NameInMap("MitigationCapacity")
         public String mitigationCapacity;
 
+        /**
+         * <p>The number of mitigation sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>unlimited</p>
+         */
         @NameInMap("MitigationNums")
         public String mitigationNums;
 
+        /**
+         * <p>The service traffic. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("NormalBandwidth")
         public String normalBandwidth;
 
@@ -209,36 +291,105 @@ public class ListInstanceResponseBody extends TeaModel {
     }
 
     public static class ListInstanceResponseBodyDataInstances extends TeaModel {
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>The purchase time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-15 11:10:42</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-23 00:00:00</p>
+         */
         @NameInMap("GmtExpire")
         public String gmtExpire;
 
+        /**
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-15 11:10:42</p>
+         */
         @NameInMap("GmtModify")
         public String gmtModify;
 
+        /**
+         * <p>The alias of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddos_diversion_public_cn-xxxxxxxxxxxxx_xxxxxx</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The configurations of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddos_diversion_public_cn-xxxxxxxxxxxxx</p>
+         */
         @NameInMap("SaleId")
         public String saleId;
 
+        /**
+         * <p>The specifications of the instance.</p>
+         */
         @NameInMap("Spec")
         public ListInstanceResponseBodyDataInstancesSpec spec;
 
+        /**
+         * <p>The status of the instance. Valid values:</p>
+         * <ul>
+         * <li>normal</li>
+         * <li>expired</li>
+         * <li>deleting</li>
+         * <li>stopped</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>177xxxxxxxxxxxxx</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -338,15 +489,36 @@ public class ListInstanceResponseBody extends TeaModel {
     }
 
     public static class ListInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>The details of the anti-DDoS diversion instance.</p>
+         */
         @NameInMap("Instances")
         public java.util.List<ListInstanceResponseBodyDataInstances> instances;
 
+        /**
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Num")
         public Long num;
 
+        /**
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Page")
         public Long page;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Total")
         public Long total;
 

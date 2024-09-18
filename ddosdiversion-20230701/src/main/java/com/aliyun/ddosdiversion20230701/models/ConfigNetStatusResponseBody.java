@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class ConfigNetStatusResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
-     * <br>
-     * <p>*   **200**: The request was successful.</p>
-     * <p>*   Other codes: The request failed.</p>
+     * <ul>
+     * <li><strong>200</strong>: The request was successful.</li>
+     * <li>Other codes: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Long code;
 
     /**
      * <p>The response parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B0949F09-B9C1-1D5E-8F27-0A5BF3CD5D95</p>
      */
     @NameInMap("RequestId")
     public String requestId;
